@@ -1,6 +1,6 @@
-// === Module 16870: PremiumTabBadge ===
+// === Module 16883: PremiumTabBadge ===
 
-// Module 16870 (PremiumTabBadge)
+// Module 16883 (PremiumTabBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -23,9 +23,9 @@ import ReferralProgramUtils from "ReferralProgramUtils" /* 8523 */;
 import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8524 */;
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8528 */;
 import MarketingComponentType from "MarketingComponentType" /* 10609 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15303 */;
-import _modDef16871 from "module_16871" /* 16871 */;
-import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 16872 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15307 */;
+import _modDef16884 from "module_16884" /* 16884 */;
+import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 16885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2052 */;
@@ -64,7 +64,7 @@ function OfferBadge(componentId) {
   tmp6(obj2, { disableTrack: null == componentId });
   if (acked) {
     const obj5 = { style: tmp4.acked, children: null };
-    const obj6 = { source: _modDef16871, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
+    const obj6 = { source: _modDef16884, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
     const items = [React6(native.Icon, obj6), ];
     const obj7 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
     const items1 = [, ];
@@ -223,7 +223,7 @@ export default function PremiumTabBadge() {
           const items4 = [, ];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj11.style = items4;
-          const obj12 = { source: _modDef16871, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
+          const obj12 = { source: _modDef16884, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
           const items5 = [React6(native.Icon, obj12), ];
           const obj13 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
           const items6 = [, ];

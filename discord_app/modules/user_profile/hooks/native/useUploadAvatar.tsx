@@ -1,6 +1,6 @@
-// === Module 16532: useUploadAvatar ===
+// === Module 16545: useUploadAvatar ===
 
-// Module 16532 (useUploadAvatar)
+// Module 16545 (useUploadAvatar)
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -100,7 +100,7 @@ export default function useUploadAvatar(guildId) {
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
           tmp22 = tmp2;
-          const obj2 = tmp2(16435);
+          const obj2 = tmp2(16447);
           obj10.description = tmp2(8740).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);

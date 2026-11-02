@@ -1,20 +1,20 @@
-// === Module 19036: ShopIllocon ===
+// === Module 19043: ShopIllocon ===
 
-// Module 19036 (ShopIllocon)
+// Module 19043 (ShopIllocon)
 import FastImageDefault from "FastImage" /* 5717 */;
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef19037 from "module_19037" /* 19037 */;
-import _modDef19038 from "module_19038" /* 19038 */;
-import _modDef19039 from "module_19039" /* 19039 */;
+import _modDef19044 from "module_19044" /* 19044 */;
+import _modDef19045 from "module_19045" /* 19045 */;
+import _modDef19046 from "module_19046" /* 19046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19037 }, 3: null };
-const obj2 = { uri: _modDef19037 };
-obj[2] = { uri: _modDef19038 };
-const obj3 = { uri: _modDef19038 };
-obj[3] = { uri: _modDef19039 };
+let obj = { 1: null, 2: { uri: _modDef19044 }, 3: null };
+const obj2 = { uri: _modDef19044 };
+obj[2] = { uri: _modDef19045 };
+const obj3 = { uri: _modDef19045 };
+obj[3] = { uri: _modDef19046 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");
 

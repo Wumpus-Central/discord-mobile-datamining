@@ -1,6 +1,6 @@
-// === Module 18805: ChannelDetailsMoreButton ===
+// === Module 18812: ChannelDetailsMoreButton ===
 
-// Module 18805 (ChannelDetailsMoreButton)
+// Module 18812 (ChannelDetailsMoreButton)
 import _modDef9100 from "module_9100" /* 9100 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9815 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;

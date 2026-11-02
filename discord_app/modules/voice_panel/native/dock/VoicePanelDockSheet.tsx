@@ -1,10 +1,10 @@
-// === Module 19201: VoicePanelDockSheet ===
+// === Module 19208: VoicePanelDockSheet ===
 
-// Module 19201 (VoicePanelDockSheet)
+// Module 19208 (VoicePanelDockSheet)
 import ColorUtils from "ColorUtils" /* 5011 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11249 */;
-import VoicePanelDockDefault from "VoicePanelDock" /* 19202 */;
+import VoicePanelDockDefault from "VoicePanelDock" /* 19209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

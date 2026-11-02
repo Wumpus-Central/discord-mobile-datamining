@@ -1,9 +1,9 @@
-// === Module 18820: getGamePlatform ===
+// === Module 18827: getGamePlatform ===
 
-// Module 18820 (getGamePlatform)
+// Module 18827 (getGamePlatform)
 import ActivityTypes from "ActivityTypes" /* 5762 */;
 import ActivityGamePlatforms2 from "ActivityGamePlatforms" /* 9738 */;
-import isOnXboxDefault from "isOnXbox" /* 14848 */;
+import isOnXboxDefault from "isOnXbox" /* 14852 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");

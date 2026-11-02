@@ -1,6 +1,6 @@
-// === Module 18306: ChannelListLegendList ===
+// === Module 18319: ChannelListLegendList ===
 
-// Module 18306 (ChannelListLegendList)
+// Module 18319 (ChannelListLegendList)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import FastList from "FastList" /* 7240 */;
 import noop from "module_19" /* 19 */;
@@ -329,7 +329,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.onScroll = obj2.useAnimatedScrollHandler(Q);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items6 = [onScrollWorklet(require("module_14407").AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items6 = [onScrollWorklet(require("module_14421").AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items6;
   return renderHeader(onScroll, obj5);
 });

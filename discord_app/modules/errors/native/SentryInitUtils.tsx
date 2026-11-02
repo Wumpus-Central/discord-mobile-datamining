@@ -14,8 +14,8 @@ import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
 import DeviceUtils from "DeviceUtils" /* 4971 */;
 import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6541 */;
 import MetricEvents from "MetricEvents" /* 6545 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15961 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 15962 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 15965 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 15966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -634,7 +634,7 @@ export function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35320500000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@353.5.0-2+353205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35420000000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@354.0.0-2+354200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod674;
-          _mod674.setTag("buildNumber", "35320500000000");
+          _mod674.setTag("buildNumber", "35420000000000");
           const tmp15Result17 = _mod674;
           _mod674.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod674;

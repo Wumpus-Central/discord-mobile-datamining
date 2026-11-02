@@ -1,6 +1,6 @@
-// === Module 12088: conjureAgentNeedsPreview ===
+// === Module 12089: conjureAgentNeedsPreview ===
 
-// Module 12088 (conjureAgentNeedsPreview)
+// Module 12089 (conjureAgentNeedsPreview)
 import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10923 */;
 import ConjureChatStore from "ConjureChatStore" /* 10851 */;
 

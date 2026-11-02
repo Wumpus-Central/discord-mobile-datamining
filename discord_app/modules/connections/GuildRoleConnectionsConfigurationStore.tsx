@@ -1,6 +1,6 @@
-// === Module 19772: GuildRoleConnectionsConfigurationStore ===
+// === Module 19779: GuildRoleConnectionsConfigurationStore ===
 
-// Module 19772 (GuildRoleConnectionsConfigurationStore)
+// Module 19779 (GuildRoleConnectionsConfigurationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GuildStore from "GuildStore" /* 4885 */;

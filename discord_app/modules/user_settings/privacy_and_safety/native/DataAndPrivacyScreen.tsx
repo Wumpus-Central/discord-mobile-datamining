@@ -1,9 +1,9 @@
-// === Module 17894: DataAndPrivacyScreen ===
+// === Module 17907: DataAndPrivacyScreen ===
 
-// Module 17894 (DataAndPrivacyScreen)
+// Module 17907 (DataAndPrivacyScreen)
 import util from "util" /* 1113 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6742 */;
 
@@ -20,13 +20,13 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1497).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1497);
-  const pinotDataPrivacySections = stackNavigation(17886).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(17899).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   let items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(17886);
+  let obj2 = stackNavigation(17899);
   obj4.helpdeskArticle = items1(2061).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , , ];
@@ -85,11 +85,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(16746).fetchConsents();
-      const obj = stackNavigation(16746);
+      const consents = stackNavigation(16759).fetchConsents();
+      const obj = stackNavigation(16759);
     }
-    const harvestStatus = stackNavigation(16749).fetchHarvestStatus();
-    const obj2 = stackNavigation(16749);
+    const harvestStatus = stackNavigation(16762).fetchHarvestStatus();
+    const obj2 = stackNavigation(16762);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
@@ -133,8 +133,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj22.screen = stackNavigation(16704).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(16704), obj22), closure_8(items1(16575), { node: memo })];
+  obj22.screen = stackNavigation(16717).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(16717), obj22), closure_8(items1(16588), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 };

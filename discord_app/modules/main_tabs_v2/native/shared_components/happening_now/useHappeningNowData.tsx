@@ -1,16 +1,16 @@
-// === Module 18107: useHappeningNowData ===
+// === Module 18120: useHappeningNowData ===
 
-// Module 18107 (useHappeningNowData)
+// Module 18120 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7449 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7451 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 18108 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 18121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 15594 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 15598 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6855 */;
 import StageInstanceStore from "StageInstanceStore" /* 4868 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
@@ -35,7 +35,7 @@ let GuildScheduledEventStore = fn(6855);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(7446).MemberListRowTypes;
 let closure_20 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(17274).HappeningNowItem;
+const HappeningNowItem = fn(17287).HappeningNowItem;
 const Constants = fn(1072);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = Constants);
 let items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
@@ -306,7 +306,7 @@ export default function useHappeningNowData(has, guildId) {
                         if (closure_2_3) {
                           const found = embeddedActivitiesForChannel.filter((userIds) => {
                             items = [...userIds.userIds];
-                            return items.some(/* F140194 */ function() { ... });
+                            return items.some(/* F140258 */ function() { ... });
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {

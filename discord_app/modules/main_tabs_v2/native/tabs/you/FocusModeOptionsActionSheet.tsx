@@ -1,6 +1,6 @@
-// === Module 18440: FocusModeOptionsActionSheet ===
+// === Module 18453: FocusModeOptionsActionSheet ===
 
-// Module 18440 (FocusModeOptionsActionSheet)
+// Module 18453 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
@@ -78,13 +78,14 @@ items[4] = {
     return intl.string(util.t["755t4q"]);
   }
 };
-items[5] = {
+const obj6 = {
   duration: "Array",
   label() {
     const intl = util.intl;
     return intl.string(util.t["46dqJY"]);
   }
 };
+items[5] = obj6;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 19207: VoicePanelHeader ===
+// === Module 19214: VoicePanelHeader ===
 
-// Module 19207 (VoicePanelHeader)
+// Module 19214 (VoicePanelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -8,15 +8,15 @@ import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
 import useChannelName from "useChannelName" /* 5652 */;
 import calculateVoicePanelHeaderSpecs from "calculateVoicePanelHeaderSpecs" /* 11229 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11881 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12015 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19143 */;
-import useStableParticipant from "useStableParticipant" /* 19211 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11882 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12016 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19150 */;
+import useStableParticipant from "useStableParticipant" /* 19218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import ExperimentStore from "ExperimentStore" /* 5238 */;
-import StageMusicStore from "StageMusicStore" /* 11874 */;
+import StageMusicStore from "StageMusicStore" /* 11875 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
@@ -49,7 +49,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11880 : 8558),
+        icon: importDefault(stateFromStores ? 11881 : 8558),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }

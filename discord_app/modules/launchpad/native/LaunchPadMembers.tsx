@@ -1,12 +1,12 @@
-// === Module 19086: LaunchPadMembers ===
+// === Module 19093: LaunchPadMembers ===
 
-// Module 19086 (LaunchPadMembers)
+// Module 19093 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11620 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12381 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 18766 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11621 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12521 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 18773 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "children", type: false };
+    return { channelId: "children", type: true };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

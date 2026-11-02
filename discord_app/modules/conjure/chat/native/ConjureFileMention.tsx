@@ -1,6 +1,6 @@
-// === Module 12485: ConjureFileMention ===
+// === Module 12144: ConjureFileMention ===
 
-// Module 12485 (ConjureFileMention)
+// Module 12144 (ConjureFileMention)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -31,13 +31,13 @@ export default function ConjureFileMention(variant) {
   }
   let context;
   const tmp = closure_9();
-  context = noop.useContext(context(12484).ConjureFileMentionProjectContext);
-  const conjureStoredAttachment = context(12486).useConjureStoredAttachment(context, variant.attachmentId);
+  context = noop.useContext(context(12143).ConjureFileMentionProjectContext);
+  const conjureStoredAttachment = context(12145).useConjureStoredAttachment(context, variant.attachmentId);
   const obj2 = { style: tmp.chip, children: null };
   let obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
-  let obj = context(12486);
+  let obj = context(12145);
   obj3.iconColor = conjureStoredAttachment(575).colors.MENTION_FOREGROUND;
-  let items = [closure_7(conjureStoredAttachment(12489), obj3), ];
+  let items = [closure_7(conjureStoredAttachment(12148), obj3), ];
   let obj4 = { variant: str, style: tmp.name, children: null };
   let name;
   if (conjureStoredAttachment != null) {
@@ -55,7 +55,7 @@ export default function ConjureFileMention(variant) {
   if (null != context) {
     tmp8Result = tmp6Result;
     if (null != conjureStoredAttachment) {
-      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12459).CONJURE_VIEWABLE_IMAGE_TYPES;
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12118).CONJURE_VIEWABLE_IMAGE_TYPES;
       tmp8Result = tmp6Result;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
         let obj5 = {

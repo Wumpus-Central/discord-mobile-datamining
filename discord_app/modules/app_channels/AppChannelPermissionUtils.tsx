@@ -1,6 +1,6 @@
-// === Module 11645: AppChannelPermissionUtils ===
+// === Module 11646: AppChannelPermissionUtils ===
 
-// Module 11645 (AppChannelPermissionUtils)
+// Module 11646 (AppChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import AppChannelPermissions from "AppChannelPermissions" /* 4953 */;
 import useAppChannelApplication from "useAppChannelApplication" /* 7420 */;

@@ -1,20 +1,20 @@
-// === Module 12689: CaterpillarIllocon ===
+// === Module 12692: CaterpillarIllocon ===
 
-// Module 12689 (CaterpillarIllocon)
+// Module 12692 (CaterpillarIllocon)
 import FastImageDefault from "FastImage" /* 5717 */;
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef12690 from "module_12690" /* 12690 */;
-import _modDef12691 from "module_12691" /* 12691 */;
-import _modDef12692 from "module_12692" /* 12692 */;
+import _modDef12693 from "module_12693" /* 12693 */;
+import _modDef12694 from "module_12694" /* 12694 */;
+import _modDef12695 from "module_12695" /* 12695 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12690 }, 3: null };
-const obj2 = { uri: _modDef12690 };
-obj[2] = { uri: _modDef12691 };
-const obj3 = { uri: _modDef12691 };
-obj[3] = { uri: _modDef12692 };
+let obj = { 1: null, 2: { uri: _modDef12693 }, 3: null };
+const obj2 = { uri: _modDef12693 };
+obj[2] = { uri: _modDef12694 };
+const obj3 = { uri: _modDef12694 };
+obj[3] = { uri: _modDef12695 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");
 

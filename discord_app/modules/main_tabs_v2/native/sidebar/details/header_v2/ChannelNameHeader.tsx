@@ -1,6 +1,6 @@
-// === Module 18806: ChannelNameHeader ===
+// === Module 18813: ChannelNameHeader ===
 
-// Module 18806 (ChannelNameHeader)
+// Module 18813 (ChannelNameHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef3804 from "module_3804" /* 3804 */;
@@ -47,7 +47,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1187).AvatarSizes.NORMAL, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: "button" };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1187).AvatarSizes.NORMAL, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: "redesign/message-preview/medium" };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();

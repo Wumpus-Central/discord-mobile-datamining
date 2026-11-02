@@ -5,10 +5,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1396 */;
 import DiscordNativeDefault from "DiscordNative" /* 4825 */;
-import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 15874 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 15876 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 15878 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 15879 */;
+import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 15878 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 15880 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 15882 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 15883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2013 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -265,8 +265,8 @@ const map = new Map();
 map1 = new Map();
 const map2 = new Map();
 let closure_35 = [];
-let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: StreamSettingsConstants.ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_60, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "flexDirection", showPovClipsInGallery: "experiment-disabled" };
-obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(15874).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
+let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: StreamSettingsConstants.ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_60, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "flexDirection", showPovClipsInGallery: "native-text-override" };
+obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(15878).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ClipsStoreClass extends DeviceSettingsStore {
 }

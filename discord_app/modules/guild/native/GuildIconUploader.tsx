@@ -1,16 +1,16 @@
-// === Module 13210: GuildIconUploader ===
+// === Module 13225: GuildIconUploader ===
 
-// Module 13210 (GuildIconUploader)
+// Module 13225 (GuildIconUploader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5021 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import Pressables from "Pressables" /* 6980 */;
-import _modDef13211 from "module_13211" /* 13211 */;
-import _modDef13212 from "module_13212" /* 13212 */;
-import _modDef13213 from "module_13213" /* 13213 */;
-import _modDef13214 from "module_13214" /* 13214 */;
+import _modDef13226 from "module_13226" /* 13226 */;
+import _modDef13227 from "module_13227" /* 13227 */;
+import _modDef13228 from "module_13228" /* 13228 */;
+import _modDef13229 from "module_13229" /* 13229 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef13211;
+      let tmp10Result = _modDef13226;
     } else {
-      tmp10Result = _modDef13212;
+      tmp10Result = _modDef13227;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef13213;
+    obj5.source = _modDef13228;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef13214 };
+    const obj7 = { source: _modDef13229 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

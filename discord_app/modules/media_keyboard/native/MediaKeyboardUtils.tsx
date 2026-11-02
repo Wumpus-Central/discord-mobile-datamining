@@ -13,7 +13,7 @@ import uploader_UploadUtils from "uploader/UploadUtils" /* 8218 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8220 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
 import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10531 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13997 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -537,7 +537,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F139299 */ function() { ... });
+                              someResult = assets.some(/* F139357 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
@@ -913,7 +913,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F139299 */ function() { ... });
+                              someResult = assets.some(/* F139357 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }

@@ -1,6 +1,6 @@
-// === Module 11706: PictureInPicture ===
+// === Module 11707: PictureInPicture ===
 
-// Module 11706 (PictureInPicture)
+// Module 11707 (PictureInPicture)
 import spring from "spring" /* 5637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

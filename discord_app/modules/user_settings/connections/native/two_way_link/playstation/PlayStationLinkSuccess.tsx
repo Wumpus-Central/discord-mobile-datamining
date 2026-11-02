@@ -1,13 +1,13 @@
-// === Module 14631: PlayStationLinkSuccess ===
+// === Module 14645: PlayStationLinkSuccess ===
 
-// Module 14631 (PlayStationLinkSuccess)
+// Module 14645 (PlayStationLinkSuccess)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9730 */;
-import _modDef14616 from "module_14616" /* 14616 */;
+import _modDef14630 from "module_14630" /* 14630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14616 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14630 }), []);
   const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

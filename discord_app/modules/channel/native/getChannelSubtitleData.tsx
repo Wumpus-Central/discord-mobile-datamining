@@ -1,6 +1,6 @@
-// === Module 18277: getChannelSubtitleData ===
+// === Module 18290: getChannelSubtitleData ===
 
-// Module 18277 (getChannelSubtitleData)
+// Module 18290 (getChannelSubtitleData)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

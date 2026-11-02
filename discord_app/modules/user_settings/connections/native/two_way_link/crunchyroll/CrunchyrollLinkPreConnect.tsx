@@ -1,11 +1,11 @@
-// === Module 14638: CrunchyrollLinkPreConnect ===
+// === Module 14652: CrunchyrollLinkPreConnect ===
 
-// Module 14638 (CrunchyrollLinkPreConnect)
-import _modDef14639 from "module_14639" /* 14639 */;
+// Module 14652 (CrunchyrollLinkPreConnect)
+import _modDef14653 from "module_14653" /* 14653 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14635).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14649).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
 const redirectDestination = fn(8909).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
@@ -25,11 +25,11 @@ export default function CrunchyrollLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef14639, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
+  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef14653, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
   const intl = navigation(1113).intl;
   obj2.title = intl.string(navigation(1113).t.siPkNp);
   const intl2 = navigation(1113).intl;
   obj2.body = intl2.string(navigation(1113).t.oS4NEH);
   obj2.redirectDestination = redirectDestination;
-  return jsx(navigation(9734).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef14639, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
+  return jsx(navigation(9734).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef14653, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
 };

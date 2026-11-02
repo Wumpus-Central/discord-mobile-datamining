@@ -1,6 +1,6 @@
-// === Module 11774: StreamQualityLiveIndicator ===
+// === Module 11775: StreamQualityLiveIndicator ===
 
-// Module 11774 (StreamQualityLiveIndicator)
+// Module 11775 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;

@@ -1,17 +1,17 @@
-// === Module 14043: GameServerActionCreators ===
+// === Module 14058: GameServerActionCreators ===
 
-// Module 14043 (GameServerActionCreators)
+// Module 14058 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import StoreUtils from "StoreUtils" /* 6455 */;
 import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8471 */;
-import GameServerMocks from "GameServerMocks" /* 14045 */;
-import GameServerStatus from "GameServerStatus" /* 14046 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 14048 */;
+import GameServerMocks from "GameServerMocks" /* 14060 */;
+import GameServerStatus from "GameServerStatus" /* 14061 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 14063 */;
 import LocaleStore from "LocaleStore" /* 2062 */;
 import UserStore from "UserStore" /* 1383 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 14044 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 14059 */;
 
 const require = globalThis.__r;
 
@@ -228,7 +228,7 @@ export function optimisticallyMarkGameServerResizing(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "VISA_CHECKOUT_NOT_ENABLED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export function updateMyGameServerName(arg0, name) {
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "VISA_CHECKOUT_NOT_ENABLED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -304,7 +304,7 @@ export function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "VISA_CHECKOUT_NOT_ENABLED" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,10 +317,10 @@ export function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(14046).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(14061).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(14046).GameServerStatus.STARTING;
+      obj2.status = closure_0(14061).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

@@ -1,6 +1,6 @@
-// === Module 18620: OnboardingHomeScrollView ===
+// === Module 18633: OnboardingHomeScrollView ===
 
-// Module 18620 (OnboardingHomeScrollView)
+// Module 18633 (OnboardingHomeScrollView)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
 import noop from "module_19" /* 19 */;

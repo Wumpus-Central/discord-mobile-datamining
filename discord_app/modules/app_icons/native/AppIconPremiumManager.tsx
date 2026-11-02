@@ -1,6 +1,6 @@
-// === Module 19394: AppIconPremiumManager ===
+// === Module 19401: AppIconPremiumManager ===
 
-// Module 19394 (AppIconPremiumManager)
+// Module 19401 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

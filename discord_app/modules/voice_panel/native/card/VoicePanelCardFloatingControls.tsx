@@ -1,6 +1,6 @@
-// === Module 19262: VoicePanelCardFloatingControls ===
+// === Module 19269: VoicePanelCardFloatingControls ===
 
-// Module 19262 (VoicePanelCardFloatingControls)
+// Module 19269 (VoicePanelCardFloatingControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 5080 */;
@@ -18,16 +18,16 @@ import usePlayingGameActivitiesDefault from "usePlayingGameActivities" /* 9291 *
 import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9317 */;
 import useResolveGameDefault from "useResolveGame" /* 9319 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10932 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10931 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import VoiceXIcon from "VoiceXIcon" /* 11949 */;
-import _modDef12043 from "module_12043" /* 12043 */;
-import useStableParticipant from "useStableParticipant" /* 19211 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19213 */;
-import _modDef19215 from "module_19215" /* 19215 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 19248 */;
-import _modDef19263 from "module_19263" /* 19263 */;
-import _modDef19264 from "module_19264" /* 19264 */;
+import VoiceXIcon from "VoiceXIcon" /* 11950 */;
+import _modDef12044 from "module_12044" /* 12044 */;
+import useStableParticipant from "useStableParticipant" /* 19218 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19220 */;
+import _modDef19222 from "module_19222" /* 19222 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 19255 */;
+import _modDef19270 from "module_19270" /* 19270 */;
+import _modDef19271 from "module_19271" /* 19271 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
@@ -58,13 +58,13 @@ function StreamIcon(voicePlatform) {
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(5095).useAnimatedStyle(fn);
-  let tmp2Result = _modDef19215;
+  let tmp2Result = _modDef19222;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef19263;
+    tmp2Result = _modDef19270;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef12043;
+    tmp2Result = _modDef12044;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef19264;
+    tmp2Result = _modDef19271;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -226,10 +226,10 @@ let closure_31 = noop.memo(function CloseButton(participant) {
   }, items);
   const obj4 = { icon: null, onPress: null, accessibilityLabel: null };
   let obj2 = { withSpring: participant(5637).withSpring, hidden: controlsHidden, MODE_CHANGE_PHYSICS, hiddenOffsetY };
-  obj4.icon = guildId(19265);
+  obj4.icon = guildId(19272);
   obj4.onPress = callback;
-  const tmp6 = guildId(19143);
-  let result = participant(19211).isStableActivityParticipant(participant);
+  const tmp6 = guildId(19150);
+  let result = participant(19218).isStableActivityParticipant(participant);
   const intl = participant(1113).intl;
   const string = intl.string;
   const t = participant(1113).t;
@@ -449,7 +449,7 @@ let closure_43 = noop.memo(function UserTagChiplet(arg0) {
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(19268), obj);
+      let tmp9 = closure_16(tmp(19275), obj);
     }
     return tmp9;
   }

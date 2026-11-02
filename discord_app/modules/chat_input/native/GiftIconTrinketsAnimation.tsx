@@ -1,6 +1,6 @@
-// === Module 13794: GiftIconTrinketsAnimation ===
+// === Module 13809: GiftIconTrinketsAnimation ===
 
-// Module 13794 (GiftIconTrinketsAnimation)
+// Module 13809 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2026 */;

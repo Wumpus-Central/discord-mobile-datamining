@@ -1,13 +1,13 @@
-// === Module 17454: TimestampHourCycleSetting ===
+// === Module 17467: TimestampHourCycleSetting ===
 
-// Module 17454 (TimestampHourCycleSetting)
+// Module 17467 (TimestampHourCycleSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

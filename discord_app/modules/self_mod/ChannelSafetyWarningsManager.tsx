@@ -1,9 +1,9 @@
-// === Module 19415: ChannelSafetyWarningsManager ===
+// === Module 19422: ChannelSafetyWarningsManager ===
 
-// Module 19415 (ChannelSafetyWarningsManager)
+// Module 19422 (ChannelSafetyWarningsManager)
 import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11263 */;
 import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11302 */;
-import showTakeoverModal from "showTakeoverModal" /* 19416 */;
+import showTakeoverModal from "showTakeoverModal" /* 19423 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;

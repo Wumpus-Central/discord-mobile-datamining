@@ -1,6 +1,6 @@
-// === Module 16535: UserProfileDisplayNameStyleTileButton ===
+// === Module 16548: UserProfileDisplayNameStyleTileButton ===
 
-// Module 16535 (UserProfileDisplayNameStyleTileButton)
+// Module 16548 (UserProfileDisplayNameStyleTileButton)
 import nativeDefault from "native" /* 575 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8737 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   obj3.accessibilityLabel = intl.string(user(1113).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(16536).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(16549).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1113).intl;
   obj3.accessibilityHint = intl2.string(user(1113).t["4lAcxv"]);
@@ -59,5 +59,5 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
     return closure_7(user(6980).PressableHighlight, obj3);
   }
   STATIC = tmp2(10773).EffectDisplayType.STATIC;
-  const obj5 = user(16536);
+  const obj5 = user(16549);
 };

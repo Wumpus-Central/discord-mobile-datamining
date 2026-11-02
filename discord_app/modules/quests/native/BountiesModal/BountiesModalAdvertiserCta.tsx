@@ -1,6 +1,6 @@
-// === Module 16950: BountiesModalAdvertiserCta ===
+// === Module 16963: BountiesModalAdvertiserCta ===
 
-// Module 16950 (BountiesModalAdvertiserCta)
+// Module 16963 (BountiesModalAdvertiserCta)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;

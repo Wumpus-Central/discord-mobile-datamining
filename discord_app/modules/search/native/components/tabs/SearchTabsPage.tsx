@@ -1,19 +1,19 @@
-// === Module 18697: SearchTabsPage ===
+// === Module 18704: SearchTabsPage ===
 
-// Module 18697 (SearchTabsPage)
+// Module 18704 (SearchTabsPage)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8841 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11218 */;
 import ChannelSpoilerDefault from "ChannelSpoiler" /* 11220 */;
-import RecentScreenDefault from "RecentScreen" /* 18698 */;
-import PeopleScreenDefault from "PeopleScreen" /* 18762 */;
-import MembersScreenDefault from "MembersScreen" /* 18764 */;
-import ChannelsScreenDefault from "ChannelsScreen" /* 18770 */;
-import MediaScreenDefault from "MediaScreen" /* 18771 */;
-import FilesScreenDefault from "FilesScreen" /* 18779 */;
-import LinksScreenDefault from "LinksScreen" /* 18781 */;
-import MessagesScreenDefault from "MessagesScreen" /* 18788 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 18791 */;
+import RecentScreenDefault from "RecentScreen" /* 18705 */;
+import PeopleScreenDefault from "PeopleScreen" /* 18769 */;
+import MembersScreenDefault from "MembersScreen" /* 18771 */;
+import ChannelsScreenDefault from "ChannelsScreen" /* 18777 */;
+import MediaScreenDefault from "MediaScreen" /* 18778 */;
+import FilesScreenDefault from "FilesScreen" /* 18786 */;
+import LinksScreenDefault from "LinksScreen" /* 18788 */;
+import MessagesScreenDefault from "MessagesScreen" /* 18795 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 18798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -75,7 +75,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(18782).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(18789).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });

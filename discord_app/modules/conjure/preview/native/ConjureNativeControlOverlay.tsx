@@ -1,12 +1,12 @@
-// === Module 12098: ConjureNativeControlOverlay ===
+// === Module 12242: ConjureNativeControlOverlay ===
 
-// Module 12098 (ConjureNativeControlOverlay)
+// Module 12242 (ConjureNativeControlOverlay)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;
-import useConjureControlBar from "useConjureControlBar" /* 12099 */;
+import useConjureControlBar from "useConjureControlBar" /* 12243 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -50,11 +50,11 @@ export default function ConjureNativeControlOverlay(arg0) {
   let sharedValue2;
   ({ active, children } = arg0);
   const tmp = closure_9();
-  conjureControlPhase = conjureControlPhase(12099).useConjureControlPhase(active);
-  let obj = conjureControlPhase(12099);
-  const conjureControlStop = conjureControlPhase(12099).useConjureControlStop(projectId);
+  conjureControlPhase = conjureControlPhase(12243).useConjureControlPhase(active);
+  let obj = conjureControlPhase(12243);
+  const conjureControlStop = conjureControlPhase(12243).useConjureControlStop(projectId);
   ({ stop, stopping } = conjureControlStop);
-  let obj2 = conjureControlPhase(12099);
+  let obj2 = conjureControlPhase(12243);
   const conjureControlTuning = conjureControlPhase(10923).useConjureControlTuning(projectId);
   let obj3 = conjureControlPhase(10923);
   let items = [sharedValue2];
@@ -176,10 +176,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp38Result = closure_6(tmp2(12100).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp38Result = closure_6(tmp2(12244).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp17(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp38Result = closure_6(tmp2(12104).SparklesIcon, obj8);
+          tmp38Result = closure_6(tmp2(12248).SparklesIcon, obj8);
         }
         const items5 = [tmp38Result, , ];
         const obj9 = { variant: "text-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: tmp.title, accessibilityLabel: null, children: null };

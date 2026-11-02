@@ -1,17 +1,17 @@
-// === Module 19971: AllChannelsSwitch ===
+// === Module 19978: AllChannelsSwitch ===
 
-// Module 19971 (AllChannelsSwitch)
+// Module 19978 (AllChannelsSwitch)
 import util from "util" /* 1113 */;
 import TableRow from "TableRow" /* 6975 */;
 import TableRadioGroup from "TableRadioGroup" /* 7058 */;
 import TableRadioRow from "TableRadioRow" /* 7061 */;
-import _modDef19972 from "module_19972" /* 19972 */;
-import _modDef19973 from "module_19973" /* 19973 */;
+import _modDef19979 from "module_19979" /* 19979 */;
+import _modDef19980 from "module_19980" /* 19980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(17204).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(17217).AllChannelAccessOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -34,14 +34,14 @@ export default function AllChannelsSwitch(channelAccessFormat) {
     },
     children: null
   };
-  const obj3 = { value: AllChannelAccessOptions.SOME_CHANNELS_ACCESS, icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19972 }), label: null, disabled: null };
+  const obj3 = { value: AllChannelAccessOptions.SOME_CHANNELS_ACCESS, icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19979 }), label: null, disabled: null };
   const intl = util.intl;
   obj3.label = intl.string(util.t["vs2T+B"]);
   obj3.disabled = disabled;
   const items = [hasOwnProperty(TableRadioRow.TableRadioRow, obj3), ];
   const obj5 = { value: AllChannelAccessOptions.ALL_CHANNELS_ACCESS, icon: null, label: null, disabled: null };
-  const obj4 = { source: _modDef19972 };
-  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19973 });
+  const obj4 = { source: _modDef19979 };
+  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19980 });
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.l4Tr7X);
   obj5.disabled = disabled;

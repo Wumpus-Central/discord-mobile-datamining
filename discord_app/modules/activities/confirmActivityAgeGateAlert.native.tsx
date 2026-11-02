@@ -1,12 +1,12 @@
-// === Module 11743: confirmActivityAgeGateAlert ===
+// === Module 11744: confirmActivityAgeGateAlert ===
 
-// Module 11743 (confirmActivityAgeGateAlert)
+// Module 11744 (confirmActivityAgeGateAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11744 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

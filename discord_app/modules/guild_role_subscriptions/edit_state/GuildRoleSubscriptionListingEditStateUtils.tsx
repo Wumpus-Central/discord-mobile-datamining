@@ -1,14 +1,14 @@
-// === Module 17203: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 17216: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 17203 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 17216 (GuildRoleSubscriptionListingEditStateUtils)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import v1 from "v1" /* 1266 */;
 import RolePermissionUtils from "RolePermissionUtils" /* 4937 */;
 import StoreUtils from "StoreUtils" /* 6455 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17190 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17205 */;
-import Contants from "Contants" /* 17206 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17208 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17203 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17218 */;
+import Contants from "Contants" /* 17219 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17221 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -380,9 +380,9 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(17204);
+const GuildRoleSubscriptionEditStore = fn(17217);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(17183).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(17196).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
@@ -669,7 +669,7 @@ export function useImage(editStateId, arg1) {
 }
 export function useApplicationId(listingId) {
   _require = listingId;
-  const f111951 = (application_id) => {
+  const f111997 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -678,7 +678,7 @@ export function useApplicationId(listingId) {
   };
   const items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = f111951(5612)(() => first);
+  const tmp2 = f111997(5612)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -784,7 +784,7 @@ export function useRole(listingId, guildId) {
   }, items);
 }
 export function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(17205)(guildId, editStateId);
+  const tmp = roleColor(17218)(guildId, editStateId);
   editStateId = tmp;
   const items = [tmp];
   let memo = noop.useMemo(() => {
@@ -834,7 +834,7 @@ export function useRoleColor(editStateId, guildId) {
   return items2;
 }
 export function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(17205)(guildId, editStateId);
+  const tmp = channelAccessFormat(17218)(guildId, editStateId);
   const items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -989,7 +989,7 @@ export function useIntangibleBenefits(listingId) {
 }
 export function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(17205)(guildId, listingId);
+  const tmp = tierEmojiIds(17218)(guildId, listingId);
   const items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
@@ -1361,8 +1361,8 @@ export function useCreateOrUpdateListingFromEditState() {
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(17207).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(17207).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(17220).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(17220).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }
@@ -1578,9 +1578,11 @@ export function useEditStateIds(groupListingId, guildId, arg2) {
     listings = listings.listings;
     const item = listings.forEach((item) => {
       closure_1_4(closure_1, () => {
-        const obj = { name: item.name, description: item.description, priceTier: item.price_tier, image: item.image, intangibleBenefits: item.additional_perks, channelBenefits: null, roleIcon: { unicodeEmoji: "Array", icon: item.image }, roleColor: item.role_color, usedTemplate: item.category };
+        const obj = { name: item.name, description: item.description, priceTier: item.price_tier, image: item.image, intangibleBenefits: item.additional_perks, channelBenefits: null, roleIcon: null, roleColor: item.role_color, usedTemplate: item.category };
         const channels = item.channels;
         obj.channelBenefits = channels.map((id) => ({ ref_id: id.id, ref_type: constants.CHANNEL, description: id.description, name: id.name, emoji_name: id.emoji_name }));
+        const obj2 = { unicodeEmoji: "Array", icon: item.image };
+        obj.roleIcon = obj2;
         return obj;
       });
     });

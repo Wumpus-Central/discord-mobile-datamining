@@ -1,14 +1,14 @@
-// === Module 12656: ConjurePublishNoticeLine ===
+// === Module 12659: ConjurePublishNoticeLine ===
 
-// Module 12656 (ConjurePublishNoticeLine)
+// Module 12659 (ConjurePublishNoticeLine)
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import transitionToGuild from "transitionToGuild" /* 7522 */;
-import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12650 */;
-import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12657 */;
-import useConjureAutomodSettingsLinkDefault from "useConjureAutomodSettingsLink" /* 12658 */;
-import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12659 */;
-import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12660 */;
+import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12653 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12660 */;
+import useConjureAutomodSettingsLinkDefault from "useConjureAutomodSettingsLink" /* 12661 */;
+import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12662 */;
+import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12663 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -105,7 +105,7 @@ export default function ConjurePublishNoticeLine(arg0) {
   const children = [intl.format(require("conjurePublishCard").publishNoticeMessage(notice, name, tmp4.automod), obj2), ];
   if (null != tmp4.guildId) {
     const obj3 = { guildId: tmp4.guildId, update: notice.update };
-    let tmp9 = closure_3(tmp6(12658).ConjureAutomodSettingsLink, obj3);
+    let tmp9 = closure_3(tmp6(12661).ConjureAutomodSettingsLink, obj3);
   } else {
     tmp9 = null;
     if (!tmp4.automod) {

@@ -1,6 +1,6 @@
-// === Module 18422: YouBar ===
+// === Module 18435: YouBar ===
 
-// Module 18422 (YouBar)
+// Module 18435 (YouBar)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -14,9 +14,9 @@ import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import spring from "spring" /* 5637 */;
 import transitionToGuild from "transitionToGuild" /* 7522 */;
 import openUserSettings from "openUserSettings" /* 7563 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11504 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18457 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 18458 */;
+import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11505 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18470 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 18471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
@@ -26,7 +26,7 @@ import UserStore from "UserStore" /* 1383 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({ YOU_BAR_HEIGHT: c10, YOU_BAR_PADDING: closure_11, YOU_BAR_SPRING_CONFIG: closure_12, YOU_BAR_AVATAR_LARGE_SIZE: map1, YOU_BAR_AVATAR_SIZE: closure_14, YOU_BAR_BUTTON_HIT_SLOP: closure_15 } = YouBarConstants);
 const ME = fn(1072).ME;
 const ContentDismissActionType = fn(4860).ContentDismissActionType;

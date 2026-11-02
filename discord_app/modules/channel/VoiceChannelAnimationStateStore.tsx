@@ -1,6 +1,6 @@
-// === Module 15572: VoiceChannelAnimationStateStore ===
+// === Module 15576: VoiceChannelAnimationStateStore ===
 
-// Module 15572 (VoiceChannelAnimationStateStore)
+// Module 15576 (VoiceChannelAnimationStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;

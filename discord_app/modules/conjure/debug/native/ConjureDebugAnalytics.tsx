@@ -1,11 +1,11 @@
-// === Module 13017: ConjureDebugAnalytics ===
+// === Module 13032: ConjureDebugAnalytics ===
 
-// Module 13017 (ConjureDebugAnalytics)
+// Module 13032 (ConjureDebugAnalytics)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13012 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 13013 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13015 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13027 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13028 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

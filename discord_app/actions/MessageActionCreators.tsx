@@ -20,7 +20,7 @@ import getInviteURLDefault from "getInviteURL" /* 9129 */;
 import createNonce from "createNonce" /* 10315 */;
 import createMessage from "createMessage" /* 10319 */;
 import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10611 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 15213 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 15217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
@@ -1082,7 +1082,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(15212)(closure_0), done: false };
+                const obj6 = { value: tmp2(15216)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1729,13 +1729,13 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[72]).enqueue(channel, (ok) => {
                 if (ok.ok) {
-                  id(15213).donateSentMessage(content, channelId);
+                  id(15217).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_55.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(15213);
+                  const obj15 = id(15217);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);
@@ -1987,7 +1987,7 @@ let obj17 = {
                           let someResult = overrideProperties.state === constants.LOADED;
                           if (someResult) {
                             attachments = overrideProperties.message.attachments;
-                            someResult = attachments.some(/* F140358 */ function() { ... });
+                            someResult = attachments.some(/* F140425 */ function() { ... });
                           }
                           const obj5 = {};
                           const obj = id(length[37]);

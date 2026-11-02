@@ -1,6 +1,6 @@
-// === Module 18055: SidebarCoachmarkOverlay ===
+// === Module 18068: SidebarCoachmarkOverlay ===
 
-// Module 18055 (SidebarCoachmarkOverlay)
+// Module 18068 (SidebarCoachmarkOverlay)
 import useInitialValueDefault from "useInitialValue" /* 5612 */;
 import LayerContext from "LayerContext" /* 5613 */;
 import _slicedToArray from "module_32" /* 32 */;

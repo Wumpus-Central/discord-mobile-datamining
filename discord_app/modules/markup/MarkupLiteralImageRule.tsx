@@ -1,6 +1,6 @@
-// === Module 12206: MarkupLiteralImageRule ===
+// === Module 12350: MarkupLiteralImageRule ===
 
-// Module 12206 (MarkupLiteralImageRule)
+// Module 12350 (MarkupLiteralImageRule)
 import _modDef1943 from "module_1943" /* 1943 */;
 import MarkupTypes from "MarkupTypes" /* 6032 */;
 

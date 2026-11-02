@@ -29,11 +29,11 @@ import AssetUtils from "AssetUtils" /* 9695 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9719 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11385 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14670 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14673 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 14674 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14675 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11386 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14684 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14687 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 14688 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14689 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -2079,13 +2079,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(14677).fetchBountyPreview(arr, previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(14691).fetchBountyPreview(arr, previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(14677).fetchQuestHomeBounties(previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(14691).fetchQuestHomeBounties(previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

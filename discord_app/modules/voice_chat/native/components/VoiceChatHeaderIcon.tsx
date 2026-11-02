@@ -1,12 +1,12 @@
-// === Module 11966: VoiceChatHeaderIcon ===
+// === Module 11967: VoiceChatHeaderIcon ===
 
-// Module 11966 (VoiceChatHeaderIcon)
+// Module 11967 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import native2 from "native" /* 5080 */;
 import Pressables from "Pressables" /* 6980 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11895 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11896 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6842 */;
 

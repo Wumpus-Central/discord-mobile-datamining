@@ -1,16 +1,16 @@
-// === Module 11698: ChannelCallModal ===
+// === Module 11699: ChannelCallModal ===
 
-// Module 11698 (ChannelCallModal)
+// Module 11699 (ChannelCallModal)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
 import VoiceChatHooks from "VoiceChatHooks" /* 11004 */;
-import RevealProvider from "RevealProvider" /* 11700 */;
-import CameraPreviewDefault from "CameraPreview" /* 11703 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11845 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11846 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 12057 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 12058 */;
+import RevealProvider from "RevealProvider" /* 11701 */;
+import CameraPreviewDefault from "CameraPreview" /* 11704 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11846 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11847 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 12058 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 12059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
@@ -55,7 +55,7 @@ class ChannelCallModal {
 const ChannelCallStore = fn(11000);
 ({ useChannelCallOrientationHandlers: closure_7, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
 let VoiceChatDrawerState = fn(11001).VoiceChatDrawerState;
-const Constants = fn(11699);
+const Constants = fn(11700);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -67,8 +67,8 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(11845).terminate();
-        const obj = closure_1_1(11845);
+        closure_1_1(11846).terminate();
+        const obj = closure_1_1(11846);
         closure_1_1(11212).setHidden(false);
         const obj2 = closure_1_1(11212);
         if (!obj3.isModalOpen(closure_1_31)) {

@@ -1,6 +1,6 @@
-// === Module 14236: ContactSyncUtils ===
+// === Module 14251: ContactSyncUtils ===
 
-// Module 14236 (ContactSyncUtils)
+// Module 14251 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -11,7 +11,7 @@ import UserSettings from "UserSettings" /* 4839 */;
 import LinkingDefault from "Linking" /* 5709 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
-import ContactSyncManager from "ContactSyncManager" /* 14237 */;
+import ContactSyncManager from "ContactSyncManager" /* 14252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
 
@@ -99,9 +99,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14235);
+const ContactSyncPersistedStore = fn(14250);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14234);
+const ContactSyncConstants = fn(14249);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);

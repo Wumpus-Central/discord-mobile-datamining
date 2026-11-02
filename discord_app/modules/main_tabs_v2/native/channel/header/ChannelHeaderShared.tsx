@@ -98,7 +98,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "button", autoStatusCutout: "Group DM" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "redesign/message-preview/medium", autoStatusCutout: 1 };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;

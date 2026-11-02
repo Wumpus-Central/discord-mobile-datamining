@@ -1,17 +1,17 @@
-// === Module 17225: SettingsVoiceScreen ===
+// === Module 17238: SettingsVoiceScreen ===
 
-// Module 17225 (SettingsVoiceScreen)
+// Module 17238 (SettingsVoiceScreen)
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5021 */;
 import useThemeDefault from "useTheme" /* 5253 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
-import KrispLogo2 from "KrispLogo" /* 11959 */;
-import _modDef11960 from "module_11960" /* 11960 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
+import KrispLogo2 from "KrispLogo" /* 11960 */;
 import _modDef11961 from "module_11961" /* 11961 */;
-import SettingLayoutDefault from "SettingLayout" /* 16575 */;
+import _modDef11962 from "module_11962" /* 11962 */;
+import SettingLayoutDefault from "SettingLayout" /* 16588 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2061 */;
@@ -21,9 +21,9 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11960;
+    let tmp2Result = _modDef11961;
   } else {
-    tmp2Result = _modDef11961;
+    tmp2Result = _modDef11962;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

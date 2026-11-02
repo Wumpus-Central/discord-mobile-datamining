@@ -1,10 +1,10 @@
-// === Module 18728: FileOrLinkGridPlaceholder ===
+// === Module 18735: FileOrLinkGridPlaceholder ===
 
-// Module 18728 (FileOrLinkGridPlaceholder)
+// Module 18735 (FileOrLinkGridPlaceholder)
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
 import useFontScale from "useFontScale" /* 5642 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18704 */;
-import SearchListCard from "SearchListCard" /* 18729 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18711 */;
+import SearchListCard from "SearchListCard" /* 18736 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

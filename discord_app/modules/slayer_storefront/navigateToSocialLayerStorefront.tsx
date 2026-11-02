@@ -1,6 +1,6 @@
-// === Module 15308: navigateToSocialLayerStorefront ===
+// === Module 15312: navigateToSocialLayerStorefront ===
 
-// Module 15308 (navigateToSocialLayerStorefront)
+// Module 15312 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10670 */;

@@ -1,8 +1,8 @@
-// === Module 13205: AcceptGuildTemplateModal ===
+// === Module 13220: AcceptGuildTemplateModal ===
 
-// Module 13205 (AcceptGuildTemplateModal)
+// Module 13220 (AcceptGuildTemplateModal)
 import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 13217 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 13232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ function ConnectedAcceptGuildTemplate(code) {
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(13206)(stateFromStores);
+  stateFromStores(13221)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -99,7 +99,7 @@ function ConnectedAcceptGuildTemplate(code) {
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(13207), {
+  obj3.children = jsx(stateFromStores(13222), {
     code,
     guildTemplate: stateFromStores,
     name,

@@ -1,9 +1,9 @@
-// === Module 17312: OfficialMessageStyleSetting ===
+// === Module 17325: OfficialMessageStyleSetting ===
 
-// Module 17312 (OfficialMessageStyleSetting)
+// Module 17325 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16266 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16270 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -36,7 +36,7 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

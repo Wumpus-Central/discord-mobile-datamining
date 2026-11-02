@@ -1,6 +1,6 @@
-// === Module 19175: useSoundboardSoundPlayer ===
+// === Module 19182: useSoundboardSoundPlayer ===
 
-// Module 19175 (useSoundboardSoundPlayer)
+// Module 19182 (useSoundboardSoundPlayer)
 import SoundboardUtils from "SoundboardUtils" /* 7525 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6058 */;

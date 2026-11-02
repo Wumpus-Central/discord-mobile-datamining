@@ -1,6 +1,6 @@
-// === Module 18889: getCannotSwapApplicationText ===
+// === Module 18896: getCannotSwapApplicationText ===
 
-// Module 18889 (getCannotSwapApplicationText)
+// Module 18896 (getCannotSwapApplicationText)
 import LocaleStore from "LocaleStore" /* 2062 */;
 import PermissionStore from "PermissionStore" /* 4946 */;
 

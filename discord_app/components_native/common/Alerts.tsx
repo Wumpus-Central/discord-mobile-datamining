@@ -1,6 +1,6 @@
-// === Module 19003: Alerts ===
+// === Module 19010: Alerts ===
 
-// Module 19003 (Alerts)
+// Module 19010 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
@@ -10,11 +10,11 @@ import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
 import OverlayViewDefault from "OverlayView" /* 5965 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19004 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19011 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15638 */;
-import PermissionVADStore from "PermissionVADStore" /* 16224 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15642 */;
+import PermissionVADStore from "PermissionVADStore" /* 16228 */;
 import SurveyStore from "SurveyStore" /* 7929 */;
 import AlertStore from "AlertStore" /* 10135 */;
 
@@ -227,7 +227,7 @@ const __initData3 = { code: "function AlertsTsx3(){const{useReducedMotion,visibl
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_12(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "dispatch", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "Boolean", renderKey: "dispatch", props: "isArray" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -259,7 +259,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "dispatch", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "Boolean", renderKey: "dispatch", props: "isArray" };
       }
     }
   });

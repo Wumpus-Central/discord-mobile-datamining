@@ -1,20 +1,20 @@
-// === Module 11745: confirmExternalAppLaunchAlert ===
+// === Module 11746: confirmExternalAppLaunchAlert ===
 
-// Module 11745 (confirmExternalAppLaunchAlert)
+// Module 11746 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import LinkingDefault from "Linking" /* 5709 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import _modDef11746 from "module_11746" /* 11746 */;
+import _modDef11747 from "module_11747" /* 11747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11746, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11747, style: tmp.announcementBirb };
   const items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;

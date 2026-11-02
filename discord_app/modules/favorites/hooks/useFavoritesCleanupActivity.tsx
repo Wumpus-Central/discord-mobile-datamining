@@ -1,6 +1,6 @@
-// === Module 18189: useFavoritesCleanupActivity ===
+// === Module 18202: useFavoritesCleanupActivity ===
 
-// Module 18189 (useFavoritesCleanupActivity)
+// Module 18202 (useFavoritesCleanupActivity)
 import DurationsDefault from "Durations" /* 1089 */;
 import _modDef3450 from "module_3450" /* 3450 */;
 import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6894 */;

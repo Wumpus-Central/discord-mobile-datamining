@@ -1,12 +1,12 @@
-// === Module 17035: OrbsArcadePlayButton ===
+// === Module 17048: OrbsArcadePlayButton ===
 
-// Module 17035 (OrbsArcadePlayButton)
+// Module 17048 (OrbsArcadePlayButton)
 import Text_Text from "Text/Text" /* 5624 */;
 import ButtonConstants from "ButtonConstants" /* 5640 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17038 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17051 */;
 import noop from "module_19" /* 19 */;
 import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9679 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17010 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
@@ -50,13 +50,13 @@ export default function OrbsArcadePlayButton(game) {
   }
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7326)().analyticsLocations;
-  const tmp4 = analyticsLocations(17036)(game);
+  const tmp4 = analyticsLocations(17049)(game);
   const text = tmp4.text;
   ({ isPaidPlay, canAffordPlay } = tmp4);
   const items = [OrbsArcadeStore];
   const items1 = [game.id];
   const stateFromStores = game(504).useStateFromStores(items, () => OrbsArcadeStore.getGameStateForGame(game.id), items1);
-  let result = analyticsLocations(17037)(game, stateFromStores);
+  let result = analyticsLocations(17050)(game, stateFromStores);
   const obj = game(504);
   const items2 = [OrbsArcadeStore];
   const items3 = [game.id];
@@ -71,10 +71,10 @@ export default function OrbsArcadePlayButton(game) {
     if (tmp5Result.mustClaimOrbsArcadeRewardsToPlay(stateFromStores)) {
       const obj3 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" };
       const intl3 = tmp5(1113).intl;
-      const obj4 = { count: tmp5(17017).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
+      const obj4 = { count: tmp5(17030).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
       obj3.text = intl3.formatToPlainString(tmp5(1113).t["18ToNc"], obj4);
       let tmp18Result2 = jsx(tmp5(5634).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" });
-      const tmp5Result3 = tmp5(17017);
+      const tmp5Result3 = tmp5(17030);
     }
     return tmp18Result2;
   }
@@ -83,10 +83,10 @@ export default function OrbsArcadePlayButton(game) {
     if (null != result.timeUntilNextRound) {
       const intl2 = tmp5(1113).intl;
       const obj6 = { duration: null };
-      result = tmp5(17026).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
+      result = tmp5(17039).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
       obj6.duration = result;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp5(1113).t["Uk+BE3"], obj6);
-      const tmp5Result4 = tmp5(17026);
+      const tmp5Result4 = tmp5(17039);
     } else {
       const intl = tmp5(1113).intl;
       formatToPlainStringResult = intl.string(tmp5(1113).t.iJjbMd);

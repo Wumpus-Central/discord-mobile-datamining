@@ -1,10 +1,10 @@
-// === Module 11449: TieredTenureBadgeCoachmark ===
+// === Module 11450: TieredTenureBadgeCoachmark ===
 
-// Module 11449 (TieredTenureBadgeCoachmark)
+// Module 11450 (TieredTenureBadgeCoachmark)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11418 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

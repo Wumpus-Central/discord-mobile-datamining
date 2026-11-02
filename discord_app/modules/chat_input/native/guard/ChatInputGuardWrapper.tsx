@@ -1,13 +1,13 @@
-// === Module 13991: ChatInputGuardWrapper ===
+// === Module 14006: ChatInputGuardWrapper ===
 
-// Module 13991 (ChatInputGuardWrapper)
+// Module 14006 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4933 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4952 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
 import MemberVerificationUtils from "MemberVerificationUtils" /* 6968 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11597 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13997 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11598 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14012 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4947 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const isThread = fn(4867).isThread;
-const TextAreaCta = fn(12806).TextAreaCta;
+const TextAreaCta = fn(12809).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
 let closure_14 = fn(7211).PHONE_VERIFICATION_MODAL_KEY;

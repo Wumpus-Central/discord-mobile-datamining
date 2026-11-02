@@ -1,6 +1,6 @@
-// === Module 17802: ? ===
+// === Module 17815: ? ===
 
-// Module 17802
+// Module 17815
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 14740: resolveInvite ===
+// === Module 14744: resolveInvite ===
 
-// Module 14740 (resolveInvite)
+// Module 14744 (resolveInvite)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import TypeUtils from "TypeUtils" /* 4875 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;

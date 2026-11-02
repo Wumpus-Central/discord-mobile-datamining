@@ -1,6 +1,6 @@
-// === Module 11731: resolveAppChannel ===
+// === Module 11732: resolveAppChannel ===
 
-// Module 11731 (resolveAppChannel)
+// Module 11732 (resolveAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import PermissionStore from "PermissionStore" /* 4946 */;

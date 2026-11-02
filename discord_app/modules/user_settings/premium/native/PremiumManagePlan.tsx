@@ -1,6 +1,6 @@
-// === Module 15380: PremiumManagePlan ===
+// === Module 15384: PremiumManagePlan ===
 
-// Module 15380 (PremiumManagePlan)
+// Module 15384 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -23,11 +23,11 @@ import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7578 *
 import PremiumManagementUtils from "PremiumManagementUtils" /* 7587 */;
 import _modDef8519 from "module_8519" /* 8519 */;
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9907 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 15235 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 15278 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15305 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 15346 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15359 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 15239 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 15282 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15309 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 15350 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15363 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -644,8 +644,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(15344).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(15344);
+  const youBarSettingsOutsideSafeAreaTop = navigation(15348).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(15348);
   navigation = navigation(1497).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -686,7 +686,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8533).useIsInReverseTrial();
   const obj8 = navigation(8533);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15346).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15350).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(2047).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -797,9 +797,9 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(15235), obj17), ];
+    const items10 = [closure_28(tmp2(15239), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(15276), obj18);
+    items10[1] = closure_28(tmp2(15280), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

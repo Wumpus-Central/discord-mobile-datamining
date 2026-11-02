@@ -1,6 +1,6 @@
-// === Module 13297: ClassificationDetail ===
+// === Module 13312: ClassificationDetail ===
 
-// Module 13297 (ClassificationDetail)
+// Module 13312 (ClassificationDetail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -13,8 +13,8 @@ import MetricEvents from "MetricEvents" /* 6545 */;
 import TableRow from "TableRow" /* 6975 */;
 import SafetyHubModels from "SafetyHubModels" /* 7971 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13301 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13303 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13316 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13318 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2062 */;
 import SafetyHubStore from "SafetyHubStore" /* 7994 */;

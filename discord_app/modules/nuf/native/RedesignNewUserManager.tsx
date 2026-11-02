@@ -1,9 +1,9 @@
-// === Module 19551: RedesignNewUserManager ===
+// === Module 19558: RedesignNewUserManager ===
 
-// Module 19551 (RedesignNewUserManager)
+// Module 19558 (RedesignNewUserManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
 import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19552 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 19559 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
@@ -37,7 +37,7 @@ function isNewUserModalInStack() {
   }
   return someResult;
 }
-const ContactSyncModalStore = fn(14233);
+const ContactSyncModalStore = fn(14248);
 ({ initialize: closure_4, ContactSyncModes: hasOwnProperty } = ContactSyncModalStore);
 const prototype = function RedesignNewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

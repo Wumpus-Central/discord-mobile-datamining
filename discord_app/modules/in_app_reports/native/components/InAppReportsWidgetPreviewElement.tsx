@@ -1,6 +1,6 @@
-// === Module 15155: InAppReportsWidgetPreviewElement ===
+// === Module 15159: InAppReportsWidgetPreviewElement ===
 
-// Module 15155 (InAppReportsWidgetPreviewElement)
+// Module 15159 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -8,8 +8,8 @@ import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7774 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8814 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 14946 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 14963 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 14950 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 14967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

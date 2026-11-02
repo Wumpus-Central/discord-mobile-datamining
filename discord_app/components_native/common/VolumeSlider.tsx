@@ -1,6 +1,6 @@
-// === Module 11948: VolumeSlider ===
+// === Module 11949: VolumeSlider ===
 
-// Module 11948 (VolumeSlider)
+// Module 11949 (VolumeSlider)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils2 from "PlatformUtils" /* 1375 */;
@@ -8,7 +8,7 @@ import useToken from "useToken" /* 5596 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5923 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8673 */;
 import _modDef8852 from "module_8852" /* 8852 */;
-import VoiceXIcon from "VoiceXIcon" /* 11949 */;
+import VoiceXIcon from "VoiceXIcon" /* 11950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 19195: usePanelOpenState ===
+// === Module 19202: usePanelOpenState ===
 
-// Module 19195 (usePanelOpenState)
+// Module 19202 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -87,10 +87,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  [first, closure_6] = doCloseChannel.useState(() => closure_1(12065).getHistory().location.pathname);
+  [first, closure_6] = doCloseChannel.useState(() => closure_1(12066).getHistory().location.pathname);
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12065).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(12066).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
@@ -106,10 +106,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(10929)();
+            closure_1(10928)();
           }
         }
-        obj3 = closure_0(12058);
+        obj3 = closure_0(12059);
       }
     });
     return () => {

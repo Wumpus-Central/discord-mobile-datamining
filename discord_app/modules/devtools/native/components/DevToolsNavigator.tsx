@@ -1,12 +1,12 @@
-// === Module 16423: DevToolsNavigator ===
+// === Module 16435: DevToolsNavigator ===
 
-// Module 16423 (DevToolsNavigator)
+// Module 16435 (DevToolsNavigator)
 import Types from "Types" /* 5206 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import HeaderShared from "HeaderShared" /* 9812 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 16424 */;
-import DevToolsContentDefault from "DevToolsContent" /* 17744 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 16436 */;
+import DevToolsContentDefault from "DevToolsContent" /* 17757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(12990).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(12997).HammerIcon, { size: "sm" }), ];
             const obj2 = { style: { marginLeft: closure_1_1(575).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
             items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
             obj.children = items;
@@ -63,8 +63,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   ,
 
   ];
-  let merged = Object.assign(tmp(17566).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17566).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17579).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17579).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
@@ -83,7 +83,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(12990).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(12997).HammerIcon, { size: "sm" }), ];
           const obj2 = { style: { marginLeft: closure_1_1(575).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
           items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
           obj.children = items;

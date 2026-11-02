@@ -1,9 +1,9 @@
-// === Module 13002: ConjurePerfTraceStatsHeader ===
+// === Module 13017: ConjurePerfTraceStatsHeader ===
 
-// Module 13002 (ConjurePerfTraceStatsHeader)
+// Module 13017 (ConjurePerfTraceStatsHeader)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13003 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/nati
 
 export default function ConjurePerfTraceStatsHeader(stats) {
   stats = stats.stats;
-  const perfModelSummaryResult = stats(13003).perfModelSummary(stats);
+  const perfModelSummaryResult = stats(13018).perfModelSummary(stats);
   const tmp4 = closure_6();
   dependencyMap = styles();
   let obj2 = { style: tmp4.header, children: null };

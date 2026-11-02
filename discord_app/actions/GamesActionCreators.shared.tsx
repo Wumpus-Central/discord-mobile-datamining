@@ -1,9 +1,9 @@
-// === Module 11695: _tryJoinAsFrame ===
+// === Module 11696: _tryJoinAsFrame ===
 
-// Module 11695 (_tryJoinAsFrame)
+// Module 11696 (_tryJoinAsFrame)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11688 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11694 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11689 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11695 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;

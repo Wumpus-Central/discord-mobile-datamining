@@ -1,6 +1,6 @@
-// === Module 18901: InstantInviteSelfMeasurer ===
+// === Module 18908: InstantInviteSelfMeasurer ===
 
-// Module 18901 (InstantInviteSelfMeasurer)
+// Module 18908 (InstantInviteSelfMeasurer)
 import InstantInvite from "InstantInvite" /* 10808 */;
 import noop from "module_19" /* 19 */;
 

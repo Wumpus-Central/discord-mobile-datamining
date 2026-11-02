@@ -1,8 +1,8 @@
-// === Module 11707: useShouldForcePipOrientation ===
+// === Module 11708: useShouldForcePipOrientation ===
 
-// Module 11707 (useShouldForcePipOrientation)
+// Module 11708 (useShouldForcePipOrientation)
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6851 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11708 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11709 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

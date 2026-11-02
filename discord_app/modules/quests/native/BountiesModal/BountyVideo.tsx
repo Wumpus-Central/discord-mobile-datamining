@@ -1,13 +1,13 @@
-// === Module 16932: BountyVideo ===
+// === Module 16945: BountyVideo ===
 
-// Module 16932 (BountyVideo)
+// Module 16945 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
 import timing from "timing" /* 5254 */;
 import timingPresets from "timingPresets" /* 5257 */;
 import LinearGradientDefault from "LinearGradient" /* 5587 */;
 import AssetUtils from "AssetUtils" /* 9695 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 16933 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16934 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 16946 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -16,7 +16,7 @@ import n_mod from "module_671" /* 671 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(16912);
+const BountiesModalConstants = fn(16925);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);

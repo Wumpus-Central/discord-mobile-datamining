@@ -1,16 +1,16 @@
-// === Module 14567: GuildChannelHeader ===
+// === Module 14581: GuildChannelHeader ===
 
-// Module 14567 (GuildChannelHeader)
+// Module 14581 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import useChannelName from "useChannelName" /* 5652 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
-import ChannelHeader from "ChannelHeader" /* 14558 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14569 */;
+import ChannelHeader from "ChannelHeader" /* 14572 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14583 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14568 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14582 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7446 */;
 import ChannelStore from "ChannelStore" /* 4863 */;

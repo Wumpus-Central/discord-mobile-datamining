@@ -1,13 +1,13 @@
-// === Module 12535: ConjurePublishHistoryPanel ===
+// === Module 12194: ConjurePublishHistoryPanel ===
 
-// Module 12535 (ConjurePublishHistoryPanel)
+// Module 12194 (ConjurePublishHistoryPanel)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6027 */;
-import useConjurePublishHistory from "useConjurePublishHistory" /* 12536 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12538 */;
+import useConjurePublishHistory from "useConjurePublishHistory" /* 12195 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 12197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -98,7 +98,7 @@ const result = size.fileFinishedImporting("modules/conjure/history/native/Conjur
 
 export default function ConjurePublishHistoryPanel(projectId) {
   projectId = projectId.projectId;
-  const iter = projectId(12536).useConjurePublishHistory(projectId);
+  const iter = projectId(12195).useConjurePublishHistory(projectId);
   const state = iter.state;
   if ("loading" === state.status) {
     const obj2 = { variant: "text-sm/normal", children: null };

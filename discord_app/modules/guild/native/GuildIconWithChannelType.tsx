@@ -1,12 +1,12 @@
-// === Module 13408: GuildIconWithChannelType ===
+// === Module 13423: GuildIconWithChannelType ===
 
-// Module 13408 (GuildIconWithChannelType)
+// Module 13423 (GuildIconWithChannelType)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import GuildIcon from "GuildIcon" /* 6957 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
 import ClipView from "ClipView" /* 9509 */;
-import Pile from "Pile" /* 13409 */;
+import Pile from "Pile" /* 13424 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

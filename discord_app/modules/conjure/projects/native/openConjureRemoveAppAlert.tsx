@@ -1,6 +1,6 @@
-// === Module 12557: openConjureRemoveAppAlert ===
+// === Module 12223: openConjureRemoveAppAlert ===
 
-// Module 12557 (openConjureRemoveAppAlert)
+// Module 12223 (openConjureRemoveAppAlert)
 import useAlertStore from "useAlertStore" /* 5960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -84,9 +84,9 @@ function ConjureRemoveAppAlert(action) {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
               const obj = tmp2(5712);
-              obj7.text = tmp3(12548).conjureRemoveAppSuccess(closure_129_1);
+              obj7.text = tmp3(12212).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(12548);
+              const obj3 = tmp3(12212);
             }
             c3 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };

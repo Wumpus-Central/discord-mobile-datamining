@@ -1,8 +1,8 @@
-// === Module 16757: useParentalConsentWarning ===
+// === Module 16770: useParentalConsentWarning ===
 
-// Module 16757 (useParentalConsentWarning)
+// Module 16770 (useParentalConsentWarning)
 import initialize from "initialize" /* 504 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 16758 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 16771 */;
 
 require = fn;
 const size = fn(2);

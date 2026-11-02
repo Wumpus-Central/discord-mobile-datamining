@@ -1,8 +1,8 @@
-// === Module 15760: GuildBadgeSound ===
+// === Module 15764: GuildBadgeSound ===
 
-// Module 15760 (GuildBadgeSound)
+// Module 15764 (GuildBadgeSound)
 import inlineStyles from "inlineStyles" /* 8031 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15741 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

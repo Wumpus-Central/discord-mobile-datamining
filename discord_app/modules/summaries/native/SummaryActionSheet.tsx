@@ -1,6 +1,6 @@
-// === Module 11665: SummaryActionSheet ===
+// === Module 11666: SummaryActionSheet ===
 
-// Module 11665 (SummaryActionSheet)
+// Module 11666 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
@@ -182,7 +182,7 @@ export function openSummaryDividerActionSheet(channelId, summaryId) {
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11665, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(11665, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11666, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(11666, dependencyMap.paths);
   }
 }

@@ -1,7 +1,7 @@
-// === Module 17851: FeedProductList ===
+// === Module 17864: FeedProductList ===
 
-// Module 17851 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 17853 */;
+// Module 17864 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 17866 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,30 +9,35 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(17852).useCardLayout();
+  const cardLayout = num(17865).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
-  for (let num = 0; num < loadingCardsNum; num = num + columns) {
-    let _Array = Array;
-    let obj2 = { length: null };
-    let _Math = Math;
-    obj2.length = Math.min(columns, loadingCardsNum - num);
-    let arr = Array.from(obj2);
-    let obj3 = { style: null, children: null };
-    let items1 = [tmp.skeletonRow, ];
-    let obj4 = { width: tmp3 };
-    items1[1] = obj4;
-    obj3.style = items1;
-    obj3.children = arr.map((item, index) => {
-      const obj = { width: require, style: null };
-      const obj2 = { marginBottom: num(9459).COLLECTIBLES_SHOP_CARD_GAP };
-      obj.style = obj2;
-      return closure_4(closure_1(9578), obj, "" + num + "-" + index);
-    });
-    let _HermesInternal = HermesInternal;
-    let arr2 = items.push(<View key={"row-" + num} style={null}>{null}</View>);
+  num = 0;
+  ({ ref, onLayout } = cardLayout);
+  if (0 < loadingCardsNum) {
+    do {
+      let _Array = Array;
+      let obj2 = { length: null };
+      let _Math = Math;
+      obj2.length = Math.min(columns, loadingCardsNum - num);
+      let arr = Array.from(obj2);
+      let obj3 = { style: null, children: null };
+      let items1 = [tmp.skeletonRow, ];
+      let obj4 = { width: tmp3 };
+      items1[1] = obj4;
+      obj3.style = items1;
+      obj3.children = arr.map((item, index) => {
+        const obj = { width: require, style: null };
+        const obj2 = { marginBottom: num(9459).COLLECTIBLES_SHOP_CARD_GAP };
+        obj.style = obj2;
+        return closure_4(closure_1(9578), obj, "" + num + "-" + index);
+      });
+      let _HermesInternal = HermesInternal;
+      let arr2 = items.push(<View key={"row-" + num} style={null}>{null}</View>);
+      num = num + columns;
+    } while (num < loadingCardsNum);
   }
-  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={accessibilityLabel.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
+  return <View style={tmp.skeletonGrid} ref={ref} onLayout={onLayout} accessibilityRole="list" accessibilityLabel={accessibilityLabel.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;

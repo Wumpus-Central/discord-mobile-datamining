@@ -1,11 +1,11 @@
-// === Module 16713: AgeConfirmationNotice ===
+// === Module 16726: AgeConfirmationNotice ===
 
-// Module 16713 (AgeConfirmationNotice)
+// Module 16726 (AgeConfirmationNotice)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import LinkingDefault from "Linking" /* 5709 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16574 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/user_settings/content_and_socia
 export default function AgeConfirmationNotice() {
   sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7472).useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(16574).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
+    const result = sensitiveContentFilterHelpArticle(16587).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
   }, []);
   const items = [sensitiveContentFilterHelpArticle];
   importDefault = noop.useCallback(() => {
@@ -33,7 +33,7 @@ export default function AgeConfirmationNotice() {
     const obj = onPress(7955);
     const result = obj.showAgeVerificationGetStartedModal({ entryPoint: sensitiveContentFilterHelpArticle(6729).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE });
     const obj2 = { entryPoint: sensitiveContentFilterHelpArticle(6729).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-    const result1 = sensitiveContentFilterHelpArticle(16574).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
+    const result1 = sensitiveContentFilterHelpArticle(16587).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
   }, []);
   obj3.marginBottom = nativeDefault.space.PX_8;
   obj2.style = obj3;

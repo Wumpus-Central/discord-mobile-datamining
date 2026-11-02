@@ -1,13 +1,13 @@
-// === Module 16953: BountiesScrollEndCard ===
+// === Module 16966: BountiesScrollEndCard ===
 
-// Module 16953 (BountiesScrollEndCard)
+// Module 16966 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import timing from "timing" /* 5254 */;
 import timingPresets from "timingPresets" /* 5257 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9960 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16914 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16915 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16927 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16928 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -51,11 +51,11 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const obj6 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
-  const items3 = [closure_8(isScrollingInBoundsSharedValue(16954), { bounty, sourceQuestContent, disabled: !isActive }), ];
+  const items3 = [closure_8(isScrollingInBoundsSharedValue(16967), { bounty, sourceQuestContent, disabled: !isActive }), ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(16956), {
+    children: closure_8(isScrollingInBoundsSharedValue(16969), {
       bounty,
       visible,
       sourceQuestContent,

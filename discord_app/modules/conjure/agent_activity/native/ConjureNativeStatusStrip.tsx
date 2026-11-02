@@ -1,13 +1,13 @@
-// === Module 12781: ConjureNativeStatusStrip ===
+// === Module 12784: ConjureNativeStatusStrip ===
 
-// Module 12781 (ConjureNativeStatusStrip)
+// Module 12784 (ConjureNativeStatusStrip)
 import nativeDefault from "native" /* 575 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
-import ConjureStatusLabels from "ConjureStatusLabels" /* 12603 */;
-import ConjureUsageSheet from "ConjureUsageSheet" /* 12787 */;
-import ConjureQueuedSheet from "ConjureQueuedSheet" /* 12788 */;
-import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12789 */;
+import ConjureStatusLabels from "ConjureStatusLabels" /* 12606 */;
+import ConjureUsageSheet from "ConjureUsageSheet" /* 12790 */;
+import ConjureQueuedSheet from "ConjureQueuedSheet" /* 12791 */;
+import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12792 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
@@ -109,7 +109,7 @@ function ThinkingIndicator(line) {
   return closure_9(ref2, obj3);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(12101).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(12245).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5014);
@@ -174,13 +174,13 @@ export default function ConjureNativeStatusStrip(projectId) {
   }
   obj2.publishPending = tmp8;
   obj2.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12603).thinkingLabel(obj2);
+  const thinkingLabelResult = projectId(12606).thinkingLabel(obj2);
   const intl = tmp2(1113).intl;
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(12603).runesUsedLabels(projectUsage);
-    const tmp2Result2 = tmp2(12603);
+    runesUsedLabelsResult = tmp2(12606).runesUsedLabels(projectUsage);
+    const tmp2Result2 = tmp2(12606);
   }
   let tmp12 = null != activity;
   if (tmp12) {
@@ -252,7 +252,7 @@ export default function ConjureNativeStatusStrip(projectId) {
       return closure_9(View, obj3);
     }
   }
-  const tmp19 = thinkingLabelResult === projectId(12603).RECALLING_LINES[0];
+  const tmp19 = thinkingLabelResult === projectId(12606).RECALLING_LINES[0];
   let tmp20 = thinking;
   if (!thinking) {
     tmp20 = tmp19;
@@ -283,5 +283,5 @@ export default function ConjureNativeStatusStrip(projectId) {
   obj14.onPress = onToggleThinking;
   obj14.children = closure_8(ThinkingIndicator, { line: stringResult, rotating: tmp19, immediate: saving });
   tmp17Result6 = closure_8(tmp2(6980).PressableOpacity, obj14);
-  const tmp2Result = projectId(12603);
+  const tmp2Result = projectId(12606);
 };

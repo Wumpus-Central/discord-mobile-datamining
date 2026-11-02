@@ -1,6 +1,6 @@
-// === Module 11520: GiftCodeRedeemError ===
+// === Module 11521: GiftCodeRedeemError ===
 
-// Module 11520 (GiftCodeRedeemError)
+// Module 11521 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1498 */;
@@ -9,8 +9,8 @@ import components_Button_Button from "components/Button/Button" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import _modDef11521 from "module_11521" /* 11521 */;
 import _modDef11522 from "module_11522" /* 11522 */;
+import _modDef11523 from "module_11523" /* 11523 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,9 +30,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11521;
+    let tmp8Result = _modDef11522;
   } else {
-    tmp8Result = _modDef11522;
+    tmp8Result = _modDef11523;
   }
   const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), , ];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

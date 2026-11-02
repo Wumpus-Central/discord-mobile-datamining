@@ -1,6 +1,6 @@
-// === Module 17253: SettingsAppearanceThemeSelectorItem ===
+// === Module 17266: SettingsAppearanceThemeSelectorItem ===
 
-// Module 17253 (SettingsAppearanceThemeSelectorItem)
+// Module 17266 (SettingsAppearanceThemeSelectorItem)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -13,11 +13,11 @@ import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
 import useToken from "useToken" /* 5596 */;
 import Pressables from "Pressables" /* 6980 */;
 import ThemedGradient from "ThemedGradient" /* 10736 */;
-import _modDef17254 from "module_17254" /* 17254 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 17255 */;
+import _modDef17267 from "module_17267" /* 17267 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 17268 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17252 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17265 */;
 
 const ThemedGradientDefault = ThemedGradient;
 
@@ -41,7 +41,7 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17254, style: tmp4.lock };
+    const obj6 = { source: _modDef17267, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -93,7 +93,7 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17254, style: tmp4.lock };
+    const obj6 = { source: _modDef17267, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;

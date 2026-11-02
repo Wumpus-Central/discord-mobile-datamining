@@ -1,6 +1,6 @@
-// === Module 16473: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
+// === Module 16486: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
 
-// Module 16473 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
+// Module 16486 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2932 from "module_2932" /* 2932 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6439 */;
@@ -8,7 +8,7 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
-import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 16468 */;
+import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 16481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -231,7 +231,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   if (availability.availability !== constants5.LOCKED) {
     let obj8 = { style: tmp.labelBadge, children: null };
     const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-    obj8.children = closure_15(tmp6(16475), obj9);
+    obj8.children = closure_15(tmp6(16488), obj9);
     tmp17Result = closure_15(closure_6, obj8);
   }
   obj7.labelTrailing = tmp17Result;

@@ -1,9 +1,9 @@
-// === Module 17763: DesignSystemsExperimentalButtonsSetting ===
+// === Module 17776: DesignSystemsExperimentalButtonsSetting ===
 
-// Module 17763 (DesignSystemsExperimentalButtonsSetting)
+// Module 17776 (DesignSystemsExperimentalButtonsSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,8 +1,8 @@
-// === Module 12661: useConjurePatchNotesComposer ===
+// === Module 12664: useConjurePatchNotesComposer ===
 
-// Module 12661 (useConjurePatchNotesComposer)
+// Module 12664 (useConjurePatchNotesComposer)
 import ConjureUtils from "ConjureUtils" /* 7419 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12662 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12665 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

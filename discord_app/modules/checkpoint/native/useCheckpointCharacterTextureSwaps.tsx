@@ -1,6 +1,6 @@
-// === Module 13617: useCheckpointCharacterTextureSwaps ===
+// === Module 13632: useCheckpointCharacterTextureSwaps ===
 
-// Module 13617 (useCheckpointCharacterTextureSwaps)
+// Module 13632 (useCheckpointCharacterTextureSwaps)
 import DataBindByName from "DataBindByName" /* 5090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

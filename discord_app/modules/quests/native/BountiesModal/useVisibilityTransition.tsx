@@ -1,6 +1,6 @@
-// === Module 16915: useVisibilityTransition ===
+// === Module 16928: useVisibilityTransition ===
 
-// Module 16915 (useVisibilityTransition)
+// Module 16928 (useVisibilityTransition)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,7 +1,7 @@
-// === Module 12109: AbstractFramePoolManager ===
+// === Module 12253: AbstractFramePoolManager ===
 
-// Module 12109 (AbstractFramePoolManager)
-import FrameStackLevel from "FrameStackLevel" /* 12110 */;
+// Module 12253 (AbstractFramePoolManager)
+import FrameStackLevel from "FrameStackLevel" /* 12254 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -40,9 +40,9 @@ prototype["emitChange"] = function emitChange() {
     continue;
   }
 };
-prototype["registerFrameEntry"] = function registerFrameEntry(id, arg1) {
+prototype["registerFrameEntry"] = function registerFrameEntry(id, iframeId) {
   const entries = this.entries;
-  const result = entries.set(id, arg1);
+  const result = entries.set(id, iframeId);
   this.reconcile(id);
 };
 prototype["removeFrameEntry"] = function removeFrameEntry(id) {

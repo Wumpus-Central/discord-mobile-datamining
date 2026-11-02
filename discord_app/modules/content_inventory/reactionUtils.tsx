@@ -1,6 +1,6 @@
-// === Module 18566: reactionUtils ===
+// === Module 18579: reactionUtils ===
 
-// Module 18566 (reactionUtils)
+// Module 18579 (reactionUtils)
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
 import MessageParserDefault from "MessageParser" /* 7824 */;
 import size from "module_2" /* 2 */;

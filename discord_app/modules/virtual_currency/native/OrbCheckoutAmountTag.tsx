@@ -1,6 +1,6 @@
-// === Module 14418: OrbCheckoutAmountTag ===
+// === Module 14432: OrbCheckoutAmountTag ===
 
-// Module 14418 (OrbCheckoutAmountTag)
+// Module 14432 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

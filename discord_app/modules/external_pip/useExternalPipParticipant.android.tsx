@@ -1,11 +1,11 @@
-// === Module 19106: useExternalPipParticipant ===
+// === Module 19113: useExternalPipParticipant ===
 
-// Module 19106 (useExternalPipParticipant)
+// Module 19113 (useExternalPipParticipant)
 import participantHasVideo from "participantHasVideo" /* 11228 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19107 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19114 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15628 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15632 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;

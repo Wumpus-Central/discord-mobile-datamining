@@ -1,6 +1,6 @@
-// === Module 18546: ICYMIPopularGuildsStore ===
+// === Module 18559: ICYMIPopularGuildsStore ===
 
-// Module 18546 (ICYMIPopularGuildsStore)
+// Module 18559 (ICYMIPopularGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GuildStore from "GuildStore" /* 4885 */;

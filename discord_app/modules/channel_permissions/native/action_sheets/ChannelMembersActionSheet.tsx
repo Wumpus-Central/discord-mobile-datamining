@@ -1,6 +1,6 @@
-// === Module 11644: ChannelMembersActionSheet ===
+// === Module 11645: ChannelMembersActionSheet ===
 
-// Module 11644 (ChannelMembersActionSheet)
+// Module 11645 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -19,9 +19,9 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9031 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9058 */;
 import GroupPlusIcon from "GroupPlusIcon" /* 10977 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11643 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11645 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11646 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11644 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11646 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11647 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;

@@ -1,6 +1,6 @@
-// === Module 15613: useHasXboxMonthlyOrbsPerk ===
+// === Module 15617: useHasXboxMonthlyOrbsPerk ===
 
-// Module 15613 (useHasXboxMonthlyOrbsPerk)
+// Module 15617 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
 import PerksStateUtils from "PerksStateUtils" /* 1389 */;
 import user from "user" /* 1391 */;

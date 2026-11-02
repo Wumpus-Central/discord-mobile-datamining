@@ -1,6 +1,6 @@
-// === Module 18094: DmGdmListRenderTriggerPoint ===
+// === Module 18107: DmGdmListRenderTriggerPoint ===
 
-// Module 18094 (DmGdmListRenderTriggerPoint)
+// Module 18107 (DmGdmListRenderTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5239 */;
 import Helpers from "Helpers" /* 10678 */;
 import size from "module_2" /* 2 */;

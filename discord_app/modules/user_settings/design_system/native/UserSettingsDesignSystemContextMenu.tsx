@@ -1,6 +1,6 @@
-// === Module 17776: UserSettingsDesignSystemContextMenu ===
+// === Module 17789: UserSettingsDesignSystemContextMenu ===
 
-// Module 17776 (UserSettingsDesignSystemContextMenu)
+// Module 17789 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -9,11 +9,11 @@ import _modDef5741 from "module_5741" /* 5741 */;
 import Card from "Card" /* 6977 */;
 import _modDef7262 from "module_7262" /* 7262 */;
 import _modDef8424 from "module_8424" /* 8424 */;
-import _modDef11591 from "module_11591" /* 11591 */;
-import _modDef11596 from "module_11596" /* 11596 */;
-import _modDef14371 from "module_14371" /* 14371 */;
-import _modDef17777 from "module_17777" /* 17777 */;
-import _modDef17778 from "module_17778" /* 17778 */;
+import _modDef11592 from "module_11592" /* 11592 */;
+import _modDef11597 from "module_11597" /* 11597 */;
+import _modDef14386 from "module_14386" /* 14386 */;
+import _modDef17790 from "module_17790" /* 17790 */;
+import _modDef17791 from "module_17791" /* 17791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "function pnpm_presetsTs2(event,screenSize){return{transform:[{translateX:(event.translationX-screenSize.width)*0.3}]};}", action: "function pnpm_presetsTs3(event){return{transform:[{translateX:event.translationX}]};}" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "circa {{count}} luni", action: "1 lun\u0103" };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -68,7 +68,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "function pnpm_presetsTs2(event,screenSize){return{transform:[{translateX:(event.translationX-screenSize.width)*0.3}]};}", action: "function pnpm_presetsTs3(event){return{transform:[{translateX:event.translationX}]};}" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "circa {{count}} luni", action: "1 lun\u0103" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -103,7 +103,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef14371, _modDef7262, _modDef8424, _modDef11596, _modDef5741, _modDef17777, _modDef17778, _modDef11591];
+let items = [_modDef14386, _modDef7262, _modDef8424, _modDef11597, _modDef5741, _modDef17790, _modDef17791, _modDef11592];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 const createStyles = fn(5014);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };

@@ -1,11 +1,11 @@
-// === Module 14627: PlayStationLinkPreConnect ===
+// === Module 14641: PlayStationLinkPreConnect ===
 
-// Module 14627 (PlayStationLinkPreConnect)
-import _modDef14628 from "module_14628" /* 14628 */;
+// Module 14641 (PlayStationLinkPreConnect)
+import _modDef14642 from "module_14642" /* 14642 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14624).PlayStationLinkModalScenes;
+let closure_4 = fn(14638).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
@@ -24,7 +24,7 @@ export function PlayStationLinkPreConnect(platformType) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14628 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14642 }), []);
   const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1113).intl;
   obj2.title = intl.string(navigation(1113).t["6n+UPR"]);

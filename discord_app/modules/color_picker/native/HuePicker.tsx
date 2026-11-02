@@ -1,9 +1,9 @@
-// === Module 16443: HuePicker ===
+// === Module 16455: HuePicker ===
 
-// Module 16443 (HuePicker)
+// Module 16455 (HuePicker)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 16440 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 16452 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

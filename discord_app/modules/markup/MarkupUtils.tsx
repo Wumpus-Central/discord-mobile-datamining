@@ -5,7 +5,7 @@ import MarkupReactRules from "MarkupReactRules" /* 5755 */;
 import combineMarkupRulesDefault from "combineMarkupRules" /* 6033 */;
 import MarkupRulesDefault from "MarkupRules" /* 6034 */;
 import MarkupParserAll from "MarkupParser" /* 8444 */;
-import reactParserFor from "reactParserFor" /* 15665 */;
+import reactParserFor from "reactParserFor" /* 15669 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -189,7 +189,7 @@ Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17()
 Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = fn(15665).default;
+obj3.reactParserFor = fn(15669).default;
 obj3.parse = function parse() {
   const items = [...arguments];
   return closure_20()(...items);

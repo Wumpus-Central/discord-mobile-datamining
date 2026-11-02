@@ -1,6 +1,6 @@
-// === Module 15001: useWishlistSuggestionsDismissibleContent ===
+// === Module 15005: useWishlistSuggestionsDismissibleContent ===
 
-// Module 15001 (useWishlistSuggestionsDismissibleContent)
+// Module 15005 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

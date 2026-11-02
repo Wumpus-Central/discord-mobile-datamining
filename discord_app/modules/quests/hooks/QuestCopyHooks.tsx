@@ -1,6 +1,6 @@
-// === Module 14682: QuestCopyHooks ===
+// === Module 14696: QuestCopyHooks ===
 
-// Module 14682 (QuestCopyHooks)
+// Module 14696 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 1895 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
@@ -13,8 +13,8 @@ import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9681 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9705 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11790 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14684 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11791 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1113);
 const utils_QuestUtils = v1votF6(7866);
-const SponsoredQuestUtils = v1votF6(14683);
+const SponsoredQuestUtils = v1votF6(14697);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -777,7 +777,7 @@ export function usePrimaryCtaCopy(arg0) {
     const intl3 = quest(1113).intl;
     return intl3.string(quest(1113).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    return quest(14671).getVideoQuestWatchCtaText(tmp5);
+    return quest(14685).getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result4.canLaunchActivity(quest)) {
       const features = quest.config.features;

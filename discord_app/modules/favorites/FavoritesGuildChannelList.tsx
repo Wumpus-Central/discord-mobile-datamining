@@ -1,6 +1,6 @@
-// === Module 18336: FavoritesGuildChannelList ===
+// === Module 18349: FavoritesGuildChannelList ===
 
-// Module 18336 (FavoritesGuildChannelList)
+// Module 18349 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7484 */;
 import ChannelListState from "ChannelListState" /* 7707 */;

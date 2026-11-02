@@ -1,9 +1,9 @@
-// === Module 17605: DoubleCheckmarkIcon ===
+// === Module 17618: DoubleCheckmarkIcon ===
 
-// Module 17605 (DoubleCheckmarkIcon)
+// Module 17618 (DoubleCheckmarkIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod17606 from "module_17606" /* 17606 */;
+import _mod17619 from "module_17619" /* 17619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function DoubleCheckmarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17606, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17619, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

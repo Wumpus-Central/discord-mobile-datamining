@@ -1,6 +1,6 @@
-// === Module 18067: useHomeDrawerGesture ===
+// === Module 18080: useHomeDrawerGesture ===
 
-// Module 18067 (useHomeDrawerGesture)
+// Module 18080 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
 import timing from "timing" /* 5254 */;
@@ -8,16 +8,16 @@ import reanimated_AccessibilityPreferencesSharedValue from "reanimated/Accessibi
 import HapticUtils from "HapticUtils" /* 5260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18061 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18068 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18074 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18081 */;
 
 require = fn;
-const computeMaxX = fn(18061).computeMaxX;
+const computeMaxX = fn(18074).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GestureConstants = fn(11242);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: c10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11535).LaunchPadTypes;
+const LaunchPadTypes = fn(11536).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let c18 = 48;

@@ -1,6 +1,6 @@
-// === Module 11530: ExternalStreamingStore ===
+// === Module 11531: ExternalStreamingStore ===
 
-// Module 11530 (ExternalStreamingStore)
+// Module 11531 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

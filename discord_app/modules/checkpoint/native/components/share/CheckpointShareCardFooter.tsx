@@ -1,12 +1,12 @@
-// === Module 13432: CheckpointShareCardFooter ===
+// === Module 13447: CheckpointShareCardFooter ===
 
-// Module 13432 (CheckpointShareCardFooter)
+// Module 13447 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5596 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import inlineStyles from "inlineStyles" /* 8031 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13429 */;
-import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13433 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13444 */;
+import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13448 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

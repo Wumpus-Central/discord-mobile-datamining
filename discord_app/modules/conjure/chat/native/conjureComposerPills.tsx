@@ -1,14 +1,14 @@
-// === Module 12793: conjureComposerPills ===
+// === Module 12796: conjureComposerPills ===
 
-// Module 12793 (conjureComposerPills)
+// Module 12796 (conjureComposerPills)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import UserUtils from "UserUtils" /* 5068 */;
 import _modDef11063 from "module_11063" /* 11063 */;
-import ChatInputParser from "ChatInputParser" /* 12794 */;
+import ChatInputParser from "ChatInputParser" /* 12797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1383 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12487 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12146 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12634).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12637).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;

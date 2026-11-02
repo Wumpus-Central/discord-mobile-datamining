@@ -16,21 +16,18 @@ function isProjectOwner(item10010) {
   }
   return item10010.owner_user_id === id;
 }
-function handleProjectUpsert(project) {
-  project = project.project;
-  const result = map.set(project.id, project);
-}
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let c8 = null;
 const map3 = new Map();
 let set = new Set();
-let c11 = false;
-let maxProjects = null;
-let c13 = false;
-let obj = null;
 const set1 = new Set();
+let c12 = false;
+let maxProjects = null;
+let c14 = false;
+let obj = null;
+const set2 = new Set();
 const map4 = new Map();
 let error = "unattempted";
 const Store = initializeDefault.Store;
@@ -44,13 +41,13 @@ prototype["getOwnedProjects"] = function getOwnedProjects() {
   return Array.from(map.values()).filter(isProjectOwner);
 };
 prototype["hasFetchedOwnedProjects"] = function hasFetchedOwnedProjects() {
-  return c11;
+  return c12;
 };
 prototype["getMaxProjects"] = function getMaxProjects() {
   return maxProjects;
 };
 prototype["hasFetchedProjectLimit"] = function hasFetchedProjectLimit() {
-  return c13;
+  return c14;
 };
 prototype["getProject"] = function getProject(arg0) {
   value = map.get(arg0);
@@ -59,7 +56,7 @@ prototype["getProject"] = function getProject(arg0) {
   }
   return value;
 };
-prototype["findProjectByApplicationId"] = function findProjectByApplicationId(prop) {
+prototype["findProjectByApplicationId"] = function findProjectByApplicationId(applicationId) {
   const values = map.values();
   for (const item10009 of values) {
     obj.return();
@@ -67,7 +64,7 @@ prototype["findProjectByApplicationId"] = function findProjectByApplicationId(pr
   }
   return null;
 };
-prototype["getSharedProjects"] = function getSharedProjects(guildId) {
+prototype["getSharedProjects"] = function getSharedProjects(id) {
   const items = [];
   const values = map.values();
   for (const item10010 of values) {
@@ -81,6 +78,21 @@ prototype["getSharedProjects"] = function getSharedProjects(guildId) {
     continue;
   }
   return items;
+};
+prototype["getSharedWithMeProjects"] = function getSharedWithMeProjects() {
+  return Array.from(map.values()).filter((owner_user_id) => {
+    currentUser = currentUser.getCurrentUser();
+    let id;
+    if (currentUser != null) {
+      id = currentUser.id;
+    }
+    let tmp4 = !tmp3;
+    if (owner_user_id.owner_user_id !== id) {
+      tmp4 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+      const tmp7 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+    }
+    return tmp4;
+  });
 };
 prototype["getIntegrationStatus"] = function getIntegrationStatus(arg0) {
   value = map1.get(arg0);
@@ -113,7 +125,7 @@ prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return obj;
 };
 prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(id) {
-  return set1.has(id);
+  return set2.has(id);
 };
 prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(arg0) {
   let str = map4.get(arg0);
@@ -142,10 +154,10 @@ obj = {
           if (null == c8) {
             if (0 === map3.size) {
               if (0 === set.size) {
-                if (0 === set1.size) {
+                if (0 === set2.size) {
                   if (null == obj) {
                     if (null == maxProjects) {
-                      if (!c13) {
+                      if (!c14) {
                         return false;
                       }
                     }
@@ -164,12 +176,13 @@ obj = {
     map3.clear();
     set.clear();
     set1.clear();
+    set2.clear();
     map4.clear();
     obj = null;
-    c11 = false;
+    c12 = false;
     error = "unattempted";
     maxProjects = null;
-    c13 = false;
+    c14 = false;
   },
   CONJURE_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
     guildId = guildId.guildId;
@@ -184,29 +197,34 @@ obj = {
     const found = projects.filter((view_only) => true !== view_only.view_only);
     set = new Set(found.map((id) => id.id));
     while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp8] = tmp5;
-      if (!set.has(tmp6)) {
-        let tmp11 = isProjectOwner(tmp8);
-        if (!tmp11) {
-          let tmp12 = null != guildId;
-          if (tmp12) {
-            tmp12 = tmp8.guild_id === guildId;
+      [first, tmp8] = tmp3;
+      let tmp7 = first;
+      let hasItem = set.has(first);
+      if (!hasItem) {
+        hasItem = set1.has(tmp7);
+      }
+      if (!hasItem) {
+        let tmp14 = isProjectOwner(tmp8);
+        if (!tmp14) {
+          let tmp15 = null != guildId;
+          if (tmp15) {
+            tmp15 = tmp8.guild_id === guildId;
           }
-          tmp11 = tmp12;
+          tmp14 = tmp15;
         }
-        if (tmp11) {
-          let deleteResult = map.delete(tmp6);
+        if (tmp14) {
+          let deleteResult = map.delete(tmp7);
         }
       }
       continue;
     }
-    for (const item10047 of found) {
-      let result = map.set(item10047.id, item10047);
+    for (const item10050 of found) {
+      let result = map.set(item10050.id, item10050);
+      let deleteResult1 = set1.delete(item10050.id);
       continue;
     }
     if (null != guildId) {
-      set1.add(guildId);
+      set2.add(guildId);
       const result1 = map4.set(guildId, "success");
     }
     (function pruneProjectScopedState() {
@@ -227,7 +245,7 @@ obj = {
       }
       tmp8 = set3[Symbol.iterator]();
     })();
-    c11 = true;
+    c12 = true;
     error = "success";
     { type: "success", fetchedAt: Date.now() };
     tmp2 = map[Symbol.iterator]();
@@ -243,10 +261,17 @@ obj = {
   },
   CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function handleProjectLimitFetchSettle(maxProjects) {
     maxProjects = maxProjects.maxProjects;
-    c13 = true;
+    c14 = true;
   },
-  CONJURE_PROJECT_CREATE_SUCCESS: handleProjectUpsert,
-  CONJURE_PROJECT_UPDATE_SUCCESS: handleProjectUpsert,
+  CONJURE_PROJECT_CREATE_SUCCESS: function handleProjectCreateSuccess(project) {
+    project = project.project;
+    const result = map.set(project.id, project);
+    set1.add(project.id);
+  },
+  CONJURE_PROJECT_UPDATE_SUCCESS: function handleProjectUpdateSuccess(project) {
+    project = project.project;
+    const result = map.set(project.id, project);
+  },
   CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function handleProjectIntegrationStatusUpdate(projectId) {
     const result = map1.set(projectId.projectId, projectId.integrationStatus);
   },
@@ -257,12 +282,13 @@ obj = {
     projectId = projectId.projectId;
     set.delete(projectId);
     map.delete(projectId);
+    set1.delete(projectId);
     map1.delete(projectId);
-    while (tmp5 !== undefined) {
-      let tmp8 = _slicedToArray(tmp6, 2);
-      let first = tmp8[0];
-      if (tmp8[1] === projectId) {
-        let deleteResult3 = map2.delete(first);
+    while (tmp6 !== undefined) {
+      let tmp9 = _slicedToArray(tmp7, 2);
+      let first = tmp9[0];
+      if (tmp9[1] === projectId) {
+        let deleteResult4 = map2.delete(first);
       }
       continue;
     }
@@ -270,7 +296,7 @@ obj = {
       c8 = null;
     }
     map3.delete(projectId);
-    tmp5 = map2[Symbol.iterator]();
+    tmp6 = map2[Symbol.iterator]();
   },
   CONJURE_PROJECT_DELETE_FAIL: function handleProjectDeleteFail(projectId) {
     return set.delete(projectId.projectId);

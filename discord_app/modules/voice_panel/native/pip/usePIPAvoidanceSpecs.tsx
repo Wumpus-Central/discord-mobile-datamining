@@ -1,14 +1,14 @@
-// === Module 19189: usePIPAvoidanceSpecs ===
+// === Module 19196: usePIPAvoidanceSpecs ===
 
-// Module 19189 (usePIPAvoidanceSpecs)
+// Module 19196 (usePIPAvoidanceSpecs)
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
 import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11221 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11223 */;
 import MorphablePanelConstants from "MorphablePanelConstants" /* 11224 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11229 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 18998 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19112 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19005 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19119 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

@@ -1,13 +1,13 @@
-// === Module 19231: VoicePanelConsoleFacepile ===
+// === Module 19238: VoicePanelConsoleFacepile ===
 
-// Module 19231 (VoicePanelConsoleFacepile)
+// Module 19238 (VoicePanelConsoleFacepile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import NativeViewDefault from "NativeView" /* 6960 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11975 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14738 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11976 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14742 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

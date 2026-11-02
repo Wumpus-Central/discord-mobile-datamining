@@ -1,12 +1,12 @@
-// === Module 18317: GuildUpsellChannelList ===
+// === Module 18330: GuildUpsellChannelList ===
 
-// Module 18317 (GuildUpsellChannelList)
+// Module 18330 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15599 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15603 */;
 import ConsentStore from "ConsentStore" /* 6742 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(18318).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(18331).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -46,11 +46,11 @@ const obj12 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.joinSection = { gap: nativeDefault.space.PX_4 };
 let closure_14 = createStyles.createStyles(obj2);
 const obj13 = { gap: nativeDefault.space.PX_4 };
-let items = [{ id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14829).BumpingFistsSpotIllustration }, , ];
-const obj14 = { id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14829).BumpingFistsSpotIllustration };
-items[1] = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18319).ChatControllersSpotIllustration };
-const obj15 = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18319).ChatControllersSpotIllustration };
-items[2] = { id: "hobbies", title: fn(1113).t["0Ka6B5"], description: fn(1113).t["5oGAp/"], Icon: fn(18323).MiniaturesSpotIllustration };
+let items = [{ id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14833).BumpingFistsSpotIllustration }, , ];
+const obj14 = { id: "hangout", title: fn(1113).t.ScXySs, description: fn(1113).t.DSCqxM, Icon: fn(14833).BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18332).ChatControllersSpotIllustration };
+const obj15 = { id: "gaming", title: fn(1113).t["F+MTAZ"], description: fn(1113).t.srNlJw, Icon: fn(18332).ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: fn(1113).t["0Ka6B5"], description: fn(1113).t["5oGAp/"], Icon: fn(18336).MiniaturesSpotIllustration };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 

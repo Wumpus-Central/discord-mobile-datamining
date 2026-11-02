@@ -1,6 +1,6 @@
-// === Module 17317: DisplayNameStylesEffectOrder ===
+// === Module 17330: DisplayNameStylesEffectOrder ===
 
-// Module 17317 (DisplayNameStylesEffectOrder)
+// Module 17330 (DisplayNameStylesEffectOrder)
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1401 */;
 import size from "module_2" /* 2 */;
 

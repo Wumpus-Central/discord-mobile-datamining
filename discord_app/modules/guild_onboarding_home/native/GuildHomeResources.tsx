@@ -1,13 +1,13 @@
-// === Module 18633: GuildHomeResources ===
+// === Module 18646: GuildHomeResources ===
 
-// Module 18633 (GuildHomeResources)
+// Module 18646 (GuildHomeResources)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13818 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 18627 */;
-import _modDef18635 from "module_18635" /* 18635 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13833 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 18640 */;
+import _modDef18648 from "module_18648" /* 18648 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildChannelStore from "GuildChannelStore" /* 4944 */;
@@ -42,8 +42,8 @@ function ResourceChannelRow(channelId) {
     first = forumPostMediaProperties[0];
   }
   const obj6 = channelId(8928);
-  let flag = channelId(13757).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(18634)(firstResult);
+  let flag = channelId(13772).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(18647)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -122,7 +122,7 @@ function ResourceChannelRow(channelId) {
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(13757).ForumPostMediaThumbnail, obj17);
+              tmp19Result6 = closure_11(tmp2(13772).ForumPostMediaThumbnail, obj17);
               const tmp2Result2 = tmp2(8928);
             }
           }
@@ -156,7 +156,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1113).intl;
     obj3.children = intl.string(guildId(1113).t.owvC9U);
     const items = [closure_11(guildId(5624).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef18635 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef18648 };
     items[1] = closure_11(FastImageDefault, obj4);
     const obj5 = {
       onPress() {

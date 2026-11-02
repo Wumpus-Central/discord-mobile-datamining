@@ -1,18 +1,18 @@
-// === Module 13018: ConjureDebugAgentTab ===
+// === Module 13033: ConjureDebugAgentTab ===
 
-// Module 13018 (ConjureDebugAgentTab)
+// Module 13033 (ConjureDebugAgentTab)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import ConjureUsageTypes from "ConjureUsageTypes" /* 10859 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13012 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 13013 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13015 */;
-import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13017 */;
-import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 13019 */;
-import ConjureDebugGitSection from "ConjureDebugGitSection" /* 13020 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13027 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13028 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13030 */;
+import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13032 */;
+import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 13034 */;
+import ConjureDebugGitSection from "ConjureDebugGitSection" /* 13035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

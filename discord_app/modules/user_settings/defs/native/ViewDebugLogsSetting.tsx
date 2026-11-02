@@ -1,6 +1,6 @@
-// === Module 17545: ViewDebugLogsSetting ===
+// === Module 17558: ViewDebugLogsSetting ===
 
-// Module 17545 (ViewDebugLogsSetting)
+// Module 17558 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1113 */;
@@ -13,13 +13,13 @@ import ActionSheet from "ActionSheet" /* 7366 */;
 import ActionSheetRow from "ActionSheetRow" /* 7368 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10143 */;
 import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10994 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15661 */;
-import WrenchIcon from "WrenchIcon" /* 17546 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 17548 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 17551 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 17552 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15665 */;
+import WrenchIcon from "WrenchIcon" /* 17559 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 17561 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 17564 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 17565 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 function ViewDebugLogsActionSheetRow(icon) {

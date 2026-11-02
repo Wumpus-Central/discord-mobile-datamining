@@ -1,9 +1,9 @@
-// === Module 17337: ChatDotsIcon ===
+// === Module 17350: ChatDotsIcon ===
 
-// Module 17337 (ChatDotsIcon)
+// Module 17350 (ChatDotsIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod17338 from "module_17338" /* 17338 */;
+import _mod17351 from "module_17351" /* 17351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChatDotsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17338, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17351, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

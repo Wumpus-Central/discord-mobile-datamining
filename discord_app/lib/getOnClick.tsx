@@ -15,9 +15,9 @@ import activityBookmarkUtils from "activityBookmarkUtils" /* 7835 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
 import QuestUtils from "QuestUtils" /* 9678 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10669 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11561 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11616 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11692 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11562 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11617 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
@@ -84,7 +84,7 @@ let closure_18 = async function _openInviteModal() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj = { value, done: true };
+          obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;
@@ -245,7 +245,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj = { value, done: true };
+          obj = { value, done: true };
           return obj;
         }
         c7 = 3;
@@ -262,7 +262,7 @@ const Constants = fn(1072);
 const CollectiblesShopConstants = fn(1074);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
 const isGameShopPath = fn(7407).isGameShopPath;
-let closure_20 = { skipExtensionCheck: "Array", analyticsLocations: [] };
+let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
 
@@ -270,12 +270,13 @@ export default function getOnClick(assetURL) {
   _require = assetURL;
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = closure_20;
+    tmp = obj;
   }
   ({ analyticsLocations: importDefault, messageId: dependencyMap, channelId } = tmp);
   pathname = undefined;
   let obj2;
-  const findCodedLinkResult = require("findCodedLinks").findCodedLink(assetURL);
+  obj = require("findCodedLinks");
+  const findCodedLinkResult = obj.findCodedLink(assetURL);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
     return (preventDefault) => {
@@ -305,20 +306,20 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "flexDirection" };
+            result = { applicationId: "raw", skuId: "cix" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
         ({ applicationId, skuId } = result);
         const guildId = SelectedGuildStore.getGuildId();
         if (null != applicationId) {
-          const obj = { application_id: applicationId, device_platform: "mobile_native", guild_id: guildId, channel_id: SelectedChannelStore.getChannelId() };
+          obj = { application_id: applicationId, device_platform: "mobile_native", guild_id: guildId, channel_id: SelectedChannelStore.getChannelId() };
           AnalyticsUtilsDefault.track(closure_2_12.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, obj);
         }
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -364,7 +365,7 @@ export default function getOnClick(assetURL) {
               tmp2 = _undefined;
             }
             obj2.channelId = tmp2;
-            const obj = GamesActionCreatorsDefault;
+            obj = GamesActionCreatorsDefault;
             obj2.linkChannelId = activityBookmarkUtils.getLinkChannelId(uRL);
             obj2.customId = customId.customId;
             obj2.referrerId = value;
@@ -381,7 +382,7 @@ export default function getOnClick(assetURL) {
               tmp2 = _undefined;
             }
             obj2.channelId = tmp2;
-            const obj = GamesActionCreatorsDefault;
+            obj = GamesActionCreatorsDefault;
             obj2.linkChannelId = activityBookmarkUtils.getLinkChannelId(uRL);
             obj2.customId = customId.customId;
             obj2.referrerId = value;
@@ -401,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14753, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14757, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -498,14 +499,14 @@ export default function getOnClick(assetURL) {
           preventDefault.preventDefault();
         }
         const enabled = assetURL(paths[41]).isVirtualCurrencyEnabled().enabled;
-        let obj = assetURL(paths[41]);
+        obj = assetURL(paths[41]);
         assetURL(paths[20])(paths[42], paths.paths).then((openCollectiblesShopMobile) => {
           const tmp3 = _slicedToArray(code.code.split("-"), 2)[1];
           if (enabled) {
             if (tmp2 === constants.ORBS) {
               let ORBS = constants2.ORBS;
             }
-            const obj = { analyticsSource: analyticsLocations[analyticsLocations.length - 1], analyticsLocations, screen: ORBS, initialProductSkuId: null };
+            obj = { analyticsSource: analyticsLocations[analyticsLocations.length - 1], analyticsLocations, screen: ORBS, initialProductSkuId: null };
             let tmp9;
             if (tmp4) {
               tmp9 = tmp3;
@@ -520,7 +521,6 @@ export default function getOnClick(assetURL) {
       };
     }
   }
-  let obj = require("findCodedLinks");
   let toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};

@@ -1,7 +1,7 @@
-// === Module 14118: useGameServerGetExpiringEntitlements ===
+// === Module 14133: useGameServerGetExpiringEntitlements ===
 
-// Module 14118 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14054 */;
+// Module 14133 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 14069 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 8469 */;
 

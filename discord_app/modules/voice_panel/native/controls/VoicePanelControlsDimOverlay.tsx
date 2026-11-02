@@ -1,14 +1,14 @@
-// === Module 19328: VoicePanelControlsDimOverlay ===
+// === Module 19335: VoicePanelControlsDimOverlay ===
 
-// Module 19328 (VoicePanelControlsDimOverlay)
+// Module 19335 (VoicePanelControlsDimOverlay)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 16265 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 19291 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 16269 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 19298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(15811).BACKDROP_OPAQUE_MAX_OPACITY;
+let closure_4 = fn(15815).BACKDROP_OPAQUE_MAX_OPACITY;
 const VoicePanelConstants = fn(11223);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;

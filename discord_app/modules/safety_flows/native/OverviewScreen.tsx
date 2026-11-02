@@ -1,7 +1,7 @@
-// === Module 20079: OverviewScreen ===
+// === Module 20086: OverviewScreen ===
 
-// Module 20079 (OverviewScreen)
-import SafetyFlowsUtils from "SafetyFlowsUtils" /* 20081 */;
+// Module 20086 (OverviewScreen)
+import SafetyFlowsUtils from "SafetyFlowsUtils" /* 20088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewS
 
 export default function OverviewScreen() {
   let tmp = closure_6();
-  task = task(20080).useSafetyFlowTask().task;
-  let obj = task(20080);
+  task = task(20087).useSafetyFlowTask().task;
+  let obj = task(20087);
   const navigation = task(1497).useNavigation();
   const items = [task, navigation];
   const callback = noop.useCallback(() => {
@@ -47,7 +47,7 @@ export default function OverviewScreen() {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type, index) => {
-        const obj = { tip: task(20074).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        const obj = { tip: task(20081).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
         return closure_1_4(navigation(8160), obj, task_type.task_type);
       });
     }
@@ -65,14 +65,14 @@ export default function OverviewScreen() {
   obj8.children = closure_5(task(6027).Stack, obj3);
   const items3 = [closure_4(task(7973).ModalContent, obj8), ];
   const obj10 = { children: null };
-  const items4 = [closure_4(navigation(20082), {}), ];
+  const items4 = [closure_4(navigation(20089), {}), ];
   const obj11 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj11.text = intl4.string(navigation(2836).Ks6opt);
   obj11.onPress = callback;
-  items4[1] = closure_4(task(13405).ModalActionButton, obj11);
+  items4[1] = closure_4(task(13420).ModalActionButton, obj11);
   obj10.children = items4;
-  items3[1] = closure_5(task(13193).ModalFooter, obj10);
+  items3[1] = closure_5(task(13208).ModalFooter, obj10);
   obj7.children = items3;
   return closure_5(task(7972).ModalScreen, obj7);
 };

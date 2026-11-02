@@ -1,13 +1,13 @@
-// === Module 18558: ICYMIMessageRow ===
+// === Module 18571: ICYMIMessageRow ===
 
-// Module 18558 (ICYMIMessageRow)
+// Module 18571 (ICYMIMessageRow)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10188 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import ICYMIShared from "ICYMIShared" /* 18554 */;
+import ICYMIShared from "ICYMIShared" /* 18567 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;
@@ -190,14 +190,14 @@ function ReplyMessageContent(message) {
   return tmp9;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(18553).ITEM_PADDING;
+const ITEM_PADDING = fn(18566).ITEM_PADDING;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(18515);
+const createICYMIStyles = fn(18528);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 }, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   const obj2 = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };
@@ -318,8 +318,8 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(18518).useGravityMessage(message);
-  const obj = gravityMessage(18518);
+  gravityMessage = gravityMessage(18531).useGravityMessage(message);
+  const obj = gravityMessage(18531);
   const items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(504);

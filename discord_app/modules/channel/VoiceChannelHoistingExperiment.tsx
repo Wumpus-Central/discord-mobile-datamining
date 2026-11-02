@@ -1,6 +1,6 @@
-// === Module 19419: VoiceChannelHoistingExperiment ===
+// === Module 19426: VoiceChannelHoistingExperiment ===
 
-// Module 19419 (VoiceChannelHoistingExperiment)
+// Module 19426 (VoiceChannelHoistingExperiment)
 import ExperimentConstants from "ExperimentConstants" /* 5239 */;
 import createExperiment from "module_5236" /* 5236 */;
 import size from "module_2" /* 2 */;

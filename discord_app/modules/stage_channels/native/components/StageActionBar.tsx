@@ -1,9 +1,9 @@
-// === Module 11912: StageActionBar ===
+// === Module 11913: StageActionBar ===
 
-// Module 11912 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 11873 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 11913 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 11968 */;
+// Module 11913 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 11874 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 11914 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 11969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

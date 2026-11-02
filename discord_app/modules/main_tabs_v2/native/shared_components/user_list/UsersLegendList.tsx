@@ -1,6 +1,6 @@
-// === Module 14406: UsersLegendList ===
+// === Module 14420: UsersLegendList ===
 
-// Module 14406 (UsersLegendList)
+// Module 14420 (UsersLegendList)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import FastestListItemTypeDefault from "FastestListItemType" /* 7232 */;

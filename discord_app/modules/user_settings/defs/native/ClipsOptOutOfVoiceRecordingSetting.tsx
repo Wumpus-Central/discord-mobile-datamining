@@ -1,6 +1,6 @@
-// === Module 16864: ClipsOptOutOfVoiceRecordingSetting ===
+// === Module 16877: ClipsOptOutOfVoiceRecordingSetting ===
 
-// Module 16864 (ClipsOptOutOfVoiceRecordingSetting)
+// Module 16877 (ClipsOptOutOfVoiceRecordingSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -56,7 +56,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,12 +1,12 @@
-// === Module 14837: AddOrOpenAppButton ===
+// === Module 14841: AddOrOpenAppButton ===
 
-// Module 14837 (AddOrOpenAppButton)
+// Module 14841 (AddOrOpenAppButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
 import ApplicationUtils from "ApplicationUtils" /* 10909 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12322 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12336 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12462 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

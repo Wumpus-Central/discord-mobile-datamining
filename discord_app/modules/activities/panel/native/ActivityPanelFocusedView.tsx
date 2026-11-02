@@ -1,13 +1,13 @@
-// === Module 19131: ActivityPanelFocusedView ===
+// === Module 19138: ActivityPanelFocusedView ===
 
-// Module 19131 (ActivityPanelFocusedView)
+// Module 19138 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11793 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19124 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11794 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19131 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -221,11 +221,11 @@ class BaseActivityPanelFocusedView {
 }
 const ActivityPanelConstants = fn(5657);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_7, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8, ActivityPanelModes: closure_9 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18993);
+const ActivityPanelNativeConstants = fn(19000);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: c10, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1072).ThemeTypes;
 const IS_IOS = fn(11223).IS_IOS;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };

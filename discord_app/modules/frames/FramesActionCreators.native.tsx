@@ -1,7 +1,7 @@
-// === Module 10928: FramesActionCreators ===
+// === Module 10927: FramesActionCreators ===
 
-// Module 10928 (FramesActionCreators)
-import _launchFrameAll from "_launchFrame" /* 10930 */;
+// Module 10927 (FramesActionCreators)
+import _launchFrameAll from "_launchFrame" /* 10929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import VoiceStateStore from "VoiceStateStore" /* 5679 */;
 

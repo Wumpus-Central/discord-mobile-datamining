@@ -35,10 +35,10 @@ import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10985
 import markChannelUnreadDefault from "markChannelUnread" /* 10990 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10996 */;
 import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10997 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11824 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14379 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 14380 */;
-import closeFrameDefault from "closeFrame" /* 14382 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11825 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14394 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 14395 */;
+import closeFrameDefault from "closeFrame" /* 14397 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6754 */;
@@ -478,7 +478,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     const buttons5 = obj21.buttons;
     const obj22 = { label: null, IconComponent: null, onPress: null };
     const intl7 = tmp5(tmp2[23]).intl;
-    obj22.label = intl7.string(tmp(tmp2[42]).KMwCb7);
+    obj22.label = intl7.string(tmp(tmp2[42])["276ll6"]);
     obj22.IconComponent = tmp5(tmp2[43]).RemixIcon;
     obj22.onPress = function onPress() {
       const obj2 = {

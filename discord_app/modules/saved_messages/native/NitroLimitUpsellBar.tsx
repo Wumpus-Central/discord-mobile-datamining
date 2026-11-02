@@ -1,6 +1,6 @@
-// === Module 14582: NitroLimitUpsellBar ===
+// === Module 14596: NitroLimitUpsellBar ===
 
-// Module 14582 (NitroLimitUpsellBar)
+// Module 14596 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

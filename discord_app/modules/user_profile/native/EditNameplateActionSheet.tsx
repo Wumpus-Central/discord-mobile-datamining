@@ -1,10 +1,10 @@
-// === Module 16497: EditNameplateActionSheet ===
+// === Module 16510: EditNameplateActionSheet ===
 
-// Module 16497 (EditNameplateActionSheet)
+// Module 16510 (EditNameplateActionSheet)
 import nativeDefault from "native" /* 575 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8735 */;
 import useShopProductItems from "useShopProductItems" /* 8742 */;
-import EditNameplateSection from "EditNameplateSection" /* 16499 */;
+import EditNameplateSection from "EditNameplateSection" /* 16512 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
@@ -145,7 +145,7 @@ function NameplateActionSheetPreview(arg0) {
   obj4.colors = items2;
   items1[2] = closure_10(purchase(5587), obj4);
   obj3.children = items1;
-  const items3 = [closure_11(View, obj3), closure_10(tmp10(11506).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
+  const items3 = [closure_11(View, obj3), closure_10(tmp10(11507).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [closure_10(tmp10(9513).NameplateDummyUserPreview, { width: 140 }), closure_10(tmp10(9513).NameplateDummyUserPreview, { width: 100 }), ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };

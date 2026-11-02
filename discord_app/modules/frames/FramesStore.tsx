@@ -145,7 +145,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         } else {
           const obj2 = { id: null, applicationId: null, intent: null, surface: null, launchRequestId: null, state: "launched", data: null };
           ({ id: obj3.id, applicationId: obj3.applicationId, intent: obj3.intent, surface: obj3.surface, launchRequestId: obj3.launchRequestId } = value);
-          const obj4 = { url: tmp6, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, runsInBackground: false, poolVisibility: "unpooled", muted: null, userMuted: false };
+          const obj4 = { url: tmp6, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, runsInBackground: false, pictureInPictureInteractive: false, poolVisibility: "unpooled", muted: null, userMuted: false };
           const _Date = Date;
           obj4.connectedSince = Date.now();
           obj4.layoutMode = constants2.FOCUSED;
@@ -300,6 +300,30 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value.data);
           obj3.runsInBackground = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
+          flag2 = true;
+        }
+        tmp5 = flag2;
+      }
+      flag = tmp5;
+    }
+    return flag;
+  },
+  FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE: function handleSetPictureInPictureInteractive(frameId) {
+    frameId = frameId.frameId;
+    let flag = false;
+    if (null != frameId) {
+      value = map.get(frameId);
+      let tmp5 = React5(value);
+      if (tmp5) {
+        let flag2 = tmp2(value.data);
+        if (flag2) {
+          const obj2 = {};
+          const merged = Object.assign(value);
+          const obj3 = {};
+          const merged1 = Object.assign(value.data);
+          obj3.pictureInPictureInteractive = tmp;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -505,7 +529,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value.data);
           obj3.iframeId = iframeId;
-          obj3.runsInBackground = false;
+          obj3.pictureInPictureInteractive = false;
           const merged2 = Object.assign(closure_12);
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
@@ -531,7 +555,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value.data);
           obj3.iframeId = null;
-          obj3.runsInBackground = false;
+          obj3.pictureInPictureInteractive = false;
           const merged2 = Object.assign(closure_12);
           obj2.data = obj3;
           const result = map.set(frameId, obj2);

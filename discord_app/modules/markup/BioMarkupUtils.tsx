@@ -1,6 +1,6 @@
-// === Module 11493: BioMarkupUtils ===
+// === Module 11494: BioMarkupUtils ===
 
-// Module 11493 (BioMarkupUtils)
+// Module 11494 (BioMarkupUtils)
 import privDefault from "priv" /* 1451 */;
 import _modDef1943 from "module_1943" /* 1943 */;
 import MarkupReactRulesDefault from "MarkupReactRules" /* 5755 */;

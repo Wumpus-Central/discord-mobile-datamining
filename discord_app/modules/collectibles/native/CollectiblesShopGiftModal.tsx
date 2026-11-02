@@ -1,12 +1,12 @@
-// === Module 14414: CollectiblesShopGiftModal ===
+// === Module 14428: CollectiblesShopGiftModal ===
 
-// Module 14414 (CollectiblesShopGiftModal)
+// Module 14428 (CollectiblesShopGiftModal)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
 import BadgeId from "BadgeId" /* 8755 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import openGiftModal from "openGiftModal" /* 14413 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 14416 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 14419 */;
+import openGiftModal from "openGiftModal" /* 14427 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 14430 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 14433 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
 

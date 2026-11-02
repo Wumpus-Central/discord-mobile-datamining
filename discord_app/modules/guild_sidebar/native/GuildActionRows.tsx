@@ -1,6 +1,6 @@
-// === Module 18255: GuildActionRows ===
+// === Module 18268: GuildActionRows ===
 
-// Module 18255 (GuildActionRows)
+// Module 18268 (GuildActionRows)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
@@ -37,11 +37,11 @@ export function GuildRolesAndChannelsRow(guild) {
   const items2 = [id];
   const stateFromStores1 = guild(563).useStateFromStores(items1, () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW);
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11576, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11577, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(13922).ChannelModes.DEFAULT;
+  let SELECTED = guild(13937).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(13922).ChannelModes.SELECTED;
+    SELECTED = tmp5(13937).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -52,8 +52,8 @@ export function GuildRolesAndChannelsRow(guild) {
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13824).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13824).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13839).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13839).NewBadge, {})}</View>;
   }
   const obj5 = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
   const obj3 = guild(563);
@@ -76,9 +76,9 @@ export function GuildRolesAndChannelsRow(guild) {
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(13922).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(13922);
-  obj5.icon = jsx(guild(13922).BaseChannelIcon, { mode: SELECTED, IconComponent: guild(15661).ChannelListMagnifyingGlassIcon });
+  obj5.name = jsx(guild(13937).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(13937);
+  obj5.icon = jsx(guild(13937).BaseChannelIcon, { mode: SELECTED, IconComponent: guild(15665).ChannelListMagnifyingGlassIcon });
   obj5.channelInfo = tmp11;
   return <tmp2Result onPress={callback} style={tmp.container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} channelInfo={null} />;
 }

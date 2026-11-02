@@ -1,9 +1,9 @@
-// === Module 14337: HubEmailConnectionPinVerify ===
+// === Module 14352: HubEmailConnectionPinVerify ===
 
-// Module 14337 (HubEmailConnectionPinVerify)
+// Module 14352 (HubEmailConnectionPinVerify)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
 import EnvelopeIcon from "EnvelopeIcon" /* 7249 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 14338 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 14353 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(14338).terminate();
+      closure_1_1(14353).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -96,7 +96,7 @@ export default function HubEmailConnectionPinVerify(email) {
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("module_14339");
+  obj4.source = require("module_14354");
   const items1 = [closure_8(require("FastImage"), obj4), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[13]).intl;

@@ -1,10 +1,10 @@
-// === Module 11945: UserSettingsVoiceInputOptions ===
+// === Module 11946: UserSettingsVoiceInputOptions ===
 
-// Module 11945 (UserSettingsVoiceInputOptions)
+// Module 11946 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1113 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7363 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 11946 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 11947 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 
@@ -95,6 +95,6 @@ export default function UserSettingsVoiceInputOptions() {
   }
   items1[1] = tmp4Result;
   obj2.children = items1;
-  return closure_8(inputMode(11939).UserSettingsTableRowGroup, obj2);
+  return closure_8(inputMode(11940).UserSettingsTableRowGroup, obj2);
 };
 export { handleInputModePress };

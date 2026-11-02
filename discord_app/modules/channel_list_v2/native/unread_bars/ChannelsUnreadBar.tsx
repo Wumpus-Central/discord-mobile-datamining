@@ -1,6 +1,6 @@
-// === Module 18229: ChannelsUnreadBar ===
+// === Module 18242: ChannelsUnreadBar ===
 
-// Module 18229 (ChannelsUnreadBar)
+// Module 18242 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;

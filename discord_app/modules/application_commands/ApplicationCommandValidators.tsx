@@ -1,6 +1,6 @@
-// === Module 12348: ApplicationCommandValidators ===
+// === Module 12488: ApplicationCommandValidators ===
 
-// Module 12348 (ApplicationCommandValidators)
+// Module 12488 (ApplicationCommandValidators)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 1992 */;

@@ -1,6 +1,6 @@
-// === Module 18383: StreamingSubtitle ===
+// === Module 18396: StreamingSubtitle ===
 
-// Module 18383 (StreamingSubtitle)
+// Module 18396 (StreamingSubtitle)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;

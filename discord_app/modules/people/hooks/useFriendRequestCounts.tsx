@@ -1,6 +1,6 @@
-// === Module 18823: useFriendRequestCounts ===
+// === Module 18830: useFriendRequestCounts ===
 
-// Module 18823 (useFriendRequestCounts)
+// Module 18830 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;

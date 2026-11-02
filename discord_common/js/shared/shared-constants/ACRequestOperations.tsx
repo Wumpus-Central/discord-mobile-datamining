@@ -1,6 +1,6 @@
-// === Module 15232: ACRequestOperations ===
+// === Module 15236: ACRequestOperations ===
 
-// Module 15232 (ACRequestOperations)
+// Module 15236 (ACRequestOperations)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ACRequestOperations.tsx");

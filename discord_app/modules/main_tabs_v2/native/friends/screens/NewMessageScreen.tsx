@@ -1,6 +1,6 @@
-// === Module 18828: NewMessageScreen ===
+// === Module 18835: NewMessageScreen ===
 
-// Module 18828 (NewMessageScreen)
+// Module 18835 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
@@ -19,12 +19,12 @@ import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import GroupPlusIcon from "GroupPlusIcon" /* 10977 */;
 import _modDef10978 from "module_10978" /* 10978 */;
 import ChatViewDefault from "ChatView" /* 11214 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11627 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11629 */;
-import NoResultsDefault from "NoResults" /* 13388 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 13901 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18768 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 18829 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11628 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11630 */;
+import NoResultsDefault from "NoResults" /* 13403 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 13916 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 18775 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 18836 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -179,7 +179,7 @@ function Header(recipientLimit) {
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(18830), obj2);
+    return closure_17(recipientLimit(18837), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
@@ -231,7 +231,7 @@ function ChatPreview(channelId) {
   const obj4 = { portal: null };
   const obj3 = { guildId, channelId, chatInputRef: noop.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
   obj4.portal = channelId(1375).isAndroid();
-  items2[1] = closure_17(channelId(12221).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(12361).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -451,7 +451,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(7396).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "concat", parent_id: "style" };
+          obj2.channel = { id: navigation(7396).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
           obj.dispatch(obj2);
         };
       }
@@ -479,8 +479,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11626).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11626);
+    enabled = tmp13(11627).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11627);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {

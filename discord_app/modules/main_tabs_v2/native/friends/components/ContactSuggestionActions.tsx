@@ -1,11 +1,11 @@
-// === Module 18502: ContactSuggestionActions ===
+// === Module 18515: ContactSuggestionActions ===
 
-// Module 18502 (ContactSuggestionActions)
+// Module 18515 (ContactSuggestionActions)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18088 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18101 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

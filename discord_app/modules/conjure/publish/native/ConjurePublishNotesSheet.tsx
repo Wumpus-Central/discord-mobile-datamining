@@ -1,13 +1,13 @@
-// === Module 12660: ConjurePublishNotesSheet ===
+// === Module 12663: ConjurePublishNotesSheet ===
 
-// Module 12660 (ConjurePublishNotesSheet)
+// Module 12663 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
 import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11200 */;
-import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 12661 */;
+import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 12664 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 12266: PortalKeyboardBottomSheet ===
+// === Module 12406: PortalKeyboardBottomSheet ===
 
-// Module 12266 (PortalKeyboardBottomSheet)
+// Module 12406 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;

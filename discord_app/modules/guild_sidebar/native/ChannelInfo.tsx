@@ -1,14 +1,14 @@
-// === Module 18278: ChannelInfo ===
+// === Module 18291: ChannelInfo ===
 
-// Module 18278 (ChannelInfo)
+// Module 18291 (ChannelInfo)
 import StageMediaHooks from "StageMediaHooks" /* 6712 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12247 */;
-import Badges from "Badges" /* 14854 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18163 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 18265 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 18279 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 18281 */;
-import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 18282 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12387 */;
+import Badges from "Badges" /* 14858 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18176 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 18278 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 18292 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 18294 */;
+import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 18295 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 7711 */;
 import GuildStore from "GuildStore" /* 4885 */;
@@ -46,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj3.video = hasVideo;
     obj3.channel = channel;
-    let tmp6Result = jsx(tmp(18164).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(tmp(18177).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj4 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -115,7 +115,7 @@ export default function ChannelInfo(channel) {
           const obj4 = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
-        tmpResult2 = tmp(18280);
+        tmpResult2 = tmp(18293);
       }
     }
     if (null != isSubscriptionGated) {

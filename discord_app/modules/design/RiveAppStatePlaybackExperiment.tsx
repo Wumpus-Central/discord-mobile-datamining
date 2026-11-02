@@ -1,6 +1,6 @@
-// === Module 17969: RiveAppStatePlaybackExperiment ===
+// === Module 17982: RiveAppStatePlaybackExperiment ===
 
-// Module 17969 (RiveAppStatePlaybackExperiment)
+// Module 17982 (RiveAppStatePlaybackExperiment)
 import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 

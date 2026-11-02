@@ -1,6 +1,6 @@
-// === Module 19827: EnableCommunityModalActionCreators ===
+// === Module 19834: EnableCommunityModalActionCreators ===
 
-// Module 19827 (EnableCommunityModalActionCreators)
+// Module 19834 (EnableCommunityModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
@@ -23,7 +23,7 @@ export default {
       rulesChannelId = CREATE_NEW_CHANNEL_VALUE;
     }
     GuildSettingsActionCreatorsDefault.updateGuild({ rulesChannelId });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19828, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19835, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
     const tmpResult = ModalActionCreatorsDefault;
   },
   close() {

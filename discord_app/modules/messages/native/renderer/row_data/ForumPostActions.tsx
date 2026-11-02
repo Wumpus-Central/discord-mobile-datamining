@@ -26,7 +26,7 @@ export function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "function pnpm_presetsTs2(event,screenSize){return{transform:[{translateX:(event.translationX-screenSize.width)*0.3}]};}", displayName: "function pnpm_presetsTs3(event){return{transform:[{translateX:event.translationX}]};}" };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "circa {{count}} luni", displayName: "1 lun\u0103" };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);

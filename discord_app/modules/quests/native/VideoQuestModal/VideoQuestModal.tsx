@@ -1,19 +1,19 @@
-// === Module 17091: VideoQuestModal ===
+// === Module 17104: VideoQuestModal ===
 
-// Module 17091 (VideoQuestModal)
+// Module 17104 (VideoQuestModal)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
 import AnalyticsActions from "AnalyticsActions" /* 7862 */;
 import QuestUtils from "QuestUtils" /* 9678 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 14691 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 14705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(17059).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(17072).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

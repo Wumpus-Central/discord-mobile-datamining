@@ -1,6 +1,6 @@
-// === Module 15012: HideFriendRequestNotesUtils ===
+// === Module 15016: HideFriendRequestNotesUtils ===
 
-// Module 15012 (HideFriendRequestNotesUtils)
+// Module 15016 (HideFriendRequestNotesUtils)
 import UserSettings from "UserSettings" /* 4839 */;
 import useUserIsTeen from "useUserIsTeen" /* 8368 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;

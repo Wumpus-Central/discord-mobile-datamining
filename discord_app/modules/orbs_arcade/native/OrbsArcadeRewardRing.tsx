@@ -1,6 +1,6 @@
-// === Module 17042: OrbsArcadeRewardRing ===
+// === Module 17055: OrbsArcadeRewardRing ===
 
-// Module 17042 (OrbsArcadeRewardRing)
+// Module 17055 (OrbsArcadeRewardRing)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,23 +1,35 @@
-// === Module 19116: conjureAppPictureInPictureActions ===
+// === Module 19122: conjureAppPictureInPictureActions ===
 
-// Module 19116 (conjureAppPictureInPictureActions)
+// Module 19122 (conjureAppPictureInPictureActions)
 import _modDef3868 from "module_3868" /* 3868 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7364 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11824 */;
-import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14381 */;
-import closeFrameDefault from "closeFrame" /* 14382 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18662 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11825 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14175 */;
+import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14396 */;
+import closeFrameDefault from "closeFrame" /* 14397 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16366 */;
 import FramesStore from "FramesStore" /* 6846 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 require = fn;
 function getConjureAppPictureInPictureActions(id, appName, arg2) {
   _require = id;
-  const obj = { label: null, IconComponent: null, onPress: null };
+  let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.formatToPlainString(_modDef3868.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
-    return conjureBackgroundFrames.returnToConjureFrameSurface(closure_0);
+    if (obj.isConjurePreviewSurface(id.surface)) {
+      const result = ConjureProjectStore.findProjectByApplicationId(id.applicationId);
+      if (null != result) {
+        openConjureProjectInBuilderDefault(result);
+      }
+    } else {
+      const result1 = conjureBackgroundFrames.returnToConjureFrameSurface(id);
+      const tmp2Result = conjureBackgroundFrames;
+    }
+    obj = conjurePreviewSurface;
   };
   const items = [obj];
   if (arg2) {
@@ -39,6 +51,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx");
 
 export const CONJURE_APP_PICTURE_IN_PICTURE_LOCATION = "ConjureAppPictureInPicture";
+export function openConjureAppPictureInPictureFrame(surface) {
+  if (obj.isConjurePreviewSurface(surface.surface)) {
+    const result = ConjureProjectStore.findProjectByApplicationId(surface.applicationId);
+    if (null != result) {
+      openConjureProjectInBuilderDefault(result);
+    }
+  } else {
+    const result1 = conjureBackgroundFrames.returnToConjureFrameSurface(surface);
+    const tmpResult = conjureBackgroundFrames;
+  }
+  obj = conjurePreviewSurface;
+}
 export { getConjureAppPictureInPictureActions };
 export function showConjureAppPictureInPictureActions(frameId, title) {
   const tmp = asLaunched(FramesStore.getFrame(frameId));

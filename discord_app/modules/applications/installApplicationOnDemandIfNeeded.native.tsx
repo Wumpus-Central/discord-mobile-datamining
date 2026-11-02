@@ -1,6 +1,6 @@
-// === Module 11736: installApplicationOnDemandIfNeeded ===
+// === Module 11737: installApplicationOnDemandIfNeeded ===
 
-// Module 11736 (installApplicationOnDemandIfNeeded)
+// Module 11737 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2016 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;

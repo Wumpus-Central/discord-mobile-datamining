@@ -1,16 +1,18 @@
-// === Module 18811: useBackgroundConjureAppChannelIds ===
+// === Module 18818: useBackgroundConjureAppChannelIds ===
 
-// Module 18811 (useBackgroundConjureAppChannelIds)
+// Module 18818 (useBackgroundConjureAppChannelIds)
 import initialize from "initialize" /* 504 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6849 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18667 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16371 */;
 import size from "module_2" /* 2 */;
 
 function getChannelIds() {
   const floatableFrames = conjureAppPictureInPictureFrames.getFloatableFrames();
-  const mapped = floatableFrames.map((surface) => getChannelIdForEmbeddedSurfaceDefault(surface.surface));
-  const found = mapped.filter((item) => null != item);
-  return found.sort();
+  const found = floatableFrames.filter((surface) => !conjurePreviewSurface.isConjurePreviewSurface(surface.surface));
+  const mapped = found.map((surface) => getChannelIdForEmbeddedSurfaceDefault(surface.surface));
+  const found1 = mapped.filter((item) => null != item);
+  return found1.sort();
 }
 const result = size.fileFinishedImporting("modules/conjure/background_frames/native/useBackgroundConjureAppChannelIds.tsx");
 

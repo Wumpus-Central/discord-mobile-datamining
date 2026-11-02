@@ -1,12 +1,12 @@
-// === Module 19091: FramePool ===
+// === Module 19098: FramePool ===
 
-// Module 19091 (FramePool)
+// Module 19098 (FramePool)
 import initialize from "initialize" /* 504 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
-import makeIframeIdDefault from "makeIframeId" /* 11798 */;
-import WebViewContext from "WebViewContext" /* 11822 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12108 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
+import makeIframeIdDefault from "makeIframeId" /* 11799 */;
+import WebViewContext from "WebViewContext" /* 11823 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6846 */;
@@ -16,33 +16,45 @@ const require = globalThis.__r;
 require = fn;
 function PooledFrame(frame) {
   frame = frame.frame;
-  iframeId = undefined;
-  dependencyMap = undefined;
+  let iframeId;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => first(11798)());
+  const proxyTicket = frame.data.proxyTicket;
+  [tmp2, tmp3] = iframeId(noop.useState(() => ({ iframeId: makeIframeIdDefault(), proxyTicket })), 2);
+  dependencyMap = tmp3;
+  if (tmp2.proxyTicket !== proxyTicket) {
+    const obj2 = { iframeId: proxyTicket(11799)(), proxyTicket };
+    tmp3(obj2);
+  }
+  iframeId = tmp2.iframeId;
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
-    FramePoolManagerDefault.registerFrameEntry(id, first);
-    FramesActionCreatorsDefault.attachFrameIframe(id, first);
+    FramePoolManagerDefault.registerFrameEntry(id, iframeId);
+    FramesActionCreatorsDefault.attachFrameIframe(id, iframeId);
     return () => {
-      first(closure_2[12]).detachFrameIframe(id, iframeId);
+      proxyTicket(c2[12]).detachFrameIframe(id, iframeId);
     };
   }, items);
   const items1 = [id];
   const effect1 = noop.useEffect(() => () => {
-    first(closure_2[9]).removeFrameEntry(id);
+    proxyTicket(c2[9]).removeFrameEntry(id);
   }, items1);
   const callback = noop.useCallback(() => {
-    dependencyMap(makeIframeIdDefault());
+    _undefined((arg0) => {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      obj.iframeId = proxyTicket(_undefined[11])();
+      return obj;
+    });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(12108).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
-  let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(12252).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
+  const tmp = iframeId(noop.useState(() => ({ iframeId: makeIframeIdDefault(), proxyTicket })), 2);
   if (syncExternalStore == null) {
-    const obj2 = { layoutMode: constants.FOCUSED };
-    syncExternalStore = obj2;
+    const obj4 = { layoutMode: constants.FOCUSED };
+    syncExternalStore = obj4;
   }
-  obj.presentation = syncExternalStore;
-  return jsx(iframeId(19092), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  obj3.presentation = syncExternalStore;
+  return jsx(proxyTicket(19099), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
 const FramesConstants = fn(6847);

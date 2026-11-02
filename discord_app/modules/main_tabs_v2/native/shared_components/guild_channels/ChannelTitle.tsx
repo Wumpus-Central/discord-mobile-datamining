@@ -1,6 +1,6 @@
-// === Module 18718: guild_channels/ChannelTitle ===
+// === Module 18725: guild_channels/ChannelTitle ===
 
-// Module 18718 (guild_channels/ChannelTitle)
+// Module 18725 (guild_channels/ChannelTitle)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

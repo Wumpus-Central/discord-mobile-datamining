@@ -1,6 +1,6 @@
-// === Module 17879: updatePersistentCodesEnabled ===
+// === Module 17892: updatePersistentCodesEnabled ===
 
-// Module 17879 (updatePersistentCodesEnabled)
+// Module 17892 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9265 */;

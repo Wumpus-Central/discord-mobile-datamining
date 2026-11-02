@@ -1,6 +1,6 @@
-// === Module 13758: SpoilerIcon ===
+// === Module 13773: SpoilerIcon ===
 
-// Module 13758 (SpoilerIcon)
+// Module 13773 (SpoilerIcon)
 import inlineStyles from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;
 

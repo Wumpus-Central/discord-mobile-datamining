@@ -1,10 +1,10 @@
-// === Module 16735: ContactSyncSettings ===
+// === Module 16748: ContactSyncSettings ===
 
-// Module 16735 (ContactSyncSettings)
+// Module 16748 (ContactSyncSettings)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14232 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14236 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14240 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14247 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -210,7 +210,7 @@ let closure_16 = async function _updateFriendSync(arg0) {
     }
   }
 };
-const ContactSyncPersistedStore = fn(14235);
+const ContactSyncPersistedStore = fn(14250);
 ({ deleteStoredContacts: hasOwnProperty, setStoredContacts: metroRequire } = ContactSyncPersistedStore);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, FriendDiscoveryFlags: closure_8, AnalyticsSections: closure_9 } = Constants);
@@ -220,8 +220,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
-  contactSyncAccount = contactSyncAccount(14236).useContactSyncAccount();
-  let obj = contactSyncAccount(14236);
+  contactSyncAccount = contactSyncAccount(14251).useContactSyncAccount();
+  let obj = contactSyncAccount(14251);
   const items = [UserStore];
   const stateFromStores = contactSyncAccount(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let phone;
@@ -233,10 +233,10 @@ export default function ContactSyncSettings() {
     isStaffResult = stateFromStores.isStaff();
   }
   let obj2 = contactSyncAccount(504);
-  const tmpResult = contactSyncAccount(14236);
+  const tmpResult = contactSyncAccount(14251);
   const FriendDiscoverySettings = tmp(4839).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  const isContactSyncEnabledResult = contactSyncAccount(14236).isContactSyncEnabled(contactSyncAccount);
+  const isContactSyncEnabledResult = contactSyncAccount(14251).isContactSyncEnabled(contactSyncAccount);
   const hasFlagResult = contactSyncAccount(1396).hasFlag(setting, constants2.FIND_BY_PHONE);
   dependencyMap = hasFlagResult;
   const tmpResult3 = contactSyncAccount(1396);
@@ -247,7 +247,7 @@ export default function ContactSyncSettings() {
   let tmp10Result = null;
   if (isStaffResult) {
     const obj4 = { children: null };
-    const obj5 = { label: "STAFF ONLY - Find your friends deletion", value: true, onValueChange: tmp(14236).adminDeleteContactSync };
+    const obj5 = { label: "STAFF ONLY - Find your friends deletion", value: true, onValueChange: tmp(14251).adminDeleteContactSync };
     const items1 = [closure_10(tmp(8177).FormSwitchRow, obj5), closure_10(tmp(8177).FormDivider, {})];
     obj4.children = items1;
     tmp10Result = closure_12(closure_11, obj4);
@@ -292,7 +292,7 @@ export default function ContactSyncSettings() {
   const obj11 = { children: null };
   const intl4 = tmp(1113).intl;
   const hasFlagResult1 = contactSyncAccount(1396).hasFlag(setting, constants2.FIND_BY_EMAIL);
-  obj11.children = intl4.format(contactSyncAccount(1113).t.BoR0dO, { onClick: contactSyncAccount(14236).handleOpenLearnMoreLink });
+  obj11.children = intl4.format(contactSyncAccount(1113).t.BoR0dO, { onClick: contactSyncAccount(14251).handleOpenLearnMoreLink });
   items4[1] = closure_10(contactSyncAccount(8177).FormHint, obj11);
   const obj13 = { children: null };
   const intl5 = tmp(1113).intl;

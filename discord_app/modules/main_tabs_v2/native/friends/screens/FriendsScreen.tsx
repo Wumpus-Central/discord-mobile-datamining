@@ -1,6 +1,6 @@
-// === Module 18822: FriendsScreen ===
+// === Module 18829: FriendsScreen ===
 
-// Module 18822 (FriendsScreen)
+// Module 18829 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
@@ -8,9 +8,9 @@ import components_Button_Button from "components/Button/Button" /* 5634 */;
 import SendMessageIcon from "SendMessageIcon" /* 5729 */;
 import TableRow from "TableRow" /* 6975 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import NoResultsDefault from "NoResults" /* 13388 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17078 */;
-import _modDef18503 from "module_18503" /* 18503 */;
+import NoResultsDefault from "NoResults" /* 13403 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17091 */;
+import _modDef18516 from "module_18516" /* 18516 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18503, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef18516, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18503 };
+      const obj8 = { source: _modDef18516 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

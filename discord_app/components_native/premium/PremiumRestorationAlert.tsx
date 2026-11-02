@@ -1,7 +1,7 @@
-// === Module 17222: PremiumRestorationAlert ===
+// === Module 17235: PremiumRestorationAlert ===
 
-// Module 17222 (PremiumRestorationAlert)
-import UntouchableAlertDefault from "UntouchableAlert" /* 17223 */;
+// Module 17235 (PremiumRestorationAlert)
+import UntouchableAlertDefault from "UntouchableAlert" /* 17236 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7597 */;
 import initialize from "initialize" /* 504 */;

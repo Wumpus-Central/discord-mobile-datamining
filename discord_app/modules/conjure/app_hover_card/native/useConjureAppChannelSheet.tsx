@@ -1,6 +1,6 @@
-// === Module 14401: useConjureAppChannelSheet ===
+// === Module 14415: useConjureAppChannelSheet ===
 
-// Module 14401 (useConjureAppChannelSheet)
+// Module 14415 (useConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;

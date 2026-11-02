@@ -1,14 +1,14 @@
-// === Module 19652: GuildSettingsRoleSubscriptionsSection ===
+// === Module 19659: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 19652 (GuildSettingsRoleSubscriptionsSection)
+// Module 19659 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
 import TableRow from "TableRow" /* 6975 */;
 import TableRowGroup from "TableRowGroup" /* 7060 */;
 import TagsIcon from "TagsIcon" /* 11137 */;
-import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17361 */;
-import WalletIcon from "WalletIcon" /* 19653 */;
+import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17374 */;
+import WalletIcon from "WalletIcon" /* 19660 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 

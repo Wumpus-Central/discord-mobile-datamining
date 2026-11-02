@@ -1,20 +1,20 @@
-// === Module 17970: MainNavigator ===
+// === Module 17983: MainNavigator ===
 
-// Module 17970 (MainNavigator)
+// Module 17983 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1375 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1495 */;
 import KeyboardTypes from "KeyboardTypes" /* 1623 */;
 import ChatInputUtils from "ChatInputUtils" /* 5207 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10144 */;
-import StartupProfiler from "StartupProfiler" /* 11562 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11862 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15867 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17972 */;
-import AutoAnalytics from "AutoAnalytics" /* 18814 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18861 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 19057 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19088 */;
-import AppComponents from "AppComponents" /* 19090 */;
+import StartupProfiler from "StartupProfiler" /* 11563 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11863 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15871 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17985 */;
+import AutoAnalytics from "AutoAnalytics" /* 18821 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18868 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 19064 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19095 */;
+import AppComponents from "AppComponents" /* 19097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -83,7 +83,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17971).StackNavigationAnimationSettings;
+let closure_7 = fn(17984).StackNavigationAnimationSettings;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

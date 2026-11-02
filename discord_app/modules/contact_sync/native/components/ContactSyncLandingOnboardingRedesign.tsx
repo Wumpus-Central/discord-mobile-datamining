@@ -1,11 +1,11 @@
-// === Module 14249: ContactSyncLandingOnboardingRedesign ===
+// === Module 14264: ContactSyncLandingOnboardingRedesign ===
 
-// Module 14249 (ContactSyncLandingOnboardingRedesign)
+// Module 14264 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14242 */;
-import _modDef14250 from "module_14250" /* 14250 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 14251 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14257 */;
+import _modDef14265 from "module_14265" /* 14265 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 14266 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -90,7 +90,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14250 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14265 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1113).intl;

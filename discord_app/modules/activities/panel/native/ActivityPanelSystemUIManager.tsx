@@ -1,10 +1,10 @@
-// === Module 19145: ActivityPanelSystemUIManager ===
+// === Module 19152: ActivityPanelSystemUIManager ===
 
-// Module 19145 (ActivityPanelSystemUIManager)
+// Module 19152 (ActivityPanelSystemUIManager)
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import StatusBarDefault from "StatusBar" /* 11212 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11702 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19124 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11703 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19131 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

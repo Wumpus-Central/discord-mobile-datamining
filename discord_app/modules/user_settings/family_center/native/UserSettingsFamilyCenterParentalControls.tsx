@@ -1,6 +1,6 @@
-// === Module 16823: UserSettingsFamilyCenterParentalControls ===
+// === Module 16836: UserSettingsFamilyCenterParentalControls ===
 
-// Module 16823 (UserSettingsFamilyCenterParentalControls)
+// Module 16836 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2538 from "module_2538" /* 2538 */;
@@ -100,7 +100,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "flexDirection" });
+    stackNavigation.setOptions({ title: "raw", headerRight: "cix" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

@@ -1,6 +1,6 @@
-// === Module 11735: getPrimaryAppCommand ===
+// === Module 11736: getPrimaryAppCommand ===
 
-// Module 11735 (getPrimaryAppCommand)
+// Module 11736 (getPrimaryAppCommand)
 import Server from "Server" /* 1992 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5651 */;
 import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9766 */;

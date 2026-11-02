@@ -1,6 +1,6 @@
-// === Module 12815: selectConjureChannel ===
+// === Module 12818: selectConjureChannel ===
 
-// Module 12815 (selectConjureChannel)
+// Module 12818 (selectConjureChannel)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 

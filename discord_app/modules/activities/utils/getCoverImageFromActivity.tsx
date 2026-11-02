@@ -1,6 +1,6 @@
-// === Module 15136: getCoverImageFromActivity ===
+// === Module 15140: getCoverImageFromActivity ===
 
-// Module 15136 (getCoverImageFromActivity)
+// Module 15140 (getCoverImageFromActivity)
 import Constants from "Constants" /* 2018 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8721 */;
 import size from "module_2" /* 2 */;

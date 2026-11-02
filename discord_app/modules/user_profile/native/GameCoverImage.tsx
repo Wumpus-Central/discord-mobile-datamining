@@ -1,6 +1,6 @@
-// === Module 14953: GameCoverImage ===
+// === Module 14957: GameCoverImage ===
 
-// Module 14953 (GameCoverImage)
+// Module 14957 (GameCoverImage)
 import nativeDefault from "native" /* 575 */;
 import GameCoverArt from "GameCoverArt" /* 9375 */;
 import noop from "module_19" /* 19 */;

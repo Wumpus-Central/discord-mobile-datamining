@@ -1,6 +1,6 @@
-// === Module 18520: ICYMICustomScoresModal ===
+// === Module 18533: ICYMICustomScoresModal ===
 
-// Module 18520 (ICYMICustomScoresModal)
+// Module 18533 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(18521).default;
+        return closure_0(18534).default;
       }
     }),
     closure_3(closure_5.Screen, {
@@ -58,7 +58,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(18522).default;
+        return closure_0(18535).default;
       }
     })
   ];

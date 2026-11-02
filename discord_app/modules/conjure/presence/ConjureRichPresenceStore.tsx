@@ -1,6 +1,6 @@
-// === Module 11527: ConjureRichPresenceStore ===
+// === Module 11528: ConjureRichPresenceStore ===
 
-// Module 11527 (ConjureRichPresenceStore)
+// Module 11528 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
@@ -12,7 +12,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import IdleStore from "IdleStore" /* 6705 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 11528 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11529 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 require = fn;
@@ -217,7 +217,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_12);
                         details = closure_1_12.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F99479 */ function() { ... });
+                        let found = prop.filter(/* F99515 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -228,7 +228,7 @@ function updateActivity(withGracePeriod) {
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(/* F99480 */ function() { ... }, closure_1_10);
+                        timeout = setTimeout(/* F99516 */ function() { ... }, closure_1_10);
                         closure_1_20.emitChange();
                       }
                     }, closure_1_10);

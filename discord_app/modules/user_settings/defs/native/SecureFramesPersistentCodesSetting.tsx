@@ -1,13 +1,13 @@
-// === Module 17878: SecureFramesPersistentCodesSetting ===
+// === Module 17891: SecureFramesPersistentCodesSetting ===
 
-// Module 17878 (SecureFramesPersistentCodesSetting)
+// Module 17891 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 17879 */;
+import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 17892 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5782 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

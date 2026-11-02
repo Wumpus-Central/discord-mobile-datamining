@@ -1,8 +1,8 @@
-// === Module 11724: IgnoreThermalStateAlert ===
+// === Module 11725: IgnoreThermalStateAlert ===
 
-// Module 11724 (IgnoreThermalStateAlert)
+// Module 11725 (IgnoreThermalStateAlert)
 import common_AlertDefault from "common/Alert" /* 6030 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11725 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

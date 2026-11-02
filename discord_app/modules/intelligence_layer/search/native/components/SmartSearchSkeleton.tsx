@@ -1,14 +1,14 @@
-// === Module 18747: SmartSearchSkeleton ===
+// === Module 18754: SmartSearchSkeleton ===
 
-// Module 18747 (SmartSearchSkeleton)
+// Module 18754 (SmartSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _modDef4123 from "module_4123" /* 4123 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18735 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18742 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(12101);
+const AILoaderConstants = fn(12245);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroRequire } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -60,7 +60,7 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   }, items);
   let obj = { style: tmp.block, children: null };
   let obj2 = { style: tmp.header, children: null };
-  const items1 = [closure_7(reducedMotion(12100).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(12782).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
+  const items1 = [closure_7(reducedMotion(12244).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(12785).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
   const obj4 = { style: tmp.skeletons, children: null };

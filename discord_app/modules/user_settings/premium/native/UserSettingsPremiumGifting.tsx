@@ -1,6 +1,6 @@
-// === Module 15441: UserSettingsPremiumGifting ===
+// === Module 15445: UserSettingsPremiumGifting ===
 
-// Module 15441 (UserSettingsPremiumGifting)
+// Module 15445 (UserSettingsPremiumGifting)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 6444 */;
@@ -12,8 +12,8 @@ import BillingActionCreatorsDefault from "BillingActionCreators" /* 7604 */;
 import BadgeId from "BadgeId" /* 8755 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 15443 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 15449 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 15447 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 15453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;

@@ -1,10 +1,10 @@
-// === Module 18759: useSearchHostSurface ===
+// === Module 18766: useSearchHostSurface ===
 
-// Module 18759 (useSearchHostSurface)
+// Module 18766 (useSearchHostSurface)
 import nativeDefault from "native" /* 575 */;
 import Link from "Link" /* 1498 */;
 import useToken from "useToken" /* 5596 */;
-import SearchNavigatorConstants from "SearchNavigatorConstants" /* 18701 */;
+import SearchNavigatorConstants from "SearchNavigatorConstants" /* 18708 */;
 import size from "module_2" /* 2 */;
 
 const SearchNavigatorScreens = SearchNavigatorConstants.SearchNavigatorScreens;

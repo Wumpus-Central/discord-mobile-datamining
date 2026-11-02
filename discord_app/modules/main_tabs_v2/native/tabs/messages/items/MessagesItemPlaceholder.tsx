@@ -1,6 +1,6 @@
-// === Module 18085: MessagesItemPlaceholder ===
+// === Module 18098: MessagesItemPlaceholder ===
 
-// Module 18085 (MessagesItemPlaceholder)
+// Module 18098 (MessagesItemPlaceholder)
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9128 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,15 +1,15 @@
-// === Module 19301: useControlsButtons ===
+// === Module 19308: useControlsButtons ===
 
-// Module 19301 (useControlsButtons)
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13813 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 19302 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19305 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19311 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19313 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19315 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19317 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19319 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19324 */;
+// Module 19308 (useControlsButtons)
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13828 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 19309 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19312 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19318 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19320 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19322 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19324 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19326 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19331 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 
@@ -68,10 +68,10 @@ export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11222));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(19325)(context.channelId);
+  const tmp2 = safeArea(19332)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(19208).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(19208);
+  treatment = safeArea(19215).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(19215);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
   let obj2 = windowDimensions(504);
@@ -79,7 +79,7 @@ export default function useControlsButtons() {
     return VoicePanelControlsUtils.getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
   };
   let obj3 = windowDimensions(5095);
-  fn.__closure = { getControlsDefaultWidth: windowDimensions(13813).getControlsDefaultWidth, windowDimensions, safeArea };
+  fn.__closure = { getControlsDefaultWidth: windowDimensions(13828).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__workletHash = 16456936876254;
   fn.__initData = __initData;
   const derivedValue = obj3.useDerivedValue(fn);
@@ -99,7 +99,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(19208).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(19215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -110,7 +110,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(19208).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(19215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

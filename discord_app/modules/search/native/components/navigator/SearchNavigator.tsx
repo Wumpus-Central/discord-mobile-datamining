@@ -1,18 +1,18 @@
-// === Module 18946: SearchNavigator ===
+// === Module 18953: SearchNavigator ===
 
-// Module 18946 (SearchNavigator)
+// Module 18953 (SearchNavigator)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
 import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 9868 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13892 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18941 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 let closure_5 = fn(9826).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(18701).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18708).SearchNavigatorScreens;
 const SearchTypes = fn(1072).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -54,7 +54,7 @@ export default noop.memo(function SearchNavigator(route) {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(18947).default;
+        return searchContext(18954).default;
       }
     }),
     closure_8(closure_11.Screen, {
@@ -73,7 +73,7 @@ export default noop.memo(function SearchNavigator(route) {
         return obj;
       },
       getComponent() {
-        return searchContext(18942).default;
+        return searchContext(18949).default;
       }
     }),
 
@@ -84,7 +84,7 @@ export default noop.memo(function SearchNavigator(route) {
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(18947).default;
+      return searchContext(18954).default;
     }
   };
   const obj6 = {
@@ -103,7 +103,7 @@ export default noop.memo(function SearchNavigator(route) {
       return obj;
     },
     getComponent() {
-      return searchContext(18942).default;
+      return searchContext(18949).default;
     }
   };
   const tmp3 = closure_10();

@@ -1,6 +1,6 @@
-// === Module 18658: AppChannel ===
+// === Module 18671: AppChannel ===
 
-// Module 18658 (AppChannel)
+// Module 18671 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
@@ -13,9 +13,9 @@ import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9829 */;
 import useChannelContentGate from "useChannelContentGate" /* 11215 */;
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11340 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12096 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18671 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18673 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12240 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18678 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18680 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 17569: HashmarkIcon ===
+// === Module 17582: HashmarkIcon ===
 
-// Module 17569 (HashmarkIcon)
+// Module 17582 (HashmarkIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod17570 from "module_17570" /* 17570 */;
+import _mod17583 from "module_17583" /* 17583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HashmarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17570, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17583, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

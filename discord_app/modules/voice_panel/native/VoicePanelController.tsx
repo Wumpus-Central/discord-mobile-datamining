@@ -1,6 +1,6 @@
-// === Module 19156: VoicePanelController ===
+// === Module 19163: VoicePanelController ===
 
-// Module 19156 (VoicePanelController)
+// Module 19163 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1089 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
@@ -20,21 +20,21 @@ import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9242 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
 import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11225 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11725 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14898 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19121 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 19158 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19159 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 19186 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19197 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11726 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14902 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19128 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 19165 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19166 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 19193 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import AppFreezeStore from "AppFreezeStore" /* 8864 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11847 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11704 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11848 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11705 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;

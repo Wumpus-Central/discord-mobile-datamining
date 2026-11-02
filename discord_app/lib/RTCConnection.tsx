@@ -48,7 +48,7 @@ import ThermalUtilsDefault from "ThermalUtils" /* 5954 */;
 import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 5956 */;
 import DaveMessageValidator from "DaveMessageValidator" /* 5957 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15655 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5771 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5781 */;
@@ -2464,16 +2464,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger2 = self.logger;
-        logger2.info("Suppressing video decoder fallback: stage channel");
+        const logger = self.logger;
+        logger.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger = self.logger;
+      const logger2 = self.logger;
       const _HermesInternal = HermesInternal;
-      logger.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
+      logger2.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
       const obj = { codecs };
       socket.updateSession(obj);
     }

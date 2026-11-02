@@ -1,6 +1,6 @@
-// === Module 15579: ContentInventoryExperiments ===
+// === Module 15583: ContentInventoryExperiments ===
 
-// Module 15579 (ContentInventoryExperiments)
+// Module 15583 (ContentInventoryExperiments)
 import ExperimentConstants from "ExperimentConstants" /* 5239 */;
 import ApexExperiment from "ApexExperiment" /* 1447 */;
 import createExperiment from "module_5236" /* 5236 */;

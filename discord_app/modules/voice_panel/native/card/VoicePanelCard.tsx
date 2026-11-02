@@ -1,6 +1,6 @@
-// === Module 19240: VoicePanelCard ===
+// === Module 19247: VoicePanelCard ===
 
-// Module 19240 (VoicePanelCard)
+// Module 19247 (VoicePanelCard)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
@@ -11,11 +11,11 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
 import StreamActionCreators from "StreamActionCreators" /* 7901 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19107 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19242 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 19244 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 19245 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19114 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19249 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 19251 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 19252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6058 */;
@@ -973,7 +973,7 @@ const Pressable = get_ActivityIndicator.Pressable;
 const VoicePanelConstants = fn(11223);
 ({ VoicePanelCTACard: closure_11, VoicePanelModes: closure_12, MODE_CHANGE_PHYSICS: map1, SPEAKING_PHYSICS: closure_14, VoicePanelCardItemType: closure_15 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19108).VoicePanelPIPModes;
+let VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
 let EDGE_GUTTER = fn(11226).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const ParticipantTypes = fn(5681).ParticipantTypes;
@@ -1339,7 +1339,7 @@ const __initData10 = { code: "function VoicePanelCardTsx10(){const{focused}=this
 const __initData11 = { code: "function VoicePanelCardTsx11(focusedId,previous){const{runOnJS,handleFocusedParticipantChange}=this.__closure;if(focusedId===previous)return;runOnJS(handleFocusedParticipantChange)(focusedId);}" };
 const __initData12 = { code: "function VoicePanelCardTsx12(){const{mode,focused,sharedTransitionState}=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};}" };
 const __initData13 = { code: "function VoicePanelCardTsx13(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}" };
-let closure_50 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
+let closure_50 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, memo, get, get2) {
   if (flag === undefined) {
     flag = false;

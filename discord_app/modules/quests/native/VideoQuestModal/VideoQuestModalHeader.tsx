@@ -1,6 +1,6 @@
-// === Module 17117: VideoQuestModalHeader ===
+// === Module 17130: VideoQuestModalHeader ===
 
-// Module 17117 (VideoQuestModalHeader)
+// Module 17130 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 575 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
 import noop from "module_19" /* 19 */;
@@ -28,8 +28,8 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(17092).useVideoQuestModalContext().quest;
-  let obj = quest(17092);
+  quest = quest(17105).useVideoQuestModalContext().quest;
+  let obj = quest(17105);
   const questTaskDetails = quest(9681).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -47,8 +47,8 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(14670).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(14670);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(14684).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(14684);
   }
   const obj3 = { style: null, children: null };
   const items = [tmp2.videoContentHeaderWrapper, style];
@@ -77,7 +77,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj7.children = gamePublisher;
   items1[1] = closure_5(quest(5624).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(17113), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(17126), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 };

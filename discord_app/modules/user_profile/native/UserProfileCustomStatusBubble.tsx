@@ -1,6 +1,6 @@
-// === Module 11395: UserProfileCustomStatusBubble ===
+// === Module 11396: UserProfileCustomStatusBubble ===
 
-// Module 11395 (UserProfileCustomStatusBubble)
+// Module 11396 (UserProfileCustomStatusBubble)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils2 from "PlatformUtils" /* 1375 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
@@ -11,7 +11,7 @@ import FastImageDefault from "FastImage" /* 5717 */;
 import EmojiDefault from "Emoji" /* 7300 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
 import inlineStyles from "inlineStyles" /* 8031 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 11396 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 11397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

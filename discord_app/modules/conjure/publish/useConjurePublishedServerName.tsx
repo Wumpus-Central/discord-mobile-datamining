@@ -1,6 +1,6 @@
-// === Module 12657: useConjurePublishedServerName ===
+// === Module 12660: useConjurePublishedServerName ===
 
-// Module 12657 (useConjurePublishedServerName)
+// Module 12660 (useConjurePublishedServerName)
 import GuildStore from "GuildStore" /* 4885 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 

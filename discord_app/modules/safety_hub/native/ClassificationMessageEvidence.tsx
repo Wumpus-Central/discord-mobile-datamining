@@ -1,6 +1,6 @@
-// === Module 13309: ClassificationMessageEvidence ===
+// === Module 13324: ClassificationMessageEvidence ===
 
-// Module 13309 (ClassificationMessageEvidence)
+// Module 13324 (ClassificationMessageEvidence)
 import RowGeneratorDefault from "RowGenerator" /* 8377 */;
 import openMediaModal from "openMediaModal" /* 8833 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -39,10 +39,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj3.useStateFromStores(items1, () => ref(5021).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(13310));
+    let assetSource = resolveAssetSource(tmp11(13325));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(13311));
+    assetSource = resolveAssetSource(tmp11(13326));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -219,7 +219,7 @@ export default function ClassificationEvidence(arg0) {
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(13312), obj6), ];
+    const items9 = [closure_18(tmp13(13327), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
     const tmp13Result = tmp13(9885);
     const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };

@@ -1,19 +1,19 @@
-// === Module 18508: MailboxSpotIllustration ===
+// === Module 18521: MailboxSpotIllustration ===
 
-// Module 18508 (MailboxSpotIllustration)
+// Module 18521 (MailboxSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef18509 from "module_18509" /* 18509 */;
-import _modDef18510 from "module_18510" /* 18510 */;
-import _modDef18511 from "module_18511" /* 18511 */;
+import _modDef18522 from "module_18522" /* 18522 */;
+import _modDef18523 from "module_18523" /* 18523 */;
+import _modDef18524 from "module_18524" /* 18524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18509 }, 3: null };
-let obj2 = { uri: _modDef18509 };
-obj[2] = { uri: _modDef18510 };
-const obj3 = { uri: _modDef18510 };
-obj[3] = { uri: _modDef18511 };
+let obj = { 1: null, 2: { uri: _modDef18522 }, 3: null };
+let obj2 = { uri: _modDef18522 };
+obj[2] = { uri: _modDef18523 };
+const obj3 = { uri: _modDef18523 };
+obj[3] = { uri: _modDef18524 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx");
 

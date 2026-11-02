@@ -1,8 +1,8 @@
-// === Module 15743: GuildBadgeWaterDrop ===
+// === Module 15747: GuildBadgeWaterDrop ===
 
-// Module 15743 (GuildBadgeWaterDrop)
+// Module 15747 (GuildBadgeWaterDrop)
 import inlineStyles from "inlineStyles" /* 8031 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15741 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

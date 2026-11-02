@@ -1,6 +1,6 @@
-// === Module 19821: GuildSettingsModalCommunity ===
+// === Module 19828: GuildSettingsModalCommunity ===
 
-// Module 19821 (GuildSettingsModalCommunity)
+// Module 19828 (GuildSettingsModalCommunity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
@@ -17,7 +17,7 @@ import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
 
 require = fn;
 let closure_6 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(18542).calculateLocaleOptions;
+const calculateLocaleOptions = fn(18555).calculateLocaleOptions;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);

@@ -1,10 +1,10 @@
-// === Module 18603: UnavailableNotice ===
+// === Module 18616: UnavailableNotice ===
 
-// Module 18603 (UnavailableNotice)
+// Module 18616 (UnavailableNotice)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import _modDef18293 from "module_18293" /* 18293 */;
+import _modDef18306 from "module_18306" /* 18306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.unavailableInfo, children: null };
-  const obj3 = { source: _modDef18293 };
+  const obj3 = { source: _modDef18306 };
   const items1 = [React4(FastImageDefault, obj3), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {

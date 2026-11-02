@@ -1,6 +1,6 @@
-// === Module 14824: AddFriendNicknameModal ===
+// === Module 14828: AddFriendNicknameModal ===
 
-// Module 14824 (AddFriendNicknameModal)
+// Module 14828 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

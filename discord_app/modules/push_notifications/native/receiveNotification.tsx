@@ -1,6 +1,6 @@
-// === Module 20119: receiveNotification ===
+// === Module 20126: receiveNotification ===
 
-// Module 20119 (receiveNotification)
+// Module 20126 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -1091,7 +1091,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               let tmp19Result7 = tmp19(5745);
               let tmp19Result3Result = tmp19Result7(data.deeplink);
-              let tmp19Result8 = tmp19(15670);
+              let tmp19Result8 = tmp19(15674);
               let obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1320,7 +1320,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1549,7 +1549,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1778,7 +1778,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2007,7 +2007,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2236,7 +2236,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2465,7 +2465,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2694,7 +2694,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2923,7 +2923,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -3152,7 +3152,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5745);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15670);
+              tmp19Result8 = tmp19(15674);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -3171,7 +3171,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
 const StreamTypes = fn(6715).StreamTypes;
 let closure_16 = fn(4869).GuildScheduledEventEntityTypes;
-const constants = fn(13963).MultiAccountSwitchLocation;
+const constants = fn(13978).MultiAccountSwitchLocation;
 const logger = new LoggerDefault("receiveNotification");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
@@ -3192,14 +3192,14 @@ export default function receiveNotification(getData, arg1) {
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
           tmp6(7655);
           tmp6(6568);
-          tmp6(15522);
+          tmp6(15526);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp6(13966).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
+          receiving_user_id = tmp6(13981).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data, closure_1_0));
           });
-          const tmp6Result4 = tmp6(13966);
+          const tmp6Result4 = tmp6(13981);
         }
       }
     }

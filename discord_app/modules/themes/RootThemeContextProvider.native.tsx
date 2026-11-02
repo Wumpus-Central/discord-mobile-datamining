@@ -1,6 +1,6 @@
-// === Module 16416: RootThemeContextProvider ===
+// === Module 16428: RootThemeContextProvider ===
 
-// Module 16416 (RootThemeContextProvider)
+// Module 16428 (RootThemeContextProvider)
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5194 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -22,7 +22,7 @@ export function RootThemeContextProvider(children) {
   manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7149).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj2 = manaTypeConsolidationExperiment(7149);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(16417).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(16429).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
@@ -33,7 +33,7 @@ export function RootThemeContextProvider(children) {
       const obj4 = { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null };
       const obj5 = { enabled: plainTextExperiment, children: children.children };
       obj4.children = jsx(tmp(5628).PlainTextExperimentProvider, { enabled: plainTextExperiment, children: children.children });
-      return jsx(tmp(12056).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
+      return jsx(tmp(12057).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
     } else {
       if (contrast > 1) {
         let REDUCED_CONTRAST_ENABLED = tmp(5080).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
@@ -50,5 +50,5 @@ export function RootThemeContextProvider(children) {
     setThemeFlagResult1 = tmp(5080).setThemeFlag(0, tmp(5080).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult6 = tmp(5080);
   }
-  const obj3 = manaTypeConsolidationExperiment(16417);
+  const obj3 = manaTypeConsolidationExperiment(16429);
 }

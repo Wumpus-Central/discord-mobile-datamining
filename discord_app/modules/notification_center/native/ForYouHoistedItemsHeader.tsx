@@ -1,6 +1,6 @@
-// === Module 18496: ForYouHoistedItemsHeader ===
+// === Module 18509: ForYouHoistedItemsHeader ===
 
-// Module 18496 (ForYouHoistedItemsHeader)
+// Module 18509 (ForYouHoistedItemsHeader)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 12394: useMediaKeyboardConfig ===
+// === Module 12534: useMediaKeyboardConfig ===
 
-// Module 12394 (useMediaKeyboardConfig)
+// Module 12534 (useMediaKeyboardConfig)
 import Server from "Server" /* 1992 */;
-import useUploadDisabledDefault from "useUploadDisabled" /* 12395 */;
+import useUploadDisabledDefault from "useUploadDisabled" /* 12535 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

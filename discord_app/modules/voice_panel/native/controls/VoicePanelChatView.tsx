@@ -1,6 +1,6 @@
-// === Module 13812: VoicePanelChatView ===
+// === Module 13827: VoicePanelChatView ===
 
-// Module 13812 (VoicePanelChatView)
+// Module 13827 (VoicePanelChatView)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -10,7 +10,7 @@ import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
 import _modDef10769 from "module_10769" /* 10769 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13810 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13825 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

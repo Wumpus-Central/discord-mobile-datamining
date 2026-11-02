@@ -1,6 +1,6 @@
-// === Module 16478: CustomizeBadgesSheet ===
+// === Module 16491: CustomizeBadgesSheet ===
 
-// Module 16478 (CustomizeBadgesSheet)
+// Module 16491 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -22,11 +22,11 @@ import ContextMenu from "ContextMenu" /* 9874 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 9876 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11450 */;
-import BadgeUtils from "BadgeUtils" /* 11459 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14981 */;
-import BadgeGrid from "BadgeGrid" /* 16479 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11451 */;
+import BadgeUtils from "BadgeUtils" /* 11460 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14985 */;
+import BadgeGrid from "BadgeGrid" /* 16492 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -156,7 +156,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj13 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(16479).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(16479).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(16492).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(16492).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_23 = noop.memo(function FixedBadgeTile(badge) {

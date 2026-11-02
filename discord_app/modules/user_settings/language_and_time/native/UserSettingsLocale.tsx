@@ -1,11 +1,11 @@
-// === Module 17403: UserSettingsLocale ===
+// === Module 17416: UserSettingsLocale ===
 
-// Module 17403 (UserSettingsLocale)
+// Module 17416 (UserSettingsLocale)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import TableRadioRow from "TableRadioRow" /* 7061 */;
-import flags from "flags" /* 17404 */;
+import flags from "flags" /* 17417 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2062 */;

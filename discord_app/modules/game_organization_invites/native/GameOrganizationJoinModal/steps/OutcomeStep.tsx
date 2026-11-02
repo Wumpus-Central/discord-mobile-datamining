@@ -1,15 +1,15 @@
-// === Module 13197: OutcomeStep ===
+// === Module 13212: OutcomeStep ===
 
-// Module 13197 (OutcomeStep)
+// Module 13212 (OutcomeStep)
 import transitionToGuild from "transitionToGuild" /* 7522 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11363);
+const GameOrganizationInviteConstants = fn(11364);
 ({ GameOrganizationInviteAcceptFailureReason: metroRequire, GameOrganizationInviteAcceptStatus: closure_7, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(13186).closeGameOrganizationJoinModal;
+const onPress = fn(13201).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5014);
@@ -23,7 +23,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13188)(code.code);
+  const tmp4 = stateFromStores(13203)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -82,7 +82,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13189)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13204)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -203,9 +203,9 @@ export function OutcomeStep(code) {
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
     obj28.children = closure_10(tmp6(5634).Button, obj56);
-    items4[1] = closure_10(tmp6(13193).ModalFooter, obj28);
+    items4[1] = closure_10(tmp6(13208).ModalFooter, obj28);
     obj26.children = items4;
     return closure_11(tmp6(7972).ModalScreen, obj26);
   }
-  const tmp2Result = stateFromStores(13189);
+  const tmp2Result = stateFromStores(13204);
 }

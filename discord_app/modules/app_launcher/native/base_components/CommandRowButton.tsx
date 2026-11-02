@@ -1,6 +1,6 @@
-// === Module 12294: CommandRowButton ===
+// === Module 12434: CommandRowButton ===
 
-// Module 12294 (CommandRowButton)
+// Module 12434 (CommandRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;

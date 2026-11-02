@@ -1,14 +1,14 @@
-// === Module 17445: DataSavingModeSetting ===
+// === Module 17458: DataSavingModeSetting ===
 
-// Module 17445 (DataSavingModeSetting)
+// Module 17458 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4839 */;
-import UserSettingsText from "UserSettingsText" /* 17443 */;
+import UserSettingsText from "UserSettingsText" /* 17456 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

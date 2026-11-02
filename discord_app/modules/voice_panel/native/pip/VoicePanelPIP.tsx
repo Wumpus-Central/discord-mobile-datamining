@@ -1,6 +1,6 @@
-// === Module 19280: VoicePanelPIP ===
+// === Module 19287: VoicePanelPIP ===
 
-// Module 19280 (VoicePanelPIP)
+// Module 19287 (VoicePanelPIP)
 import util from "util" /* 1113 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4935 */;
 import native from "native" /* 5080 */;
@@ -8,13 +8,13 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import spring from "spring" /* 5637 */;
 import ExternalPipDefault from "ExternalPip" /* 5874 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11725 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19107 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19191 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19197 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19200 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11726 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19114 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19198 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 19204 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19207 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import FramesStore from "FramesStore" /* 6846 */;
@@ -645,7 +645,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const VoicePanelConstants = fn(11223);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19108).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
 const ActivityPanelModes = fn(5657).ActivityPanelModes;
 const isLaunched = fn(6847).isLaunched;
 const jsxProd = fn(21);
@@ -720,8 +720,8 @@ let closure_37 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   const pipHandoff = noop.useContext(transitionCleanUp(11222)).pipHandoff;
-  const mode = transitionState(19197).usePIPState().mode;
-  const obj = transitionState(19197);
+  const mode = transitionState(19204).usePIPState().mode;
+  const obj = transitionState(19204);
   const pIPCardsSettled = transitionState(11231).usePIPCardsSettled(pipHandoff);
   const obj2 = transitionState(11231);
   const pIPPanelLayoutCommitted = transitionState(11231).usePIPPanelLayoutCommitted(pipHandoff);

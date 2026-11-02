@@ -1,6 +1,6 @@
-// === Module 11589: GuildRoleConnectionsConnectAccountsActionSheet ===
+// === Module 11590: GuildRoleConnectionsConnectAccountsActionSheet ===
 
-// Module 11589 (GuildRoleConnectionsConnectAccountsActionSheet)
+// Module 11590 (GuildRoleConnectionsConnectAccountsActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -27,11 +27,11 @@ import getConnectionsRolesDefault from "getConnectionsRoles" /* 7350 */;
 import openUserSettings from "openUserSettings" /* 7563 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
 import BotTagDefault from "BotTag" /* 9202 */;
-import _modDef11591 from "module_11591" /* 11591 */;
 import _modDef11592 from "module_11592" /* 11592 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11593 */;
-import _modDef11596 from "module_11596" /* 11596 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11602 */;
+import _modDef11593 from "module_11593" /* 11593 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11594 */;
+import _modDef11597 from "module_11597" /* 11597 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11603 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -453,7 +453,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11591, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11592, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1187).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -463,7 +463,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(5624).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11592, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11593, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1187).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -586,7 +586,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
           },
         children: null
       };
-      const obj17 = { source: _modDef11596, size: tmp15(1187).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      const obj17 = { source: _modDef11597, size: tmp15(1187).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
       obj16.children = tmp24(tmp15(1187).Icon, obj17);
       tmp24Result8 = tmp24(c7, obj16);
     }
@@ -1072,7 +1072,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 const obj2 = { default: closure_1_40 };
                 const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11597).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11598).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -1080,7 +1080,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11597);
+                const obj3 = platformType(11598);
               },
               overrideUrl: null
             };

@@ -1,13 +1,13 @@
-// === Module 19016: AppIconsCoachmark ===
+// === Module 19023: AppIconsCoachmark ===
 
-// Module 19016 (AppIconsCoachmark)
+// Module 19023 (AppIconsCoachmark)
 import nativeDefault from "native" /* 575 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import _modDef10048 from "module_10048" /* 10048 */;
-import AppIconUtils from "AppIconUtils" /* 15340 */;
-import _modDef19017 from "module_19017" /* 19017 */;
+import AppIconUtils from "AppIconUtils" /* 15344 */;
+import _modDef19024 from "module_19024" /* 19024 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 
@@ -47,7 +47,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef19017;
+  obj5.source = _modDef19024;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.titleContainer, children: null };

@@ -1,10 +1,10 @@
-// === Module 17831: CollectiblesShopFeaturedPage ===
+// === Module 17844: CollectiblesShopFeaturedPage ===
 
-// Module 17831 (CollectiblesShopFeaturedPage)
+// Module 17844 (CollectiblesShopFeaturedPage)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import generated_NoResults from "generated/NoResults" /* 8805 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 17832 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 17845 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

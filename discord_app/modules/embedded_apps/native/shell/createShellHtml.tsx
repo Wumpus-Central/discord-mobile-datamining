@@ -1,8 +1,8 @@
-// === Module 11832: createShellHtml ===
+// === Module 11833: createShellHtml ===
 
-// Module 11832 (createShellHtml)
-import bridgeProtocol from "bridgeProtocol" /* 11802 */;
-import _modDef11833 from "module_11833" /* 11833 */;
+// Module 11833 (createShellHtml)
+import bridgeProtocol from "bridgeProtocol" /* 11803 */;
+import _modDef11834 from "module_11834" /* 11834 */;
 import EmbeddedAppConstants from "EmbeddedAppConstants" /* 10921 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ export function createShellHtml(shimVersion) {
     combined1 = "<script type=\"text/javascript\">\n          document.addEventListener('securitypolicyviolation', e => {\n            if (e.effectiveDirective === 'frame-src') {\n              window.ReactNativeWebView.postMessage(" + JSON.stringify(React3) + ");\n            }\n          });\n      </script>";
   }
   if (null != shellBridgeSecret) {
-    const tmp9 = _modDef11833;
+    const tmp9 = _modDef11834;
     const _JSON2 = JSON;
     const _JSON3 = JSON;
     const json = JSON.stringify(shellBridgeSecret);

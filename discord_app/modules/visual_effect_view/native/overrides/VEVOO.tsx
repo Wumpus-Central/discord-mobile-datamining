@@ -1,6 +1,6 @@
-// === Module 17964: VEVOO ===
+// === Module 17977: VEVOO ===
 
-// Module 17964 (VEVOO)
+// Module 17977 (VEVOO)
 import nativeDefault from "native" /* 575 */;
 import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;

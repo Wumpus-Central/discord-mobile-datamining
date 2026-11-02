@@ -1,7 +1,7 @@
-// === Module 18177: useChannelListSpecs ===
+// === Module 18190: useChannelListSpecs ===
 
-// Module 18177 (useChannelListSpecs)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
+// Module 18190 (useChannelListSpecs)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,11 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(18178).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(18191).useRedesignGuildHeaderHeight(banner);
   height = height(1491)({ ignoreKeyboard: true }).height;
-  const tmp2 = height(18064)();
+  const tmp2 = height(18077)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(18178);
+  const obj = redesignGuildHeaderHeight(18191);
   const fontScale = redesignGuildHeaderHeight(5642).useFontScale();
   closure_4 = tmp4;
   const top = height(1625)().top;

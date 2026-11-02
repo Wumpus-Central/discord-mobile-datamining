@@ -1,11 +1,11 @@
-// === Module 12402: PollsActionCreators ===
+// === Module 12542: PollsActionCreators ===
 
-// Module 12402 (PollsActionCreators)
+// Module 12542 (PollsActionCreators)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
 import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6906 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 12403 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 12543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 4947 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
@@ -707,7 +707,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(12408).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(12548).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -832,7 +832,7 @@ let closure_29 = async function _endPollEarly(arg0) {
   return "flexDirection";
 };
 const DraftType = fn(7701).DraftType;
-const PollsInteractionStore = fn(11367);
+const PollsInteractionStore = fn(11368);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

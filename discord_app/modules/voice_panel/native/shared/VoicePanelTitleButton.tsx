@@ -1,6 +1,6 @@
-// === Module 19214: VoicePanelTitleButton ===
+// === Module 19221: VoicePanelTitleButton ===
 
-// Module 19214 (VoicePanelTitleButton)
+// Module 19221 (VoicePanelTitleButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import BaseTextButton from "BaseTextButton" /* 5635 */;
@@ -11,11 +11,11 @@ import _modDef8608 from "module_8608" /* 8608 */;
 import _modDef8612 from "module_8612" /* 8612 */;
 import native from "native" /* 8992 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14735 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19139 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19212 */;
-import _modDef19215 from "module_19215" /* 19215 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19216 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14739 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19146 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19219 */;
+import _modDef19222 from "module_19222" /* 19222 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19223 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
 import StageInstanceStore from "StageInstanceStore" /* 4868 */;
@@ -66,7 +66,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19215;
+  obj2.icon = _modDef19222;
   obj2.onPress = onPress;
   return React7(native.HeaderButton, obj2);
 }
@@ -161,7 +161,7 @@ export default noop.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(19211)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19218)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

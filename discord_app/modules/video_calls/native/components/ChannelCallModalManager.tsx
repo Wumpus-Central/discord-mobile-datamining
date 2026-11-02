@@ -1,6 +1,6 @@
-// === Module 11845: ChannelCallModalManager ===
+// === Module 11846: ChannelCallModalManager ===
 
-// Module 11845 (ChannelCallModalManager)
+// Module 11846 (ChannelCallModalManager)
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
 import UserStore from "UserStore" /* 1383 */;
 import VoiceStateStore from "VoiceStateStore" /* 5679 */;

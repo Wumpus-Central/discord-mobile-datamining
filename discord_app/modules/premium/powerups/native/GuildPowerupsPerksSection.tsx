@@ -1,14 +1,14 @@
-// === Module 14128: GuildPowerupsPerksSection ===
+// === Module 14143: GuildPowerupsPerksSection ===
 
-// Module 14128 (GuildPowerupsPerksSection)
+// Module 14143 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2570 from "module_2570" /* 2570 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14111 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14129 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14131 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14133 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14126 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14144 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14146 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14148 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;

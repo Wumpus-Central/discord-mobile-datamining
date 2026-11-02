@@ -1,7 +1,7 @@
-// === Module 14093: useCanGuildPowerupBeToggled ===
+// === Module 14108: useCanGuildPowerupBeToggled ===
 
-// Module 14093 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14061 */;
+// Module 14108 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14076 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
 
@@ -26,7 +26,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   items1[4] = tmp2.type;
   return stateFromStores.useMemo(() => {
     if (null == stateFromStores) {
-      return { disabled: true, reason: "Array" };
+      return { disabled: true, reason: "a" };
     } else {
       if (closure_4.type !== constants.LEVEL_ACTIVATED) {
         if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
@@ -70,7 +70,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           return obj;
         }
       }
-      return { disabled: true, reason: "Array" };
+      return { disabled: true, reason: "a" };
     }
   }, items1);
 };

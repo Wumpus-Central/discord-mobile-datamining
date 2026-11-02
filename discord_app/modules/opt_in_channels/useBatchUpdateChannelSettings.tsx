@@ -1,6 +1,6 @@
-// === Module 11584: useBatchUpdateChannelSettings ===
+// === Module 11585: useBatchUpdateChannelSettings ===
 
-// Module 11584 (useBatchUpdateChannelSettings)
+// Module 11585 (useBatchUpdateChannelSettings)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7282 */;
 import noop from "module_19" /* 19 */;
@@ -43,8 +43,8 @@ export default function useBatchUpdateChannelSettings(guildId) {
         isCollapsedResult = null != channel;
       }
       if (isCollapsedResult) {
-        guildId(11585).categoryExpand(channel);
-        const obj = guildId(11585);
+        guildId(11586).categoryExpand(channel);
+        const obj = guildId(11586);
       }
       if (obj2.hasNotSetUpChannelOptIn(guildId)) {
         if (channelId === channel) {
@@ -53,23 +53,23 @@ export default function useBatchUpdateChannelSettings(guildId) {
           const items = [channelId];
           const set = new Set(items);
           obj3.include = set;
-          const result = guildId(11582).optIntoAllChannelsForExistingMember(guildId, obj3);
-          const tmp8Result = guildId(11582);
+          const result = guildId(11583).optIntoAllChannelsForExistingMember(guildId, obj3);
+          const tmp8Result = guildId(11583);
         } else {
           const obj4 = { exclude: null };
           const _Set = Set;
           const items1 = [channelId];
           const set1 = new Set(items1);
           obj4.exclude = set1;
-          const result1 = guildId(11582).optIntoAllChannelsForExistingMember(guildId, obj4);
-          const tmp8Result3 = guildId(11582);
+          const result1 = guildId(11583).optIntoAllChannelsForExistingMember(guildId, obj4);
+          const tmp8Result3 = guildId(11583);
         }
       } else {
         const tmp8Result4 = guildId(7282);
         const obj5 = { section: constants.CHANNEL_BROWSER };
         const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
       }
-      obj2 = guildId(11582);
+      obj2 = guildId(11583);
     }, [])
   };
 };

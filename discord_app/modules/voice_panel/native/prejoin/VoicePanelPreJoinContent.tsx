@@ -1,6 +1,6 @@
-// === Module 19269: VoicePanelPreJoinContent ===
+// === Module 19276: VoicePanelPreJoinContent ===
 
-// Module 19269 (VoicePanelPreJoinContent)
+// Module 19276 (VoicePanelPreJoinContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -18,13 +18,13 @@ import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
 import StreamActionCreators from "StreamActionCreators" /* 7901 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7950 */;
 import FormComponents from "FormComponents" /* 9232 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import GameConsoleStore from "GameConsoleStore" /* 5765 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15617 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15621 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -163,7 +163,7 @@ function ActivityInfo(activity) {
               if (null != inputApplication) {
                 const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                 v3 = num3;
-                const obj7 = { value: v3(11792).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(11793).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
@@ -451,7 +451,7 @@ const MODE_CHANGE_PHYSICS = fn(11223).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11226).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15621).VoiceChannelWarningSurfaces;
+const constants4 = fn(15625).VoiceChannelWarningSurfaces;
 const Features = fn(5768).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -647,7 +647,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11222));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19144)(channelId);
+  const tmp2 = guildId(19151)(channelId);
   dependencyMap = tmp2;
   let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -687,6 +687,6 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       };
       return obj;
     }
-  }, items1, channelId(19272).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(19279).areVoicePanelPreJoinContentPropsEqual);
   return closure_25(channelId(5080).TransitionItem, { item: stateFromStores, renderItem });
 });

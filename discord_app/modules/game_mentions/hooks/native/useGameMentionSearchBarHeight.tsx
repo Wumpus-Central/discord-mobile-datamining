@@ -1,6 +1,6 @@
-// === Module 13937: useGameMentionSearchBarHeight ===
+// === Module 13952: useGameMentionSearchBarHeight ===
 
-// Module 13937 (useGameMentionSearchBarHeight)
+// Module 13952 (useGameMentionSearchBarHeight)
 import _mod17 from "module_17" /* 17 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
 import size from "module_2" /* 2 */;

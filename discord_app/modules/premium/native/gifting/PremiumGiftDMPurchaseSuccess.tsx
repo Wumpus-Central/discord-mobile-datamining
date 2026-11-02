@@ -1,6 +1,6 @@
-// === Module 14479: PremiumGiftDMPurchaseSuccess ===
+// === Module 14493: PremiumGiftDMPurchaseSuccess ===
 
-// Module 14479 (PremiumGiftDMPurchaseSuccess)
+// Module 14493 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;

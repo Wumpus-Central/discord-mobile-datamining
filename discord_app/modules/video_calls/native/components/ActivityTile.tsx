@@ -1,11 +1,11 @@
-// === Module 11786: ActivityTile ===
+// === Module 11787: ActivityTile ===
 
-// Module 11786 (ActivityTile)
+// Module 11787 (ActivityTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import native2 from "native" /* 5080 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11792 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ function ActivityTileInner(participant) {
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11696)(obj4), done: false };
+              const obj5 = { value: v1(11697)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -74,8 +74,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11791).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11791);
+          const result = tmp2(11792).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11792);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -243,7 +243,7 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+let ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;

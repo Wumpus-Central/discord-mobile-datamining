@@ -1,11 +1,11 @@
-// === Module 18283: VoiceChannel ===
+// === Module 18296: VoiceChannel ===
 
-// Module 18283 (VoiceChannel)
+// Module 18296 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9085 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12247 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7706 */;

@@ -1,6 +1,6 @@
-// === Module 14687: QuestOrbsRewardModal ===
+// === Module 14701: QuestOrbsRewardModal ===
 
-// Module 14687 (QuestOrbsRewardModal)
+// Module 14701 (QuestOrbsRewardModal)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
@@ -11,9 +11,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import XSmallIcon from "XSmallIcon" /* 7054 */;
 import APNGPlayer from "APNGPlayer" /* 9504 */;
 import OrbsIcon from "OrbsIcon" /* 9532 */;
-import _modDef14688 from "module_14688" /* 14688 */;
-import _modDef14689 from "module_14689" /* 14689 */;
-import _modDef14690 from "module_14690" /* 14690 */;
+import _modDef14702 from "module_14702" /* 14702 */;
+import _modDef14703 from "module_14703" /* 14703 */;
+import _modDef14704 from "module_14704" /* 14704 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ function StaticOrb() {
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_26();
-  obj3.uri = _modDef14688;
+  obj3.uri = _modDef14702;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = closure_1_14(FastImageDefault, obj2);
@@ -104,7 +104,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = closure_1_14(React6, obj2);
   }
   const items1 = [tmp13, , ];
-  const obj3 = { uri: _modDef14689, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef14703, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb, ];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -123,7 +123,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = closure_1_14(closure_25, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef14690, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef14704, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = closure_1_14(closure_25, obj5);
   }
   items1[2] = tmp15Result;
@@ -276,7 +276,7 @@ export default function QuestOrbsRewardModal(quest) {
     obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(dependencyMap[33]).QuestContent.REWARD_MODAL });
   }, []);
   const obj6 = { style: tmp.root, children: null };
-  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(14692).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
+  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(14706).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
   const items4 = [closure_14(closure_8, obj7), , ];
   let tmp15Result = !tmp8;
   if (!tmp8) {

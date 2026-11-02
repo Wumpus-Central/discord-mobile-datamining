@@ -1,6 +1,6 @@
-// === Module 16893: OrbWalletComponents ===
+// === Module 16906: OrbWalletComponents ===
 
-// Module 16893 (OrbWalletComponents)
+// Module 16906 (OrbWalletComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
@@ -18,13 +18,13 @@ import TrophyIcon from "TrophyIcon" /* 9378 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
 import _mod9553 from "module_9553" /* 9553 */;
 import QuestUtils from "QuestUtils" /* 9678 */;
-import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 11416 */;
-import _modDef12329 from "module_12329" /* 12329 */;
-import _modDef14715 from "module_14715" /* 14715 */;
-import OrbWalletUtils from "OrbWalletUtils" /* 16890 */;
-import useNitroProgramReward from "useNitroProgramReward" /* 16894 */;
-import ProgramRewardsActionCreatorsDefault from "ProgramRewardsActionCreators" /* 16898 */;
-import _modDef16899 from "module_16899" /* 16899 */;
+import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 11417 */;
+import _modDef12469 from "module_12469" /* 12469 */;
+import _modDef14719 from "module_14719" /* 14719 */;
+import OrbWalletUtils from "OrbWalletUtils" /* 16903 */;
+import useNitroProgramReward from "useNitroProgramReward" /* 16907 */;
+import ProgramRewardsActionCreatorsDefault from "ProgramRewardsActionCreators" /* 16911 */;
+import _modDef16912 from "module_16912" /* 16912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -134,7 +134,7 @@ export function OrbBalanceHeader(orbBalance) {
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headerAssetSlot, importantForAccessibility: "no-hide-descendants", children: null };
   const obj3 = { source: null, style: null, resizeMode: "contain" };
-  const obj4 = { uri: _modDef16899 };
+  const obj4 = { uri: _modDef16912 };
   obj3.source = obj4;
   obj3.style = tmp.headerAsset;
   obj2.children = closure_1_10(FastImageDefault, obj3);
@@ -149,7 +149,7 @@ export function OrbBalanceHeader(orbBalance) {
     stringResult = intl.formatToPlainString(util.t.zPaLL9, obj6);
     tmp10 = require;
   }
-  const obj7 = { accessible: true, accessibilityLabel: stringResult, accessibilityState: { busy: null == orbBalance }, children: closure_1_10(tmp10(14495).BalanceCounter, { value: orbBalance, onValueChange: onValueReached, onValueReached, targetTotalCounterTime: 1500, textVariant: "display-md", textColor: "text-strong" }) };
+  const obj7 = { accessible: true, accessibilityLabel: stringResult, accessibilityState: { busy: null == orbBalance }, children: closure_1_10(tmp10(14509).BalanceCounter, { value: orbBalance, onValueChange: onValueReached, onValueReached, targetTotalCounterTime: 1500, textVariant: "display-md", textColor: "text-strong" }) };
   const items1 = [closure_1_10(hasOwnProperty, obj7), closure_1_10(OrbWalletHeaderTags, {})];
   obj5.children = items1;
   items[1] = closure_1_11(hasOwnProperty, obj5);
@@ -240,7 +240,7 @@ export function OrbWalletFooter() {
   const obj4 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.JALI2K);
-  obj4.icon = _modDef14715;
+  obj4.icon = _modDef14719;
   obj4.onPress = openQuestHomeFromWallet;
   obj3.children = closure_1_10(components_Button_Button.Button, obj4);
   const items = [closure_1_10(hasOwnProperty, obj3), ];
@@ -248,7 +248,7 @@ export function OrbWalletFooter() {
   const obj6 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
   const intl2 = util.intl;
   obj6.text = intl2.string(util.t.pWG4ze);
-  obj6.icon = _modDef12329;
+  obj6.icon = _modDef12469;
   obj6.onPress = openOrbsShopFromWallet;
   obj5.children = closure_1_10(components_Button_Button.Button, obj6);
   items[1] = closure_1_10(hasOwnProperty, obj5);

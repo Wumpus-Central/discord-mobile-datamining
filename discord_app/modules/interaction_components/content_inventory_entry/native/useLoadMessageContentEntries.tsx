@@ -1,6 +1,6 @@
-// === Module 11558: useLoadMessageContentEntries ===
+// === Module 11559: useLoadMessageContentEntries ===
 
-// Module 11558 (useLoadMessageContentEntries)
+// Module 11559 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1992 */;
 import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8713 */;

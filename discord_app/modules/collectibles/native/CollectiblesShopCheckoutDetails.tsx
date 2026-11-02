@@ -1,6 +1,6 @@
-// === Module 14416: CollectiblesShopCheckoutDetails ===
+// === Module 14430: CollectiblesShopCheckoutDetails ===
 
-// Module 14416 (CollectiblesShopCheckoutDetails)
+// Module 14430 (CollectiblesShopCheckoutDetails)
 import nativeDefault from "native" /* 575 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import util from "util" /* 1113 */;
@@ -21,7 +21,7 @@ import _modDef9540 from "module_9540" /* 9540 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9541 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9551 */;
 import getProductName from "getProductName" /* 9568 */;
-import _modDef14417 from "module_14417" /* 14417 */;
+import _modDef14431 from "module_14431" /* 14431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef14417 };
+    const obj3 = { uri: _modDef14431 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -271,7 +271,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(575).space.PX_16, backgroundColor: "children" } };
+  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(575).space.PX_16, backgroundColor: "diversity" } };
   return obj;
 });
 createStyles = fn(5014);

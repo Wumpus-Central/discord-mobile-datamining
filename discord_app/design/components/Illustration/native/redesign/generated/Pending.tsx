@@ -1,6 +1,6 @@
-// === Module 18969: Pending ===
+// === Module 18976: Pending ===
 
-// Module 18969 (Pending)
+// Module 18976 (Pending)
 import shared from "shared" /* 5021 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import _mod8806 from "module_8806" /* 8806 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getPendingSource(theme) {
   return _mod8806.getIllustrationSource(theme, {
     dark() {
-      return require("module_18970");
+      return require("module_18977");
     },
     darker() {
-      return require("module_18971");
+      return require("module_18978");
     },
     light() {
-      return require("module_18972");
+      return require("module_18979");
     }
   });
 }
@@ -30,13 +30,13 @@ export function usePendingSource() {
   const obj = shared;
   return _mod8806.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18970");
+      return require("module_18977");
     },
     darker() {
-      return require("module_18971");
+      return require("module_18978");
     },
     light() {
-      return require("module_18972");
+      return require("module_18979");
     }
   });
 }
@@ -44,25 +44,25 @@ export function Pending(arg0) {
   const obj = shared;
   const illustrationSource = _mod8806.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18970");
+      return require("module_18977");
     },
     darker() {
-      return require("module_18971");
+      return require("module_18978");
     },
     light() {
-      return require("module_18972");
+      return require("module_18979");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_18970");
+      return require("module_18977");
     },
     darker() {
-      return require("module_18971");
+      return require("module_18978");
     },
     light() {
-      return require("module_18972");
+      return require("module_18979");
     }
   };
   const merged = Object.assign(arg0);

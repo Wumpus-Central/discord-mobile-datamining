@@ -1,6 +1,6 @@
-// === Module 18041: PanelsNavigationUtils ===
+// === Module 18054: PanelsNavigationUtils ===
 
-// Module 18041 (PanelsNavigationUtils)
+// Module 18054 (PanelsNavigationUtils)
 import v1 from "v1" /* 1266 */;
 import CommonActions2 from "CommonActions" /* 1502 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;

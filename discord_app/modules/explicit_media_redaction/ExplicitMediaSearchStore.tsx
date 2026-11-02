@@ -1,6 +1,6 @@
-// === Module 15582: ExplicitMediaSearchStore ===
+// === Module 15586: ExplicitMediaSearchStore ===
 
-// Module 15582 (ExplicitMediaSearchStore)
+// Module 15586 (ExplicitMediaSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;

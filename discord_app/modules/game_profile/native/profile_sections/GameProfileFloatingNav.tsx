@@ -7,7 +7,7 @@ import timing from "timing" /* 5254 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import native from "native" /* 8992 */;
 import YouBannerDecorations from "YouBannerDecorations" /* 9624 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14704 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,8 +36,8 @@ function FloatingNav(navigation) {
   const selectTab = navigation.selectTab;
   const tmp3 = closure_14(selectTab(1625)().bottom);
   dependencyMap = tmp3;
-  const isGameProfileCommunitiesMobileEnabled = selectedTab(14718).useIsGameProfileCommunitiesMobileEnabled({ location: "GameProfileFloatingNav" });
-  let obj = selectedTab(14718);
+  const isGameProfileCommunitiesMobileEnabled = selectedTab(14722).useIsGameProfileCommunitiesMobileEnabled({ location: "GameProfileFloatingNav" });
+  let obj = selectedTab(14722);
   const token = selectedTab(5596).useToken(selectTab(575).colors.BACKGROUND_BASE_LOWEST);
   let items = [token];
   const memo = noop.useMemo(() => {
@@ -129,7 +129,7 @@ function FloatingNav(navigation) {
           }, tab);
         })
     };
-    items5[1] = closure_7(tmp4(14704).YouScreenNavIconMeasurer, obj12);
+    items5[1] = closure_7(tmp4(14715).YouScreenNavIconMeasurer, obj12);
     obj10.children = items5;
     items3[1] = closure_8(closure_5, obj10);
     obj8.children = items3;

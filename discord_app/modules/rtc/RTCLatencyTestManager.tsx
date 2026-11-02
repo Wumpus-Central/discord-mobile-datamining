@@ -1,10 +1,10 @@
-// === Module 19600: RTCLatencyTestManager ===
+// === Module 19607: RTCLatencyTestManager ===
 
-// Module 19600 (RTCLatencyTestManager)
+// Module 19607 (RTCLatencyTestManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
-import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 19601 */;
+import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 19608 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 import RTCRegionStore from "RTCRegionStore" /* 5863 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;

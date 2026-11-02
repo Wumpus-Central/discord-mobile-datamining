@@ -1,13 +1,13 @@
-// === Module 12651: ConjureVoiceChannelPinCard ===
+// === Module 12654: ConjureVoiceChannelPinCard ===
 
-// Module 12651 (ConjureVoiceChannelPinCard)
+// Module 12654 (ConjureVoiceChannelPinCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11200 */;
-import useConjureVoiceChannelPin from "useConjureVoiceChannelPin" /* 12652 */;
+import useConjureVoiceChannelPin from "useConjureVoiceChannelPin" /* 12655 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4885 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;
@@ -18,7 +18,7 @@ function ConjureVoiceChannelPinForm(projectId) {
   channels = undefined;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const conjureVoiceChannelPinForm = channels(12652).useConjureVoiceChannelPinForm(projectId.projectId);
+  const conjureVoiceChannelPinForm = channels(12655).useConjureVoiceChannelPinForm(projectId.projectId);
   ({ guildId, channels } = conjureVoiceChannelPinForm);
   const selected = conjureVoiceChannelPinForm.selected;
   ({ setPicked: c2, pinning } = conjureVoiceChannelPinForm);

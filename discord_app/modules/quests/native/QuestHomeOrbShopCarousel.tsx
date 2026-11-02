@@ -1,6 +1,6 @@
-// === Module 16988: QuestHomeOrbShopCarousel ===
+// === Module 17001: QuestHomeOrbShopCarousel ===
 
-// Module 16988 (QuestHomeOrbShopCarousel)
+// Module 17001 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,8 +9,8 @@ import AnalyticsActions from "AnalyticsActions" /* 7862 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9462 */;
 import SkeletonCardDefault from "SkeletonCard" /* 9578 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16975 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16989 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16988 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 17002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -97,7 +97,7 @@ const jsxProd = fn(21);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(16975).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(16988).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(5014);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };

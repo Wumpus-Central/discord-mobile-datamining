@@ -1,6 +1,6 @@
-// === Module 15302: usePremiumPrimaryGradientColors ===
+// === Module 15306: usePremiumPrimaryGradientColors ===
 
-// Module 15302 (usePremiumPrimaryGradientColors)
+// Module 15306 (usePremiumPrimaryGradientColors)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5596 */;
 import size from "module_2" /* 2 */;

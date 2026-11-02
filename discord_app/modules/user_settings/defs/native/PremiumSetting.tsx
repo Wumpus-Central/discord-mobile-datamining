@@ -1,18 +1,18 @@
-// === Module 16869: PremiumSetting ===
+// === Module 16882: PremiumSetting ===
 
-// Module 16869 (PremiumSetting)
+// Module 16882 (PremiumSetting)
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2047 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7602 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11373 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16870 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11374 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16883 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 import SubscriptionStore from "SubscriptionStore" /* 2052 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const currentUser = UserStore.getCurrentUser();

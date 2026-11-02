@@ -1,6 +1,6 @@
-// === Module 20100: UserApplicationIdentityManager ===
+// === Module 20107: UserApplicationIdentityManager ===
 
-// Module 20100 (UserApplicationIdentityManager)
+// Module 20107 (UserApplicationIdentityManager)
 import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 10945 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 

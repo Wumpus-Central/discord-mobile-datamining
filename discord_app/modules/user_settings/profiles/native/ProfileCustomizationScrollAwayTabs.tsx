@@ -1,6 +1,6 @@
-// === Module 16565: ProfileCustomizationScrollAwayTabs ===
+// === Module 16578: ProfileCustomizationScrollAwayTabs ===
 
-// Module 16565 (ProfileCustomizationScrollAwayTabs)
+// Module 16578 (ProfileCustomizationScrollAwayTabs)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 11603: LegacyUserProfileConnections ===
+// === Module 11604: LegacyUserProfileConnections ===
 
-// Module 11603 (LegacyUserProfileConnections)
+// Module 11604 (LegacyUserProfileConnections)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -498,8 +498,8 @@ export default function LegacyUserProfileConnections(user) {
         const intl = tmp(1113).intl;
         obj4.title = intl.string(tmp(1113).t.PHjkRE);
         obj4.children = mapped;
-        tmp10 = closure_14(stateFromStores(11611), obj4);
-        const tmp13 = stateFromStores(11611);
+        tmp10 = closure_14(stateFromStores(11612), obj4);
+        const tmp13 = stateFromStores(11612);
       }
       const obj5 = { children: null };
       const items6 = [tmp10, ];
@@ -507,10 +507,10 @@ export default function LegacyUserProfileConnections(user) {
       const intl2 = tmp(1113).intl;
       obj6.title = intl2.string(tmp(1113).t["3fe7U5"]);
       obj6.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11611), obj6);
+      items6[1] = closure_14(stateFromStores(11612), obj6);
       obj5.children = items6;
       tmp17Result = closure_15(closure_16, obj5);
-      const tmp16 = stateFromStores(11611);
+      const tmp16 = stateFromStores(11612);
     }
   }
   return tmp17Result;

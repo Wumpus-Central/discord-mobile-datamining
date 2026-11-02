@@ -1,15 +1,15 @@
-// === Module 12735: ConjurePlanExperiences ===
+// === Module 12738: ConjurePlanExperiences ===
 
-// Module 12735 (ConjurePlanExperiences)
+// Module 12738 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import AppsIcon2 from "AppsIcon" /* 8678 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12721 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12729 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12738 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12739 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12724 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12732 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12741 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -220,7 +220,7 @@ function ComponentSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { frame: fn(9727).GameControllerIcon, overlay_widget: fn(12736).WindowTopIcon, user_widget: fn(10805).UserCircleIcon, bot: fn(12446).RobotIcon, commands: fn(12446).RobotIcon, automod: fn(11281).ShieldIcon };
+let obj = { frame: fn(9727).GameControllerIcon, overlay_widget: fn(12739).WindowTopIcon, user_widget: fn(10805).UserCircleIcon, bot: fn(12105).RobotIcon, commands: fn(12105).RobotIcon, automod: fn(11281).ShieldIcon };
 const createStyles = fn(5014);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };

@@ -1,6 +1,6 @@
-// === Module 11445: useTieredTenureBadgeForUser ===
+// === Module 11446: useTieredTenureBadgeForUser ===
 
-// Module 11445 (useTieredTenureBadgeForUser)
+// Module 11446 (useTieredTenureBadgeForUser)
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7781 */;
 import UserProfileStore from "UserProfileStore" /* 7772 */;
 import UserStore from "UserStore" /* 1383 */;

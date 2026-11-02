@@ -1,6 +1,6 @@
-// === Module 19167: SoundboardStyleConstants ===
+// === Module 19174: SoundboardStyleConstants ===
 
-// Module 19167 (SoundboardStyleConstants)
+// Module 19174 (SoundboardStyleConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");

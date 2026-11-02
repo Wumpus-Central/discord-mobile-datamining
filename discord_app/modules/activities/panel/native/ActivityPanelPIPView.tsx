@@ -1,6 +1,6 @@
-// === Module 19126: ActivityPanelPIPView ===
+// === Module 19133: ActivityPanelPIPView ===
 
-// Module 19126 (ActivityPanelPIPView)
+// Module 19133 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
@@ -9,12 +9,12 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11793 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19124 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19127 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11794 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19131 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19134 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11847 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11848 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 
@@ -257,10 +257,10 @@ const View = fn(17).View;
 const ActivityPanelConstants = fn(5657);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: c10, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_11, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1 } = ActivityPanelConstants);
-let closure_14 = fn(18993).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19000).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1072).ThemeTypes;
 const PIP_WINDOW_OFFSET = fn(11224).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1187);

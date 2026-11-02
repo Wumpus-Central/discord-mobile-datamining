@@ -1,6 +1,6 @@
-// === Module 20087: UpdateAppScreen ===
+// === Module 20094: UpdateAppScreen ===
 
-// Module 20087 (UpdateAppScreen)
+// Module 20094 (UpdateAppScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2836 from "module_2836" /* 2836 */;

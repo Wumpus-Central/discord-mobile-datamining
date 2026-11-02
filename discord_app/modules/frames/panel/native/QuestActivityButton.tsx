@@ -1,16 +1,16 @@
-// === Module 19139: QuestActivityButton ===
+// === Module 19146: QuestActivityButton ===
 
-// Module 19139 (QuestActivityButton)
+// Module 19146 (QuestActivityButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import timing from "timing" /* 5254 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14673 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14687 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import QuestStore from "QuestStore" /* 7846 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19140 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 19147 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 
 require = fn;
@@ -44,10 +44,10 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       const obj2 = { questId: quest.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19141, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19148, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
       const obj4 = { questId: quest.id };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19142, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19149, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
     }
   }, items1);
   if (quest != null) {
@@ -152,21 +152,21 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = quest(5095);
-  obj6.source = quest(17043);
+  obj6.source = quest(17056);
   obj5.children = closure_9(stateFromStores(5618), obj6);
   const items6 = [closure_9(closure_4, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp20 = stateFromStores(5618);
-  obj8.icon = stateFromStores(14715);
+  obj8.icon = stateFromStores(14719);
   obj8.onPress = callback;
   const intl = tmp(1113).intl;
   obj8.accessibilityLabel = intl.string(quest(1113).t.JALI2K);
-  obj7.children = closure_9(stateFromStores(19143), obj8);
+  obj7.children = closure_9(stateFromStores(19150), obj8);
   items6[1] = closure_9(closure_4, obj7);
   const obj9 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(19143);
+  const tmp21 = stateFromStores(19150);
   size.children = closure_9(quest(8031).Circle, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: stateFromStores(575).unsafe_rawColors.OPACITY_32, strokeWidth: 3.4, strokeDasharray: result });
   obj9.children = closure_9(quest(8031).Svg, size);
   items6[2] = closure_9(closure_4, obj9);
@@ -242,7 +242,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj2 = { questId: memo.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19141, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19148, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

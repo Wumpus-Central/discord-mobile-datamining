@@ -1,13 +1,13 @@
-// === Module 12750: ConjureScopeServerCard ===
+// === Module 12753: ConjureScopeServerCard ===
 
-// Module 12750 (ConjureScopeServerCard)
+// Module 12753 (ConjureScopeServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12477 */;
-import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12751 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12136 */;
+import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// === Module 17509: AppIconRows ===
+// === Module 17522: AppIconRows ===
 
-// Module 17509 (AppIconRows)
+// Module 17522 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
 import AppIconTypes from "AppIconTypes" /* 9980 */;
-import AppIconUtils from "AppIconUtils" /* 15340 */;
-import AppIconRowDefault from "AppIconRow" /* 17510 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17511 */;
+import AppIconUtils from "AppIconUtils" /* 15344 */;
+import AppIconRowDefault from "AppIconRow" /* 17523 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;

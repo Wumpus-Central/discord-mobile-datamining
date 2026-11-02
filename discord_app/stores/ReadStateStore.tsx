@@ -3644,7 +3644,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "Enable Counts", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "hasEvents", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

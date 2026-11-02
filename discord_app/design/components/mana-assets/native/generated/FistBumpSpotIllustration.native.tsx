@@ -1,19 +1,19 @@
-// === Module 15328: FistBumpSpotIllustration ===
+// === Module 15332: FistBumpSpotIllustration ===
 
-// Module 15328 (FistBumpSpotIllustration)
+// Module 15332 (FistBumpSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef15329 from "module_15329" /* 15329 */;
-import _modDef15330 from "module_15330" /* 15330 */;
-import _modDef15331 from "module_15331" /* 15331 */;
+import _modDef15333 from "module_15333" /* 15333 */;
+import _modDef15334 from "module_15334" /* 15334 */;
+import _modDef15335 from "module_15335" /* 15335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15329 }, 3: null };
-let obj2 = { uri: _modDef15329 };
-obj[2] = { uri: _modDef15330 };
-const obj3 = { uri: _modDef15330 };
-obj[3] = { uri: _modDef15331 };
+let obj = { 1: null, 2: { uri: _modDef15333 }, 3: null };
+let obj2 = { uri: _modDef15333 };
+obj[2] = { uri: _modDef15334 };
+const obj3 = { uri: _modDef15334 };
+obj[3] = { uri: _modDef15335 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx");
 

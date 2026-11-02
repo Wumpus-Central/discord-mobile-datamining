@@ -1,6 +1,6 @@
-// === Module 15443: OutboundPromotionCard ===
+// === Module 15447: OutboundPromotionCard ===
 
-// Module 15443 (OutboundPromotionCard)
+// Module 15447 (OutboundPromotionCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;

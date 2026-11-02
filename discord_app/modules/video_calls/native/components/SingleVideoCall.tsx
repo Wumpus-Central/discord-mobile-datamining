@@ -1,6 +1,6 @@
-// === Module 12010: SingleVideoCall ===
+// === Module 12011: SingleVideoCall ===
 
-// Module 12010 (SingleVideoCall)
+// Module 12011 (SingleVideoCall)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import noop from "module_19" /* 19 */;

@@ -1,15 +1,15 @@
-// === Module 18378: HomeDrawerGuildRow ===
+// === Module 18391: HomeDrawerGuildRow ===
 
-// Module 18378 (HomeDrawerGuildRow)
+// Module 18391 (HomeDrawerGuildRow)
 import Text_Text from "Text/Text" /* 5624 */;
 import useChannelName from "useChannelName" /* 5652 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10992 */;
 import BellZIcon from "BellZIcon" /* 11172 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 18383 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 18384 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 18385 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 18387 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 18388 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 18396 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 18397 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 18398 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 18400 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 18401 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4948 */;
 import ChannelStore from "ChannelStore" /* 4863 */;

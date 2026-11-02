@@ -1,13 +1,13 @@
-// === Module 17923: ParentalControlsDirectMessages ===
+// === Module 17936: ParentalControlsDirectMessages ===
 
-// Module 17923 (ParentalControlsDirectMessages)
+// Module 17936 (ParentalControlsDirectMessages)
 import util from "util" /* 1113 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16708 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16709 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16721 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16722 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

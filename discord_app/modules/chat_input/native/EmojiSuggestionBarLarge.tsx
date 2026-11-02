@@ -1,12 +1,12 @@
-// === Module 13974: EmojiSuggestionBarLarge ===
+// === Module 13989: EmojiSuggestionBarLarge ===
 
-// Module 13974 (EmojiSuggestionBarLarge)
+// Module 13989 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import EmojiPickerListRow from "EmojiPickerListRow" /* 10025 */;
 import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10050 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13975 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13990 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

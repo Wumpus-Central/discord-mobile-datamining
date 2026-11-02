@@ -1,6 +1,6 @@
-// === Module 18909: ChannelSettingsPermissionsList ===
+// === Module 18916: ChannelSettingsPermissionsList ===
 
-// Module 18909 (ChannelSettingsPermissionsList)
+// Module 18916 (ChannelSettingsPermissionsList)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 1992 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6899 */;

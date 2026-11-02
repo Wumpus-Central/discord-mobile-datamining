@@ -1,6 +1,6 @@
-// === Module 19798: GuildSettingsRoleEditConnectionsControls ===
+// === Module 19805: GuildSettingsRoleEditConnectionsControls ===
 
-// Module 19798 (GuildSettingsRoleEditConnectionsControls)
+// Module 19805 (GuildSettingsRoleEditConnectionsControls)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -15,12 +15,12 @@ import TableRadioGroup from "TableRadioGroup" /* 7058 */;
 import TableRadioRow from "TableRadioRow" /* 7061 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7348 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11488 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19785 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 19799 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11489 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19792 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 19806 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7298 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19771 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19778 */;
 
 require = fn;
 function HeaderSection(arg0) {
@@ -215,7 +215,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(19801, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(19808, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -361,7 +361,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "context", value: 139264.31632853302 };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "Object", value: false };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

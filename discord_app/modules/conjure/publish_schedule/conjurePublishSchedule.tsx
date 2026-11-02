@@ -1,6 +1,6 @@
-// === Module 12502: conjurePublishSchedule ===
+// === Module 12161: conjurePublishSchedule ===
 
-// Module 12502 (conjurePublishSchedule)
+// Module 12161 (conjurePublishSchedule)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 18031: RedesignNotificationModal ===
+// === Module 18044: RedesignNotificationModal ===
 
-// Module 18031 (RedesignNotificationModal)
+// Module 18044 (RedesignNotificationModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13960 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13961 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 14244 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13975 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13976 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 14259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,8 +46,8 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(13958).PermissionStateType;
-const NotificationPermissionConstants = fn(13959);
+const PermissionStateType = fn(13973).PermissionStateType;
+const NotificationPermissionConstants = fn(13974);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;

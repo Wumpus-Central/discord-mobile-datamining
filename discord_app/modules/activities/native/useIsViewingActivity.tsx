@@ -1,8 +1,8 @@
-// === Module 11711: useIsViewingActivity ===
+// === Module 11712: useIsViewingActivity ===
 
-// Module 11711 (useIsViewingActivity)
-import ChannelCallModalDefault from "ChannelCallModal" /* 11698 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11701 */;
+// Module 11712 (useIsViewingActivity)
+import ChannelCallModalDefault from "ChannelCallModal" /* 11699 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11702 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 
 const require = fn;

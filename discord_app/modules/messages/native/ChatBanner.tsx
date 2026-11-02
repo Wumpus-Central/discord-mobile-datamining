@@ -1,6 +1,6 @@
-// === Module 11355: ChatBanner ===
+// === Module 11356: ChatBanner ===
 
-// Module 11355 (ChatBanner)
+// Module 11356 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,8 +8,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7282 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8202 */;
-import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11357 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11358 */;
+import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11358 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11359 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
 import ReadStateStore from "ReadStateStore" /* 6842 */;
@@ -195,7 +195,7 @@ function NewMessagesChatBar(channel) {
       obj5.onPress = function onPress() {
         return ReadStateActionCreators.ack(channel.id, { section: constants4.NEW_MESSAGES_BANNER, object: constants2.MARK_CHANNEL_AS_READ_BUTTON, objectType: constants.ACK_MANUAL });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11359).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11360).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -210,7 +210,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11356).ChatOverlays;
+const ChatOverlays = fn(11357).ChatOverlays;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: c10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

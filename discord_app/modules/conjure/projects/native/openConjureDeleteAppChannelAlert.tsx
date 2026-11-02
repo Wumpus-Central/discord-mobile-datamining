@@ -1,6 +1,6 @@
-// === Module 18886: openConjureDeleteAppChannelAlert ===
+// === Module 18893: openConjureDeleteAppChannelAlert ===
 
-// Module 18886 (openConjureDeleteAppChannelAlert)
+// Module 18893 (openConjureDeleteAppChannelAlert)
 import useAlertStore from "useAlertStore" /* 5960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -44,7 +44,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13265)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13280)(conjureServerApp), done: false };
                 return obj4;
               }
             }

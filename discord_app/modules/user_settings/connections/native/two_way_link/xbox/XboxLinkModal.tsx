@@ -5,8 +5,8 @@ import util from "util" /* 1113 */;
 import HeaderActionButton from "HeaderActionButton" /* 7558 */;
 import _modDef8359 from "module_8359" /* 8359 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9721 */;
-import XboxLinkEducationDefault from "XboxLinkEducation" /* 14615 */;
-import XboxLinkErrorDefault from "XboxLinkError" /* 14617 */;
+import XboxLinkEducationDefault from "XboxLinkEducation" /* 14629 */;
+import XboxLinkErrorDefault from "XboxLinkError" /* 14631 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,7 +84,7 @@ export default function XboxLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(14612), {});
+          return closure_1_6(closure_1_1(14626), {});
         }
       },
       [closure_2_4.EDUCATION]: {
@@ -108,7 +108,7 @@ export default function XboxLinkModal(locationStack) {
     };
   }, items);
   const obj = twoWayLinkStyles(9730);
-  const accountLinkStepTracking = twoWayLinkStyles(14621).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(14635).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1113).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1113).t["13/7kX"]);

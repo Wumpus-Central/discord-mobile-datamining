@@ -1,17 +1,17 @@
-// === Module 13947: ApplicationCommandsCategories ===
+// === Module 13962: ApplicationCommandsCategories ===
 
-// Module 13947 (ApplicationCommandsCategories)
+// Module 13962 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5260 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13778 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13793 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(13944);
+const ApplicationCommandsCategoriesConstants = fn(13959);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);

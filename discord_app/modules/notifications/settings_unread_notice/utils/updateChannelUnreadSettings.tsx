@@ -1,6 +1,6 @@
-// === Module 11354: updateChannelUnreadSettings ===
+// === Module 11355: updateChannelUnreadSettings ===
 
-// Module 11354 (updateChannelUnreadSettings)
+// Module 11355 (updateChannelUnreadSettings)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11069 */;

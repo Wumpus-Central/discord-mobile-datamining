@@ -1,9 +1,9 @@
-// === Module 11730: openFrame ===
+// === Module 11731: openFrame ===
 
-// Module 11730 (openFrame)
+// Module 11731 (openFrame)
 import router_utils from "router_utils" /* 1099 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
 import FramesStore from "FramesStore" /* 6846 */;
 
 require = fn;

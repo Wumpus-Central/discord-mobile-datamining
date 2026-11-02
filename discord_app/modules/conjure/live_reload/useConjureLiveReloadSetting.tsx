@@ -1,6 +1,6 @@
-// === Module 12471: useConjureLiveReloadSetting ===
+// === Module 12130: useConjureLiveReloadSetting ===
 
-// Module 12471 (useConjureLiveReloadSetting)
+// Module 12130 (useConjureLiveReloadSetting)
 import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 10897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

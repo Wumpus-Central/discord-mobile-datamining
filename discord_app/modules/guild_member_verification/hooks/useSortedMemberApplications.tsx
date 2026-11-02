@@ -1,6 +1,6 @@
-// === Module 18652: useSortedMemberApplications ===
+// === Module 18665: useSortedMemberApplications ===
 
-// Module 18652 (useSortedMemberApplications)
+// Module 18665 (useSortedMemberApplications)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;

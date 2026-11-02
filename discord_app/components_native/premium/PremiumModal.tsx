@@ -3,8 +3,8 @@
 // Module 7595 (PremiumModal)
 import NavigatorHeader from "NavigatorHeader" /* 6998 */;
 import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7596 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 15425 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 15441 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 15429 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 15445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

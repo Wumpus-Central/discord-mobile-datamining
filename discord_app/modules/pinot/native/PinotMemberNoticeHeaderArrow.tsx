@@ -1,6 +1,6 @@
-// === Module 11345: PinotMemberNoticeHeaderArrow ===
+// === Module 11346: PinotMemberNoticeHeaderArrow ===
 
-// Module 11345 (PinotMemberNoticeHeaderArrow)
+// Module 11346 (PinotMemberNoticeHeaderArrow)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -32,8 +32,8 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
-  const isForumChannelSearchActive = channelId(11346).useIsForumChannelSearchActive(channelId);
-  const obj2 = channelId(11346);
+  const isForumChannelSearchActive = channelId(11347).useIsForumChannelSearchActive(channelId);
+  const obj2 = channelId(11347);
   const obj3 = channelId(11322);
   const pinotChannelLabelCenter = channelId(11331).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;

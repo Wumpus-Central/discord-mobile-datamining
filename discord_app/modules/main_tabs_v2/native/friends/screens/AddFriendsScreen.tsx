@@ -1,15 +1,15 @@
-// === Module 18833: AddFriendsScreen ===
+// === Module 18840: AddFriendsScreen ===
 
-// Module 18833 (AddFriendsScreen)
+// Module 18840 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14232 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14236 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 18836 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 18838 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14247 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 18843 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 18845 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -59,10 +59,10 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(14256).Sections;
+const Sections = fn(14271).Sections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(14234).ContactPermissions;
+const ContactPermissions = fn(14249).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };

@@ -26,11 +26,11 @@ import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10187 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10188 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11218 */;
 import ChannelSpoilerDefault from "ChannelSpoiler" /* 11220 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11573 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11574 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11612 */;
-import contentHandlers2 from "contentHandlers" /* 11613 */;
-import ChatDefault from "Chat" /* 13312 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11574 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11575 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11613 */;
+import contentHandlers2 from "contentHandlers" /* 11614 */;
+import ChatDefault from "Chat" /* 13327 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import ActionSheetStore from "ActionSheetStore" /* 5259 */;
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "PX_8", shouldInitialScroll: "Array", animated: 85.192, scrollPosition: 105.692, focusTargetId: 0 };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "PX_8", shouldInitialScroll: "Array", animated: 75.942, scrollPosition: 87.567, focusTargetId: 0 };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -291,9 +291,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 0,
-        selectedChannelId: 1,
-        tapLinkData: 4
+        messageChannel: "Enable useStateFromStores profiling",
+        selectedChannelId: "May require app restart after changes.",
+        tapLinkData: null
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

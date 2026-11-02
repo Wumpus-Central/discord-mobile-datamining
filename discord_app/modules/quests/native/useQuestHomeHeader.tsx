@@ -1,13 +1,13 @@
-// === Module 16886: useQuestHomeHeader ===
+// === Module 16899: useQuestHomeHeader ===
 
-// Module 16886 (useQuestHomeHeader)
+// Module 16899 (useQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
-import QuestsIcon from "QuestsIcon" /* 14714 */;
+import QuestsIcon from "QuestsIcon" /* 14718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,13 +30,13 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   const tmp3 = balance;
   balance = balance(9554).useFetchVirtualCurrencyBalance().balance;
   let obj = balance(9554);
-  const orbBalanceEntrypoint = balance(16887).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  const orbBalanceEntrypoint = balance(16900).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   let items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(14487).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(14501).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -67,7 +67,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16906, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16919, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;

@@ -1,6 +1,6 @@
-// === Module 14357: TabsGradient ===
+// === Module 14372: TabsGradient ===
 
-// Module 14357 (TabsGradient)
+// Module 14372 (TabsGradient)
 import LinearGradientDefault from "LinearGradient" /* 5587 */;
 import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;

@@ -1,7 +1,7 @@
-// === Module 19343: MediaPlaybackPanelController ===
+// === Module 19350: MediaPlaybackPanelController ===
 
-// Module 19343 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 16385 */;
+// Module 19350 (MediaPlaybackPanelController)
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 16397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -9,7 +9,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import VoicePanelStore from "VoicePanelStore" /* 6875 */;
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(16386).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(16398).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(5657).ActivityPanelModes;
 let MorphablePanelModes = fn(11224).MorphablePanelModes;
 const jsx = fn(21).jsx;

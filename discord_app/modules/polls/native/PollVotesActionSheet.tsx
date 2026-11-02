@@ -1,6 +1,6 @@
-// === Module 12404: PollVotesActionSheet ===
+// === Module 12544: PollVotesActionSheet ===
 
-// Module 12404 (PollVotesActionSheet)
+// Module 12544 (PollVotesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
@@ -13,9 +13,9 @@ import Pressables from "Pressables" /* 6980 */;
 import EmojiDefault from "Emoji" /* 7300 */;
 import PollsUtils from "PollsUtils" /* 8403 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 12405 */;
-import _modDef12412 from "module_12412" /* 12412 */;
-import _modDef12413 from "module_12413" /* 12413 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 12545 */;
+import _modDef12552 from "module_12552" /* 12552 */;
+import _modDef12553 from "module_12553" /* 12553 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -365,9 +365,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12412;
+    let tmp2Result = _modDef12552;
   } else {
-    tmp2Result = _modDef12413;
+    tmp2Result = _modDef12553;
   }
   obj2.source = tmp2Result;
   const items = [map1(tmp8, obj2), , ];

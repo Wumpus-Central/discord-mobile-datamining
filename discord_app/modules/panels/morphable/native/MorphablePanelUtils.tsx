@@ -1,6 +1,6 @@
-// === Module 19127: MorphablePanelUtils ===
+// === Module 19134: MorphablePanelUtils ===
 
-// Module 19127 (MorphablePanelUtils)
+// Module 19134 (MorphablePanelUtils)
 import MorphablePanelConstants from "MorphablePanelConstants" /* 11224 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 16304: application ===
+// === Module 16308: application ===
 
-// Module 16304 (application)
+// Module 16308 (application)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
 import RPCErrorDefault from "RPCError" /* 9333 */;
 import TestModeUtils from "TestModeUtils" /* 9557 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11809 */;
-import RPCHelpers from "RPCHelpers" /* 11812 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 16305 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16306 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11810 */;
+import RPCHelpers from "RPCHelpers" /* 11813 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 16309 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16310 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
 
 require = fn;
@@ -74,8 +74,8 @@ export default {
       const id = socket.socket.application.id;
       if (null == id) {
         const obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp10 = new RPCErrorDefault(obj, "No application.");
-        throw tmp10;
+        const tmp7 = new RPCErrorDefault(obj, "No application.");
+        throw tmp7;
       } else {
         const HTTP = HTTPUtils.HTTP;
         const request = { url: hasOwnProperty.APPLICATION_TICKET(id), body: null, retries: 3, oldFormErrors: true, rejectWithError: false };

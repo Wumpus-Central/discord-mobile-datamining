@@ -1,10 +1,10 @@
-// === Module 13383: ChannelTabsStore ===
+// === Module 13398: ChannelTabsStore ===
 
-// Module 13383 (ChannelTabsStore)
+// Module 13398 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
-import TabsExperimentDefault from "TabsExperiment" /* 13384 */;
+import TabsExperimentDefault from "TabsExperiment" /* 13399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;

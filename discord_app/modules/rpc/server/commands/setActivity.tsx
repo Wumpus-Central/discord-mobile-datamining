@@ -1,6 +1,6 @@
-// === Module 16330: setActivity ===
+// === Module 16334: setActivity ===
 
-// Module 16330 (setActivity)
+// Module 16334 (setActivity)
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_12 = ["1402418171662569542"];
 let items = [, , ];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16297);
+const CONTEXT_MENU_ICON_NAMES = fn(16301);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [fn(8910).OAuth2Scopes.RPC, fn(8910).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];

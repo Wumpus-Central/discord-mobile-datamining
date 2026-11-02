@@ -1,6 +1,6 @@
-// === Module 19567: InterestGameCover ===
+// === Module 19574: InterestGameCover ===
 
-// Module 19567 (InterestGameCover)
+// Module 19574 (InterestGameCover)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import FastImageDefault from "FastImage" /* 5717 */;

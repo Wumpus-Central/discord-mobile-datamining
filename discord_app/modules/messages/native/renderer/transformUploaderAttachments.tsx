@@ -1,6 +1,6 @@
-// === Module 15079: transformUploaderAttachments ===
+// === Module 15083: transformUploaderAttachments ===
 
-// Module 15079 (transformUploaderAttachments)
+// Module 15083 (transformUploaderAttachments)
 import util from "util" /* 1113 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
 import CloudUpload from "CloudUpload" /* 8209 */;

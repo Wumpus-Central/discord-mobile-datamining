@@ -1,15 +1,15 @@
-// === Module 19228: useSpeakerTooltips ===
+// === Module 19235: useSpeakerTooltips ===
 
-// Module 19228 (useSpeakerTooltips)
+// Module 19235 (useSpeakerTooltips)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19231 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19238 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(19226);
+const ConsoleVoiceUpsellStore = fn(19233);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
 let VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
 const ContentDismissActionType = fn(4860).ContentDismissActionType;

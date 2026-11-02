@@ -1,14 +1,14 @@
-// === Module 16725: DirectMessageSafetyAlertsSetting ===
+// === Module 16738: DirectMessageSafetyAlertsSetting ===
 
-// Module 16725 (DirectMessageSafetyAlertsSetting)
+// Module 16738 (DirectMessageSafetyAlertsSetting)
 import util from "util" /* 1113 */;
 import SettingsConstants from "SettingsConstants" /* 8432 */;
 import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11263 */;
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11264 */;
 import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11265 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13290 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 16726 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13305 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 16739 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

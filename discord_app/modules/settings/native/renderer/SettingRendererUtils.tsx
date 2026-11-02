@@ -1,6 +1,6 @@
-// === Module 16579: SettingRendererUtils ===
+// === Module 16592: SettingRendererUtils ===
 
-// Module 16579 (SettingRendererUtils)
+// Module 16592 (SettingRendererUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1072 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -9,10 +9,10 @@ import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7101 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7161 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
 import SettingsConstants from "SettingsConstants" /* 8432 */;
-import SettingHookHarness from "SettingHookHarness" /* 16424 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 16426 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 16580 */;
-import SettingRendererConstants from "SettingRendererConstants" /* 11540 */;
+import SettingHookHarness from "SettingHookHarness" /* 16436 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 16438 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 16593 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11541 */;
 import size from "module_2" /* 2 */;
 
 ({ ListItemType: c3, NodeType: closure_4, SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: hasOwnProperty } = SettingRendererConstants);
@@ -59,7 +59,7 @@ export function getSettingTitle(id) {
   return cachedSettingTitle;
 }
 export function getSettingSearchableTitles() {
-  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -80,7 +80,7 @@ export function getSettingSearchableTitles() {
 export function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -95,7 +95,7 @@ export function getSettingScreens() {
 }
 export function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

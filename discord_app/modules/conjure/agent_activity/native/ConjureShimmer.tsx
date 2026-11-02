@@ -1,6 +1,6 @@
-// === Module 12623: ConjureShimmer ===
+// === Module 12626: ConjureShimmer ===
 
-// Module 12623 (ConjureShimmer)
+// Module 12626 (ConjureShimmer)
 import _modDef671 from "module_671" /* 671 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;

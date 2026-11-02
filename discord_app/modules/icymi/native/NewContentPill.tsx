@@ -1,6 +1,6 @@
-// === Module 18582: NewContentPill ===
+// === Module 18595: NewContentPill ===
 
-// Module 18582 (NewContentPill)
+// Module 18595 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
 import spring from "spring" /* 5637 */;
 import GuildIcon from "GuildIcon" /* 6957 */;

@@ -1,8 +1,8 @@
-// === Module 17966: VEVOOSlider ===
+// === Module 17979: VEVOOSlider ===
 
-// Module 17966 (VEVOOSlider)
+// Module 17979 (VEVOOSlider)
 import nativeDefault from "native" /* 575 */;
-import Slider from "Slider" /* 15853 */;
+import Slider from "Slider" /* 15857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

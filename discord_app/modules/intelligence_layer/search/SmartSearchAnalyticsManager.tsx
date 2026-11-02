@@ -1,10 +1,10 @@
-// === Module 13895: SmartSearchAnalyticsManager ===
+// === Module 13910: SmartSearchAnalyticsManager ===
 
-// Module 13895 (SmartSearchAnalyticsManager)
+// Module 13910 (SmartSearchAnalyticsManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
-import SearchUtils from "SearchUtils" /* 13878 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13872 */;
+import SearchUtils from "SearchUtils" /* 13893 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13887 */;
 
 require = fn;
 function getCitationCompositionProperties(citations) {

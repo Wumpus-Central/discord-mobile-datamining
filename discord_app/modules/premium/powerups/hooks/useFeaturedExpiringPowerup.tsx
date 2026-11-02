@@ -1,6 +1,6 @@
-// === Module 14067: useFeaturedExpiringPowerup ===
+// === Module 14082: useFeaturedExpiringPowerup ===
 
-// Module 14067 (useFeaturedExpiringPowerup)
+// Module 14082 (useFeaturedExpiringPowerup)
 import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 8469 */;

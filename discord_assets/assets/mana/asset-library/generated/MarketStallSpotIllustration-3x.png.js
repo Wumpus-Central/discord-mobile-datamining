@@ -1,6 +1,6 @@
-// === Module 19931: ? ===
+// === Module 19938: ? ===
 
-// Module 19931
+// Module 19938
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MarketStallSpotIllustration-3x.png.js");

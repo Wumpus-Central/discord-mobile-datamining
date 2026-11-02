@@ -1,11 +1,11 @@
-// === Module 15053: OrbBadgeCollectedModal ===
+// === Module 15057: OrbBadgeCollectedModal ===
 
-// Module 15053 (OrbBadgeCollectedModal)
+// Module 15057 (OrbBadgeCollectedModal)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import NavigatorHeader from "NavigatorHeader" /* 6998 */;
 import _mod9553 from "module_9553" /* 9553 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 14487 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 14501 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -27,7 +27,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   }, items2);
   if (stateFromStores) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: onPressViewBadge(14693) };
+    const obj4 = { uri: onPressViewBadge(14707) };
     obj3.source = obj4;
     obj3.style = tmp.background;
     let tmp9Result = closure_6(onPressViewBadge(5717), obj3);
@@ -36,9 +36,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
     const tmp15 = onPressViewBadge(5717);
   } else {
     const obj5 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
-    const obj6 = { uri: onPressViewBadge(14694) };
+    const obj6 = { uri: onPressViewBadge(14708) };
     obj5.source = obj6;
-    obj5.poster = onPressViewBadge(14693);
+    obj5.poster = onPressViewBadge(14707);
     obj5.style = tmp.background;
     tmp9Result = closure_6(tmp2(8873).VideoComponent, obj5);
     tmp12 = onPressViewBadge;

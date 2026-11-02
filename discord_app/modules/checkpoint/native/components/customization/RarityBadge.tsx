@@ -1,6 +1,6 @@
-// === Module 13685: RarityBadge ===
+// === Module 13700: RarityBadge ===
 
-// Module 13685 (RarityBadge)
+// Module 13700 (RarityBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;

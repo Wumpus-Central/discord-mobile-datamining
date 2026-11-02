@@ -1,6 +1,6 @@
-// === Module 14421: UnifiedGiftModalSuccessScreen ===
+// === Module 14435: UnifiedGiftModalSuccessScreen ===
 
-// Module 14421 (UnifiedGiftModalSuccessScreen)
+// Module 14435 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
@@ -37,7 +37,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14433, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14447, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

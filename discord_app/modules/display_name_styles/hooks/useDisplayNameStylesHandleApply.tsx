@@ -1,6 +1,6 @@
-// === Module 17315: useDisplayNameStylesHandleApply ===
+// === Module 17328: useDisplayNameStylesHandleApply ===
 
-// Module 17315 (useDisplayNameStylesHandleApply)
+// Module 17328 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -106,8 +106,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_0 = tmp8;
                           closure_128_0 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16452).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(16452);
+                            const result = displayNameStyles(16465).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj4 = displayNameStyles(16465);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -172,8 +172,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj13 = { font_name: displayNameStyles(1403).DisplayNameFont[closure_2], effect_name: displayNameStyles(1402).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(16452).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(16452);
+                        const result2 = displayNameStyles(16465).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj10 = displayNameStyles(16465);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();

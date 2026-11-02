@@ -1,6 +1,6 @@
-// === Module 19239: VoicePanelCardView ===
+// === Module 19246: VoicePanelCardView ===
 
-// Module 19239 (VoicePanelCardView)
+// Module 19246 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
@@ -12,8 +12,8 @@ import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7241 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11229 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11249 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19240 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
@@ -233,7 +233,7 @@ get_ActivityIndicator = fn(17);
 const VoicePanelConstants = fn(11223);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: c10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19108).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11226).EDGE_GUTTER;
 const isUserParticipant = fn(5681).isUserParticipant;
 const jsx = fn(21).jsx;

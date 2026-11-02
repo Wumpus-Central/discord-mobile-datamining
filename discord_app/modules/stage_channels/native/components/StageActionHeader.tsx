@@ -1,6 +1,6 @@
-// === Module 12011: StageActionHeader ===
+// === Module 12012: StageActionHeader ===
 
-// Module 12011 (StageActionHeader)
+// Module 12012 (StageActionHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -15,20 +15,20 @@ import _modDef8174 from "module_8174" /* 8174 */;
 import _modDef8196 from "module_8196" /* 8196 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
 import StatusBarDefault from "StatusBar" /* 11212 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11881 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11895 */;
-import _modDef12012 from "module_12012" /* 12012 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11882 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11896 */;
 import _modDef12013 from "module_12013" /* 12013 */;
 import _modDef12014 from "module_12014" /* 12014 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12015 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 12016 */;
+import _modDef12015 from "module_12015" /* 12015 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12016 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 12017 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
 import GuildStore from "GuildStore" /* 4885 */;
 import StageInstanceStore from "StageInstanceStore" /* 4868 */;
-import StageMusicStore from "StageMusicStore" /* 11874 */;
+import StageMusicStore from "StageMusicStore" /* 11875 */;
 
 require = fn;
 class HideStageChannelCallIcon {
@@ -336,7 +336,7 @@ export function HideChannelCallButton(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef12012;
+  obj2.source = _modDef12013;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {

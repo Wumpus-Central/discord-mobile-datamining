@@ -1,6 +1,6 @@
-// === Module 17696: OrbWalletEntryRow ===
+// === Module 17709: OrbWalletEntryRow ===
 
-// Module 17696 (OrbWalletEntryRow)
+// Module 17709 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2172 from "module_2172" /* 2172 */;
@@ -28,7 +28,7 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(15625).ClientUnreadNotificationType;
+const constants = fn(15629).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5014);

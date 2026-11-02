@@ -1,9 +1,9 @@
-// === Module 15194: VoiceMemberEmbeddedActivity ===
+// === Module 15198: VoiceMemberEmbeddedActivity ===
 
-// Module 15194 (VoiceMemberEmbeddedActivity)
+// Module 15198 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11792 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11793 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;

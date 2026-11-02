@@ -1,6 +1,6 @@
-// === Module 15195: VoiceMemberUser ===
+// === Module 15199: VoiceMemberUser ===
 
-// Module 15195 (VoiceMemberUser)
+// Module 15199 (VoiceMemberUser)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5068 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
@@ -69,9 +69,9 @@ function StreamingUserRow(user) {
               }
             }
       };
-      obj4.children = closure_12(channel(12037), obj5);
+      obj4.children = closure_12(channel(12038), obj5);
       tmp10Result = closure_12(closure_3, obj4);
-      const tmp20 = channel(12037);
+      const tmp20 = channel(12038);
     }
     const obj6 = { children: null };
     items1[1] = tmp10Result;
@@ -285,7 +285,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
       const obj11 = { style: tmp4.row, children: null };
       let tmp21Result = null;
       if (user.isSpectating) {
-        const obj12 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15201), style: tmp20 };
+        const obj12 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15205), style: tmp20 };
         tmp21Result = closure_12(tmp2(1187).Icon, obj12);
       }
       const items4 = [tmp21Result, , , , ];
@@ -293,7 +293,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
         items4[1] = null;
         let tmp21Result5 = null;
         if (tmp15) {
-          const obj13 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15198), style: tmp20 };
+          const obj13 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15202), style: tmp20 };
           tmp21Result5 = closure_12(tmp2(1187).Icon, obj13);
         }
         items4[2] = tmp21Result5;
@@ -309,18 +309,18 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
           tmp24Result = closure_13(tmp25, obj11);
         } else {
           if (localVideoDisabled) {
-            const obj15 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15199), style: tmp4.voiceStatusIconMargin, disableColor: true };
+            const obj15 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15203), style: tmp4.voiceStatusIconMargin, disableColor: true };
             let obj16 = obj15;
           } else {
-            obj16 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15200), style: tmp20 };
+            obj16 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15204), style: tmp20 };
           }
           closure_12(tmp2(1187).Icon, obj16);
         }
       } else {
         if (tmp2Result.isThemeDark(stateFromStores1)) {
-          let tmp7Result = channel(15196);
+          let tmp7Result = channel(15200);
         } else {
-          tmp7Result = channel(15197);
+          tmp7Result = channel(15201);
         }
         const obj17 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: tmp7Result, style: tmp4.voiceStatusIconMargin, color: tmp20.tintColor, disableColor: localMute };
         closure_12(tmp2(1187).Icon, obj17);
@@ -354,7 +354,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
   obj18.label = closure_12(user(8177).FormRow.Label, obj21);
   if (localVideoAutoDisabled) {
     const obj22 = { style: tmp4.autoDisabledVideo, children: null };
-    const obj23 = { source: channel(11779), size: tmp2(1187).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const obj23 = { source: channel(11780), size: tmp2(1187).Icon.Sizes.EXTRA_SMALL, disableColor: true };
     const items7 = [closure_12(tmp2(1187).Icon, obj23), ];
     const obj24 = { variant: "text-xs/medium", color: "text-default", style: tmp4.autoDisabledVideoLabel, children: null };
     const intl3 = tmp2(1113).intl;

@@ -1,8 +1,8 @@
-// === Module 12428: EditPollCreationImageAltTextModal ===
+// === Module 12568: EditPollCreationImageAltTextModal ===
 
-// Module 12428 (EditPollCreationImageAltTextModal)
+// Module 12568 (EditPollCreationImageAltTextModal)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12427 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12567 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   value = undefined;
   const tmp = closure_10();
-  const tmp4 = value(12425)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = value(12565)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let str;
   if (upload != null) {
@@ -51,7 +51,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   }, items);
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, children: null };
-  const obj4 = { onPress: onSave(12427).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj4 = { onPress: onSave(12567).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1113).intl;
   obj4.accessibilityLabel = intl.string(onSave(1113).t.cpT0Cq);
   obj4.children = closure_8(onSave(1187).Icon, { source: value(8359) });

@@ -1,6 +1,6 @@
-// === Module 19047: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 19054: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 19047 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 19054 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
@@ -11,18 +11,18 @@ import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8528 */;
 import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10608 */;
 import MarketingComponentType from "MarketingComponentType" /* 10609 */;
 import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10616 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13716 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15303 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19019 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19048 */;
-import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19049 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19050 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19051 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19052 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13731 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15307 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19026 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19055 */;
+import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19056 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19057 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19058 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19021 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19028 */;
 import PromotionsStore from "PromotionsStore" /* 9626 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;

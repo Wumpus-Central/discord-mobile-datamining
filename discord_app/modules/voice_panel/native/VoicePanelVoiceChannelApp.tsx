@@ -1,12 +1,12 @@
-// === Module 19273: VoicePanelVoiceChannelApp ===
+// === Module 19280: VoicePanelVoiceChannelApp ===
 
-// Module 19273 (VoicePanelVoiceChannelApp)
+// Module 19280 (VoicePanelVoiceChannelApp)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19144 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19235 */;
-import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 19274 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19151 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19242 */;
+import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout" /* 19281 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import VoicePanelStore from "VoicePanelStore" /* 6875 */;

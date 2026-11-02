@@ -1,7 +1,7 @@
-// === Module 12225: useAppLauncherOnboardingContent ===
+// === Module 12365: useAppLauncherOnboardingContent ===
 
-// Module 12225 (useAppLauncherOnboardingContent)
-import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12231 */;
+// Module 12365 (useAppLauncherOnboardingContent)
+import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9763 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -42,7 +42,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj4.fetchesShelf = !result;
-      const activityApplications = channelId(12226).useActivityApplications(obj4);
+      const activityApplications = channelId(12366).useActivityApplications(obj4);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {
@@ -53,7 +53,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         let obj5 = { hasUsedActivities: flag };
         return obj5;
       }
-      const tmpResult = channelId(12226);
+      const tmpResult = channelId(12366);
     })(obj).hasUsedActivities) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
     } else {

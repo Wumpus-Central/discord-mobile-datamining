@@ -1,8 +1,8 @@
-// === Module 13816: ResourceChannelButtons ===
+// === Module 13831: ResourceChannelButtons ===
 
-// Module 13816 (ResourceChannelButtons)
+// Module 13831 (ResourceChannelButtons)
 import nativeDefault from "native" /* 575 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13818 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

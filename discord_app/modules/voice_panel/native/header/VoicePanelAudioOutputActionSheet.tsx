@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
 import NativeViewDefault from "NativeView" /* 6960 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 14737 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 14741 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5765 */;
 import AudioManagerStore from "AudioManagerStore" /* 9222 */;
@@ -68,8 +68,8 @@ function VoicePanelAudioConsoleSection(channel) {
   channel = channel.channel;
   let arr;
   let awaitingRemoteSessionInfo;
-  arr = arr(11975)();
-  dependencyMap = arr(11859)();
+  arr = arr(11976)();
+  dependencyMap = arr(11860)();
   let tmp = closure_13();
   const items = [awaitingRemoteSessionInfo];
   const stateFromStores = channel(563).useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());

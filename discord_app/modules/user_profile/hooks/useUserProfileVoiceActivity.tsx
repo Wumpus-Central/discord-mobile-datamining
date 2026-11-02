@@ -1,6 +1,6 @@
-// === Module 14894: useUserProfileVoiceActivity ===
+// === Module 14898: useUserProfileVoiceActivity ===
 
-// Module 14894 (useUserProfileVoiceActivity)
+// Module 14898 (useUserProfileVoiceActivity)
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7883 */;
 import PresenceStore from "PresenceStore" /* 5761 */;
 import VoiceStateStore from "VoiceStateStore" /* 5679 */;

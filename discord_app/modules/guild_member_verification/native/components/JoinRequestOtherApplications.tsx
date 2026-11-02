@@ -1,13 +1,13 @@
-// === Module 18650: JoinRequestOtherApplications ===
+// === Module 18663: JoinRequestOtherApplications ===
 
-// Module 18650 (JoinRequestOtherApplications)
+// Module 18663 (JoinRequestOtherApplications)
 import nativeDefault from "native" /* 575 */;
 import DateUtils from "DateUtils" /* 4836 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import CircleXIcon from "CircleXIcon" /* 7092 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18647 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18660 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

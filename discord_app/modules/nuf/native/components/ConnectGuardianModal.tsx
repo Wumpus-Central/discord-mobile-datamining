@@ -1,6 +1,6 @@
-// === Module 19574: ConnectGuardianModal ===
+// === Module 19581: ConnectGuardianModal ===
 
-// Module 19574 (ConnectGuardianModal)
+// Module 19581 (ConnectGuardianModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(19575).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(19582).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -77,7 +77,7 @@ export default function ConnectGuardianModal(route) {
     obj8.children = intl3.string(tmp2(2538).Mi60fm);
     const items4 = [closure_7(tmp4(5624).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(16772).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = closure_7(tmp4(16785).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
     items3[1] = closure_8(View, obj7);
     const obj11 = { style: tmp.grow };

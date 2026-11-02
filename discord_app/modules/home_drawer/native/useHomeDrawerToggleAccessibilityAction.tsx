@@ -1,6 +1,6 @@
-// === Module 18359: useHomeDrawerToggleAccessibilityAction ===
+// === Module 18372: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 18359 (useHomeDrawerToggleAccessibilityAction)
+// Module 18372 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 

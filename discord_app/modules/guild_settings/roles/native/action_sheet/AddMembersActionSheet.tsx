@@ -1,6 +1,6 @@
-// === Module 19776: action_sheet/AddMembersActionSheet ===
+// === Module 19783: action_sheet/AddMembersActionSheet ===
 
-// Module 19776 (action_sheet/AddMembersActionSheet)
+// Module 19783 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -12,7 +12,7 @@ import GuildUtilsDefault from "GuildUtils" /* 6901 */;
 import FormCheckbox from "FormCheckbox" /* 6989 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10819 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19775 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19782 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -214,7 +214,7 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19770).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19777).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5014);

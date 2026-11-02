@@ -1,6 +1,6 @@
-// === Module 12357: AppLauncherChoicesActionSheet ===
+// === Module 12497: AppLauncherChoicesActionSheet ===
 
-// Module 12357 (AppLauncherChoicesActionSheet)
+// Module 12497 (AppLauncherChoicesActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6779 */;
 import _mod7294 from "module_7294" /* 7294 */;

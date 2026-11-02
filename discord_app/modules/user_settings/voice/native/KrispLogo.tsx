@@ -1,6 +1,6 @@
-// === Module 11959: KrispLogo ===
+// === Module 11960: KrispLogo ===
 
-// Module 11959 (KrispLogo)
+// Module 11960 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,8 +8,8 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import shared from "shared" /* 5021 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import LinkingDefault from "Linking" /* 5709 */;
-import _modDef11960 from "module_11960" /* 11960 */;
 import _modDef11961 from "module_11961" /* 11961 */;
+import _modDef11962 from "module_11962" /* 11962 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef11960;
+    let tmp4Result = _modDef11961;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef11961;
+    tmp4Result = _modDef11962;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };

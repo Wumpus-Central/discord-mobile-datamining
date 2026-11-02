@@ -1,13 +1,13 @@
-// === Module 17401: AnimateStickersSetting ===
+// === Module 17414: AnimateStickersSetting ===
 
-// Module 17401 (AnimateStickersSetting)
+// Module 17414 (AnimateStickersSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StickerAnimationSettings = fn(4842).StickerAnimationSettings;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

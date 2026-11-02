@@ -1,6 +1,6 @@
-// === Module 19471: NewMemberActionsCompletedModal ===
+// === Module 19478: NewMemberActionsCompletedModal ===
 
-// Module 19471 (NewMemberActionsCompletedModal)
+// Module 19478 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;

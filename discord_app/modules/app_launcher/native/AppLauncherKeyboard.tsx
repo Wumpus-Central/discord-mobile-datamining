@@ -1,6 +1,6 @@
-// === Module 12223: AppLauncherKeyboard ===
+// === Module 12363: AppLauncherKeyboard ===
 
-// Module 12223 (AppLauncherKeyboard)
+// Module 12363 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1495 */;
@@ -11,15 +11,15 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6021 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12234 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12235 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12374 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ContentDismissActionType = fn(4860).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12224).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12364).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5014);
@@ -138,11 +138,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11500).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(11501).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(5275).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11500).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(11501).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(5275).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11500).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(11501).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }

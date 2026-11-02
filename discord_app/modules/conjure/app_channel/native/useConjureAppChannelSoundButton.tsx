@@ -1,12 +1,12 @@
-// === Module 14538: useConjureAppChannelSoundButton ===
+// === Module 14552: useConjureAppChannelSoundButton ===
 
-// Module 14538 (useConjureAppChannelSoundButton)
+// Module 14552 (useConjureAppChannelSoundButton)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
-import VoiceXIcon from "VoiceXIcon" /* 11949 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
+import VoiceXIcon from "VoiceXIcon" /* 11950 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6846 */;
 

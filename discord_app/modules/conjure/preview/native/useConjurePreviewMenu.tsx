@@ -1,11 +1,11 @@
-// === Module 12545: useConjurePreviewMenu ===
+// === Module 12205: useConjurePreviewMenu ===
 
-// Module 12545 (useConjurePreviewMenu)
+// Module 12205 (useConjurePreviewMenu)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
-import conjureExternalConnections from "conjureExternalConnections" /* 12517 */;
-import conjureProjectMenuItems from "conjureProjectMenuItems" /* 12547 */;
+import conjureExternalConnections from "conjureExternalConnections" /* 12176 */;
+import conjureProjectMenuItems from "conjureProjectMenuItems" /* 12211 */;
 import noop from "module_19" /* 19 */;
 import ConjureSettingsStore from "ConjureSettingsStore" /* 10869 */;
 

@@ -1,6 +1,6 @@
-// === Module 14993: useUserProfileApplicationRoleConnections ===
+// === Module 14997: useUserProfileApplicationRoleConnections ===
 
-// Module 14993 (useUserProfileApplicationRoleConnections)
+// Module 14997 (useUserProfileApplicationRoleConnections)
 import _mod19 from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7772 */;
 import size from "module_2" /* 2 */;

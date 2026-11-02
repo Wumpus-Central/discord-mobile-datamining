@@ -1,6 +1,6 @@
-// === Module 16948: BountiesScrollIndicatorOverlay ===
+// === Module 16961: BountiesScrollIndicatorOverlay ===
 
-// Module 16948 (BountiesScrollIndicatorOverlay)
+// Module 16961 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F139623 */ function() { ... }, num);
+            let timeout = setTimeout(/* F139679 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

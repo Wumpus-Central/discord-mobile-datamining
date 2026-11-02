@@ -1,10 +1,10 @@
-// === Module 18675: NavTTISurfaceProvider ===
+// === Module 18682: NavTTISurfaceProvider ===
 
-// Module 18675 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13315 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 18598 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18600 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18601 */;
+// Module 18682 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13330 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 18611 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18613 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18614 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5627 */;

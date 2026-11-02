@@ -1,10 +1,10 @@
-// === Module 12550: conjureChatMoreSections ===
+// === Module 12216: conjureChatMoreSections ===
 
-// Module 12550 (conjureChatMoreSections)
+// Module 12216 (conjureChatMoreSections)
 import conjureProjectMute from "conjureProjectMute" /* 10878 */;
-import conjureProjectActions from "conjureProjectActions" /* 12555 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12557 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12561 */;
+import conjureProjectActions from "conjureProjectActions" /* 12221 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12223 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12227 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 import size from "module_2" /* 2 */;
 
@@ -28,7 +28,7 @@ export function conjureChatMoreSections(project) {
   if (preview(project)) {
     const obj2 = { kind: "action", key: "remix", label: null, IconComponent: null, onPress: null };
     const intl2 = tmp2(removeTarget[1]).intl;
-    obj2.label = intl2.string(require("module_3868").XWgAfc);
+    obj2.label = intl2.string(require("module_3868")["276ll6"]);
     obj2.IconComponent = tmp2(removeTarget[4]).RemixIcon;
     obj2.onPress = onRemix;
     items.push(obj2);

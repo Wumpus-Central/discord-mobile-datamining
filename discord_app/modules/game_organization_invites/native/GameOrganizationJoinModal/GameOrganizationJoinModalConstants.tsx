@@ -1,6 +1,6 @@
-// === Module 13186: GameOrganizationJoinModalConstants ===
+// === Module 13201: GameOrganizationJoinModalConstants ===
 
-// Module 13186 (GameOrganizationJoinModalConstants)
+// Module 13201 (GameOrganizationJoinModalConstants)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import size from "module_2" /* 2 */;
 

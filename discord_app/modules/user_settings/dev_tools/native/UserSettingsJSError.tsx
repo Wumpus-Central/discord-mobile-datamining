@@ -1,6 +1,6 @@
-// === Module 17675: UserSettingsJSError ===
+// === Module 17688: UserSettingsJSError ===
 
-// Module 17675 (UserSettingsJSError)
+// Module 17688 (UserSettingsJSError)
 import Text_Text from "Text/Text" /* 5624 */;
 import noop from "module_19" /* 19 */;
 

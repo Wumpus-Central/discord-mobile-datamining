@@ -1,6 +1,6 @@
-// === Module 20013: clips/ClipsManager ===
+// === Module 20020: clips/ClipsManager ===
 
-// Module 20013 (clips/ClipsManager)
+// Module 20020 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -8,10 +8,10 @@ import DiscordNativeDefault from "DiscordNative" /* 4825 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
-import isClipsEnabled from "isClipsEnabled" /* 15210 */;
-import ClipsExperiment from "ClipsExperiment" /* 15211 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20014 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20015 */;
+import isClipsEnabled from "isClipsEnabled" /* 15214 */;
+import ClipsExperiment from "ClipsExperiment" /* 15215 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20021 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

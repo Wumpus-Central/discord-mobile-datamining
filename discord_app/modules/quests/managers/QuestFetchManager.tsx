@@ -1,6 +1,6 @@
-// === Module 20024: QuestFetchManager ===
+// === Module 20031: QuestFetchManager ===
 
-// Module 20024 (QuestFetchManager)
+// Module 20031 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;

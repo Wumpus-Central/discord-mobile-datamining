@@ -1,10 +1,10 @@
-// === Module 18061: HomeDrawerStore ===
+// === Module 18074: HomeDrawerStore ===
 
-// Module 18061 (HomeDrawerStore)
+// Module 18074 (HomeDrawerStore)
 import Constants from "Constants" /* 1072 */;
 import _mod4929 from "module_4929" /* 4929 */;
 import timing from "timing" /* 5254 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18062 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18075 */;
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 

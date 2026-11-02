@@ -1,6 +1,6 @@
-// === Module 15670: handleSupportedURL ===
+// === Module 15674: handleSupportedURL ===
 
-// Module 15670 (handleSupportedURL)
+// Module 15674 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
@@ -22,18 +22,18 @@ import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 944
 import QuestUtils from "QuestUtils" /* 9678 */;
 import ApplicationUtils from "ApplicationUtils" /* 10909 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 10911 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 10929 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13204 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13341 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14265 */;
-import BountyActionCreators from "BountyActionCreators" /* 14677 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15678 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15712 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15807 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 10928 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13219 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13356 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14280 */;
+import BountyActionCreators from "BountyActionCreators" /* 14691 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15682 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15716 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15811 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15280 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15284 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -48,7 +48,7 @@ const NativePermissionTypes = fn(7940).NativePermissionTypes;
 let closure_21 = fn(10910).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7716).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(5747).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15671).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15675).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8432).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -201,7 +201,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: false };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[30])(obj21);
@@ -285,7 +285,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15682, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15686, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[40]);
             const tmp3 = payload(inviteCode[40]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;
@@ -801,8 +801,8 @@ export default function handleSupportedURL(payload) {
                 pathname(() => {
                   if (null != payload.questId) {
                     const obj2 = { questId: payload.questId, event: constants.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT, sourceQuestContent: QuestContent.QuestContent.QUEST_EMBED_MOBILE, properties: null };
-                    const obj3 = { referrer_id: payload.referrerId };
-                    obj2.properties = obj3;
+                    const obj4 = { referrer_id: payload.referrerId };
+                    obj2.properties = obj4;
                     AnalyticsActions.trackQuestEvent(obj2);
                   }
                   let sort;
@@ -814,22 +814,22 @@ export default function handleSupportedURL(payload) {
                     filter = payload.filter;
                   }
                   const obj5 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp9 = null;
+                  let tmp3 = null;
                   if (null != sort) {
-                    tmp9 = null;
+                    tmp3 = null;
                     if ("" !== sort) {
-                      tmp9 = sort;
+                      tmp3 = sort;
                     }
                   }
-                  obj5.sort = tmp9;
-                  let tmp10 = null;
+                  obj5.sort = tmp3;
+                  let tmp4 = null;
                   if (null != filter) {
-                    tmp10 = null;
+                    tmp4 = null;
                     if ("" !== filter) {
-                      tmp10 = filter;
+                      tmp4 = filter;
                     }
                   }
-                  obj5.filter = tmp10;
+                  obj5.filter = tmp4;
                   obj5.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
                   QuestUtils.openQuestHome(obj5);
                 });

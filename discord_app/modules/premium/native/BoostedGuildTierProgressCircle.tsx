@@ -1,16 +1,16 @@
-// === Module 15390: BoostedGuildTierProgressCircle ===
+// === Module 15394: BoostedGuildTierProgressCircle ===
 
-// Module 15390 (BoostedGuildTierProgressCircle)
+// Module 15394 (BoostedGuildTierProgressCircle)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 8463 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8468 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12570 */;
-import Tier048Px from "Tier048Px" /* 15391 */;
-import _modDef15395 from "module_15395" /* 15395 */;
-import _modDef15396 from "module_15396" /* 15396 */;
-import _modDef15397 from "module_15397" /* 15397 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12236 */;
+import Tier048Px from "Tier048Px" /* 15395 */;
+import _modDef15399 from "module_15399" /* 15399 */;
+import _modDef15400 from "module_15400" /* 15400 */;
+import _modDef15401 from "module_15401" /* 15401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,11 +64,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef15395;
+          let tmp2Result4 = _modDef15399;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef15396;
+          tmp2Result4 = _modDef15400;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef15397;
+          tmp2Result4 = _modDef15401;
         }
       }
       const obj5 = { source: tmp2Result4, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

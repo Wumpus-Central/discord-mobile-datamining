@@ -1,6 +1,6 @@
-// === Module 15812: Menu ===
+// === Module 15816: Menu ===
 
-// Module 15812 (Menu)
+// Module 15816 (Menu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(15813).STANDARD_EASING };
+let __closure = { duration: 250, easing: fn(15817).STANDARD_EASING };
 const createStyles = fn(5014);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};

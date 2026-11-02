@@ -1,6 +1,6 @@
-// === Module 19783: GuildSettingsRoleItem ===
+// === Module 19790: GuildSettingsRoleItem ===
 
-// Module 19783 (GuildSettingsRoleItem)
+// Module 19790 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 575 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -136,7 +136,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11602).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11603).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {

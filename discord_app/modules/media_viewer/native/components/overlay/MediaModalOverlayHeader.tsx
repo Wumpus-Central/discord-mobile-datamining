@@ -1,12 +1,12 @@
-// === Module 14771: MediaModalOverlayHeader ===
+// === Module 14775: MediaModalOverlayHeader ===
 
-// Module 14771 (MediaModalOverlayHeader)
+// Module 14775 (MediaModalOverlayHeader)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8939 */;
 import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10194 */;
-import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 14772 */;
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 14776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export function MediaModalOverlayHeader(arg0) {
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = closure_8();
-  const headerLayoutAnimation = isModalOpen(14768).useHeaderLayoutAnimation(animationDriver);
-  let obj = isModalOpen(14768);
+  const headerLayoutAnimation = isModalOpen(14772).useHeaderLayoutAnimation(animationDriver);
+  let obj = isModalOpen(14772);
   const mediaShareActions = isModalOpen(8905).useMediaShareActions({ source, disableDownload, shareable });
   const tmp7 = useShouldHideMediaOptionsDefault(channelId);
   const obj2 = isModalOpen(8905);
@@ -103,7 +103,7 @@ export function MediaModalOverlayHeader(arg0) {
               obj.accessibilityLabel = intl.string(isModalOpen(1113).t.PdRCRg);
               const tmp4 = MediaViewerOverlayButtonDefault;
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_6(isModalOpen(14773).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = closure_1_6(isModalOpen(14777).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
                 tmp2Result = closure_1_6(isModalOpen(9756).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }

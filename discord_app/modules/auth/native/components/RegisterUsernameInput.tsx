@@ -1,13 +1,13 @@
-// === Module 18002: RegisterUsernameInput ===
+// === Module 18015: RegisterUsernameInput ===
 
-// Module 18002 (RegisterUsernameInput)
+// Module 18015 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import Stack_Stack from "Stack/Stack" /* 6027 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15868 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16593 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15872 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16606 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -67,7 +67,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(17976);
+const RegistrationUIStore = fn(17989);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -141,7 +141,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16593).NameValidationState.ERROR) {
+  if (type === tmp14(16606).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

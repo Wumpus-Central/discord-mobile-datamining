@@ -1,8 +1,8 @@
-// === Module 19326: JankVoicePanelTabReporter ===
+// === Module 19333: JankVoicePanelTabReporter ===
 
-// Module 19326 (JankVoicePanelTabReporter)
+// Module 19333 (JankVoicePanelTabReporter)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18054 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

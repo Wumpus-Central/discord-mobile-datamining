@@ -1,17 +1,17 @@
-// === Module 13219: ExperimentEmbed ===
+// === Module 13234: ExperimentEmbed ===
 
-// Module 13219 (ExperimentEmbed)
+// Module 13234 (ExperimentEmbed)
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
 import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8585 */;
 import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8587 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11548 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11549 */;
-import useApexExperiments from "useApexExperiments" /* 11550 */;
-import _modDef13220 from "module_13220" /* 13220 */;
-import _modDef13221 from "module_13221" /* 13221 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 13222 */;
-import _modDef13223 from "module_13223" /* 13223 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11549 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11550 */;
+import useApexExperiments from "useApexExperiments" /* 11551 */;
+import _modDef13235 from "module_13235" /* 13235 */;
+import _modDef13236 from "module_13236" /* 13236 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 13237 */;
+import _modDef13238 from "module_13238" /* 13238 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -169,7 +169,7 @@ export function createExperimentEmbed(url, theme) {
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13223);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13238);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -198,7 +198,7 @@ export function createExperimentEmbed(url, theme) {
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13223);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13238);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -222,9 +222,9 @@ export function createExperimentEmbed(url, theme) {
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef13220;
+    let tmpResult = _modDef13235;
   } else {
-    tmpResult = _modDef13221;
+    tmpResult = _modDef13236;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

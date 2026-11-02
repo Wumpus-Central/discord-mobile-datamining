@@ -58,8 +58,8 @@ export function getConjurePreviewSurface(conjurePreviewGuildId) {
     obj3 = { type: result, channelId, guildId: conjurePreviewGuildId };
   }
 }
-export function getConjureBuilderPreviewFrames(previewAppId) {
-  _require = previewAppId;
+export function getConjureBuilderPreviewFrames(arg0) {
+  _require = arg0;
   const prop = require("conjurePreviewFrameSurfaces").CONJURE_PREVIEW_LAUNCH_SURFACE_TYPES;
   const mapped = prop.map((item) => {
     let APP_CHANNEL = item;

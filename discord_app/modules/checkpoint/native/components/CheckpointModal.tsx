@@ -1,17 +1,17 @@
-// === Module 13420: CheckpointModal ===
+// === Module 13435: CheckpointModal ===
 
-// Module 13420 (CheckpointModal)
+// Module 13435 (CheckpointModal)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import CheckpointNavigation from "CheckpointNavigation" /* 6435 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
-import CheckpointFlows from "CheckpointFlows" /* 13437 */;
+import CheckpointFlows from "CheckpointFlows" /* 13452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4957 */;
-import CheckpointStore from "CheckpointStore" /* 13421 */;
+import CheckpointStore from "CheckpointStore" /* 13436 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -125,7 +125,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
                 }
                 c7 = 3;
                 c8 = 1;
-                const obj7 = { value: closure_0(13435).sendCheckpointCard(closure_132_0, c3, closure_133_0), done: false };
+                const obj7 = { value: closure_0(13450).sendCheckpointCard(closure_132_0, c3, closure_133_0), done: false };
                 return obj7;
               }
             } else if (2 === tmp7) {
@@ -146,7 +146,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               return obj9;
             } else {
               c6 = 0;
-              closure_0(13364).closeForwardModal();
+              closure_0(13379).closeForwardModal();
               closure_1_11(1, { skipThrottle: true });
               c8 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
@@ -501,7 +501,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       return applyArgumentsResult;
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13422, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13437, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
     },
     color: tmp20,
     shadowColor: null,
@@ -528,7 +528,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(13421).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13436).CheckpointFetchStates;
 const CheckpointConstants = fn(6066);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_PRIMARY: closure_11, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const ThemeTypes = fn(1083).ThemeTypes;

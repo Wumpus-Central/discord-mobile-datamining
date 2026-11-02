@@ -1,6 +1,6 @@
-// === Module 18423: useYouBarCoachmark ===
+// === Module 18436: useYouBarCoachmark ===
 
-// Module 18423 (useYouBarCoachmark)
+// Module 18436 (useYouBarCoachmark)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
 import _slicedToArray from "module_32" /* 32 */;

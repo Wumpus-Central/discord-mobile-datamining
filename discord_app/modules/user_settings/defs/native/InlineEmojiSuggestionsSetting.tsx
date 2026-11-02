@@ -1,13 +1,13 @@
-// === Module 17452: InlineEmojiSuggestionsSetting ===
+// === Module 17465: InlineEmojiSuggestionsSetting ===
 
-// Module 17452 (InlineEmojiSuggestionsSetting)
+// Module 17465 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import SettingsConstants from "SettingsConstants" /* 8432 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13712 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13727 */;
 import Constants from "Constants" /* 1072 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);

@@ -1,6 +1,6 @@
-// === Module 12346: CommandDetailsOverflowMenu ===
+// === Module 12486: CommandDetailsOverflowMenu ===
 
-// Module 12346 (CommandDetailsOverflowMenu)
+// Module 12486 (CommandDetailsOverflowMenu)
 import ToastUtils from "ToastUtils" /* 5711 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
 import _modDef9207 from "module_9207" /* 9207 */;

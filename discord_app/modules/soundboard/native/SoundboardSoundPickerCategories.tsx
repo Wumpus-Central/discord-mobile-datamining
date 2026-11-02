@@ -1,6 +1,6 @@
-// === Module 19183: SoundboardSoundPickerCategories ===
+// === Module 19190: SoundboardSoundPickerCategories ===
 
-// Module 19183 (SoundboardSoundPickerCategories)
+// Module 19190 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -15,7 +15,7 @@ import LockIcon from "LockIcon" /* 8667 */;
 import TrophyIcon from "TrophyIcon" /* 9378 */;
 import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9796 */;
 import _modDef10271 from "module_10271" /* 10271 */;
-import _modDef19181 from "module_19181" /* 19181 */;
+import _modDef19188 from "module_19188" /* 19188 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 
@@ -50,13 +50,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef19181;
+    tmp6 = _modDef19188;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef19181;
+    tmp6 = _modDef19188;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -117,7 +117,7 @@ function SoundboardCategoryScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(19166).setSearchQuery;
+const setSearchQuery = fn(19173).setSearchQuery;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);

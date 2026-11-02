@@ -1,9 +1,9 @@
-// === Module 17375: EmojiSquintingFaceWithTongueIcon ===
+// === Module 17388: EmojiSquintingFaceWithTongueIcon ===
 
-// Module 17375 (EmojiSquintingFaceWithTongueIcon)
+// Module 17388 (EmojiSquintingFaceWithTongueIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod17376 from "module_17376" /* 17376 */;
+import _mod17389 from "module_17389" /* 17389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiSquintingFaceWithTongueIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17376, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17389, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

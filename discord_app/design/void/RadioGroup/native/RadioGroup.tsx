@@ -1,6 +1,6 @@
-// === Module 15975: RadioGroup ===
+// === Module 15979: RadioGroup ===
 
-// Module 15975 (RadioGroup)
+// Module 15979 (RadioGroup)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
 import FormRowDefault from "FormRow" /* 7309 */;

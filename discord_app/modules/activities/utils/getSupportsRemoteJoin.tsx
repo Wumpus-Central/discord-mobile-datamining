@@ -1,6 +1,6 @@
-// === Module 11689: getSupportsRemoteJoin ===
+// === Module 11690: getSupportsRemoteJoin ===
 
-// Module 11689 (getSupportsRemoteJoin)
+// Module 11690 (getSupportsRemoteJoin)
 import Constants from "Constants" /* 1072 */;
 import hasFlagDefault from "hasFlag" /* 7483 */;
 import size from "module_2" /* 2 */;

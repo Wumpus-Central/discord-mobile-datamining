@@ -1,6 +1,6 @@
-// === Module 18913: HangoutWindowExperiment ===
+// === Module 18920: HangoutWindowExperiment ===
 
-// Module 18913 (HangoutWindowExperiment)
+// Module 18920 (HangoutWindowExperiment)
 import ExperimentConstants from "ExperimentConstants" /* 5239 */;
 import createExperiment from "module_5236" /* 5236 */;
 import size from "module_2" /* 2 */;

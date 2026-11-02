@@ -1,6 +1,6 @@
-// === Module 18446: YouBarUser ===
+// === Module 18459: YouBarUser ===
 
-// Module 18446 (YouBarUser)
+// Module 18459 (YouBarUser)
 import nativeDefault from "native" /* 575 */;
 import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -55,19 +55,19 @@ export default noop.memo(function YouBarUser(isCondensed) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items2 = [closure_9(tmp9(18448), obj5), ];
+      const items2 = [closure_9(tmp9(18461), obj5), ];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(18449), obj7);
+      obj6.children = closure_9(tmp9(18462), obj7);
       items2[1] = closure_9(tmp9(5095).View, obj6);
       obj3.children = items2;
     }
     return tmp11(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items4 = [closure_9(sharedValue(18447), { isLarge: !isCondensed }), ];
+  const items4 = [closure_9(sharedValue(18460), { isLarge: !isCondensed }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items5;

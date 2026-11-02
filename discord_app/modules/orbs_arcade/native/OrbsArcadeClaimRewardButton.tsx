@@ -1,12 +1,12 @@
-// === Module 17032: OrbsArcadeClaimRewardButton ===
+// === Module 17045: OrbsArcadeClaimRewardButton ===
 
-// Module 17032 (OrbsArcadeClaimRewardButton)
+// Module 17045 (OrbsArcadeClaimRewardButton)
 import util from "util" /* 1113 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17017 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17010 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
 
 require = fn;
 function showOrbsArcadeClaimRewardsError() {
@@ -61,12 +61,12 @@ export default function OrbsArcadeClaimRewardButton(game) {
             let orbsArcadeClaimableRewards;
             let gameState;
             closure_128_3 = undefined;
-            orbsArcadeClaimableRewards = tmp5(17017).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
+            orbsArcadeClaimableRewards = tmp5(17030).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
             dependencyMap = 1;
-            const obj6 = tmp5(17017);
+            const obj6 = tmp5(17030);
             c3 = 2;
             c4 = 1;
-            const obj4 = { value: tmp5(17016).claimOrbsArcadeRewards(game.id), done: false };
+            const obj4 = { value: tmp5(17029).claimOrbsArcadeRewards(game.id), done: false };
             return obj4;
           }
         } else if (1 === tmp8) {
@@ -98,8 +98,8 @@ export default function OrbsArcadeClaimRewardButton(game) {
               showOrbsArcadeClaimRewardsError();
             }
             if (closure_128_3.length > 0) {
-              const result = tmp5(17033).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
-              const obj = tmp5(17033);
+              const result = tmp5(17046).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
+              const obj = tmp5(17046);
             }
           }
           c4 = 3;

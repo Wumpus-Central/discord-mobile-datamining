@@ -54,7 +54,7 @@ export function BaseButton(disabled) {
   const tmp = closure_8();
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: null };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

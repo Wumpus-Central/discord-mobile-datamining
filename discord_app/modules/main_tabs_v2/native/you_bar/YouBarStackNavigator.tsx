@@ -1,7 +1,7 @@
-// === Module 18056: YouBarStackNavigator ===
+// === Module 18069: YouBarStackNavigator ===
 
-// Module 18056 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 18463 */;
+// Module 18069 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 18476 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
@@ -18,7 +18,7 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11513).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11514).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const NativeStackNavigator = fn(9856);

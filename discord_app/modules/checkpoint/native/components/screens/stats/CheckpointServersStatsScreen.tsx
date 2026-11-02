@@ -1,21 +1,21 @@
-// === Module 13642: CheckpointServersStatsScreen ===
+// === Module 13657: CheckpointServersStatsScreen ===
 
-// Module 13642 (CheckpointServersStatsScreen)
+// Module 13657 (CheckpointServersStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef3060 from "module_3060" /* 3060 */;
 import _modDef3092 from "module_3092" /* 3092 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import GuildIcon from "GuildIcon" /* 6957 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13622 */;
-import CheckpointTextDefault from "CheckpointText" /* 13624 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13629 */;
-import _modDef13630 from "module_13630" /* 13630 */;
-import _modDef13631 from "module_13631" /* 13631 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13643 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13644 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13645 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13637 */;
+import CheckpointTextDefault from "CheckpointText" /* 13639 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13644 */;
+import _modDef13645 from "module_13645" /* 13645 */;
+import _modDef13646 from "module_13646" /* 13646 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13658 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13659 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13660 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13421 */;
+import CheckpointStore from "CheckpointStore" /* 13436 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -180,8 +180,8 @@ export default function CheckpointServersStatsScreen() {
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef13630;
-  obj15.staticUri = _modDef13631;
+  obj15.animatedUri = _modDef13645;
+  obj15.staticUri = _modDef13646;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15), ];
   const obj16 = { isStepHeading: true, children: null };

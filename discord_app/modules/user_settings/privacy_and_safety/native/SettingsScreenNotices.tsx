@@ -1,12 +1,12 @@
-// === Module 16704: SettingsScreenNotices ===
+// === Module 16717: SettingsScreenNotices ===
 
-// Module 16704 (SettingsScreenNotices)
+// Module 16717 (SettingsScreenNotices)
 import nativeDefault from "native" /* 575 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 6731 */;
-import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 16705 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 16713 */;
+import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 16718 */;
+import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 16726 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 
@@ -22,8 +22,8 @@ const obj5 = { SENSITIVE_CONTENT_FILTERS: null, CONTENT_AND_SOCIAL: null, DATA_A
 const obj4 = { marginTop: nativeDefault.space.PX_16 };
 let items = [{ order: 100, predicate: fn(8372).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, , , ];
 const obj6 = { order: 100, predicate: fn(8372).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
-items[1] = { order: 150, predicate: fn(16706).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(16706).ContentFiltersUnconfirmedNotice };
-const obj7 = { order: 150, predicate: fn(16706).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(16706).ContentFiltersUnconfirmedNotice };
+items[1] = { order: 150, predicate: fn(16719).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(16719).ContentFiltersUnconfirmedNotice };
+const obj7 = { order: 150, predicate: fn(16719).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(16719).ContentFiltersUnconfirmedNotice };
 items[2] = {
   order: 200,
   predicate() {
@@ -58,7 +58,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16714).SensitiveContentFiltersTeenNotice
+  Component: fn(16727).SensitiveContentFiltersTeenNotice
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -71,7 +71,7 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(16714).SensitiveContentFiltersTeenNotice
+  Component: fn(16727).SensitiveContentFiltersTeenNotice
 };
 const items1 = [{ order: 100, predicate: fn(8372).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, ];
 const obj10 = { order: 100, predicate: fn(8372).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };

@@ -1,8 +1,8 @@
-// === Module 19561: RedesignAddAvatarModal ===
+// === Module 19568: RedesignAddAvatarModal ===
 
-// Module 19561 (RedesignAddAvatarModal)
+// Module 19568 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 575 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19538 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19545 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -83,7 +83,7 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16435);
+              const obj = tmp2(16447);
               obj11.description = tmp2(8740).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8740);

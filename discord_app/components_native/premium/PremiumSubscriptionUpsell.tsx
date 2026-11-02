@@ -1,6 +1,6 @@
-// === Module 15422: PremiumSubscriptionUpsell ===
+// === Module 15426: PremiumSubscriptionUpsell ===
 
-// Module 15422 (PremiumSubscriptionUpsell)
+// Module 15426 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -13,8 +13,8 @@ import components_Button_Button from "components/Button/Button" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6993 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 9936 */;
-import _modDef15423 from "module_15423" /* 15423 */;
-import _modDef15424 from "module_15424" /* 15424 */;
+import _modDef15427 from "module_15427" /* 15427 */;
+import _modDef15428 from "module_15428" /* 15428 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2062 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -82,11 +82,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15423;
+    obj11.source = _modDef15427;
     const items4 = [React7(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15424;
+    obj12.source = _modDef15428;
     items4[1] = React7(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

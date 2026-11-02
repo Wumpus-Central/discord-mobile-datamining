@@ -1,6 +1,6 @@
-// === Module 12555: conjureProjectActions ===
+// === Module 12221: conjureProjectActions ===
 
-// Module 12555 (conjureProjectActions)
+// Module 12221 (conjureProjectActions)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
@@ -10,9 +10,9 @@ import ChannelUtils from "ChannelUtils" /* 6046 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
 import conjureProjectMute from "conjureProjectMute" /* 10878 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12548 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12557 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12561 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12212 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12223 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
@@ -88,7 +88,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1113).intl;
-          await tmp3(12556).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3868).Owerd3));
+          await tmp3(12222).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3868).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;
@@ -228,7 +228,7 @@ export function conjureProjectActions(project) {
   if (closure_8(project)) {
     let obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = tmp3(muted[8]).intl;
-    obj2.label = intl2.string(tmp8(muted[9]).XWgAfc);
+    obj2.label = intl2.string(tmp8(muted[9])["276ll6"]);
     obj2.IconComponent = tmp3(muted[20]).RemixIcon;
     obj2.action = project.onRemix;
     items.push(obj2);

@@ -1,6 +1,6 @@
-// === Module 15523: GatewaySocket ===
+// === Module 15527: GatewaySocket ===
 
-// Module 15523 (GatewaySocket)
+// Module 15527 (GatewaySocket)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -15,13 +15,13 @@ import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1350 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5020 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 6540 */;
 import MetricEvents from "MetricEvents" /* 6545 */;
-import GatewayEncodingDefault from "GatewayEncoding" /* 15524 */;
-import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 15527 */;
-import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 15528 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 15533 */;
-import ConnectionStateDefault from "ConnectionState" /* 15535 */;
-import GatewayCompressionHandler from "GatewayCompressionHandler" /* 15537 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15556 */;
+import GatewayEncodingDefault from "GatewayEncoding" /* 15528 */;
+import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 15531 */;
+import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 15532 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 15537 */;
+import ConnectionStateDefault from "ConnectionState" /* 15539 */;
+import GatewayCompressionHandler from "GatewayCompressionHandler" /* 15541 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15560 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
@@ -193,7 +193,7 @@ prototype["_connect"] = function _connect() {
     if (obj.getIsPaused()) {
       logger.info("Skipping _connect because socket is paused");
     } else {
-      self.connectionState = identify(15535).CONNECTING;
+      self.connectionState = identify(15539).CONNECTING;
       self.nextReconnectIsImmediate = false;
       const algorithm = self.compressionHandler.getAlgorithm();
       name = name.getName();
@@ -385,7 +385,7 @@ prototype["_connect"] = function _connect() {
         }
       }
       if (null == tmp32) {
-        const tmp48 = tmp5(15526)(str1);
+        const tmp48 = tmp5(15530)(str1);
         tmp48.binaryType = "arraybuffer";
         tmp32 = tmp48;
       }
@@ -796,7 +796,7 @@ prototype["_doIdentify"] = function _doIdentify() {
             const handleIdentifyResult = self.handleIdentify();
             closure_128_0 = handleIdentifyResult;
             if (null !== handleIdentifyResult) {
-              self.connectionState = tmp2(15535).IDENTIFYING;
+              self.connectionState = tmp2(15539).IDENTIFYING;
               const _Date = Date;
               const timestamp = Date.now();
               closure_128_1 = timestamp;
@@ -855,7 +855,7 @@ prototype["_doIdentify"] = function _doIdentify() {
               obj = { guild_versions: {} };
             }
             closure_128_8 = obj;
-            if (closure_129_0.connectionState !== tmp2(15535).IDENTIFYING) {
+            if (closure_129_0.connectionState !== tmp2(15539).IDENTIFYING) {
               closure_1_9.warn("Skipping identify because connectionState or identifyStartTime has changed");
             }
             token = closure_128_0.token;
@@ -872,8 +872,8 @@ prototype["_doIdentify"] = function _doIdentify() {
             const obj14 = { token, capabilities: null, properties: null, presence: null, compress: null, client_state: null, qos_token: null };
             const obj21 = tmp3(500);
             const obj18 = { useChannelObfuscation: null };
-            const obj5 = tmp3(15557);
-            obj18.useChannelObfuscation = tmp3(15558).isChannelMetadataObfuscationEnabled("GatewaySocket");
+            const obj5 = tmp3(15561);
+            obj18.useChannelObfuscation = tmp3(15562).isChannelMetadataObfuscationEnabled("GatewaySocket");
             obj14.capabilities = obj5.getClientCapabilities(obj18);
             obj14.properties = closure_128_11;
             obj14.presence = presence;
@@ -885,14 +885,14 @@ prototype["_doIdentify"] = function _doIdentify() {
             closure_128_14 = JSON.stringify(closure_128_13);
             closure_129_0.identifyUncompressedByteSize = closure_128_14.length;
             const compressionHandler = closure_129_0.compressionHandler;
-            const obj7 = tmp3(15558);
-            closure_129_0.identifyCompressedByteSize = v1(15540).deflate(closure_128_14).length;
+            const obj7 = tmp3(15562);
+            closure_129_0.identifyCompressedByteSize = v1(15544).deflate(closure_128_14).length;
             closure_129_0.identifyCount = closure_129_0.identifyCount + num3;
             num3 = closure_129_0;
-            closure_129_0.send(tmp3(15527).Opcode.IDENTIFY, closure_128_13, false);
+            closure_129_0.send(tmp3(15531).Opcode.IDENTIFY, closure_128_13, false);
             tmp65 = tmp2(1252);
             tmp65.track(constants.SESSION_START_CLIENT, {});
-            const obj8 = v1(15540);
+            const obj8 = v1(15544);
           }
         }
         dependencyMap = 3;

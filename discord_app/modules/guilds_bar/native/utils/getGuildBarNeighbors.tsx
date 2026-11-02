@@ -1,6 +1,6 @@
-// === Module 18398: getGuildBarNeighbors ===
+// === Module 18411: getGuildBarNeighbors ===
 
-// Module 18398 (getGuildBarNeighbors)
+// Module 18411 (getGuildBarNeighbors)
 import GuildsTree from "GuildsTree" /* 6777 */;
 import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 

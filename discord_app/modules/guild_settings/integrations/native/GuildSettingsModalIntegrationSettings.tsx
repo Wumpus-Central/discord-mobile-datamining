@@ -1,6 +1,6 @@
-// === Module 19757: GuildSettingsModalIntegrationSettings ===
+// === Module 19764: GuildSettingsModalIntegrationSettings ===
 
-// Module 19757 (GuildSettingsModalIntegrationSettings)
+// Module 19764 (GuildSettingsModalIntegrationSettings)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import TableRow from "TableRow" /* 6975 */;
@@ -9,7 +9,7 @@ import TableRowGroup from "TableRowGroup" /* 7060 */;
 import TableRadioRow from "TableRadioRow" /* 7061 */;
 import TableSwitchRow from "TableSwitchRow" /* 7369 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
-import _modDef19759 from "module_19759" /* 19759 */;
+import _modDef19766 from "module_19766" /* 19766 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4920 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
@@ -35,7 +35,7 @@ function ForceSyncIcon(isSyncing) {
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
-    const obj2 = { source: _modDef19759 };
+    const obj2 = { source: _modDef19766 };
     obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
     tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
   }
@@ -129,7 +129,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   value = self(6574).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(19758).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(19765).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -176,11 +176,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     obj9.children = items2;
     items1[1] = closure_7(tmp15(7060).TableRowGroup, obj9);
     const obj16 = { title: stringResult, value: integration.expire_behavior, onChange: self.handleExpireBehaviorChange, hasIcons: false, children: null };
-    const obj17 = { value: tmp15(19760).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const obj17 = { value: tmp15(19767).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
     const intl6 = tmp15(1113).intl;
     obj17.label = intl6.string(tmp15(1113).t["6kpw4i"]);
     const items3 = [closure_6(tmp15(7061).TableRadioRow, obj17), ];
-    const obj18 = { value: tmp15(19760).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const obj18 = { value: tmp15(19767).IntegrationExpireBehaviorTypes.KICK, label: null };
     const intl7 = tmp15(1113).intl;
     obj18.label = intl7.string(tmp15(1113).t.fQUQIJ);
     items3[1] = closure_6(tmp15(7061).TableRadioRow, obj18);

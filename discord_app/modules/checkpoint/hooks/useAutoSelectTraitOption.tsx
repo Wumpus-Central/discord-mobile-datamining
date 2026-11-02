@@ -1,6 +1,6 @@
-// === Module 13683: useAutoSelectTraitOption ===
+// === Module 13698: useAutoSelectTraitOption ===
 
-// Module 13683 (useAutoSelectTraitOption)
+// Module 13698 (useAutoSelectTraitOption)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

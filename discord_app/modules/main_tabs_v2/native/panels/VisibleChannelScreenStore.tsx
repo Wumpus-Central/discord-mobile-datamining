@@ -1,6 +1,6 @@
-// === Module 18591: VisibleChannelScreenStore ===
+// === Module 18604: VisibleChannelScreenStore ===
 
-// Module 18591 (VisibleChannelScreenStore)
+// Module 18604 (VisibleChannelScreenStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

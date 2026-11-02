@@ -1,6 +1,6 @@
-// === Module 19796: RolePermissionTemplatesActionSheet ===
+// === Module 19803: RolePermissionTemplatesActionSheet ===
 
-// Module 19796 (RolePermissionTemplatesActionSheet)
+// Module 19803 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -9,7 +9,7 @@ import ToastUtils from "ToastUtils" /* 5711 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
 import ActionSheet from "ActionSheet" /* 7366 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19774 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

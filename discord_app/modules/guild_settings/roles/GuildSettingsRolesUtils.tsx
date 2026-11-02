@@ -1,6 +1,6 @@
-// === Module 19775: GuildSettingsRolesUtils ===
+// === Module 19782: GuildSettingsRolesUtils ===
 
-// Module 19775 (GuildSettingsRolesUtils)
+// Module 19782 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import UserUtilsDefault from "UserUtils" /* 5068 */;
@@ -14,7 +14,7 @@ import UserStore from "UserStore" /* 1383 */;
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19766).GuildSettingsRoleEditSections;
+const constants = fn(19773).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

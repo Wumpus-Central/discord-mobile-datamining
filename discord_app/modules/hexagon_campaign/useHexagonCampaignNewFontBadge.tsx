@@ -1,12 +1,12 @@
-// === Module 16461: useHexagonCampaignNewFontBadge ===
+// === Module 16474: useHexagonCampaignNewFontBadge ===
 
-// Module 16461 (useHexagonCampaignNewFontBadge)
+// Module 16474 (useHexagonCampaignNewFontBadge)
 import initialize from "initialize" /* 504 */;
 import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5042 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16452 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16465 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16462 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16222 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16475 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 16226 */;
 
 const require = globalThis.__r;
 

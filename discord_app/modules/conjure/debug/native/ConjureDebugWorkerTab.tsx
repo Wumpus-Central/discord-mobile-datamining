@@ -1,13 +1,13 @@
-// === Module 13016: ConjureDebugWorkerTab ===
+// === Module 13031: ConjureDebugWorkerTab ===
 
-// Module 13016 (ConjureDebugWorkerTab)
+// Module 13031 (ConjureDebugWorkerTab)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13012 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 13013 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13015 */;
-import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13017 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13027 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13028 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13030 */;
+import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -151,11 +151,11 @@ function RuntimeEnvBlock(env) {
   let obj = { children: null };
   const obj2 = { label: null, value: null };
   let intl = env(1113).intl;
-  let obj3 = { env: env(13012).debugEnvLabel(env) };
+  let obj3 = { env: env(13027).debugEnvLabel(env) };
   obj2.label = intl.formatToPlainString(_modDef3868["92gVTm"], obj3);
-  let obj4 = env(13012);
-  obj2.value = env(13013).formatCount(runtime.connections);
-  const items = [closure_5(env(13015).DebugStatRow, obj2), ];
+  let obj4 = env(13027);
+  obj2.value = env(13028).formatCount(runtime.connections);
+  const items = [closure_5(env(13030).DebugStatRow, obj2), ];
   const schedules = runtime.schedules;
   items[1] = schedules.map((id) => {
     const obj = { label: null, value: null, hint: null };
@@ -319,15 +319,15 @@ function StorageSection(status) {
     let tmp4 = limits;
     let items1 = items;
   } else {
-    let obj = { key: "preview", label: limits(13012).debugEnvLabel("preview"), metrics: tmp };
+    let obj = { key: "preview", label: limits(13027).debugEnvLabel("preview"), metrics: tmp };
     items1 = [obj, ];
     let obj5 = { key: "stable", label: null, metrics: null };
-    let obj2 = limits(13012);
-    obj5.label = limits(13012).debugEnvLabel("stable");
+    let obj2 = limits(13027);
+    obj5.label = limits(13027).debugEnvLabel("stable");
     obj5.metrics = stable;
     items1[1] = obj5;
     tmp4 = limits;
-    let obj4 = limits(13012);
+    let obj4 = limits(13027);
   }
   let obj6 = { title: null, children: null };
   let intl2 = tmp4(1113).intl;
@@ -368,7 +368,7 @@ function StorageSection(status) {
     }
     return tmp18Result;
   });
-  return closure_5(tmp4(13015).DebugSection, obj6);
+  return closure_5(tmp4(13030).DebugSection, obj6);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

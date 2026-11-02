@@ -1,26 +1,26 @@
-// === Module 11360: Messages ===
+// === Module 11361: Messages ===
 
-// Module 11360 (Messages)
+// Module 11361 (Messages)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11553 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8722 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11361 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11362 */;
 import CacheStore from "CacheStore" /* 7655 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10116 */;
 import EmojiStore from "EmojiStore" /* 6796 */;
 import ExperimentStore from "ExperimentStore" /* 5238 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7464 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11362 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11363 */;
 import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6882 */;
 import BasicGuildStore from "BasicGuildStore" /* 8413 */;
 import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8383 */;
@@ -28,12 +28,12 @@ import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7637 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8697 */;
 import InteractionStore from "InteractionStore" /* 8389 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11365 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11366 */;
 import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8390 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11366 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11367 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7632 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11368 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11369 */;
 import PendingReplyStore from "PendingReplyStore" /* 7822 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
 import SummaryStore from "SummaryStore" /* 10122 */;
@@ -44,7 +44,7 @@ import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import EditMessageStore from "EditMessageStore" /* 7823 */;
-import GiftCodeStore from "GiftCodeStore" /* 11369 */;
+import GiftCodeStore from "GiftCodeStore" /* 11370 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;
 import GuildStore from "GuildStore" /* 4885 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 6708 */;
@@ -59,7 +59,7 @@ import UploadStore from "UploadStore" /* 8392 */;
 import UserStore from "UserStore" /* 1383 */;
 import VoiceStateStore from "VoiceStateStore" /* 5679 */;
 import SKUStore from "SKUStore" /* 6896 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11523 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11524 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
 
 require = fn;
@@ -871,11 +871,11 @@ class MessagesConnected {
     return tmp124(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11367);
+const PollsInteractionStore = fn(11368);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_59, ChannelTypesSets: closure_60, ME: closure_61, MessageTypes: closure_62, Permissions: closure_63 } = Constants);
-let closure_64 = fn(11363).GameOrganizationInviteStates;
+let closure_64 = fn(11364).GameOrganizationInviteStates;
 const PremiumConstants = fn(1385);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

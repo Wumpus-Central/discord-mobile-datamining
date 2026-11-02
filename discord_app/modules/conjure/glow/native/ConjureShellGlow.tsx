@@ -1,6 +1,6 @@
-// === Module 12604: ConjureShellGlow ===
+// === Module 12607: ConjureShellGlow ===
 
-// Module 12604 (ConjureShellGlow)
+// Module 12607 (ConjureShellGlow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;

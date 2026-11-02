@@ -1,15 +1,16 @@
-// === Module 16446: UserProfileEditBannerButton ===
+// === Module 16458: UserProfileEditBannerButton ===
 
-// Module 16446 (UserProfileEditBannerButton)
+// Module 16458 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
 import Pressables from "Pressables" /* 6980 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8803 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8819 */;
 import PencilIcon from "PencilIcon" /* 10232 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 16459 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(16447);
+const EditButtonDefault = tmp(16460);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -70,8 +71,10 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   let refreshEditButtonContainer = closure_7();
   let tmp = importDefault;
   let obj = dependencyMap;
-  const obj2 = { style: refreshEditButtonContainer.container, children: null };
-  const items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
+  ({ ref, onLayout, width } = useMeasuredLayoutDefault());
+  const obj2 = { ref, style: refreshEditButtonContainer.container, onLayout, children: null };
+  const tmp2 = useMeasuredLayoutDefault();
+  const items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(width), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     const obj3 = { userId: user.id };
     showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj3);
@@ -89,10 +92,10 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
     obj.onPress = onPressEdit;
     obj.accessibilityLabel = editButtonAccessibilityLabel;
     obj.disabled = editDisabled;
-    let tmp5Result = hasOwnProperty(tmp, obj);
+    let tmp6Result = hasOwnProperty(tmp, obj);
   } else {
     const obj4 = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    tmp5Result = hasOwnProperty(EditButton, obj4);
+    tmp6Result = hasOwnProperty(EditButton, obj4);
   }
-  const tmp2 = useUserProfileBannerHeightDefault();
+  const tmp3 = useUserProfileBannerHeightDefault(width);
 };

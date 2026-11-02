@@ -1,8 +1,8 @@
-// === Module 18943: PinsScreen ===
+// === Module 18950: PinsScreen ===
 
-// Module 18943 (PinsScreen)
+// Module 18950 (PinsScreen)
 import nativeDefault from "native" /* 575 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 18791 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 18798 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 
@@ -30,7 +30,7 @@ export default noop.memo(function PinsScreen() {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(13832).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(13847).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = { style: closure_7().container, children: jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS }) };
   return <View style={closure_7().container}>{jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS })}</View>;
 });

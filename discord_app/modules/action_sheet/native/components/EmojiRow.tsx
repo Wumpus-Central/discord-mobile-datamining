@@ -1,6 +1,6 @@
-// === Module 14526: EmojiRow ===
+// === Module 14540: EmojiRow ===
 
-// Module 14526 (EmojiRow)
+// Module 14540 (EmojiRow)
 import ReactionUtils from "ReactionUtils" /* 4958 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import HapticUtils from "HapticUtils" /* 5260 */;
@@ -9,9 +9,9 @@ import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 8405 */;
 import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9896 */;
 import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9950 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 14527 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 14528 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 14529 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 14541 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 14542 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 14543 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

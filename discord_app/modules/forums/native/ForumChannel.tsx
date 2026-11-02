@@ -1,6 +1,6 @@
-// === Module 14358: ForumChannel ===
+// === Module 14373: ForumChannel ===
 
-// Module 14358 (ForumChannel)
+// Module 14373 (ForumChannel)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -17,9 +17,9 @@ import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9320
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 9821 */;
 import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10202 */;
-import ForumPostDefault from "ForumPost" /* 13747 */;
-import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 13775 */;
-import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 14367 */;
+import ForumPostDefault from "ForumPost" /* 13762 */;
+import ForumPostPlaceholderDefault from "ForumPostPlaceholder" /* 13790 */;
+import CreateGameInvitePostModalActionCreators from "CreateGameInvitePostModalActionCreators" /* 14382 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4947 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6861 */;
@@ -132,7 +132,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14361, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14376, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -148,7 +148,7 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5634).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(12342).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_15(id(5634).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_15(id(12482).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -156,7 +156,7 @@ function TagFilter(channel) {
   const intl = channel(1113).intl;
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14362, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14377, dependencyMap.paths), "ForumTagFilterActionSheet", { channel });
   };
   obj.icon = closure_15(channel(9566).TagIcon, { size: "xxs" });
   return closure_15(channel(5634).Button, obj);
@@ -414,7 +414,7 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13748).useForumChannelStore;
+const useForumChannelStore = fn(13763).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 let closure_14 = fn(11241).getVoicePanelDockButtonsTop;
@@ -649,7 +649,7 @@ export default function ForumChannel(channel) {
   const obj17 = { accessibilityLabel: null, icon: null, disabled: null, positionBottom: null, onPress: null, onPressDisabled: null, accessibilityHint: null };
   const intl = tmp2(tmp3[17]).intl;
   obj17.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj17.icon = require("module_14371");
+  obj17.icon = require("module_14386");
   obj17.disabled = tmp17;
   obj17.positionBottom = sum;
   obj17.onPress = callback1;

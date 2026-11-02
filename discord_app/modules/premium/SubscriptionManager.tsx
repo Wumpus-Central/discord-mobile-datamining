@@ -1,6 +1,6 @@
-// === Module 19620: SubscriptionManager ===
+// === Module 19627: SubscriptionManager ===
 
-// Module 19620 (SubscriptionManager)
+// Module 19627 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1383 */;
 import BillingInfoStore from "BillingInfoStore" /* 2048 */;

@@ -1,6 +1,6 @@
-// === Module 13690: createAppMessageEmbed ===
+// === Module 13705: createAppMessageEmbed ===
 
-// Module 13690 (createAppMessageEmbed)
+// Module 13705 (createAppMessageEmbed)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1377 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
@@ -17,12 +17,12 @@ import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8721 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9761 */;
 import ApplicationUtils from "ApplicationUtils" /* 10909 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11688 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11692 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13691 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 13692 */;
-import getPlayInContext from "getPlayInContext" /* 13693 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13694 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11689 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11693 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13706 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 13707 */;
+import getPlayInContext from "getPlayInContext" /* 13708 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13709 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1383 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8722 */;

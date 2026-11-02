@@ -1,12 +1,12 @@
-// === Module 11497: MarkupReactCommandRule ===
+// === Module 11498: MarkupReactCommandRule ===
 
-// Module 11497 (MarkupReactCommandRule)
+// Module 11498 (MarkupReactCommandRule)
 import KeyboardTypes from "KeyboardTypes" /* 1623 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11503 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11504 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 
@@ -135,7 +135,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11500).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(11501).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,

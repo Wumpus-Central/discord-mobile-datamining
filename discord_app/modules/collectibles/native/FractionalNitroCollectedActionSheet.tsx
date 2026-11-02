@@ -1,6 +1,6 @@
-// === Module 15054: FractionalNitroCollectedActionSheet ===
+// === Module 15058: FractionalNitroCollectedActionSheet ===
 
-// Module 15054 (FractionalNitroCollectedActionSheet)
+// Module 15058 (FractionalNitroCollectedActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5021 */;
@@ -9,14 +9,14 @@ import FastImageDefault from "FastImage" /* 5717 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9541 */;
 import _modDef10594 from "module_10594" /* 10594 */;
 import _modDef10595 from "module_10595" /* 10595 */;
-import _modDef15055 from "module_15055" /* 15055 */;
+import _modDef15059 from "module_15059" /* 15059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef15055 };
+  const obj2 = { source: _modDef15059 };
   const items = [React7(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };
@@ -133,7 +133,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const items2 = [tmp12Result, ];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(7761);
-  obj5.children = tmp15(skuId(14502).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
+  obj5.children = tmp15(skuId(14516).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
   items2[1] = tmp15(skuId(6980).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), , ];

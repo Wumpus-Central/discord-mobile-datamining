@@ -1,6 +1,6 @@
-// === Module 13827: useShowConnectedUserLimit ===
+// === Module 13842: useShowConnectedUserLimit ===
 
-// Module 13827 (useShowConnectedUserLimit)
+// Module 13842 (useShowConnectedUserLimit)
 import Constants from "Constants" /* 1072 */;
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9224 */;
 import size from "module_2" /* 2 */;

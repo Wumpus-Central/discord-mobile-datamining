@@ -1,20 +1,20 @@
-// === Module 14297: ChairIllocon ===
+// === Module 14312: ChairIllocon ===
 
-// Module 14297 (ChairIllocon)
+// Module 14312 (ChairIllocon)
 import FastImageDefault from "FastImage" /* 5717 */;
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14298 from "module_14298" /* 14298 */;
-import _modDef14299 from "module_14299" /* 14299 */;
-import _modDef14300 from "module_14300" /* 14300 */;
+import _modDef14313 from "module_14313" /* 14313 */;
+import _modDef14314 from "module_14314" /* 14314 */;
+import _modDef14315 from "module_14315" /* 14315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14298 }, 3: null };
-const obj2 = { uri: _modDef14298 };
-obj[2] = { uri: _modDef14299 };
-const obj3 = { uri: _modDef14299 };
-obj[3] = { uri: _modDef14300 };
+let obj = { 1: null, 2: { uri: _modDef14313 }, 3: null };
+const obj2 = { uri: _modDef14313 };
+obj[2] = { uri: _modDef14314 };
+const obj3 = { uri: _modDef14314 };
+obj[3] = { uri: _modDef14315 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");
 

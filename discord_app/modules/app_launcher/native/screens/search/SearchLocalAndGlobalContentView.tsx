@@ -1,15 +1,15 @@
-// === Module 12293: SearchLocalAndGlobalContentView ===
+// === Module 12433: SearchLocalAndGlobalContentView ===
 
-// Module 12293 (SearchLocalAndGlobalContentView)
+// Module 12433 (SearchLocalAndGlobalContentView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
 import TableRow from "TableRow" /* 6975 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11501 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12239 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12242 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11502 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12379 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,15 +39,15 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12239).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12379).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12244), obj2);
+    tmp4 = closure_10(onPressSend(12384), obj2);
   }
-  obj = hasOptions(12239);
-  const tmpResult = hasOptions(12294);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11501).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12379);
+  const tmpResult = hasOptions(12434);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11502).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -69,14 +69,14 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11501).AppLauncherSectionName.SEARCH };
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11502).AppLauncherSectionName.SEARCH };
   obj4.subLabel = hasOptions(9761).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12294), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj4.trailing = closure_10(onPressSend(12434), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return closure_10(hasOptions(6975).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
@@ -152,7 +152,7 @@ function CommandsExpandableList(expandedOverride) {
 }
 const View = fn(17).View;
 const getSection = fn(9762).getSection;
-const FetchState = fn(12255).FetchState;
+const FetchState = fn(12395).FetchState;
 const AppLauncherNativeConstants = fn(1496);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

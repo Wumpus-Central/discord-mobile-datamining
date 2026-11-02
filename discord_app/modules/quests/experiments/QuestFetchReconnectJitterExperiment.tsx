@@ -1,6 +1,6 @@
-// === Module 20025: QuestFetchReconnectJitterExperiment ===
+// === Module 20032: QuestFetchReconnectJitterExperiment ===
 
-// Module 20025 (QuestFetchReconnectJitterExperiment)
+// Module 20032 (QuestFetchReconnectJitterExperiment)
 import DurationsDefault from "Durations" /* 1089 */;
 import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;

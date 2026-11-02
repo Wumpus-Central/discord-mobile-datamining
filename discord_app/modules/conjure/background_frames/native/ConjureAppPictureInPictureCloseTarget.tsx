@@ -1,10 +1,10 @@
-// === Module 19114: ConjureAppPictureInPictureCloseTarget ===
+// === Module 19123: ConjureAppPictureInPictureCloseTarget ===
 
-// Module 19114 (ConjureAppPictureInPictureCloseTarget)
+// Module 19123 (ConjureAppPictureInPictureCloseTarget)
 import nativeDefault from "native" /* 575 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19113 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ const SPRING = { mass: 0.4, damping: 18, stiffness: 300 };
 const FADE = { duration: 150 };
 const createStyles = fn(5014);
 let obj2 = { target: null, fill: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(19113).CLOSE_TARGET_SIZE, height: fn(19113).CLOSE_TARGET_SIZE, borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let size = { position: "absolute", top: 0, left: 0, width: fn(19120).CLOSE_TARGET_SIZE, height: fn(19120).CLOSE_TARGET_SIZE, borderRadius: fn(19120).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.target = size;
-const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.STATUS_DANGER };
+const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: fn(19120).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.STATUS_DANGER };
 obj2.fill = rect;
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ConjureAppPictureInPictureCloseTargetTsx1(){const{withTiming,shown,FADE,x,CLOSE_TARGET_SIZE,withSpring,y,SPRING,hovered,HOVERED_SCALE}=this.__closure;return{opacity:withTiming(shown.get()?1:0,FADE),transform:[{translateX:x-CLOSE_TARGET_SIZE/2},{translateY:withSpring(y-CLOSE_TARGET_SIZE/2+(shown.get()?0:CLOSE_TARGET_SIZE),SPRING)},{scale:withSpring(hovered.get()?HOVERED_SCALE:1,SPRING)}]};}" };
@@ -58,7 +58,7 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
     obj3.transform = items;
     return obj3;
   };
-  const point = { withTiming: shown(5254).withTiming, shown, FADE, x, CLOSE_TARGET_SIZE: shown(19113).CLOSE_TARGET_SIZE, withSpring: shown(5637).withSpring, y, SPRING, hovered, HOVERED_SCALE: 1.3 };
+  const point = { withTiming: shown(5254).withTiming, shown, FADE, x, CLOSE_TARGET_SIZE: shown(19120).CLOSE_TARGET_SIZE, withSpring: shown(5637).withSpring, y, SPRING, hovered, HOVERED_SCALE: 1.3 };
   fn.__closure = point;
   fn.__workletHash = 15134050536622;
   fn.__initData = __initData;
@@ -80,12 +80,12 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
   let items = [tmp.target, animatedStyle];
   obj4.style = items;
   const obj2 = { withTiming: shown(5254).withTiming, hovered, FADE };
-  const items1 = [closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG }), ];
+  const items1 = [closure_3(shown(11884).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG }), ];
   const obj6 = { style: null, children: null };
   const items2 = [tmp.fill, animatedStyle1];
   obj6.style = items2;
   let obj5 = { size: "md", color: hovered(575).colors.ICON_STRONG };
-  obj6.children = closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
+  obj6.children = closure_3(shown(11884).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
   items1[1] = closure_3(hovered(5095).View, obj6);
   obj4.children = items1;
   return closure_4(hovered(5095).View, obj4);

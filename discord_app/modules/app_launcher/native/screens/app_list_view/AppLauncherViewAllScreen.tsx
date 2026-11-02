@@ -1,6 +1,6 @@
-// === Module 12390: AppLauncherViewAllScreen ===
+// === Module 12530: AppLauncherViewAllScreen ===
 
-// Module 12390 (AppLauncherViewAllScreen)
+// Module 12530 (AppLauncherViewAllScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 5624 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
 import Pressables from "Pressables" /* 6980 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
-import AppLauncherContext from "AppLauncherContext" /* 11500 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12239 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 12321 */;
+import AppLauncherContext from "AppLauncherContext" /* 11501 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12379 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 12461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOA
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(12321).BACK_BUTTON_SIZE, height: fn(12321).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(12461).BACK_BUTTON_SIZE, height: fn(12461).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 obj2.backButton = size;
 let closure_10 = createStyles.createStyles(obj2);
 size = fn(2);

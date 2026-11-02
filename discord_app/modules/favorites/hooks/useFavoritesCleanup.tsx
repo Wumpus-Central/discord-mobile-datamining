@@ -1,6 +1,6 @@
-// === Module 18187: useFavoritesCleanup ===
+// === Module 18200: useFavoritesCleanup ===
 
-// Module 18187 (useFavoritesCleanup)
+// Module 18200 (useFavoritesCleanup)
 import FavoritesCleanup from "FavoritesCleanup" /* 10844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

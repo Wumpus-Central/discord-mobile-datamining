@@ -1,13 +1,13 @@
-// === Module 13757: ForumPostMedia ===
+// === Module 13772: ForumPostMedia ===
 
-// Module 13757 (ForumPostMedia)
+// Module 13772 (ForumPostMedia)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1490 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
 import FastImageDefault from "FastImage" /* 5717 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 13758 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13760 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 13773 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13775 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -79,9 +79,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(13759), obj2);
+    let tmp6Result = closure_9(ref(13774), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(13759);
+    const tmp19 = ref(13774);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};

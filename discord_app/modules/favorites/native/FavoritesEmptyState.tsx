@@ -1,6 +1,6 @@
-// === Module 18813: FavoritesEmptyState ===
+// === Module 18820: FavoritesEmptyState ===
 
-// Module 18813 (FavoritesEmptyState)
+// Module 18820 (FavoritesEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3450 from "module_3450" /* 3450 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6027 */;
 import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10838 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11483 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14387 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11484 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 13444: useCheckpointCustomization ===
+// === Module 13459: useCheckpointCustomization ===
 
-// Module 13444 (useCheckpointCustomization)
+// Module 13459 (useCheckpointCustomization)
 import CheckpointTrait from "CheckpointTrait" /* 6112 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
-import CheckpointStore from "CheckpointStore" /* 13421 */;
+import CheckpointStore from "CheckpointStore" /* 13436 */;
 
 require = fn;
 const size = fn(2);

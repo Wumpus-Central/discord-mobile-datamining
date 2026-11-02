@@ -1,6 +1,6 @@
-// === Module 12568: ConjureHeaderIconButton ===
+// === Module 12234: ConjureHeaderIconButton ===
 
-// Module 12568 (ConjureHeaderIconButton)
+// Module 12234 (ConjureHeaderIconButton)
 import ClipView from "ClipView" /* 9509 */;
 import noop from "module_19" /* 19 */;
 

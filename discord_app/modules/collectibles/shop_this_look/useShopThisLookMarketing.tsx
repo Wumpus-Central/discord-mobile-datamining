@@ -1,6 +1,6 @@
-// === Module 14817: useShopThisLookMarketing ===
+// === Module 14821: useShopThisLookMarketing ===
 
-// Module 14817 (useShopThisLookMarketing)
+// Module 14821 (useShopThisLookMarketing)
 import dismissible_content from "dismissible_content" /* 4847 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
 import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8788 */;

@@ -1,9 +1,9 @@
-// === Module 12080: useUserApplicationWidgetData ===
+// === Module 12081: useUserApplicationWidgetData ===
 
-// Module 12080 (useUserApplicationWidgetData)
+// Module 12081 (useUserApplicationWidgetData)
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
 import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10945 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 12081 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 12082 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;

@@ -1,12 +1,12 @@
-// === Module 18377: GuildsBarGuild ===
+// === Module 18390: GuildsBarGuild ===
 
-// Module 18377 (GuildsBarGuild)
+// Module 18390 (GuildsBarGuild)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import spring from "spring" /* 5637 */;
 import GuildIcon from "GuildIcon" /* 6957 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18349 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 18397 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18362 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 18410 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
@@ -17,8 +17,8 @@ import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 require = fn;
 const GuildRecord = fn(4881);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(18348).useItemDragState;
-const TRANSITION_PHYSICS = fn(18345).TRANSITION_PHYSICS;
+const useItemDragState = fn(18361).useItemDragState;
+const TRANSITION_PHYSICS = fn(18358).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);

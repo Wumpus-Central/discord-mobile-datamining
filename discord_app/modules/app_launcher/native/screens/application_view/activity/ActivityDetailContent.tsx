@@ -1,17 +1,17 @@
-// === Module 12330: ActivityDetailContent ===
+// === Module 12470: ActivityDetailContent ===
 
-// Module 12330 (ActivityDetailContent)
+// Module 12470 (ActivityDetailContent)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9761 */;
-import AppLauncherContext from "AppLauncherContext" /* 11500 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11501 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12245 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12332 */;
+import AppLauncherContext from "AppLauncherContext" /* 11501 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11502 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12385 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 12472 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -92,12 +92,12 @@ function TryItOutButton(applicationId) {
   const items = [applicationId, analyticsLocations];
   let str = "primary";
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
-    v2(1252).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(11501).EntryPointCommandButtonActions.OPEN_APP_DM });
+    v2(1252).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, { application_id: applicationId, button_action: tmp3(11502).EntryPointCommandButtonActions.OPEN_APP_DM });
     const _setTimeout = setTimeout;
     closure_3.current = setTimeout(() => {
       closure_1_2(true);
     }, 250);
-    await v2(11692).launch({ applicationId, analyticsLocations });
+    await v2(11693).launch({ applicationId, analyticsLocations });
     if (1 === tmp7) {
       dependencyMap = 0;
       const _clearTimeout = clearTimeout;
@@ -149,10 +149,10 @@ export default function ActivityDetailContent(application) {
   importDefault = undefined;
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = closure_15();
-  const width = application(11500).useRequiredAppLauncherContext().width;
-  let obj = application(11500);
-  const getPrimaryAppCommand = application(11735).useGetPrimaryAppCommand(context, application.id);
-  const obj2 = application(11735);
+  const width = application(11501).useRequiredAppLauncherContext().width;
+  let obj = application(11501);
+  const getPrimaryAppCommand = application(11736).useGetPrimaryAppCommand(context, application.id);
+  const obj2 = application(11736);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
   [tmp8, c1] = noop.useState(undefined);
   const callback = noop.useCallback((nativeEvent) => {
@@ -160,7 +160,7 @@ export default function ActivityDetailContent(application) {
   }, []);
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
   const isScreenLandscape = application(8773).useIsScreenLandscape();
-  let detailsContainerLandscape = entrypoint !== application(11501).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  let detailsContainerLandscape = entrypoint !== application(11502).AppLauncherEntrypoint.VOICE && isScreenLandscape;
   const obj3 = application(8773);
   const items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: DeveloperActivityShelfStore.inDevModeForApplication(application.id), activityUrlOverride: DeveloperActivityShelfStore.getActivityUrlOverride(), useActivityUrlOverride: DeveloperActivityShelfStore.getUseActivityUrlOverride() }));
@@ -206,15 +206,15 @@ export default function ActivityDetailContent(application) {
     }
     const tmp2Result8 = tmp2(7330);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(12245).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(12245);
-    const delayedSwapToActivityActionLeave = tmp2(12333).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(12385).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(12385);
+    const delayedSwapToActivityActionLeave = tmp2(12473).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(12333);
-    ({ reason, disabled } = tmp5(12334)(obj10));
+    const tmp2Result10 = tmp2(12473);
+    ({ reason, disabled } = tmp5(12474)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(12335);
+    tmp5(12475);
     if (bot != null) {
       id = bot.id;
     }
@@ -281,13 +281,13 @@ export default function ActivityDetailContent(application) {
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(12334)(obj10);
+    const tmp29 = tmp5(12474)(obj10);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(12272), obj25);
+    obj24.children = closure_11(tmp5(12412), obj25);
     const items4 = [closure_11(View, obj24), ];
     const items5 = [tmp.details, ];
     if (detailsContainerLandscape) {
@@ -302,17 +302,17 @@ export default function ActivityDetailContent(application) {
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
     obj29.icon = closure_11(tmp2(8661).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(12272);
+    const tmp5Result3 = tmp5(12412);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(12337).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(12337);
+    obj29.tagName = tmp2(12477).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(12477);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(12337)(num);
+    obj29.accessibilityLabel = tmp5(12477)(num);
     const items7 = [closure_11(Tag, obj29, "participants"), ];
     const tags = application.tags;
     let mapped;

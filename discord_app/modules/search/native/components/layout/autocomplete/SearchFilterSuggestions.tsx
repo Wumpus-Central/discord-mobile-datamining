@@ -1,13 +1,13 @@
-// === Module 18682: SearchFilterSuggestions ===
+// === Module 18689: SearchFilterSuggestions ===
 
-// Module 18682 (SearchFilterSuggestions)
+// Module 18689 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13871 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 18683 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13886 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 18690 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -112,12 +112,12 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   let memo;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(18677).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18684).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(18677);
-  const validFilterTokens = searchContext(18686).useValidFilterTokens(searchContext);
+  let obj = searchContext(18684);
+  const validFilterTokens = searchContext(18693).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsRef(suggestionsMounted.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -155,7 +155,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     }
     closure_8(closure_1_14);
   }), items);
-  let obj2 = searchContext(18686);
+  let obj2 = searchContext(18693);
   const fn = function f() {
     return dismissed.get();
   };

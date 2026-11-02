@@ -1,6 +1,6 @@
-// === Module 19204: useDockBoxShadow ===
+// === Module 19211: useDockBoxShadow ===
 
-// Module 19204 (useDockBoxShadow)
+// Module 19211 (useDockBoxShadow)
 import ColorUtils from "ColorUtils" /* 5011 */;
 import noop from "module_19" /* 19 */;
 

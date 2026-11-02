@@ -1,12 +1,12 @@
-// === Module 18665: conjureBackgroundFramePlatform ===
+// === Module 16369: conjureBackgroundFramePlatform ===
 
-// Module 18665 (conjureBackgroundFramePlatform)
+// Module 16369 (conjureBackgroundFramePlatform)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
 import transitionToChannel from "transitionToChannel" /* 5756 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12108 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18666 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18667 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16370 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16371 */;
 import FramesStore from "FramesStore" /* 6846 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 14742: VoicePanelSpoilerAlert ===
+// === Module 14746: VoicePanelSpoilerAlert ===
 
-// Module 14742 (VoicePanelSpoilerAlert)
+// Module 14746 (VoicePanelSpoilerAlert)
 import util from "util" /* 1113 */;
 import AlertModal from "AlertModal" /* 5964 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;

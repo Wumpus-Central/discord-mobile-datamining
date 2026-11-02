@@ -1,12 +1,12 @@
-// === Module 11511: GiftCodeRedeemSuccess ===
+// === Module 11512: GiftCodeRedeemSuccess ===
 
-// Module 11511 (GiftCodeRedeemSuccess)
+// Module 11512 (GiftCodeRedeemSuccess)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11391 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11505 */;
-import NameplatePreview from "NameplatePreview" /* 11506 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11507 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11392 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11506 */;
+import NameplatePreview from "NameplatePreview" /* 11507 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11508 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 6896 */;
@@ -40,11 +40,11 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   const items = [SKUStore];
   const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
   let obj = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(11381).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const obj2 = giftCode(11381);
+  const getOrFetchSubscriptionPlan = giftCode(11382).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const obj2 = giftCode(11382);
   const getOrFetchApplication = giftCode(7330).useGetOrFetchApplication(giftCode.applicationId);
   const obj3 = giftCode(7330);
-  const obj4 = giftCode(11385);
+  const obj4 = giftCode(11386);
   let skuId = null;
   if (obj5.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -72,10 +72,10 @@ export default function GiftCodeRedeemSuccess(giftCode) {
     const obj7 = { skuId: "", type: tmp2(1987).CollectiblesItemType.BUNDLE, items: [] };
     tmp12 = obj7;
   }
-  const handleUseNow1 = giftCode(11512).useHandleUseNow({ product: tmp12 });
+  const handleUseNow1 = giftCode(11513).useHandleUseNow({ product: tmp12 });
   const isApplying = handleUseNow1.isApplying;
   ({ handleUseNow, canUseNow } = handleUseNow1);
-  const tmp2Result6 = giftCode(11512);
+  const tmp2Result6 = giftCode(11513);
   [tmp15, c3] = noop.useState();
   const callback = noop.useCallback((nativeEvent) => {
     ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);

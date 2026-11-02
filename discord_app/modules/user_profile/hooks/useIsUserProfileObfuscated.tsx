@@ -1,6 +1,6 @@
-// === Module 14835: useIsUserProfileObfuscated ===
+// === Module 14839: useIsUserProfileObfuscated ===
 
-// Module 14835 (useIsUserProfileObfuscated)
+// Module 14839 (useIsUserProfileObfuscated)
 import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 const require = globalThis.__r;

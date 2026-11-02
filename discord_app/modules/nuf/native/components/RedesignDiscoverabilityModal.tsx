@@ -1,12 +1,12 @@
-// === Module 19568: RedesignDiscoverabilityModal ===
+// === Module 19575: RedesignDiscoverabilityModal ===
 
-// Module 19568 (RedesignDiscoverabilityModal)
+// Module 19575 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14240 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 14253 */;
-import NUFActionCreators from "NUFActionCreators" /* 14261 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14255 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 14268 */;
+import NUFActionCreators from "NUFActionCreators" /* 14276 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 
@@ -76,7 +76,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(14254), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(14269), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 }
 class RedesignDiscoverabilityModal {
@@ -156,7 +156,7 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14233).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14248).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };

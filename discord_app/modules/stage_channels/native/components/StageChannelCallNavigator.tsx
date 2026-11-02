@@ -1,15 +1,15 @@
-// === Module 11848: StageChannelCallNavigator ===
+// === Module 11849: StageChannelCallNavigator ===
 
-// Module 11848 (StageChannelCallNavigator)
+// Module 11849 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
 import MessageManagerDefault from "MessageManager" /* 9830 */;
 import participantHasVideoDefault from "participantHasVideo" /* 11228 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 11873 */;
-import JoinStageViewDefault from "JoinStageView" /* 11911 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12056 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 11874 */;
+import JoinStageViewDefault from "JoinStageView" /* 11912 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 12057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 12036: CallTile ===
+// === Module 12037: CallTile ===
 
-// Module 12036 (CallTile)
+// Module 12037 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
@@ -8,13 +8,13 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12037 */;
-import _modDef12042 from "module_12042" /* 12042 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12038 */;
 import _modDef12043 from "module_12043" /* 12043 */;
 import _modDef12044 from "module_12044" /* 12044 */;
 import _modDef12045 from "module_12045" /* 12045 */;
 import _modDef12046 from "module_12046" /* 12046 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 12047 */;
+import _modDef12047 from "module_12047" /* 12047 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 12048 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -44,17 +44,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12042;
+    let tmp3 = _modDef12043;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12043;
-    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12044;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12045;
-    } else if (constants2.QUEST === voicePlatform) {
+    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = _modDef12046;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef12047;
     }
   }
   let tmp14 = null;

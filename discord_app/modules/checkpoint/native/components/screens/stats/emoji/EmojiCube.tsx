@@ -1,12 +1,12 @@
-// === Module 13650: EmojiCube ===
+// === Module 13665: EmojiCube ===
 
-// Module 13650 (EmojiCube)
+// Module 13665 (EmojiCube)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import CheckpointConstants from "CheckpointConstants" /* 6066 */;
 import EmojiDefault from "Emoji" /* 7300 */;
-import _mod13651 from "module_13651" /* 13651 */;
+import _mod13666 from "module_13666" /* 13666 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import createStyles from "createStyles" /* 5014 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1376 */;
@@ -25,22 +25,22 @@ function transformMatrix(items, rotation) {
   if (point2 === undefined) {
     point2 = { x: 0, y: 0, z: 0 };
   }
-  const mat4 = _mod13651.mat4;
+  const mat4 = _mod13666.mat4;
   const obj = mat4.create();
-  const mat42 = _mod13651.mat4;
+  const mat42 = _mod13666.mat4;
   mat42.copy(obj, items);
-  const mat43 = _mod13651.mat4;
+  const mat43 = _mod13666.mat4;
   mat43.rotateX(obj, obj, point.x);
-  const mat44 = _mod13651.mat4;
+  const mat44 = _mod13666.mat4;
   mat44.rotateY(obj, obj, point.y);
-  const mat45 = _mod13651.mat4;
+  const mat45 = _mod13666.mat4;
   mat45.rotateZ(obj, obj, point.z);
-  const mat46 = _mod13651.mat4;
+  const mat46 = _mod13666.mat4;
   items = [, , ];
   ({ x: arr[0], y: arr[1], z: arr[2] } = translation);
   mat46.translate(obj, obj, items);
-  const mat47 = _mod13651.mat4;
-  const mat48 = _mod13651.mat4;
+  const mat47 = _mod13666.mat4;
+  const mat48 = _mod13666.mat4;
   mat48.multiply(obj, obj, mat47.fromValues(1, point2.y, 0, 0, point2.x, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));
   return Array.from(obj);
 }

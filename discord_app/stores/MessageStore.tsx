@@ -17,8 +17,8 @@ import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPa
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
 import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7771 */;
 import MessageQueue from "MessageQueue" /* 8384 */;
-import canEditMessageDefault from "canEditMessage" /* 11671 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15651 */;
+import canEditMessageDefault from "canEditMessage" /* 11672 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 4919 */;
@@ -990,9 +990,9 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (orCreate === removeManyResult) {
         return false;
       } else {
-        let tmp3 = removeManyResult;
+        let tmp8 = removeManyResult;
         if (null != removeManyResult.revealedMessageId) {
-          tmp3 = removeManyResult;
+          tmp8 = removeManyResult;
           if (tmpResult.some(ids, (arg0) => mutation.revealedMessageId === arg0)) {
             let id = removeManyResult.getAfter(removeManyResult.revealedMessageId);
             if (null == id) {
@@ -1005,7 +1005,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6563).commit(tmp3);
+        tmp(6563).commit(tmp8);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });

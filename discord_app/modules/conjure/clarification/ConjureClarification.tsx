@@ -1,6 +1,6 @@
-// === Module 12584: ConjureClarification ===
+// === Module 12587: ConjureClarification ===
 
-// Module 12584 (ConjureClarification)
+// Module 12587 (ConjureClarification)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import useChannelName from "useChannelName" /* 5652 */;

@@ -1,6 +1,6 @@
-// === Module 19185: useVoicePanelDockMorphState ===
+// === Module 19192: useVoicePanelDockMorphState ===
 
-// Module 19185 (useVoicePanelDockMorphState)
+// Module 19192 (useVoicePanelDockMorphState)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import spring from "spring" /* 5637 */;

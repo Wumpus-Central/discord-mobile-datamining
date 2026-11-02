@@ -1,6 +1,6 @@
-// === Module 12372: AppLauncherBooleanOption ===
+// === Module 12512: AppLauncherBooleanOption ===
 
-// Module 12372 (AppLauncherBooleanOption)
+// Module 12512 (AppLauncherBooleanOption)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
 import FormCheckbox from "FormCheckbox" /* 6989 */;

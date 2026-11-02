@@ -1,9 +1,9 @@
-// === Module 12089: conjurePreviewTargets ===
+// === Module 12090: conjurePreviewTargets ===
 
-// Module 12089 (conjurePreviewTargets)
+// Module 12090 (conjurePreviewTargets)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 12083 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 12084 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -61,14 +61,14 @@ export function activePreviewTarget(activeMode, frameSurface) {
     const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
 }
-export function getPreviewTargetLabel(memo1) {
-  const mode = memo1.mode;
+export function getPreviewTargetLabel(string) {
+  const mode = string.mode;
   if ("frame" === mode) {
-    if (null == memo1.appChannel) {
-      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface);
+    if (null == string.appChannel) {
+      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
     } else {
       const intl4 = util.intl;
-      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
+      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface), channel: string.appChannel };
       previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3868["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;

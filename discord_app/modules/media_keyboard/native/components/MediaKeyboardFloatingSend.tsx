@@ -1,6 +1,6 @@
-// === Module 12431: MediaKeyboardFloatingSend ===
+// === Module 12571: MediaKeyboardFloatingSend ===
 
-// Module 12431 (MediaKeyboardFloatingSend)
+// Module 12571 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import spring from "spring" /* 5637 */;

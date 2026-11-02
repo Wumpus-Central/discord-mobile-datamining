@@ -1,6 +1,6 @@
-// === Module 19072: isGuildSelectable ===
+// === Module 19079: isGuildSelectable ===
 
-// Module 19072 (isGuildSelectable)
+// Module 19079 (isGuildSelectable)
 import StageInstanceStore from "StageInstanceStore" /* 4868 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;

@@ -1,6 +1,6 @@
-// === Module 16776: FamilyCenterFeatureRow ===
+// === Module 16789: FamilyCenterFeatureRow ===
 
-// Module 16776 (FamilyCenterFeatureRow)
+// Module 16789 (FamilyCenterFeatureRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2538 from "module_2538" /* 2538 */;
@@ -10,11 +10,11 @@ import TableRow from "TableRow" /* 6975 */;
 import TableRowGroup from "TableRowGroup" /* 7060 */;
 import EyeIcon from "EyeIcon" /* 7137 */;
 import _modDef9166 from "module_9166" /* 9166 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13347 */;
-import _modDef13919 from "module_13919" /* 13919 */;
-import QrCodeIcon from "QrCodeIcon" /* 16773 */;
-import _modDef16777 from "module_16777" /* 16777 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 16778 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13362 */;
+import _modDef13934 from "module_13934" /* 13934 */;
+import QrCodeIcon from "QrCodeIcon" /* 16786 */;
+import _modDef16790 from "module_16790" /* 16790 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 16791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,13 +44,13 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2538["+pi4Yt"]), intl6.string(_modDef2538["1xPTwE"]));
-  obj4.icon = _modDef16777;
+  obj4.icon = _modDef16790;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2538["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef13919, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef13934, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2538.yipAeP);
   obj5.description = ageSpecificText1;

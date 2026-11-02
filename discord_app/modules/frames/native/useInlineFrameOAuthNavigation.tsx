@@ -1,6 +1,6 @@
-// === Module 12097: useInlineFrameOAuthNavigation ===
+// === Module 12241: useInlineFrameOAuthNavigation ===
 
-// Module 12097 (useInlineFrameOAuthNavigation)
+// Module 12241 (useInlineFrameOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

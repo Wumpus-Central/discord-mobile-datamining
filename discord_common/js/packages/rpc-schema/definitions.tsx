@@ -1,6 +1,6 @@
-// === Module 16298: definitions ===
+// === Module 16302: definitions ===
 
-// Module 16298 (definitions)
+// Module 16302 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2019 */;
@@ -11,12 +11,12 @@ import InviteTargetTypes from "InviteTargetTypes" /* 7880 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9738 */;
 import StatusDisplayTypes from "StatusDisplayTypes" /* 10760 */;
-import ActivityPlatform from "ActivityPlatform" /* 11808 */;
-import ThermalStates from "ThermalStates" /* 16295 */;
-import SKUTypes from "SKUTypes" /* 16299 */;
-import helpers from "helpers" /* 16300 */;
-import contextMenuIcons from "contextMenuIcons" /* 16301 */;
-import Constants from "Constants" /* 11693 */;
+import ActivityPlatform from "ActivityPlatform" /* 11809 */;
+import ThermalStates from "ThermalStates" /* 16299 */;
+import SKUTypes from "SKUTypes" /* 16303 */;
+import helpers from "helpers" /* 16304 */;
+import contextMenuIcons from "contextMenuIcons" /* 16305 */;
+import Constants from "Constants" /* 11694 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -1164,6 +1164,91 @@ let obj16 = {
   }
 };
 let obj18 = { embeddedAppSDK: true, request: "Array", response: ActivityInstanceParticipants };
+let obj20 = {
+  request: "Array",
+  response(boolean) {
+    return VoiceCapabilities(boolean);
+  }
+};
+let obj22 = {
+  request: "Array",
+  response(string) {
+    const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
+    const stringResult = string.string();
+    obj.channel_id = string.string().required();
+    const stringResult1 = string.string();
+    obj.capabilities = VoiceCapabilities(string).required();
+    const obj4 = VoiceCapabilities(string);
+    const obj2 = { user_id: null, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null };
+    const arrayResult = string.array();
+    obj2.user_id = string.string().required();
+    const stringResult2 = string.string();
+    obj2.username = string.string().required();
+    const stringResult3 = string.string();
+    const stringResult4 = string.string();
+    obj2.global_name = string.string().allow(null).required();
+    const allowResult = string.string().allow(null);
+    const stringResult5 = string.string();
+    obj2.avatar = string.string().allow(null).required();
+    const allowResult1 = string.string().allow(null);
+    obj2.mute = string.boolean().required();
+    const booleanResult = string.boolean();
+    obj2.deaf = string.boolean().required();
+    const booleanResult1 = string.boolean();
+    obj2.self_mute = string.boolean().required();
+    const booleanResult2 = string.boolean();
+    obj2.self_deaf = string.boolean().required();
+    const booleanResult3 = string.boolean();
+    const objectResult = string.object(obj2);
+    obj.participants = arrayResult.items(string.object(obj2).required()).required();
+    return obj;
+  }
+};
+let obj25 = {
+  request: "Array",
+  response(boolean) {
+    const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
+    const booleanResult = boolean.boolean();
+    const stringResult = boolean.string();
+    obj.transport = boolean.string().valid("iframe").required();
+    const validResult = boolean.string().valid("iframe");
+    obj.requires_existing_watch = boolean.boolean().required();
+    return obj;
+  }
+};
+let obj26 = {
+  request: "Array",
+  response(boolean) {
+    const obj = { available: boolean.boolean().required(), transport: null };
+    const booleanResult = boolean.boolean();
+    const stringResult = boolean.string();
+    obj.transport = boolean.string().valid("iframe").required();
+    return obj;
+  }
+};
+const obj36 = {
+  request: "Array",
+  response(boolean) {
+    const obj = { hidden: boolean.boolean().required() };
+    return obj;
+  }
+};
+const obj39 = {
+  request: "Array",
+  response(array) {
+    const obj = { permissions: null };
+    const arrayResult = array.array();
+    const obj2 = { permission: null, state: null };
+    const requiredResult = array.array().required();
+    const stringResult = array.string();
+    obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
+    const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
+    const stringResult1 = array.string();
+    obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
+    obj.permissions = requiredResult.items(array.object(obj2));
+    return obj;
+  }
+};
 const obj42 = {
   embeddedAppSDK: true,
   request: "Array",
@@ -1235,7 +1320,21 @@ const obj50 = {
     return obj;
   }
 };
-const obj55 = {
+const obj53 = {
+  request: "Array",
+  response(number) {
+    const obj = { layout_mode: joiEnum(number, "ActivityLayoutMode").required() };
+    return obj;
+  }
+};
+const obj54 = {
+  request: "Array",
+  response(boolean) {
+    const obj = { opened: boolean.boolean().required() };
+    return obj;
+  }
+};
+const obj57 = {
   embeddedAppSDK: true,
   request: "Array",
   response(boolean) {
@@ -1243,7 +1342,7 @@ const obj55 = {
     return obj;
   }
 };
-const obj56 = {
+const obj58 = {
   embeddedAppSDK: true,
   request: "Array",
   response(boolean) {
@@ -1251,7 +1350,7 @@ const obj56 = {
     return obj;
   }
 };
-const obj57 = {
+const obj59 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -1259,7 +1358,7 @@ const obj57 = {
     return obj;
   }
 };
-const obj61 = {
+const obj63 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -1270,7 +1369,7 @@ const obj61 = {
     return obj;
   }
 };
-const obj62 = {
+const obj64 = {
   embeddedAppSDK: true,
   request: "Array",
   response(array) {
@@ -1280,7 +1379,7 @@ const obj62 = {
     return obj;
   }
 };
-const obj63 = {
+const obj65 = {
   embeddedAppSDK: true,
   request: "Array",
   response(array) {
@@ -1290,7 +1389,31 @@ const obj63 = {
     return obj;
   }
 };
-const obj79 = {
+const obj69 = {
+  request: "Array",
+  response(arg0) {
+    return Channel(arg0).allow(null);
+  }
+};
+const obj74 = {
+  request: "Array",
+  response(array) {
+    const obj = { guilds: null };
+    const obj2 = { id: null, name: null, icon_url: null };
+    const arrayResult = array.array();
+    const stringResult = array.string();
+    obj2.id = array.string().required().meta({ className: "GuildId" });
+    const requiredResult = array.string().required();
+    obj2.name = array.string().required();
+    const stringResult1 = array.string();
+    const stringResult2 = array.string();
+    obj2.icon_url = array.string().allow(null).required();
+    const allowResult = array.string().allow(null);
+    obj.guilds = arrayResult.items(array.object(obj2)).required();
+    return obj;
+  }
+};
+const obj81 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload(number) {
@@ -1298,14 +1421,14 @@ const obj79 = {
     return obj;
   }
 };
-const obj80 = {
+const obj82 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload(arg0) {
     return User(arg0);
   }
 };
-const obj82 = {
+const obj84 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload(string) {
@@ -1313,7 +1436,7 @@ const obj82 = {
     return obj;
   }
 };
-const obj83 = {
+const obj85 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload(number) {
@@ -1321,8 +1444,8 @@ const obj83 = {
     return obj;
   }
 };
-const obj84 = { embeddedAppSDK: true, subscribeArgs: "Array", payload: ActivityInstanceParticipants };
-const obj85 = {
+const obj86 = { embeddedAppSDK: true, subscribeArgs: "Array", payload: ActivityInstanceParticipants };
+const obj87 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload: function Relationship(number) {
@@ -1338,7 +1461,7 @@ const obj85 = {
     return number.object(obj);
   }
 };
-const obj86 = {
+const obj88 = {
   embeddedAppSDK: true,
   subscribeArgs: "Array",
   payload(string) {
@@ -1442,12 +1565,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: {
-    request: "Array",
-    response(boolean) {
-      return VoiceCapabilities(boolean);
-    }
-  },
+  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj20,
   [helpers.RPCCommand.GET_VOICE_SESSION_PARTICIPANTS]: {
     request(string) {
       const obj = { session_id: string.string().required() };
@@ -1480,40 +1598,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.START_VOICE_SESSION]: {
-    request: "Array",
-    response(string) {
-      const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
-      const stringResult = string.string();
-      obj.channel_id = string.string().required();
-      const stringResult1 = string.string();
-      obj.capabilities = VoiceCapabilities(string).required();
-      const obj4 = VoiceCapabilities(string);
-      const obj2 = { user_id: null, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null };
-      const arrayResult = string.array();
-      obj2.user_id = string.string().required();
-      const stringResult2 = string.string();
-      obj2.username = string.string().required();
-      const stringResult3 = string.string();
-      const stringResult4 = string.string();
-      obj2.global_name = string.string().allow(null).required();
-      const allowResult = string.string().allow(null);
-      const stringResult5 = string.string();
-      obj2.avatar = string.string().allow(null).required();
-      const allowResult1 = string.string().allow(null);
-      obj2.mute = string.boolean().required();
-      const booleanResult = string.boolean();
-      obj2.deaf = string.boolean().required();
-      const booleanResult1 = string.boolean();
-      obj2.self_mute = string.boolean().required();
-      const booleanResult2 = string.boolean();
-      obj2.self_deaf = string.boolean().required();
-      const booleanResult3 = string.boolean();
-      const objectResult = string.object(obj2);
-      obj.participants = arrayResult.items(string.object(obj2).required()).required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.START_VOICE_SESSION]: obj22,
   [helpers.RPCCommand.UPDATE_VOICE_SPATIAL]: {
     request(string) {
       const obj = { session_id: string.string().required(), listener: null, sources: null };
@@ -1778,34 +1863,14 @@ export const RPCCommandSchemas = {
   [helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj11,
   [helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj11,
   [helpers.RPCCommand.STOP_VOICE_SESSION]: obj11,
-  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: {
-    request: "Array",
-    response(boolean) {
-      const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
-      const booleanResult = boolean.boolean();
-      const stringResult = boolean.string();
-      obj.transport = boolean.string().valid("iframe").required();
-      const validResult = boolean.string().valid("iframe");
-      obj.requires_existing_watch = boolean.boolean().required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj25,
   [helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj13,
   [helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj11,
   [helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj11,
   [helpers.RPCCommand.SET_APPLICATION_STREAMING_VIEW_FIT]: obj12,
   [helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj11,
   [helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj11,
-  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: {
-    request: "Array",
-    response(boolean) {
-      const obj = { available: boolean.boolean().required(), transport: null };
-      const booleanResult = boolean.boolean();
-      const stringResult = boolean.string();
-      obj.transport = boolean.string().valid("iframe").required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj26,
   [helpers.RPCCommand.START_CAMERA_VIEW]: obj13,
   [helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj11,
   [helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj11,
@@ -2059,13 +2124,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.HIDE_TOOLTIP]: {
-    request: "Array",
-    response(boolean) {
-      const obj = { hidden: boolean.boolean().required() };
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.HIDE_TOOLTIP]: obj36,
   [helpers.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
@@ -2102,22 +2161,7 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     }
   },
-  [helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: {
-    request: "Array",
-    response(array) {
-      const obj = { permissions: null };
-      const arrayResult = array.array();
-      const obj2 = { permission: null, state: null };
-      const requiredResult = array.array().required();
-      const stringResult = array.string();
-      obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
-      const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
-      const stringResult1 = array.string();
-      obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
-      obj.permissions = requiredResult.items(array.object(obj2));
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: obj39,
   [helpers.RPCCommand.REQUEST_DEVICE_PERMISSIONS]: {
     request(array) {
       const obj = { permissions: null };
@@ -2182,7 +2226,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "flexDirection"
+    response: "Array"
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj44,
   [helpers.RPCCommand.GET_USER]: {
@@ -2248,6 +2292,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
+  [helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_HANDSHAKE]: obj53,
+  [helpers.RPCCommand.FRAME_PICTURE_IN_PICTURE_OPEN]: obj54,
   [helpers.RPCCommand.SET_AUDIO_SESSION_TYPE]: {
     request(string) {
       const obj = { type: null };
@@ -2271,11 +2317,11 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "flexDirection"
+    response: "Array"
   },
-  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj55,
-  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj56,
-  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj57,
+  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
+  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
+  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj59,
   [helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
     embeddedAppSDK: true,
     request(number) {
@@ -2286,7 +2332,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "EmbeddedActivityOrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "flexDirection"
+    response: "Array"
   },
   [helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -2316,9 +2362,9 @@ export const RPCCommandSchemas = {
       return boolean.object(obj).default({ opened: null });
     }
   },
-  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj61,
-  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj62,
-  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj63,
+  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj63,
+  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj64,
+  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj65,
   [helpers.RPCCommand.START_PURCHASE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2371,12 +2417,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: {
-    request: "Array",
-    response(arg0) {
-      return Channel(arg0).allow(null);
-    }
-  },
+  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj69,
   [helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
     request(string) {
       const obj = { channel_id: null, expected_channel_id: null, timeout: null, force: null, navigate: null };
@@ -2509,24 +2550,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_GUILDS]: {
-    request: "Array",
-    response(array) {
-      const obj = { guilds: null };
-      const obj2 = { id: null, name: null, icon_url: null };
-      const arrayResult = array.array();
-      const stringResult = array.string();
-      obj2.id = array.string().required().meta({ className: "GuildId" });
-      const requiredResult = array.string().required();
-      obj2.name = array.string().required();
-      const stringResult1 = array.string();
-      const stringResult2 = array.string();
-      obj2.icon_url = array.string().allow(null).required();
-      const allowResult = array.string().allow(null);
-      obj.guilds = arrayResult.items(array.object(obj2)).required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_GUILDS]: obj74,
   [helpers.RPCCommand.GET_ROLES]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2781,8 +2805,8 @@ export const RPCEventSchemas = {
   },
   [helpers.RPCEvent.SPEAKING_START]: obj14,
   [helpers.RPCEvent.SPEAKING_STOP]: obj14,
-  [helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: obj79,
-  [helpers.RPCEvent.CURRENT_USER_UPDATE]: obj80,
+  [helpers.RPCEvent.ACTIVITY_LAYOUT_MODE_UPDATE]: obj81,
+  [helpers.RPCEvent.CURRENT_USER_UPDATE]: obj82,
   [helpers.RPCEvent.CURRENT_GUILD_MEMBER_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {
@@ -2795,11 +2819,11 @@ export const RPCEventSchemas = {
       return GuildMember(string, { legacyCompat: true });
     }
   },
-  [helpers.RPCEvent.ENTITLEMENT_CREATE]: obj82,
-  [helpers.RPCEvent.THERMAL_STATE_UPDATE]: obj83,
-  [helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: obj84,
-  [helpers.RPCEvent.RELATIONSHIP_UPDATE]: obj85,
-  [helpers.RPCEvent.ACTIVITY_JOIN]: obj86,
+  [helpers.RPCEvent.ENTITLEMENT_CREATE]: obj84,
+  [helpers.RPCEvent.THERMAL_STATE_UPDATE]: obj85,
+  [helpers.RPCEvent.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: obj86,
+  [helpers.RPCEvent.RELATIONSHIP_UPDATE]: obj87,
+  [helpers.RPCEvent.ACTIVITY_JOIN]: obj88,
   [helpers.RPCEvent.QUEST_ENROLLMENT_STATUS_UPDATE]: {
     embeddedAppSDK: true,
     subscribeArgs(string) {

@@ -1,6 +1,6 @@
-// === Module 14975: useProfileNewContent ===
+// === Module 14979: useProfileNewContent ===
 
-// Module 14975 (useProfileNewContent)
+// Module 14979 (useProfileNewContent)
 import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7783 */;
 import WishlistStore from "WishlistStore" /* 9471 */;
 import UserStore from "UserStore" /* 1383 */;

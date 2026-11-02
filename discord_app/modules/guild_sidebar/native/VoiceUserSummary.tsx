@@ -1,6 +1,6 @@
-// === Module 18175: VoiceUserSummary ===
+// === Module 18188: VoiceUserSummary ===
 
-// Module 18175 (VoiceUserSummary)
+// Module 18188 (VoiceUserSummary)
 import native from "native" /* 1187 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9822 */;
 import noop from "module_19" /* 19 */;

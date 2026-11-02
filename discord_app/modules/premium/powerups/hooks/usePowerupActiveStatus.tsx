@@ -1,6 +1,6 @@
-// === Module 14061: usePowerupActiveStatus ===
+// === Module 14076: usePowerupActiveStatus ===
 
-// Module 14061 (usePowerupActiveStatus)
+// Module 14076 (usePowerupActiveStatus)
 import GuildStore from "GuildStore" /* 4885 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
 
@@ -57,7 +57,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "applicationId" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
             } else {
               let tmp4;
               if (null != React5[tmp22]) {
@@ -110,11 +110,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "applicationId" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "concat", sourcePowerup: "style" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
     let first = obj3;
   } else {
     first = mapped[0];
@@ -162,7 +162,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "applicationId" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
             } else {
               let tmp4;
               if (null != React5[tmp22]) {
@@ -215,7 +215,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "applicationId" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "dispatch", levelPowerup: "Array" };
     }
   });
 }

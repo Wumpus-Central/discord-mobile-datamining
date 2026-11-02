@@ -1,19 +1,19 @@
-// === Module 19423: ConjureTurnNotificationManager ===
+// === Module 19430: ConjureTurnNotificationManager ===
 
-// Module 19423 (ConjureTurnNotificationManager)
+// Module 19430 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 4839 */;
 import ConjureUtils from "ConjureUtils" /* 7419 */;
 import conjureProjectMute from "conjureProjectMute" /* 10878 */;
 import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10902 */;
 import SoundUtils from "SoundUtils" /* 11030 */;
-import conjureMentions from "conjureMentions" /* 12634 */;
+import conjureMentions from "conjureMentions" /* 12637 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7715 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 11011 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 11528 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11529 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 

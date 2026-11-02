@@ -1,6 +1,6 @@
-// === Module 12037: TouchableStreamPreview ===
+// === Module 12038: TouchableStreamPreview ===
 
-// Module 12037 (TouchableStreamPreview)
+// Module 12038 (TouchableStreamPreview)
 import nativeDefault from "native" /* 575 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;

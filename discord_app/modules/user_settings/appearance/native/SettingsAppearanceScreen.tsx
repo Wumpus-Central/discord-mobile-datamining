@@ -1,6 +1,6 @@
-// === Module 17242: SettingsAppearanceScreen ===
+// === Module 17255: SettingsAppearanceScreen ===
 
-// Module 17242 (SettingsAppearanceScreen)
+// Module 17255 (SettingsAppearanceScreen)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import HeaderShared from "HeaderShared" /* 9812 */;
@@ -12,7 +12,7 @@ import ThemeStore from "ThemeStore" /* 1192 */;
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(17243);
+const FontScaleStore = fn(17256);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(8432).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
@@ -23,8 +23,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(function SettingsAppearanceScreen() {
   nativeStackNavigation(5593)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(17244).fetchUserCustomThemes();
-      const obj = closure_0(17244);
+      const userCustomThemes = closure_0(17257).fetchUserCustomThemes();
+      const obj = closure_0(17257);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -52,7 +52,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "Array" });
+          nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       const obj2 = { headerRight: null };
@@ -99,7 +99,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
     obj8.settings = items6;
     const intl3 = closure_0(1113).intl;
     const obj9 = { helpCenterLink: null };
-    const obj = closure_0(11539);
+    const obj = closure_0(11540);
     obj9.helpCenterLink = nativeStackNavigation(2061).getArticleURL(constants2.FAVORITES_GUILD);
     obj8.subLabel = intl3.format(nativeStackNavigation(3450).GR2KOG, obj9);
     items1[5] = obj8;
@@ -123,5 +123,5 @@ export default noop.memo(function SettingsAppearanceScreen() {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(16575), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(16588), { node }, "" + theme + "-" + gradientPresetId);
 });

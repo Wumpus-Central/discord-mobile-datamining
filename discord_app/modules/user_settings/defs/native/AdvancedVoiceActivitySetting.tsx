@@ -1,13 +1,13 @@
-// === Module 17238: AdvancedVoiceActivitySetting ===
+// === Module 17251: AdvancedVoiceActivitySetting ===
 
-// Module 17238 (AdvancedVoiceActivitySetting)
+// Module 17251 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5915 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

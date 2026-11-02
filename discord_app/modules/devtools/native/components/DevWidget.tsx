@@ -1,13 +1,13 @@
-// === Module 17963: DevWidget ===
+// === Module 17976: DevWidget ===
 
-// Module 17963 (DevWidget)
+// Module 17976 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;
 import Pressables from "Pressables" /* 6980 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17563 */;
-import VEVOODefault from "VEVOO" /* 17964 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17576 */;
+import VEVOODefault from "VEVOO" /* 17977 */;
 import noop from "module_19" /* 19 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
 

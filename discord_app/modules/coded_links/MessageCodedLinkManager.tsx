@@ -1,8 +1,8 @@
-// === Module 19515: MessageCodedLinkManager ===
+// === Module 19522: MessageCodedLinkManager ===
 
-// Module 19515 (MessageCodedLinkManager)
+// Module 19522 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 5748 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19527 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19534 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7637 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -164,7 +164,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj3 = { value, done: true };
                                                       return obj3;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(19523).useGameOrganizationInviteFetch;
+                                                      const useGameOrganizationInviteFetch = tmp4(19530).useGameOrganizationInviteFetch;
                                                       const items = [code];
                                                       v1 = 1;
                                                       dependencyMap = 1;
@@ -179,7 +179,7 @@ function resolveMessageCodedLinks(content) {
                                                     const obj = { value, done: true };
                                                     return obj;
                                                   } else {
-                                                    v1(13201)(closure_128_0).catch(closure_1_6);
+                                                    v1(13216)(closure_128_0).catch(closure_1_6);
                                                     dependencyMap = 3;
                                                     return { value: "HermesInternal", done: "HermesInternal" };
                                                   }
@@ -377,7 +377,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj3 = { value, done: true };
                                                           return obj3;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(19523).useGameOrganizationInviteFetch;
+                                                          const useGameOrganizationInviteFetch = tmp4(19530).useGameOrganizationInviteFetch;
                                                           const items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -392,7 +392,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj = { value, done: true };
                                                         return obj;
                                                       } else {
-                                                        v1(13201)(closure_128_0).catch(closure_1_6);
+                                                        v1(13216)(closure_128_0).catch(closure_1_6);
                                                         dependencyMap = 3;
                                                         return { value: "HermesInternal", done: "HermesInternal" };
                                                       }

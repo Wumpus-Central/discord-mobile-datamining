@@ -1,6 +1,6 @@
-// === Module 14871: useCanRequestStreamFromUser ===
+// === Module 14875: useCanRequestStreamFromUser ===
 
-// Module 14871 (useCanRequestStreamFromUser)
+// Module 14875 (useCanRequestStreamFromUser)
 import _modDef12 from "module_12" /* 12 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildMemberStore from "GuildMemberStore" /* 4926 */;

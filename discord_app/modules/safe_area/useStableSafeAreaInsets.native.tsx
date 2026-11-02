@@ -1,6 +1,6 @@
-// === Module 11823: useStableSafeAreaInsets ===
+// === Module 11824: useStableSafeAreaInsets ===
 
-// Module 11823 (useStableSafeAreaInsets)
+// Module 11824 (useStableSafeAreaInsets)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1494 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1625 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1637 */;

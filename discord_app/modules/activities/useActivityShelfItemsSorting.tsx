@@ -1,6 +1,6 @@
-// === Module 12229: useActivityShelfItemsSorting ===
+// === Module 12369: useActivityShelfItemsSorting ===
 
-// Module 12229 (useActivityShelfItemsSorting)
+// Module 12369 (useActivityShelfItemsSorting)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

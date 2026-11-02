@@ -1,6 +1,6 @@
-// === Module 16874: PremiumSettingScreen ===
+// === Module 16887: PremiumSettingScreen ===
 
-// Module 16874 (PremiumSettingScreen)
+// Module 16887 (PremiumSettingScreen)
 import useNavigation from "useNavigation" /* 1497 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7161 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7164 */;

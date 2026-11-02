@@ -1,6 +1,6 @@
-// === Module 17721: InappropriateConversationModal ===
+// === Module 17734: InappropriateConversationModal ===
 
-// Module 17721 (InappropriateConversationModal)
+// Module 17734 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -13,7 +13,7 @@ import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 7065 */
 import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;
 import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11270 */;
 import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11275 */;
-import TakeActionScreenDefault from "TakeActionScreen" /* 17722 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 17735 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
@@ -96,7 +96,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  const items = [closure_13(trackAnalyticsEvent(17723).SafetyChatSpotIllustration, {}), , ];
+  const items = [closure_13(trackAnalyticsEvent(17736).SafetyChatSpotIllustration, {}), , ];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1113).intl;

@@ -1,6 +1,6 @@
-// === Module 19331: VoicePanelVoiceControlsButtons ===
+// === Module 19338: VoicePanelVoiceControlsButtons ===
 
-// Module 19331 (VoicePanelVoiceControlsButtons)
+// Module 19338 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
@@ -22,24 +22,24 @@ import showAudioOutputSelector from "showAudioOutputSelector" /* 9228 */;
 import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9238 */;
 import GroupPlusIcon from "GroupPlusIcon" /* 10977 */;
 import _modDef11272 from "module_11272" /* 11272 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11938 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11948 */;
-import _modDef11967 from "module_11967" /* 11967 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12001 */;
-import SoundboardIcon from "SoundboardIcon" /* 14087 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 19162 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 19209 */;
-import _modDef19223 from "module_19223" /* 19223 */;
-import _modDef19224 from "module_19224" /* 19224 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 19318 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 19334 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 19335 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11939 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11949 */;
+import _modDef11968 from "module_11968" /* 11968 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12002 */;
+import SoundboardIcon from "SoundboardIcon" /* 14102 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 19169 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 19216 */;
+import _modDef19230 from "module_19230" /* 19230 */;
+import _modDef19231 from "module_19231" /* 19231 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 19325 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 19341 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 19342 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11704 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11705 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
@@ -170,7 +170,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-let closure_15 = fn(19332).SelfStreamAndVideoAlertType;
+let closure_15 = fn(19339).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -179,7 +179,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 export function GameConsoles(channel) {
   channel = channel.channel;
   const connected = channel.connected;
-  const arr = connected(11975)();
+  const arr = connected(11976)();
   let tmp2 = null;
   if (!channel.isGuildStageVoice()) {
     let tmp3 = null;
@@ -244,7 +244,7 @@ export function SoundboardButton(channel) {
 }
 export function ScreenshareButton(channel) {
   let isActive;
-  const tmp = isActive(11919)(channel.channel);
+  const tmp = isActive(11920)(channel.channel);
   const onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -298,7 +298,7 @@ export function DeafenSwitch() {
   const items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19224 });
+  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19231 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -342,8 +342,8 @@ export function InviteButton(channel) {
       tmp8 = null;
       if (channel.connected) {
         const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11967 };
-        obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11967 });
+        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11968 };
+        obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11968 });
         const intl = util.intl;
         obj2.label = intl.string(util.t["f1+QIK"]);
         obj2.trailing = jsx(TableRowArrow.TableRowArrow, {});
@@ -363,7 +363,7 @@ export function HideNonVideoParticipants(channelId) {
   }, items1);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   const obj = channelId(504);
-  obj2.icon = jsx(channelId(6983).TableRowIcon, { IconComponent: channelId(11040).VideoIcon, source: stateFromStores(11918) });
+  obj2.icon = jsx(channelId(6983).TableRowIcon, { IconComponent: channelId(11040).VideoIcon, source: stateFromStores(11919) });
   const intl = channelId(1113).intl;
   obj2.accessibilityHint = intl.string(channelId(1113).t.ZMTRyc);
   obj2.value = stateFromStores;
@@ -390,7 +390,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133070 = () => f133070(!VIDEO);
+          const f133127 = () => f133127(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -467,13 +467,13 @@ export function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19223 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19230 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1113).intl;
   obj.label = intl.string(guildId(1113).t.dsXapM);
   const intl2 = guildId(1113).intl;
   obj.subLabel = intl2.string(guildId(1113).t["16SG+O"]);
   obj.trailing = jsx(guildId(6984).TableRowArrow, {});
-  return jsx(guildId(6975).TableRow, { onPress: callback, icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19223 }), label: null, subLabel: null, trailing: null });
+  return jsx(guildId(6975).TableRow, { onPress: callback, icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19230 }), label: null, subLabel: null, trailing: null });
 }
 export function ReportStreamIssueButton(stream) {
   const reportStreamIssueResult = ChannelCallUtils.reportStreamIssue(stream.stream);

@@ -1,6 +1,6 @@
-// === Module 17221: PremiumRestoreSubscriptionSetting ===
+// === Module 17234: PremiumRestoreSubscriptionSetting ===
 
-// Module 17221 (PremiumRestoreSubscriptionSetting)
+// Module 17234 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 18006: components/MFA ===
+// === Module 18019: components/MFA ===
 
-// Module 18006 (components/MFA)
+// Module 18019 (components/MFA)
 import _modDef12 from "module_12" /* 12 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(17657).MFAModal, obj3);
+    return jsx(isMultiAccount(17670).MFAModal, obj3);
   } else {
     const tmpResult2 = isMultiAccount(1376);
     tmp4(575).space;

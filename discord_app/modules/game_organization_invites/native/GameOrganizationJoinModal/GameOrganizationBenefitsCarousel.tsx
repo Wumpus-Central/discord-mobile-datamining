@@ -1,6 +1,6 @@
-// === Module 13196: GameOrganizationBenefitsCarousel ===
+// === Module 13211: GameOrganizationBenefitsCarousel ===
 
-// Module 13196 (GameOrganizationBenefitsCarousel)
+// Module 13211 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2404 from "module_2404" /* 2404 */;

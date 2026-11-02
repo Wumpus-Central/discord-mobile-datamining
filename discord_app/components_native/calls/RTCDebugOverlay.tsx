@@ -1,6 +1,6 @@
-// === Module 12019: RTCDebugOverlay ===
+// === Module 12020: RTCDebugOverlay ===
 
-// Module 12019 (RTCDebugOverlay)
+// Module 12020 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1187 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 5788 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 12020 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 12021 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildStore from "GuildStore" /* 4885 */;

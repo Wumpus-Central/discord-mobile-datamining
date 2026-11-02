@@ -1,6 +1,6 @@
-// === Module 15682: RemoteAuthModal ===
+// === Module 15686: RemoteAuthModal ===
 
-// Module 15682 (RemoteAuthModal)
+// Module 15686 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -14,10 +14,10 @@ import FastImageDefault from "FastImage" /* 5717 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import ButtonGroup from "ButtonGroup" /* 6767 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
-import _modDef15681 from "module_15681" /* 15681 */;
-import _modDef15683 from "module_15683" /* 15683 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15684 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15688 */;
+import _modDef15685 from "module_15685" /* 15685 */;
+import _modDef15687 from "module_15687" /* 15687 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15688 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -204,12 +204,12 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15683, style: tmp.imageStyle };
+  const obj2 = { source: _modDef15687, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef15681;
+  obj3.source = _modDef15685;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

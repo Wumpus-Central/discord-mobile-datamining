@@ -1,6 +1,6 @@
-// === Module 12607: ConjureTipsHost ===
+// === Module 12610: ConjureTipsHost ===
 
-// Module 12607 (ConjureTipsHost)
+// Module 12610 (ConjureTipsHost)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ export default function ConjureTipsHost(onShow) {
   let joined;
   ({ projectId, messages, draftHasText, onAskForIdeas } = onShow);
   const tmp = closure_6();
-  const tmp2Result = joined(12608)(onShow(12618).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
+  const tmp2Result = joined(12611)(onShow(12621).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
   const mapped = tmp2Result.map((tip) => "" + tip.tip.id + ":" + tip.presentation);
   joined = mapped.join(",");
   const items = [joined, onShow];

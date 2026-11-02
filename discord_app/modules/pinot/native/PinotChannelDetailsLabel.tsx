@@ -1,6 +1,6 @@
-// === Module 18807: PinotChannelDetailsLabel ===
+// === Module 18814: PinotChannelDetailsLabel ===
 
-// Module 18807 (PinotChannelDetailsLabel)
+// Module 18814 (PinotChannelDetailsLabel)
 import nativeDefault from "native" /* 575 */;
 import _modDef3160 from "module_3160" /* 3160 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;

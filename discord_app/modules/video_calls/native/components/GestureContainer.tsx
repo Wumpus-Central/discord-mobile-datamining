@@ -1,6 +1,6 @@
-// === Module 12005: GestureContainer ===
+// === Module 12006: GestureContainer ===
 
-// Module 12005 (GestureContainer)
+// Module 12006 (GestureContainer)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const useChannelCallStore = fn(11000).useChannelCallStore;
-const Constants = fn(11699);
+const Constants = fn(11700);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);

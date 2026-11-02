@@ -1,6 +1,6 @@
-// === Module 17768: UserSettingsDesignSystemAlertModal ===
+// === Module 17781: UserSettingsDesignSystemAlertModal ===
 
-// Module 17768 (UserSettingsDesignSystemAlertModal)
+// Module 17781 (UserSettingsDesignSystemAlertModal)
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import useAlertStore from "useAlertStore" /* 5960 */;
 import AlertModal from "AlertModal" /* 5964 */;

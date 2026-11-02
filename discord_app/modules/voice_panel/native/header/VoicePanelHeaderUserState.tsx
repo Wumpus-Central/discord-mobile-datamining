@@ -1,13 +1,13 @@
-// === Module 19212: VoicePanelHeaderUserState ===
+// === Module 19219: VoicePanelHeaderUserState ===
 
-// Module 19212 (VoicePanelHeaderUserState)
+// Module 19219 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 575 */;
 import timing from "timing" /* 5254 */;
 import NativeViewDefault from "NativeView" /* 6960 */;
 import native from "native" /* 8992 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 9233 */;
-import useStableParticipant from "useStableParticipant" /* 19211 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19213 */;
+import useStableParticipant from "useStableParticipant" /* 19218 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19220 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -98,7 +98,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(19211)(stateFromStores, channelId, guildId), guildId);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(19218)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(5095);
   const fn = function h() {
     let num = 0;

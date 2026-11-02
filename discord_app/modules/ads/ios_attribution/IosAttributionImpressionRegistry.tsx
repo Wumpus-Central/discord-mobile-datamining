@@ -1,9 +1,9 @@
-// === Module 14666: IosAttributionImpressionRegistry ===
+// === Module 14680: IosAttributionImpressionRegistry ===
 
-// Module 14666 (IosAttributionImpressionRegistry)
+// Module 14680 (IosAttributionImpressionRegistry)
 import LoggerDefault from "Logger" /* 3 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14664 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 14668 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14678 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 14682 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -337,9 +337,9 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   return iter;
 };
 let obj = {};
-let obj2 = { viewThroughSpec: { kind: fn(14667).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
-obj[fn(14667).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
-let obj3 = { kind: fn(14667).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+let obj2 = { viewThroughSpec: { kind: fn(14681).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(14681).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(14681).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

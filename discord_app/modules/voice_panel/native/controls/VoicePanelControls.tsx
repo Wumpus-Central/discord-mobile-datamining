@@ -1,6 +1,6 @@
-// === Module 19288: VoicePanelControls ===
+// === Module 19295: VoicePanelControls ===
 
-// Module 19288 (VoicePanelControls)
+// Module 19295 (VoicePanelControls)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import native from "native" /* 5080 */;
@@ -12,16 +12,16 @@ import native2 from "native" /* 8992 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11229 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11249 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13813 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19159 */;
-import useControlsLockDefault from "useControlsLock" /* 19199 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 19289 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19290 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 19291 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19292 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19296 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19298 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13828 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19166 */;
+import useControlsLockDefault from "useControlsLock" /* 19206 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 19296 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19297 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 19298 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19299 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19303 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;

@@ -1,6 +1,6 @@
-// === Module 13367: ForwardModal ===
+// === Module 13382: ForwardModal ===
 
-// Module 13367 (ForwardModal)
+// Module 13382 (ForwardModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HapticUtils from "HapticUtils" /* 5260 */;
@@ -10,10 +10,10 @@ import LinkIcon from "LinkIcon" /* 5727 */;
 import ChannelUtils from "ChannelUtils" /* 6046 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
 import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13364 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 13365 */;
-import formatResults from "formatResults" /* 13369 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 13371 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13379 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 13380 */;
+import formatResults from "formatResults" /* 13384 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 13386 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13368).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(13383).MAX_DESTINATION_COUNT;
 let UserRowModes = fn(10727).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -235,7 +235,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5960).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(13374), {
+                    closure_1_0(5960).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(13389), {
                       onConfirm() {
                         return closure_0(true);
                       },

@@ -1,13 +1,13 @@
-// === Module 16600: AccountEmailSetting ===
+// === Module 16613: AccountEmailSetting ===
 
-// Module 16600 (AccountEmailSetting)
+// Module 16613 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6995 */;
 import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

@@ -1,9 +1,9 @@
-// === Module 16940: TranscriptOutlineIcon ===
+// === Module 16953: TranscriptOutlineIcon ===
 
-// Module 16940 (TranscriptOutlineIcon)
+// Module 16953 (TranscriptOutlineIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5716 */;
-import _mod16941 from "module_16941" /* 16941 */;
+import _mod16954 from "module_16954" /* 16954 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TranscriptOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16941, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16954, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

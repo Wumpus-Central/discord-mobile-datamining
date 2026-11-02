@@ -1,6 +1,6 @@
-// === Module 11865: FocusedControlsBottomControls ===
+// === Module 11866: FocusedControlsBottomControls ===
 
-// Module 11865 (FocusedControlsBottomControls)
+// Module 11866 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -59,7 +59,7 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(11866).useCanShowTooltip(positionY(1092).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const canShowTooltip = positionY(11867).useCanShowTooltip(positionY(1092).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(5095);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c15, 1) };

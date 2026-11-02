@@ -12,7 +12,7 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
 import _modDef9225 from "module_9225" /* 9225 */;
 import _modDef9226 from "module_9226" /* 9226 */;
 import _modDef9227 from "module_9227" /* 9227 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 11937 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 11938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -269,7 +269,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid() ? (() => {
 }) : (() => {
   const items = [ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore, AudioRouteStore];
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(11937).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
+    isVideoMode = isEnabled(11938).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
     isEnabled = currentRouteType === isEnabled(5785).RouteTypes.SPEAKER;
     const isBluetoothRoute = currentRouteType === isEnabled(5785).RouteTypes.BLUETOOTH;

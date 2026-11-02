@@ -1,19 +1,19 @@
-// === Module 13713: TypingIndicator ===
+// === Module 13728: TypingIndicator ===
 
-// Module 13713 (TypingIndicator)
+// Module 13728 (TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import native from "native" /* 5080 */;
 import spring from "spring" /* 5637 */;
 import springPresets from "springPresets" /* 5638 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13718 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13719 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13720 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13733 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13734 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13735 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5627 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6797 */;
-import TypingStore from "TypingStore" /* 13714 */;
+import TypingStore from "TypingStore" /* 13729 */;
 import UserStore from "UserStore" /* 1383 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 18681: SearchBarActivityIcon ===
+// === Module 18688: SearchBarActivityIcon ===
 
-// Module 18681 (SearchBarActivityIcon)
+// Module 18688 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
-import SearchUtils from "SearchUtils" /* 13878 */;
+import SearchUtils from "SearchUtils" /* 13893 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13885 */;
+import SearchQueryStore from "SearchQueryStore" /* 13900 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;

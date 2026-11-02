@@ -1,6 +1,6 @@
-// === Module 18402: HomeDrawerDM ===
+// === Module 18415: HomeDrawerDM ===
 
-// Module 18402 (HomeDrawerDM)
+// Module 18415 (HomeDrawerDM)
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5204 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import useChannelName from "useChannelName" /* 5652 */;
@@ -8,7 +8,7 @@ import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5692 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10992 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 11039 */;
 import BellZIcon from "BellZIcon" /* 11172 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 17297 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 17310 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   let obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(18403).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(18416).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(18403);
+  const obj3 = channel(18416);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -95,7 +95,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(18369).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(18382).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(4867).isMultiUserDM;

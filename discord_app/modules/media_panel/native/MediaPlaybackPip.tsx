@@ -1,6 +1,6 @@
-// === Module 19346: MediaPlaybackPip ===
+// === Module 19353: MediaPlaybackPip ===
 
-// Module 19346 (MediaPlaybackPip)
+// Module 19353 (MediaPlaybackPip)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import timing from "timing" /* 5254 */;
@@ -9,7 +9,7 @@ import safeTransitionToDefault from "safeTransitionTo" /* 7421 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7636 */;
 import PlayIcon2 from "PlayIcon" /* 8848 */;
 import PauseIcon from "PauseIcon" /* 8850 */;
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 16385 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 16397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -91,7 +91,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(19347).Marquee, obj7), ];
+          const items3 = [closure_15(tmp2(19354).Marquee, obj7), ];
           const obj8 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, locations: [0, 0.1, 0.2, 0.8, 0.9, 1], colors: null, style: null };
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj8.colors = items4;
@@ -187,7 +187,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(19108).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(19115).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5014);

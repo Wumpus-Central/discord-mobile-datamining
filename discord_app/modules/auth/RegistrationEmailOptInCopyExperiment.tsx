@@ -1,6 +1,6 @@
-// === Module 18017: RegistrationEmailOptInCopyExperiment ===
+// === Module 18030: RegistrationEmailOptInCopyExperiment ===
 
-// Module 18017 (RegistrationEmailOptInCopyExperiment)
+// Module 18030 (RegistrationEmailOptInCopyExperiment)
 import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 

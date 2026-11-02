@@ -1,16 +1,16 @@
-// === Module 18524: ICYMIContentSettingControl ===
+// === Module 18537: ICYMIContentSettingControl ===
 
-// Module 18524 (ICYMIContentSettingControl)
+// Module 18537 (ICYMIContentSettingControl)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import ICYMIUtils from "ICYMIUtils" /* 8923 */;
 import SegmentedControlState from "SegmentedControlState" /* 8980 */;
 import SegmentedControl from "SegmentedControl" /* 9214 */;
-import _modDef18525 from "module_18525" /* 18525 */;
-import _modDef18526 from "module_18526" /* 18526 */;
-import _modDef18527 from "module_18527" /* 18527 */;
-import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 18528 */;
+import _modDef18538 from "module_18538" /* 18538 */;
+import _modDef18539 from "module_18539" /* 18539 */;
+import _modDef18540 from "module_18540" /* 18540 */;
+import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 18541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
@@ -25,7 +25,7 @@ function ContentSettingsControl(initialValue) {
   const obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  const obj2 = { source: _modDef18525, style: null };
+  const obj2 = { source: _modDef18538, style: null };
   const items = [tmp.icon, ];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -38,7 +38,7 @@ function ContentSettingsControl(initialValue) {
   const obj3 = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.SnrG00);
-  const obj4 = { source: _modDef18526, style: null };
+  const obj4 = { source: _modDef18539, style: null };
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -51,7 +51,7 @@ function ContentSettingsControl(initialValue) {
   const obj5 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.Rxe3jF);
-  const obj6 = { source: _modDef18527, style: null };
+  const obj6 = { source: _modDef18540, style: null };
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {

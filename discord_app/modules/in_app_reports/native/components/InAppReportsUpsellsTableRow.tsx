@@ -1,6 +1,6 @@
-// === Module 15163: InAppReportsUpsellsTableRow ===
+// === Module 15167: InAppReportsUpsellsTableRow ===
 
-// Module 15163 (InAppReportsUpsellsTableRow)
+// Module 15167 (InAppReportsUpsellsTableRow)
 import TableRow from "TableRow" /* 6975 */;
 import noop from "module_19" /* 19 */;
 

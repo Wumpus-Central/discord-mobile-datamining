@@ -1,6 +1,6 @@
-// === Module 12629: ConjureTipSwap ===
+// === Module 12632: ConjureTipSwap ===
 
-// Module 12629 (ConjureTipSwap)
+// Module 12632 (ConjureTipSwap)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;

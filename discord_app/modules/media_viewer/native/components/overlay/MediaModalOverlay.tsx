@@ -1,6 +1,6 @@
-// === Module 14764: MediaModalOverlay ===
+// === Module 14768: MediaModalOverlay ===
 
-// Module 14764 (MediaModalOverlay)
+// Module 14768 (MediaModalOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -12,13 +12,13 @@ import useVideoControls from "useVideoControls" /* 8836 */;
 import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8837 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8839 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
-import useMediaModalFooterAction from "useMediaModalFooterAction" /* 14660 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 14768 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14769 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 14771 */;
-import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 14775 */;
-import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 14776 */;
-import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 14777 */;
+import useMediaModalFooterAction from "useMediaModalFooterAction" /* 14674 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 14772 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14773 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 14775 */;
+import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 14779 */;
+import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 14780 */;
+import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 14781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function OverlayMuteButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.w4m945);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 14765 : 11995);
+  obj.source = importDefault(isMuted ? 14769 : 11996);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleMute;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -44,7 +44,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 14766 : 14767);
+  obj.source = importDefault(spoilerActive ? 14770 : 14771);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -70,7 +70,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(14770).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(14774).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }

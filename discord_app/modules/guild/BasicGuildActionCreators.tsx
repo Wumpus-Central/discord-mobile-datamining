@@ -1,6 +1,6 @@
-// === Module 20035: BasicGuildActionCreators ===
+// === Module 20042: BasicGuildActionCreators ===
 
-// Module 20035 (BasicGuildActionCreators)
+// Module 20042 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

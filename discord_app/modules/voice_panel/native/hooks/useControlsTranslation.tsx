@@ -1,6 +1,6 @@
-// === Module 19299: useControlsTranslation ===
+// === Module 19306: useControlsTranslation ===
 
-// Module 19299 (useControlsTranslation)
+// Module 19306 (useControlsTranslation)
 import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
 

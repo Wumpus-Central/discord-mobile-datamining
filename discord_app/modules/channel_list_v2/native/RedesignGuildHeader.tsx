@@ -1,6 +1,6 @@
-// === Module 18178: RedesignGuildHeader ===
+// === Module 18191: RedesignGuildHeader ===
 
-// Module 18178 (RedesignGuildHeader)
+// Module 18191 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
 import FavoritesUtils from "FavoritesUtils" /* 4888 */;
@@ -15,11 +15,11 @@ import useFontScale from "useFontScale" /* 5642 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9822 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15730 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18149 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18179 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18180 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12411 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15734 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18162 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18192 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18193 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import ActionSheetStore from "ActionSheetStore" /* 5259 */;

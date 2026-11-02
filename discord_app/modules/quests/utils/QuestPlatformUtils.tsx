@@ -16,9 +16,9 @@ import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
 import captureAdUserAction from "captureAdUserAction" /* 9684 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9720 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14648 */;
-import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14665 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14666 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14662 */;
+import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 14679 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14680 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -442,8 +442,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(14663).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
-    const tmp2Result = tmp2(14663);
+    iosAttributionClickFramework = tmp2(14677).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
+    const tmp2Result = tmp2(14677);
   }
   let fn;
   if (null != iosAttributionClickFramework) {
@@ -631,8 +631,8 @@ export function openGameLinkDirectly(quest, impressionId) {
         iosAppId = ios.iosAppId;
       }
     }
-    iosAttributionClickFramework = tmp(14663).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, quest.id);
-    const tmpResult5 = tmp(14663);
+    iosAttributionClickFramework = tmp(14677).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, quest.id);
+    const tmpResult5 = tmp(14677);
   }
   const ComponentDispatch = tmp(1108).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);

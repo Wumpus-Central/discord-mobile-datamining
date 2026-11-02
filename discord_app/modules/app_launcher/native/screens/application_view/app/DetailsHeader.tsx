@@ -5,7 +5,7 @@ import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import timingPresets from "timingPresets" /* 5257 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11493 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

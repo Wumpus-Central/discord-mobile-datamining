@@ -1,6 +1,6 @@
-// === Module 17707: DevToolsTogglesScreen ===
+// === Module 17720: DevToolsTogglesScreen ===
 
-// Module 17707 (DevToolsTogglesScreen)
+// Module 17720 (DevToolsTogglesScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
@@ -85,8 +85,8 @@ export default function DevToolsTogglesScreen() {
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  const manaTextMigrationHighlightRestartNotice = query(15857).useManaTextMigrationHighlightRestartNotice();
-  let obj = query(15857);
+  const manaTextMigrationHighlightRestartNotice = query(15861).useManaTextMigrationHighlightRestartNotice();
+  let obj = query(15861);
   const tmp5 = query;
   const items = [DesignTogglesStore];
   const items1 = [query];
@@ -116,9 +116,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(17708).clearAll();
-        const obj = first(17708);
-        first(17689).clearAll();
+        first(17721).clearAll();
+        const obj = first(17721);
+        first(17702).clearAll();
       },
       arrow: true
     }),
@@ -129,9 +129,9 @@ export default function DevToolsTogglesScreen() {
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(17708).clearAll();
-      const obj = first(17708);
-      first(17689).clearAll();
+      first(17721).clearAll();
+      const obj = first(17721);
+      first(17702).clearAll();
     },
     arrow: true
   };
@@ -150,7 +150,7 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(17708).toggle(query, arg0);
+              return first(17721).toggle(query, arg0);
             }
           }, tmp);
         })

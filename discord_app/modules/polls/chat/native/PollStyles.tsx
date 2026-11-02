@@ -1,9 +1,9 @@
-// === Module 12407: PollStyles ===
+// === Module 12547: PollStyles ===
 
-// Module 12407 (PollStyles)
+// Module 12547 (PollStyles)
 import _mod6556 from "module_6556" /* 6556 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12408 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12409 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12548 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12549 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, config) {

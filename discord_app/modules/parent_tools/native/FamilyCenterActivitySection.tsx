@@ -1,11 +1,11 @@
-// === Module 16790: FamilyCenterActivitySection ===
+// === Module 16803: FamilyCenterActivitySection ===
 
-// Module 16790 (FamilyCenterActivitySection)
+// Module 16803 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8370 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 8372 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 16785 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 16798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,11 +76,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(16785).useActionsForDisplayType(displayType);
-  const obj = displayType(16785);
-  const actionTotalsForDisplayType = displayType(16785).useActionTotalsForDisplayType(displayType);
-  const obj2 = displayType(16785);
-  const familyCenterActions = displayType(13344).useFamilyCenterActions({});
+  const actionsForDisplayType = displayType(16798).useActionsForDisplayType(displayType);
+  const obj = displayType(16798);
+  const actionTotalsForDisplayType = displayType(16798).useActionTotalsForDisplayType(displayType);
+  const obj2 = displayType(16798);
+  const familyCenterActions = displayType(13359).useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp6[1];
@@ -96,7 +96,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const formatToPlainStringResult = intl.formatToPlainString(loadMore(2538)["7dMmJY"], obj4);
     const obj5 = { style: loadMoreButton.container, children: null };
     const obj6 = { displayType };
-    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj6), substr.map((action) => closure_1_9(loadMore(16791), { action }, action.event_id)), ];
+    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj6), substr.map((action) => closure_1_9(loadMore(16804), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj5.children = items1;
@@ -120,5 +120,5 @@ export default function FamilyCenterActivitySection(displayType) {
       closure_9(closure_6, obj7);
     }
   }
-  const obj3 = displayType(13344);
+  const obj3 = displayType(13359);
 };

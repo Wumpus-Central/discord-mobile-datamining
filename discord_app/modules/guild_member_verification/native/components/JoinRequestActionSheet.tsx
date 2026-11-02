@@ -1,6 +1,6 @@
-// === Module 18648: JoinRequestActionSheet ===
+// === Module 18661: JoinRequestActionSheet ===
 
-// Module 18648 (JoinRequestActionSheet)
+// Module 18661 (JoinRequestActionSheet)
 import isChangelogUserDefault from "isChangelogUser" /* 4915 */;
 import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6918 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;

@@ -1,7 +1,7 @@
-// === Module 19403: BackgroundSyncManager ===
+// === Module 19410: BackgroundSyncManager ===
 
-// Module 19403 (BackgroundSyncManager)
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19404 */;
+// Module 19410 (BackgroundSyncManager)
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19411 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1383 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;

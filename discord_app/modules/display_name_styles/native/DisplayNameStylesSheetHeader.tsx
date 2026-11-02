@@ -1,6 +1,6 @@
-// === Module 17320: DisplayNameStylesSheetHeader ===
+// === Module 17333: DisplayNameStylesSheetHeader ===
 
-// Module 17320 (DisplayNameStylesSheetHeader)
+// Module 17333 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import noop from "module_19" /* 19 */;

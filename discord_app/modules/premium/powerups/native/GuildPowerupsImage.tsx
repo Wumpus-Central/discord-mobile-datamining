@@ -1,6 +1,6 @@
-// === Module 14082: GuildPowerupsImage ===
+// === Module 14097: GuildPowerupsImage ===
 
-// Module 14082 (GuildPowerupsImage)
+// Module 14097 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
 import FastImageDefault from "FastImage" /* 5717 */;

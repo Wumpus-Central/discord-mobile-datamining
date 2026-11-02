@@ -1,6 +1,6 @@
-// === Module 19330: VoicePanelVoiceControls ===
+// === Module 19337: VoicePanelVoiceControls ===
 
-// Module 19330 (VoicePanelVoiceControls)
+// Module 19337 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1622 */;
@@ -8,13 +8,13 @@ import UserSettings from "UserSettings" /* 4839 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import TableRowGroup from "TableRowGroup" /* 7060 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11747 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11942 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11954 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15202 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19208 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19325 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19331 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11748 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11943 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11955 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15206 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19215 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19332 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19338 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;

@@ -1,9 +1,9 @@
-// === Module 16280: VoiceNotificationManager ===
+// === Module 16284: VoiceNotificationManager ===
 
-// Module 16280 (VoiceNotificationManager)
+// Module 16284 (VoiceNotificationManager)
 import nativeDefault from "native" /* 575 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10211 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 12020 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 12021 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "Path", connectionState: "create", selfMute: false, deafened: 282, isPushToTalk: null, embeddedActivity: 1, isStreaming: "left" };
+    obj.state = { channelId: "Path", connectionState: "create", selfMute: false, deafened: "family_adult_child", isPushToTalk: false, embeddedActivity: "Boolean", isStreaming: "children" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -183,7 +183,7 @@ class VoiceNotificationManager {
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = result;
-          obj4 = obj4(16281);
+          obj4 = obj4(16285);
           result = obj4.shouldAcquireCallWifiLock();
           obj.acquireWifiLock = result;
           tmp16 = tmp16(10211);
@@ -220,7 +220,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "Path", connectionState: "create", selfMute: false, deafened: 282, isPushToTalk: null, embeddedActivity: 1, isStreaming: "left" };
+obj2.state = { channelId: "Path", connectionState: "create", selfMute: false, deafened: "family_adult_child", isPushToTalk: false, embeddedActivity: "Boolean", isStreaming: "children" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();
@@ -378,7 +378,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = result;
-      obj4 = obj4(16281);
+      obj4 = obj4(16285);
       result = obj4.shouldAcquireCallWifiLock();
       obj.acquireWifiLock = result;
       tmp16 = tmp16(10211);

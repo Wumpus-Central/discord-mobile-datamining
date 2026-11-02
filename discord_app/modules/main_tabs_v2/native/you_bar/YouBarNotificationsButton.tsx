@@ -1,6 +1,6 @@
-// === Module 18455: YouBarNotificationsButton ===
+// === Module 18468: YouBarNotificationsButton ===
 
-// Module 18455 (YouBarNotificationsButton)
+// Module 18468 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 575 */;
 import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -26,7 +26,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
   let onLongPress;
   const tmp = closure_10();
-  value = onLongPress(18456)().value;
+  value = onLongPress(18469)().value;
   _require = value;
   const fn = function u() {
     let num = 0;

@@ -1,15 +1,15 @@
-// === Module 16323: ActivityShareLinkModal ===
+// === Module 16327: ActivityShareLinkModal ===
 
-// Module 16323 (ActivityShareLinkModal)
+// Module 16327 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
 import LinkIcon from "LinkIcon" /* 5727 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
 import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12322 */;
-import formatResults from "formatResults" /* 13369 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16322 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12462 */;
+import formatResults from "formatResults" /* 13384 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -119,7 +119,7 @@ export default function ActivityShareLinkModal(applicationId) {
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(13369).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(13384).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -130,7 +130,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1379).isNotNullish);
-          closure_128_1 = tmp2(16324).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
+          closure_128_1 = tmp2(16328).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
           closure_129_7(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -195,7 +195,7 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(16324);
+          let obj5 = tmp2(16328);
           let obj7 = { text: null };
           const intl = tmp2(1113).intl;
           const obj8 = { applicationName: closure_129_15.name };
@@ -203,8 +203,8 @@ export default function ActivityShareLinkModal(applicationId) {
           tmp3(5712).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_5(true, closure_129_8);
           let obj6 = tmp3(5712);
-          const result = tmp2(16322).closeActivityShareLinkModal();
-          const obj9 = tmp2(16322);
+          const result = tmp2(16326).closeActivityShareLinkModal();
+          const obj9 = tmp2(16326);
         }
         c3 = 3;
         let obj = { value, done: true };

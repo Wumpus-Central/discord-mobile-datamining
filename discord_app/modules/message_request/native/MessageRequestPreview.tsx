@@ -1,6 +1,6 @@
-// === Module 18960: MessageRequestPreview ===
+// === Module 18967: MessageRequestPreview ===
 
-// Module 18960 (MessageRequestPreview)
+// Module 18967 (MessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
@@ -31,10 +31,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(14154).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(14169).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(14154);
+  let obj = channel(14169);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {

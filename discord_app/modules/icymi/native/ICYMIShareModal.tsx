@@ -1,14 +1,14 @@
-// === Module 18565: ICYMIShareModal ===
+// === Module 18578: ICYMIShareModal ===
 
-// Module 18565 (ICYMIShareModal)
+// Module 18578 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
 import ShareEventUtils from "ShareEventUtils" /* 8984 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 13390 */;
-import ShareChatInputDefault from "ShareChatInput" /* 13403 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 13405 */;
+import ShareChatInputDefault from "ShareChatInput" /* 13418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18566).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18579).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

@@ -1,6 +1,6 @@
-// === Module 14840: RequestToStreamNewEntryPointExperiment ===
+// === Module 14844: RequestToStreamNewEntryPointExperiment ===
 
-// Module 14840 (RequestToStreamNewEntryPointExperiment)
+// Module 14844 (RequestToStreamNewEntryPointExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1448 */;
 
 const obj = { kind: "user", name: "2026-09-request-to-stream-new-entry-point", defaultConfig: { showReminderPanel: false }, variations: null };

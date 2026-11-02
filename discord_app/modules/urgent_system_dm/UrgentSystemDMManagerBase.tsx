@@ -1,6 +1,6 @@
-// === Module 19625: UrgentSystemDMManagerBase ===
+// === Module 19632: UrgentSystemDMManagerBase ===
 
-// Module 19625 (UrgentSystemDMManagerBase)
+// Module 19632 (UrgentSystemDMManagerBase)
 import UserActionCreatorsAll from "UserActionCreators" /* 8752 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
@@ -50,7 +50,7 @@ function maybeClearUrgentMessage(channelId) {
     UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
   }
 }
-const SYSTEM_USER = fn(19626).SYSTEM_USER;
+const SYSTEM_USER = fn(19633).SYSTEM_USER;
 const UserFlags = fn(1072).UserFlags;
 let c7 = false;
 const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAlert) {

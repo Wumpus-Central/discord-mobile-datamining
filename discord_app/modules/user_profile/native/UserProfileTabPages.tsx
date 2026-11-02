@@ -1,6 +1,6 @@
-// === Module 15006: UserProfileTabPages ===
+// === Module 15010: UserProfileTabPages ===
 
-// Module 15006 (UserProfileTabPages)
+// Module 15010 (UserProfileTabPages)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;

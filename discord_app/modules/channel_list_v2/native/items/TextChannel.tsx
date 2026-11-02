@@ -1,13 +1,13 @@
-// === Module 18273: TextChannel ===
+// === Module 18286: TextChannel ===
 
-// Module 18273 (TextChannel)
+// Module 18286 (TextChannel)
 import nativeDefault from "native" /* 575 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1111 */;
 import transitionToChannel from "transitionToChannel" /* 5756 */;
 import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6045 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18274 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18287 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import GatedChannelStore from "GatedChannelStore" /* 4918 */;

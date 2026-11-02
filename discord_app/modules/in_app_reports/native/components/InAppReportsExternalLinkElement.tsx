@@ -1,6 +1,6 @@
-// === Module 15171: InAppReportsExternalLinkElement ===
+// === Module 15175: InAppReportsExternalLinkElement ===
 
-// Module 15171 (InAppReportsExternalLinkElement)
+// Module 15175 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -17,7 +17,7 @@ function ExternalLinkItem(data) {
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(15172).LinkExternalMediumIcon };
+    const obj2 = { IconComponent: url(15176).LinkExternalMediumIcon };
     obj.trailing = closure_4(url(6983).TableRowIcon, obj2);
     obj.onPress = function onLinkPress() {
       LinkingDefault.openURL(url);

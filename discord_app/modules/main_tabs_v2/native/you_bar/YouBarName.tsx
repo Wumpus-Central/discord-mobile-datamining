@@ -1,13 +1,13 @@
-// === Module 18449: YouBarName ===
+// === Module 18462: YouBarName ===
 
-// Module 18449 (YouBarName)
+// Module 18462 (YouBarName)
 import nativeDefault from "native" /* 575 */;
 import GuildTagDefault from "GuildTag" /* 9295 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10747 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10748 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11413 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 18450 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11414 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 18463 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -42,8 +42,8 @@ export default noop.memo(function YouName(username) {
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11393).useCustomStatusActivity();
-  let obj2 = userId(11393);
+  const customStatusActivity = userId(11394).useCustomStatusActivity();
+  let obj2 = userId(11394);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;

@@ -1,6 +1,6 @@
-// === Module 17973: Auth ===
+// === Module 17986: Auth ===
 
-// Module 17973 (Auth)
+// Module 17986 (Auth)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
@@ -10,15 +10,15 @@ import WideAuthScrollContext from "WideAuthScrollContext" /* 7140 */;
 import BackgroundImageDefault from "BackgroundImage" /* 7142 */;
 import Navigator from "Navigator" /* 7169 */;
 import StackNavigator from "StackNavigator" /* 7171 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 17974 */;
-import RegistrationUtils from "RegistrationUtils" /* 17984 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18027 */;
-import _mod18028 from "module_18028" /* 18028 */;
-import AuthManagerDefault from "AuthManager" /* 18029 */;
-import useOrientationLockDefault from "useOrientationLock" /* 18038 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 17987 */;
+import RegistrationUtils from "RegistrationUtils" /* 17997 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18040 */;
+import _mod18041 from "module_18041" /* 18041 */;
+import AuthManagerDefault from "AuthManager" /* 18042 */;
+import useOrientationLockDefault from "useOrientationLock" /* 18051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 13962 */;
+import MultiAccountStore from "MultiAccountStore" /* 13977 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod18028;
+  obj3.backgroundImageSource = _mod18041;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -132,7 +132,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17975);
+let RegistrationStepsUtils = fn(17988);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

@@ -1,6 +1,6 @@
-// === Module 19387: AgeGateVerify ===
+// === Module 19394: AgeGateVerify ===
 
-// Module 19387 (AgeGateVerify)
+// Module 19394 (AgeGateVerify)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;

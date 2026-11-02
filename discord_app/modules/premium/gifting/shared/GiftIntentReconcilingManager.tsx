@@ -1,6 +1,6 @@
-// === Module 19592: GiftIntentReconcilingManager ===
+// === Module 19599: GiftIntentReconcilingManager ===
 
-// Module 19592 (GiftIntentReconcilingManager)
+// Module 19599 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

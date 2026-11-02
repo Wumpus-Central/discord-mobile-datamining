@@ -3,8 +3,8 @@
 // Module 2013 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11531 */;
-import OverlayTypes from "OverlayTypes" /* 15873 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11532 */;
+import OverlayTypes from "OverlayTypes" /* 15877 */;
 import GameStore from "GameStore" /* 2014 */;
 import DetectableGameStore from "DetectableGameStore" /* 2032 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;

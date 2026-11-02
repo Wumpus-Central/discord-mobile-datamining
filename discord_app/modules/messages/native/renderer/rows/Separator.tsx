@@ -1,6 +1,6 @@
-// === Module 15152: Separator ===
+// === Module 15156: Separator ===
 
-// Module 15152 (Separator)
+// Module 15156 (Separator)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5192 */;

@@ -1,6 +1,6 @@
-// === Module 19964: GuildRoleSubscriptionBenefitEditorModal ===
+// === Module 19971: GuildRoleSubscriptionBenefitEditorModal ===
 
-// Module 19964 (GuildRoleSubscriptionBenefitEditorModal)
+// Module 19971 (GuildRoleSubscriptionBenefitEditorModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import components_Button_Button from "components/Button/Button" /* 5634 */;
@@ -11,7 +11,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;
 import UserStore from "UserStore" /* 1383 */;
-import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19963 */;
+import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19970 */;
 
 require = fn;
 function DeleteButton(onDelete) {
@@ -24,7 +24,7 @@ function DeleteButton(onDelete) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(17183);
+const GuildRoleSubscriptionsConstants = fn(17196);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -191,7 +191,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
               closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
             }
       };
-      obj2.children = closure_13(tmp3(19965), obj3);
+      obj2.children = closure_13(tmp3(19972), obj3);
       let tmp27 = closure_13(tmp21(7060).TableRowGroup, obj2);
       let tmp28 = closure_13;
     } else {
@@ -219,7 +219,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         },
       listingId: merged.listingId
     };
-    const items = [tmp28(tmp3(19967), obj5), ];
+    const items = [tmp28(tmp3(19974), obj5), ];
     const obj6 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp2.scrollContainer, tmp5.container, ];
     const obj7 = { paddingBottom: null };
@@ -239,7 +239,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    obj8.children = tmp28(tmp3(19968), obj9);
+    obj8.children = tmp28(tmp3(19975), obj9);
     items2[1] = tmp28(tmp21(7060).TableRowGroup, obj8);
     const obj11 = { label: null, maxLength: null, value: null, onChange: null, placeholder: null };
     const intl9 = tmp21(1113).intl;
@@ -282,5 +282,5 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     }
     tmp16 = num3 > 0;
   }
-  tmp5 = value(19943)();
+  tmp5 = value(19950)();
 };

@@ -1,17 +1,17 @@
-// === Module 19125: ActivityPanelUI ===
+// === Module 19132: ActivityPanelUI ===
 
-// Module 19125 (ActivityPanelUI)
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19124 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19144 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19145 */;
+// Module 19132 (ActivityPanelUI)
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19131 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19151 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19152 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 19126;
+    let tmp4 = 19133;
   } else {
-    tmp4 = 19131;
+    tmp4 = 19138;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

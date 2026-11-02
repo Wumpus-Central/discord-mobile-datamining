@@ -1,6 +1,6 @@
-// === Module 16900: OrbChallengeListItem ===
+// === Module 16913: OrbChallengeListItem ===
 
-// Module 16900 (OrbChallengeListItem)
+// Module 16913 (OrbChallengeListItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2172 from "module_2172" /* 2172 */;
@@ -8,8 +8,8 @@ import components_Button_Button from "components/Button/Button" /* 5634 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
 import OrbsIcon from "OrbsIcon" /* 9532 */;
 import _modDef9707 from "module_9707" /* 9707 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14679 */;
-import OrbChallengeTypes from "OrbChallengeTypes" /* 15626 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14693 */;
+import OrbChallengeTypes from "OrbChallengeTypes" /* 15630 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

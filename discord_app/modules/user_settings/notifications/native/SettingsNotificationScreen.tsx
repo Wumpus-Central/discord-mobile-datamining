@@ -1,18 +1,18 @@
-// === Module 17462: SettingsNotificationScreen ===
+// === Module 17475: SettingsNotificationScreen ===
 
-// Module 17462 (SettingsNotificationScreen)
+// Module 17475 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import Card from "Card" /* 6977 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7086 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7149 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13960 */;
-import SettingLayoutDefault from "SettingLayout" /* 16575 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17464 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 17465 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 17466 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13975 */;
+import SettingLayoutDefault from "SettingLayout" /* 16588 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17477 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 17478 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 17479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(17463).initializeAndroidNotificationSettingsStore;
+let closure_5 = fn(17476).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(8432).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

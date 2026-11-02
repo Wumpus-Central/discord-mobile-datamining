@@ -1,12 +1,12 @@
-// === Module 18445: YouBarNameplate ===
+// === Module 18458: YouBarNameplate ===
 
-// Module 18445 (YouBarNameplate)
+// Module 18458 (YouBarNameplate)
 import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(17062).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(17075).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
 const size = fn(2);
@@ -18,7 +18,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(5596).useToken(token(575).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(17143)(token);
+  const tmp4 = token(17156)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(5596);
   const tmp2 = token;

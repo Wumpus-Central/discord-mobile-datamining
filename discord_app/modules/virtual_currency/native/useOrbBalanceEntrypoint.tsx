@@ -1,23 +1,23 @@
-// === Module 16887: useOrbBalanceEntrypoint ===
+// === Module 16900: useOrbBalanceEntrypoint ===
 
-// Module 16887 (useOrbBalanceEntrypoint)
+// Module 16900 (useOrbBalanceEntrypoint)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(16888).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(16901).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
 export function useOrbBalanceEntrypoint(location) {
   let isOrbchievementsMobileEnabled;
-  isOrbchievementsMobileEnabled = isOrbchievementsMobileEnabled(16905).useIsOrbchievementsMobileEnabled({ location: location.location });
-  let obj = isOrbchievementsMobileEnabled(16905);
-  const orbChallengeUnreadState = isOrbchievementsMobileEnabled(16891).useOrbChallengeUnreadState({ enabled: isOrbchievementsMobileEnabled });
+  isOrbchievementsMobileEnabled = isOrbchievementsMobileEnabled(16918).useIsOrbchievementsMobileEnabled({ location: location.location });
+  let obj = isOrbchievementsMobileEnabled(16918);
+  const orbChallengeUnreadState = isOrbchievementsMobileEnabled(16904).useOrbChallengeUnreadState({ enabled: isOrbchievementsMobileEnabled });
   const items = [isOrbchievementsMobileEnabled];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  let obj2 = isOrbchievementsMobileEnabled(16891);
+  let obj2 = isOrbchievementsMobileEnabled(16904);
   return {
     isOrbchievementsEnabled: isOrbchievementsMobileEnabled,
     hasUnreadUpdate,

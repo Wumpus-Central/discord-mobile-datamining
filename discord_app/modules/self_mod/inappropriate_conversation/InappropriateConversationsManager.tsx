@@ -1,6 +1,6 @@
-// === Module 20020: InappropriateConversationsManager ===
+// === Module 20027: InappropriateConversationsManager ===
 
-// Module 20020 (InappropriateConversationsManager)
+// Module 20027 (InappropriateConversationsManager)
 import _modDef5859 from "module_5859" /* 5859 */;
 import SoundUtils from "SoundUtils" /* 11030 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;

@@ -1,6 +1,6 @@
-// === Module 15212: maybeConvertPrivateChannel ===
+// === Module 15216: maybeConvertPrivateChannel ===
 
-// Module 15212 (maybeConvertPrivateChannel)
+// Module 15216 (maybeConvertPrivateChannel)
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7396 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import ChannelStore from "ChannelStore" /* 4863 */;

@@ -1,6 +1,6 @@
-// === Module 15871: PremiumPerkGates ===
+// === Module 15875: PremiumPerkGates ===
 
-// Module 15871 (PremiumPerkGates)
+// Module 15875 (PremiumPerkGates)
 import PerksStateUtils from "PerksStateUtils" /* 1389 */;
 import user2 from "user" /* 1391 */;
 import ProductCatalog from "ProductCatalog" /* 5071 */;

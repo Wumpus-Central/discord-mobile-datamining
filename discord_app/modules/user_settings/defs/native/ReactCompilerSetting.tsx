@@ -1,10 +1,10 @@
-// === Module 17913: ReactCompilerSetting ===
+// === Module 17926: ReactCompilerSetting ===
 
-// Module 17913 (ReactCompilerSetting)
+// Module 17926 (ReactCompilerSetting)
 import UserSettings from "UserSettings" /* 4839 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 15962 */;
-import WrenchIcon from "WrenchIcon" /* 17546 */;
-import SettingBuilders from "SettingBuilders" /* 11539 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 15966 */;
+import WrenchIcon from "WrenchIcon" /* 17559 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

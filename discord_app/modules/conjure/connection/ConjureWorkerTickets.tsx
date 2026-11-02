@@ -85,8 +85,8 @@ export function prefetchWorkerTicket(projectId) {
     }
   }
 }
-export function forgetEarlyTicket(id) {
-  map.delete(id);
+export function forgetEarlyTicket(arg0) {
+  map.delete(arg0);
 }
 export function forgetEarlyTickets() {
   map.clear();

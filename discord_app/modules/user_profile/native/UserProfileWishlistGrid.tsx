@@ -1,6 +1,6 @@
-// === Module 14994: UserProfileWishlistGrid ===
+// === Module 14998: UserProfileWishlistGrid ===
 
-// Module 14994 (UserProfileWishlistGrid)
+// Module 14998 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -14,7 +14,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
-import SentGiftsStore from "SentGiftsStore" /* 14440 */;
+import SentGiftsStore from "SentGiftsStore" /* 14454 */;
 import WishlistStore from "WishlistStore" /* 9471 */;
 import UserStore from "UserStore" /* 1383 */;
 import SKUStore from "SKUStore" /* 6896 */;
@@ -558,7 +558,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14999, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15003, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items14);
   const callback1 = obj12.useCallback(() => {

@@ -1,6 +1,6 @@
-// === Module 18765: useContentContainerStyles ===
+// === Module 18772: useContentContainerStyles ===
 
-// Module 18765 (useContentContainerStyles)
+// Module 18772 (useContentContainerStyles)
 import SearchConstants from "SearchConstants" /* 9827 */;
 import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;

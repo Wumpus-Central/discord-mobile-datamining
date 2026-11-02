@@ -1,6 +1,6 @@
-// === Module 14957: WidgetUtils ===
+// === Module 14961: WidgetUtils ===
 
-// Module 14957 (WidgetUtils)
+// Module 14961 (WidgetUtils)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
@@ -11,12 +11,12 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7774 */;
 import GameWidgetLimits from "GameWidgetLimits" /* 7776 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7780 */;
-import WidgetGameTag from "WidgetGameTag" /* 14949 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14960 */;
+import WidgetGameTag from "WidgetGameTag" /* 14953 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14964 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1383 */;
 import UserProfileStore from "UserProfileStore" /* 7772 */;
-import WidgetStore from "WidgetStore" /* 14958 */;
+import WidgetStore from "WidgetStore" /* 14962 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -87,7 +87,7 @@ function replaceWidgetInList(clipsGalleryWidget) {
 }
 const WIDGET_TITLES_BY_TYPE = fn(7775).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_9 = fn(14959).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(14963).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -166,12 +166,12 @@ export function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj2);
-      const tmp16Result = DismissibleContentUnsafeUtils;
       const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj3);
-      const tmp16Result2 = DismissibleContentUnsafeUtils;
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj3);
+      const tmp13Result = DismissibleContentUnsafeUtils;
+      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj4);
+      const tmp13Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);

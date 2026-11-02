@@ -1,12 +1,12 @@
-// === Module 16599: AccountDisplayNameSetting ===
+// === Module 16612: AccountDisplayNameSetting ===
 
-// Module 16599 (AccountDisplayNameSetting)
+// Module 16612 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

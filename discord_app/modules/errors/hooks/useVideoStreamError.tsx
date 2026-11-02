@@ -1,9 +1,9 @@
-// === Module 11757: useVideoStreamError ===
+// === Module 11758: useVideoStreamError ===
 
-// Module 11757 (useVideoStreamError)
+// Module 11758 (useVideoStreamError)
 import AVError from "AVError" /* 5947 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11758 */;
+import AVErrorStore from "AVErrorStore" /* 11759 */;
 
 const require = globalThis.__r;
 

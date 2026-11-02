@@ -1,6 +1,6 @@
-// === Module 14870: useStreamRequestActivities ===
+// === Module 14874: useStreamRequestActivities ===
 
-// Module 14870 (useStreamRequestActivities)
+// Module 14874 (useStreamRequestActivities)
 import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9292 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

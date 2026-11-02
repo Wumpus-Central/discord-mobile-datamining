@@ -1,6 +1,6 @@
-// === Module 16491: UserProfileFrameEditButton ===
+// === Module 16504: UserProfileFrameEditButton ===
 
-// Module 16491 (UserProfileFrameEditButton)
+// Module 16504 (UserProfileFrameEditButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
@@ -56,7 +56,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchCollectiblesProduct = user(11385).useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = user(11386).useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -68,7 +68,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1987).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  const tmp2Result = user(11385);
+  const tmp2Result = user(11386);
   userProfileFrame = user(8737).useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -76,7 +76,7 @@ export default function UserProfileFrameEditButton(arg0) {
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16492, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16505, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   if (product != null) {
@@ -109,7 +109,7 @@ export default function UserProfileFrameEditButton(arg0) {
     const intl3 = user(1113).intl;
     obj6.label = intl3.string(user(1113).t.GWrZOd);
     const obj7 = { showNewBadge: tmp4[0] === user(4847).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = jsx(user(16467).UserProfileEditFormLabelBadges, { showNewBadge: tmp4[0] === user(4847).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE });
+    obj6.labelTrailing = jsx(user(16480).UserProfileEditFormLabelBadges, { showNewBadge: tmp4[0] === user(4847).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE });
     obj6.buttonText = formatToPlainStringResult;
     const obj8 = { text: formatToPlainStringResult };
     obj6.accessibilityValue = obj8;
@@ -121,10 +121,10 @@ export default function UserProfileFrameEditButton(arg0) {
       let tmp18Result = <View style={tmp.previewContainer}>{null}</View>;
       const tmp23 = guildId(9518);
     } else {
-      const obj11 = { source: guildId(15072), style: tmp.noneIcon };
-      tmp18Result = jsx(user(1187).Icon, { source: guildId(15072), style: tmp.noneIcon });
+      const obj11 = { source: guildId(15076), style: tmp.noneIcon };
+      tmp18Result = jsx(user(1187).Icon, { source: guildId(15076), style: tmp.noneIcon });
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(16467).UserProfileEditFormButton, obj6);
+  return jsx(user(16480).UserProfileEditFormButton, obj6);
 };

@@ -1,6 +1,6 @@
-// === Module 11862: GlobalStatusIndicator ===
+// === Module 11863: GlobalStatusIndicator ===
 
-// Module 11862 (GlobalStatusIndicator)
+// Module 11863 (GlobalStatusIndicator)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
 import noop from "module_19" /* 19 */;

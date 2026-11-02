@@ -1,6 +1,6 @@
-// === Module 13930: Autocomplete ===
+// === Module 13945: Autocomplete ===
 
-// Module 13930 (Autocomplete)
+// Module 13945 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -19,9 +19,9 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
 import _modDef8708 from "module_8708" /* 8708 */;
 import StickersHooks from "StickersHooks" /* 10266 */;
 import StickerDefault from "Sticker" /* 10282 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13931 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13932 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13933 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13946 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13947 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13948 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4885 */;
 import RelationshipStore from "RelationshipStore" /* 4956 */;

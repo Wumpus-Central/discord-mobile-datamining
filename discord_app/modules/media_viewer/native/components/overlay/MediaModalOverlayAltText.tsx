@@ -1,8 +1,8 @@
-// === Module 14775: MediaModalOverlayAltText ===
+// === Module 14779: MediaModalOverlayAltText ===
 
-// Module 14775 (MediaModalOverlayAltText)
+// Module 14779 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 575 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11564 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11565 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -1,27 +1,27 @@
-// === Module 19225: VoicePanelHeaderSpeaker ===
+// === Module 19232: VoicePanelHeaderSpeaker ===
 
-// Module 19225 (VoicePanelHeaderSpeaker)
+// Module 19232 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
 import NativeViewDefault from "NativeView" /* 6960 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9228 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 14738 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19143 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19228 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 14742 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19150 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 19235 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5765 */;
 import AudioRouteStore from "AudioRouteStore" /* 5784 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19227 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 19234 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import SessionsStore from "SessionsStore" /* 5766 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19226).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(19233).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -245,7 +245,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "a" };
+        const obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

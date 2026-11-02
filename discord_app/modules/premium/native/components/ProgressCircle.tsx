@@ -1,6 +1,6 @@
-// === Module 12570: ProgressCircle ===
+// === Module 12236: ProgressCircle ===
 
-// Module 12570 (ProgressCircle)
+// Module 12236 (ProgressCircle)
 import nativeDefault from "native" /* 575 */;
 import inlineStyles from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;

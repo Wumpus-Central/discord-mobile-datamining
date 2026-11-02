@@ -1,9 +1,9 @@
-// === Module 11996: DisconnectRemoteButton ===
+// === Module 11997: DisconnectRemoteButton ===
 
-// Module 11996 (DisconnectRemoteButton)
+// Module 11997 (DisconnectRemoteButton)
 import CallsUtils from "CallsUtils" /* 9221 */;
-import CallBarActionAll from "CallBarAction" /* 11714 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11978 */;
+import CallBarActionAll from "CallBarAction" /* 11715 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11979 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5765 */;
 
@@ -17,7 +17,7 @@ export function DisconnectRemoteButton(channel) {
   const items = [GameConsoleStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({ awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(), remoteSessionId: GameConsoleStore.getRemoteSessionId() }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
-  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11934), accessibilityLabel: null, isSmallSize: null, onPress: null };
+  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11935), accessibilityLabel: null, isSmallSize: null, onPress: null };
   const intl = tmp(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t["6vrfgt"]);
   obj2.isSmallSize = channel.isSmallSize;
@@ -29,5 +29,5 @@ export function DisconnectRemoteButton(channel) {
       GameConsoleActionCreators.disconnectRemote();
     }
   };
-  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11934), accessibilityLabel: null, isSmallSize: null, onPress: null });
+  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11935), accessibilityLabel: null, isSmallSize: null, onPress: null });
 }

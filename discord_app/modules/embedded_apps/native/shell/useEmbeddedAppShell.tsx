@@ -1,8 +1,8 @@
-// === Module 11828: useEmbeddedAppShell ===
+// === Module 11829: useEmbeddedAppShell ===
 
-// Module 11828 (useEmbeddedAppShell)
-import getEmbeddedAppShellUrl from "getEmbeddedAppShellUrl" /* 11829 */;
-import createShellHtml from "createShellHtml" /* 11832 */;
+// Module 11829 (useEmbeddedAppShell)
+import getEmbeddedAppShellUrl from "getEmbeddedAppShellUrl" /* 11830 */;
+import createShellHtml from "createShellHtml" /* 11833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

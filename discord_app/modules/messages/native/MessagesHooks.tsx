@@ -1,14 +1,14 @@
-// === Module 11545: MessagesHooks ===
+// === Module 11546: MessagesHooks ===
 
-// Module 11545 (MessagesHooks)
+// Module 11546 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11546 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11547 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11547 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10116 */;

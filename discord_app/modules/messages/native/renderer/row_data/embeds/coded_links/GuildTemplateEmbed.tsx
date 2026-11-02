@@ -1,6 +1,6 @@
-// === Module 15119: GuildTemplateEmbed ===
+// === Module 15123: GuildTemplateEmbed ===
 
-// Module 15119 (GuildTemplateEmbed)
+// Module 15123 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,9 +8,9 @@ import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7501 */;
 import Constants from "Constants" /* 7879 */;
 import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8381 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
-import _modDef13220 from "module_13220" /* 13220 */;
-import _modDef13221 from "module_13221" /* 13221 */;
-import _modDef15120 from "module_15120" /* 15120 */;
+import _modDef13235 from "module_13235" /* 13235 */;
+import _modDef13236 from "module_13236" /* 13236 */;
+import _modDef15124 from "module_15124" /* 15124 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7637 */;
 import size from "module_2" /* 2 */;
 
@@ -42,9 +42,9 @@ export function createGuildTemplateEmbed(code, theme) {
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef13220;
+      let tmpResult = _modDef13235;
     } else {
-      tmpResult = _modDef13221;
+      tmpResult = _modDef13236;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -63,7 +63,7 @@ export function createGuildTemplateEmbed(code, theme) {
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15120).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15124).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);

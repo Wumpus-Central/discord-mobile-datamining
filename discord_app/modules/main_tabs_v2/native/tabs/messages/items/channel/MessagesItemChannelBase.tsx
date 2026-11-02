@@ -1,6 +1,6 @@
-// === Module 18076: MessagesItemChannelBase ===
+// === Module 18089: MessagesItemChannelBase ===
 
-// Module 18076 (MessagesItemChannelBase)
+// Module 18089 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5756 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
@@ -71,7 +71,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "flexDirection" };
+      obj3 = { status: "raw", activities: "cix" };
     }
     return obj3;
   });

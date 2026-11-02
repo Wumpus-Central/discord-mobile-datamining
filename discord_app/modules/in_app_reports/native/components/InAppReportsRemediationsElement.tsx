@@ -1,6 +1,6 @@
-// === Module 15161: InAppReportsRemediationsElement ===
+// === Module 15165: InAppReportsRemediationsElement ===
 
-// Module 15161 (InAppReportsRemediationsElement)
+// Module 15165 (InAppReportsRemediationsElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import TableRowGroup from "TableRowGroup" /* 7060 */;

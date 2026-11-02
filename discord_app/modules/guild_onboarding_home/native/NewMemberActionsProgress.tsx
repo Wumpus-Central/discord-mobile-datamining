@@ -1,6 +1,6 @@
-// === Module 18257: NewMemberActionsProgress ===
+// === Module 18270: NewMemberActionsProgress ===
 
-// Module 18257 (NewMemberActionsProgress)
+// Module 18270 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5587 */;
 import noop from "module_19" /* 19 */;

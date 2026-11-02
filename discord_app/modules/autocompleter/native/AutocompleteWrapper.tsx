@@ -1,6 +1,6 @@
-// === Module 13929: AutocompleteWrapper ===
+// === Module 13944: AutocompleteWrapper ===
 
-// Module 13929 (AutocompleteWrapper)
+// Module 13944 (AutocompleteWrapper)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import KeyboardTypes from "KeyboardTypes" /* 1623 */;
@@ -17,9 +17,9 @@ import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
 import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10224 */;
 import AutocompleteOptions from "AutocompleteOptions" /* 10308 */;
 import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10320 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13778 */;
-import Autocomplete from "Autocomplete" /* 13930 */;
-import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13941 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13793 */;
+import Autocomplete from "Autocomplete" /* 13945 */;
+import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8346 */;

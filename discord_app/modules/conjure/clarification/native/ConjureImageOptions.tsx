@@ -1,6 +1,6 @@
-// === Module 12758: clarification/ConjureImageOptions ===
+// === Module 12761: clarification/ConjureImageOptions ===
 
-// Module 12758 (clarification/ConjureImageOptions)
+// Module 12761 (clarification/ConjureImageOptions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
@@ -14,9 +14,9 @@ import FormRadio from "FormRadio" /* 7062 */;
 import IconButton from "IconButton" /* 8028 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 8653 */;
 import openMediaModal from "openMediaModal" /* 8833 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12490 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12756 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12759 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12149 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12759 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12762 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -413,7 +413,7 @@ export default function ConjureImageOptions(projectId) {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12761).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12764).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -427,8 +427,8 @@ export default function ConjureImageOptions(projectId) {
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12761).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12761);
+            closure_129_4.onUpload(tmp2(12764).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12764);
           }
           c3 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };

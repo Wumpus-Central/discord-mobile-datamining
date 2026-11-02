@@ -24,8 +24,8 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 87
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10181 */;
 import SpoilerDefault from "Spoiler" /* 11055 */;
 import TimestampDefault from "Timestamp" /* 11057 */;
-import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11497 */;
-import openStaticChannelRouteDefault from "openStaticChannelRoute" /* 11575 */;
+import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11498 */;
+import openStaticChannelRouteDefault from "openStaticChannelRoute" /* 11576 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -203,13 +203,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(11619, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(11620, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(11619, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(11620, dependencyMap.paths);
           const obj8 = { guildId: node.guildId, roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId), channelId: node.channelId };
           obj2.openLazy(tmp12, "RoleMembersActionSheet", obj8, "stack");
         }
@@ -471,7 +471,7 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj6.style = size;
-    obj6.source = node(11592);
+    obj6.source = node(11593);
     obj6.size = tmp4(1187).Icon.Sizes.CUSTOM;
     closure_12(tmp4(1187).ThemedIcon, obj6);
   }
@@ -481,7 +481,7 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(15659).SignPostIcon;
+  let SignPostIcon = state(15663).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -492,7 +492,7 @@ function MarkupStaticRouteLink(state) {
           }
         }
       }
-      SignPostIcon = tmp2(15661).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(15665).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -562,7 +562,7 @@ function MarkupStaticRouteLink(state) {
     }
     const tmp2Result = tmp2(8571);
   }
-  SignPostIcon = tmp2(15659).SignPostIcon;
+  SignPostIcon = tmp2(15663).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -578,7 +578,7 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15663), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15667), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1187).Icon.Sizes.EXTRA_SMALL_10;
@@ -999,7 +999,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[45]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_12(obj2(15664), { node, state }, state.key);
+        return closure_1_12(obj2(15668), { node, state }, state.key);
       }
     },
     [closure_0(closure_2[45]).AST_KEY.TIMESTAMP]: {
@@ -1210,4 +1210,4 @@ export function plainSpoilerRenderer(content) {
   }
   return str;
 }
-export const createFetchingGameMentionRule = fn(15664).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(15668).createFetchingGameMentionRule;

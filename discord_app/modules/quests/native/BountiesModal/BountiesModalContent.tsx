@@ -1,6 +1,6 @@
-// === Module 16964: BountiesModalContent ===
+// === Module 16977: BountiesModalContent ===
 
-// Module 16964 (BountiesModalContent)
+// Module 16977 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import timing from "timing" /* 5254 */;
@@ -10,10 +10,10 @@ import AdCreativeType from "AdCreativeType" /* 6788 */;
 import QuestDataUtils from "QuestDataUtils" /* 7842 */;
 import AnalyticsActions from "AnalyticsActions" /* 7862 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14648 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14670 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14685 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16908 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14662 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14684 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14699 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -188,7 +188,7 @@ function BountiesModalContentInner(bounty) {
                 do {
                   let _Math = Math;
                   let result = arr[num3] / tmp4;
-                  let rounded = Math.round(result * (closure_1_0(14496).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
+                  let rounded = Math.round(result * (closure_1_0(14510).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
                   let obj2 = { time: num4, type: "continuous", duration: rounded, intensity: num + tmp5 * (num3 / 5), sharpness: 0.5 };
                   let arr4 = items.push(obj2);
                   sum = num4 + rounded;
@@ -414,7 +414,7 @@ function BountiesModalContentWithAppStore(arg0) {
 const View = fn(17).View;
 const QuestConstants = fn(6781);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16912);
+const BountiesModalConstants = fn(16925);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

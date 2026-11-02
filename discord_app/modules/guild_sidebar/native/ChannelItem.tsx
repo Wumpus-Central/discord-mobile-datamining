@@ -1,14 +1,14 @@
-// === Module 18161: ChannelItem ===
+// === Module 18174: ChannelItem ===
 
-// Module 18161 (ChannelItem)
+// Module 18174 (ChannelItem)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 8647 */;
-import BaseChannelItem from "BaseChannelItem" /* 13922 */;
-import _modDef18162 from "module_18162" /* 18162 */;
+import BaseChannelItem from "BaseChannelItem" /* 13937 */;
+import _modDef18175 from "module_18175" /* 18175 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5761 */;
@@ -65,7 +65,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18162;
+      let tmp12 = _modDef18175;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -89,7 +89,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return map1(tmp9(13922).BaseChannelIcon, obj10);
+    return map1(tmp9(13937).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "hash" };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: null };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

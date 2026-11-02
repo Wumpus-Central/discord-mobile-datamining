@@ -1,6 +1,6 @@
-// === Module 19136: ActivityInviteSheetList ===
+// === Module 19143: ActivityInviteSheetList ===
 
-// Module 19136 (ActivityInviteSheetList)
+// Module 19143 (ActivityInviteSheetList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import RootNavigationRef from "RootNavigationRef" /* 5199 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import Pressables from "Pressables" /* 6980 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19137 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19144 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 6723 */;
 

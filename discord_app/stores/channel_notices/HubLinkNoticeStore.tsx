@@ -1,6 +1,6 @@
-// === Module 15645: HubLinkNoticeStore ===
+// === Module 15649: HubLinkNoticeStore ===
 
-// Module 15645 (HubLinkNoticeStore)
+// Module 15649 (HubLinkNoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HotspotStore from "hotspot/HotspotStore" /* 7382 */;

@@ -1,35 +1,17 @@
 // === Module 10926: restartFrames ===
 
 // Module 10926 (restartFrames)
-import leaveFrame from "leaveFrame" /* 10927 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10927 */;
 import FramesStore from "FramesStore" /* 6846 */;
 
-require = fn;
-function restartFrame(item10016) {
-  let launch;
-  if (isLaunched(item10016)) {
-    launch = item10016.data.launch;
-  }
-  let invite;
-  if (isLaunched(item10016)) {
-    invite = item10016.data.invite;
-  }
-  const mainFrame = FramesStore.getMainFrame();
-  let id;
-  if (mainFrame != null) {
-    id = mainFrame.id;
-  }
-  leaveFrame.leaveFrame(item10016.id);
-  const obj3 = { applicationId: item10016.applicationId, surface: item10016.surface, launch, invite };
-  FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch, invite }).catch(() => {
+function restartFrame(data) {
+  if (tmp) {
+    FramesActionCreatorsDefault.refreshProxyTicket(data.id).catch(() => {
 
-  });
-  if (id !== item10016.id) {
-    FramesActionCreatorsDefault.demoteMainFrame(item10016.id);
-    const tmp8Result = FramesActionCreatorsDefault;
+    });
+    const refreshProxyTicketResult = FramesActionCreatorsDefault.refreshProxyTicket(data.id);
   }
-  const launchFrameResult = FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch, invite });
+  tmp = isLaunched(data) && !data.data.proxyTicketRefreshing;
 }
 const isLaunched = fn(6847).isLaunched;
 const size = fn(2);
@@ -37,13 +19,12 @@ const result = size.fileFinishedImporting("modules/frames/native/restartFrames.t
 
 export { restartFrame };
 export function restartAppFrames(application_id) {
-  closure_0 = application_id;
   if (null != application_id) {
-    const items = [];
-    HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
-    const found = items.filter((applicationId) => applicationId.applicationId === closure_0);
-    for (const item10016 of found) {
-      let tmp8 = restartFrame(item10016);
+    const allFrames = FramesStore.getAllFrames();
+    for (const item10010 of allFrames) {
+      if (item10010.applicationId === arg0) {
+        let tmp8 = restartFrame(tmp5);
+      }
       continue;
     }
   }

@@ -1,20 +1,20 @@
-// === Module 18700: useOnPressSearchItem ===
+// === Module 18707: useOnPressSearchItem ===
 
-// Module 18700 (useOnPressSearchItem)
+// Module 18707 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1377 */;
 import LinkingDefault from "Linking" /* 5709 */;
 import ToastUtils from "ToastUtils" /* 5711 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8940 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13871 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13892 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13896 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
-import SearchQueryStore from "SearchQueryStore" /* 13885 */;
+import SearchQueryStore from "SearchQueryStore" /* 13900 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -95,7 +95,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(9827);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18701).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18708).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13871).delayUntilNavigationComplete(() => {
+      const result = searchContext(13886).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13871);
+      let obj2 = searchContext(13886);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

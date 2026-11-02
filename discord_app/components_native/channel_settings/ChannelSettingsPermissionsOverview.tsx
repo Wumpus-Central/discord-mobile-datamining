@@ -1,6 +1,6 @@
-// === Module 18906: ChannelSettingsPermissionsOverview ===
+// === Module 18913: ChannelSettingsPermissionsOverview ===
 
-// Module 18906 (ChannelSettingsPermissionsOverview)
+// Module 18913 (ChannelSettingsPermissionsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -11,8 +11,8 @@ import TableRow from "TableRow" /* 6975 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import RoleLabel from "RoleLabel" /* 10233 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10819 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17292 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 18907 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17305 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 18914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -70,9 +70,9 @@ function ChannelPermissionSyncModule(channel) {
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11645).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11646).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(11645);
+              const obj9 = tmp2(11646);
               c2 = 1;
               c3 = 1;
               const obj5 = { value: tmp2(9033).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
@@ -128,7 +128,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(12553).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(12219).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1113).intl;
   obj6.label = intl2.string(channel(1113).t.NVwuHq);
   obj6.onPress = callback;
@@ -159,14 +159,14 @@ function AddPermission(isEditing) {
     const obj3 = { title: null, hasIcons: true, children: null };
     const intl = tmp2(1113).intl;
     obj3.title = intl.string(tmp2(1113).t.vPHdP5);
-    const obj4 = { icon: closure_16(tmp2(11483).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj4 = { icon: closure_16(tmp2(11484).PlusMediumIcon, {}), label: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj4.label = intl2.string(tmp2(1113).t.fVWxvT);
     obj4.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.ROLE });
     };
     const items = [closure_16(tmp2(6975).TableRow, obj4), ];
-    const obj5 = { icon: closure_16(tmp2(11483).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj5 = { icon: closure_16(tmp2(11484).PlusMediumIcon, {}), label: null, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj5.label = intl3.string(tmp2(1113).t.riesLt);
     obj5.onPress = function onPress() {

@@ -1,6 +1,6 @@
-// === Module 18149: useIsGameCommunityServerPreview ===
+// === Module 18162: useIsGameCommunityServerPreview ===
 
-// Module 18149 (useIsGameCommunityServerPreview)
+// Module 18162 (useIsGameCommunityServerPreview)
 import LurkingStore from "LurkingStore" /* 4947 */;
 
 const require = globalThis.__r;

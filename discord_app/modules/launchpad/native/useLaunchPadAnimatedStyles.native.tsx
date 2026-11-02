@@ -1,9 +1,9 @@
-// === Module 19062: useLaunchPadAnimatedStyles ===
+// === Module 19069: useLaunchPadAnimatedStyles ===
 
-// Module 19062 (useLaunchPadAnimatedStyles)
+// Module 19069 (useLaunchPadAnimatedStyles)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11535 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11536 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;

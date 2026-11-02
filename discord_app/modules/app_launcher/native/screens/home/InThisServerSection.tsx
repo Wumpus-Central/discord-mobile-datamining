@@ -1,13 +1,13 @@
-// === Module 12301: InThisServerSection ===
+// === Module 12441: InThisServerSection ===
 
-// Module 12301 (InThisServerSection)
+// Module 12441 (InThisServerSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import Pressables from "Pressables" /* 6980 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11501 */;
-import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12277 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11502 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12417 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(12239).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(12379).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -36,7 +36,7 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12244), obj3);
+    tmp6 = closure_5(application(12384), obj3);
   }
   const items = [tmp6, closure_5(onAppSelected(5624).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj2.children = items;

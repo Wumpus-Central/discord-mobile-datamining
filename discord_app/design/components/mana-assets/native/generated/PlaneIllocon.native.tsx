@@ -1,20 +1,20 @@
-// === Module 20095: PlaneIllocon ===
+// === Module 20102: PlaneIllocon ===
 
-// Module 20095 (PlaneIllocon)
+// Module 20102 (PlaneIllocon)
 import FastImageDefault from "FastImage" /* 5717 */;
 import assetHelpers from "assetHelpers" /* 7069 */;
-import _modDef14039 from "module_14039" /* 14039 */;
-import _modDef20096 from "module_20096" /* 20096 */;
-import _modDef20097 from "module_20097" /* 20097 */;
+import _modDef14054 from "module_14054" /* 14054 */;
+import _modDef20103 from "module_20103" /* 20103 */;
+import _modDef20104 from "module_20104" /* 20104 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20096 }, 3: null };
-const obj2 = { uri: _modDef20096 };
-obj[2] = { uri: _modDef14039 };
-const obj3 = { uri: _modDef14039 };
-obj[3] = { uri: _modDef20097 };
+let obj = { 1: null, 2: { uri: _modDef20103 }, 3: null };
+const obj2 = { uri: _modDef20103 };
+obj[2] = { uri: _modDef14054 };
+const obj3 = { uri: _modDef14054 };
+obj[3] = { uri: _modDef20104 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PlaneIllocon.native.tsx");
 

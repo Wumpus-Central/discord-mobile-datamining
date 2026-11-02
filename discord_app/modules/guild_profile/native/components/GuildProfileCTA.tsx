@@ -1,6 +1,6 @@
-// === Module 14733: GuildProfileCTA ===
+// === Module 14737: GuildProfileCTA ===
 
-// Module 14733 (GuildProfileCTA)
+// Module 14737 (GuildProfileCTA)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6906 */;

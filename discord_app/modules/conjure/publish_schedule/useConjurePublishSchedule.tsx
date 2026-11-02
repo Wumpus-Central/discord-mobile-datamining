@@ -1,6 +1,6 @@
-// === Module 12501: useConjurePublishSchedule ===
+// === Module 12160: useConjurePublishSchedule ===
 
-// Module 12501 (useConjurePublishSchedule)
+// Module 12160 (useConjurePublishSchedule)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,10 +1,10 @@
-// === Module 13734: SlowModeIndicator ===
+// === Module 13749: SlowModeIndicator ===
 
-// Module 13734 (SlowModeIndicator)
+// Module 13749 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7831 */;
-import TimerIcon from "TimerIcon" /* 11640 */;
+import TimerIcon from "TimerIcon" /* 11641 */;
 import noop from "module_19" /* 19 */;
 import SlowmodeStore from "SlowmodeStore" /* 7830 */;
 

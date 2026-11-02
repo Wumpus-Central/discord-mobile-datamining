@@ -1,9 +1,9 @@
-// === Module 13446: CheckpointCharacterReferencedAssets ===
+// === Module 13461: CheckpointCharacterReferencedAssets ===
 
-// Module 13446 (CheckpointCharacterReferencedAssets)
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13447 */;
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13612 */;
-import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13613 */;
+// Module 13461 (CheckpointCharacterReferencedAssets)
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13462 */;
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13627 */;
+import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13628 */;
 import size from "module_2" /* 2 */;
 
 let set = new Set([1]);

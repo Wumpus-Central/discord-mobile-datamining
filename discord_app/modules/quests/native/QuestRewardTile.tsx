@@ -1,9 +1,9 @@
-// === Module 14678: QuestRewardTile ===
+// === Module 14692: QuestRewardTile ===
 
-// Module 14678 (QuestRewardTile)
+// Module 14692 (QuestRewardTile)
 import AssetUtils from "AssetUtils" /* 9695 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9700 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14679 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

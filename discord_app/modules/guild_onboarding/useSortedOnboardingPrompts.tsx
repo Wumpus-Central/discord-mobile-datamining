@@ -1,6 +1,6 @@
-// === Module 11580: useSortedOnboardingPrompts ===
+// === Module 11581: useSortedOnboardingPrompts ===
 
-// Module 11580 (useSortedOnboardingPrompts)
+// Module 11581 (useSortedOnboardingPrompts)
 import noop from "module_19" /* 19 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
 

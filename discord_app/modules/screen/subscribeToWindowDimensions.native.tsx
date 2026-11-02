@@ -1,6 +1,6 @@
-// === Module 12812: subscribeToWindowDimensions ===
+// === Module 12815: subscribeToWindowDimensions ===
 
-// Module 12812 (subscribeToWindowDimensions)
+// Module 12815 (subscribeToWindowDimensions)
 import DimensionsStore from "DimensionsStore" /* 1492 */;
 
 const size = fn(2);

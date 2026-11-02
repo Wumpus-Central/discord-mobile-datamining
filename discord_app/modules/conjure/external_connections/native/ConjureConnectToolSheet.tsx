@@ -1,6 +1,6 @@
-// === Module 12514: ConjureConnectToolSheet ===
+// === Module 12173: ConjureConnectToolSheet ===
 
-// Module 12514 (ConjureConnectToolSheet)
+// Module 12173 (ConjureConnectToolSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
@@ -31,7 +31,7 @@ export default function ConjureConnectToolSheet(projectId) {
   let connection;
   mint = undefined;
   const tmp = closure_7();
-  const mcpConnectionPanel = connection(12515).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(12174).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, mint } = mcpConnectionPanel);
   const items = [connection];
@@ -95,12 +95,12 @@ export default function ConjureConnectToolSheet(projectId) {
     items3[2] = closure_6(View, obj10);
     const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp2(1113).intl;
-    const obj16 = { time: tmp2(12516).formatMcpConnectionExpiry(connection) };
+    const obj16 = { time: tmp2(12175).formatMcpConnectionExpiry(connection) };
     obj15.children = intl7.format(tmp8(3868).EQ8k1i, obj16);
     items3[3] = closure_5(tmp2(5624).Text, obj15);
     obj6.children = items3;
     let tmp7Result = closure_6(View, obj6);
-    const tmp2Result = tmp2(12516);
+    const tmp2Result = tmp2(12175);
   } else {
     tmp7Result = null;
     if (loading) {

@@ -1,6 +1,6 @@
-// === Module 19774: GuildSettingsRoleTemplate ===
+// === Module 19781: GuildSettingsRoleTemplate ===
 
-// Module 19774 (GuildSettingsRoleTemplate)
+// Module 19781 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -12,7 +12,7 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
 import _modDef8852 from "module_8852" /* 8852 */;
 import PaginationDefault from "Pagination" /* 10629 */;
-import _modDef11591 from "module_11591" /* 11591 */;
+import _modDef11592 from "module_11592" /* 11592 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19770);
+const GuildSettingsRoleConstants = fn(19777);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -203,7 +203,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: closure_3.templateContent, children: null };
-          const items = [closure_3_14(native.Icon, { source: _modDef11591, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
+          const items = [closure_3_14(native.Icon, { source: _modDef11592, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
           obj.children = items;
           return __initData(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

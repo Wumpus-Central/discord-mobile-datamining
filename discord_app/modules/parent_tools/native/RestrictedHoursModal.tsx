@@ -1,6 +1,6 @@
-// === Module 19374: RestrictedHoursModal ===
+// === Module 19381: RestrictedHoursModal ===
 
-// Module 19374 (RestrictedHoursModal)
+// Module 19381 (RestrictedHoursModal)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5624 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6022 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19373 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 19377 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19380 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 19384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;

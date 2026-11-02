@@ -11,7 +11,7 @@ import _mod7005 from "module_7005" /* 7005 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9814 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9819 */;
 import ChannelActionsDefault from "ChannelActions" /* 9824 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14558 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14572 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 12977: ConjureHomeFeatureList ===
+// === Module 12980: ConjureHomeFeatureList ===
 
-// Module 12977 (ConjureHomeFeatureList)
+// Module 12980 (ConjureHomeFeatureList)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import LinearGradientDefault from "LinearGradient" /* 5587 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
 import ShieldIcon from "ShieldIcon" /* 11281 */;
-import RobotIcon from "RobotIcon" /* 12446 */;
+import RobotIcon from "RobotIcon" /* 12105 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

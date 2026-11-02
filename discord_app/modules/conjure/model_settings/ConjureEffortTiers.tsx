@@ -1,9 +1,9 @@
-// === Module 12508: ConjureEffortTiers ===
+// === Module 12167: ConjureEffortTiers ===
 
-// Module 12508 (ConjureEffortTiers)
+// Module 12167 (ConjureEffortTiers)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12509 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12168 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

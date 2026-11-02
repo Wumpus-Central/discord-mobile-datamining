@@ -1,6 +1,6 @@
-// === Module 18137: HappeningNowActions ===
+// === Module 18150: HappeningNowActions ===
 
-// Module 18137 (HappeningNowActions)
+// Module 18150 (HappeningNowActions)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -8,12 +8,12 @@ import FastImageDefault from "FastImage" /* 5717 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9034 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13841 */;
-import _modDef14371 from "module_14371" /* 14371 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 17275 */;
-import _modDef18138 from "module_18138" /* 18138 */;
-import _modDef18139 from "module_18139" /* 18139 */;
-import _modDef18140 from "module_18140" /* 18140 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13856 */;
+import _modDef14386 from "module_14386" /* 14386 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 17288 */;
+import _modDef18151 from "module_18151" /* 18151 */;
+import _modDef18152 from "module_18152" /* 18152 */;
+import _modDef18153 from "module_18153" /* 18153 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4944 */;
 import GuildStore from "GuildStore" /* 4885 */;
@@ -21,7 +21,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17274);
+const HappeningNowConstants = fn(17287);
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, InstantInviteSources: c10 } = Constants);
@@ -61,7 +61,7 @@ export function HappeningNowCardCreateChannel(guildId) {
     const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
     CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
   }, items);
-  obj.imageSource = _modDef18138;
+  obj.imageSource = _modDef18151;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t["fUYU+j"]);
@@ -81,7 +81,7 @@ export function HappeningNowCardCustomizeGuild(guildId) {
     const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
     GuildSettingsActionCreatorsDefault.open(guildId);
   }, items);
-  obj.imageSource = _modDef18139;
+  obj.imageSource = _modDef18152;
   obj.onPress = callback;
   obj.panelVariant = flag;
   return closure_11(closure_14, obj);
@@ -105,7 +105,7 @@ export function HappeningNowCardInvite(guildId) {
       const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
     }
   }, items);
-  obj.imageSource = _modDef18140;
+  obj.imageSource = _modDef18153;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t.VINpSK);
@@ -133,7 +133,7 @@ export function HappeningNowStudentHubAddServer(guildId) {
     }
     tmp4 = null != guild && null != defaultChannel;
   }, items);
-  obj.imageSource = _modDef14371;
+  obj.imageSource = _modDef14386;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t.emRpdS);

@@ -1,6 +1,6 @@
-// === Module 13922: BaseChannelItem ===
+// === Module 13937: BaseChannelItem ===
 
-// Module 13922 (BaseChannelItem)
+// Module 13937 (BaseChannelItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
@@ -130,7 +130,7 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(13924);
+      let AnimatedPressableHighlight = hideIcon(13939);
     } else {
       AnimatedPressableHighlight = mode(8992).AnimatedPressableHighlight;
     }
@@ -147,8 +147,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(13923), obj3);
-    const tmp9 = hideIcon(13923);
+    closure_8(hideIcon(13938), obj3);
+    const tmp9 = hideIcon(13938);
   }
 };
 export const ChannelModes = obj2;

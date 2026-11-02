@@ -1,6 +1,6 @@
-// === Module 18482: ForYouItemActionButtons ===
+// === Module 18495: ForYouItemActionButtons ===
 
-// Module 18482 (ForYouItemActionButtons)
+// Module 18495 (ForYouItemActionButtons)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
@@ -11,8 +11,8 @@ import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10740 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15670 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18088 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15674 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
@@ -369,7 +369,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15670)({ payload: closure_1(5745)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(15674)({ payload: closure_1(5745)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {

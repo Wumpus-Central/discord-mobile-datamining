@@ -1,6 +1,6 @@
-// === Module 18761: SuggestedSearchSkeleton ===
+// === Module 18768: SuggestedSearchSkeleton ===
 
-// Module 18761 (SuggestedSearchSkeleton)
+// Module 18768 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
@@ -16,7 +16,7 @@ const createStyles = fn(5014);
 const obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9827).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13873).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13888).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);

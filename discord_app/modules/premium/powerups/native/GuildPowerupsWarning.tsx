@@ -1,6 +1,6 @@
-// === Module 14119: GuildPowerupsWarning ===
+// === Module 14134: GuildPowerupsWarning ===
 
-// Module 14119 (GuildPowerupsWarning)
+// Module 14134 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import noop from "module_19" /* 19 */;

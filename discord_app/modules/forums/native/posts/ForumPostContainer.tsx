@@ -1,6 +1,6 @@
-// === Module 13768: ForumPostContainer ===
+// === Module 13783: ForumPostContainer ===
 
-// Module 13768 (ForumPostContainer)
+// Module 13783 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import Card from "Card" /* 6977 */;

@@ -1,10 +1,10 @@
-// === Module 18003: RegisterPasswordInput ===
+// === Module 18016: RegisterPasswordInput ===
 
-// Module 18003 (RegisterPasswordInput)
+// Module 18016 (RegisterPasswordInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5624 */;
-import usePasswordScore from "usePasswordScore" /* 18000 */;
+import usePasswordScore from "usePasswordScore" /* 18013 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(17976);
+const RegistrationUIStore = fn(17989);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);

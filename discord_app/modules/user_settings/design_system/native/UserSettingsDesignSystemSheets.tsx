@@ -1,6 +1,6 @@
-// === Module 17801: UserSettingsDesignSystemSheets ===
+// === Module 17814: UserSettingsDesignSystemSheets ===
 
-// Module 17801 (UserSettingsDesignSystemSheets)
+// Module 17814 (UserSettingsDesignSystemSheets)
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -12,7 +12,7 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
 import ActionSheet from "ActionSheet" /* 7366 */;
 import ActionSheetRow from "ActionSheetRow" /* 7368 */;
 import PromoSheet from "PromoSheet" /* 10837 */;
-import _modDef17802 from "module_17802" /* 17802 */;
+import _modDef17815 from "module_17815" /* 17815 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,7 +99,7 @@ function DemoPromoSheet() {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17802 };
+  obj3.src = { uri: _modDef17815 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj2);

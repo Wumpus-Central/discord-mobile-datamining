@@ -1,6 +1,6 @@
-// === Module 11794: doesOrientationMatchLockState ===
+// === Module 11795: doesOrientationMatchLockState ===
 
-// Module 11794 (doesOrientationMatchLockState)
+// Module 11795 (doesOrientationMatchLockState)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2019 */;
 import size from "module_2" /* 2 */;
 

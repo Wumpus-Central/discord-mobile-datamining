@@ -1,6 +1,6 @@
-// === Module 12453: useConjureLiveParts ===
+// === Module 12112: useConjureLiveParts ===
 
-// Module 12453 (useConjureLiveParts)
+// Module 12112 (useConjureLiveParts)
 import ApplicationStore from "ApplicationStore" /* 2038 */;
 import GuildChannelStore from "GuildChannelStore" /* 4944 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;

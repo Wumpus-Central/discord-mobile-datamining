@@ -1,13 +1,13 @@
-// === Module 19880: HowItWorksSection ===
+// === Module 19887: HowItWorksSection ===
 
-// Module 19880 (HowItWorksSection)
+// Module 19887 (HowItWorksSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5624 */;
-import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 19881 */;
-import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 19885 */;
-import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 19889 */;
+import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 19888 */;
+import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 19892 */;
+import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 19896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

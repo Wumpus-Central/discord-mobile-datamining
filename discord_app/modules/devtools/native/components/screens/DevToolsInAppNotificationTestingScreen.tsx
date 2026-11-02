@@ -1,6 +1,6 @@
-// === Module 17729: DevToolsInAppNotificationTestingScreen ===
+// === Module 17742: DevToolsInAppNotificationTestingScreen ===
 
-// Module 17729 (DevToolsInAppNotificationTestingScreen)
+// Module 17742 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -498,7 +498,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
         return closure_1_14(closure_1_0(6975).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(17571).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(17584).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
@@ -518,7 +518,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
     children: items3.map((label) => closure_1_14(label(6975).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(17571).BeakerIcon, {}),
+      icon: closure_1_14(label(17584).BeakerIcon, {}),
       onPress() {
         return label(label);
       },

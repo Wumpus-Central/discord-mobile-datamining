@@ -1,6 +1,6 @@
-// === Module 13173: voiceChannelAppSession ===
+// === Module 13188: voiceChannelAppSession ===
 
-// Module 13173 (voiceChannelAppSession)
+// Module 13188 (voiceChannelAppSession)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
 import size from "module_2" /* 2 */;
 

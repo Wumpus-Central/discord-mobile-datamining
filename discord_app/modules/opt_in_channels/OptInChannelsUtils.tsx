@@ -1,6 +1,6 @@
-// === Module 11586: OptInChannelsUtils ===
+// === Module 11587: OptInChannelsUtils ===
 
-// Module 11586 (OptInChannelsUtils)
+// Module 11587 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import useChannelName from "useChannelName" /* 5652 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
 import ChannelListState from "ChannelListState" /* 7707 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11587 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11588 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;

@@ -1,6 +1,6 @@
-// === Module 19566: useGameRecords ===
+// === Module 19573: useGameRecords ===
 
-// Module 19566 (useGameRecords)
+// Module 19573 (useGameRecords)
 import GlobalUtils from "GlobalUtils" /* 1379 */;
 import GameStore from "GameStore" /* 2014 */;
 

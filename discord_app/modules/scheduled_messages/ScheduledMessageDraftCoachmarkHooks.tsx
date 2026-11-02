@@ -1,6 +1,6 @@
-// === Module 13737: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 13752: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 13737 (ScheduledMessageDraftCoachmarkHooks)
+// Module 13752 (ScheduledMessageDraftCoachmarkHooks)
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7569 */;
 import _slicedToArray from "module_32" /* 32 */;
 

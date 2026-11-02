@@ -1,6 +1,6 @@
-// === Module 15800: GuildActionSheetTabItems ===
+// === Module 15804: GuildActionSheetTabItems ===
 
-// Module 15800 (GuildActionSheetTabItems)
+// Module 15804 (GuildActionSheetTabItems)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
 import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6768 */;
@@ -24,9 +24,9 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(15785).useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(15789).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(8468)(guild.id).total;
-  let obj = guild(15785);
+  let obj = guild(15789);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);

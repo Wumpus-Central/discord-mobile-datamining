@@ -1,7 +1,7 @@
-// === Module 18004: components/VerifyPhone ===
+// === Module 18017: components/VerifyPhone ===
 
-// Module 18004 (components/VerifyPhone)
-import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 18005 */;
+// Module 18017 (components/VerifyPhone)
+import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 18018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,8 +9,8 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17976).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17977);
+let closure_6 = fn(17989).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17990);
 ({ authStateToRegisterTransitionStep: closure_7, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const Links = fn(1072).Links;
 const jsx = fn(21).jsx;
@@ -33,7 +33,7 @@ export default function VerifyPhone(phone) {
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(17993)(closure_7(sourceState));
+  onPhoneTokenReceived(18006)(closure_7(sourceState));
   const items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -169,7 +169,7 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(17993);
+  const tmp7 = onPhoneTokenReceived(18006);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;

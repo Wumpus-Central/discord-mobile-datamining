@@ -1,6 +1,6 @@
-// === Module 12438: useConjurePublishAction ===
+// === Module 12097: useConjurePublishAction ===
 
-// Module 12438 (useConjurePublishAction)
+// Module 12097 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6845 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
@@ -8,7 +8,7 @@ import ConjureUtils from "ConjureUtils" /* 7419 */;
 import UserActionCreators from "UserActionCreators" /* 8752 */;
 import conjureAppInServer from "conjureAppInServer" /* 10891 */;
 import ConjurePublishTypes from "ConjurePublishTypes" /* 10960 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 12440 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 12099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
@@ -421,7 +421,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(12439).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(12098).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10875).getProject(projectId);
                     project.catch(() => {
 
@@ -429,7 +429,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const tmp9Result = closure_0(10875);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(12439)(ok));
+                  const error = new Error(closure_1(12098)(ok));
                   throw error;
                 }
               }).then((result) => {
@@ -533,7 +533,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(12439).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(12098).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(10875).getProject(projectId);
                     project.catch(() => {
 
@@ -541,7 +541,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const tmp9Result = closure_0(10875);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(12439)(ok));
+                  const error = new Error(closure_1(12098)(ok));
                   throw error;
                 }
               });
@@ -876,13 +876,13 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f136833 = requestConsent;
+                  f136801 = requestConsent;
                   if (requestConsent == null) {
-                    f136833 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f136801 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f136833(closure_0), done: false };
+                  const obj5 = { value: f136801(closure_0), done: false };
                   return obj5;
                 }
               }

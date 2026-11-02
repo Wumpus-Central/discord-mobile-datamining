@@ -1,6 +1,6 @@
-// === Module 14946: UserProfileWidgetsBoard ===
+// === Module 14950: UserProfileWidgetsBoard ===
 
-// Module 14946 (UserProfileWidgetsBoard)
+// Module 14950 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2026 */;
@@ -9,11 +9,11 @@ import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7778 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9316 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12114 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14952 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14953 */;
-import QuoteIcon from "QuoteIcon" /* 14954 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 14963 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12258 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14956 */;
+import GameCoverImageDefault from "GameCoverImage" /* 14957 */;
+import QuoteIcon from "QuoteIcon" /* 14958 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 14967 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -398,10 +398,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(14967).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(14971).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(14967);
+  let obj = userId(14971);
   const trackUserProfileAction = userId(8761).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

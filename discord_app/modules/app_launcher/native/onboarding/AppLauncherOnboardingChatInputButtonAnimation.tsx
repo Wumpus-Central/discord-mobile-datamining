@@ -1,6 +1,6 @@
-// === Module 13787: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 13802: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 13787 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 13802 (AppLauncherOnboardingChatInputButtonAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
@@ -9,9 +9,9 @@ import timingPresets from "timingPresets" /* 5257 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5618 */;
 import ButtonConstants from "ButtonConstants" /* 5640 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 9821 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12225 */;
-import _mod12250 from "module_12250" /* 12250 */;
-import _mod13788 from "module_13788" /* 13788 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12365 */;
+import _mod12390 from "module_12390" /* 12390 */;
+import _mod13803 from "module_13803" /* 13803 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -75,7 +75,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod13788;
+  obj5.source = _mod13803;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), , ];
   const obj6 = { collapsable: false, style: null };
@@ -87,7 +87,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items4 = [React5(ReanimatedRexportDefault.View, obj4), ];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod12250;
+  obj8.source = _mod12390;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

@@ -1,14 +1,14 @@
-// === Module 18621: GuildFeedBanner ===
+// === Module 18634: GuildFeedBanner ===
 
-// Module 18621 (GuildFeedBanner)
+// Module 18634 (GuildFeedBanner)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
 import timing from "timing" /* 5254 */;
 import timingPresets from "timingPresets" /* 5257 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15796 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15800 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 15795 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 15799 */;
 import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function GuildFeedBanner(guild) {
   width = size.width;
   height = size.height;
   const tmp2Result4 = guild(504);
-  drawerWidth = guild(11556).useDrawerWidth();
+  drawerWidth = guild(11557).useDrawerWidth();
   const items4 = [width, height, tmp12, drawerWidth];
   let obj4 = { style: tmp.container, children: null };
   const memo1 = obj3.useMemo(() => {
@@ -186,16 +186,16 @@ function GuildFeedBanner(guild) {
     return closure_11(tmp16, obj4);
   } else {
     if (tmp2Result6.isThemeDark(tmp8)) {
-      let tmp6Result2 = tmp6(18623);
+      let tmp6Result2 = tmp6(18636);
     } else {
-      tmp6Result2 = tmp6(18624);
+      tmp6Result2 = tmp6(18637);
     }
     tmp2Result6 = tmp2(5021);
   }
-  const tmp2Result5 = guild(11556);
+  const tmp2Result5 = guild(11557);
 }
 const View = fn(17).View;
-const GuildFeedConstants = fn(18622);
+const GuildFeedConstants = fn(18635);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1072).GuildFeatures;

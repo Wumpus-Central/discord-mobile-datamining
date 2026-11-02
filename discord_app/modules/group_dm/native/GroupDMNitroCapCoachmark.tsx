@@ -1,17 +1,17 @@
-// === Module 14565: GroupDMNitroCapCoachmark ===
+// === Module 14579: GroupDMNitroCapCoachmark ===
 
-// Module 14565 (GroupDMNitroCapCoachmark)
+// Module 14579 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
 import _modDef10978 from "module_10978" /* 10978 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11626 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11628).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(11629).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
@@ -28,15 +28,15 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11626).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11627).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11626);
-  obj3.acquisitionStrategy = channelId(11626).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11633)(obj3);
+  const obj2 = channelId(11627);
+  obj3.acquisitionStrategy = channelId(11627).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11634)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11633);
+  let tmp7 = _location(11634);
   channelId(7569);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
@@ -77,7 +77,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11625)(channelId, closure_1_1);
+          _location(11626)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -89,5 +89,5 @@ export default function GroupDMNitroCapCoachmark(channelId) {
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
-  obj4 = _location(11629);
+  obj4 = _location(11630);
 };

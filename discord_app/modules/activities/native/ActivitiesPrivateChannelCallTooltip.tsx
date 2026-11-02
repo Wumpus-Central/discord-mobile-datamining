@@ -1,6 +1,6 @@
-// === Module 14378: ActivitiesPrivateChannelCallTooltip ===
+// === Module 14393: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 14378 (ActivitiesPrivateChannelCallTooltip)
+// Module 14393 (ActivitiesPrivateChannelCallTooltip)
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;

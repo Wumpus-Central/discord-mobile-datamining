@@ -1,12 +1,12 @@
-// === Module 17502: CommunityActivityAlertsSetting ===
+// === Module 17515: CommunityActivityAlertsSetting ===
 
-// Module 17502 (CommunityActivityAlertsSetting)
+// Module 17515 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11010 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

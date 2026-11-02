@@ -1,6 +1,6 @@
-// === Module 18590: MainTabsChannelScreenStack ===
+// === Module 18603: MainTabsChannelScreenStack ===
 
-// Module 18590 (MainTabsChannelScreenStack)
+// Module 18603 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Link from "Link" /* 1498 */;
 import native from "native" /* 5080 */;
@@ -14,12 +14,12 @@ import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import useMountEffect from "useMountEffect" /* 5593 */;
 import Suspender from "Suspender" /* 5989 */;
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11243 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11555 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18042 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18043 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18594 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18595 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18596 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11556 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18055 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18056 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18607 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18608 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -102,7 +102,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18591).setVisibleChannelScreen;
+const setVisibleChannelScreen = fn(18604).setVisibleChannelScreen;
 const ONYX_BORDER_WIDTH = fn(9813).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);

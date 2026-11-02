@@ -1,6 +1,6 @@
-// === Module 12776: useConjurePublishScheduleProposal ===
+// === Module 12779: useConjurePublishScheduleProposal ===
 
-// Module 12776 (useConjurePublishScheduleProposal)
+// Module 12779 (useConjurePublishScheduleProposal)
 import _modDef3868 from "module_3868" /* 3868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -103,9 +103,9 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
   let formatToPlainStringResult = null;
   if (trigger.next_run_at > _slicedToArray(noop.useState(() => Date.now()), 1)[0]) {
     let intl = tmp(1113).intl;
-    const obj2 = { time: tmp(12502).formatPublishScheduleTime(trigger.next_run_at) };
+    const obj2 = { time: tmp(12161).formatPublishScheduleTime(trigger.next_run_at) };
     formatToPlainStringResult = intl.formatToPlainString(_modDef3868.orZDqY, obj2);
-    const tmpResult = tmp(12502);
+    const tmpResult = tmp(12161);
   }
   let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
   const tmp4 = _slicedToArray(noop.useState("idle"), 2);

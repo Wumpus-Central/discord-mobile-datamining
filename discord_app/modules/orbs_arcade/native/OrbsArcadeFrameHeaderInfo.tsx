@@ -1,10 +1,10 @@
-// === Module 18994: OrbsArcadeFrameHeaderInfo ===
+// === Module 19001: OrbsArcadeFrameHeaderInfo ===
 
-// Module 18994 (OrbsArcadeFrameHeaderInfo)
+// Module 19001 (OrbsArcadeFrameHeaderInfo)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2038 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17010 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17023 */;
 
 const require = fn;
 const View = fn(17).View;

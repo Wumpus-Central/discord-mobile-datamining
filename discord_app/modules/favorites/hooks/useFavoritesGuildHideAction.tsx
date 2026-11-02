@@ -1,6 +1,6 @@
-// === Module 18183: useFavoritesGuildHideAction ===
+// === Module 18196: useFavoritesGuildHideAction ===
 
-// Module 18183 (useFavoritesGuildHideAction)
+// Module 18196 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import _modDef3450 from "module_3450" /* 3450 */;

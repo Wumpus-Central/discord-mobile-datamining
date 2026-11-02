@@ -1,6 +1,6 @@
-// === Module 14241: RedesignContactSyncModal ===
+// === Module 14256: RedesignContactSyncModal ===
 
-// Module 14241 (RedesignContactSyncModal)
+// Module 14256 (RedesignContactSyncModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -11,9 +11,9 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14232 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14236 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14242 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14247 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14251 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14257 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -117,7 +117,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               obj5.phone = tmp15;
               dependencyMap = 2;
               c3 = 1;
-              const obj7 = { value: tmp2(14240).updateDiscoverability(obj5), done: false };
+              const obj7 = { value: tmp2(14255).updateDiscoverability(obj5), done: false };
               return obj7;
             }
           } else if (1 === tmp5) {
@@ -144,7 +144,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           }
           dependencyMap = 1;
           c3 = 1;
-          const obj9 = { value: tmp2(14232).startContactSync(closure_129_3), done: false };
+          const obj9 = { value: tmp2(14247).startContactSync(closure_129_3), done: false };
           return obj9;
         } catch (tmp2) {
           c3 = tmp;
@@ -172,7 +172,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     if (openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14243, dependencyMap.paths), "Contact Sync Info Settings");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14258, dependencyMap.paths), "Contact Sync Info Settings");
     }
   }, items4);
   const items5 = [onNext, onComplete];
@@ -218,8 +218,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             closure_128_8();
           } else {
             const obj7 = { onComplete: closure_128_2, skip: true };
-            const result = tmp4(14232).closeContactSyncModal(obj7);
-            const obj = tmp4(14232);
+            const result = tmp4(14247).closeContactSyncModal(obj7);
+            const obj = tmp4(14247);
           }
           dependencyMap = 3;
         }
@@ -277,7 +277,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(14252)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(14267)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -308,7 +308,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
             React7(options);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: options(14232).startContactSync(options), done: false };
+            const obj5 = { value: options(14247).startContactSync(options), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -371,7 +371,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj3.prefilledFromContactBook = tmp12;
-  obj2.children = closure_16(loading(14254), obj3);
+  obj2.children = closure_16(loading(14269), obj3);
   return closure_16(View, obj2);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -557,9 +557,9 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(14233);
+const ContactSyncModalStore = fn(14248);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(14234);
+const ContactSyncConstants = fn(14249);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const NativePermissionTypes = fn(7940).NativePermissionTypes;

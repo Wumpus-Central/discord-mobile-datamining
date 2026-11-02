@@ -1,16 +1,16 @@
-// === Module 19329: VoicePanelControlsDrawer ===
+// === Module 19336: VoicePanelControlsDrawer ===
 
-// Module 19329 (VoicePanelControlsDrawer)
+// Module 19336 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import spring from "spring" /* 5637 */;
 import Suspender from "Suspender" /* 5989 */;
 import useRefValueDefault from "useRefValue" /* 6959 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13812 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13813 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19330 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19341 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13827 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13828 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19337 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19348 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

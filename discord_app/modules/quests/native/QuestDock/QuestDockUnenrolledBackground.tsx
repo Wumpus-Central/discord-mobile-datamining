@@ -1,15 +1,15 @@
-// === Module 17160: QuestDockUnenrolledBackground ===
+// === Module 17173: QuestDockUnenrolledBackground ===
 
-// Module 17160 (QuestDockUnenrolledBackground)
+// Module 17173 (QuestDockUnenrolledBackground)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5596 */;
-import QuestHooks from "QuestHooks" /* 17055 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17087 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 17161 */;
+import QuestHooks from "QuestHooks" /* 17068 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17100 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 17174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const expandedHeight = fn(17059).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(17072).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");

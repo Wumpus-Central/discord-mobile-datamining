@@ -1,9 +1,9 @@
-// === Module 18049: getJankScreenName ===
+// === Module 18062: getJankScreenName ===
 
-// Module 18049 (getJankScreenName)
+// Module 18062 (getJankScreenName)
 import RootNavigationRef from "RootNavigationRef" /* 5199 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18051 */;
-import JankScreenConstants from "JankScreenConstants" /* 18050 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18064 */;
+import JankScreenConstants from "JankScreenConstants" /* 18063 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {
@@ -212,7 +212,7 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "canap\u00E9" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "article" };
           let obj10 = obj9;
         } else {
           obj10 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null, chatScreens: null };

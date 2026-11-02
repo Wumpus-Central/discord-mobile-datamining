@@ -1,12 +1,12 @@
-// === Module 17329: DisplayNameStylesCustomColorButton ===
+// === Module 17342: DisplayNameStylesCustomColorButton ===
 
-// Module 17329 (DisplayNameStylesCustomColorButton)
+// Module 17342 (DisplayNameStylesCustomColorButton)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import GummyStripesDefault from "GummyStripes" /* 16466 */;
-import useCustomSwatchA11yDefault from "useCustomSwatchA11y" /* 17330 */;
-import EyeDropperIcon from "EyeDropperIcon" /* 17331 */;
+import GummyStripesDefault from "GummyStripes" /* 16479 */;
+import useCustomSwatchA11yDefault from "useCustomSwatchA11y" /* 17343 */;
+import EyeDropperIcon from "EyeDropperIcon" /* 17344 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 19302: VoicePanelMicButton ===
+// === Module 19309: VoicePanelMicButton ===
 
-// Module 19302 (VoicePanelMicButton)
+// Module 19309 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import HapticUtils from "HapticUtils" /* 5260 */;
@@ -8,9 +8,9 @@ import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import useMuteStates from "useMuteStates" /* 7526 */;
 import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9240 */;
 import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11211 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11969 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11970 */;
-import useDeafStates from "useDeafStates" /* 12002 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11970 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11971 */;
+import useDeafStates from "useDeafStates" /* 12003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5765 */;

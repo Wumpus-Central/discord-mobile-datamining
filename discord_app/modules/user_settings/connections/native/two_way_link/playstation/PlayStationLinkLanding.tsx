@@ -1,12 +1,12 @@
-// === Module 14625: PlayStationLinkLanding ===
+// === Module 14639: PlayStationLinkLanding ===
 
-// Module 14625 (PlayStationLinkLanding)
+// Module 14639 (PlayStationLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
-import _modDef14626 from "module_14626" /* 14626 */;
+import _modDef14640 from "module_14640" /* 14640 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14624).PlayStationLinkModalScenes;
+let closure_4 = fn(14638).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
@@ -40,7 +40,7 @@ export function PlayStationLinkLanding(platformType) {
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef14626 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef14640 }), []);
   const obj3 = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1113).intl;
   obj3.headerConnect = intl2.string(navigation(1113).t.xAWHOy);

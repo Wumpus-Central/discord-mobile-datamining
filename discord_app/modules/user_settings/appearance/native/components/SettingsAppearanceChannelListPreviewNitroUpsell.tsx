@@ -1,6 +1,6 @@
-// === Module 17281: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 17294: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 17281 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 17294 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5587 */;

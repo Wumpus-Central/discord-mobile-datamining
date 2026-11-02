@@ -1,6 +1,6 @@
-// === Module 11506: NameplatePreview ===
+// === Module 11507: NameplatePreview ===
 
-// Module 11506 (NameplatePreview)
+// Module 11507 (NameplatePreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;

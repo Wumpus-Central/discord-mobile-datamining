@@ -1,6 +1,6 @@
-// === Module 15279: PremiumNitroHome ===
+// === Module 15283: PremiumNitroHome ===
 
-// Module 15279 (PremiumNitroHome)
+// Module 15283 (PremiumNitroHome)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,17 +14,17 @@ import spring from "spring" /* 5637 */;
 import Pressables from "Pressables" /* 6980 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
 import ReferralProgramUtils from "ReferralProgramUtils" /* 8523 */;
-import PremiumReferralTrialPill from "PremiumReferralTrialPill" /* 15281 */;
-import PremiumPerkCardDefault from "PremiumPerkCard" /* 15282 */;
-import useScrollToSectionDefault from "useScrollToSection" /* 15304 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15305 */;
-import MarketingPageBannerTileDefault from "MarketingPageBannerTile" /* 15306 */;
-import PremiumPerkCarouselDefault from "PremiumPerkCarousel" /* 15339 */;
+import PremiumReferralTrialPill from "PremiumReferralTrialPill" /* 15285 */;
+import PremiumPerkCardDefault from "PremiumPerkCard" /* 15286 */;
+import useScrollToSectionDefault from "useScrollToSection" /* 15308 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15309 */;
+import MarketingPageBannerTileDefault from "MarketingPageBannerTile" /* 15310 */;
+import PremiumPerkCarouselDefault from "PremiumPerkCarousel" /* 15343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import SubscriptionStore from "SubscriptionStore" /* 2052 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15280 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15284 */;
 import n from "module_671" /* 671 */;
 
 require = fn;
@@ -84,7 +84,7 @@ function NewTab(arg0) {
   }
   if (tmp12) {
     const obj6 = { style: null, cardStyle: null, bannerFields: null, analyticsPage: "Nitro Home Banner Tile", componentId: null, promotionId: null };
-    const obj7 = { width: tmp2(15282).PERK_CARD_SIZES[tmp2(undefined, 15282).PerkCardVariant.WIDE].width };
+    const obj7 = { width: tmp2(15286).PERK_CARD_SIZES[tmp2(undefined, 15286).PerkCardVariant.WIDE].width };
     obj6.style = obj7;
     obj6.cardStyle = tmp.marketingBannerCard;
     obj6.bannerFields = promotionMarketingComponent.properties.properties.marketingPageBanner;
@@ -95,7 +95,7 @@ function NewTab(arg0) {
   const items1 = [tmp12, closure_16(require("TieredTenureBadgePerkCard").TieredTenureBadgePerkCard, {}), , , , , ];
   let tmp15Result = null;
   if (isEligibleSenderForReferralProgram) {
-    const obj8 = { onLayout: useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM), children: closure_16(tmp2(15316).ReferralProgramPerkCard, {}) };
+    const obj8 = { onLayout: useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM), children: closure_16(tmp2(15320).ReferralProgramPerkCard, {}) };
     tmp15Result = closure_16(closure_5, obj8);
   }
   items1[2] = tmp15Result;
@@ -159,7 +159,7 @@ function PerksTab(extraBottomHeight) {
     const obj4 = { title: null, perks: null, onItemChange: null };
     const intl2 = tmp2(1113).intl;
     obj4.title = intl2.string(tmp2(1113).t["+vt7w9"]);
-    const tmp9Result = tmp9(15339);
+    const tmp9Result = tmp9(15343);
     if (tmp2Result.isAppIconsSupported()) {
       const items5 = [premiumPerkCard.customAppIcons];
       let items6 = items5;
@@ -177,7 +177,7 @@ function PerksTab(extraBottomHeight) {
     };
     items4[1] = closure_16(tmp9Result, obj4);
     const obj5 = { title: null, perks: null, onItemChange: null };
-    tmp2Result = tmp2(15340);
+    tmp2Result = tmp2(15344);
     const intl3 = tmp2(1113).intl;
     obj5.title = intl3.string(tmp2(1113).t.LgHbnL);
     const items8 = [, , , , ];
@@ -186,9 +186,9 @@ function PerksTab(extraBottomHeight) {
     obj5.onItemChange = function onItemChange(arg0) {
       return closure_0(closure_21.CAROUSEL_SECTION_NAME_3, arg0);
     };
-    items4[2] = closure_16(tmp9(15339), obj5);
+    items4[2] = closure_16(tmp9(15343), obj5);
     const obj6 = { title: null, perks: null, onItemChange: null };
-    const tmp9Result3 = tmp9(15339);
+    const tmp9Result3 = tmp9(15343);
     const intl4 = tmp2(1113).intl;
     obj6.title = intl4.string(tmp2(1113).t.LTaxu9);
     if (fractionalState === tmp11.FP_ONLY) {
@@ -210,13 +210,13 @@ function PerksTab(extraBottomHeight) {
       obj2.children = items4;
       return closure_17(closure_6, obj2);
     }
-    tmp9Result4 = tmp9(15339);
+    tmp9Result4 = tmp9(15343);
   }
   tmp10 = PremiumPerkCarouselDefault;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const NitroHomeSectionId = fn(15280).NitroHomeSectionId;
+const NitroHomeSectionId = fn(15284).NitroHomeSectionId;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, ThemeTypes: map1 } = Constants);
 const ContentDismissActionType = fn(4860).ContentDismissActionType;
@@ -270,14 +270,14 @@ export default function PremiumNitroHome(onClose) {
   let sharedValue;
   let isEligibleSenderForReferralProgram;
   let promotionMarketingComponent;
-  const commonTriggerPoint = bottom(15342).useCommonTriggerPoint(bottom(15343).OpenNitroTriggerPoint);
-  let obj = bottom(15342);
+  const commonTriggerPoint = bottom(15346).useCommonTriggerPoint(bottom(15347).OpenNitroTriggerPoint);
+  let obj = bottom(15346);
   const giftCardMobileConsumptionHalfsheet = bottom(7566).useGiftCardMobileConsumptionHalfsheet();
   const tmp5 = closure_22();
   bottom = navigation(1625)().bottom;
   let obj2 = bottom(7566);
-  const youBarSettingsCustomHeaderPaddingTop = bottom(15344).useYouBarSettingsCustomHeaderPaddingTop();
-  let obj3 = bottom(15344);
+  const youBarSettingsCustomHeaderPaddingTop = bottom(15348).useYouBarSettingsCustomHeaderPaddingTop();
+  let obj3 = bottom(15348);
   navigation = bottom(1497).useNavigation();
   const items = [navigation];
   const layoutEffect = stateFromStores.useLayoutEffect(() => {
@@ -316,12 +316,12 @@ export default function PremiumNitroHome(onClose) {
   const obj7 = bottom(504);
   const isInReverseTrial = bottom(8533).useIsInReverseTrial();
   const obj8 = bottom(8533);
-  const maybeFetchTieredTenureBadgeData = bottom(15345).useMaybeFetchTieredTenureBadgeData();
+  const maybeFetchTieredTenureBadgeData = bottom(15349).useMaybeFetchTieredTenureBadgeData();
   const field = PremiumNitroNavigationStore.useField("scrollToSectionId");
   const effect = stateFromStores.useEffect(() => () => {
     closure_1_9.resetState();
   }, []);
-  const obj9 = bottom(15345);
+  const obj9 = bottom(15349);
   const obj11 = { items: null, pageWidth: null, onPageChange: null };
   const obj12 = { label: null, id: null, page: null };
   const intl = bottom(1113).intl;
@@ -376,8 +376,8 @@ export default function PremiumNitroHome(onClose) {
   let tmpResult6 = bottom(5021);
   const isThemeDarkResult = bottom(5021).isThemeDark(theme);
   const tmpResult7 = bottom(5021);
-  const tmp6Result = navigation(15346);
-  const tmp6ResultResult = navigation(15346)(tmp21.endsAt, bottom(15346).CountDownMessageTypes.ENDS_IN);
+  const tmp6Result = navigation(15350);
+  const tmp6ResultResult = navigation(15350)(tmp21.endsAt, bottom(15350).CountDownMessageTypes.ENDS_IN);
   isEligibleSenderForReferralProgram = bottom(8524).useIsEligibleSenderForReferralProgram();
   const items5 = [isEligibleSenderForReferralProgram];
   const effect2 = obj5.useEffect(() => {
@@ -406,7 +406,7 @@ export default function PremiumNitroHome(onClose) {
     obj = bottom(_undefined[46]);
   }, []);
   const tmpResult8 = bottom(8524);
-  promotionMarketingComponent = bottom(15303).usePromotionMarketingComponent(tmp(10609).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = bottom(15307).usePromotionMarketingComponent(tmp(10609).MarketingComponentType.PREMIUM_TAB);
   const items6 = [promotionMarketingComponent];
   const effect4 = obj5.useEffect(() => {
     let isDismissed = null == promotionMarketingComponent;
@@ -425,17 +425,17 @@ export default function PremiumNitroHome(onClose) {
   const items7 = [tmp5.container, { paddingTop: youBarSettingsCustomHeaderPaddingTop }];
   obj17.style = items7;
   const obj18 = { style: tmp5.background, source: null };
-  const tmpResult9 = bottom(15303);
-  obj18.source = navigation(15347);
+  const tmpResult9 = bottom(15307);
+  obj18.source = navigation(15351);
   const items8 = [closure_16(navigation(5717), obj18), closure_16(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }), , , ];
   let tmp26Result = tmp21.fractionalState !== FractionalPremiumStates.NONE && !isInReverseTrial;
   if (tmp26Result) {
     const obj19 = { countdownText: tmp6ResultResult };
-    tmp26Result = closure_16(tmp6(15348), obj19);
+    tmp26Result = closure_16(tmp6(15352), obj19);
   }
   items8[2] = tmp26Result;
   const obj20 = { style: tmp5.tabContent, children: null };
-  const items9 = [closure_16(bottom(14177).SegmentedControlPages, { state: segmentedControlState, nativeGesture: memo }), ];
+  const items9 = [closure_16(bottom(14192).SegmentedControlPages, { state: segmentedControlState, nativeGesture: memo }), ];
   if (tmp26Result4) {
     const obj21 = { style: tmp5.backSwipeSensor };
     tmp26Result4 = closure_16(tmp41, obj21);

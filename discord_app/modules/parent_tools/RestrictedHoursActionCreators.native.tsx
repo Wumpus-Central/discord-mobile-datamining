@@ -1,6 +1,6 @@
-// === Module 19373: RestrictedHoursActionCreators ===
+// === Module 19380: RestrictedHoursActionCreators ===
 
-// Module 19373 (RestrictedHoursActionCreators)
+// Module 19380 (RestrictedHoursActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

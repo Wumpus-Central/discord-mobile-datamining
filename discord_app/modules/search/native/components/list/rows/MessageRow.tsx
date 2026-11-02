@@ -1,6 +1,6 @@
-// === Module 18731: MessageRow ===
+// === Module 18738: MessageRow ===
 
-// Module 18731 (MessageRow)
+// Module 18738 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,9 +16,9 @@ import _modDef10271 from "module_10271" /* 10271 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 11039 */;
 import _modDef11073 from "module_11073" /* 11073 */;
 import BellZIcon from "BellZIcon" /* 11172 */;
-import SearchListRow from "SearchListRow" /* 18695 */;
-import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 18732 */;
-import PollBadgeDefault from "PollBadge" /* 18733 */;
+import SearchListRow from "SearchListRow" /* 18702 */;
+import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 18739 */;
+import PollBadgeDefault from "PollBadge" /* 18740 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import FavoriteStore from "FavoriteStore" /* 4866 */;
@@ -86,7 +86,7 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(18732).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(18739).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -114,7 +114,7 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_11(channel(18733), obj8);
+    tmp9Result2 = closure_11(channel(18740), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;

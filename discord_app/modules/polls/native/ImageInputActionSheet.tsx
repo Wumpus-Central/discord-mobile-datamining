@@ -1,8 +1,8 @@
-// === Module 12426: ImageInputActionSheet ===
+// === Module 12566: ImageInputActionSheet ===
 
-// Module 12426 (ImageInputActionSheet)
+// Module 12566 (ImageInputActionSheet)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12427 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12567 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

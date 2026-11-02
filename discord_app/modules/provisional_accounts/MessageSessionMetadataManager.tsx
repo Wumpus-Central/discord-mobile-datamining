@@ -1,6 +1,6 @@
-// === Module 19477: MessageSessionMetadataManager ===
+// === Module 19484: MessageSessionMetadataManager ===
 
-// Module 19477 (MessageSessionMetadataManager)
+// Module 19484 (MessageSessionMetadataManager)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;

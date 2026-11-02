@@ -1,6 +1,6 @@
-// === Module 18447: YouBarAvatarDefault ===
+// === Module 18460: YouBarAvatarDefault ===
 
-// Module 18447 (YouBarAvatarDefault)
+// Module 18460 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useToken from "useToken" /* 5596 */;
@@ -85,7 +85,7 @@ function AvatarDefaultLarge() {
   return closure_1_12(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: metroRequire, YOU_BAR_HEIGHT: closure_7, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: c10 } = YouBarConstants);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);

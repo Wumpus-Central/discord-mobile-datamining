@@ -1,13 +1,13 @@
-// === Module 15335: ProgressWheel ===
+// === Module 15339: ProgressWheel ===
 
-// Module 15335 (ProgressWheel)
+// Module 15339 (ProgressWheel)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5596 */;
 import FastImageDefault from "FastImage" /* 5717 */;
 import inlineStyles from "inlineStyles" /* 8031 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 15318 */;
-import _modDef15336 from "module_15336" /* 15336 */;
-import _modDef15337 from "module_15337" /* 15337 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 15322 */;
+import _modDef15340 from "module_15340" /* 15340 */;
+import _modDef15341 from "module_15341" /* 15341 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -31,7 +31,7 @@ export default function ProgressWheel(arg0) {
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: _modDef15336, style: tmp.glowImage };
+    const obj4 = { source: _modDef15340, style: tmp.glowImage };
     tmp9 = React4(FastImageDefault, obj4);
     const tmp4Result = FastImageDefault;
   }
@@ -43,7 +43,7 @@ export default function ProgressWheel(arg0) {
   const obj5 = { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" };
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef15337;
+    altImage = _modDef15341;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

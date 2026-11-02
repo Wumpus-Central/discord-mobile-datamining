@@ -1,10 +1,10 @@
-// === Module 17672: PasskeyUpsellPromoSheet ===
+// === Module 17685: PasskeyUpsellPromoSheet ===
 
-// Module 17672 (PasskeyUpsellPromoSheet)
+// Module 17685 (PasskeyUpsellPromoSheet)
 import FastImageDefault from "FastImage" /* 5717 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 7116 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 17671 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 17674 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 17684 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 17687 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
-  let obj = { source: require("module_17673"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  let obj = { source: require("module_17686"), style: { height: 190, width: 220, resizeMode: "contain" } };
   _require = noop.useRef(false);
   let obj2 = { illustration: closure_6(FastImageDefault, obj), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;

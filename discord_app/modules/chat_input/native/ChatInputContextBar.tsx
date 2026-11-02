@@ -1,6 +1,6 @@
-// === Module 13970: ChatInputContextBar ===
+// === Module 13985: ChatInputContextBar ===
 
-// Module 13970 (ChatInputContextBar)
+// Module 13985 (ChatInputContextBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;

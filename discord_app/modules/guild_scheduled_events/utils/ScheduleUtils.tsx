@@ -249,7 +249,7 @@ export function getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guildEvent
   ({ scheduled_start_time, scheduled_end_time } = guildEvent);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2042(scheduled_start_time), endDate: "a" };
+    const obj = { startDate: _modDef2042(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2042(scheduled_end_time);
@@ -296,7 +296,7 @@ export function getScheduleFromEventData(arg0) {
   ({ scheduledStartTime, scheduledEndTime } = arg0);
   let tmp;
   if (null != scheduledStartTime) {
-    const obj = { startDate: _modDef2042(scheduledStartTime), endDate: "a" };
+    const obj = { startDate: _modDef2042(scheduledStartTime), endDate: "Array" };
     tmp = obj;
     if (null != scheduledEndTime) {
       obj.endDate = _modDef2042(scheduledEndTime);
@@ -309,7 +309,7 @@ export function getScheduleFromEvent(arg0) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2042(scheduled_start_time), endDate: "a" };
+    const obj = { startDate: _modDef2042(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2042(scheduled_end_time);

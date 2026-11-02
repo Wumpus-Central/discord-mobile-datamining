@@ -1,16 +1,16 @@
-// === Module 16865: FriendRequestsEveryoneSetting ===
+// === Module 16878: FriendRequestsEveryoneSetting ===
 
-// Module 16865 (FriendRequestsEveryoneSetting)
+// Module 16878 (FriendRequestsEveryoneSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16708 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 19172: SoundboardSoundPickerList ===
+// === Module 19179: SoundboardSoundPickerList ===
 
-// Module 19172 (SoundboardSoundPickerList)
+// Module 19179 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -16,8 +16,8 @@ import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10021 *
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10022 */;
 import chunkDefault from "chunk" /* 10069 */;
 import _modDef10271 from "module_10271" /* 10271 */;
-import SoundButton from "SoundButton" /* 19173 */;
-import _modDef19181 from "module_19181" /* 19181 */;
+import SoundButton from "SoundButton" /* 19180 */;
+import _modDef19188 from "module_19188" /* 19188 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1383 */;
 
@@ -98,7 +98,7 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(19167);
+const SoundboardStyleConstants = fn(19174);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -304,7 +304,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = React5(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef19181, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef19188, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const obj5 = { source: _modDef10271, style: currentUser.sectionIcon };

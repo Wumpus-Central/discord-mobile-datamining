@@ -1,10 +1,10 @@
-// === Module 18619: GuildOnboardingHomePage ===
+// === Module 18632: GuildOnboardingHomePage ===
 
-// Module 18619 (GuildOnboardingHomePage)
+// Module 18632 (GuildOnboardingHomePage)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13818 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13833 */;
 import noop from "module_19" /* 19 */;
 import ExperimentStore from "ExperimentStore" /* 5238 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7398 */;
@@ -85,14 +85,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(18621), obj4), ];
+    const items3 = [closure_9(tmp4(18634), obj4), ];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(18625), obj6), , ];
+      const items4 = [closure_9(tmp4(18638), obj6), , ];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(18629), obj7);
-      tmp4 = tmp4(18630);
+      items4[1] = closure_9(tmp4(18642), obj7);
+      tmp4 = tmp4(18643);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -100,12 +100,12 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(18633), obj9);
+      tmp12Result = closure_9(tmp4(18646), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(18620), obj3);
-    const tmp4Result = tmp4(18620);
+    closure_11(tmp4(18633), obj3);
+    const tmp4Result = tmp4(18633);
   }
   let obj2 = guildId(504);
 }

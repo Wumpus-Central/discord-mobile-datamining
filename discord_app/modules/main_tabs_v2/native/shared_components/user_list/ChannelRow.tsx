@@ -9,7 +9,7 @@ import useChannelName from "useChannelName" /* 5652 */;
 import TextIcon2 from "TextIcon" /* 8652 */;
 import ForumIcon from "ForumIcon" /* 8660 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13408 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13423 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildStore from "GuildStore" /* 4885 */;

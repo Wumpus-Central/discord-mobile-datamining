@@ -1,9 +1,9 @@
-// === Module 12352: CommandOptionView ===
+// === Module 12492: CommandOptionView ===
 
-// Module 12352 (CommandOptionView)
+// Module 12492 (CommandOptionView)
 import nativeDefault from "native" /* 575 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12355 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12495 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
@@ -30,7 +30,7 @@ export default function CommandOptionView(option) {
   const ReduceMotion = option(5095).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(12353).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12493).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -60,8 +60,8 @@ export default function CommandOptionView(option) {
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12353).ExitingAnimation,
-      layout: tmp2(12353).LayoutAnimation,
+      exiting: tmp2(12493).ExitingAnimation,
+      layout: tmp2(12493).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -109,10 +109,10 @@ export default function CommandOptionView(option) {
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-    obj3.children = closure_5(tmp2(12354).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(12494).AwaitAnimationContext, obj4);
     return closure_5(tmp2(5095).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(12353);
+  const tmp2Result = option(12493);
 };

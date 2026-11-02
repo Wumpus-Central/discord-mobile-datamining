@@ -1,14 +1,14 @@
-// === Module 17209: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 17222: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 17209 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 17222 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtilsAll from "FlagUtils" /* 1396 */;
 import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7434 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15717 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15721 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17210 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17223 */;
 import allSettled_mod from "allSettled" /* 6456 */;
 
 const require = globalThis.__r;
@@ -138,7 +138,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17204).useEditStateStore;
+const useEditStateStore = fn(17217).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
 const ChannelFlags = fn(4870).ChannelFlags;
 let allSettled = allSettled_mod;

@@ -1,6 +1,6 @@
-// === Module 17551: UserSettingsStartupTimings ===
+// === Module 17564: UserSettingsStartupTimings ===
 
-// Module 17551 (UserSettingsStartupTimings)
+// Module 17564 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import Stack_Stack from "Stack/Stack" /* 6027 */;
@@ -8,7 +8,7 @@ import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
 import TableRow from "TableRow" /* 6975 */;
 import TableRowGroup from "TableRowGroup" /* 7060 */;
 import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 11095 */;
-import ShareIcon from "ShareIcon" /* 14763 */;
+import ShareIcon from "ShareIcon" /* 14767 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

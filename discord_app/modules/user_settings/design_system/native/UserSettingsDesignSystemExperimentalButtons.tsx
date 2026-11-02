@@ -1,6 +1,6 @@
-// === Module 17764: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 17777: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 17764 (UserSettingsDesignSystemExperimentalButtons)
+// Module 17777 (UserSettingsDesignSystemExperimentalButtons)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5080 */;
 import LinearGradientDefault from "LinearGradient" /* 5587 */;

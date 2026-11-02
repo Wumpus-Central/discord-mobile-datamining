@@ -1,8 +1,8 @@
-// === Module 12540: useConjureRevealedText ===
+// === Module 12199: useConjureRevealedText ===
 
-// Module 12540 (useConjureRevealedText)
-import ConjureStreamReveal from "ConjureStreamReveal" /* 12541 */;
-import conjurePageVisibility from "conjurePageVisibility" /* 12542 */;
+// Module 12199 (useConjureRevealedText)
+import ConjureStreamReveal from "ConjureStreamReveal" /* 12200 */;
+import conjurePageVisibility from "conjurePageVisibility" /* 12201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -100,7 +100,7 @@ export function useConjureRevealedText(source, streaming) {
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(12542);
+          obj = closure_0(12201);
         }
         obj = conjurePageVisibility;
         return conjurePageVisibility.subscribePageVisibility(flushIfHidden);
@@ -122,8 +122,8 @@ export function useConjureRevealedText(source, streaming) {
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(12541).reconcileRevealedLength(target, source, length);
-      const targetResult = target(12541);
+      let length2 = target(12200).reconcileRevealedLength(target, source, length);
+      const targetResult = target(12200);
     } else {
       length2 = source.length;
     }

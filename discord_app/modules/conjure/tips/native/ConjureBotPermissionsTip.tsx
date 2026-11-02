@@ -1,15 +1,15 @@
-// === Module 12619: ConjureBotPermissionsTip ===
+// === Module 12622: ConjureBotPermissionsTip ===
 
-// Module 12619 (ConjureBotPermissionsTip)
+// Module 12622 (ConjureBotPermissionsTip)
 import _modDef3868 from "module_3868" /* 3868 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12620 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12623 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(12438).ConjurePublishActionContext);
+  dependencyMap = noop.useContext(projectId(12097).ConjurePublishActionContext);
   let obj = { icon: projectId(11281).ShieldIcon, children: null };
   const intl = projectId(1113).intl;
   const obj2 = { onReview: null };
@@ -74,7 +74,7 @@ function BotPermissionsHint(projectId) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12624).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12627).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

@@ -1,19 +1,19 @@
-// === Module 17997: RegisterDisplayName ===
+// === Module 18010: RegisterDisplayName ===
 
-// Module 17997 (RegisterDisplayName)
+// Module 18010 (RegisterDisplayName)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16596 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16609 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(17976);
+const RegistrationUIStore = fn(17989);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17977);
+const RegistrationConstants = fn(17990);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

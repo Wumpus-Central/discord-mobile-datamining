@@ -1,6 +1,6 @@
-// === Module 17694: BalanceWidgetMenu ===
+// === Module 17707: BalanceWidgetMenu ===
 
-// Module 17694 (BalanceWidgetMenu)
+// Module 17707 (BalanceWidgetMenu)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import dismissible_content from "dismissible_content" /* 4847 */;
@@ -57,7 +57,7 @@ class OrbsOnboardingMenuDismissibleContent {
           const obj2 = QuestUtils;
           obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         };
-        obj.trailing = closure_10(closure_1(17695), {});
+        obj.trailing = closure_10(closure_1(17708), {});
         return closure_10(closure_11, obj);
       } else {
         return null;
@@ -69,7 +69,7 @@ class OrbsOnboardingMenuDismissibleContent {
 function BalanceWidgetMenu() {
   str = str(9553).useFetchVirtualCurrencyBalance().balance;
   let obj = str(9553);
-  const orbBalanceEntrypoint = str(16887).useOrbBalanceEntrypoint({ location: "MobileBalanceWidgetMenu" });
+  const orbBalanceEntrypoint = str(16900).useOrbBalanceEntrypoint({ location: "MobileBalanceWidgetMenu" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   let items = [str, openBalanceWidgetActionSheet];
   ({ isOrbchievementsEnabled, notificationType } = orbBalanceEntrypoint);
@@ -112,7 +112,7 @@ function BalanceWidgetMenu() {
   }, items);
   if (isOrbchievementsEnabled) {
     let obj3 = { balance: str, notificationType, onPress: callback };
-    let tmp5Result = jsx(tmp(17696).OrbWalletEntryRow, { balance: str, notificationType, onPress: callback });
+    let tmp5Result = jsx(tmp(17709).OrbWalletEntryRow, { balance: str, notificationType, onPress: callback });
   } else {
     let intl = tmp(1113).intl;
     let str2;
@@ -127,7 +127,7 @@ function BalanceWidgetMenu() {
     obj4.accessibilityLabel = intl.formatToPlainString(tmp(1113).t.zPaLL9, obj5);
     obj4.onPress = callback;
     const obj6 = { balance: str, onPress: callback, accessible: false };
-    obj4.trailing = jsx(openBalanceWidgetActionSheet(14497), { balance: str, onPress: callback, accessible: false });
+    obj4.trailing = jsx(openBalanceWidgetActionSheet(14511), { balance: str, onPress: callback, accessible: false });
     tmp5Result = <OrbsBalanceRow accessibilityLabel={null} onPress={null} trailing={null} />;
   }
   return tmp5Result;

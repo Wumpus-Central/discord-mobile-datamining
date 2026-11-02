@@ -1,6 +1,6 @@
-// === Module 19278: VoicePanelDismissableContent ===
+// === Module 19285: VoicePanelDismissableContent ===
 
-// Module 19278 (VoicePanelDismissableContent)
+// Module 19285 (VoicePanelDismissableContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +9,7 @@ import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19279, dependencyMap.paths);
+  return asyncRequireImpl(19286, dependencyMap.paths);
 }
 const VoicePanelModes = fn(11223).VoicePanelModes;
 const isActivityParticipant = fn(5681).isActivityParticipant;

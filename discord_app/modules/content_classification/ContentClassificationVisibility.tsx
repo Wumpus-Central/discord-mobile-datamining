@@ -1,6 +1,6 @@
-// === Module 13691: ContentClassificationVisibility ===
+// === Module 13706: ContentClassificationVisibility ===
 
-// Module 13691 (ContentClassificationVisibility)
+// Module 13706 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
 import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5661 */;
 import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5663 */;

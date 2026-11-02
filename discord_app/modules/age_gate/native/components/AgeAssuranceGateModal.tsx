@@ -1,16 +1,16 @@
-// === Module 19384: AgeAssuranceGateModal ===
+// === Module 19391: AgeAssuranceGateModal ===
 
-// Module 19384 (AgeAssuranceGateModal)
+// Module 19391 (AgeAssuranceGateModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6739 */;
 import NavigatorHeader from "NavigatorHeader" /* 6998 */;
-import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19386 */;
+import ageGateNavigationCallbacks from "ageGateNavigationCallbacks" /* 19393 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 
 require = fn;
 const AgeGateSource = fn(1097).AgeGateSource;
-let closure_6 = fn(19385).ExistingUserAgeGateScreens;
+let closure_6 = fn(19392).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeAssuranceGateModal.tsx");

@@ -1,8 +1,8 @@
-// === Module 12817: ConjureHomeCarousel ===
+// === Module 12820: ConjureHomeCarousel ===
 
-// Module 12817 (ConjureHomeCarousel)
+// Module 12820 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 12820 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 12823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -17,7 +17,7 @@ const STEP = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(9727).GameControllerIcon, apps: fn(8678).AppsIcon, profile_widget: fn(12818).WidgetsIcon, overlay_widget: fn(9587).ScreenIcon, automod: fn(11281).ShieldIcon, chat_bot: fn(12446).RobotIcon };
+let obj = { games: fn(9727).GameControllerIcon, apps: fn(8678).AppsIcon, profile_widget: fn(12821).WidgetsIcon, overlay_widget: fn(9587).ScreenIcon, automod: fn(11281).ShieldIcon, chat_bot: fn(12105).RobotIcon };
 const createStyles = fn(5014);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };
@@ -113,7 +113,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   noop = undefined;
   let frameCallback;
   onScreen = undefined;
-  const memo = noop.useMemo(() => memo(12972).conjureHomeInspirationEntries(), []);
+  const memo = noop.useMemo(() => memo(12975).conjureHomeInspirationEntries(), []);
   obj = noop;
   const tmp = closure_13();
   const tmp2 = memo;
@@ -144,7 +144,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     }
   }
   const obj6 = memo(5095);
-  C.__closure = { offset: sharedValue, CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND: memo(12820).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND, loop: result };
+  C.__closure = { offset: sharedValue, CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND: memo(12823).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND, loop: result };
   C.__workletHash = 7470635772737;
   C.__initData = __initData2;
   frameCallback = obj6.useFrameCallback(C, false);

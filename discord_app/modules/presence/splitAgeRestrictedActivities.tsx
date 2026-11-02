@@ -1,6 +1,6 @@
-// === Module 15649: splitAgeRestrictedActivities ===
+// === Module 15653: splitAgeRestrictedActivities ===
 
-// Module 15649 (splitAgeRestrictedActivities)
+// Module 15653 (splitAgeRestrictedActivities)
 import ContentClassificationReference from "ContentClassificationReference" /* 5659 */;
 import size from "module_2" /* 2 */;
 

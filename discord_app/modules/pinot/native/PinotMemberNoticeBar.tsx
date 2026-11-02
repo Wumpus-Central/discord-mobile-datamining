@@ -1,6 +1,6 @@
-// === Module 11344: PinotMemberNoticeBar ===
+// === Module 11345: PinotMemberNoticeBar ===
 
-// Module 11344 (PinotMemberNoticeBar)
+// Module 11345 (PinotMemberNoticeBar)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import Text_Text from "Text/Text" /* 5624 */;

@@ -1,6 +1,6 @@
-// === Module 12995: conjureAppSlotsLeftLabel ===
+// === Module 13002: conjureAppSlotsLeftLabel ===
 
-// Module 12995 (conjureAppSlotsLeftLabel)
+// Module 13002 (conjureAppSlotsLeftLabel)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import size from "module_2" /* 2 */;

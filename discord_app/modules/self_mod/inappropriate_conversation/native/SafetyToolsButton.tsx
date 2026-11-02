@@ -1,6 +1,6 @@
-// === Module 14573: SafetyToolsButton ===
+// === Module 14587: SafetyToolsButton ===
 
-// Module 14573 (SafetyToolsButton)
+// Module 14587 (SafetyToolsButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SafetyWarningUtils from "SafetyWarningUtils" /* 11269 */;

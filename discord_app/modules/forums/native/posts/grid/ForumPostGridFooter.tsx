@@ -1,11 +1,11 @@
-// === Module 13765: ForumPostGridFooter ===
+// === Module 13780: ForumPostGridFooter ===
 
-// Module 13765 (ForumPostGridFooter)
+// Module 13780 (ForumPostGridFooter)
 import nativeDefault from "native" /* 575 */;
-import ForumPostReactions from "ForumPostReactions" /* 11349 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 13715 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13766 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13767 */;
+import ForumPostReactions from "ForumPostReactions" /* 11350 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13730 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13781 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13782 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

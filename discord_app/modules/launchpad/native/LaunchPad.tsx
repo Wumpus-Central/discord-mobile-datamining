@@ -1,6 +1,6 @@
-// === Module 19065: LaunchPad ===
+// === Module 19072: LaunchPad ===
 
-// Module 19065 (LaunchPad)
+// Module 19072 (LaunchPad)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
@@ -10,9 +10,9 @@ import Text_Text from "Text/Text" /* 5624 */;
 import Pressables from "Pressables" /* 6980 */;
 import AutocompleterDefault from "Autocompleter" /* 9136 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9147 */;
-import RouteManagerDefault from "RouteManager" /* 12065 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14379 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16423 */;
+import RouteManagerDefault from "RouteManager" /* 12066 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14394 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5259 */;
@@ -24,7 +24,7 @@ import ChannelStore from "ChannelStore" /* 4863 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7864 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
 import GuildStore from "GuildStore" /* 4885 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15640 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15644 */;
 import ReadStateStore from "ReadStateStore" /* 6842 */;
 import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;

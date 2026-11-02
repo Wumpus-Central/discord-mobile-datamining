@@ -1,6 +1,6 @@
-// === Module 12573: useConjureIncompleteAppNotice ===
+// === Module 12576: useConjureIncompleteAppNotice ===
 
-// Module 12573 (useConjureIncompleteAppNotice)
+// Module 12576 (useConjureIncompleteAppNotice)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4885 */;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 
 export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(12438)(arg0);
+  const tmp3 = guildId(12097)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -56,12 +56,12 @@ export default function useConjureIncompleteAppNotice(arg0) {
       } else {
         Lm7IRC = tmp(3868).Lm7IRC;
       }
-      let str2 = stateFromStores;
+      let str = stateFromStores;
       if (stateFromStores == null) {
-        str2 = "";
+        str = "";
       }
       const obj2 = { message: null, onDismiss: null };
-      const obj3 = { server: str2 };
+      const obj3 = { server: str };
       obj2.message = intl.format(Lm7IRC, obj3);
       obj2.onDismiss = function onDismiss() {
         return closure_2(closure_0);

@@ -1,6 +1,6 @@
-// === Module 17305: useIsFavoritesGuildVisible ===
+// === Module 17318: useIsFavoritesGuildVisible ===
 
-// Module 17305 (useIsFavoritesGuildVisible)
+// Module 17318 (useIsFavoritesGuildVisible)
 import FavoritesUtils from "FavoritesUtils" /* 4888 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 import FavoriteStore from "FavoriteStore" /* 4866 */;

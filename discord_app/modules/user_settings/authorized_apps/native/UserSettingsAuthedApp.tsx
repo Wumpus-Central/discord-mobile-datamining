@@ -1,6 +1,6 @@
-// === Module 16841: UserSettingsAuthedApp ===
+// === Module 16854: UserSettingsAuthedApp ===
 
-// Module 16841 (UserSettingsAuthedApp)
+// Module 16854 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1498 */;
@@ -14,8 +14,8 @@ import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7332 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8940 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10932 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14157 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10931 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14172 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7276 */;

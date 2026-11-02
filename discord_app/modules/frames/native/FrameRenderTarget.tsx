@@ -1,7 +1,7 @@
-// === Module 12106: FrameRenderTarget ===
+// === Module 12250: FrameRenderTarget ===
 
-// Module 12106 (FrameRenderTarget)
-import FramePoolManagerDefault from "FramePoolManager" /* 12108 */;
+// Module 12250 (FrameRenderTarget)
+import FramePoolManagerDefault from "FramePoolManager" /* 12252 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

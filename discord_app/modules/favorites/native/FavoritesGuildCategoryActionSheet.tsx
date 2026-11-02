@@ -1,9 +1,9 @@
-// === Module 18155: FavoritesGuildCategoryActionSheet ===
+// === Module 18168: FavoritesGuildCategoryActionSheet ===
 
-// Module 18155 (FavoritesGuildCategoryActionSheet)
+// Module 18168 (FavoritesGuildCategoryActionSheet)
 import ToastUtils from "ToastUtils" /* 5711 */;
 import ClipboardUtils from "ClipboardUtils" /* 7358 */;
-import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 18156 */;
+import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 18169 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4866 */;
 
@@ -11,7 +11,7 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(14386)(category);
+  const tmp3 = onClose(14401)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(4839).DeveloperMode;
   const setting = DeveloperMode.useSetting();

@@ -1,6 +1,6 @@
-// === Module 16002: EmptyState ===
+// === Module 16006: EmptyState ===
 
-// Module 16002 (EmptyState)
+// Module 16006 (EmptyState)
 import nativeDefault from "native" /* 575 */;
 import shared from "shared" /* 5021 */;
 import Text_Text from "Text/Text" /* 5624 */;

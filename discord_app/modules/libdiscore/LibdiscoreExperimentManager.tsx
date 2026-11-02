@@ -1,6 +1,6 @@
-// === Module 20067: LibdiscoreExperimentManager ===
+// === Module 20074: LibdiscoreExperimentManager ===
 
-// Module 20067 (LibdiscoreExperimentManager)
+// Module 20074 (LibdiscoreExperimentManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import js_shim_shim from "js_shim/shim" /* 1361 */;
 import ApexExperiment from "ApexExperiment" /* 1447 */;

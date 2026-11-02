@@ -1,6 +1,6 @@
-// === Module 13667: CheckpointFriendsStatsScreen ===
+// === Module 13682: CheckpointFriendsStatsScreen ===
 
-// Module 13667 (CheckpointFriendsStatsScreen)
+// Module 13682 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3060 from "module_3060" /* 3060 */;
@@ -8,16 +8,16 @@ import FriendsIcon from "FriendsIcon" /* 5715 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
 import ChatIcon from "ChatIcon" /* 8643 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10558 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11971 */;
-import CheckpointTextDefault from "CheckpointText" /* 13624 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13627 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13643 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11972 */;
+import CheckpointTextDefault from "CheckpointText" /* 13639 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13642 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13658 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import UserStore from "UserStore" /* 1383 */;
-import CheckpointStore from "CheckpointStore" /* 13421 */;
+import CheckpointStore from "CheckpointStore" /* 13436 */;
 
 const require = globalThis.__r;
 
@@ -199,7 +199,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1113).intl;
     obj5.accessibilityLabel = intl2.string(user(1113).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(13350).GiftIcon, obj6);
+    obj5.children = closure_13(user(13365).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {

@@ -1,6 +1,6 @@
-// === Module 12624: conjureBotPermissionsTip ===
+// === Module 12627: conjureBotPermissionsTip ===
 
-// Module 12624 (conjureBotPermissionsTip)
+// Module 12627 (conjureBotPermissionsTip)
 import size from "module_2" /* 2 */;
 
 function resolveBotPermissionsTip(publish) {

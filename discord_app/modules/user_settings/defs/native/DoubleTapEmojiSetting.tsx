@@ -1,6 +1,6 @@
-// === Module 17919: DoubleTapEmojiSetting ===
+// === Module 17932: DoubleTapEmojiSetting ===
 
-// Module 17919 (DoubleTapEmojiSetting)
+// Module 17932 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
@@ -35,7 +35,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {

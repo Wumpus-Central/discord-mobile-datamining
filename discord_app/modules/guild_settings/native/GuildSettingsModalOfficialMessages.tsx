@@ -1,6 +1,6 @@
-// === Module 19999: GuildSettingsModalOfficialMessages ===
+// === Module 20006: GuildSettingsModalOfficialMessages ===
 
-// Module 19999 (GuildSettingsModalOfficialMessages)
+// Module 20006 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258
 import Text_Text from "Text/Text" /* 5624 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7441 */;
 import HeaderActionButton from "HeaderActionButton" /* 7558 */;
-import _modDef17262 from "module_17262" /* 17262 */;
+import _modDef17275 from "module_17275" /* 17275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(closure_1_10).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef17262 }), ];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef17275 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -183,7 +183,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(18354, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(18367, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

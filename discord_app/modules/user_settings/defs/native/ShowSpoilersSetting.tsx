@@ -1,13 +1,13 @@
-// === Module 17451: ShowSpoilersSetting ===
+// === Module 17464: ShowSpoilersSetting ===
 
-// Module 17451 (ShowSpoilersSetting)
+// Module 17464 (ShowSpoilersSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const SpoilerRenderSetting = fn(1072).SpoilerRenderSetting;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;

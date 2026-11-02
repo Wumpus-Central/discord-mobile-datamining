@@ -1,11 +1,11 @@
-// === Module 17402: LanguageSetting ===
+// === Module 17415: LanguageSetting ===
 
-// Module 17402 (LanguageSetting)
+// Module 17415 (LanguageSetting)
 import util from "util" /* 1113 */;
 import LocaleStore from "LocaleStore" /* 2062 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

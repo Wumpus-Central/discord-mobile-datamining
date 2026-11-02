@@ -1,7 +1,7 @@
-// === Module 19829: EnableCommunitySharedNavigation ===
+// === Module 19836: EnableCommunitySharedNavigation ===
 
-// Module 19829 (EnableCommunitySharedNavigation)
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19827 */;
+// Module 19836 (EnableCommunitySharedNavigation)
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19834 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
 

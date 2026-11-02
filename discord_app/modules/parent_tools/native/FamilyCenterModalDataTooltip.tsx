@@ -1,13 +1,13 @@
-// === Module 16782: FamilyCenterModalDataTooltip ===
+// === Module 16795: FamilyCenterModalDataTooltip ===
 
-// Module 16782 (FamilyCenterModalDataTooltip)
+// Module 16795 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2538 from "module_2538" /* 2538 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8370 */;
-import Modal from "Modal" /* 11481 */;
+import Modal from "Modal" /* 11482 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -62,7 +62,7 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8643).ChatIcon, [USER_CALLED]: fn(13348).PhoneIcon, [USER_ADD]: fn(5715).FriendsIcon, [GUILD_ADD]: fn(15473).ServerGridIcon, [GUILD_INTERACTION]: fn(8645).ThreadIcon, [PURCHASES]: fn(8015).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5740).ClockIcon, [GIFTS]: fn(13350).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(8643).ChatIcon, [USER_CALLED]: fn(13363).PhoneIcon, [USER_ADD]: fn(5715).FriendsIcon, [GUILD_ADD]: fn(15477).ServerGridIcon, [GUILD_INTERACTION]: fn(8645).ThreadIcon, [PURCHASES]: fn(8015).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5740).ClockIcon, [GIFTS]: fn(13365).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7716).TeenActionDisplayType);
 let createStyles = fn(5014);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };

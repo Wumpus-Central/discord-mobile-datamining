@@ -1,6 +1,6 @@
-// === Module 11393: userSettingToActivity ===
+// === Module 11394: userSettingToActivity ===
 
-// Module 11393 (userSettingToActivity)
+// Module 11394 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
 import ActivityTypes from "ActivityTypes" /* 5762 */;

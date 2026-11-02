@@ -1,6 +1,6 @@
-// === Module 19274: voiceChannelAppLayerLayout ===
+// === Module 19281: voiceChannelAppLayerLayout ===
 
-// Module 19274 (voiceChannelAppLayerLayout)
+// Module 19281 (voiceChannelAppLayerLayout)
 import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11221 */;
 import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11226 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11229 */;

@@ -1,13 +1,13 @@
-// === Module 17874: EncryptionSetting ===
+// === Module 17887: EncryptionSetting ===
 
-// Module 17874 (EncryptionSetting)
+// Module 17887 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 17875 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 17888 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5782 */;
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

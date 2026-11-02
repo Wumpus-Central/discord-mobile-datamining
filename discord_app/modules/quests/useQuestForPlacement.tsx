@@ -1,6 +1,6 @@
-// === Module 17082: useQuestForPlacement ===
+// === Module 17095: useQuestForPlacement ===
 
-// Module 17082 (useQuestForPlacement)
+// Module 17095 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1089 */;
 import AdCreativeType from "AdCreativeType" /* 6788 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;

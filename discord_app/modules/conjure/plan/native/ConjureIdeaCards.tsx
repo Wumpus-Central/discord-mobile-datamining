@@ -1,6 +1,6 @@
-// === Module 12773: ConjureIdeaCards ===
+// === Module 12776: ConjureIdeaCards ===
 
-// Module 12773 (ConjureIdeaCards)
+// Module 12776 (ConjureIdeaCards)
 import util from "util" /* 1113 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5014);
-let obj2 = { ideaCards: { gap: fn(12631).BLOCK_GAP } };
+let obj2 = { ideaCards: { gap: fn(12634).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");

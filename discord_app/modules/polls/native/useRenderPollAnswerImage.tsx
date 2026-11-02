@@ -1,6 +1,6 @@
-// === Module 12425: useRenderPollAnswerImage ===
+// === Module 12565: useRenderPollAnswerImage ===
 
-// Module 12425 (useRenderPollAnswerImage)
+// Module 12565 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
 import EmojiTypes from "EmojiTypes" /* 4963 */;
 import FastImageDefault from "FastImage" /* 5717 */;

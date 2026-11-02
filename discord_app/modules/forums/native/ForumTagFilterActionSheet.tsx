@@ -1,6 +1,6 @@
-// === Module 14362: ForumTagFilterActionSheet ===
+// === Module 14377: ForumTagFilterActionSheet ===
 
-// Module 14362 (ForumTagFilterActionSheet)
+// Module 14377 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
 import EmojiDefault from "Emoji" /* 7300 */;
@@ -36,7 +36,7 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-const ForumChannelStore = fn(13748);
+const ForumChannelStore = fn(13763);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);

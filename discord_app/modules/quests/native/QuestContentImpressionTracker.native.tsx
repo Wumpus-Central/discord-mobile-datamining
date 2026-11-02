@@ -1,6 +1,6 @@
-// === Module 14685: QuestContentImpressionTracker ===
+// === Module 14699: QuestContentImpressionTracker ===
 
-// Module 14685 (QuestContentImpressionTracker)
+// Module 14699 (QuestContentImpressionTracker)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1993 */;
@@ -150,7 +150,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     obj7.adCreativeType = skipRemountKey.adCreativeType;
     tmp19 = obj7;
   }
-  return createElement(adContentIds2(14686).QuestContentImpressionTracker, tmp19);
+  return createElement(adContentIds2(14700).QuestContentImpressionTracker, tmp19);
 }
 let closure_6 = fn(9686).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1072).AppStates;

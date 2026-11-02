@@ -1,10 +1,10 @@
-// === Module 15852: TableSliderRow ===
+// === Module 15856: TableSliderRow ===
 
-// Module 15852 (TableSliderRow)
+// Module 15856 (TableSliderRow)
 import Text_Text from "Text/Text" /* 5624 */;
 import TableRowGroupContext from "TableRowGroupContext" /* 6976 */;
 import Card from "Card" /* 6977 */;
-import Slider from "Slider" /* 15853 */;
+import Slider from "Slider" /* 15857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

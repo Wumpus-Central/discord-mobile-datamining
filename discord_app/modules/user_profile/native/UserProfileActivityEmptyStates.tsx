@@ -1,6 +1,6 @@
-// === Module 14973: UserProfileActivityEmptyStates ===
+// === Module 14977: UserProfileActivityEmptyStates ===
 
-// Module 14973 (UserProfileActivityEmptyStates)
+// Module 14977 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

@@ -1,13 +1,13 @@
-// === Module 11457: BadgeDirectoryView ===
+// === Module 11458: BadgeDirectoryView ===
 
-// Module 11457 (BadgeDirectoryView)
+// Module 11458 (BadgeDirectoryView)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5624 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8768 */;
-import BadgeUtils from "BadgeUtils" /* 11459 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11462 */;
+import BadgeUtils from "BadgeUtils" /* 11460 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11463 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11458 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11459 */;
 import UserStore from "UserStore" /* 1383 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
 
@@ -95,12 +95,12 @@ export default function BadgeDirectoryView(arg0) {
   targetUserId = undefined;
   let stateFromStoresArray;
   let stringResult1 = dependencyMap;
-  let isBadgeManagementEnabled = targetUsername(11452).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
+  let isBadgeManagementEnabled = targetUsername(11453).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
   const tmp4 = closure_12();
   const diff = stateFromStores(1491)().width - 2 * stateFromStores(575).space.PX_16;
   let result = 3 * stateFromStores(575).space.PX_12;
   let items = [tmp4.footer, ];
-  let obj = targetUsername(11452);
+  let obj = targetUsername(11453);
   items[1] = { paddingBottom: stateFromStores(1625)().bottom + stateFromStores(575).space.PX_16 };
   let obj2 = { paddingBottom: stateFromStores(1625)().bottom + stateFromStores(575).space.PX_16 };
   const items1 = [UserStore];
@@ -171,7 +171,7 @@ export default function BadgeDirectoryView(arg0) {
   const obj4 = { badges: stateFromStoresArray, enabled: null };
   let tmp30Result = !tmp8;
   obj4.enabled = tmp30Result;
-  const badgeIndicatorIds = targetUsername(11460).useBadgeDirectoryBadgeIndicators(obj4).badgeIndicatorIds;
+  const badgeIndicatorIds = targetUsername(11461).useBadgeDirectoryBadgeIndicators(obj4).badgeIndicatorIds;
   if (null != targetUserId && targetUserId !== stateFromStores) {
     if (null != targetUsername) {
       const intl2 = targetUsername(1113).intl;
@@ -280,5 +280,5 @@ export default function BadgeDirectoryView(arg0) {
   }
   const intl = targetUsername(1113).intl;
   formatToPlainStringResult = intl.string(targetUsername(1113).t.UqnlQF);
-  const tmpResult6 = targetUsername(11460);
+  const tmpResult6 = targetUsername(11461);
 };

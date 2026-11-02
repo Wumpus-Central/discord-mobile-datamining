@@ -1,6 +1,6 @@
-// === Module 14890: VoicePanelStreamPreview ===
+// === Module 14894: VoicePanelStreamPreview ===
 
-// Module 14890 (VoicePanelStreamPreview)
+// Module 14894 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
 import timing from "timing" /* 5254 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
@@ -49,8 +49,8 @@ export function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(12041)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(12041);
+  const previewUrl = stream(12042)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(12042);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(items, () => {

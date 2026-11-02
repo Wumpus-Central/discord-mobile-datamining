@@ -1,6 +1,6 @@
-// === Module 13379: SearchableDestinationListHeader ===
+// === Module 13394: SearchableDestinationListHeader ===
 
-// Module 13379 (SearchableDestinationListHeader)
+// Module 13394 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import Link from "Link" /* 1498 */;

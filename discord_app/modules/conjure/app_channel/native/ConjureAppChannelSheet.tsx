@@ -1,6 +1,6 @@
-// === Module 14571: ConjureAppChannelSheet ===
+// === Module 14585: ConjureAppChannelSheet ===
 
-// Module 14571 (ConjureAppChannelSheet)
+// Module 14585 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
@@ -11,9 +11,9 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10848 */;
 import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10976 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14569 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14583 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14568 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14582 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import PermissionStore from "PermissionStore" /* 4946 */;
 
@@ -218,7 +218,7 @@ function ConjureAppChannelSheetContent(channel) {
         const obj12 = { IconComponent: tmp2(tmp3[29]).RemixIcon };
         obj11.icon = closure_10(tmp2(tmp3[25]).TableRowIcon, obj12);
         const intl3 = tmp2(tmp3[27]).intl;
-        obj11.label = intl3.string(tmp5(tmp3[30]).KMwCb7);
+        obj11.label = intl3.string(tmp5(tmp3[30])["276ll6"]);
         tmp24Result9 = closure_10(tmp2(tmp3[24]).TableRow, obj11);
       }
     }

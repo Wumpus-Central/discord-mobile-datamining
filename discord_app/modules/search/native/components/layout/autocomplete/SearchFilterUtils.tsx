@@ -1,19 +1,19 @@
-// === Module 18683: SearchFilterUtils ===
+// === Module 18690: SearchFilterUtils ===
 
-// Module 18683 (SearchFilterUtils)
+// Module 18690 (SearchFilterUtils)
 import util from "util" /* 1113 */;
 import AtIcon from "AtIcon" /* 8662 */;
 import CalendarIcon from "CalendarIcon" /* 9115 */;
 import TrackingConstants from "TrackingConstants" /* 9826 */;
 import AttachmentIcon from "AttachmentIcon" /* 10535 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12420 */;
-import RobotIcon from "RobotIcon" /* 12446 */;
-import UserIcon from "UserIcon" /* 12466 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13871 */;
-import SearchTokens from "SearchTokens" /* 13879 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13896 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15661 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 18684 */;
+import RobotIcon from "RobotIcon" /* 12105 */;
+import UserIcon from "UserIcon" /* 12125 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12560 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13886 */;
+import SearchTokens from "SearchTokens" /* 13894 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13911 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15665 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 18691 */;
 import SearchConstants from "SearchConstants" /* 9827 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -213,7 +213,7 @@ export function getSearchTokenPressHandler(arg0, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(13879));
+  const keys = Object.keys(items(13894));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

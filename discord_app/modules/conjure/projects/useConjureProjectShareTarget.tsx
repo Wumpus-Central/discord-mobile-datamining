@@ -1,45 +1,68 @@
-// === Module 14709: useConjureProjectShareTarget ===
+// === Module 13008: useConjureProjectShareTarget ===
 
-// Module 14709 (useConjureProjectShareTarget)
+// Module 13008 (useConjureProjectShareTarget)
 import _modDef3868 from "module_3868" /* 3868 */;
 import GuildStore from "GuildStore" /* 4885 */;
 
 const require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectShareTarget.tsx");
-
-export default function useConjureProjectShareTarget(guild_id) {
-  guild_id = undefined;
-  if (guild_id != null) {
-    guild_id = guild_id.guild_id;
+function useConjureProjectShareTargetDetails(project) {
+  let guild_id;
+  if (project != null) {
+    guild_id = project.guild_id;
   }
+  let intl = guild_id;
+  let stringResult = dependencyMap;
   const items = [GuildStore];
   const items1 = [guild_id];
-  let stateFromStores = guild_id(504).useStateFromStores(items, () => {
+  const stateFromStores = guild_id(504).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != guild_id) {
-      const guild = GuildStore.getGuild(tmp);
-      let name;
-      if (guild != null) {
-        name = guild.name;
+      let guild = GuildStore.getGuild(tmp);
+      if (guild == null) {
+        guild = null;
       }
-      if (name == null) {
-        name = null;
-      }
-      tmp2 = name;
+      tmp2 = guild;
     }
     return tmp2;
   }, items1);
-  let tmp5 = null;
-  if (null != guild_id) {
-    tmp5 = null;
-    if (null == guild_id.install_scope_setup) {
-      if ("user" === guild_id.install_scope) {
-        const intl = guild_id(1113).intl;
-        stateFromStores = intl.string(_modDef3868.KxFFKT);
+  let tmp4 = null;
+  if (null != project) {
+    tmp4 = null;
+    if (null == project.install_scope_setup) {
+      if ("user" === project.install_scope) {
+        const obj2 = { kind: "user", label: null };
+        intl = intl(1113).intl;
+        stringResult = intl.string(_modDef3868.KxFFKT);
+        obj2.label = stringResult;
+      } else if (null != stateFromStores) {
+        const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
       }
-      tmp5 = stateFromStores;
     }
   }
-  return tmp5;
+  return tmp4;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectShareTarget.tsx");
+
+export default function useConjureProjectShareTarget(project) {
+  const tmp = useConjureProjectShareTargetDetails(project);
+  let label;
+  if (tmp != null) {
+    label = tmp.label;
+  }
+  if (label == null) {
+    label = null;
+  }
+  return label;
 };
+export { useConjureProjectShareTargetDetails };
+export function isConjureProjectWithoutServer(project) {
+  let tmp = null == project.guild_id;
+  if (tmp) {
+    tmp = "user" !== project.install_scope;
+  }
+  if (tmp) {
+    tmp = null == project.install_scope_setup;
+  }
+  return tmp;
+}

@@ -1,13 +1,13 @@
-// === Module 19205: VoicePanelDockControls ===
+// === Module 19212: VoicePanelDockControls ===
 
-// Module 19205 (VoicePanelDockControls)
+// Module 19212 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5260 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
 import _modDef9836 from "module_9836" /* 9836 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11969 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19204 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11970 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19211 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import VoicePanelStore from "VoicePanelStore" /* 6875 */;

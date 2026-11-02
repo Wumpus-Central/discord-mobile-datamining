@@ -1,6 +1,6 @@
-// === Module 17339: CustomTypingIndicatorEditScreen ===
+// === Module 17352: CustomTypingIndicatorEditScreen ===
 
-// Module 17339 (CustomTypingIndicatorEditScreen)
+// Module 17352 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import user from "user" /* 1391 */;
@@ -10,7 +10,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13718 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13733 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -95,10 +95,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, []);
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17340, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17353, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
   }, items4);
   const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17341, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17354, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   ref = noop.useRef(null);
   const items6 = [analyticsLocations];

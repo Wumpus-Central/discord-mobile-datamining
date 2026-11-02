@@ -1,12 +1,12 @@
-// === Module 13740: ChatInputCommandOptionParser ===
+// === Module 13755: ChatInputCommandOptionParser ===
 
-// Module 13740 (ChatInputCommandOptionParser)
+// Module 13755 (ChatInputCommandOptionParser)
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2025 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
 import useChannelName from "useChannelName" /* 5652 */;
 import _modDef8144 from "module_8144" /* 8144 */;
-import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12296 */;
-import ChatInputParser from "ChatInputParser" /* 12794 */;
+import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12436 */;
+import ChatInputParser from "ChatInputParser" /* 12797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import EmojiStore from "EmojiStore" /* 6796 */;

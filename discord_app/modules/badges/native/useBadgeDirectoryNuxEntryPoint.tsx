@@ -1,6 +1,6 @@
-// === Module 14920: useBadgeDirectoryNuxEntryPoint ===
+// === Module 14924: useBadgeDirectoryNuxEntryPoint ===
 
-// Module 14920 (useBadgeDirectoryNuxEntryPoint)
+// Module 14924 (useBadgeDirectoryNuxEntryPoint)
 import noop from "module_19" /* 19 */;
 
 const ContentDismissActionType = fn(4860).ContentDismissActionType;

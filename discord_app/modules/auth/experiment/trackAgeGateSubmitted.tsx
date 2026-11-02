@@ -1,10 +1,10 @@
-// === Module 17989: trackAgeGateSubmitted ===
+// === Module 18002: trackAgeGateSubmitted ===
 
-// Module 17989 (trackAgeGateSubmitted)
+// Module 18002 (trackAgeGateSubmitted)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef2042 from "module_2042" /* 2042 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 17990 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 18003 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,14 +1,14 @@
-// === Module 13674: FinalizeTraitTabs ===
+// === Module 13689: FinalizeTraitTabs ===
 
-// Module 13674 (FinalizeTraitTabs)
+// Module 13689 (FinalizeTraitTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import Text_Text from "Text/Text" /* 5624 */;
-import CheckpointPressable from "CheckpointPressable" /* 13662 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13676 */;
+import CheckpointPressable from "CheckpointPressable" /* 13677 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13691 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -204,7 +204,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         showNitroLockedToastDefault(closure_4);
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13675, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13690, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
       }
     }
   };

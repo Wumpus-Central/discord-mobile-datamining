@@ -1,12 +1,12 @@
-// === Module 19748: GuildSettingsServerTagUpsellCard ===
+// === Module 19755: GuildSettingsServerTagUpsellCard ===
 
-// Module 19748 (GuildSettingsServerTagUpsellCard)
+// Module 19755 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import Powerups from "Powerups" /* 5233 */;
 import LinearGradientDefault from "LinearGradient" /* 5587 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14049 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 14079 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14082 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14064 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 14094 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14097 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5229 */;
 
@@ -79,7 +79,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj13 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1113).intl;
   obj13.text = intl3.string(guildId(1113).t.kMRDWs);
-  obj13.icon = closure_7(guildId(18267).BoostTier2Icon, { color: "white" });
+  obj13.icon = closure_7(guildId(18280).BoostTier2Icon, { color: "white" });
   obj13.onPress = guildId.onUnlockPress;
   items5[2] = closure_7(guildId(5634).Button, obj13);
   obj7.children = items5;

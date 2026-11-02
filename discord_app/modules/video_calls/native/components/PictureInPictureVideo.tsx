@@ -1,14 +1,14 @@
-// === Module 11751: PictureInPictureVideo ===
+// === Module 11752: PictureInPictureVideo ===
 
-// Module 11751 (PictureInPictureVideo)
+// Module 11752 (PictureInPictureVideo)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1375 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11697 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11707 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11710 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11711 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11698 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11708 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11711 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
@@ -17,7 +17,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import SpeakingStore from "SpeakingStore" /* 6756 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11704 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11705 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {

@@ -1,6 +1,6 @@
-// === Module 18948: useSearchLayoutInsetTop ===
+// === Module 18955: useSearchLayoutInsetTop ===
 
-// Module 18948 (useSearchLayoutInsetTop)
+// Module 18955 (useSearchLayoutInsetTop)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
 import size from "module_2" /* 2 */;
 

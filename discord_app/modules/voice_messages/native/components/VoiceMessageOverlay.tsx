@@ -1,6 +1,6 @@
-// === Module 14207: VoiceMessageOverlay ===
+// === Module 14222: VoiceMessageOverlay ===
 
-// Module 14207 (VoiceMessageOverlay)
+// Module 14222 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
@@ -233,10 +233,10 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13710).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13711).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13725).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13726).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12806).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12809).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;

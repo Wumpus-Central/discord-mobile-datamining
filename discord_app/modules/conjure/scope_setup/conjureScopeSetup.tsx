@@ -1,18 +1,18 @@
-// === Module 12580: conjureScopeSetup ===
+// === Module 12583: conjureScopeSetup ===
 
-// Module 12580 (conjureScopeSetup)
+// Module 12583 (conjureScopeSetup)
 import Storage6 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef3868 from "module_3868" /* 3868 */;
 import createNonce from "createNonce" /* 10315 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12582 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12583 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12585 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12586 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjureChatStore from "ConjureChatStore" /* 10851 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12581 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12584 */;
 import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10850 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 

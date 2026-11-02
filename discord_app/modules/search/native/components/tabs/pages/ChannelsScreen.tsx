@@ -1,13 +1,13 @@
-// === Module 18770: ChannelsScreen ===
+// === Module 18777: ChannelsScreen ===
 
-// Module 18770 (ChannelsScreen)
+// Module 18777 (ChannelsScreen)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13892 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13907 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13898 */;
-import SearchQueryStore from "SearchQueryStore" /* 13885 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13913 */;
+import SearchQueryStore from "SearchQueryStore" /* 13900 */;
 
 const require = globalThis.__r;
 

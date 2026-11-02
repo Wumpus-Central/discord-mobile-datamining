@@ -1,6 +1,6 @@
-// === Module 19203: VoicePanelDockIdentity ===
+// === Module 19210: VoicePanelDockIdentity ===
 
-// Module 19203 (VoicePanelDockIdentity)
+// Module 19210 (VoicePanelDockIdentity)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import useChannelName from "useChannelName" /* 5652 */;
 import GuildIcon from "GuildIcon" /* 6957 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7275 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11222 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19204 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19211 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4863 */;
 import GuildStore from "GuildStore" /* 4885 */;

@@ -1,6 +1,6 @@
-// === Module 15675: AddFriendById ===
+// === Module 15679: AddFriendById ===
 
-// Module 15675 (AddFriendById)
+// Module 15679 (AddFriendById)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;

@@ -1,6 +1,6 @@
-// === Module 13806: DMMessageStickerGreeting ===
+// === Module 13821: DMMessageStickerGreeting ===
 
-// Module 13806 (DMMessageStickerGreeting)
+// Module 13821 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;

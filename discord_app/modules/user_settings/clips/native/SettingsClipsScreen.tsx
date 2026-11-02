@@ -1,8 +1,8 @@
-// === Module 16863: SettingsClipsScreen ===
+// === Module 16876: SettingsClipsScreen ===
 
-// Module 16863 (SettingsClipsScreen)
-import SettingBuilders from "SettingBuilders" /* 11539 */;
-import SettingLayoutDefault from "SettingLayout" /* 16575 */;
+// Module 16876 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingLayoutDefault from "SettingLayout" /* 16588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
