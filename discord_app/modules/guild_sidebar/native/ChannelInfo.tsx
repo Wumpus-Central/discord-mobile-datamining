@@ -3,8 +3,8 @@ import StageMediaHooks from "../../stage_channels/StageMediaHooks.tsx";
 import useEmbeddedAppsForChannelDefault from "../../activities/useEmbeddedAppsForChannel.tsx";
 import Badges from "../../icymi/native/content_inventory/Badges.tsx";
 import GuildRoleSubscriptionGatedChannelIconDefault from "../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
-import ChannelBadgeDefault from "ChannelBadge.tsx";
 import showChannelBadgeDefault from "../showChannelBadge.tsx";
+import ChannelBadgeDefault from "ChannelBadge.tsx";
 import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities.tsx";
 import useVoiceChannelStartTime from "../../channel/useVoiceChannelStartTime.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ require = fn;
 function LimitAndDurationInfo(channel) {
   channel = channel.channel;
   ({ voiceStatesCount, selected } = channel);
-  const items = [VoiceStateStore, PermissionStore];
+  items = [VoiceStateStore, PermissionStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let isGuildStageVoiceResult = channel.isGuildStageVoice();
     if (isGuildStageVoiceResult) {
@@ -48,7 +48,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj3.video = hasVideo;
     obj3.channel = channel;
-    let tmp6Result = jsx(tmp(18177).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(tmp(18321).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj4 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -71,7 +71,7 @@ function DurationInfo(channel) {
 const Constants = fn(1072);
 ({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({
   activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 },
 });
@@ -89,7 +89,7 @@ export default function ChannelInfo(channel) {
     isSubscriptionGated,
     needSubscriptionToAccess,
   } = channel);
-  const items = [GuildStore, ReadStateStore, NewChannelsStore];
+  items = [GuildStore, ReadStateStore, NewChannelsStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({
     guild: GuildStore.getGuild(channel.guild_id),
     mentionsCount: ReadStateStore.getMentionCount(channel.id),
@@ -99,7 +99,7 @@ export default function ChannelInfo(channel) {
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
   const obj = channel(504);
-  const postsWithUnreadsCount = channel(9838).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+  const postsWithUnreadsCount = channel(9969).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     const obj3 = {
       mentionCount: mentionsCount,
@@ -134,7 +134,7 @@ export default function ChannelInfo(channel) {
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1187).LiveTag, {});
           }
-          tmpResult = tmp(6047);
+          tmpResult = tmp(6167);
         }
       }
     }
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
           const obj4 = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
-        tmpResult2 = tmp(18293);
+        tmpResult2 = tmp(18438);
       }
     }
     if (null != isSubscriptionGated) {

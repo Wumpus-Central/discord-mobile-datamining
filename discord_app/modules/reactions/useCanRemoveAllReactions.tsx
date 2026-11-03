@@ -12,7 +12,7 @@ export default function useCanRemoveAllReactions(channel) {
   _require = channel;
   isActiveChannelOrUnarchivableThread = require("ThreadHooks").useIsActiveChannelOrUnarchivableThread(channel);
   const obj = require("ThreadHooks");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel, isActiveChannelOrUnarchivableThread];
   const obj2 = require("initialize");
   return (

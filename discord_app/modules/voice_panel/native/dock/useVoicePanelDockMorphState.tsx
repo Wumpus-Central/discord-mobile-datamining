@@ -1,559 +1,571 @@
 // discord_app/modules/voice_panel/native/dock/useVoicePanelDockMorphState.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import VoicePanelSheetMorph from "VoicePanelSheetMorph.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-const VoicePanelModes = fn(11223).VoicePanelModes;
-const VoicePanelDockConstants = fn(11241);
+const VoicePanelModes = fn(11360).VoicePanelModes;
+const VoicePanelDockConstants = fn(11378);
 ({ DOCK_PRESS_PHYSICS: closure_4, getVoicePanelDockHeight: hasOwnProperty } = VoicePanelDockConstants);
 let closure_6 = {
-  code: "function useVoicePanelDockMorphStateTsx1(){const{isDockEnabled,getVoicePanelDockHeight,safeArea}=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;}",
+  code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})",
 };
-let closure_7 = { code: "function useVoicePanelDockMorphStateTsx2(){const{mode}=this.__closure;return mode.get();}" };
+let closure_7 = { code: "(function useVoicePanelDockMorphStateTsx2(){let[mode]=this.__closure;return mode.get();})" };
 let closure_8 = {
-  code: "function useVoicePanelDockMorphStateTsx3(current,previous){const{committedMode}=this.__closure;if(current!==previous&&committedMode.get()!=null){committedMode.set(null);}}",
+  code: "(function useVoicePanelDockMorphStateTsx3(current,previous){let[committedMode]=this.__closure;if(current!==previous&&committedMode.get()!=null){committedMode.set(null);}})",
 };
-let closure_9 = { code: "function useVoicePanelDockMorphStateTsx4(){const{mode}=this.__closure;return mode.get();}" };
+let closure_9 = { code: "(function useVoicePanelDockMorphStateTsx4(){let[mode]=this.__closure;return mode.get();})" };
 let closure_10 = {
-  code: "function useVoicePanelDockMorphStateTsx5(current,previous){const{VoicePanelModes,dismissedFromDock}=this.__closure;if(current===VoicePanelModes.DISMISSED&&previous!=null){dismissedFromDock.set(previous===VoicePanelModes.PIP);}}",
+  code: "(function useVoicePanelDockMorphStateTsx5(current,previous){let[VoicePanelModes,dismissedFromDock]=this.__closure;if(current===VoicePanelModes.DISMISSED&&previous!=null){dismissedFromDock.set(previous===VoicePanelModes.PIP);}})",
 };
 let closure_11 = {
-  code: "function useVoicePanelDockMorphStateTsx6(){const{connected,mode}=this.__closure;return{isConnected:connected.get(),currentMode:mode.get()};}",
+  code: "(function useVoicePanelDockMorphStateTsx6(){let[connected,mode]=this.__closure;return{isConnected:connected.get(),currentMode:mode.get()};})",
 };
 let closure_12 = {
-  code: "function useVoicePanelDockMorphStateTsx7({isConnected:isConnected,currentMode:currentMode}){const{VoicePanelModes,wasDockConnected}=this.__closure;if(currentMode!==VoicePanelModes.DISMISSED){wasDockConnected.set(isConnected||currentMode===VoicePanelModes.PIP);}}",
+  code: "(function useVoicePanelDockMorphStateTsx7({isConnected:isConnected,currentMode:currentMode}){let[VoicePanelModes,wasDockConnected]=this.__closure;if(currentMode!==VoicePanelModes.DISMISSED){wasDockConnected.set(isConnected||currentMode===VoicePanelModes.PIP);}})",
 };
 let closure_13 = {
-  code: "function useVoicePanelDockMorphStateTsx8(){const{isDockEnabled,mode,VoicePanelModes,wasDockConnected,connected}=this.__closure;if(!isDockEnabled)return false;return mode.get()===VoicePanelModes.DISMISSED?wasDockConnected.get():connected.get()||mode.get()===VoicePanelModes.PIP;}",
+  code: "(function useVoicePanelDockMorphStateTsx8(){let[isDockEnabled,mode,VoicePanelModes,wasDockConnected,connected]=this.__closure;if(!isDockEnabled)return false;return mode.get()===VoicePanelModes.DISMISSED?wasDockConnected.get():connected.get()||mode.get()===VoicePanelModes.PIP;})",
 };
 let closure_14 = {
-  code: "function useVoicePanelDockMorphStateTsx9(){const{mode,VoicePanelModes,dismissedFromDock,committedMode}=this.__closure;var _committedMode$get;if(mode.get()===VoicePanelModes.DISMISSED){return dismissedFromDock.get()?1:0;}return((_committedMode$get=committedMode.get())!==null&&_committedMode$get!==void 0?_committedMode$get:mode.get())===VoicePanelModes.PIP?1:0;}",
+  code: "(function useVoicePanelDockMorphStateTsx9(){let[mode,VoicePanelModes,dismissedFromDock,committedMode]=this.__closure;var _committedMode$get;if(mode.get()===VoicePanelModes.DISMISSED){return dismissedFromDock.get()?1:0;}return((_committedMode$get=committedMode.get())!==null&&_committedMode$get!==void 0?_committedMode$get:mode.get())===VoicePanelModes.PIP?1:0;})",
 };
 let closure_15 = {
-  code: "function useVoicePanelDockMorphStateTsx10(){const{dockShapeTarget}=this.__closure;return dockShapeTarget.get()===0;}",
+  code: "(function useVoicePanelDockMorphStateTsx10(){let[dockShapeTarget]=this.__closure;return dockShapeTarget.get()===0;})",
 };
 let closure_16 = {
-  code: "function useVoicePanelDockMorphStateTsx11(){const{dockPressed,wrapperOffset,mode,VoicePanelModes}=this.__closure;return dockPressed.get()||wrapperOffset.get().gestureActive&&mode.get()===VoicePanelModes.PIP;}",
+  code: "(function useVoicePanelDockMorphStateTsx11(){let[dockPressed,wrapperOffset,mode,VoicePanelModes]=this.__closure;return dockPressed.get()||wrapperOffset.get().gestureActive&&mode.get()===VoicePanelModes.PIP;})",
 };
 let closure_17 = {
-  code: "function useVoicePanelDockMorphStateTsx12(){const{withSpring,isDockHeld,DOCK_PRESS_PHYSICS}=this.__closure;return withSpring(isDockHeld.get()?1:0,DOCK_PRESS_PHYSICS);}",
+  code: "(function useVoicePanelDockMorphStateTsx12(){let[withSpring,isDockHeld,DOCK_PRESS_PHYSICS]=this.__closure;return withSpring(isDockHeld.get()?1:0,DOCK_PRESS_PHYSICS);})",
 };
 let closure_18 = {
-  code: "function useVoicePanelDockMorphStateTsx13(){const{withSpring,mode,VoicePanelModes,isDockConnected,DOCK_SPACE_SPRING_CONFIG}=this.__closure;return withSpring(mode.get()===VoicePanelModes.DISMISSED&&isDockConnected.get()?1:0,DOCK_SPACE_SPRING_CONFIG);}",
+  code: "(function useVoicePanelDockMorphStateTsx13(){let[withSpring,mode,VoicePanelModes,isDockConnected,DOCK_SPACE_SPRING_CONFIG]=this.__closure;return withSpring(mode.get()===VoicePanelModes.DISMISSED&&isDockConnected.get()?1:0,DOCK_SPACE_SPRING_CONFIG);})",
 };
-const __initData = {
-  code: "function useVoicePanelDockMorphStateTsx14(){const{isDockConnected,wrapperOffset,mode,VoicePanelModes,wrapperDimensions,dockHeight,clamp,dockShapeTarget,morphSkipsEntryAnimation,withSpring,SHEET_MORPH_PHYSICS}=this.__closure;if(!isDockConnected.get())return 0;const offset=wrapperOffset.get();if(offset.gestureActive&&mode.get()!==VoicePanelModes.DISMISSED){const travel=wrapperDimensions.get().drawerHeight-dockHeight.get();if(travel<=0)return 0;return clamp(offset.y/travel,0,1);}const target=dockShapeTarget.get();if(morphSkipsEntryAnimation.get()){return target;}return withSpring(target,SHEET_MORPH_PHYSICS);}",
+let closure_19 = {
+  code: "(function useVoicePanelDockMorphStateTsx14(){let[isDockConnected,wrapperOffset,mode,VoicePanelModes,wrapperDimensions,dockHeight,clamp,dockShapeTarget,morphSkipsEntryAnimation,withSpring,SHEET_MORPH_PHYSICS]=this.__closure;if(!isDockConnected.get())return 0;const offset=wrapperOffset.get();if(offset.gestureActive&&mode.get()!==VoicePanelModes.DISMISSED){const travel=wrapperDimensions.get().drawerHeight-dockHeight.get();if(travel<=0)return 0;return clamp(offset.y/travel,0,1);}const target=dockShapeTarget.get();if(morphSkipsEntryAnimation.get()){return target;}return withSpring(target,SHEET_MORPH_PHYSICS);})",
 };
-const __initData2 = {
-  code: "function useVoicePanelDockMorphStateTsx15(){const{morphSkipsEntryAnimation,dockMinimizeProgress,dockShapeTarget}=this.__closure;return morphSkipsEntryAnimation.get()&&dockMinimizeProgress.get()===dockShapeTarget.get();}",
+let closure_20 = {
+  code: "(function useVoicePanelDockMorphStateTsx15(){let[morphSkipsEntryAnimation,dockMinimizeProgress,dockShapeTarget]=this.__closure;return morphSkipsEntryAnimation.get()&&dockMinimizeProgress.get()===dockShapeTarget.get();})",
 };
-const __initData3 = {
-  code: "function useVoicePanelDockMorphStateTsx16(settled){const{morphSkipsEntryAnimation}=this.__closure;if(settled){morphSkipsEntryAnimation.set(false);}}",
+let closure_21 = {
+  code: "(function useVoicePanelDockMorphStateTsx16(settled){let[morphSkipsEntryAnimation]=this.__closure;if(settled){morphSkipsEntryAnimation.set(false);}})",
 };
-const __initData4 = {
-  code: "function useVoicePanelDockMorphStateTsx17(){const{dockJoinMorphOrigin,connected,dockMinimizeProgress,SHEET_MORPH_PHYSICS,wrapperOffset,mode,VoicePanelModes}=this.__closure;return dockJoinMorphOrigin.get()!=null&&connected.get()&&(dockMinimizeProgress.get()>=1-SHEET_MORPH_PHYSICS.restDisplacementThreshold||wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.DISMISSED);}",
+let closure_22 = {
+  code: "(function useVoicePanelDockMorphStateTsx17(){let[dockJoinMorphOrigin,connected,dockMinimizeProgress,SHEET_MORPH_PHYSICS,wrapperOffset,mode,VoicePanelModes]=this.__closure;return dockJoinMorphOrigin.get()!=null&&connected.get()&&(dockMinimizeProgress.get()>=1-SHEET_MORPH_PHYSICS.restDisplacementThreshold||wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.DISMISSED);})",
 };
-const __initData5 = {
-  code: "function useVoicePanelDockMorphStateTsx18(done){const{dockJoinMorphOrigin}=this.__closure;if(done){dockJoinMorphOrigin.set(null);}}",
+let closure_23 = {
+  code: "(function useVoicePanelDockMorphStateTsx18(done){let[dockJoinMorphOrigin]=this.__closure;if(done){dockJoinMorphOrigin.set(null);}})",
 };
-const __initData6 = {
-  code: "function useVoicePanelDockMorphStateTsx19(){const{wrapperOffset,mode,VoicePanelModes,isDockExpanding,dockMinimizeProgress,SHEET_MORPH_PHYSICS}=this.__closure;const{gestureActive:gestureActive}=wrapperOffset.get();return mode.get()===VoicePanelModes.DISMISSED||gestureActive&&mode.get()===VoicePanelModes.PANEL||!gestureActive&&(!isDockExpanding.get()||dockMinimizeProgress.get()<=SHEET_MORPH_PHYSICS.restDisplacementThreshold);}",
+let closure_24 = {
+  code: "(function useVoicePanelDockMorphStateTsx19(){let[wrapperOffset,mode,VoicePanelModes,isDockExpanding,dockMinimizeProgress,SHEET_MORPH_PHYSICS]=this.__closure;const{gestureActive:gestureActive}=wrapperOffset.get();return mode.get()===VoicePanelModes.DISMISSED||gestureActive&&mode.get()===VoicePanelModes.PANEL||!gestureActive&&(!isDockExpanding.get()||dockMinimizeProgress.get()<=SHEET_MORPH_PHYSICS.restDisplacementThreshold);})",
 };
-const __initData7 = {
-  code: "function useVoicePanelDockMorphStateTsx20(released){const{dockContentSwap,withTiming,DOCK_CONTENT_SWAP_TIMING}=this.__closure;if(released&&dockContentSwap.get()!==0){dockContentSwap.set(withTiming(0,DOCK_CONTENT_SWAP_TIMING));}}",
+let closure_25 = {
+  code: "(function useVoicePanelDockMorphStateTsx20(released){let[dockContentSwap,withTiming,DOCK_CONTENT_SWAP_TIMING]=this.__closure;if(released&&dockContentSwap.get()!==0){dockContentSwap.set(withTiming(0,DOCK_CONTENT_SWAP_TIMING));}})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockMorphState.tsx");
 
-export default function useVoicePanelDockMorphState(isDockEnabled) {
-  isDockEnabled = isDockEnabled.isDockEnabled;
-  const mode = isDockEnabled.mode;
-  const connected = isDockEnabled.connected;
-  const safeArea = isDockEnabled.safeArea;
-  const wrapperDimensions = isDockEnabled.wrapperDimensions;
-  let dockHeight;
-  let committedMode;
-  let sharedValue2;
-  let sharedValue3;
-  let isDockConnected;
-  let derivedValue2;
-  let isDockExpanding;
-  let dockPressed;
-  let derivedValue4;
-  let sharedValue6;
-  let dockMinimizeProgress;
-  let dockJoinMorphOrigin;
-  let dockContentSwap;
-  ({ mountsMinimized, wrapperOffset } = isDockEnabled);
-  let sharedValue = isDockEnabled(mode[3]).useSharedValue({ gestureActive: false, x: 0, y: 0 });
+export default function useVoicePanelDockMorphState(arg0) {
+  ({ isDockEnabled, mode, connected } = arg0);
+  ({ mountsMinimized, safeArea, wrapperOffset, wrapperDimensions } = arg0);
+  let sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue({
+    gestureActive: false,
+    x: 0,
+    y: 0,
+  });
   if (isDockEnabled) {
     sharedValue = wrapperOffset;
   }
-  let obj = isDockEnabled(mode[3]);
-  class G {
-    constructor() {
-      num = 0;
-      if (isDockEnabled) {
-        tmp = getVoicePanelDockHeight;
-        tmp2 = safeArea;
-        num = getVoicePanelDockHeight(safeArea.get().bottom);
-      }
-      return num;
+  let obj = require("../../../../../_runtime/metro/01652__.js");
+  items = [c6, isDockEnabled, c5, safeArea];
+  _require = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  function useVoicePanelDockMorphStateTsx1() {
+    let num = 0;
+    if (c0) {
+      num = _undefined2(_undefined3.get().bottom);
+    }
+    return num;
+  }
+  const items1 = [tmp5, tmp6, tmp7];
+  useVoicePanelDockMorphStateTsx1.__closure = items1;
+  useVoicePanelDockMorphStateTsx1.__workletHash = 16574063931371;
+  useVoicePanelDockMorphStateTsx1.__initData = tmp4;
+  const dockHeight = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx1,
+  );
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const committedMode = require("../../../../../_runtime/metro/01652__.js").useSharedValue(null);
+  const tmpResult22 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [c7, mode];
+  [tmp10, tmp11] = items2;
+  function useVoicePanelDockMorphStateTsx2() {
+    return _undefined.get();
+  }
+  const items3 = [tmp11];
+  useVoicePanelDockMorphStateTsx2.__closure = items3;
+  useVoicePanelDockMorphStateTsx2.__workletHash = 1130154786589;
+  useVoicePanelDockMorphStateTsx2.__initData = tmp10;
+  const items4 = [c8, committedMode];
+  _require = undefined;
+  [tmp12, tmp13] = items4;
+  function useVoicePanelDockMorphStateTsx3(arg0, arg1) {
+    let tmp = arg0 !== arg1;
+    if (tmp) {
+      tmp = null != _undefined.get();
+    }
+    if (tmp) {
+      const result = _undefined.set(null);
     }
   }
-  G.__closure = { isDockEnabled, getVoicePanelDockHeight: sharedValue, safeArea };
-  G.__workletHash = 11599676161970;
-  G.__initData = dockHeight;
-  dockHeight = isDockEnabled(mode[3]).useDerivedValue(G);
-  let obj2 = { isDockEnabled, getVoicePanelDockHeight: sharedValue, safeArea };
-  const tmpResult = isDockEnabled(mode[3]);
-  committedMode = isDockEnabled(mode[3]).useSharedValue(null);
-  const tmpResult22 = isDockEnabled(mode[3]);
-  class K {
-    constructor() {
-      return mode.get();
+  const items5 = [tmp13];
+  useVoicePanelDockMorphStateTsx3.__closure = items5;
+  useVoicePanelDockMorphStateTsx3.__workletHash = 11294143921957;
+  useVoicePanelDockMorphStateTsx3.__initData = tmp12;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx2,
+    useVoicePanelDockMorphStateTsx3,
+  );
+  const tmpResult23 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmpResult24 = require("../../../../../_runtime/metro/01652__.js");
+  const items6 = [c9, mode];
+  [tmp16, tmp17] = items6;
+  function useVoicePanelDockMorphStateTsx4() {
+    return _undefined.get();
+  }
+  const items7 = [tmp17];
+  useVoicePanelDockMorphStateTsx4.__closure = items7;
+  useVoicePanelDockMorphStateTsx4.__workletHash = 6511286054171;
+  useVoicePanelDockMorphStateTsx4.__initData = tmp16;
+  const items8 = [c10, c3, sharedValue2];
+  _require = undefined;
+  [tmp19, tmp20, tmp21] = items8;
+  function useVoicePanelDockMorphStateTsx5(arg0, arg1) {
+    let tmp2 = arg0 === _undefined.DISMISSED;
+    if (tmp2) {
+      tmp2 = null != arg1;
+    }
+    if (tmp2) {
+      const result = _undefined2.set(arg1 === _undefined.PIP);
     }
   }
-  K.__closure = { mode };
-  K.__workletHash = 4611544497028;
-  K.__initData = committedMode;
-  class Y {
-    constructor(arg0, arg1) {
-      tmp = isDockEnabled !== arg1;
-      if (tmp) {
-        tmp2 = closure_7;
-        tmp3 = null;
-        tmp = null != closure_7.get();
-      }
-      if (tmp) {
-        tmp4 = closure_7;
-        tmp5 = null;
-        result = closure_7.set(null);
-      }
-      return;
-    }
+  const items9 = [tmp20, tmp21];
+  useVoicePanelDockMorphStateTsx5.__closure = items9;
+  useVoicePanelDockMorphStateTsx5.__workletHash = 16449264979544;
+  useVoicePanelDockMorphStateTsx5.__initData = tmp19;
+  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx4,
+    useVoicePanelDockMorphStateTsx5,
+  );
+  const tmpResult25 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmpResult26 = require("../../../../../_runtime/metro/01652__.js");
+  const items10 = [closure_11, connected, mode];
+  [tmp24, tmp25, tmp26] = items10;
+  function useVoicePanelDockMorphStateTsx6() {
+    return { isConnected: _undefined.get(), currentMode: _undefined2.get() };
   }
-  Y.__closure = { committedMode };
-  Y.__workletHash = 17280219380028;
-  Y.__initData = sharedValue2;
-  const animatedReaction = isDockEnabled(mode[3]).useAnimatedReaction(K, Y);
-  const tmpResult23 = isDockEnabled(mode[3]);
-  sharedValue2 = isDockEnabled(mode[3]).useSharedValue(false);
-  const tmpResult24 = isDockEnabled(mode[3]);
-  const fn = function $() {
-    return mode.get();
-  };
-  fn.__closure = { mode };
-  fn.__workletHash = 14684098011330;
-  fn.__initData = sharedValue3;
-  class W {
-    constructor(arg0, arg1) {
-      tmp2 = isDockEnabled === VoicePanelModes.DISMISSED;
-      tmp = VoicePanelModes;
-      if (tmp2) {
-        tmp3 = null;
-        tmp2 = null != arg1;
-      }
-      if (tmp2) {
-        tmp4 = closure_8;
-        result = closure_8.set(arg1 === tmp.PIP);
-      }
-      return;
-    }
-  }
-  W.__closure = { VoicePanelModes: safeArea, dismissedFromDock: sharedValue2 };
-  W.__workletHash = 6804996750753;
-  W.__initData = isDockConnected;
-  const animatedReaction1 = isDockEnabled(mode[3]).useAnimatedReaction(fn, W);
-  const obj3 = { VoicePanelModes: safeArea, dismissedFromDock: sharedValue2 };
-  const tmpResult25 = isDockEnabled(mode[3]);
-  sharedValue3 = isDockEnabled(mode[3]).useSharedValue(false);
-  const tmpResult26 = isDockEnabled(mode[3]);
-  class B {
-    constructor() {
-      obj = { isConnected: connected.get(), currentMode: mode.get() };
-      return obj;
-    }
-  }
-  B.__closure = { connected, mode };
-  B.__workletHash = 13158810064144;
-  B.__initData = derivedValue2;
-  const fn2 = function q(arg0) {
+  const items11 = [tmp25, tmp26];
+  useVoicePanelDockMorphStateTsx6.__closure = items11;
+  useVoicePanelDockMorphStateTsx6.__workletHash = 9395341436969;
+  useVoicePanelDockMorphStateTsx6.__initData = tmp24;
+  const items12 = [closure_12, c3, sharedValue3];
+  _require = undefined;
+  [tmp27, tmp28, tmp29] = items12;
+  function useVoicePanelDockMorphStateTsx7(arg0) {
     ({ isConnected, currentMode } = arg0);
-    if (currentMode !== VoicePanelModes.DISMISSED) {
+    if (currentMode !== _undefined.DISMISSED) {
       if (!isConnected) {
         isConnected = currentMode === tmp.PIP;
       }
-      const result = sharedValue3.set(isConnected);
-    }
-  };
-  fn2.__closure = { VoicePanelModes: safeArea, wasDockConnected: sharedValue3 };
-  fn2.__workletHash = 17408928003338;
-  fn2.__initData = isDockExpanding;
-  const animatedReaction2 = isDockEnabled(mode[3]).useAnimatedReaction(B, fn2);
-  const tmpResult27 = isDockEnabled(mode[3]);
-  class U {
-    constructor() {
-      tmp = isDockEnabled;
-      if (!tmp) {
-        return tmp;
-      } else {
-        obj = mode;
-        if (mode.get() === VoicePanelModes.DISMISSED) {
-          tmp5 = closure_9;
-          value = closure_9.get();
-        } else {
-          tmp3 = connected;
-          value = connected.get() || obj.get() === tmp2.PIP;
-        }
-        tmp6 = value;
-      }
-      return;
+      const result = _undefined2.set(isConnected);
     }
   }
-  U.__closure = { isDockEnabled, mode, VoicePanelModes: safeArea, wasDockConnected: sharedValue3, connected };
-  U.__workletHash = 10160859525680;
-  U.__initData = dockPressed;
-  isDockConnected = isDockEnabled(mode[3]).useDerivedValue(U);
-  const tmpResult28 = isDockEnabled(mode[3]);
-  class X {
-    constructor() {
-      obj = mode;
-      if (mode.get() === VoicePanelModes.DISMISSED) {
-        tmp5 = closure_8;
-        num2 = 0;
-        if (closure_8.get()) {
-          num2 = 1;
-        }
-        num = num2;
-      } else {
-        tmp2 = closure_7;
-        value = closure_7.get();
-        tmp4 = null;
-        if (value == null) {
-          value = obj.get();
-        }
-        num = 0;
-        if (value === tmp.PIP) {
-          num = 1;
-        }
-      }
-      return num;
-    }
-  }
-  X.__closure = { mode, VoicePanelModes: safeArea, dismissedFromDock: sharedValue2, committedMode };
-  X.__workletHash = 4580477793979;
-  X.__initData = derivedValue4;
-  derivedValue2 = isDockEnabled(mode[3]).useDerivedValue(X);
-  const tmpResult29 = isDockEnabled(mode[3]);
-  class Z {
-    constructor() {
-      return 0 === closure_11.get();
-    }
-  }
-  Z.__closure = { dockShapeTarget: derivedValue2 };
-  Z.__workletHash = 16095307145434;
-  Z.__initData = sharedValue6;
-  isDockExpanding = isDockEnabled(mode[3]).useDerivedValue(Z);
-  const tmpResult30 = isDockEnabled(mode[3]);
-  const dockEntryProgress = isDockEnabled(mode[3]).useSharedValue(1);
-  closure_129_0 = dockEntryProgress;
-  closure_129_1 = connected.useRef(false);
-  closure_129_2 = connected.useRef(false);
-  const items = [dockEntryProgress];
-  const items1 = [dockEntryProgress];
-  const beginDockEntry = connected.useCallback(() => {
-    const result = isDockEnabled.set(0);
-    if (mode.current) {
-      const result1 = isDockEnabled.set(spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
+  const items13 = [tmp28, tmp29];
+  useVoicePanelDockMorphStateTsx7.__closure = items13;
+  useVoicePanelDockMorphStateTsx7.__workletHash = 10331916200307;
+  useVoicePanelDockMorphStateTsx7.__initData = tmp27;
+  const animatedReaction2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx6,
+    useVoicePanelDockMorphStateTsx7,
+  );
+  const tmpResult27 = require("../../../../../_runtime/metro/01652__.js");
+  const items14 = [closure_13, isDockEnabled, mode, c3, sharedValue3, connected];
+  _require = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp31, tmp32, tmp33, tmp34, tmp35, tmp36] = items14;
+  function useVoicePanelDockMorphStateTsx8() {
+    if (!c0) {
+      return c0;
+    } else if (_undefined2.get() === _undefined3.DISMISSED) {
+      value = _undefined4.get();
     } else {
-      connected.current = true;
+      value = _undefined5.get() || _undefined2.get() === tmp2.PIP;
     }
-  }, items);
-  const handleDockSheetLayout = connected.useCallback(() => {
-    mode.current = true;
-    if (connected.current) {
+  }
+  const items15 = [tmp32, tmp33, tmp34, tmp35, tmp36];
+  useVoicePanelDockMorphStateTsx8.__closure = items15;
+  useVoicePanelDockMorphStateTsx8.__workletHash = 484957089417;
+  useVoicePanelDockMorphStateTsx8.__initData = tmp31;
+  const isDockConnected = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx8,
+  );
+  const tmpResult28 = require("../../../../../_runtime/metro/01652__.js");
+  const items16 = [closure_14, mode, c3, sharedValue2, committedMode];
+  _require = undefined;
+  c3 = undefined;
+  [tmp38, tmp39, tmp40, tmp41, tmp42] = items16;
+  function useVoicePanelDockMorphStateTsx9() {
+    if (_undefined.get() === _undefined2.DISMISSED) {
+      let num2 = 0;
+      if (_undefined3.get()) {
+        num2 = 1;
+      }
+      let num = num2;
+    } else {
+      value = _undefined4.get();
+      if (value == null) {
+        value = _undefined.get();
+      }
+      num = 0;
+      if (value === tmp.PIP) {
+        num = 1;
+      }
+    }
+    return num;
+  }
+  const items17 = [tmp39, tmp40, tmp41, tmp42];
+  useVoicePanelDockMorphStateTsx9.__closure = items17;
+  useVoicePanelDockMorphStateTsx9.__workletHash = 11998655504610;
+  useVoicePanelDockMorphStateTsx9.__initData = tmp38;
+  const derivedValue2 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx9,
+  );
+  const tmpResult29 = require("../../../../../_runtime/metro/01652__.js");
+  const items18 = [closure_15, derivedValue2];
+  _require = undefined;
+  [tmp44, tmp45] = items18;
+  function useVoicePanelDockMorphStateTsx10() {
+    return 0 === _undefined.get();
+  }
+  const items19 = [tmp45];
+  useVoicePanelDockMorphStateTsx10.__closure = items19;
+  useVoicePanelDockMorphStateTsx10.__workletHash = 9313360300259;
+  useVoicePanelDockMorphStateTsx10.__initData = tmp44;
+  const isDockExpanding = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx10,
+  );
+  _require = undefined;
+  noop = undefined;
+  const tmpResult30 = require("../../../../../_runtime/metro/01652__.js");
+  const dockEntryProgress = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  _require = dockEntryProgress;
+  noop.useRef(false);
+  noop = noop.useRef(false);
+  const items20 = [dockEntryProgress];
+  const items21 = [dockEntryProgress];
+  const beginDockEntry = noop.useCallback(() => {
+    const result = _undefined.set(0);
+    if (_undefined2.current) {
+      const result1 = _undefined.set(spring_spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
+    } else {
+      c2.current = true;
+    }
+  }, items20);
+  const handleDockSheetLayout = noop.useCallback(() => {
+    c1.current = true;
+    if (_undefined3.current) {
       tmp.current = false;
-      const result = isDockEnabled.set(spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
+      const result = _undefined.set(spring_spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
     }
-  }, items1);
-  const tmpResult31 = isDockEnabled(mode[3]);
-  dockPressed = isDockEnabled(mode[3]).useSharedValue(false);
-  const tmpResult32 = isDockEnabled(mode[3]);
-  function ee() {
-    value = dockPressed.get();
+  }, items21);
+  const tmpResult31 = require("../../../../../_runtime/metro/01652__.js");
+  const dockPressed = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmpResult32 = require("../../../../../_runtime/metro/01652__.js");
+  const items22 = [closure_16, dockPressed, sharedValue, mode, c3];
+  _require = undefined;
+  c3 = undefined;
+  [tmp51, tmp52, tmp53, tmp54, tmp55] = items22;
+  function useVoicePanelDockMorphStateTsx11() {
+    value = _undefined.get();
     if (!value) {
-      let gestureActive = sharedValue.get().gestureActive;
+      let gestureActive = _undefined2.get().gestureActive;
       if (gestureActive) {
-        gestureActive = mode.get() === VoicePanelModes.PIP;
+        gestureActive = _undefined3.get() === _undefined4.PIP;
       }
       value = gestureActive;
     }
     return value;
   }
-  ee.__closure = { dockPressed, wrapperOffset: sharedValue, mode, VoicePanelModes: safeArea };
-  ee.__workletHash = 4131610632229;
-  ee.__initData = dockMinimizeProgress;
-  derivedValue4 = isDockEnabled(mode[3]).useDerivedValue(ee);
-  const tmpResult33 = isDockEnabled(mode[3]);
-  function te() {
+  const items23 = [tmp52, tmp53, tmp54, tmp55];
+  useVoicePanelDockMorphStateTsx11.__closure = items23;
+  useVoicePanelDockMorphStateTsx11.__workletHash = 2842369107004;
+  useVoicePanelDockMorphStateTsx11.__initData = tmp51;
+  const derivedValue4 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx11,
+  );
+  const tmpResult33 = require("../../../../../_runtime/metro/01652__.js");
+  const items24 = [closure_17, require("spring/spring").withSpring, derivedValue4, c4];
+  _require = undefined;
+  [tmp57, tmp58, tmp59, tmp60] = items24;
+  function useVoicePanelDockMorphStateTsx12() {
     let num = 0;
-    if (derivedValue4.get()) {
+    if (_undefined2.get()) {
       num = 1;
     }
-    return spring.withSpring(num, React4);
+    return _undefined(num, c2);
   }
-  const tmpResult34 = isDockEnabled(mode[3]);
-  te.__closure = {
-    withSpring: isDockEnabled(mode[4]).withSpring,
-    isDockHeld: derivedValue4,
-    DOCK_PRESS_PHYSICS: wrapperDimensions,
-  };
-  te.__workletHash = 11374894455644;
-  te.__initData = dockJoinMorphOrigin;
-  const dockPressProgress = tmpResult34.useDerivedValue(te);
-  const obj4 = {
-    withSpring: isDockEnabled(mode[4]).withSpring,
-    isDockHeld: derivedValue4,
-    DOCK_PRESS_PHYSICS: wrapperDimensions,
-  };
-  function oe() {
+  const items25 = [tmp58, tmp59, tmp60];
+  useVoicePanelDockMorphStateTsx12.__closure = items25;
+  useVoicePanelDockMorphStateTsx12.__workletHash = 4055713938309;
+  useVoicePanelDockMorphStateTsx12.__initData = tmp57;
+  const dockPressProgress = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx12,
+  );
+  const tmpResult34 = require("../../../../../_runtime/metro/01652__.js");
+  const items26 = [
+    closure_18,
+    require("spring/spring").withSpring,
+    mode,
+    c3,
+    isDockConnected,
+    require("VoicePanelSheetMorph").DOCK_SPACE_SPRING_CONFIG,
+  ];
+  _require = undefined;
+  c3 = undefined;
+  [tmp62, tmp63, tmp64, tmp65, tmp66, tmp67] = items26;
+  function useVoicePanelDockMorphStateTsx13() {
     let num = 0;
-    if (mode.get() === VoicePanelModes.DISMISSED) {
+    if (_undefined2.get() === _undefined3.DISMISSED) {
       num = 0;
-      if (isDockConnected.get()) {
+      if (_undefined4.get()) {
         num = 1;
       }
     }
-    return spring.withSpring(num, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG);
+    return _undefined(num, c4);
   }
-  const tmpResult35 = isDockEnabled(mode[3]);
-  oe.__closure = {
-    withSpring: isDockEnabled(mode[4]).withSpring,
-    mode,
-    VoicePanelModes: safeArea,
+  const items27 = [tmp63, tmp64, tmp65, tmp66, tmp67];
+  useVoicePanelDockMorphStateTsx13.__closure = items27;
+  useVoicePanelDockMorphStateTsx13.__workletHash = 11884228837973;
+  useVoicePanelDockMorphStateTsx13.__initData = tmp62;
+  const sheetExitProgress = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx13,
+  );
+  const tmpResult35 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue6 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(mountsMinimized);
+  const tmpResult36 = require("../../../../../_runtime/metro/01652__.js");
+  const items28 = [
+    closure_19,
     isDockConnected,
-    DOCK_SPACE_SPRING_CONFIG: isDockEnabled(mode[5]).DOCK_SPACE_SPRING_CONFIG,
-  };
-  oe.__workletHash = 862139017068;
-  oe.__initData = dockContentSwap;
-  const sheetExitProgress = tmpResult35.useDerivedValue(oe);
-  const obj5 = {
-    withSpring: isDockEnabled(mode[4]).withSpring,
+    sharedValue,
     mode,
-    VoicePanelModes: safeArea,
-    isDockConnected,
-    DOCK_SPACE_SPRING_CONFIG: isDockEnabled(mode[5]).DOCK_SPACE_SPRING_CONFIG,
-  };
-  sharedValue6 = isDockEnabled(mode[3]).useSharedValue(mountsMinimized);
-  const tmpResult36 = isDockEnabled(mode[3]);
-  function ne() {
-    if (isDockConnected.get()) {
-      value = sharedValue.get();
+    c3,
+    wrapperDimensions,
+    dockHeight,
+    require("../../../../../_runtime/metro/01652__.js").clamp,
+    derivedValue2,
+    sharedValue6,
+    require("spring/spring").withSpring,
+    require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS,
+  ];
+  _require = undefined;
+  c3 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  [tmp70, tmp71, tmp72, tmp73, tmp74, tmp75, tmp76, tmp77, tmp78, tmp79, tmp80, tmp81] = items28;
+  function useVoicePanelDockMorphStateTsx14() {
+    if (_undefined.get()) {
+      value = _undefined2.get();
       if (value.gestureActive) {
-        if (mode.get() !== VoicePanelModes.DISMISSED) {
-          const diff = wrapperDimensions.get().drawerHeight - dockHeight.get();
+        if (_undefined3.get() !== _undefined4.DISMISSED) {
+          const diff = _undefined5.get().drawerHeight - _undefined6.get();
           let num3 = 0;
           if (diff > 0) {
-            num3 = ReanimatedRexport.clamp(value.y / diff, 0, 1);
+            num3 = _undefined7(value.y / diff, 0, 1);
           }
           return num3;
         }
       }
-      value2 = derivedValue2.get();
-      let withSpringResult = value2;
-      if (!sharedValue6.get()) {
-        withSpringResult = spring.withSpring(value2, VoicePanelSheetMorph.SHEET_MORPH_PHYSICS);
+      value2 = _undefined8.get();
+      let tmp8 = value2;
+      if (!_undefined9.get()) {
+        tmp8 = _undefined10(value2, c10);
       }
-      return withSpringResult;
+      return tmp8;
     } else {
       return 0;
     }
   }
-  const tmpResult37 = isDockEnabled(mode[3]);
-  ne.__closure = {
-    isDockConnected,
-    wrapperOffset: sharedValue,
-    mode,
-    VoicePanelModes: safeArea,
-    wrapperDimensions,
-    dockHeight,
-    clamp: isDockEnabled(mode[3]).clamp,
-    dockShapeTarget: derivedValue2,
-    morphSkipsEntryAnimation: sharedValue6,
-    withSpring: isDockEnabled(mode[4]).withSpring,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-  };
-  ne.__workletHash = 9895057299659;
-  ne.__initData = __initData;
-  dockMinimizeProgress = tmpResult37.useDerivedValue(ne);
-  const obj6 = {
-    isDockConnected,
-    wrapperOffset: sharedValue,
-    mode,
-    VoicePanelModes: safeArea,
-    wrapperDimensions,
-    dockHeight,
-    clamp: isDockEnabled(mode[3]).clamp,
-    dockShapeTarget: derivedValue2,
-    morphSkipsEntryAnimation: sharedValue6,
-    withSpring: isDockEnabled(mode[4]).withSpring,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-  };
-  function ce() {
-    value = sharedValue6.get();
+  const items29 = [tmp71, tmp72, tmp73, tmp74, tmp75, tmp76, tmp77, tmp78, tmp79, tmp80, tmp81];
+  useVoicePanelDockMorphStateTsx14.__closure = items29;
+  useVoicePanelDockMorphStateTsx14.__workletHash = 1103316875634;
+  useVoicePanelDockMorphStateTsx14.__initData = tmp70;
+  const dockMinimizeProgress = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+    useVoicePanelDockMorphStateTsx14,
+  );
+  const tmpResult37 = require("../../../../../_runtime/metro/01652__.js");
+  const items30 = [closure_20, sharedValue6, dockMinimizeProgress, derivedValue2];
+  [tmp83, tmp84, tmp85, tmp86] = items30;
+  function useVoicePanelDockMorphStateTsx15() {
+    value = _undefined.get();
     if (value) {
-      value2 = dockMinimizeProgress.get();
-      value = value2 === derivedValue2.get();
+      value2 = _undefined2.get();
+      value = value2 === _undefined3.get();
     }
     return value;
   }
-  ce.__closure = { morphSkipsEntryAnimation: sharedValue6, dockMinimizeProgress, dockShapeTarget: derivedValue2 };
-  ce.__workletHash = 14873809000559;
-  ce.__initData = __initData2;
-  function ie(arg0) {
+  const items31 = [tmp84, tmp85, tmp86];
+  useVoicePanelDockMorphStateTsx15.__closure = items31;
+  useVoicePanelDockMorphStateTsx15.__workletHash = 11635000337302;
+  useVoicePanelDockMorphStateTsx15.__initData = tmp83;
+  const items32 = [closure_21, sharedValue6];
+  _require = undefined;
+  [tmp87, tmp88] = items32;
+  function useVoicePanelDockMorphStateTsx16(arg0) {
     if (arg0) {
-      const result = sharedValue6.set(false);
+      const result = _undefined.set(false);
     }
   }
-  ie.__closure = { morphSkipsEntryAnimation: sharedValue6 };
-  ie.__workletHash = 8612909128122;
-  ie.__initData = __initData3;
-  const animatedReaction3 = isDockEnabled(mode[3]).useAnimatedReaction(ce, ie);
-  const tmpResult38 = isDockEnabled(mode[3]);
-  dockJoinMorphOrigin = isDockEnabled(mode[3]).useSharedValue(null);
-  const tmpResult39 = isDockEnabled(mode[3]);
-  class Me {
-    constructor() {
-      value = null != closure_17.get();
-      if (value) {
-        tmp2 = connected;
-        value = connected.get();
-      }
-      if (value) {
-        tmp3 = closure_16;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        value1 = closure_16.get();
-        num = 1;
-        gestureActive = value1 >= 1 - closure_0(closure_1[5]).SHEET_MORPH_PHYSICS.restDisplacementThreshold;
-        if (!gestureActive) {
-          tmp7 = wrapperOffset;
-          gestureActive = wrapperOffset.get().gestureActive;
-        }
-        if (!gestureActive) {
-          tmp8 = mode;
-          tmp9 = VoicePanelModes;
-          gestureActive = mode.get() === VoicePanelModes.DISMISSED;
-        }
-        value = gestureActive;
-      }
-      return value;
-    }
-  }
-  const tmpResult40 = isDockEnabled(mode[3]);
-  Me.__closure = {
+  const items33 = [tmp88];
+  useVoicePanelDockMorphStateTsx16.__closure = items33;
+  useVoicePanelDockMorphStateTsx16.__workletHash = 12553679383107;
+  useVoicePanelDockMorphStateTsx16.__initData = tmp87;
+  const animatedReaction3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx15,
+    useVoicePanelDockMorphStateTsx16,
+  );
+  const tmpResult38 = require("../../../../../_runtime/metro/01652__.js");
+  const dockJoinMorphOrigin = require("../../../../../_runtime/metro/01652__.js").useSharedValue(null);
+  const tmpResult39 = require("../../../../../_runtime/metro/01652__.js");
+  const items34 = [
+    closure_22,
     dockJoinMorphOrigin,
     connected,
     dockMinimizeProgress,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-    wrapperOffset: sharedValue,
+    require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS,
+    sharedValue,
     mode,
-    VoicePanelModes: safeArea,
-  };
-  Me.__workletHash = 16793844025178;
-  Me.__initData = __initData4;
-  function pe(arg0) {
+    c3,
+  ];
+  c3 = undefined;
+  c6 = undefined;
+  [tmp91, tmp92, tmp93, tmp94, tmp95, tmp96, tmp97, tmp98] = items34;
+  function useVoicePanelDockMorphStateTsx17() {
+    value = null != _undefined.get();
+    if (value) {
+      value = _undefined2.get();
+    }
+    if (value) {
+      let gestureActive = _undefined3.get() >= 1 - _undefined4.restDisplacementThreshold;
+      if (!gestureActive) {
+        gestureActive = _undefined5.get().gestureActive;
+      }
+      if (!gestureActive) {
+        gestureActive = _undefined6.get() === _undefined7.DISMISSED;
+      }
+      value = gestureActive;
+    }
+    return value;
+  }
+  const items35 = [tmp92, tmp93, tmp94, tmp95, tmp96, tmp97, tmp98];
+  useVoicePanelDockMorphStateTsx17.__closure = items35;
+  useVoicePanelDockMorphStateTsx17.__workletHash = 13906375791619;
+  useVoicePanelDockMorphStateTsx17.__initData = tmp91;
+  const items36 = [closure_23, dockJoinMorphOrigin];
+  _require = undefined;
+  [tmp99, tmp100] = items36;
+  function useVoicePanelDockMorphStateTsx18(arg0) {
     if (arg0) {
-      const result = dockJoinMorphOrigin.set(null);
+      const result = _undefined.set(null);
     }
   }
-  pe.__closure = { dockJoinMorphOrigin };
-  pe.__workletHash = 1489918984530;
-  pe.__initData = __initData5;
-  const animatedReaction4 = tmpResult40.useAnimatedReaction(Me, pe);
-  const obj7 = {
-    dockJoinMorphOrigin,
-    connected,
-    dockMinimizeProgress,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-    wrapperOffset: sharedValue,
+  const items37 = [tmp100];
+  useVoicePanelDockMorphStateTsx18.__closure = items37;
+  useVoicePanelDockMorphStateTsx18.__workletHash = 13549147314699;
+  useVoicePanelDockMorphStateTsx18.__initData = tmp99;
+  const animatedReaction4 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx17,
+    useVoicePanelDockMorphStateTsx18,
+  );
+  const tmpResult40 = require("../../../../../_runtime/metro/01652__.js");
+  const dockContentSwap = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const tmpResult41 = require("../../../../../_runtime/metro/01652__.js");
+  const items38 = [
+    closure_24,
+    sharedValue,
     mode,
-    VoicePanelModes: safeArea,
-  };
-  dockContentSwap = isDockEnabled(mode[3]).useSharedValue(0);
-  const tmpResult41 = isDockEnabled(mode[3]);
-  class Ee {
-    constructor() {
-      gestureActive = wrapperOffset.get().gestureActive;
-      obj = mode;
-      tmp2 = mode.get() === VoicePanelModes.DISMISSED;
-      if (!tmp2) {
-        tmp3 = gestureActive;
-        if (gestureActive) {
-          tmp3 = obj.get() === tmp.PANEL;
-        }
-        tmp2 = tmp3;
-      }
-      if (!tmp2) {
-        tmp4 = !gestureActive;
-        if (!gestureActive) {
-          tmp5 = closure_12;
-          value = closure_12.get();
-          tmp7 = !value;
-          if (value) {
-            tmp8 = closure_16;
-            tmp10 = closure_0;
-            tmp11 = closure_1;
-            value1 = closure_16.get();
-            tmp7 = value1 <= closure_0(closure_1[5]).SHEET_MORPH_PHYSICS.restDisplacementThreshold;
-          }
-          tmp4 = tmp7;
-        }
-        tmp2 = tmp4;
-      }
-      return tmp2;
-    }
-  }
-  const tmpResult42 = isDockEnabled(mode[3]);
-  Ee.__closure = {
-    wrapperOffset: sharedValue,
-    mode,
-    VoicePanelModes: safeArea,
+    c3,
     isDockExpanding,
     dockMinimizeProgress,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-  };
-  Ee.__workletHash = 17390712868429;
-  Ee.__initData = __initData6;
-  function fe(arg0) {
+    require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS,
+  ];
+  _require = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp103, tmp104, tmp105, tmp106, tmp107, tmp108, tmp109] = items38;
+  function useVoicePanelDockMorphStateTsx19() {
+    const gestureActive = _undefined.get().gestureActive;
+    let tmp2 = _undefined2.get() === _undefined3.DISMISSED;
+    if (!tmp2) {
+      let tmp3 = gestureActive;
+      if (gestureActive) {
+        tmp3 = _undefined2.get() === tmp.PANEL;
+      }
+      tmp2 = tmp3;
+    }
+    if (!tmp2) {
+      let tmp4 = !gestureActive;
+      if (!gestureActive) {
+        value = _undefined4.get();
+        let tmp7 = !value;
+        if (value) {
+          tmp7 = _undefined5.get() <= _undefined6.restDisplacementThreshold;
+        }
+        tmp4 = tmp7;
+      }
+      tmp2 = tmp4;
+    }
+    return tmp2;
+  }
+  const items39 = [tmp104, tmp105, tmp106, tmp107, tmp108, tmp109];
+  useVoicePanelDockMorphStateTsx19.__closure = items39;
+  useVoicePanelDockMorphStateTsx19.__workletHash = 6416964197268;
+  useVoicePanelDockMorphStateTsx19.__initData = tmp103;
+  const items40 = [
+    closure_25,
+    dockContentSwap,
+    require("timing/timing").withTiming,
+    require("VoicePanelSheetMorph").DOCK_CONTENT_SWAP_TIMING,
+  ];
+  _require = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp110, tmp111, tmp112, tmp113] = items40;
+  function useVoicePanelDockMorphStateTsx20(arg0) {
     let tmp = arg0;
     if (arg0) {
-      tmp = 0 !== dockContentSwap.get();
+      tmp = 0 !== _undefined.get();
     }
     if (tmp) {
-      const result = dockContentSwap.set(timing.withTiming(0, VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING));
+      const result = _undefined.set(_undefined2(0, c2));
     }
   }
-  const obj8 = {
-    wrapperOffset: sharedValue,
-    mode,
-    VoicePanelModes: safeArea,
-    isDockExpanding,
-    dockMinimizeProgress,
-    SHEET_MORPH_PHYSICS: isDockEnabled(mode[5]).SHEET_MORPH_PHYSICS,
-  };
-  fe.__closure = {
-    dockContentSwap,
-    withTiming: isDockEnabled(mode[6]).withTiming,
-    DOCK_CONTENT_SWAP_TIMING: isDockEnabled(mode[5]).DOCK_CONTENT_SWAP_TIMING,
-  };
-  fe.__workletHash = 1315911263720;
-  fe.__initData = __initData7;
-  const animatedReaction5 = tmpResult42.useAnimatedReaction(Ee, fe);
+  const items41 = [tmp111, tmp112, tmp113];
+  useVoicePanelDockMorphStateTsx20.__closure = items41;
+  useVoicePanelDockMorphStateTsx20.__workletHash = 2464334707217;
+  useVoicePanelDockMorphStateTsx20.__initData = tmp110;
+  const animatedReaction5 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useVoicePanelDockMorphStateTsx19,
+    useVoicePanelDockMorphStateTsx20,
+  );
   return {
     beginDockEntry,
     committedMode,

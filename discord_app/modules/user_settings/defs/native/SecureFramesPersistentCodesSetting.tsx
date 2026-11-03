@@ -5,7 +5,7 @@ import updatePersistentCodesEnabled from "../../../rtc/updatePersistentCodesEnab
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -15,9 +15,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(8432).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8556).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
-    const items = [SecureFramesPersistedStore];
+    items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {

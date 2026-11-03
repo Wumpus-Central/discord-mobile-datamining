@@ -15,10 +15,10 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileMutuals(arg0) {
   _require = arg0;
-  let items = [UserProfileStore];
+  items = [UserProfileStore];
   const tmp = stateFromStores(
     require("initialize").useStateFromStoresArray(items, () => {
-      const items = [
+      items = [
         UserProfileStore.getMutualFriendsCount(closure_0.id),
         UserProfileStore.getMutualFriends(closure_0.id),
         UserProfileStore.getMutualGuilds(closure_0.id),
@@ -68,7 +68,7 @@ export default function useUserProfileMutuals(arg0) {
         const _Object = Object;
         closure_0 = Object.fromEntries(
           stateFromStores1.map((item, index) => {
-            const items = [item, index];
+            items = [item, index];
             return items;
           }),
         );

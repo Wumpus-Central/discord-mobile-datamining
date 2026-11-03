@@ -71,7 +71,7 @@ function UserExperimentDebugView(id) {
     return -tmp;
   });
   obj6.subLabel = str4;
-  const items = [
+  items = [
     closure_1_11(TableRowGroup.TableRowGroup, {
       title: "Overview",
       hasIcons: false,
@@ -126,7 +126,7 @@ function UserExperimentDebugView(id) {
     children: closure_1_11(TableRow.TableRow, { label: str5 }),
   });
   obj5.children = items;
-  return closure_1_12(View, obj5);
+  return application_id(View, obj5);
 }
 function GuildExperimentDebugView(arg0) {
   ({ id, override } = arg0);
@@ -146,7 +146,7 @@ function GuildExperimentDebugView(arg0) {
     return -tmp;
   });
   const obj3 = {};
-  const items = [];
+  items = [];
   const iter = _modDef12.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase())[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -184,10 +184,10 @@ function GuildExperimentDebugView(arg0) {
   const obj4 = _modDef12(obj3);
   obj6.subLabel = str;
   const items1 = [
-    closure_11(obj3(7060).TableRowGroup, {
+    closure_11(obj3(7186).TableRowGroup, {
       title: "Overview",
       hasIcons: false,
-      children: closure_11(obj3(6975).TableRow, obj6),
+      children: closure_11(obj3(7101).TableRow, obj6),
     }),
     closure_11(obj3(1187).Spacer, { size: 16 }),
     ,
@@ -198,9 +198,9 @@ function GuildExperimentDebugView(arg0) {
     ,
   ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6975).TableRow, obj6) };
-  obj8.children = closure_11(obj3(6975).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(7060).TableRowGroup, obj8);
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(7101).TableRow, obj6) };
+  obj8.children = closure_11(obj3(7101).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(7186).TableRowGroup, obj8);
   items1[3] = closure_11(obj3(1187).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -209,10 +209,10 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(7060).TableRowGroup, {
+  items1[4] = closure_11(obj3(7186).TableRowGroup, {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6975).TableRow, { label: str3 }),
+    children: closure_11(obj3(7101).TableRow, { label: str3 }),
   });
   items1[5] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (null != override) {
@@ -222,22 +222,22 @@ function GuildExperimentDebugView(arg0) {
   const obj10 = {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6975).TableRow, { label: str3 }),
+    children: closure_11(obj3(7101).TableRow, { label: str3 }),
   };
-  items1[6] = closure_11(obj3(7060).TableRowGroup, {
+  items1[6] = closure_11(obj3(7186).TableRowGroup, {
     title: "Override Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6975).TableRow, { label: str2 }),
+    children: closure_11(obj3(7101).TableRow, { label: str2 }),
   });
   items1[7] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(6975).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(7101).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) =>
       closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label),
     );
   }
-  items1[8] = closure_11(obj3(7060).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(7186).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 }
@@ -256,7 +256,7 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        uRLForExperiment(5712).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
+        uRLForExperiment(5832).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
         if (onCopyLink != null) {
           onCopyLink();
         }
@@ -276,7 +276,7 @@ class ExperimentDetails {
         if (isDestructive) {
           variant = "danger";
         }
-        return closure_1_11(onCopyLink(6975).TableRow, { variant, label, onPress }, index);
+        return closure_1_11(onCopyLink(7101).TableRow, { variant, label, onPress }, index);
       }),
     };
     items1 = [, ,];
@@ -322,11 +322,11 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(5239);
-({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
+const ExperimentConstants = fn(5362);
+({ ExperimentBuckets: closure_9, ExperimentTypes: closure_10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   listContainer: null,
@@ -342,13 +342,13 @@ let obj5 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nati
 obj.debugContainer = { marginTop: nativeDefault.space.PX_16 };
 let obj6 = { marginTop: nativeDefault.space.PX_16 };
 obj.copyExperimentLink = { marginTop: nativeDefault.space.PX_16 };
-createStyles.createStyles(obj);
+const state = createStyles.createStyles(obj);
 let obj7 = { marginTop: nativeDefault.space.PX_16 };
 let closure_14 = noop.memo(function ExperimentGroup(id) {
   id = id.id;
   const override = id.override;
   const experiment = id.experiment;
-  let items = [experiment];
+  items = [experiment];
   ({ start, end } = id);
   const memo = noop.useMemo(() => ExperimentDevToolsUtils.getExperimentVariantsForDevTools(experiment), items);
   const items1 = [id, experiment, override, memo];
@@ -358,7 +358,7 @@ let closure_14 = noop.memo(function ExperimentGroup(id) {
     const item = memo.forEach((id) => {
       const result = map.set(id.id, id);
     });
-    const items = [];
+    items = [];
     const item1 = map.forEach((label) => {
       items.push({
         label: label.label,
@@ -432,7 +432,7 @@ export default noop.memo(function DevToolsExperimentsScreen() {
   const apexExperiments = experiments(experiments2[11]).useApexExperiments();
   experiments2 = apexExperiments.experiments;
   overridesInfo2 = apexExperiments.overridesInfo;
-  let items = [experiments, experiments2];
+  items = [experiments, experiments2];
   const memo = memo1.useMemo(() => {
     const merged = Object.assign(experiments);
     const merged1 = Object.assign(experiments2);
@@ -455,7 +455,7 @@ export default noop.memo(function DevToolsExperimentsScreen() {
   const items2 = [bestMatches.length];
   const items3 = [bestMatches, memo1];
   const memo2 = memo1.useMemo(() => {
-    const items = [bestMatches.length];
+    items = [bestMatches.length];
     return items;
   }, items2);
   const callback = memo1.useCallback(

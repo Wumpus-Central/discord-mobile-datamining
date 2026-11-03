@@ -5,15 +5,15 @@ import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.ts
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
@@ -23,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     );
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   },
 });

@@ -53,7 +53,7 @@ function ObscuredMediaOverlay(isSpoiler) {
   if (tmp2Result.isAndroid()) {
     str = "dark";
   }
-  const items = [children, , ,];
+  items = [children, , ,];
   let tmp8 = isObscured;
   if (isObscured) {
     const obj2 = { style: tmp.obscureBackground };
@@ -82,7 +82,7 @@ function ObscuredMediaOverlay(isSpoiler) {
 function SinglePreviewableMedia(arg0) {
   ({ previewableMedia, size, message } = arg0);
   const tmp = closure_13();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   ({ type, media, icon } = previewableMedia);
   const shouldAgeVerifyForExplicitMedia = ExplicitMediaRedactionUtils.useShouldAgeVerifyForExplicitMedia();
@@ -258,7 +258,7 @@ function MultiplePreviewableMedia(arg0) {
     return size;
   }, []);
   const obj2 = { cutouts: null, children: null };
-  const items = [memo];
+  items = [memo];
   obj2.cutouts = items;
   const tmp = closure_14();
   obj2.children = React6(SinglePreviewableMedia, { previewableMedia, size: 56, message });
@@ -282,8 +282,8 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+let createStyles = fn(5141);
 let obj2 = { badge: null, icon: null };
 let size = {
   alignItems: "center",
@@ -299,7 +299,7 @@ let size = {
 obj2.badge = size;
 obj2.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj3 = { badge: null };
 let size1 = {
   width: 20,
@@ -314,7 +314,7 @@ let size1 = {
 };
 obj3.badge = size1;
 let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj5 = {
   mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   mediaThumbnail: { width: "100%", height: "100%" },
@@ -353,9 +353,9 @@ obj5.spoilerPill = {
   alignItems: "center",
 };
 let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj11 = {
   padding: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.xs,
@@ -364,7 +364,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(11023).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(11156).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");

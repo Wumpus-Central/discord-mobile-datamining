@@ -5,7 +5,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -18,7 +18,7 @@ export default function UserSettingsSensitiveContentFilters() {
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.GYpoAq);
-    const items = [,];
+    items = [,];
     ({
       PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0],
       PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1],

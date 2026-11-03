@@ -10,7 +10,7 @@ import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8397 from "../../../../../_runtime/metro/08397__.js";
+import _modDef8521 from "../../../../../_runtime/metro/08521__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8397);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8521);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -263,7 +263,7 @@ function createMessageContent(message) {
   if (null != messageForward) {
     message2 = messageForward.messageSnapshot.message;
   }
-  let items = [];
+  items = [];
   if (renderReactions) {
     const obj2 = { reactions: message.reactions, animateEmoji };
     items = tmp4(tmp5[41])(obj2);
@@ -569,7 +569,7 @@ function createMessageContent(message) {
               if (message.type === constants.REPLY) {
                 if (renderReplies) {
                   const messageByReference1 = ReferencedMessageStore.getMessageByReference(message.messageReference);
-                  const state = messageByReference1.state;
+                  state = messageByReference1.state;
                   if (ReferencedMessageState.LOADED === state) {
                     const message3 = messageByReference1.message;
                     const result2 = tmp15(tmp5[40]).maybeCreateSingleForwardForMessage(message3);
@@ -895,7 +895,7 @@ function createMessageContent(message) {
                   }
                   const items4 = [];
                   if (hasFlagResult2) {
-                    const guild = GuildStore.getGuild(guildId1);
+                    guild = GuildStore.getGuild(guildId1);
                     if (null != guild) {
                       if (tmp15Result101.isGuildOfficialMessagesEnabled(guild, "createMessageContent")) {
                         let officialMessageColor = guild.officialMessageColor;

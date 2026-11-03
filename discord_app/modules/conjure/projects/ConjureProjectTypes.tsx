@@ -20,8 +20,8 @@ export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_APP_DESCRIPTION_LENGTH = 400;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const ConjureProjectFlags = frozen1;
-export function isProjectGuildCollaborationEnabled(flags) {
-  let num = flags.flags;
+export function isProjectGuildCollaborationEnabled(stateFromStores) {
+  let num = stateFromStores.flags;
   if (num == null) {
     num = 0;
   }

@@ -33,7 +33,7 @@ export function useForwardPreviewContent(message) {
   } else if (null != onlyEmbedIndices) {
     attachments = [];
   }
-  const items = [];
+  items = [];
   const items1 = [onlyAttachmentIds];
   if (
     obj.useStateFromStores(items1, () => {

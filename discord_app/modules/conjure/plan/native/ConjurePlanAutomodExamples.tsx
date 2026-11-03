@@ -19,7 +19,7 @@ function ExampleRow(showReason) {
     result = ConjurePlanAutomodOutcomes.planAutomodReasonText(example);
     const tmp2Result = ConjurePlanAutomodOutcomes;
   }
-  const items = [tmp.row];
+  items = [tmp.row];
   let blockedRow = blockedStyle;
   if (blockedStyle) {
     blockedRow = tmp.blockedRow;
@@ -71,7 +71,7 @@ function ExampleSection(arg0) {
   }
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { style: tmp.caption, accessibilityRole: "header", children: null };
-  const items = [
+  items = [
     closure_3(require("Text/Text").Text, {
       variant: "text-xs/semibold",
       color: closure_6[obj.tone],
@@ -115,7 +115,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
 let closure_6 = { blurple: "text-brand", red: "text-feedback-critical", green: "text-feedback-positive" };
 let closure_7 = ["glazedgamer", "sprinkles", "donutking"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     gap: nativeDefault.space.PX_16,
@@ -220,7 +220,7 @@ export default function ConjurePlanAutomodExamples(automod) {
     obj3.children = closure_3(require("Text/Text").Text, obj4);
     tmp7 = closure_3(View, obj3);
   }
-  const items = [
+  items = [
     tmp7,
     result.map((group, index) => {
       const obj = { group, firstIndex: null };

@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 fn(1072).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
   gifImage: null,
@@ -47,7 +47,7 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
   const tmp = closure_9();
-  const items = [onSelectCategory, item];
+  items = [onSelectCategory, item];
   const callback = noop.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);

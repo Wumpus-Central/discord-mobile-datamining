@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/billing/native/subscription/u
 export default function useStoreFrontPrice(arg0, arg1) {
   const user = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     if (null == user) {
       let priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;

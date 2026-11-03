@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default function useManageSubscriptionCardData(currentPeriodEnd) {
   _require = require("subscriptionUtils").getRoleSubscriptionPlanId(currentPeriodEnd);
   const obj = require("subscriptionUtils");
-  const items = [fetchSubscriptionsSettings];
+  items = [fetchSubscriptionsSettings];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListingForPlan(closure_0),
   );

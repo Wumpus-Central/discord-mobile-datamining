@@ -27,7 +27,7 @@ let closure_7 = async function _handleConfirm() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_7 = async function _handleConfirm() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c0 = tmp;
@@ -82,7 +82,7 @@ export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount)
   const obj3 = { variant: "destructive", onPress: handleConfirm, text: null };
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t["cY+Oob"]);
-  const items = [React4(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React4(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["ETE/oC"]);

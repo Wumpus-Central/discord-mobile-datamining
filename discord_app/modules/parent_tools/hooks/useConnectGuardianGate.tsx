@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export function useConnectGuardianGate() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     linkCode: FamilyCenterStore.getLinkCode(),
     expiresAt: FamilyCenterStore.getLinkCodeExpiresAt(),

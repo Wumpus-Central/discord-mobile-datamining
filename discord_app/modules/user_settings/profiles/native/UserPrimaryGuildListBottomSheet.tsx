@@ -13,10 +13,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8393).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -30,7 +30,7 @@ let obj = {
   emptyState: null,
   noResults: null,
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -58,10 +58,10 @@ let closure_11 = noop.memo(function Item(item) {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8736).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8736);
+    guildTagBadgeUrl = item(8860).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8860);
   }
-  const radioA11yNative = item(5082).useRadioA11yNative({ selected });
+  const radioA11yNative = item(5209).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,
@@ -92,7 +92,7 @@ let closure_11 = noop.memo(function Item(item) {
   obj3.label = name;
   let tmp10Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6957).GuildIconSizes.SMALL_32 };
+    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(7083).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_7(GuildIconDefault, obj4);
   }
   obj3.icon = tmp10Result;
@@ -118,12 +118,12 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(9295).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(9423).BaseGuildTagChiplet, obj10);
   }
-  const items = [tmp10Result2, closure_7(item(7062).FormRadio, { selected })];
+  items = [tmp10Result2, closure_7(item(7188).FormRadio, { selected })];
   obj5.children = items;
   obj3.trailing = closure_8(View, obj5);
-  return closure_7(item(6975).TableRow, obj3);
+  return closure_7(item(7101).TableRow, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
@@ -146,13 +146,13 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     "UserPrimaryGuildListBottomSheet",
   );
   ({ creatableGuilds: c6, isUpsellVisible } = guildTagCreationUpsell);
-  let items = [availableGuilds];
+  items = [availableGuilds];
   const memo = first.useMemo(() => _modDef12.sortBy(availableGuilds, (name) => name.name.toLowerCase()), items);
   const items1 = [memo, first];
   const memo1 = first.useMemo(() => {
     let formatted = first.trim().toLowerCase();
     if ("" === formatted) {
-      const items = [null];
+      items = [null];
       HermesBuiltin.arraySpread(memo, 1);
       let found = items;
     } else {
@@ -224,7 +224,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   const tmp13 = memo(availableGuilds(onSelectGuild[24]).SearchBar, obj6);
   const obj7 = { style: tmp.titleContainer, children: null };
   const obj8 = {
-    variant: "heading-lg/bold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,

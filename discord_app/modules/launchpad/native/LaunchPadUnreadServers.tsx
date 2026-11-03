@@ -25,8 +25,8 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -50,7 +50,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   guildId = guildId.guildId;
   const onGuildSelect = guildId.onGuildSelect;
   const tmp = closure_12();
-  const items = [guildId, onGuildSelect];
+  items = [guildId, onGuildSelect];
   const items1 = [guildId];
   const callback = noop.useCallback(() => {
     onGuildSelect(guildId);
@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19074), {
+  obj.children = closure_10(onGuildSelect(19232), {
     size: 48,
     borderRadius: 16,
     guildId,
@@ -74,7 +74,7 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
   const tmp = closure_12();
-  let items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(stateFromStores1[11]).useStateFromStores(items, () =>
     ChannelStore.getChannel(channelId),
   );
@@ -172,7 +172,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   let tmp = prop;
   const categoryStyles = selectedGuildId(prop[19]).useCategoryStyles();
   unreadGuilds.useRef(-1);
-  const items = [setSelectedGuild, selectedGuildId];
+  items = [setSelectedGuild, selectedGuildId];
   const onGuildSelect = unreadGuilds.useCallback((id) => {
     if (ref.current < 0) {
       if (isGuildSelectableDefault(id)) {

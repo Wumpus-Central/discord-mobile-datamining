@@ -28,7 +28,7 @@ let closure_10 = async function _fetchApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -225,7 +225,7 @@ export default {
         rejectWithError: tmp5(channel_id[6]).rejectWithMigratedError(),
       };
       await HTTP.get(request);
-      const items = value.body.items;
+      items = value.body.items;
       surface(channel_id[5]).dispatch({
         type: "GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS",
         guildId: closure_129_0,
@@ -267,7 +267,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -319,7 +319,7 @@ export default {
                 const _URLSearchParams = URLSearchParams;
                 const str = new URLSearchParams(
                   arr.map((item) => {
-                    const items = ["application_ids", item];
+                    items = ["application_ids", item];
                     return items;
                   }),
                 );
@@ -388,7 +388,7 @@ export function useApplicationWithLoggedOutContext(arg0) {
   const data = tmp.data;
   const error = tmp.error;
   const obj = { app: null, isLoading: tmp.isLoading, error };
-  const items = [ApplicationDirectoryApplicationsStore];
+  items = [ApplicationDirectoryApplicationsStore];
   const items1 = [arg0, data];
   obj.app = require("initialize").useStateFromStores(
     items,

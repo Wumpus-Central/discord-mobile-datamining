@@ -73,7 +73,7 @@ function getEmbeddedActivityJoinability(arg0) {
               if (null == guildId) {
                 return obj.NO_GUILD;
               } else {
-                const guild = GuildStore.getGuild(guildId);
+                guild = GuildStore.getGuild(guildId);
                 let afkChannelId;
                 if (guild != null) {
                   afkChannelId = guild.afkChannelId;
@@ -156,7 +156,7 @@ export function useEmbeddedActivityJoinability(userId) {
   let isChannelContentGated;
   const isActivitiesEnabledForCurrentPlatform = userId(channelId[8]).useIsActivitiesEnabledForCurrentPlatform();
   const obj = userId(channelId[8]);
-  const items = [isChannelContentGated];
+  items = [isChannelContentGated];
   const stateFromStores = userId(channelId[9]).useStateFromStores(items, () => isChannelContentGated.getCurrentUser());
   const obj2 = userId(channelId[9]);
   const items1 = [application];

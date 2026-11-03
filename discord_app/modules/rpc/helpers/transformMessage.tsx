@@ -534,7 +534,7 @@ export function transformMessageRecord(id) {
       images = [];
     }
     const found = images.filter((item) => item !== images.image);
-    const items = [
+    items = [
       closure_10(images),
       ...found.map((image) => transformEmbed({ id: images.id, type: constants.RICH, url: images.url, image })),
     ];

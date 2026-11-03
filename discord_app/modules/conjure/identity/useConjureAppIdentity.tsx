@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conjure/identity/useConjureAp
 
 export default function useConjureAppIdentity(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

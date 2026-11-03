@@ -41,15 +41,15 @@ function UserResult(user) {
   }
   const tmp = closure_15();
   const tmp4 = getLayoutStylesDefault();
-  let items = [user.id];
+  items = [user.id];
   const callback = noop.useCallback(() => {
     const obj2 = { recipientIds: null };
-    const items = [user.id];
+    items = [user.id];
     obj2.recipientIds = items;
     ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  const fontScale = user(5642).useFontScale();
-  const obj = user(5642);
+  const fontScale = user(5762).useFontScale();
+  const obj = user(5762);
   const items1 = [LocaleStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
@@ -72,8 +72,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(6860).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(6860);
+    relativeTimestamp = tmp6(6980).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(6980);
   }
   let str = "text-muted";
   if (unread) {
@@ -99,12 +99,12 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "fa86a4eca395e5248db0fae5baa1efbd",
-    style: "zh-TW.messages.fa86a4eca395e5248db0fae5baa1efbd.compiled.messages",
+    streaming: "94b089780a9defb1e54e78e501ec5014",
+    style: "pt-BR.messages.94b089780a9defb1e54e78e501ec5014.compiled.messages",
     size: "jsona",
-    animate: "addOnJSPropsChangeListener",
+    animate: "ConjureAppPictureInPicture",
     typing: null,
-    autoStatusCutout: "\u{1F9C2}",
+    autoStatusCutout: null,
   };
   let tmp19 = null;
   if (!user.isSystemUser()) {
@@ -152,9 +152,9 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(5692).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(5812).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(11039).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(11172).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -168,11 +168,11 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj8);
   obj10.children = items5;
   obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-  return tmp2Result5(closure_12(user(6980).PressableHighlight, obj5));
+  return tmp2Result5(closure_12(user(7106).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelMuted(undefined, channel.id),
   );
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(17310)(channel, { unread });
+  obj4.lastMessage = channel(17453)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;
@@ -194,10 +194,10 @@ function UserResultWithChannel(arg0) {
   return closure_12(UserResult, obj4);
 }
 const StatusTypes = fn(1072).StatusTypes;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },
@@ -209,7 +209,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadSea
 
 export default noop.memo(function LaunchPadSearchResultUser(user) {
   user = user.user;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   closure_1 = user(504).useStateFromStores(items, () => ChannelStore.getDMFromUserId(user.id));
   const obj = user(504);
   const items1 = [ChannelStore];

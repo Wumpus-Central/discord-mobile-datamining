@@ -29,7 +29,7 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
   first(null);
   first(Date.now());
   first(false);
-  const items = [onAnalytics];
+  items = [onAnalytics];
   const tmp9 = closure_5((segmentEndSec) => {
     if (segmentEndSec.segmentEndSec >= segmentEndSec.segmentStartSec) {
       const obj = {

@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(6709).RequestToSpeakPermissionStates;
+const constants = fn(6829).RequestToSpeakPermissionStates;
 const Permissions = fn(1072).Permissions;
-const RowType = fn(7947).RowType;
+const RowType = fn(8071).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
@@ -21,7 +21,7 @@ export function fillChunk(arg0, arg1, arg2) {
   closure_0 = tmp;
   return _mod12.chunk(arg0, arg1).reduce((acc, item) => {
     if (closure_0 <= item.length) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(acc, 0)] = item;
       return items;
     } else {

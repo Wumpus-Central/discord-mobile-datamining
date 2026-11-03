@@ -24,7 +24,7 @@ const prototype = function ForumChannelSeenManager(channelId) {
     return () => {
       (function flushSeenItems(trackedFeedItems) {
         trackedFeedItems = trackedFeedItems.trackedFeedItems;
-        const items = [];
+        items = [];
         const items1 = [];
         ({ guildId, channelId, sessionId, isForcedFlush } = trackedFeedItems);
         const keys = Object.keys(trackedFeedItems);

@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx
-import _modDef3450 from "../intl/FavoritesGuild.messages.js";
+import _modDef3577 from "../intl/FavoritesGuild.messages.js";
 import openFavoritesGuildAddChannelModalDefault from "../utils/openFavoritesGuildAddChannelModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesG
 
 export default function useFavoritesGuildCategoryAddAction(id) {
   _require = id;
-  const items = [id.id];
+  items = [id.id];
   const callback = noop.useCallback(() => {
     openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
   }, items);
@@ -22,7 +22,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       const obj2 = { label: null, perform: null };
       const intl = require("util").intl;
-      obj2.label = intl.string(_modDef3450["1QJmIL"]);
+      obj2.label = intl.string(_modDef3577["1QJmIL"]);
       obj2.perform = callback;
       tmp4 = obj2;
     }

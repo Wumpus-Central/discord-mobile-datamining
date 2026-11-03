@@ -4,7 +4,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const EmojiInteractionPoint = fn(1386).EmojiInteractionPoint;
+const EmojiInteractionPoint = fn(1388).EmojiInteractionPoint;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -13,7 +13,7 @@ class TopEmojisDataManager extends tmp2 {
   }
 }
 TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction(interaction) {
-  const items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
+  items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
   if (items.includes(interaction.interaction)) {
     const guildId = SelectedGuildStore.getGuildId();
     const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);

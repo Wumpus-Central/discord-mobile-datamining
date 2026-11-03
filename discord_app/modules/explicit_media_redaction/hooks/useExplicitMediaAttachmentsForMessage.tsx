@@ -15,7 +15,7 @@ export function useRedactableMediaAttachmentsForMessage(channelId, messageId, at
   _require = channelId;
   dependencyMap = messageId;
   closure_2 = attachmentId;
-  const items = [closure_2];
+  items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     MessageStore.getMessage(closure_0, closure_1),
   );
@@ -42,7 +42,7 @@ export function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId
   _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
-  const items = [closure_2];
+  items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     MessageStore.getMessage(closure_0, closure_1),
   );

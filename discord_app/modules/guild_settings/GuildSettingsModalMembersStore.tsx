@@ -75,7 +75,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(Dispat
     if (null == found) {
       return false;
     } else if (tmp) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {

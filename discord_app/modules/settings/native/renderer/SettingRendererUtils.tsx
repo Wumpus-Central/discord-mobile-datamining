@@ -32,7 +32,7 @@ export function onRouteSettingOnPress(arg0) {
         const timerId = setTimeout(() => {
           UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
           const obj3 = { destinationPane: closure_1_1.route, source: { page: constants.USER_SETTINGS } };
-          const result = navigation(7165).trackUserSettingsPaneViewed(obj3);
+          const result = navigation(7286).trackUserSettingsPaneViewed(obj3);
           navigation.navigate(closure_1_1.route);
         }, 100);
         const tmpResult3 = KeyboardManagerUtils;
@@ -61,7 +61,7 @@ export function getSettingTitle(id) {
   return cachedSettingTitle;
 }
 export function getSettingSearchableTitles() {
-  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16582).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -80,9 +80,9 @@ export function getSettingSearchableTitles() {
   return items;
 }
 export function getSettingScreens() {
-  let items = [];
+  items = [];
   set = new Set();
-  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16582).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -96,8 +96,8 @@ export function getSettingScreens() {
   return items;
 }
 export function getDesignSystemScreens() {
-  let items = [];
-  const entries = Object.entries(items(16438).SETTING_RENDERER_CONFIG);
+  items = [];
+  const entries = Object.entries(items(16582).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;
@@ -113,7 +113,7 @@ export function getDesignSystemScreens() {
 }
 export function toSettingListItems(node, field) {
   closure_0 = field;
-  const items = [];
+  items = [];
   const sections = node.sections;
   let item = sections.forEach((settings) => {
     settings = settings.settings;
@@ -139,7 +139,7 @@ export function toSettingListItems(node, field) {
   return items;
 }
 export function getSettingListSearchResultItems(arr) {
-  const items = [];
+  items = [];
   const item = arr.forEach((setting) => {
     const tmp2 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting];
     if (null != tmp2.parent) {
@@ -203,7 +203,7 @@ export function getSettingListSearchResultItems(arr) {
   return items1;
 }
 export function getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount) {
-  let items = [];
+  items = [];
   if (isLoading) {
     for (let num4 = 0; num4 < placeholderCount; num4 = num4 + 1) {
       let obj = { type: null, start: null, end: null };
@@ -217,7 +217,7 @@ export function getScoredSettingListSearchResultItems(settings, isLoading, place
     const _Map = Map;
     const map = new Map();
     const _Map2 = Map;
-    map1 = new Map();
+    const map1 = new Map();
     constants = 0;
     let item = settings.forEach((item) => {
       ({ setting, score } = item);

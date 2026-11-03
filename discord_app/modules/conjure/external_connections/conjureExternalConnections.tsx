@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting("modules/conjure/external_connections/
 
 export { externalConnectionOffer };
 export function externalConnectionOffers(stateFromStores) {
-  const items = [];
+  items = [];
   set = new Set();
   const iter = stateFromStores[Symbol.iterator]();
   const nextResult = iter.next();

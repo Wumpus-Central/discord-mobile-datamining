@@ -5,7 +5,7 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 
@@ -18,7 +18,7 @@ export function getHasImportantUnread(channel) {
 }
 export function useHasImportantUnread(arg0) {
   _require = arg0;
-  const items = [ReadStateStore, UserGuildSettingsStore];
+  items = [ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStores(items, () => {
     let hasUnreadResult = ReadStateStore.hasUnread(id.id);
     if (hasUnreadResult) {

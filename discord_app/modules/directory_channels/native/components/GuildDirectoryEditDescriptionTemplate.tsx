@@ -9,11 +9,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13853);
-({ DirectoryEntryCategories: closure_9, getHubCategories: c10 } = GuildDirectoryConstants);
+const GuildDirectoryConstants = fn(13984);
+({ DirectoryEntryCategories: closure_9, getHubCategories: closure_10 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({ container: { marginHorizontal: 16, gap: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -38,7 +38,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   };
   const tmp = closure_13();
   const arr = closure_10(directoryChannelId);
-  const items = [GuildDirectoryStore];
+  items = [GuildDirectoryStore];
   let primaryCategoryId;
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildDirectoryStore.getCurrentCategoryId(directoryChannelId),

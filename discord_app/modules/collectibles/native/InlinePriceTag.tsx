@@ -5,10 +5,10 @@ import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -19,12 +19,12 @@ import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
+import useVirtualCurrencyData from "hooks/useVirtualCurrencyData.tsx";
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder.tsx";
 import TagIcon from "../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
 import useProductDisableState from "../hooks/useProductDisableState.tsx";
 import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet.tsx";
 import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment.tsx";
-import useVirtualCurrencyData from "hooks/useVirtualCurrencyData.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
@@ -40,7 +40,7 @@ function PriceTag(accessibilityLabel) {
     variant = "text-md/medium";
   }
   const obj = { children: null };
-  const items = [icon];
+  items = [icon];
   const obj2 = {
     variant,
     style: null,
@@ -75,7 +75,7 @@ function OrbsPriceTag(arg0) {
     if (result) {
       result = discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
     }
-    const items = [tmp.priceTagRow];
+    items = [tmp.priceTagRow];
     const canAfford = vcData.canAfford;
     let disabled = !canAfford;
     if (canAfford) {
@@ -156,9 +156,9 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(15042, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(15184, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
-        const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
+        items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
         const intl = util.intl;
         obj2.title = intl.string(util.t.XcOMLu);
@@ -175,7 +175,7 @@ function ExpressiveNitroUpsell(arg0) {
   };
   const alphaResult1 = tmp7(useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(0.4);
   const obj3 = { style: tmp.nitroUpsellGradient, colors: null, start, end, pointerEvents: "none" };
-  let items = [
+  items = [
     hexResult,
     tmp7(useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END)).alpha(0.4).hex(),
   ];
@@ -279,7 +279,7 @@ function NitroUpsell(premiumPriceFormatted) {
     children: null,
   };
   const obj2 = { color: "interactive-text-default", style: null };
-  const items = [,];
+  items = [,];
   ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp);
   obj2.style = items;
   const items1 = [closure_9(NitroWheelIcon.NitroWheelIcon, obj2)];
@@ -310,7 +310,7 @@ function BundleDiscountV2(discountPercentage) {
   if (discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
     const obj = { style: tmp.discount, children: null };
     const obj2 = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
-    const items = ["-", discountPercentage, "%"];
+    items = ["-", discountPercentage, "%"];
     obj2.children = items;
     obj.children = closure_1_11(Text_Text.Text, obj2);
     tmp4 = React7(React4, obj);
@@ -323,8 +323,8 @@ const ShopCtaEnum = fn(1074).ShopCtaEnum;
 const Constants = fn(1072);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+let createStyles = fn(5141);
 let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
@@ -391,7 +391,7 @@ obj2.disabled = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(obj2);
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_19 = createStyles.createStyles(() => {
   const discount = {
     backgroundColor: "rgba(46, 204, 113, 0.25)",
@@ -435,7 +435,7 @@ export default function InlinePriceTag(arg0) {
     true,
   );
   const virtualCurrencyData = useVirtualCurrencyData.useVirtualCurrencyData(product, canUseShopDiscountsResult);
-  const items = [IAPStore];
+  items = [IAPStore];
   if (obj8.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus())) {
     if (null == formattedPriceForCollectiblesProduct) {
       return React7(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});

@@ -7,12 +7,12 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const PlatformUtils = APNGPlayer(1375);
-const APNGPlayer2 = APNGPlayer(9504);
+const PlatformUtils = APNGPlayer(1377);
+const APNGPlayer2 = APNGPlayer(9632);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width) => ({
   containerRefresh: {
     position: "absolute",
@@ -41,7 +41,7 @@ export const GiftIconTrinketsAnimation = noop.memo(function GiftIconTrinketsAnim
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
   const tmp2 = closure_6(useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const trinketsRefresh = tmp2.trinketsRefresh;
   if (obj4.isNullOrEmpty(trinketsAnimationUrl)) {

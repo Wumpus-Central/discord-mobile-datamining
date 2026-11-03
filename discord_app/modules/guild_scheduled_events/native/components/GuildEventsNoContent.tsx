@@ -12,7 +12,7 @@ const Constants = fn(1083);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     display: "flex",
@@ -41,7 +41,7 @@ export default function GuildEventsNoContent(guild) {
   guild = guild.guild;
   const onClose = guild.onClose;
   const tmp = closure_9();
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   let stateFromStores = guild(504).useStateFromStores(
     items,
@@ -52,17 +52,17 @@ export default function GuildEventsNoContent(guild) {
   const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = guild(1113).intl;
   obj3.children = intl.string(guild(1113).t["WgZ+3D"]);
-  const items2 = [closure_7(guild(5624).Text, obj3), ,];
+  const items2 = [closure_7(guild(5747).Text, obj3), ,];
   const obj4 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1113).intl;
   obj4.children = intl2.string(guild(1113).t["v/S/PG"]);
-  items2[1] = closure_7(guild(5624).Text, obj4);
+  items2[1] = closure_7(guild(5747).Text, obj4);
   if (stateFromStores) {
     const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1113).intl;
@@ -73,7 +73,7 @@ export default function GuildEventsNoContent(guild) {
       },
     };
     obj5.children = intl3.format(tmp2(1113).t["K+DH2o"], obj6);
-    stateFromStores = closure_7(tmp2(5624).Text, obj5);
+    stateFromStores = closure_7(tmp2(5747).Text, obj5);
   }
   items2[2] = stateFromStores;
   obj2.children = items2;

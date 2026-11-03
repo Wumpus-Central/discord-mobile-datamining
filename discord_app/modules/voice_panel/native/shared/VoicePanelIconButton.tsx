@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelIconButton.tsx
-import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -22,5 +22,5 @@ export default noop.memo(function VoicePanelIconButton(overrideVariant) {
   obj2.variant = str;
   obj2.maxFontSizeMultiplier = 2;
   obj.children = jsx(IconButton.IconButton, {});
-  return jsx(ReanimatedNativeViewDefault, { ref, style, layout, children: null });
+  return jsx(_modDef1652.View, { ref, style, layout, children: null });
 });

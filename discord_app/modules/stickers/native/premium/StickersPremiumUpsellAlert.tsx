@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef10293 from "../../../../../_runtime/metro/10293__.js";
-import _modDef10294 from "../../../../../_runtime/metro/10294__.js";
-import _modDef10295 from "../../../../../_runtime/metro/10295__.js";
+import _modDef10423 from "../../../../../_runtime/metro/10423__.js";
+import _modDef10424 from "../../../../../_runtime/metro/10424__.js";
+import _modDef10425 from "../../../../../_runtime/metro/10425__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -24,8 +24,8 @@ function PerkRow(perk) {
   const obj = { style: items, children: null };
   items[1] = lastPerkRow;
   const items1 = [
-    map1(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }),
-    map1(Text_Text.Text, {
+    state(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }),
+    state(Text_Text.Text, {
       style: tmp.perkText,
       variant: "text-md/medium",
       color: "interactive-text-active",
@@ -33,15 +33,15 @@ function PerkRow(perk) {
     }),
   ];
   obj.children = items1;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
-  SubscriptionPlans: c10,
+  SubscriptionPlans: closure_10,
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_11,
   PRICE_PLACEHOLDER: closure_12,
 } = PremiumConstants);
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10293,
+    icon: _modDef10423,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -59,7 +59,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef10293,
+  icon: _modDef10423,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -67,28 +67,28 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef10294,
+  icon: _modDef10424,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef10294,
+  icon: _modDef10424,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef10295,
+  icon: _modDef10425,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj5 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -103,7 +103,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef10295,
+  icon: _modDef10425,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -153,12 +153,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9908)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(10039)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7326)().analyticsLocations;
+  analyticsLocations = tmp3(7446)().analyticsLocations;
   let obj = {
     cancelText: null,
     confirmColor: null,
@@ -188,15 +188,15 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.onCancel = onClose;
   items = [tmp.alert];
   let shortHeightAlert = null;
-  if (analyticsLocations(1491)().height <= 580) {
+  if (analyticsLocations(1493)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(6030);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(8359) });
+  const tmp3Result = analyticsLocations(6150);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(8483) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2)];
   const obj5 = {
@@ -207,10 +207,10 @@ export default function StickersPremiumUpsellAlert(arg0) {
     children: null,
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(8359) };
-  obj6.source = analyticsLocations(10296);
+  const obj4 = { source: analyticsLocations(8483) };
+  obj6.source = analyticsLocations(10426);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(5717), obj6), ,];
+  const items2 = [closure_13(analyticsLocations(5837), obj6), ,];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -219,7 +219,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(5717);
+  const tmp3Result2 = analyticsLocations(5837);
   items2[2] = closure_13(closure_4, {
     style: tmp.perks,
     children: items.map((perk, index) =>

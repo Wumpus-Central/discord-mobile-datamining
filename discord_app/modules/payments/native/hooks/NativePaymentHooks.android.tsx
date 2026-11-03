@@ -26,7 +26,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
     flag = true;
   }
   noop = undefined;
-  const items = [IAPStore];
+  items = [IAPStore];
   const items1 = [flag];
   const isFetchingGoogleSkus = require("initialize").useStateFromStores(
     items,
@@ -55,7 +55,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj7 = { value: memo2(9911).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: memo2(10042).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -100,8 +100,8 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v3("Unable to fetch");
-              const result = memo2(4827).captureBillingException(closure_128_1);
-              const obj3 = memo2(4827);
+              const result = memo2(4954).captureBillingException(closure_128_1);
+              const obj3 = memo2(4954);
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -144,7 +144,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
 function useLoadedGoogleSkuIds(memo1) {
   _require = memo1;
   [first, dependencyMap] = noop.useState(() => new Set());
-  let items = [IAPStore, AuthenticationStore];
+  items = [IAPStore, AuthenticationStore];
   let items1 = [
     memo1,
     require("initialize").useStateFromStores(items, () => {
@@ -158,12 +158,12 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(9911);
-    ({ settled, release: first } = memo1(9911).retainInAppSkus(c0));
+    const obj = memo1(10042);
+    ({ settled, release: first } = memo1(10042).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {
-          const items = [...closure_1_0];
+          items = [...closure_1_0];
           return new Set(items);
         });
       }
@@ -186,7 +186,7 @@ function useLoadedGoogleSkuIds(memo1) {
   );
   const items4 = [first, stateFromStores];
   return noop.useMemo(() => {
-    const items = [...first];
+    items = [...first];
     if ("" === stateFromStores) {
       let items1 = [];
     } else {
@@ -214,10 +214,10 @@ function useCreateSubscription(arg0) {
   }
 }
 function useMobileStoreFront() {
-  let items = [IAPStore];
+  items = [IAPStore];
   const tmp = _slicedToArray(
     first(504).useStateFromStoresArray(items, () => {
-      const items = [authStore.getUserCountry()];
+      items = [authStore.getUserCountry()];
       const products = authStore.getProducts();
       let currencyCode;
       if (products != null) {

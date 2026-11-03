@@ -8,8 +8,8 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 function DCDChatList() {
   const tmp = closure_7();
-  navigationTTIContentPainted = navigationTTIContentPainted(13328).useNavigationTTIContentPainted();
-  const items = [navigationTTIContentPainted];
+  navigationTTIContentPainted = navigationTTIContentPainted(13464).useNavigationTTIContentPainted();
+  items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[5]).Gesture;
     const NativeResult = Gesture.Native();
@@ -23,21 +23,21 @@ function DCDChatList() {
     onContentPaintStateChange: callback,
     children: null,
   };
-  const obj = navigationTTIContentPainted(13328);
-  obj3.children = closure_5(navigationTTIContentPainted(13335).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(13464);
+  obj3.children = closure_5(navigationTTIContentPainted(13471).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
-  return closure_5(navigationTTIContentPainted(5303).GestureDetector, obj2);
+  return closure_5(navigationTTIContentPainted(5426).GestureDetector, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 
 export default function Chat(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   const obj2 = {};
   const merged1 = Object.assign(merged);

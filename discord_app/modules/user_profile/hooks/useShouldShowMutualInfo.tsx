@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");
 
 export default function useShouldShowMutualInfo(id) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {

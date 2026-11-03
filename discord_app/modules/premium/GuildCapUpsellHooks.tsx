@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 
 export function useShouldShowInlineGuildCapUpsell() {
-  const items = [GuildStore];
+  items = [GuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
   const items1 = [HotspotStore2.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {

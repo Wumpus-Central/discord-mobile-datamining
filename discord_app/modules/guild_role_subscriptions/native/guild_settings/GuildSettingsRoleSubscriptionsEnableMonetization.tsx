@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 
 export default function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   if (null == obj.useStateFromStores(items, () => GuildStore.getGuild(guildId))) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {

@@ -20,7 +20,7 @@ export function setIsOnStartStageScreen(arg0) {
 }
 export function useUpdateIsOnStartStageScreenEffect(id) {
   _require = id;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => SelectedChannelStore.getVoiceChannelId() === id.id,
@@ -35,7 +35,7 @@ export function useUpdateIsOnStartStageScreenEffect(id) {
   );
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(7943)(id.id);
+    tmp3 = !stateFromStores(8067)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

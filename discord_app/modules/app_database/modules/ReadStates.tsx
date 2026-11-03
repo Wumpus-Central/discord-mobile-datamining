@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -112,7 +112,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const iter2 = sorted.reverse();
       const result = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
       const obj2 = { id: "highest_last_message_id", versionString: str2 };
-      const items = [obj2, ,];
+      items = [obj2, ,];
       const obj4 = { id: "private_channels_version", versionString: _lastMessageId };
       items[1] = obj4;
       const obj5 = { id: "read_state_version", version: tmp.readStateVersion };

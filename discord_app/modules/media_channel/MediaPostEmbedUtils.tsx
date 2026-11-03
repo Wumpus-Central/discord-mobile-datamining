@@ -179,7 +179,7 @@ export function getMediaPostEmbedChannelPath(url) {
   }
 }
 export function canUseMediaPostEmbed(guildId, isMediaChannel) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
       const features = guild.features;

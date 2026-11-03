@@ -10,7 +10,7 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import LiveChannelNoticesStore from "LiveChannelNoticesStore.tsx";
 
 require = fn;
-let closure_11 = fn(4869).GuildScheduledEventEntityTypes;
+let closure_11 = fn(4996).GuildScheduledEventEntityTypes;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
@@ -22,7 +22,7 @@ export function useGuildHasLiveChannelNotice(id) {
     id = first.id;
   }
   const channel = ChannelStore.getChannel(id);
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [channel];
   stateFromStores = channel(guildActiveEvent[11]).useStateFromStores(
     items,
@@ -71,7 +71,7 @@ export function useGuildLiveChannelNoticeInfo(id) {
     stateFromStores2[13],
   ).useActiveEventOrStageInstanceChannel(id);
   const obj = activeEventOrStageInstanceChannel(stateFromStores2[13]);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = activeEventOrStageInstanceChannel(stateFromStores2[11]).useStateFromStores(items, () => {
     let canResult = null != activeEventOrStageInstanceChannel;
     if (canResult) {

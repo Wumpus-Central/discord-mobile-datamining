@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_16 },
   avatar: null,
@@ -25,7 +25,7 @@ export default function LockedRecipientField(user) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.avatar, user, guildId: "Array", size: native.AvatarSizes.NORMAL };
-  const items = [React4(native.Avatar, obj2)];
+  items = [React4(native.Avatar, obj2)];
   const obj3 = { variant: "text-md/semibold", children: UserUtilsDefault.getName(user) };
   items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;

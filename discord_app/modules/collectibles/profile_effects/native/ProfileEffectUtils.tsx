@@ -4,21 +4,24 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export function shouldAnimate(entering, current) {
-  if (current >= entering.start) {
-    if (!entering.loop) {
-      if (current > entering.duration + entering.start) {
+export function shouldAnimate(aPNGPlayerControls, current) {
+  if (current >= aPNGPlayerControls.start) {
+    if (!aPNGPlayerControls.loop) {
+      if (current > aPNGPlayerControls.duration + aPNGPlayerControls.start) {
         return false;
       }
     }
-    if (entering.loop) {
-      if (undefined !== entering.loopDelay) {
-        if (entering.loopDelay > 0) {
+    if (aPNGPlayerControls.loop) {
+      if (undefined !== aPNGPlayerControls.loopDelay) {
+        if (aPNGPlayerControls.loopDelay > 0) {
           let loopDelay;
-          if (entering != null) {
-            loopDelay = entering.loopDelay;
+          if (aPNGPlayerControls != null) {
+            loopDelay = aPNGPlayerControls.loopDelay;
           }
-          if ((current - entering.start) % (entering.duration + loopDelay) > entering.duration) {
+          if (
+            (current - aPNGPlayerControls.start) % (aPNGPlayerControls.duration + loopDelay) >
+            aPNGPlayerControls.duration
+          ) {
             return false;
           }
         }

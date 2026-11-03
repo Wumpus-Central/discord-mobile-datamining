@@ -61,7 +61,7 @@ class OrbsArcadeRun$Type extends MessageType {
       name: "charge_status",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus",
           obj2,
           "ORBS_ARCADE_CHARGE_STATUS_",
@@ -216,7 +216,7 @@ let items = [
     name: "charge_type",
     kind: "enum",
     T() {
-      const items = [
+      items = [
         "discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeType",
         OrbsArcadeChargeType,
         "ORBS_ARCADE_CHARGE_TYPE_",
@@ -229,7 +229,7 @@ let items = [
     name: "charge_status",
     kind: "enum",
     T() {
-      const items = [
+      items = [
         "discord_protos.discord_kkv_store_value_models.v1.OrbsArcadeChargeStatus",
         obj2,
         "ORBS_ARCADE_CHARGE_STATUS_",

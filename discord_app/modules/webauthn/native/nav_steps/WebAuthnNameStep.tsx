@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ margin: { margin: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
@@ -31,7 +31,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ export default function WebAuthnNameStep() {
           v3(tmp32[10]).open("WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {
@@ -130,7 +130,7 @@ export default function WebAuthnNameStep() {
   const intl2 = util.intl;
   obj4.placeholder = intl2.string(util.t["I/sJtJ"]);
   obj4.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
-  const items = [closure_8(Form.FormInput, obj4), closure_8(Form.FormDivider, {})];
+  items = [closure_8(Form.FormInput, obj4), closure_8(Form.FormDivider, {})];
   let obj5 = { style: tmp3.margin, children: null };
   let obj6 = {
     onPress() {

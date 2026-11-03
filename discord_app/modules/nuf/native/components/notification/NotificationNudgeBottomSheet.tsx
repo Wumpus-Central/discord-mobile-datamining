@@ -7,13 +7,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const NotificationPermissionConstants = fn(13974);
+const NotificationPermissionConstants = fn(14105);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
   illustration: null,
@@ -41,7 +41,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   const onHide = actionLocation.onHide;
   ({ title, body } = actionLocation);
   const tmp = closure_11();
-  const items = [surface];
+  items = [surface];
   const effect = onHide.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
       action: constants2.IMPRESSION,
@@ -87,7 +87,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
     }),
     closure_9(actionLocation(markAsDismissed[13]).Text, {
       style: tmp.title,
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       accessibilityRole: "header",
       children: title,
     }),

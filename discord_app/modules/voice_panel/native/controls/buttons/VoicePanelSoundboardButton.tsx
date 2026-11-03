@@ -14,7 +14,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -56,7 +56,7 @@ export default function SoundboardButton(arg0) {
     element.accessibilityLabel = intl.string(util.t["6EJvHt"]);
     element.accessibilityHint = disabledAccessibilityHint;
     const obj2 = { style: null };
-    const items = [tmp3.circle];
+    items = [tmp3.circle];
     const obj3 = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
     items[1] = obj3;
     obj2.style = items;

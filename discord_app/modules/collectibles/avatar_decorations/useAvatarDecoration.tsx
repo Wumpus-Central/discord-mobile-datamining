@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/collectibles/avatar_decoratio
 export function useAvatarDecoration(user, guildId) {
   _require = user;
   dependencyMap = guildId;
-  let items = [GuildMemberStore];
+  items = [GuildMemberStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
-    const items = [GuildMemberStore];
+    items = [GuildMemberStore];
     const first = _slicedToArray(items, 1)[0];
     let member = null;
     if (null != closure_1) {
@@ -39,7 +39,7 @@ export function useAvatarDecoration(user, guildId) {
 export function getAvatarDecoration(user, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [GuildMemberStore];
+    items = [GuildMemberStore];
     tmp = items;
   }
   const first = _slicedToArray(tmp, 1)[0];

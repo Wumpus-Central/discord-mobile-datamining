@@ -17,11 +17,11 @@ export default function useLatestChannelMessage(arg0) {
   id = undefined;
   _slicedToArray = undefined;
   ({ guild_id: c1, id } = arg0);
-  let items = [MessagePreviewStore];
+  items = [MessagePreviewStore];
   const tmp = _slicedToArray(
     flag(id[3]).useStateFromStoresArray(items, () => {
       if (flag) {
-        const items = [null, true];
+        items = [null, true];
         let items1 = items;
       } else {
         items1 = [MessagePreviewStore.message(c1, id), MessagePreviewStore.isLatest(c1, id)];

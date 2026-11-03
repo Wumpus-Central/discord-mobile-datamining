@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPa
 export function useStageParticipants(id, SPEAKER) {
   _require = id;
   dependencyMap = SPEAKER;
-  let items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id, SPEAKER];
   return _slicedToArray(
     require("initialize").useStateFromStores(
       items,
       () => {
-        const items = [
+        items = [
           StageChannelParticipantStore.getMutableParticipants(closure_0, closure_1),
           StageChannelParticipantStore.getParticipantsVersion(closure_0),
         ];
@@ -33,7 +33,7 @@ export function useStageParticipants(id, SPEAKER) {
 export function useStageParticipantsCount(id, AUDIENCE) {
   _require = id;
   dependencyMap = AUDIENCE;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id, AUDIENCE];
   return require("initialize").useStateFromStores(
     items,
@@ -43,13 +43,13 @@ export function useStageParticipantsCount(id, AUDIENCE) {
 }
 export function useSortedRequestToSpeakParticipants(id) {
   _require = id;
-  let items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return _slicedToArray(
     require("initialize").useStateFromStores(
       items,
       () => {
-        const items = [
+        items = [
           StageChannelParticipantStore.getMutableRequestToSpeakParticipants(closure_0),
           StageChannelParticipantStore.getRequestToSpeakParticipantsVersion(closure_0),
         ];
@@ -63,7 +63,7 @@ export function useSortedRequestToSpeakParticipants(id) {
 }
 export function useActualStageSpeakerCount(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

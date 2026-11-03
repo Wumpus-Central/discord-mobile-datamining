@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/device/native/WakeLock.tsx");
 
 export default function WakeLock(wakeLockKey) {
   wakeLockKey = wakeLockKey.wakeLockKey;
-  const items = [wakeLockKey];
+  items = [wakeLockKey];
   const effect = noop.useEffect(() => {
     const lock = NativeScreenWakeLockModuleDefault.requestLock(wakeLockKey);
     return () => {
@@ -18,7 +18,7 @@ export default function WakeLock(wakeLockKey) {
 }
 export function useWakeLock(VoiceMessageOverlay) {
   closure_0 = VoiceMessageOverlay;
-  const items = [VoiceMessageOverlay];
+  items = [VoiceMessageOverlay];
   const effect = noop.useEffect(() => {
     const lock = NativeScreenWakeLockModuleDefault.requestLock(wakeLockKey);
     return () => {

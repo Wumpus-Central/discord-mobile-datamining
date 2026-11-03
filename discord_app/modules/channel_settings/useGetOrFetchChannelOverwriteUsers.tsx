@@ -1,7 +1,7 @@
 // discord_app/modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import _modDef18915 from "../../../_runtime/metro/18915__.js";
+import _modDef19073 from "../../../_runtime/metro/19073__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/channel_settings/useGetOrFetc
 export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg0];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -27,7 +27,7 @@ export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
   let tmp2 = first(
     noop.useMemo(() => {
       if (null == closure_1) {
-        let items = [];
+        items = [];
       } else {
         const _Object = Object;
         const values = Object.values(tmp2);
@@ -36,7 +36,7 @@ export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
         );
         items = found.map((id) => id.id);
       }
-      return _modDef18915(items, (arg0) => stateFromStoresArray.includes(arg0));
+      return _modDef19073(items, (arg0) => stateFromStoresArray.includes(arg0));
     }, items2),
     2,
   );

@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceEr
 
 export function useAnnounceError(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

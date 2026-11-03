@@ -182,7 +182,7 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
       name: "disclosure_type",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType",
           ApplicationDisclosureType,
         ];
@@ -296,10 +296,7 @@ const items1 = [
     name: "disclosure_type",
     kind: "enum",
     T() {
-      const items = [
-        "discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType",
-        ApplicationDisclosureType,
-      ];
+      items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
       return items;
     },
   },

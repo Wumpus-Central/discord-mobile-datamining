@@ -109,7 +109,7 @@ prototype["hasFieldErrors"] = function hasFieldErrors() {
 prototype["getFieldErrors"] = function getFieldErrors(ASSET) {
   let arr = ASSET;
   if (typeof ASSET === "string") {
-    const items = [ASSET];
+    items = [ASSET];
     arr = items;
   }
   const errors = this.errors;

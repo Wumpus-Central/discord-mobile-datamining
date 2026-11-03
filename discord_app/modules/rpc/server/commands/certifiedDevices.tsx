@@ -37,7 +37,7 @@ obj2.validation = function validation(array) {
   };
   const obj5 = createRpcJoiSchemaObjectDefault(array);
   const stringResult = array.string();
-  const items = [, ,];
+  items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   obj3.type = array.string().required().valid(items);
   const requiredResult1 = array.string().required();

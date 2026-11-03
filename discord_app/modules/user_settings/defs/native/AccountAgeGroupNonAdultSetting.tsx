@@ -5,7 +5,7 @@ import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.ts
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import AgeNoticeSettingsPredicate from "../../../age_assurance/age_notice/native/AgeNoticeSettingsPredicate.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
-    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
       let tmp5 = !isAgeVerified;
       if (isAgeVerified) {

@@ -9,18 +9,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
-let closure_6 = fn(8794).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
+let closure_6 = fn(8918).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(15074).GUTTER_SIZE,
+    paddingHorizontal: fn(15215).GUTTER_SIZE,
   },
   rowSpacer: null,
   previewContainer: null,
@@ -29,9 +29,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(15074).GUTTER_SIZE,
+  paddingHorizontal: fn(15215).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(15074).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15215).GUTTER_SIZE };
 obj.previewContainer = {
   width: "100%",
   height: "100%",
@@ -84,7 +84,7 @@ const memoResult1 = noop.memo((isSelected) => {
   const profileFrame = isSelected.profileFrame;
   const setSelectedProfileFrame = isSelected.setSelectedProfileFrame;
   const size = isSelected.size;
-  const items = [setSelectedProfileFrame, profileFrame];
+  items = [setSelectedProfileFrame, profileFrame];
   const callback = noop.useCallback(() => {
     setSelectedProfileFrame({ skuId: profileFrame.skuId, type: profileFrame.type });
   }, items);

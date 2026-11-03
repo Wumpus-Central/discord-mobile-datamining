@@ -13,7 +13,7 @@ function getItemKey(key) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { overlayView: null, wrapperView: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -34,7 +34,7 @@ export function ContextMenuContainer() {
   _require = tmp;
   const activeContextMenu = require("ContextMenuState").useActiveContextMenu();
   if (null != activeContextMenu) {
-    const items = [activeContextMenu];
+    items = [activeContextMenu];
     let tmp5 = items;
   } else {
     tmp5 = closure_7;

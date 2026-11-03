@@ -12,8 +12,8 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-fn(10946).FetchState;
-const FetchState = fn(10943).FetchState;
+fn(11084).FetchState;
+const FetchState = fn(11081).FetchState;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/hooks/useUserApplicationWidgetData.tsx");
 
@@ -21,7 +21,7 @@ export default function useUserApplicationWidgetData(arg0, applicationId) {
   _require = applicationId;
   closure_129_0 = applicationId;
   if (null != applicationId) {
-    let items = [applicationId];
+    items = [applicationId];
     let items1 = items;
   } else {
     items1 = [];
@@ -34,7 +34,7 @@ export default function useUserApplicationWidgetData(arg0, applicationId) {
     items2,
     () => {
       if (null == closure_0) {
-        const items = [false, null];
+        items = [false, null];
         return items;
       } else {
         let config = ApplicationWidgetConfigStore.getConfig(closure_0);
@@ -62,7 +62,7 @@ export default function useUserApplicationWidgetData(arg0, applicationId) {
       items2,
       () => {
         if (null == closure_0) {
-          const items = [false, null];
+          items = [false, null];
           return items;
         } else {
           let config = ApplicationWidgetConfigStore.getConfig(closure_0);
@@ -176,7 +176,7 @@ export default function useUserApplicationWidgetData(arg0, applicationId) {
             if (isFetchingUserResult) {
               isFetchingUserResult = null == userIdentityByApplication;
             }
-            const items = [isFetchingUserResult, userIdentityByApplication];
+            items = [isFetchingUserResult, userIdentityByApplication];
             return items;
           }
         }
@@ -201,7 +201,7 @@ export default function useUserApplicationWidgetData(arg0, applicationId) {
     items12,
     () => {
       if (null != closure_0) {
-        const items = [UserProfileStore.isFetchingProfile(closure_0)];
+        items = [UserProfileStore.isFetchingProfile(closure_0)];
         let userProfile = UserProfileStore.getUserProfile(closure_0);
         if (userProfile == null) {
           userProfile = null;

@@ -109,7 +109,7 @@ export default {
                 value = invites3.get(code);
                 const invites4 = merged.invites;
                 const value7 = invites4.get(code);
-                let state;
+                state = undefined;
                 if (value != null) {
                   state = value.state;
                 }
@@ -119,7 +119,7 @@ export default {
                 }
                 let tmp52 = state !== state1;
                 if (tmp52) {
-                  let state2;
+                  state2 = undefined;
                   if (value7 != null) {
                     state2 = value7.state;
                   }

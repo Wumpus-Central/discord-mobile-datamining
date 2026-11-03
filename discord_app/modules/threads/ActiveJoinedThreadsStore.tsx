@@ -137,7 +137,7 @@ function recountParent(guild_id, id) {
       dependencyMap6[guild_id][id] = 0;
       if (null != dependencyMap3[guild_id]) {
         if (null != dependencyMap3[guild_id][id]) {
-          const guild = GuildStore.getGuild(guild_id);
+          guild = GuildStore.getGuild(guild_id);
           if (null != guild) {
             let trackedAckMessageId = ReadStateStore.getTrackedAckMessageId(id);
             if (null == trackedAckMessageId) {
@@ -772,7 +772,7 @@ class ActiveJoinedThreadsStore extends Store {}
 const prototype = ActiveJoinedThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ActiveThreadsStore, ChannelStore, GuildStore, JoinedThreadsStore, ReadStateStore, SelectedChannelStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, updateSelectedChannel);
 };
 prototype["hasActiveJoinedUnreadThreads"] = function hasActiveJoinedUnreadThreads(arg0, arg1) {
@@ -816,8 +816,8 @@ prototype["getActiveJoinedThreadsForGuild"] = function getActiveJoinedThreadsFor
   }
   return tmp;
 };
-prototype["getActiveJoinedUnreadThreadsForGuild"] = function getActiveJoinedUnreadThreadsForGuild(guildId) {
-  let tmp = dependencyMap2[guildId];
+prototype["getActiveJoinedUnreadThreadsForGuild"] = function getActiveJoinedUnreadThreadsForGuild(c2) {
+  let tmp = dependencyMap2[c2];
   if (tmp == null) {
     tmp = obj;
   }
@@ -876,7 +876,7 @@ prototype["getNewThreadCountsForGuild"] = function getNewThreadCountsForGuild(ar
   return tmp;
 };
 prototype["computeAllActiveJoinedThreads"] = function computeAllActiveJoinedThreads(guildId) {
-  const items = [];
+  items = [];
   for (const key10005 in closure_12) {
     if (key10005 === arg0) {
       let keys = Object.keys();

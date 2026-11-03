@@ -21,7 +21,7 @@ export function ICYMIContextProvider(children) {
   const PX_16 = nativeDefault.space.PX_16;
   const sum = PX_16 + 38;
   c2 = sum;
-  const items = [bound, PX_16, sum];
+  items = [bound, PX_16, sum];
   return (
     <context.Provider value={React2(() => ({ width: bound, margin: PX_16, inset }), items)}>
       {children.children}

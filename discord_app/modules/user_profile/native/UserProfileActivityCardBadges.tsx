@@ -9,14 +9,14 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
-  if (activity.type === activity(5762).ActivityTypes.PLAYING) {
-    const items = [tmp(14855).PartyBadge, tmp(14855).TimestampBadge];
+  if (activity.type === activity(5882).ActivityTypes.PLAYING) {
+    items = [tmp(14986).PartyBadge, tmp(14986).TimestampBadge];
     let items3 = items;
-  } else if (activity.type === tmp(5762).ActivityTypes.LISTENING) {
-    const items1 = [tmp(14855).TimestampBadge];
+  } else if (activity.type === tmp(5882).ActivityTypes.LISTENING) {
+    const items1 = [tmp(14986).TimestampBadge];
     items3 = items1;
-  } else if (activity.type === tmp(5762).ActivityTypes.WATCHING) {
-    const items2 = [tmp(14855).TimestampBadge, tmp(14855).EpisodeBadge];
+  } else if (activity.type === tmp(5882).ActivityTypes.WATCHING) {
+    const items2 = [tmp(14986).TimestampBadge, tmp(14986).EpisodeBadge];
     items3 = items2;
   } else {
     items3 = [];

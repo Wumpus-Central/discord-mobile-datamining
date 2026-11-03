@@ -48,12 +48,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7947);
+const ChannelPermissionsConstants = fn(8071);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   inputContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 },
   inputDescContainer: null,
@@ -117,7 +117,7 @@ export default function AddMembersBody(pendingAdditions) {
   }
   const tmp3 = closure_20();
   dependencyMap = tmp3;
-  let items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
   [first, _slicedToArray] = str.useState(false);
   [str, closure_7] = str.useState("");
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5275).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5398).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5275).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5398).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -207,24 +207,24 @@ export default function AddMembersBody(pendingAdditions) {
     if (tmp) {
       substr = str.slice(1);
     }
-    const members = GuildUtilsDefault.requestMembers(guild.id, substr, closure_2_14);
+    const members = GuildUtilsDefault.requestMembers(guild.id, substr, gesture);
     closure_7(str);
     closure_5(tmp);
   };
   obj10.onRemove = function handleRemoveTag(arg0) {
     closure_0 = Object.keys(pendingAdditions)[arg0];
     importAll((dependencyMap) => {
-      const items = [closure_0];
+      items = [closure_0];
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(9062), obj10);
+  obj9.children = closure_16(pendingAdditions(9190), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5624).Text, obj12);
+    obj11.children = closure_16(guild(5747).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -233,7 +233,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1113).intl;
     obj14.message = intl4.string(guild(1113).t["5f3HIC"]);
-    obj13.children = closure_16(guild(8025).InlineNotice, obj14);
+    obj13.children = closure_16(guild(8149).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(9067).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(9195).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1113).intl;
         const obj17 = { query: str };
@@ -262,10 +262,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(9062);
+  const tmp4Result = pendingAdditions(9190);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5607)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5730)(obj).insets.bottom,
   };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
@@ -323,7 +323,7 @@ export default function AddMembersBody(pendingAdditions) {
             }
             const obj5 = { text: row.name, icon: null };
             const obj6 = { style: null };
-            const items = [sectionRowWrapper.tagRoleColor];
+            items = [sectionRowWrapper.tagRoleColor];
             const obj7 = { backgroundColor: row.colorString };
             items[1] = obj7;
             obj6.style = items;
@@ -360,7 +360,7 @@ export default function AddMembersBody(pendingAdditions) {
         color: "interactive-text-default",
         children: tmp,
       };
-      tmp2 = __initData2(Text_Text.Text, obj);
+      tmp2 = value2(Text_Text.Text, obj);
     }
     return tmp2;
   };
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
   const obj20 = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5607)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5730)(obj).insets.bottom,
   };
 }

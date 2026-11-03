@@ -92,6 +92,18 @@ export function savedMessageCreateObjectToClient(body) {
   obj2.saveData = obj5;
   return obj2;
 }
+export function getSavedMessagesRawMessages(items) {
+  return items.flatMap((message) => {
+    message = message.message;
+    if (null != message) {
+      items = [message];
+      let items1 = items;
+    } else {
+      items1 = [];
+    }
+    return items1;
+  });
+}
 export function savedMessageDeleteObjectToClient(channelId) {
   return { channelId: channelId.channel_id, messageId: channelId.message_id };
 }

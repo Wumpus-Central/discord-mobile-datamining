@@ -62,14 +62,14 @@ function checkIdleAFK() {
 }
 const Constants = fn(1072);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(5768).SpeakingFlags;
+const SpeakingFlags = fn(5888).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;
 let c11 = false;
 let c12 = false;
 let closure_13 = false;
-if (fn(1375).isPlatformEmbedded) {
+if (fn(1377).isPlatformEmbedded) {
   const importDefaultResult = DiscordNativeDefault;
   let powerMonitor1;
   if (importDefaultResult != null) {

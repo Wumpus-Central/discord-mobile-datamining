@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -53,7 +53,7 @@ export default function EditGuildEventsStepContainer(arg0) {
     contentContainerStyle: tmp.scroller,
     children,
   };
-  const items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
+  items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
   obj2.style = items;
   const callback = noop.useCallback((nativeEvent) => {
     closure_0(nativeEvent.nativeEvent.layout.height);

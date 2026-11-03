@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export function useYouBarAccessibilityLabel(stateFromStores) {
-  _require = id(5068).useName(stateFromStores);
+  _require = id(5195).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -32,7 +32,7 @@ export function useYouBarAccessibilityLabel(stateFromStores) {
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(5068);
+  let obj = id(5195);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;
@@ -49,19 +49,11 @@ export function useYouBarAccessibilityLabel(stateFromStores) {
     tag = userPrimaryGuild.tag;
   }
   const tmp3Result3 = require("GuildTagUtils");
-  let items = [
-    SelfPresenceStore,
-    tag,
-    RelationshipStore,
-    ChannelStore,
-    PermissionStore,
-    VoiceStateStore,
-    PresenceStore,
-  ];
+  items = [SelfPresenceStore, tag, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore, PresenceStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const status = SelfPresenceStore.getStatus();
-      const items = [ApplicationStreamingStore, RelationshipStore];
+      items = [ApplicationStreamingStore, RelationshipStore];
       const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(
         id,
         items,

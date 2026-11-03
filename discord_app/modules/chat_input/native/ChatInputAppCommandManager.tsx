@@ -293,7 +293,7 @@ class ChatInputAppCommandManager {
             const mapped = closure_2_11(chatInputStateRef.current.text).map((item) => stateFromStores2.get(item));
             const found = mapped.filter((item) => null != item);
             if (0 !== found.length) {
-              const replaced = str.replace(closure_2_12, (arg0, arg1) => {
+              const replaced = str.replace(application_id, (arg0, arg1) => {
                 let combined = arg0;
                 value = stateFromStores2.get(arg1);
                 if (null != value) {
@@ -328,13 +328,13 @@ class ChatInputAppCommandManager {
     return null;
   }
 }
-const ChannelAutocompleteConstants = fn(6036);
+const ChannelAutocompleteConstants = fn(6156);
 ({
   extractGameMentionIds: closure_11,
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
 } = ChannelAutocompleteConstants);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   commandOption: {
     backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
@@ -394,7 +394,7 @@ let obj6 = {
   fontWeight: "bold",
 };
 obj.autocomplete = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
-let value = createStyles.createStyles(obj);
+const gesture = createStyles.createStyles(obj);
 ChatInputAppCommandManager.displayName = "ChatInputAppCommandManager";
 let obj7 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const size = fn(2);

@@ -12,7 +12,7 @@ Logger.setLogFn((name, arg1, arg2) => {
   const toFixedResult = result.toFixed(3);
   const toFixedResult1 = result1.toFixed(3);
   const tmp5 = LogAggregatorAll;
-  const items = [{ name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" }, arg2, ...substr];
+  items = [{ name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" }, arg2, ...substr];
   tmp5.report.apply(items);
   const obj = { name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" };
   const items1 = [name, arg1, arg2, ...substr];

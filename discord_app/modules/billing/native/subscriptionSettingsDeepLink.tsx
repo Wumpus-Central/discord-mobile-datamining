@@ -34,7 +34,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
         closure_130_11();
         closure_130_8();
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -89,7 +89,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5258).default;
+            closure_0 = closure_0(5381).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1113).intl;
@@ -102,14 +102,14 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             const intl2 = closure_0(1113).intl;
             obj3.label = intl2.string(closure_0(1113).t["8jmdON"]);
             obj3.onPress = onPress;
-            const items = [obj3];
+            items = [obj3];
             const obj4 = { label: null, onPress: null };
             const intl3 = closure_0(1113).intl;
             obj4.label = intl3.string(closure_0(1113).t["KzCF/6"]);
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15814).showSimpleActionSheet(obj);
+            const result = closure_0(15957).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

@@ -15,7 +15,7 @@ require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { paddingVertical: nativeDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
@@ -39,7 +39,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t.euks4U);
-  const items = [hasOwnProperty(Text_Text.Text, obj2)];
+  items = [hasOwnProperty(Text_Text.Text, obj2)];
   const obj3 = { children: null };
   const obj4 = { size: "lg", text: null, onPress: null, icon: null, iconPosition: "end" };
   const intl2 = util.intl;

@@ -3,7 +3,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef3288 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3415 from "../premium_group/PremiumGroup.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
 import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
@@ -29,7 +29,7 @@ function AccountCreditTier(arg0) {
   }
   if (hasPremiumGroup) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3288["5asczk"]);
+    let stringResult = intl3.string(_modDef3415["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -60,7 +60,7 @@ function AccountCreditTier(arg0) {
     tmp18 = null != currentSubscription && currentSubscription.isPurchasedExternally;
     const tmp20 = null != currentSubscription && currentSubscription.isPurchasedExternally;
   }
-  const items = [tmp.creditItem];
+  items = [tmp.creditItem];
   let divider = null;
   if (shouldAddDivider) {
     divider = tmp.divider;
@@ -109,7 +109,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -123,8 +123,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7334).GameIconImageSize[fn(undefined, 7334).GameIconSizes.SMALL],
-  height: fn(7334).GameIconImageSize[fn(undefined, 7334).GameIconSizes.SMALL],
+  width: fn(7454).GameIconImageSize[fn(undefined, 7454).GameIconSizes.SMALL],
+  height: fn(7454).GameIconImageSize[fn(undefined, 7454).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -146,7 +146,7 @@ export default function PremiumAccountCredit(currentSubscription) {
   c3 = undefined;
   ({ style, creditListContainerStyle } = currentSubscription);
   let tmp = closure_8();
-  const items = [EntitlementStore];
+  items = [EntitlementStore];
   dependencyMap = currentSubscription(504).useStateFromStoresArray(items, () =>
     unactivatedFractionalPremiumUnits.getUnactivatedFractionalPremiumUnits(),
   );
@@ -177,7 +177,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       };
       const intl = tmp2(1113).intl;
       obj3.children = intl.string(tmp2(1113).t.YugZY0);
-      const items1 = [closure_6(tmp2(5624).Text, obj3), , ,];
+      const items1 = [closure_6(tmp2(5747).Text, obj3), , ,];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -202,7 +202,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1113).intl;
       obj5.children = intl2.string(tmp2(1113).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5624).Text, obj5);
+      items1[2] = closure_6(tmp2(5747).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -210,7 +210,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1113).intl;
           obj6.children = intl3.string(tmp2(1113).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5624).Text, obj6);
+          tmp9Result = closure_6(tmp2(5747).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

@@ -8,7 +8,7 @@ import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(1621).MediaPickerActionSheetEngagedActions;
+let closure_4 = fn(1623).MediaPickerActionSheetEngagedActions;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -33,14 +33,14 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     onManageLimited,
   } = onAttachPress);
   const sharedValue = onAttachPress(onClose[4]).useSharedValue(-1);
-  let items = [onAttachPress];
+  items = [onAttachPress];
   const memo = onBack.useMemo(() => {
     const obj = { text: null, IconComponent: null, onPress: null, disabled: true };
     const intl = util.intl;
     obj.text = intl.string(util.t.RgIi2B);
     obj.IconComponent = PollsIcon.PollsIcon;
     obj.onPress = function onPress() {};
-    const items = [obj];
+    items = [obj];
     const obj2 = { text: null, IconComponent: null, onPress: null, disabled: false };
     const intl2 = util.intl;
     obj2.text = intl2.string(util.t["8Hvr3+"]);
@@ -85,7 +85,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj2.text = intl.string(util.t.Zmm6dN);
     obj2.IconComponent = ImageIcon.ImageIcon;
     obj2.onPress = onViewAll;
-    const items = [obj2, ...memo];
+    items = [obj2, ...memo];
     obj.overflowButtons = items;
     return jsx(MediaKeyboardBottomSheetActionsDefault, {
       canPostPolls: false,

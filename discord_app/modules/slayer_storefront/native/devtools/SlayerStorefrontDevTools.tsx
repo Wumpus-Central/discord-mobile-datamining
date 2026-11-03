@@ -22,7 +22,7 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -105,7 +105,7 @@ const Constants = fn(1072);
 ({ Endpoints: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   inputRow: null,
@@ -126,7 +126,7 @@ export default function SlayerStorefrontDevTools() {
   _require = trimmed;
   let trimmed1 = str2.trim();
   const tmp7 = first(first1.useState(""), 2);
-  let items = [stateFromStores2];
+  items = [stateFromStores2];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     value = undefined;
     if (length.length > 0) {
@@ -182,7 +182,7 @@ export default function SlayerStorefrontDevTools() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -305,7 +305,7 @@ export default function SlayerStorefrontDevTools() {
   const callback4 = obj.useCallback(() => {
     if (null != c8) {
       constants("Querying Play\u2026");
-      const items = [tmp];
+      items = [tmp];
       const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
       inAppSkus
         .then((result) => {

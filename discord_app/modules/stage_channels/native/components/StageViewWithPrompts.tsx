@@ -11,8 +11,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = fn(11855).CALL_ACTION_BAR_HEIGHT + 8;
-const createStyles = fn(5014);
+let closure_7 = fn(11992).CALL_ACTION_BAR_HEIGHT + 8;
+const createStyles = fn(5141);
 let obj2 = {
   scrollView: { flex: 1 },
   container: { paddingHorizontal: 16, alignItems: "center" },
@@ -29,7 +29,7 @@ export default function StageViewWithPrompts(arg0) {
   ({ title, body, children } = arg0);
   const tmp = styles();
   const obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
-  const items = [tmp.container];
+  items = [tmp.container];
   const tmp2 = useSafeAreaInsetsDefault();
   ({ top, bottom } = tmp2);
   items[1] = { paddingTop: top + FocusedControls.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_7 };
@@ -43,7 +43,7 @@ export default function StageViewWithPrompts(arg0) {
     hasOwnProperty(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "text-overlay-light",
       children: title,
     }),

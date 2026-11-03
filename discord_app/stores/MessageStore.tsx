@@ -98,7 +98,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           }
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         closure_132_28.log(
           "Push notification message not in cache, adding directly",
@@ -174,27 +174,27 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
     }
   })();
 };
-function receiveMediaMentionMessage(item10038) {
-  const media_mention = item10038.media_mention;
+function receiveMediaMentionMessage(item10041) {
+  const media_mention = item10041.media_mention;
   let message_id;
   if (media_mention != null) {
     message_id = media_mention.message_id;
   }
   if (null != message_id) {
-    const attachment_id = item10038.media_mention.attachment_id;
+    const attachment_id = item10041.media_mention.attachment_id;
     const orCreate = ChannelMessagesDefault.getOrCreate(attachment_id);
     const obj = {};
-    const merged = Object.assign(item10038);
+    const merged = Object.assign(item10041);
     obj.channel_id = attachment_id;
     obj.type = constants6.MEDIA_MENTION_MESSAGE;
-    obj.id = item10038.media_mention.message_id;
+    obj.id = item10041.media_mention.message_id;
     const obj2 = {
-      channel_id: item10038.channel_id,
-      message_id: item10038.media_mention.message_id,
+      channel_id: item10041.channel_id,
+      message_id: item10041.media_mention.message_id,
       type: constants4.DEFAULT,
       guild_id: null,
     };
-    const channel = ChannelStore.getChannel(item10038.channel_id);
+    const channel = ChannelStore.getChannel(item10041.channel_id);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -287,7 +287,7 @@ function performAuthorUpdate(guildId) {
       guild_id = channel.guild_id;
     }
     if (guild_id === guildId) {
-      const items = [];
+      items = [];
       c1 = false;
       const item = channelId.forEach((nick) => {
         const messageAuthor = guildId(dependencyMap[27]).getMessageAuthor(nick);
@@ -400,7 +400,7 @@ prototype["initialize"] = function initialize() {
     SelectedGuildStore,
     UserStore,
   );
-  const items = [ImpersonateStore];
+  items = [ImpersonateStore];
   this.syncWith(items, () => {});
 };
 prototype["getMessages"] = function getMessages(arg0) {
@@ -624,12 +624,26 @@ const messageStore = new MessageStore(DispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(arg0) {
     ({ channelId, isBefore, isAfter, messages } = arg0);
-    ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll, requestStartTime } = arg0);
+    ({
+      before,
+      after,
+      limit,
+      jump,
+      hasMoreBefore,
+      hasMoreAfter,
+      isStale,
+      truncate,
+      avoidInitialScroll,
+      requestStartTime,
+    } = arg0);
     const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
     const complete = orCreate.loadComplete({
       newMessages: messages,
       isBefore,
       isAfter,
+      before,
+      after,
+      limit,
       jump,
       hasMoreBefore,
       hasMoreAfter,
@@ -659,8 +673,8 @@ const messageStore = new MessageStore(DispatcherDefault, {
     }
     const tmp7 = reinjectEphemerals(channelId, truncateResult);
     ChannelMessagesDefault.commit(tmp7);
-    for (const item10038 of messages) {
-      let tmp10 = receiveMediaMentionMessage(item10038);
+    for (const item10041 of messages) {
+      let tmp10 = receiveMediaMentionMessage(item10041);
       continue;
     }
     const tmpResult = ChannelMessagesDefault;
@@ -1061,7 +1075,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6563).getOrCreate(ids.channelId);
+    const orCreate = mutation(6683).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1095,9 +1109,9 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (orCreate === removeManyResult) {
         return false;
       } else {
-        let tmp8 = removeManyResult;
+        let tmp3 = removeManyResult;
         if (null != removeManyResult.revealedMessageId) {
-          tmp8 = removeManyResult;
+          tmp3 = removeManyResult;
           if (tmpResult.some(ids, (arg0) => mutation.revealedMessageId === arg0)) {
             let id = removeManyResult.getAfter(removeManyResult.revealedMessageId);
             if (null == id) {
@@ -1110,14 +1124,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6563).commit(tmp8);
+        tmp(6683).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6563);
+        const tmpResult2 = tmp(6683);
       }
     }
-    let obj = mutation(6563);
+    let obj = mutation(6683);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
@@ -1194,7 +1208,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
         guild_id = channel.guild_id;
       }
       if (guild_id === guildId) {
-        const items = [];
+        items = [];
         c1 = false;
         const item = channelId.forEach((nick) => {
           const messageAuthor = guildId(dependencyMap[27]).getMessageAuthor(nick);
@@ -1286,7 +1300,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (null == value) {
         return false;
       } else {
-        const items = [value];
+        items = [value];
         const removeResult = orCreate.remove(messageId);
         set.delete(messageId);
         const mergeResult = orCreate.remove(messageId).merge(items);

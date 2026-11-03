@@ -32,7 +32,7 @@ export default function ConjureProjectEventLine(arg0) {
     let tmp8Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
   } else {
     const obj3 = { variant: "text-md/normal", color: "text-default", children: tmp3 };
-    const items = [React3(Text_Text.Text, obj3)];
+    items = [React3(Text_Text.Text, obj3)];
     let tmp10Result = null;
     if (null != tmp4) {
       const obj = { projectId, request: tmp4, notifyAgent: false };

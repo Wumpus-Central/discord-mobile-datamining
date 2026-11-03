@@ -1,7 +1,7 @@
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -93,7 +93,7 @@ export function ExpressiveGradient(color) {
   const token2 = useToken.useToken(backgroundColor);
   const obj4 = _modDef671(token2);
   const obj5 = { style: null, children: null };
-  const items = [React4.absoluteFill, style];
+  items = [React4.absoluteFill, style];
   obj5.style = items;
   const items1 = [React4.absoluteFill];
   let tmp13;

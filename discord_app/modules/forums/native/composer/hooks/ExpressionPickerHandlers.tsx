@@ -51,7 +51,7 @@ export function usePressGIFHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  const items = [draftContent, focusTextInput, handleTextChange, , ,];
+  items = [draftContent, focusTextInput, handleTextChange, , ,];
   ({ end: arr[3], start: arr[4] } = selection);
   items[5] = setSelection;
   return noop.useCallback((url) => {

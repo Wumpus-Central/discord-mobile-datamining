@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(5236);
+const createExperiment = fn(5359);
 let obj2 = {
   kind: "guild",
   id: "2026-06_guild_rooms",
@@ -68,7 +68,7 @@ export function getGuildRoomsConfig(guildId, disable) {
 }
 export function useGuildRoomsExperiment(guildId, disable) {
   _require = guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [guildId.guildId];
   const obj2 = { autoTrackExposure: true };
   const stateFromStores = require("initialize").useStateFromStores(

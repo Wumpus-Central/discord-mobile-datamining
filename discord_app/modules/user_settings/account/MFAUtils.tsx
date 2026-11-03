@@ -60,7 +60,7 @@ export function getSMSBackupDisabledMessage(stateFromStores) {
   }
 }
 export function useIsMFAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
@@ -69,7 +69,7 @@ export function useIsMFAEnabled() {
 export { MFAAvailability };
 export function useMFAAvailability() {
   const obj = useStateFromStores;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let verified;
@@ -93,7 +93,7 @@ export function use2FARemoveDisableReason() {
   if (arg0 === undefined) {
     flag = false;
   }
-  const items = [GuildStore, PermissionStore, UserStore];
+  items = [GuildStore, PermissionStore, UserStore];
   return flag(563).useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();
     let hasAnyStaffLevelResult;

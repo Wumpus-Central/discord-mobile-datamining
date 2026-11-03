@@ -14,7 +14,7 @@ export function shouldRenderReportFalsePositiveButton(id) {
 }
 export function useShouldRenderReportFalsePositiveButton(id) {
   _require = id;
-  const items = [ExplicitMediaStore];
+  items = [ExplicitMediaStore];
   return (
     null !=
     require("useStateFromStores").useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(closure_0))

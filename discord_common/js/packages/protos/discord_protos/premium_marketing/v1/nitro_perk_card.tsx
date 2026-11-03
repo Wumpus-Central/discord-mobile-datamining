@@ -75,7 +75,7 @@ class NitroPerkCard$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.NitroPerkCardPlacement",
           NitroPerkCardPlacement,
           "NITRO_PERK_CARD_PLACEMENT_",
@@ -363,7 +363,7 @@ items[8] = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = [
+    items = [
       "discord_protos.premium_marketing.v1.NitroPerkCardPlacement",
       NitroPerkCardPlacement,
       "NITRO_PERK_CARD_PLACEMENT_",

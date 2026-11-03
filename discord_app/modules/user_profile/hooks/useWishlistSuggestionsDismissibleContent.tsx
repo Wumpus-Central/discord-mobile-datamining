@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 const require = fn;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
 let closure_7 = 90 * DurationsDefault.Millis.DAY;
 const size = fn(2);
@@ -39,7 +39,7 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   const obj = noop;
   const tmp2 = _slicedToArray;
   const tmp3 = _slicedToArray(noop.useState(false), 2);
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   const items1 = [wishlist, userId];
   const stateFromStores = userId(wishlist[5]).useStateFromStores(
     items,

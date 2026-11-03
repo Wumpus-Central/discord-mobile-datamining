@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx
-import Link from "../../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../../_runtime/01500_Link.js";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import ChannelDetailsDefault from "ChannelDetails.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/d
 export default noop.memo(function ChannelDetailsScreen(navigation) {
   navigation = navigation.navigation;
   const route = Link.useRoute();
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
   }, items);

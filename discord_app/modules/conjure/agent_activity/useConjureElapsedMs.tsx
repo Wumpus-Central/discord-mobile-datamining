@@ -17,7 +17,7 @@ export function useConjureElapsedMs(startedAt) {
     2,
   );
   closure_2 = tmp[1];
-  const items = [startedAt, str];
+  items = [startedAt, str];
   const effect = str.useEffect(() => {
     if (null != timeout) {
       closure_1 = tmp4;

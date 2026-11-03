@@ -8,7 +8,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
-import _modDef14336 from "../../../../_runtime/metro/14336__.js";
+import _modDef14467 from "../../../../_runtime/metro/14467__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -29,7 +29,7 @@ function getInviteState(invite) {
   if (null != invite) {
     if (null != invite.state) {
       if (!tmp2) {
-        const state = invite.state;
+        state = invite.state;
         if (InviteStates.RESOLVED !== state) {
           if (InviteStates.ACCEPTED !== state) {
             if (InviteStates.EXPIRED !== state) {
@@ -71,7 +71,7 @@ function InviteResolving() {
 function AcceptInviteCardComponent(invite) {
   invite = invite.invite;
   [first, dependencyMap] = noop.useState(getInviteState(invite));
-  const items = [invite, first];
+  items = [invite, first];
   const effect = noop.useEffect(() => {
     const tmp = getInviteState(invite);
     if (tmp !== first) {
@@ -85,12 +85,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_8(first(14328), obj2);
+    return closure_8(first(14459), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_8(first(14331), obj);
+    return closure_8(first(14462), obj);
   } else {
     return closure_8(InviteResolving, {});
   }
@@ -100,7 +100,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   parentContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -147,13 +147,13 @@ export default function AcceptInvite(invite) {
   if (invite == null) {
     obj = {};
   }
-  const guild = obj.guild;
+  guild = obj.guild;
   let splash;
   if (guild != null) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14336;
+    let guildSplashSource = _modDef14467;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
@@ -162,7 +162,7 @@ export default function AcceptInvite(invite) {
     guildSplashSource = tmp3Result2.getGuildSplashSource(obj2);
   }
   const obj5 = { style: null, children: null };
-  const items = [tmp2.parentContainer, { height, width }];
+  items = [tmp2.parentContainer, { height, width }];
   obj5.style = items;
   const obj6 = { style: { height, width }, children: null };
   const obj7 = { source: guildSplashSource, style: null };

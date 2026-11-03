@@ -4,7 +4,7 @@ import ApplicationDirectoryActionCreatorsAll from "../../global_discovery_apps/A
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const CommandListSortOrder = fn(12465).CommandListSortOrder;
+const CommandListSortOrder = fn(12601).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
@@ -14,7 +14,7 @@ export default function useSortedSectionCommands(sectionId) {
   let setSortOrder;
   canSort = undefined;
   [tmp3, tmp4] = canSort(noop.useState(CommandListSortOrder.ALPHABETICAL), 2);
-  const items = [commandsByActiveSection, sectionId];
+  items = [commandsByActiveSection, sectionId];
   const memo = noop.useMemo(() => {
     const found = commandsByActiveSection.find((section) => section.section.id === memo);
     let data;

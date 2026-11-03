@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(6728);
+const AgeVerificationConstants = fn(6848);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -21,7 +21,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
   first = undefined;
   _slicedToArray = undefined;
   ({ onClose, classificationId } = onGoogleWalletSelect);
-  let items = [AgeVerificationStore];
+  items = [AgeVerificationStore];
   const stateFromStoresObject = onGoogleWalletSelect(initiateAgeVerification[5]).useStateFromStoresObject(
     items,
     () => ({ methods: AgeVerificationStore.methods, loading: AgeVerificationStore.loading }),
@@ -43,7 +43,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
       if (!c0) {
         const obj2 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: null };
         const _HermesInternal = HermesInternal;
-        const items = ["available:" + result];
+        items = ["available:" + result];
         obj2.tags = items;
         MonitoringAgentDefault.increment(obj2);
         if (result) {
@@ -96,7 +96,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -110,11 +110,11 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6729);
+                      const obj5 = id(6849);
                       const result = obj5.trackAgeVerificationModalClicked(
                         id,
-                        id(6729).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                        id(6729).AgeVerificationModalCta.METHOD_SELECT,
+                        id(6849).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                        id(6849).AgeVerificationModalCta.METHOD_SELECT,
                         id,
                       );
                       v1 = 1;
@@ -131,7 +131,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp5) {
                   c1 = tmp;
@@ -181,7 +181,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
               );
               closure_1_0();
             };
-            const items = [];
+            items = [];
             items[HermesBuiltin.arraySpread(found1, 0)] = obj;
             return items;
           }

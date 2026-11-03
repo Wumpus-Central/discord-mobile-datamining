@@ -6,8 +6,8 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import GameConsoleActionCreators from "../GameConsoleActionCreators.tsx";
-import _modDef11989 from "../../../../_runtime/metro/11989__.js";
-import _modDef11990 from "../../../../_runtime/metro/11990__.js";
+import _modDef12126 from "../../../../_runtime/metro/12126__.js";
+import _modDef12127 from "../../../../_runtime/metro/12127__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -33,27 +33,27 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef11989 };
-  const items = [
+  const obj2 = { style: tmp.deviceIcon, source: _modDef12126 };
+  items = [
     closure_1_11(FastImageDefault, obj2),
     closure_1_11(Text_Text.Text, {
       style: tmp.deviceText,
       color: "mobile-text-heading-primary",
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       children: children.name,
     }),
   ];
   obj.children = items;
-  return closure_1_12(React5, obj);
+  return application_id(React5, obj);
 }
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef11990, style: tmp.emptyArt };
-  const items = [closure_1_11(FastImageDefault, obj2), ,];
+  const obj2 = { source: _modDef12127, style: tmp.emptyArt };
+  items = [closure_1_11(FastImageDefault, obj2), ,];
   const obj3 = {
     style: tmp.emptyHeader,
-    variant: "heading-md/extrabold",
+    variant: "heading-md/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -65,14 +65,14 @@ function EmptyState() {
   obj4.children = intl2.string(util.t["of/l5Z"]);
   items[2] = closure_1_11(Text_Text.Text, obj4);
   obj.children = items;
-  return closure_1_12(React5, obj);
+  return application_id(React5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16, justifyContent: "center", paddingBottom: 90 },
   loading: { minHeight: 56 },
@@ -123,7 +123,7 @@ export default function GameConsoleListActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ export default function GameConsoleListActionSheet(arg0) {
             v1 = 1;
             dependencyMap = 1;
             const obj4 = {
-              value: tmp4(11981).transferToPlaystationWithAlert(
+              value: tmp4(12118).transferToPlaystationWithAlert(
                 require,
                 stateFromStores[_slicedToArray],
                 importDefault,
@@ -159,11 +159,11 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5258).hideActionSheet();
+          v1(5381).hideActionSheet();
           const ComponentDispatch = tmp4(1108).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;
@@ -172,7 +172,7 @@ export default function GameConsoleListActionSheet(arg0) {
     }
   };
   const tmp = closure_14();
-  let items = [GameConsoleStore];
+  items = [GameConsoleStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     GameConsoleStore.getDevicesForPlatform(require),
   );
@@ -202,7 +202,7 @@ export default function GameConsoleListActionSheet(arg0) {
   }, items3);
   const items4 = [stateFromStores];
   const memo = noop.useMemo(() => {
-    let items = stateFromStores;
+    items = stateFromStores;
     if (stateFromStores == null) {
       items = [];
     }

@@ -79,7 +79,7 @@ if (!tmp6.getEntriesByType) {
     tmp6.webkitGetEntriesByType ||
     ((arg0) => {
       if (typeof u === "function") {
-        const items = [];
+        items = [];
         let num = 0;
         if (0 < closure_2.length) {
           do {
@@ -100,7 +100,7 @@ if (!tmp6.getEntriesByName) {
     tmp6.webkitGetEntriesByName ||
     ((arg0) => {
       if (typeof u === "function") {
-        const items = [];
+        items = [];
         let num = 0;
         if (0 < closure_2.length) {
           do {

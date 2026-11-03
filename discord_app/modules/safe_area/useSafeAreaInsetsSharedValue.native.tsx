@@ -3,19 +3,19 @@ import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
 import AppEntryKey from "../window/native/AppEntryKey.tsx";
 import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.tsx";
-import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
+import module_1652_mod from "../../../_runtime/metro/01652__.js";
 import useSafeAreaInsets_mod from "useSafeAreaInsets.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { main: null, share: null };
-let ReanimatedRexport = ReanimatedRexport_mod;
+let module_1652 = module_1652_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj.main = ReanimatedRexport.makeMutable({});
-let ReanimatedRexport = ReanimatedRexport_mod;
+obj.main = module_1652.makeMutable({});
+let module_1652 = module_1652_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj.share = ReanimatedRexport.makeMutable({});
+obj.share = module_1652.makeMutable({});
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {
@@ -27,26 +27,31 @@ while (iter !== undefined) {
   let _loopResult = _loop(iter.next());
   continue;
 }
-const __initData = {
-  code: "function getSafeAreaInsetsWorklet_useSafeAreaInsetsSharedValueNativeTsx1(appEntryKey='main'){const{safeAreaInsetsSharedValues}=this.__closure;return safeAreaInsetsSharedValues[appEntryKey].get();}",
-};
+let items = [
+  {
+    code: "(function getSafeAreaInsetsWorklet_useSafeAreaInsetsSharedValueNativeTsx1(appEntryKey='main'){let[safeAreaInsetsSharedValues]=this.__closure;return safeAreaInsetsSharedValues[appEntryKey].get();})",
+  },
+  obj,
+];
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
 
 export default function useSafeAreaInsetsSharedValue() {
   obj = AppEntryKeyContext;
   return obj[obj.useAppEntryKey(obj)];
 }
-export const getSafeAreaInsetsWorklet = (() => {
-  function getSafeAreaInsetsWorklet() {
-    let str = arg0;
-    if (arg0 === undefined) {
-      str = "main";
+export const getSafeAreaInsetsWorklet =
+  (function getSafeAreaInsetsWorklet_useSafeAreaInsetsSharedValueNativeTsx1Factory(items) {
+    [tmp, tmp2] = items;
+    function getSafeAreaInsetsWorklet() {
+      let str = arg0;
+      if (arg0 === undefined) {
+        str = "main";
+      }
+      return require[str].get();
     }
-    return obj[str].get();
-  }
-  __closure = { safeAreaInsetsSharedValues: __closure };
-  getSafeAreaInsetsWorklet.__closure = __closure;
-  getSafeAreaInsetsWorklet.__workletHash = 5220247127549;
-  getSafeAreaInsetsWorklet.__initData = __initData;
-  return getSafeAreaInsetsWorklet;
-})();
+    items = [tmp2];
+    getSafeAreaInsetsWorklet.__closure = items;
+    getSafeAreaInsetsWorklet.__workletHash = 50436263204;
+    getSafeAreaInsetsWorklet.__initData = tmp;
+    return getSafeAreaInsetsWorklet;
+  })(items);

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 
 export default function OrbsArcadeHowToPlaySheet(gameId) {
   gameId = gameId.gameId;
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [gameId];
   const stateFromStores = gameId(504).useStateFromStores(items, () => OrbsArcadeStore.getGame(gameId), items1);
   let tmp5Result2 = null;
@@ -32,16 +32,16 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
     const obj4 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     };
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     });
-    tmp5Result2 = jsx(tmp(10837).PromoSheet, {
+    tmp5Result2 = jsx(tmp(10967).PromoSheet, {
       illustration: tmp5Result,
       title: null,
       description: null,

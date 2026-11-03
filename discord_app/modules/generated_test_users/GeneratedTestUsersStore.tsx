@@ -28,7 +28,7 @@ prototype["initialize"] = function initialize(pools) {
     if (null != pools.users) {
       const _Map2 = Map;
       const _Object2 = Object;
-      map1 = new Map(Object.entries(pools.users));
+      const map1 = new Map(Object.entries(pools.users));
       closure_1.users = map1;
     }
   }
@@ -51,7 +51,7 @@ prototype["getState"] = function getState() {
 prototype["getUsersForPool"] = function getUsersForPool(id) {
   closure_0 = id;
   const users = pools.users;
-  let items;
+  items = undefined;
   if (users != null) {
     items = users.values();
   }

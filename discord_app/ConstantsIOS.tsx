@@ -101,6 +101,7 @@ export const LinkingTypes = {
   ACCOUNT_STANDING: "account-standing",
   MOBILE_NATIVE_UPDATE: "mobile-native-update",
   SHOP: "shop",
+  SOCIAL_LAYER_STOREFRONT: "social-layer-storefront",
   MOBILE_WEB_REDIRECT_CHECKOUT: "mobile-web-redirect-checkout",
   AUTHORIZED_APPS: "authorized-apps",
   DAVE_PROTOCOL_VERIFICATION: "dave-protocol-verification",

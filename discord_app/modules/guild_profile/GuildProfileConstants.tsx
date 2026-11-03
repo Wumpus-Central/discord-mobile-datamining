@@ -135,7 +135,7 @@ export const INVALID_ACCESS_ERROR_CODE = 50001;
 export const HOISTED_SEARCH_GAME_IDS = items1;
 export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = new Map(
   items1.map((item, index, arg2) => {
-    const items = [item, arg2.length - index];
+    items = [item, arg2.length - index];
     return items;
   }),
 );

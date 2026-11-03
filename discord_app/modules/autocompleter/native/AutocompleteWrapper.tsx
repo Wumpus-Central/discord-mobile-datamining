@@ -77,10 +77,10 @@ const Constants = fn(1072);
   AnalyticEvents: map1,
   UpsellTypes: closure_14,
 } = Constants);
-const BOOLEAN_CHOICES = fn(6035).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10225);
+const BOOLEAN_CHOICES = fn(6155).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(10355);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6036);
+const ChannelAutocompleteConstants = fn(6156);
 ({
   MENTION_SENTINEL: closure_18,
   CHANNEL_SENTINEL: closure_19,
@@ -89,16 +89,16 @@ const ChannelAutocompleteConstants = fn(6036);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10309).AutocompleteTypes;
-const EmojiInteractionPoint = fn(1386).EmojiInteractionPoint;
+const AutocompleteTypes = fn(10439).AutocompleteTypes;
+const EmojiInteractionPoint = fn(1388).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
 let c29 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c31 = 200;
 let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(8681).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
-const createStyles = fn(5014);
+let obj = { allowSpaces: true, maxQueryLength: fn(8805).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+const createStyles = fn(5141);
 let closure_34 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
     obj = {
@@ -350,7 +350,7 @@ class ACWrapper {
                       const tmp32Result = autocompleter_AutocompleteUtils;
                       if (tmp32Result.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                         const current2 = chatInputRef.current;
-                        current2.insertText(__initData2, result.tokenStart, false, undefined, tmp2);
+                        current2.insertText(closure_2_22, result.tokenStart, false, undefined, tmp2);
                         beginSearch(result.tokenStart);
                       }
                     }
@@ -360,7 +360,7 @@ class ACWrapper {
                     const tmp32Result2 = autocompleter_AutocompleteUtils;
                     if (tmp32Result2.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                       const current = chatInputRef.current;
-                      current.insertText(__initData3, result.tokenStart, false, undefined, tmp2);
+                      current.insertText(dependencyMap2, result.tokenStart, false, undefined, tmp2);
                       beginSearch2(result.tokenStart);
                     }
                   }
@@ -801,7 +801,7 @@ class ACWrapper {
       if (null != autocompleteType) {
         if (null != query) {
           const queryResultsResult = memo[tmp].queryResults(tmp2, queryOptions, arg0);
-          const items = [];
+          items = [];
           const items1 = [];
           const item = queryResultsResult.forEach((type) => {
             if (type.type === scaledTextLineHeight.STICKER) {
@@ -921,9 +921,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(9143).getGameSearchSession(
-                analyticsLocations(9611).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(9144).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(9271).getGameSearchSession(
+                analyticsLocations(9743).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(9272).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }
@@ -1150,14 +1150,14 @@ class ACWrapper {
         if (type.type === constants.GLOBAL) {
           if ("gameMentionInput" === type.inlineAutocompleteType) {
             const current5 = chatInputRef.current;
-            current5.insertText(__initData2, tokenStart, false);
+            current5.insertText(closure_2_22, tokenStart, false);
             beginSearch(tokenStart);
           }
         }
         if (type.type === constants.GLOBAL) {
           if ("timestampMentionInput" === type.inlineAutocompleteType) {
             const current4 = chatInputRef.current;
-            current4.insertText(__initData3, tokenStart, false);
+            current4.insertText(dependencyMap2, tokenStart, false);
             beginSearch2(tokenStart);
           }
         }
@@ -1175,7 +1175,7 @@ class ACWrapper {
           }
           let tmp17;
           if (null != gameMentionNode) {
-            const items = [gameMentionNode];
+            items = [gameMentionNode];
             tmp17 = items;
           }
           tmp13 = tmp17;

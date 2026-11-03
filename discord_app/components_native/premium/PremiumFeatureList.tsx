@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   item: {
     backgroundColor: "transparent",
@@ -35,7 +35,7 @@ export default function PremiumFeatureList(style) {
     style: style.style,
     children: found.map((color, index) => {
       const obj = { style: null, children: null };
-      const items = [closure_4.item, closure_1_3];
+      items = [closure_4.item, closure_1_3];
       obj.style = items;
       const obj2 = {
         accessibilityElementsHidden: true,

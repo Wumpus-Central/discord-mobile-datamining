@@ -11,7 +11,7 @@ const prototype = function WishlistRecommendationRecord(skus) {
   tmp5.skusToUserAndReason = Object.fromEntries(
     entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, tmp2];
+      items = [tmp, tmp2];
       return items;
     }),
   );
@@ -31,7 +31,7 @@ prototype["fromServer"] = function fromServer(skus) {
     tmp9.skusToUserAndReason = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp, tmp2];
+        items = [tmp, tmp2];
         return items;
       }),
     );

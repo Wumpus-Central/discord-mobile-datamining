@@ -2,7 +2,7 @@
 import design_shared from "../../discord_common/js/packages/design/shared.tsx";
 import StickerTypes from "../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 import themes from "utils/shared/themes.tsx";
-import Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
+import shared_Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/shared.tsx");
@@ -21,8 +21,8 @@ export const useThemeContext = design_shared.useThemeContext;
 export const ThemeContextType = design_shared.ThemeContextType;
 export const isThemeDark = themes.isThemeDark;
 export const isThemeLight = themes.isThemeLight;
-export const getContrastingColor = Colors.getContrastingColor;
-export const darkenColor = Colors.darkenColor;
-export const brightenColor = Colors.brightenColor;
-export const setColorOpacity = Colors.setColorOpacity;
-export const WCAGContrastRatios = Colors.WCAGContrastRatios;
+export const getContrastingColor = shared_Colors.getContrastingColor;
+export const darkenColor = shared_Colors.darkenColor;
+export const brightenColor = shared_Colors.brightenColor;
+export const setColorOpacity = shared_Colors.setColorOpacity;
+export const WCAGContrastRatios = shared_Colors.WCAGContrastRatios;

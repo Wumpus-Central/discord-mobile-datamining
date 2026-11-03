@@ -1,19 +1,19 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
-import _modDef6015 from "../../../../../_runtime/metro/06015__.js";
+import _modDef6135 from "../../../../../_runtime/metro/06135__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5966).FullWindowOverlay;
+  FullWindowOverlay = fn(6086).FullWindowOverlay;
 }
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 if (PlatformUtils.isIOS()) {
-  View = _modDef6015;
+  View = _modDef6135;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

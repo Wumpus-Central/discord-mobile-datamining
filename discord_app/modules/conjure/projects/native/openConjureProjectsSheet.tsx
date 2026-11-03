@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/projects/native/openConjureProjectsSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
 import ConjureProjectStore from "../ConjureProjectStore.tsx";
@@ -16,10 +16,10 @@ export default function openConjureProjectsSheet() {
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13006, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13142, dependencyMap.paths), "ConjureProjectsSheet");
 }
 export function openConjureProjectsSheetForGuild(guildId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13006, dependencyMap.paths), "ConjureProjectsSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13142, dependencyMap.paths), "ConjureProjectsSheet", {
     guildId,
   });
 }

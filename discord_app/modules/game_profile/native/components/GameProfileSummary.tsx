@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "column", overflow: "hidden" },
   measurement: { position: "absolute", top: 0, left: 0, right: 0, opacity: 0 },
@@ -27,7 +27,7 @@ export default function GameProfileSummary(arg0) {
   if (description == null) {
     description = game.description;
   }
-  const items = [description];
+  items = [description];
   const memo = description.useMemo(() => {
     if (null != description) {
       let parseHTMLFromTextResult = findTextStart.parseHTMLFromText(tmp, { parseTextLinks: true });

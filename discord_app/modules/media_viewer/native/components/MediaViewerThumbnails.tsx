@@ -1,13 +1,14 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundView.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function ObscuredView(source) {
@@ -18,7 +19,7 @@ function ObscuredView(source) {
   if (tmp4) {
     if (source.spoiler) {
       const obj2 = { style: null, children: null };
-      const items = [absoluteFill.absoluteFill, tmp5];
+      items = [absoluteFill.absoluteFill, tmp5];
       obj2.style = items;
       const tmp7Result = VisualEffectViewDefault;
       let str = "light";
@@ -27,7 +28,7 @@ function ObscuredView(source) {
       }
       const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
       obj2.children = React6(tmp7Result, obj3);
-      tmp10Result = React6(ReanimatedRexportDefault.View, obj2);
+      tmp10Result = React6(_modDef1652.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -37,11 +38,11 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8866);
+const Constants = fn(8990);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({
   containerPortrait: { height: 60 },
   thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },
@@ -56,7 +57,7 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   if (Array.isArray(source)) {
     source = source[0];
   }
-  const items = [source];
+  items = [source];
   const memo = noop.useMemo(() => {
     let thumbnail = first.thumbnail;
     if (thumbnail == null) {
@@ -86,32 +87,32 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   ];
   obj2.children = items3;
   obj.children = React7(hasOwnProperty, obj2);
-  return React6(ReanimatedRexportDefault.View, obj);
+  return React6(_modDef1652.View, obj);
 });
-const __initData = {
-  code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}",
+let closure_13 = {
+  code: "(function MediaViewerThumbnailsTsx1(){let[scrollEnabled]=this.__closure;return{scrollEnabled:scrollEnabled.get()};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerThumbnails.tsx");
 
 export default function MediaViewerThumbnails(syncer) {
   syncer = syncer.syncer;
-  let onSelect;
+  let useThumbnailStyle;
   const sources = syncer.sources;
+  _require = sources;
   const index = syncer.index;
   const variableWidthThumbnailsEnabled = syncer.variableWidthThumbnailsEnabled;
   const thumbnailScrollPositions = syncer.thumbnailScrollPositions;
   ({ onEndReached, onEndReachedThreshold } = syncer);
-  const thumbnailsProps = syncer.useThumbnailsProps(onSelect, sources.length - 1);
+  const thumbnailsProps = syncer.useThumbnailsProps(useThumbnailStyle, sources.length - 1);
   const headerBufferStyle = thumbnailsProps.headerBufferStyle;
   const footerBufferStyle = thumbnailsProps.footerBufferStyle;
-  const scrollEnabled = thumbnailsProps.scrollEnabled;
-  onSelect = thumbnailsProps.onSelect;
-  const useThumbnailStyle = thumbnailsProps.useThumbnailStyle;
-  let items = [thumbnailScrollPositions, variableWidthThumbnailsEnabled];
-  ({ ref, headerBufferSize, footerBufferSize, onScroll, screenWidth, itemSize } = thumbnailsProps);
+  const onSelect = thumbnailsProps.onSelect;
+  useThumbnailStyle = thumbnailsProps.useThumbnailStyle;
+  items = [thumbnailScrollPositions, variableWidthThumbnailsEnabled];
+  ({ ref, headerBufferSize, footerBufferSize, scrollEnabled, onScroll, screenWidth, itemSize } = thumbnailsProps);
   const memo = headerBufferStyle.useMemo(() => {
-    const items = [];
+    items = [];
     for (let num = 0; num < thumbnailScrollPositions.length; num = num + 1) {
       let push = items.push;
       if (variableWidthThumbnailsEnabled) {
@@ -123,18 +124,17 @@ export default function MediaViewerThumbnails(syncer) {
     return items;
   }, items);
   const tmp = closure_11();
-  const selectedIndex = thumbnailScrollPositions(
-    sources(variableWidthThumbnailsEnabled[13]).useSelectedMediaSource(syncer),
-    1,
-  )[0];
+  const tmp4 = _require;
+  const tmp5 = variableWidthThumbnailsEnabled;
+  const selectedIndex = thumbnailScrollPositions(require("MediaSourceUtil").useSelectedMediaSource(syncer), 1)[0];
   const items1 = [sources, selectedIndex, onSelect, useThumbnailStyle];
   const items2 = [sources.length];
   const callback = headerBufferStyle.useCallback(
     (arg0, index) =>
       React6(closure_12, {
         index,
-        source: sources[index],
-        numSources: sources.length,
+        source: _undefined[index],
+        numSources: _undefined.length,
         selectedIndex,
         onSelect,
         useThumbnailStyle,
@@ -142,30 +142,31 @@ export default function MediaViewerThumbnails(syncer) {
     items1,
   );
   const memo1 = headerBufferStyle.useMemo(() => {
-    const items = [sources.length];
+    items = [_undefined.length];
     return items;
   }, items2);
-  const obj = sources(variableWidthThumbnailsEnabled[13]);
-  const fn = function n() {
-    return { scrollEnabled: scrollEnabled.get() };
-  };
-  fn.__closure = { scrollEnabled };
-  fn.__workletHash = 13439565264141;
-  fn.__initData = __initData;
-  const items3 = [headerBufferStyle];
-  const animatedProps = sources(variableWidthThumbnailsEnabled[8]).useAnimatedProps(fn);
-  const items4 = [footerBufferStyle];
-  const callback1 = headerBufferStyle.useCallback(
-    () => React6(REAWorkaroundViewDefault, { style: headerBufferStyle }),
-    items3,
-  );
-  const items5 = [index];
-  const callback2 = headerBufferStyle.useCallback(
-    () => React6(REAWorkaroundViewDefault, { style: footerBufferStyle }),
-    items4,
-  );
-  const memo2 = headerBufferStyle.useMemo(() => index.get(), items5);
-  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, {
+  const obj2 = require("MediaSourceUtil");
+  const items3 = [closure_13, scrollEnabled];
+  _require = undefined;
+  [tmp9, tmp10] = items3;
+  class MediaViewerThumbnailsTsx1 {
+    constructor() {
+      obj = { scrollEnabled: closure_0.get() };
+      return obj;
+    }
+  }
+  const items4 = [tmp10];
+  MediaViewerThumbnailsTsx1.__closure = items4;
+  MediaViewerThumbnailsTsx1.__workletHash = 12189184507540;
+  MediaViewerThumbnailsTsx1.__initData = tmp9;
+  const items5 = [headerBufferStyle];
+  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(MediaViewerThumbnailsTsx1);
+  const items6 = [footerBufferStyle];
+  const callback1 = obj.useCallback(() => React6(_modDef1652.View, { style: headerBufferStyle }), items5);
+  const items7 = [index];
+  const callback2 = obj.useCallback(() => React6(_modDef1652.View, { style: footerBufferStyle }), items6);
+  const memo2 = obj.useMemo(() => index.get(), items7);
+  return selectedIndex(tmp4(tmp5[14]).AnimatedFastList, {
     ref,
     style: tmp.containerPortrait,
     sections: memo1,

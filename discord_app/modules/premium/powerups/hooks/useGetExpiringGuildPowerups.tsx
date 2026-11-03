@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGet
 
 export default function useGetExpiringGuildPowerups(arg0) {
   _require = arg0;
-  const items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildPowerupsStore.getStateForGuild(closure_0),
   );

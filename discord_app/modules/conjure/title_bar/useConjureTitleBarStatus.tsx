@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/conjure/title_bar/useConjureT
 export default function useConjureTitleBarStatus() {
   const tmp = useConjureHomeOwnProjectsDefault();
   _require = tmp;
-  const items = [tmp];
+  items = [tmp];
   return require("initialize").useStateFromStores(
     require("conjureHomeProjectState").CONJURE_HOME_PROJECT_STATE_STORES,
     () =>

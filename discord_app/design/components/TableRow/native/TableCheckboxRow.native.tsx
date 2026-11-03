@@ -1,6 +1,6 @@
 // discord_app/design/components/TableRow/native/TableCheckboxRow.native.tsx
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import native from "../../../utils/native.tsx";
 import TableRow from "TableRow.native.tsx";
 import FormCheckbox from "../../Forms/native/FormCheckbox.native.tsx";
@@ -22,8 +22,8 @@ export function TableCheckboxRow(checked) {
     checked,
     Object.assign({ checked: 0, label: 0, subLabel: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }),
   );
-  const sharedValue = ReanimatedRexport.useSharedValue(0);
-  const items = [sharedValue];
+  const sharedValue = _mod1652.useSharedValue(0);
+  items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = noop.useCallback(() => {
     const result = sharedValue.set(1);

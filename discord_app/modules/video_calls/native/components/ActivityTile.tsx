@@ -40,7 +40,7 @@ function ActivityTileInner(participant) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11697)(obj4), done: false };
+              const obj5 = { value: v1(11834)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11792).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11792);
+          const result = tmp2(11929).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11929);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -90,7 +90,7 @@ function ActivityTileInner(participant) {
     }
   };
   const tmp = closure_14();
-  const items = [participant.applicationId];
+  items = [participant.applicationId];
   const application = stateFromStores(channel(onSingleTap[15])(items), 1)[0];
   closure_129_0 = participant;
   const items1 = [embeddedActivityJoinability];
@@ -273,12 +273,12 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(11694).ActivityLayoutMode;
+let ActivityLayoutMode = fn(11831).ActivityLayoutMode;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1191).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,

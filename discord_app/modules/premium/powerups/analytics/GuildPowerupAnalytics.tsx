@@ -10,7 +10,7 @@ export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost
 export function useLogPowerupModalOpened(guildId, powerup, DEACTIVATE) {
   const guild_id = guildId;
   noop = DEACTIVATE;
-  const items = [DEACTIVATE, guildId, powerup.skuId];
+  items = [DEACTIVATE, guildId, powerup.skuId];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: powerup.skuId, guild_id });
   }, items);

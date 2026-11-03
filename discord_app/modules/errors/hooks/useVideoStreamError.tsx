@@ -6,17 +6,17 @@ import AVErrorStore from "../av_errors/AVErrorStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 
-export default function useVideoStreamError(arg0, arg1) {
-  _require = arg0;
-  dependencyMap = arg1;
-  let items = [AVErrorStore, AuthenticationStore];
+export default function useVideoStreamError(DEFAULT, id) {
+  _require = DEFAULT;
+  dependencyMap = id;
+  items = [AVErrorStore, AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() !== closure_1) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
         HermesBuiltin.arraySpread(
@@ -46,10 +46,10 @@ export default function useVideoStreamError(arg0, arg1) {
 export function useVideoStreamErrorContext(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [AVErrorStore, AuthenticationStore];
+  items = [AVErrorStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() !== closure_1) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
         HermesBuiltin.arraySpread(

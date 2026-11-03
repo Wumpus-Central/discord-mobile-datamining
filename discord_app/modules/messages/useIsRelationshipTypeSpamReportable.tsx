@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTyp
 
 export function useIsRelationshipTypeSpamReportable(id) {
   _require = id;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

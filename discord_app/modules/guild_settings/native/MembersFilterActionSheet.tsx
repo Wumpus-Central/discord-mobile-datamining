@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { listView: { marginVertical: 8, borderRadius: nativeDefault.radii.lg, overflow: "hidden" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   onFilterRoleId = onFilterRoleId.onFilterRoleId;
   let callback;
   const tmp2 = closure_7();
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleStore.getSortedRoles(require.id),
   );

@@ -4,7 +4,7 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(11000);
+const ChannelCallStore = fn(11133);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -18,7 +18,7 @@ export default function SingleVideoCall(channel) {
   bottom = rect.bottom;
   right = rect.right;
   const analyticsLocations = bottom(right[4])().analyticsLocations;
-  const items = [right, bottom];
+  items = [right, bottom];
   const memo = analyticsLocations.useMemo(() => ({ marginRight: right, marginBottom: bottom }), items);
   const obj = {
     gestureEnabled: true,

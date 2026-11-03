@@ -15,7 +15,7 @@ import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/use
 
 export function useConjureVoiceChannelPinOutcome(projectId) {
   _require = projectId;
-  const items = [ConjureVoiceChannelPinStore];
+  items = [ConjureVoiceChannelPinStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     ConjureVoiceChannelPinStore.getOutcome(closure_0),
   );
@@ -56,7 +56,7 @@ export function useConjureVoiceChannelPinOutcome(projectId) {
 }
 export function useConjureVoiceChannelPinForm(projectId) {
   _require = projectId;
-  let items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -78,7 +78,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
     items2,
     () => {
       if (null == closure_0) {
-        let items = [];
+        items = [];
       } else {
         const mapped = GuildChannelStore.getChannels(tmp)[GUILD_VOCAL_CHANNELS_KEY].map((channel) => channel.channel);
         items = mapped.filter((type) => {
@@ -104,7 +104,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
   if (selected == null) {
     selected = null;
   }
-  let application_id;
+  application_id = undefined;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -122,7 +122,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

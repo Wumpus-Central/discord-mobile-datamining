@@ -28,7 +28,7 @@ export default function useRestorePurchases() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ export default function useRestorePurchases() {
   noop.useRef(false);
   let tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     let tmp = flag;
     if (!flag) {

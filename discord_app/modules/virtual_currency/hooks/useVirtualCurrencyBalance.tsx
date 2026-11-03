@@ -9,12 +9,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
 
 export function useVirtualCurrencyBalance() {
-  const items = [VirtualCurrencyStore];
+  items = [VirtualCurrencyStore];
   return initialize.useStateFromStores(items, () => balance.balance);
 }
 export function useHasEnoughVirtualCurrency(arg0) {
   _require = arg0;
-  const items = [VirtualCurrencyStore];
+  items = [VirtualCurrencyStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

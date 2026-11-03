@@ -42,7 +42,7 @@ function resolvePlaintextInlineVoid(text, id, id2, arg3) {
             for (const item10028 of sortedRoles) {
               if (first === item10028.name) {
                 let element = { type: "roleMention", roleId: item10028.id, children: null };
-                let items = [{ text: "" }];
+                items = [{ text: "" }];
                 element.children = items;
                 obj.return();
                 return element;
@@ -185,9 +185,9 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 

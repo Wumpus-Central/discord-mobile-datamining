@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/lurker_mode/native/useIsGameC
 
 export default function useIsGameCommunityServerPreview(arg0) {
   _require = arg0;
-  const items = [LurkingStore];
+  items = [LurkingStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

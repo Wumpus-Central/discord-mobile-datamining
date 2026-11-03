@@ -24,14 +24,14 @@ export function useFormattedSKUPrice(sku) {
     tmp2 = null;
   }
   _require = tmp2;
-  let items = [tmp2];
+  items = [tmp2];
   const effect = noop.useEffect(() => {
     if (null != c0) {
-      const items = [tmp];
+      items = [tmp];
       const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
     }
   }, items);
-  const items1 = [stateFromStores(7597)];
+  const items1 = [stateFromStores(7721)];
   const items2 = [tmp2];
   stateFromStores = require("initialize").useStateFromStores(
     items1,

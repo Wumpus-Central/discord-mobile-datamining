@@ -8,7 +8,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: {
     alignItems: "center",
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 
 export function ForYouLoadMore(onPressLoad) {
   const tmp = closure_6();
-  const items = [NotificationCenterItemsStore];
+  items = [NotificationCenterItemsStore];
   const obj2 = { style: tmp.container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {
     let tmp4Result = <React2 />;

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useS
 
 export default function useSelfHasVideo(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore, AuthenticationStore, MediaEngineStore];
+  items = [ChannelRTCStore, AuthenticationStore, MediaEngineStore];
   return require("initialize").useStateFromStores(items, () => {
     const participant = ChannelRTCStore.getParticipant(closure_0, AuthenticationStore.getId());
     return participantHasVideo.canRenderParticipantVideo(participant, MediaEngineStore);

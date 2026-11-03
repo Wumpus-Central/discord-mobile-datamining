@@ -9,7 +9,7 @@ export default function useRefreshLinkCodeOnExpiry(arg0, arg1) {
   closure_0 = arg0;
   const tmp = useStableCallbackDefault(arg1);
   closure_1 = tmp;
-  const items = [arg0, tmp];
+  items = [arg0, tmp];
   const effect = noop.useEffect(() => {
     if (null != timeout) {
       const _Date = Date;

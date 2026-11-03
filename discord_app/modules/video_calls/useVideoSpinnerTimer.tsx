@@ -23,7 +23,7 @@ export default function useVideoSpinnerTimer(userId) {
     }),
     1,
   )[0];
-  const items = [loading, flag, streamId, first, videoSpinnerContext, userId];
+  items = [loading, flag, streamId, first, videoSpinnerContext, userId];
   const effect = streamId.useEffect(() => {
     if (!flag) {
       if (loading) {

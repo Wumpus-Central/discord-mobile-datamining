@@ -27,7 +27,7 @@ function calculatePositionDeltas(arg0) {
         let idGetterResult = idGetter(oldOrdering[num]);
         let result = map.set(idGetterResult, existingPositionGetter(oldOrdering[num]));
       }
-      const items = [];
+      items = [];
       for (let num2 = 0; num2 < length; num2 = num2 + 1) {
         let idGetterResult1 = idGetter(newOrdering[num2]);
         let diff = num2;
@@ -48,7 +48,7 @@ function calculatePositionDeltas(arg0) {
   }
 }
 function moveItemFromTo(c9, arg1, to) {
-  const items = [...c9];
+  items = [...c9];
   items.splice(arg1, 1);
   items.splice(to, 0, c9[arg1]);
   return items;
@@ -70,7 +70,7 @@ function getPositionUpdates(arg0) {
     existingPositionGetter: null,
     ascending: null,
   };
-  const items = [...values];
+  items = [...values];
   items.splice(fromPosition, 1);
   items.splice(toPosition, 0, values[fromPosition]);
   obj2.newOrdering = items;

@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageBlocke
 
 export function useStageBlockedUsersCount(id1) {
   _require = id1;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id1];
   return require("initialize").useStateFromStores(
     items,
@@ -29,7 +29,7 @@ export function useStageBlockedUsersCount(id1) {
 }
 export function useStageIgnoredUsersCount(id2) {
   _require = id2;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id2];
   return require("initialize").useStateFromStores(
     items,
@@ -68,7 +68,7 @@ export function getStageIgnoredUsersCount(id) {
 }
 export function useStageBlockedUsers(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
@@ -82,7 +82,7 @@ export function useStageBlockedUsers(id) {
 }
 export function useStageIgnoredUsers(id) {
   _require = id;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

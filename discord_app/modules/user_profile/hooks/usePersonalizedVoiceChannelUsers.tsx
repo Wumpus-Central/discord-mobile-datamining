@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/usePersona
 
 export default function usePersonalizedVoiceChannelUsers(arg0) {
   _require = arg0;
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [,];
   ({ id: arr2[0], guild_id: arr2[1] } = arg0);
   stateFromStoresArray = require("initialize").useStateFromStoresArray(

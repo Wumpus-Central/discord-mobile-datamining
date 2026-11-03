@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { gap: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,7 +45,7 @@ export default function ConjureScopeCardView(onInputFocusChange) {
     obj4.onInputFocusChange = onInputFocusChange.onInputFocusChange;
     tmp6 = React4(ConjureClarificationCardDefault, obj4, card.clarification.id);
   }
-  const items = [tmp6];
+  items = [tmp6];
   let tmp3Result = null;
   if (null != card.failure) {
     const obj7 = {

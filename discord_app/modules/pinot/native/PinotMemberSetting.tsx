@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3160 from "../Pinot.messages.js";
+import _modDef3287 from "../Pinot.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import SettingsConstants from "../../user_settings/core/native/SettingsConstants.tsx";
@@ -22,14 +22,14 @@ function PinotMemberSettingFooter() {
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(_modDef3160.V0EPTo, { learnMoreURL: articleURL });
-  const items = [timestampProducer(Text_Text.Text, obj4)];
+  obj4.children = intl.format(_modDef3287.V0EPTo, { learnMoreURL: articleURL });
+  items = [timestampProducer(Text_Text.Text, obj4)];
   let tmp8Result = null;
   if (obj.usePinotMemberSettingState().locked) {
     const obj5 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj6 = { learnMoreURL: articleURL };
-    obj5.message = intl2.format(_modDef3160.Z9bKIJ, obj6);
+    obj5.message = intl2.format(_modDef3287.Z9bKIJ, obj6);
     tmp8Result = timestampProducer(InlineNotice.InlineNotice, obj5);
   }
   items[1] = tmp8Result;
@@ -46,7 +46,7 @@ let closure_9 = createStyles.createStyles(obj);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3160.M33rl6);
+    return intl.string(_modDef3287.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {
@@ -69,7 +69,7 @@ export const PinotMemberSetting = toggle;
 export function usePinotDataPrivacySections() {
   if (obj.useIsPinotMemberEnabled(mobile_user_settings_data_and_privacy)) {
     const obj2 = { settings: null, subLabel: null };
-    const items = [MobileUserSettings.PINOT_MEMBER_SETTING];
+    items = [MobileUserSettings.PINOT_MEMBER_SETTING];
     obj2.settings = items;
     obj2.subLabel = timestampProducer(PinotMemberSettingFooter, {});
     const items1 = [obj2];

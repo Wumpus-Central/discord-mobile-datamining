@@ -92,7 +92,7 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
 };
 prototype["handleSearchSuccess"] = function handleSearchSuccess(analyticsId, arr) {
   const self = this;
-  let items;
+  items = undefined;
   let items1;
   this.analyticsId = analyticsId.analyticsId;
   this.isFetching = false;

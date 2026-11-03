@@ -69,7 +69,7 @@ function requestToSpeakSortKey(user) {
 function getParticipantIndex(arg0) {
   ({ role, rtsState } = arg0);
   ({ speaker, blocked, ignored, isFriend } = arg0);
-  const items = [];
+  items = [];
   if (tmp3) {
     items.push(obj.ALL_REQUESTED_TO_SPEAK);
   }
@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5767).getComparator;
+const getComparator = fn(5887).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",
@@ -135,7 +135,7 @@ class StageChannelParticipants {
 const prototype = StageChannelParticipants.prototype;
 prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, arg1) {
   const self = this;
-  const items = [];
+  items = [];
   const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(this.channelId, userId);
   if (null == voiceStateForChannel) {
     return items;

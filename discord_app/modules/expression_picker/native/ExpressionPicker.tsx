@@ -16,10 +16,10 @@ const ExpressionPickerConstants = fn(1228);
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   expressionPickerContainer: {
     flex: 1,
@@ -66,7 +66,7 @@ export default noop.memo(function ExpressionPicker(expressionType) {
   });
   expressionPickerViewType = tmp4.expressionPickerViewType;
   const prop = tmp4.expressionPickerTabStrings;
-  const items = [channel];
+  items = [channel];
   memo = memo.useMemo(() => channel.getGuildId(), items);
   const items1 = [memo];
   const effect = memo.useEffect(() => {

@@ -15,7 +15,7 @@ export default function useResolveGame(arg0) {
     tmp3 = applicationId;
   }
   getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
-  const items = [gameId, getOrFetchApplication];
+  items = [gameId, getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let tmp = gameId;
     if (null == gameId) {

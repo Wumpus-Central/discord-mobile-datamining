@@ -25,7 +25,7 @@ function VoiceBadges(arg0) {
     tmp6 = hasOwnProperty(NativeViewDefault, obj2);
     const tmp3Result = NativeViewDefault;
   }
-  const items = [tmp6];
+  items = [tmp6];
   let tmp10 = null;
   if (null != videoIconState) {
     const obj4 = { style: tmp.iconWrapper, children: null };
@@ -40,7 +40,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: 16 },
   voiceBadgesContainer: { flexDirection: "row" },
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/For
 export function VoicePanelFormSection(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
   const obj = { style: null, children: null };
-  const items = [closure_7().container, style.style];
+  items = [closure_7().container, style.style];
   obj.style = items;
   const tmp2 = closure_7();
   const merged1 = Object.assign(merged);
@@ -107,7 +107,7 @@ export function MemberRowItem(user) {
   const obj5 = { userId: user.id, guildId };
   const tmp9 = channelId(flag[13])({ userId: user.id, guildId });
   const displayNameStylesFont = user(flag[14]).useDisplayNameStylesFont({ displayNameStyles: tmp9 });
-  let items = [id, channelId, analyticsLocations];
+  items = [id, channelId, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
     showUserProfileActionSheetDefault({
       userId: id,
@@ -123,7 +123,7 @@ export function MemberRowItem(user) {
     StreamerApplicationSelectors.getStreamerActivityByUserId(id, PresenceStore),
   );
   const first = channelId(flag[18])(id, guildId, flag2)[0];
-  let application_id;
+  application_id = undefined;
   if (first != null) {
     application_id = first.application_id;
   }
@@ -204,7 +204,7 @@ export function MemberRowItem(user) {
       size: "sm",
       variant: "secondary",
       onPress() {
-        const items = [user.id];
+        items = [user.id];
         return CallActionCreatorsDefault.ring(channelId, items, "voice_panel_floating_cta");
       },
       text: null,

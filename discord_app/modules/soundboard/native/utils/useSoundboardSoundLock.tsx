@@ -12,14 +12,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(6060).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6180).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
 export function useSoundboardSoundLock(sound, channel) {
   _require = sound;
   let BARTXV = dependencyMap;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const result = require("SoundboardUtils").canUseSoundboardSound(stateFromStores, sound, channel);

@@ -79,7 +79,7 @@ export function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
   const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
   const displayItems = totalUnownedWishlistItemCount.displayItems;
   const recipientName = totalUnownedWishlistItemCount.recipientName;
-  const items = [totalUnownedWishlistItemCount, wishlistInDmLength, displayItems];
+  items = [totalUnownedWishlistItemCount, wishlistInDmLength, displayItems];
   const tmp = displayItems(() => {
     if (totalUnownedWishlistItemCount >= wishlistInDmLength) {
       let SHOP_ONLY = obj.FULL_WISHLIST;

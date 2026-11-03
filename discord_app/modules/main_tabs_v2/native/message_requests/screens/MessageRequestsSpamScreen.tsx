@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export default function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;
-  const items = [navigation];
+  items = [navigation];
   const goToMessageRequestPreview = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
   return jsx(SpamMessageListDefault, { goToMessageRequestPreview });
 }

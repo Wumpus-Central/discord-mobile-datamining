@@ -8,10 +8,10 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6855).isGuildScheduledEventActive;
+let closure_6 = fn(6975).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   header: {
     margin: 12,
@@ -45,7 +45,7 @@ export default noop.memo(function GuildEventVoiceBanner(channel) {
   let obj = channel(event[7]);
   const imminentUpcomingGuildEvents = channel(event[7]).useImminentUpcomingGuildEvents(channel.id);
   let obj2 = channel(event[7]);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   let tmp7 = activeEvent;
   const stateFromStores = channel(event[8]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {

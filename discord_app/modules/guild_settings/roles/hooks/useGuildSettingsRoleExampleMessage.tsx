@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/us
 
 export function useGuildSettingsRoleExampleMessage(intl) {
   const content = intl;
-  const items = [intl];
+  items = [intl];
   return noop.useMemo(() => {
     const obj2 = {};
     const merged = Object.assign(createMessageDefault({ channelId: "1337", content }));

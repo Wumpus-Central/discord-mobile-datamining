@@ -20,7 +20,7 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   let analyticsLocations2;
   productLine = skuId;
   let tmp = applicationId;
-  const items = [analyticsLocations2];
+  items = [analyticsLocations2];
   const items1 = [skuId];
   applicationId = skuId(applicationId[4]).useStateFromStores(items, () => SKUStore.get(skuId), items1);
   let tmp2 = giftingOrigin;

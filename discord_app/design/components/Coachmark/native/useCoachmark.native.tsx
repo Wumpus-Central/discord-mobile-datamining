@@ -14,7 +14,7 @@ export function useCoachmark(targetRef, memo) {
   let context;
   let obj = require("v1");
   context = noop.useContext(require("LayerContext").LayerContext);
-  const items = [context, memo];
+  items = [context, memo];
   const callback = noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
     const obj = {};
     const merged = Object.assign(closure_0);

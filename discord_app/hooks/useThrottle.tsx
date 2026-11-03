@@ -11,7 +11,7 @@ function throttleStateFn(arg0) {
 function useThrottledFunction(callback4, arg1) {
   _require = callback4;
   dependencyMap = arg1;
-  let items = items4;
+  items = items4;
   if (items4 === undefined) {
     items = [];
   }
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("hooks/useThrottle.tsx");
 export (memo, throttleDurationForChannel) => {
   let current = memo;
   _require = memo;
-  let items = items5;
+  items = items5;
   if (items5 === undefined) {
     items = [];
   }

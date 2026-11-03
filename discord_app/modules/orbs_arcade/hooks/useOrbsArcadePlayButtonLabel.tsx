@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/hooks/useOrbsArca
 
 export default function useOrbsArcadePlayButtonLabel(orbCost) {
   _require = orbCost;
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [,];
   ({ id: arr2[0], numFreePlays: arr2[1] } = orbCost);
   const stateFromStores = require("initialize").useStateFromStores(

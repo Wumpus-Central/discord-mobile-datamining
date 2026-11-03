@@ -8,7 +8,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
-import _modDef13771 from "../../../../../_runtime/metro/13771__.js";
+import _modDef13902 from "../../../../../_runtime/metro/13902__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -17,7 +17,7 @@ import ICYMIStore from "../../ICYMIStore.tsx";
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  const items = [React6(native.Icon, { source: _modDef13771, size: native.IconSizes.SMALL })];
+  items = [React6(native.Icon, { source: _modDef13902, size: native.IconSizes.SMALL })];
   const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
@@ -27,14 +27,14 @@ function UploadPlaceholder() {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -143,7 +143,7 @@ export default function GravityCustomStatusEntryRow(id) {
   const hexWithOpacityResult = id(renderForScreenshot[14]).hexWithOpacity(tmp5Result.background.backgroundColor, 0.6);
   c6 = hexWithOpacityResult;
   const tmp2Result = id(renderForScreenshot[14]);
-  let items = [c6];
+  items = [c6];
   let str1;
   const stateFromStores = id(renderForScreenshot[15]).useStateFromStores(items, () => UserStore.getUser(userId));
   if (customStatusExtra.emoji_id != null) {

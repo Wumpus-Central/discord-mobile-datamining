@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   avatars: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -30,7 +30,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
   otherUser = otherUser.otherUser;
   ({ iconSrc, iconStyles } = otherUser);
   const tmp = closure_6();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp5 = null;
   if (undefined !== stateFromStores) {

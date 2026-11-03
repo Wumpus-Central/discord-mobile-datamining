@@ -24,7 +24,7 @@ function getInitialGuildState(guildId, channelId, flag) {
     if (null != channelId) {
       if (!isChatLockedOpen) {
         if (!flag) {
-          let items = [true];
+          items = [true];
           const obj2 = { index: 0, routes: null };
           const obj3 = { name: "tabs", state: null };
           const obj4 = { routes: null, index: 0 };
@@ -103,7 +103,7 @@ function computeInitialNavigationStateWithoutLogging() {
     }
     ({ channelId, guildId } = params);
     if (null == guildId) {
-      const items = [{ page: "private-channels" }];
+      items = [{ page: "private-channels" }];
       let flag2 = tmp5;
       if (tmp5 === undefined) {
         flag2 = false;
@@ -167,7 +167,7 @@ export function wrapRouteForRootNavigator(items) {
 }
 export function getInitialAuthState() {
   const obj = { routes: null, index: 0 };
-  const items = [{ name: "auth" }];
+  items = [{ name: "auth" }];
   obj.routes = items;
   return obj;
 }

@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conversations/useSelectedConv
 
 export default function useSelectedConversation(arg0) {
   _require = arg0;
-  const items = [SelectedConversationStore];
+  items = [SelectedConversationStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

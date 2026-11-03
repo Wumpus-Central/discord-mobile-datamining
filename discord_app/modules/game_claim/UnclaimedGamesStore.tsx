@@ -10,7 +10,7 @@ prototype["getMap"] = function getMap() {
   return guildIdToGameIds;
 };
 prototype["getUnclaimedGameIdsForGuild"] = function getUnclaimedGameIdsForGuild(arg0) {
-  let items;
+  items = undefined;
   if (guildIdToGameIds != null) {
     items = tmp[arg0];
   }
@@ -38,7 +38,7 @@ prototype["getGuildIdsWithUnclaimedGames"] = function getGuildIdsWithUnclaimedGa
     const _Object = Object;
     const keys = Object.keys(guildIdToGameIds);
     return keys.filter((item) => {
-      let items = closure_0[item];
+      items = closure_0[item];
       if (items == null) {
         items = [];
       }

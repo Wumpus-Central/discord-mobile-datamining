@@ -5,13 +5,13 @@ import noop from "../../../_runtime/metro/00019__.js";
 function FavoritesGuildSuggestionsLoaderInner() {
   const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
   importDefault = tmp;
-  const items = [tmp];
+  items = [tmp];
   const layoutEffect = noop.useLayoutEffect(() => {
     React4(closure_0);
   }, items);
   return null;
 }
-const FavoritesGuildSuggestionsStore = fn(18262);
+const FavoritesGuildSuggestionsStore = fn(18406);
 ({
   NO_SUGGESTIONS: c3,
   setFavoritesGuildSuggestions: closure_4,
@@ -26,7 +26,7 @@ export default noop.memo(function FavoritesGuildSuggestionsLoader() {
   const isEligible = tmp.isEligible;
   const isSelected = tmp.isSelected;
   noop = noop.useRef(false);
-  const items = [isEligible, isSelected];
+  items = [isEligible, isSelected];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (isSelected) {
       ref.current = true;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx
 import DateUtils from "../../../utils/DateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import hooks from "../../../../_runtime/metro/02042__.js";
+import hooks from "../../../../_runtime/metro/02171__.js";
 
 require = fn;
 let closure_4 = hooks.duration(30, "days");
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/premium/hooks/useOutboundProm
 export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     let tmp = dependencyMap;
     DateUtils;

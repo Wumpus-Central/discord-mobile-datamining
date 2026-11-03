@@ -120,7 +120,7 @@ class GuildSettingsModalMemberEditScene {
       if (user != null) {
         id1 = user.id;
       }
-      const items = [UserStore, GuildStore, PermissionStore];
+      items = [UserStore, GuildStore, PermissionStore];
       obj.canDisableCommunication = useCanToggleCommunicationDisableOnUser.canToggleCommunicationDisableOnUser(
         id,
         id1,
@@ -168,14 +168,14 @@ class GuildSettingsModalMemberEditScene {
   }
 }
 const View = fn(17).View;
-const GuildRecord = fn(4881);
+const GuildRecord = fn(5008);
 ({ isGuildOwner: metroRequire, isGuildOwnerWithRequiredMfaLevel: closure_7 } = GuildRecord);
-const isEveryoneRole = fn(4921).isEveryoneRole;
+const isEveryoneRole = fn(5048).isEveryoneRole;
 const Constants = fn(1072);
 ({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -208,7 +208,7 @@ RolesList["getDerivedStateFromProps"] = function getDerivedStateFromProps(isEdit
 };
 RolesList.prototype["render"] = function render() {
   const props = this.props;
-  const guild = props.guild;
+  guild = props.guild;
   ({ sortedGuildRoles, roles: importDefault, currentUserId } = props);
   const onToggleRole = props.onToggleRole;
   if (props.isEditing) {
@@ -363,7 +363,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
     };
     applyArgumentsResult.handleTransferOwnership = function handleTransferOwnership() {
       const props = applyArgumentsResult.props;
-      const guild = props.guild;
+      guild = props.guild;
       const features = guild.features;
       if (!features.has(constants2.VERIFIED)) {
         const features2 = guild.features;
@@ -410,8 +410,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(6998).getHeaderCloseButton(onClose);
-      let obj = self(6998);
+      fn = self(7124).getHeaderCloseButton(onClose);
+      let obj = self(7124);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -463,7 +463,7 @@ prototype["render"] = function render() {
   } else {
     const obj2 = { style: tmp.rowLabel, children: null };
     const obj3 = { variant: "text-sm/medium", children: UserUtilsDefault.getUserTag(user) };
-    const items = [collapsedCategories(Text_Text.Text, obj3)];
+    items = [collapsedCategories(Text_Text.Text, obj3)];
     let tmp17Result = null;
     if (user.bot) {
       const obj = { verified: user.isVerifiedBot() };
@@ -580,7 +580,7 @@ prototype["render"] = function render() {
       items2[5] = canBan;
       items2[6] = tmp17Result3;
       obj7.children = items2;
-      obj6.children = closure_1_19(Stack_Stack.Stack, obj7);
+      obj6.children = expandedHeight(Stack_Stack.Stack, obj7);
       return collapsedCategories(Form.Form, obj6);
     } else {
       const result = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
@@ -612,7 +612,7 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(5080).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -620,9 +620,9 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5612)(guildId);
+  const tmp = onRemove(5735)(guildId);
   closure_2 = tmp;
-  const items = [onClose, onRemove, tmp];
+  items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
     const guildId = closure_2;
     closure_2 = onRemove;
@@ -645,7 +645,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(13277), obj);
+          return closure_2_18(onRemove(13413), obj);
         },
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -657,7 +657,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(13281), obj);
+          return closure_2_18(onRemove(13417), obj);
         },
       },
     };
@@ -665,6 +665,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(7169).Navigator, obj);
+  return closure_18(onClose(7290).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

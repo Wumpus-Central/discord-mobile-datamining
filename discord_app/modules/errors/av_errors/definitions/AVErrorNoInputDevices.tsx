@@ -30,7 +30,7 @@ export const AVErrorNoInputDevicesDefinition = {
           if (!isGuildStageVoiceResult) {
             const obj = { type: AVError.AVError.NO_INPUT_DEVICES };
             const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-            const items = [obj];
+            items = [obj];
             return items;
           }
         }

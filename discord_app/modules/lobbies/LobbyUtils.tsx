@@ -31,7 +31,7 @@ export function canUnlinkLobbyChannel(channel, arg1) {
 }
 export function useCanUnlinkLobbyChannel(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     if (PermissionStore !== undefined) {
       let tmp3 = null != linkedLobby;

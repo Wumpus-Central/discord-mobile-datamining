@@ -20,7 +20,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     roleSubscriptionOnClickHandler = React7;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;
@@ -62,7 +62,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8450);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8574);
 ({
   getJoinButtonLabels: hasOwnProperty,
   getRenewButtonLabels: metroRequire,
@@ -129,7 +129,7 @@ export function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOn
     roleSubscriptionOnClickHandler = React7;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;

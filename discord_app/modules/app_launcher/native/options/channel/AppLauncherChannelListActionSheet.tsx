@@ -70,7 +70,7 @@ function ChannelListItem(arg0) {
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 const React7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -90,7 +90,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
   const tmp4 = option(query.useState([]), 2);
   const first1 = tmp4[0];
   closure_8 = tmp4[1];
-  const items = [query, channel, option];
+  items = [query, channel, option];
   const effect = query.useEffect(() => {
     closure_8(
       AutocompleteUtilsDefault.queryApplicationCommandChannelResults({

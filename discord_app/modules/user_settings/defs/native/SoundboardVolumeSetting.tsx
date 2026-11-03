@@ -16,7 +16,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
   maximum: 100,
   useValue: SoundboardUtils.getAmplitudinalSoundboardVolume,
   onValueChange(volume) {
-    const items = [AnalyticsLocationDefault.USER_SETTINGS];
+    items = [AnalyticsLocationDefault.USER_SETTINGS];
     return SoundboardActionCreators.updateUserSoundboardVolume(volume, items);
   },
 });

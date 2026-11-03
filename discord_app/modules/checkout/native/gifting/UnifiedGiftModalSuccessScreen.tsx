@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   alertContainer: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -39,7 +39,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const tmp = closure_7();
   const GiftingBadgeExperiment = giftBadgeProgress(enabled[6]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
-  const items = [enabled, giftBadgeProgress, onClose];
+  items = [enabled, giftBadgeProgress, onClose];
   const callback = noop.useCallback(() => {
     onClose();
     let tmp2 = enabled;
@@ -49,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(14447, dependencyMap.paths),
+        asyncRequireImpl(14578, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -64,7 +64,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const tmp4 = giftBadgeProgress(enabled[5]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
   const tmp8 = onClose(enabled[11]);
   const items2 = [closure_5(onClose(enabled[12]), { source: tmp4, style: tmp.image }), , ,];
-  const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
+  const obj3 = { variant: "heading-lg/semibold", style: tmp.title, children: null };
   const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = closure_5(giftBadgeProgress(enabled[13]).Text, obj3);

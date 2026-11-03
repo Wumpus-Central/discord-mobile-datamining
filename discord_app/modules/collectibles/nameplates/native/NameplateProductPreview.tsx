@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -28,7 +28,7 @@ function NameplateUser(arg0) {
   const tmp5Result = tmp5(currentUser(stateFromStores[13]).getProfilePreviewValue(obj3));
   importDefault = tmp5Result;
   const obj2 = currentUser(stateFromStores[13]);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   stateFromStores = currentUser(stateFromStores[14]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmpResult = currentUser(stateFromStores[14]);
   const name = require("UserUtils").getName(currentUser);
@@ -53,7 +53,7 @@ function NameplateUser(arg0) {
       avatarDecoration,
       animate: !stateFromStores,
       autoStatusCutout: null,
-      "aria-hidden": "\u{1F63E}",
+      "aria-hidden": "\u{1FAC6}",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);
@@ -83,7 +83,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
   memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -126,7 +126,7 @@ export default function NameplateProductPreview(arg0) {
     obj4.accessibilityLabel = intl.formatToPlainString(util.t.YJig7C, obj5);
     const obj6 = { style: tmp.memberListContainer, children: null };
     const obj7 = { user: nameplateSampleUsers.mallow, end: true };
-    const items = [timestampProducer(PlaceholderUser, obj7), , , , , ,];
+    items = [timestampProducer(PlaceholderUser, obj7), , , , , ,];
     const obj8 = {
       maxFontSizeMultiplier: 2,
       variant: "text-sm/semibold",

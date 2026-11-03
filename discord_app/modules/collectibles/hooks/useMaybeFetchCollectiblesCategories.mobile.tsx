@@ -12,7 +12,7 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway, arg1
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     noCache: DevSettingsStore.get("shop_disable_cache"),
     includeUnpublished: DevSettingsStore.get("shop_include_unpublished"),

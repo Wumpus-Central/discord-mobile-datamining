@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conjure/home/useConjureOwnPro
 
 export default function useConjureOwnProjectListState(str) {
   const arr = useConjureHomeOwnProjectsDefault();
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const stateFromStores = arr(504).useStateFromStores(items, () =>
     ownedProjectsFetchState.getOwnedProjectsFetchState(),
   );

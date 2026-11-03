@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx");
@@ -18,7 +18,7 @@ export default function JoinVoiceChannelButton(channel) {
   channel = channel.channel;
   const tmp = closure_9();
   const tmp3 = useIsVoiceChannelFullDefault(channel);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(
     items,
     () => !PermissionStore.can(Permissions.CONNECT, channel),
@@ -45,6 +45,6 @@ export default function JoinVoiceChannelButton(channel) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5634).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5754).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 }

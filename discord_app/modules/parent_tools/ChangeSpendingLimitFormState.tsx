@@ -15,7 +15,7 @@ export function useChangeSpendingLimitFormState(teenId) {
   _require = teenId;
   let ParentalControlledSpendingLimit = require("ParentalControlledUserSettings").ParentalControlledSpendingLimit;
   controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(teenId);
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = require("initialize").useStateFromStores(items, () => closure_5.getSpendingLimit());
   let obj = require("initialize");
   const items1 = [closure_5];
@@ -118,7 +118,7 @@ export function useChangeSpendingLimitFormState(teenId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -136,7 +136,7 @@ export function useChangeSpendingLimitFormState(teenId) {
                 closure_8(true);
                 c3 = 1;
                 if (closure_5) {
-                  const ParentalControlledSpendingLimit2 = tmp3(16722).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit2 = tmp3(16865).ParentalControlledSpendingLimit;
                   dependencyMap = 2;
                   c4 = 1;
                   const obj4 = {
@@ -145,7 +145,7 @@ export function useChangeSpendingLimitFormState(teenId) {
                   };
                   return obj4;
                 } else if (null != rounded) {
-                  const ParentalControlledSpendingLimit = tmp3(16722).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit = tmp3(16865).ParentalControlledSpendingLimit;
                   const obj5 = { amount: tmp16, currency: formatted };
                   dependencyMap = 3;
                   c4 = 1;
@@ -157,7 +157,7 @@ export function useChangeSpendingLimitFormState(teenId) {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp7) {
             c3 = 0;

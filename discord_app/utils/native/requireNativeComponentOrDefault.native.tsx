@@ -17,7 +17,7 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
   if (flag === undefined) {
     flag = true;
   }
-  if (framebus.hasViewManagerConfig(componentName)) {
+  if (duration.hasViewManagerConfig(componentName)) {
     if (!map.has(componentName)) {
       if (componentFoundInstance == null) {
         componentFoundInstance = React(componentName);

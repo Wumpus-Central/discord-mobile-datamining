@@ -32,19 +32,19 @@ function PlaceholderCommandRow(isFirstRow) {
   const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
   const obj3 = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   const obj4 = { style: null };
-  const items = [tmp.loadingTextPlaceholder];
+  items = [tmp.loadingTextPlaceholder];
   items[1] = { width: "" + placeholderWidth + "%" };
   obj4.style = items;
-  obj3.label = map1(View, obj4);
+  obj3.label = state(View, obj4);
   const obj6 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall];
   const obj5 = { width: "" + placeholderWidth + "%" };
   items1[1] = { width: "" + placeholderWidth1 + "%" };
   obj6.style = items1;
-  obj3.subLabel = map1(View, obj6);
+  obj3.subLabel = state(View, obj6);
   obj3.start = flag;
   obj3.end = flag2;
-  return map1(TableRow.TableRow, obj3);
+  return state(TableRow.TableRow, obj3);
 }
 class CommandRow {
   constructor(arg0) {
@@ -91,7 +91,7 @@ class CommandRow {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -141,7 +141,7 @@ class CommandRow {
                 closure_129_0();
               }
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -175,7 +175,7 @@ class CommandRow {
         const obj = { name: "send", label: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.TXNS7S);
-        const items = [obj];
+        items = [obj];
         tmp = items;
       }
       return tmp;
@@ -204,18 +204,18 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9762);
+const ApplicationCommandIndexStore = fn(9894);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_12 = fn(6035).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(6155).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
-  headerSpacer: { height: fn(12460).EXPANDED_HEADER_HEIGHT - fn(12460).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12596).EXPANDED_HEADER_HEIGHT - fn(12596).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -233,7 +233,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12460).EXPANDED_HEADER_HEIGHT - fn(12460).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12596).EXPANDED_HEADER_HEIGHT - fn(12596).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -316,7 +316,7 @@ export default function AppDetailContent(context) {
   let obj = context(sectionName[13]);
   let obj3 = { context, filters: null, options: null, allowFetch: true };
   let obj4 = { commandTypes: null };
-  let items = [context(sectionName[20]).ApplicationCommandType.CHAT];
+  items = [context(sectionName[20]).ApplicationCommandType.CHAT];
   obj4.commandTypes = items;
   obj3.filters = obj4;
   obj3.options = {
@@ -358,7 +358,7 @@ export default function AppDetailContent(context) {
   let items2 = [application.id, filterSection];
   const memo = onCommandExecuted.useMemo(() => {
     if ("channel" !== context.type) {
-      let items = [];
+      items = [];
     } else if (loading) {
       items = closure_18;
     } else {
@@ -431,7 +431,7 @@ export default function AppDetailContent(context) {
     const type = item.type;
     if (obj10.PLACEHOLDER === type) {
       const obj2 = { isFirstRow: 0 === index, isLastRow: index === length.length - 1 };
-      return map1(PlaceholderCommandRow, obj2);
+      return state(PlaceholderCommandRow, obj2);
     } else if (tmp.COMMAND === type) {
       const obj = {
         command: item.command,
@@ -445,7 +445,7 @@ export default function AppDetailContent(context) {
         installOnDemand,
         sectionName,
       };
-      return map1(CommandRow, obj);
+      return state(CommandRow, obj);
     } else {
       return null;
     }
@@ -460,7 +460,7 @@ export default function AppDetailContent(context) {
     let tmp6 = null;
     if (result) {
       const obj2 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items = [map1(BillIcon.BillIcon, { size: "sm", color: "icon-muted" })];
+      items = [state(BillIcon.BillIcon, { size: "sm", color: "icon-muted" })];
       const obj3 = {
         style: closure_7.monetizationDisclosureTextStyle,
         variant: "text-xs/normal",
@@ -470,14 +470,14 @@ export default function AppDetailContent(context) {
       };
       const intl = util.intl;
       obj3.children = intl.string(util.t["5khEk8"]);
-      items[1] = map1(Text_Text.Text, obj3);
+      items[1] = state(Text_Text.Text, obj3);
       obj2.children = items;
-      tmp6 = closure_2_14(View, obj2);
+      tmp6 = gesture(View, obj2);
     }
     let tmp11 = null;
     if (isAndroidResult) {
       const obj4 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items1 = [map1(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" })];
+      const items1 = [state(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" })];
       const obj5 = {
         style: closure_7.monetizationDisclosureTextStyle,
         variant: "text-xs/normal",
@@ -487,15 +487,15 @@ export default function AppDetailContent(context) {
       };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t["8z5B2U"]);
-      items1[1] = map1(Text_Text.Text, obj5);
+      items1[1] = state(Text_Text.Text, obj5);
       obj4.children = items1;
-      tmp11 = closure_2_14(View, obj4);
+      tmp11 = gesture(View, obj4);
     }
     if (isAndroidResult) {
       const obj6 = { style: closure_7.monetizationDisclosureContainerStyle, children: null };
       const items2 = [tmp11, tmp6];
       obj6.children = items2;
-      let tmp16 = closure_2_14(View, obj6);
+      let tmp16 = gesture(View, obj6);
     } else {
       tmp16 = null;
     }

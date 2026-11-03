@@ -44,7 +44,7 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
       const registrationSteps = RegistrationStepsUtils.getRegistrationSteps();
       const obj8 = registrationSteps[Symbol.iterator]();
       while (obj8 !== undefined) {
-        let items = closure_7[tmp4];
+        items = closure_7[tmp4];
         if (items == null) {
           items = [];
         }

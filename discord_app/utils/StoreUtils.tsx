@@ -8,7 +8,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/06456_allSettled.js";
+import allSettled_mod from "../../_runtime/06576_allSettled.js";
 
 require = fn;
 let closure_10 = async function _waitForSubscriptionsToBeFetched() {
@@ -22,7 +22,7 @@ let closure_10 = async function _waitForSubscriptionsToBeFetched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_10 = async function _waitForSubscriptionsToBeFetched() {
   }
 };
 function fetchCountryCodeQueryDependencies() {
-  const items = [];
+  items = [];
   if (!PaymentSourceStore.hasFetchedPaymentSources) {
     let paymentSourcesFetchRequest = BillingInfoStore.paymentSourcesFetchRequest;
     if (paymentSourcesFetchRequest == null) {
@@ -115,7 +115,7 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -161,7 +161,7 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
               isAuthenticatedResult = closure_133_3.isAuthenticated();
             }
             if (isAuthenticatedResult) {
-              const items = [closure_133_11()];
+              items = [closure_133_11()];
               const promise = new Promise((arg0) => setTimeout(arg0, 10000));
               items[1] = promise;
               c6 = 2;
@@ -243,14 +243,14 @@ const Constants = fn(1072);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5952).isMobile;
+const isMobile = fn(6072).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5952).isTablet;
+  tmp4 = !fn(6072).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5871).getChromeVersion();
-  let obj2 = fn(5871);
+  tmp4 = -1 !== fn(5991).getChromeVersion();
+  let obj2 = fn(5991);
 }
 let closure_9 = tmp4;
 const size = fn(2);

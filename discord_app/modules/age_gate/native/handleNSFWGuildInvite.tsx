@@ -3,8 +3,8 @@ import Constants from "../../../Constants.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import GuildRecord from "../../../records/GuildRecord.tsx";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import TinyBroncoConstants from "../../tiny_bronco/TinyBroncoConstants.tsx";
-import TinyBroncoExperiment from "../../tiny_bronco/TinyBroncoExperiment.tsx";
+import AgeNoticeConstants from "../../age_assurance/age_notice/AgeNoticeConstants.tsx";
+import AgeNoticeExperiment from "../../age_assurance/age_notice/AgeNoticeExperiment.tsx";
 import NsfwGateGuildAlert from "components/NsfwGateGuildAlert.tsx";
 import NsfwServerInviteWarningAlert from "components/NsfwServerInviteWarningAlert.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = TinyBroncoConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_5 = AgeNoticeConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -37,7 +37,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }
@@ -94,7 +94,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
         } else {
           return false;
         }
-        tmp6Result5 = TinyBroncoExperiment;
+        tmp6Result5 = AgeNoticeExperiment;
       } else {
         return false;
       }

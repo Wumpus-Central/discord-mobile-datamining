@@ -33,7 +33,7 @@ export const AppStartInfo = {
         );
         throw error;
       }
-      const items = [closure_129_0(closure_129_1[3]).getAppStartType(), ,];
+      items = [closure_129_0(closure_129_1[3]).getAppStartType(), ,];
       closure_129_0(closure_129_1[3]);
       items[1] = closure_129_0(closure_129_1[3]).getLaunchScenario();
       closure_129_0(closure_129_1[3]);

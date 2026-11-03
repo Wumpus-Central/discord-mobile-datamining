@@ -534,10 +534,7 @@ const items2 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = [
-        "discord_protos.safety_common.v1.ClassificationType",
-        require("classification_type").ClassificationType,
-      ];
+      items = ["discord_protos.safety_common.v1.ClassificationType", require("classification_type").ClassificationType];
       return items;
     },
   },
@@ -586,7 +583,7 @@ class BannedState$Type extends MessageType5 {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = [
+        items = [
           "discord_protos.safety_common.v1.ClassificationType",
           require("classification_type").ClassificationType,
         ];
@@ -719,10 +716,7 @@ const items3 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = [
-        "discord_protos.safety_common.v1.ClassificationType",
-        require("classification_type").ClassificationType,
-      ];
+      items = ["discord_protos.safety_common.v1.ClassificationType", require("classification_type").ClassificationType];
       return items;
     },
   },
@@ -820,7 +814,7 @@ class SafetyState$Type extends MessageType6 {
       name: "reason",
       kind: "enum",
       T() {
-        const items = ["discord_protos.safety_common.v1.SafetyStateReason", obj];
+        items = ["discord_protos.safety_common.v1.SafetyStateReason", obj];
         return items;
       },
     };
@@ -848,7 +842,7 @@ class SafetyState$Type extends MessageType6 {
 }
 const prototype6 = SafetyState$Type.prototype;
 prototype6["create"] = function create(partialSettings) {
-  obj = { state: { oneofKind: "r" }, reason: 0, annotations: [] };
+  obj = { state: { oneofKind: "Array" }, reason: 0, annotations: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -895,7 +889,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         );
         obj2.state = obj10;
       } else if (105 === tmp5) {
-        let state = { oneofKind: "banned", banned: null };
+        state = { oneofKind: "banned", banned: null };
         state.banned = tempBannedStateType.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj2.state.banned);
         obj2.state = state;
       } else if (1 === tmp5) {
@@ -1113,7 +1107,7 @@ const items4 = [
     name: "reason",
     kind: "enum",
     T() {
-      const items = ["discord_protos.safety_common.v1.SafetyStateReason", obj];
+      items = ["discord_protos.safety_common.v1.SafetyStateReason", obj];
       return items;
     },
   },

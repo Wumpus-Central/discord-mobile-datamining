@@ -2,8 +2,19 @@
 import MorphablePanelConstants from "MorphablePanelConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
-const fn = function _(arg0) {
+const items = [
+  {
+    code: "(function getPIPBottomOffsetForPIPMode_getPIPBottomOffsetForPIPModeTsx1(screenName){let[DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,PIP_AVOIDANCE_TAB_BAR_HEIGHT]=this.__closure;switch(screenName){case'panels':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'channel':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'notifications':case'main_tab':case'guilds':return PIP_AVOIDANCE_TAB_BAR_HEIGHT+PIP_WINDOW_OFFSET;default:return 0;}})",
+  },
+  60,
+  MorphablePanelConstants.PIP_WINDOW_OFFSET,
+  46,
+];
+let c0;
+let c1;
+let c2;
+[tmp2, tmp3, tmp4, tmp5] = items;
+function getPIPBottomOffsetForPIPMode(arg0) {
   if ("panels" !== arg0) {
     if ("channel" !== arg0) {
       if ("notifications" !== arg0) {
@@ -13,17 +24,16 @@ const fn = function _(arg0) {
           }
         }
       }
-      return 46 + PIP_WINDOW_OFFSET;
+      return c2 + c1;
     }
   }
-  return 60 + PIP_WINDOW_OFFSET;
-};
-fn.__closure = { DEFAULT_CHANNEL_INPUT_HEIGHT: 60, PIP_WINDOW_OFFSET, PIP_AVOIDANCE_TAB_BAR_HEIGHT: 46 };
-fn.__workletHash = 11461742802267;
-fn.__initData = {
-  code: "function getPIPBottomOffsetForPIPMode_getPIPBottomOffsetForPIPModeTsx1(screenName){const{DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;switch(screenName){case'panels':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'channel':return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;case'notifications':case'main_tab':case'guilds':return PIP_AVOIDANCE_TAB_BAR_HEIGHT+PIP_WINDOW_OFFSET;default:return 0;}}",
-};
+  return c0 + c1;
+}
+const items1 = [tmp3, tmp4, tmp5];
+getPIPBottomOffsetForPIPMode.__closure = items1;
+getPIPBottomOffsetForPIPMode.__workletHash = 9505843948738;
+getPIPBottomOffsetForPIPMode.__initData = tmp2;
 const result = size.fileFinishedImporting("modules/panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx");
 
-export default fn;
+export default getPIPBottomOffsetForPIPMode;
 export const PIP_AVOIDANCE_TAB_BAR_HEIGHT = 46;

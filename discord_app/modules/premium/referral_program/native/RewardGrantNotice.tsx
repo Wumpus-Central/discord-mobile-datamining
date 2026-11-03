@@ -11,7 +11,7 @@ require = fn;
 function OrbsGrantNotice(nRewardsGranted) {
   const tmp = closure_8();
   const obj = { style: tmp.orbsPillContainer, children: null };
-  const items = [
+  items = [
     timestampProducer(BalanceWidgetPill.BalanceWidgetPill, {
       initialRenderedBalance: 0,
       balance: nRewardsGranted.nRewardsGranted * hasOwnProperty,
@@ -31,7 +31,7 @@ function DiscountGrantNotice(nRewardsGranted) {
   const obj = { style: closure_8().container, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t["P//01n"], { discountPercent, duration: nRewardsGranted });
-  const items = [
+  items = [
     timestampProducer(CheckmarkSmallIcon.CheckmarkSmallIcon, {
       color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE,
       size: "xs",
@@ -45,12 +45,12 @@ function DiscountGrantNotice(nRewardsGranted) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(15321);
+const Constants = fn(15462);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } =
   Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",

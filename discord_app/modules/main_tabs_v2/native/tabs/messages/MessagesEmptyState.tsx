@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center" },
   scrollViewContentContainer: { flexGrow: 2 },
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 export default function MessagesEmptyState() {
   const tmp = closure_8();
   const navigation = useNavigation.useNavigation();
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.navigate("friends", {
       screen: "add-friends",
@@ -65,7 +65,12 @@ export default function MessagesEmptyState() {
     }),
   ];
   const obj9 = { style: tmp.textWrapper, children: null };
-  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
+  const obj10 = {
+    color: "mobile-text-heading-primary",
+    variant: "heading-md/semibold",
+    style: tmp.title,
+    children: null,
+  };
   const intl = util.intl;
   obj10.children = intl.string(util.t["8JZof8"]);
   const items3 = [timestampProducer(Text_Text.Heading, obj10)];

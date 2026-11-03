@@ -39,7 +39,7 @@ function handleTapCommandMention(channelId) {
       }
       const rootNavigationRef = onSetCommand(sum1[7]).getRootNavigationRef();
       if (null != rootNavigationRef) {
-        const state = rootNavigationRef.getState();
+        state = rootNavigationRef.getState();
         let length;
         if (state != null) {
           const routes = state.routes;
@@ -114,13 +114,13 @@ function handleLongPressCommandMention(arg0, arg1) {
     ToastUtils.presentCommandCopied();
     ClipboardUtils.copy("" + COMMAND_SENTINEL + closure_0);
   };
-  const items = [obj];
+  items = [obj];
   const DeveloperMode = require("UserSettings").DeveloperMode;
   if (DeveloperMode.getSetting()) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1113).intl;
     obj2.label = intl2.string(tmp(1113).t.oJ1Muw);
-    obj2.IconComponent = tmp(10524).IdIcon;
+    obj2.IconComponent = tmp(10654).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -134,10 +134,10 @@ function handleLongPressCommandMention(arg0, arg1) {
   });
   const tmpResult = require("showSimpleActionSheet");
 }
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6035).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(6036).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6155).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(6156).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -145,11 +145,11 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11501).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(11638).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = node(dependencyMap[21]).getBestActiveInput();
       let tmp2;
@@ -206,11 +206,11 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null,
   };
-  const items = ["/", node(8571).smartOutput(node, output, state)];
+  items = ["/", node(8695).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(5624).Text, {
+  return jsxs(node(5747).Text, {
     style,
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = node(dependencyMap[21]).getBestActiveInput();
       let tmp2;

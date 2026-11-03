@@ -8,7 +8,7 @@ import PencilIcon from "../../../design/components/Icon/native/redesign/generate
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16460);
+const EditButtonDefault = tmp(16603);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -17,7 +17,7 @@ function ProfilePreviewButton(userId) {
   analyticsLocations = analyticsLocations(context[5])().analyticsLocations;
   const tmp = closure_7();
   context = userId(context[6]).useUserProfileAnalyticsContext().context;
-  const items = [userId, context, analyticsLocations];
+  items = [userId, context, analyticsLocations];
   let tmp5 = null;
   if (null != userId) {
     const obj2 = {
@@ -58,7 +58,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,
@@ -112,7 +112,7 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   ({ ref, onLayout, width } = useMeasuredLayoutDefault());
   const obj2 = { ref, style: refreshEditButtonContainer.container, onLayout, children: null };
   const tmp2 = useMeasuredLayoutDefault();
-  const items = [
+  items = [
     hasOwnProperty(UserProfileBannerDefault, {
       user,
       displayProfile,

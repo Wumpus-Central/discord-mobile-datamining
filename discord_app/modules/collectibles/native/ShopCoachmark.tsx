@@ -15,9 +15,9 @@ function CoachmarkImg(arg0) {
     size: native.AvatarSizes.XXLARGE,
   });
 }
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
@@ -31,7 +31,7 @@ export default function ShopCoachmark(markAsDismissed) {
   const decorationAsset = markAsDismissed.decorationAsset;
   const navigateToShop = markAsDismissed.navigateToShop;
   const renderImgComponent = markAsDismissed.renderImgComponent;
-  const items = [
+  items = [
     avatarSrc,
     decorationAsset,
     description,

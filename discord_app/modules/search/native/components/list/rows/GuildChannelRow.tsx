@@ -18,9 +18,9 @@ function GuildChannelLabel(channel) {
   return <View style={closure_6().content}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(9827).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9958).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { paddingVertical: 10 },
   content: { flexDirection: "row", alignItems: "center" },

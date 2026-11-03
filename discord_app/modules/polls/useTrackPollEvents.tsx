@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx"
 export function useTrackPollCreationEvents(answers, allowMultiSelect) {
   let attachments_count = answers;
   let obj = { trackPollCreationCancelled: null };
-  const items = [answers, allowMultiSelect];
+  items = [answers, allowMultiSelect];
   obj.trackPollCreationCancelled = noop.useCallback(() => {
     attachments_count = 0;
     allowMultiSelect = 0;

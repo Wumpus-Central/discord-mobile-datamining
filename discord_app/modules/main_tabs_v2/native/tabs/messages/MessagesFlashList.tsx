@@ -36,7 +36,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
   const friendsHeaderIndex = tmp2.friendsHeaderIndex;
   const extraData = tmp2.friendsHeaderOffset;
   const listHeaderHeight = tmp2.listHeaderHeight;
-  let items = [listHeaderHeight];
+  items = [listHeaderHeight];
   const imperativeHandle = listRefHappeningNow.useImperativeHandle(
     ref,
     () => ({
@@ -161,7 +161,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
     let tmp;
     if (first === data2) {
       if (null != friendsHeaderIndex) {
-        const items = [tmp2];
+        items = [tmp2];
         tmp = items;
       }
     }

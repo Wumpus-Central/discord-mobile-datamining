@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
@@ -20,7 +20,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef671("#000000");
@@ -39,7 +39,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
   const tmp = closure_7();
   const arr = useMarketablePowerupPerksDefault(guild.id);
-  const items = [guild.id];
+  items = [guild.id];
   const effect = noop.useEffect(() => {
     if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
       const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(guild.id);
@@ -74,13 +74,13 @@ export default function GuildPowerupsMarketingHeader(guild) {
             obj4.perk1 = <PerkText powerup={first[0]} />;
             const obj6 = { powerup: first[1] };
             obj4.perk2 = <PerkText powerup={first[1]} />;
-            formatResult = intl2.format(_modDef2570.MNO3sG, obj4);
+            formatResult = intl2.format(_modDef2699.MNO3sG, obj4);
           }
         }
       }
       const obj7 = { perks: str2 };
-      obj2.children = intl.format(_modDef2570["7lwpzR"], obj7);
-      obj.children = jsx(guild(5624).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj2.children = intl.format(_modDef2699["7lwpzR"], obj7);
+      obj.children = jsx(guild(5747).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

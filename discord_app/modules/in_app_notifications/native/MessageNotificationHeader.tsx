@@ -23,7 +23,7 @@ function LocationText(channel) {
   if (str == null) {
     str = "text-muted";
   }
-  const items = [channel, parentChannel, tmp.icon, str];
+  items = [channel, parentChannel, tmp.icon, str];
   let obj = { style: tmp.secondaryTextContainer, children: null };
   let tmp5 = null != author;
   const memo = noop.useMemo(() => {
@@ -50,7 +50,7 @@ function LocationText(channel) {
   }, items);
   if (tmp5) {
     const obj2 = {
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       color: str,
       maxFontSizeMultiplier: 1.75,
       style: tmp.separator,
@@ -75,7 +75,7 @@ function LocationText(channel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   headerContent: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/M
 export default function MessageNotificationHeader(locationTextColor) {
   ({ channel, parentChannel, guild, author } = locationTextColor);
   const tmp = closure_9();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   if (author != null) {
     const colorString = author.colorString;
@@ -210,14 +210,14 @@ export function SimpleNotificationHeader(secondaryText) {
     style: null,
     children: text,
   };
-  const items = [tmp.primaryText, labelStyle];
+  items = [tmp.primaryText, labelStyle];
   obj2.style = items;
   const items1 = [React5(Text_Text.Text, obj2)];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     const obj3 = { style: tmp.secondaryTextContainer, children: null };
     const obj4 = {
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       color: "text-muted",
       maxFontSizeMultiplier: 1.75,
       style: tmp.separator,

@@ -15,7 +15,7 @@ export default function useCanViewOthersWishlist(id) {
   _require = id;
   const tmp = useCanDMDefault(id.id);
   importDefault = tmp;
-  const items = [UserProfileStore, WishlistStore, RelationshipStore];
+  items = [UserProfileStore, WishlistStore, RelationshipStore];
   const items1 = [id, tmp];
   return require("initialize").useStateFromStores(
     items,

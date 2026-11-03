@@ -9,9 +9,9 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const DEFAULT_CONTENT_PADDING = fn(1496).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1498).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
 let size = fn(2);
 const result = size.fileFinishedImporting(
@@ -32,7 +32,7 @@ export default function HeroMedia(arg0) {
   const rounded = Math.floor((9 * contentWidth2) / 16);
   const tmp7 = useEmbeddedActivityBackgroundDefault({ applicationId, size: contentWidth2, names: ["embedded_cover"] });
   obj = useDefaultAppLauncherWidth;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
   const tmp2Result = initialize;
   const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);

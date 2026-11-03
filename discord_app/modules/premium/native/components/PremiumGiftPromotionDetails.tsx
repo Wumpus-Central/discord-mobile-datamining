@@ -14,7 +14,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   ({ style, graphic, topContent, title, subtitle } = arg0);
   const tmp = closure_10();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const items1 = [graphic];
   const obj2 = { style: tmp.textContainer, children: null };
@@ -52,7 +52,7 @@ function AnimatedImage(arg0) {
   let aPNGPlayerControls;
   let first;
   noop = undefined;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = shouldAnimate(aPNGPlayerControls[8]).useStateFromStores(
     items,
     () => useReducedMotion.useReducedMotion,
@@ -106,7 +106,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 },
@@ -118,7 +118,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1, alignSelf: "center" };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj3 = { preview: null };
 let size = {
   width: PX_40,
@@ -148,7 +148,7 @@ export function PremiumGiftPromotionCollectibleRewardDetails(product) {
   product = product.product;
   require = product;
   const merged = Object.assign(product, Object.assign({ product: 0 }));
-  const items = [product];
+  items = [product];
   const memo = noop.useMemo(() => {
     if (null != product) {
       if (0 !== product.items.length) {
@@ -175,7 +175,7 @@ export function PremiumGiftPromotionCollectibleRewardDetails(product) {
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(1987).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(2116).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }

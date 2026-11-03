@@ -10,7 +10,7 @@ export default function useIsCarouselInView() {
   const containerRef = noop.useRef(null);
   const height = useWindowDimensionsDefault().height;
   closure_2 = noop.useRef(height);
-  const items = [height];
+  items = [height];
   const effect = noop.useEffect(() => {
     closure_2.current = height;
   }, items);

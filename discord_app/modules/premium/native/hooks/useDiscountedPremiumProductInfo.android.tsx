@@ -17,7 +17,7 @@ export function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
     items3,
   );
   discountedProduct = discountedPremiumPlan.discountedProduct;
-  const items = [premiumDiscountOffer, discountedProduct];
+  items = [premiumDiscountOffer, discountedProduct];
   const obj = require("useDiscountedPremiumPlan");
   return {
     discountedPlan: discountedPremiumPlan.discountedPlan,

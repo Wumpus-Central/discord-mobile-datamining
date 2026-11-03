@@ -7,7 +7,7 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
-import _modDef8359 from "../../../../_runtime/metro/08359__.js";
+import _modDef8483 from "../../../../_runtime/metro/08483__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +20,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef8359;
+  obj2.source = _modDef8483;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
@@ -33,11 +33,11 @@ function SubmitFeedbackScreen(onSubmit) {
   const tmp2 = useSafeAreaInsetsDefault();
   ({ left, right } = tmp2);
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, { paddingLeft: 16 + left, paddingRight: 16 + right }];
+  items = [tmp.container, { paddingLeft: 16 + left, paddingRight: 16 + right }];
   obj2.style = items;
   const obj4 = {
     style: tmp.headerTitle,
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -96,7 +96,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -166,7 +166,7 @@ export default function AutomodSubmitFeedbackModal(onCloseModal) {
   first = undefined;
   _slicedToArray = undefined;
   [first, _slicedToArray] = noop.useState(onCloseModal(first[11]).Feedback.BUG);
-  const items = [first, onCloseModal, automodDecision];
+  items = [first, onCloseModal, automodDecision];
   const memo = noop.useMemo(() => {
     const onClose = onCloseModal;
     const feedback = first;

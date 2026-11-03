@@ -20,8 +20,8 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isMessageComponentsV2 = fn(4957).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(5019).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(5084).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(5146).FileUploadErrorTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: map1,
@@ -61,7 +61,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   actionSheetSource = tmp5;
   const canAddNewReactions = analyticsLocation.canAddNewReactions;
   isMessageComponentsV2 = undefined !== canAddNewReactions && canAddNewReactions;
-  let items = [analyticsLocation, channel];
+  items = [analyticsLocation, channel];
   const effect = channel.useEffect(() => {
     const obj2 = { channel_id: channel.id, guild_id: channel.guild_id, location: null };
     const obj = AppAnalyticsUtilsDefault;
@@ -79,13 +79,13 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const canReplyToMessage = require("canReplyToMessage").useCanReplyToMessage(channel, message);
   let obj2 = require("canReplyToMessage");
   const canForwardMessage = require("canForwardMessage").useCanForwardMessage(message);
-  const guild = GuildStore.getGuild(channel.guild_id);
+  guild = GuildStore.getGuild(channel.guild_id);
   let obj3 = require("canForwardMessage");
   const items2 = [actionSheetSource];
   const obj4 = require("initialize");
   [tmp13, tmp14] = message(
     require("initialize").useStateFromStoresArray(items2, () => {
-      const items = [
+      items = [
         SavedMessagesStore.isMessageReminder(channel.id, message.id),
         SavedMessagesStore.isMessageBookmarked(channel.id, message.id),
       ];
@@ -95,7 +95,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   );
   const tmp12 = message(
     require("initialize").useStateFromStoresArray(items2, () => {
-      const items = [
+      items = [
         SavedMessagesStore.isMessageReminder(channel.id, message.id),
         SavedMessagesStore.isMessageBookmarked(channel.id, message.id),
       ];
@@ -568,7 +568,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
         if (!hasFlagResult) {
           hasFlagResult = FlagUtils.hasFlag(message.flags, constants2.EPHEMERAL);
         }
-        const items = [];
+        items = [];
         if (hasFlagResult) {
           items.push(
             props4,

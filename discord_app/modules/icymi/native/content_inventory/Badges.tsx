@@ -60,7 +60,7 @@ function BaseBadge(accessibilityLabel) {
   ({ Icon, iconColor, text } = accessibilityLabel);
   const tmp = closure_10(noop.useContext(closure_11));
   obj = { style: tmp.badgeContainer, accessible: null != accessibilityLabel, accessibilityLabel, children: null };
-  const items = [
+  items = [
     timestampProducer(Icon, { style: tmp.icon, color: iconColor }),
     timestampProducer(Text_Text.Text, {
       variant: "text-sm/medium",
@@ -86,7 +86,7 @@ let obj2 = {
   icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
 };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -126,7 +126,7 @@ export function GameTimestampBadge(entry) {
     icon = obj[noop.useContext(noop, closure_11)].icon;
   }
   const obj2 = { style: tmp.badgeContainer, children: null };
-  const items = [
+  items = [
     timestampProducer(GameControllerIcon.GameControllerIcon, { style: tmp.icon, color: icon }),
     timestampProducer(ContentTimestamp, { entry }),
   ];
@@ -223,7 +223,7 @@ export function TopGameBadge(entry) {
     const obj2 = { Icon: TrophyIcon.TrophyIcon, text: null, iconColor: null };
     const obj3 = { children: null };
     const intl = util.intl;
-    const items = [intl.string(util.t["/50eHi"]), ": "];
+    items = [intl.string(util.t["/50eHi"]), ": "];
     const intl2 = util.intl;
     const obj4 = { hours: null };
     const _Math = Math;
@@ -238,7 +238,7 @@ export function TopGameBadge(entry) {
 export function CustomStatusTimestampBadge(entry) {
   const tmp = closure_10(noop.useContext(closure_11));
   obj = { style: tmp.badgeContainer, children: null };
-  const items = [
+  items = [
     timestampProducer(TimerIcon.TimerIcon, { style: tmp.icon, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }),
     timestampProducer(ContentTimestamp, { entry: entry.entry }),
   ];

@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import Form from "../../../../design/void/Form/native/index.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10978 from "../../../../../_runtime/metro/10978__.js";
+import _modDef11111 from "../../../../../_runtime/metro/11111__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -24,27 +24,27 @@ const VoiceMemberUserDefault = VoiceMemberUser;
 require = fn;
 function ItemSeparator() {
   const tmp = closure_24();
-  return __initData(Form.FormDivider, { style: closure_24().rowFormDivider });
+  return guild(Form.FormDivider, { style: closure_24().rowFormDivider });
 }
 function VoiceMemberListSectionHeader(title) {
   const tmp = closure_24();
   const obj = {
     style: tmp.sectionContainer,
-    children: __initData(Text_Text.Text, {
+    children: guild(Text_Text.Text, {
       style: tmp.sectionTitle,
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       color: "text-default",
       children: title.title.toUpperCase(),
     }),
   };
-  return __initData(React6, obj);
+  return guild(React6, obj);
 }
 function renderSectionHeader(section) {
   const title = section.section.title;
   let tmp = null;
   if (null != title) {
     const obj = { title };
-    tmp = __initData(VoiceMemberListSectionHeader, obj);
+    tmp = guild(VoiceMemberListSectionHeader, obj);
   }
   return tmp;
 }
@@ -64,7 +64,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(10049).useAnalyticsContext();
+  importDefault = isActionSheet(10179).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -78,7 +78,7 @@ function VoiceSectionRow(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -152,15 +152,15 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(15198), obj2);
+    return closure_21(tmp2(15339), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(15199), obj3);
+    return closure_21(tmp2(15340), obj3);
   }
-  let obj = isActionSheet(10049);
+  let obj = isActionSheet(10179);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -168,11 +168,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1191).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_24 = createStyles.createStyles({
   container: { flex: 1, flexShrink: 1 },
   sectionContainer: { paddingTop: 16, paddingHorizontal: 16 },
@@ -182,7 +182,7 @@ let closure_24 = createStyles.createStyles({
   rowFormDivider: { marginHorizontal: 16 },
 });
 let closure_25 = noop.memo(function Header(channel) {
-  return __initData(GuildEventVoiceBannerDefault, { channel: channel.channel });
+  return guild(GuildEventVoiceBannerDefault, { channel: channel.channel });
 });
 let closure_26 = noop.memo(function Footer(channel) {
   channel = channel.channel;
@@ -193,14 +193,14 @@ let closure_26 = noop.memo(function Footer(channel) {
     tmp7 = null;
     if (tmp6) {
       let obj = { children: null };
-      const items = [closure_21(ItemSeparator, {})];
+      items = [closure_21(ItemSeparator, {})];
       let obj2 = { leading: null, label: null, onPress: null };
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1113).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1113).t["6Qgrev"]);
-      obj3.source = _modDef10978;
-      obj3.size = tmp4(15197).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(15197).CircularIconButton, obj3);
+      obj3.source = _modDef11111;
+      obj3.size = tmp4(15338).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(15338).CircularIconButton, obj3);
       const intl2 = tmp4(1113).intl;
       obj2.label = intl2.string(tmp4(1113).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -211,7 +211,7 @@ let closure_26 = noop.memo(function Footer(channel) {
           const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       };
-      items[1] = closure_21(tmp4(8177).FormRow, obj2);
+      items[1] = closure_21(tmp4(8301).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -241,7 +241,7 @@ export default function VoiceMemberList(channel) {
   const rowFormDivider = tmp2;
   analyticsLocations = flag(analyticsLocations[27])().analyticsLocations;
   _slicedToArray = Math.min(flag(analyticsLocations[34])().width, ACTION_SHEET_MAX_WIDTH);
-  let items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [channel];
   const stateFromStores = channel(analyticsLocations[18]).useStateFromStores(
     items,
@@ -347,7 +347,7 @@ export default function VoiceMemberList(channel) {
           let tmp18 = null;
           if (!(item instanceof UserRecord)) {
             const obj2 = { item, channelId: channel.id, onPressUser: onPress, isActionSheet: flag };
-            tmp18 = __initData(VoiceSectionRow, obj2);
+            tmp18 = guild(VoiceSectionRow, obj2);
           }
           return tmp18;
         } else if (constants.SPECTATING === type) {
@@ -356,10 +356,10 @@ export default function VoiceMemberList(channel) {
           obj3.onPress = onPress;
           obj3.isSpectating = true;
           obj3.isActionSheet = true;
-          return __initData(VoiceMemberUserDefault, obj3);
+          return guild(VoiceMemberUserDefault, obj3);
         } else if (constants.DISCONNECTED === type) {
           const obj = { user: item, channel, isActionSheet: flag, onPress };
-          return __initData(VoiceMemberUser.DisconnectedUserRow, obj);
+          return guild(VoiceMemberUser.DisconnectedUserRow, obj);
         }
       }, items7);
       if (flag) {
@@ -377,11 +377,11 @@ export default function VoiceMemberList(channel) {
           } else {
             const obj = { item: tmp2, section: tmp[arg0] };
             const obj2 = { children: null };
-            const items = [callback1(obj)];
+            items = [callback1(obj)];
             const obj3 = { style: rowFormDivider.rowFormDivider };
-            items[1] = __initData(Form.FormDivider, obj3);
+            items[1] = guild(Form.FormDivider, obj3);
             obj2.children = items;
-            return __initData2(__initData3, obj2);
+            return closure_2_22(dependencyMap2, obj2);
           }
         };
         obj14.itemSize = function getRowHeight(arg0, arg1) {
@@ -398,7 +398,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(15198);
+                tmp4 = tmp4(15339);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

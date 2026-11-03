@@ -7,7 +7,7 @@ import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 
@@ -15,7 +15,7 @@ export function useMemberActionsForChannel(guild_id, channel) {
   _require = guild_id;
   importDefault = channel;
   const tmp = useIsNewMemberDefault(guild_id);
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guild_id];
   const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
@@ -61,7 +61,7 @@ export function useMemberActionsForChannel(guild_id, channel) {
 export function useNextMemberAction(guild_id, channelId) {
   _require = guild_id;
   closure_1 = channelId;
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     GuildOnboardingHomeSettingsStore.getNewMemberActions(closure_0),
   );
@@ -88,7 +88,7 @@ export function useNextMemberAction(guild_id, channelId) {
 }
 export function useAllActionsCompleted(guild_id) {
   _require = guild_id;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     GuildMemberStore.getSelfMember(closure_0),
   );

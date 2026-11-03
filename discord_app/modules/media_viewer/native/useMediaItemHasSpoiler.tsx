@@ -18,7 +18,7 @@ export function useMediaItemHasSpoiler(index) {
     userRevealedIndexes = userRevealedIndexes.userRevealedIndexes;
     return userRevealedIndexes.has(closure_0);
   });
-  const items = [state];
+  items = [state];
   memo = memo.useMemo(() => {
     let flattenSourceResult;
     if (null != state) {

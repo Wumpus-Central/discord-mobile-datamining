@@ -1,67 +1,76 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemTransformPresenter.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import getMediaViewerStateForScreenDefault from "../getMediaViewerStateForScreen.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+let jsx = fn(21).jsx;
 let obj = { platformStyles: { position: "absolute", width: "100%", height: "100%" }, presenter: null };
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.overflow = "hidden";
 obj2.opacity = 1;
 obj.presenter = obj2;
+let items = [
+  {
+    code: "(function toScale_MediaViewerItemTransformPresenterTsx1(size,finalSize){let[MIN_SCALE]=this.__closure;return finalSize>0?Math.max(size/finalSize,MIN_SCALE):1;})",
+  },
+  0.001,
+];
+let closure_129_0;
+[tmp4, tmp5] = items;
 function toScale(arg0, arg1) {
   let num = 1;
   if (arg1 > 0) {
     const _Math = Math;
-    num = Math.max(arg0 / arg1, 0.001);
+    num = Math.max(arg0 / arg1, require);
   }
   return num;
 }
-toScale.__closure = { MIN_SCALE: 0.001 };
-toScale.__workletHash = 9575629284817;
-toScale.__initData = {
-  code: "function toScale_MediaViewerItemTransformPresenterTsx1(size,finalSize){const{MIN_SCALE}=this.__closure;return finalSize>0?Math.max(size/finalSize,MIN_SCALE):1;}",
-};
+let items1 = [tmp5];
+toScale.__closure = items1;
+toScale.__workletHash = 3407744270152;
+toScale.__initData = tmp4;
 let closure_9 = {
-  code: "function MediaViewerItemTransformPresenterTsx2(){const{entranceAnimationDriver,interpolate,Extrapolation,startWidth,sourceWidth,startHeight,sourceHeight,startTranslateX,startTranslateY,startScale,toScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}const width=interpolateProxy([0,1],[startWidth,sourceWidth]);const height=interpolateProxy([0,1],[startHeight,sourceHeight]);const left=interpolateProxy([0,1],[startTranslateX,0]);const top=interpolateProxy([0,1],[startTranslateY,0]);const scale=interpolateProxy([0,1],[startScale,1]);const scaleX=toScale(width,sourceWidth);const scaleY=toScale(height,sourceHeight);return{borderRadius:interpolateProxy([0,0.25],[16,0])/Math.sqrt(scaleX*scaleY),transform:[{translateX:left+(width-sourceWidth)/2},{translateY:top+(height-sourceHeight)/2},{scaleX:scale*scaleX},{scaleY:scale*scaleY}]};}",
+  code: "(function MediaViewerItemTransformPresenterTsx2(){let[entranceAnimationDriver,interpolate,Extrapolation,startWidth,sourceWidth,startHeight,sourceHeight,startTranslateX,startTranslateY,startScale,toScale]=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}const width=interpolateProxy([0,1],[startWidth,sourceWidth]);const height=interpolateProxy([0,1],[startHeight,sourceHeight]);const left=interpolateProxy([0,1],[startTranslateX,0]);const top=interpolateProxy([0,1],[startTranslateY,0]);const scale=interpolateProxy([0,1],[startScale,1]);const scaleX=toScale(width,sourceWidth);const scaleY=toScale(height,sourceHeight);return{borderRadius:interpolateProxy([0,0.25],[16,0])/Math.sqrt(scaleX*scaleY),transform:[{translateX:left+(width-sourceWidth)/2},{translateY:top+(height-sourceHeight)/2},{scaleX:scale*scaleX},{scaleY:scale*scaleY}]};})",
 };
 let closure_10 = {
-  code: "function MediaViewerItemTransformPresenterTsx3(){const{entranceAnimationDriver,toScale,interpolate,startWidth,sourceWidth,Extrapolation,startHeight,sourceHeight}=this.__closure;const entranceValue=entranceAnimationDriver.get();const scaleX=toScale(interpolate(entranceValue,[0,1],[startWidth,sourceWidth],Extrapolation.CLAMP),sourceWidth);const scaleY=toScale(interpolate(entranceValue,[0,1],[startHeight,sourceHeight],Extrapolation.CLAMP),sourceHeight);const cover=Math.max(scaleX,scaleY);return{transform:[{scaleX:cover/scaleX},{scaleY:cover/scaleY}]};}",
+  code: "(function MediaViewerItemTransformPresenterTsx3(){let[entranceAnimationDriver,toScale,interpolate,startWidth,sourceWidth,Extrapolation,startHeight,sourceHeight]=this.__closure;const entranceValue=entranceAnimationDriver.get();const scaleX=toScale(interpolate(entranceValue,[0,1],[startWidth,sourceWidth],Extrapolation.CLAMP),sourceWidth);const scaleY=toScale(interpolate(entranceValue,[0,1],[startHeight,sourceHeight],Extrapolation.CLAMP),sourceHeight);const cover=Math.max(scaleX,scaleY);return{transform:[{scaleX:cover/scaleX},{scaleY:cover/scaleY}]};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemTransformPresenter.tsx");
 
 export default function MediaViewerItemTransformPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
+  _require = windowWidth;
   windowHeight = windowHeight.windowHeight;
-  const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
-  const index = windowHeight.index;
-  let num3;
-  let diff2;
-  let diff3;
-  let width2;
-  let height2;
+  importDefault = windowHeight;
+  ({ entranceAnimationDriver, index } = windowHeight);
   ({ useItemVisible, panGestureConfig } = windowHeight);
-  const entranceAnimation = windowWidth(entranceAnimationDriver[3]).useEntranceAnimation(entranceAnimationDriver);
+  const entranceAnimation = require("useEntranceAnimation").useEntranceAnimation(entranceAnimationDriver);
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
-  obj = windowWidth(entranceAnimationDriver[3]);
-  const mediaItemHasSpoiler = windowWidth(entranceAnimationDriver[4]).useMediaItemHasSpoiler(index);
-  let size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
+  obj = require("useEntranceAnimation");
+  const mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(index);
+  let size = getMediaViewerStateForScreenDefault(windowWidth, windowHeight, source);
   const width = size.width;
+  dependencyMap = width;
   const height = size.height;
+  noop = height;
   const itemVisible = useItemVisible(index);
   const overlayEnabled = panGestureConfig.overlayEnabled;
-  let items = [overlayEnabled];
-  const callback = width.useCallback(() => {
-    const result = overlayEnabled.set(!overlayEnabled.get());
+  c4 = overlayEnabled;
+  items = [overlayEnabled];
+  const callback = noop.useCallback(() => {
+    const result = _undefined.set(!_undefined.get());
   }, items);
   let items1 = [];
   if (Array.isArray(source)) {
     if (loads <= 1) {
-      let obj4 = {
+      const obj4 = {
         key: null,
         onLoadStart: null,
         onLoad: null,
@@ -79,7 +88,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
       obj4.onLoad = handleLoad;
       obj4.onError = handleError;
       obj4.source = source[0];
-      obj4.style = diff2.platformStyles;
+      obj4.style = c7.platformStyles;
       obj4.index = index;
       obj4.hasSpoiler = mediaItemHasSpoiler;
       obj4.visible = itemVisible;
@@ -87,7 +96,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
       items1.push(renderMedia(obj4));
     }
     if (loads >= 1) {
-      let obj5 = {
+      const obj5 = {
         key: null,
         source: null,
         style: null,
@@ -103,7 +112,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
       const _HermesInternal3 = HermesInternal;
       obj5.key = "1:" + index + ":" + source[0].uri;
       obj5.source = source[1];
-      obj5.style = diff2.platformStyles;
+      obj5.style = c7.platformStyles;
       obj5.onLoad = handleLoad;
       obj5.onError = handleError;
       let str5 = "auto";
@@ -118,7 +127,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
       items1.push(renderMedia(obj5));
     }
   } else {
-    let obj6 = {
+    const obj6 = {
       key: null,
       onLoadStart: null,
       onLoad: null,
@@ -136,7 +145,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
     obj6.onLoad = handleLoad;
     obj6.onError = handleError;
     obj6.source = source;
-    obj6.style = diff2.platformStyles;
+    obj6.style = c7.platformStyles;
     obj6.index = index;
     obj6.hasSpoiler = mediaItemHasSpoiler;
     obj6.visible = itemVisible;
@@ -144,252 +153,171 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
     items1.push(renderMedia(obj6));
   }
   let result = width / height;
-  let diff = originLayout.x - (width - originLayout.width) / 2 - (windowWidth - width) / 2;
-  diff2 = diff;
   const result1 = (windowHeight - height) / 2;
-  let diff1 = originLayout.y - (height - originLayout.height) / 2 - result1;
-  diff3 = diff1;
-  width2 = width;
-  height2 = height;
   if ("cover" === originLayout.resizeMode) {
-    width2 = originLayout.width;
-    height2 = originLayout.height;
-    diff2 = originLayout.x - (windowWidth - width) / 2;
-    diff3 = originLayout.y - result1;
-    let tmp19 = height2;
-    let tmp20 = width2;
-    diff1 = diff3;
-    diff = diff2;
-    num3 = 1;
+    ({ width: width2, height: height2 } = originLayout);
+    let diff = originLayout.x - (windowWidth - width) / 2;
+    let diff1 = originLayout.y - result1;
+    let num3 = 1;
   } else {
     let num2 = 1;
     if (result > tmp15) {
       num2 = result;
     }
+    diff = tmp16 - tmp17;
+    diff1 = tmp19 - result1;
     num3 = (originLayout.width / width) * num2;
-    tmp19 = height;
-    tmp20 = width;
+    height2 = height;
+    width2 = width;
   }
-  let obj2 = windowWidth(entranceAnimationDriver[4]);
-  let obj3 = width;
-  class G {
+  const obj2 = require("useMediaItemHasSpoiler");
+  const obj3 = noop;
+  let items2 = [
+    c9,
+    entranceAnimationDriver,
+    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    width2,
+    width,
+    height2,
+    height,
+    diff,
+    diff1,
+    num3,
+    c8,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  StyleSheet = undefined;
+  jsx = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34] = items2;
+  class MediaViewerItemTransformPresenterTsx2 {
     constructor() {
-      value = entranceAnimationDriver.get();
+      value = closure_0.get();
       items = [,];
-      items[0] = width;
-      tmp2 = width;
-      items[1] = width;
-      tmp3 = closure_0;
-      tmp4 = closure_2;
-      obj = closure_0(closure_2[6]);
-      interpolateResult = obj.interpolate(value, [0, 1], items, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items[0] = closure_3;
+      items[1] = closure_4;
+      tmp2 = closure_1(value, [0, 1], items, closure_2.CLAMP);
       items1 = [,];
-      items1[0] = height;
-      tmp6 = height;
-      items1[1] = height;
-      obj2 = closure_0(closure_2[6]);
-      interpolateResult1 = obj2.interpolate(value, [0, 1], items1, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items1[0] = closure_5;
+      items1[1] = closure_6;
+      tmp3 = closure_1(value, [0, 1], items1, closure_2.CLAMP);
       items2 = [,];
       items2[0] = closure_7;
       items2[1] = 0;
-      obj3 = closure_0(closure_2[6]);
       items3 = [,];
       items3[0] = closure_8;
       items3[1] = 0;
-      interpolateResult2 = obj3.interpolate(value, [0, 1], items2, closure_0(closure_2[6]).Extrapolation.CLAMP);
-      obj4 = closure_0(closure_2[6]);
+      tmp4 = closure_1(value, [0, 1], items2, closure_2.CLAMP);
       items4 = [,];
-      items4[0] = closure_6;
-      num = 1;
+      items4[0] = closure_9;
       items4[1] = 1;
-      interpolateResult3 = obj4.interpolate(value, [0, 1], items3, closure_0(closure_2[6]).Extrapolation.CLAMP);
-      obj5 = closure_0(closure_2[6]);
-      interpolateResult4 = obj5.interpolate(value, [0, 1], items4, closure_0(closure_2[6]).Extrapolation.CLAMP);
-      if (typeof toScale === "function") {
-        bound = num;
-        if (tmp2 > 0) {
-          tmp13 = globalThis;
-          _Math = Math;
-          num2 = 0.001;
-          bound = Math.max(interpolateResult / tmp2, 0.001);
-        }
-        if (typeof tmp11 === "function") {
-          if (tmp6 > 0) {
-            tmp14 = globalThis;
-            _Math2 = Math;
-            num3 = 0.001;
-            num = Math.max(interpolateResult1 / tmp6, 0.001);
-          }
-          obj1 = { borderRadius: null, transform: null };
-          tmp3Result = tmp3(tmp4[6]);
-          tmp15 = tmp3Result;
-          tmp16 = value;
-          tmp18 = globalThis;
-          _Math3 = Math;
-          interpolateResult5 = tmp3Result.interpolate(value, [0, 0.25], [16, 0], tmp3(tmp4[6]).Extrapolation.CLAMP);
-          obj1.borderRadius = interpolateResult5 / Math.sqrt(bound * num);
-          obj12 = { translateX: null };
-          num4 = 2;
-          obj12.translateX = interpolateResult2 + (interpolateResult - tmp2) / 2;
-          items5 = [, , ,];
-          items5[0] = obj12;
-          obj13 = { translateY: null };
-          obj13.translateY = interpolateResult3 + (interpolateResult1 - tmp6) / 2;
-          items5[1] = obj13;
-          obj14 = { scaleX: null };
-          obj14.scaleX = interpolateResult4 * bound;
-          items5[2] = obj14;
-          obj15 = { scaleY: null };
-          obj15.scaleY = interpolateResult4 * num;
-          items5[3] = obj15;
-          obj1.transform = items5;
-          return obj1;
-        } else {
-          str2 = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        str = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
+      tmp5 = closure_1(value, [0, 1], items3, closure_2.CLAMP);
+      tmp6 = closure_1(value, [0, 1], items4, closure_2.CLAMP);
+      tmp7 = closure_10(tmp2, closure_4);
+      tmp8 = closure_10(tmp3, closure_6);
+      obj = { borderRadius: null, transform: null };
+      tmp9 = closure_1(value, [0, 0.25], [16, 0], closure_2.CLAMP);
+      obj.borderRadius = tmp9 / Math.sqrt(tmp7 * tmp8);
+      obj1 = { translateX: tmp4 + (tmp2 - closure_4) / 2 };
+      items5 = [, , ,];
+      items5[0] = obj1;
+      items5[1] = { translateY: tmp5 + (tmp3 - closure_6) / 2 };
+      items5[2] = { scaleX: tmp6 * tmp7 };
+      items5[3] = { scaleY: tmp6 * tmp8 };
+      obj.transform = items5;
+      return obj;
     }
   }
-  const tmpResult = windowWidth(entranceAnimationDriver[6]);
-  G.__closure = {
+  let items3 = [tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34];
+  MediaViewerItemTransformPresenterTsx2.__closure = items3;
+  MediaViewerItemTransformPresenterTsx2.__workletHash = 7865873276369;
+  MediaViewerItemTransformPresenterTsx2.__initData = tmp23;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    MediaViewerItemTransformPresenterTsx2,
+  );
+  const tmp22 = c8;
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  let items4 = [
+    c10,
     entranceAnimationDriver,
-    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
-    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
-    startWidth: tmp20,
-    sourceWidth: width,
-    startHeight: tmp19,
-    sourceHeight: height,
-    startTranslateX: diff,
-    startTranslateY: diff1,
-    startScale: num3,
-    toScale: diff3,
-  };
-  G.__workletHash = 512853979336;
-  G.__initData = width2;
-  const animatedStyle = tmpResult.useAnimatedStyle(G);
-  let obj7 = {
-    entranceAnimationDriver,
-    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
-    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
-    startWidth: tmp20,
-    sourceWidth: width,
-    startHeight: tmp19,
-    sourceHeight: height,
-    startTranslateX: diff,
-    startTranslateY: diff1,
-    startScale: num3,
-    toScale: diff3,
-  };
-  class B {
+    tmp22,
+    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    width2,
+    width,
+    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    height2,
+    height,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  StyleSheet = undefined;
+  jsx = undefined;
+  c7 = undefined;
+  [tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44] = items4;
+  class MediaViewerItemTransformPresenterTsx3 {
     constructor() {
-      value = entranceAnimationDriver.get();
-      tmp3 = closure_0;
-      tmp4 = closure_2;
-      tmp2 = toScale;
-      tmp5 = closure_0(closure_2[6]);
+      value = closure_0.get();
       items = [,];
-      items[0] = width;
-      tmp6 = width;
-      items[1] = width;
-      if (typeof toScale === "function") {
-        num = 0;
-        num2 = 1;
-        num3 = 1;
-        if (tmp6 > 0) {
-          tmp8 = globalThis;
-          _Math = Math;
-          num4 = 0.001;
-          num3 = Math.max(tmp7 / tmp6, 0.001);
-        }
-        tmp3Result = tmp3(tmp4[6]);
-        tmp10 = height;
-        items1 = [,];
-        items1[0] = height;
-        tmp11 = height;
-        items1[1] = height;
-        interpolate = tmp3Result.interpolate;
-        tmp12 = tmp3Result;
-        tmp13 = value;
-        tmp14 = items1;
-        if (typeof tmp2 === "function") {
-          if (tmp11 > 0) {
-            tmp16 = globalThis;
-            _Math2 = Math;
-            num5 = 0.001;
-            num2 = Math.max(tmp15 / tmp11, 0.001);
-          }
-          tmp17 = globalThis;
-          _Math3 = Math;
-          bound = Math.max(num3, num2);
-          obj = { transform: null };
-          obj1 = { scaleX: null };
-          obj1.scaleX = bound / num3;
-          items2 = [,];
-          items2[0] = obj1;
-          obj4 = { scaleY: null };
-          obj4.scaleY = bound / num2;
-          items2[1] = obj4;
-          obj.transform = items2;
-          return obj;
-        } else {
-          str2 = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        str = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
+      items[0] = closure_3;
+      items[1] = closure_4;
+      tmp2 = closure_1(closure_2(value, [0, 1], items, closure_5.CLAMP), closure_4);
+      items1 = [,];
+      items1[0] = closure_6;
+      items1[1] = closure_7;
+      tmp3 = closure_1(closure_2(value, [0, 1], items1, closure_5.CLAMP), closure_7);
+      bound = Math.max(tmp2, tmp3);
+      obj = { transform: null };
+      obj1 = { scaleX: bound / tmp2 };
+      items2 = [,];
+      items2[0] = obj1;
+      items2[1] = { scaleY: bound / tmp3 };
+      obj.transform = items2;
+      return obj;
     }
   }
-  const tmpResult2 = windowWidth(entranceAnimationDriver[6]);
-  B.__closure = {
-    entranceAnimationDriver,
-    toScale: diff3,
-    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
-    startWidth: tmp20,
-    sourceWidth: width,
-    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
-    startHeight: tmp19,
-    sourceHeight: height,
-  };
-  B.__workletHash = 7705932751771;
-  B.__initData = height2;
-  let items2 = [windowWidth, windowHeight, width, height];
-  const animatedStyle1 = tmpResult2.useAnimatedStyle(B);
+  let items5 = [tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44];
+  MediaViewerItemTransformPresenterTsx3.__closure = items5;
+  MediaViewerItemTransformPresenterTsx3.__workletHash = 10330717925602;
+  MediaViewerItemTransformPresenterTsx3.__initData = tmp36;
+  const items6 = [windowWidth, windowHeight, width, height];
+  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    MediaViewerItemTransformPresenterTsx3,
+  );
   const memo = obj3.useMemo(() => {
     obj = { container: null, child: null };
-    const size = { width: windowWidth, height: windowHeight, alignItems: "center", justifyContent: "center" };
+    const size = { width, height, alignItems: "center", justifyContent: "center" };
     obj.container = size;
-    const size1 = { width, height };
+    const size1 = { width: width2, height: height2 };
     obj.child = size1;
     return StyleSheet.create(obj);
-  }, items2);
-  let obj9 = { collapsable: false, style: memo.container, children: null };
-  let obj10 = { style: memo.child, children: null };
-  const obj11 = { style: null, children: null };
-  let items3 = [diff2.presenter, animatedStyle];
-  obj11.style = items3;
-  let obj8 = {
-    entranceAnimationDriver,
-    toScale: diff3,
-    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
-    startWidth: tmp20,
-    sourceWidth: width,
-    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
-    startHeight: tmp19,
-    sourceHeight: height,
-  };
-  const obj12 = { style: null, children: items1 };
-  let items4 = [overlayEnabled.absoluteFill, animatedStyle1];
-  obj12.style = items4;
-  obj11.children = num3(windowHeight(entranceAnimationDriver[7]), obj12);
-  obj10.children = num3(windowHeight(entranceAnimationDriver[7]), obj11);
-  obj9.children = num3(height, obj10);
-  return num3(height, obj9);
+  }, items6);
+  const obj7 = { collapsable: false, style: memo.container, children: null };
+  const obj8 = { style: memo.child, children: null };
+  const obj9 = { style: null, children: null };
+  const items7 = [c7.presenter, animatedStyle];
+  obj9.style = items7;
+  const obj10 = { style: null, children: items1 };
+  const items8 = [StyleSheet.absoluteFill, animatedStyle1];
+  obj10.style = items8;
+  obj9.children = jsx(_modDef1652.View, { style: null, children: items1 });
+  obj8.children = jsx(_modDef1652.View, { style: null, children: null });
+  obj7.children = <c4 style={memo.child}>{null}</c4>;
+  return (
+    <c4 collapsable={false} style={memo.container}>
+      {null}
+    </c4>
+  );
 }
 export function canPresentWithTransforms(source) {
   source = source.source;
@@ -398,7 +326,7 @@ export function canPresentWithTransforms(source) {
     const _Array = Array;
     obj = source;
     if (!Array.isArray(source)) {
-      const items = [source];
+      items = [source];
       obj = items;
     }
     everyResult = obj.every((videoURI) => {

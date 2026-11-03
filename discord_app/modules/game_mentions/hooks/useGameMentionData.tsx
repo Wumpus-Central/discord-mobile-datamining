@@ -40,7 +40,7 @@ export function getGameMentionData(gameId) {
 }
 export function useGameMentionData(gameId) {
   _require = gameId;
-  const items = [GameStore, GameAutocompleteStore, UserStore];
+  items = [GameStore, GameAutocompleteStore, UserStore];
   const items1 = [gameId];
   return require("initialize").useStateFromStores(
     items,

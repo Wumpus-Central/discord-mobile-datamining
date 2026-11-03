@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageCont
 
 export default function usePollMessageContextItemTypes(poll) {
   const obj = initialize;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   if (poll.isPoll()) {

@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem.tsx";
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
 import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
@@ -107,7 +107,7 @@ function LeftSlot(state) {
     onExitComplete: cleanup,
   }));
   const obj2 = { style: null };
-  const items = [wrapperStyle, { width: slotWidth }, animatedStyle];
+  items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({
     visible: state !== native.TransitionStates.YEETED,
@@ -121,15 +121,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "flexDirection",
-    shouldShowThread: "#E893FF",
+    shouldShowThread: "ModulesLoader",
   });
-  return React5(ReanimatedRexportDefault.View, obj2);
+  return React5(_modDef1652.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12809).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12945).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const React7 = createStyles.createStyles(() => {
   const obj = {
     container: {

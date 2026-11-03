@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
 
 export function useEmojiColorPalette(burst_colors) {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => saturation.saturation);
   const items1 = [ThemeStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => shared.isThemeDark(theme.theme));

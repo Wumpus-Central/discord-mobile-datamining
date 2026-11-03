@@ -71,7 +71,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx
 
 export default function useMuteStates(channel) {
   _require = channel;
-  const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
+  items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
   return require("initialize").useStateFromStoresObject(items, () =>
     getMuteStates({
       channel,

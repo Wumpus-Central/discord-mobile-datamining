@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/useExternalPIPModeRestore.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11223).VoicePanelModes;
+const VoicePanelModes = fn(11360).VoicePanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useExternalPIPModeRestore.tsx");
 
@@ -9,7 +9,7 @@ export default function useExternalPIPModeRestore(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   noop = arg2;
-  const items = [arg0, arg1, arg2];
+  items = [arg0, arg1, arg2];
   const effect = noop.useEffect(() => {
     if (c0) {
       c0 = null;

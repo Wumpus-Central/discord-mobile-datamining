@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/native/ConjureSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ function SettingsTabStrip(tabs) {
   dependencyMap = undefined;
   let setActiveIndex;
   [tmp2, c2] = setActiveIndex(noop.useState(0), 2);
-  const items = [tabs];
+  items = [tabs];
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -30,7 +30,7 @@ function SettingsTabStrip(tabs) {
     items,
   );
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(8980);
+  obj = tabs(9108);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -52,29 +52,29 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12170).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12306).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9214).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9342).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6844);
-({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
+let ConjureProjectStore = fn(6964);
+({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = {
-  project: _modDef3868.W0eQfN,
-  app: _modDef3868.lFaJYF,
-  secrets: _modDef3868.vDpCPU,
-  model: _modDef3868.Rs3qc9,
-  linked: _modDef3868.fBEHdq,
-  experimental: _modDef3868["0Pe9uw"],
+  project: _modDef3995.W0eQfN,
+  app: _modDef3995.lFaJYF,
+  secrets: _modDef3995.vDpCPU,
+  model: _modDef3995.Rs3qc9,
+  linked: _modDef3995.fBEHdq,
+  experimental: _modDef3995["0Pe9uw"],
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -102,7 +102,7 @@ export default function ConjureSettingsSheet(projectId) {
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, onSaved, isPreview } = projectId);
   const ref = noop.useRef(null);
   let tmp2 = canSave(ref(stateFromStores1[11])({ includeKeyboardHeight: true }).insets.bottom);
-  let items = [memo];
+  items = [memo];
   const items1 = [projectId];
   const stateFromStores = projectId(stateFromStores1[12]).useStateFromStores(
     items,
@@ -169,7 +169,7 @@ export default function ConjureSettingsSheet(projectId) {
     if (!closure_3) {
       tmp2 = closure_4;
     }
-    const items = [];
+    items = [];
     if (tmp2) {
       items.push("project");
     }
@@ -244,7 +244,7 @@ export default function ConjureSettingsSheet(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -278,7 +278,7 @@ export default function ConjureSettingsSheet(projectId) {
                         submitResult = closure_5.submit();
                       }
                     }
-                    const items = [submitResult, canSave.submit()];
+                    items = [submitResult, canSave.submit()];
                     c2 = 1;
                     c3 = 1;
                     const obj5 = { value: Promise.all(items), done: false };

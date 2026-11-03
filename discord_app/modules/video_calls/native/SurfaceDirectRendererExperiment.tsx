@@ -4,7 +4,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const obj2 = {
   kind: "user",
   name: "2026-03-surface-direct-renderer",
@@ -24,7 +24,7 @@ export function isSurfaceDirectRendererExperimentEnabled() {
 }
 export function useSurfaceDirectRendererExperiment(userId, location) {
   _require = userId;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [userId];
   const obj = require("initialize");
   return (

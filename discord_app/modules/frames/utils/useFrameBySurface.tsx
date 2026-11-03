@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/frames/utils/useFrameBySurfac
 export default function useFrameBySurface(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,

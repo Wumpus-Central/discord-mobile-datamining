@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   commandClickable: {
     color: nativeDefault.colors.MENTION_FOREGROUND,
@@ -37,7 +37,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
   let obj = {
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
@@ -103,10 +103,10 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
     style: closure_5().commandClickable,
     children: null,
   };
-  const items = ["/", command.displayName];
+  items = ["/", command.displayName];
   obj.children = items;
   return jsxs(require("Text/Text").Text, {
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");

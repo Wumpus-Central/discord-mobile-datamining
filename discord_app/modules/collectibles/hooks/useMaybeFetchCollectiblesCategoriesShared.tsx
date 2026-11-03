@@ -26,7 +26,7 @@ export function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
   }
   let hasLoadedExperiments;
   let lastSuccessfulFetch;
-  let items = [hasLoadedExperiments];
+  items = [hasLoadedExperiments];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => hasLoadedExperiments.hasLoadedExperiments,
@@ -35,7 +35,7 @@ export function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
   const items1 = [lastSuccessfulFetch];
   const tmp2 = _slicedToArray(
     require("initialize").useStateFromStoresArray(items1, () => {
-      const items = [, , , , , ,];
+      items = [, , , , , ,];
       ({
         isFetchingCategories: arr[0],
         lastFetchOptions: arr[1],

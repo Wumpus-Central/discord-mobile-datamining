@@ -11,9 +11,9 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
-  container: { marginBottom: fn(12459).BETWEEN_SECTIONS_MARGIN },
+  container: { marginBottom: fn(12595).BETWEEN_SECTIONS_MARGIN },
   header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 },
 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -33,7 +33,7 @@ export default function FrecencyCommandsSection(commands) {
   } = commands);
   const tmp = closure_8();
   const arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: commands.allCommands, limit: 5 });
-  const items = [arr.length, sectionName];
+  items = [arr.length, sectionName];
   const effect = noop.useEffect(() => {
     if (0 !== arr.length) {
       const obj2 = {
@@ -51,7 +51,7 @@ export default function FrecencyCommandsSection(commands) {
     const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = context(1113).intl;
     obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5624).Heading, obj3);
+    obj2.children = arr(context(5747).Heading, obj3);
     const items1 = [
       arr(View, obj2),
       arr.map((command, index) =>

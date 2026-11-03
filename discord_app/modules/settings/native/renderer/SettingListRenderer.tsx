@@ -91,9 +91,9 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11541).ListItemType;
+const ListItemType = fn(11678).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 },
   contentContainer: { paddingHorizontal: 16 },
@@ -107,10 +107,10 @@ const memoResult = noop.memo(function SettingsList(node) {
   node = node.node;
   const tmp = closure_9();
   const field = SettingBlocklistStore.useField("blocklist");
-  const items = [field, node];
+  items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(16597).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(16740).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = {
     ref,
@@ -124,14 +124,14 @@ const memoResult = noop.memo(function SettingsList(node) {
   };
   const obj4 = {};
   const merged = Object.assign(tmp.contentContainer);
-  obj4.paddingBottom = field(1625)().bottom + field(575).space.PX_16;
+  obj4.paddingBottom = field(1627)().bottom + field(575).space.PX_16;
   obj3.contentContainerStyle = obj4;
   obj3.scrollIndicatorInsets = { right: 0.01 };
   obj3.keyExtractor = keyExtractor;
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(7294).FlashList, {
+  obj2.children = jsx(node(7414).FlashList, {
     ref,
     ListHeaderComponent: node.ListHeaderComponent,
     contentContainerStyle: null,
@@ -150,7 +150,7 @@ export const SettingsList = memoResult;
 export const SearchableSettingsList = noop.memo(function SearchableSettingsList(node) {
   node = node.node;
   let settings;
-  let state;
+  state = undefined;
   let field;
   let memo2;
   let tmp = memo2();
@@ -161,7 +161,7 @@ export const SearchableSettingsList = noop.memo(function SearchableSettingsList(
   const placeholderCount = settingSearchResults.placeholderCount;
   state = state.useState((query) => "" === query.query.trim());
   field = field.useField("blocklist");
-  const items = [field, node];
+  items = [field, node];
   const memo = isLoading.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const items1 = [settings, isLoading, placeholderCount];
   const memo1 = isLoading.useMemo(

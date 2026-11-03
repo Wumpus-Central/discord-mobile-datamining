@@ -19,8 +19,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(5019).FileUploadErrorTypes;
-const PremiumConstants = fn(1385);
+const FileUploadErrorTypes = fn(5146).FileUploadErrorTypes;
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
 const size = fn(2);
@@ -28,7 +28,7 @@ let result = size.fileFinishedImporting("modules/media_uploads/native/showUpload
 
 export default function showUploadFileSizeError(arg0) {
   ({ file, maxSize, analyticsLocations, errorReason } = arg0);
-  let items;
+  items = undefined;
   let items1;
   ({ baseMaxSize, guildId, appEntryKey } = arg0);
   const currentUser = UserStore.getCurrentUser();

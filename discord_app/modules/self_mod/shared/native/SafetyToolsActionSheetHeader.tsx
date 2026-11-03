@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" },
   navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 },
@@ -25,7 +25,7 @@ export default function SafetyToolsActionSheetHeader(channelId) {
   ({ title, hasBackButton } = channelId);
   const tmp = closure_6();
   const navbarLeft = tmp;
-  const items = [channelId, recipientId, warningId, warningType];
+  items = [channelId, recipientId, warningId, warningType];
   const callback = warningId.useCallback(() => {
     const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
   }, items);
@@ -41,7 +41,7 @@ export default function SafetyToolsActionSheetHeader(channelId) {
   const items2 = [
     memo,
     navbarLeft(channelId(recipientId[7]).Text, {
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),

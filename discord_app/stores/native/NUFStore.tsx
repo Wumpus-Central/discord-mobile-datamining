@@ -43,7 +43,7 @@ class NUFStore extends PersistedStore {}
 const prototype = NUFStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RelationshipStore, GuildStore);
-  const items = [RelationshipStore, GuildStore];
+  items = [RelationshipStore, GuildStore];
   this.syncWith(items, handleUpdate);
 };
 prototype["getState"] = function getState() {

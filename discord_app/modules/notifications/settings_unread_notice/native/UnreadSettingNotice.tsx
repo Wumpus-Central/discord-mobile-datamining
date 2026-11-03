@@ -11,7 +11,7 @@ const View = fn(17).View;
 let closure_4 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = {
@@ -36,7 +36,7 @@ export default function UnreadSettingNoticeConnected(channel) {
   _require = channel;
   const tmp = closure_7();
   const obj = { style: tmp.content, children: null };
-  const items = [closure_5(UnreadSettingNoticeImpressionTrackingDefault, { id: channel.channel.id }), ,];
+  items = [closure_5(UnreadSettingNoticeImpressionTrackingDefault, { id: channel.channel.id }), ,];
   const obj3 = { style: tmp.informations, children: null };
   const obj4 = { variant: "text-md/semibold", children: null };
   const intl = require("util").intl;

@@ -14,17 +14,17 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 const SystemThemeState = fn(1195).SystemThemeState;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const constants = fn(1385).AnalyticsPremiumFeatureNames;
+const constants = fn(1387).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
-export function handleSaveTheme(found, analyticsLocations, isSynced) {
+export function handleSaveTheme(found, analyticsLocations, c3) {
   if (found.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     const obj2 = {
       feature_name: constants.CLIENT_THEME,
       theme_name: "custom theme",
       is_persisted: true,
-      is_synced: isSynced,
+      is_synced,
       location_stack: analyticsLocations,
     };
     AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
@@ -75,7 +75,7 @@ export function handleSaveTheme(found, analyticsLocations, isSynced) {
     combined = "default " + found.theme;
   }
 }
-export function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
+export function handleSaveSyncedModeTheme(theme, systemTheme, c10) {
   if ("system" !== theme.theme) {
     if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
       const obj2 = {
@@ -83,7 +83,7 @@ export function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations
         theme_name: "custom theme",
         is_persisted: true,
         is_synced: false,
-        location_stack: analyticsLocations,
+        location_stack,
       };
       AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
       if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {

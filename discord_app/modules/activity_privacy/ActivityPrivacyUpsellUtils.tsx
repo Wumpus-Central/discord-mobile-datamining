@@ -42,7 +42,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(7165).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(7286).getSanitizedActivityRestrictedGuilds();
         const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
         if (setting !== tmp8(1196).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
           if (setting !== tmp8(1196).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
@@ -88,7 +88,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         let tmp4 = null;
         if (0 !== found.length) {
           const sorted = found.sort((arg0, arg1) => {
-            const guild = GuildStore.getGuild(arg0);
+            guild = GuildStore.getGuild(arg0);
             const guild1 = GuildStore.getGuild(arg1);
             let joinedAt;
             if (guild != null) {
@@ -331,7 +331,7 @@ export function computeProfileToActivityUpsell(setting, NumberResult) {
   }
 }
 export function sortGuildIdsByFrecency(guildIds) {
-  const items = [...guildIds];
+  items = [...guildIds];
   return items.sort((id, id) => {
     const scoreWithoutFetchingLatest = FrecencyStore.getScoreWithoutFetchingLatest(id);
     return scoreWithoutFetchingLatest - FrecencyStore.getScoreWithoutFetchingLatest(id);
@@ -342,7 +342,7 @@ export function applyBulkGuildRestrictionChange(direction, affectedGuildIds) {
   const sanitizedActivityRestrictedGuilds = obj.getSanitizedActivityRestrictedGuilds();
   if (direction === obj.RESTRICTING) {
     const _Set = Set;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(tmp5, HermesBuiltin.arraySpread(sanitizedActivityRestrictedGuilds, 0));
     const set1 = new Set(items);
     const ActivityRestrictedGuilds2 = UserSettings.ActivityRestrictedGuilds;

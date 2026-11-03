@@ -86,7 +86,7 @@ export function applyTimingTraceBatch(found, batch, live) {
   }
   const map = new Map(
     spans.map((id) => {
-      const items = [id.id, id];
+      items = [id.id, id];
       return items;
     }),
   );
@@ -108,7 +108,7 @@ export function applyTimingTraceBatch(found, batch, live) {
     dropped: null,
     live: null,
   };
-  let items = [...map.values()];
+  items = [...map.values()];
   const sorted = items.sort((id, id2) => id.id - id2.id);
   obj.spans = sorted.map((parent) => {
     let tmp = parent;

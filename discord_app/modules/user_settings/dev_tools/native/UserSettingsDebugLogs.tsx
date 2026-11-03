@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(7098).InputHeights.MD,
-  width: fn(7098).InputHeights.MD,
+  height: fn(7224).InputHeights.MD,
+  width: fn(7224).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
@@ -68,7 +68,7 @@ export default function UserSettingsDebugLogs() {
     const Storage = Storage2.Storage;
     const result = Storage.set("debug-log-sort-order", arg0);
   }, []);
-  let items = [sortOrder, tmp6];
+  items = [sortOrder, tmp6];
   const memo = obj.useMemo(() => LogAggregator.getAllForDebugPanel("newest" === first), items);
   const tmp4Result3 = sortOrder(
     noop.useState(() => {
@@ -120,7 +120,7 @@ export default function UserSettingsDebugLogs() {
     item = item.item;
     const obj = { style: closure_0.log, children: null };
     const obj2 = { style: closure_0.code, variant: "text-xs/normal", color: "text-muted", children: null };
-    const items = [new Date(item.time).toISOString(), " "];
+    items = [new Date(item.time).toISOString(), " "];
     let str = item.timing;
     if (str == null) {
       str = "";

@@ -21,7 +21,7 @@ function DefaultAvatarButton(selected) {
   selected = selected.selected;
   ({ source, onSelect, accessibilityLabel } = selected);
   const tmp = closure_7();
-  const items = [tmp.defaultAvatarContainer];
+  items = [tmp.defaultAvatarContainer];
   let prop;
   if (selected) {
     prop = tmp.defaultAvatarSelected;
@@ -168,7 +168,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   },
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj10 = {
   container: { display: "flex", alignItems: "center", flex: 1 },
   buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" },
@@ -209,7 +209,7 @@ export default function PresetAvatarSelect(arg0) {
   let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = util.intl;
   obj2.children = intl.string(util.t.yP28YL);
-  const items = [closure_4(Text_Text.Text, obj2), ,];
+  items = [closure_4(Text_Text.Text, obj2), ,];
   const obj3 = { style: tmp.buttonsContainer, children: null };
   items1 = [0, 1, 2, 3];
   obj3.children = items1.map((item) => {

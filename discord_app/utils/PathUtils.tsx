@@ -4,7 +4,7 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("utils/PathUtils.tsx");
 
 export function pathJoin() {
-  const items = [...arguments];
+  items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {
     str = "\\";

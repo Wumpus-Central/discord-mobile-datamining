@@ -3,7 +3,7 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 
@@ -15,7 +15,7 @@ export function useChannelsUserCanStartStageIn(guild) {
   if (id == null) {
     id = null;
   }
-  const items = [GuildChannelStore, PermissionStore];
+  items = [GuildChannelStore, PermissionStore];
   const items1 = [id];
   return id(504).useStateFromStoresArray(
     items,

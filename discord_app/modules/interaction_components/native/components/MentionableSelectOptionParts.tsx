@@ -27,7 +27,7 @@ function UserOptionTag(user) {
 function RoleMemberCount(children) {
   const tmp = closure_10();
   const obj = { style: tmp.roleCountContainer, children: null };
-  const items = [
+  items = [
     React6(Text_Text.Text, {
       style: tmp.roleCountText,
       variant: "text-sm/medium",
@@ -44,7 +44,7 @@ const Constants = fn(1072);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   name: {
     color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,

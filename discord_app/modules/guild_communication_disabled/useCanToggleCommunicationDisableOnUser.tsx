@@ -16,7 +16,7 @@ function canToggleCommunicationDisableOnUser(id, id2) {
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
-  const guild = obj2.getGuild(id);
+  guild = obj2.getGuild(id);
   const user = obj.getUser(id2);
   let tmp6 = null != guild && null != user;
   if (tmp6) {
@@ -47,12 +47,12 @@ const result = size.fileFinishedImporting(
 export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [UserStore, GuildStore, PermissionStore];
+  items = [UserStore, GuildStore, PermissionStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [UserStore, GuildStore, PermissionStore];
+      items = [UserStore, GuildStore, PermissionStore];
       return canToggleCommunicationDisableOnUser(closure_0, closure_1, items);
     },
     items1,

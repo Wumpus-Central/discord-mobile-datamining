@@ -14,7 +14,7 @@ export default function useCustomSwatchA11y(selectedColors) {
   const id = noop.useId();
   if (hasCustomPalette) {
     const _Math = Math;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(
       selectedColors.map((item) => utils_ColorUtils.getContrast(item, 0)),
       0,

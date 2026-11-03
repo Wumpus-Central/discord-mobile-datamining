@@ -16,9 +16,9 @@ function DurationSelectionActionSheet(onClose) {
   const obj2 = { title: null };
   const intl = onClose(1113).intl;
   obj2.title = intl.string(onClose(1113).t.vKYZzc);
-  const items = [closure_14(onClose(7321).BottomSheetTitleHeader, obj2)];
+  items = [closure_14(onClose(7441).BottomSheetTitleHeader, obj2)];
   const arr = getTimeframes();
-  items[1] = closure_14(onClose(7368).ActionSheetRow.Group, {
+  items[1] = closure_14(onClose(7488).ActionSheetRow.Group, {
     hasIcons: false,
     children: getTimeframes().map((label) =>
       closure_1_14(
@@ -35,24 +35,24 @@ function DurationSelectionActionSheet(onClose) {
     ),
   });
   obj.children = items;
-  return closure_15(onClose(7366).ActionSheet, obj);
+  return closure_15(onClose(7486).ActionSheet, obj);
 }
-const GuildIncidentsActionSheetStore = fn(13256);
+const GuildIncidentsActionSheetStore = fn(13392);
 ({
   resetGuildIncidentsActionSheetStore: hasOwnProperty,
   setInitialTime: metroRequire,
   setPauseDms: closure_7,
   setPauseInvites: closure_8,
   setTime: closure_9,
-  useGuildIncidentsActionSheetStore: c10,
+  useGuildIncidentsActionSheetStore: closure_10,
 } = GuildIncidentsActionSheetStore);
-const getTimeframes = fn(8483).getTimeframes;
+const getTimeframes = fn(8607).getTimeframes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
-const __initData2 = createStyles.createStyles({ beta: { marginLeft: -12 } });
+const createStyles = fn(5141);
+const value2 = createStyles.createStyles({ beta: { marginLeft: -12 } });
 class GuildIncidentActionsActionSheet {
   constructor(arg0) {
     guild = global.guild;
@@ -65,7 +65,7 @@ class GuildIncidentActionsActionSheet {
     closure_7 = undefined;
     onDurationSelectorClose = function onDurationSelectorClose() {
       const obj2 = {
-        content: closure_2_14(GuildIncidentActionsActionSheet, { guild, analyticsData }),
+        content: gesture(GuildIncidentActionsActionSheet, { guild, analyticsData }),
         key: "GuildIncidentActionsActionSheet",
       };
       ActionSheetActionCreators.showActionSheet(obj2);
@@ -147,7 +147,7 @@ class GuildIncidentActionsActionSheet {
     obj18.label = intl2.string(tmp3(tmp4[9]).t.vKYZzc);
     obj18.onPress = function onDropdownPress() {
       const obj2 = {
-        content: closure_2_14(DurationSelectionActionSheet, { onClose: onDurationSelectorClose }),
+        content: gesture(DurationSelectionActionSheet, { onClose: onDurationSelectorClose }),
         key: "DurationSelectionActionSheet",
       };
       ActionSheetActionCreators.showActionSheet(obj2);
@@ -229,7 +229,7 @@ class GuildIncidentActionsActionSheet {
         if (!tmp11) {
           const obj7 = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
           const obj8 = { guildId: guild.id };
-          obj7.content = closure_2_14(GuildRaidLockdownFeedbackActionSheetDefault, obj8);
+          obj7.content = gesture(GuildRaidLockdownFeedbackActionSheetDefault, obj8);
           ActionSheetActionCreators.showActionSheet(obj7);
           const tmpResult = ActionSheetActionCreators;
         }

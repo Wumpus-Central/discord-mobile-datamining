@@ -36,7 +36,7 @@ export function maybeFetchTopSoundboardSoundsByGuild(id) {
           value.then(
             (body) => {
               const obj2 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
-              const items = body.body.items;
+              items = body.body.items;
               const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
               obj2.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
               return DispatcherDefault.dispatch(obj2);
@@ -65,7 +65,7 @@ export function fetchTopSoundboardSounds(guildId) {
     value.then(
       (body) => {
         const obj2 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
-        const items = body.body.items;
+        items = body.body.items;
         const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
         obj2.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
         return DispatcherDefault.dispatch(obj2);

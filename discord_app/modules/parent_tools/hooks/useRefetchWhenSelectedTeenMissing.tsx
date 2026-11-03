@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefetchWhenSelectedTeenMissing.tsx");
 
 export default function useRefetchWhenSelectedTeenMissing() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStoresObject = isInitialized(hasActiveLinks[4]).useStateFromStoresObject(items, () => ({
     isInitialized: FamilyCenterStore.getIsInitialized(),
     isLoading: FamilyCenterStore.isLoading(),

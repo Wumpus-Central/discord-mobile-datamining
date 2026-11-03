@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function useNotificationsTabBadge() {
-  const items = [NotificationCenterItemsStore];
+  items = [NotificationCenterItemsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];
   const memo = noop.useMemo(

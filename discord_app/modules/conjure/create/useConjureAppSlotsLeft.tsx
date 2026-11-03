@@ -12,7 +12,7 @@ export default function useConjureAppSlotsLeft() {
   const effect = noop.useEffect(() => {
     const projectLimit = ConjureActionCreators.fetchProjectLimit();
   }, []);
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   return initialize.useStateFromStores(items, () => {
     maxProjects = maxProjects.getMaxProjects();
     let bound = null;

@@ -27,7 +27,7 @@ export function DynamicBadgeTooltip(tooltipPosition) {
   const onPress = noop.useCallback(() => {
     closure_2(false);
   }, []);
-  const items = [str, stringResult, visible, onPress];
+  items = [str, stringResult, visible, onPress];
   const memo = noop.useMemo(() => ({ position: str, label, visible, onPress }), items);
   const tooltip = useTooltip.useTooltip(ref, memo);
   const items1 = [visible];

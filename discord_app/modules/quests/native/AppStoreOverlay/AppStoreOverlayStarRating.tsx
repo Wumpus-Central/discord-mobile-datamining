@@ -9,7 +9,7 @@ function FractionalStar(fillAmount) {
   fillAmount = fillAmount.fillAmount;
   const tmp = closure_6();
   const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
-  const items = [
+  items = [
     React4(StarOutlineIcon.StarOutlineIcon, {
       size: "custom",
       color: nativeDefault.colors.TEXT_MUTED,
@@ -34,7 +34,7 @@ function FractionalStar(fillAmount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: 2 },
   star: null,

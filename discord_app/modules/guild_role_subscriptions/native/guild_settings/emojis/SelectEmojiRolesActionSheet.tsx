@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   list: { flex: 1 },
   row: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -51,7 +51,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
     sortDeletedListingsLast: true,
   });
   let obj = guildId(emoji[9]);
-  let items = [subscriptionListingsForGuild];
+  items = [subscriptionListingsForGuild];
   const items1 = [guildId, subscriptionListingsForGuild];
   dependencyMap = guildId(emoji[10]).useStateFromStoresArray(
     items,
@@ -137,7 +137,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
         };
         tmp7Result = dependencyMap(guildId(emoji[12]).Text, obj6);
       }
-      const items = [tmp7Result];
+      items = [tmp7Result];
       let archived = tmp.archived;
       if (archived) {
         const obj7 = { type: null, variant: "critical" };

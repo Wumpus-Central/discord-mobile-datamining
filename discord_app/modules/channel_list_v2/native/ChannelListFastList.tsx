@@ -37,7 +37,7 @@ export default noop.memo(function ChannelListFastList(scrollIndicatorInsetBottom
     drawDistanceMode,
     ref,
   } = scrollIndicatorInsetBottom);
-  const items = [scrollIndicatorInsetBottom];
+  items = [scrollIndicatorInsetBottom];
   const memo = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
   const obj = {
     insetEnd,

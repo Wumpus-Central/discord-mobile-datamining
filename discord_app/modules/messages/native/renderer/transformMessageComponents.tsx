@@ -6,14 +6,14 @@ import InteractionComponentUtils from "../../../interaction_components/Interacti
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import RowGeneratorTypes from "RowGeneratorTypes.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import priv from "../../../../../_runtime/01451_priv.js";
+import priv from "../../../../../_runtime/01453_priv.js";
 
 const util = tmp4(1113);
-const FlagUtils = tmp4(1396);
-const MediaTypes = tmp4(6072);
-const AgeVerificationUtils = tmp4(6726);
-const sanitizeMediaDimension = tmp4(8689);
-const ExplicitMediaUtils = tmp4(8709);
+const FlagUtils = tmp4(1398);
+const MediaTypes = tmp4(6192);
+const AgeVerificationUtils = tmp4(6846);
+const sanitizeMediaDimension = tmp4(8813);
+const ExplicitMediaUtils = tmp4(8833);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -218,7 +218,7 @@ function transformToRowGeneratedComponent(message, accessory) {
               }
               VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
             } else if (tmp(tmp2[6]).ComponentType.MEDIA_GALLERY === type) {
-              const items = accessory.items;
+              items = accessory.items;
               const mapped3 = items.map((media, index) => {
                 ({ width, height, contentType } = media.media);
                 if (null != width) {
@@ -588,8 +588,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(6066).CheckpointVersions;
-let closure_7 = fn(8695).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(6186).CheckpointVersions;
+let closure_7 = fn(8819).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -599,13 +599,13 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/transf
 export default function transformMessageComponents(message, arr) {
   const obj = {
     type: "textDisplayComponent",
-    parserState: obj3(8582).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: obj3(8706).getInitialParserStateFromMessage(message.message, closure_7),
   };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
-  return mapped.filter(obj3(1379).isNotNullish);
+  return mapped.filter(obj3(1380).isNotNullish);
 }
 export function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);

@@ -8,7 +8,7 @@ function handleGameServerUpsert(gameServer) {
   gameServer = undefined;
   if (null == gameServer.guildId) {
     if (-1 === closure_1.findIndex((id) => id.id === gameServer.id)) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_1, 0)] = gameServer;
       let mapped = items;
     } else {

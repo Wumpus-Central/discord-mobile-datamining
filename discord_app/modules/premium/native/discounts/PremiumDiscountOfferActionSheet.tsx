@@ -6,11 +6,11 @@ import openPremiumModalDefault from "../../../../components_native/premium/openP
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_4, SubscriptionPlanInfo: hasOwnProperty } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = Constants);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_9 = {
   page: AnalyticsPages.USER_SETTINGS,
@@ -28,7 +28,7 @@ export default function _default(markAsDismissed) {
   analyticsLocations = userDiscountOffer(analyticsLocations[5])(
     userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET,
   ).analyticsLocations;
-  const items = [userDiscountOffer];
+  items = [userDiscountOffer];
   memo = memo.useMemo(() => {
     let first;
     if (userDiscountOffer != null) {

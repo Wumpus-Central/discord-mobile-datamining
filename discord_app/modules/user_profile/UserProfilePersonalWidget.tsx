@@ -15,7 +15,7 @@ function createDefaultFieldsSection() {
   const sum = tmp + 1;
   closure_5 = sum;
   obj2.key = `field-${+closure_5}`;
-  const items = [obj2, , ,];
+  items = [obj2, , ,];
   const obj3 = { key: `field-${+sum}`, title: "", description: "" };
   const sum1 = tmp3 + 1;
   items[1] = obj3;
@@ -143,7 +143,7 @@ function serializeSection(type) {
     return type;
   }
 }
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 let closure_5 = 0;
 let UserProfilePersonalWidget;
 class UserProfilePersonalWidget {
@@ -308,7 +308,7 @@ export function createDefaultField() {
 export { createDefaultFieldsSection };
 export function createDefaultPersonalWidget() {
   const obj = { header: "", sections: null };
-  const items = [
+  items = [
     { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" },
     createDefaultFieldsSection(),
   ];
@@ -336,7 +336,7 @@ export function isPersonalWidgetNew() {
 }
 export function parsePersonalWidgetSections(sections) {
   if (null == sections) {
-    let items = [];
+    items = [];
   } else {
     const mapped = sections.map((type) => {
       type = type.type;

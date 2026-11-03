@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default function UserSettingsVoiceOverlay() {
-  const items = [MobileVoiceOverlayStore];
+  items = [MobileVoiceOverlayStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => enabled.getEnabled());
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = util.intl;

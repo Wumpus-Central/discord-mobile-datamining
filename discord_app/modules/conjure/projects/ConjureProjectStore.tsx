@@ -63,7 +63,7 @@ prototype["findProjectByApplicationId"] = function findProjectByApplicationId(ap
   return null;
 };
 prototype["getSharedProjects"] = function getSharedProjects(id) {
-  const items = [];
+  items = [];
   const values = map.values();
   for (const item10010 of values) {
     let tmp4 = isProjectOwner(item10010);
@@ -112,8 +112,8 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
 prototype["getGlobalSelectedProjectId"] = function getGlobalSelectedProjectId() {
   return c8;
 };
-prototype["getProjectLoadStatus"] = function getProjectLoadStatus(projectId) {
-  value = map3.get(projectId);
+prototype["getProjectLoadStatus"] = function getProjectLoadStatus(c1) {
+  value = map3.get(c1);
   if (value == null) {
     value = null;
   }

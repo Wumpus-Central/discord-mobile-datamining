@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 }, image: null, gifTag: null };
 let obj3 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 };
 obj2.image = { borderRadius: nativeDefault.radii.xs };
@@ -81,7 +81,7 @@ export default function ChangelogInlineImage(title) {
       };
       const obj2 = { uri: tmp21 };
       obj.source = obj2;
-      const items = [tmp.image, fitChangelogImageResult];
+      items = [tmp.image, fitChangelogImageResult];
       obj.style = items;
       let tmp22 = !tmp17;
       if (null == changelogImageStillUrl) {

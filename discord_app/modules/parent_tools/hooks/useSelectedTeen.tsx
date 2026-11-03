@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
 
 export function useSelectedTeen() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
   const obj = require("useStateFromStores");
   const items1 = [UserStore];
@@ -23,6 +23,6 @@ export function useSelectedTeen() {
   });
 }
 export function useSelectedTeenId() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 }

@@ -54,7 +54,7 @@ export function useGetOrFetchApplication(applicationId) {
     flag = true;
   }
   if (null != applicationId) {
-    const items = [applicationId];
+    items = [applicationId];
     let items1 = items;
   } else {
     items1 = [];

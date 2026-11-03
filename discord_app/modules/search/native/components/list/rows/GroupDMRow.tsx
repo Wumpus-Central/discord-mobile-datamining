@@ -17,7 +17,7 @@ export default function GroupDMRow(channel) {
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
   let str = useChannelNameDefault(channel);
-  const items = [channel.id, onPress];
+  items = [channel.id, onPress];
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);

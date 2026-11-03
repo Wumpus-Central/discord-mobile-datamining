@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
 
 export default function useNotificationPermissionPrompt() {
-  const items = [GatewayConnectionStore];
+  items = [GatewayConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => connected.isConnected());
   const obj = stateFromStores(504);
   const items1 = [UserRequiredActionStore, LoginRequiredActionStore];
@@ -32,7 +32,7 @@ export default function useNotificationPermissionPrompt() {
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(18598).useGuildOpenNudge();
-  const obj3 = stateFromStores(18598);
-  const postCallDisconnectNudge = stateFromStores(18600).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(18756).useGuildOpenNudge();
+  const obj3 = stateFromStores(18756);
+  const postCallDisconnectNudge = stateFromStores(18758).usePostCallDisconnectNudge();
 }

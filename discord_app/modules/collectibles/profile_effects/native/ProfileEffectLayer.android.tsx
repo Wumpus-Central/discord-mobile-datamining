@@ -16,7 +16,7 @@ export default noop.memo(function ProfileEffectLayerAndroid(paused) {
   ({ accessibilityLabel, onLoad } = paused);
   const ref = noop.useRef(null);
   const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
-  const items = [animate, paused, aPNGPlayerControls];
+  items = [animate, paused, aPNGPlayerControls];
   const effect = noop.useEffect(() => {
     if (animate) {
       if (!paused) {

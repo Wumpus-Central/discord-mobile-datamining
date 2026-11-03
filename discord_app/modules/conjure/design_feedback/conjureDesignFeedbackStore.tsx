@@ -38,7 +38,7 @@ export function enterConjureDesignFeedback(arg0) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -64,7 +64,7 @@ export function pauseConjureDesignFeedback(arg0) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -83,7 +83,7 @@ export function exitConjureDesignFeedback(arg0) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -109,7 +109,7 @@ export function setConjureDesignFeedbackContext(arg0, context) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -135,7 +135,7 @@ export function addConjureDesignAnnotation(arg0, authorId, target, comment) {
   const text = `annotation-${tmp4}`;
   const obj2 = {};
   const merged = Object.assign(value);
-  const items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(value.annotations, 0)] = {
     id: text,
     authorId,
@@ -149,7 +149,7 @@ export function addConjureDesignAnnotation(arg0, authorId, target, comment) {
       map.delete(arg0);
     }
     (function emit() {
-      const items = [...closure_1_5];
+      items = [...closure_1_5];
       const iter = items[Symbol.iterator]();
       if (iter !== undefined) {
         try {
@@ -190,7 +190,7 @@ export function relocateConjureDesignAnnotations(arg0, size) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -241,7 +241,7 @@ export function updateConjureDesignAnnotation(arg0, arg1, arg2, comment) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -276,7 +276,7 @@ export function removeConjureDesignAnnotation(arg0, arg1, arg2) {
         map.delete(arg0);
       }
       (function emit() {
-        const items = [...closure_1_5];
+        items = [...closure_1_5];
         const iter = items[Symbol.iterator]();
         if (iter !== undefined) {
           try {
@@ -291,7 +291,7 @@ export function removeConjureDesignAnnotation(arg0, arg1, arg2) {
 export { subscribeConjureDesignFeedback };
 export function useConjureDesignFeedback(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const callback = noop.useCallback(() => {
     if (null == closure_0) {
       value = closure_3;

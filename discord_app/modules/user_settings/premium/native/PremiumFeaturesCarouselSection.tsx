@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15359 from "../../../../../_runtime/metro/15359__.js";
-import _modDef15360 from "../../../../../_runtime/metro/15360__.js";
-import _modDef15361 from "../../../../../_runtime/metro/15361__.js";
-import _modDef15362 from "../../../../../_runtime/metro/15362__.js";
+import _modDef15500 from "../../../../../_runtime/metro/15500__.js";
+import _modDef15501 from "../../../../../_runtime/metro/15501__.js";
+import _modDef15502 from "../../../../../_runtime/metro/15502__.js";
+import _modDef15503 from "../../../../../_runtime/metro/15503__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -37,9 +37,9 @@ function CarouselCard(arg0) {
   ({ style, title, imageSrc, imageStyle } = arg0);
   const tmp = closure_15();
   const obj = { style, children: null };
-  const items = [
+  items = [
     closure_1_10(Text_Text.Text, {
-      variant: "heading-md/extrabold",
+      variant: "heading-md/semibold",
       color: "text-overlay-light",
       style: tmp.cardTitle,
       children: title,
@@ -57,28 +57,28 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5274).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5397).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
   closure_129_0 = width;
   const tmp8 = closure_16();
   closure_129_1 = tmp8;
-  let items = [tmp8];
+  items = [tmp8];
   const memo = noop.useMemo(() => {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef15359;
+    obj.imageSrc = _modDef15500;
     obj.imageStyle = first.emojiImage;
-    const items = [,];
+    items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
     obj.premiumTypes = new Set(items);
     const items1 = [obj, , ,];
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef15360;
+    obj2.imageSrc = _modDef15501;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -87,7 +87,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef15361;
+    obj3.imageSrc = _modDef15502;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -95,7 +95,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef15362;
+    obj4.imageSrc = _modDef15503;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -124,7 +124,7 @@ function PremiumFeaturesCarousel(arg0) {
   const callback = noop.useCallback((nativeEvent) => {
     closure_2(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
-  if (!onEndReached(1622).isThumbstickScrollDevice) {
+  if (!onEndReached(1624).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
       let tmp17 = closure_10;
       let obj3 = {
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(10629), obj3);
+      let tmp19 = closure_10(currentIndex(10759), obj3);
     }
     let items3 = [tmp19];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -151,7 +151,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5274);
+  let obj = onEndReached(5397);
   tmp19 = closure_10(closure_5, {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -179,13 +179,13 @@ function PremiumFeaturesCarousel(arg0) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7617).Gradients;
-const PremiumTypes = fn(1385).PremiumTypes;
+const Gradients = fn(7741).Gradients;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1 },
   headerText: { textAlign: "center" },
@@ -196,7 +196,7 @@ let obj2 = {
 let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
 obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 const obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
 obj6.card = {
@@ -215,8 +215,8 @@ const obj7 = {
   overflow: "hidden",
 };
 obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
-const __initData = createStyles.createStyles(obj6);
-createStyles = fn(5014);
+const value = createStyles.createStyles(obj6);
+createStyles = fn(5141);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
@@ -226,11 +226,11 @@ export default function PremiumFeaturesCarouselSection(style) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const tmp = closure_14();
-  const analyticsLocations = first(7326)().analyticsLocations;
+  const analyticsLocations = first(7446)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
-  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1491).getWindowDimensions().width), 2);
+  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1493).getWindowDimensions().width), 2);
   _slicedToArray = tmp4[1];
-  const items = [analyticsLocations, first];
+  items = [analyticsLocations, first];
   let obj2 = {
     style: null,
     onLayout(nativeEvent) {
@@ -249,7 +249,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   }, items);
   const obj3 = {
     style: tmp.headerText,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,
@@ -257,7 +257,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const intl = analyticsLocations(1113).intl;
   obj3.children = intl.string(analyticsLocations(1113).t.RGadQR);
   const items2 = [
-    closure_10(analyticsLocations(5624).Text, obj3),
+    closure_10(analyticsLocations(5747).Text, obj3),
     closure_10(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback }),
   ];
   obj2.children = items2;

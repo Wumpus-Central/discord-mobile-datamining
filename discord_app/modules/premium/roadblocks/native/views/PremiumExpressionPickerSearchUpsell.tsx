@@ -9,7 +9,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const sum = 56 + nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8 }, upsell: null, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.upsell = {
@@ -35,7 +35,7 @@ export default function PremiumExpressionPickerSearchUpsell(arg0) {
   const obj = { style: tmp.container, collapsable: false, children: null };
   const obj2 = { style: tmp.upsell, accessibilityRole: "button", disabled: loading, onPress, children: null };
   const obj3 = { style: tmp.content, children: null };
-  const items = [
+  items = [
     icon,
     React3(Text_Text.Text, {
       lineClamp: 2,

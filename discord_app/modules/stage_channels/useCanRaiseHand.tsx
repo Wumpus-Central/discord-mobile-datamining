@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useCanRaiseHan
 
 export function useCanRaiseHand(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(Permissions.REQUEST_TO_SPEAK, closure_0),
   );

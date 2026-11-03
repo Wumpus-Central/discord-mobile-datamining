@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5927).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(6047).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { imageThumbnail: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -63,7 +63,7 @@ export function useVideoBackgroundRadioOptions() {
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.fUdMeO);
   obj.icon = jsx(require("TableRowIcon").TableRowIcon, { IconComponent: require("DenyIcon").DenyIcon });
-  const items = [obj];
+  items = [obj];
   const obj3 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
   const intl2 = require("util").intl;
   obj3.label = intl2.string(require("util").t.LhSyL8);

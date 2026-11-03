@@ -38,7 +38,7 @@ export function validateOpenInviteDialog(socket) {
         const tmp48 = new RPCErrorDefault(obj3, "Invalid channel");
         throw tmp48;
       } else {
-        const guild = GuildStore.getGuild(channel1.getGuildId());
+        guild = GuildStore.getGuild(channel1.getGuildId());
         if (null == guild) {
           const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
           const _HermesInternal3 = HermesInternal;

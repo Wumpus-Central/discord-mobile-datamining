@@ -72,7 +72,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/EditableT
 export default EditableTileAvatarButtonBase;
 export function TryItOutEditableTileAvatarButton(arg0) {
   ({ user, onPress } = arg0);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const tryItOutAvatar = UserProfileSettingsStore.getTryItOutChanges().tryItOutAvatar;
     let pendingAvatar = tryItOutAvatar;

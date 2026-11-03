@@ -19,8 +19,8 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -36,7 +36,7 @@ obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
 obj2.button = { marginTop: 16 };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 class UserSettingsConfirmPasswordInner {
   constructor(arg0) {
     ({ onSubmit, onSuccess, onError, parentLoading } = global);
@@ -61,7 +61,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -209,7 +209,7 @@ class UserSettingsConfirmPasswordInner {
       obj12 = {
         style: null,
         accessibilityRole: "header",
-        variant: "heading-xl/extrabold",
+        variant: "heading-xl/semibold",
         color: "mobile-text-heading-primary",
         children: null,
       };

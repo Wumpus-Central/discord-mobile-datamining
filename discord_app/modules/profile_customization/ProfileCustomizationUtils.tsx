@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/profile_customization/Profile
 
 export function useAvatarsWithGuilds(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => {
     const mutableAllGuildsAndMembers = GuildMemberStore.getMutableAllGuildsAndMembers();
     const obj = {};
@@ -44,7 +44,7 @@ export function useAvatarsWithGuilds(arg0) {
 export function useGuildMemberAndUserPendingNameplate(user, guildId) {
   _require = user;
   dependencyMap = guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
@@ -75,7 +75,7 @@ export function useGuildMemberAndUserPendingNameplate(user, guildId) {
 export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
   _require = user;
   dependencyMap = guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
@@ -118,7 +118,7 @@ export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
 export function useUserAvatarDecoration(user) {
   user = user.user;
   const guildId = user.guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = user(guildId[4]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
@@ -139,7 +139,7 @@ export function useUserAvatarDecoration(user) {
 }
 export function useUserProfileEffect(arg0) {
   ({ user: require, guildId: dependencyMap } = arg0);
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   return initialize.useStateFromStores(items, () => {
     if (null == dependencyMap) {
       const userProfile = UserProfileStore.getUserProfile(user.id);
@@ -159,7 +159,7 @@ export function useUserProfileEffect(arg0) {
 }
 export function useUserProfileFrame(arg0) {
   ({ user: require, guildId: dependencyMap } = arg0);
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   return initialize.useStateFromStores(items, () => {
     if (null == dependencyMap) {
       const userProfile = UserProfileStore.getUserProfile(user.id);
@@ -179,7 +179,7 @@ export function useUserProfileFrame(arg0) {
 }
 export function useAvatarDecorationSettings(arg0) {
   _require = arg0;
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => ({
     pendingAvatarDecoration: UserProfileSettingsStore.getPendingChanges(closure_0).pendingAvatarDecoration,
     errors: UserProfileSettingsStore.getErrors(closure_0).avatarDecoration,
@@ -187,7 +187,7 @@ export function useAvatarDecorationSettings(arg0) {
 }
 export function useProfileEffectSettings(arg0) {
   _require = arg0;
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => ({
     pendingProfileEffect: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileEffect,
     errors: UserProfileSettingsStore.getErrors(closure_0).profileEffect,
@@ -195,7 +195,7 @@ export function useProfileEffectSettings(arg0) {
 }
 export function useProfileFrameSettings(arg0) {
   _require = arg0;
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => ({
     pendingProfileFrame: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileFrame,
     errors: UserProfileSettingsStore.getErrors(closure_0).profileFrame,

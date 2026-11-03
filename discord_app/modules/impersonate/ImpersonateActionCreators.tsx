@@ -35,7 +35,7 @@ function updateImpersonating(guildId, type) {
       if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
-          router_utils.transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+          router_utils.transitionTo(application_id.CHANNEL(guildId, defaultChannel.id));
           const tmp7Result = router_utils;
         }
       }
@@ -45,7 +45,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1072);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
@@ -61,7 +61,7 @@ export function startImpersonating(guildId, data) {
     if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp7)) {
       const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
       if (null != defaultChannel) {
-        router_utils.transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+        router_utils.transitionTo(application_id.CHANNEL(guildId, defaultChannel.id));
         const tmp2Result = router_utils;
       }
     }
@@ -78,9 +78,9 @@ export function updateImpersonatedChannels(guildId, items1, items2) {
   const item1 = items2.forEach((item) => set.delete(item));
   updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, optInChannels: set });
 }
-export function updateImpersonatedRoles(guildId, selectedRoleIds) {
-  (function optIntoPrivateChannelsForGrantedRolesForPreview(guildId, selectedRoleIds) {
-    let items = [...closure_4.getSelectableChannelIds(guildId), ...closure_4.getVocalChannelIds(guildId)];
+export function updateImpersonatedRoles(c0, selectedRoleIds) {
+  (function optIntoPrivateChannelsForGrantedRolesForPreview(c0, selectedRoleIds) {
+    items = [...closure_4.getSelectableChannelIds(c0), ...closure_4.getVocalChannelIds(c0)];
     closure_2 = Array.from(selectedRoleIds);
     const result = closure_4.addConditionalChangeListener(() => {
       selfMember = selfMember.getSelfMember(set);
@@ -107,20 +107,20 @@ export function updateImpersonatedRoles(guildId, selectedRoleIds) {
           set = new Set(optedInChannels.getOptedInChannels(tmp));
           const item = found.forEach((item) => set.add(item));
           const item1 = items1.forEach((item) => set.delete(item));
-          const obj = { type: guildId(closure_2[12]).ImpersonateType.NEW_MEMBER, optInChannels: set };
+          const obj = { type: c0(closure_2[12]).ImpersonateType.NEW_MEMBER, optInChannels: set };
           closure_1_15(tmp, obj);
         }
         return false;
       }
     });
-  })(guildId, selectedRoleIds);
+  })(c0, selectedRoleIds);
   let obj = {};
-  const manyRoles = GuildRoleStore.getManyRoles(guildId, selectedRoleIds);
+  const manyRoles = GuildRoleStore.getManyRoles(c0, selectedRoleIds);
   for (const item10013 of manyRoles) {
     obj[item10013.id] = item10013;
     continue;
   }
-  updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, roles: obj });
+  updateImpersonating(c0, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, roles: obj });
 }
 export function updateImpersonatedData(guildId, arg1) {
   const merged = Object.assign(arg1);

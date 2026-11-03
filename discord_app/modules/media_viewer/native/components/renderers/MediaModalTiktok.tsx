@@ -8,11 +8,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 let jsx = fn(21).jsx;
 let closure_6 = { autoplay: 1, controls: 0, enable_music_info: 0, enable_timestamp: 0, utm_source: "discord.gg" };
-let obj = { "-1": fn(8871).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
-obj[0] = fn(8871).PlayerState.ENDED;
-obj[1] = fn(8871).PlayerState.PLAYING;
-obj[2] = fn(8871).PlayerState.PAUSED;
-obj[3] = fn(8871).PlayerState.BUFFERING;
+let obj = { "-1": fn(8995).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
+obj[0] = fn(8995).PlayerState.ENDED;
+obj[1] = fn(8995).PlayerState.PLAYING;
+obj[2] = fn(8995).PlayerState.PAUSED;
+obj[3] = fn(8995).PlayerState.BUFFERING;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalTiktok.tsx");
 
@@ -42,7 +42,7 @@ export default noop.memo(function MediaModalTiktok(visible) {
   if (controls != null) {
     props1 = controls.props;
   }
-  const items = [props1];
+  items = [props1];
   const callback = obj.useCallback((arg0) => {
     const iter = JSON.parse(arg0);
     const type = iter.type;
@@ -289,7 +289,7 @@ export function createTiktokVideoControls() {
         const current = ref.current;
         if (current != null) {
           const _HermesInternal = HermesInternal;
-          current.injectJavaScript("\n    window.postMessage(" + tmp5 + ", '*')\n  ");
+          current.injectJavaScript("\n    window.postMessage(" + tmp6 + ", '*')\n  ");
         }
         const obj2 = { "x-tiktok-player": true };
       }

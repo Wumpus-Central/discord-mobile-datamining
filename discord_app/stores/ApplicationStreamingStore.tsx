@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import asyncRequireImpl from "../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02123_asyncRequireImpl.js";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
 import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
@@ -53,7 +53,7 @@ const Constants = fn(1072);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -68,7 +68,7 @@ const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStreamingStore extends PersistedStore {}
 const prototype = ApplicationStreamingStore.prototype;
 prototype["initialize"] = function initialize(selfStreamParticipantsHidden) {
-  const items = [PermissionStore];
+  items = [PermissionStore];
   this.syncWith(items, () => true);
   this.waitFor(
     AuthenticationStore,
@@ -116,7 +116,7 @@ prototype["getLastActiveStream"] = function getLastActiveStream() {
 prototype["getAllActiveStreams"] = function getAllActiveStreams() {
   if (canSpectateDefault(MediaEngineStore)) {
     const _Array = Array;
-    let items = Array.from(map.values());
+    items = Array.from(map.values());
   } else {
     items = [];
   }
@@ -313,13 +313,13 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
     return null;
   }
 };
-prototype["getStreamForUser"] = function getStreamForUser(userId, guildId) {
+prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
   if (canSpectateDefault(MediaEngineStore)) {
     let tmp5;
-    if (streamsByUserAndGuild[userId] != null) {
+    if (streamsByUserAndGuild[id] != null) {
       let tmp6 = guildId;
       if (guildId == null) {
-        tmp6 = __initData;
+        tmp6 = guild;
       }
       tmp5 = tmp4[tmp6];
     }
@@ -367,7 +367,7 @@ prototype["getRTCStream"] = function getRTCStream(arg0) {
   return tmp;
 };
 prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
-  const items = [];
+  items = [];
   if (canSpectateDefault(MediaEngineStore)) {
     for (const key10011 in streamsByUserAndGuild) {
       let keys = Object.keys();
@@ -405,7 +405,7 @@ prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
 };
 prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStreamsForChannel(id) {
   closure_0 = id;
-  const items = [];
+  items = [];
   if (canSpectateDefault(MediaEngineStore)) {
     for (const key10012 in streamsByUserAndGuild) {
       let keys = Object.keys();
@@ -700,7 +700,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6717);
+    const obj = sourceId(6837);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -792,11 +792,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6720, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6840, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6720, dependencyMap.paths);
+        const promise = asyncRequireImpl(6840, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

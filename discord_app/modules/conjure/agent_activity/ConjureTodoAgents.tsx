@@ -6,7 +6,7 @@ let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureT
 
 export const MAX_SHOWN_AGENTS = 3;
 export function runningTodoAgents(tasks) {
-  const items = [];
+  items = [];
   const iter = tasks[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

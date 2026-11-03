@@ -27,7 +27,7 @@ function ApplicationCommandOptionItem(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t.evoEHc, { optionName: option.displayName });
   obj.disabled = flag;
-  const items = [tmp2.applicationCommandOption, ,];
+  items = [tmp2.applicationCommandOption, ,];
   let activeCommandOption = flag;
   if (flag) {
     activeCommandOption = tmp2.activeCommandOption;
@@ -89,8 +89,8 @@ function ApplicationCommandOptionItem(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   applicationCommandBar: {
     flexDirection: "column",
@@ -158,7 +158,7 @@ obj2.applicationCommandOption = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(6778).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(6898).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 let obj5 = {
   marginHorizontal: 4,
@@ -166,7 +166,7 @@ let obj5 = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(6778).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(6898).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -190,7 +190,7 @@ obj2.descriptionEllipsis = {
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6778).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6898).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_11 = createStyles.createStyles(obj2);
 function ApplicationCommandOptionDescription(option) {
   option = option.option;
@@ -208,7 +208,7 @@ function ApplicationCommandOptionDescription(option) {
   [tmp10, c6] = noop.useState(0);
   const tmp11 = usePreviousDefault(first1);
   closure_7 = tmp11;
-  const items = [tmp4, option, first1, tmp11];
+  items = [tmp4, option, first1, tmp11];
   const effect = noop.useEffect(() => {
     if (closure_1 !== option) {
       closure_5(0);
@@ -309,7 +309,7 @@ export default function _default(command) {
   const tmp7 = currentOption(optionStates.useState(), 2);
   first = tmp7[0];
   closure_12 = tmp7[1];
-  const items = [command];
+  items = [command];
   const effect = optionStates.useEffect(() => {
     c0 = false;
     c1 = false;
@@ -396,11 +396,11 @@ export default function _default(command) {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = ref(section(5717), obj4);
+    tmp22 = ref(section(5837), obj4);
   }
   const items5 = [
     tmp22,
-    ref(command(5624).Text, {
+    ref(command(5747).Text, {
       style: tmp.applicationName,
       lineClamp: 1,
       variant: "text-sm/semibold",
@@ -456,7 +456,7 @@ export default function _default(command) {
     };
     const intl = tmp12(1113).intl;
     obj7.children = intl.string(tmp12(1113).t.U19GM3);
-    items7[1] = tmp25(tmp12(5624).Text, obj7);
+    items7[1] = tmp25(tmp12(5747).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -488,9 +488,9 @@ export default function _default(command) {
   obj3.children = items5;
   const items8 = [
     c10(closure_6, obj3),
-    ref(command(8177).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8301).FormDivider, { style: tmp.applicationDescriptionDivider }),
     ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }),
-    ref(command(8177).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8301).FormDivider, { style: tmp.applicationDescriptionDivider }),
   ];
   obj2.children = items8;
   return c10(onPressOption, obj2);

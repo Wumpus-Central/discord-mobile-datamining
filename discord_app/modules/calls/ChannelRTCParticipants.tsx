@@ -62,12 +62,12 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5681);
+const CallConstants = fn(5801);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-const Constants = fn(5768);
+const Constants = fn(5888);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -92,7 +92,7 @@ class ChannelRTCParticipants {
     set1 = new Set();
     obj.stageSpeakerIds = set1;
     secondaryIndexMap = new closure_0(closure_2[18]).SecondaryIndexMap((type) => {
-      const items = [];
+      items = [];
       if (tmp2) {
         items.push(obj.SPEAKING);
       }
@@ -128,7 +128,7 @@ class ChannelRTCParticipants {
         }
         return items;
       }
-      if (__initData(type)) {
+      if (closure_2_15(type)) {
         items.push(obj.STREAM);
         let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89480) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89837) {
   const self = this;
-  const userId = f89480;
+  const userId = f89837;
   let flag;
-  if (this.participants[f89480] != null) {
+  if (this.participants[f89837] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f894
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f89486, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f89843, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f89486] != null) {
+  if (this.participants[f89843] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -339,7 +339,7 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
   const selfEmbeddedActivityForChannel = EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(this.channelId);
   let uniqByResult = embeddedActivitiesForChannelIncludingHidden;
   if (null != selfEmbeddedActivityForChannel) {
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(embeddedActivitiesForChannelIncludingHidden, 0)] = selfEmbeddedActivityForChannel;
     uniqByResult = _mod12.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
   }
@@ -393,7 +393,7 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
     if (participants == null) {
       participants = [];
     }
-    const items = [...participants];
+    items = [...participants];
     obj.participants = items;
     const channel = ChannelStore.getChannel(self.channelId);
     let guildId;
@@ -409,7 +409,7 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
   });
 };
 prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) {
-  const items = [];
+  items = [];
   const user = UserStore.getUser(userId);
   if (null == user) {
     return items;

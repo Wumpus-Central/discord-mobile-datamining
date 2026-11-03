@@ -19,7 +19,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19233).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(19391).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -55,7 +55,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   const awaitingRemoteSessionInfo = channelId(style[15])();
   let obj = isConnectedToVoiceChannel(style[13]);
   let tmp = channelId;
-  let items = [awaitingRemoteSessionInfo];
+  items = [awaitingRemoteSessionInfo];
   const stateFromStores = isConnectedToVoiceChannel(style[16]).useStateFromStores(items, () =>
     awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
   );
@@ -153,7 +153,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   const memo = obj5.useMemo(() => {
     if (!obj.isAndroid()) {
       if (closure_15) {
-        const items = [];
+        items = [];
         let tmp4 = closure_7;
         let tmp5 = closure_7;
         if (!closure_7) {
@@ -253,7 +253,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "Array" };
+        const obj = { onPress, ref: "y" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };
@@ -265,7 +265,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
         tmp9 = isConnectedToVoiceChannel;
       }
       obj2.canShowTooltip = tmp9;
-      const items = [closure_2_14(closure_18, obj2)];
+      items = [gesture(closure_18, obj2)];
       const obj3 = { style, ref, children: null };
       const tmp3 = _objectWithoutProperties(tmp, closure_3);
       const obj4 = { ref: tmp.ref };
@@ -288,10 +288,10 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
       obj4.icon = tmp15;
       const intl = util.intl;
       obj4.accessibilityLabel = intl.string(util.t.dnI0AL);
-      obj3.children = closure_2_14(VoicePanelIconButtonDefault, obj4);
-      items[1] = closure_2_14(tmp11, obj3);
+      obj3.children = gesture(VoicePanelIconButtonDefault, obj4);
+      items[1] = gesture(tmp11, obj3);
       obj5.children = items;
-      return __initData2(__initData, obj5);
+      return value2(closure_2_15, obj5);
     }
     if (!tmp4Result2.isAndroid()) {
       if (tmp10) {

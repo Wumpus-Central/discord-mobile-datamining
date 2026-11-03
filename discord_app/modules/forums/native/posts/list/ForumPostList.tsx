@@ -9,10 +9,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 },
   content: { flex: 1, marginBottom: 12 },
@@ -39,7 +39,7 @@ export default function ForumPostList(arg0) {
     if (hasFlagResult) {
       tmp10 = timestampProducer(ForumPostPinIconDefault, {});
     }
-    const items = [tmp10];
+    items = [tmp10];
     let tmp13 = 0 !== first.length;
     if (tmp13) {
       const obj4 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads };

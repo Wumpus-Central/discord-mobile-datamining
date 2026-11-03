@@ -18,13 +18,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
-const DraftType = fn(7701).DraftType;
-const MediaKeyboardConstants = fn(1621);
+const DraftType = fn(7825).DraftType;
+const MediaKeyboardConstants = fn(1623);
 ({ MediaKeyboardTarget: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(12364).KEYBOARD_ANIMATION_CONFIG;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
+const KEYBOARD_ANIMATION_CONFIG = fn(12500).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default noop.memo(function MediaKeyboard(channel) {
   channel = channel.channel;
   const chatInputRef = channel.chatInputRef;
   let sharedValue;
-  let items = [,];
+  items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   ({ onClose, transitionState } = channel);
   const effect = sharedValue.useEffect(() => {
@@ -115,7 +115,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       } else if (keyboardContextForType.target === tmp4.COMMAND) {
         const result1 = channel(ref[18]).mediaNodeToUploadItem(item);
         if (extensions.length > 0) {
-          const items = [channel(ref[19]).getFileFromUploadItem(result1).filename];
+          items = [channel(ref[19]).getFileFromUploadItem(result1).filename];
           if (!validateFilenames(items)) {
             return showInvalidFileTypeAlert();
           }
@@ -269,7 +269,7 @@ export default noop.memo(function MediaKeyboard(channel) {
           if (fn != null) {
             tmp();
           }
-          const items = [arg0];
+          items = [arg0];
           onSelectFiles(items, Upload.UploadOrigin.IMAGE_EDITOR);
         };
         obj2.onRemove = onRemove;
@@ -320,7 +320,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       obj.text = intl.string(util.t.PHjkRE);
       obj.IconComponent = AppsIcon.AppsIcon;
       obj.onPress = memo.onAppsPress;
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       items1 = [];
@@ -364,7 +364,7 @@ export default noop.memo(function MediaKeyboard(channel) {
   let items4 = [sharedValue, sharedValue1, memo, channel.id, tmp8, memo1, token];
   const callback = sharedValue.useCallback(
     (animatedIndex) =>
-      closure_2_12(MediaKeyboardBottomSheetHeaderSimpleDefault, {
+      application_id(MediaKeyboardBottomSheetHeaderSimpleDefault, {
         animatedIndex: animatedIndex.animatedIndex,
         onPress: memo.onPressHeader,
       }),
@@ -382,15 +382,15 @@ export default noop.memo(function MediaKeyboard(channel) {
       initialPosition: animateOnMount.initialPosition,
       children: null,
     };
-    const items = [
-      closure_2_12(MediaKeyboardFloatingSendDefault, {
+    items = [
+      application_id(MediaKeyboardFloatingSendDefault, {
         ref,
         animatedIndex: sharedValue,
         channelId: channel.id,
         draftType: closure_8.draftType,
         onSend: memo.onSend,
       }),
-      closure_2_12(MediaKeyboardBottomSheetActionsDefault, {
+      application_id(MediaKeyboardBottomSheetActionsDefault, {
         canPostPolls: closure_8.canPostPolls,
         onHeightChange(arg0) {
           const current = ref.current;
@@ -405,7 +405,7 @@ export default noop.memo(function MediaKeyboard(channel) {
       }),
     ];
     obj.children = items;
-    return map1(MediaKeyboardAccessoriesContainerDefault, obj);
+    return state(MediaKeyboardAccessoriesContainerDefault, obj);
   }, items4);
   const obj8 = {
     animationConfigs: showInvalidFileTypeAlert,

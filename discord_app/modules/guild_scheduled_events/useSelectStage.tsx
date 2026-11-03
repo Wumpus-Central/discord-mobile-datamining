@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
   [first, asyncGeneratorStep] = noop.useState(stateFromStores);
   const items1 = [stateFromStores];

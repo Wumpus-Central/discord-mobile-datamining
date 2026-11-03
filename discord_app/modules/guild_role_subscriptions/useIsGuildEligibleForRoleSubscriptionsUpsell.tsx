@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   require("initialize");
   [][0] = UserStore;

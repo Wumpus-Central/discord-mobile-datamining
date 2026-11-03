@@ -9,9 +9,9 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function NitroFileUploadUpsellPromoSheet(markAsDismissed) {
   noop = undefined;
   onPress = undefined;
   importDefault = noop.useRef(false);
-  const items = [markAsDismissed];
+  items = [markAsDismissed];
   const callback = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;

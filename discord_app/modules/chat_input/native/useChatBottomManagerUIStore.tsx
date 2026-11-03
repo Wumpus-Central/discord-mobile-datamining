@@ -9,7 +9,7 @@ let obj = module_560.create(() => {
   obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null, smallSuggestionBarHeight: null };
   const map = new Map();
   obj.showingAutoComplete = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   obj.showJumpToPresentButtonChannelId = new Map();
   const map2 = new Map();
   obj.isAtBottom = new Map();

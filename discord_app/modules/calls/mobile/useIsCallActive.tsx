@@ -5,14 +5,14 @@ import ChannelRTCStore from "../ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 
 export default function useIsCallActive(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [CallStore, ChannelRTCStore];
+  items = [CallStore, ChannelRTCStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
@@ -38,7 +38,7 @@ export function checkIsCallActive(channelId, id) {
 export function useIsCallActiveNullable(id, arg1) {
   _require = id;
   dependencyMap = arg1;
-  const items = [CallStore, ChannelRTCStore];
+  items = [CallStore, ChannelRTCStore];
   const items1 = [id, arg1];
   return require("initialize").useStateFromStores(
     items,

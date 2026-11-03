@@ -23,7 +23,7 @@ const route = SettingBuilders.createRoute({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.uEz8JF), , , , ,];
+    items = [intl.string(util.t.uEz8JF), , , , ,];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["N/oRI+"]);
     const intl3 = util.intl;

@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const InputModes = fn(1072).InputModes;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 let closure_11 = {
   LURKER: "lurker",
   VOICE: "voice",
@@ -24,7 +24,7 @@ let closure_11 = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
@@ -58,7 +58,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   closure_129_2 = tmp3(tmp2[11])(arg0).needSubscriptionToAccess;
   closure_129_3 = tmp3(tmp2[12])();
   let obj2 = gradientBottom(stateFromStores[17]);
-  const items = [GatewayConnectionStore, ChannelStore, LurkingStore, MediaEngineStore, RTCConnectionStore];
+  items = [GatewayConnectionStore, ChannelStore, LurkingStore, MediaEngineStore, RTCConnectionStore];
   stateFromStores = tmp(stateFromStores[13]).useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(gradientBottom);
     if (channel != null) {

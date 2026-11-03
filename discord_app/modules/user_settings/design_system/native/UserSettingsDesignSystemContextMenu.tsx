@@ -3,15 +3,15 @@ import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5741 from "../../../../../_runtime/metro/05741__.js";
+import _modDef5861 from "../../../../../_runtime/metro/05861__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7262 from "../../../../../_runtime/metro/07262__.js";
-import _modDef8424 from "../../../../../_runtime/metro/08424__.js";
-import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
-import _modDef11597 from "../../../../../_runtime/metro/11597__.js";
-import _modDef14386 from "../../../../../_runtime/metro/14386__.js";
-import _modDef17790 from "../../../../../_runtime/metro/17790__.js";
-import _modDef17791 from "../../../../../_runtime/metro/17791__.js";
+import _modDef7382 from "../../../../../_runtime/metro/07382__.js";
+import _modDef8548 from "../../../../../_runtime/metro/08548__.js";
+import _modDef11729 from "../../../../../_runtime/metro/11729__.js";
+import _modDef11734 from "../../../../../_runtime/metro/11734__.js";
+import _modDef14517 from "../../../../../_runtime/metro/14517__.js";
+import _modDef17933 from "../../../../../_runtime/metro/17933__.js";
+import _modDef17934 from "../../../../../_runtime/metro/17934__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "circa {{count}} luni",
-            action: "1 lun\u0103",
+            variant: 0.003,
+            action: -3.334,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "circa {{count}} luni",
-          action: "1 lun\u0103",
+          variant: 0.003,
+          action: -3.334,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef14386,
-  _modDef7262,
-  _modDef8424,
-  _modDef11597,
-  _modDef5741,
-  _modDef17790,
-  _modDef17791,
-  _modDef11592,
+  _modDef14517,
+  _modDef7382,
+  _modDef8548,
+  _modDef11734,
+  _modDef5861,
+  _modDef17933,
+  _modDef17934,
+  _modDef11729,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -132,7 +132,7 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },
@@ -150,7 +150,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.card, children: null };
   items = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Basic Example" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -163,7 +163,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   const items1 = [timestampProducer(Card.Card, obj3), , , , ,];
   const obj4 = { style: tmp.card, children: null };
   const items2 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Long Press" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Long Press" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -175,7 +175,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[1] = timestampProducer(Card.Card, obj4);
   const obj5 = { style: tmp.card, children: null };
   const items3 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Sections" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Sections" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -187,7 +187,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[2] = timestampProducer(Card.Card, obj5);
   const obj6 = { style: tmp.card, children: null };
   const items4 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Automatic Alignment" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -206,7 +206,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[3] = timestampProducer(Card.Card, obj6);
   const obj8 = { style: tmp.card, children: null };
   const items5 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Intentional Alignment" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Intentional Alignment" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -232,7 +232,7 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[4] = timestampProducer(Card.Card, obj8);
   const obj13 = { style: tmp.card, children: null };
   const items6 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Overflow Scrolling" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Overflow Scrolling" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",

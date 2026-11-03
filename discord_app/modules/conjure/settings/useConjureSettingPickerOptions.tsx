@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/conjure/settings/useConjureSett
 export default function useConjureSettingPickerOptions(arg0, type) {
   _require = arg0;
   dependencyMap = type;
-  const items = [conjureGuildRoles];
+  items = [conjureGuildRoles];
   const items1 = [arg0, type.type];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -62,7 +62,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
         mapped = result.map((id) => {
           const obj = {
             id: id.id,
-            label: closure_1_0(5652).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
+            label: closure_1_0(5772).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
           };
           return obj;
         });
@@ -72,10 +72,10 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(12153).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(12289).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(12153);
-        obj2.label = closure_0(6041).getName(closure_1_0, null, id);
+        const obj = closure_0(12289);
+        obj2.label = closure_0(6161).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {
@@ -95,7 +95,7 @@ export function conjureSettingPickedIds(value) {
     return value;
   } else {
     if (typeof value !== "string") {
-      let items = [];
+      items = [];
     }
     const items1 = [value];
     items = items1;
@@ -106,7 +106,7 @@ export function withSavedPicks(arr, value, arg2) {
   closure_1 = arg2;
   if (Array.isArray(value)) {
     if (0 === value.length) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(arr, 0);
       let items1 = items;
     } else {
@@ -149,7 +149,7 @@ export function withSavedPicks(arr, value, arg2) {
 export function withPickCap(arr, arg1) {
   closure_0 = arg1;
   if (arg1.length < 25) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr, 0);
     let mapped = items;
   } else {
@@ -169,7 +169,7 @@ export function withPickCap(arr, arg1) {
 export function useConjureSettingsGuildId(projectId, isPreview) {
   _require = projectId;
   dependencyMap = isPreview;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [isPreview, projectId];
   return require("initialize").useStateFromStores(
     items,

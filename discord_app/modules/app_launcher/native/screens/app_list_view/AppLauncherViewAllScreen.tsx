@@ -13,13 +13,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     height: "100%",
@@ -59,8 +59,8 @@ let obj4 = {
 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 let size = {
-  width: fn(12461).BACK_BUTTON_SIZE,
-  height: fn(12461).BACK_BUTTON_SIZE,
+  width: fn(12597).BACK_BUTTON_SIZE,
+  height: fn(12597).BACK_BUTTON_SIZE,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -104,7 +104,7 @@ export default function AppLauncherViewAllScreen(route) {
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
   entrypoint = requiredAppLauncherContext.entrypoint;
-  let items = [chatInputRef, keyboardCloseReasonRef, navigation];
+  items = [chatInputRef, keyboardCloseReasonRef, navigation];
   onPress = applications.useCallback(() => {
     if (navigation.canGoBack()) {
       navigation.pop();
@@ -190,12 +190,12 @@ export default function AppLauncherViewAllScreen(route) {
     obj2.children = React5(ArrowLargeLeftIcon.ArrowLargeLeftIcon, {
       color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
     });
-    const items = [
+    items = [
       React5(Pressables.PressableOpacity, obj2),
       React5(Text_Text.Text, {
         accessibilityRole: "header",
         lineClamp: 1,
-        variant: "heading-lg/bold",
+        variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         children: title,
       }),
@@ -204,7 +204,7 @@ export default function AppLauncherViewAllScreen(route) {
     const obj4 = {
       accessibilityRole: "header",
       lineClamp: 1,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     };
@@ -303,7 +303,7 @@ export default function AppLauncherViewAllScreen(route) {
   const items8 = [sectionName, sectionOverallPosition, trackAppLauncherItemImpressionOnFirstView];
   const items9 = [sectionName, sectionOverallPosition, trackAppLauncherItemImpressionOnFirstView];
   const memo2 = applications.useMemo(() => {
-    const items = [
+    items = [
       {
         viewabilityConfig,
         onViewableItemsChanged(viewableItems) {
@@ -324,7 +324,7 @@ export default function AppLauncherViewAllScreen(route) {
     return items;
   }, items8);
   const memo3 = applications.useMemo(() => {
-    const items = [
+    items = [
       {
         viewabilityConfig,
         onViewableItemsChanged(viewableItems) {

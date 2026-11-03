@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/referral_program/hook
 
 export const MAX_REFERRALS_SENT = 3;
 export function useReferralProgramBannerDetails() {
-  const items = [ReferralTrialStore];
+  items = [ReferralTrialStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => authStore.getSentUserIds());
   const obj = stateFromStoresArray(504);
   const items1 = [UserStore];

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 export function useExperimentAssignment(experiment, maybeExtractIdResult) {
   _require = experiment;
   dependencyMap = maybeExtractIdResult;
-  const items = [ExperimentStore, ApexExperimentStore];
+  items = [ExperimentStore, ApexExperimentStore];
   return require("initialize").useStateFromStores(items, () => {
     if (experiment.system === ExperimentManager.ExperimentSystem.LEGACY) {
       const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(experiment.name);
@@ -34,7 +34,7 @@ export function useExperimentAssignment(experiment, maybeExtractIdResult) {
 export function getExperimentServerAssignment(name, id) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [ExperimentStore, ApexExperimentStore];
+    items = [ExperimentStore, ApexExperimentStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -51,10 +51,10 @@ export function getExperimentServerAssignment(name, id) {
 export function useExperimentServerAssignment(experiment, maybeExtractIdResult) {
   _require = experiment;
   dependencyMap = maybeExtractIdResult;
-  let items = [ExperimentStore, ApexExperimentStore];
+  items = [ExperimentStore, ApexExperimentStore];
   return require("initialize").useStateFromStores(items, () => {
     let name = closure_0;
-    const items = [ExperimentStore, ApexExperimentStore];
+    items = [ExperimentStore, ApexExperimentStore];
     [obj, obj2] = items;
     if (null == closure_0) {
       return null;

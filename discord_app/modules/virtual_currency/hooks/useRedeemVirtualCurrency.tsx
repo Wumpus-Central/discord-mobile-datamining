@@ -19,7 +19,7 @@ export function useRedeemVirtualCurrency(order) {
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(9560).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(9692).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,7 +31,7 @@ export function useRedeemVirtualCurrency(order) {
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(9560);
+  let obj = entitlements(9692);
   const orderSigning = require("useOrderSigning").useOrderSigning({
     order,
     errorSource: "orb_redeem_orders_api",
@@ -46,7 +46,7 @@ export function useRedeemVirtualCurrency(order) {
   if (null != order) {
     onSetIsSubmitting = order.onSetIsSubmitting;
   }
-  const items = [onSetIsSubmitting];
+  items = [onSetIsSubmitting];
   const tmp12 = _reportError((arg0) => {
     closure_4(arg0);
     if (null != onSetIsSubmitting) {
@@ -70,7 +70,7 @@ export function useRedeemVirtualCurrency(order) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ export function useRedeemVirtualCurrency(order) {
                   v4 = 4;
                   c8 = 1;
                   const obj9 = {
-                    value: skuId(7418).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
+                    value: skuId(7542).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
                     done: false,
                   };
                   return obj9;
@@ -142,7 +142,7 @@ export function useRedeemVirtualCurrency(order) {
               } else {
                 closure_131_4 = value;
                 if (0 === closure_131_4.length) {
-                  const orderProcessingPendingError = new skuId(7418).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new skuId(7542).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
                   dependencyMap(closure_131_4);

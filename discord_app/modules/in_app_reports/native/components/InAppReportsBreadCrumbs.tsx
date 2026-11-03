@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -62,14 +62,14 @@ export default function Breadcrumbs(element) {
         .flatMap(merged.history, (destination) => {
           [tmp] = destination.destination;
           const multiSelect = destination.multiSelect;
-          let state;
+          state = undefined;
           if (multiSelect != null) {
             state = multiSelect.state;
           }
           if (state == null) {
             state = {};
           }
-          const items = [null, null];
+          items = [null, null];
           const values = Object.values(state);
           if (values.length > 0) {
             items[0] = values.join(", ");
@@ -85,13 +85,13 @@ export default function Breadcrumbs(element) {
       } else {
         let obj2 = { style: tmp2.container, children: null };
         let map = require("Text/Text").Text;
-        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
         const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
         const intl = require("util").intl;
         const string = intl.string;
         if (hasItem) {
-          prop = tmp7(2674)["6mx/DP"];
+          prop = tmp7(2801)["6mx/DP"];
           let stringResult = string(prop);
         } else {
           stringResult = string(tmp12(1113).t["+3V9Tp"]);
@@ -107,7 +107,7 @@ export default function Breadcrumbs(element) {
             const obj2 = { style: closure_0.breadCrumbBar };
             tmp4 = React4(View, obj2);
           }
-          const items = [
+          items = [
             tmp4,
             React4(View, { style: closure_0.breadCrumbDot }),
             React4(Text_Text.Text, {
@@ -129,14 +129,14 @@ export default function Breadcrumbs(element) {
       const flatMapResult = found(12).flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
-        let state;
+        state = undefined;
         if (multiSelect != null) {
           state = multiSelect.state;
         }
         if (state == null) {
           state = {};
         }
-        const items = [null, null];
+        items = [null, null];
         const values = Object.values(state);
         if (values.length > 0) {
           items[0] = values.join(", ");

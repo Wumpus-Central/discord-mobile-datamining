@@ -9,7 +9,7 @@ export default function useControlsLock(arg0) {
   closure_0 = arg0;
   const generateStateLocker = noop.useContext(VoicePanelStateContextDefault).generateStateLocker;
   const first = noop.useState(() => generateStateLocker(closure_0))[0];
-  const items = [first];
+  items = [first];
   const layoutEffect = noop.useLayoutEffect(() => () => first.unlock(), items);
   return first;
 }

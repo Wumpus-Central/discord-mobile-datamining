@@ -130,7 +130,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     Friends,
     GuildMembers,
   } = closure_16);
-  let items = data[AffinitySuggestions];
+  items = data[AffinitySuggestions];
   if (undefined === items) {
     items = [];
   }
@@ -288,7 +288,7 @@ class UserSearch {
     secondaryIndexMap = new closure_0(closure_2[10]).SecondaryIndexMap(
       (arg0) => {
         ({ names, type } = arg0);
-        const items = [];
+        items = [];
         if (constants.PENDING_INCOMING === type) {
           items.push(closure_1_16.FriendRequests);
           const push = items.push;
@@ -462,7 +462,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   if (flag) {
     userSearchContext = UserSearchManagerDefault.getUserSearchContext((results) => {
       results = results.results;
-      let items;
+      items = undefined;
       if (items.currentQuery === results.query) {
         items = [];
         if (
@@ -774,7 +774,7 @@ export default function useUserListData(query) {
   const tmp = withGameFriends(withFriendSuggestions.useState(0), 2);
   const first = tmp[0];
   closure_14 = tmp3;
-  const items = [tmp[1], withGameFriends];
+  items = [tmp[1], withGameFriends];
   const memo = withFriendSuggestions.useMemo(
     () => new UserSearch(() => closure_1_14(Date.now()), withGameFriends),
     items,

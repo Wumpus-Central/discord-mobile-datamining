@@ -14,8 +14,12 @@ import SearchAutocompleteStore from "../../../../SearchAutocompleteStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9827);
-({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
+const SearchConstants = fn(9958);
+({
+  SearchListItemTypes: closure_10,
+  SearchQueryTagTypes: closure_11,
+  USER_ESTIMATED_ITEM_SIZE: closure_12,
+} = SearchConstants);
 const Constants = fn(1072);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
 const jsx = fn(21).jsx;
@@ -29,7 +33,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   _slicedToArray = undefined;
   let fullscreenPlaceholderCount;
   let callback3;
-  let items = [callback3];
+  items = [callback3];
   const items1 = [searchContext];
   const stateFromStores = searchContext(first[10]).useStateFromStores(
     items,
@@ -167,7 +171,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   }, items9);
   const items10 = [first, searchContext, fullscreenPlaceholderCount, stateFromStores, callback2, callback3, callback1];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
-    const items = [];
+    items = [];
     if (set1) {
       for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
         let obj2 = { type: constants.MESSAGE_PLACEHOLDER, key: null };

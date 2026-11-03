@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
@@ -19,12 +19,12 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;

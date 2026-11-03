@@ -20,7 +20,7 @@ export default function usePremiumGroupMembership() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [PremiumGroupStore];
+  items = [PremiumGroupStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({
     premiumGroupMembership: PremiumGroupStore.getMembership(),
     isFetchingMembership: PremiumGroupStore.isFetchingMembership(),

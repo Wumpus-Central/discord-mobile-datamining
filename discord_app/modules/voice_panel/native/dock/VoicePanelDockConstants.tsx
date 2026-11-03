@@ -1,57 +1,71 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockConstants.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import VoicePanelConstants from "../../VoicePanelConstants.tsx";
-import GestureConstants from "../../../gesture_handlers/native/GestureConstants.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const IS_IOS = VoicePanelConstants.IS_IOS;
-const sum = nativeDefault.space.PX_24 + nativeDefault.space.PX_4;
-let closure_1 = sum;
-const PX_16 = nativeDefault.space.PX_16;
+let sum = nativeDefault.space.PX_24 + nativeDefault.space.PX_4;
+const items = [
+  {
+    code: "(function getDockInset_VoicePanelDockConstantsTsx1(pressed){let[DOCK_PADDING_HORIZONTAL,DOCK_PADDING_HORIZONTAL_PRESSED]=this.__closure;return DOCK_PADDING_HORIZONTAL+(DOCK_PADDING_HORIZONTAL_PRESSED-DOCK_PADDING_HORIZONTAL)*pressed;})",
+  },
+  sum,
+  nativeDefault.space.PX_16,
+];
+let c0;
+let c1;
+[tmp3, tmp4, tmp5] = items;
 function getDockInset(arg0) {
-  return sum + (PX_16 - sum) * arg0;
+  return c0 + (c1 - c0) * arg0;
 }
-getDockInset.__closure = { DOCK_PADDING_HORIZONTAL: sum, DOCK_PADDING_HORIZONTAL_PRESSED: PX_16 };
-getDockInset.__workletHash = 14458064168941;
-getDockInset.__initData = {
-  code: "function getDockInset_VoicePanelDockConstantsTsx1(pressed){const{DOCK_PADDING_HORIZONTAL,DOCK_PADDING_HORIZONTAL_PRESSED}=this.__closure;return DOCK_PADDING_HORIZONTAL+(DOCK_PADDING_HORIZONTAL_PRESSED-DOCK_PADDING_HORIZONTAL)*pressed;}",
-};
+const items1 = [tmp4, tmp5];
+getDockInset.__closure = items1;
+getDockInset.__workletHash = 14543646828628;
+getDockInset.__initData = tmp3;
 const diff = nativeDefault.space.PX_16 - 4;
-let c3 = diff;
-const PX_24 = nativeDefault.space.PX_24;
+let closure_129_0 = diff;
+const items2 = [
+  {
+    code: "(function getVoicePanelDockPaddingBottom_VoicePanelDockConstantsTsx2(safeAreaBottom){let[IS_IOS,DOCK_PADDING_BOTTOM_MIN]=this.__closure;return IS_IOS?DOCK_PADDING_BOTTOM_MIN:Math.max(DOCK_PADDING_BOTTOM_MIN,safeAreaBottom);})",
+  },
+  fn(11360).IS_IOS,
+  nativeDefault.space.PX_24,
+];
+let closure_130_0;
+let closure_130_1;
+[tmp7, tmp8, tmp9] = items2;
 function getVoicePanelDockPaddingBottom(arg0) {
-  if (IS_IOS) {
-    let bound = PX_24;
+  if (c0) {
+    let bound = c1;
   } else {
     const _Math = Math;
-    bound = Math.max(PX_24, arg0);
+    bound = Math.max(c1, arg0);
   }
   return bound;
 }
-getVoicePanelDockPaddingBottom.__closure = { IS_IOS, DOCK_PADDING_BOTTOM_MIN: PX_24 };
-getVoicePanelDockPaddingBottom.__workletHash = 11572795728510;
-getVoicePanelDockPaddingBottom.__initData = {
-  code: "function getVoicePanelDockPaddingBottom_VoicePanelDockConstantsTsx2(safeAreaBottom){const{IS_IOS,DOCK_PADDING_BOTTOM_MIN}=this.__closure;return IS_IOS?DOCK_PADDING_BOTTOM_MIN:Math.max(DOCK_PADDING_BOTTOM_MIN,safeAreaBottom);}",
-};
+const items3 = [tmp8, tmp9];
+getVoicePanelDockPaddingBottom.__closure = items3;
+getVoicePanelDockPaddingBottom.__workletHash = 1051676343655;
+getVoicePanelDockPaddingBottom.__initData = tmp7;
+const items4 = [
+  {
+    code: "(function getVoicePanelDockHeight_VoicePanelDockConstantsTsx3(safeAreaBottom){let[DOCK_PADDING_TOP,DOCK_ROW_HEIGHT,getVoicePanelDockPaddingBottom]=this.__closure;return DOCK_PADDING_TOP+DOCK_ROW_HEIGHT+getVoicePanelDockPaddingBottom(safeAreaBottom);})",
+  },
+  diff,
+  40,
+  getVoicePanelDockPaddingBottom,
+];
+let closure_131_0;
+let closure_131_1;
+let closure_131_2;
+[tmp10, tmp11, tmp12, tmp13] = items4;
 function getVoicePanelDockHeight(arg0) {
-  if (typeof getVoicePanelDockPaddingBottom === "function") {
-    if (IS_IOS) {
-      let bound = PX_24;
-    } else {
-      const _Math = Math;
-      bound = Math.max(PX_24, arg0);
-    }
-    return tmp + 40 + bound;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+  const sum = c0 + c1;
+  return sum + React2(arg0);
 }
-getVoicePanelDockHeight.__closure = { DOCK_PADDING_TOP: diff, DOCK_ROW_HEIGHT: 40, getVoicePanelDockPaddingBottom };
-getVoicePanelDockHeight.__workletHash = 14003451949817;
-getVoicePanelDockHeight.__initData = {
-  code: "function getVoicePanelDockHeight_VoicePanelDockConstantsTsx3(safeAreaBottom){const{DOCK_PADDING_TOP,DOCK_ROW_HEIGHT,getVoicePanelDockPaddingBottom}=this.__closure;return DOCK_PADDING_TOP+DOCK_ROW_HEIGHT+getVoicePanelDockPaddingBottom(safeAreaBottom);}",
-};
-const result = 1 / GestureConstants.PULL_GESTURE_RESISTANCE;
+const items5 = [tmp11, tmp12, tmp13];
+getVoicePanelDockHeight.__closure = items5;
+getVoicePanelDockHeight.__workletHash = 8239861783104;
+getVoicePanelDockHeight.__initData = tmp10;
+const result = 1 / fn(11379).PULL_GESTURE_RESISTANCE;
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockConstants.tsx");
 
 export const DOCK_ROW_HEIGHT = 40;
@@ -63,7 +77,7 @@ export { getDockInset };
 export const DOCK_PADDING_TOP = diff;
 export { getVoicePanelDockHeight };
 export function getVoicePanelDockButtonsTop(arg0) {
-  return arg0 - diff - 4;
+  return arg0 - c0 - 4;
 }
 export const DOCK_GAP = nativeDefault.space.PX_12;
 export const DOCK_DRAG_HANDLE_WIDTH = 48;

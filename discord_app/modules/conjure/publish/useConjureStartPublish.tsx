@@ -16,7 +16,7 @@ export default function useConjureStartPublish(arg0, arg1, arg2, arg3) {
   if (arg2 == null) {
     context = noop.useContext(require("useConjurePublishAction").ConjurePublishActionContext);
   }
-  const items = [arg0, arg1, context, arg3];
+  items = [arg0, arg1, context, arg3];
   return noop.useCallback((entryPoint) => {
     if (null != closure_0) {
       if (null != closure_1) {

@@ -19,7 +19,7 @@ export default function usePlayingGameActivities(arg0, arg1) {
   if (arg2 === undefined) {
     flag = true;
   }
-  const items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
+  items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (flag) {
       if (AuthenticationStore.getId() === closure_0) {

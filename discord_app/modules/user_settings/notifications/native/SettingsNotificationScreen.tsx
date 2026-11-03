@@ -4,7 +4,6 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NotificationPermissionUtil from "../../../nuf/native/NotificationPermissionUtil.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
@@ -16,51 +15,45 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function SystemNotificationsSubLabel() {
   const tmp = closure_10();
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("SystemNotificationsSubLabel");
   let showReactivationPrompt = NotificationPermissionUtil.useShowReactivationPrompt();
-  const obj3 = ContextualOptInNudgeHoldoutExperimentDefault;
+  const obj2 = ContextualOptInNudgeHoldoutExperimentDefault;
   let result = SettingsNotificationUtils.hasAndroidNotificationChannels();
   if (result) {
-    let str = "text-sm/medium";
-    if (manaTypeConsolidationExperiment) {
-      str = "experimental/body-xs/normal";
-    }
-    const obj5 = { variant: str, color: "text-muted", children: null };
+    const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
-    obj5.children = intl.string(util.t["/TZX1J"]);
-    result = React5(Text_Text.Text, obj5);
+    obj4.children = intl.string(util.t["/TZX1J"]);
+    result = React5(Text_Text.Text, obj4);
   }
   const children = [result];
   if (showReactivationPrompt) {
-    showReactivationPrompt = obj3.useConfig({ location: "SystemNotificationsSubLabel" }).inHoldout;
+    showReactivationPrompt = obj2.useConfig({ location: "SystemNotificationsSubLabel" }).inHoldout;
   }
   if (showReactivationPrompt) {
-    const obj6 = { style: tmp.card, children: null };
-    const obj7 = { border: "none", shadow: "none", children: null };
-    const obj8 = { style: tmp.cardContent, children: null };
-    const obj9 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-    const items1 = [React5(CircleErrorIcon.CircleErrorIcon, obj9)];
-    const obj10 = { style: tmp.text, children: null };
-    const obj11 = { color: "text-default", variant: "text-sm/medium", children: null };
+    const obj5 = { style: tmp.card, children: null };
+    const obj6 = { border: "none", shadow: "none", children: null };
+    const obj7 = { style: tmp.cardContent, children: null };
+    const obj8 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+    const items1 = [React5(CircleErrorIcon.CircleErrorIcon, obj8)];
+    const obj9 = { style: tmp.text, children: null };
+    const obj10 = { color: "text-default", variant: "text-sm/medium", children: null };
     const intl2 = util.intl;
-    obj11.children = intl2.string(util.t.TAuasM);
-    obj10.children = React5(Text_Text.Text, obj11);
-    items1[1] = React5(View, obj10);
-    obj8.children = items1;
-    obj7.children = React6(View, obj8);
-    obj6.children = React5(Card.Card, obj7);
-    showReactivationPrompt = React5(View, obj6);
+    obj10.children = intl2.string(util.t.TAuasM);
+    obj9.children = React5(Text_Text.Text, obj10);
+    items1[1] = React5(View, obj9);
+    obj7.children = items1;
+    obj6.children = React6(View, obj7);
+    obj5.children = React5(Card.Card, obj6);
+    showReactivationPrompt = React5(View, obj5);
   }
   children[1] = showReactivationPrompt;
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(17476).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+let closure_5 = fn(17619).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   card: {
     marginBottom: 8,
@@ -85,13 +78,13 @@ export default noop.memo(function SettingsNotificationsScreen() {
   const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
     .inHoldout;
   closure_0 = tmp;
-  let items = [tmp];
+  items = [tmp];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.clE4PU);
-    const items = [,];
+    items = [,];
     ({ IN_APP_NOTIFICATIONS: arr[0], IN_APP_MESSAGE_SOUNDS: arr[1] } = MobileUserSettings);
     obj3.settings = items;
     const items1 = [obj3, , , , , , , , , , , , , , , , , ,];
@@ -197,7 +190,7 @@ export default noop.memo(function SettingsNotificationsScreen() {
     closure_1_5();
   }, []);
   const effect1 = noop.useEffect(() => {
-    const result = closure_0(dependencyMap[17]).prefetchFamilyCenterAgeGroup();
+    const result = closure_0(dependencyMap[16]).prefetchFamilyCenterAgeGroup();
   }, []);
   return closure_7(SettingLayoutDefault, { node });
 });

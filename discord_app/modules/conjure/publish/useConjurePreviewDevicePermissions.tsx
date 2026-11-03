@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePre
 
 export default function useConjurePreviewDevicePermissions(arg0) {
   _require = arg0;
-  const items = [ConjurePublishStatusStore];
+  items = [ConjurePublishStatusStore];
   return require("initialize").useStateFromStores(items, () => {
     const publishStatus = ConjurePublishStatusStore.getPublishStatus(closure_0);
     let prop;

@@ -14,7 +14,7 @@ export function setCurrentImpression(arg0) {
   require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
       const obj = { impressions: null };
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_1_0;
       obj.impressions = items;
       return obj;

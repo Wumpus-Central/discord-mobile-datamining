@@ -39,7 +39,7 @@ export default function useSafeAreaInsetsKeyboardAware() {
   c6 = undefined;
   const tmp2 = flag2(flag3[5])();
   const appEntryKey = flag(flag3[6]).useAppEntryKey();
-  const items = [appEntryKey, flag3, flag, flag2];
+  items = [appEntryKey, flag3, flag, flag2];
   callback = callback.useCallback(() => {
     if (obj.isIOS()) {
       if (!flag) {

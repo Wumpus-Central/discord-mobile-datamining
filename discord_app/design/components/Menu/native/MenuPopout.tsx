@@ -36,7 +36,7 @@ export function MenuPopout(onRequestOpen) {
   const tmp4 = position(align.useState(false), 2);
   isShown = tmp4[0];
   closure_10 = tmp4[1];
-  const items = [key, onRequestClose];
+  items = [key, onRequestClose];
   const mapped = menuItems.map((label) => ({ name: label.label, label: label.label }));
   onClose = align.useCallback(() => {
     closure_10(false);
@@ -58,8 +58,8 @@ export function MenuPopout(onRequestOpen) {
         children: menuItems.map((item, index) => {
           const obj = { children: null };
           const merged = Object.assign(item);
-          obj.children = offset(menuItems(15822).MenuItem, { showIconFirst: true });
-          return offset(menuItems(15821).MenuGroup, obj, "chat-context-menu-group-" + index);
+          obj.children = offset(menuItems(15965).MenuItem, { showIconFirst: true });
+          return offset(menuItems(15964).MenuGroup, obj, "chat-context-menu-group-" + index);
         }),
       }),
     items1,

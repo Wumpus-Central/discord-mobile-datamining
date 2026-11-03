@@ -10,7 +10,7 @@ const View = fn(17).View;
 const CurrencyCodes = fn(1083).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -50,7 +50,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   obj4.children = intl.format(selectedTemplate(newPricesToPick[10]).t["5WZ9Ct"], {
     tierName: selectedTemplate.listings[0].name,
   });
-  let items = [
+  items = [
     closure_7(selectedTemplate(newPricesToPick[9]).Text, obj4),
     closure_7(selectedTemplate(newPricesToPick[11]).Spacer, { size: 12 }),
     ,
@@ -91,7 +91,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
     const obj2 = {};
     const merged1 = Object.assign(selectedTemplate.listings[0]);
     obj2.price_tier = newPricesToPick[first];
-    const items = [obj2];
+    items = [obj2];
     obj.listings = items;
     importDefault(obj, true);
   };

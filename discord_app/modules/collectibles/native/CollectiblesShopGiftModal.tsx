@@ -34,7 +34,7 @@ function CollectiblesShopGiftModalContent(product) {
     }
     tmp5 = result;
   }
-  const items = [onGiftModalDismiss];
+  items = [onGiftModalDismiss];
   obj = require("PlatformUtils");
   const callback = noop.useCallback(() => {
     openGiftModal.closeShopGiftModal();
@@ -133,7 +133,7 @@ export default function CollectiblesShopGiftModal(skuId) {
   ({ lockedRecipientUser, giftingOrigin } = skuId);
   const GiftingBadgeExperiment = skuId(skuId1[15]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
-  const items = [enabled];
+  items = [enabled];
   const effect = noop.useEffect(() => {
     if (enabled) {
       const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);

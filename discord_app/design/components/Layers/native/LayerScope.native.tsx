@@ -8,10 +8,10 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5613).LayerContext);
+  const context = noop.useContext(zIndex(5736).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
-  const items = [context];
+  items = [context];
   const effect = noop.useEffect(() => {
     context.invalidate = () => closure_1_2({});
     return () => {
@@ -53,7 +53,7 @@ export function LayerScope(arg0) {
     }),
     children: null,
   };
-  const items = [children, React6(Layer, { zIndex })];
+  items = [children, React6(Layer, { zIndex })];
   obj.children = items;
   return React7(LayerContext.LayerContext.Provider, obj);
 }

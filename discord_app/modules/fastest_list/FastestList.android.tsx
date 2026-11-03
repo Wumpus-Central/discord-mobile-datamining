@@ -1,18 +1,18 @@
 // discord_app/modules/fastest_list/FastestList.android.tsx
 import FastestListNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
-import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
+import module_1652_mod from "../../../_runtime/metro/01652__.js";
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let ReanimatedRexport = ReanimatedRexport_mod;
-ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-let ReanimatedRexport = ReanimatedRexport_mod;
-const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(5275);
+let module_1652 = module_1652_mod;
+module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
+let module_1652 = module_1652_mod;
+const FastestListNativeComponent = module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
+const BottomSheetModal = fn(5398);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(5275).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(5398).SCROLLABLE_TYPE.SCROLLVIEW,
   FastestListNativeComponent,
 );
 let closure_9 = 0;
@@ -88,7 +88,7 @@ export default function FastestList(ref) {
   ref = listId.useRef(null);
   ref1 = listId.useRef(null);
   ref2 = listId.useRef(merged);
-  const items = [merged];
+  items = [merged];
   const effect = listId.useEffect(() => {
     ref2.current = merged;
   }, items);

@@ -25,7 +25,7 @@ export default noop.memo(function GIFFavButton(source) {
   let YELLOW_300 = isFavoriteGIF;
   let obj = source(isFavoriteGIF[2]);
   isFavoriteGIF = obj.useIsFavoriteGIF(source(isFavoriteGIF[3]).gifUrlKey(uri));
-  const items = [isFavoriteGIF, , , , , , ,];
+  items = [isFavoriteGIF, , , , , , ,];
   ({
     embedProviderName: arr[1],
     height: arr[2],

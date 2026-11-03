@@ -29,7 +29,7 @@ export function useTimestampTickedNow() {
     2,
   );
   _require = now[1];
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
@@ -47,7 +47,7 @@ export function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(4858).Interval();
+    const interval = new closure_0(4985).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / c1(1089).Millis.SECOND);

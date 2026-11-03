@@ -1,8 +1,8 @@
 // discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
+import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import MfaScreenUtilsDefault from "../MfaScreenUtils.tsx";
 import BackButtonDefault from "../components/BackButton.tsx";
@@ -31,10 +31,10 @@ export default function MFAOptionScreen(arg0) {
   if (tmp9) {
     tmp9 = headerImage;
   }
-  const items = [
+  items = [
     tmp9,
     React4(Text_Text.Heading, {
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       style: screenStyles.mfaContainerHeaderText,
       children: headerText,
     }),
@@ -42,7 +42,7 @@ export default function MFAOptionScreen(arg0) {
   ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
-    const obj4 = { variant: "heading-sm/normal", color: "text-default", children: subtitle };
+    const obj4 = { variant: "heading-sm/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;

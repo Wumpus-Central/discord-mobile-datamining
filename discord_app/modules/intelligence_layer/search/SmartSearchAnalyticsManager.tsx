@@ -7,7 +7,7 @@ import SuggestedSearchStore from "SuggestedSearchStore.tsx";
 require = fn;
 function getCitationCompositionProperties(citations) {
   const set = new Set();
-  const items = [];
+  items = [];
   const items1 = [];
   const items2 = [];
   const iter = citations[Symbol.iterator]();

@@ -26,7 +26,7 @@ let closure_6 = async function _withConjureDatabaseLock(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ export function withConjureDatabaseLock() {
 }
 export function useConjureDatabaseBusy(projectId) {
   closure_0 = projectId;
-  const items = [projectId];
+  items = [projectId];
   return noop.useSyncExternalStore(
     subscribe,
     noop.useCallback(() => set.has(closure_0), items),

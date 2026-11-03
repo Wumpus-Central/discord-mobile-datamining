@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: {
     gap: nativeDefault.space.PX_8,
@@ -57,7 +57,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   };
   const intl = util.intl;
   obj5.children = intl.string(util.t["/4gj6r"]);
-  const items = [closure_4(Text_Text.Text, obj5)];
+  items = [closure_4(Text_Text.Text, obj5)];
   const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.format(util.t["0acM2Y"], { gameName: gameName.gameName });

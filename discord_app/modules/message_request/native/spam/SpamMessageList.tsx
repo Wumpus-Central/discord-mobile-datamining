@@ -22,7 +22,7 @@ function PendingSpamMessageRequestRow(isLastRow) {
     id,
     channel.getRecipientId(),
   );
-  const items = [id, hasSingleMessageRequest];
+  items = [id, hasSingleMessageRequest];
   const callback = channel.useCallback(() => {
     const obj2 = { text: null, variant: "critical" };
     const intl = require("util").intl;
@@ -200,7 +200,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -278,7 +278,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     let tmp10Result = closure_7(tmp2(tmp3[26]), obj3);
     const tmp2Result = tmp2(tmp3[26]);
   } else {
-    const items = [tmp.list];
+    items = [tmp.list];
     let num = 0;
     if (tmp4Result.isAndroid()) {
       num = bottom;

@@ -36,36 +36,38 @@ export const ICYMIAnalytics = {
         item = item.item;
         const kind = item.data.kind;
         if ("end" === kind) {
-          let str3 = "end";
+          let str4 = "end";
         } else if ("loading" === kind) {
-          str3 = "loading";
+          str4 = "loading";
         } else {
-          let str6 = "message";
+          let str7 = "message";
           if ("message" === kind) {
             if (item.channelType === constants.GUILD_ANNOUNCEMENT) {
-              str6 = "announcement";
+              str7 = "announcement";
             }
-            str3 = str6;
+            str4 = str7;
           } else if ("guildEvent" === kind) {
-            str3 = "guild_event";
+            str4 = "guild_event";
           } else if ("contentInventory" === kind) {
-            let str5 = "hotwheels_gaming_activity";
+            let str6 = "hotwheels_gaming_activity";
             if (item.data.content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS) {
-              str5 = "hotwheels_custom_status";
+              str6 = "hotwheels_custom_status";
             }
-            str3 = str5;
+            str4 = str6;
           } else if ("recommendedGuilds" === kind) {
-            str3 = "recommended_guilds";
+            str4 = "recommended_guilds";
+          } else if ("waterwheelsItem" === kind) {
+            str4 = "discover_item";
           } else if ("forumThread" === kind) {
-            str3 = "forum_thread";
+            str4 = "forum_thread";
           } else {
-            str3 = "icymi_header";
+            str4 = "icymi_header";
             if ("icymiHeader" !== kind) {
-              str3 = "unknown";
+              str4 = "unknown";
             }
           }
         }
-        return str3;
+        return str4;
       }),
       num_items: viewableItems.length,
       all_feed_item_ids: arr2.map((id) => id.id),
@@ -86,36 +88,38 @@ export const ICYMIAnalytics = {
         item = item.item;
         const kind = item.data.kind;
         if ("end" === kind) {
-          let str3 = "end";
+          let str4 = "end";
         } else if ("loading" === kind) {
-          str3 = "loading";
+          str4 = "loading";
         } else {
-          let str6 = "message";
+          let str7 = "message";
           if ("message" === kind) {
             if (item.channelType === constants.GUILD_ANNOUNCEMENT) {
-              str6 = "announcement";
+              str7 = "announcement";
             }
-            str3 = str6;
+            str4 = str7;
           } else if ("guildEvent" === kind) {
-            str3 = "guild_event";
+            str4 = "guild_event";
           } else if ("contentInventory" === kind) {
-            let str5 = "hotwheels_gaming_activity";
+            let str6 = "hotwheels_gaming_activity";
             if (item.data.content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS) {
-              str5 = "hotwheels_custom_status";
+              str6 = "hotwheels_custom_status";
             }
-            str3 = str5;
+            str4 = str6;
           } else if ("recommendedGuilds" === kind) {
-            str3 = "recommended_guilds";
+            str4 = "recommended_guilds";
+          } else if ("waterwheelsItem" === kind) {
+            str4 = "discover_item";
           } else if ("forumThread" === kind) {
-            str3 = "forum_thread";
+            str4 = "forum_thread";
           } else {
-            str3 = "icymi_header";
+            str4 = "icymi_header";
             if ("icymiHeader" !== kind) {
-              str3 = "unknown";
+              str4 = "unknown";
             }
           }
         }
-        return str3;
+        return str4;
       }),
       num_items: viewableItems.length,
       all_feed_item_ids: arr2.map((id) => id.id),

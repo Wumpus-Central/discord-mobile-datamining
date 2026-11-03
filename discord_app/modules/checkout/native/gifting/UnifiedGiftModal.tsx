@@ -17,7 +17,7 @@ export default function UnifiedGiftModal(analyticsLocations) {
   const tmp = validateRecipient(renderProductDetails.useState(lockedRecipientUser), 2);
   const first = tmp[0];
   closure_7 = tmp[1];
-  const items = [onGiftModalDismiss];
+  items = [onGiftModalDismiss];
   const callback = renderProductDetails.useCallback(() => {
     ModalActionCreatorsDefault.pop();
     if (onGiftModalDismiss != null) {

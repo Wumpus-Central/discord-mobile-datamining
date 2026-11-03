@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pill: {
     paddingHorizontal: 10,
@@ -31,10 +31,10 @@ const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPrev
 export default function ServerPreviewPill() {
   const tmp = closure_4();
   const obj = { style: tmp.pill, accessibilityRole: "text", children: null };
-  const obj2 = { variant: "text-xs/bold", style: tmp.text, children: null };
+  const obj2 = { variant: "text-xs/semibold", style: tmp.text, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.KNhFgD);
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.text, children: null });
   return (
     <View style={tmp.pill} accessibilityRole="text">
       {null}

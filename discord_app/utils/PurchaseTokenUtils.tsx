@@ -33,7 +33,7 @@ let closure_6 = async function _getPurchaseTokenHash() {
   closure_0 = 0;
   const _Uint8Array = Uint8Array;
   const uint8Array1 = new Uint8Array(closure_129_0);
-  const items = [];
+  items = [];
   closure_0 = HermesBuiltin.arraySpread(uint8Array1, closure_0);
   const _String2 = String;
   return btoa(HermesBuiltin.apply(items, String));

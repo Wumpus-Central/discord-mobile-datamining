@@ -9,6 +9,6 @@ const result = size.fileFinishedImporting(
 );
 
 export function useIsAllowGameFriendDMsSettingVisible() {
-  const items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
 }

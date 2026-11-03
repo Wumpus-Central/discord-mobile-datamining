@@ -63,7 +63,7 @@ export function queryData(apps, limit) {
           bucketPredicates1 = [];
         }
         tmp = (function applyBucketing(found, bucketPredicates1, limit) {
-          const items = [];
+          items = [];
           let tmp = found;
           const iter = bucketPredicates1[Symbol.iterator]();
           while (iter !== undefined) {
@@ -90,7 +90,7 @@ export function queryData(apps, limit) {
       }
     }
   }
-  let items = [found];
+  items = [found];
   let sortComparers = limit.sortComparers;
   if (sortComparers == null) {
     sortComparers = [];

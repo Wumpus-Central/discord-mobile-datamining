@@ -10,7 +10,7 @@ export function useAutoSelectTraitOption(paused) {
   const first = availableTraitOptions[0];
   const someResult = availableTraitOptions.some((optionId) => optionId.optionId === noop);
   c4 = someResult;
-  const items = [first, someResult, onSelectOption, paused];
+  items = [first, someResult, onSelectOption, paused];
   const effect = noop.useEffect(() => {
     let tmp = paused;
     if (!paused) {

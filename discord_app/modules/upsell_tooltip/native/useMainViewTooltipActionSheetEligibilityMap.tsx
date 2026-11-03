@@ -26,7 +26,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
@@ -48,7 +48,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useMainViewTooltipActionSheetMap() {
-  let items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   let stateFromStores = initialize.useStateFromStores(items, () =>
     UserSettingsProtoStore.hasLoaded(constants.PRELOADED_USER_SETTINGS),
   );
@@ -69,13 +69,13 @@ export function useMainViewTooltipActionSheetMap() {
   const items2 = [GooglePlayPriceChangeStore];
   const tmpResult18 = initialize;
   [tmp8, tmp9] = initialize.useStateFromStoresArray(items2, () => {
-    const items = [,];
+    items = [,];
     ({ shouldShowGooglePlayPriceChange: arr[0], priceChangeRecord: arr[1] } = GooglePlayPriceChangeStore);
     return items;
   });
   const tmp7 = _slicedToArray(
     initialize.useStateFromStoresArray(items2, () => {
-      const items = [,];
+      items = [,];
       ({ shouldShowGooglePlayPriceChange: arr[0], priceChangeRecord: arr[1] } = GooglePlayPriceChangeStore);
       return items;
     }),
@@ -97,7 +97,7 @@ export function useMainViewTooltipActionSheetMap() {
   const items4 = [ReferralTrialStore];
   const tmpResult22 = initialize;
   [tmp14, tmp15] = initialize.useStateFromStoresArray(items4, () => {
-    const items = [
+    items = [
       ReferralTrialStore.getReferralsRemaining({ bypassFetch: true }),
       ReferralTrialStore.getRecurringReminderStateId(),
     ];
@@ -105,7 +105,7 @@ export function useMainViewTooltipActionSheetMap() {
   });
   const tmp13 = _slicedToArray(
     initialize.useStateFromStoresArray(items4, () => {
-      const items = [
+      items = [
         ReferralTrialStore.getReferralsRemaining({ bypassFetch: true }),
         ReferralTrialStore.getRecurringReminderStateId(),
       ];

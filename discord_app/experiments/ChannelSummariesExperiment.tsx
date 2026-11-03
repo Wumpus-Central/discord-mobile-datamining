@@ -27,7 +27,7 @@ function canSeeChannelSummaries(channel) {
       if (str == null) {
         str = "";
       }
-      const guild = GuildStore.getGuild(str);
+      guild = GuildStore.getGuild(str);
       const SUMMARIZEABLE = constants.SUMMARIZEABLE;
       const tmp4 = null != guild && guild.rulesChannelId === channel.id;
       const tmp6 = isGuildNSFW(guild);
@@ -144,7 +144,7 @@ export function useChannelSummariesExperiment(channel) {
 }
 export function useGuildEligibleForSummaries(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("useStateFromStores").useStateFromStores(
     items,
@@ -156,7 +156,7 @@ export function useGuildEligibleForSummaries(arg0) {
       if (id1 == null) {
         id1 = React5;
       }
-      const guild = GuildStore.getGuild(id1);
+      guild = GuildStore.getGuild(id1);
       let tmp4 = null != guild;
       if (tmp4) {
         id = guild.id;

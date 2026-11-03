@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13383).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10727).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13519).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -67,7 +67,7 @@ export default function ForwardModal(message) {
   let height = forwardOptions(source[15])({ ignoreKeyboard: true }).height;
   const channel_id = message.channel_id;
   const id = message.id;
-  const items = [channel_id];
+  items = [channel_id];
   const memo = channel_id.useMemo(() => formatResults.getDestinationIdFromChannelId(channel_id), items);
   [tmp7, c7] = height(channel_id.useState(false), 2);
   const tmp6 = height(channel_id.useState(false), 2);
@@ -192,7 +192,7 @@ export default function ForwardModal(message) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -261,9 +261,9 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5960).openAlert(
+                    closure_1_0(6080).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(13389), {
+                      closure_1_15(forwardOptions(13525), {
                         onConfirm() {
                           return closure_0(true);
                         },
@@ -460,7 +460,7 @@ export default function ForwardModal(message) {
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.Xrt5Po);
       obj.IconComponent = LinkIcon.LinkIcon;
-      tmp = __initData(HeaderActionButton.HeaderActionButton, obj);
+      tmp = closure_2_15(HeaderActionButton.HeaderActionButton, obj);
     }
     return tmp;
   };

@@ -13,7 +13,7 @@ export default function useDockBoxShadow(SHADOW_MEDIUM) {
   shadowRadius = nativeStyles.shadowRadius;
   const shadowColor = nativeStyles.shadowColor;
   const shadowOpacity = nativeStyles.shadowOpacity;
-  let items = [shadowOffset, shadowRadius, shadowColor, shadowOpacity];
+  items = [shadowOffset, shadowRadius, shadowColor, shadowOpacity];
   return shadowColor.useMemo(() => {
     const obj = {
       offsetX: shadowOffset.width,
@@ -21,7 +21,7 @@ export default function useDockBoxShadow(SHADOW_MEDIUM) {
       blurRadius: shadowRadius,
       color: ColorUtils.hexWithOpacity(shadowColor, shadowOpacity),
     };
-    const items = [obj];
+    items = [obj];
     return items;
   }, items);
 }

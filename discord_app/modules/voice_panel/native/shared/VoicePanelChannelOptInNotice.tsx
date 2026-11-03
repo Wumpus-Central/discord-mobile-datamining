@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/shared/Voi
 export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   channel = channel.channel;
   const analyticsSection = channel.analyticsSection;
-  const items = [channel, analyticsSection];
+  items = [channel, analyticsSection];
   const callback = noop.useCallback(() => {
     OptInChannelsActionCreators.setOptInChannel(channel.guild_id, channel.id, true, { section: analyticsSection });
   }, items);
@@ -20,10 +20,10 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   obj2.label = intl.string(channel(1113).t["9mysCh"]);
   const intl2 = channel(1113).intl;
   obj2.subLabel = intl2.string(channel(1113).t.PDUCIN);
-  const tmp2 = analyticsSection(6960);
-  obj2.icon = jsx(channel(6983).TableRowIcon, { IconComponent: channel(15665).ChannelListMagnifyingGlassIcon });
+  const tmp2 = analyticsSection(7086);
+  obj2.icon = jsx(channel(7109).TableRowIcon, { IconComponent: channel(15808).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
-  obj.children = jsx(channel(6975).TableRow, {
+  obj.children = jsx(channel(7101).TableRow, {
     label: null,
     subLabel: null,
     icon: null,

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef2674 from "../../../report_to_mod/ReportToMod.messages.js";
+import _modDef2801 from "../../../report_to_mod/ReportToMod.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 },
   paddingHorizontal: { paddingHorizontal: 16 },
@@ -45,7 +45,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = util.intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(_modDef2674.ZUyreS);
+        let stringResult = string(_modDef2801.ZUyreS);
       } else {
         const intl3 = util.intl;
         const stringResult1 = string(util.t["G+vU89"]);
@@ -66,13 +66,13 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = util.intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(_modDef2674.psKFdJ);
+        let string2Result = string2(_modDef2801.psKFdJ);
       } else {
         string2Result = string2(util.t.h6D8Vy);
       }
       const obj = { style: tmp.container, children: null };
       const obj2 = { style: tmp.divider };
-      const items = [React4(View, obj2)];
+      items = [React4(View, obj2)];
       const obj3 = { style: tmp.paddingHorizontal, children: null };
       let tmp14Result = null;
       if (null != tmp3) {

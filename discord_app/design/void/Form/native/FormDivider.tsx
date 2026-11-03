@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     divider: {},
@@ -56,7 +56,7 @@ export default function Divider(arg0) {
   }
   let tmp10Result = null;
   if (!noop.useContext(RedesignCompat.RedesignCompatContext)) {
-    const items = [flag ? tmp.dividerOuter : tmp.divider, , ,];
+    items = [flag ? tmp.dividerOuter : tmp.divider, , ,];
     if (flag2) {
       flag2 = tmp.dividerHasIcon;
     }

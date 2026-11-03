@@ -2,24 +2,15 @@
 import useToken from "../../tokens/native/useToken.tsx";
 import AIGlyphFont from "AIGlyphFont.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import ReanimatedRexport from "../../../modules/reanimated/ReanimatedRexport.tsx";
+import 01652__ from "../../../../_runtime/metro/01652__.js";
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
-const createStyles = fn(5014);
+let closure_4 = module_1652.createAnimatedComponent(Text);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
-  const obj = {
-    glyph: {
-      color,
-      fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE,
-      fontSize,
-      lineHeight: fontSize,
-      textAlign: "center",
-      includeFontPadding: false,
-    },
-  };
+  const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;
 });
 const size = fn(2);
@@ -40,17 +31,11 @@ export function AIGlyphText(color) {
     tmp = str;
   }
   const obj2 = { style: null, allowFontScaling: null, numberOfLines: null, ellipsizeMode: null, children: null };
-  const items = [closure_5(color.size, useToken.useToken(tmp)).glyph, style];
+  items = [closure_5(color.size, useToken.useToken(tmp)).glyph, style];
   obj2.style = items;
   obj2.allowFontScaling = allowFontScaling;
   obj2.numberOfLines = numberOfLines;
   obj2.ellipsizeMode = ellipsizeMode;
   obj2.children = children;
-  return jsx(animated ? closure_4 : Text, {
-    style: null,
-    allowFontScaling: null,
-    numberOfLines: null,
-    ellipsizeMode: null,
-    children: null,
-  });
+  return jsx(animated ? closure_4 : Text, { style: null, allowFontScaling: null, numberOfLines: null, ellipsizeMode: null, children: null });
 }

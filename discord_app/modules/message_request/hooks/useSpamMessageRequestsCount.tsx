@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSpamMessageRequestsCount.tsx");
 
 export function useSpamMessageRequestCount() {
-  const items = [SpamMessageRequestStore];
+  items = [SpamMessageRequestStore];
   return initialize.useStateFromStores(items, () => spamChannelsCount.getSpamChannelsCount());
 }

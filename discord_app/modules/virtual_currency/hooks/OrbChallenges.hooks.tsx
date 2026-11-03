@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/virtual_currency/hooks/OrbCha
 
 export function useFetchOrbChallenges(shouldFetch) {
   _require = fetchChallengesError(false);
-  const items = [shouldFetch];
+  items = [shouldFetch];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     challengesForOrbWallet: shouldFetch.challengesForOrbWallet,
     hasFetchedChallenges: shouldFetch.hasFetchedChallenges,
@@ -61,7 +61,7 @@ export function useOrbChallengeUnreadState(enabled) {
   }
   _require = tmp;
   dependencyMap = closure_3(false);
-  const items = [OrbChallengesStore];
+  items = [OrbChallengesStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     hasUnreadUpdate: OrbChallengesStore.hasUnreadUpdate,
     notificationType: OrbChallengesStore.clientUnreadNotificationType,

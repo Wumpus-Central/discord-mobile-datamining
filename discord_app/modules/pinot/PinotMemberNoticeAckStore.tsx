@@ -35,7 +35,7 @@ const pinotMemberNoticeAckStoreImpl = new PinotMemberNoticeAckStoreImpl(Dispatch
       return false;
     } else {
       const _Set = Set;
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(set, 0)] = channelId;
       set = new Set(items);
     }

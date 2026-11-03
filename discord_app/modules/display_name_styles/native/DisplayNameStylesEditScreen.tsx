@@ -4,10 +4,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import DisplayNameStylesUtils from "../DisplayNameStylesUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import UserProfileSettingsActionCreators from "../../user_profile/UserProfileSettingsActionCreators.tsx";
 import UserProfileActionCreators from "../../user_profile/UserProfileActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,100 +19,122 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function ApplyButton(onPress) {
   onPress = onPress.onPress;
+  _require = onPress;
   const visible = onPress.visible;
-  let stateFromStores;
   items = [AccessibilityStore];
-  stateFromStores = onPress(stateFromStores[15]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const obj = onPress(stateFromStores[15]);
-  const fn = function s() {
-    let pointerEvents = "none";
-    if (visible) {
-      pointerEvents = "box-none";
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj = require("initialize");
+  const items1 = [closure_17, visible];
+  _require = undefined;
+  [tmp5, tmp6] = items1;
+  class DisplayNameStylesEditScreenTsx1 {
+    constructor() {
+      pointerEvents = "none";
+      if (closure_0) {
+        pointerEvents = "box-none";
+      }
+      return { pointerEvents };
     }
-    return { pointerEvents };
-  };
-  fn.__closure = { visible };
-  fn.__workletHash = 2349569076845;
-  fn.__initData = __initData;
-  const animatedProps = onPress(stateFromStores[56]).useAnimatedProps(fn);
-  let obj2 = onPress(stateFromStores[56]);
-  const fn2 = function c() {
-    let num = 0;
-    if (visible) {
-      num = 1;
+  }
+  const items2 = [tmp6];
+  DisplayNameStylesEditScreenTsx1.__closure = items2;
+  DisplayNameStylesEditScreenTsx1.__workletHash = 11149120055604;
+  DisplayNameStylesEditScreenTsx1.__initData = tmp5;
+  const animatedProps = require("../../../../_runtime/metro/01652__.js").useAnimatedProps(
+    DisplayNameStylesEditScreenTsx1,
+  );
+  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_18, visible, nativeDefault, stateFromStores, require("spring/spring").withSpring, closure_11];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  noop = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items3;
+  class DisplayNameStylesEditScreenTsx2 {
+    constructor() {
+      tmp = closure_0;
+      num = 0;
+      if (closure_0) {
+        num = 1;
+      }
+      num2 = 60;
+      if (tmp) {
+        num2 = 0;
+      }
+      num3 = 0.9;
+      if (tmp) {
+        num3 = 1;
+      }
+      rect = {
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        marginHorizontal: closure_1.space.PX_16,
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        transform: null,
+        opacity: null,
+      };
+      tmp2 = closure_2;
+      tmp3 = num2;
+      if (!closure_2) {
+        tmp4 = closure_3;
+        tmp5 = closure_4;
+        tmp3 = closure_3(num2, closure_4);
+      }
+      items = [,];
+      items[0] = { translateY: tmp3 };
+      tmp6 = num3;
+      if (!tmp2) {
+        tmp7 = closure_3;
+        tmp8 = closure_4;
+        tmp6 = closure_3(num3, closure_4);
+      }
+      items[1] = { scale: tmp6 };
+      rect.transform = items;
+      tmp9 = num;
+      if (!tmp2) {
+        tmp10 = closure_3;
+        tmp11 = closure_4;
+        tmp9 = closure_3(num, closure_4);
+      }
+      rect.opacity = tmp9;
+      return rect;
     }
-    let num2 = 60;
-    if (visible) {
-      num2 = 0;
-    }
-    let num3 = 0.9;
-    if (visible) {
-      num3 = 1;
-    }
-    const rect = {
-      position: "absolute",
-      bottom: 0,
-      left: 0,
-      right: 0,
-      marginHorizontal: nativeDefault.space.PX_16,
-      flexDirection: "column",
-      justifyContent: "flex-end",
-      transform: null,
-      opacity: null,
-    };
-    let withSpringResult = num2;
-    if (!stateFromStores) {
-      withSpringResult = spring.withSpring(num2, closure_11);
-    }
-    items = [{ translateY: withSpringResult }];
-    let withSpringResult1 = num3;
-    if (!stateFromStores) {
-      withSpringResult1 = spring.withSpring(num3, closure_11);
-    }
-    items[1] = { scale: withSpringResult1 };
-    rect.transform = items;
-    let withSpringResult2 = num;
-    if (!stateFromStores) {
-      withSpringResult2 = spring.withSpring(num, closure_11);
-    }
-    rect.opacity = withSpringResult2;
-    return rect;
-  };
-  let obj3 = onPress(stateFromStores[56]);
-  fn2.__closure = {
-    visible,
-    tokens: visible(stateFromStores[10]),
-    reducedMotion: stateFromStores,
-    withSpring: onPress(stateFromStores[57]).withSpring,
-    MEDIA_PICKER_SEND_BUTTON_SPRING,
-  };
-  fn2.__workletHash = 16786362025671;
-  fn2.__initData = __initData2;
-  const items1 = [onPress];
-  const animatedStyle = obj3.useAnimatedStyle(fn2);
+  }
+  const items4 = [tmp9, tmp10, tmp11, tmp12, tmp13];
+  DisplayNameStylesEditScreenTsx2.__closure = items4;
+  DisplayNameStylesEditScreenTsx2.__workletHash = 4978276148126;
+  DisplayNameStylesEditScreenTsx2.__initData = tmp8;
+  const items5 = [onPress];
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    DisplayNameStylesEditScreenTsx2,
+  );
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-    onPress();
-  }, items1);
-  const obj5 = { style: animatedStyle, children: null };
-  const obj6 = { style: { marginBottom: visible(stateFromStores[55])().bottom }, animatedProps, children: null };
-  const obj7 = { variant: "primary", onPress: callback, size: "lg", text: null, loading: null };
-  const intl = onPress(stateFromStores[26]).intl;
-  obj7.text = intl.string(onPress(stateFromStores[26]).t["1Qm822"]);
-  obj7.loading = onPress.loading;
-  obj6.children = closure_12(onPress(stateFromStores[52]).Button, obj7);
-  obj5.children = closure_12(visible(stateFromStores[56]).View, obj6);
-  return closure_12(visible(stateFromStores[56]).View, obj5);
+    _undefined();
+  }, items5);
+  const obj3 = { style: animatedStyle, children: null };
+  const obj4 = { style: { marginBottom: useSafeAreaInsetsDefault().bottom }, animatedProps, children: null };
+  const obj5 = { variant: "primary", onPress: callback, size: "lg", text: null, loading: null };
+  const intl = tmp(1113).intl;
+  obj5.text = intl.string(require("util").t["1Qm822"]);
+  obj5.loading = onPress.loading;
+  obj4.children = closure_12(require("components/Button/Button").Button, obj5);
+  obj3.children = closure_12(_modDef1652.View, obj4);
+  return closure_12(_modDef1652.View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1621).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_11 = fn(1623).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let items = [fn(1402).DisplayNameEffect.GRADIENT, fn(1402).DisplayNameEffect.GUMMY, fn(1402).DisplayNameEffect.PRISM];
+let items = [fn(1404).DisplayNameEffect.GRADIENT, fn(1404).DisplayNameEffect.GUMMY, fn(1404).DisplayNameEffect.PRISM];
 let value = { overrideSettings: true };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
@@ -160,11 +183,11 @@ obj2.buttonContainer = {
   gap: nativeDefault.space.PX_16,
 };
 let closure_16 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function DisplayNameStylesEditScreenTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}",
+let closure_17 = {
+  code: "(function DisplayNameStylesEditScreenTsx1(){let[visible]=this.__closure;return{pointerEvents:visible?'box-none':'none'};})",
 };
-const __initData2 = {
-  code: "function DisplayNameStylesEditScreenTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}",
+let closure_18 = {
+  code: "(function DisplayNameStylesEditScreenTsx2(){let[visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING]=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
@@ -443,7 +466,7 @@ export default function DisplayNameStylesEditScreen() {
       dismissCampaignFontBadge();
     }
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17332, dependencyMap.paths),
+      asyncRequireImpl(17475, dependencyMap.paths),
       "DisplayNameStylesFontPickerSheet",
       { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut },
     );
@@ -465,13 +488,13 @@ export default function DisplayNameStylesEditScreen() {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    obj.openLazy(asyncRequireImpl(17335, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+    obj.openLazy(asyncRequireImpl(17478, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
       userId: id,
       selectedEffectId: first1,
       onSelectEffect,
     });
     const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-    const tmp3 = asyncRequireImpl(17335, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17478, dependencyMap.paths);
   }, items7);
   const callback7 = obj10.useCallback(() => {
     if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -482,7 +505,7 @@ export default function DisplayNameStylesEditScreen() {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17336, dependencyMap.paths),
+        asyncRequireImpl(17479, dependencyMap.paths),
         "DisplayNameStylesGummyColorPickerSheet",
         obj2,
       );
@@ -497,10 +520,10 @@ export default function DisplayNameStylesEditScreen() {
             return callback(first1, arg0);
           },
         };
-        openLazy(tmp2Result(17346, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+        openLazy(tmp2Result(17489, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
       } else {
         const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-        openLazy(tmp2Result(17348, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+        openLazy(tmp2Result(17491, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
       }
     }
   }, items8);

@@ -4,7 +4,7 @@ import Platforms from "../lib/Platforms.tsx";
 
 const spotify = "spotify";
 const value = Platforms.get("spotify");
-let closure_1 = value;
+const duration = value;
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
     tmp1 = new tmp({}, new.target, tmp);

@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import GuildRecord from "../../../records/GuildRecord.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -42,7 +42,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   const users = channel(onAction[10])(channel);
   const tmp6 = channel(onAction[11])(channel);
   let obj2 = guild(onAction[9]);
-  const items = [users];
+  items = [users];
   const stateFromStores = guild(onAction[12]).useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14882, dependencyMap.paths),
+      asyncRequireImpl(15013, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

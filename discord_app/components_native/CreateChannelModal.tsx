@@ -84,14 +84,14 @@ function ChannelTypeRow(selected) {
     const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl14 = util.intl;
     obj10.children = intl14.string(util.t.JyCrwS);
-    const items = [dependencyMap(Text_Text.Text, obj10)];
+    items = [dependencyMap(Text_Text.Text, obj10)];
     const obj11 = { variant: "text-xs/normal", children: null };
     const intl15 = util.intl;
     obj12 = { hcArticleUrl: HelpdeskUtilsDefault.getCreatorSupportArticleURL(constants3.MEDIA_CHANNEL) };
     obj11.children = intl15.format(util.t["2Sapx1"], obj12);
     items[1] = dependencyMap(Text_Text.Text, obj11);
     obj9.children = items;
-    obj8.description = __initData2(__initData, obj9);
+    obj8.description = closure_1_22(guild, obj9);
     tmp6 = obj8;
   }
   const label = tmp6.label;
@@ -121,7 +121,7 @@ function ChannelTypeRow(selected) {
     const obj18 = { size: native.BetaSizes.SMALL };
     items1[1] = dependencyMap(native.BetaTag, obj18);
     obj16.children = items1;
-    tmp9 = __initData2(timestampProducer, obj16);
+    tmp9 = closure_1_22(timestampProducer, obj16);
   }
   obj13.label = tmp9;
   obj13.subLabel = tmp6.description;
@@ -292,7 +292,7 @@ class CreateChannel {
               obj.onPress = function onPress() {
                 const tmp3 = closure_1_18 | closure_2_0(dependencyMap[51]).getPinotCloneChannelFlags(closure_1_5);
                 if (null != closure_1_5) {
-                  let items = closure_2_1(dependencyMap[52]).values(closure_1_5.permissionOverwrites);
+                  items = closure_2_1(dependencyMap[52]).values(closure_1_5.permissionOverwrites);
                   const obj2 = closure_2_1(dependencyMap[52]);
                 } else {
                   items = [];
@@ -643,7 +643,7 @@ function AddMembers(guildId) {
   let tmp = closure_23();
   importDefault = noop.useRef(guildId);
   navigation = require("useNavigation").useNavigation();
-  const guild = GuildStore.getGuild(guildId.guildId);
+  guild = GuildStore.getGuild(guildId.guildId);
   require("../../_runtime/metro/00038__.js")(null != guild, "Guild must not be null");
   const currentUser = UserStore.getCurrentUser();
   require("../../_runtime/metro/00038__.js")(null != currentUser, "AddMembers: user cannot be undefined");
@@ -659,7 +659,7 @@ function AddMembers(guildId) {
   const effect = noop.useEffect(() => {
     closure_1.current = current;
   });
-  const items = [canResult, tmp10, navigation, tmp13[2], pendingAdditions, currentUser.id];
+  items = [canResult, tmp10, navigation, tmp13[2], pendingAdditions, currentUser.id];
   const onPress = noop.useCallback(() => {
     current = ref.current;
     ({ guildId, channelType } = current);
@@ -751,8 +751,8 @@ function AddMembers(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const isGuildVocalChannelType = fn(4867).isGuildVocalChannelType;
-let isGuildOwner = fn(4881).isGuildOwner;
+const isGuildVocalChannelType = fn(4994).isGuildVocalChannelType;
+let isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
 const ChannelTypes = Constants.ChannelTypes;
 ({
@@ -761,47 +761,47 @@ const ChannelTypes = Constants.ChannelTypes;
   AnalyticEvents: closure_17,
   HelpdeskArticles: closure_18,
 } = Constants);
-const RowType = fn(7947).RowType;
+const RowType = fn(8071).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   errorMessage: { marginBottom: 0 },
   flexRow: { flexDirection: "row", alignItems: "center" },
   horizontalContainer: { flex: 1, flexDirection: "row" },
 };
-const __initData3 = createStyles.createStyles(obj2);
+const dependencyMap2 = createStyles.createStyles(obj2);
 let obj4 = {};
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8652).TextIcon };
-let obj5 = { IconComponent: fn(8652).TextIcon };
-obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8660).ForumIcon };
-let obj6 = { IconComponent: fn(8660).ForumIcon };
-obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8673).VoiceNormalIcon };
-let obj7 = { IconComponent: fn(8673).VoiceNormalIcon };
-obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8669).StageIcon };
-let obj8 = { IconComponent: fn(8669).StageIcon };
-obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8666).AnnouncementsIcon };
-let obj9 = { IconComponent: fn(8666).AnnouncementsIcon };
-obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8659).ImageIcon };
-let obj10 = { IconComponent: fn(8659).ImageIcon };
-obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(8678).AppsIcon };
+obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8776).TextIcon };
+let obj5 = { IconComponent: fn(8776).TextIcon };
+obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8784).ForumIcon };
+let obj6 = { IconComponent: fn(8784).ForumIcon };
+obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8797).VoiceNormalIcon };
+let obj7 = { IconComponent: fn(8797).VoiceNormalIcon };
+obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8793).StageIcon };
+let obj8 = { IconComponent: fn(8793).StageIcon };
+obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8790).AnnouncementsIcon };
+let obj9 = { IconComponent: fn(8790).AnnouncementsIcon };
+obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8783).ImageIcon };
+let obj10 = { IconComponent: fn(8783).ImageIcon };
+obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(8802).AppsIcon };
 let obj12 = {};
-let obj11 = { IconComponent: fn(8678).AppsIcon };
-obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8650).TextLockIcon };
-let obj13 = { IconComponent: fn(8650).TextLockIcon };
-obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8658).ForumLockIcon };
-let obj14 = { IconComponent: fn(8658).ForumLockIcon };
-obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8670).VoiceLockIcon };
-let obj15 = { IconComponent: fn(8670).VoiceLockIcon };
-obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8668).StageLockIcon };
-let obj16 = { IconComponent: fn(8668).StageLockIcon };
-obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8665).AnnouncementsLockIcon };
-let obj17 = { IconComponent: fn(8665).AnnouncementsLockIcon };
-obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8657).ImageLockIcon };
-let obj18 = { IconComponent: fn(8657).ImageLockIcon };
-obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(8677).AppsLockIcon };
+let obj11 = { IconComponent: fn(8802).AppsIcon };
+obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8774).TextLockIcon };
+let obj13 = { IconComponent: fn(8774).TextLockIcon };
+obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8782).ForumLockIcon };
+let obj14 = { IconComponent: fn(8782).ForumLockIcon };
+obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8794).VoiceLockIcon };
+let obj15 = { IconComponent: fn(8794).VoiceLockIcon };
+obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8792).StageLockIcon };
+let obj16 = { IconComponent: fn(8792).StageLockIcon };
+obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8789).AnnouncementsLockIcon };
+let obj17 = { IconComponent: fn(8789).AnnouncementsLockIcon };
+obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8781).ImageLockIcon };
+let obj18 = { IconComponent: fn(8781).ImageLockIcon };
+obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(8801).AppsLockIcon };
 let closure_29 = { CREATE_CHANNEL: "CREATE_CHANNEL", ADD_MEMBERS: "ADD_MEMBERS", ADD_MODERATORS: "ADD_MODERATORS" };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");
@@ -812,7 +812,7 @@ export default function CreateChannelModal(arg0) {
     const obj = { name: constants.CREATE_CHANNEL, params: null };
     let merged = Object.assign(closure_0);
     obj.params = {};
-    const items = [obj];
+    items = [obj];
     const obj3 = { screens: null, initialStack: null };
     obj4 = {};
     const obj5 = {

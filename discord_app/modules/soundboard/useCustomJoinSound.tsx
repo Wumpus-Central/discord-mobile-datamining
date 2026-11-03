@@ -4,7 +4,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(6060).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(6180).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound
 export { CustomSoundType };
 export function useCustomJoinSound(arg0) {
   _require = arg0;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {
     const guilds = UserSettingsProtoStore.settings.guilds;
     let guilds1;

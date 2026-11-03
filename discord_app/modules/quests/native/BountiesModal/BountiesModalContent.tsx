@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -35,7 +35,7 @@ function BountiesModalContentInner(bounty) {
   closure_129_1 = height;
   const tmp4 = sourceQuestContent(dismissVideoEndAppStoreOverlay[11])();
   closure_129_2 = tmp4;
-  let items = [width, height, , , ,];
+  items = [width, height, , , ,];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp4);
   const memo = balance.useMemo(() => {
     const rect = sharedValue;
@@ -62,7 +62,7 @@ function BountiesModalContentInner(bounty) {
   const items2 = [tmp.closeButton, , ,];
   ({ top: arr3[1], left: arr3[2], width: arr3[3] } = memo);
   const memo1 = balance.useMemo(() => {
-    const items = [closure_3.videoWrapper];
+    items = [closure_3.videoWrapper];
     const size = { top: memo.top, left: memo.left, width: memo.width, height: memo.height };
     items[1] = size;
     return items;
@@ -71,7 +71,7 @@ function BountiesModalContentInner(bounty) {
   ({ bottomContainer: arr4[0], bottomContainerFullWidth: arr4[1], bottomContainerNotFullWidth: arr4[2] } = tmp);
   ({ isFullWidth: arr4[3], left: arr4[4], width: arr4[5] } = memo);
   const memo2 = balance.useMemo(() => {
-    const items = [closure_3.closeButton];
+    items = [closure_3.closeButton];
     const rect = { top: memo.top + nativeDefault.space.PX_8, left: null };
     const sum = memo.left + memo.width;
     const diff = sum - nativeDefault.space.PX_32;
@@ -82,7 +82,7 @@ function BountiesModalContentInner(bounty) {
   const memo3 = balance.useMemo(() => {
     const bottomContainer = closure_3.bottomContainer;
     if (memo.isFullWidth) {
-      const items = [bottomContainer, closure_3.bottomContainerFullWidth];
+      items = [bottomContainer, closure_3.bottomContainerFullWidth];
       let items1 = items;
     } else {
       items1 = [bottomContainer, closure_3.bottomContainerNotFullWidth];
@@ -124,7 +124,7 @@ function BountiesModalContentInner(bounty) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,16 +187,16 @@ function BountiesModalContentInner(bounty) {
                   if (obj.isAndroid()) {
                     num = 0.15;
                   }
-                  obj = closure_1_0(1375);
-                  const tmpResult = closure_1_0(1375);
-                  const items = [];
+                  obj = closure_1_0(1377);
+                  const tmpResult = closure_1_0(1377);
+                  items = [];
                   let num3 = 0;
                   let num4 = 0;
                   do {
                     let _Math = Math;
                     let result = arr[num3] / tmp4;
                     let rounded = Math.round(
-                      result * (closure_1_0(14510).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
+                      result * (closure_1_0(14641).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
                     );
                     let obj2 = {
                       time: num4,
@@ -213,13 +213,13 @@ function BountiesModalContentInner(bounty) {
                   items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                   arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                   const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                  closure_1_0(5262).triggerPattern(items);
-                  const tmp7Result = closure_1_0(5262);
+                  closure_1_0(5385).triggerPattern(items);
+                  const tmp7Result = closure_1_0(5385);
                 })();
               }
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp39) {
           if (tmp4 === c3) {
@@ -436,7 +436,7 @@ function BountiesModalContentInner(bounty) {
   size1.playerRef = ref;
   ({ width: obj9.width, height: obj9.height } = memo);
   size1.renderEndCard = function renderEndCard() {
-    return __initData(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
+    return closure_2_15(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
       adContentId: bounty.id,
       adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
       questContent: QuestContent.QuestContent.VIDEO_MODAL_END_CARD,
@@ -497,7 +497,7 @@ function BountiesModalContentWithAppStore(arg0) {
   closure_129_1 = height2;
   const tmp3 = memo(sharedValue[11])();
   closure_129_2 = tmp3;
-  const items = [width, height2, , , ,];
+  items = [width, height2, , , ,];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp3);
   memo = noop.useMemo(() => {
     const rect = sharedValue;
@@ -541,7 +541,7 @@ function BountiesModalContentWithAppStore(arg0) {
     closure_5.current = Date.now();
     closure_4.current = current;
     _undefined(current);
-    const result = sharedValue.set(timing.withTiming(1, timingPresets.timingSlow));
+    const result = sharedValue.set(timing_timing.withTiming(1, timingPresets.timingSlow));
     const appId = current.metadata.appId;
     current.trackOverlayEvent(
       constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
@@ -567,7 +567,7 @@ function BountiesModalContentWithAppStore(arg0) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
       _undefined(null);
-      const result1 = sharedValue.set(timing.withTiming(0, timingPresets.timingStandard));
+      const result1 = sharedValue.set(timing_timing.withTiming(0, timingPresets.timingStandard));
     }
   }, items4);
   const items5 = [callback1, null != tmp7, showVideoEndAppStoreOverlay, sharedValue, memo1];
@@ -601,10 +601,11 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16925);
-({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
+const BountiesModalConstants = fn(17068);
+({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
+  BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
 const ThemeTypes = fn(1083).ThemeTypes;
@@ -612,7 +613,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_20 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
@@ -653,7 +654,7 @@ export default function BountiesModalContent(bountyId) {
   )[0];
   let tmp2 = null;
   _slicedToArray = tmp3;
-  const items = [null == bounty, bountyId, sourceQuestContent];
+  items = [null == bounty, bountyId, sourceQuestContent];
   const effect = noop.useEffect(() => {
     if (closure_4) {
       const _Error = Error;
@@ -674,7 +675,7 @@ export default function BountiesModalContent(bountyId) {
       sourceQuestContent,
       overrideVisibility: true,
       children() {
-        return __initData(BountiesModalContentWithAppStore, { bounty, sourceQuestContent });
+        return closure_2_15(BountiesModalContentWithAppStore, { bounty, sourceQuestContent });
       },
     };
     obj.children = closure_15(bountyId(bounty[32]).BillableAdPlacementImpressionTrackerNative, obj2);

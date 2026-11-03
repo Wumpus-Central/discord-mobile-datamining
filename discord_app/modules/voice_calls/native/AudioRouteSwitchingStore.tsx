@@ -41,7 +41,7 @@ class AudioRouteSwitchingStore extends Store {}
 const prototype = AudioRouteSwitchingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(AudioRouteStore, ChannelStore, RTCConnectionStore);
-  const items = [AudioRouteStore];
+  items = [AudioRouteStore];
   this.syncWith(items, handleAudioRouteChanged);
 };
 prototype["getConnectedChannelId"] = function getConnectedChannelId() {

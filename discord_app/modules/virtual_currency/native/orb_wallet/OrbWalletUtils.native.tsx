@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const constants = fn(1074).CollectiblesMobileShopScreen;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const context = noop.createContext({ analyticsPage: AnalyticsLocationDefault.ORB_WALLET });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx");
@@ -20,7 +20,7 @@ export function useOpenNitroCheckoutFromOrbWallet(ORB_CHALLENGE_DISCOVERY_CLICK)
   const objectType = ORB_CHALLENGE_DISCOVERY_CLICK;
   const analyticsPage = noop.useContext(context).analyticsPage;
   analyticsLocations = analyticsPage(analyticsLocations[4])(ORB_CHALLENGE_DISCOVERY_CLICK).analyticsLocations;
-  const items = [analyticsPage, analyticsLocations, ORB_CHALLENGE_DISCOVERY_CLICK];
+  items = [analyticsPage, analyticsLocations, ORB_CHALLENGE_DISCOVERY_CLICK];
   return noop.useCallback(() => {
     const obj = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
     const obj2 = { page: analyticsPage, section: AnalyticsLocationDefault.ORB_WALLET, objectType };

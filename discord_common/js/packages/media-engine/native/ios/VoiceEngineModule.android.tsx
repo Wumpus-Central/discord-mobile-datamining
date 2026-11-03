@@ -49,10 +49,10 @@ const merged1 = Object.assign(
   Object.fromEntries(
     found.map((item) => {
       closure_0 = item;
-      let items = [
+      items = [
         item,
         () => {
-          const items = [...arguments];
+          items = [...arguments];
           const items1 = [...items];
           return NativeMediaEngineModule[closure_0].apply(items1);
         },

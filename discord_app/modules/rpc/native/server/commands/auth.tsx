@@ -67,7 +67,7 @@ export default AuthCommandsFactoryDefault(
         disclosures: null,
         integrationType: null,
       };
-      let items = dependencyMap;
+      items = dependencyMap;
       if (dependencyMap == null) {
         items = [];
       }

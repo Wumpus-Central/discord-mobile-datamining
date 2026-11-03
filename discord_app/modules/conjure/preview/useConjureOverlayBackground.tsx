@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/conjure/preview/useConjureOve
 export default function useConjureOverlayBackground(projectId, arg1) {
   _require = projectId;
   dependencyMap = arg1;
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let background = null;
     if (null != closure_0) {
@@ -55,7 +55,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
               v0(closure_130_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           if (tmp4 === v0) {

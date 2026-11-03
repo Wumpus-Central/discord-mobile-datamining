@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/voice_calls/native/components
 
 export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
-  const items = [CallStore];
+  items = [CallStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,

@@ -12,13 +12,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(15598).MAX_STORED_MESSAGES;
-let closure_10 = fn(17287).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(15740).MAX_STORED_MESSAGES;
+let closure_10 = fn(17430).HappeningNowCardTrackingType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({
   content: { flexShrink: 1, marginLeft: 4, gap: 2 },
   avatarsWrapper: { marginBottom: 2 },
@@ -37,7 +37,7 @@ export default noop.memo(function HappeningNowCardActiveChannel(index) {
     flag = false;
   }
   const tmp = closure_15();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = index(channelId[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = index(channelId[10]);
   const items1 = [TypingStore, UserStore];
@@ -83,7 +83,7 @@ export default noop.memo(function HappeningNowCardActiveChannel(index) {
       type: constants.ACTIVE_CHANNEL_CARD,
       destination_channel_id: channelId,
     };
-    router_utils.transitionTo(closure_2_12.CHANNEL(guildId, channelId));
+    router_utils.transitionTo(application_id.CHANNEL(guildId, channelId));
   }, items5);
   if (null == stateFromStores) {
     return null;

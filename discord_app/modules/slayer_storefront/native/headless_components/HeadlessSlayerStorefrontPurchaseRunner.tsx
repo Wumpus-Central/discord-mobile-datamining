@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -29,7 +29,7 @@ export function HeadlessSlayerStorefrontPurchaseRunner(attempt) {
   const tmp4 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
   closure_6 = tmp4;
   noop.useRef(false);
-  const items = [tmp, tmp2, onPurchaseError];
+  items = [tmp, tmp2, onPurchaseError];
   onPurchaseError = noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;

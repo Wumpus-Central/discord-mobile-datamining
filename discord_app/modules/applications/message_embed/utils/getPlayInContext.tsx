@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/applications/message_embed/ut
 
 export function usePlayInContext(arg0) {
   _require = arg0;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
   const obj = require("initialize");
   const items1 = [EmbeddedActivitiesStore];
@@ -119,7 +119,7 @@ export function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11748).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11885).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 }

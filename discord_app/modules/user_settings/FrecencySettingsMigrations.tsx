@@ -15,7 +15,7 @@ function readFavoriteGIFs(arg0) {
   c0 = 1;
   importDefault = { IMAGE: "IMAGE", VIDEO: "VIDEO" };
   const PersistedStore = require("initialize").PersistedStore;
-  const items = [
+  items = [
     (favorites) => {
       if (null == favorites) {
         const obj2 = { favorites: [], timesFavorited: 0 };
@@ -94,7 +94,7 @@ let items = [
     version: 3,
     run(favoriteStickers) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const items = [
+      items = [
         (arg0) => {
           let tmp = arg0;
           if (null == arg0) {
@@ -120,7 +120,7 @@ let items = [
           obj = { usageHistory: {}, favorites: [] };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -154,14 +154,14 @@ let items = [
     version: 4,
     run(favoriteEmojis) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const items = [
+      items = [
         () => {
           const Storage = Storage4.Storage;
           const usageHistory = Storage.get("EmojiUsageHistory") || {};
           return { usageHistory };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -276,7 +276,7 @@ let items = [
     version: 7,
     run(applicationCommandFrecency) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
+      state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
@@ -301,7 +301,7 @@ let items = [
     run(arg0) {
       closure_0 = arg0;
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
+      state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
       } else {

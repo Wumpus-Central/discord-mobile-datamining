@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const maxWordCount = fn(13292).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
+const maxWordCount = fn(13428).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function DefaultKeywordListTriggerFields(rule) {
         onPress(arg0) {
           const filter = presets.filter;
           if (arg0) {
-            const items = [];
+            items = [];
             items[
               HermesBuiltin.arraySpread(
                 filter((arg0) => arg0 !== closure_0),
@@ -56,7 +56,7 @@ export default function DefaultKeywordListTriggerFields(rule) {
       item,
     );
   });
-  let items = [closure_4(rule(presets[3]).TableRowGroup, obj2)];
+  items = [closure_4(rule(presets[3]).TableRowGroup, obj2)];
   const obj3 = {
     label: null,
     description: null,

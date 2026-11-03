@@ -12,7 +12,7 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
   context = noop.useContext(onCloseCallback(context[3]));
-  const items = [context];
+  items = [context];
   const effect = noop.useEffect(() => {
     let transitionState;
     if (context != null) {

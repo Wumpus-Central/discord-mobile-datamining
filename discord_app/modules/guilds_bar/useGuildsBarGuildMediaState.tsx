@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/useGuildsBarGuildM
 
 export default function useGuildsBarGuildMediaState(arg0) {
   _require = arg0;
-  const items = [GuildMediaStateStore];
+  items = [GuildMediaStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

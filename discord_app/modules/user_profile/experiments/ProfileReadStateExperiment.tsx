@@ -34,7 +34,7 @@ function getProfileReadStateConfigPeek() {
 }
 const obj = { enabled: false };
 const obj2 = { 0: obj, 1: { enabled: true } };
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-profile-read-state",
   kind: "user",
@@ -47,7 +47,7 @@ const result = size.fileFinishedImporting("modules/user_profile/experiments/Prof
 export default apexExperiment;
 export { getProfileReadStateConfigPeek };
 export function useProfileReadStateConfigPeek() {
-  const items = [UserStore, ApexExperimentStore];
+  items = [UserStore, ApexExperimentStore];
   return initialize.useStateFromStores(items, getProfileReadStateConfigPeek);
 }
 export function ProfileReadStateExposure(location) {

@@ -153,7 +153,7 @@ export function useConjurePlanWidget(projectId, proposal) {
   if (undefined === widget_preview) {
     widget_preview = closure_8;
   }
-  let items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores1.locale);
   let obj = require("initialize");
   const items1 = [ConjureProjectStore];
@@ -164,7 +164,7 @@ export function useConjurePlanWidget(projectId, proposal) {
       prop = project.preview_application_id;
     }
     if (prop == null) {
-      let application_id;
+      application_id = undefined;
       if (project != null) {
         application_id = project.application_id;
       }
@@ -196,7 +196,7 @@ export function useConjurePlanWidget(projectId, proposal) {
           const attachmentUrl = _true(widget_config[8]).getAttachmentUrl(c0, tmp.id);
           return attachmentUrl.then(
             (result) => {
-              const items = [_true, result];
+              items = [_true, result];
               return items;
             },
             () => null,

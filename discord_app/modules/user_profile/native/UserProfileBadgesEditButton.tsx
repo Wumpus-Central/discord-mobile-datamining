@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   badge: { width: 32, height: 32 },
@@ -58,7 +58,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   let obj2 = autoOpen(isBadgeManagementEnabled[9]);
   let tmp6 = importDefault;
   if (!isBadgeManagementEnabled) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [tmp2(tmp3[12]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE];
     items = items1;

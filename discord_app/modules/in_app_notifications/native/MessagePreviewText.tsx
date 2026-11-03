@@ -66,7 +66,7 @@ function EmbedMediaThumbnail(media) {
     style: null,
     children: React6(FastImageDefault, { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" }),
   };
-  const items = [tmp.embedMediaContainer, { aspectRatio: num }];
+  items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj.style = items;
   return React6(View, obj);
 }
@@ -97,7 +97,7 @@ function EmbedCard(embed) {
   let tmp9 = null != int2hslResult;
   if (tmp9) {
     const obj3 = { style: null };
-    const items = [tmp.embedAccentBar];
+    items = [tmp.embedAccentBar];
     const obj4 = { backgroundColor: int2hslResult };
     items[1] = obj4;
     obj3.style = items;
@@ -148,14 +148,14 @@ function EmbedCard(embed) {
   return React7(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11023);
+const InAppNotificationConstants = fn(11156);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5014);
-const PlatformUtils = fn(1376);
+let createStyles = fn(5141);
+const PlatformUtils = fn(1357);
 let obj3 = {
   italic: {
     fontStyle: "italic",
@@ -163,7 +163,7 @@ let obj3 = {
   },
 };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj6 = {
   embedContainer: null,
   embedAccentBar: null,
@@ -237,7 +237,7 @@ export default function MessagePreviewText(message) {
   ({ text, secondaryText } = previewableMediaText);
   const tmpResult = usePreviewableMediaText;
   const getInitialMessagePreview = useGetInitialMessagePreview.useGetInitialMessagePreview({ message });
-  const items = [message.embeds];
+  items = [message.embeds];
   const memo = noop.useMemo(() => {
     const embeds = message.embeds;
     return embeds.filter((image) => null != image.image || null != image.thumbnail);

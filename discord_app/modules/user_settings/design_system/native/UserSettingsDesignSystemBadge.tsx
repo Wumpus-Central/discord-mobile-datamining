@@ -29,7 +29,7 @@ function Playground() {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const first3 = tmp7[0];
   const obj = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Playground" }), , , , ,];
+  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Playground" }), , , , ,];
   const obj2 = { style: closure_9().preview, children: null };
   let tmp15 = first1;
   if ("custom" === first1) {
@@ -98,7 +98,7 @@ function VariantMatrix() {
   let obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   items = [
-    closure_7(require("Text/Text").Heading, { variant: "text-lg/bold", children: "Variants" }),
+    closure_7(require("Text/Text").Heading, { variant: "text-lg/semibold", children: "Variants" }),
     closure_7(require("Text/Text").Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -166,7 +166,7 @@ function Truncation() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Long text" }),
+    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Long text" }),
     React5(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -214,7 +214,7 @@ function LegacyComparison() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Legacy vs. Mana" }),
+    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Legacy vs. Mana" }),
     React5(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -313,7 +313,7 @@ function ParentLayouts() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/bold", children: "Parent layouts" }),
+    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Parent layouts" }),
     React5(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -401,7 +401,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   preview: null,

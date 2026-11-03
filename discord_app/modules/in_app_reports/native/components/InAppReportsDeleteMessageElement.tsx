@@ -19,7 +19,7 @@ export default function DeleteMessageElement(message) {
   let stateFromStores;
   const tmp = stateFromStores(noop.useState(false), 2);
   dependencyMap = tmp[1];
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [message];
   stateFromStores = message(504).useStateFromStores(
     items,
@@ -57,8 +57,8 @@ export default function DeleteMessageElement(message) {
   obj2.description = intl3.string(message(1113).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(5738).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(15167), {
+  obj2.icon = jsx(message(5858).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(15308), {
     title: null,
     disabledTitle: null,
     description: null,

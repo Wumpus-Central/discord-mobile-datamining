@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting(
 export default function useEmojiPickerViewableItemsChanged(arg0) {
   _require = arg0;
   closure_1 = noop.useRef(0);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     const result = closure_1(stateFromStores[3]).canUseEmojisEverywhere(currentUser);

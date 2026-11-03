@@ -24,7 +24,7 @@ export default function useProfileTileGradient(userId) {
   isVideoBackgroundProfileFetchEnabled = userId(
     isVideoBackgroundProfileFetchEnabled[3],
   ).useIsVideoBackgroundProfileFetchEnabled(userId.location);
-  const items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
+  items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
   const effect = noop.useEffect(() => {
     let tmp2 = null != userId;
     if (tmp2) {

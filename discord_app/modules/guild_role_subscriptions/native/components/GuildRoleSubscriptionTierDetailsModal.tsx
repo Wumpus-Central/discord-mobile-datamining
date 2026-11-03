@@ -48,7 +48,7 @@ function Content() {
   const obj9 = { title: null };
   const intl = util.intl;
   obj9.title = intl.string(util.t["6XpbbR"]);
-  const items = [closure_1_10(TableRowGroup.TableRowGroupTitle, obj9)];
+  items = [closure_1_10(TableRowGroup.TableRowGroupTitle, obj9)];
   const obj10 = {
     description: null,
     image: null,
@@ -113,7 +113,7 @@ function Content() {
   return closure_1_11(View, obj7);
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17196);
+const GuildRoleSubscriptionsConstants = fn(17339);
 ({
   GuildRoleSubscriptionsTierScenes: metroRequire,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7,
@@ -121,7 +121,7 @@ const GuildRoleSubscriptionsConstants = fn(17196);
 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const memoResult = noop.memo(function GuildRoleSubscriptionTierDetailsTab() {
   return closure_1_10(Content, {});
 });

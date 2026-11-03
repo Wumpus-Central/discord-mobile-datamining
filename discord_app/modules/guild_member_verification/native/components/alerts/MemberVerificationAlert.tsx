@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   headerImage: {
     marginLeft: "auto",
@@ -42,11 +42,11 @@ export default function MemberVerificationAlert(arg0) {
     const obj2 = { style: tmp2.headerImage, children: React4(icon, { size: "lg" }) };
     tmp7 = React4(View, obj2);
   }
-  const items = [
+  items = [
     tmp7,
     React4(Text_Text.Heading, {
       style: tmp2.header,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: header,
     }),

@@ -13,7 +13,7 @@ function getMatch(str, arg1, index) {
         let match = str.match(obj.regex);
         tmp3 = null;
         if (null != match) {
-          let items = [];
+          items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(match, 0);
           items.index = index;
           tmp3 = items;
@@ -161,7 +161,7 @@ prototype["addRule"] = function addRule(type) {
   const self = this;
   type = type.type;
   ({ follows, validator } = type);
-  const regex = type.regex;
+  regex = type.regex;
   let regExp = regex;
   let tmp = regex;
   if ("^" !== str.charAt(0)) {
@@ -192,7 +192,7 @@ prototype["addRule"] = function addRule(type) {
 prototype["tokenize"] = function tokenize(arg0) {
   const self = this;
   let str = arg0;
-  const items = [];
+  items = [];
   let num = 0;
   let str2 = "";
   let num2 = 0;

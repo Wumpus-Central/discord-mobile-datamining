@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildP
 
 export function usePerksCoachmarkDCF(arg0) {
   if (arg0) {
-    const items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK];
+    items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
@@ -37,7 +37,7 @@ export function useGuildPowerupNotificationDCF(arg0) {
   });
 }
 export function useNewGamesCoachmarkDC() {
-  const items = [null, () => {}];
+  items = [null, () => {}];
   return items;
 }
 export function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
@@ -65,6 +65,6 @@ export function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
   );
 }
 export function useExpiringPowerupCoachmarkDCF() {
-  const items = [null, () => {}];
+  items = [null, () => {}];
   return items;
 }

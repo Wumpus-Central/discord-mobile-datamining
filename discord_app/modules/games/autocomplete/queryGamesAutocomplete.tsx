@@ -9,11 +9,11 @@ require = fn;
 let closure_3 = debounce(
   (arg0, arg1) => {
     const useGameAutocomplete = useGameAutocomplete2.useGameAutocomplete;
-    const items = [arg0, arg1];
+    items = [arg0, arg1];
     const many = useGameAutocomplete.fetchMany(items);
   },
-  fn(9141).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
-  { leading: true, maxWait: fn(9141).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
+  fn(9269).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: fn(9269).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
 );
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");

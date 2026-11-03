@@ -41,7 +41,7 @@ export function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
     isActive,
     playerRef,
   }).handleVideoPausedForAppStore;
-  const items = [handleVideoPaused, handleVideoPausedForAppStore, onPaused];
+  items = [handleVideoPaused, handleVideoPausedForAppStore, onPaused];
   const items1 = [handleVideoResumed];
   const callback = noop.useCallback((arg0) => {
     handleVideoPaused(arg0);

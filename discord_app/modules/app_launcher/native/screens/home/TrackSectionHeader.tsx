@@ -22,7 +22,7 @@ export default function TrackSectionHeader(viewed) {
     num_visible_items: numVisibleItems,
     source: AppLauncherStore.entrypoint(),
   };
-  const items = [viewed];
+  items = [viewed];
   tmp(obj, { disableTrack: !viewed }, items);
   return children;
 }

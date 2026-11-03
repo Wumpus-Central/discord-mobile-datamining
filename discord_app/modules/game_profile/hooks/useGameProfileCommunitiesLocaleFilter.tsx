@@ -4,7 +4,7 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(9617).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9749).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx");
 
@@ -12,9 +12,9 @@ export default function useGameProfileCommunitiesLocaleFilter(arg0, arg1) {
   closure_0 = arg1;
   let tmp = closure_4(arg0);
   closure_1 = tmp;
-  let items = [arg1];
+  items = [arg1];
   const memo = noop.useMemo(() => {
-    let items = closure_0;
+    items = closure_0;
     if (closure_0 == null) {
       items = [];
     }
@@ -24,7 +24,7 @@ export default function useGameProfileCommunitiesLocaleFilter(arg0, arg1) {
   const obj = { locales: memo, filteredGuilds: null, showLocaleFilter: memo.length >= 2 };
   const items1 = [arg1, tmp];
   obj.filteredGuilds = noop.useMemo(() => {
-    let items = closure_0;
+    items = closure_0;
     if (closure_0 == null) {
       items = [];
     }

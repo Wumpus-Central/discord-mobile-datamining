@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column", justifyContent: "center", alignItems: "center", paddingVertical: 8, width: 78 },
   iconBox: null,
@@ -45,7 +45,7 @@ export function SummaryActionSheetButton(label) {
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, accessibilityRole: "button", accessibilityLabel: label, children: null };
   const obj2 = { style: tmp.iconBox, children: React3(native.Icon, { style: tmp.icon, source: iconSource }) };
-  const items = [
+  items = [
     React3(View, obj2),
     React3(Text_Text.Text, {
       style: tmp.name,

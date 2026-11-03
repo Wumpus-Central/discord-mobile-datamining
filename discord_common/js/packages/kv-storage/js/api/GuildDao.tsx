@@ -33,7 +33,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   if (typeof GuildDao === "function") {
     const obj = Object.create(GuildDao.prototype);
     obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
+    items = [originalPrefix];
     const table = new Table.Table(items, tableId, database, false);
     obj.table = table;
     return obj;
@@ -43,17 +43,17 @@ prototype["withoutLogging"] = function withoutLogging() {
 };
 prototype["get"] = function get(arg0, arg1) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return table.get(items);
 };
 prototype["getMany"] = function getMany(arg0, arg1) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getMany(items, arg1);
 };
 prototype["getRange"] = function getRange(arg0, arg1, arg2, arg3) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const items1 = [arg0, arg2];
   return table.getRange(items, items1, arg3);
 };
@@ -67,7 +67,7 @@ prototype["getMapEntries"] = function getMapEntries() {
 };
 prototype["getIds"] = function getIds(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getChildIds(items);
 };
 prototype["getGuildIds"] = function getGuildIds() {
@@ -76,7 +76,7 @@ prototype["getGuildIds"] = function getGuildIds() {
 };
 prototype["getGuildId"] = function getGuildId(arg0) {
   const table = this.table;
-  const items = [null, arg0];
+  items = [null, arg0];
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0, arg1, arg2) {
@@ -93,7 +93,7 @@ prototype["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, ge
   }
   const table = this.table;
   const obj = { key: null, data, generation };
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   obj.key = items;
   return table.put(obj, Replace);
 };
@@ -105,7 +105,7 @@ prototype["delete"] = function delete(arg0, arg1) {
     return table3.delete([]);
   } else if (1 === length) {
     const table2 = self.table;
-    const items = [arg0];
+    items = [arg0];
     return table2.delete(items);
   } else {
     const table = self.table;
@@ -141,7 +141,7 @@ prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.getManySyncUnsafe(items, arg1);
 };
 prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
@@ -179,9 +179,9 @@ prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, g
   if (arg4 === undefined) {
     Replace = TableId.ConflictOptions.Replace;
   }
-  const state = this.state;
+  state = this.state;
   const obj = { key: null, data, generation };
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   obj.key = items;
   return state.put(obj, Replace);
 };
@@ -192,17 +192,17 @@ prototype2["delete"] = function delete(arg0, arg1) {
     const state3 = self.state;
     state3.delete([]);
   } else if (1 === length) {
-    const state2 = self.state;
-    const items = [arg0];
+    state2 = self.state;
+    items = [arg0];
     state2.delete(items);
   } else {
-    const state = self.state;
+    state = self.state;
     const items1 = [arg0, arg1];
     state.delete(items1);
   }
 };
 prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
-  const state = this.state;
+  state = this.state;
   return state.deleteGeneration([], arg0, arg1);
 };
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");

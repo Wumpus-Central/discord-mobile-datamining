@@ -98,7 +98,7 @@ prototype["completeOperation"] = function completeOperation(value, timings, nowR
 prototype["initialize"] = function initialize() {
   const self = this;
   if (!this.initialized) {
-    const KV_RAW = self(4894).KV_RAW;
+    const KV_RAW = self(5021).KV_RAW;
     const obj = {
       status(handle) {
         return self.onStatus(handle);
@@ -115,7 +115,7 @@ prototype["initialize"] = function initialize() {
           str = "completed";
         }
         const execution = ok.timings.execution;
-        const items = ["" + execution.toFixed(3) + "ms execution", , ,];
+        items = ["" + execution.toFixed(3) + "ms execution", , ,];
         const materialization = ok.timings.materialization;
         items[1] = "" + materialization.toFixed(3) + "ms js materialization";
         const ccTotal = ok.timings.ccTotal;

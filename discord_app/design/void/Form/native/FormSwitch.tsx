@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -53,7 +53,7 @@ export default function FormSwitch(value) {
   obj2.ios_backgroundColor = tmp11;
   obj2.value = undefined !== value && value;
   obj2.disabled = undefined !== disabled && disabled;
-  const items = [tmp4.switch, style];
+  items = [tmp4.switch, style];
   obj2.style = items;
   obj2.onValueChange = onValueChange;
   obj2.accessibilityState = { disabled: undefined !== disabled && disabled, selected: undefined !== value && value };

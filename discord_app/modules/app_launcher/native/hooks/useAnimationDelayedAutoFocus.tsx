@@ -11,7 +11,7 @@ export function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   closure_1 = onPress;
   const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
   noop.useRef(false);
-  const items = [autoFocus, onPress, awaitAnimationCompletion];
+  items = [autoFocus, onPress, awaitAnimationCompletion];
   const effect = noop.useEffect(() => {
     let tmp = closure_0;
     if (closure_0) {

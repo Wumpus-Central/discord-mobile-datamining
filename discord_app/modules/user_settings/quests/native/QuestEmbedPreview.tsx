@@ -23,7 +23,7 @@ export function QuestEmbedPreview(questId) {
     });
     return obj;
   }, []);
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = questId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [questId, stateFromStores];
   const memo1 = noop.useMemo(() => {
@@ -63,7 +63,7 @@ export function QuestEmbedPreview(questId) {
           code: questId,
           url: QuestCopyUtils.getQuestUrl(questId),
         };
-        const items = [obj2];
+        items = [obj2];
         obj.codedLinks = items;
         tmp2 = new MessageRecord(obj);
       }
@@ -76,14 +76,14 @@ export function QuestEmbedPreview(questId) {
     const intl = tmp2(1113).intl;
     obj2.title = intl.string(tmp2(1113).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9885), {
+    obj2.children = jsx(stateFromStores(10016), {
       rowGenerator: memo,
       message: memo1,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(17148), { title: null, children: null });
-    const tmp9 = stateFromStores(17148);
+    tmp6 = jsx(stateFromStores(17291), { title: null, children: null });
+    const tmp9 = stateFromStores(17291);
   }
   return tmp6;
 }

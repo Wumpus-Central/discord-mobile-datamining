@@ -13,10 +13,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -108,7 +108,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
     },
     [],
   );
-  let items = [onSearchTextChange, updateSearchText];
+  items = [onSearchTextChange, updateSearchText];
   onChange = obj.useCallback((current) => {
     let flag = arg1;
     if (arg1 === undefined) {
@@ -147,7 +147,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items1);
   const items2 = [results.length];
   const memo = obj.useMemo(() => {
-    const items = [results.length];
+    items = [results.length];
     return items;
   }, items2);
   const items3 = [disabledDestinations];
@@ -182,7 +182,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
         if (disableSelection) {
           return arr;
         } else {
-          const items = [id];
+          items = [id];
           HermesBuiltin.arraySpread(arr, 1);
           let items1 = items;
         }

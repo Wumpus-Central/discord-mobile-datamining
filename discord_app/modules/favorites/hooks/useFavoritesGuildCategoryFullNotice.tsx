@@ -1,19 +1,19 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3450 from "../intl/FavoritesGuild.messages.js";
+import _modDef3577 from "../intl/FavoritesGuild.messages.js";
 import FavoritesUtils from "../FavoritesUtils.tsx";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-let closure_4 = fn(4876).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+let closure_4 = fn(5003).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
 
 export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStores = initialize.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
   FavoritesHooks;
   let tmp6 = null;
@@ -32,9 +32,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3450.WsUrMD);
+              obj2.label = intl.string(_modDef3577.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3450.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3577.dW9Kov);
               tmp6 = obj2;
             }
           }

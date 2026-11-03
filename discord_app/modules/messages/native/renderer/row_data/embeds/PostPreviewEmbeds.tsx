@@ -13,7 +13,7 @@ export function createPostPreviewEmbeds(message, roleStyle) {
   if (useReducedMotion === undefined) {
     flag = false;
   }
-  const items = [];
+  items = [];
   const embeds = message.embeds;
   if (embeds != null) {
     const item = embeds.forEach((type) => {

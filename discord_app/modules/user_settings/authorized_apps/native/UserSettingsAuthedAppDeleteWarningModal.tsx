@@ -44,7 +44,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     tmp9 = React3(InfoBoxDefault, obj5);
     const tmp8Result = InfoBoxDefault;
   }
-  const items = [tmp9];
+  items = [tmp9];
   let tmp12 = result;
   if (result) {
     const obj7 = { look: InfoBox.InfoBoxLooks.WARNING, children: null };

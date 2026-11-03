@@ -23,7 +23,7 @@ export default {
   getTermsForEmoji(name) {
     value = closure_2.get();
     if (undefined !== value) {
-      let items = value[name];
+      items = value[name];
     } else {
       items = [];
     }

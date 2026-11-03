@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   cell: {
     alignItems: "center",
@@ -53,7 +53,7 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
     style: null,
     children: null,
   };
-  const items = [tmp.cell, ,];
+  items = [tmp.cell, ,];
   if (selected) {
     selected = tmp.cellSelected;
   }

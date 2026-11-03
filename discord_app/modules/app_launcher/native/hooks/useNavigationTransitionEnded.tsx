@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
-import Link from "../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../_runtime/01500_Link.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAppLauncherNavigation = fn(1496).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1498).useAppLauncherNavigation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
@@ -14,7 +14,7 @@ export default function useNavigationTransitionEnded() {
   const tmp3 = useAppLauncherNavigation();
   closure_1 = tmp3;
   const route = Link.useRoute();
-  const items = [tmp3, route, tmp[1]];
+  items = [tmp3, route, tmp[1]];
   const effect = noop.useEffect(
     () =>
       state.addListener("transitionEnd", () => {

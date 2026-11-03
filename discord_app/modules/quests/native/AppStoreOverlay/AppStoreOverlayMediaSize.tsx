@@ -56,7 +56,7 @@ export function getMediaSizeFromLoadEvent(nativeEvent) {
 export function useAppStoreOverlayMediaSizes(memo) {
   const first = _slicedToArray(noop.useState(memo), 1)[0];
   [tmp3, dependencyMap] = noop.useState(map);
-  const items = [first];
+  items = [first];
   const recordMediaSize = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;

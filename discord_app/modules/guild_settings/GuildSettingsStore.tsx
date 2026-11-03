@@ -5,7 +5,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
@@ -71,7 +71,7 @@ function handleFormInit(type) {
     }
     if (null != section) {
       const obj3 = { key: "landing", name: constants.LANDING };
-      const items = [obj3];
+      items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {
         ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push({ key: null, name: null });
@@ -112,7 +112,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef2042(created_at);
+  obj.createdAt = _modDef2171(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -317,7 +317,7 @@ prototype["getGuildId"] = function getGuildId() {
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
   const Storage = Storage2.Storage;
-  return !Storage.get(__initData6);
+  return !Storage.get(closure_1_28);
 };
 prototype["getGuild"] = function getGuild() {
   return closure_7;
@@ -360,7 +360,7 @@ prototype["getSlug"] = function getSlug() {
   return c12;
 };
 prototype["getBans"] = function getBans() {
-  const items = [c55, closure_56];
+  items = [c55, closure_56];
   return items;
 };
 prototype["getProps"] = function getProps() {
@@ -572,7 +572,7 @@ obj2 = {
         }
       }
       const HTTP = HTTPUtils.HTTP;
-      const obj4 = { url: __initData4.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
+      const obj4 = { url: closure_1_25.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj4);
       value.then((body) => {
         DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body });
@@ -650,7 +650,7 @@ obj2 = {
     if (null != guild) {
       if (tmp === guild.id) {
         const _Set = Set;
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(guild.features, 0)] = constants3.PIN_PERMISSION_MIGRATION_COMPLETE;
         set = new Set(items);
         guild = set(guild, "features", set);
@@ -662,7 +662,7 @@ obj2 = {
     if (null != guild) {
       if (tmp === guild.id) {
         const _Set = Set;
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(guild.features, 0)] = constants3.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE;
         set = new Set(items);
         guild = set(guild, "features", set);
@@ -804,7 +804,7 @@ obj2 = {
                   tmp = "publicUpdatesChannelId" !== item;
                 }
                 if (!tmp) {
-                  tmp = obj2[item] !== __initData7;
+                  tmp = obj2[item] !== closure_2_29;
                 }
                 if (tmp) {
                   tmp = "features" !== item;
@@ -1047,7 +1047,7 @@ obj2 = {
     if (tmp2) {
       obj = {};
       const merged = Object.assign(obj);
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0)] = categoryId;
       obj.secondaryCategoryIds = items;
       obj2 = {};
@@ -1064,7 +1064,7 @@ obj2 = {
         const secondaryCategoryIds = obj.secondaryCategoryIds;
         const index = secondaryCategoryIds.indexOf(categoryId);
         if (-1 !== index) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0);
           items.splice(index, 1);
           obj = {};

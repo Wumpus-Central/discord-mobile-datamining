@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
 obj2.container = {
@@ -45,7 +45,7 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj4.children = num;
-  const items = [
+  items = [
     React3(Text_Text.Text, obj4),
     React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult }),
   ];

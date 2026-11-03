@@ -82,7 +82,7 @@ export function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;
   if (tenureBadgeHideable.tenureBadgeHideable) {
-    const items = [STAFF];
+    items = [STAFF];
     let _Set1 = new _Set(items);
   } else {
     const items1 = [STAFF, BadgeId.BadgeId.PREMIUM_TENURE];

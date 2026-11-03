@@ -8,7 +8,7 @@ function recomputeAffinities() {
   const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
   map = new Map(
     found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
+      items = [otherUserId.otherUserId, otherUserId];
       return items;
     }),
   );
@@ -21,7 +21,7 @@ function recomputeAffinities() {
     const result = map.set(_null.otherUserId, _null);
   }
 }
-const USER_AFFINITY_TTL = fn(7802).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7926).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 let c4 = null;
@@ -49,7 +49,7 @@ prototype["initialize"] = function initialize(userAffinities) {
     );
     map = new Map(
       found.map((otherUserId) => {
-        const items = [otherUserId.otherUserId, otherUserId];
+        items = [otherUserId.otherUserId, otherUserId];
         return items;
       }),
     );
@@ -62,7 +62,7 @@ prototype["initialize"] = function initialize(userAffinities) {
       const result = map.set(_null.otherUserId, _null);
     }
   }
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   self.syncWith(items, recomputeAffinities);
 };
 prototype["shouldFetch"] = function shouldFetch() {
@@ -152,7 +152,7 @@ const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, {
     const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
     map = new Map(
       found.map((otherUserId) => {
-        const items = [otherUserId.otherUserId, otherUserId];
+        items = [otherUserId.otherUserId, otherUserId];
         return items;
       }),
     );

@@ -10,8 +10,8 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { heartOverlay: null };
 const rect = {
   position: "absolute",
@@ -40,10 +40,10 @@ export default function AddToWishlistItemCard(sku) {
   _slicedToArray = tmp2;
   const wishlistAnalyticsContext = sku(analyticsLocations[8]).useWishlistAnalyticsContext();
   [first, closure_7] = wishlistAnalyticsContext.useState(false);
-  let items = [sku, tmp2.heartOverlay, merged.size];
+  items = [sku, tmp2.heartOverlay, merged.size];
   const callback = wishlistAnalyticsContext.useCallback(() => {
     const obj = { children: null };
-    const items = [React6(SKUPreviewDefault, { sku, size: merged.size })];
+    items = [React6(SKUPreviewDefault, { sku, size: merged.size })];
     const obj3 = {
       style: heartOverlay.heartOverlay,
       pointerEvents: "none",
@@ -72,7 +72,7 @@ export default function AddToWishlistItemCard(sku) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

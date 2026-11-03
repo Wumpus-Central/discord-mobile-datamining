@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 
 export default function useGuildIdForChannelRoute(getGuildId) {
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {
     stateFromStores = getGuildId.getGuildId();

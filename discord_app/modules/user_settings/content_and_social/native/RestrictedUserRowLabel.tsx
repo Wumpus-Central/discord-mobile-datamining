@@ -36,7 +36,7 @@ export function RestrictedUserRowLabel(userRecord) {
     username = userRecord.username;
   }
   obj4.children = username;
-  const items = [React4(Text_Text.Text, obj4)];
+  items = [React4(Text_Text.Text, obj4)];
   if (tmp8Result) {
     const obj5 = {
       variant: "text-xs/medium",

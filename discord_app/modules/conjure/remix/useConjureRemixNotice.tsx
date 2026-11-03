@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/remix/useConjureRemixNotice.tsx
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import conjureRemixConnection from "conjureRemixConnection.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ConjureRemixStore from "ConjureRemixStore.tsx";
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/conjure/remix/useConjureRemix
 
 export default function useConjureRemixNotice(arg0) {
   _require = arg0;
-  const items = [ConjureRemixStore];
+  items = [ConjureRemixStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     ConjureRemixStore.getFailure(closure_0),
   );
@@ -22,10 +22,10 @@ export default function useConjureRemixNotice(arg0) {
     const obj2 = { message: null, retry: null };
     const intl = tmp(1113).intl;
     const obj3 = { reason: stateFromStores };
-    obj2.message = intl.format(_modDef3868.Up6Ssw, obj3);
+    obj2.message = intl.format(_modDef3995.Up6Ssw, obj3);
     const obj4 = { text: null, onClick: null };
     const intl2 = tmp(1113).intl;
-    obj4.text = intl2.string(_modDef3868["ywA+ET"]);
+    obj4.text = intl2.string(_modDef3995["ywA+ET"]);
     obj4.onClick = tmp4;
     obj2.retry = obj4;
     tmp5 = obj2;
@@ -34,7 +34,7 @@ export default function useConjureRemixNotice(arg0) {
 }
 export function useConjureRemixStartedAt(projectId) {
   _require = projectId;
-  const items = [ConjureRemixStore];
+  items = [ConjureRemixStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => ConjureRemixStore.getSetupStartedAt(closure_0), items1);
 }

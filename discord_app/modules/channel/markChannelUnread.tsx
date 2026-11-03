@@ -5,7 +5,7 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ReadState = fn(6842).ReadState;
+const ReadState = fn(6962).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 
@@ -17,7 +17,7 @@ export default function markChannelUnread(arg0) {
 }
 export function useCanMarkChannelUnread(channel) {
   _require = channel;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStores(
     items,
     () => ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory(),

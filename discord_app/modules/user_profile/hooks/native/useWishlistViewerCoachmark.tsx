@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/native/use
 export function useWishlistViewerCoachmark(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
   const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
-  let items = [isCurrentUser, shouldShowWishlistTab];
+  items = [isCurrentUser, shouldShowWishlistTab];
   const memo = noop.useMemo(() => {
     if (!isCurrentUser) {
       if (shouldShowWishlistTab) {
-        let items = [dismissible_content.DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
+        items = [dismissible_content.DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
       }
       return items;
     }

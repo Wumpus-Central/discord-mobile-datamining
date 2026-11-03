@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3096 from "../AgeAssurance.messages.js";
+import _modDef3223 from "../AgeAssurance.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch" },
   text: { textAlign: "center" },
@@ -29,7 +29,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef3096.MLPgsX);
+    title = intl.string(_modDef3223.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -37,19 +37,19 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (description == null) {
     const intl2 = util.intl;
-    description = intl2.string(_modDef3096.VcZF1q);
+    description = intl2.string(_modDef3223.VcZF1q);
   }
   const obj = { children: null };
   const obj2 = { children: null };
   const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
-  const items = [
+  items = [
     React3(MobilePhoneIcon.MobilePhoneIcon, { size: "lg", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT }),
   ];
   const obj5 = { align: "center", justify: "center", spacing: 8, children: null };
   const items1 = [
     React3(Text_Text.Text, {
       accessibilityRole: "header",
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.text,
       children: title,

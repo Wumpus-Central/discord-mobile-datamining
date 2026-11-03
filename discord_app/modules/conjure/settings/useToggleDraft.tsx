@@ -19,7 +19,7 @@ export function useToggleDraft(stateFromStores, callback) {
     }
     changed = checked !== flag2;
   }
-  const items = [changed, checked, callback];
+  items = [changed, checked, callback];
   const save = noop.useCallback(() => {
     let tmp = !changed;
     if (changed) {

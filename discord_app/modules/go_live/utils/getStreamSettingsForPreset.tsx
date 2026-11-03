@@ -6,7 +6,7 @@ import StreamSettingsConstants from "../StreamSettingsConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getApplicationStreamPresetValues() {
-  const items = [
+  items = [
     { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 },
     { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_5 },
   ];
@@ -52,7 +52,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
                   if (item10011.resolution !== hasOwnProperty.RESOLUTION_SOURCE) {
                     if (item10011.resolution < tmp12.maxResolution) {
                       if (item10011.fps <= tmp12.maxFPS) {
-                        let items = [,];
+                        items = [,];
                         ({ maxResolution: arr2[0], maxFPS: arr2[1] } = tmp12);
                         obj2.return();
                         return items;

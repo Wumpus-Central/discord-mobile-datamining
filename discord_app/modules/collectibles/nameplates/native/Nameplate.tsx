@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/nameplates/native/Nameplate.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -34,63 +34,68 @@ function NameplateInner(isFocused) {
   if (flag6 === undefined) {
     flag6 = false;
   }
+  _require = flag6;
   let flag7 = isFocused.animate;
   if (flag7 === undefined) {
     flag7 = false;
   }
   let sharedValue;
-  const items = [AccessibilityStore];
-  const stateFromStores = flag6(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
-  let obj = flag6(504);
-  const tmp6 = sharedValue(5253)();
+  let obj = require("initialize");
+  const tmp6 = sharedValue(5376)();
   let num = 1;
   if (flag6) {
     num = 0;
   }
-  sharedValue = flag6(5095).useSharedValue(num);
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
   const items1 = [sharedValue, flag6];
   const effect = noop.useEffect(() => {
-    if (flag6) {
+    if (c0) {
       const obj2 = { duration: 100, easing: null };
-      const Easing = ReanimatedRexport.Easing;
-      obj2.easing = Easing.in(ReanimatedRexport.Easing.ease);
-      const result = sharedValue.set(timing.withTiming(1, obj2));
+      const Easing = _mod1652.Easing;
+      obj2.easing = Easing.in(_mod1652.Easing.ease);
+      const result = sharedValue.set(timing_timing.withTiming(1, obj2));
     }
   }, items1);
-  let obj2 = flag6(5095);
-  class A {
+  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_8, sharedValue];
+  _require = undefined;
+  [tmp9, tmp10] = items2;
+  class NameplateTsx1 {
     constructor() {
-      obj = { opacity: closure_1.get() };
+      obj = { opacity: closure_0.get() };
       return obj;
     }
   }
-  A.__closure = { opacity: sharedValue };
-  A.__workletHash = 15588901070870;
-  A.__initData = __initData;
-  const animatedStyle = flag6(5095).useAnimatedStyle(A);
-  const tmpResult = flag6(5095);
-  const backgroundGradientColors = flag6(1984).getBackgroundGradientColors(nameplate.palette, tmp6);
-  const tmpResult4 = flag6(1984);
-  const nameplateAssets = flag6(9515).getNameplateAssets(nameplate);
+  const items3 = [tmp10];
+  NameplateTsx1.__closure = items3;
+  NameplateTsx1.__workletHash = 2118555458479;
+  NameplateTsx1.__initData = tmp9;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(NameplateTsx1);
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const backgroundGradientColors = require("utils").getBackgroundGradientColors(nameplate.palette, tmp6);
+  const tmpResult4 = require("utils");
+  const nameplateAssets = require("NameplateUtils").getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
-  let tmp12 = true === flag7;
-  if (tmp12) {
-    tmp12 = !stateFromStores;
+  let tmp14 = true === flag7;
+  if (tmp14) {
+    tmp14 = !stateFromStores;
   }
-  if (!tmp12) {
-    tmp12 = "always" === flag7;
+  if (!tmp14) {
+    tmp14 = "always" === flag7;
   }
-  if (tmp12) {
+  if (tmp14) {
     str = nameplateAssets.animatedImageUrl;
   }
   if (str == null) {
     str = "";
   }
   const obj3 = { style: null, children: null };
-  const items2 = [tmp4.container, isFocused.style, animatedStyle];
-  obj3.style = items2;
-  let tmp15Result = null;
+  const items4 = [tmp4.container, isFocused.style, animatedStyle];
+  obj3.style = items4;
+  let tmp17Result = null;
   if (null != backgroundGradientColors) {
     const obj4 = { style: tmp4.gradient, start: null, end: null, colors: null };
     let num2 = 0;
@@ -100,30 +105,30 @@ function NameplateInner(isFocused) {
     const point = { x: num2, y: 0 };
     obj4.start = point;
     obj4.end = { x: 1, y: 0 };
-    const items3 = [,];
-    ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
-    obj4.colors = items3;
-    tmp15Result = closure_5(tmp5(5587), obj4);
-    const tmp5Result = tmp5(5587);
+    const items5 = [,];
+    ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
+    obj4.colors = items5;
+    tmp17Result = closure_5(tmp5(5710), obj4);
+    const tmp5Result = tmp5(5710);
   }
-  const items4 = [tmp15Result];
-  const tmpResult5 = flag6(9515);
+  const items6 = [tmp17Result];
+  const tmpResult5 = require("NameplateUtils");
   if (tmpResult6.isAndroid()) {
-    if (tmp12) {
+    if (tmp14) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_5(tmp(9504).APNGPlayer, obj5);
+      let tmp19 = closure_5(tmp(9632).APNGPlayer, obj5);
     }
-    items4[1] = tmp17;
-    obj3.children = items4;
-    return closure_6(tmp5(5095).View, obj3);
+    items6[1] = tmp19;
+    obj3.children = items6;
+    return closure_6(tmp5(1652).View, obj3);
   }
-  tmp17 = closure_5(tmp5(5717), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp19 = closure_5(tmp5(5837), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
   const obj6 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
-  tmpResult6 = flag6(1375);
+  tmpResult6 = require("PlatformUtils");
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = {
     container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 },
@@ -154,7 +159,7 @@ let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   obj.img = { position: "absolute", height: "100%", right: 0, aspectRatio: 5.333333333333333, opacity: num };
   return obj;
 });
-const __initData = { code: "function NameplateTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let closure_8 = { code: "(function NameplateTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/nameplates/native/Nameplate.tsx");
 

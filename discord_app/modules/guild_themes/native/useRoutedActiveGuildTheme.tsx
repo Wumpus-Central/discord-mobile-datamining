@@ -19,7 +19,7 @@ function getGuildIdFromNavigationState(routes) {
         }
       }
       if (null == guildId) {
-        let state;
+        state = undefined;
         if (tmp != null) {
           state = tmp.state;
         }
@@ -46,7 +46,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             }
           }
           if (null == guildId) {
-            let state;
+            state = undefined;
             if (tmp5 != null) {
               state = tmp5.state;
             }
@@ -85,7 +85,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             found = mapped.find((item) => null != item);
           }
         }
-        let state2;
+        state2 = undefined;
         if (found != null) {
           state2 = found.state;
         }

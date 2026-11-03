@@ -2,7 +2,7 @@
 import RouteConstants from "RouteConstants.tsx";
 import utils_PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import escapeRegExpDefault from "../../../_runtime/05065_escapeRegExp.js";
+import escapeRegExpDefault from "../../../_runtime/05192_escapeRegExp.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
@@ -51,7 +51,7 @@ export const RouteParam = {
     if (flag === undefined) {
       flag = false;
     }
-    const items = [...StaticChannelRoutes];
+    items = [...StaticChannelRoutes];
     const mapped = items.map(escapeRegExpDefault);
     const combined = "" + mapped.join("|") + "|\\d+";
     let flag2 = { optional: flag }.optional;

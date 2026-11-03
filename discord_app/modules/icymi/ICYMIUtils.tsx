@@ -25,7 +25,7 @@ let closure_12 = async function _hydrateItems(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -47,19 +47,19 @@ let closure_12 = async function _hydrateItems(arg0) {
               generateHydrationId.generateHydrationId(closure_1, dependencyMap2),
             );
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8919).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(9043).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({
               channel_id: channel_id.data.channel_id,
               message_id: channel_id.data.message_id,
             }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8919).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(9043).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
                   reply_message_id = message_context.reply_message_id;
                 }
-                const items = [];
+                items = [];
                 if (null != reply_message_id) {
                   const obj = {
                     channel_id: type.data.channel_id,
@@ -98,11 +98,11 @@ let closure_12 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8919).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(9043).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };
-            let items = [];
+            items = [];
             HermesBuiltin.arraySpread(found2, HermesBuiltin.arraySpread(mapped, 0));
             obj7.messageItems = items;
             obj7.activityItems = mapped2;
@@ -124,16 +124,16 @@ let closure_12 = async function _hydrateItems(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp17) {
       c4 = tmp;
       throw tmp17;
     }
   }
 };
-const ThreadChannelRecord = fn(4867).ThreadChannelRecord;
+const ThreadChannelRecord = fn(4994).ThreadChannelRecord;
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
+({ ChannelTypes: closure_9, GuildNSFWContentLevel: closure_10 } = Constants);
 const ICYMICustomScore = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
@@ -303,7 +303,7 @@ export function isItemNSFW(data) {
     if (guild_id1 == null) {
       guild_id1 = guild_id;
     }
-    let guild = null;
+    guild = null;
     if (null != guild_id1) {
       guild = GuildStore.getGuild(guild_id1);
     }
@@ -323,46 +323,46 @@ export function isItemNSFW(data) {
   }
 }
 export function itemToType(data) {
-  const kind = data.data.kind;
-  if ("end" === kind) {
-    return "end";
-  } else if ("loading" === kind) {
-    return "loading";
-  } else if ("bottomLoading" === kind) {
-    return "bottomLoading";
-  } else {
-    let str11 = "message";
-    if ("message" === kind) {
-      let str10 = "announcement";
+  switch (data.data.kind) {
+    case "end":
+      return "end";
+    case "loading":
+      return "loading";
+    case "bottomLoading":
+      return "bottomLoading";
+    case "message":
+      let str7 = "announcement";
       if (data.channelType !== constants.GUILD_ANNOUNCEMENT) {
         const messageContext = data.data.messageContext;
         let prop;
         if (messageContext != null) {
           prop = messageContext.external_content_application_id;
         }
+        let str8 = "message";
         if (null != prop) {
-          str11 = "game_message";
+          str8 = "game_message";
         }
-        str10 = str11;
+        str7 = str8;
       }
-      return str10;
-    } else if ("guildEvent" === kind) {
+      return str7;
+    case "guildEvent":
       return "guild_event";
-    } else if ("contentInventory" === kind) {
-      let str8 = "hotwheels_gaming_activity";
+    case "contentInventory":
+      let str5 = "hotwheels_gaming_activity";
       if (data.data.content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS) {
-        str8 = "hotwheels_custom_status";
+        str5 = "hotwheels_custom_status";
       }
-      return str8;
-    } else if ("recommendedGuilds" === kind) {
+      return str5;
+    case "recommendedGuilds":
       return "recommended_guilds";
-    } else if ("forumThread" === kind) {
+    case "waterwheelsItem":
+      return "discover_item";
+    case "forumThread":
       return "forum_thread";
-    } else if ("icymiHeader" === kind) {
+    case "icymiHeader":
       return "icymi_header";
-    } else {
+    default:
       return "unknown";
-    }
   }
 }
 export function determineContentType(channel, message) {

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx
 import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import _modDef2570 from "../../GuildPowerups.messages.js";
+import _modDef2699 from "../../GuildPowerups.messages.js";
 import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
-import _modDef14124 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
-import _modDef14125 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef14255 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef14256 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
@@ -17,9 +17,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks
 export default function usePowerupGroupConfig(arg0, arg1) {
   _require = arg0;
   const group = arg1;
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
       guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
@@ -35,18 +35,18 @@ export default function usePowerupGroupConfig(arg0, arg1) {
         image: null,
         disabledReason: null,
         badge: "HermesInternal",
-        forceStaticImages: "no-hide-descendants",
+        forceStaticImages: "HermesInternal",
       };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2570.KC9HRW);
+      obj2.title = intl.string(_modDef2699.KC9HRW);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2570.GJiSmP);
-      const obj3 = { staticUrl: _modDef14124, animatedUrl: _modDef14125 };
+      obj2.description = intl2.string(_modDef2699.GJiSmP);
+      const obj3 = { staticUrl: _modDef14255, animatedUrl: _modDef14256 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef2570.lvk1Gc);
+        stringResult = intl3.string(_modDef2699.lvk1Gc);
       }
       obj2.disabledReason = stringResult;
       return obj2;

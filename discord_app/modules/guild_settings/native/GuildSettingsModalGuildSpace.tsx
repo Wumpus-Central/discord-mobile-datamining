@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalGuildSpace.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2442 from "../../guild_space/GuildSpace.messages.js";
+import _modDef2571 from "../../guild_space/GuildSpace.messages.js";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
 import ServerHubAnalytics from "../../guild_space/ServerHubAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ function GuildSpaceSystemMessageSwitch(guild) {
   guild = guild.guild;
   const flag = guild.flag;
   const settingType = guild.settingType;
-  const items = [guild, flag, settingType];
+  items = [guild, flag, settingType];
   ({ label, subLabel, disabled } = guild);
   const callback = noop.useCallback((value) => {
     const setFlagResult = FlagUtils.setFlag(guild.systemChannelFlags, flag, !value);
@@ -32,8 +32,8 @@ function GuildSpaceSystemMessageSwitch(guild) {
 const Constants = fn(1072);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -44,7 +44,7 @@ let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSett
 export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
   let stateFromStores;
   const tmp = closure_11();
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => guild.getGuild(), []);
   const obj = stateFromStores(504);
   const items1 = [PermissionStore];
@@ -69,13 +69,13 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj7 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-      settingType: tmp2(19663).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(19813).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
     };
     const intl3 = tmp2(1113).intl;
-    obj7.label = intl3.string(_modDef2442.btBTIw);
+    obj7.label = intl3.string(_modDef2571.btBTIw);
     const intl4 = tmp2(1113).intl;
     obj7.subLabel = intl4.string(tmp2(1113).t.n3aRYQ);
     obj7.disabled = !stateFromStores1;
@@ -83,7 +83,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj8 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-      settingType: tmp2(19663).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(19813).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
       label: null,
       disabled: null,
     };
@@ -94,21 +94,21 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj9 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-      settingType: tmp2(19663).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+      settingType: tmp2(19813).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
     };
     const intl6 = tmp2(1113).intl;
-    obj9.label = intl6.string(_modDef2442["5xxUI2"]);
+    obj9.label = intl6.string(_modDef2571["5xxUI2"]);
     const intl7 = tmp2(1113).intl;
-    obj9.subLabel = intl7.string(_modDef2442.FMGoDB);
+    obj9.subLabel = intl7.string(_modDef2571.FMGoDB);
     obj9.disabled = !stateFromStores1;
     items4[2] = closure_8(GuildSpaceSystemMessageSwitch, obj9);
     obj6.children = items4;
-    obj5.children = closure_9(tmp2(7060).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(6027).Stack, obj5);
-    const items5 = [closure_8(tmp2(8177).Form, obj4), closure_8(tmp2(5606).NavScrim, {})];
+    obj5.children = closure_9(tmp2(7186).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(6147).Stack, obj5);
+    const items5 = [closure_8(tmp2(8301).Form, obj4), closure_8(tmp2(5729).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

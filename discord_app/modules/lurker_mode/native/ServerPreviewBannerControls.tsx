@@ -1,7 +1,7 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef7003 from "../../../../_runtime/metro/07003__.js";
+import _modDef7129 from "../../../../_runtime/metro/07129__.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1072).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { row: null };
 const rect = {
   position: "absolute",
@@ -35,14 +35,14 @@ export default function ServerPreviewBannerControls() {
   const obj2 = {
     size: "md",
     variant: "secondary-overlay",
-    icon: _modDef7003,
+    icon: _modDef7129,
     onPress: callback,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,
   };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
-  const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];
+  items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];
   obj.children = items;
   return React5(View, obj);
 }

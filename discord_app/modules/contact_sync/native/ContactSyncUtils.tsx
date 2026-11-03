@@ -25,7 +25,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,16 +107,16 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14250);
+const ContactSyncPersistedStore = fn(14381);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14249);
+const ContactSyncConstants = fn(14380);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
-  ContactPermissions: c10,
+  ContactPermissions: closure_10,
   ContactSyncSuggestionsSetting: closure_11,
 } = ContactSyncConstants);
 const Constants = fn(1072);
@@ -183,7 +183,7 @@ export function uploadContacts() {
 }
 export function bulkAddFriends(user_ids, bulkAddToken) {
   const request = {
-    url: closure_1_12.USER_BULK_RELATIONSHIPS,
+    url: application_id.USER_BULK_RELATIONSHIPS,
     body: { user_ids, token: bulkAddToken },
     trackedActionData: null,
     rejectWithError: false,
@@ -203,7 +203,7 @@ export function adminDeleteContactSync() {
   const ContactSyncEnabled = UserSettings.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
   const obj3 = {
-    url: closure_1_12.CONNECTION(constants2.CONTACTS, "@me"),
+    url: application_id.CONNECTION(constants2.CONTACTS, "@me"),
     oldFormErrors: true,
     trackedActionData: null,
     rejectWithError: false,
@@ -274,11 +274,11 @@ export function getStoredContacts() {
   }
 }
 export function useContactSyncAccount() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   return initialize.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 }
 export function useContactSyncEnabled() {
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   return initialize.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;

@@ -13,7 +13,7 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
           return tmp16;
         }
       }
-      const items = [];
+      items = [];
       if (set.has(ActivityGamePlatforms.ActivityGamePlatforms.ANDROID)) {
         if (set.has(ActivityGamePlatforms.ActivityGamePlatforms.IOS)) {
           items.push(obj.MOBILE);
@@ -61,22 +61,22 @@ const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromS
 
 export { IconKey };
 export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
-  [fn(9738).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP,
-  [fn(9738).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID,
-  [fn(9738).ActivityGamePlatforms.IOS]: IconKey.IOS,
-  [fn(9738).ActivityGamePlatforms.XBOX]: IconKey.XBOX,
-  [fn(9738).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION,
-  [fn(9738).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION,
-  [fn(9738).ActivityGamePlatforms.SAMSUNG]: null,
-  [fn(9738).ActivityGamePlatforms.EMBEDDED]: null,
-  [fn(9738).ActivityGamePlatforms.META_QUEST]: IconKey.VR,
+  [fn(9870).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP,
+  [fn(9870).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID,
+  [fn(9870).ActivityGamePlatforms.IOS]: IconKey.IOS,
+  [fn(9870).ActivityGamePlatforms.XBOX]: IconKey.XBOX,
+  [fn(9870).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION,
+  [fn(9870).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION,
+  [fn(9870).ActivityGamePlatforms.SAMSUNG]: null,
+  [fn(9870).ActivityGamePlatforms.EMBEDDED]: null,
+  [fn(9870).ActivityGamePlatforms.META_QUEST]: IconKey.VR,
 };
 export { getJoinFromSupportedPlatformsIconKeys };
 export function useJoinFromSupportedPlatformsIconKeys(platforms) {
   platforms = platforms.platforms;
   const currentPlatform = platforms.currentPlatform;
   const isGameLaunchable = platforms.isGameLaunchable;
-  const items = [currentPlatform, platforms, isGameLaunchable];
+  items = [currentPlatform, platforms, isGameLaunchable];
   return isGameLaunchable.useMemo(
     () => getJoinFromSupportedPlatformsIconKeys({ platforms, currentPlatform, isGameLaunchable }),
     items,

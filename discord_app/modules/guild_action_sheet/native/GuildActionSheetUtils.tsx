@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/Gui
 
 export function useGuildActionSheetPermissions(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   return require("initialize").useStateFromStoresObject(
     items,

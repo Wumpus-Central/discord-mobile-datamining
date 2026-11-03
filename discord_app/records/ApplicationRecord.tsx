@@ -22,9 +22,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(2018);
+const Constants = fn(2147);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
@@ -369,7 +369,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     fromEntriesResult = Object.fromEntries(
       entries.map((item) => {
         [tmp, obj] = item;
-        const items = [tmp];
+        items = [tmp];
         if (obj == null) {
           obj = {};
         }
@@ -568,7 +568,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     guildId = self.guildId;
   }
   obj.guildId = guildId;
-  let guild = id.guild;
+  guild = id.guild;
   if (guild == null) {
     guild = self.guild;
   }
@@ -790,7 +790,7 @@ prototype2["supportsEmbeddedSurface"] = function supportsEmbeddedSurface(MAIN) {
   return require("EmbeddedSurfaceUtils").supportsEmbeddedSurface(this, MAIN);
 };
 prototype2["supportsIntegrationTypes"] = function supportsIntegrationTypes() {
-  const items = [...arguments];
+  items = [...arguments];
   const integrationTypesConfig = this.integrationTypesConfig;
   return null != integrationTypesConfig && items.every((item) => item in integrationTypesConfig);
 };

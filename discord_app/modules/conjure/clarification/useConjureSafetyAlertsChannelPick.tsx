@@ -38,7 +38,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
     tmp = "safety_alerts_channel" === question.default;
   }
   closure_129_3 = tmp;
-  let items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId, tmp];
   const stateFromStores = guildId(onChange[7]).useStateFromStores(
     items,
@@ -66,7 +66,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
       isMemberResult = GuildMemberStore.isMember(value, stateFromStores1);
     }
     if (!isMemberResult) {
-      const items = [stateFromStores1];
+      items = [stateFromStores1];
       const membersById = GuildActionCreatorsDefault.requestMembersById(value, items);
     }
   }, items2);
@@ -78,7 +78,7 @@ export default function useConjureSafetyAlertsChannelPick(disabled) {
     () => {
       if (onChange) {
         if (null != value) {
-          const guild = GuildStore.getGuild(value);
+          guild = GuildStore.getGuild(value);
           let prop;
           if (guild != null) {
             prop = guild.safetyAlertsChannelId;

@@ -115,7 +115,7 @@ class MobileSearchableSelect {
           tmp = found;
           if ("" !== first.trim()) {
             const obj = { label: first.trim(), value: first.trim() };
-            const items = [obj];
+            items = [obj];
             tmp = items;
           }
         }
@@ -200,7 +200,7 @@ class MobileSearchableSelect {
       };
       obj6.children = memo.map((children, index) => {
         value = children;
-        const items = [dropdownItem.dropdownItem];
+        items = [dropdownItem.dropdownItem];
         let dropdownItemLast = index === memo.length - 1;
         if (dropdownItemLast) {
           dropdownItemLast = dropdownItem.dropdownItemLast;
@@ -234,7 +234,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,

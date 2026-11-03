@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 
@@ -13,7 +13,7 @@ export function useEmojisForReactionRow(channel, emojiLineHeight, arg2) {
   const guildId = channel.getGuildId();
   const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
   rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, emojiLineHeight) / arg2);
-  const items = [frequentlyUsedReactionEmojis, channel, rounded];
+  items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
     let length;
     const found = frequentlyUsedReactionEmojis.filter(

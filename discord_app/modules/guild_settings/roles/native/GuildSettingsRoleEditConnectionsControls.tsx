@@ -2,7 +2,7 @@
 import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -28,7 +28,7 @@ function HeaderSection(arg0) {
   if (hasMembers) {
     const obj = { style: tmp.warningContainer, children: null };
     const obj2 = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
-    const items = [closure_1_10(CircleErrorIcon.CircleErrorIcon, obj2)];
+    items = [closure_1_10(CircleErrorIcon.CircleErrorIcon, obj2)];
     const obj3 = { variant: "text-xs/medium", style: tmp.warningText, children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["2aFeef"]);
@@ -64,7 +64,7 @@ function HeaderSection(arg0) {
   obj9.children = items3;
   items1[1] = closure_1_11(Stack_Stack.Stack, obj9);
   obj8.children = items1;
-  return closure_1_11(closure_1_12, obj8);
+  return closure_1_11(application_id, obj8);
 }
 function AndOrRadios(setPendingRoleConfigurations) {
   ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
@@ -73,7 +73,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
     ConnectionsUtils.ConnectionConfigurationRuleOperator.OR === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND
   ) {
     if (0 === roleConnectionConfigurations.length) {
-      let items = [];
+      items = [];
     } else {
       const items1 = [];
       HermesBuiltin.arraySpread(roleConnectionConfigurations, 0);
@@ -117,7 +117,7 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
   importDefault = arg1;
   dependencyMap = locked;
   function handleConfigurationChange(arg0, arg1) {
-    const items = [];
+    items = [];
     for (const item10006 of closure_0) {
       let obj = {};
       let merged = Object.assign(item10006);
@@ -168,7 +168,7 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
       }
     } else {
       const obj3 = { index, configuration: connectionType };
-      const items = [obj3];
+      items = [obj3];
       const result = map.set(combined, items);
     }
   });
@@ -245,20 +245,20 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(19808, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(19958, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const Constants = fn(7349);
+const Constants = fn(7469);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   formContent: { paddingTop: 16, paddingBottom: 0 },
   warningContainer: {
@@ -296,7 +296,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
     stateFromStoresArray[26],
   ).useApplicationIdentityLinkedRolesEnabled(guild.id, "guild_settings_roles_edit_connections");
   let obj2 = guild(stateFromStoresArray[26]);
-  let items = [GuildRoleMemberCountStore];
+  items = [GuildRoleMemberCountStore];
   let items1 = [role.id, guild.id];
   let num = guild(stateFromStoresArray[27]).useStateFromStores(
     items,
@@ -314,7 +314,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   let items2 = [GuildSettingsRolesStore];
   stateFromStoresArray = guild(stateFromStoresArray[27]).useStateFromStoresArray(items2, () => {
     const editedRoleConnectionConfigurationsMap = GuildSettingsRolesStore.getEditedRoleConnectionConfigurationsMap();
-    let items = editedRoleConnectionConfigurationsMap.get(role.id);
+    items = editedRoleConnectionConfigurationsMap.get(role.id);
     if (items == null) {
       items = [];
     }
@@ -378,7 +378,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       setPendingRoleConfigurations(arg0, arg1) {
         if (arg1 === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
           if (0 === arg0.length) {
-            let items = [];
+            items = [];
           } else {
             const items1 = [];
             HermesBuiltin.arraySpread(arg0, 0);
@@ -410,7 +410,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       (arg0) => {
         if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
           if (0 === arg0.length) {
-            let items = [];
+            items = [];
           } else {
             const items1 = [];
             HermesBuiltin.arraySpread(arg0, 0);
@@ -438,8 +438,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   items6[2] = tmp15;
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
-      const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "Object", value: false };
+      items = [...memo];
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "jsx", value: "Array" };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

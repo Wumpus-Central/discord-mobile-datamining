@@ -7,13 +7,13 @@ import useShouldRenderChannelList from "../../guild_sidebar/native/useShouldRend
 import FavoritesGuildChannelList from "../FavoritesGuildChannelList.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ChannelListPanelBackdropDefault = tmp2(18108);
-const ChannelListStickyHeaderDefault = tmp2(18193);
-const FavoritesGuildSuggestedChannelsDefault = tmp2(18261);
-const FavoritesGuildSuggestionsLoaderDefault = tmp2(18350);
-const FavoritesGuildSidebarHeaderDefault = tmp2(18355);
+const ChannelListPanelBackdropDefault = tmp2(18252);
+const ChannelListStickyHeaderDefault = tmp2(18337);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(18405);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(18495);
+const FavoritesGuildSidebarHeaderDefault = tmp2(18500);
 require = fn;
-let closure_3 = fn(18262).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(18406).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function FavoritesGuildChannels(arg0) {
     return null;
   } else {
     let tmp2Result2 = arg0;
-    const items = [React4(FavoritesGuildSuggestionsLoaderDefault, {})];
+    items = [React4(FavoritesGuildSuggestionsLoaderDefault, {})];
     if (hasNoChannels) {
       const obj6 = { style: null, contentInset: null, children: null };
       ({ style: obj8.style, contentInset: obj8.contentInset } = tmp2Result2);

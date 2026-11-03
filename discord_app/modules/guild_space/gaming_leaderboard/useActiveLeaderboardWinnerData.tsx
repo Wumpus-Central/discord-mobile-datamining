@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 export default function useActiveLeaderboardWinnerData(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
@@ -112,7 +112,7 @@ export function getActiveLeaderboardLeaderData(prop1) {
 export function useActiveLeaderboardLeaderData(guildId, userId) {
   _require = guildId;
   dependencyMap = userId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [guildId, userId];
   return require("initialize").useStateFromStores(
     items,
@@ -155,7 +155,7 @@ export function useActiveLeaderboardLeaderData(guildId, userId) {
 export function useHasActiveLeaderboardBadge(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,

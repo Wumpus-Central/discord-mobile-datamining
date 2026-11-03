@@ -30,8 +30,8 @@ const Constants = fn(1072);
   UserSettingsSections: closure_9,
 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   form: { paddingTop: nativeDefault.space.PX_16 },
   trailingWrapper: { flexDirection: "row", alignItems: "center" },
@@ -168,7 +168,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_1_10(TableRow.TableRow, obj2)];
+      items = [closure_1_10(TableRow.TableRow, obj2)];
       const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj5.value = Boolean(self.state.enabled);
@@ -209,13 +209,13 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
     }
   }
-  const token = platformType(5596).useToken(closeGuildSettings(575).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(5719).useToken(closeGuildSettings(575).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_13();
   dependencyMap = tmp5;
-  let obj = platformType(5596);
-  const navigation = platformType(1497).useNavigation();
-  let obj2 = platformType(1497);
-  const items = [c5];
+  let obj = platformType(5719);
+  const navigation = platformType(1499).useNavigation();
+  let obj2 = platformType(1499);
+  items = [c5];
   const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({
     guild: _undefined.getGuild(),
     submitting: _undefined.isSubmitting(),
@@ -223,7 +223,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  constants2 = closeGuildSettings(5253)();
+  constants2 = closeGuildSettings(5376)();
   const obj4 = platformType(504);
   const items1 = [c5];
   const stateFromStores = platformType(504).useStateFromStores(items1, () => _undefined.getProps().integrations);
@@ -238,7 +238,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(6574).get(platformType);
+    value = tmp3(6694).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -268,18 +268,18 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       let intl = tmp(1113).intl;
       const obj6 = {
         connectAction: onConectTap,
-        helpdeskArticle: tmp3(2061).getArticleURL(constants2.YOUTUBE_INTEGRATION),
+        helpdeskArticle: tmp3(2190).getArticleURL(constants2.YOUTUBE_INTEGRATION),
       };
       let formatResult = intl.format(tmp(1113).t["4OSAQ9"], obj6);
-      const tmp3Result3 = tmp3(2061);
+      const tmp3Result3 = tmp3(2190);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1113).intl;
       const obj7 = {
         connectAction: onConectTap,
-        helpdeskArticle: tmp3(2061).getArticleURL(constants2.TWITCH_INTEGRATION),
+        helpdeskArticle: tmp3(2190).getArticleURL(constants2.TWITCH_INTEGRATION),
       };
       formatResult = intl2.format(tmp(1113).t.ro1jEN, obj7);
-      const tmp3Result4 = tmp3(2061);
+      const tmp3Result4 = tmp3(2190);
     }
     const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
     const obj9 = { style: null, spacing: null, children: null };
@@ -308,10 +308,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj11 = { children: null };
     const items2 = [mapped];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_10(tmp(5624).Text, obj12);
+    items2[1] = closure_10(tmp(5747).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_11(tmp(6027).Stack, obj9);
-    const items3 = [closure_10(tmp(8177).Form, obj8), closure_10(tmp(5606).NavScrim, {})];
+    obj8.children = closure_11(tmp(6147).Stack, obj9);
+    const items3 = [closure_10(tmp(8301).Form, obj8), closure_10(tmp(5729).NavScrim, {})];
     obj11.children = items3;
     return closure_11(closure_12, obj11);
   }

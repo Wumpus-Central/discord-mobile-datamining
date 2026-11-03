@@ -171,7 +171,7 @@ export function splitParagraphAtImages(content) {
       arraySpreadResult4 = HermesBuiltin.arraySpread(items4, arraySpreadResult4);
     }
   }
-  let items = [];
+  items = [];
   closure_1 = [];
   c2 = false;
   const item = content.forEach((type) => {

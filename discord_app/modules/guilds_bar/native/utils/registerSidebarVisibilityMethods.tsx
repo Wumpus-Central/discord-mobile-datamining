@@ -17,7 +17,7 @@ export function registerGuildVisibilityMethod(fastListRef) {
       if (null == current) {
         return [];
       } else {
-        const items = current.getItems();
+        items = current.getItems();
         const scrollPosition = current.getScrollPosition();
         const containerSize = current.containerSize;
         const guilds = GuildStore.getGuilds();
@@ -65,7 +65,7 @@ export function registerFastListChannelVisibilityMethod(ref, guildChannels) {
       if (null == containerSize) {
         return [];
       } else {
-        const items = obj.getItems();
+        items = obj.getItems();
         let channelFromSectionRow = obj.getScrollPosition();
         containerSize = obj.containerSize;
         const items1 = [];

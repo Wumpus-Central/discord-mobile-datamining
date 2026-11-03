@@ -22,7 +22,7 @@ function DockChannelIcon() {
   const tmp4Result = useDockBoxShadowDefault(native.Shadow.SHADOW_MEDIUM);
   const context = noop.useContext(VoicePanelStateContextDefault);
   ({ channelId: require, guildId: importDefault } = context);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => GuildStore.getGuild(importDefault));
   const items1 = [ChannelStore, UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {
@@ -70,11 +70,11 @@ function DockChannelIcon() {
   return tmp12;
 }
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11241);
+const VoicePanelDockConstants = fn(11378);
 ({ DOCK_TILE_RADIUS, DOCK_TILE_SIZE, DOCK_GAP, DOCK_GLYPH_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   identity: { flexDirection: "row", alignItems: "center", gap: DOCK_GAP },
   guildIcon: null,
@@ -105,7 +105,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/Voice
 export default noop.memo(function VoicePanelDockIdentity() {
   const tmp = closure_11();
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,
@@ -126,14 +126,14 @@ export default noop.memo(function VoicePanelDockIdentity() {
   const items3 = [closure_9(DockChannelIcon, {})];
   const obj4 = { style: tmp.titleRow, children: null };
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(8670).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(8794).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(8673).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(8797).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
   const items4 = [
     closure_9(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }),
-    closure_9(channelId(5624).Text, {
+    closure_9(channelId(5747).Text, {
       variant: "text-md/medium",
       color: "text-default",
       lineClamp: 1,

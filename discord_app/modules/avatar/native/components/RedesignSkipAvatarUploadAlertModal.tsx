@@ -19,7 +19,7 @@ export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   const obj3 = { onPress: onConfirm.onConfirm, text: null };
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.nhJ8OC);
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["7eZ3ji"]);

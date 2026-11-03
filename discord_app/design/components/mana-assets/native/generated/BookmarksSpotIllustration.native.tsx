@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef11184 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-1x.png.js";
-import _modDef11185 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-2x.png.js";
-import _modDef11186 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-3x.png.js";
+import _modDef11321 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-1x.png.js";
+import _modDef11322 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-2x.png.js";
+import _modDef11323 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11184 }, 3: null };
-let obj2 = { uri: _modDef11184 };
-obj[2] = { uri: _modDef11185 };
-const obj3 = { uri: _modDef11185 };
-obj[3] = { uri: _modDef11186 };
+let obj = { 1: null, 2: { uri: _modDef11321 }, 3: null };
+let obj2 = { uri: _modDef11321 };
+obj[2] = { uri: _modDef11322 };
+const obj3 = { uri: _modDef11322 };
+obj[3] = { uri: _modDef11323 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx",
@@ -25,7 +25,7 @@ export function BookmarksSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

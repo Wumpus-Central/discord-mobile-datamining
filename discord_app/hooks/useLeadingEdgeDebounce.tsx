@@ -11,7 +11,7 @@ export (stateFromStores1, arg1) => {
   noop.useRef(true);
   const tmp = _slicedToArray(noop.useState(stateFromStores1), 2);
   closure_3 = tmp[1];
-  const items = [stateFromStores1, arg1];
+  items = [stateFromStores1, arg1];
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_1_3(closure_0);

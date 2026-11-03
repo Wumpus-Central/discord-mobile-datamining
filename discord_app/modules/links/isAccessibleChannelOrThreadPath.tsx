@@ -17,7 +17,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -36,7 +36,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
           closure_130_0 = undefined;
           closure_130_1 = undefined;
           ({ guildId: closure_130_0, channelId: closure_130_1 } = closure_0);
-          let guild;
+          guild = undefined;
           let unsafeMutableRoles;
           let channel2;
           c4 = 1;
@@ -80,6 +80,9 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
                   c5 = 3;
                   const obj7 = { value: canAccessConjureResult, done: true };
                   return obj7;
+                } else if (closure_131_11.CONJURE_PROJECT === tmp31) {
+                  c5 = 3;
+                  return { value: false, done: true };
                 } else if (closure_131_11.ROLE_SUBSCRIPTIONS === tmp31) {
                   c5 = 3;
                   const obj9 = {
@@ -265,8 +268,8 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
 };
 const Constants = fn(1072);
 ({ GuildFeatures: closure_8, ME: closure_9 } = Constants);
-const ChannelConstants = fn(4870);
-({ isStaticChannelRoute: c10, StaticChannelRoute: closure_11 } = ChannelConstants);
+const ChannelConstants = fn(4997);
+({ isStaticChannelRoute: closure_10, StaticChannelRoute: closure_11 } = ChannelConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");
 

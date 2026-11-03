@@ -3,7 +3,7 @@ import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
 
@@ -11,7 +11,7 @@ export function useIsPremiumSubscriber() {
   if (TIER_2 === undefined) {
     TIER_2 = PremiumTypes.TIER_2;
   }
-  const items = [UserStore];
+  items = [UserStore];
   return TIER_2(504).useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();
     return PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2);

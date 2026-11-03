@@ -47,7 +47,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -78,7 +78,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -86,7 +86,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
@@ -108,7 +108,7 @@ export function getFavoritesCleanupCandidates(days) {
     if (days >= 1) {
       const _Date = Date;
       const timestamp = Date.now();
-      const items = [];
+      items = [];
       const diff = timestamp - days * DurationsDefault.Millis.DAY;
       const tmp28 = getFavoriteThreadIdsForCleanup(days.categoryId);
       const iter = tmp28[Symbol.iterator]();

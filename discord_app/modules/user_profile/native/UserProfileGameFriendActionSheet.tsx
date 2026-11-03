@@ -13,7 +13,7 @@ function GameFriendApplicationRow(application) {
   const userId = application.userId;
   const userDisplayName = application.userDisplayName;
   const tmp = closure_12();
-  const items = [, , ,];
+  items = [, , ,];
   ({ id: arr[0], name: arr[1] } = application);
   items[2] = userDisplayName;
   items[3] = userId;
@@ -57,8 +57,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,
@@ -76,7 +76,7 @@ export default function UserProfileGameFriendActionSheet(user) {
   noop = undefined;
   ({ guildId, channelId } = user);
   const gameFriendsForUser = user(memo[14]).useGameFriendsForUser(user.id);
-  const items = [gameFriendsForUser];
+  items = [gameFriendsForUser];
   memo = noop.useMemo(() => gameFriendsForUser.map((applicationId) => applicationId.applicationId), items);
   let obj = user(memo[14]);
   const arr2 = gameFriendsForUser(memo[15])(memo);
@@ -114,7 +114,7 @@ export default function UserProfileGameFriendActionSheet(user) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

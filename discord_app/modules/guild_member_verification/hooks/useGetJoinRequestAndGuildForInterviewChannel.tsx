@@ -24,13 +24,13 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const castResult = first(11).cast(id);
   _slicedToArray = castResult;
   let obj = first(11);
-  const items = [GuildJoinRequestStore, UserGuildJoinRequestStore, joinRequestGuild, PermissionStore];
+  items = [GuildJoinRequestStore, UserGuildJoinRequestStore, joinRequestGuild, PermissionStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const request = GuildJoinRequestStore.getRequest(castResult);
     if (null == request) {
       return { joinRequest: null, isModmin: false, guild: null };
     } else {
-      let guild = GuildStore.getGuild(request.guildId);
+      guild = GuildStore.getGuild(request.guildId);
       if (guild == null) {
         guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
       }

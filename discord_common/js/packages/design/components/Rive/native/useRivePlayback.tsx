@@ -31,7 +31,7 @@ export function useRivePlayback(riveViewRef, isReady) {
       ref.current = null;
     }
   }, []);
-  const items = [callback, riveViewRef];
+  items = [callback, riveViewRef];
   const pause = noop.useCallback(() => {
     callback();
     if (closure_0 != null) {

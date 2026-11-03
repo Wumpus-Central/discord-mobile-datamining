@@ -10,13 +10,13 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/useSortedOnb
 
 export default function useSortedOnboardingPrompts(arg0) {
   _require = arg0;
-  let items = [GuildOnboardingPromptsStore];
+  items = [GuildOnboardingPromptsStore];
   stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () =>
     GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0),
   );
   let items1 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     const items2 = [];
     const items3 = [];

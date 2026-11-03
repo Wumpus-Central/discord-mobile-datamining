@@ -52,7 +52,7 @@ function highlightAST(content, c0, c1) {
       return item;
     });
   } else if ("list" === content.type) {
-    const items = content.items;
+    items = content.items;
     const item1 = items.forEach((item) => {
       highlightAST(item, closure_0, closure_1);
       return item;
@@ -113,7 +113,7 @@ function splitHighlights(content, words) {
   if (0 === words.size) {
     return null;
   } else {
-    const items = [];
+    items = [];
     let str = "";
     const parts = content.split(/(\W+)/g);
     for (const item10009 of parts) {

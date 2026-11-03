@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 
 export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(12097)(arg0);
+  const tmp3 = guildId(12233)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -19,11 +19,11 @@ export default function useConjureIncompleteAppNotice(arg0) {
   if (guildId == null) {
     guildId = null;
   }
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != guildId) {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -50,16 +50,16 @@ export default function useConjureIncompleteAppNotice(arg0) {
     if (tmp7[0] !== arg0) {
       const intl = require("util").intl;
       if ("channel" === missingSurface) {
-        let Lm7IRC = tmp(3868)["1cm4fj"];
+        let Lm7IRC = tmp(3995)["1cm4fj"];
       } else {
-        Lm7IRC = tmp(3868).Lm7IRC;
+        Lm7IRC = tmp(3995).Lm7IRC;
       }
-      let str = stateFromStores;
+      let str2 = stateFromStores;
       if (stateFromStores == null) {
-        str = "";
+        str2 = "";
       }
       const obj2 = { message: null, onDismiss: null };
-      const obj3 = { server: str };
+      const obj3 = { server: str2 };
       obj2.message = intl.format(Lm7IRC, obj3);
       obj2.onDismiss = function onDismiss() {
         return closure_2(closure_0);

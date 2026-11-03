@@ -1,30 +1,34 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const __initData = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
+let closure_2 = { code: "(function useFastestListPropsScrollReportingNativeTsx1(event){let[scrollPosition,horizontal]=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}})" };
 let result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
 
-export default function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
-  closure_0 = horizontal;
+export default function useFastestListPropsScrollReporting(scrollReporting, arg1) {
   let scrollPosition;
   if ("animatedScrollPosition" === scrollReporting.scrollReporting) {
     scrollPosition = scrollReporting.scrollPosition;
   }
-  ReanimatedRexport;
-  const fn = function n(contentOffset) {
-    if (null != scrollPosition) {
+  _mod1652;
+  items = [closure_2, scrollPosition, arg1];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp3, tmp4, tmp5] = items;
+  function useFastestListPropsScrollReportingNativeTsx1(contentOffset) {
+    if (null != _undefined) {
       contentOffset = contentOffset.contentOffset;
-      const result = scrollPosition.set(closure_0 ? contentOffset.x : contentOffset.y);
+      const result = _undefined.set(c1 ? contentOffset.x : contentOffset.y);
     }
-  };
-  fn.__closure = { scrollPosition, horizontal };
-  fn.__workletHash = 14196294214838;
-  fn.__initData = __initData;
-  { onScroll: null }.onScroll = fn;
+  }
+  const items1 = [tmp4, tmp5];
+  useFastestListPropsScrollReportingNativeTsx1.__closure = items1;
+  useFastestListPropsScrollReportingNativeTsx1.__workletHash = 11602000785903;
+  useFastestListPropsScrollReportingNativeTsx1.__initData = tmp3;
+  { onScroll: null }.onScroll = useFastestListPropsScrollReportingNativeTsx1;
   scrollReporting = scrollReporting.scrollReporting;
   if ("animatedScrollPosition" === scrollReporting) {
-    const obj2 = { onScroll: tmp3 };
+    const obj2 = { onScroll: tmp6 };
     return obj2;
   } else if ("animatedCallbacks" === scrollReporting) {
     const obj3 = { onScroll: scrollReporting.scrollHandlerAnimated };

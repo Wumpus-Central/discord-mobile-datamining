@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
@@ -21,7 +21,7 @@ export function useGuildsRouteGuildAndChannelId() {
       guildId = params.guildId;
     }
   }
-  const items = [guildId];
+  items = [guildId];
   let channelId;
   if (route != null) {
     const params2 = route.params;

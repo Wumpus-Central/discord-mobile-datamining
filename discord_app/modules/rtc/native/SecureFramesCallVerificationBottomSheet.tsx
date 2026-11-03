@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCallVeri
 
 export default function SecureFramesCallVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     secureFramesState = secureFramesState.getSecureFramesState();
@@ -36,7 +36,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1113).t["MPp7+C"]);
   const intl3 = channelId(1113).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(9265).getSecureFramesHelpdeskArticle();
+  obj3.helpArticle = channelId(9393).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1113).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

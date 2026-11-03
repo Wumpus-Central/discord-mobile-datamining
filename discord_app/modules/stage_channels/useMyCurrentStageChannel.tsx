@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default function useMyCurrentStageChannel() {
-  const items = [SelectedChannelStore, ChannelStore];
+  items = [SelectedChannelStore, ChannelStore];
   return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default function useHasNewAdContent() {
-  const items = [QuestStore];
+  items = [QuestStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const found = Array.from(quests.values()).filter(
@@ -42,10 +42,10 @@ export default function useHasNewAdContent() {
   const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(4847).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4974).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
   const tmp6 = _slicedToArray(
-    stateFromStoresArray(7569).useSelectedTimeRecurringDismissibleContent(
+    stateFromStoresArray(7693).useSelectedTimeRecurringDismissibleContent(
       prop,
       { cooldownDurationMs: DAY },
       undefined,

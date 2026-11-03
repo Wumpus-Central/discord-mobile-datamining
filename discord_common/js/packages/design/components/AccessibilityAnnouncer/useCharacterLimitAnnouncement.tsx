@@ -13,7 +13,7 @@ export function useCharacterLimitAnnouncement(currentLength) {
   const maxLength = currentLength.maxLength;
   const message = currentLength.message;
   message.useRef(false);
-  const items = [currentLength, maxLength, message];
+  items = [currentLength, maxLength, message];
   const effect = message.useEffect(() => {
     if (null != maxLength) {
       if (currentLength >= tmp) {

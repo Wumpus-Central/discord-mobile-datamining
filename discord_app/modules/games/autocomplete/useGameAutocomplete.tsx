@@ -66,7 +66,7 @@ export function useDebouncedGameAutocomplete(name, arg1) {
   [tmp4, c1] = query.useState(result);
   _slicedToArray = query.useRef(tmp4);
   query = query.useRef(0);
-  const items = [result];
+  items = [result];
   const effect = query.useEffect(() => {
     if (current !== ref.current) {
       if (null != tmp) {

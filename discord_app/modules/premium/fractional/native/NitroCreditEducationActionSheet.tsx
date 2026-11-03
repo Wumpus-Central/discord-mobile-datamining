@@ -35,7 +35,7 @@ export default function NitroCreditEducationActionSheet(children) {
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.aboutContainer, children: null };
-  const items = [
+  items = [
     hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }),
     hasOwnProperty(View, {
       style: tmp.aboutTextContainer,

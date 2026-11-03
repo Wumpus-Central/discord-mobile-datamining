@@ -109,7 +109,7 @@ const prototype = function DeprecatedModalManager() {
         }
         tmp5Result3 = NavigationRouteUtils;
       } else {
-        const items = [closure_1_16, closure_1_14];
+        items = [closure_1_16, closure_1_14];
         pushFirstOpenModal(items, requiredAction.requiredAction);
       }
     },

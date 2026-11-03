@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/native/showGummyCustomColorSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/native/sh
 
 export default function showGummyCustomColorSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17340, dependencyMap.paths),
+    asyncRequireImpl(17483, dependencyMap.paths),
     DisplayNameStylesGummyCustomColorSheet,
     arg0,
     "stack",

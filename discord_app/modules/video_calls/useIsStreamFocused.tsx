@@ -4,13 +4,13 @@ import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isStreamParticipant = fn(5681).isStreamParticipant;
+const isStreamParticipant = fn(5801).isStreamParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 
 export function useIsStreamFocused(id) {
   _require = id;
-  const items = [ChannelRTCStore];
+  items = [ChannelRTCStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let selectedParticipant = null;
     if (null != closure_0) {

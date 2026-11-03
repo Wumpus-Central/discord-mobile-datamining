@@ -24,7 +24,7 @@ function conjureApplicationIdForBot(userId) {
   return appIdForBotUserId;
 }
 function readConjureServerApp(arg0, arg1) {
-  let guild = null;
+  guild = null;
   if (null != arg0) {
     guild = GuildStore.getGuild(arg0);
   }
@@ -48,10 +48,10 @@ function readConjureServerApp(arg0, arg1) {
           return conjureProjectId === conjureProjectId;
         });
         if (null == id) {
-          let items = [];
+          items = [];
         } else {
-          items = guild(10891).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10891);
+          items = guild(11021).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(11021);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10891).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10891);
+          canRemoveConjureBotResult = guild(11021).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(11021);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10891).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10891);
+          canRemoveConjureBotResult = guild(11021).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(11021);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -183,7 +183,7 @@ function appChannelApplicationIds(id) {
     }
     continue;
   }
-  const items = [...set];
+  items = [...set];
   return items;
 }
 function fetchMissingApplication(item10010) {
@@ -214,7 +214,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -246,14 +246,14 @@ let closure_21 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);
@@ -264,7 +264,7 @@ export { readConjureServerApp };
 export function useConjureServerApp(guildId, applicationId) {
   _require = guildId;
   closure_1 = applicationId;
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const items1 = [applicationId];
   stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -422,7 +422,7 @@ export function loadConjureServerApp() {
 }
 export function conjureKickAppItems(rest) {
   const channels = rest.channels;
-  const items = [...channels.map((id) => ({ key: "channel:" + id.id, kind: "channel", label: "#" + id.name }))];
+  items = [...channels.map((id) => ({ key: "channel:" + id.id, kind: "channel", label: "#" + id.name }))];
   if (rest.targetIsPreview) {
     const obj2 = { key: "main-app", kind: "app", label: rest.appName };
     let obj = obj2;
@@ -436,6 +436,6 @@ export function conjureDeleteAppChannelItems(rest, channelId) {
   closure_0 = channelId;
   const channels = rest.channels;
   const found = channels.filter((id) => id.id !== closure_0);
-  const items = [...found.map((id) => ({ key: "channel:" + id.id, kind: "channel", label: "#" + id.name })), obj, obj2];
+  items = [...found.map((id) => ({ key: "channel:" + id.id, kind: "channel", label: "#" + id.name })), obj, obj2];
   return items;
 }

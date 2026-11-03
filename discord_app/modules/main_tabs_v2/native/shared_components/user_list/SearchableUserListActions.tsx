@@ -46,9 +46,9 @@ const result = size.fileFinishedImporting(
 export function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  const tmp = style(10732)();
+  const tmp = style(10862)();
   dependencyMap = tmp;
-  const items = [actions, tmp, style];
+  items = [actions, tmp, style];
   return noop.useMemo(() => {
     let obj = style;
     if (style == null) {

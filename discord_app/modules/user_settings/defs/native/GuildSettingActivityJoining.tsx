@@ -32,7 +32,7 @@ const toggle = SettingBuilders.createToggle({
       sanitizedActivityJoiningRestrictedGuilds.add(tmp);
     }
     const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
-    const items = [...sanitizedActivityJoiningRestrictedGuilds];
+    items = [...sanitizedActivityJoiningRestrictedGuilds];
     ActivityJoiningRestrictedGuilds.updateSetting(items);
   },
 });

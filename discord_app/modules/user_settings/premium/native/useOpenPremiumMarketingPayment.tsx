@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 let closure_6 = {
   page: AnalyticsPages.USER_SETTINGS,
@@ -17,15 +17,15 @@ let closure_6 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
 
-export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER) {
+export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FLOATING_CTA) {
   const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(
-    PREMIUM_MARKETING_FOOTER,
+    PREMIUM_MARKETING_FLOATING_CTA,
   ).analyticsLocations;
   premiumTrialOffer = analyticsLocations(premiumTrialOfferPremiumType[4]).usePremiumTrialOffer();
   let obj = analyticsLocations(premiumTrialOfferPremiumType[4]);
   premiumTrialOfferPremiumType = analyticsLocations(premiumTrialOfferPremiumType[5]).usePremiumTrialOfferPremiumType();
   const obj3 = { openPayment: null, buttonText: null };
-  const items = [analyticsLocations, premiumTrialOfferPremiumType];
+  items = [analyticsLocations, premiumTrialOfferPremiumType];
   obj3.openPayment = noop.useCallback(() => {
     const obj = {
       analyticsLocation,

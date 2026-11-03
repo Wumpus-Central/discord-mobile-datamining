@@ -14,7 +14,7 @@ export default function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);
   _slicedToArray = undefined;
   closure_3 = undefined;
-  const items = [ContentInventoryOutboxStore];
+  items = [ContentInventoryOutboxStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     ContentInventoryOutboxStore.isFetchingUserOutbox(require),
   );

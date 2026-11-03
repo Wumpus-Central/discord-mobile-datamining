@@ -27,7 +27,7 @@ function WebhookItem(avatar) {
   ({ user, webhookId } = avatar);
   const webhookType = avatar.webhookType;
   const navigation = avatar(guildId[12]).useNavigation();
-  const items = [webhookId, webhookType, avatar, channel, guildId, name, token, navigation];
+  items = [webhookId, webhookType, avatar, channel, guildId, name, token, navigation];
   const items1 = [webhookId, avatar];
   const callback = token.useCallback(() => {
     navigation.push(constants2.EDIT_WEBHOOK, { webhookId, webhookType, avatar, name, channel, guildId, token });
@@ -63,7 +63,7 @@ function WebhookItem(avatar) {
 function ConnectedWebhookItem(arg0) {
   ({ channelId: require, user: importDefault } = arg0);
   const merged = Object.assign(arg0, Object.assign({ channelId: 0, user: 0 }));
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     id = undefined;
     if (id != null) {
@@ -85,13 +85,13 @@ function CreateWebhookButton(guild) {
   let navigation;
   navigation = guild(navigation[12]).useNavigation();
   let obj = guild(navigation[12]);
-  let items = [GuildChannelStore, PermissionStore];
+  items = [GuildChannelStore, PermissionStore];
   const stateFromStores = guild(navigation[19]).useStateFromStores(items, () => {
     if (null != channel) {
       return channel;
     } else {
       const channels = GuildChannelStore.getChannels(guild.id);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(channels[React5], HermesBuiltin.arraySpread(channels[timestampProducer], 0));
       const found = items.find((channel) => closure_1_10.can(constants.MANAGE_WEBHOOKS, channel.channel));
       channel = undefined;
@@ -114,7 +114,7 @@ function CreateWebhookButton(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ function CreateWebhookButton(guild) {
   obj3.onPress = callback;
   return closure_18(guild(navigation[21]).RowButton, obj3);
 }
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -200,7 +200,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = {
@@ -234,8 +234,8 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [
-    closure_18(webhookType(5624).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+  items = [
+    closure_18(webhookType(5747).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -245,7 +245,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(18934).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(19092).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1113).intl;
       dkHRkE = webhookType(1113).t.dkHRkE;
@@ -276,7 +276,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_18(webhookType(7060).TableRowGroup, obj3);
+    items[2] = closure_18(webhookType(7186).TableRowGroup, obj3);
     obj4.children = items;
     return closure_20(closure_19, obj4);
   }
@@ -293,11 +293,11 @@ prototype["render"] = function render() {
       children: this.renderWebhooks(),
     }),
   };
-  const items = [collapsedCategories(Form.Form, obj2), collapsedCategories(NavScrim.NavScrim, {})];
+  items = [collapsedCategories(Form.Form, obj2), collapsedCategories(NavScrim.NavScrim, {})];
   obj.children = items;
-  return dependencyMap(closure_1_19, obj);
+  return dependencyMap(expandedHeight, obj);
 };
-WebhooksOverview.contextType = fn(5080).ThemeContext;
+WebhooksOverview.contextType = fn(5207).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -310,7 +310,7 @@ export default function ConnectedWebhooksOverview(channelId) {
   let stateFromStores;
   let id1;
   ({ contentContainerStyle, webhookType } = channelId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[19]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(stateFromStores[19]);
   const tmp = channelId;

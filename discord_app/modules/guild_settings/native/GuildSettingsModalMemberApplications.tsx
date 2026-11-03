@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 },
   spinnerContainer: { padding: 32 },
@@ -64,7 +64,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6975).TableRow, obj2);
+      return closure_7(joinRequest(7101).TableRow, obj2);
     }
   }
 });
@@ -94,7 +94,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
     guildJoinRequests,
   }).fetchNextPage;
   const obj3 = applicationStatus(guildJoinRequests[15]);
-  const items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const stateFromStores = applicationStatus(guildJoinRequests[16]).useStateFromStores(items, () =>
     fetching.isFetching(),
   );

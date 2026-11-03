@@ -98,23 +98,23 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({
   DismissibleQuestContentFlags: closure_7,
   BILLABLE_PLACEMENTS: closure_8,
   NON_BILLABLE_CREATIVE_TYPES: closure_9,
-  EMPTY_AD_DECISION_DATA: c10,
+  EMPTY_AD_DECISION_DATA: closure_10,
 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(6784).QuestContent.QUEST_BAR] = fn(6784).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6784).QuestContent.QUEST_BAR_V2] = fn(6784).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6784).QuestContent.QUEST_BAR_MOBILE] = fn(6784).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(6784).QuestContent.QUEST_HOME_HERO] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6784).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6784).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6784).QuestContent.VIDEO_MODAL_MOBILE] = fn(6784).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(6784).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(6904).QuestContent.QUEST_BAR] = fn(6904).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6904).QuestContent.QUEST_BAR_V2] = fn(6904).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6904).QuestContent.QUEST_BAR_MOBILE] = fn(6904).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(6904).QuestContent.QUEST_HOME_HERO] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6904).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6904).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6904).QuestContent.VIDEO_MODAL_MOBILE] = fn(6904).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(6904).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -135,17 +135,17 @@ export function findQuestOrReplacement(questId, quests, excludedQuests) {
     const _Map = Map;
     map = new Map(
       quests.map((id) => {
-        const items = [id.id, id];
+        items = [id.id, id];
         return items;
       }),
     );
   }
-  map1 = excludedQuests;
+  let map1 = excludedQuests;
   if (Array.isArray(excludedQuests)) {
     const _Map2 = Map;
     map1 = new Map(
       excludedQuests.map((id) => {
-        const items = [id.id, id];
+        items = [id.id, id];
         return items;
       }),
     );

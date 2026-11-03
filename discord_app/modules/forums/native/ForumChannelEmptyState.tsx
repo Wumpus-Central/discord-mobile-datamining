@@ -4,15 +4,15 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef14380 from "../../../../_runtime/metro/14380__.js";
-import _modDef14381 from "../../../../_runtime/metro/14381__.js";
+import _modDef14511 from "../../../../_runtime/metro/14511__.js";
+import _modDef14512 from "../../../../_runtime/metro/14512__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" },
   image: { width: 120, height: 80 },
@@ -31,14 +31,14 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const tmp = closure_6();
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
+  items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   obj2.style = items;
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14380;
+    let tmp4Result = _modDef14511;
   } else {
-    tmp4Result = _modDef14381;
+    tmp4Result = _modDef14512;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), ,];
   const obj5 = {

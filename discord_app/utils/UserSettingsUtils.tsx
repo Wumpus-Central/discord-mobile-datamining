@@ -103,7 +103,7 @@ export function generateNonSpamRetrainingOptInSettingOptions() {
   const intl2 = util.intl;
   obj.desc = intl2.string(util.t["3fzkPq"]);
   obj.value = obj.OPTIN;
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { name: null, desc: null, value: null };
   const intl3 = util.intl;
   obj2.name = intl3.string(util.t["21fP2b"]);

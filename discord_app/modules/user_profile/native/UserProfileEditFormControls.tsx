@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   button: {
     flexGrow: 1,
@@ -113,7 +113,7 @@ export function UserProfileEditFormLabelBadges(showPremiumIcon) {
     if (flag) {
       tmp5 = timestampProducer(NitroWheelIcon.NitroWheelIcon, { size: "xs" });
     }
-    const items = [tmp5];
+    items = [tmp5];
     let tmp9 = null;
     if (flag2) {
       const obj2 = { text: null, style: null };
@@ -157,7 +157,7 @@ export function UserProfileEditFormButton(loading) {
     disabled: null,
     children: null,
   };
-  const items = [tmp.button, ,];
+  items = [tmp.button, ,];
   let buttonInGroup = null != footer;
   if (buttonInGroup) {
     buttonInGroup = tmp.buttonInGroup;
@@ -225,12 +225,12 @@ export function UserProfileEditFormSwitch(arg0) {
   const isAndroidResult = PlatformUtils.isAndroid();
   const tmp5 = _slicedToArray(noop.useState(value), 2);
   closure_2 = tmp5[1];
-  const items = [value];
+  items = [value];
   const effect = noop.useEffect(() => {
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(6980).PressableHighlight;
+    let PressableHighlight = tmp2(7106).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }

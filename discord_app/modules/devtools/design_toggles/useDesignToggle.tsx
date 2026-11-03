@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDe
 
 export default function useDesignToggle(arg0) {
   _require = arg0;
-  const items = [DesignTogglesStore];
+  items = [DesignTogglesStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => DesignTogglesStore.get(closure_0), items1);
 }

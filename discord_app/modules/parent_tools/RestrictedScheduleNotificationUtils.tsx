@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2538 from "FamilyCenter.messages.js";
+import _modDef2667 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -38,12 +38,12 @@ let obj = {
 };
 let map = new Map();
 let obj2 = {
-  [Created]: _modDef2538["5V7eBH"],
-  [Enabled]: _modDef2538.iefrVg,
-  [Disabled]: _modDef2538["k+s9cM"],
-  [Updated]: _modDef2538.Nm6hZV,
-  [Multiple]: _modDef2538.Nm6hZV,
-  [Removed]: _modDef2538.jR6uOs,
+  [Created]: _modDef2667["5V7eBH"],
+  [Enabled]: _modDef2667.iefrVg,
+  [Disabled]: _modDef2667["k+s9cM"],
+  [Updated]: _modDef2667.Nm6hZV,
+  [Multiple]: _modDef2667.Nm6hZV,
+  [Removed]: _modDef2667.jR6uOs,
 };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
@@ -57,7 +57,7 @@ export function toScheduleSnapshot(restrictedSchedule) {
       const rules = restrictedSchedule.rules;
       map = new Map(
         rules.map((ruleId) => {
-          const items = [ruleId.ruleId, ruleId];
+          items = [ruleId.ruleId, ruleId];
           return items;
         }),
       );
@@ -81,7 +81,7 @@ export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult)
       closure_3 = value;
       closure_7 = closure_7 + 1;
     } else {
-      const items = [,];
+      items = [,];
       ({ Enabled: arr[0], Disabled: arr[1] } = obj);
       if (items.includes(Created)) {
         closure_8 = closure_8 + 1;
@@ -97,7 +97,7 @@ export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult)
   closure_6 = 0;
   closure_7 = 0;
   closure_8 = 0;
-  let items = [];
+  items = [];
   const items1 = [...EMPTY_SCHEDULE_SNAPSHOT.keys(), ...toScheduleSnapshotResult.keys()];
   for (const item10030 of set) {
     value = arg0.get(item10030);
@@ -223,7 +223,7 @@ export function getRestrictedScheduleNotificationSubtitle(rule) {
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2538["8OlpoY"]);
+    result = intl.string(_modDef2667["8OlpoY"]);
   }
   return result;
 }

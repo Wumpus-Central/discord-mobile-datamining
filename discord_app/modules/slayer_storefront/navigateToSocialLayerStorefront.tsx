@@ -28,7 +28,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
           } else {
             closure_129_5 = null;
             if (null != closure_129_1) {
-              const guild = closure_129_1.guild;
+              guild = closure_129_1.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -120,7 +120,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {
@@ -190,7 +190,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
 export function eagerNavigateToSocialLayerStorefront(forceFetch) {
   ({ guildId, invite } = forceFetch);
   if (null != invite) {
-    const guild = invite.guild;
+    guild = invite.guild;
     let id;
     if (guild != null) {
       id = guild.id;

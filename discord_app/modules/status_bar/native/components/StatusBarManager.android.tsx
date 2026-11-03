@@ -51,7 +51,7 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   const self = this;
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
-    const items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
+    items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
     const applyResult = _modDef12.merge.apply(items);
     StatusBar.setBarStyle(applyResult.barStyle);
     NativeSafeAreaInsetsModuleDefault.setStatusBarVisible(!applyResult.hidden);

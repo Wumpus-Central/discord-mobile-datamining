@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
@@ -35,7 +35,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
     true,
   );
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStores = initialize.useStateFromStores(items, () => giftPromotion.getGiftPromotion());
   let endDate;
   if (stateFromStores != null) {
@@ -95,12 +95,12 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   return React7(native.ThemeContextProvider, obj4);
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const Constants = fn(1083);
 ({ Fonts: closure_7, ThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { default: { paddingVertical: nativeDefault.space.PX_8 }, compact: null, smallCompact: null };
 let obj2 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.compact = { paddingVertical: nativeDefault.space.PX_4 };
@@ -126,7 +126,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles(() => {
   obj = {
     card: null,
@@ -203,7 +203,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
     Object.assign({ premiumType: 0, onPress: 0, style: 0, claimableRewards: 0, isSelected: 0, variant: 0 }),
   );
   obj = initialize;
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     marketingComponentByType = marketingComponentByType.getMarketingComponentByType(
       MarketingComponentType.MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER,
@@ -245,7 +245,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   const intl = util.intl;
   obj5.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
   items3[2] = React7(Text_Text.Text, obj5);
-  const obj6 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
+  const obj6 = { style: null, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
   const items5 = [tmp6.featureTitle, obj4[str]];
   obj6.style = items5;
   const intl2 = util.intl;

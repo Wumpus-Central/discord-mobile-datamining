@@ -19,8 +19,8 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8722).FetchState;
-const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
+const FetchState = fn(8846).FetchState;
+const CodedLinkExtendedType = fn(10247).CodedLinkExtendedType;
 let closure_15 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -47,7 +47,7 @@ export function createEmbeddedActivityInviteEmbed(inviteCode) {
         }
         const tmp9 = getEmbedThemeColorsDefault(inviteCode.theme);
         const baseColors = tmp9.baseColors;
-        const guild = invite.guild;
+        guild = invite.guild;
         let name;
         if (guild != null) {
           name = guild.name;

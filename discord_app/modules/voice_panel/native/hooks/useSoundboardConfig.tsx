@@ -21,7 +21,7 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   importDefault = analyticsSource;
   let tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
   let obj = require("initialize");
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
   if (tmp2) {
     if (obj.VOICE_CONTROLS === analyticsSource) {

@@ -15,7 +15,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [arg1, arg0];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -74,7 +74,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp3(7485).ensurePrivateChannel(tmp32), done: false };
+                const obj7 = { value: tmp3(7609).ensurePrivateChannel(tmp32), done: false };
                 return obj7;
               }
               tmp32 = closure_0;
@@ -116,14 +116,14 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(10739)(channel, closure_129_1).onPress();
-            const obj3 = tmp3(10739)(channel, closure_129_1);
+            tmp3(10869)(channel, closure_129_1).onPress();
+            const obj3 = tmp3(10869)(channel, closure_129_1);
           }
           if (closure_129_2 != null) {
             closure_129_2();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp25) {
           c3 = tmp;
           throw tmp25;

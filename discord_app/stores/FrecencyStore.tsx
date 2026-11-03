@@ -109,7 +109,7 @@ let closure_9 = new FrecencyDefault({
     return num;
   },
   lookupKey(id) {
-    let guild = GuildStore.getGuild(id);
+    guild = GuildStore.getGuild(id);
     if (guild == null) {
       guild = ChannelStore.getChannel(id);
     }
@@ -142,7 +142,7 @@ prototype["initialize"] = function initialize(pendingUsages) {
     });
     global = pendingUsages;
   }
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   self.syncWith(items, initFrecency);
 };
 prototype["getState"] = function getState() {

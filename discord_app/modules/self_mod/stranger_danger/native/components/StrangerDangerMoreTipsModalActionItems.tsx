@@ -12,7 +12,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -25,7 +25,7 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   const senderId = channelId.senderId;
   const onBlockPressed = channelId.onBlockPressed;
   let isBlocked;
-  let items = [isBlocked];
+  items = [isBlocked];
   const items1 = [senderId];
   const stateFromStores = channelId(senderId[6]).useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
@@ -112,7 +112,7 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
     }
     obj3.icon = <EyeSlashIcon />;
     obj3.disabled = isBlocked;
-    const items = [obj3];
+    items = [obj3];
     const intl3 = util.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
     const t2 = util.t;

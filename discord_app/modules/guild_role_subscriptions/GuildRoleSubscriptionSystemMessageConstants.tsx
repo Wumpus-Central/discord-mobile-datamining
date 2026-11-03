@@ -68,14 +68,14 @@ const result = size.fileFinishedImporting(
 
 export function getJoinButtonLabels() {
   const intl = util.intl;
-  const items = [intl.string(util.t.b6wEe6)];
+  items = [intl.string(util.t.b6wEe6)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.i8o9hX);
   return items;
 }
 export function getRenewButtonLabels() {
   const intl = util.intl;
-  const items = [intl.string(util.t.vqnToc)];
+  items = [intl.string(util.t.vqnToc)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["9yh+dM"]);
   return items;

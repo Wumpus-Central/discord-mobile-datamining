@@ -33,7 +33,7 @@ function DevToolsContentSortButtons(arg0) {
     accessibilityLabel: "Shift up",
     children: null,
   };
-  const items = [tmp.button];
+  items = [tmp.button];
   if (start) {
     start = tmp.disabledButton;
   }
@@ -66,8 +66,8 @@ function DevToolsContentSortButtons(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
   sortingIcons: null,
@@ -90,7 +90,7 @@ let closure_12 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, closure_1_10(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  items = [label, closure_1_10(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 });
@@ -109,7 +109,7 @@ export default noop.memo(function DevToolsContent(arg0) {
   _require = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
   let tmp4 = useSafeAreaInsetsDefault();
-  const items = [BuildOverrideStore];
+  items = [BuildOverrideStore];
   closure_129_0 = require("initialize").useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let id;

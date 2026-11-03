@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   messageRequestContent: { flex: 1 },
@@ -35,7 +35,7 @@ export default noop.memo(function MessageRequestsScreenWithTabs(navigation) {
   closure_1 = undefined;
   const tmp = closure_9();
   [obj2.pageWidth, closure_1] = noop.useState(0);
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
   const callback1 = noop.useCallback((nativeEvent) => {
     closure_1(nativeEvent.nativeEvent.layout.width);

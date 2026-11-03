@@ -24,7 +24,7 @@ export function onConnectToConsole(channel, found) {
   }
   const type = found.type;
   if (constants2.XBOX === type) {
-    const items = [constants.CHANNEL_CALL];
+    items = [constants.CHANNEL_CALL];
     return XboxLinkModalActionCreatorsDefault.showModal(items);
   } else {
     const items1 = [constants.CHANNEL_CALL];
@@ -33,7 +33,7 @@ export function onConnectToConsole(channel, found) {
 }
 export function useOnConnectToConsole(channel, account) {
   closure_0 = channel;
-  let items = [channel, account];
+  items = [channel, account];
   return noop.useCallback(() => {
     const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
       dismissible_content.DismissibleContent.DONUT_MOBILE_NUX,
@@ -46,7 +46,7 @@ export function useOnConnectToConsole(channel, account) {
     }
     const type = account.type;
     if (constants2.XBOX === type) {
-      const items = [constants.CHANNEL_CALL];
+      items = [constants.CHANNEL_CALL];
       XboxLinkModalActionCreatorsDefault.showModal(items);
     } else if (constants2.PLAYSTATION === type) {
       const items1 = [constants.CHANNEL_CALL];

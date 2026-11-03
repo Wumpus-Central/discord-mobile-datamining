@@ -9,7 +9,7 @@ export default function downsampleWaveform(arg0, arg1) {
   if (arg0.length === arg1) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     let num5 = 0;
     while (items.length < arg1) {
       let _Math = Math;

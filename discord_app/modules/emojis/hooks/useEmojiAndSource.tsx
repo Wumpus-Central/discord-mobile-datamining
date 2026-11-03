@@ -7,7 +7,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 
 require = fn;
-const ExpressionSourceRecord = fn(6958);
+const ExpressionSourceRecord = fn(7084);
 ({
   ExpressionSourceGuildRecord: closure_7,
   EmojiSourceDataTypes: closure_8,
@@ -29,7 +29,7 @@ export function useEmojiAndSource(emojiId) {
   c5 = undefined;
   c6 = undefined;
   c7 = undefined;
-  const items = [c6, c5];
+  items = [c6, c5];
   const stateFromStoresObject = emojiId(refreshPositionKey[8]).useStateFromStoresObject(items, () => {
     let customEmojiById = null;
     if (null != emojiId) {
@@ -105,7 +105,7 @@ export function useEmojiAndSource(emojiId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -159,7 +159,7 @@ export function useEmojiAndSource(emojiId) {
             current();
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

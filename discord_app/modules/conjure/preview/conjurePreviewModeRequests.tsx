@@ -17,7 +17,7 @@ export function useConjurePreviewModeRequests(projectId, current) {
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [projectId];
+  items = [projectId];
   const effect = noop.useEffect(() => {
     if (null != listener) {
       listener = function listener(arg0, AUTO_DISMISS) {

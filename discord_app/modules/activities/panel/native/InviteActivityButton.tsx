@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/Invit
 
 export default noop.memo(function InviteActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
-  const items = [LocalActivityStore, SelfPresenceStore];
+  items = [LocalActivityStore, SelfPresenceStore];
   const items1 = [applicationId];
   const stateFromStores = applicationId(504).useStateFromStores(
     items,
@@ -26,12 +26,12 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19142, dependencyMap.paths),
+          asyncRequireImpl(19300, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10978),
+      icon: stateFromStores(11111),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -43,16 +43,16 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     obj2.text = intl.string(tmp(1113).t["OzOM/q"]);
     const intl2 = tmp(1113).intl;
     obj2.accessibilityLabel = intl2.string(tmp(1113).t["OzOM/q"]);
-    tmp4 = jsx(tmp(5634).Button, {
+    tmp4 = jsx(tmp(5754).Button, {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19142, dependencyMap.paths),
+          asyncRequireImpl(19300, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10978),
+      icon: stateFromStores(11111),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

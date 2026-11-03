@@ -12,7 +12,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
   const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(guildId);
   const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === closure_0);
   if (findIndexResult < 0) {
-    let items = [null, null];
+    items = [null, null];
   } else {
     items = [resourceChannels[findIndexResult], resourceChannels[(findIndexResult + 1) % resourceChannels.length]];
   }
@@ -21,7 +21,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
 export function usePreviousAndNextResourceChannel(guild_id, id) {
   _require = guild_id;
   dependencyMap = id;
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0),
   );

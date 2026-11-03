@@ -21,7 +21,7 @@ prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
   return tmp2;
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  let guild = null;
+  guild = null;
   if (null != closure_4.guilds[arg0]) {
     guild = tmp.guild;
   }

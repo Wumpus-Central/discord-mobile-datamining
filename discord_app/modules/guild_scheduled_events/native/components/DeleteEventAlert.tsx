@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
@@ -27,7 +27,7 @@ export default function DeleteEventAlert(eventException) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ export default function DeleteEventAlert(eventException) {
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8967);
+            const obj8 = v1(9095);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -76,9 +76,9 @@ export default function DeleteEventAlert(eventException) {
             const obj = { value, done: true };
             return obj;
           }
-          v1(5258).hideActionSheet();
+          v1(5381).hideActionSheet();
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -87,7 +87,7 @@ export default function DeleteEventAlert(eventException) {
     }
   };
   const tmp = closure_6();
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildScheduledEventStore.getGuildScheduledEvent(require),
   );

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,13 +11,13 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6066).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const PlatformUtils = fn(1376);
-const CheckpointCustomizationUtils = fn(6434);
+const PlatformUtils = fn(1357);
+const CheckpointCustomizationUtils = fn(6554);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj4 = {
   container: { paddingHorizontal: nativeDefault.space.PX_6 },
   emphasis: { flexDirection: "row", alignItems: "center" },
@@ -44,7 +44,7 @@ export default function CheckpointEmphasis(children) {
   const tmp = closure_10();
   const fontScale = useFontScale.useFontScale();
   const obj3 = { style: null, children: null };
-  const items = [tmp.container];
+  items = [tmp.container];
   const obj4 = { transform: null };
   const items1 = [{ translateY: (num * useScaledTextLineHeight.scaleLineHeight(14, fontScale)) / 14 }];
   obj4.transform = items1;
@@ -64,7 +64,7 @@ export default function CheckpointEmphasis(children) {
   const items2 = [
     timestampProducer(inlineStylesDefault, size),
     timestampProducer(Text_Text.Text, {
-      variant: "experimental/mono-md/bold",
+      variant: "mono-md/bold",
       style: tmp.text,
       lineClamp: 1,
       children: children.children,

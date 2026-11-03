@@ -9,7 +9,7 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: nativeDefault.space.PX_4 };
@@ -22,7 +22,7 @@ export default noop.memo(function SlowModeIndicator(channel) {
   const slowmodeType = channel.slowmodeType;
   let canBypassSlowmode;
   const tmp = closure_7();
-  const items = [canBypassSlowmode];
+  items = [canBypassSlowmode];
   const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () =>
     SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType),
   );

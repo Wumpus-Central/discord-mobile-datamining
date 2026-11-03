@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { position: "relative" },
   circle: { position: "absolute" },
@@ -27,7 +27,7 @@ export default function GuildProgressCircle(size) {
   const tmp = closure_6();
   size = { width: num, height: num, borderRadius: num / 2 };
   const obj = { style: null, children: null };
-  const items = [tmp.wrapper, style, size];
+  items = [tmp.wrapper, style, size];
   obj.style = items;
   const obj2 = {
     style: null,

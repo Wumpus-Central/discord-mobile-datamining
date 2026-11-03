@@ -5,8 +5,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const top = "top";
-const module_5025 = fn(5025);
-let closure_5 = module_5025.create(() => {
+const module_5152 = fn(5152);
+let closure_5 = module_5152.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });
@@ -22,7 +22,7 @@ export function useToastContainer(app) {
   const id = noop.useId();
   closure_129_0 = app;
   closure_129_1 = id;
-  let items = [app, id];
+  items = [app, id];
   const effect = noop.useEffect(() => {
     closure_5.setState((containerIdsBySurface) => {
       containerIdsBySurface = new Map(containerIdsBySurface.containerIdsBySurface);
@@ -30,7 +30,7 @@ export function useToastContainer(app) {
       if (items1 == null) {
         items1 = [];
       }
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(items1, 0)] = entry;
       const result = containerIdsBySurface.set(app, items);
       return { containerIdsBySurface };
@@ -38,7 +38,7 @@ export function useToastContainer(app) {
     return () => {
       closure_2_5.setState((containerIdsBySurface) => {
         containerIdsBySurface = new Map(containerIdsBySurface.containerIdsBySurface);
-        let items = containerIdsBySurface.get(closure_1_0);
+        items = containerIdsBySurface.get(closure_1_0);
         if (items == null) {
           items = [];
         }

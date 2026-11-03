@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef2634 from "../../GiftingBadge.messages.js";
+import _modDef2763 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = {
@@ -43,7 +43,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   ({ giftsToNextTier, nextTierName, nextTierIcon, analyticsLocation } = arg0);
   const tmp = closure_7();
   if (null != analyticsLocation) {
-    const items = [analyticsLocation];
+    items = [analyticsLocation];
     let items1 = items;
   } else {
     items1 = [];
@@ -69,7 +69,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [React4(View, obj3)];
   const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2634["0+xfd9"], {
+  obj5.children = intl.formatToPlainString(_modDef2763["0+xfd9"], {
     giftsRemaining: giftsToNextTier,
     nextTier: nextTierName,
   });

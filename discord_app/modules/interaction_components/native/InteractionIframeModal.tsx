@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const BotTagTypes = fn(1360).BotTagTypes;
+const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 },
   header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" },
@@ -44,7 +44,7 @@ export default function InteractionIframeModal(application) {
       const result = id2(callback[10]).restoreDefaultOrientation();
     };
   }, []);
-  const items = [id2];
+  items = [id2];
   onDisallowedNavigation = noop.useCallback(() => {
     closeIFrameModalDefault(id2, undefined);
   }, items);
@@ -69,7 +69,7 @@ export default function InteractionIframeModal(application) {
   const obj6 = { style: tmp.headerTitleContainer, children: null };
   const items4 = [
     closure_7(id2(onDisallowedNavigation[16]).Text, {
-      variant: "heading-sm/bold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
@@ -77,7 +77,7 @@ export default function InteractionIframeModal(application) {
   const obj8 = { type: BotTagTypes.BOT, verified: null, style: null };
   const bot = application.bot;
   let verified;
-  const obj7 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name };
+  const obj7 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: application.name };
   const tmp6 = _slicedToArray(noop.useState(require("makeIframeId")), 2);
   if (bot != null) {
     verified = bot.verified;

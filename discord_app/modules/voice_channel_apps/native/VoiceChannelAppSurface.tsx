@@ -15,7 +15,7 @@ export default function VoiceChannelAppSurface(guildId) {
   let rect = guildId(left[2])();
   left = rect.left;
   const right = rect.right;
-  const items = [left, right];
+  items = [left, right];
   const items1 = [channelId, guildId];
   const memo = right.useMemo(() => {
     const rect = { top: 0, bottom: 0, left, right };
@@ -32,7 +32,7 @@ export default function VoiceChannelAppSurface(guildId) {
     tmp9 = applicationId;
   }
   guildId(left[7])(tmp9);
-  const state = tmp5.state;
+  state = tmp5.state;
   if (channelId(left[5]).FrameLifecycleState.Launched === state) {
     const obj2 = {
       frameId: tmp5.frame.id,

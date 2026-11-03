@@ -11,7 +11,7 @@ export default function useSubscriptionRole(arg0, editStateId) {
   _require = arg0;
   dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(editStateId);
   const obj = require("GuildRoleSubscriptionsHooks");
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   return require("initialize").useStateFromStores(items, () => {
     let role;
     if (null != closure_0) {

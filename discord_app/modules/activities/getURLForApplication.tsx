@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
 export default function getURLForApplication(arg0) {
-  const state = DeveloperActivityShelfStore.getState();
+  state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;
@@ -98,7 +98,7 @@ export function getApplicationRouterOrigin(assetURL) {
   }
 }
 export function isUsingDevShelfActivityUrlOverride() {
-  const state = DeveloperActivityShelfStore.getState();
+  state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;

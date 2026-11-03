@@ -9,7 +9,7 @@ export default function rateLimit(arg0, arg1, arg2) {
   closure_2 = arg2;
   closure_4 = [];
   function wrapper() {
-    const items = [...arguments];
+    items = [...arguments];
     const timestamp = Date.now();
     if (null != timeout) {
       const _clearTimeout = clearTimeout;

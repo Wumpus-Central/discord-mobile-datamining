@@ -27,12 +27,12 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
+      items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
       return items;
     },
     items1,
@@ -48,7 +48,7 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
   );
   const items4 = [stateFromStores, arg1, stateFromStores1, arg2, arg0];
   return stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     let num = -1;
     c2 = -1;
@@ -130,7 +130,7 @@ export function useThrottleDurationForChannel(id) {
   );
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
-  const items = [stageParticipantsCount];
+  items = [stageParticipantsCount];
   const effect = noop.useEffect(() => {
     if (stageParticipantsCount > 100) {
       closure_1(true);
@@ -151,12 +151,12 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
   }
   _require = id;
   dependencyMap = memo;
-  let items = [StageChannelParticipantStore];
+  items = [StageChannelParticipantStore];
   let items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
+      items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
       return items;
     },
     items1,
@@ -172,7 +172,7 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
   );
   let items4 = [stateFromStores, memo, stateFromStores1, flag, id];
   memo = stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     let num = -1;
     c2 = -1;

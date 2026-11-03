@@ -11,7 +11,7 @@ function toNativeKeyCommand(eventName) {
   };
 }
 function registerKeyCommand(arg0) {
-  const items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(closure_3, 0)] = arg0;
   closure_3 = items;
   if (null == closure_5) {
@@ -75,7 +75,7 @@ export const KeyModifierFlags = NativeKeyCommandsModule;
 export const KeyInputs = { ESCAPE: "UIKeyInputEscape" };
 export function subscribeKeyCommand(arg0) {
   importDefault = arg0;
-  let items = [];
+  items = [];
   items[HermesBuiltin.arraySpread(items, 0)] = arg0;
   if (null == closure_5) {
     closure_5 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
@@ -126,7 +126,7 @@ export function subscribeKeyCommand(arg0) {
   };
 }
 export function useKeyCommands(memo) {
-  const items = [memo];
+  items = [memo];
   const effect = noop.useEffect(() => {
     while (tmp2 !== undefined) {
       let tmp5 = registerKeyCommand(tmp3);

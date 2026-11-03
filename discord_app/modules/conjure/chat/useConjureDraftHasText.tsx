@@ -18,6 +18,6 @@ export default function useConjureDraftHasText(arg0) {
     tmp4[1](arg0);
     tmp3(tmp2);
   }
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }

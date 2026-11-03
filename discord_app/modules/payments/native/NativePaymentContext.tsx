@@ -19,7 +19,7 @@ export function NativePaymentContextProvider(children) {
   const nativeIAPPayments = activeSubscription(nativePaymentsConnected[6]).useNativeIAPPayments();
   nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
   const storeFront = nativeIAPPayments.storeFront;
-  const items = [storeFront, skuIDs];
+  items = [storeFront, skuIDs];
   const effect = storeFront.useEffect(() => {
     let isFetchingForSKUsResult = null == storeFront;
     if (!isFetchingForSKUsResult) {

@@ -36,7 +36,7 @@ export default function VoicePanelSpoilerAlert(arg0) {
   };
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.p89ACt);
-  const items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm")];
+  items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm")];
   const obj5 = {
     variant: "secondary",
     onPress: function handleDisagree() {

@@ -24,10 +24,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: c10, GiftCodeModalStates: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },
@@ -96,7 +96,7 @@ export default function GiftCodeRedeemStart(giftCode) {
   const tmp3 = soundId;
   closure_6 = giftCode(soundId[15]).useNavigation();
   let obj = giftCode(soundId[15]);
-  let items = [message];
+  items = [message];
   const stateFromStores = giftCode(soundId[16]).useStateFromStores(items, () =>
     GiftCodeStore.getIsAccepting(giftCode.code),
   );
@@ -235,7 +235,7 @@ export default function GiftCodeRedeemStart(giftCode) {
   const obj7 = { contentContainerStyle: items8, alwaysBounceVertical: false, children: null };
   items8[1] = bodyWithMessage;
   const obj8 = {
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
     accessibilityRole: "header",
@@ -448,7 +448,7 @@ export default function GiftCodeRedeemStart(giftCode) {
     const str3 = tmp2(tmp3[11]);
     const obj31 = { type: tmp2(tmp3[12]).CollectiblesItemType.PROFILE_EFFECT };
     const withResult = match.with(obj30, (avatarDecoration) =>
-      closure_2_12(native.Avatar, {
+      application_id(native.Avatar, {
         source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
         avatarDecoration,
         size: native.AvatarSizes.GIFT_START,
@@ -458,68 +458,68 @@ export default function GiftCodeRedeemStart(giftCode) {
     const obj32 = { type: tmp2(tmp3[12]).CollectiblesItemType.PROFILE_FRAME };
     const withResult1 = match
       .with(obj30, (avatarDecoration) =>
-        closure_2_12(native.Avatar, {
+        application_id(native.Avatar, {
           source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
           avatarDecoration,
           size: native.AvatarSizes.GIFT_START,
           animate: true,
         }),
       )
-      .with(obj31, (profileEffect) => closure_2_12(ProfileEffectUserPreviewDefault, { user, profileEffect }));
+      .with(obj31, (profileEffect) => application_id(ProfileEffectUserPreviewDefault, { user, profileEffect }));
     const obj33 = { type: tmp2(tmp3[12]).CollectiblesItemType.NAMEPLATE };
     const withResult2 = match
       .with(obj30, (avatarDecoration) =>
-        closure_2_12(native.Avatar, {
+        application_id(native.Avatar, {
           source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
           avatarDecoration,
           size: native.AvatarSizes.GIFT_START,
           animate: true,
         }),
       )
-      .with(obj31, (profileEffect) => closure_2_12(ProfileEffectUserPreviewDefault, { user, profileEffect }))
-      .with(obj32, (profileFrame) => closure_2_12(ProfileFrameUserPreviewDefault, { user, profileFrame }));
+      .with(obj31, (profileEffect) => application_id(ProfileEffectUserPreviewDefault, { user, profileEffect }))
+      .with(obj32, (profileFrame) => application_id(ProfileFrameUserPreviewDefault, { user, profileFrame }));
     obj29.children = match
       .with(obj30, (avatarDecoration) =>
-        closure_2_12(native.Avatar, {
+        application_id(native.Avatar, {
           source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
           avatarDecoration,
           size: native.AvatarSizes.GIFT_START,
           animate: true,
         }),
       )
-      .with(obj31, (profileEffect) => closure_2_12(ProfileEffectUserPreviewDefault, { user, profileEffect }))
-      .with(obj32, (profileFrame) => closure_2_12(ProfileFrameUserPreviewDefault, { user, profileFrame }))
+      .with(obj31, (profileEffect) => application_id(ProfileEffectUserPreviewDefault, { user, profileEffect }))
+      .with(obj32, (profileFrame) => application_id(ProfileFrameUserPreviewDefault, { user, profileFrame }))
       .with(obj33, (nameplate) => {
-        const items = [closure_5.nameplateContainer];
+        items = [closure_5.nameplateContainer];
         let prop;
         if (!closure_8) {
           prop = closure_5.nameplateContainerOffCenter;
         }
-        const obj = { style: items, children: closure_2_12(NameplatePreview.NameplatePreview, { user, nameplate }) };
+        const obj = { style: items, children: application_id(NameplatePreview.NameplatePreview, { user, nameplate }) };
         items[1] = prop;
-        return closure_2_12(hasOwnProperty, obj);
+        return application_id(hasOwnProperty, obj);
       })
-      .otherwise(() => closure_2_12(GiftBoxAnimationDefault, { giftStyle: giftCode.giftStyle }));
+      .otherwise(() => application_id(GiftBoxAnimationDefault, { giftStyle: giftCode.giftStyle }));
     const withResult3 = match
       .with(obj30, (avatarDecoration) =>
-        closure_2_12(native.Avatar, {
+        application_id(native.Avatar, {
           source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
           avatarDecoration,
           size: native.AvatarSizes.GIFT_START,
           animate: true,
         }),
       )
-      .with(obj31, (profileEffect) => closure_2_12(ProfileEffectUserPreviewDefault, { user, profileEffect }))
-      .with(obj32, (profileFrame) => closure_2_12(ProfileFrameUserPreviewDefault, { user, profileFrame }))
+      .with(obj31, (profileEffect) => application_id(ProfileEffectUserPreviewDefault, { user, profileEffect }))
+      .with(obj32, (profileFrame) => application_id(ProfileFrameUserPreviewDefault, { user, profileFrame }))
       .with(obj33, (nameplate) => {
-        const items = [closure_5.nameplateContainer];
+        items = [closure_5.nameplateContainer];
         let prop;
         if (!closure_8) {
           prop = closure_5.nameplateContainerOffCenter;
         }
-        const obj = { style: items, children: closure_2_12(NameplatePreview.NameplatePreview, { user, nameplate }) };
+        const obj = { style: items, children: application_id(NameplatePreview.NameplatePreview, { user, nameplate }) };
         items[1] = prop;
-        return closure_2_12(hasOwnProperty, obj);
+        return application_id(hasOwnProperty, obj);
       });
   }
   const tmp24 = emojiName(user.useState(), 2);

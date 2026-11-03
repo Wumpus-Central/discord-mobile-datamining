@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   bar: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
@@ -45,7 +45,7 @@ export default function UserProfileActivityTimebar(arg0) {
   const obj = { style, children: null };
   const obj2 = { style: tmp.bar, children: null };
   const obj3 = { style: null };
-  const items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
+  items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
   obj3.style = items;
   ({ elapsed, duration } = tmp2);
   obj2.children = React4(View, obj3);

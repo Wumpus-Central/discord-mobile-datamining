@@ -33,7 +33,7 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -106,7 +106,7 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
           };
           const intl2 = closure_132_0(closure_132_2[14]).intl;
           obj9.message = intl2.string(closure_132_0(closure_132_2[14]).t.Whhv4w);
-          const items = [obj9];
+          items = [obj9];
           obj8.errorHints = items;
           c8 = 3;
           const obj10 = { value: obj8, done: true };
@@ -185,7 +185,7 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -200,7 +200,7 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
           return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: value.QUEST_ON_CONSOLE_STOP(closure_0), rejectWithError: false };
+          const obj4 = { url: gesture.QUEST_ON_CONSOLE_STOP(closure_0), rejectWithError: false };
           c2 = 1;
           c1 = 1;
           const obj5 = { value: HTTP.post(obj4), done: false };
@@ -215,7 +215,7 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -234,7 +234,7 @@ let closure_18 = async function _resetRecentQuestCompletions() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -264,7 +264,7 @@ let closure_18 = async function _resetRecentQuestCompletions() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -283,7 +283,7 @@ let closure_19 = async function _fetchCurrentQuests() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -316,7 +316,7 @@ let closure_19 = async function _fetchCurrentQuests() {
           if (!QuestStore.isFetchingCurrentQuests) {
             closure_0 = 0;
             const quests = tmp70.quests;
-            const items = [];
+            items = [];
             closure_0 = HermesBuiltin.arraySpread(quests.keys(), closure_0);
             closure_129_0 = items;
             DispatcherDefault.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
@@ -344,8 +344,8 @@ let closure_19 = async function _fetchCurrentQuests() {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7854).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7854).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7978).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7978).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -380,7 +380,7 @@ let closure_19 = async function _fetchCurrentQuests() {
           obj10.data = obj11;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj10);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7854).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7978).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj13 = {
             type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
@@ -421,7 +421,7 @@ let closure_20 = async function _sendHeartbeat(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -561,7 +561,7 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -579,6 +579,7 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
             closure_2 = tmp7;
             closure_130_0 = questId;
             closure_130_1 = undefined;
+            closure_130_2 = undefined;
             if (null != questContentCTA.questContentCTA) {
               const obj5 = {
                 type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
@@ -654,13 +655,11 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
           return obj19;
         } else {
           closure_130_1 = value;
-          const obj21 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: null };
-          const obj20 = closure_131_1(closure_131_2[12]);
-          obj21.enrolledQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(
-            closure_130_1.body,
-          );
-          obj20.dispatch(obj21);
-          const obj23 = { type: closure_131_21.SUCCESS };
+          closure_130_2 = closure_131_0(closure_131_2[15]).questUserStatusFromServer(closure_130_1.body);
+          const obj20 = closure_131_0(closure_131_2[15]);
+          const obj22 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: closure_130_2 };
+          closure_131_1(closure_131_2[12]).dispatch(obj22);
+          const obj23 = { type: closure_131_21.SUCCESS, userStatus: closure_130_2 };
           c4 = 0;
           c6 = 3;
           const obj = { value: obj23, done: true };
@@ -688,7 +687,7 @@ let closure_24 = async function _trackClaimQuestReward(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -769,7 +768,7 @@ let closure_25 = async function _performClaimQuestReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -873,7 +872,7 @@ let closure_26 = async function _fetchQuestRewardCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -957,7 +956,7 @@ let closure_27 = async function _dismissQuestContent() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1066,7 +1065,7 @@ let closure_28 = async function _completeQuestPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1160,7 +1159,7 @@ let closure_29 = async function _resetQuestPreviewStatus(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: value.QUESTS_PREVIEW_STATUS(closure_0), body: {}, rejectWithError: false };
+  const request = { url: gesture.QUESTS_PREVIEW_STATUS(closure_0), body: {}, rejectWithError: false };
   await HTTP.del(request);
   if (1 === tmp7) {
     c4 = 0;
@@ -1191,7 +1190,7 @@ let closure_30 = async function _resetQuestDismissibilityStatus(arg0) {
   closure_129_0 = closure_0;
   DispatcherDefault.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: value.QUESTS_PREVIEW_DISMISSIBILITY(closure_0), body: {}, rejectWithError: false };
+  const request = { url: gesture.QUESTS_PREVIEW_DISMISSIBILITY(closure_0), body: {}, rejectWithError: false };
   await HTTP.del(request);
   if (1 === tmp7) {
     c4 = 0;
@@ -1228,7 +1227,7 @@ let closure_31 = async function _fetchClaimedQuests() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1311,7 +1310,7 @@ let closure_32 = async function _fetchQuestToDeliver() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1426,7 +1425,7 @@ let closure_32 = async function _fetchQuestToDeliver() {
               config = LessPersonalizedAdsExperiment.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" });
               closure_132_7 = closure_133_5();
               if (null != closure_132_7) {
-                let items = closure_132_7();
+                items = closure_132_7();
               } else {
                 items = [];
               }
@@ -1686,7 +1685,7 @@ let closure_32 = async function _fetchQuestToDeliver() {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp227) {
         folderExpanded = tmp227;
@@ -1717,7 +1716,7 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1757,7 +1756,7 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (content != null) {
                   value = content.get(item);
                 }
-                return !closure_0(7842).earnedDecisionIsValid(value);
+                return !closure_0(7966).earnedDecisionIsValid(value);
               });
               closure_132_2 = found;
               if (0 !== found.length) {
@@ -1827,14 +1826,14 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (closure_1_8 != null) {
                   tmp = closure_1_8[item];
                 }
-                const items = [item];
+                items = [item];
                 let tmp2 = null;
                 if (null != tmp) {
                   tmp2 = null;
                   if (obj.isQuestWithKnownConfigVersion(tmp)) {
                     tmp2 = tmp;
                   }
-                  obj = closure_0(7854);
+                  obj = closure_0(7978);
                 }
                 items[1] = tmp2;
                 return items;
@@ -1892,7 +1891,7 @@ let closure_34 = async function _updateVideoProgress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1943,7 +1942,7 @@ let closure_34 = async function _updateVideoProgress() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c3 = tmp;
@@ -1963,7 +1962,7 @@ let closure_35 = async function _fetchVideoTranscript(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -2010,7 +2009,7 @@ let closure_35 = async function _fetchVideoTranscript(arg0) {
               closure_130_1,
             );
             if (null != questAsset) {
-              const state = closure_131_10.getState();
+              state = closure_131_10.getState();
               const obj4 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FETCHING };
               state.setTranscriptAsset(obj4);
               c5 = 1;
@@ -2029,7 +2028,7 @@ let closure_35 = async function _fetchVideoTranscript(arg0) {
         } else {
           if (2 === tmp7) {
             c5 = 0;
-            const state2 = closure_131_10.getState();
+            state2 = closure_131_10.getState();
             const obj8 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FAILURE };
             state2.setTranscriptAsset(obj8);
           } else if (arg0 === 1) {
@@ -2088,7 +2087,7 @@ let closure_37 = async function _fetchQuestPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2168,7 +2167,7 @@ let closure_39 = async function _fetchQuestHomeHero() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -2434,7 +2433,7 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -2464,7 +2463,7 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
           DispatcherDefault.dispatch(obj5);
           c6 = 1;
           const _URLSearchParams = URLSearchParams;
-          const items = ["ad_creative_ids", closure_0];
+          items = ["ad_creative_ids", closure_0];
           const items1 = [items];
           const _String = String;
           const items2 = ["placement", String(QUEST_HOME_BANNER_DESKTOP)];
@@ -2623,7 +2622,7 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
         closure_132_1(closure_132_2[12]).dispatch(obj12);
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp74) {
       closure_5 = tmp74;
@@ -2636,15 +2635,15 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(9683).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7848).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(6781).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(9815).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7972).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(6901).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
 let items = [
-  fn(6784).QuestContent.QUEST_BAR,
-  fn(6784).QuestContent.QUEST_BAR_V2,
-  fn(6784).QuestContent.QUEST_BAR_MOBILE,
+  fn(6904).QuestContent.QUEST_BAR,
+  fn(6904).QuestContent.QUEST_BAR_V2,
+  fn(6904).QuestContent.QUEST_BAR_MOBILE,
 ];
 const set = new Set(items);
 const QuestEnrollmentResultType = {

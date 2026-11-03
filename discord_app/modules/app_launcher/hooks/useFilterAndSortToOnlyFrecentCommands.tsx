@@ -15,7 +15,7 @@ export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   const commandContext = commands(length[2]).useCommandContext(commands.context);
   const obj = commands(length[2]);
   const topCommands = commands(length[3]).useTopCommands(commandContext);
-  const items = [commands];
+  items = [commands];
   const memo = commandContext.useMemo(
     () =>
       commands.reduce((acc, id) => {

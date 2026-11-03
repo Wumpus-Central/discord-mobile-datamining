@@ -35,7 +35,7 @@ let closure_6 = {
   },
   canCreateGuild: true,
   useIsGuildSupported() {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     return initialize.useStateFromStores(
       items,
       () => (guild) => closure_1_4.canAccessGuildSettings(guild),

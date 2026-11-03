@@ -13,7 +13,6 @@ const obj = {
   navHeader: null,
   content: null,
   title: null,
-  stepHeader: null,
   body: null,
   bodyContent: null,
   footerContainer: null,
@@ -39,7 +38,6 @@ obj.content = {
   alignSelf: "center",
 };
 obj.title = { textAlign: "center" };
-obj.stepHeader = { textTransform: "uppercase" };
 obj.body = { marginTop: 8, textAlign: "center" };
 obj.bodyContent = { flexDirection: "column", gap: 24, padding: 16 };
 const obj3 = {

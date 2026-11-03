@@ -32,7 +32,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "HermesInternal", done: "HermesInternal" };
+    return { value: "HermesInternal", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -304,7 +304,7 @@ export function canRetryInteractionData(interactionData) {
   if (options != null) {
     length = options.length;
   }
-  let items = options;
+  items = options;
   if (1 === length) {
     let tmp4 = options;
     if (options[0].type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -348,4 +348,4 @@ export function canRetryInteractionData(interactionData) {
   }
   return true;
 }
-export const interactionCallbackErrorReason = fn(6068).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(6188).interactionCallbackErrorReason;

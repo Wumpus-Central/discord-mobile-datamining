@@ -9,7 +9,7 @@ import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import getTinyBroncoWarningDescriptions from "../tiny_bronco/getTinyBroncoWarningDescriptions.tsx";
+import getAgeNoticeWarningDescriptions from "../age_assurance/age_notice/getAgeNoticeWarningDescriptions.tsx";
 import AgeGateModalActionCreators from "AgeGateModalActionCreators.tsx";
 import NSFWContentGate from "NSFWContentGate.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -51,7 +51,7 @@ function isChannelContentGated(channel) {
         return true;
       }
     }
-    const guild = GuildStore.getGuild(channel.guild_id);
+    guild = GuildStore.getGuild(channel.guild_id);
     let tmp9 = null != guild;
     if (tmp9) {
       tmp9 = isGuildNSFW(guild) && tmp6;
@@ -186,11 +186,11 @@ export function useAgeGateVerifyContentForGuild(stateFromStores) {
       str = "";
     }
     if (tmp3Result) {
-      let tinyBroncoWarningDescriptions = getTinyBroncoWarningDescriptions.getTinyBroncoWarningDescriptions(
+      let tinyBroncoWarningDescriptions = getAgeNoticeWarningDescriptions.getTinyBroncoWarningDescriptions(
         tmp3Result,
         str,
       );
-      const tmpResult = getTinyBroncoWarningDescriptions;
+      const tmpResult = getAgeNoticeWarningDescriptions;
     } else {
       tinyBroncoWarningDescriptions = null;
     }
@@ -309,8 +309,8 @@ export function useAgeGateVerifyContent(source) {
   if (tmpResult3.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES)) {
     tinyBroncoWarningDescriptions = null;
     if (tmp6) {
-      tinyBroncoWarningDescriptions = getTinyBroncoWarningDescriptions.getTinyBroncoWarningDescriptions(true, "");
-      const tmpResult4 = getTinyBroncoWarningDescriptions;
+      tinyBroncoWarningDescriptions = getAgeNoticeWarningDescriptions.getTinyBroncoWarningDescriptions(true, "");
+      const tmpResult4 = getAgeNoticeWarningDescriptions;
     }
   }
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
@@ -478,7 +478,7 @@ export function shouldShowAgeGateForGuildContentLevel(arg0) {
   }
   if (flag) {
     if (null != arg0) {
-      const guild = GuildStore.getGuild(arg0);
+      guild = GuildStore.getGuild(arg0);
       let tmp8 = null != guild;
       if (tmp8) {
         tmp8 = isGuildNSFW(guild);
@@ -566,7 +566,7 @@ export function maybeShowAgeGate(guildId, channelId, JOIN_LARGE_GUILD_UNDERAGE) 
   if (flag) {
     flag3 = false;
     if (null != guildId) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let tmp8 = null != guild;
       if (tmp8) {
         tmp8 = isGuildNSFW(guild);

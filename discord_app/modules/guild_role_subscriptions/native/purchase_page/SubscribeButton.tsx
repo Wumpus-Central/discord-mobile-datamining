@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
@@ -12,45 +12,42 @@ import GuildRoleSubscriptionsStore from "../../GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
 function emphasisHook(children) {
-  return closure_1_12(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
+  return application_id(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(17216);
+  let obj = changeToListingId(17359);
   const obj3 = { children: null };
-  const obj2 = activeListingId(2042)(activeSubscription.currentPeriodEnd);
+  const obj2 = activeListingId(2171)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1113).intl;
-  const formatResult = activeListingId(2042)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  const formatResult = activeListingId(2171)(activeSubscription.currentPeriodEnd).format("MMMM Do");
   obj4.children = intl.format(activeSubscription(1113).t.lA7ztO, {
     activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0],
-    billingEndDate: activeListingId(2042)(activeSubscription.currentPeriodEnd).format("MMMM Do"),
+    billingEndDate: activeListingId(2171)(activeSubscription.currentPeriodEnd).format("MMMM Do"),
     emphasisHook,
   });
-  const items = [
-    closure_12(activeSubscription(5624).Text, obj4),
-    closure_12(activeSubscription(1187).Spacer, { size: 16 }),
-  ];
+  items = [closure_12(activeSubscription(5747).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 })];
   const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1113).intl;
   obj6.text = intl2.string(activeSubscription(1113).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18630, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
+    obj.openLazy(asyncRequireImpl(18788, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
       activeSubscription,
       activeListingId,
       changeToListingId,
     });
   };
-  items[2] = closure_12(activeSubscription(18623).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(18781).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }
 const View = fn(17).View;
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -61,7 +58,7 @@ export default function SubscribeButton(listingId) {
   let callback;
   let guild_id;
   let showMemberVerificationGate;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const items1 = [listingId];
   const stateFromStores = listingId(showMemberVerificationGate[10]).useStateFromStores(
     items,
@@ -118,7 +115,7 @@ export default function SubscribeButton(listingId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -157,7 +154,7 @@ export default function SubscribeButton(listingId) {
             c3 = 0;
             closure_128_1(false);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           closure_2 = tmp22;

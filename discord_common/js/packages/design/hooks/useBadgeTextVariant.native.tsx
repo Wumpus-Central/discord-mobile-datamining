@@ -16,7 +16,7 @@ export function useBadgeTextVariant() {
   }
   let str2 = "eyebrow";
   if (true === hasItem) {
-    str2 = "experimental/body-xs/semibold";
+    str2 = "body-xs/semibold";
   }
   return str2;
 }

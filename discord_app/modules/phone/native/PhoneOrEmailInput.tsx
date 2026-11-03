@@ -99,7 +99,7 @@ export default function PhoneOrEmailInput(onChange) {
   const tmp2 = forceMode(noop.useState(""), 2);
   const tmp6 = onChange;
   const tmp7 = onPressCountrySelector;
-  const items = [countryCode, forceMode, onChange];
+  items = [countryCode, forceMode, onChange];
   const result = onChange(onPressCountrySelector[3]).shouldShowCountryCodeSelector(forceMode, tmp3);
   const callback = noop.useCallback((value) => {
     _undefined(value);

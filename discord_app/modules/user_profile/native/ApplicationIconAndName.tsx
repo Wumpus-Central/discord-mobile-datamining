@@ -26,7 +26,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj.source = { uri: str };
-  const items = [React3(native.Icon, obj, application.id)];
+  items = [React3(native.Icon, obj, application.id)];
   const obj2 = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {

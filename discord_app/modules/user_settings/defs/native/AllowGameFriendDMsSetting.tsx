@@ -16,7 +16,7 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: UserSettings.AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.XpBObB)];
+    items = [intl.string(util.t.XpBObB)];
     return items;
   },
   usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible,

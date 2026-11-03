@@ -74,7 +74,7 @@ function ToastEntityContent(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" },
   image: { width: 24, height: 24 },
@@ -95,7 +95,7 @@ export function ToastEntity(entity) {
   entity = entity.entity;
   const tmp = closure_5();
   if ("avatar" === entity.type) {
-    let guild = tmp.avatar;
+    guild = tmp.avatar;
   } else if ("guild" === entity.type) {
     guild = tmp.guild;
   }
@@ -111,7 +111,7 @@ export function ToastEntity(entity) {
     importantForAccessibility: "no-hide-descendants",
     children: <ToastEntityContent entity={entity} styles={tmp} />,
   };
-  const items = [tmp.entity, guild, guildAcronym, entity.style];
+  items = [tmp.entity, guild, guildAcronym, entity.style];
   obj.style = items;
   return (
     <View style={null} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">

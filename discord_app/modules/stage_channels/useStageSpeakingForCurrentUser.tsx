@@ -49,7 +49,7 @@ export function useShouldAgeVerifyToSpeakForCurrentUser(id) {
   if (null == id) {
     channelId = SelectedChannelStore.getChannelId();
   }
-  const items = [PermissionStore, ChannelStore];
+  items = [PermissionStore, ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,
@@ -67,11 +67,11 @@ export function useShouldAgeVerifyToSpeakForCurrentUser(id) {
     items1,
   );
   const obj = channelId(504);
-  const isVerifiedAdult = channelId(6726).useIsVerifiedAdult();
-  const obj2 = channelId(6726);
-  const obj3 = channelId(5693);
+  const isVerifiedAdult = channelId(6846).useIsVerifiedAdult();
+  const obj2 = channelId(6846);
+  const obj3 = channelId(5813);
   return (
-    channelId(5693).useIsFeatureAgeGated(channelId(6731).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5813).useIsFeatureAgeGated(channelId(6851).AgeGatedFeature.STAGE_SPEAKING) &&
     !isVerifiedAdult &&
     stateFromStores
   );
@@ -81,7 +81,7 @@ export function useShouldShowAgeVerificationPopover(id) {
   if (null == id) {
     channelId = SelectedChannelStore.getChannelId();
   }
-  const items = [PermissionStore, ChannelStore];
+  items = [PermissionStore, ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,
@@ -99,11 +99,11 @@ export function useShouldShowAgeVerificationPopover(id) {
     items1,
   );
   const obj = channelId(504);
-  const isAgeVerified = channelId(6726).useIsAgeVerified();
-  const obj2 = channelId(6726);
-  const obj3 = channelId(5693);
+  const isAgeVerified = channelId(6846).useIsAgeVerified();
+  const obj2 = channelId(6846);
+  const obj3 = channelId(5813);
   return (
-    channelId(5693).useIsFeatureAgeGated(channelId(6731).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5813).useIsFeatureAgeGated(channelId(6851).AgeGatedFeature.STAGE_SPEAKING) &&
     !isAgeVerified &&
     stateFromStores
   );

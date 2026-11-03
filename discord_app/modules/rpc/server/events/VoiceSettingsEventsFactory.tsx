@@ -15,7 +15,7 @@ export default function createVoiceSettingsEventHandlers(getDeprecatedVoiceSetti
   const obj = {};
   const obj2 = { scope: null, handler: null };
   const obj3 = {};
-  const items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
+  items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
   obj3[constants.ANY] = items;
   obj2.scope = obj3;
   obj2.handler = function handler() {

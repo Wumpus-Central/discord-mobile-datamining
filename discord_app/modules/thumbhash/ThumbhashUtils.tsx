@@ -1,5 +1,5 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
-import thumbHashToRGBA2 from "../../../_runtime/17166_thumbHashToRGBA.js";
+import thumbHashToRGBA2 from "../../../_runtime/17309_thumbHashToRGBA.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function thumbHashToRGBA(arg0) {
@@ -44,7 +44,7 @@ function thumbHashToRGBA(arg0) {
   if (tmp3) {
     num6 = 6;
   }
-  const items = [];
+  items = [];
   let num7 = 0;
   let num8 = 0;
   let num9 = 0;

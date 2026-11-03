@@ -40,7 +40,7 @@ export function createChannelPinnedMessageSystemMessage(roleStyle) {
   if (accessibilityActions == null) {
     accessibilityActions = [];
   }
-  const items = [...accessibilityActions];
+  items = [...accessibilityActions];
   const obj6 = { label: null, name: null };
   const intl3 = util.intl;
   obj6.label = intl3.string(util.t["mp1N/2"]);

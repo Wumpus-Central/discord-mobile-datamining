@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const obj2 = {
   name: "2026-02-mana-playground-access",
   kind: "user",
@@ -25,7 +25,7 @@ export function getPlaygroundAccessExperiment(location) {
   return apexExperiment.getConfig({ location }).enabled;
 }
 export function useHasPlaygroundAccess(location) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;
   if (stateFromStores != null) {

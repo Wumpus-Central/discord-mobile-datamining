@@ -7,9 +7,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../../../emojis/EmojiStore.tsx";
 
 require = fn;
-const LoadState = fn(6796).LoadState;
-const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
-let closure_7 = fn(9942).EmojiPickerRenderingDataType;
+const LoadState = fn(6916).LoadState;
+const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
+let closure_7 = fn(10073).EmojiPickerRenderingDataType;
 const EmojiPickerItemType = {
   PLACEHOLDER: 0,
   [0]: "PLACEHOLDER",
@@ -35,7 +35,7 @@ export default function useEmojiPickerData(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   const rowSize = emojiSections.rowSize;
   const isNativeEmojiPickerEnabled = emojiSections.isNativeEmojiPickerEnabled;
-  let items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = emojiSections(isNativeEmojiPickerEnabled[4]).useStateFromStores(items, () => {
     let tmp = EmojiStore.loadState === LoadState.Loaded;
     if (!tmp) {
@@ -45,7 +45,7 @@ export default function useEmojiPickerData(emojiSections) {
   });
   const items1 = [stateFromStores, emojiSections, rowSize, isNativeEmojiPickerEnabled];
   return stateFromStores.useMemo(() => {
-    const items = [{ type: constants.PLACEHOLDER, isSectionNitroLocked: false }];
+    items = [{ type: constants.PLACEHOLDER, isSectionNitroLocked: false }];
     obj2 = {
       data: items,
       rowSize: obj2,

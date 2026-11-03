@@ -10,14 +10,14 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 export default function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(10748)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(10878)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {
     id = voiceChannel.id;
   }
   const obj = { voiceState: tmp2.voiceState, voiceChannel, voiceActivity: null };
-  const items = [PresenceStore, VoiceStateStore];
+  items = [PresenceStore, VoiceStateStore];
   obj.voiceActivity = userId(504).useStateFromStores(items, () => {
     if (null != userId) {
       if (null != id) {

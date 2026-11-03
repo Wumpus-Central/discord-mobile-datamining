@@ -12,7 +12,7 @@ export default function UnreadSettingNoticeImpressionTracking(id) {
     type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
     name: discord_common_AnalyticsUtils.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE,
   };
-  const items = [id.id];
+  items = [id.id];
   useTrackImpressionDefault(obj, undefined, items);
   return null;
 }

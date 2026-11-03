@@ -105,7 +105,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   _require = 0;
   const keys = SnowflakeUtilsDefault.keys(subscriptions);
   const item = keys.forEach((item) => {
-    const items = [item, subscriptions[item]];
+    items = [item, subscriptions[item]];
     const length = JSON.stringify(items).length;
     if (closure_0 + length > 15360) {
       const obj = { subscriptions: subscriptions2 };
@@ -192,4 +192,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
-export const Opcode = fn(2004).Opcode;
+export const Opcode = fn(2133).Opcode;

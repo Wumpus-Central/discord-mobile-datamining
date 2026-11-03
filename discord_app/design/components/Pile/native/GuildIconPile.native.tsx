@@ -31,7 +31,7 @@ export function GuildIconPile(arg0) {
     num = 2;
   }
   obj.gap = num;
-  const items = [children];
+  items = [children];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
     const obj3 = { size: tmp4, borderRadius: tmp4 / 3, value: totalCount - countResult };

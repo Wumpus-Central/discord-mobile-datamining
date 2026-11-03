@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/useInt
 export default function useInterestedEventUsers(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -49,7 +49,7 @@ export default function useInterestedEventUsers(arg0, arg1) {
     });
     const found1 = stateFromStoresArray1.filter((response) => response.response === constants.INTERESTED);
     const set = new Set();
-    const items = [];
+    items = [];
     const item = found.forEach(addUserToAllInterested);
     const item1 = found1.forEach(addUserToAllInterested);
     return items;

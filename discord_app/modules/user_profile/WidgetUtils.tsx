@@ -73,7 +73,7 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return uniqueKey === uniqueKey.getUniqueKey();
   });
   if (-1 === findIndexResult) {
-    const items = [clipsGalleryWidget];
+    items = [clipsGalleryWidget];
     HermesBuiltin.arraySpread(tmp8, 1);
     return items;
   } else {
@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7775).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_9 = fn(14963).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7899).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+let closure_9 = fn(15097).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -118,7 +118,7 @@ export function getRandomElement(arg0) {
   return arg0[Math.floor(Math, Math.random(Math) * arg0.length)];
 }
 export function getRandomElements(arg0, arg1) {
-  const items = [...arg0];
+  items = [...arg0];
   const sorted = items.sort(() => 0.5 - Math.random());
   return sorted.slice(0, arg1);
 }
@@ -167,20 +167,20 @@ export function addWidgetToPending(type) {
     })
   ) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
-        obj3,
+        obj2,
       );
-      const tmp13Result = DismissibleContentUnsafeUtils;
-      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const tmp16Result = DismissibleContentUnsafeUtils;
+      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
-        obj4,
+        obj3,
       );
-      const tmp13Result2 = DismissibleContentUnsafeUtils;
+      const tmp16Result2 = DismissibleContentUnsafeUtils;
     }
-    const items = [type];
+    items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
     WidgetActionCreatorsDefault.setPendingWidgets(items);
   }
@@ -264,7 +264,7 @@ export function addUploadingClipToClipsGalleryWidget(arg0) {
       id = found.id;
     }
     const obj2 = { id, clips: null };
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(clips, 0)] = arg0;
     obj2.clips = items;
     const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj2);
@@ -498,7 +498,7 @@ export function reorderClipsInClipsGalleryWidget(arg0, arg1) {
   }
   if (null != found) {
     if (arg0 !== arg1) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found.clips, 0);
       if (arg0 >= 0) {
         if (arg0 < items.length) {
@@ -856,7 +856,7 @@ export function addPendingGameToWidget(ignoreMaxGames) {
   }
   const obj = { gameId: game.gameId, comment: game.comment, tags: game.tags };
   if (null != tmp) {
-    const items = [obj];
+    items = [obj];
     let games2 = tmp.games;
     if (games2 == null) {
       games2 = [];
@@ -907,7 +907,7 @@ export function reorderWidgets(arg0, arg1) {
       if (arg0 < widgets.length) {
         if (arg1 >= 0) {
           if (arg1 < widgets.length) {
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(widgets, 0);
             items.splice(arg1, 0, _slicedToArray(items.splice(arg0, 1), 1)[0]);
             WidgetActionCreatorsDefault.setPendingWidgets(items);
@@ -922,7 +922,7 @@ export function reorderGamesInWidget(widgetType, arg1, arg2) {
   if (null != tmp) {
     if (null != tmp.games) {
       if (arg1 !== arg2) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(tmp.games, 0);
         if (arg1 >= 0) {
           if (arg1 < items.length) {
@@ -957,13 +957,13 @@ export function removePendingGameFromWidget(widgetType, arg1) {
     WidgetActionCreatorsDefault.setPendingWidgets(tmp13);
   }
 }
-export function isGameLimitReached(type) {
-  type = type.type;
+export function isGameLimitReached(widget) {
+  const type = widget.type;
   let num = 0;
   if (type in GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE) {
     num = GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[type];
   }
-  return type.games.length >= num;
+  return widget.games.length >= num;
 }
 export function isGameAllowedInGameWidgets(contentClassification) {
   const result = utils.isAgeRestrictedContentClassification(contentClassification.contentClassification);

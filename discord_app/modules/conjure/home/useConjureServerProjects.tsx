@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/home/useConjureServer
 export default function useConjureServerProjects(arg0) {
   _require = arg0;
   const obj = { mine: null, shared: null, fetchState: null };
-  const items = [arg0];
+  items = [arg0];
   obj.mine = require("useConjureHomeOwnProjects").useConjureProjectsByActivity(() => {
     const ownedProjects = ConjureProjectStore.getOwnedProjects();
     return ownedProjects.filter((guild_id) => guild_id.guild_id === closure_1_0 || guild_id.preview_guild_id === tmp);

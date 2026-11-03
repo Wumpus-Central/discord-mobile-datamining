@@ -100,7 +100,7 @@ prototype["clear"] = function clear() {
 };
 prototype["remove"] = function remove(fn) {
   const self = this;
-  const items = [];
+  items = [];
   if (this.queue.length > 0) {
     do {
       let queue = self.queue;

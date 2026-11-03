@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 
 export default function useFeedBlockSkuIds(sortedSkuIds) {
   _require = sortedSkuIds;
-  let items = [ConsentStore];
+  items = [ConsentStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     ConsentStore.hasConsented(constants.PERSONALIZATION),
   );
@@ -22,7 +22,7 @@ export default function useFeedBlockSkuIds(sortedSkuIds) {
   }
   let items1 = [sortedSkuIds, stateFromStores];
   return noop.useMemo(() => {
-    let items;
+    items = undefined;
     if (sortedSkuIds != null) {
       sortedSkuIds = sortedSkuIds.sortedSkuIds;
       if (sortedSkuIds != null) {

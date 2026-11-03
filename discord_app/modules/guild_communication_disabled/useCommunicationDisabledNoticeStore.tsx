@@ -1,17 +1,17 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import _mod1254 from "../../../_runtime/metro/01254__.js";
-import _mod4929 from "../../../_runtime/metro/04929__.js";
+import _mod5056 from "../../../_runtime/metro/05056__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
 const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY =
-  fn(4928).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+  fn(5055).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
   let Storage = require("Storage").Storage;
-  let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
+  items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
   }
@@ -63,16 +63,16 @@ export function useCommunicationDisabledNoticeStore(arg0) {
     _mod1254.useStoreWithEqualityFn(
       closure_4,
       (arg0) => {
-        const items = [,];
+        items = [,];
         ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
         return items;
       },
-      _mod4929.shallow,
+      _mod5056.shallow,
     ),
     2,
   );
   const first = tmp[0];
-  let items = [!first.has(arg0), tmp[1]];
+  items = [!first.has(arg0), tmp[1]];
   return items;
 }
 export function clearCommunicationDisabledNotice(arg0) {

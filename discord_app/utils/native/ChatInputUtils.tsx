@@ -34,7 +34,7 @@ function getHighestIndexForScreenIndexMap(map1) {
               });
               if (0 !== found.length) {
                 const _Math = Math;
-                const items = [];
+                items = [];
                 HermesBuiltin.arraySpread(found, 0);
                 const _Math2 = Math;
                 str = HermesBuiltin.apply(items, Math);
@@ -158,7 +158,7 @@ export function getHighestActiveScreenIndex() {
       });
       if (0 !== found.length) {
         const _Math = Math;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found, 0);
         const _Math2 = Math;
         return HermesBuiltin.apply(items, Math);

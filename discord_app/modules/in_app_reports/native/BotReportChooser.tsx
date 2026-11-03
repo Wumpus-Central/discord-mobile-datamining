@@ -37,7 +37,7 @@ function ReportAppBehavior(arg0) {
     onSubmit: closure_4,
     appContext: closure_5,
   } = arg0);
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
   const data = ApplicationActionCreators.useApplication(stateFromStores).data;
   let obj3 = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
@@ -67,13 +67,13 @@ let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReport
 
 export default function BotReportChooser(arg0) {
   const obj = { header: null, children: null };
-  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
+  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.Bd10bR);
   obj.header = React4(Text_Text.Text, obj2);
   const obj3 = { hasIcons: false, children: null };
   const merged = Object.assign(arg0);
-  const items = [React4(ReportAppProfile, {})];
+  items = [React4(ReportAppProfile, {})];
   const merged1 = Object.assign(arg0);
   items[1] = React4(ReportAppBehavior, {});
   obj3.children = items;

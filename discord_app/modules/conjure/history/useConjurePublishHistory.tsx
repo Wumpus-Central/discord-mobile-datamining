@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/useConjurePublishHistory.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2042 from "../../../../_runtime/metro/02042__.js";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef2171 from "../../../../_runtime/metro/02171__.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import conjurePublishHistoryRequests from "conjurePublishHistoryRequests.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,8 +14,8 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 
 export function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
-  const obj = { date: _modDef2042(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef3868["/spQzC"], obj);
+  const obj = { date: _modDef2171(publishedAt).format("LLL") };
+  return intl.formatToPlainString(_modDef3995["/spQzC"], obj);
 }
 export function useConjurePublishHistory(projectId) {
   _require = projectId;
@@ -26,7 +26,7 @@ export function useConjurePublishHistory(projectId) {
     atResult = null;
   }
   dependencyMap = atResult;
-  let items = [projectId, atResult];
+  items = [projectId, atResult];
   const callback = nextCursor.useCallback(
     () => conjurePublishHistoryRequests.fetchPublishHistory(closure_0, atResult),
     items,
@@ -55,7 +55,7 @@ export function useConjurePublishHistory(projectId) {
     next() {
       if (null != nextCursor) {
         importDefault((arg0) => {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(arg0, 0)] = nextCursor;
           return items;
         });
@@ -72,7 +72,7 @@ export function useConjurePublishHistoryNotes(projectId, id, notesCache) {
   closure_1 = id;
   dependencyMap = notesCache;
   const combined = "" + projectId + "/" + id;
-  const items = [projectId, id, notesCache, combined];
+  items = [projectId, id, notesCache, combined];
   const callback = noop.useCallback(() => {
     value = notesCache.get(combined);
     let status;
@@ -107,7 +107,7 @@ export function useConjurePublishHistoryNotes(projectId, id, notesCache) {
     }
   }, items);
   const historyLoad = require("useConjureHistoryData").useHistoryLoad(callback);
-  let state = notesCache.get(combined);
+  state = notesCache.get(combined);
   const obj2 = {};
   const merged = Object.assign(historyLoad);
   let status;

@@ -7,11 +7,11 @@ import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7734);
+const CollectiblesDebugStore = fn(7858);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
-({ jsxs: closure_9, jsx: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsxs: closure_9, jsx: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   debugLogContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -45,7 +45,7 @@ export default function DebugLogView() {
   dependencyMap = closure_7((clearLogs) => clearLogs.clearLogs);
   let tmp = closure_11();
   noop = tmp;
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = arr(504).useStateFromStores(items, () => DevSettingsStore.get("shop_show_debug_overlay"));
   const items1 = [arr.length, stateFromStores];
   const effect = noop.useEffect(() => {
@@ -67,7 +67,7 @@ export default function DebugLogView() {
       obj4.style = obj5;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj4.children = items2;
-      const items3 = [closure_9(tmp2(5624).Text, obj4)];
+      const items3 = [closure_9(tmp2(5747).Text, obj4)];
       const obj6 = {
         onPress: function handleClear() {
           closure_1();
@@ -75,8 +75,8 @@ export default function DebugLogView() {
         style: tmp.clearButton,
         children: null,
       };
-      const obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
-      obj6.children = closure_10(tmp2(5624).Text, obj7);
+      const obj7 = { variant: "text-xs/semibold", style: tmp.clearButtonText, children: "Clear" };
+      obj6.children = closure_10(tmp2(5747).Text, obj7);
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3)];

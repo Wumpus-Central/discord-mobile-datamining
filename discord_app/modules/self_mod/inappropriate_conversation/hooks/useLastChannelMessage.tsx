@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 
 export function useLastChannelMessage(channelId) {
   _require = channelId;
-  const items = [MessageStore];
+  items = [MessageStore];
   return require("initialize").useStateFromStores(items, () => {
     let lastNonCurrentUserMessage = MessageStore.getLastNonCurrentUserMessage(closure_0);
     if (lastNonCurrentUserMessage == null) {

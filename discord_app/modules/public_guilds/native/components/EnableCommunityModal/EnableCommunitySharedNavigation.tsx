@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 let GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   container: { flex: 1, height: "100%" },
   modal: { height: "100%", flex: 1, justifyContent: "space-between" },
@@ -31,8 +31,8 @@ export function EnableCommunityModalScreen(arg0) {
   GuildFeatures = undefined;
   ({ disableNextStep, children } = arg0);
   const tmp = closure_10();
-  const items = [isScreenReaderEnabled];
-  const guild = require("initialize").useStateFromStoresObject(items, () => isScreenReaderEnabled.getProps()).guild;
+  items = [isScreenReaderEnabled];
+  guild = require("initialize").useStateFromStoresObject(items, () => isScreenReaderEnabled.getProps()).guild;
   let hasItem;
   if (guild != null) {
     const features = guild.features;

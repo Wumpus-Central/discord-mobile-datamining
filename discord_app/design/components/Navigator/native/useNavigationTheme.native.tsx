@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigationTheme.native.tsx
-import Link from "../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../_runtime/01500_Link.js";
 import shared from "../../../shared.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +20,7 @@ export function useNavigationTheme(DARK) {
   const token3 = require("useToken").useToken(token(token1[2]).colors.TEXT_MUTED, DARK);
   const obj4 = require("useToken");
   const token4 = require("useToken").useToken(token(token1[2]).colors.BACKGROUND_FEEDBACK_NOTIFICATION, DARK);
-  const items = [token1, token2, token4, token, token3, DARK];
+  items = [token1, token2, token4, token, token3, DARK];
   return token2.useMemo(() => {
     const obj = {
       dark: shared.isThemeDark(closure_0),

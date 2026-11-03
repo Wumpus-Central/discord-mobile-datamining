@@ -3,12 +3,12 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
-import _mod9250 from "../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9378 from "../../../discord_common/js/packages/libdave/index.tsx";
 import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators.tsx";
 import SecureFramesTracking from "SecureFramesTracking.tsx";
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils.native.tsx";
@@ -71,7 +71,7 @@ let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -217,7 +217,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
         const result = closure_130_1(closure_130_2[11]).addUploadedKeyVersion(closure_129_0);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -245,7 +245,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -291,7 +291,7 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -421,7 +421,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9266);
+const SecureFramesConstants = fn(9394);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
 const Constants = fn(1072);
@@ -452,7 +452,7 @@ export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9250.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9378.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
@@ -488,8 +488,8 @@ export function deleteUserPersistentVerifications(userId) {
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 }
 export function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2042(timestamp);
-  const diffResult = _modDef2042().diff(tmp3, "s");
+  const tmp3 = _modDef2171(timestamp);
+  const diffResult = _modDef2171().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -531,7 +531,7 @@ export function getSecureFramesUserVerifiedTimestamp(timestamp) {
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2042();
+  const obj = _modDef2171();
 }
 export function getUserVerificationDeeplink(userId, arg1) {
   return (
@@ -539,7 +539,7 @@ export function getUserVerificationDeeplink(userId, arg1) {
     location.protocol +
     "//" +
     location.host +
-    closure_1_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) +
+    gesture.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) +
     "?userId=" +
     userId +
     "&fingerprint=" +
@@ -549,7 +549,7 @@ export function getUserVerificationDeeplink(userId, arg1) {
 export function getUserVerifyStateText(memo, name) {
   if (constants.OTHER_USER_DISCONNECTED === memo) {
     const intl13 = util.intl;
-    const items = [intl13.string(util.t.ZBHDM9)];
+    items = [intl13.string(util.t.ZBHDM9)];
     const intl14 = util.intl;
     const obj2 = { username: name };
     items[1] = intl14.format(util.t["+rIdOd"], obj2);
@@ -665,7 +665,7 @@ export function showSecureFramesKeyInconsistentAlert(arg0) {
 }
 export function validateSecureFramesKeyConsistent(guildId) {
   ({ userId, channelId } = guildId);
-  const items = [RTCConnectionStore, StreamRTCConnectionStore];
+  items = [RTCConnectionStore, StreamRTCConnectionStore];
   if (getIsSecureFramesKeyInconsistent(userId, items)) {
     const user = UserStore.getUser(userId);
     const name = NicknameUtilsDefault.getName(guildId.guildId, channelId, user);

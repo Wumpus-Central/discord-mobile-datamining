@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/AppLauncherContext.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import useDefaultAppLauncherWidth from "hooks/useDefaultAppLauncherWidth.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -74,9 +74,9 @@ export function useRequiredAppLauncherContext() {
 export function useAppLauncherContext() {
   noop.useRef(obj.DISMISSED);
   const bottomSheetExpandReasonRef = noop.useRef(undefined);
-  obj = ReanimatedRexport;
+  obj = _mod1652;
   const sharedValue = obj.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const sharedValue1 = _mod1652.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;
@@ -103,7 +103,7 @@ export function useAppLauncherContext() {
       }
     },
   });
-  const items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
+  items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
   const memo = noop.useMemo(
     () => ({
       keyboardCloseReasonRef,

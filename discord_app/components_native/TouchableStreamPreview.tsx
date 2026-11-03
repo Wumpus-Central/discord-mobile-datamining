@@ -25,7 +25,7 @@ function StreamPreviewContainer(disableTransition) {
   const tmp = closure_14();
   let obj = disableTransition(stream[14]);
   const isChannelFullResult = disableTransition(stream[14]).isChannelFull(channel, VoiceStateStore, GuildStore);
-  const items = [GameConsoleStore];
+  items = [GameConsoleStore];
   const stateFromStores = disableTransition(stream[15]).useStateFromStores(
     items,
     () => null != remoteSessionId.getRemoteSessionId(),
@@ -133,13 +133,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1072).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
 obj2.ctaWrapper = obj3;
 obj2.ctaBackground = {
@@ -157,7 +157,7 @@ let result = size.fileFinishedImporting("components_native/TouchableStreamPrevie
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   _require = arg0;
-  const items = [ApplicationStreamingStore];
+  items = [ApplicationStreamingStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     ApplicationStreamingStore.getStreamForUser(closure_0.userId, closure_0.guildId),
   );

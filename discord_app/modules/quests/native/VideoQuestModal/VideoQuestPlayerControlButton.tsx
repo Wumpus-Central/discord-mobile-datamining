@@ -7,7 +7,7 @@ import n from "../../../../../_runtime/metro/00671__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   disabled: { opacity: 0.5 },
   container: { borderRadius: nativeDefault.radii.round, overflow: "hidden" },
@@ -28,7 +28,7 @@ export const VideoQuestPlayerControlButton = noop.memo(function VideoQuestPlayer
   ({ style, children } = arg0);
   const merged = Object.assign(arg0, Object.assign({ style: 0, children: 0 }));
   const tmp2 = closure_4();
-  const items = [tmp2.container, ,];
+  items = [tmp2.container, ,];
   let disabled = merged.disabled;
   if (disabled) {
     disabled = tmp2.disabled;

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   headerContainer: {
     alignItems: "center",
@@ -40,7 +40,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   const tmp = closure_8();
   const obj2 = { top: true, style: tmp.headerContainer, children: null };
   const obj3 = { style: null, accessibilityRole: "button", onPress: onClose, children: null };
-  const items = [,];
+  items = [,];
   ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
   obj3.style = items;
   const obj = GuildRoleSubscriptionListingEditStateUtilsAll;

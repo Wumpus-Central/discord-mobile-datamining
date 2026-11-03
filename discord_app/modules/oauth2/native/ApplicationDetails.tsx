@@ -27,7 +27,7 @@ function ApplicationDetailsEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  const items = [
+  items = [
     iconComponentResult,
     React4(Text_Text.Text, {
       variant: "text-sm/normal",
@@ -42,7 +42,7 @@ function ApplicationDetailsEntry(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   applicationDetails: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 8 },
@@ -84,7 +84,7 @@ export default function ApplicationDetails(arg0) {
     obj4.text = intl.format(util.t["5k5OKD"], obj5);
     tmp15 = React4(ApplicationDetailsEntry, obj4);
   }
-  const items = [tmp15, , , , , ,];
+  items = [tmp15, , , , , ,];
   const obj6 = { iconComponent: LockIcon.LockIcon, text: null };
   obj6.text = Utils.getApplicationDetailsText(application);
   items[1] = React4(ApplicationDetailsEntry, obj6);

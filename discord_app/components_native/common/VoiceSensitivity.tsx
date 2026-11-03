@@ -13,10 +13,10 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
-const NativePermissionTypes = fn(7940).NativePermissionTypes;
+const NativePermissionTypes = fn(8064).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
@@ -43,7 +43,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -59,7 +59,7 @@ export default function VoiceSensitivity(auto) {
   let width;
   let stateFromStores;
   let first2;
-  let state;
+  state = undefined;
   c10 = undefined;
   let ref;
   const tmp = ref();
@@ -72,7 +72,7 @@ export default function VoiceSensitivity(auto) {
   width = onThresholdChange(first[13])().width;
   const ref1 = stateFromStores.useRef(null);
   const tmp8 = onThresholdChange;
-  const items = [state];
+  items = [state];
   stateFromStores = auto(first[14]).useStateFromStores(items, () => state.getState(), []);
   const tmp12 = width(stateFromStores.useState(0), 2);
   const first1 = tmp12[0];
@@ -116,7 +116,7 @@ export default function VoiceSensitivity(auto) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
               c1 = 1;
               c2 = 1;
               const obj4 = {
-                value: onThresholdChange(7957).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                value: onThresholdChange(8081).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
               return obj4;
@@ -153,10 +153,10 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5789).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5909).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c2 = tmp;

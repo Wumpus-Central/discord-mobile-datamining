@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/suppress_notifications/parseC
 
 export default function parseContentForSuppressNotifications(str) {
   if (null == str) {
-    const items = [false, ""];
+    items = [false, ""];
     let items2 = items;
   } else if (null == str.match(regExp)) {
     const items1 = [false, str];

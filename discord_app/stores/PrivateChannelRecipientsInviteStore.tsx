@@ -25,7 +25,7 @@ function performQuery() {
       closure_129_0 = channel;
       const currentUser = UserStore.getCurrentUser();
       closure_129_1 = currentUser;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(RelationshipStore.getFriendIDs(), 0);
       let isStaffResult;
       if (currentUser != null) {
@@ -153,7 +153,7 @@ function parseUserResults(results) {
   if (c15) {
     if ("" !== c16) {
       const currentUser = UserStore.getCurrentUser();
-      const items = [];
+      items = [];
       const iter = results[Symbol.iterator]();
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
@@ -185,7 +185,7 @@ function parseUserResults(results) {
   }
 }
 function handleModalActionSheetOpen(key) {
-  if (key.key !== closure_1_14) {
+  if (key.key !== gesture) {
     return false;
   } else {
     c15 = true;
@@ -202,7 +202,7 @@ function handleModalActionSheetOpen(key) {
   }
 }
 function handleActionSheetDismiss(key) {
-  if (key.key !== closure_1_14) {
+  if (key.key !== gesture) {
     return false;
   } else {
     if (null != closure_3) {
@@ -222,7 +222,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4867).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4994).PrivateChannelRecord;
 const Constants = fn(1072);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;
@@ -248,7 +248,7 @@ prototype["initialize"] = function initialize() {
     UserAffinitiesV2Store,
     UserStore,
   );
-  const items = [UserStore, ChannelStore];
+  items = [UserStore, ChannelStore];
   this.syncWith(items, performQuery);
   const items1 = [UserAffinitiesV2Store];
   this.syncWith(items1, performQueryOnAffinityChange);

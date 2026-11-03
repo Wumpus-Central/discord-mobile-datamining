@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -116,7 +116,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       let obj2 = {};
       const _categories = categories._categories;
       const item = _categories.forEach((channel) => {
-        const items = [];
+        items = [];
         obj2[channel.channel.id] = items;
         return items;
       });
@@ -234,7 +234,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 };
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
-  return map1(
+  return state(
     TableRow.TableRow,
     {
       label: label.name,
@@ -263,7 +263,7 @@ prototype["renderCategories"] = function renderCategories() {
   let tmp4 = null;
   if (mapped.length > 0) {
     const obj = { hasIcons: false, children: mapped };
-    tmp4 = map1(TableRowGroup.TableRowGroup, obj);
+    tmp4 = state(TableRowGroup.TableRowGroup, obj);
   }
   return tmp4;
 };
@@ -281,8 +281,8 @@ prototype["render"] = function render() {
     const intl2 = util.intl;
     name = intl2.string(util.t.GSfOoo);
   }
-  const items = [
-    map1(Text_Text.Text, {
+  items = [
+    state(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-muted",
       children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }),
@@ -302,29 +302,29 @@ prototype["render"] = function render() {
             return self.handleSetCategory(first.id);
           },
         };
-        obj4.children = map1(TableRow.TableRow, obj5, first.id);
-        tmp3Result = map1(TableRowGroup.TableRowGroup, obj4);
+        obj4.children = state(TableRow.TableRow, obj5, first.id);
+        tmp3Result = state(TableRowGroup.TableRowGroup, obj4);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj2.children = items;
-  obj.children = closure_1_14(Stack_Stack.Stack, obj2);
-  return map1(Form.Form, obj);
+  obj.children = gesture(Stack_Stack.Stack, obj2);
+  return state(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(5080).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(504);
-  const navigation = channelId(1497).useNavigation();
-  const obj2 = channelId(1497);
-  const appChannelBotUserId = channelId(11646).useAppChannelBotUserId(channel);
+  const navigation = channelId(1499).useNavigation();
+  const obj2 = channelId(1499);
+  const appChannelBotUserId = channelId(11783).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

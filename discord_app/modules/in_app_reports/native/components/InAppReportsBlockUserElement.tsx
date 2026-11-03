@@ -17,7 +17,7 @@ export default function BlockUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [user];
   const stateFromStores = user(reportId[5]).useStateFromStores(
     items,

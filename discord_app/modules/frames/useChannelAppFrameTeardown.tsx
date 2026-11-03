@@ -8,7 +8,7 @@ import FramesStore from "FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(6847).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6967).getFrameSurfaceForChannel;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");
@@ -19,7 +19,7 @@ export default function useChannelAppFrameTeardown(id) {
   if (id != null) {
     id = id.id;
   }
-  const items = [id];
+  items = [id];
   memo = memo.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {

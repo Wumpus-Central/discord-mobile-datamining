@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useAppleSubscriptionOwnership.tsx");
 
 export function useAppleSubscriptionOwnership(subscription) {
-  const items = [IAPStore];
+  items = [IAPStore];
   const stateFromStores = stateFromStores1(prop[6]).useStateFromStores(items, () => ready.isReady());
   const obj = stateFromStores1(prop[6]);
   const items1 = [state];

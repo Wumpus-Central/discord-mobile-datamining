@@ -37,7 +37,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
   const friendsHeaderIndex = data2.friendsHeaderIndex;
   const friendsHeaderOffset = data2.friendsHeaderOffset;
   const estimatedHeaderSize = data2.listHeaderHeight;
-  let items = [estimatedHeaderSize];
+  items = [estimatedHeaderSize];
   const imperativeHandle = listLeft.useImperativeHandle(
     ref,
     () => ({
@@ -174,7 +174,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
   const stickyHeaderIndices = listLeft.useMemo(() => {
     let tmp2;
     if (null != friendsHeaderIndex) {
-      const items = [tmp];
+      items = [tmp];
       tmp2 = items;
     }
     return tmp2;

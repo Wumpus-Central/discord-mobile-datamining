@@ -62,7 +62,7 @@ export function processColorStringsArray(colorStrings) {
   if (null == colorStrings) {
     return [];
   } else {
-    const items = [, ,];
+    items = [, ,];
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
     return items.filter(GlobalUtils.isNotNullish);
   }
@@ -73,7 +73,7 @@ export function useProcessColorStringsArray(colorStrings) {
   if (colorStrings != null) {
     primaryColor = colorStrings.primaryColor;
   }
-  let items = [primaryColor, ,];
+  items = [primaryColor, ,];
   let secondaryColor;
   if (colorStrings != null) {
     secondaryColor = colorStrings.secondaryColor;
@@ -86,7 +86,7 @@ export function useProcessColorStringsArray(colorStrings) {
   items[2] = tertiaryColor;
   return noop.useMemo(() => {
     if (null == closure_0) {
-      let items = [];
+      items = [];
     } else {
       const items1 = [, ,];
       ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(tmp));

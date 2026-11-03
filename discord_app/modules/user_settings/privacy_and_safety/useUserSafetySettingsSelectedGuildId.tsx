@@ -2,7 +2,7 @@
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17911);
+const UserSettingsSafetySelectedGuildStore = fn(18054);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } =
   UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1072).GuildFeatures;
@@ -19,7 +19,7 @@ export function useAllServersOptionSelected() {
 }
 export function useIsSelectedGuildAHub() {
   const selectedGuildId = closure_4().selectedGuildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
   let flag;
   if (stateFromStores != null) {

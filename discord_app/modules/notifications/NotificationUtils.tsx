@@ -19,7 +19,7 @@ export function getMuteTimeOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
   obj.value = timestampProducer.MINUTES_15;
-  const items = [obj, , , , ,];
+  items = [obj, , , , ,];
   const obj2 = { id: "1-hour", label: null, value: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.UMWBZr);
@@ -94,6 +94,6 @@ export function filterOverrides(channelOverrides, arg1) {
   });
 }
 export function useShouldUseNewNotificationSystem() {
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
 }

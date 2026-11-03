@@ -7,14 +7,14 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
 export default function useSetMediaPostThumbnail(arg0, arg1) {
   _require = arg0;
   const user = arg1;
-  const items = [UploadAttachmentStore];
+  items = [UploadAttachmentStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const uploads = UploadAttachmentStore.getUploads(closure_0, DraftType.ChannelMessage);
     let found = uploads.find((item) => {

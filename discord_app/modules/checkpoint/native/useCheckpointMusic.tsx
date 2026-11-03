@@ -9,16 +9,16 @@ const AppState = _mod17.AppState;
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointMusic.tsx");
 
 export default function useCheckpointMusic() {
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => CheckpointStore.isMuted);
   closure_4(null);
   closure_3(() => {
     let num = 1;
-    const obj = stateFromStores(11030);
+    const obj = stateFromStores(11163);
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(13458), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(13596), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

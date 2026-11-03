@@ -19,7 +19,7 @@ const Constants = fn(1072);
 ({ GuildSettingsSections: closure_12, AuditLogFilterTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   listView: { marginVertical: 12 },
   spinner: { marginTop: 40 },
@@ -61,7 +61,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   closure_1 = tmp;
   const navigation = guildId(stateFromStores[12]).useNavigation();
   let obj = guildId(stateFromStores[12]);
-  let items = [stateFromStores1, extraData];
+  items = [stateFromStores1, extraData];
   stateFromStores = guildId(stateFromStores[13]).useStateFromStores(items, () =>
     stateFromStores1.getChannel(first.getChannelId()),
   );
@@ -139,7 +139,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       navigation.push(constants.AUDIT_LOG_FILTER, obj);
       const obj2 = guildId(stateFromStores[18]);
     };
-    const items = [obj3];
+    items = [obj3];
     const obj4 = { label: null, onPress: null };
     const intl2 = util.intl;
     obj4.label = intl2.string(util.t.rautds);
@@ -164,12 +164,12 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       firstAuditRow = closure_1.firstAuditRow;
     }
     let lastAuditRow = index === diff;
-    const items = [firstAuditRow];
+    items = [firstAuditRow];
     if (lastAuditRow) {
       lastAuditRow = closure_1.lastAuditRow;
     }
     items[1] = lastAuditRow;
-    return closure_2_14(AuditLogDefault, {
+    return gesture(AuditLogDefault, {
       containerStyle: items,
       onHeaderClick(id) {
         if (ref.current !== id.id) {

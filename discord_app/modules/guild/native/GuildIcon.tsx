@@ -4,8 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(6958).ExpressionSourceGuildRecord;
-const GuildRecord = fn(4881);
+let closure_5 = fn(7084).ExpressionSourceGuildRecord;
+const GuildRecord = fn(5008);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1072).Fonts;
 const jsx = fn(21).jsx;
@@ -51,7 +51,7 @@ let obj2 = {
   [GuildIconSizes.XLARGE]: 64,
   [GuildIconSizes.XXLARGE]: 80,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj3[GuildIconSizes.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj3[GuildIconSizes.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };
@@ -186,7 +186,7 @@ export default noop.memo(function GuildIconInner(guild) {
     },
     [],
   );
-  let items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
+  items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
   const effect1 = obj2.useEffect(() => {
     if (null != obj2) {
       if (null != obj.icon) {
@@ -286,7 +286,7 @@ export default noop.memo(function GuildIconInner(guild) {
   let items1 = [style, size, tmp3, tmp29, undefined, tmp34, selected, textStyle, null == tmp15];
   const memo = obj2.useMemo(() => {
     let items1 = guildIcon;
-    const items = [guildIcon.guildIcon, guildIcon[size], style];
+    items = [guildIcon.guildIcon, guildIcon[size], style];
     if (null != loadingStyle) {
       items.push(tmp);
     }

@@ -6,8 +6,8 @@ import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const ChatOverlays = fn(11357).ChatOverlays;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ChatOverlays = fn(11494).ChatOverlays;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, ,];
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverla
 
 export default function useAllowedChatOverlays() {
   obj = useStateFromStores;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());
   const items1 = [EmbeddedActivitiesStore];
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () =>

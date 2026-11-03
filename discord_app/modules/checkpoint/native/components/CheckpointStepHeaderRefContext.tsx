@@ -18,7 +18,7 @@ export function CheckpointStepFocusProvider(arg0) {
     closure_0.current = current;
   }, []);
   isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  const items = [route, isScreenReaderEnabled];
+  items = [route, isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
     if (isScreenReaderEnabled) {
       const _setTimeout = setTimeout;

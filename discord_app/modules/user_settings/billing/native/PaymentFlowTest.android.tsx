@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTest.android.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
@@ -14,7 +14,7 @@ function TestView() {
   const tmp3 = first2(noop.useState("1341506443580276736"), 2);
   value = tmp3[0];
   closure_1 = tmp3[1];
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = value(first1[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores != null) {
@@ -25,9 +25,11 @@ function TestView() {
   const tmp2Result2 = first2(noop.useState(undefined), 2);
   first2 = tmp2Result2[0];
   let obj3 = { spacing: 16, style: tmp.container, children: null };
-  const items1 = [closure_7(value(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" })];
+  const items1 = [
+    closure_7(value(first1[9]).Text, { variant: "text-lg/semibold", children: "Android Payment Flow Test" }),
+  ];
   const items2 = [
-    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" }),
+    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/semibold", children: "Gift Purchase SKU" }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
@@ -72,7 +74,7 @@ function TestView() {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17705, dependencyMap.paths),
+          asyncRequireImpl(17848, dependencyMap.paths),
           "SimpleRequestOTPActionSheet",
           obj,
         );
@@ -87,7 +89,7 @@ function TestView() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,

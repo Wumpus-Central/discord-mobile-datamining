@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useI
 
 export default function useIsConnectedToVoiceChannel(arg0) {
   _require = arg0;
-  const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
+  items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     const channelId = RTCConnectionStore.getChannelId();
     let tmp2 = closure_0;
@@ -24,7 +24,7 @@ export default function useIsConnectedToVoiceChannel(arg0) {
     } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
       return true;
     } else {
-      const state = RTCConnectionStore.getState();
+      state = RTCConnectionStore.getState();
       if (RTCConnectionStates.DISCONNECTED !== state) {
         if (RTCConnectionStates.NO_ROUTE !== state) {
           return true;

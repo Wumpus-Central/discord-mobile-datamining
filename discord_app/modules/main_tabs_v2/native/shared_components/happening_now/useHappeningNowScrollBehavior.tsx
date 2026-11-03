@@ -12,7 +12,7 @@ export default function useHappeningNowScrollBehavior(arg0, arg1) {
   closure_1 = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const items1 = [
     noop.useCallback((nativeEvent) => {
       closure_2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
@@ -37,7 +37,7 @@ export function useHappeningNowScrollSnapping(listRef) {
   if (num == null) {
     num = 0;
   }
-  const items = [];
+  items = [];
   let num2 = 0;
   let num3 = 0;
   if (0 < num) {

@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
@@ -31,7 +31,7 @@ export default function useGuildActionRows(id) {
   const obj4 = require("SlayerStorefrontUtils");
   const canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(id.id);
   const obj5 = require("OnboardingHomeUtils");
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [id.id];
   const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
@@ -74,7 +74,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(4847).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(4974).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

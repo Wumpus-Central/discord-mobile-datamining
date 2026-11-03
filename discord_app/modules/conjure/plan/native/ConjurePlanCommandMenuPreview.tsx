@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sheet: {
     gap: nativeDefault.space.PX_4,
@@ -74,7 +74,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
     children: null,
   };
   const obj2 = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ row: arr[0], muted: arr[1] } = tmp);
   obj2.style = items;
   let tmp5 = null;

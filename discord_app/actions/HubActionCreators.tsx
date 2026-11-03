@@ -108,7 +108,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -152,7 +152,7 @@ export default {
               throw value;
             } else if (arg0 !== 2) {
               closure_128_0 = value;
-              const guild = closure_128_0.body.guild;
+              guild = closure_128_0.body.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -195,7 +195,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -228,7 +228,7 @@ export default {
                 return obj8;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {
@@ -247,7 +247,7 @@ export default {
             return obj10;
           } else {
             closure_128_0 = value;
-            const guild = closure_128_0.body.guild;
+            guild = closure_128_0.body.guild;
             let id;
             if (guild != null) {
               id = guild.id;

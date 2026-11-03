@@ -18,7 +18,7 @@ export function productToGameServerGame(id) {
   let num = 0;
   if (sorted.length > 0) {
     const _Math = Math;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(
       sorted.map((cost) => cost.cost),
       0,

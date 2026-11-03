@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMay
 export default function useMaybeGetSortedBoosts(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   const items1 = [arg0];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -81,7 +81,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const obj2 = require("initialize");
   const items6 = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items6, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let prop;
     if (guild != null) {
       prop = guild.premiumSubscriberCount;
@@ -112,7 +112,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
 export function useGetBoostUserConfig(boost) {
   _require = boost;
   const date = new Date(SnowflakeUtilsDefault.extractTimestamp(boost.id));
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [boost];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,

@@ -13,16 +13,16 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11256);
+const Constants = fn(11393);
 ({
-  MODAL_LOCATION_CONTEXT_MOBILE: c10,
+  MODAL_LOCATION_CONTEXT_MOBILE: closure_10,
   NOFILTR_URL: closure_11,
   THROUGHLINE_URL: closure_12,
   REPORTED_USER_CONFIRMATION_TOAST_KEY: map1,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 },
   helplineGroup: null,
@@ -45,7 +45,7 @@ export default function TakeActionButtons(senderId) {
   noop = undefined;
   useState = undefined;
   const tmp = closure_16();
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [senderId];
   const stateFromStores = senderId(setReported[10]).useStateFromStores(
     items,
@@ -90,7 +90,7 @@ export default function TakeActionButtons(senderId) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -108,18 +108,18 @@ export default function TakeActionButtons(senderId) {
               v1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: tmp4(8352).submitReportForInappropriateConversationSafetyAlert(
+                value: tmp4(8476).submitReportForInappropriateConversationSafetyAlert(
                   lastChannelMessage,
                   () => {
                     dependencyMap(true);
                     const obj2 = { text: null, variant: "success" };
                     const intl = closure_0(1113).intl;
                     obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                    c1(5712).open(closure_2_13, obj2);
+                    c1(5832).open(closure_2_13, obj2);
                   },
                   () => {
                     const intl = closure_1_0(1113).intl;
-                    closure_1_0(5711).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                    closure_1_0(5831).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                   },
                 ),
                 done: false,
@@ -133,9 +133,9 @@ export default function TakeActionButtons(senderId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_5(false);
-            const result = v1(7496).showReportSuccessToast(closure_128_0, closure_128_1);
-            closure_128_3(tmp4(11269).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-            const obj = v1(7496);
+            const result = v1(7620).showReportSuccessToast(closure_128_0, closure_128_1);
+            closure_128_3(tmp4(11406).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const obj = v1(7620);
           }
           dependencyMap = 3;
           const obj6 = { value, done: true };
@@ -227,7 +227,7 @@ export default function TakeActionButtons(senderId) {
     if (shouldShowThroughlineLink) {
       obj11.text = string3(t3.HQ2nKl);
       obj11.onPress = function onPress() {
-        LinkingDefault.openURL(closure_2_12);
+        LinkingDefault.openURL(application_id);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
       const items6 = [closure_14(Button, obj11)];

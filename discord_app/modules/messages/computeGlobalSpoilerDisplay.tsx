@@ -21,7 +21,7 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
 }
 export function useShouldDisplaySpoilerObscurity(stateFromStores) {
   _require = stateFromStores;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     PermissionStore.can(constants.MANAGE_MESSAGES, closure_0),
   );

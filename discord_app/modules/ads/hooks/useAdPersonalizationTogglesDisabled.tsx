@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
 
 export function useAdPersonalizationTogglesDisabled() {
-  const items = [AdPersonalizationStore];
+  items = [AdPersonalizationStore];
   return initialize.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
 }

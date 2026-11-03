@@ -21,7 +21,7 @@ export default noop.memo(function MediaModalVideo(source) {
     uri = source.uri;
   }
   const isMediaViewerVideoPerfEnabled = MediaViewerVideoPerfExperiment.useIsMediaViewerVideoPerfEnabled();
-  const items = [uri, ,];
+  items = [uri, ,];
   ({ width: arr[1], height: arr[2] } = source);
   ({ hasError, isLoadingVisible, handleLoadStart, handleLoad, handleError } = useMediaLoadingDefault({
     onError,

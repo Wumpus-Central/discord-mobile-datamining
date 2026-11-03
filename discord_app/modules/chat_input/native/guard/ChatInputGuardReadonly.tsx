@@ -18,9 +18,9 @@ function sortChannelsByLastMessageId(id, id2) {
   const obj = SnowflakeUtilsDefault;
   return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = fn(4867).isTextChannel;
-let closure_6 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(12809).TextAreaCta;
+const isTextChannel = fn(4994).isTextChannel;
+let closure_6 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(12945).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
@@ -41,7 +41,7 @@ export default noop.memo(function ChatInputGuardReadonly(guildId) {
   }
   importDefault = guildId(stateFromStores[11]).useNextMemberAction(guildId, channelId);
   let obj2 = guildId(stateFromStores[11]);
-  const items = [stateFromStoresArray1];
+  items = [stateFromStoresArray1];
   stateFromStores = guildId(stateFromStores[12]).useStateFromStores(items, () => {
     channelId = undefined;
     if (channelId != null) {

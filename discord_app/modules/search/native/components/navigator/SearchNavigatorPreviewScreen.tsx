@@ -6,7 +6,7 @@ const require = fn;
 const ScrollView = fn(17).ScrollView;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
@@ -19,7 +19,7 @@ export default function SearchNavigatorPreviewScreen() {
   const channelId = route.params.channelId;
   searchContext = route.params.searchContext;
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
-  const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
+  items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   const callback = onBeforeJumpToMessage.useCallback(() => {
     const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {

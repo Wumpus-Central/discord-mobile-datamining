@@ -16,11 +16,11 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11046);
+const RedesignChannelListConstants = fn(11186);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     container: {
@@ -81,7 +81,7 @@ export default noop.memo(function TextChannel(channel) {
   let appSoundIcon = closure_15(muted, selected);
   const id = channel.id;
   const guild_id = channel.guild_id;
-  const items = [
+  items = [
     ChannelStore,
     GatedChannelStore,
     PermissionStore,

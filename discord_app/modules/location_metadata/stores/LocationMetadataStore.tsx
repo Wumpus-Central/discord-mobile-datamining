@@ -22,7 +22,7 @@ const locationMetadataStore = new LocationMetadataStore(DispatcherDefault, {
     countryCode = countryCode.countryCode;
     let flag = null != countryCode;
     if (flag) {
-      let tmp2 = framebus(countryCode);
+      let tmp2 = duration(countryCode);
       if (tmp2 == null) {
         tmp2 = React();
       }
@@ -35,7 +35,7 @@ const locationMetadataStore = new LocationMetadataStore(DispatcherDefault, {
     ({ countryCode, minimumAge } = arg0);
     let flag = null != countryCode;
     if (flag) {
-      let tmp2 = framebus(countryCode);
+      let tmp2 = duration(countryCode);
       if (tmp2 == null) {
         tmp2 = React();
       }

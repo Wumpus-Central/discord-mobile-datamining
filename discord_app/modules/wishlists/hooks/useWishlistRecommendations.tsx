@@ -30,7 +30,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
   let recommendations;
   let skusToUserAndReasonRecommendations;
   let wishlistAndRecommendations;
-  let items = [userIdsAndWishlistIds];
+  items = [userIdsAndWishlistIds];
   const memo = memo1.useMemo(() => userIdsAndWishlistIds.map((userId) => userId.userId), items);
   closure_129_0 = memo;
   closure_129_1 = numItems;
@@ -92,7 +92,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     const iter = found[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let items = nextResult.items;
+      items = nextResult.items;
       for (const item10023 of items) {
         let isOwned = null == item10023.sku;
         if (!isOwned) {
@@ -139,7 +139,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
       });
     return Object.fromEntries(
       found1.map((item) => {
-        const items = [,];
+        items = [,];
         ({ skuId: arr[0], sku: arr[1] } = item);
         return items;
       }),
@@ -202,7 +202,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
       continue;
     }
     const obj3 = { combinedSkus: null, combinedSkusToUserAndReason };
-    const items = [...recommendations];
+    items = [...recommendations];
     obj3.combinedSkus = items;
     return obj3;
   }, items8);
@@ -229,7 +229,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     return str;
   }, items9);
   const memo7 = obj.useMemo(() => {
-    const items = [...recommendations.map((id) => id.id), ...wishlistAndRecommendations.map((id) => id.id)];
+    items = [...recommendations.map((id) => id.id), ...wishlistAndRecommendations.map((id) => id.id)];
     return _mod12.uniq(items);
   }, items10);
   const tmp3Result3 = userIdsAndWishlistIds(memo3[8]);
@@ -243,7 +243,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     status,
   };
 }
-let closure_8 = fn(7405).WishlistRecommendationReason;
+let closure_8 = fn(7529).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = {
   state: "success",
@@ -256,9 +256,9 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRe
 export function useWishlistRecommendationsForSingleUser(arg0) {
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
-    source = userId(9477).WishlistFetchSource.USER_PROFILE;
+    source = userId(9605).WishlistFetchSource.USER_PROFILE;
   }
-  const items = [userId];
+  items = [userId];
   const effect = noop.useEffect(() => {
     maybeFetchUserProfileDefault(userId);
   }, items);
@@ -269,7 +269,7 @@ export function useWishlistRecommendationsForSingleUser(arg0) {
   const items2 = [userId, defaultWishlistId];
   const obj2 = {
     userIdsAndWishlistIds: noop.useMemo(() => {
-      const items = [{ userId, wishlistId: recommendations }];
+      items = [{ userId, wishlistId: recommendations }];
       return items;
     }, items2),
     applicationIds: null,
@@ -277,13 +277,13 @@ export function useWishlistRecommendationsForSingleUser(arg0) {
     source: null,
   };
   const obj = userId(504);
-  obj2.applicationIds = userId(10666).useWishlistApplicationIds(userId);
+  obj2.applicationIds = userId(10796).useWishlistApplicationIds(userId);
   obj2.numItems = numItems;
   obj2.source = source;
-  const obj3 = userId(10666);
+  const obj3 = userId(10796);
   ({ skusToUserAndReason, wishlistAndRecommendations, status } = useWishlistRecommendationsWithWishlists(obj2));
   const tmp4 = useWishlistRecommendationsWithWishlists(obj2);
-  const wishlistSkuFilter = userId(10667).useWishlistSkuFilter({
+  const wishlistSkuFilter = userId(10797).useWishlistSkuFilter({
     wishlistAndRecommendations,
     skusToUserAndReason,
     userId,
@@ -312,7 +312,7 @@ export function useRecommendationsForApplicationIds(userIds) {
     source: null,
     filterByApplicationIds: true,
   };
-  const items = [userIds];
+  items = [userIds];
   const memo = noop.useMemo(() => {
     let substr;
     if (userIds != null) {
@@ -359,10 +359,10 @@ export function useRecommendationsForSingleUser(source) {
   userId = numItems;
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
-    USER_PROFILE = userId(9477).WishlistFetchSource.USER_PROFILE;
+    USER_PROFILE = userId(9605).WishlistFetchSource.USER_PROFILE;
   }
   const obj = { userIdsAndWishlistIds: null, applicationIds: null, numItems: null, source: null };
-  let items = [userId];
+  items = [userId];
   const effect = noop.useEffect(() => {
     maybeFetchUserProfileDefault(userId);
   }, items);
@@ -372,11 +372,11 @@ export function useRecommendationsForSingleUser(source) {
   })).defaultWishlistId;
   const items2 = [userId, defaultWishlistId];
   obj.userIdsAndWishlistIds = noop.useMemo(() => {
-    const items = [{ userId, wishlistId: recommendations }];
+    items = [{ userId, wishlistId: recommendations }];
     return items;
   }, items2);
   const obj2 = userId(504);
-  obj.applicationIds = userId(10666).useWishlistApplicationIds(userId);
+  obj.applicationIds = userId(10796).useWishlistApplicationIds(userId);
   obj.numItems = numItems;
   obj.source = USER_PROFILE;
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);

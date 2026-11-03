@@ -11,7 +11,7 @@ export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
-  let items = [MessageReactionsStore];
+  items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
   const stateFromStores = channelId(reaction[2]).useStateFromStores(
     items,
@@ -23,7 +23,7 @@ export default function useVoteReactors(channelId) {
         closure_4,
         MessageReactionsTypes.ReactionTypes.VOTE,
       );
-      let items;
+      items = undefined;
       if (reactions != null) {
         items = reactions.values();
       }

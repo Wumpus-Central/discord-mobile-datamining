@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: {
     alignItems: "center",
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting(
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_5();
   const obj = { style: tmp.content, children: null };
-  const items = [
+  items = [
     React3(View, {
       style: tmp.headerIllustration,
       children: React3(CompassSpotIllustration.CompassSpotIllustration, { width: 240, accessible: false }),
@@ -75,7 +75,12 @@ export default function AddFriendsContactSyncEmptyState() {
     ,
     ,
   ];
-  const obj3 = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = {
+    style: tmp.title,
+    variant: "heading-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = util.intl;
   obj3.children = intl.string(util.t["/G+nci"]);
   items[1] = React3(Text_Text.Heading, obj3);

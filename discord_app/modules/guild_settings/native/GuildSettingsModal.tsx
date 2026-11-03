@@ -25,7 +25,7 @@ export default function GuildSettingsModal() {
   let bottom = rect.bottom;
   left = rect.left;
   right = rect.right;
-  const items = [left, right];
+  items = [left, right];
   const memo = stateFromStores.useMemo(() => {
     const rect = { left, right };
     return rect;

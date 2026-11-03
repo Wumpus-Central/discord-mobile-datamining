@@ -1,7 +1,7 @@
 // discord_app/modules/premium/fractional/native/BoostingCountDownPill.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
@@ -14,7 +14,7 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(15405, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(15546, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -69,12 +69,12 @@ export default function BoostingCountDownPill(style) {
   }
   const obj = { activeOpacity: 0.7, onPress: tmp4, children: null };
   const obj2 = { style: null, children: null };
-  const items = [tmp.fractionalPremiumBanner, style.style];
+  items = [tmp.fractionalPremiumBanner, style.style];
   obj2.style = items;
   let tmp2Result = !isInReverseTrial;
   if (!isInReverseTrial) {
     const obj3 = { style: tmp.fpDurationPill, children: null };
-    const obj4 = { variant: "text-sm/bold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
+    const obj4 = { variant: "text-sm/semibold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
     tmp2Result = hasOwnProperty(React4, obj3);
   }

@@ -11,7 +11,7 @@ export default function useOpenThemeColorPickerActionSheet(primaryColor) {
   const avatarColors = primaryColor.avatarColors;
   const onChangeColors = primaryColor.onChangeColors;
   let obj = { openPrimaryColorPicker: null, openSecondaryColorPicker: null };
-  let items = [avatarColors, onChangeColors, primaryColor, secondaryColor];
+  items = [avatarColors, onChangeColors, primaryColor, secondaryColor];
   obj.openPrimaryColorPicker = avatarColors.useCallback(() => {
     let tmp2 = null != primaryColor;
     if (tmp2) {
@@ -23,7 +23,7 @@ export default function useOpenThemeColorPickerActionSheet(primaryColor) {
         suggestedColors: avatarColors,
         onSelect(arg0) {
           if (arg0 !== primaryColor) {
-            const items = [arg0, secondaryColor];
+            items = [arg0, secondaryColor];
             onChangeColors(items);
           }
         },
@@ -43,7 +43,7 @@ export default function useOpenThemeColorPickerActionSheet(primaryColor) {
         suggestedColors: avatarColors,
         onSelect(arg0) {
           if (arg0 !== secondaryColor) {
-            const items = [primaryColor, arg0];
+            items = [primaryColor, arg0];
             onChangeColors(items);
           }
         },

@@ -23,11 +23,11 @@ function PooledFrame(frame) {
   );
   dependencyMap = tmp3;
   if (tmp2.proxyTicket !== proxyTicket) {
-    const obj2 = { iframeId: proxyTicket(11799)(), proxyTicket };
+    const obj2 = { iframeId: proxyTicket(11936)(), proxyTicket };
     tmp3(obj2);
   }
   iframeId = tmp2.iframeId;
-  const items = [id, iframeId];
+  items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, iframeId);
     FramesActionCreatorsDefault.attachFrameIframe(id, iframeId);
@@ -50,7 +50,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(12252).subscribe, () =>
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(12388).subscribe, () =>
     FramePoolManagerDefault.getWinningTargetState(id),
   );
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -63,13 +63,13 @@ function PooledFrame(frame) {
     syncExternalStore = obj4;
   }
   obj3.presentation = syncExternalStore;
-  return jsx(proxyTicket(19099), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(proxyTicket(19257), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");
@@ -78,7 +78,7 @@ export default function FramePool() {
   let tmp = closure_10();
   ({ width, height } = useWindowDimensionsDefault());
   const tmp2 = useWindowDimensionsDefault();
-  const items = [FramesStore];
+  items = [FramesStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => allFrames.getAllFrames());
   [tmp4, require] = noop.useState(0);
   const obj2 = {

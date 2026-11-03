@@ -4,7 +4,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   imageContainer: {
     flex: 1,
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting(
 export default noop.memo(function GridItemPlaceholder(arg0) {
   ({ width, height, style } = arg0);
   const obj = { style: null };
-  const items = [{ width, height }, closure_2().imageContainer, style];
+  items = [{ width, height }, closure_2().imageContainer, style];
   obj.style = items;
   return <View style={null} />;
 });

@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = {
@@ -31,7 +31,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   const tmp = closure_5();
   closure_5 = tmp;
   const memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
-  const items = [tmp, memo, classificationId, onComplete, entryPoint];
+  items = [tmp, memo, classificationId, onComplete, entryPoint];
   const items1 = [flag, isRetry];
   const memo1 = classificationId.useMemo(() => {
     const modalSessionId = memo;

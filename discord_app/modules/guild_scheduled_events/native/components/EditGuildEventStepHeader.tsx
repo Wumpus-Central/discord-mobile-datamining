@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   header: { alignItems: "center", paddingBottom: 24 },
   headerTitle: { marginTop: 8, marginBottom: 8 },
@@ -21,7 +21,7 @@ export default function EditGuildEventStepHeader(children) {
   const subtitle = children.subtitle;
   const tmp = closure_5();
   const obj = { style: tmp.header, children: null };
-  const items = [
+  items = [
     React3(Text_Text.Text, {
       style: tmp.headerTitle,
       accessibilityRole: "header",

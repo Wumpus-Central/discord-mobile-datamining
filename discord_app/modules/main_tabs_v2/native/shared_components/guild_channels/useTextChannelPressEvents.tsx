@@ -17,7 +17,7 @@ export function useTextChannelPressEvents(channel, flag2) {
   const user = channel;
   const navigationReplace = flag2;
   let obj = { onPress: null, onLongPress: null, unstable_pressDelay: 32 };
-  const items = [, ,];
+  items = [, ,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag2;
   obj.onPress = noop.useCallback(() => {

@@ -41,7 +41,7 @@ export default noop.memo(function KeyboardAwareView(style) {
   const tmp6 = num(ref.useState(ref.current), 2);
   marginBottom = tmp6[0];
   closure_5 = tmp6[1];
-  const items = [num];
+  items = [num];
   const effect = obj.useEffect(
     () =>
       subscribeToKeyboardUIStore(function keyboardHeightUpdater() {

@@ -1,16 +1,17 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: { flex: 1 },
   scrollArea: { flex: 1 },
@@ -62,70 +63,80 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5640).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5760).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+let closure_8 = {
+  code: "(function ProductDetailsActionSheetSkeletonTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = closure_7();
-  let sharedValue;
-  sharedValue = sharedValue(5095).useSharedValue(0.3);
-  const items = [sharedValue];
+  _require = undefined;
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0.3);
+  _require = sharedValue;
+  items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = ReanimatedRexport;
-    const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
+    const obj = _mod1652;
+    const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(5095);
-  const fn = function o() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 4141895524740;
-  fn.__initData = __initData;
-  const animatedStyle = sharedValue(5095).useAnimatedStyle(fn);
+  let obj = require("../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_8, sharedValue];
+  _require = undefined;
+  [tmp5, tmp6] = items1;
+  class ProductDetailsActionSheetSkeletonTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items2 = [tmp6];
+  ProductDetailsActionSheetSkeletonTsx1.__closure = items2;
+  ProductDetailsActionSheetSkeletonTsx1.__workletHash = 8439265984765;
+  ProductDetailsActionSheetSkeletonTsx1.__initData = tmp5;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ProductDetailsActionSheetSkeletonTsx1,
+  );
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.scrollArea, children: null };
   const obj5 = { style: null };
-  const items1 = [, ,];
-  ({ block: arr2[0], preview: arr2[1] } = tmp);
-  items1[2] = animatedStyle;
-  obj5.style = items1;
-  const items2 = [closure_5(ReanimatedRexportDefault.View, obj5)];
+  const items3 = [, ,];
+  ({ block: arr4[0], preview: arr4[1] } = tmp);
+  items3[2] = animatedStyle;
+  obj5.style = items3;
+  const items4 = [closure_5(_modDef1652.View, obj5)];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { style: null };
-  const items3 = [, ,];
-  ({ block: arr4[0], title: arr4[1] } = tmp);
-  items3[2] = animatedStyle;
-  obj7.style = items3;
-  const items4 = [closure_5(ReanimatedRexportDefault.View, obj7), ,];
-  const obj8 = { style: null };
   const items5 = [, ,];
-  ({ block: arr6[0], description: arr6[1] } = tmp);
+  ({ block: arr6[0], title: arr6[1] } = tmp);
   items5[2] = animatedStyle;
-  obj8.style = items5;
-  items4[1] = closure_5(ReanimatedRexportDefault.View, obj8);
+  obj7.style = items5;
+  const items6 = [closure_5(_modDef1652.View, obj7), ,];
+  const obj8 = { style: null };
+  const items7 = [, ,];
+  ({ block: arr8[0], description: arr8[1] } = tmp);
+  items7[2] = animatedStyle;
+  obj8.style = items7;
+  items6[1] = closure_5(_modDef1652.View, obj8);
   const obj9 = { style: null };
-  const items6 = [, ,];
-  ({ block: arr7[0], price: arr7[1] } = tmp);
-  items6[2] = animatedStyle;
-  obj9.style = items6;
-  items4[2] = closure_5(ReanimatedRexportDefault.View, obj9);
-  obj6.children = items4;
-  items2[1] = closure_6(View, obj6);
-  obj4.children = items2;
-  const items7 = [closure_6(View, obj4)];
+  const items8 = [, ,];
+  ({ block: arr9[0], price: arr9[1] } = tmp);
+  items8[2] = animatedStyle;
+  obj9.style = items8;
+  items6[2] = closure_5(_modDef1652.View, obj9);
+  obj6.children = items6;
+  items4[1] = closure_6(View, obj6);
+  obj4.children = items4;
+  const items9 = [closure_6(View, obj4)];
   const obj10 = { style: tmp.purchaseSection, children: null };
   const obj11 = { style: null };
-  const items8 = [, ,];
-  ({ block: arr9[0], purchaseButton: arr9[1] } = tmp);
-  items8[2] = animatedStyle;
-  obj11.style = items8;
-  obj10.children = closure_5(ReanimatedRexportDefault.View, obj11);
-  items7[1] = closure_5(View, obj10);
-  obj3.children = items7;
+  const items10 = [, ,];
+  ({ block: arr11[0], purchaseButton: arr11[1] } = tmp);
+  items10[2] = animatedStyle;
+  obj11.style = items10;
+  obj10.children = closure_5(_modDef1652.View, obj11);
+  items9[1] = closure_5(View, obj10);
+  obj3.children = items9;
   return closure_6(View, obj3);
 }

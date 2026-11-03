@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/native/ConjureLinkedAppsTab.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   let obj = { spacing: nativeDefault.space.PX_8, children: null };
   let obj2 = { description: null, hasIcons: false, children: null };
   let intl = require("util").intl;
-  obj2.description = intl.string(_modDef3868["6c2rjv"]);
+  obj2.description = intl.string(_modDef3995["6c2rjv"]);
   obj2.children = callers.map((build) => {
     _undefined = build;
     const obj = { label: _undefined[build.project_id], trailing: null, arrow: true, onPress: null };
@@ -31,7 +31,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       const project_id = build.project_id;
       const name = tmp;
       let obj2 = {
-        content: closure_1_3(closure_1_1(12163), {
+        content: closure_1_3(closure_1_1(12299), {
           sheetKey,
           title: build[project_id],
           value: build.build,
@@ -49,25 +49,25 @@ export default function ConjureLinkedAppsTab(linkedApps) {
               onConfirm: null,
             };
             const intl = project_id(1113).intl;
-            obj2.title = intl.formatToPlainString(name(3868).zSfIvv, { name });
+            obj2.title = intl.formatToPlainString(name(3995).zSfIvv, { name });
             const intl2 = project_id(1113).intl;
-            obj2.content = intl2.formatToPlainString(name(3868)["7TX+mR"], { name });
+            obj2.content = intl2.formatToPlainString(name(3995)["7TX+mR"], { name });
             const intl3 = project_id(1113).intl;
-            obj2.confirmText = intl3.string(name(3868).vDZEGQ);
+            obj2.confirmText = intl3.string(name(3995).vDZEGQ);
             obj2.onConfirm = function onConfirm() {
               return dependencyMap(closure_0);
             };
-            project_id(5964).showConfirmModal(obj2);
+            project_id(6084).showConfirmModal(obj2);
           },
         }),
         key: sheetKey,
         stackingBehavior: "stack",
       };
-      build(5258).showActionSheet(obj2);
+      build(5381).showActionSheet(obj2);
     };
     return closure_1_3(_undefined(_undefined2[10]).TableRow, obj, build.project_id);
   });
-  const items = [closure_3(require("TableRowGroup").TableRowGroup, obj2)];
+  items = [closure_3(require("TableRowGroup").TableRowGroup, obj2)];
   let tmp5Result = null;
   if (linkedApps.failed) {
     const obj3 = {
@@ -78,8 +78,8 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       children: null,
     };
     let intl2 = tmp2(1113).intl;
-    obj3.children = intl2.string(_modDef3868.dIEOrl);
-    tmp5Result = closure_3(tmp2(5624).Text, obj3);
+    obj3.children = intl2.string(_modDef3995.dIEOrl);
+    tmp5Result = closure_3(tmp2(5747).Text, obj3);
   }
   items[1] = tmp5Result;
   obj.children = items;

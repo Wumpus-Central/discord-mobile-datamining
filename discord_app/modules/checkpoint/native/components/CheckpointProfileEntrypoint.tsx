@@ -1,29 +1,32 @@
 // discord_app/modules/checkpoint/native/components/CheckpointProfileEntrypoint.tsx
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
-import _modDef3092 from "../../Checkpoint2026.messages.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import _modDef3219 from "../../Checkpoint2026.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import CheckpointExperiments from "../../CheckpointExperiments.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ExperimentalCheckpointIcon from "../../../../design/components/Icon/native/redesign/generated/ExperimentalCheckpointIcon.tsx";
 import openCheckpoint from "../../openCheckpoint.native.tsx";
-import CheckpointActionCreators from "../../CheckpointActionCreators.tsx";
+import CheckpointStore from "../../CheckpointStore.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function handlePress() {
-  const checkpointData = CheckpointActionCreators.fetchCheckpointData();
   openCheckpoint.openCheckpoint("user_profile");
 }
 function handleLongPress() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(18882, dependencyMap.paths),
+    asyncRequireImpl(19040, dependencyMap.paths),
     "CheckpointTestingActionSheet",
   );
 }
 function CheckpointProfileEntrypointRow() {
   const isCheckpointQAEnabled = CheckpointExperiments.useIsCheckpointQAEnabled("CheckpointProfileEntrypoint");
-  const obj2 = {
+  items = [CheckpointStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => isFetching.isFetching);
+  const obj3 = {
     label: null,
     subLabel: null,
     icon: null,
@@ -34,16 +37,22 @@ function CheckpointProfileEntrypointRow() {
     end: true,
   };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3092["8hclXY"]);
+  obj3.label = intl.string(_modDef3219["8hclXY"]);
   const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3092.BFc4lY);
-  obj2.icon = jsx(TableRow.TableRow.Icon, { IconComponent: ExperimentalCheckpointIcon.ExperimentalCheckpointIcon });
-  obj2.onPress = handlePress;
-  let tmp3;
-  if (isCheckpointQAEnabled) {
-    tmp3 = handleLongPress;
+  obj3.subLabel = intl2.string(_modDef3219.BFc4lY);
+  if (stateFromStores) {
+    let tmp5Result = <ActivityIndicator />;
+  } else {
+    const obj4 = { IconComponent: ExperimentalCheckpointIcon.ExperimentalCheckpointIcon };
+    tmp5Result = jsx(TableRow.TableRow.Icon, { IconComponent: ExperimentalCheckpointIcon.ExperimentalCheckpointIcon });
   }
-  obj2.onLongPress = tmp3;
+  obj3.icon = tmp5Result;
+  obj3.onPress = handlePress;
+  let tmp8;
+  if (isCheckpointQAEnabled) {
+    tmp8 = handleLongPress;
+  }
+  obj3.onLongPress = tmp8;
   return jsx(TableRow.TableRow, {
     label: null,
     subLabel: null,
@@ -55,6 +64,7 @@ function CheckpointProfileEntrypointRow() {
     end: true,
   });
 }
+const ActivityIndicator = _mod17.ActivityIndicator;
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointProfileEntrypoint.tsx");
 

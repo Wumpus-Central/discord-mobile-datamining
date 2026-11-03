@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/expression_picker/native/useE
 export default function useExpressionPickerInsets(hasCategories) {
   const bottom = useSafeAreaInsetsDefault().bottom;
   const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
-  const items = [bottom];
+  items = [bottom];
   obj.safeAreaStyle = noop.useMemo(() => ({ paddingBottom: bottom }), items);
   let num = 0;
   if (hasCategories.hasCategories) {

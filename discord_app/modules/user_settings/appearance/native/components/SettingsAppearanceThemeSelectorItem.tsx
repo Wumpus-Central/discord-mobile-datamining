@@ -11,7 +11,7 @@ import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtil
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef17267 from "../../../../../../_runtime/metro/17267__.js";
+import _modDef17410 from "../../../../../../_runtime/metro/17410__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -24,7 +24,7 @@ function GradientThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
   const isThemeDarkResult = themes.isThemeDark(item.theme);
   const tmp4 = closure_9(isThemeDarkResult);
-  const items = [tmp4.themeSelectorGradientBackground];
+  items = [tmp4.themeSelectorGradientBackground];
   let obj2 = isThemeLocked;
   if (isThemeLocked) {
     obj2 = { opacity: 0.5 };
@@ -39,7 +39,7 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17267, style: tmp4.lock };
+    const obj6 = { source: _modDef17410, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -85,7 +85,7 @@ function CustomThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
   const isThemeDarkResult = themes.isThemeDark(item.theme);
   const tmp4 = closure_9(isThemeDarkResult);
-  const items = [tmp4.themeSelectorGradientBackground];
+  items = [tmp4.themeSelectorGradientBackground];
   let obj2 = isThemeLocked;
   if (isThemeLocked) {
     obj2 = { opacity: 0.5 };
@@ -98,7 +98,7 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17267, style: tmp4.lock };
+    const obj6 = { source: _modDef17410, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -109,7 +109,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT },
   themeSelectorItemContainer: {
@@ -135,7 +135,7 @@ let size = {
 };
 obj2.newRedCircle = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" },
@@ -198,7 +198,7 @@ export default function ThemeSelectorItem(onPress) {
   }
   obj5.accessibilityHint = stringResult;
   const obj6 = { style: tmp.themeSelectorItem, children: null };
-  const items = [tmp8];
+  items = [tmp8];
   if (isNew) {
     isNew = !isSelected;
   }

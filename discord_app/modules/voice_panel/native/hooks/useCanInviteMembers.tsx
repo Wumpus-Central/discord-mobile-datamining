@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export function useCanInviteMembers(channelId) {
   _require = channelId;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   const items1 = [channelId];
   return require("useStateFromStores").useStateFromStores(
     items,

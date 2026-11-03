@@ -8,7 +8,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(11460).BETA_BADGE_IDS;
+export const NEW_INDICATOR_BADGE_IDS = fn(11597).BETA_BADGE_IDS;
 export function isNewIndicatorBadgeId(arg0) {
   const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
   return BETA_BADGE_IDS.has(arg0);
@@ -23,7 +23,7 @@ export function dismissBadgeDirectoryBadgeIndicator(badgeId) {
 export function useBadgeDirectoryBadgeIndicators(badges) {
   badges = badges.badges;
   const enabled = badges.enabled;
-  const items = [BadgeDirectorySeenStore];
+  items = [BadgeDirectorySeenStore];
   const stateFromStores = badges(enabled[4]).useStateFromStores(items, () =>
     seenBadgeIndicators.getSeenBadgeIndicators(),
   );
@@ -52,7 +52,7 @@ export function useBadgeDirectoryBadgeIndicators(badges) {
 export function useDismissBadgeDirectoryBadgeIndicator(badgeId) {
   badgeId = badgeId.badgeId;
   const enabled = badgeId.enabled;
-  const items = [badgeId, enabled];
+  items = [badgeId, enabled];
   const effect = noop.useEffect(() => {
     if (tmp2) {
       const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;

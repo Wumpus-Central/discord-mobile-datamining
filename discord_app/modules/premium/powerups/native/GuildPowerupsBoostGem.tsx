@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsBoostGem(arg0) {
   ({ style, gemWidth, gemHeight } = arg0);
   const obj = { style: null, children: null };
-  const items = [closure_4().boostGemContainer, style];
+  items = [closure_4().boostGemContainer, style];
   obj.style = items;
   obj.children = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;

@@ -17,7 +17,7 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
   importDefault = contextSwitch;
   const id = contextSwitch.id;
   ({ status, error } = contextSwitch);
-  const items = [ConjureConnectionStore];
+  items = [ConjureConnectionStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -125,7 +125,7 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
 }
 export function useConjureSmartContextSetting(arg0) {
   _require = arg0;
-  const items = [ConjureSmartContextStore];
+  items = [ConjureSmartContextStore];
   const items1 = [arg0];
   const items2 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(

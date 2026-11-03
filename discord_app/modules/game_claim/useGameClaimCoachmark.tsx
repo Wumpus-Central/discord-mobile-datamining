@@ -15,7 +15,7 @@ export function useCanShowGameClaimCoachmark(id) {
     "useCanShowGameClaimCoachmark",
   );
   const obj = require("GameClaimCoachmarkExperiment");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [id];
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = obj2.useStateFromStores(

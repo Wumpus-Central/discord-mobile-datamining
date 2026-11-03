@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width, gap) => {
   const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
   return obj;
@@ -28,7 +28,7 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
   const tmpResult = closure_6(emojiSize, emojiGap);
   _require = tmpResult;
   let obj = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
-  const items = [
+  items = [
     closure_4(View, {
       style: tmpResult.emojiRow,
       children: emojiSource.map((uri, index) => {

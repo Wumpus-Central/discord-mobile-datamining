@@ -46,7 +46,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
@@ -71,7 +71,7 @@ export function getConjureProjectMentionCount(id) {
 }
 export function useConjureProjectBadge(id) {
   _require = id;
-  const items = [ReadStateStore, UserSettingsProtoStore];
+  items = [ReadStateStore, UserSettingsProtoStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
@@ -105,7 +105,7 @@ export function useConjureProjectBadge(id) {
 }
 export function useConjureUnreadSummary(arg0) {
   _require = arg0;
-  const items = [ReadStateStore, UserSettingsProtoStore, ConjureProjectStore];
+  items = [ReadStateStore, UserSettingsProtoStore, ConjureProjectStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(
     items,
@@ -140,7 +140,7 @@ export function useConjureUnreadSummary(arg0) {
 }
 export function useAckConjureProjectOnLeave(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const layoutEffect = noop.useLayoutEffect(
     () => () => {
       DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_ACK", projectId });
@@ -151,7 +151,7 @@ export function useAckConjureProjectOnLeave(arg0) {
 export function useAckConjureProjectWhileViewing(projectId, stateFromStores) {
   _require = projectId;
   closure_1 = stateFromStores;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const items1 = [projectId];
   stateFromStores = require("initialize").useStateFromStores(
     items,

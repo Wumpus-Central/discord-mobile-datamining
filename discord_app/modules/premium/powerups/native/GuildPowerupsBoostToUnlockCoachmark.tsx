@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
   powerup = powerup.powerup;
   const markAsDismissed = powerup.markAsDismissed;
-  const items = [powerup, markAsDismissed];
+  items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
   const memo = noop.useMemo(
     () => ({
@@ -19,6 +19,6 @@ export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
     }),
     items,
   );
-  markAsDismissed(18231)(targetRef, guildId, memo);
+  markAsDismissed(18375)(targetRef, guildId, memo);
   return null;
 }

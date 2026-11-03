@@ -9,7 +9,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
 let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj4 = {
   container: {
     padding: 10,
@@ -70,7 +70,7 @@ export default function Tooltip(arrowHeight) {
     UP = obj.UP;
   }
   const tmp3 = closure_8();
-  const items = [LEFT, num2];
+  items = [LEFT, num2];
   const memo = noop.useMemo(() => {
     if (obj2.LEFT === LEFT) {
       obj2 = { alignSelf: "flex-start", left: num2 };

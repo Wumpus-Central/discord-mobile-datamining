@@ -34,7 +34,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
             return obj4;
           } else if (canPinVoiceChannel(closure_0)) {
             channel = channel.getChannel(closure_0);
-            let application_id;
+            application_id = undefined;
             if (channel != null) {
               application_id = channel.application_id;
             }

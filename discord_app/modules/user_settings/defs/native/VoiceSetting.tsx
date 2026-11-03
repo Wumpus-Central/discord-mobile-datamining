@@ -5,16 +5,16 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ InputModes: c3, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11972).MicrophoneIcon,
+  IconComponent: fn(12109).MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t.Q8gkVL);
@@ -32,7 +32,7 @@ const route = SettingBuilders.createRoute({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   },
 });

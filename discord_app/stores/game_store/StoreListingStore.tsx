@@ -52,7 +52,7 @@ class StoreListingStore extends Store {}
 const prototype = StoreListingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
   locale = LocaleStore.locale;
 };
@@ -73,7 +73,7 @@ prototype["getForSKU"] = function getForSKU(arg0, arg1) {
 };
 prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
   if (null == dependencyMap3[skuId]) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     const mapped = Array.from(tmp).map((item) => dependencyMap[item]);

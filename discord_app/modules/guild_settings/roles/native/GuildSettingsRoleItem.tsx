@@ -13,7 +13,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: {
@@ -29,7 +29,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5624).TextStyleSheet["text-md/semibold"];
+let prop = fn(5747).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -81,7 +81,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     guild_connections = tags.guild_connections;
   }
   closure_5 = tmp8;
-  const items = [];
+  items = [];
   if (null != onMoveUp) {
     const obj3 = { name: "moveup", label: null };
     let intl = tmp5(onMoveUp[11]).intl;
@@ -161,7 +161,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -178,7 +178,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                     c1 = 1;
                     c2 = 1;
                     const obj6 = {
-                      value: tmp2(11603).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      value: tmp2(11740).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                       done: false,
                     };
                     return obj6;
@@ -193,7 +193,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;
@@ -319,7 +319,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     if (null != prop) {
       const obj23 = {
         size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16,
-        source: require("../../../../../_runtime/metro/09977__.js"),
+        source: require("../../../../../_runtime/metro/10109__.js"),
         "aria-label": null,
         style: null,
       };

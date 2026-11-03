@@ -17,7 +17,7 @@ function PersonalWidgetText(variant) {
   const color = variant.color;
   const children = variant.children;
   const personalWidgetFieldClamp = variant(children[7]).usePersonalWidgetFieldClamp(variant.maxLines, children);
-  const items = [children, variant, color];
+  items = [children, variant, color];
   ({ lineClamp, onTextLayout } = personalWidgetFieldClamp);
   const children1 = noop.useMemo(
     () =>
@@ -80,7 +80,7 @@ function useWidgetImage(userId, image, disableInteraction) {
     }
   }
   _slicedToArray = tmp4;
-  const items = [userId, tmp4, first];
+  items = [userId, tmp4, first];
   const memo = noop.useMemo(() => {
     let tmp2 = null;
     if (null != image) {
@@ -118,7 +118,7 @@ function CoverSection(section) {
   const tmp = closure_14();
   const tmp2 = useWidgetImage(userId, section.image, disableInteraction);
   const source = tmp2.source;
-  const items = [tmp.coverContent];
+  items = [tmp.coverContent];
   let prop = null;
   ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
   if (null != source) {
@@ -171,7 +171,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React7(tmp14(5587), obj9);
+        tmp24Result4 = React7(tmp14(5710), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -181,7 +181,7 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = React7(tmp14(8573), obj10);
+      tmp24Result5 = React7(tmp14(8697), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -210,7 +210,7 @@ function FieldRow(field) {
       const obj3 = { onPress: toggleAnimation, accessibilityRole: "button", accessibilityLabel: null, children: null };
       const intl = util.intl;
       obj3.accessibilityLabel = intl.string(util.t.MxXgrL);
-      const items = [tmp3];
+      items = [tmp3];
       let tmp13 = null;
       if (showGifTag) {
         const obj4 = { style: tmp.gifTagSmall };
@@ -267,12 +267,12 @@ function UserProfilePersonalWidgetCardContent(style) {
     children: null,
   };
   const tmp = closure_14();
-  obj.titleLeadingIcon = closure_9(userId(9528).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_9(userId(9656).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
   let obj2 = { style: tmp.sectionsContainer, children: null };
   const sections = widget.sections;
-  const items = [
+  items = [
     sections.map(function renderSection(type, index) {
       type = type.type;
       if ("cover" === type) {
@@ -293,17 +293,17 @@ function UserProfilePersonalWidgetCardContent(style) {
   items[1] = tmp2Result;
   obj2.children = items;
   obj.children = closure_10(closure_7, obj2);
-  return closure_9(disableInteraction(14960), obj);
+  return closure_9(disableInteraction(15101), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" },
   coverContent: null,

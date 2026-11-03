@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonaliz
 
 export default function useShowBadgePersonalizationNotice(arg0) {
   ({ badge, isViewingOtherUser } = arg0);
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     ConsentStore.hasConsented(constants.PERSONALIZATION),
   );

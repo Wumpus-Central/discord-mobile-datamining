@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");
@@ -16,12 +16,12 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCan
 export default function useCanCreateAnEvent(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildStore, GuildChannelStore, PermissionStore];
+  items = [GuildStore, GuildChannelStore, PermissionStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       if (!PermissionStore.can(Permissions.ADMINISTRATOR, guild)) {
         if (!PermissionStore.can(Permissions.CREATE_EVENTS, guild)) {
           const tmp8 = GuildChannelStore.getChannels(closure_0)[GUILD_VOCAL_CHANNELS_KEY];

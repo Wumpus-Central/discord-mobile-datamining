@@ -25,7 +25,7 @@ export function setSimulcastDebugOverride(userId, context, quality) {
 export function chooseReplayPath() {
   const fileManager = DiscordNativeDefault.fileManager;
   const obj = { filters: null };
-  const items = [{ name: "All Files", extensions: ["*"] }];
+  items = [{ name: "All Files", extensions: ["*"] }];
   obj.filters = items;
   fileManager.showOpenDialog(obj).then((result) => {
     let str = "";

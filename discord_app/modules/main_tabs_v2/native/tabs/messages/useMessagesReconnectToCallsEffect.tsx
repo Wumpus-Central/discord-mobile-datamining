@@ -18,7 +18,7 @@ export default function useMessagesReconnectToCallsEffect() {
       if (isConnectedResult !== isConnectedResult) {
         if (isConnectedResult) {
           [r10011, arr] = sortedChannels.getSortedChannels();
-          const items = [];
+          items = [];
           const _Math = Math;
           let num3 = 0;
           if (0 < Math.min(20, arr.length)) {

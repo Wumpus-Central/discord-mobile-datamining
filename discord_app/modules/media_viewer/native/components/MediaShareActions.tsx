@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaShareActions.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
@@ -44,7 +44,7 @@ function useMediaShareActions(source) {
   let mobileMediaViewerShareExperimentEnabled;
   const channelId = source.channelId;
   const messageId = source.messageId;
-  let items = [obscure, messageId, action];
+  items = [obscure, messageId, action];
   let items1 = [channelId, messageId];
   const stateFromStores = source(shareable[8]).useStateFromStores(
     items,
@@ -143,10 +143,10 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "UsernameWithEffects",
+            forwardOptions: "create-new-folder",
           };
           const obj4 = { onlyAttachmentIds: null };
-          const items = [attachmentId];
+          items = [attachmentId];
           obj4.onlyAttachmentIds = items;
           obj3.forwardOptions = obj4;
           ForwardModalUtils.openForwardModal(obj3);
@@ -156,7 +156,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "UsernameWithEffects",
+          forwardOptions: "create-new-folder",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -187,7 +187,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13306, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13442, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -233,7 +233,7 @@ function useMediaShareActions(source) {
     if (!disableDownload) {
       disableDownload = source.disableDownload;
     }
-    const items = [];
+    items = [];
     if (!disableDownload) {
       const obj = { IconComponent: DownloadIcon.DownloadIcon, label: null, action: null };
       const intl = util.intl;
@@ -289,8 +289,8 @@ function useMediaShareActions(source) {
   }, items9);
 }
 const Constants = fn(1072);
-({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7466).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: closure_10 } = Constants);
+let closure_11 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

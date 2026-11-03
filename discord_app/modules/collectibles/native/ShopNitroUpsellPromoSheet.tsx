@@ -56,7 +56,7 @@ export default function ShopNitroUpsellPromoSheet(analyticsLocations) {
   obj5.text = intl.string(util.t["8x0jKT"]);
   obj5.loading = loading;
   obj5.onPress = onPress;
-  const items = [React4(NitroUpsellButtonDefault, obj5)];
+  items = [React4(NitroUpsellButtonDefault, obj5)];
   const obj6 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl2 = util.intl;
   obj6.text = intl2.string(util.t.PcTCB7);

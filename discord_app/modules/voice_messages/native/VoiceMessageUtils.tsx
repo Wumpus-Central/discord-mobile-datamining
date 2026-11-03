@@ -22,7 +22,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -44,7 +44,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
           React7(constants.REQUESTED);
           React6(closure_0);
           const mediaEngine = MediaEngineStore.getMediaEngine();
-          mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, __initData3);
+          mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, guild);
           c4 = 1;
           const _performance2 = performance;
           closure_129_1 = performance.now();
@@ -84,14 +84,14 @@ let closure_22 = async function _startAudioRecording(arg0) {
         if (closure_130_11.getState().recordingId !== closure_129_0) {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else {
           closure_130_9(closure_130_12.STARTED);
           const _Date = Date;
           closure_130_10(Date.now());
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       }
     } catch (tmp22) {
@@ -149,7 +149,7 @@ let closure_26 = async function _endAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -225,7 +225,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
         closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -267,18 +267,18 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13725);
+const VoiceMessagesUIStore = fn(13856);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: metroRequire,
   setSavedVoiceMessageUploadData: closure_7,
   setVoiceMessageRecordingId: closure_8,
   setVoiceMessageRecordingState: closure_9,
-  setVoiceMessageStartTimeMillis: c10,
+  setVoiceMessageStartTimeMillis: closure_10,
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13726);
+const VoiceMessageConstants = fn(13857);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,
@@ -290,9 +290,9 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 let c19 = null;
 let closure_20 = new LoggerDefault("VoiceMessages");
 let closure_21 = apply.throttle((arg0) => {
-  const state = closure_1_11.getState();
+  state = closure_1_11.getState();
   if (null != state.startTimeMillis) {
-    hasOwnProperty(map1 * ((arg0 - closure_1_14) / (__initData - closure_1_14)));
+    hasOwnProperty(closure_1_13 * ((arg0 - gesture) / (closure_1_15 - gesture)));
     let tmp8 = null == state.savedVoiceMessageUploadData;
     if (tmp8) {
       const _performance = performance;
@@ -308,7 +308,7 @@ let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMess
 
 export function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
-  if (arg0.length > __initData2) {
+  if (arg0.length > value2) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
   const mapped = arr.map((item) => Math.min(item, closure_1_13));

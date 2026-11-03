@@ -6,14 +6,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx",
 );
 
 export function useMaybeFetchTieredTenureBadgeData() {
-  const items = [UserStore];
+  items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = require("initialize");
   importDefault = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);

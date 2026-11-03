@@ -7,7 +7,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   headerContainer: { paddingHorizontal: 16 },
   container: {
@@ -41,7 +41,7 @@ export default function NoResults(illustration) {
     fullHeightScrollContent = tmp.fullHeightScrollContent;
   }
   obj.contentContainerStyle = fullHeightScrollContent;
-  const items = [tmp.container, ,];
+  items = [tmp.container, ,];
   if (fullHeight) {
     fullHeight = tmp.fullHeightContentContainer;
   }

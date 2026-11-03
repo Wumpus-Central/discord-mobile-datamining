@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/native/useOpenChangeBannerActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserProfileActionCreators from "../../UserProfileActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ export default function useOpenChangeBannerActionSheet(user) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let items = [user, analyticsLocations, flag, flag2];
+  items = [user, analyticsLocations, flag, flag2];
   return flag2.useCallback(() => {
     let obj2 = {
       user,
@@ -29,7 +29,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       isTryItOut: null,
       onGifBannerSelect: null,
     };
-    let items = analyticsLocations;
+    items = analyticsLocations;
     let obj = ActionSheetActionCreatorsDefault;
     if (analyticsLocations == null) {
       items = [];
@@ -53,7 +53,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       obj3.selectionContext = closure_1_2 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
       obj2.openLazy(user(flag[3])(flag[6], flag.paths), "Select GIF Banner", obj3);
     };
-    obj.openLazy(asyncRequireImpl(16446, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(16446, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(16590, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(16590, dependencyMap.paths);
   }, items);
 }

@@ -16,8 +16,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6799);
-({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: c10 } = EmojiPickerConstants);
+const EmojiPickerConstants = fn(6919);
+({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_11,
@@ -26,14 +26,14 @@ const Constants = fn(1072);
   AutoCompleteResultTypes: closure_14,
   SearchTypes: closure_15,
 } = Constants);
-const EmojiConstants = fn(1386);
+const EmojiConstants = fn(1388);
 ({
   isExternalEmojiAllowedForIntention: closure_16,
   EmojiDisabledReasons: closure_17,
   EmojiIntention: closure_18,
 } = EmojiConstants);
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const re21 = /-/g;
 const apply = fn(12);
 const size = fn(2);
@@ -87,7 +87,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const obj2 = require("TopEmojisUtils");
-  let items = [suggestedEmojis];
+  items = [suggestedEmojis];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedEmojisWithoutFetchingLatest();
@@ -128,7 +128,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
   let obj6 = require("initialize");
   const items5 = [closure_5];
   const stateFromStores1 = require("initialize").useStateFromStores(items5, () => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let name;
     if (guild != null) {
       name = guild.name;
@@ -172,7 +172,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
     (function addCustomEmojiCategory(flattenedGuildIds, GUILD) {
       const iter = flattenedGuildIds[Symbol.iterator]();
       while (iter !== undefined) {
-        let guild;
+        guild = undefined;
         if (GUILD === constants2.GUILD) {
           guild = GuildStore.getGuild(tmp2);
         }
@@ -250,7 +250,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
         }
         return arr;
       } else if (id === constants.RECENT) {
-        const items = [,];
+        items = [,];
         ({ REACTION: arr4[0], DEFAULT_REACT_EMOJI: arr4[1] } = constants8);
         const tmp28 = items.includes(intention) ? stateFromStoresArray1 : stateFromStoresArray;
         const obj7 = { categoryEmojis: tmp28, channel, guildId, intention, bypassPremiumEmojiEntitlement: flag };
@@ -354,7 +354,7 @@ export function useEmojiCategories(CHAT, channel, arg2) {
         };
         const intl = util.intl;
         obj.name = intl.string(util.t.YUcvdQ);
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(locked, HermesBuiltin.arraySpread(unlocked, 0));
         obj.emojis = items;
         obj.emojisDisabled = set;
@@ -381,7 +381,7 @@ export function trackPremiumSettingsPaneOpened(getGuildId) {
     guildId = getGuildId.getGuildId();
   }
   const obj2 = {
-    location_page: null != guildId ? constants.GUILD_CHANNEL : constants.DM_CHANNEL,
+    location_page: null != guildId ? application_id.GUILD_CHANNEL : application_id.DM_CHANNEL,
     location_section: null,
   };
   if (null != getGuildId) {
@@ -700,7 +700,7 @@ export function useEmojiSearchResults(arg0, channel, intention, showOnlyUnicode)
   }, []);
   const tmp2 = closure_16(intention);
   const includeExternalGuilds = tmp2;
-  const items = [includeExternalGuilds];
+  items = [includeExternalGuilds];
   const items1 = [arg0, channel, intention, tmp2, showOnlyUnicode];
   return require("initialize").useStateFromStores(
     items,
@@ -723,7 +723,7 @@ export function useFrequentlyUsedEmojis(arg0) {
     const FrecencyUserSettingsActionCreators = CHAT(guildId[24]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [EmojiStore];
+  items = [EmojiStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedEmojisWithoutFetchingLatest();
@@ -735,7 +735,7 @@ export function useFrequentlyUsedReactionEmojis(guildId) {
     const FrecencyUserSettingsActionCreators = CHAT(guildId[24]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [EmojiStore];
+  items = [EmojiStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getFrequentlyUsedReactionEmojisWithoutFetchingLatest();
@@ -747,7 +747,7 @@ export function useFavoriteEmojis(arg0) {
     const FrecencyUserSettingsActionCreators = CHAT(guildId[24]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [EmojiStore];
+  items = [EmojiStore];
   return require("initialize").useStateFromStoresArray(
     items,
     () => EmojiStore.getDisambiguatedEmojiContext(closure_0).favoriteEmojisWithoutFetchingLatest,
@@ -760,7 +760,7 @@ export function useIsFavoriteEmoji(guildId, customEmojiFromJoinedGuild) {
     const FrecencyUserSettingsActionCreators = guildId(dependencyMap[24]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [EmojiStore];
+  items = [EmojiStore];
   return require("initialize").useStateFromStores(items, () => {
     let result = null != closure_1;
     if (result) {
@@ -776,7 +776,7 @@ export function useEmojiInPriorityOrder(arg0) {
     const FrecencyUserSettingsActionCreators = closure_0(dependencyMap[24]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [EmojiStore];
+  items = [EmojiStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getEmojiInPriorityOrderWithoutFetchingLatest();

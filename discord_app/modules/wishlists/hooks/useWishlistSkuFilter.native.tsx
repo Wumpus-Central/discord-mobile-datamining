@@ -2,7 +2,7 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_3 = fn(7405).WishlistRecommendationReason;
+let closure_3 = fn(7529).WishlistRecommendationReason;
 const SKUProductLines = fn(1072).SKUProductLines;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
@@ -12,7 +12,7 @@ export function useWishlistSkuFilter(wishlistAndRecommendations) {
   const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
   const userId = wishlistAndRecommendations.userId;
   const numItems = wishlistAndRecommendations.numItems;
-  const items = [wishlistAndRecommendations];
+  items = [wishlistAndRecommendations];
   const memo = userId.useMemo(
     () =>
       wishlistAndRecommendations.filter((productLine) => {

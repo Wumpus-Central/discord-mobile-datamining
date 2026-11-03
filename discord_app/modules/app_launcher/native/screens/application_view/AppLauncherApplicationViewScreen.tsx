@@ -31,7 +31,7 @@ function AppLauncherApplicationViewScreenInner(application) {
     initiallyExpanded = application(tmp2[9]).isActivityApp(application);
     const tmpResult = application(tmp2[9]);
   }
-  const items = [application, chatInputRef];
+  items = [application, chatInputRef];
   const items1 = [tmp5, initiallyExpanded, expandBottomSheet, bottomSheetExpandReasonRef];
   const onAauth2Cancel = chatInputRef.useCallback(() => {
     const current = chatInputRef.current;
@@ -68,11 +68,11 @@ function AppLauncherApplicationViewScreenInner(application) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 ({ AppLauncherRouteName: closure_7, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(6035).BuiltInSectionId;
+const BuiltInSectionId = fn(6155).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -113,8 +113,8 @@ export default function AppLauncherApplicationViewScreen(route) {
     }
   }
   const tmpResult = require("useGetOrFetchApplications");
-  const items = [id, context, installOnDemand];
-  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
+  items = [id, context, installOnDemand];
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
   const effect = navigation.useEffect(() => {
     let tmp2 = null != id;
     if (tmp2) {

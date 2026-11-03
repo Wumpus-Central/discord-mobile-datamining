@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBar
 
 export default function useGuildsBarSelectedGuildScroller(arg0) {
   noop = arg0;
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     function handleSelectedGuildChange() {
       let guildId = SelectedGuildStore.getGuildId();

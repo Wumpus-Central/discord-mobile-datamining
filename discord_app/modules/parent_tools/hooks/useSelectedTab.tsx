@@ -5,7 +5,7 @@ import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(7716);
+const FamilyCenterConstants = fn(7840);
 ({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function useSelectedMyFamilyTab() {
       AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, { action: TabChange.TabChange, tab });
     },
   };
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   obj.selectedTab = useStateFromStores.useStateFromStores(items, () => selectedTab.getSelectedTab());
   return obj;
 }

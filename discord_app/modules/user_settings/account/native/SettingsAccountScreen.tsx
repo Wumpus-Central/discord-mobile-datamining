@@ -7,7 +7,7 @@ import WebAuthnActionCreators from "../../../webauthn/WebAuthnActionCreators.tsx
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import MFAUtils from "../../../../utils/MFAUtils.tsx";
 import SafetyHubActionCreatorsAll from "../../../safety_hub/SafetyHubActionCreators.tsx";
-import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import AgeNoticeSettingsPredicate from "../../../age_assurance/age_notice/native/AgeNoticeSettingsPredicate.tsx";
 import SettingsAccountHeaderDefault from "SettingsAccountHeader.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -24,10 +24,10 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("../../../../../_runtime/metro/16582__.js");
+  obj6.source = require("../../../../../_runtime/metro/16725__.js");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
-  const items = [closure_10(View, obj5)];
+  items = [closure_10(View, obj5)];
   const obj7 = { style: { flex: 1 }, children: null };
   const obj8 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
   const obj9 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
@@ -57,10 +57,10 @@ function PasswordlessUpsell() {
   return closure_10(View, obj2);
 }
 function AccountTwoFALabel() {
-  let items = [WebAuthnStore];
+  items = [WebAuthnStore];
   const tmp3 = _slicedToArray(
     first(504).useStateFromStoresObject(items, () => {
-      const items = [WebAuthnStore.hasCredentials, WebAuthnStore.hasFetchedCredentials()];
+      items = [WebAuthnStore.hasCredentials, WebAuthnStore.hasFetchedCredentials()];
       return items;
     }),
     2,
@@ -68,7 +68,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(16583).useIsUserVerified();
+  const isUserVerified = first(16726).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -92,12 +92,12 @@ function AccountTwoFALabel() {
   const obj4 = { title: null };
   const intl = tmp(1113).intl;
   obj4.title = intl.string(first(1113).t.fuTmEJ);
-  items3[1] = closure_10(first(7060).TableRowGroupTitle, obj4);
+  items3[1] = closure_10(first(7186).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 }
 function AccountStatusLabel() {
-  const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+  const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
   const intl = util.intl;
   const t = util.t;
   return closure_1_10(TableRowGroup.TableRowGroupTitle, {
@@ -110,7 +110,7 @@ function AccountSecurityPage() {
     const obj3 = { label: null, settings: null };
     const intl = require("util").intl;
     obj3.label = intl.string(require("util").t.e262Nn);
-    const items = [, , , , , ,];
+    items = [, , , , , ,];
     ({
       ACCOUNT_USERNAME: arr[0],
       ACCOUNT_DISPLAY_NAME: arr[1],
@@ -153,11 +153,11 @@ function AccountSecurityPage() {
   return closure_1_10(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   upsellPasswordless: {
     marginBottom: 16,

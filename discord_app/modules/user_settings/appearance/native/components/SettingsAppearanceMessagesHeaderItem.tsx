@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   messagesHeaderContainer: {
     flexDirection: "row",
@@ -27,7 +27,7 @@ export default function MessagesHeaderItem(animatedStyles) {
   const obj2 = {
     animated: true,
     style: animatedStyles.animatedStyles.textNormal,
-    variant: "text-lg/bold",
+    variant: "text-lg/semibold",
     children: null,
   };
   const intl = util.intl;
@@ -35,7 +35,7 @@ export default function MessagesHeaderItem(animatedStyles) {
   obj.children = jsx(Text_Text.Text, {
     animated: true,
     style: animatedStyles.animatedStyles.textNormal,
-    variant: "text-lg/bold",
+    variant: "text-lg/semibold",
     children: null,
   });
   return <View style={closure_4().messagesHeaderContainer}>{null}</View>;

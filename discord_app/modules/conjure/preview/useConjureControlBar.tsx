@@ -6,7 +6,7 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(10850).interruptTurn;
+const interruptTurn = fn(10980).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/useConjureControlBar.tsx");
 
@@ -20,7 +20,7 @@ export function useConjureControlPhase(active) {
     tmp3(active);
     tmp6(!active);
   }
-  const items = [first];
+  items = [first];
   const effect = noop.useEffect(() => {
     if (timeout) {
       const _setTimeout = setTimeout;
@@ -40,7 +40,7 @@ export function useConjureControlPhase(active) {
 }
 export function useConjureControlStop(projectId) {
   _require = projectId;
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let isThinkingResult = null != closure_0;
     if (isThinkingResult) {

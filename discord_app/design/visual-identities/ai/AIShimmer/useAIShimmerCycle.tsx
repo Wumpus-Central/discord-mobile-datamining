@@ -20,7 +20,7 @@ export function linesFromKey(str) {
 export function useAIShimmerCycle(initialDelay) {
   ({ text, delay } = initialDelay);
   initialDelay = initialDelay.initialDelay;
-  const duration = initialDelay.duration;
+  duration = initialDelay.duration;
   const reducedMotion = initialDelay.reducedMotion;
   const trailingWidth = initialDelay.trailingWidth;
   const onComplete = initialDelay.onComplete;
@@ -38,7 +38,7 @@ export function useAIShimmerCycle(initialDelay) {
   if (Array.isArray(text)) {
     joined = text.join("\0");
   }
-  const items = [joined];
+  items = [joined];
   lines = obj.useMemo(() => joined.split("\0"), items);
   const tmp2 = duration(reducedMotion.useState(0), 2);
   first = tmp2[0];

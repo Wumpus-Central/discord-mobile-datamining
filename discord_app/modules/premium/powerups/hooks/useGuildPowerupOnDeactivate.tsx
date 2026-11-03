@@ -9,7 +9,7 @@ export default function useGuildPowerupOnDeactivate(arg0, arg1) {
   const tmp = useGuildPowerupOnToggleDefault(arg0, arg1);
   const onToggle = tmp.onToggle;
   const obj = { isLoading: tmp.isLoading, error: tmp.error, onDeactivate: null };
-  const items = [onToggle];
+  items = [onToggle];
   obj.onDeactivate = noop.useCallback(() => onToggle(false), items);
   return obj;
 }

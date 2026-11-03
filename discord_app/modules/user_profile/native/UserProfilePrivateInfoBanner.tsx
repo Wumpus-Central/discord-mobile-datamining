@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;
-  const items = [closure_4().banner];
+  items = [closure_4().banner];
   let tmp3 = null != containerBackground;
   if (tmp3) {
     const obj = { backgroundColor: containerBackground };

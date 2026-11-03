@@ -127,7 +127,7 @@ export function useNavigationTTIRegionHierarchy(name) {
       return map;
     });
   }, []);
-  const items = [depth, updateChild];
+  items = [depth, updateChild];
   let includedDescendants = 0;
   sum1 = 0;
   let excludedDescendants = 0;

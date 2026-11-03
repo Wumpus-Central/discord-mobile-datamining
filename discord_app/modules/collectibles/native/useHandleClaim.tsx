@@ -11,7 +11,7 @@ export function useHandleClaim(product) {
   require = product;
   const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
   const obj = { handleClaim: null };
-  const items = [product, stageCollectibleChangeForEditProfile];
+  items = [product, stageCollectibleChangeForEditProfile];
   obj.handleClaim = noop.useCallback(
     asyncGeneratorStep(async () => {
       await tmp3(tmp20[2]).claimPremiumCollectiblesProduct(product.skuId);

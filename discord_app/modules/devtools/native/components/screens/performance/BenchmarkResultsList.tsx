@@ -17,7 +17,7 @@ export default function BenchmarkResultsList(results) {
   let tmp2 = null;
   if (0 !== results.length) {
     let obj = { title: "Results (newest first)", hasIcons: false, children: null };
-    const items = [
+    items = [
       results.map((kind) => {
         if ("mount" === kind.kind) {
           const obj = { label: null, subLabel: null };

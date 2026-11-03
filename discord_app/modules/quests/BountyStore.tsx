@@ -42,7 +42,7 @@ Object.defineProperty(prototype, "questHomeBounties", {
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
   return set.has(id);
 };
-prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(c7) {
   let num = 0;
   while (tmp !== undefined) {
     if (set.has(tmp2.id)) {
@@ -117,7 +117,7 @@ const bountyStore = new BountyStore(DispatcherDefault, {
     if (type !== AdCreativeType.AdCreativeType.BOUNTY) {
       return false;
     } else {
-      const items = [creative.bounty.id];
+      items = [creative.bounty.id];
       resetStateForDeliveredBounties(items);
     }
   },

@@ -16,10 +16,10 @@ function HiddenMedia(length) {
   const tmp = closure_10();
   _require = tmp;
   let obj = { children: null };
-  let items = [
+  items = [
     Array.from({ length: length.count }, (arg0, arg1) => {
       const obj = { style: mediaPlaceholderCard.mediaPlaceholderCard, children: null };
-      const items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" })];
+      items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" })];
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.B2xSxL);
@@ -72,10 +72,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(18988).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -87,11 +87,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(18988).RESTRICTED_CONTENT_INSET,
-  height: fn(18988).RESTRICTED_AVATAR_SIZE,
+  width: fn(19146).RESTRICTED_CONTENT_INSET,
+  height: fn(19146).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(18988).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",
@@ -143,7 +143,7 @@ export default function RestrictedMessagePreviewList(channelId) {
   let tmp = closure_10();
   importDefault = tmp;
   analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
-  let items = [renderMessage];
+  items = [renderMessage];
   let items1 = [channelId];
   const items2 = [channelId, analyticsLocations];
   const stateFromStoresArray = channelId(analyticsLocations[13]).useStateFromStoresArray(
@@ -166,7 +166,7 @@ export default function RestrictedMessagePreviewList(channelId) {
   renderMessage = callback.useCallback((message) => {
     const tmp = closure_1(analyticsLocations[16])(message);
     const obj = { style: closure_1.messageRow, children: null };
-    const items = [arr5(closure_1(analyticsLocations[17]), { pointerEvents: "none", message, rowGenerator: memo })];
+    items = [arr5(closure_1(analyticsLocations[17]), { pointerEvents: "none", message, rowGenerator: memo })];
     const obj3 = {
       style: closure_1.avatarHitbox,
       accessibilityRole: "button",
@@ -192,7 +192,7 @@ export default function RestrictedMessagePreviewList(channelId) {
     return closure_1_7(closure_1_8, { children });
   }, items3);
   const arr5 = (function groupMessages(stateFromStoresArray) {
-    const items = [];
+    items = [];
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -244,7 +244,7 @@ export default function RestrictedMessagePreviewList(channelId) {
         if (tmp6Result) {
           const obj2 = { style: closure_1.dateDivider, children: null };
           const obj3 = { style: closure_1.dividerLine };
-          const items = [timestampProducer(View, obj3), ,];
+          items = [timestampProducer(View, obj3), ,];
           const obj4 = {
             variant: "text-xs/semibold",
             color: "text-muted",

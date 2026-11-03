@@ -19,7 +19,7 @@ function getPlayIntegrityCloudProjectNumber() {
   }
 }
 function buildRequestHashPayload(arg0, platform) {
-  const items = [arg0, platform.platform, , , , ,];
+  items = [arg0, platform.platform, , , , ,];
   let str = "";
   if (null != platform.ageLower) {
     const _String = String;
@@ -50,7 +50,7 @@ function buildRequestHashPayload(arg0, platform) {
   return items.join("|");
 }
 function buildConsentReinstatementPayload(arg0, arg1) {
-  const items = [arg0, Endpoints.APP_STORE_CONSENT_REINSTATE, arg1, "true"];
+  items = [arg0, Endpoints.APP_STORE_CONSENT_REINSTATE, arg1, "true"];
   return items.join("|");
 }
 function requestIOSChallenge() {
@@ -100,7 +100,7 @@ let closure_14 = async function _registerAttestKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_14 = async function _registerAttestKey(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp20) {
       c4 = tmp;
       throw tmp20;
@@ -188,7 +188,7 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -254,13 +254,13 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
             }
           }
           c8 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp7) {
         c6 = 0;
         closure_133_13(null);
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else {
         if (2 === tmp7) {
           if (arg0 === 1) {
@@ -276,7 +276,7 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
             if (null == closure_132_2) {
               c6 = 0;
               c8 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               closure_132_3 = closure_132_1;
               nonce = closure_132_2.nonce;
@@ -329,7 +329,7 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
             if (null == closure_132_3) {
               c6 = 0;
               c8 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               c7 = 5;
               c8 = 1;
@@ -369,7 +369,7 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp47) {
       if (tmp4 === c6) {
@@ -384,7 +384,7 @@ let closure_16 = async function _getAppAttestAssertion(arg0) {
 };
 let closure_17 = async function _getAppStoreAgeSignalAssertion() {
   await getAppAttestAssertion((arg0) => {
-    const items = [arg0, closure_0.platform, , , ,];
+    items = [arg0, closure_0.platform, , , ,];
     let str = "";
     let str2 = "";
     if (null != closure_0.ageLower) {
@@ -423,7 +423,7 @@ let closure_18 = async function _getAppStoreConsentReinstatementProof() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -447,7 +447,7 @@ let closure_18 = async function _getAppStoreConsentReinstatementProof() {
             c3 = 1;
             const obj4 = {
               value: getAppAttestAssertion((arg0) => {
-                const items = [arg0, constants.APP_STORE_CONSENT_REINSTATE, "ios", "true"];
+                items = [arg0, constants.APP_STORE_CONSENT_REINSTATE, "ios", "true"];
                 return items.join("|");
               }),
               done: false,
@@ -473,7 +473,7 @@ let closure_18 = async function _getAppStoreConsentReinstatementProof() {
           closure_128_0 = value;
           if (null == closure_128_0) {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             const obj7 = {
               platform: "ios",
@@ -520,7 +520,7 @@ let closure_18 = async function _getAppStoreConsentReinstatementProof() {
           }
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp27) {
       c3 = tmp;
@@ -543,7 +543,7 @@ let closure_20 = async function _requestPlayIntegrityToken() {
   if (null != tmp20) {
     if (null != NativePlayIntegrityModuleDefault) {
       c3 = 1;
-      const items = [NativePlayIntegrityModuleDefault.requestIntegrityToken(closure_0, tmp20)];
+      items = [NativePlayIntegrityModuleDefault.requestIntegrityToken(closure_0, tmp20)];
       NativePlayIntegrityModuleDefault;
       TimeUtils;
       items[1] = TimeUtils.sleep(15000).then(() => {});
@@ -577,7 +577,7 @@ let closure_22 = async function _getAgeSignalChallenge() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -599,14 +599,14 @@ let closure_22 = async function _getAgeSignalChallenge() {
             return obj5;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           obj3 = PlatformUtils;
         }
       } else if (1 === tmp6) {
         c2 = 0;
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
@@ -646,7 +646,7 @@ let closure_23 = async function _getAgeSignalIntegrityToken(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -666,7 +666,7 @@ let closure_23 = async function _getAgeSignalIntegrityToken(arg0) {
           return obj4;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (arg0 === 1) {
         c2 = 3;
@@ -696,7 +696,7 @@ export const PLAY_INTEGRITY_CLOUD_PROJECT_NUMBER_PROD = 179099419678;
 export const PLAY_INTEGRITY_CLOUD_PROJECT_NUMBER_STAGE = 976935287357;
 export { buildRequestHashPayload };
 export function buildIOSClientDataPayload(arg0, platform, arg2) {
-  const items = [arg0, platform.platform, , , ,];
+  items = [arg0, platform.platform, , , ,];
   let str = "";
   let str2 = "";
   if (null != platform.ageLower) {

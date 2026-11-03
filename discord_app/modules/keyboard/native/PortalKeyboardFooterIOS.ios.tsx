@@ -1,12 +1,21 @@
 // discord_app/modules/keyboard/native/PortalKeyboardFooterIOS.ios.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import KeyboardTypes from "KeyboardTypes.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import KeyboardChatScrollView from "../../../../_runtime/01641_KeyboardChatScrollView.js";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import useKeyboardType from "useKeyboardType.tsx";
+import Portal from "../../../../_runtime/05337_Portal.js";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -18,103 +27,104 @@ const rect = {
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
 };
 obj2.keyboardStickyFooter = rect;
-let closure_5 = createStyles.createStyles(obj2);
+const constants = createStyles.createStyles(obj2);
 let closure_6 = {
-  code: "function PortalKeyboardFooterIOSIosTsx1(){const{interpolate,progress,bottom,followSystemKeyboard,keyboardType,KeyboardTypes,animatedSheetIndex,height,EXPRESSION_FOOTER_HEIGHT}=this.__closure;const offset=interpolate(progress.get(),[0,1],[0,bottom]);const shouldFollowKeyboard=followSystemKeyboard||keyboardType.get()===KeyboardTypes.EXPRESSION;if(shouldFollowKeyboard&&animatedSheetIndex.get()>=0){return{transform:[{translateY:height.get()+offset}]};}return{transform:[{translateY:interpolate(animatedSheetIndex.get(),[-1,0],[EXPRESSION_FOOTER_HEIGHT+bottom,0],'clamp')}]};}",
+  code: "(function PortalKeyboardFooterIOSIosTsx1(){let[interpolate,progress,bottom,followSystemKeyboard,keyboardType,KeyboardTypes,animatedSheetIndex,height,EXPRESSION_FOOTER_HEIGHT]=this.__closure;const offset=interpolate(progress.get(),[0,1],[0,bottom]);const shouldFollowKeyboard=followSystemKeyboard||keyboardType.get()===KeyboardTypes.EXPRESSION;if(shouldFollowKeyboard&&animatedSheetIndex.get()>=0){return{transform:[{translateY:height.get()+offset}]};}return{transform:[{translateY:interpolate(animatedSheetIndex.get(),[-1,0],[EXPRESSION_FOOTER_HEIGHT+bottom,0],'clamp')}]};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardFooterIOS.ios.tsx");
 
-export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
-  animatedSheetIndex = animatedSheetIndex.animatedSheetIndex;
-  let str = animatedSheetIndex.portalHostName;
+export default function PortalKeyboardFooterIOS(portalHostName) {
+  let str = portalHostName.portalHostName;
   if (str === undefined) {
     str = "expression-footer";
   }
-  let flag = animatedSheetIndex.followSystemKeyboard;
+  let flag = portalHostName.followSystemKeyboard;
   if (flag === undefined) {
     flag = false;
   }
-  let progress;
+  let flag2 = portalHostName.constrainToActionSheet;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  let tmp = _undefined3();
+  const bottomSheetContainerStyle = Sheet_BottomSheet.useBottomSheetContainerStyle(
+    useWindowDimensionsDefault({ ignoreKeyboard: true }),
+  );
+  const reanimatedKeyboardAnimation = KeyboardChatScrollView.useReanimatedKeyboardAnimation();
+  ({ height, progress } = reanimatedKeyboardAnimation);
+  const keyboardTypeSharedValue = useKeyboardType.useKeyboardTypeSharedValue();
+  items = [
+    _undefined4,
+    _mod1652.interpolate,
+    progress,
+    useSafeAreaInsetsDefault().bottom,
+    flag,
+    keyboardTypeSharedValue,
+    KeyboardTypes.KeyboardTypes,
+    portalHostName.animatedSheetIndex,
+    height,
+    ConstantsIOS.EXPRESSION_FOOTER_HEIGHT,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
   let animatedStyle;
-  const tmp = progress();
-  dependencyMap = tmp;
-  const bottom = flag(1625)().bottom;
-  const reanimatedKeyboardAnimation = animatedSheetIndex(1639).useReanimatedKeyboardAnimation();
-  const height = reanimatedKeyboardAnimation.height;
-  progress = reanimatedKeyboardAnimation.progress;
-  let obj = animatedSheetIndex(1639);
-  const keyboardTypeSharedValue = animatedSheetIndex(5209).useKeyboardTypeSharedValue();
-  let obj2 = animatedSheetIndex(5209);
-  class S {
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items;
+  class PortalKeyboardFooterIOSIosTsx1 {
     constructor() {
       tmp = closure_0;
+      [0][1] = closure_2;
       tmp2 = closure_2;
-      tmp3 = closure_0(closure_2[7]);
-      [0][1] = bottom;
-      tmp4 = bottom;
-      if (c1) {
-        tmp8 = animatedSheetIndex;
+      if (closure_3) {
+        tmp6 = closure_6;
         num = 0;
-        if (animatedSheetIndex.get() >= 0) {
+        if (closure_6.get() >= 0) {
           obj1 = { transform: null };
-          obj6 = { translateY: null };
-          tmp10 = height;
-          obj6.translateY = height.get() + tmp5;
+          obj5 = { translateY: null };
+          tmp7 = closure_7;
+          obj5.translateY = closure_7.get() + tmp3;
           items = [];
-          items[0] = obj6;
+          items[0] = obj5;
           obj1.transform = items;
           obj = obj1;
         }
         return obj;
       } else {
-        tmp6 = closure_6;
-        value = closure_6.get();
+        tmp4 = closure_4;
+        tmp5 = closure_5;
       }
       obj = { transform: null };
-      obj7 = { translateY: null };
-      tmpResult = tmp(tmp2[7]);
-      value1 = animatedSheetIndex.get();
+      obj6 = { translateY: null };
       items1 = [,];
-      items1[0] = tmp(tmp2[9]).EXPRESSION_FOOTER_HEIGHT + tmp4;
+      items1[0] = closure_8 + tmp2;
       items1[1] = 0;
-      obj7.translateY = tmpResult.interpolate(value1, [-1, 0], items1, "clamp");
+      obj6.translateY = tmp(closure_6.get(), [-1, 0], items1, "clamp");
       items2 = [];
-      items2[0] = obj7;
+      items2[0] = obj6;
       obj.transform = items2;
       return;
     }
   }
-  let obj3 = animatedSheetIndex(5095);
-  S.__closure = {
-    interpolate: animatedSheetIndex(5095).interpolate,
-    progress,
-    bottom,
-    followSystemKeyboard: flag,
-    keyboardType: keyboardTypeSharedValue,
-    KeyboardTypes: animatedSheetIndex(1623).KeyboardTypes,
-    animatedSheetIndex,
-    height,
-    EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1092).EXPRESSION_FOOTER_HEIGHT,
-  };
-  S.__workletHash = 9444646970651;
-  S.__initData = keyboardTypeSharedValue;
-  animatedStyle = obj3.useAnimatedStyle(S);
-  let items = [animatedStyle, tmp];
-  const memo = bottom.useMemo(() => {
-    const items = [keyboardStickyFooter.keyboardStickyFooter, animatedStyle];
+  let items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  PortalKeyboardFooterIOSIosTsx1.__closure = items1;
+  PortalKeyboardFooterIOSIosTsx1.__workletHash = 5822849225954;
+  PortalKeyboardFooterIOSIosTsx1.__initData = tmp8;
+  animatedStyle = _mod1652.useAnimatedStyle(PortalKeyboardFooterIOSIosTsx1);
+  let items2 = [animatedStyle, tmp, flag2, bottomSheetContainerStyle];
+  const memo = noop.useMemo(() => {
+    items = [_undefined.keyboardStickyFooter, animatedStyle];
+    let tmp = c0;
+    if (c0) {
+      tmp = c2;
+    }
+    items[2] = tmp;
     return items;
-  }, items);
-  let obj4 = {
-    interpolate: animatedSheetIndex(5095).interpolate,
-    progress,
-    bottom,
-    followSystemKeyboard: flag,
-    keyboardType: keyboardTypeSharedValue,
-    KeyboardTypes: animatedSheetIndex(1623).KeyboardTypes,
-    animatedSheetIndex,
-    height,
-    EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1092).EXPRESSION_FOOTER_HEIGHT,
-  };
-  return height(flag(5095).View, { style: memo, children: height(animatedSheetIndex(5214).PortalHost, { name: str }) });
+  }, items2);
+  return jsx(_modDef1652.View, { style: memo, children: jsx(Portal.PortalHost, { name: str }) });
 }

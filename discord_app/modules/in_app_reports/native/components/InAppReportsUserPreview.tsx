@@ -4,14 +4,13 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -37,47 +36,30 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 export default function UserPreview(user) {
   user = user.user;
   const tmp = closure_5();
-  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
-    "InAppReportsUserPreview",
-    "text-xs/bold",
-  );
-  const obj3 = { style: tmp.container, children: null };
-  if (null != typeConsolidationEyebrow.style) {
-    const items = [tmp.title, typeConsolidationEyebrow.style];
-    let title = items;
-  } else {
-    title = tmp.title;
-  }
-  const obj4 = { style: title, accessibilityRole: "header", variant: typeConsolidationEyebrow.variant, children: null };
-  if (null != typeConsolidationEyebrow.style) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t.Rsth7z);
-  } else {
-    const intl = util.intl;
-    stringResult = intl.string(util.t.Rsth7z).toUpperCase();
-    const str = intl.string(util.t.Rsth7z);
-  }
-  obj4.children = stringResult;
-  const items1 = [React3(Text_Text.Text, obj4)];
-  const obj5 = { style: null, children: null };
-  const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
-  obj5.style = items2;
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.Rsth7z);
+  items = [React3(Text_Text.Text, obj3)];
+  const obj4 = { style: null, children: null };
+  const items1 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj4.style = items1;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
-  const obj7 = { style: tmp.userProfileInfo, children: null };
-  let tmp8Result = null != user.globalName;
-  if (tmp8Result) {
-    const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
-    tmp8Result = React3(Text_Text.Text, obj8);
+  const items2 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
+  const obj6 = { style: tmp.userProfileInfo, children: null };
+  let tmp7Result = null != user.globalName;
+  if (tmp7Result) {
+    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
+    tmp7Result = React3(Text_Text.Text, obj7);
   }
-  const items4 = [
-    tmp8Result,
+  const items3 = [
+    tmp7Result,
     React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username }),
   ];
-  obj7.children = items4;
-  items3[1] = React4(View, obj7);
-  obj5.children = items3;
-  items1[1] = React4(View, obj5);
-  obj3.children = items1;
-  return React4(View, obj3);
+  obj6.children = items3;
+  items2[1] = React4(View, obj6);
+  obj4.children = items2;
+  items[1] = React4(View, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 }

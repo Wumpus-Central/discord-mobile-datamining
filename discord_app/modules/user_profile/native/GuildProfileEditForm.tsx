@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/GuildProfileEditForm.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -57,7 +57,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16446, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16590, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -101,7 +101,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(7326).AnalyticsLocationProvider, obj2);
+  return closure_16(user(7446).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -120,11 +120,11 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     obj2.buttonText = intl4.string(util.t.pj0XBN);
     obj2.onButtonPress = onButtonPress;
     obj2.onLayout = onButtonPress.onLayout;
-    let tmp6Result = __initData2(UserProfileFloatingUpsellDefault, obj2);
+    let tmp6Result = value2(UserProfileFloatingUpsellDefault, obj2);
     const tmp3Result = UserProfileFloatingUpsellDefault;
   } else {
     const obj3 = { style: null, ctaText: null, onPress: null, children: null };
-    const items = [tmp4.floatingUpsell];
+    items = [tmp4.floatingUpsell];
     const obj4 = { bottom: nativeDefault.space.PX_16 + tmp5.bottom };
     items[1] = obj4;
     obj3.style = items;
@@ -134,8 +134,8 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     const obj5 = { variant: "text-sm/normal", children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t.YIZS5B);
-    obj3.children = __initData2(Text_Text.Text, obj5);
-    tmp6Result = __initData2(UserProfileUpsellCardDefault, obj3);
+    obj3.children = value2(Text_Text.Text, obj5);
+    tmp6Result = value2(UserProfileUpsellCardDefault, obj3);
     const tmp3Result2 = UserProfileUpsellCardDefault;
   }
   return tmp6Result;
@@ -144,14 +144,14 @@ let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticsObjects: c10, AnalyticsSections } = Constants);
+({ AnalyticsObjects: closure_10, AnalyticsSections } = Constants);
 ({
   DISPLAY_NAME_MAX_LENGTH: closure_12,
   PRONOUNS_MAX_LENGTH: map1,
   UpsellTypes: closure_14,
   AnalyticsPages,
 } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };
@@ -162,7 +162,7 @@ export default function GuildProfileEditForm(currentUser) {
   currentUser = currentUser.currentUser;
   const stickyHeader = currentUser.stickyHeader;
   let guildScrollY;
-  let guild;
+  guild = undefined;
   let analyticsLocations;
   const tmp2 = guild;
   const tmp3 = guildScrollY(guild[28])();
@@ -175,7 +175,7 @@ export default function GuildProfileEditForm(currentUser) {
   if (context != null) {
     guildScrollY = context.guildScrollY;
   }
-  const items = [guildScrollY];
+  items = [guildScrollY];
   const items1 = [guildScrollY];
   const callback = noop.useCallback((nativeEvent) => {
     if (guildScrollY != null) {
@@ -512,7 +512,7 @@ export default function GuildProfileEditForm(currentUser) {
             tmp65Result5 = null;
             if ("" !== first3) {
               const obj26 = { style: tmp4.errorContainer, children: null };
-              const obj28 = { variant: "text-sm/bold", color: "text-feedback-critical", children: first3 };
+              const obj28 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: first3 };
               obj26.children = closure_16(tmp5(tmp2[27]).Text, obj28);
               tmp65Result5 = closure_16(closure_7, obj26);
             }

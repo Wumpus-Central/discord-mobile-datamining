@@ -15,9 +15,9 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     keyboardShouldPersistTaps: "always",
     keyboardDismissMode: "on-drag",
   };
-  const items = [onPressRow.query];
+  items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(12499).AppLauncherList, {
+  return jsx(onPressRow(12635).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -27,10 +27,10 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     keyboardDismissMode: "on-drag",
   });
 }
-const DEFAULT_CONTENT_PADDING = fn(1496).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1498).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 });
@@ -45,7 +45,7 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
   const channel = onUserPress.channel;
   let callback1;
   const id = channel.id;
-  const items = [onActionSheetDismiss];
+  items = [onActionSheetDismiss];
   const callback = callback1.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherUserListActionSheet);
     onActionSheetDismiss();

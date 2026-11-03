@@ -50,7 +50,7 @@ export function getSelectedNoiseSuppressionOption() {
   }
 }
 export function useSelectedNoiseSuppressionOption() {
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     const noiseSuppression = MediaEngineStore.getNoiseSuppression();
     const noiseCancellation = MediaEngineStore.getNoiseCancellation();

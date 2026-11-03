@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/useSelecte
 
 export default function useSelectedActiveStream(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore, ApplicationStreamingStore];
+  items = [ChannelRTCStore, ApplicationStreamingStore];
   return require("initialize").useStateFromStores(items, () => {
     const selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;

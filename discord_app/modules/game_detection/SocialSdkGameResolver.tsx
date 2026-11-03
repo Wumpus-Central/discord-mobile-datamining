@@ -92,7 +92,7 @@ prototype["resolve"] = function resolve(arr) {
   let someResult = mapped.some((item, index) => item !== closure_1[index]);
   let someResult1 = map.size !== this.resolutionsByPid.size;
   if (!someResult1) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(map, 0);
     someResult1 = items.some((item) => {
       [tmp, tmp2] = item;

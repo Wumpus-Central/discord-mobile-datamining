@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting(
 );
 
 export function useChannelTopicGradientBackground() {
-  token = token(5596).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let items = [token];
+  token = token(5719).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  items = [token];
   return noop.useMemo(() => {
     const obj = _modDef671(token);
-    const items = [_modDef671(token).alpha(0).hex(), token];
+    items = [_modDef671(token).alpha(0).hex(), token];
     return items;
   }, items);
 }

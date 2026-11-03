@@ -15,7 +15,7 @@ function updateApplicationConfigs(configs) {
       if (found == null) {
         found = [];
       }
-      const items = [...tmp];
+      items = [...tmp];
       closure_3[_slicedToArray] = items;
     }
     const entries = Object.entries(configs);
@@ -36,7 +36,7 @@ function updateApplicationConfigs(configs) {
     const merged2 = Object.assign(
       Object.fromEntries(
         keys.map((item) => {
-          const items = [item, obj.SUCCESS];
+          items = [item, obj.SUCCESS];
           return items;
         }),
       ),

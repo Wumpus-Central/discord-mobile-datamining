@@ -17,13 +17,13 @@ export function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
 }
 export function useNotifSettingValue(arg0) {
   _require = arg0;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
 }
 export function useNotifSettingToggleValue(CALLS) {
   _require = CALLS;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [CALLS];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -41,7 +41,7 @@ export function useNotifSettingToggleValue(CALLS) {
 }
 export function useNotifSettingRadioValue(arg0) {
   _require = arg0;
-  const items = [NotifSettingsProtoStore];
+  items = [NotifSettingsProtoStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

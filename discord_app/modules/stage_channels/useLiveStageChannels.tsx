@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageCh
 
 export default function useLiveStageChannels(arg0) {
   _require = arg0;
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -60,7 +60,7 @@ export function getAllLiveStageChannels() {
   }, []);
 }
 export function useAllLiveStageChannels() {
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     allStageInstances = allStageInstances.getAllStageInstances();
     return allStageInstances.map((channel_id) => channel_id.channel_id);

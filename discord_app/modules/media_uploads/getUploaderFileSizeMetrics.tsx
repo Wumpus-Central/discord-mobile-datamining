@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
 
 export function getUploaderChannelId(file) {
-  const items = file.items;
+  items = file.items;
   let channelId;
   if (items != null) {
     const first = items[0];
@@ -18,7 +18,7 @@ export function getUploaderChannelId(file) {
   return channelId;
 }
 export function getUploaderFileSizeMetrics(totalPreCompressionSize) {
-  let items = totalPreCompressionSize.items;
+  items = totalPreCompressionSize.items;
   if (items == null) {
     items = [];
   }

@@ -14,7 +14,7 @@ function AddEmojiButton(channel) {
   channel = channel.channel;
   const onOpenPicker = channel.onOpenPicker;
   const onPressEmoji = channel.onPressEmoji;
-  const items = [channel, onPressEmoji, onOpenPicker];
+  items = [channel, onPressEmoji, onOpenPicker];
   const callback = noop.useCallback(() => {
     onOpenPicker();
     const obj = openEmojiPickerActionSheet;
@@ -75,7 +75,7 @@ function ReactActionSheetBase(content) {
     const tmp2Result = tmp2(obj.useState(""), 2);
     first1 = tmp2Result[0];
     closure_8 = tmp10;
-    let items = [content.id, str, first1, sendMessage];
+    items = [content.id, str, first1, sendMessage];
     const callback = obj.useCallback(
       asyncGeneratorStep(async () => {
         if (dependencyMap === 2) {
@@ -88,7 +88,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -103,8 +103,8 @@ function ReactActionSheetBase(content) {
                 return obj3;
               } else {
                 closure_5(true);
-                v1(8924).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                const obj5 = v1(8924);
+                v1(9048).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                const obj5 = v1(9048);
                 const obj4 = {
                   itemId: tmp4.id,
                   itemType: hotwheels_gaming_activity,
@@ -115,7 +115,7 @@ function ReactActionSheetBase(content) {
                     actionDestinationType: null,
                   },
                 };
-                v1(8924).feedItemActioned(obj4);
+                v1(9048).feedItemActioned(obj4);
                 v1 = 1;
                 dependencyMap = 1;
                 const obj7 = { value: sendMessage(first1), done: false };
@@ -132,7 +132,7 @@ function ReactActionSheetBase(content) {
               closure_128_5(false);
               closure_128_8("");
               dependencyMap = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp10) {
             dependencyMap = tmp;
@@ -157,7 +157,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -200,7 +200,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;
@@ -276,7 +276,7 @@ function ReactActionSheetBase(content) {
             children: null,
           };
           const obj2 = { style: null, source: null };
-          const items = [,];
+          items = [,];
           ({ defaultEmoji: arr[0], emojiImage: arr[1] } = closure_3);
           obj2.style = items;
           const obj3 = { uri: null };
@@ -381,11 +381,11 @@ function ReactActionSheetBase(content) {
   tmp2 = loading;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
-const EmojiIntention = fn(1386).EmojiIntention;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },
@@ -460,7 +460,7 @@ export function getStatusReplyContent(reply) {
     formatToPlainStringResult = formatToPlainString(t.XPQgL2, obj);
     tmp5 = require;
   }
-  const items = [];
+  items = [];
   items.push("> -# *" + formatToPlainStringResult + "*");
   if (tmp7) {
     const _HermesInternal = HermesInternal;

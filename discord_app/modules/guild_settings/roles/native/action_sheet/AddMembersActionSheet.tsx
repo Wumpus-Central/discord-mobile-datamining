@@ -228,10 +228,10 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19777).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19927).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   inputContainer: null,
@@ -257,7 +257,7 @@ export default function AddMembersActionSheet(guild) {
   const tmp = closure_10();
   const tmp2 = _slicedToArray(noop.useState({}), 2);
   const pendingAdditions = tmp2[0];
-  const items = [role.id];
+  items = [role.id];
   const callback = noop.useCallback((roles) => {
     roles = roles.roles;
     return !roles.includes(role.id);

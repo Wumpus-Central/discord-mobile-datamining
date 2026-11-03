@@ -44,7 +44,7 @@ prototype["initialize"] = function initialize(arg0) {
     obj = {};
   }
   closure_3 = obj;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, updateExistingSettings);
 };
 prototype["getState"] = function getState() {

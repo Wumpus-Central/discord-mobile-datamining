@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCreator.tsx");
@@ -20,7 +20,7 @@ export default noop.memo(function InstantInviteCreator(arg0) {
   if (null != user) {
     const obj = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_8, children: null };
     const obj2 = { source: user.getAvatarSource(guildId), size: native.AvatarSizes.SMALL };
-    const items = [React4(native.Avatar, obj2)];
+    items = [React4(native.Avatar, obj2)];
     const obj3 = { style: tmp.identity, children: null };
     const obj4 = { user, guildId };
     obj3.children = React4(DetailedGuildIdentityUserRow.DetailedGuildIdentityUser, obj4);

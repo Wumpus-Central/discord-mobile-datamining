@@ -1,12 +1,16 @@
 // discord_app/design/components/Forms/native/FormRadio.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = _mod1652;
+
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles(() => {
   const CONTROL_RADIO_ICON_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
   const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
@@ -38,147 +42,146 @@ let closure_5 = createStyles.createStyles(() => {
   obj.dot = size1;
   return obj;
 });
-const __initData = {
-  code: "function FormRadioNativeTsx1(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');}",
+let closure_6 = {
+  code: "(function FormRadioNativeTsx1(){let[withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING]=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');})",
 };
-const __initData2 = {
-  code: "function FormRadioNativeTsx2(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');}",
+let closure_7 = {
+  code: "(function FormRadioNativeTsx2(){let[withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING]=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');})",
 };
-const __initData3 = {
-  code: "function FormRadioNativeTsx3(){const{borderColor,backgroundColor}=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};}",
+let closure_8 = {
+  code: "(function FormRadioNativeTsx3(){let[borderColor,backgroundColor]=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};})",
 };
-const __initData4 = {
-  code: "function FormRadioNativeTsx4(){const{useReducedMotion,withSpring,selected,SUBTLE_SPRING}=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};}",
+let closure_9 = {
+  code: "(function FormRadioNativeTsx4(){let[useReducedMotion,withSpring,selected,SUBTLE_SPRING]=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
 
 export function FormRadio(selected) {
   selected = selected.selected;
-  const tmp = derivedValue1();
-  const enabled = sharedValue.useContext(selected(unselected[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  let derivedValue;
-  derivedValue1 = undefined;
-  const tmp2 = derivedValue1();
-  const selected2 = tmp2.selected;
-  unselected = tmp2.unselected;
-  sharedValue = selected(unselected[5]).useSharedValue(selected);
-  let items = [selected, sharedValue];
-  const effect = sharedValue.useEffect(() => {
-    const result = sharedValue.set(selected);
+  const tmp = closure_5();
+  ({ selected: selected2, unselected } = closure_5());
+  const tmp4 = closure_5();
+  const sharedValue = _mod1652.useSharedValue(selected);
+  items = [selected, sharedValue];
+  const effect = noop.useEffect(() => {
+    const result = _undefined2.set(c0);
   }, items);
-  let obj = selected(unselected[5]);
-  class T {
+  const items1 = [closure_6, spring_spring.withSpring, sharedValue, selected2, unselected, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items1;
+  class FormRadioNativeTsx1 {
     constructor() {
       tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[6]);
-      if (closure_3.get()) {
-        tmp4 = selected;
-        borderColor = selected.borderColor;
+      if (closure_1.get()) {
+        tmp3 = closure_2;
+        borderColor = closure_2.borderColor;
       } else {
-        tmp3 = unselected;
-        borderColor = unselected.borderColor;
+        tmp2 = closure_3;
+        borderColor = closure_3.borderColor;
       }
-      return obj.withSpring(borderColor, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always");
+      return tmp(borderColor, closure_4, "animate-always");
     }
   }
-  let obj2 = selected(unselected[5]);
-  T.__closure = {
-    withSpring: selected(unselected[6]).withSpring,
-    selectedShared: sharedValue,
-    selectedStyles: selected2,
-    unselectedStyles: unselected,
-    SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING,
-  };
-  T.__workletHash = 12275577765341;
-  T.__initData = __initData;
-  derivedValue = obj2.useDerivedValue(T);
-  const obj3 = {
-    withSpring: selected(unselected[6]).withSpring,
-    selectedShared: sharedValue,
-    selectedStyles: selected2,
-    unselectedStyles: unselected,
-    SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING,
-  };
-  class C {
+  const items2 = [tmp8, tmp9, tmp10, tmp11, tmp12];
+  FormRadioNativeTsx1.__closure = items2;
+  FormRadioNativeTsx1.__workletHash = 8234742107812;
+  FormRadioNativeTsx1.__initData = tmp7;
+  const derivedValue = _mod1652.useDerivedValue(FormRadioNativeTsx1);
+  const items3 = [closure_7, spring_spring.withSpring, sharedValue, selected2, unselected, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19] = items3;
+  class FormRadioNativeTsx2 {
     constructor() {
       tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[6]);
-      if (closure_3.get()) {
-        tmp4 = selected;
-        backgroundColor = selected.backgroundColor;
+      if (closure_1.get()) {
+        tmp3 = closure_2;
+        backgroundColor = closure_2.backgroundColor;
       } else {
-        tmp3 = unselected;
-        backgroundColor = unselected.backgroundColor;
+        tmp2 = closure_3;
+        backgroundColor = closure_3.backgroundColor;
       }
-      return obj.withSpring(backgroundColor, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always");
+      return tmp(backgroundColor, closure_4, "animate-always");
     }
   }
-  const obj4 = selected(unselected[5]);
-  C.__closure = {
-    withSpring: selected(unselected[6]).withSpring,
-    selectedShared: sharedValue,
-    selectedStyles: selected2,
-    unselectedStyles: unselected,
-    SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING,
-  };
-  C.__workletHash = 7732795836606;
-  C.__initData = __initData2;
-  derivedValue1 = obj4.useDerivedValue(C);
-  const obj5 = {
-    withSpring: selected(unselected[6]).withSpring,
-    selectedShared: sharedValue,
-    selectedStyles: selected2,
-    unselectedStyles: unselected,
-    SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING,
-  };
-  const fn = function b() {
-    return { borderColor: derivedValue.get(), backgroundColor: derivedValue1.get() };
-  };
-  fn.__closure = { borderColor: derivedValue, backgroundColor: derivedValue1 };
-  fn.__workletHash = 5670342272321;
-  fn.__initData = __initData3;
-  closure_129_0 = enabled;
-  closure_129_1 = selected;
-  const animatedStyle = selected(unselected[5]).useAnimatedStyle(fn);
-  const obj6 = selected(unselected[5]);
-  const fn2 = function s() {
-    let num = 0.5;
-    if (selected) {
-      num = 1;
+  const items4 = [tmp15, tmp16, tmp17, tmp18, tmp19];
+  FormRadioNativeTsx2.__closure = items4;
+  FormRadioNativeTsx2.__workletHash = 13712264253863;
+  FormRadioNativeTsx2.__initData = tmp14;
+  const derivedValue1 = _mod1652.useDerivedValue(FormRadioNativeTsx2);
+  const tmp2Result = _mod1652;
+  const items5 = [closure_8, derivedValue, derivedValue1];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp21, tmp22, tmp23] = items5;
+  class FormRadioNativeTsx3 {
+    constructor() {
+      obj = { borderColor: closure_0.get(), backgroundColor: closure_1.get() };
+      return obj;
     }
-    let num2 = 0;
-    if (selected2) {
-      num2 = 1;
-    }
-    const obj2 = { opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
-    let num3 = 1;
-    if (!selected2) {
-      num3 = num;
-    }
-    const tmpResult = spring;
-    const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
-    obj2.transform = items;
-    return obj2;
-  };
-  const obj7 = selected(unselected[5]);
-  fn2.__closure = {
-    useReducedMotion: enabled,
-    withSpring: selected(unselected[6]).withSpring,
+  }
+  const items6 = [tmp22, tmp23];
+  FormRadioNativeTsx3.__closure = items6;
+  FormRadioNativeTsx3.__workletHash = 12595254902040;
+  FormRadioNativeTsx3.__initData = tmp21;
+  const animatedStyle = _mod1652.useAnimatedStyle(FormRadioNativeTsx3);
+  const tmp2Result3 = _mod1652;
+  const items7 = [
+    closure_9,
+    noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled,
+    spring_spring.withSpring,
     selected,
-    SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING,
-  };
-  fn2.__workletHash = 15209729079449;
-  fn2.__initData = __initData4;
-  const animatedStyle1 = obj7.useAnimatedStyle(fn2);
-  const obj9 = { style: null, children: null };
-  const items1 = [tmp.radio, animatedStyle];
-  obj9.style = items1;
-  const obj10 = { style: null };
-  const items2 = [tmp.dot, animatedStyle1];
-  obj10.style = items2;
-  obj9.children = derivedValue(selected2(unselected[5]).View, obj10);
-  return derivedValue(selected2(unselected[5]).View, obj9);
+    springPresets.SUBTLE_SPRING,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp25, tmp26, tmp27, tmp28, tmp29] = items7;
+  class FormRadioNativeTsx4 {
+    constructor() {
+      num = 0.5;
+      if (closure_0) {
+        num = 1;
+      }
+      tmp = closure_1;
+      num2 = 0;
+      tmp2 = closure_2;
+      if (closure_2) {
+        num2 = 1;
+      }
+      obj = { opacity: tmp(num2, closure_3, "animate-always"), transform: null };
+      tmp3 = closure_3;
+      num3 = 1;
+      if (!tmp2) {
+        num3 = num;
+      }
+      obj1 = { scale: tmp(num3, tmp3) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items8 = [tmp26, tmp27, tmp28, tmp29];
+  FormRadioNativeTsx4.__closure = items8;
+  FormRadioNativeTsx4.__workletHash = 9714979112288;
+  FormRadioNativeTsx4.__initData = tmp25;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(FormRadioNativeTsx4);
+  const obj3 = { style: null, children: null };
+  const items9 = [tmp.radio, animatedStyle];
+  obj3.style = items9;
+  const obj4 = { style: null };
+  const items10 = [tmp.dot, animatedStyle1];
+  obj4.style = items10;
+  obj3.children = jsx(_modDef1652.View, { style: null });
+  return jsx(_modDef1652.View, { style: null, children: null });
 }

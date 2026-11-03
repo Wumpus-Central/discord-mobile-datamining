@@ -10,7 +10,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildEventEnded = fn(6855).isGuildEventEnded;
+const isGuildEventEnded = fn(6975).isGuildEventEnded;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
@@ -104,7 +104,7 @@ export default function getNotificationCenterItemBody(arg0) {
     if (guildScheduledEvent != null) {
       guild_id = guildScheduledEvent.guild_id;
     }
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     let name4;
     if (guild != null) {
       name4 = guild.name;

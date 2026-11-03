@@ -11,9 +11,9 @@ const ThemeTypes = fn(1072).ThemeTypes;
 fn(12);
 const apply = fn(12);
 const memoizeResult = apply.memoize(
-  (memo) => {
+  (c1) => {
     const obj = shared;
-    const contrastingColor = obj.getContrastingColor(memo, {
+    const contrastingColor = obj.getContrastingColor(c1, {
       base: "#ffffff",
       contrastRatio: shared.WCAGContrastRatios.HighContrastText,
     });
@@ -54,7 +54,7 @@ export function calculateOverlayedColor(secondaryColor, overlay) {
     if (null == parseStringResult) {
       return 0;
     } else {
-      const items = [, ,];
+      items = [, ,];
       ({ red: arr[0], green: arr[1], blue: arr[2] } = parseStringResult);
       const items1 = [, ,];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult;
@@ -103,7 +103,7 @@ export const calculateModalV2BackgroundColor = apply.memoize(
 export function getGradientPercentageColorInRgb(arg0, arg1, arg2) {
   const result = arg2 / 100;
   const diff = 1 - result;
-  const items = [
+  items = [
     Math.round(arg0[0] * diff + arg1[0] * result),
     Math.round(arg0[1] * diff + arg1[1] * result),
     Math.round(arg0[2] * diff + arg1[2] * result),
@@ -119,7 +119,7 @@ export function calculateGradientSplitColors(modalV2BackgroundColor, modalV2Back
     const result = (100 * arg3) / arg2 / 100;
     const diff = 1 - result;
     const _Math = Math;
-    const items = [Math.round(int2rgbArrayResult[0] * diff + int2rgbArrayResult1[0] * result), ,];
+    items = [Math.round(int2rgbArrayResult[0] * diff + int2rgbArrayResult1[0] * result), ,];
     const _Math2 = Math;
     items[1] = Math.round(int2rgbArrayResult[1] * diff + int2rgbArrayResult1[1] * result);
     const _Math3 = Math;
@@ -146,7 +146,7 @@ export function getUserProfileGradientContainerColors(result, result1, str) {
     if (null != result) {
       int2rgbaResult = utils_ColorUtils.int2rgba(result, 1);
     }
-    const items = [int2rgbaResult];
+    items = [int2rgbaResult];
     if (null != result1) {
       int2rgbaResult1 = utils_ColorUtils.int2rgba(result1, 1);
     }

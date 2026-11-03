@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   base: { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 },
   danger: null,
@@ -23,7 +23,7 @@ obj2.brand = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 const obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 obj2.expressive = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 const obj9 = {
   text: { textAlign: "center", textTransform: "uppercase" },
   dangerText: null,
@@ -54,11 +54,11 @@ export function TextBadge(color) {
   const tmp2 = closure_4();
   const tmp3 = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp2.base, tmp2[DANGER], style];
+  items = [tmp2.base, tmp2[DANGER], style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/bold", style: null, children: text };
+  const obj2 = { variant: "text-xs/semibold", style: null, children: text };
   const items1 = [tmp3.text, tmp3["" + DANGER + "Text"], textStyle];
   obj2.style = items1;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: null, children: text });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: null, children: text });
   return <View style={null}>{null}</View>;
 }

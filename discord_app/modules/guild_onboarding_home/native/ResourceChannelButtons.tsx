@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   wrapper: {
     display: "flex",
@@ -40,7 +40,7 @@ export default function ResourceChannelButtons(channel) {
   const obj = channel(first[6]);
   [first] = channel(first[7]).usePreviousAndNextResourceChannel(channel.guild_id, channel.id);
   _slicedToArray = tmp7;
-  const items = [channel.guild_id, navigation];
+  items = [channel.guild_id, navigation];
   noop = noop.useCallback((channelId) => {
     navigation.goBack();
     const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(

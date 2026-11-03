@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ statusLabel: { flexDirection: "row", alignItems: "center", gap: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardStatusLabel.tsx");
@@ -36,7 +36,7 @@ export default function OrbsArcadeRewardStatusLabel(status) {
     }
   }
   obj2.children = stringResult;
-  const items = [React4(Text_Text.Text, obj2)];
+  items = [React4(Text_Text.Text, obj2)];
   let tmp3Result = null;
   if (status === OrbsArcadeTypes.OrbsArcadeRewardStatus.LOCKED) {
     const obj3 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };

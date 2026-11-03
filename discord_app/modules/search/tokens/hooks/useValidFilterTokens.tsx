@@ -10,20 +10,20 @@ const result = size.fileFinishedImporting("modules/search/tokens/hooks/useValidF
 
 export function useValidOrderedFilterTokens(searchContext) {
   _require = searchContext;
-  let items = [StreamerModeStore];
+  items = [StreamerModeStore];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     return SearchTokenStreamerModeUtils.getValidOrderedFilterTokens(closure_0, items);
   });
 }
 export function useValidFilterTokens(searchContext) {
   _require = searchContext;
-  let items = [StreamerModeStore];
+  items = [StreamerModeStore];
   const items1 = [searchContext];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [StreamerModeStore];
+      items = [StreamerModeStore];
       return SearchTokenStreamerModeUtils.getValidFilterTokens(closure_0, items);
     },
     items1,

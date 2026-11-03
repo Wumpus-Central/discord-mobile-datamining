@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9116 from "../../../../../_runtime/metro/09116__.js";
+import _modDef9244 from "../../../../../_runtime/metro/09244__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import _modDef10978 from "../../../../../_runtime/metro/10978__.js";
+import _modDef11111 from "../../../../../_runtime/metro/11111__.js";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
 import useEventsButtonPropsDefault from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
@@ -20,7 +20,7 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 require = fn;
 function handleInviteDisabledPress() {
   const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[11], paths.paths));
-  useAlertStore.openAlert("invites-disabled", closure_1_12(lazyResult, {}));
+  useAlertStore.openAlert("invites-disabled", application_id(lazyResult, {}));
 }
 function GuildSearchAndInvite(guildId) {
   guildId = guildId.guildId;
@@ -37,7 +37,7 @@ function GuildSearchAndInvite(guildId) {
   let obj = guildId(invitesDisabled[14]);
   closure_9 = guildId(invitesDisabled[15]).useGuildSearchContext(guildId);
   const tmp5 = canInvite(invitesDisabled[16])(() => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -61,7 +61,7 @@ function GuildSearchAndInvite(guildId) {
   });
   let obj2 = guildId(invitesDisabled[15]);
   const iOSPressEffects = guildId(invitesDisabled[19]).useIOSPressEffects(4);
-  let items = [canInvite, invitesDisabled, onInvitePress];
+  items = [canInvite, invitesDisabled, onInvitePress];
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
   const items1 = [useEventsButton, onEventsPress, hasUnreadEvents, tmp.badge];
   const memo = onInvitePress.useMemo(() => {
@@ -70,7 +70,7 @@ function GuildSearchAndInvite(guildId) {
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: _modDef10978,
+        icon: _modDef11111,
         onPress: onInvitePress,
         onPressDisabled: handleInviteDisabledPress,
         accessibilityLabel: null,
@@ -80,7 +80,7 @@ function GuildSearchAndInvite(guildId) {
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.VINpSK);
       obj.disabled = invitesDisabled;
-      tmp = closure_2_12(IconButton.IconButton, obj);
+      tmp = application_id(IconButton.IconButton, obj);
     }
     return tmp;
   }, items);
@@ -130,12 +130,12 @@ function GuildSearchAndInvite(guildId) {
   return closure_13(onEventsPress, tmp14);
 }
 const View = fn(17).View;
-const SEARCH_BAR_MARGIN_BOTTOM = fn(11046).SEARCH_BAR_MARGIN_BOTTOM;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(11186).SEARCH_BAR_MARGIN_BOTTOM;
 const Constants = fn(1072);
-({ GuildFeatures: c10, InstantInviteSources: closure_11 } = Constants);
+({ GuildFeatures: closure_10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -174,7 +174,7 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [guild];
   const stateFromStores = guild(504).useStateFromStores(
     items,
@@ -195,8 +195,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
       constants2.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(13929).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(13929);
+  const shouldShowInvitesDisabledNotif = guild(14060).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(14060);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = {
     guildId: guild.id,

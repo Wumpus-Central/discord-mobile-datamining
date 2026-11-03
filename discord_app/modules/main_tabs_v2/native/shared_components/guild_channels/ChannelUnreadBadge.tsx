@@ -8,10 +8,10 @@ const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6776).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" },
   unreadBadgePanel: { marginLeft: -16 },
@@ -32,7 +32,7 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
   useFontScale;
   let tmp8Result = null;
   if (unread) {
-    const items = [tmp.unreadBadge, , ,];
+    items = [tmp.unreadBadge, , ,];
     let unreadBadgePanel;
     if (flag) {
       unreadBadgePanel = tmp.unreadBadgePanel;

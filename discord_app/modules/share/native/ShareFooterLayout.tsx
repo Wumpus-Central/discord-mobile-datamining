@@ -1,19 +1,20 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
-const obj2 = {
+const createStyles = fn(5141);
+let obj2 = {
   footer: {
     display: "flex",
     flexDirection: "column",
@@ -53,8 +54,8 @@ let obj4 = {
 };
 obj2.chatRow = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
 let closure_7 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function ShareFooterLayoutTsx1(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};}",
+let closure_8 = {
+  code: "(function ShareFooterLayoutTsx1(){let[withSpring,footerPaddingBottom,ON_PRESS_SPRING]=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
@@ -67,47 +68,48 @@ export default function ShareFooterLayout(arg0) {
     tmp.footer.paddingVertical +
     useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false })
       .insets.bottom;
-  _require = sum;
-  const fn = function f() {
-    const obj = { paddingBottom: spring.withSpring(c0, springPresets.ON_PRESS_SPRING, "respect-motion-settings") };
-    return obj;
-  };
-  let obj = require("ReanimatedRexport");
-  const tmp4 = _require;
-  fn.__closure = {
-    withSpring: require("spring").withSpring,
-    footerPaddingBottom: sum,
-    ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING,
-  };
-  fn.__workletHash = 2871405301293;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj3 = { style: null, children: null };
-  const items = [tmp.footer, animatedStyle];
-  obj3.style = items;
-  let tmp6Result = null;
+  items = [closure_8, spring_spring.withSpring, sum, springPresets.ON_PRESS_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp6, tmp7, tmp8, tmp9] = items;
+  class ShareFooterLayoutTsx1 {
+    constructor() {
+      obj = { paddingBottom: closure_0(closure_1, closure_2, "respect-motion-settings") };
+      return obj;
+    }
+  }
+  const items1 = [tmp7, tmp8, tmp9];
+  ShareFooterLayoutTsx1.__closure = items1;
+  ShareFooterLayoutTsx1.__workletHash = 16457312043220;
+  ShareFooterLayoutTsx1.__initData = tmp6;
+  const animatedStyle = _mod1652.useAnimatedStyle(ShareFooterLayoutTsx1);
+  const obj2 = { style: null, children: null };
+  const items2 = [tmp.footer, animatedStyle];
+  obj2.style = items2;
+  let tmp11Result = null;
   if (null != preview) {
-    const obj4 = { children: null };
-    const items1 = [preview];
-    const obj5 = { style: tmp.footerSeparator };
-    items1[1] = closure_4(View, obj5);
-    obj4.children = items1;
-    tmp6Result = closure_6(closure_5, obj4);
+    const obj3 = { children: null };
+    const items3 = [preview];
+    const obj4 = { style: tmp.footerSeparator };
+    items3[1] = React4(View, obj4);
+    obj3.children = items3;
+    tmp11Result = timestampProducer(hasOwnProperty, obj3);
   }
-  const items2 = [tmp6Result];
-  const obj6 = { style: tmp.warningWrapper, children: null };
-  const obj7 = { style: tmp.chatRow, children: null };
-  const items3 = [chatInput, sendButton];
-  obj7.children = items3;
-  const items4 = [closure_6(View, obj7)];
-  let tmp12 = null != warningText;
-  if (tmp12) {
-    const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-    tmp12 = closure_4(tmp4(5624).Text, obj8);
+  const items4 = [tmp11Result];
+  const obj5 = { style: tmp.warningWrapper, children: null };
+  const obj6 = { style: tmp.chatRow, children: null };
+  const items5 = [chatInput, sendButton];
+  obj6.children = items5;
+  const items6 = [timestampProducer(View, obj6)];
+  let tmp17 = null != warningText;
+  if (tmp17) {
+    const obj7 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
+    tmp17 = React4(Text_Text.Text, obj7);
   }
-  items4[1] = tmp12;
-  obj6.children = items4;
-  items2[1] = closure_6(View, obj6);
-  obj3.children = items2;
-  return closure_6(ReanimatedRexportDefault.View, obj3);
+  items6[1] = tmp17;
+  obj5.children = items6;
+  items4[1] = timestampProducer(View, obj5);
+  obj2.children = items4;
+  return timestampProducer(_modDef1652.View, obj2);
 }

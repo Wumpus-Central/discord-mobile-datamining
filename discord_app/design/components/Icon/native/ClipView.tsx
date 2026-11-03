@@ -2,7 +2,7 @@
 import CutoutBackgroundContext from "CutoutBackgroundContext.tsx";
 import ClipViewNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import 01652__ from "../../../../../_runtime/metro/01652__.js";
 
 require = fn;
 function SolidCutout(arg0) {
@@ -30,11 +30,7 @@ function SolidCutout(arg0) {
 }
 function SolidCutoutOverlay(arg0) {
   ({ backgroundColor: require, cutouts } = arg0);
-  return closure_4(closure_3, {
-    pointerEvents: "none",
-    style: closure_10.solidCutoutContainer,
-    children: cutouts.map((cutout, index) => React4(SolidCutout, { backgroundColor, cutout }, index)),
-  });
+  return closure_4(closure_3, { pointerEvents: "none", style: closure_10.solidCutoutContainer, children: cutouts.map((cutout, index) => React4(SolidCutout, { backgroundColor, cutout }, index)) });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
@@ -47,7 +43,7 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.solidCutoutContainer = {};
 obj2.solidCutout = { position: "absolute" };
 const styles = StyleSheet.create(obj2);
-const ClipViewNativeComponent = ReanimatedRexport.createAnimatedComponent(ClipViewNativeComponentDefault);
+const ClipViewNativeComponent = module_1652.createAnimatedComponent(ClipViewNativeComponentDefault);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 
@@ -75,9 +71,9 @@ export default function ClipView(cutouts) {
   const merged1 = Object.assign(merged);
   obj3.cutouts = tmp5;
   obj3.style = style;
-  const items = [children, tmp4];
+  items = [children, tmp4];
   obj3.children = items;
   return hasOwnProperty(ClipViewNativeComponentDefault, obj3);
-}
+};
 export const ClipViewAnimated = ClipViewNativeComponent;
 export { CutoutShape };

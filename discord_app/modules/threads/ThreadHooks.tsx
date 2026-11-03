@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 function useCanStartPrivateThread(type) {
   _require = type;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [type];
   let tmp3 = type.type === constants3.GUILD_TEXT;
   const stateFromStores = require("initialize").useStateFromStores(
@@ -45,7 +45,7 @@ function useCanStartPrivateThread(type) {
 }
 function useCanUnarchiveThread(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
@@ -81,7 +81,7 @@ function useCanUnarchiveThread(channel) {
   const obj2 = require("initialize");
   const items3 = [PermissionStore];
   const stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     const first = _slicedToArray(items, 1)[0];
     let canResult = null != closure_0;
     if (canResult) {
@@ -123,7 +123,7 @@ function canUnarchiveThread(stateFromStores) {
   if (canResult) {
     canResult = canResult1;
   }
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const first = _slicedToArray(items, 1)[0];
   let canResult2 = null != stateFromStores;
   if (canResult2) {
@@ -144,7 +144,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4867).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4994).THREADED_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = {
@@ -163,7 +163,7 @@ const result = size.fileFinishedImporting("modules/threads/ThreadHooks.tsx");
 export const VoiceInThreadsExperiment = importDefaultResultResult;
 export function useCanStartPublicThread(type, arg1) {
   _require = type;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [type];
   let flag = false;
   if (
@@ -249,7 +249,7 @@ export function computeCanStartPrivateThread(type, hasFlag) {
 }
 export function useCanStartThread(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   let flag = false;
   if (
@@ -278,7 +278,7 @@ export function useCanStartThread(channel) {
 }
 export function useCanViewThreadForMessage(hasFlag) {
   _require = hasFlag;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [hasFlag];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -302,7 +302,7 @@ export function useCanViewThreadForMessage(hasFlag) {
 }
 export function useHasActiveThreads(channel) {
   _require = channel;
-  const items = [ActiveJoinedThreadsStore, PermissionStore];
+  items = [ActiveJoinedThreadsStore, PermissionStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const activeJoinedThreadsForParent = ActiveJoinedThreadsStore.getActiveJoinedThreadsForParent(
       user.guild_id,
@@ -348,7 +348,7 @@ export function useHasActiveThreads(channel) {
 }
 export function useCanManageThread(channel) {
   _require = channel;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     parent_id = undefined;
     if (parent_id != null) {
@@ -451,19 +451,19 @@ export function getIsActiveChannelOrUnarchivableThread(channel) {
   }
   return tmp;
 }
-export function computeIsReadOnlyThread(channel) {
-  if (channel.isMediaThread()) {
+export function computeIsReadOnlyThread(c0) {
+  if (_require.isMediaThread()) {
     return true;
   } else {
-    const canResult = PermissionStore.can(constants.MANAGE_THREADS, channel);
-    return channel.isArchivedLockedThread() && !PermissionStore.can(constants.MANAGE_THREADS, channel);
+    const canResult = PermissionStore.can(constants.MANAGE_THREADS, _require);
+    return _require.isArchivedLockedThread() && !PermissionStore.can(constants.MANAGE_THREADS, _require);
   }
 }
 export function useIsThreadModerator(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     const first = _slicedToArray(items, 1)[0];
     let canResult = null != closure_0;
     if (canResult) {
@@ -475,7 +475,7 @@ export function useIsThreadModerator(channel) {
 export function isThreadModerator(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     tmp = items;
   }
   const first = _slicedToArray(tmp, 1)[0];
@@ -487,7 +487,7 @@ export function isThreadModerator(arg0) {
 }
 export function useCanRemoveThreadMember(channelId) {
   _require = channelId;
-  let items = [ChannelStore, PermissionStore, AuthenticationStore];
+  items = [ChannelStore, PermissionStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null == channel) {
@@ -495,7 +495,7 @@ export function useCanRemoveThreadMember(channelId) {
     } else {
       let tmp5 = channel.type === constants3.PRIVATE_THREAD && channel.ownerId === tmp3;
       if (!tmp5) {
-        const items = [PermissionStore];
+        items = [PermissionStore];
         const first = _slicedToArray(items, 1)[0];
         let canResult = null != channel;
         if (canResult) {
@@ -510,7 +510,7 @@ export function useCanRemoveThreadMember(channelId) {
 export function useIsThreadMember(channelId, id) {
   _require = channelId;
   closure_1 = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let isThreadResult;
@@ -549,7 +549,7 @@ export function useIsThreadMember(channelId, id) {
 }
 export function useHasPermissionToJoinThreadVoice(isThread) {
   _require = isThread;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(constants.CONNECT, closure_0),
   );
@@ -585,7 +585,7 @@ export function useHasPermissionToJoinThreadVoice(isThread) {
 export function useCanJoinThreadVoice(channel) {
   const tmp2 = useIsRemoteDefault();
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(constants.CONNECT, closure_0),
   );
@@ -626,8 +626,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6734).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6734);
+    shouldAgeVerifyForAgeGate = tmp3(6854).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6854);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {
@@ -649,9 +649,9 @@ export function useCanJoinThreadVoice(channel) {
 }
 export function useIsNonModInLockedThread(channel) {
   _require = channel;
-  let items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const items = [PermissionStore];
+    items = [PermissionStore];
     const first = _slicedToArray(items, 1)[0];
     let canResult = null != closure_0;
     if (canResult) {
@@ -663,7 +663,7 @@ export function useIsNonModInLockedThread(channel) {
   return channel.isLockedThread() && !stateFromStores;
 }
 export function isNonModInLockedThread(isLockedThread) {
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const first = _slicedToArray(items, 1)[0];
   let canResult = null != isLockedThread;
   if (canResult) {

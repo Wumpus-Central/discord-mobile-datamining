@@ -26,7 +26,7 @@ prototype["getWishlist"] = function getWishlist(wishlistId) {
 prototype["getWishlistItems"] = function getWishlistItems(firstWishlistId) {
   const data = this.get(firstWishlistId).data;
   if (null != data) {
-    let items = React3(data);
+    items = React3(data);
   } else {
     items = [];
   }
@@ -122,7 +122,7 @@ const wishlistStore = new WishlistStore(DispatcherDefault, {
     }
     if (null != tmp2.data) {
       const obj2 = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
-      const items = tmp2.data.items;
+      items = tmp2.data.items;
       obj2.items = items.filter((skuId) => skuId.skuId !== require);
       obj2.applications = tmp2.data.applications;
       const tmp7 = new WishlistRecord(obj2);

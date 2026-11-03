@@ -1,57 +1,78 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-
-const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 function FadeTransitionItem(state) {
   state = state.state;
+  _require = state;
   const cleanup = state.cleanup;
   let sharedValue;
-  const tmp3 = state === state(sharedValue[4]).TransitionStates.YEETED;
+  const tmp3 = state === require("native").TransitionStates.YEETED;
   let num = 1;
   if (tmp3) {
     num = 0;
   }
-  sharedValue = state(sharedValue[5]).useSharedValue(num);
-  const items = [state, sharedValue, cleanup];
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
-    if (state === native.TransitionStates.YEETED) {
-      const tmpResult = timing;
-      const fn = function t(arg0) {
-        if (true === arg0) {
-          state(sharedValue[5]).runOnJS(cleanup)();
-          const obj = state(sharedValue[5]);
+    if (c0 === native.TransitionStates.YEETED) {
+      const tmpResult = timing_timing;
+      items = [closure_7, _mod1705.scheduleOnRN, cleanup];
+      c0 = undefined;
+      c1 = undefined;
+      [tmp11, tmp12, tmp13] = items;
+      class ChatInputActionButtonTransitionItemTsx1 {
+        constructor(arg0) {
+          if (true === arg0) {
+            tmp = closure_0;
+            tmp2 = closure_1;
+            tmp3 = closure_0(closure_1);
+          }
+          return;
         }
-      };
-      let obj = { runOnJS: ReanimatedRexport.runOnJS, cleanup };
-      fn.__closure = obj;
-      fn.__workletHash = 10965161938750;
-      fn.__initData = __initData;
-      const result = sharedValue.set(tmpResult.withTiming(0, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings", fn));
+      }
+      const items1 = [tmp12, tmp13];
+      ChatInputActionButtonTransitionItemTsx1.__closure = items1;
+      ChatInputActionButtonTransitionItemTsx1.__workletHash = 2879120786854;
+      ChatInputActionButtonTransitionItemTsx1.__initData = tmp11;
+      const result = sharedValue.set(
+        tmpResult.withTiming(
+          0,
+          CHAT_INPUT_TIMING_CONFIG,
+          "respect-motion-settings",
+          ChatInputActionButtonTransitionItemTsx1,
+        ),
+      );
     } else {
-      const result1 = sharedValue.set(timing.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
-      const tmpResult2 = timing;
+      const result1 = sharedValue.set(timing_timing.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
+      const tmpResult2 = timing_timing;
     }
   }, items);
-  let obj = state(sharedValue[5]);
-  class T {
+  const obj = require("../../../../../_runtime/metro/01652__.js");
+  let items1 = [closure_8, sharedValue];
+  _require = undefined;
+  [tmp6, tmp7] = items1;
+  class ChatInputActionButtonTransitionItemTsx2 {
     constructor() {
-      obj = { opacity: closure_2.get() };
+      obj = { opacity: closure_0.get() };
       return obj;
     }
   }
-  T.__closure = { visible: sharedValue };
-  T.__workletHash = 13386937038500;
-  T.__initData = __initData;
-  const animatedStyle = state(sharedValue[5]).useAnimatedStyle(T);
+  const items2 = [tmp7];
+  ChatInputActionButtonTransitionItemTsx2.__closure = items2;
+  ChatInputActionButtonTransitionItemTsx2.__workletHash = 10652693384285;
+  ChatInputActionButtonTransitionItemTsx2.__initData = tmp6;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ChatInputActionButtonTransitionItemTsx2,
+  );
   const obj2 = { style: null };
-  const items1 = [closure_6.transitionItem, animatedStyle];
-  obj2.style = items1;
+  const items3 = [closure_6.transitionItem, animatedStyle];
+  obj2.style = items3;
   let str = "none";
   if (!tmp3) {
     str = "auto";
@@ -78,7 +99,7 @@ function BounceTransitionItem(state) {
   };
   ({ isInteractive, animatedStyle } = useChatInputFloatingBounceDefault(obj));
   const obj2 = { style: null };
-  const items = [closure_6.transitionItemCentered, animatedStyle];
+  items = [closure_6.transitionItemCentered, animatedStyle];
   obj2.style = items;
   let str = "none";
   if (isInteractive) {
@@ -92,10 +113,10 @@ function BounceTransitionItem(state) {
   obj3.importantForAccessibility = str2;
   const merged = Object.assign(obj3);
   obj2.children = children;
-  return jsx(ReanimatedRexportDefault.View, { style: null });
+  return jsx(_modDef1652.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12809).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12945).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({
   transitionItem: { position: "absolute" },
@@ -110,10 +131,10 @@ const styles = StyleSheet.create({
   },
 });
 let closure_7 = {
-  code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}",
+  code: "(function ChatInputActionButtonTransitionItemTsx1(finished){let[scheduleOnRN,cleanup]=this.__closure;if(finished===true){scheduleOnRN(cleanup);}})",
 };
-const __initData = {
-  code: "function ChatInputActionButtonTransitionItemTsx2(){const{visible}=this.__closure;return{opacity:visible.get()};}",
+let closure_8 = {
+  code: "(function ChatInputActionButtonTransitionItemTsx2(){let[visible]=this.__closure;return{opacity:visible.get()};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting(

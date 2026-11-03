@@ -51,7 +51,7 @@ export function BaseTextField(onChangeText) {
     tmp6 = obj5;
     tmpResult7 = PlatformUtils;
   }
-  const items = [onChangeText];
+  items = [onChangeText];
   const callback = noop.useCallback((str) => {
     let replaced = str;
     if (null != str) {

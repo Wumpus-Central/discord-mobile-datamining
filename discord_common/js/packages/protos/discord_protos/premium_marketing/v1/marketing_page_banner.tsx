@@ -59,7 +59,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button_variant",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant",
           MarketingPageBannerButtonVariant,
           "MARKETING_PAGE_BANNER_BUTTON_VARIANT_",
@@ -278,7 +278,7 @@ items[8] = {
   name: "button_variant",
   kind: "enum",
   T() {
-    const items = [
+    items = [
       "discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant",
       MarketingPageBannerButtonVariant,
       "MARKETING_PAGE_BANNER_BUTTON_VARIANT_",

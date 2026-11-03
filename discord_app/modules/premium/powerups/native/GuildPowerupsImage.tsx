@@ -7,7 +7,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" },
 });
@@ -21,7 +21,7 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = closure_5();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
     if (isAnimated) {

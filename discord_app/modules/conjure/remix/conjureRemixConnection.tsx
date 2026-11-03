@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 require = fn;
 let closure_5 = async function _acceptRemix(arg0) {
   closure_3 = tmp2;
-  const items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
+  items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
   await Promise.all(items);
   if (1 === tmp5) {
     if (arg0 === 1) {

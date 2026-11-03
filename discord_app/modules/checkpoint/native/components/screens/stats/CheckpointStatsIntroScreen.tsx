@@ -7,7 +7,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexGrow: 1,
@@ -39,8 +39,8 @@ export default function CheckpointStatsIntroScreen(title) {
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, children: null };
-  const items = [icon];
-  const obj4 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  items = [icon];
+  const obj4 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
   const tmp2 = CheckpointScreenDefault;
   obj4.children = title.toLocaleUpperCase();
   items[1] = React3(CheckpointTextDefault, obj4);

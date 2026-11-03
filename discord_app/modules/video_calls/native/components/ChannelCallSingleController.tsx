@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 export function ChannelCallSingleController(selectedParticipant) {
   selectedParticipant = selectedParticipant.selectedParticipant;
   const channel = selectedParticipant.channel;
-  const items = [channel.id];
+  items = [channel.id];
   const effect = noop.useEffect(() => {
     const obj = AnalyticsUtilsDefault;
     const obj2 = { video_layout: "focus" };
@@ -30,13 +30,13 @@ export function ChannelCallSingleController(selectedParticipant) {
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 12008 : 12010);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 12145 : 12147);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(12011), { participant: selectedParticipant, channel });
+    return jsx(channel(12148), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

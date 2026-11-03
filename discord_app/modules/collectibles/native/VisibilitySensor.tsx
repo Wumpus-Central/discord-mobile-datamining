@@ -29,7 +29,7 @@ export default function _default(onChange) {
   const width = size.width;
   const height = size.height;
   React3(null);
-  const items = [resetKey];
+  items = [resetKey];
   React2(() => {
     closure_2.current = false;
   }, items);

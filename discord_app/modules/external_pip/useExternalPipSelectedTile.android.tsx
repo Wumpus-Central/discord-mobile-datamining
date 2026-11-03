@@ -5,7 +5,7 @@ import PIPSpeakerStore from "../voice_panel/native/pip/PIPSpeakerStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-const VoicePanelPIPModes = fn(19115).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
 
@@ -16,7 +16,7 @@ export default function useExternalPipSelectedTile(arg0, arg1, arg2) {
   if (arg2 === VoicePanelPIPModes.IN_APP) {
     str = "pip";
   }
-  let items = [arg0, arg1, str];
+  items = [arg0, arg1, str];
   const effect = noop.useEffect(() => {
     function update() {
       if (channelId.getChannelId() === batchedStoreListener) {
@@ -48,7 +48,7 @@ export default function useExternalPipSelectedTile(arg0, arg1, arg2) {
         const obj = batchedStoreListener(str[5]);
       }
     }
-    const items = [channelId, speakerId];
+    items = [channelId, speakerId];
     HermesBuiltin.arraySpread(batchedStoreListener(str[5]).EXTERNAL_PIP_SELECTED_PARTICIPANT_STORES, 2);
     batchedStoreListener = new batchedStoreListener(str[7]).BatchedStoreListener(items, update);
     batchedStoreListener.attach("useExternalPipSelectedTile");

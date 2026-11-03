@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3060 from "../../Checkpoint.messages.js";
+import _modDef3187 from "../../Checkpoint.messages.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import MicrophoneIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
@@ -32,7 +32,7 @@ export default function CheckpointGuildStats(arg0) {
   const rounded1 = Math.round(numMessagesSent);
   const intl = util.intl;
   const intl2 = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3060.UZbUtl, { numMinutes: rounded });
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef3187.UZbUtl, { numMinutes: rounded });
   const obj = { style: tmp.stats, children: null };
   const obj2 = {
     accessible: true,
@@ -40,25 +40,21 @@ export default function CheckpointGuildStats(arg0) {
     style: tmp.stat,
     children: null,
   };
-  const items = [
+  items = [
     hasOwnProperty(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }),
-    hasOwnProperty(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.text, children: rounded }),
+    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: rounded }),
   ];
   obj2.children = items;
   const items1 = [timestampProducer(View, obj2)];
   const obj5 = {
     accessible: true,
-    accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3060.wWKySP).toLocaleLowerCase(),
+    accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3187.wWKySP).toLocaleLowerCase(),
     style: tmp.stat,
     children: null,
   };
   const items2 = [
     hasOwnProperty(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }),
-    hasOwnProperty(CheckpointTextDefault, {
-      variant: "experimental/mono-md/bold",
-      style: tmp.text,
-      children: rounded1,
-    }),
+    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: rounded1 }),
   ];
   obj5.children = items2;
   items1[1] = timestampProducer(View, obj5);

@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_notifications/native/MessageNotification.tsx
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(11023);
+const InAppNotificationConstants = fn(11156);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let closure_9 = noop.memo(function MessagePreview(message) {
   return jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight });
@@ -29,7 +29,7 @@ export default noop.memo(function MessageNotification(notification) {
   const message = notification.message;
   const channel = notification.channel;
   const parentChannel = notification.parentChannel;
-  const guild = notification.guild;
+  guild = notification.guild;
   let tmp2 = 0 === message.content.length;
   if (tmp2) {
     tmp2 = null !== message.interaction;
@@ -57,7 +57,7 @@ export default noop.memo(function MessageNotification(notification) {
   const tmp = closure_8();
   nullableMessageAuthor = message(parentChannel[9]).useNullableMessageAuthor(message);
   const obj3 = message(parentChannel[9]);
-  const items = [nullableMessageAuthor];
+  items = [nullableMessageAuthor];
   let colorString;
   const stateFromStores = message(parentChannel[6]).useStateFromStores(items, () => nullableMessageAuthor.roleStyle);
   if (nullableMessageAuthor != null) {
@@ -98,7 +98,7 @@ export default noop.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11067, dependencyMap.paths),
+        asyncRequireImpl(11204, dependencyMap.paths),
         { channelId: channel.id },
         "in-app-notification-settings-modal",
       ),

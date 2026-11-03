@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { gap: nativeDefault.space.PX_4 }, line: null };
 let obj3 = { gap: nativeDefault.space.PX_4 };
 obj2.line = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -22,7 +22,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
   ({ localizedNumber, subtext } = metricKey);
   ({ title, isTrendingUp, isTrendingDown } = metricKey);
   const tmp = closure_8();
-  const items = [description, metricKey];
+  items = [description, metricKey];
   const callback = noop.useCallback(() => {
     if (null != description) {
       const _HermesInternal = HermesInternal;
@@ -33,7 +33,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
   let obj = { variant: "secondary", border: "subtle", style: tmp.card, children: null };
   let obj2 = { style: tmp.line, children: null };
   const items1 = [
-    closure_6(metricKey(5624).Text, { variant: "text-md/medium", color: "text-subtle", children: title }),
+    closure_6(metricKey(5747).Text, { variant: "text-md/medium", color: "text-subtle", children: title }),
   ];
   let tmp7Result = null;
   if (null != description) {
@@ -45,7 +45,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       children: null,
     };
     const obj4 = { size: "xs", color: description(575).colors.INTERACTIVE_ICON_DEFAULT };
-    obj3.children = closure_6(tmp4(5735).CircleInformationIcon, obj4);
+    obj3.children = closure_6(tmp4(5855).CircleInformationIcon, obj4);
     tmp7Result = closure_6(closure_4, obj3);
   }
   items1[1] = tmp7Result;
@@ -61,7 +61,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
     localizedNumber = intl.string(tmp4(1113).t.jHpxwo);
   }
   obj5.children = localizedNumber;
-  items2[1] = closure_6(metricKey(5624).Text, obj5);
+  items2[1] = closure_6(metricKey(5747).Text, obj5);
   let tmp3Result = null;
   if (null != subtext) {
     const obj6 = { style: tmp.line, children: null };
@@ -75,7 +75,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl2 = tmp4(1113).intl;
       obj7.accessibilityLabel = intl2.string(tmp4(1113).t["8mcccd"]);
-      tmp7Result3 = closure_6(tmp4(11351).ArrowLargeUpIcon, obj7);
+      tmp7Result3 = closure_6(tmp4(11488).ArrowLargeUpIcon, obj7);
     }
     const items3 = [tmp7Result3, ,];
     let tmp7Result4 = null;
@@ -88,15 +88,15 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl3 = tmp4(1113).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1113).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(19872).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(20022).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "text-xs/normal", color: "text-subtle", children: subtext };
-    items3[2] = closure_6(tmp4(5624).Text, obj9);
+    items3[2] = closure_6(tmp4(5747).Text, obj9);
     obj6.children = items3;
     tmp3Result = closure_7(closure_5, obj6);
   }
   items2[2] = tmp3Result;
   obj.children = items2;
-  return closure_7(metricKey(6977).Card, obj);
+  return closure_7(metricKey(7103).Card, obj);
 }

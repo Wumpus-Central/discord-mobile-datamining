@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scroll: { flex: 1 },
@@ -47,7 +47,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const tmp = closure_9();
   [highlightedSkuId, closure_4] = noop.useState(defaultHighlightedReward);
   [first1, closure_6] = noop.useState(false);
-  const items = [onSelect, highlightedSkuId, claimableRewards];
+  items = [onSelect, highlightedSkuId, claimableRewards];
   const callback = noop.useCallback(() => {
     const found = claimableRewards.find((item) => item === highlightedSkuId);
     if (null != found) {
@@ -90,7 +90,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const obj3 = { style: tmp.headerContainer, children: null };
   const obj4 = {
     style: tmp.header,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,

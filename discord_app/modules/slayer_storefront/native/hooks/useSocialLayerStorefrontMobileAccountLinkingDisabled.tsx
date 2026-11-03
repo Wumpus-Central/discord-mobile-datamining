@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 
 export function useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId) {
   _require = applicationId;
-  const items = [SocialLayerStorefrontStore];
+  items = [SocialLayerStorefrontStore];
   const items1 = [applicationId];
   return require("initialize").useStateFromStores(
     items,

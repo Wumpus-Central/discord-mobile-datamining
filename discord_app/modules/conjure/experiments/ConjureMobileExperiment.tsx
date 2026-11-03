@@ -15,7 +15,7 @@ export default apexExperiment;
 export function useIsConjureMobileEnabled(canConjureCustomWidget, ConjureAppChannelSheet) {
   _require = canConjureCustomWidget;
   dependencyMap = ConjureAppChannelSheet;
-  const items = [require("ApexExperiment").ApexExperimentStore];
+  items = [require("ApexExperiment").ApexExperimentStore];
   const items1 = [canConjureCustomWidget, ConjureAppChannelSheet];
   return require("initialize").useStateFromStores(
     items,

@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyleProperties({
   muted: nativeDefault.colors.TEXT_MUTED,
   normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,
@@ -26,7 +26,7 @@ export default noop.memo(function ChannelTitle(unread) {
   const connected = unread.connected;
   let tmp2 = closure_6();
   const normal = tmp2;
-  const items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
+  items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
   const memo = connected.useMemo(() => {
     let color = normal.normal;
     if (muted) {

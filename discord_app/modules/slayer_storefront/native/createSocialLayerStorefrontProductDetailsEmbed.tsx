@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3738 from "../intl/SlayerStorefront.messages.js";
+import _modDef3865 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
@@ -13,7 +13,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -76,7 +76,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3738.BKf0MM);
+              stringResult = string(_modDef3865.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -106,7 +106,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
 }
 export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(stateFromStores) {
   _require = stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   const memo = noop.useMemo(
     () =>
       stateFromStores.reduce((arr, item) => {
@@ -138,10 +138,10 @@ export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(sta
     () => {
       const mapped = memo.map((item) => closure_1_5.get(item));
       const found = mapped.filter(GlobalUtils.isNotNullish);
-      const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
+      items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
       return items;
     },
     items2,
   );
-  memo(7330)(stateFromStoresArray);
+  memo(7450)(stateFromStoresArray);
 }

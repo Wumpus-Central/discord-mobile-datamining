@@ -69,7 +69,7 @@ export function createChangeChannelNameSystemMessage(message) {
       accessibilityActions = [];
     }
     const obj6 = { accessibilityActions: null };
-    const items = [];
+    items = [];
     const obj7 = { label: null, name: null };
     const intl2 = util.intl;
     obj7.label = intl2.string(util.t["5Q9+/L"]);

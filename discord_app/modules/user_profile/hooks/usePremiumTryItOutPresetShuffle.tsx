@@ -15,10 +15,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5253)();
+  const tmp = callback(5376)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
-  const items = [isThemeLightResult];
+  items = [isThemeLightResult];
   callback = noop.useCallback((lastPreset) => {
     const tryItOutPresetConfig = TryItOutPresets.getTryItOutPresetConfig(lastPreset);
     const obj2 = { banner: null, themeColors: null, displayNameStyles: null, lastPreset: null };
@@ -29,7 +29,7 @@ export default function usePremiumTryItOutPresetShuffle() {
       imageUri: tryItOutPresetConfig.getBannerSrc(false),
       staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
       description: tryItOutPresetConfig.getBannerAltText(),
-      originalAsset: "ind",
+      originalAsset: "fill",
     });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

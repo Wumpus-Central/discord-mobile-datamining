@@ -18,15 +18,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 200;
-const result = fn(13439).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
+const result = fn(13577).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
 const characterLayout = { size: 224, top: 24, left: -12 };
-const characterLayout2 = { size: 224, top: 24, left: -4 };
+const rect = { size: 224, top: nativeDefault.space.PX_24, left: -4 };
 let layout = { iconSize: 16, textVariant: "text-sm/medium" };
 let obj2 = {};
 const merged = Object.assign(layout);
-obj2.reactionsIcon = fn(13441).EmojiSlightlySmilingFaceIcon;
-const createStyles = fn(5014);
-let obj4 = {
+obj2.reactionsIcon = fn(13579).EmojiSlightlySmilingFaceIcon;
+const createStyles = fn(5141);
+const obj3 = {
   card: { overflow: "hidden" },
   portraitCard: null,
   characterAndStatsCard: null,
@@ -35,21 +35,21 @@ let obj4 = {
   characterAndStatsStats: null,
   statRow: null,
 };
-let size = { width: 200, height: fn(13439).CHECKPOINT_CARD_HEIGHT };
-obj4.portraitCard = size;
-obj4.characterAndStatsCard = { width: 300, height: result };
-let size1 = { width: 432, height: fn(13439).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
+let size = { width: 200, height: fn(13577).CHECKPOINT_CARD_HEIGHT };
+obj3.portraitCard = size;
+obj3.characterAndStatsCard = { width: 300, height: result };
+let size1 = { width: 432, height: fn(13577).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
 let items = [{ scale: 0.6944444444444444 }];
 size1.transform = items;
-obj4.characterAndStatsCanvas = size1;
-const rect = {
+obj3.characterAndStatsCanvas = size1;
+const rect1 = {
   position: "absolute",
   top: 56,
   left: nativeDefault.space.PX_12,
   right: nativeDefault.space.PX_12,
   gap: nativeDefault.space.PX_8,
 };
-obj4.portraitStats = rect;
+obj3.portraitStats = rect1;
 const size2 = {
   position: "absolute",
   top: 29,
@@ -59,9 +59,9 @@ const size2 = {
   justifyContent: "center",
   gap: nativeDefault.space.PX_12 + 2,
 };
-obj4.characterAndStatsStats = size2;
-obj4.statRow = { height: 16, gap: nativeDefault.space.PX_8 };
-let closure_13 = createStyles.createStyles(obj4);
+obj3.characterAndStatsStats = size2;
+obj3.statRow = { height: 16, gap: nativeDefault.space.PX_8 };
+let closure_13 = createStyles.createStyles(obj3);
 size = fn(2);
 const result1 = size.fileFinishedImporting("modules/checkpoint/native/components/share/CheckpointShareCard.tsx");
 
@@ -83,14 +83,14 @@ export default function CheckpointShareCard(arg0) {
       canvasWidth: 432,
       isCharacterAndStats: true,
       clydeSize: 24,
-      characterLayout: characterLayout2,
+      characterLayout: rect,
       children: null,
     };
     const obj4 = { path: null, x: 156.25 };
     const tmp22 = CheckpointCardFrameDefault;
     obj4.path = CheckpointShareCardYear.YEAR_PATH;
     obj2.children = React4(CheckpointShareCardYearDefault, obj4);
-    const items = [React4(tmp22, obj2), ,];
+    items = [React4(tmp22, obj2), ,];
     let tmp18Result = null != stats;
     if (tmp18Result) {
       const obj5 = { children: null };

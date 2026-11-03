@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj = {
   suggestionsContainer: {
     justifyContent: "center",
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerSe
 export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) {
   onClickSuggestion = onClickSuggestion.onClickSuggestion;
   const tmp = closure_7();
-  const items = [GIFPickerViewStore];
+  items = [GIFPickerViewStore];
   const stateFromStoresArray = onClickSuggestion(504).useStateFromStoresArray(items, () =>
     suggestions.getSuggestions(),
   );
@@ -45,13 +45,13 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
     };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(5624).Text, obj3)];
+    const items1 = [closure_5(tmp2(5747).Text, obj3)];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
         closure_0 = text;
         return closure_1_5(
-          onClickSuggestion(5634).Button,
+          onClickSuggestion(5754).Button,
           {
             size: "sm",
             variant: "secondary",

@@ -52,7 +52,7 @@ export function RootThemeContextProvider(children) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
+  items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
   value = secondaryColor.useMemo(
     () =>
       native.createThemedContext({
@@ -73,8 +73,8 @@ export function RootThemeContextProvider(children) {
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 }
 export function DisableCustomTheme(children) {
-  themeContext = themeContext(5080).useThemeContext();
-  const items = [themeContext];
+  themeContext = themeContext(5207).useThemeContext();
+  items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
     const merged = Object.assign(themeContext);
@@ -83,5 +83,5 @@ export function DisableCustomTheme(children) {
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(5080).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(5207).ThemeContext.Provider, { value: memo, children: children.children });
 }

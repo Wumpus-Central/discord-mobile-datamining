@@ -65,7 +65,7 @@ export (arg0) => {
     }
     if (null != obj3) {
       if ("throttlePeriod" in obj3) {
-        const items = [arg0];
+        items = [arg0];
         HermesBuiltin.arraySpread(obj3.throttleKeys(obj2), 1);
         const joined = items.join("_");
         let tmp13 = null != dependencyMap[joined];

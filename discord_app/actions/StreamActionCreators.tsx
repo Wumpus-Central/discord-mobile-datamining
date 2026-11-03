@@ -92,7 +92,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -208,7 +208,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -316,7 +316,7 @@ export function updateStreamSettings(noTrack) {
 export function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: map1.STREAM(encodeStreamKeyResult),
+    url: state.STREAM(encodeStreamKeyResult),
     body: { region: preferredRegion },
     oldFormErrors: true,
     rejectWithError: true,
@@ -365,15 +365,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7938)(closure_1_1);
+          closure_1(8062)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6046).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6046);
+          closure_0(6166).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6166);
         }
       }
     };

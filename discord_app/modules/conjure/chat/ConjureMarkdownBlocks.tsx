@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMarkdownB
 
 export function splitMarkdownBlocks(source) {
   const parts = source.split("\n");
-  const items = [];
+  items = [];
   let items1 = [];
   let items2 = [];
   let tmp = null;

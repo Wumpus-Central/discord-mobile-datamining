@@ -29,7 +29,7 @@ import UserStore from "../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, GuildFeatures: closure_19 } = Constants);
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 const jsx = fn(21).jsx;
 const PureComponent = noop.PureComponent;
 class AutoAnalytics extends PureComponent {}
@@ -125,7 +125,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
         rtcConnectionId = tmp2.rtcConnectionId;
       }
       obj6.rtc_connection_id = rtcConnectionId;
-      let duration;
+      duration = undefined;
       if (tmp2 != null) {
         duration = tmp2.duration;
       }
@@ -206,7 +206,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       if (isScreenSharing) {
         str = "screen";
       }
-      const items = [str];
+      items = [str];
       let str2 = null;
       if (videoEnabled) {
         str2 = "camera";
@@ -341,7 +341,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/AutoAnalytics.tsx");
 
 export default function ConnectedAutoAnalytics() {
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   stateFromStores = stateFromStores(stateFromStores6[29]).useStateFromStores(
     items,
     () => SelectedChannelStore.getVoiceChannelId(),
@@ -508,7 +508,7 @@ export default function ConnectedAutoAnalytics() {
     name = stateFromStores5.name;
   }
   obj3.gameName = name;
-  let application_id = null;
+  application_id = null;
   if (null != stateFromStores5) {
     application_id = stateFromStores5.application_id;
   }

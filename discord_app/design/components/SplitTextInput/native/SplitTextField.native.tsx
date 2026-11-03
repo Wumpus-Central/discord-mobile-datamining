@@ -39,7 +39,7 @@ export function SplitTextField(ref) {
           if (pressed.pressed) {
             obj = { opacity: 0.2 };
           }
-          const items = [obj];
+          items = [obj];
           return items;
         },
       };
@@ -52,7 +52,7 @@ export function SplitTextField(ref) {
             if (pressed.pressed) {
               obj = { opacity: 0.2 };
             }
-            const items = [obj];
+            items = [obj];
             return items;
           }}
         />

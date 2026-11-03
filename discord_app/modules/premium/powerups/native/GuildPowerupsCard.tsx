@@ -7,7 +7,7 @@ import n_mod from "../../../../../_runtime/metro/00671__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
 const obj3 = { borderColor: null };
 let n = n_mod;
@@ -42,7 +42,7 @@ export default function GuildPowerupsCard(status) {
   if (status != null) {
     type = status.type;
   }
-  const items = ["active" === type && tmp2.cardActive, , ,];
+  items = ["active" === type && tmp2.cardActive, , ,];
   let type1;
   if (status != null) {
     type1 = status.type;

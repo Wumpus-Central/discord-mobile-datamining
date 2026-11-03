@@ -62,7 +62,7 @@ class HcaptchaModal {
       tmp16 = jsx;
       obj16 = {
         accessibilityRole: "header",
-        variant: "heading-lg/bold",
+        variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         style: null,
         children: null,
@@ -117,8 +117,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
-createStyles.createStyles({
+const createStyles = fn(5141);
+const state = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
   title: { textAlign: "center" },
   closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 },

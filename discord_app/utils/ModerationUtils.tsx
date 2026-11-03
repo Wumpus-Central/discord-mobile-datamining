@@ -72,7 +72,7 @@ export function generateVerificationLevelOptions() {
   obj.desc = stringResult;
   obj.value = constants.NONE;
   obj.disabled = flag;
-  const items = [obj, , , ,];
+  items = [obj, , , ,];
   const obj2 = { name: null, desc: null, value: null, color: null };
   const intl3 = util.intl;
   obj2.name = intl3.string(util.t.SsCK8I);
@@ -139,7 +139,7 @@ export function generateContentFilterHighlightedOptions() {
   obj.desc = intl2.string(util.t["Z+yUWF"]);
   obj.value = constants3.ALL_MEMBERS;
   obj.color = shims.unsafe_getRawColor("RED_400");
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj3 = { name: null, desc: null, value: null, disabled: null, color: null };
   const intl3 = util.intl;
   obj3.name = intl3.string(util.t.ynfFaI);
@@ -186,7 +186,7 @@ export function generateContentFilterOptions() {
   const intl2 = util.intl;
   obj.desc = intl2.string(util.t["Z+yUWF"]);
   obj.value = constants3.ALL_MEMBERS;
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { name: null, desc: null, value: null, disabled: null };
   const intl3 = util.intl;
   obj2.name = intl3.string(util.t.ynfFaI);
@@ -226,7 +226,7 @@ export function generateDmSpamOptions() {
   const intl2 = util.intl;
   obj.desc = intl2.string(util.t.TgipjE);
   obj.value = preloaded_user_settings.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { name: null, desc: null, value: null };
   const intl3 = util.intl;
   obj2.name = intl3.string(util.t["6NnX6F"]);
@@ -251,7 +251,7 @@ export function generateExplicitImageOptions() {
   obj.desc = intl2.string(util.t["Fw+Lvp"]);
   obj.value = constants4.FRIENDS_AND_NON_FRIENDS;
   obj.color = shims.unsafe_getRawColor("GREEN_360");
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj3 = { name: null, desc: null, value: null, color: null };
   const intl3 = util.intl;
   obj3.name = intl3.string(util.t["8ioJ4S"]);

@@ -10,7 +10,7 @@ import GIFPickerViewStore from "../../../stores/views/GIFPickerViewStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = {
     item: {
@@ -57,14 +57,14 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   }
   const tmp6 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
   closure_4 = tmp6;
-  let items = [trendingCategories];
+  items = [trendingCategories];
   trendingCategories = tmp3(tmp2[8]).useStateFromStoresObject(items, () => ({
     trendingCategories: trendingCategories.getTrendingCategories(),
   })).trendingCategories;
   let items1 = [columns, favoritesCategory, trendingCategories];
   const memo = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useMemo(() => {
     let bound;
-    const items = [...trendingCategories];
+    items = [...trendingCategories];
     if (null != favoritesCategory) {
       items.unshift(tmp);
     }
@@ -92,7 +92,7 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   }, items2);
   const items3 = [columns, data, onSelectCategory, tmp6];
   const callback = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useCallback((arg0, arg1) => {
-    const items = [];
+    items = [];
     for (let num = 0; num < columns; num = num + 1) {
       let tmp2 = tmp[num];
       if (null != tmp2) {

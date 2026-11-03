@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -50,7 +50,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   const tmpResult = closure_10(muted);
   const REFRESH_MEDIUM_32 = channel(1187).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
-  const items = [TypingStore];
+  items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
     const typingUsers = TypingStore.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
@@ -124,8 +124,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "11da15fb2cefbe51d12c26d658b6db75",
-        style: "nl.messages.11da15fb2cefbe51d12c26d658b6db75.compiled.messages",
+        streaming: "4bcf2455110bd4db5a84ce5509f13de0",
+        style: "fr.messages.4bcf2455110bd4db5a84ce5509f13de0.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,
@@ -148,8 +148,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
         status: null,
-        streaming: "11da15fb2cefbe51d12c26d658b6db75",
-        style: "nl.messages.11da15fb2cefbe51d12c26d658b6db75.compiled.messages",
+        streaming: "4bcf2455110bd4db5a84ce5509f13de0",
+        style: "fr.messages.4bcf2455110bd4db5a84ce5509f13de0.compiled.messages",
         size: "jsona",
         animate: "VOICE_CATEGORY_EXPAND",
         typing: null,

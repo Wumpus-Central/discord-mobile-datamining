@@ -9,7 +9,7 @@ export default {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE" });
   },
   startReordering() {
-    const items = [...arguments];
+    items = [...arguments];
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER", sortingType: items });
   },
   stopReordering() {

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx
-import inlineStyles from "../../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -30,7 +30,7 @@ export function SkipBackwardIcon(width) {
   obj.height = num2;
   obj.viewBox = "0 0 32 32";
   obj.fill = "none";
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       d: "M169.545 229.312v7.919l14.838-10.253v46.348h7.669v-55.434h-6.169l-16.338 11.42ZM225.979 274.576c13.087 0 21.34-11.003 21.34-28.842 0-17.756-8.253-29.093-21.34-29.093-13.004 0-21.173 11.254-21.173 29.009 0 17.923 8.169 28.926 21.173 28.926Zm0-7.335c-8.419 0-13.004-8.336-13.004-21.591 0-13.087 4.585-21.673 13.004-21.673 8.503 0 13.171 8.669 13.171 21.757 0 13.171-4.668 21.507-13.171 21.507Z",
       fill: str,

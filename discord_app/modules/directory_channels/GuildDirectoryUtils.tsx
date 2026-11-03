@@ -85,19 +85,19 @@ export function guildDirectoryEntryFromServer(entry) {
 }
 export const MAX_CATEGORY_SERVERS = 5;
 export function orderByTotalMemberCount(found) {
-  const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
+  items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
   return _modDef12.orderBy(found, items, ["desc"]);
 }
 export function orderByDateAdded(reactions) {
-  const items = [(createdAt) => createdAt.createdAt];
+  items = [(createdAt) => createdAt.createdAt];
   return _modDef12.orderBy(reactions, items, ["desc"]);
 }
 export function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
-  const items = [(createdAt) => createdAt.createdAt];
+  items = [(createdAt) => createdAt.createdAt];
   return _modDef12.orderBy(found, items, ["desc"]).slice(0, 5);
 }
 export function rankGuildEntries(arr) {
-  const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
+  items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
   return _modDef12.orderBy(arr, items, ["desc"]);
 }

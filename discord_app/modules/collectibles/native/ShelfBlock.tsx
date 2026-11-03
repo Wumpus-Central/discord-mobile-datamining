@@ -19,7 +19,7 @@ let closure_6 = fn(1074).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   containerWithBackground: null,
@@ -89,7 +89,7 @@ export default function _default(block) {
   let obj2 = block(navigation[9]);
   let obj3 = block(navigation[10]);
   const tmp7 = preferVCPrice(navigation[11]);
-  let items = [closure_5];
+  items = [closure_5];
   const stateFromStores = block(navigation[13]).useStateFromStores(items, () => {
     let category;
     if (null != block.categorySkuId) {
@@ -109,7 +109,7 @@ export default function _default(block) {
     if (null != stateFromStores) {
       if (stateFromStores.isOrbsExclusive) {
         const obj3 = { analyticsLocations: null, analyticsSource: null, screen: null };
-        const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
+        items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
         obj3.analyticsLocations = items;
         obj3.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
         obj3.screen = constants.ORBS;

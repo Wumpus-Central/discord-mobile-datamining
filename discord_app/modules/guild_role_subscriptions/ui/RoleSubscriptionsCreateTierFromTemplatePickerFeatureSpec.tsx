@@ -23,7 +23,7 @@ export default {
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [ExperimentStore, PermissionStore];
+    items = [ExperimentStore, PermissionStore];
     return initialize.useStateFromStores(
       items,
       () => (features) => {

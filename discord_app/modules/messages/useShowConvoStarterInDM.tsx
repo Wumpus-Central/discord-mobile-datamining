@@ -34,7 +34,7 @@ export function useShowConvoStarterInDM(channel) {
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
   UserStore = hasFlagResult;
   const obj = require("useStrangerDangerWarning");
-  const items = [recipientId, closure_3, strangerDangerWarning, UserStore];
+  items = [recipientId, closure_3, strangerDangerWarning, UserStore];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
   return require("initialize").useStateFromStores(
     items,

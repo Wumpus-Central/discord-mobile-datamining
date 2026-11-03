@@ -34,7 +34,7 @@ export default function useConjureAppCreator(conjureProjectId, arg1, arg2) {
   const tmp6 = owner_user_id(first.useState(null), 2);
   first = tmp6[0];
   closure_6 = tmp6[1];
-  const items = [arg2, owner_user_id];
+  items = [arg2, owner_user_id];
   const effect = first.useEffect(() => {
     closure_1 = async function _requestCreator(arg0) {
       if (c4 === 2) {
@@ -47,7 +47,7 @@ export default function useConjureAppCreator(conjureProjectId, arg1, arg2) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -85,7 +85,7 @@ export default function useConjureAppCreator(conjureProjectId, arg1, arg2) {
               closure_1_6(closure_129_0);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

@@ -8,15 +8,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileLinks.tsx");
 
 export function useGameProfileLinks(game) {
-  const items = [game];
+  items = [game];
   return noop.useMemo(() => {
     const websites = game.websites;
     const found = websites.filter((category) => {
       category = category.category;
-      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = game(9471).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       let hasItem = GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES.includes(category);
       if (hasItem) {
-        const MOBILE_STORE_WEBSITE_CATEGORIES = game(9393).MOBILE_STORE_WEBSITE_CATEGORIES;
+        const MOBILE_STORE_WEBSITE_CATEGORIES = game(9521).MOBILE_STORE_WEBSITE_CATEGORIES;
         hasItem = !MOBILE_STORE_WEBSITE_CATEGORIES.has(category);
       }
       return hasItem;
@@ -25,9 +25,9 @@ export function useGameProfileLinks(game) {
     const mapped = values.map((item) => closure_0(dependencyMap[2]).getMobileStoreLink(game, item));
     const found1 = mapped.filter(GlobalUtils.isNotNullish);
     const sorted = found.sort((category, category2) => {
-      const prop = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop = game(9471).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       const index = prop.indexOf(category.category);
-      const prop1 = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop1 = game(9471).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       return index - prop1.indexOf(category2.category);
     });
     return sorted.concat(found1);

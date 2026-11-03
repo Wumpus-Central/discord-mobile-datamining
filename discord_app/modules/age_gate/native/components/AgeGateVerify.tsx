@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_16,
@@ -34,10 +34,10 @@ export default function AgeGateVerify(source) {
   const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   const obj2 = { top: true, style: tmp.container, children: null };
-  const items = [
+  items = [
     React4(Text_Text.Heading, {
       style: tmp.header,
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: verifyTitle,
     }),

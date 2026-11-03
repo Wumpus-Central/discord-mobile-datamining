@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoi
 export default function useVoiceChannelGames(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
+  items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
   const items1 = [arg0, arg1];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -54,7 +54,7 @@ export default function useVoiceChannelGames(arg0, arg1) {
   });
   const items3 = [getGamesForAppIds, stateFromStores];
   return stateFromStores.useMemo(() => {
-    const items = [];
+    items = [];
     const set = new Set();
     for (const item10013 of getGamesForAppIds) {
       let obj2 = useGameProfileObscured;

@@ -37,8 +37,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   settingsContainer: null,
@@ -61,7 +61,7 @@ export default function SettingsUpsellElement(settingsUpsells) {
   const reportSubType = settingsUpsells.reportSubType;
   closure_5 = undefined;
   const tmp = closure_11();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = settingsUpsells(reportId[12]).useStateFromStores(items, () =>
     ChannelStore.getChannel(importDefault),
   );

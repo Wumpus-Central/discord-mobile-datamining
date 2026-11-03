@@ -58,7 +58,7 @@ prototype["isVisible"] = function isVisible() {
 };
 prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(isForcedFlush) {
   let num = 0;
-  const items = [];
+  items = [];
   const iter = this.seenIntervals[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -270,7 +270,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp17) {
         c2 = tmp;
         throw tmp17;

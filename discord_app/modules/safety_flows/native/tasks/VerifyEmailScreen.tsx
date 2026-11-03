@@ -22,7 +22,7 @@ export default function _default() {
   const tmp6 = first1(noop.useState(false), 2);
   first1 = tmp6[0];
   noop = tmp6[1];
-  const items = [onTaskComplete];
+  items = [onTaskComplete];
   const onAction = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c4 === 2) {
@@ -35,7 +35,7 @@ export default function _default() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

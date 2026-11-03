@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
 export function isChannelTypeMentionable(type) {
   let tmp = React(type);
   if (!tmp) {
-    tmp = framebus(type);
+    tmp = duration(type);
   }
   return tmp;
 }

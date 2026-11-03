@@ -177,7 +177,7 @@ class ReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     display: "flex",
@@ -229,7 +229,7 @@ export function AdditionalReactionCount(arg0) {
   const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.N8hbZB);
-  const items = [closure_7().container, containerStyle];
+  items = [closure_7().container, containerStyle];
   obj.style = items;
   obj.onPress = useNativeForumPostHandlersDefault({ threadId }).onTapReactionCount;
   const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", children: null };
@@ -245,7 +245,7 @@ export function AddReactionButton(reactionType) {
     NORMAL = MessageReactionsTypes.ReactionTypes.NORMAL;
   }
   const obj = { style: null, accessible: true, accessibilityLabel: null, onPress: null, children: null };
-  const items = [closure_7().container, containerStyle];
+  items = [closure_7().container, containerStyle];
   obj.style = items;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.lfIHs4);
@@ -268,7 +268,7 @@ export function ForumPostReactionButton(emojiSize) {
   const onLongTapReaction = tmp2.onLongTapReaction;
   const AnimateEmoji = UserSettings.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const items = [disableReactionCreates, disableReactionUpdates, locationAnalyticsObject, onTapReaction, reaction];
+  items = [disableReactionCreates, disableReactionUpdates, locationAnalyticsObject, onTapReaction, reaction];
   const callback = noop.useCallback(() => {
     onTapReaction({ reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject });
   }, items);

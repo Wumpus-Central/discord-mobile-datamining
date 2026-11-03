@@ -62,7 +62,7 @@ export function updateOptionValidationStates(channelId, arg1) {
   const fromEntriesResult = Object.fromEntries(
     entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp, { lastValidationResult: tmp2 }];
+      items = [tmp, { lastValidationResult: tmp2 }];
       return items;
     }),
   );
@@ -144,7 +144,7 @@ export function performAutocomplete(applicationId, autocomplete, data) {
         data: null,
         nonce: null,
       };
-      const guild = autocomplete.guild;
+      guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;

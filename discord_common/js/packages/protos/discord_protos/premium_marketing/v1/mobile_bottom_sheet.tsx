@@ -27,7 +27,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "dismissible_content",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.discord_users.v1.DismissibleContent",
           require("dismissible_content").DismissibleContent,
         ];
@@ -243,10 +243,7 @@ let items = [
     name: "dismissible_content",
     kind: "enum",
     T() {
-      const items = [
-        "discord_protos.discord_users.v1.DismissibleContent",
-        require("dismissible_content").DismissibleContent,
-      ];
+      items = ["discord_protos.discord_users.v1.DismissibleContent", require("dismissible_content").DismissibleContent];
       return items;
     },
   },

@@ -8,7 +8,7 @@ import ICYMIStore from "../../ICYMIStore.tsx";
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/IC
 export default function ICYMICustomScoresOverviewScreen(navigation) {
   navigation = navigation.navigation;
   let stateFromStores1;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = navigation(stateFromStores1[8]).useStateFromStores(items, () => guilds.getGuilds());
   let obj = navigation(stateFromStores1[8]);
   const items1 = [SortedGuildStore];

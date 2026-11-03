@@ -19,17 +19,17 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11223);
+const VoicePanelConstants = fn(11360);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({
   BASE_TARGET_CARD_SIZE: closure_8,
   VoicePanelCTACardDimensionKeys: closure_9,
-  VoicePanelCTACardDimensions: c10,
+  VoicePanelCTACardDimensions: closure_10,
   VOICE_PANEL_CHUNK_DIVISOR: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11226);
+const VoicePanelCardConstants = fn(11363);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 let closure_15 = {
   id: "invalid",
   type: VoicePanelCardItemType.PARTICIPANT,
@@ -131,15 +131,15 @@ prototype["handleLayoutEffect"] = function handleLayoutEffect() {
 prototype["cleanUp"] = function cleanUp() {
   this.mounted = false;
 };
-prototype["updateItems"] = function updateItems(items) {
+prototype["updateItems"] = function updateItems(c2) {
   const self = this;
   items = this.items;
-  let tmp = items.length === items.length;
+  let tmp = dependencyMap.length === items.length;
   if (tmp) {
-    tmp = !items.some((item, index) => items[index] !== item);
+    tmp = !dependencyMap.some((item, index) => items[index] !== item);
   }
   this.setDirty(!tmp);
-  self.items = items;
+  self.items = dependencyMap;
 };
 prototype["updateProps"] = function updateProps(windowHeight) {
   const self = this;
@@ -148,9 +148,9 @@ prototype["updateProps"] = function updateProps(windowHeight) {
     windowHeight,
     windowWidth: windowHeight.windowWidth,
     chunkSize: windowHeight / closure_1_11,
-    safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_1_12),
-    safeAreaRight: Math.max(safeAreaRight, closure_1_12),
-    safeAreaBottom: Math.max(safeAreaBottom, closure_1_12),
+    safeAreaLeft: Math.max(windowHeight.safeAreaLeft, application_id),
+    safeAreaRight: Math.max(safeAreaRight, application_id),
+    safeAreaBottom: Math.max(safeAreaBottom, application_id),
     safeAreaTop,
     gutter,
     controlBarSize,
@@ -225,7 +225,7 @@ prototype["resetTargetDimensions"] = function resetTargetDimensions(arg0) {
     self.deferredLayoutChange();
   }
 };
-prototype["setTargetAspectRatio"] = function setTargetAspectRatio(applicationId, landscape) {
+prototype["setTargetAspectRatio"] = function setTargetAspectRatio(c0, landscape) {
   if ("portrait" === landscape) {
     let size = { width: 1, height: 2 };
   } else if ("landscape" === landscape) {
@@ -234,10 +234,10 @@ prototype["setTargetAspectRatio"] = function setTargetAspectRatio(applicationId,
     size = { width: 1, height: 1 };
   }
   const self = this;
-  const size2 = this.getTargetDimensions(applicationId);
+  const size2 = this.getTargetDimensions(c0);
   if (!tmp) {
     const targetDimensions = self.targetDimensions;
-    const result = targetDimensions.set(applicationId, size);
+    const result = targetDimensions.set(c0, size);
     self.setDirty(true);
     self.deferredLayoutChange();
   }
@@ -249,7 +249,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
     const map = new Map();
     self.cardCoords = map;
     const _Map2 = Map;
-    map1 = new Map();
+    const map1 = new Map();
     self.chunkedCoords = map1;
     const props = self.props;
     const windowWidth = props.windowWidth;
@@ -407,7 +407,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
         let tmp50 = new.target;
         let tmp51 = new.target;
         let array = new Array(tmp38);
-        let items = [array.fill(0)];
+        items = [array.fill(0)];
         c15 = -1;
         bound1 = -1;
         closure_17 = -1;
@@ -852,8 +852,8 @@ export function useCardLayoutCoordsSubscription(id, layoutManager) {
     cardCoords = closure_15;
   }
   const merged = Object.assign(cardCoords);
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  const items = [id, layoutManager, sharedValue];
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue({});
+  items = [id, layoutManager, sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     let cardCoords = layoutManager.getCardCoords(closure_0);
     if (null != cardCoords) {
@@ -871,8 +871,8 @@ export function useCardLayoutCoordsSubscription(id, layoutManager) {
 export function useTargetDimensionsSubscription(participantId, layoutManager) {
   _require = participantId;
   const merged = Object.assign(layoutManager.getTargetDimensions(participantId));
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  const items = [participantId, layoutManager, sharedValue];
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue({});
+  items = [participantId, layoutManager, sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     let targetDimensions = layoutManager.getTargetDimensions(closure_0);
     updateSharedValueIfChangedDefault(sharedValue, targetDimensions);

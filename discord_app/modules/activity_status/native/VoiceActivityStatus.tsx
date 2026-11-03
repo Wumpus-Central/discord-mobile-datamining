@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
@@ -26,7 +26,7 @@ export default function VoiceActivityStatus(hideText) {
     let tmp5 = !hideIcon;
     if (!hideIcon) {
       const obj = { channel, size: "xxs", color: "status-positive", style: null };
-      const items = [tmp.icon, iconStyle];
+      items = [tmp.icon, iconStyle];
       obj.style = items;
       tmp5 = React3(UserProfileVoiceActivityIconDefault, obj);
     }

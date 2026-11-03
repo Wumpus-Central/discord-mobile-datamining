@@ -20,7 +20,7 @@ function isActivityInTextSupportedForChannel(channel) {
       hasItem = type === ChannelTypes.ChannelTypes.GUILD_CATEGORY;
     }
     if (hasItem) {
-      const items = [
+      items = [
         ChannelTypes.ChannelTypes.GUILD_TEXT,
         ChannelTypes.ChannelTypes.GUILD_VOICE,
         ChannelTypes.ChannelTypes.GROUP_DM,
@@ -58,7 +58,7 @@ export function isActivitiesInTextEnabled(channel) {
 }
 export function useIsActivitiesInTextEnabled(id) {
   _require = id;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let flag = false;
@@ -93,7 +93,7 @@ export function getIsAppLauncherEnabled(channel) {
 }
 export function useIsAppLauncherEnabled(id) {
   _require = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let tmp2 = null != channel;

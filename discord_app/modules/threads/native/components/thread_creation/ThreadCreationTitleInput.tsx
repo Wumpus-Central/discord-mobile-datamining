@@ -20,7 +20,7 @@ export default noop.memo(function ThreadCreationTitleInput(chatInputRef) {
   let obj = chatInputRef(ref[4]);
   let obj2 = { content: threadSettingsDraft.name };
   ref1 = ref1.useRef(threadSettingsDraft.name);
-  const items = [threadSettingsDraft.parentChannelId];
+  items = [threadSettingsDraft.parentChannelId];
   const items1 = [threadSettingsDraft];
   const callback = ref1.useCallback((current) => {
     if (null != threadSettingsDraft.parentChannelId) {

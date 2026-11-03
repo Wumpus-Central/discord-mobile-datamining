@@ -8,13 +8,13 @@ import ConsentStore from "../../../stores/ConsentStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(17989).resetRegistration;
+const resetRegistration = fn(18132).resetRegistration;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
 export default function useInitialRegistrationStep(arg0) {
   _require = arg0;
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     authenticationConsentRequired.getAuthenticationConsentRequired(),
   );

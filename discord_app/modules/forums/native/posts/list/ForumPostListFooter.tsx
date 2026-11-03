@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
   dot: null,
@@ -37,7 +37,7 @@ export default function ForumPostListFooter(parentChannel) {
   let tmp6Result = typingUserIds.length > 0;
   let isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
   const obj3 = { style: tmp.footer, children: null };
-  const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , ,];
+  items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , ,];
   if (isGameInvitesPost) {
     const obj4 = { channel: thread };
     isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj4);

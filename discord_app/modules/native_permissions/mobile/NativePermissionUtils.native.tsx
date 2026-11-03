@@ -34,7 +34,7 @@ let closure_8 = async function _combineStatuses(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -97,15 +97,15 @@ let closure_8 = async function _combineStatuses(arg0) {
     }
   })();
 };
-const NativePermissionConstants = fn(7940);
+const NativePermissionConstants = fn(8064);
 ({ NativePermissionTypes, NativePermissionStatus: hasOwnProperty } = NativePermissionConstants);
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   PlatformUtils = fn(17).Platform.constants.Version <= 28;
 }
-let MetaQuestUtils = fn(1622);
+let MetaQuestUtils = fn(1624);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 if (PlatformUtils) {
   let items = [NativePermissionManagerModule.requestExternalStorageAuthorization];
@@ -138,7 +138,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(7959).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(8083).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {
@@ -147,8 +147,8 @@ prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) 
 prototype["hasPermissionCore"] = function hasPermissionCore(arg0, arg1) {
   return this.performRequest(NativePermissionIOSUtils.hasPermissionLookup, arg0, arg1);
 };
-prototype["performRequest"] = function performRequest(hasPermissionLookup, arg1, arg2) {
-  if (null == hasPermissionLookup[arg1]) {
+prototype["performRequest"] = function performRequest(arg0, arg1, arg2) {
+  if (null == arg0[arg1]) {
     const obj = new LoggerDefault("NativePermissionUtils");
     const _HermesInternal = HermesInternal;
     obj.error("Unable to locate permission type " + arg1);
@@ -181,10 +181,10 @@ let obj3 = {
   [HEADSET_CAMERA]: NativePermissionManagerModule.requestHeadsetCameraAuthorization,
 };
 ({ HEADSET_CAMERA, AUDIO } = NativePermissionTypes);
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 if (PlatformUtils.isAndroid()) {
   fn = () => {
-    const items = [
+    items = [
       NativePermissionManagerModule.requestMicrophoneAuthorization,
       NativePermissionManagerModule.requestModifyAudioAuthorization,
     ];
@@ -203,10 +203,10 @@ let obj5 = {
   [HEADSET_CAMERA2]: NativePermissionManagerModule.hasHeadsetCameraAuthorization,
 };
 ({ HEADSET_CAMERA: HEADSET_CAMERA2, AUDIO: AUDIO2 } = NativePermissionTypes);
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 if (PlatformUtils.isAndroid()) {
   let fn2 = () => {
-    const items = [
+    items = [
       NativePermissionManagerModule.hasMicrophoneAuthorization,
       NativePermissionManagerModule.hasModifyAudioAuthorization,
     ];

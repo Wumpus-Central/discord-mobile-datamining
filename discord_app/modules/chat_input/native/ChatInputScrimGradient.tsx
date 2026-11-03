@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -59,7 +59,7 @@ export function ChatInputScrimGradient(scrimBase) {
     end: { x: 0, y: 1 },
     locations: [0, 1],
   };
-  const items = [str, hex2rgbResult];
+  items = [str, hex2rgbResult];
   obj5.colors = items;
   const items1 = [
     React4(LinearGradientDefault, obj5),

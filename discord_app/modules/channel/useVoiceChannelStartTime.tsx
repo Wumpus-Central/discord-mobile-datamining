@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartT
 
 export function useStartTime(channel) {
   _require = channel;
-  const items = [VoiceChannelStartTimeStore, closure_4];
+  items = [VoiceChannelStartTimeStore, closure_4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(channel.guild_id),
     startTime: VoiceChannelStartTimeStore.getStartTime(channel),

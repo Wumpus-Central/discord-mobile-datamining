@@ -20,7 +20,7 @@ function compareArrays(arg0, arg1) {
 }
 let closure_6 = async function _generatePairwiseFingerprint() {
   closure_6 = tmp2;
-  const items = [KeyFingerprint.generateKeyFingerprint(closure_0, closure_1, closure_2)];
+  items = [KeyFingerprint.generateKeyFingerprint(closure_0, closure_1, closure_2)];
   items[1] = KeyFingerprint.generateKeyFingerprint(closure_0, closure_3, closure_4);
   await Promise.all(items);
   closure_133_0 = value;

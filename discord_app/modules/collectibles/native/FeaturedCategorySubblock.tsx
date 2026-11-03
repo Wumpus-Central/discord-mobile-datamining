@@ -7,14 +7,14 @@ import VisibilitySensorDefault from "VisibilitySensor.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const FastImageDefault = tmp12(5717);
+const FastImageDefault = tmp12(5837);
 require = fn;
 let closure_4 = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -27,12 +27,12 @@ export default function _default(subblock) {
   subblock = subblock.subblock;
   let stateFromStores;
   const tmp = closure_9();
-  importDefault = subblock(1497).useNavigation();
-  let obj = subblock(1497);
-  dependencyMap = subblock(9462).useCollectiblesAnalyticsContext();
+  importDefault = subblock(1499).useNavigation();
+  let obj = subblock(1499);
+  dependencyMap = subblock(9590).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(9462);
-  let items = [stateFromStores];
+  let obj2 = subblock(9590);
+  items = [stateFromStores];
   stateFromStores = subblock(504).useStateFromStores(items, () =>
     CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
   );
@@ -51,14 +51,14 @@ export default function _default(subblock) {
     date = new Date(unpublishedAt);
   }
   let obj5 = {
-    onChange: subblock(17848).useTrackProductCardImpression(
+    onChange: subblock(17991).useTrackProductCardImpression(
       subblock.categoryStoreListingId,
       "mobile_home",
       "featured_block",
     ).handleCardVisibilityChange,
     children: null,
   };
-  let obj4 = subblock(17848);
+  let obj4 = subblock(17991);
   const obj6 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -111,7 +111,7 @@ export default function _default(subblock) {
     if (null != stateFromStores) {
       if (stateFromStores.isOrbsExclusive) {
         const obj3 = { analyticsLocations: null, analyticsSource: null, screen: null };
-        const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
+        items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
         obj3.analyticsLocations = items;
         obj3.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
         obj3.screen = constants.ORBS;
@@ -133,13 +133,13 @@ export default function _default(subblock) {
   }
   const items1 = [tmp11Result];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7732).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7856).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(9526).LimitedTimeBadge, obj11);
+    result = closure_7(tmp2(9654).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_8(subblock(6980).PressableOpacity, obj6);
+  obj5.children = closure_8(subblock(7106).PressableOpacity, obj6);
   return closure_7(tmp13, obj5);
 }

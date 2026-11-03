@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
@@ -39,7 +39,7 @@ export default function ForumPostMessageContent(senderModifier) {
   }
   obj.color = str;
   obj.lineClamp = num;
-  const items = [style, tmp.text];
+  items = [style, tmp.text];
   obj.style = items;
   obj.children = content;
   return jsx(Text_Text.Text, {

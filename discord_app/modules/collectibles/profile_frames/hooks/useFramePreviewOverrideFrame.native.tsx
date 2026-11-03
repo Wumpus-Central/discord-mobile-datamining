@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ProfileFrameRecord from "../../records/ProfileFrameRecord.tsx";
 
 require = fn;
-let closure_4 = fn(8776).useFramePreviewOverrideStore;
+let closure_4 = fn(8900).useFramePreviewOverrideStore;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx",
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 export default function useFramePreviewOverrideFrame() {
   const tmp = closure_4((override) => override.override);
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {

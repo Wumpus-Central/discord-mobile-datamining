@@ -8,7 +8,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4939).FetchState;
+const FetchState = fn(5066).FetchState;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 const size = fn(2);
@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/creator_monetization_review/Cre
 
 export function useShouldHideGuildPurchaseEntryPoints(id2) {
   _require = id2;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id2];
   let has = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = has;
@@ -96,14 +96,14 @@ export function useShouldHideGuildPurchaseEntryPoints(id2) {
     }
     let result = flag;
   } else {
-    result = tmp(4938).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult4 = tmp(4938);
+    result = tmp(5065).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult4 = tmp(5065);
   }
   const tmpResult3 = require("initialize");
 }
 export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;
@@ -166,8 +166,8 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
     }
     let result = flag;
   } else {
-    result = tmp(4938).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult4 = tmp(4938);
+    result = tmp(5065).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult4 = tmp(5065);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -185,7 +185,7 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
 }
 export function useIsMonetizationReapplicationDisabled(id2) {
   _require = id2;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id2];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;

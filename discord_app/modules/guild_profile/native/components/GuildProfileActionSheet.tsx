@@ -8,12 +8,12 @@ import GuildProfileStore from "../../GuildProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const GuildProfileFetchStatus = fn(9046).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(9297).INVALID_ACCESS_ERROR_CODE;
+const GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(9425).INVALID_ACCESS_ERROR_CODE;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   loadingContainer: { paddingTop: 40 },
   footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },
@@ -35,7 +35,7 @@ export default function GuildProfileActionSheet(guildId) {
   ({ guildProfile, fetchGuildProfile } = guildProfile1);
   const fetchStatus = guildProfile1.fetchStatus;
   let obj = guildId(analyticsLocations[9]);
-  let items = [GuildProfileStore];
+  items = [GuildProfileStore];
   const stateFromStores = guildId(analyticsLocations[10]).useStateFromStores(items, () =>
     GuildProfileStore.getErrorCode(guildId),
   );
@@ -115,7 +115,7 @@ export default function GuildProfileActionSheet(guildId) {
     const items6 = [token1];
     const memo = obj6.useMemo(() => {
       const obj = _modDef671(token1);
-      const items = [_modDef671(token1).alpha(0).hex(), token1];
+      items = [_modDef671(token1).alpha(0).hex(), token1];
       return items;
     }, items6);
     const obj16 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, footer: null, children: null };

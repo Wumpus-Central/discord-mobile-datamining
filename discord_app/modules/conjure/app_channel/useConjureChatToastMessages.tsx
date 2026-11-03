@@ -17,7 +17,7 @@ const result1 = size.fileFinishedImporting("modules/conjure/app_channel/useConju
 export default function useConjureChatToastMessages(arg0, arg1) {
   _require = arg0;
   let stateFromStores = arg1;
-  let items = [CallChatToastsStore];
+  items = [CallChatToastsStore];
   const items1 = [arg0];
   if (arg1) {
     stateFromStores = obj.useStateFromStores(items, () => CallChatToastsStore.getToastsEnabled(closure_0), items1);
@@ -35,7 +35,7 @@ export default function useConjureChatToastMessages(arg0, arg1) {
           setTimeout(() => closure_1_3([]), result);
           timeout = MessageRecordUtils.createMessageRecord(tmp);
           closure_3((arg0) => {
-            const items = [];
+            items = [];
             items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
             return items.slice(-3);
           });

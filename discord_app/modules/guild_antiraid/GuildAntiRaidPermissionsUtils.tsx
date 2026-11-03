@@ -28,7 +28,7 @@ export function canReportRaid(guild) {
 }
 export function useCanReportRaid(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -61,8 +61,8 @@ export function useCanReportRaid(guild) {
   );
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8482).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8482);
+    hasDetectedActivityResult = tmp(8606).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8606);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -79,7 +79,7 @@ export function canEnableRaidAlerts(arg0) {
 }
 export function useCanEnableRaidAlerts(arg0) {
   _require = arg0;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

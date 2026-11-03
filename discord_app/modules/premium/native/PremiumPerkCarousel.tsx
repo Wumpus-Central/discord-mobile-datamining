@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   title: { marginLeft: 24 },
   indicators: { marginBottom: -36 },
@@ -33,7 +33,7 @@ export default function PremiumPerkCarousel(arg0) {
     onItemChange(currentIndex[5]).PerkCardVariant.NARROW,
   );
   [currentIndex, _slicedToArray] = length.useState(0);
-  let items = [currentIndex, onItemChange];
+  items = [currentIndex, onItemChange];
   const callback = length.useCallback((arg0) => {
     if (arg0 !== first) {
       closure_3(arg0);
@@ -50,7 +50,7 @@ export default function PremiumPerkCarousel(arg0) {
   const items1 = [
     closure_6(onItemChange(currentIndex[6]).Text, {
       style: tmp.title,
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),
@@ -75,7 +75,7 @@ export default function PremiumPerkCarousel(arg0) {
   let obj = onItemChange(currentIndex[5]);
   const obj3 = {
     style: tmp.title,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: title,
   };
@@ -88,7 +88,7 @@ export default function PremiumPerkCarousel(arg0) {
     decelerationRate: "normal",
   };
   obj4.children = perks.map((item, index) => {
-    const items = [closure_1.carouselCard];
+    items = [closure_1.carouselCard];
     let lastCarouselCard = null;
     if (length - 1 === index) {
       lastCarouselCard = closure_1.lastCarouselCard;

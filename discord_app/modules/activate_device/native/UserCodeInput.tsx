@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const OAuthConstants = fn(15710).OAuthConstants;
+const OAuthConstants = fn(15853).OAuthConstants;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
@@ -32,10 +32,15 @@ export function UserCodeInput(prefilledUserCode) {
   const obj2 = { children: null };
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   ({ manualSubmit, error, submitting } = userCodeSubmit);
-  const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj4 = {
+    variant: "heading-lg/semibold",
+    color: "mobile-text-heading-primary",
+    style: tmp.text,
+    children: null,
+  };
   const intl = util.intl;
   obj4.children = intl.string(util.t.KYPNUv);
-  const items = [React5(Text_Text.Text, obj4)];
+  items = [React5(Text_Text.Text, obj4)];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.xRHk7f);

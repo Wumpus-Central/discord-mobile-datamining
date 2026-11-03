@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("design/components/Text/native/useMana
 
 export function useManaTextMigrationHighlight(fromEntriesResult, style) {
   const tmp = closure_5();
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   if (!obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {
     return null;
   } else {

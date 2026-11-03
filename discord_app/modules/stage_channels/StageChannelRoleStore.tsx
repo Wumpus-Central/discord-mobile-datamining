@@ -29,7 +29,7 @@ function buildStageChannelUserRoles(user, id2) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {

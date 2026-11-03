@@ -28,7 +28,7 @@ export function mergeChildMappings() {
     obj2 = {};
   }
   const obj3 = {};
-  let items = [];
+  items = [];
   let arr2 = items;
   const keys = Object.keys();
   if (keys !== undefined) {

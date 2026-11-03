@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {
   _require = id;
-  let items = [skuId3];
+  items = [skuId3];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const tmp2 = skuId(skuId1[3])(id, guildId);
@@ -38,7 +38,7 @@ function useEquippedCollectibleSkuIds(id, guildId) {
   }
   const items2 = [skuId, skuId1, skuId2, skuId3];
   return skuId2.useMemo(() => {
-    const items = [skuId, skuId1, skuId2, skuId3];
+    items = [skuId, skuId1, skuId2, skuId3];
     return items.filter((item) => null != item);
   }, items2);
 }
@@ -49,7 +49,7 @@ export default function useMaybeFetchEquippedCollectibleProducts(id, guildId, ar
   closure_0 = arg2;
   let tmp = useEquippedCollectibleSkuIds(id, guildId);
   const skuIds = tmp;
-  const items = [arg2, tmp];
+  items = [arg2, tmp];
   const effect = noop.useEffect(() => {
     let tmp = closure_0;
     if (closure_0) {

@@ -69,7 +69,7 @@ function getVisibleMessages(arg0) {
         if (lastVisibleMessageRowIndex >= 0) {
           if (null != chatManager._rows) {
             if (null != chatManager._messages) {
-              const items = [];
+              items = [];
               let diff = firstVisibleMessageRowIndex;
               if (firstVisibleMessageRowIndex >= lastVisibleMessageRowIndex) {
                 do {
@@ -126,7 +126,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9895).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8378);
+let closure_5 = fn(10026).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8502);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1072);
 ({
@@ -283,7 +283,13 @@ export function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpRes
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
+          const obj3 = {
+            sourceType: "embed",
+            source: tmp8,
+            mediaType: "image",
+            mediaUrl: tmp8.url,
+            contentType: "Array",
+          };
           return obj3;
         }
       }
@@ -779,7 +785,7 @@ export function handleMessageVisibilityChanged(
   });
 }
 export function handleLongPressSticker(arg0, arg1, fn) {
-  const items = [arg0];
+  items = [arg0];
   const set = new Set(items);
   if (null != arg1) {
     set.add(arg1);
@@ -1083,7 +1089,7 @@ export function getVoiceChannelIdChangedAuthorIds(prop, prop1) {
   const obj = parseVoiceStateChannelIdSummary(prop);
   const obj2 = parseVoiceStateChannelIdSummary(prop1);
   const set = new Set();
-  const items = [...obj.keys(), ...obj2.keys()];
+  items = [...obj.keys(), ...obj2.keys()];
   for (const item10032 of set1) {
     value = obj.get(item10032);
     if (value !== obj2.get(item10032)) {
@@ -1113,7 +1119,7 @@ export function getMessageAuthorMemberUserIds(author) {
   if (author != null) {
     id1 = author.id;
   }
-  const items = [id1, , ,];
+  items = [id1, , ,];
   const interaction = author.interaction;
   let id2;
   if (interaction != null) {

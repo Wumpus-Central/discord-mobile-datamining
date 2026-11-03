@@ -46,7 +46,7 @@ export const VideoIconState = obj2;
 export function useStableVoiceParticipant(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [VoiceStateStore, MediaEngineStore];
+  items = [VoiceStateStore, MediaEngineStore];
   const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
@@ -72,7 +72,7 @@ export function useMuteDeafenIconState(id, guildId) {
   _require = id;
   closure_1 = guildId;
   let obj = require("initialize");
-  const items = [VoiceStateStore, MediaEngineStore];
+  items = [VoiceStateStore, MediaEngineStore];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(
     items,
@@ -113,7 +113,7 @@ export function useMuteDeafenIconState(id, guildId) {
 export function useStableVideoState(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [MediaEngineStore, VoiceStateStore];
+  items = [MediaEngineStore, VoiceStateStore];
   const items1 = [arg1, arg0];
   return require("initialize").useStateFromStoresObject(
     items,
@@ -144,7 +144,7 @@ export function useStableVideoState(arg0, arg1) {
 export function useVideoIconState(id, guildId) {
   _require = id;
   closure_1 = guildId;
-  const items = [MediaEngineStore, VoiceStateStore];
+  items = [MediaEngineStore, VoiceStateStore];
   const items1 = [guildId, id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,

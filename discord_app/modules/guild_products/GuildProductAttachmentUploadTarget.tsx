@@ -19,7 +19,7 @@ prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
   return Endpoints.MESSAGE_DELETE_UPLOAD(arg0);
 };
 prototype["getMaxFileSize"] = function getMaxFileSize() {
-  return framebus;
+  return duration;
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return React;

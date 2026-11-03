@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/Messages.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
-import _mod4893 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod5020 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import requireSortedDescending from "messages/requireSortedDescending.tsx";
 import isReadableChannel from "messages/isReadableChannel.tsx";
 import KvMessage2 from "messages/KvMessage.tsx";
@@ -43,7 +43,7 @@ prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const self = this;
   const result = requireSortedDescending.requireSortedDescending(arr);
   const map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   const iter = arr[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -51,7 +51,7 @@ prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
     let addIntoMapResult1 = self.addIntoMap(map1, nextResult.members, (userId) => userId.userId);
     continue;
   }
-  const items = [Array.from(map.values()), Array.from(map1.values())];
+  items = [Array.from(map.values()), Array.from(map1.values())];
   return items;
 };
 prototype["addIntoMap"] = function addIntoMap(map, members, fn) {
@@ -138,7 +138,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -285,7 +285,7 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
     guildId,
     channel_id,
     KvMessage.fromMessage(guildId, channel_id, item10009, result),
-    _mod4893.ConflictOptions.Skip,
+    _mod5020.ConflictOptions.Skip,
   );
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
@@ -296,7 +296,7 @@ prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, databa
     guildId,
     channelId,
     KvMessage.fromMessage(guildId, channelId, message, result),
-    _mod4893.ConflictOptions.Replace,
+    _mod5020.ConflictOptions.Replace,
   );
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
@@ -321,7 +321,7 @@ prototype2["replaceChannel"] = function replaceChannel(arg0, channelId, arg2, da
   importDefault = channelId;
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
   dependencyMap = GatewayConnectionStore.lastTimeConnectedChanged();
-  const items = [];
+  items = [];
   HermesBuiltin.arraySpread(arg2, 0);
   const sorted = items.sort((id, id2) => channelId(closure_2[11]).compare(id2.id, id.id));
   const substr = sorted.slice(0, SaveableChannelsStore.saveLimit(channelId));
@@ -351,7 +351,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

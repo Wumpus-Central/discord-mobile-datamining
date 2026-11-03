@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
@@ -19,7 +19,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
     null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID,
   );
   const obj = require("isOptInEnabled");
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let result = null != closure_0;
     if (result) {

@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",
     alignItems: "center",
-    height: fn(5586).NAV_BAR_HEIGHT,
+    height: fn(5709).NAV_BAR_HEIGHT,
     paddingHorizontal: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -31,7 +31,7 @@ let obj2 = {
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5586).NAV_BAR_HEIGHT,
+  height: fn(5709).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,
@@ -77,7 +77,7 @@ export default function SearchBarNav(arg0) {
   if (tmp4Result.isAndroid()) {
     tmp10 = tmp3Result2;
   }
-  const items = [tmp10, ,];
+  items = [tmp10, ,];
   const obj6 = { style: tmp2.flex, children: null };
   const obj7 = { children: null };
   const merged1 = Object.assign(merged);

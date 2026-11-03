@@ -1,46 +1,54 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/Messages.tsx
 import TTITrackerDefault from "../../../../tti_analytics/TTITracker.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../../RootNavigationRef.native.tsx";
 import DeprecatedLayoutAnimation from "../../../../animations/native/DeprecatedLayoutAnimation.tsx";
+import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import TTIAnalyticsUtils from "../../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import useMessagesSpecsDefault from "useMessagesSpecs.tsx";
+import MessagesHeaderDefault from "MessagesHeader.tsx";
+import useMessagesDataDefault from "useMessagesData.tsx";
+import useMessagesScrollToTopDefault from "useMessagesScrollToTop.tsx";
+import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect.tsx";
+import ChannelListPanelBackdropDefault from "../../../../channel_list_v2/native/components/ChannelListPanelBackdrop.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const __initData = {
-  code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}",
+let closure_8 = {
+  code: "(function MessagesTsx1(event){let[scrollPosition,handleGuildsNavigationScroll]=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
 
 export default noop.memo(function Messages(style) {
-  let sharedValue;
-  let dataKey;
-  let sections;
-  let externalScrollEventHandler;
-  const tmp3 = dataKey(sections[4]);
-  sharedValue = sharedValue(sections[6]).useSharedValue(0);
-  let obj = sharedValue(sections[6]);
-  const youBarTotalHeight = sharedValue(sections[7]).useYouBarTotalHeight();
-  const obj2 = sharedValue(sections[7]);
-  const youBarTotalHeight1 = sharedValue(sections[7]).useYouBarTotalHeight(-16);
-  const obj3 = sharedValue(sections[7]);
-  const doesLandOnHomeDrawer = sharedValue(sections[8]).useDoesLandOnHomeDrawer();
-  const obj4 = sharedValue(sections[8]);
-  ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } = dataKey(
-    sections[9],
-  )());
-  const tmp10 = dataKey(sections[10])();
-  dataKey = tmp10.dataKey;
-  sections = tmp10.sections;
-  const ref = externalScrollEventHandler.useRef(null);
-  const ref1 = externalScrollEventHandler.useRef(null);
-  const tmp9 = dataKey(sections[9])();
+  _require = undefined;
+  const tmp3 = useAnalyticsLocationsDefault;
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
+  const obj2 = require("useYouBarTotalHeight");
+  const youBarTotalHeight1 = require("useYouBarTotalHeight").useYouBarTotalHeight(-16);
+  const obj3 = require("useYouBarTotalHeight");
+  const doesLandOnHomeDrawer = require("useHomeDrawerGesture").useDoesLandOnHomeDrawer();
+  const obj4 = require("useHomeDrawerGesture");
+  ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } =
+    useMessagesSpecsDefault());
+  const tmp10 = useMessagesDataDefault();
+  const dataKey = tmp10.dataKey;
+  _require = dataKey;
+  importDefault = tmp10.sections;
+  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
+  const tmp9 = useMessagesSpecsDefault();
   if (obj6.isAndroid()) {
     let AndroidMessagesListImplExperiment = tmp4(tmp13).AndroidMessagesListImplExperiment;
   } else {
@@ -48,15 +56,15 @@ export default noop.memo(function Messages(style) {
   }
   const config = AndroidMessagesListImplExperiment.useConfig({ location: "Messages Tab" });
   ({ list, recycleItems } = config);
-  dataKey(sections[13])({ listRef: ref, listRefHappeningNow: ref1 });
-  dataKey(sections[14])();
-  obj6 = sharedValue(sections[11]);
-  const commonTriggerPoint = sharedValue(sections[15]).useCommonTriggerPoint(
-    tmp4(tmp2[16]).DmGdmListRenderTriggerPoint,
+  useMessagesScrollToTopDefault({ listRef: ref, listRefHappeningNow: ref1 });
+  useMessagesReconnectToCallsEffectDefault();
+  obj6 = require("PlatformUtils");
+  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
+    tmp4(18251).DmGdmListRenderTriggerPoint,
   );
-  const items = [dataKey];
-  const effect = obj5.useEffect(() => {
-    if (null != dataKey) {
+  items = [dataKey];
+  const effect = noop.useEffect(() => {
+    if (null != c0) {
       if (!obj7.isAndroid()) {
         if (!AccessibilityStore.useReducedMotion) {
           const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
@@ -81,25 +89,31 @@ export default noop.memo(function Messages(style) {
       obj7 = PlatformUtils;
     }
   }, items);
-  const layoutEffect = obj5.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
-    const reduced = sections.reduce((acc, item) => acc + item, 0);
+    const reduced = _undefined2.reduce((acc, item) => acc + item, 0);
     TTITrackerDefault.recordRender(reduced, GatewayConnectionStore.isConnected());
   });
-  const tmp4Result = sharedValue(sections[15]);
-  externalScrollEventHandler = sharedValue(sections[22]).useExternalScrollEventHandler({ id: "messages" });
-  const tmp4Result3 = sharedValue(sections[22]);
-  const fn = function w(contentOffset) {
-    const result = sharedValue.set(contentOffset.contentOffset.y);
-    externalScrollEventHandler(
-      contentOffset.contentOffset.y,
-      contentOffset.contentSize.height,
-      contentOffset.layoutMeasurement.height,
-    );
-  };
-  fn.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
-  fn.__workletHash = 5461403437592;
-  fn.__initData = __initData;
+  const tmp4Result = require("useCommonTriggerPoint");
+  const tmp4Result3 = require("QuestDockExternalCoordinationContext");
+  const externalScrollEventHandler = require("QuestDockExternalCoordinationContext").useExternalScrollEventHandler({
+    id: "messages",
+  });
+  const items1 = [closure_8, sharedValue, externalScrollEventHandler];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp21, tmp22, tmp23] = items1;
+  class MessagesTsx1 {
+    constructor(arg0) {
+      result = closure_0.set(style.contentOffset.y);
+      tmp2 = closure_1(style.contentOffset.y, style.contentSize.height, style.layoutMeasurement.height);
+      return;
+    }
+  }
+  const items2 = [tmp22, tmp23];
+  MessagesTsx1.__closure = items2;
+  MessagesTsx1.__workletHash = 2610387438817;
+  MessagesTsx1.__initData = tmp21;
   let obj7 = {
     accessibilityLabel: null,
     data: null,
@@ -115,11 +129,13 @@ export default noop.memo(function Messages(style) {
     scrollIndicatorInsetBottom: null,
     scrollPosition: null,
   };
-  const tmp4Result4 = sharedValue(sections[6]);
-  const intl = tmp4(tmp2[23]).intl;
-  obj7.accessibilityLabel = intl.string(sharedValue(sections[23]).t.OIgYlQ);
+  const tmp4Result4 = require("../../../../../../_runtime/metro/01652__.js");
+  const intl = tmp4(1113).intl;
+  obj7.accessibilityLabel = intl.string(require("util").t.OIgYlQ);
   obj7.data = tmp10;
-  obj7.handleScrollAnimated = sharedValue(sections[6]).useAnimatedScrollHandler(fn);
+  obj7.handleScrollAnimated = require("../../../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(
+    MessagesTsx1,
+  );
   obj7.insetEnd = youBarTotalHeight;
   obj7.listItemHeight = listItemHeight;
   obj7.listItemSizes = listItemSizes;
@@ -130,32 +146,34 @@ export default noop.memo(function Messages(style) {
   obj7.recycleItems = recycleItems;
   obj7.scrollIndicatorInsetBottom = youBarTotalHeight1;
   obj7.scrollPosition = sharedValue;
-  const obj8 = { value: tmp3(dataKey(sections[5]).MESSAGES).analyticsLocations, children: null };
+  const obj8 = { value: tmp3(AnalyticsLocationDefault.MESSAGES).analyticsLocations, children: null };
   const obj9 = { style: style.style, children: null };
-  const animatedScrollHandler = sharedValue(sections[6]).useAnimatedScrollHandler(fn);
-  const obj10 = { backgroundColor: dataKey(sections[26]).colors.PANEL_BG, children: null };
-  const items1 = [closure_6(dataKey(sections[27]), { height: headerSize, scrollPosition: sharedValue }), ,];
+  const animatedScrollHandler = require("../../../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(
+    MessagesTsx1,
+  );
+  const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
+  const items3 = [closure_6(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp22Result = closure_6(tmp(tmp2[28]), {});
+    let tmp25Result = closure_6(tmp(18254), {});
   } else {
     if ("legend" === list) {
-      let tmp25 = tmp2[29];
+      let tmp28 = 18259;
     } else {
-      tmp25 = "flash" === list ? tmp2[30] : tmp2[31];
+      tmp28 = "flash" === list ? 18303 : 18304;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
-    tmp22Result = closure_6(tmp(tmp25), obj11);
-    const tmpResult2 = tmp(tmp25);
+    tmp25Result = closure_6(tmp(tmp28), obj11);
+    const tmpResult2 = tmp(tmp28);
   }
-  items1[1] = tmp22Result;
-  let tmp22Result2 = null;
+  items3[1] = tmp25Result;
+  let tmp25Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp22Result2 = closure_6(tmp4(tmp2[32]).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp25Result2 = closure_6(tmp4(13471).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
-  items1[2] = tmp22Result2;
-  obj10.children = items1;
-  obj9.children = closure_7(sharedValue(sections[25]).CutoutBackgroundProvider, obj10);
-  obj8.children = closure_6(dataKey(sections[24]), obj9);
-  return closure_6(sharedValue(sections[4]).AnalyticsLocationProvider, obj8);
+  items3[2] = tmp25Result2;
+  obj10.children = items3;
+  obj9.children = closure_7(require("CutoutBackgroundContext").CutoutBackgroundProvider, obj10);
+  obj8.children = closure_6(ChannelListPanelBackdropDefault, obj9);
+  return closure_6(require("useAnalyticsLocations").AnalyticsLocationProvider, obj8);
 });

@@ -7,7 +7,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
 
 export function useIsHomeDrawerChannelInChannelList() {
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   return initialize.useStateFromStores(
     items,
     () => (guild_id) => {

@@ -7,13 +7,13 @@ import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 
 export default function useProfileEffect(arg0) {
   _require = arg0;
-  const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
+  items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = CollectiblesCategoryStore.getProduct(closure_0);

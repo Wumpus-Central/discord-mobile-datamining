@@ -34,7 +34,7 @@ let closure_16 = async function _executeCommand(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -346,7 +346,7 @@ let closure_16 = async function _executeCommand(arg0) {
                                       channelId = str.trim();
                                     } else {
                                       let obj11 = closure_140_0(closure_140_3[17]);
-                                      let guild = closure_139_2.guild;
+                                      guild = closure_139_2.guild;
                                       let id5;
                                       if (guild != null) {
                                         id5 = guild.id;
@@ -595,7 +595,7 @@ let closure_16 = async function _executeCommand(arg0) {
                     obj27.type = closure_139_29.type;
                     obj27.name = name2;
                     obj27.options = closure_139_11;
-                    let items = [obj27];
+                    items = [obj27];
                     closure_139_11 = items;
                     closure_139_28 = closure_139_28 - 1;
                   } while (closure_139_28 >= 0);
@@ -691,7 +691,7 @@ let closure_16 = async function _executeCommand(arg0) {
                             if ("emoji" === type.type) {
                               const obj = { names: null, surrogates: "", unicodeVersion: 6 };
                               const name = type.name;
-                              const items = [name.replaceAll(":", "")];
+                              items = [name.replaceAll(":", "")];
                               obj.names = items;
                               let emoji = new closure_1_0(closure_1_3[21]).Emoji(obj);
                             } else {
@@ -759,7 +759,7 @@ let closure_17 = async function _retryCommandMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -822,7 +822,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
   interactionLifecycleOptions = interactionLifecycleOptions.interactionLifecycleOptions;
   let message;
   if (null != context.channel) {
-    const guild = context.guild;
+    guild = context.guild;
     const id = context.channel.id;
     let id1;
     if (guild != null) {
@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(10315).createNonce();
-      let obj2 = onMessageSuccess(10315);
+      nonce = onMessageSuccess(10445).createNonce();
+      let obj2 = onMessageSuccess(10445);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(6070).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(6190).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(8384).MessageDataType.COMMAND, message };
-    message(8384).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8508).MessageDataType.COMMAND, message };
+    message(8508).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(8384);
+    const obj6 = message(8508);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -972,7 +972,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1174,7 +1174,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -1259,7 +1259,7 @@ let closure_24 = async function _stageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1113).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8701);
-            obj2.maxSize = closure_0(8216).sizeString(dependencyMap);
+            const obj = closure_2(8825);
+            obj2.maxSize = closure_0(8340).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1113).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(8216);
+            const obj3 = closure_0(8340);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1402,7 +1402,7 @@ const Constants = fn(1072);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(5019).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(5146).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

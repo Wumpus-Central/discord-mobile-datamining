@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3192 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3319 from "../../age_assurance/ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
@@ -22,7 +22,7 @@ function ClassificationHeader(classificationTypeText) {
   classificationTypeText = classificationTypeText.classificationTypeText;
   const guildMetadata = classificationTypeText.guildMetadata;
   const tmp = closure_16();
-  const items = [classificationTypeText, guildMetadata];
+  items = [classificationTypeText, guildMetadata];
   let obj = { style: tmp.header, children: null };
   const memo = noop.useMemo(() => {
     let obj2 = {
@@ -30,7 +30,7 @@ function ClassificationHeader(classificationTypeText) {
       classificationHook(children, arg1) {
         return closure_1_13(
           classificationTypeText(closure_1_2[9]).Text,
-          { variant: "heading-xl/bold", children },
+          { variant: "heading-xl/semibold", children },
           arg1,
         );
       },
@@ -71,7 +71,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5624).Text, {
+  obj.children = closure_13(classificationTypeText(5747).Text, {
     variant: "text-lg/normal",
     style: tmp.headerText,
     color: "mobile-text-heading-primary",
@@ -90,7 +90,7 @@ function SectionHeader(arg0) {
   } else {
     obj = { variant: "eyebrow", color: "text-muted", children };
   }
-  return map1(Text_Text.Text, obj);
+  return state(Text_Text.Text, obj);
 }
 function BulletRow(children) {
   let flag = children.large;
@@ -103,16 +103,16 @@ function BulletRow(children) {
     str = "text-md/medium";
   }
   const obj = { style: tmp.classificationActionDescription, children: null };
-  const items = [
-    closure_1_14(Text_Text.Text, { variant: str, children: [" ", "\u2022"] }),
-    map1(Text_Text.Text, { variant: str, style: tmp.bulletText, children: children.children }),
+  items = [
+    gesture(Text_Text.Text, { variant: str, children: [" ", "\u2022"] }),
+    state(Text_Text.Text, { variant: str, style: tmp.bulletText, children: children.children }),
   ];
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function ClassificationActionsTaken(arg0) {
   ({ actions, classificationExpiration, redesigned } = arg0);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = redesigned(504).useStateFromStores(items, () => locale.locale);
   const tmp4 = closure_16();
   const found = actions.filter((descriptions) => descriptions.descriptions.length > 0);
@@ -124,7 +124,7 @@ function ClassificationActionsTaken(arg0) {
     const items1 = [closure_13(SectionHeader, obj3)];
     const obj4 = { style: tmp4.actionsTaken, children: null };
     const items2 = [
-      found.map((action) => map1(ClassificationActionsTakenRows, { action, large: redesigned }, action.id)),
+      found.map((action) => state(ClassificationActionsTakenRows, { action, large: redesigned }, action.id)),
     ];
     let tmp8Result = null;
     if (null != classificationExpiration) {
@@ -152,21 +152,21 @@ function ManualReviewDecidedUnderageActionsTaken() {
   const obj2 = { plain: true, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["O2nYk+"]);
-  const items = [map1(SectionHeader, obj2)];
+  items = [state(SectionHeader, obj2)];
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3192.rn3Gto);
-  obj3.children = map1(BulletRow, obj4);
-  items[1] = map1(React4, obj3);
+  obj4.children = intl2.string(_modDef3319.rn3Gto);
+  obj3.children = state(BulletRow, obj4);
+  items[1] = state(React4, obj3);
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function ClassificationActionsTakenRows(large) {
   large = large.large;
   const obj = { children: null };
   const descriptions = large.action.descriptions;
-  obj.children = descriptions.map((children, index) => map1(BulletRow, { large, children }, index));
+  obj.children = descriptions.map((children, index) => state(BulletRow, { large, children }, index));
   return closure_13(closure_15, obj);
 }
 function ManualReviewDecidedUnderageGuidance() {
@@ -175,15 +175,15 @@ function ManualReviewDecidedUnderageGuidance() {
   const obj2 = { plain: true, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["977iei"]);
-  const items = [map1(SectionHeader, obj2)];
+  items = [state(SectionHeader, obj2)];
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3192["yV/t/V"]);
-  obj3.children = map1(BulletRow, obj4);
-  items[1] = map1(React4, obj3);
+  obj4.children = intl2.string(_modDef3319["yV/t/V"]);
+  obj3.children = state(BulletRow, obj4);
+  items[1] = state(React4, obj3);
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function ClassificationGuidance(arg0) {
   ({ tosLink, communityGuidelinesLink, classificationTypeText, policyExplainerLink, appealComponent } = arg0);
@@ -191,15 +191,15 @@ function ClassificationGuidance(arg0) {
   const obj2 = { variant: "eyebrow", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["977iei"]);
-  const items = [map1(Text_Text.Text, obj2), , ,];
+  items = [state(Text_Text.Text, obj2), , ,];
   const obj3 = { variant: "text-sm/normal", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.format(util.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-  items[1] = map1(Text_Text.Text, obj3);
-  items[2] = map1(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
+  items[1] = state(Text_Text.Text, obj3);
+  items[2] = state(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
   items[3] = appealComponent;
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function ClassificationPolicyCard(classificationDescription) {
   const policyExplainerLink = classificationDescription.policyExplainerLink;
@@ -214,18 +214,18 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11281).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(11418).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
-  const items = [closure_13(closure_4, obj3)];
+  items = [closure_13(closure_4, obj3)];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1113).intl;
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj5.children = closure_13(policyExplainerLink(5624).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5747).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);
@@ -235,7 +235,7 @@ function AppealStatus() {
   const obj = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.string(util.t["I2H0/E"]);
-  return map1(Text_Text.Text, obj);
+  return state(Text_Text.Text, obj);
 }
 function LetUsKnow(arg0) {
   _require = arg0;
@@ -243,7 +243,7 @@ function LetUsKnow(arg0) {
   const intl = require("util").intl;
   obj.children = intl.format(require("util").t.IFxUaT, {
     letUsKnowHook(children, arg1) {
-      return map1(
+      return state(
         Text_Text.Text,
         { onPress: onPressLetUsKnow.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children },
         arg1,
@@ -258,26 +258,26 @@ function AppealWindowExpired() {
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.appealWindowExpiredText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.PHriyz);
-  const items = [map1(Text_Text.Text, obj2)];
+  items = [state(Text_Text.Text, obj2)];
   const obj3 = { variant: "text-sm/normal", color: "text-muted", style: tmp.appealWindowExpiredText, children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.YsxY1D);
-  items[1] = map1(Text_Text.Text, obj3);
+  items[1] = state(Text_Text.Text, obj3);
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function AppealFooter(hasBeenAppealed) {
   const obj = { style: closure_16().letUsKnowContainer, children: null };
   if (hasBeenAppealed.hasBeenAppealed) {
-    let tmpResult = map1(AppealStatus, {});
+    let tmpResult = state(AppealStatus, {});
   } else if (hasBeenAppealed.isAppealWindowExpired) {
-    tmpResult = map1(AppealWindowExpired, {});
+    tmpResult = state(AppealWindowExpired, {});
   } else {
     const obj2 = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
-    tmpResult = map1(LetUsKnow, obj2);
+    tmpResult = state(LetUsKnow, obj2);
   }
   obj.children = tmpResult;
-  return map1(React4, obj);
+  return state(React4, obj);
 }
 function ConfirmMinimumAgeGuidance(arg0) {
   ({ tosLink, communityGuidelinesLink, onPressLetUsKnow } = arg0);
@@ -286,38 +286,38 @@ function ConfirmMinimumAgeGuidance(arg0) {
   const obj2 = { plain: true, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.RVEiD0);
-  const items = [map1(SectionHeader, obj2), ,];
+  items = [state(SectionHeader, obj2), ,];
   const obj3 = { label: null, onPress: null, arrow: true, start: true, end: true };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.YQPbuc);
   obj3.onPress = onPressLetUsKnow;
-  items[1] = map1(TableRow.TableRow, obj3);
+  items[1] = state(TableRow.TableRow, obj3);
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.guidelinesFooter, children: null };
   const intl3 = util.intl;
   obj4.children = intl3.format(util.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-  items[2] = map1(Text_Text.Text, obj4);
+  items[2] = state(Text_Text.Text, obj4);
   obj.children = items;
-  return closure_1_14(React4, obj);
+  return gesture(React4, obj);
 }
 function ManualReviewDecidedUnderageFooter(arg0) {
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3192.vPOpia, { tosLink, communityGuidelinesLink });
-  return map1(Text_Text.Text, obj);
+  obj.children = intl.format(_modDef3319.vPOpia, { tosLink, communityGuidelinesLink });
+  return state(Text_Text.Text, obj);
 }
 function ManualReviewDecidedUnderageView() {
   const obj = { children: null };
-  const items = [
-    map1(ManualReviewDecidedUnderageActionsTaken, {}),
-    map1(ManualReviewDecidedUnderageGuidance, {}),
-    map1(ManualReviewDecidedUnderageFooter, {
+  items = [
+    state(ManualReviewDecidedUnderageActionsTaken, {}),
+    state(ManualReviewDecidedUnderageGuidance, {}),
+    state(ManualReviewDecidedUnderageFooter, {
       tosLink: constants.TOS_LINK,
       communityGuidelinesLink: constants.COMMUNITY_GUIDELINES,
     }),
   ];
   obj.children = items;
-  return closure_1_14(__initData, obj);
+  return gesture(closure_1_15, obj);
 }
 function ClassificationDetailFooter(onClose) {
   const obj = { style: closure_16().redirectButtonWrapper, children: null };
@@ -325,21 +325,21 @@ function ClassificationDetailFooter(onClose) {
   const intl = util.intl;
   obj2.text = intl.string(util.t.elrEjL);
   obj2.onPress = onClose.onClose;
-  obj.children = map1(components_Button_Button.Button, obj2);
-  return map1(React4, obj);
+  obj.children = state(components_Button_Button.Button, obj2);
+  return state(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
-  SafetyHubAnalyticsActions: c10,
+  SafetyHubAnalyticsActions: closure_10,
   SafetyHubLinks: closure_11,
 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,
@@ -468,7 +468,7 @@ export default function ConnectedClassificationDetail(classificationId) {
   const isAppealEligible = safetyHubClassification.isAppealEligible;
   const tmp4 = closure_16();
   let obj = classificationId(onClose[19]);
-  let items = [hasItem];
+  items = [hasItem];
   const stateFromStores = classificationId(onClose[12]).useStateFromStores(items, () => hasItem.getAppealEligibility());
   let flagged_content;
   if (classification != null) {
@@ -544,7 +544,7 @@ export default function ConnectedClassificationDetail(classificationId) {
         violation_type: null,
       };
       const _Number = Number;
-      const items = [Number(classificationId)];
+      items = [Number(classificationId)];
       obj3.classification_ids = items;
       if (source == null) {
         source = React7.SystemDM;
@@ -589,7 +589,7 @@ export default function ConnectedClassificationDetail(classificationId) {
           is_dsa_eligible: null,
           violation_type: null,
         };
-        const items = [Number(classificationId)];
+        items = [Number(classificationId)];
         obj3.classification_ids = items;
         let SystemDM = source;
         if (source == null) {

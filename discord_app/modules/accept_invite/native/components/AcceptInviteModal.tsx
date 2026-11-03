@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const CreateGuildModalStates = fn(7147).CreateGuildModalStates;
+const CreateGuildModalStates = fn(7270).CreateGuildModalStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
@@ -16,7 +16,7 @@ export default function AcceptInviteModal(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => () => {}, []);
   let obj = { screens: null, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE };
-  const items = [arg0];
+  items = [arg0];
   obj.screens = noop.useMemo(() => {
     let obj = {};
     const obj2 = {
@@ -34,7 +34,7 @@ export default function AcceptInviteModal(arg0) {
     obj2.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(9444).clearDisplayedInvite;
+      obj.onPressClose = closure_0(9572).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj2;

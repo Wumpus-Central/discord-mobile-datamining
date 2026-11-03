@@ -47,7 +47,7 @@ prototype["isMember"] = function isMember(arg0) {
   return guildIds.has(arg0);
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds) {
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   this.guildIds = new Set(items);
 };
 prototype["handleCacheLoaded"] = function handleCacheLoaded(guilds) {

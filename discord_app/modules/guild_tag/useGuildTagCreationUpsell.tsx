@@ -20,7 +20,7 @@ export function useGuildTagCreationUpsell(GuildProfileCreateTagUpsell, arg1) {
   if (arg1 === undefined) {
     obj = ServerTagUpsellOnProfileExperimentDefault;
   }
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return _modDef12.sortBy(

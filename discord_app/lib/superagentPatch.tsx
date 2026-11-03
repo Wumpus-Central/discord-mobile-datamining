@@ -23,9 +23,9 @@ let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(19363).IdGenerator();
+const idGenerator = new fn(19521).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = {
   name: "2026-07-reject-with-error-kill-switch",
   kind: "user",
@@ -59,8 +59,8 @@ HTTPUtils = fn(1282);
 HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
     const _default = promise(502).default;
-    const _default2 = promise(1357).default;
-    const _default3 = promise(1383).default;
+    const _default2 = promise(1359).default;
+    const _default3 = promise(1385).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
       promise.url = tmp(1282).getAPIBaseURL() + promise.url;
@@ -72,7 +72,7 @@ HTTPUtils.setRequestPatch({
         const result = promise.set("Authorization", _default.getToken());
       }
       const tmpResult = tmp(1282);
-      const result1 = tmp(19364).updateDynamicSuperProperties();
+      const result1 = tmp(19522).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -93,8 +93,8 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (promise(1375).isPlatformEmbedded) {
-        let items = [];
+      if (promise(1377).isPlatformEmbedded) {
+        items = [];
         const _default5 = tmp(1114).default;
         if (null != _default5) {
           let Languages = _default5.getConstants().Languages;
@@ -121,7 +121,7 @@ HTTPUtils.setRequestPatch({
           })(items),
         );
       }
-      const result6 = promise.set("X-Discord-Locale", promise(2062).default.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2191).default.locale);
       const tmp18 = getTimeZoneDefault();
       if (null != tmp18) {
         const result7 = promise.set("X-Discord-Timezone", tmp18);
@@ -174,7 +174,7 @@ HTTPUtils.setRequestPatch({
           }
         } catch (err) {}
       }
-      const tmpResult2 = tmp(19364);
+      const tmpResult2 = tmp(19522);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
@@ -280,7 +280,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(1994)(19369, dependencyMap.paths), statusCode(1994)(6538, dependencyMap.paths)];
+        items = [statusCode(2123)(19527, dependencyMap.paths), statusCode(2123)(6658, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -384,14 +384,14 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(1994)(17668, dependencyMap.paths);
-          statusCode(1994)(17668, dependencyMap.paths)
+          const promise4 = statusCode(2123)(17811, dependencyMap.paths);
+          statusCode(2123)(17811, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(1994)(17668, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2123)(17811, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -403,11 +403,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(1994)(6904, dependencyMap.paths).then((result) => {
+      tmp7(2123)(7024, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(1994)(6904, dependencyMap.paths);
+      const promise3 = tmp7(2123)(7024, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -415,7 +415,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1994)(6720, dependencyMap.paths).then((result) => {
+        tmp7(2123)(6840, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -424,7 +424,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(1994)(6720, dependencyMap.paths);
+        const promise2 = tmp7(2123)(6840, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -436,16 +436,16 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(1994)(19380, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(2123)(19538, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(1994)(19380, dependencyMap.paths);
+          const promise = tmp7(2123)(19538, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(19379);
+      tmp7Result = tmp7(19537);
     }
-    obj = statusCode(7492);
+    obj = statusCode(7616);
   },
 });
 HTTPUtils = fn(1282);
@@ -460,7 +460,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -483,10 +483,10 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           } else {
             dependencyMap = 1;
             c4 = 1;
-            const obj4 = { value: tmp2(1475).awaitOnline(), done: false };
+            const obj4 = { value: tmp2(1477).awaitOnline(), done: false };
             return obj4;
           }
-          obj8 = tmp2(1475);
+          obj8 = tmp2(1477);
         }
       } else if (arg0 === 1) {
         c4 = 3;

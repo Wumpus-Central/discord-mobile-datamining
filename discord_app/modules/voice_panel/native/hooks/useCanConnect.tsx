@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export default function useCanConnect(arg0) {
   _require = arg0;
-  const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
+  items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(
     items,

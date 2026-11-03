@@ -5,14 +5,14 @@ import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.na
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const useWindowDimensionsDefault = tmp(1491);
-const useChatLayoutDefault = tmp(5201);
-const YouScreenDefault = tmp(18861);
+const useWindowDimensionsDefault = tmp(1493);
+const useChatLayoutDefault = tmp(5324);
+const YouScreenDefault = tmp(19019);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11514).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11651).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" },
   androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none },
@@ -37,7 +37,7 @@ export default noop.memo(function YouScreenContainer(route) {
     }
   }
   if (useChatLayoutDefault().isChatBesideChannelList) {
-    const items = [items1.container];
+    items = [items1.container];
     let tmp7;
     if (tmp3Result.isAndroid()) {
       const obj2 = {};

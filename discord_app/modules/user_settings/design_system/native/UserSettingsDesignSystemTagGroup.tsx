@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, narrow: { width: "60%" } };
 let closure_7 = createStyles.createStyles(obj2);
 let items = [
@@ -55,7 +55,7 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj4 = { children: null };
   const obj5 = { spacing: nativeDefault.space.PX_12, children: null };
   items1 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/bold", children: "Default layout" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Default layout" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -78,7 +78,7 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj8 = { children: null };
   const obj9 = { spacing: nativeDefault.space.PX_12, children: null };
   items3 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/bold", children: "Sizes" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Sizes" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -95,7 +95,7 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj12 = { children: null };
   const obj13 = { spacing: nativeDefault.space.PX_12, children: null };
   const items4 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/bold", children: "Filter treatment" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Filter treatment" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -109,7 +109,7 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj15 = { children: null };
   const obj16 = { spacing: nativeDefault.space.PX_12, children: null };
   const items5 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/bold", children: "Inline layout" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Inline layout" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",

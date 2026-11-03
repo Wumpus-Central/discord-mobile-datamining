@@ -10,11 +10,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 require = fn;
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(6957).GuildIconSizes.XSMALL;
+  obj2.size = guildId(7083).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 }
 function GuildCard(guildIds) {
@@ -22,7 +22,7 @@ function GuildCard(guildIds) {
   ({ direction, onPress } = guildIds);
   let substr;
   const tmp = closure_9();
-  const items = [guildIds];
+  items = [guildIds];
   const memo = noop.useMemo(() => ActivityPrivacyUpsellUtils.sortGuildIdsByFrecency(guildIds), items);
   const items1 = [GuildStore];
   const stateFromStores = guildIds(substr[6]).useStateFromStores(items1, () => GuildStore.getGuild(memo[0]));
@@ -120,7 +120,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 },
   title: null,
@@ -172,7 +172,7 @@ export default function BaseUpsellActionSheet(toastContent) {
   const onConfirm = toastContent.onConfirm;
   ({ direction, affectedGuildIds, title, subtitle, confirmText, onCardPress } = toastContent);
   const tmp = closure_9();
-  const items = [onConfirm, toastContent];
+  items = [onConfirm, toastContent];
   const callback = noop.useCallback(() => {
     onConfirm();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -184,14 +184,14 @@ export default function BaseUpsellActionSheet(toastContent) {
   let obj = { startExpanded: true, children: null };
   const obj2 = { style: tmp.container, children: null };
   const items1 = [
-    closure_7(toastContent(5624).Text, {
+    closure_7(toastContent(5747).Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "text-strong",
       children: title,
     }),
-    closure_7(toastContent(5624).Text, {
+    closure_7(toastContent(5747).Text, {
       style: tmp.description,
       variant: "text-md/medium",
       color: "text-default",
@@ -201,16 +201,16 @@ export default function BaseUpsellActionSheet(toastContent) {
   ];
   const obj5 = { style: tmp.buttonsContainer, children: null };
   const items2 = [
-    closure_7(toastContent(5634).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
+    closure_7(toastContent(5754).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
   ];
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1113).intl;
   obj6.text = intl.string(toastContent(1113).t.X1rGEm);
   obj6.onPress = callback1;
-  items2[1] = closure_7(toastContent(5634).Button, obj6);
+  items2[1] = closure_7(toastContent(5754).Button, obj6);
   obj5.children = items2;
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(5272).BottomSheet, obj);
+  return closure_7(toastContent(5395).BottomSheet, obj);
 }

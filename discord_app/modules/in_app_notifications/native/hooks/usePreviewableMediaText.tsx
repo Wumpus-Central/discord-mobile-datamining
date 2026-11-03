@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 export function usePreviewableMediaText(previewableMedia) {
   previewableMedia = previewableMedia.previewableMedia;
   const author = previewableMedia.author;
-  const items = [author, previewableMedia];
+  items = [author, previewableMedia];
   return noop.useMemo(() => {
     if (0 === previewableMedia.length) {
       return { text: null, secondaryText: null };

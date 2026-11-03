@@ -12,7 +12,7 @@ export default function useGameRecords(memo) {
   _require = memo;
   const games = require("useGame").useGames(memo);
   const obj = require("useGame");
-  const items = [GameStore];
+  items = [GameStore];
   const items1 = [memo];
   return require("initialize").useStateFromStoresArray(
     items,

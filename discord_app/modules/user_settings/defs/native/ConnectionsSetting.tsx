@@ -14,7 +14,7 @@ const route = SettingBuilders.createRoute({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3fe7U5"])];
+    items = [intl.string(util.t["3fe7U5"])];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["f6kk+r"]);
     return items;

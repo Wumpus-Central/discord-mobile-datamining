@@ -86,7 +86,7 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
       }
       const obj = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
       if ("replaceAll" === str) {
-        const items = [obj];
+        items = [obj];
         let combined = items;
       } else {
         if ("stack" === str) {
@@ -119,7 +119,7 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
       }
       const obj2 = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
       if ("replaceAll" === str) {
-        const items = [obj2];
+        items = [obj2];
         let combined = items;
       } else {
         if ("stack" === str) {

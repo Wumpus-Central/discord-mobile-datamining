@@ -3,10 +3,10 @@ import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchAppli
 import noop from "../../../_runtime/metro/00019__.js";
 
 let items = [
-  fn(6859).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
-  fn(6859).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-  fn(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-  fn(6859).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+  fn(6979).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  fn(6979).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  fn(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  fn(6979).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ];
 let set = new Set(items);
 const size = fn(2);
@@ -16,10 +16,10 @@ const result = size.fileFinishedImporting(
 
 export function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
   importDefault = stateFromStores1;
-  let items = [stateFromStores1];
+  items = [stateFromStores1];
   const memo = noop.useMemo(() => {
     set = new Set();
-    const items = [];
+    items = [];
     const item = stateFromStores1.forEach((applicationId) => {
       applicationId = applicationId.applicationId;
       if (set.has(applicationId.type)) {

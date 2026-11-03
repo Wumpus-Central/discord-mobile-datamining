@@ -75,7 +75,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
     const values = Object.values(subscriptions);
     const found = values.filter((type) => type.type === constants.PREMIUM);
     let mapped = found.map((id) => {
-      const items = id.items;
+      items = id.items;
       const mapped = items.map((planId) => planId.planId);
       const sorted = mapped.sort();
       return "" + id.id + ":" + id.type + ":" + id.status + ":" + sorted.join("|");

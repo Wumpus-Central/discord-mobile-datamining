@@ -145,7 +145,7 @@ prototype["getGameMetadata"] = function getGameMetadata() {
     exeName = currentGameForAnalytics.exeName;
   }
   obj.game_exe_name = exeName;
-  let application_id = null;
+  application_id = null;
   if (null != findActivityResult) {
     application_id = findActivityResult.application_id;
   }

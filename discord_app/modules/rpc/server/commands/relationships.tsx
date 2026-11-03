@@ -10,11 +10,11 @@ require = fn;
 const Constants = fn(1072);
 ({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16301);
+const CONTEXT_MENU_ICON_NAMES = fn(16444);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items = [fn(8910).OAuth2Scopes.RELATIONSHIPS_READ];
-obj4[fn(6450).RPC_SCOPE_CONFIG.ANY] = items;
+let items = [fn(9034).OAuth2Scopes.RELATIONSHIPS_READ];
+obj4[fn(6570).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {
   const deserializer = BigFlagUtilsAll;
@@ -29,7 +29,7 @@ obj3.handler = function handler(socket) {
     const tmp34 = new RPCErrorDefault(obj2, "Missing Permissions");
     throw tmp34;
   } else {
-    const items = [];
+    items = [];
     const mutableRelationships = RelationshipStore.getMutableRelationships();
     const entries = mutableRelationships.entries();
     const tmp8 = entries[Symbol.iterator]();

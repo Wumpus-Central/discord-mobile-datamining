@@ -46,7 +46,7 @@ function handleUpdate(arg0) {
   }
   const obj = {};
   const mapped = prompts.map((options) => {
-    const items = [];
+    items = [];
     let num = 0;
     let flag = false;
     let flag2 = false;
@@ -79,8 +79,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7264).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7269).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7384).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7389).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -105,9 +105,9 @@ prototype["getOnboardingPromptsForOnboarding"] = function getOnboardingPromptsFo
   }
   return onboardingPrompts;
 };
-prototype["getOnboardingPrompts"] = function getOnboardingPrompts(guildId) {
+prototype["getOnboardingPrompts"] = function getOnboardingPrompts(c0) {
   let prompts;
-  if (dependencyMap[guildId] != null) {
+  if (dependencyMap[c0] != null) {
     prompts = tmp.prompts;
   }
   if (prompts == null) {
@@ -133,15 +133,15 @@ prototype["getOnboardingResponses"] = function getOnboardingResponses(id) {
   }
   return responses;
 };
-prototype["getSelectedOptions"] = function getSelectedOptions(guildId) {
-  const onboardingResponses = this.getOnboardingResponses(guildId);
-  const onboardingPrompts = this.getOnboardingPrompts(guildId);
+prototype["getSelectedOptions"] = function getSelectedOptions(c0) {
+  const onboardingResponses = this.getOnboardingResponses(c0);
+  const onboardingPrompts = this.getOnboardingPrompts(c0);
   const mapped = onboardingPrompts.map((options) => options.options);
   return mapped.flat().filter((id) => closure_0.includes(id.id));
 };
-prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesForPrompt(guildId, id) {
+prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesForPrompt(c0, id) {
   closure_0 = id;
-  if (null == dependencyMap[guildId]) {
+  if (null == dependencyMap[c0]) {
     return closure_13;
   } else {
     const prompts = tmp.prompts;
@@ -152,7 +152,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(guildId));
+      intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(c0));
     }
     return intersectionResult;
   }
@@ -286,7 +286,7 @@ prototype["getOnboardingConnections"] = function getOnboardingConnections(guildI
       if (connections == null) {
         connections = closure_15;
       }
-      let items = connections;
+      items = connections;
     } else {
       let connections1 = tmp.connections;
       if (connections1 == null) {
@@ -329,7 +329,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
     ({ enabled, mode, belowRequirements } = guildId);
     const tmp = GuildOnboardingStore.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
     const mapped = prompts.map((options) => {
-      const items = [];
+      items = [];
       let num = 0;
       let flag = false;
       let flag2 = false;
@@ -372,7 +372,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
       connections: null,
       additionalConnections: null,
     };
-    let items = responses;
+    items = responses;
     if (tmp) {
       items = [];
     }
@@ -533,7 +533,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
     } else {
       const prompts = tmp2.prompts;
       const mapped = prompts.map((options) => {
-        const items = [];
+        items = [];
         let num = 0;
         let flag = false;
         let flag2 = false;

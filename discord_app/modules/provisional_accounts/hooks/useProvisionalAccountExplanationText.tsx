@@ -15,7 +15,7 @@ export function useProvisionalAccountExplanationText(renderApplicationName) {
   renderApplicationName = renderApplicationName.renderApplicationName;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
   importDefault = tmp;
-  const items = [tmp, renderApplicationName];
+  items = [tmp, renderApplicationName];
   return noop.useMemo(() => {
     if (null != closure_1) {
       const intl = util.intl;

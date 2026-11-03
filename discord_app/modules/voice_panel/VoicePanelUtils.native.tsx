@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export function useIsVoicePanelShowing() {
-  const items = [ChannelStore, RTCConnectionStore];
+  items = [ChannelStore, RTCConnectionStore];
   return useStateFromStores.useStateFromStores(items, () => {
     channel = channel.getChannel(channelId.getChannelId());
     return null != channel && !channel.isGuildStageVoice();

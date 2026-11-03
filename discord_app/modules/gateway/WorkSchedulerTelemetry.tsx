@@ -77,7 +77,7 @@ prototype["clearTime"] = function clearTime(arg0) {
 };
 prototype["_storeTimeValue"] = function _storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration) {
   const tmp = _slicedToArray(this._timingStats[TIME_OVER_DEADLINE], 2);
-  const items = [(tmp[0] * tmp[1] + timeSinceExpiration) / (tmp[1] + 1), tmp[1] + 1];
+  items = [(tmp[0] * tmp[1] + timeSinceExpiration) / (tmp[1] + 1), tmp[1] + 1];
   this._timingStats[TIME_OVER_DEADLINE] = items;
 };
 prototype["time"] = function time(arg0) {
@@ -106,7 +106,7 @@ prototype["measure"] = function measure(arg0, arg1) {
   const self = this;
   if (this._enabled) {
     const tmp4 = _slicedToArray(self._measurements[arg0], 2);
-    const items = [(tmp4[0] * tmp4[1] + arg1) / (tmp4[1] + 1), tmp4[1] + 1];
+    items = [(tmp4[0] * tmp4[1] + arg1) / (tmp4[1] + 1), tmp4[1] + 1];
     self._measurements[arg0] = items;
   }
 };

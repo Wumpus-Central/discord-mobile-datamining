@@ -5,11 +5,11 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import SKURecord from "../skus/SKURecord.tsx";
 
 require = fn;
-let closure_4 = fn(9474).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(9475).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(9476).isSKUWishlistItemRecord;
+let closure_4 = fn(9602).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(9603).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(9604).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1072).SKUProductLines;
-const PremiumSubscriptionSKUs = fn(1385).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
 
@@ -93,7 +93,7 @@ export function buildReorderedWishlistData(set, arg1, arg2, arg3) {
       skuId3 = null;
     }
   }
-  const items = [...arg1];
+  items = [...arg1];
   items.splice(arg3, 0, _slicedToArray(items.splice(arg2, 1), 1)[0]);
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
 }

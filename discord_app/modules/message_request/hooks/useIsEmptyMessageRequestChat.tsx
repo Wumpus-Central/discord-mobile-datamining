@@ -22,7 +22,7 @@ export function isEmptyLoadedChat(messages) {
 }
 export function useIsEmptyChat(arg0) {
   _require = arg0;
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
@@ -47,7 +47,7 @@ export function useIsEmptyMessageRequestChat(id) {
   let isEitherTypeOfMessageRequest = require("useIsMessageRequest").useIsEitherTypeOfMessageRequest(id);
   _require = id;
   const obj = require("useIsMessageRequest");
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [id];
   if (isEitherTypeOfMessageRequest) {
     isEitherTypeOfMessageRequest = obj2.useStateFromStores(

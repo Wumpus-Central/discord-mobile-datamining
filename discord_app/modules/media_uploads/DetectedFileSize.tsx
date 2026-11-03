@@ -12,7 +12,7 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -31,8 +31,8 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
           return obj4;
         } else {
           c4 = 1;
-          const promise = new Promise((response, arg1) => {
-            closure_0 = response;
+          const promise = new Promise((arg0, arg1) => {
+            closure_0 = arg0;
             closure_1 = arg1;
             const fileReader = new FileReader();
             const timeout = setTimeout(() => {

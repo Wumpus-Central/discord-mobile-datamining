@@ -27,11 +27,11 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({
   DISCORD_APPLICATION_ID: closure_8,
   QuestVariants: closure_9,
-  RewardFilterTypes: c10,
+  RewardFilterTypes: closure_10,
   TaskFilterTypes: closure_11,
 } = QuestConstants);
 const size = fn(2);
@@ -112,7 +112,7 @@ export function shouldShowBountiesGivenFilters(filters) {
 }
 export function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
-  const state = QuestUtmStore.getState();
+  state = QuestUtmStore.getState();
   const obj = {
     utmSourceCurrent: utmSource,
     utmMediumCurrent: utmMedium,

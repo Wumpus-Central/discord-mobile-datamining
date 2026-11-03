@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_communication_disabled/
 export default function useUserCommunicationDisabled(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [arg1, arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -41,7 +41,7 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   return items2;
 }
 export function useCurrentUserCommunicationDisabled(guild_id) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {
@@ -74,7 +74,7 @@ export function useCurrentUserCommunicationDisabled(guild_id) {
   }
   const items3 = [prop];
   const tmpResult = id(504);
-  items3[1] = id(4933).isMemberCommunicationDisabled(stateFromStores1);
+  items3[1] = id(5060).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 }
 export function userCommunicationDisabled(id, guildId) {
@@ -92,6 +92,6 @@ export function userCommunicationDisabled(id, guildId) {
   if (prop == null) {
     prop = null;
   }
-  const items = [prop, CommunicationDisabledUtils.isMemberCommunicationDisabled(member)];
+  items = [prop, CommunicationDisabledUtils.isMemberCommunicationDisabled(member)];
   return items;
 }

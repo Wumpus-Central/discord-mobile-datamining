@@ -65,7 +65,7 @@ class SafetyWarningBanner {
     obj16 = { style: tmp.text, variant: "heading-md/semibold", children: header };
     items3 = [,];
     items3[0] = jsx(channelId(senderId[13]).Text, obj16);
-    obj17 = { style: tmp.text, variant: "heading-sm/normal", children: description };
+    obj17 = { style: tmp.text, variant: "heading-sm/medium", children: description };
     items3[1] = jsx(channelId(senderId[13]).Text, obj17);
     obj15.children = items3;
     items2[1] = jsxs(View, obj15);
@@ -101,7 +101,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: null,
   contentContainer: null,

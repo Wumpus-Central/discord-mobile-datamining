@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfi
 
 export default function useUserProfileActivity(arg0) {
   _require = arg0;
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     MediaEngineStore.supports(constants.VIDEO),
   );
@@ -59,8 +59,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8908).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8908);
+                  result = userProfileLiveActivities(9032).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9032);
                 }
                 return result;
               });
@@ -71,8 +71,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8908).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8908);
+                  result = userProfileLiveActivities(9032).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9032);
                 }
                 return result;
               });

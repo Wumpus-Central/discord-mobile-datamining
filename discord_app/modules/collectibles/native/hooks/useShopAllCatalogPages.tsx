@@ -41,7 +41,7 @@ export default function useShopAllCatalogPages(pageSize) {
   first = tmp[0];
   closure_5 = tmp[1];
   const rounded = Math.ceil(first / pageSize);
-  let items = [rounded, pageSize, includeUnpublished, noCache];
+  items = [rounded, pageSize, includeUnpublished, noCache];
   const memo = first.useMemo(
     () =>
       Array.from({ length: rounded }, (arg0, arg1) => ({
@@ -145,7 +145,7 @@ export default function useShopAllCatalogPages(pageSize) {
   }, items7);
   const items8 = [memo1, stateFromStoresObject];
   memo3 = obj.useMemo(() => {
-    const items = [];
+    items = [];
     const obj = memo1[Symbol.iterator]();
     while (obj !== undefined) {
       let tmp4 = stateFromStoresObject[tmp2];

@@ -63,7 +63,7 @@ const socialSdkApplicationStore = new SocialSdkApplicationStore(DispatcherDefaul
         return false;
       }
     } else {
-      const items = [pid, applicationId];
+      items = [pid, applicationId];
     }
     if (null != applicationId) {
       const items1 = [pid, applicationId];

@@ -14,7 +14,7 @@ export default function replaceFlagIconAndFlagColor(layers, p, arg2) {
     if ("gr" === layers.layers[findIndexResult].shapes[0].it[index].ty) {
       const it = layers.layers[findIndexResult].shapes[0].it[index].it;
       if (it.findIndex((ty) => "fl" === ty.ty) >= 0) {
-        const items = [];
+        items = [];
         items[
           HermesBuiltin.arraySpread(
             closure_1.map((item) => item / 256),

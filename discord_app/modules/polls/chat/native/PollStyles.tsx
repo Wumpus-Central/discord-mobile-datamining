@@ -1,5 +1,5 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import _mod6556 from "module_6556" /* 6556 */;
+import _mod6676 from "module_6676" /* 6676 */;
 import PollLayoutTypes from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import PollMessageChatDataTypes from "../PollMessageChatDataTypes.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -18,7 +18,7 @@ function normal(border, config) {
     radioBackground: null,
     radioForeground: null,
   };
-  const match = _mod6556.match(config);
+  const match = _mod6676.match(config);
   obj.label = match
     .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE)
     .otherwise(() => colors.colors.TEXT_DEFAULT);
@@ -44,7 +44,7 @@ function normalVote(colors, config) {
       radioBackground: null,
       radioForeground: null,
     };
-    const match = _mod6556.match(config);
+    const match = _mod6676.match(config);
     obj2.label = match
       .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE)
       .otherwise(() => colors.colors.TEXT_DEFAULT);
@@ -97,14 +97,14 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(unselected, config) {
+  selected(styles, config) {
     const obj = {};
-    const merged = Object.assign(normalVote(unselected, config));
-    obj.border = unselected.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(styles, config));
+    obj.border = styles.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.FILLED;
-    obj.radioBackground = unselected.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = unselected.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = styles.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = styles.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,

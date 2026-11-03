@@ -65,7 +65,7 @@ export function useCommandRowSend(command) {
   const tmp2 = sectionName(noop.useState(false), 2);
   noop = tmp2[1];
   commandContext = command(onExecuteCommand[4]).useCommandContext(command.context);
-  const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
+  items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
   callback = noop.useCallback(
     tryExecuteCommand(function* () {
       if (c4 === 2) {
@@ -78,7 +78,7 @@ export function useCommandRowSend(command) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -128,7 +128,7 @@ export function useCommandRowSend(command) {
             c3 = 0;
             closure_128_5(false);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp27) {
           if (tmp4 === c3) {

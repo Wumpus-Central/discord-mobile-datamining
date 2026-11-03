@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 let jsx = fn(21).jsx;
 const constants = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };
@@ -22,7 +22,7 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
   let intl = webviewUrl(onClose[6]).intl;
   const stringResult = intl.string(webviewUrl(onClose[6]).t.wJVyYR);
   jsx = stringResult;
-  const items = [tmp, webviewUrl, onComplete, onClose, stringResult];
+  items = [tmp, webviewUrl, onComplete, onClose, stringResult];
   const memo = noop.useMemo(() => {
     closure_2 = onClose;
     function handleClose() {

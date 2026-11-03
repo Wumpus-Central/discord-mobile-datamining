@@ -15,11 +15,11 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import _modDef14391 from "../../../../../../_runtime/metro/14391__.js";
+import _modDef14522 from "../../../../../../_runtime/metro/14522__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef19268 from "../../../../../../_runtime/metro/19268__.js";
+import _modDef19426 from "../../../../../../_runtime/metro/19426__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -39,7 +39,7 @@ function ActivityActionOverlay(arg0) {
     const obj = { style: tmp3.ongoingActivityJoinedContainer };
     tmp8 = timestampProducer(NativeViewDefault, obj);
   }
-  const items = [tmp8];
+  items = [tmp8];
   let id1;
   tmp3 = closure_9();
   if ("channel" === context.type) {
@@ -66,12 +66,12 @@ function ParticipantsText(arg0) {
   }
   const name = NicknameUtilsDefault.getName(guildId, channelId, first);
   const obj2 = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
   const items1 = [
-    timestampProducer(native.Icon, { source: _modDef14391, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+    timestampProducer(native.Icon, { source: _modDef14522, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
   ];
   const obj4 = {
     lineClamp: 1,
@@ -104,7 +104,7 @@ const ThemeTypes = fn(1072).ThemeTypes;
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -129,7 +129,7 @@ let obj2 = {
   developerIconColor: null,
 };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -208,7 +208,7 @@ export default function ActivityShelfItem(arg0) {
   });
   let tmp11 = !disableBadges;
   if (!disableBadges) {
-    const items = [useActivityShelfItem.ActivityAction.LEAVE, useActivityShelfItem.ActivityAction.JOIN];
+    items = [useActivityShelfItem.ActivityAction.LEAVE, useActivityShelfItem.ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
   const obj2 = { applicationId: activityItem.application.id, size: result, names: ["embedded_background"] };
@@ -259,7 +259,7 @@ export default function ActivityShelfItem(arg0) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
       const obj10 = {
         size: native.Icon.Sizes.REFRESH_SMALL_16,
-        source: _modDef19268,
+        source: _modDef19426,
         color: tmp.developerIconColor.color,
       };
       obj9.children = timestampProducer(native.Icon, obj10);

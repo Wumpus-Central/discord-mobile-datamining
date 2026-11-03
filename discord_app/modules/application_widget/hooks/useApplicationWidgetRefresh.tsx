@@ -18,7 +18,7 @@ export default function useApplicationWidgetRefresh(arg0) {
       closure_1_3.current = false;
     };
   }, []);
-  const items = [arg0, pending];
+  items = [arg0, pending];
   return {
     pending,
     refresh: noop.useCallback(() => {

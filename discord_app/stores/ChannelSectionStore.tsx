@@ -63,11 +63,11 @@ function toggleSection(c17, arg1) {
   let tmp4 = null;
   if (null != channelId) {
     tmp4 = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp8 = null;
       if (null != guildId) {
-        tmp8 = __initData(channelId, guildId);
+        tmp8 = closure_1_15(channelId, guildId);
       }
       tmp4 = tmp8;
     }
@@ -138,7 +138,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(4870);
+const ChannelConstants = fn(4997);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;
@@ -186,7 +186,7 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       guildSidebars = {};
     }
   }
-  const items = [PermissionStore];
+  items = [PermissionStore];
   this.syncWith(items, handlePermissionsChange);
   this.waitFor(
     ApplicationStore,
@@ -219,11 +219,11 @@ prototype["getSection"] = function getSection(arg0, arg1) {
     let tmp3 = null;
     if (null != arg0) {
       tmp3 = arg0;
-      if (closure_1_14(arg0)) {
+      if (gesture(arg0)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(arg0, guildId);
+          tmp7 = closure_1_15(arg0, guildId);
         }
         tmp3 = tmp7;
       }
@@ -262,11 +262,11 @@ prototype["getSidebarState"] = function getSidebarState(channelId) {
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -291,11 +291,11 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -321,11 +321,11 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (gesture(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -461,11 +461,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(baseChannelId, guildId);
+          tmp5 = closure_1_15(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -492,11 +492,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = __initData(baseChannelId, guildId1);
+          tmp5 = closure_1_15(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -516,11 +516,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
       tmp = parentChannelId;
-      if (closure_1_14(parentChannelId)) {
+      if (gesture(parentChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(parentChannelId, guildId);
+          tmp5 = closure_1_15(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -540,11 +540,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let tmp3 = null;
     if (null != baseChannelId) {
       tmp3 = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (gesture(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(baseChannelId, guildId);
+          tmp7 = closure_1_15(baseChannelId, guildId);
         }
         tmp3 = tmp7;
       }
@@ -615,7 +615,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         let tmp17 = sidebars[tmp10];
         let hasItem = null != tmp17;
         if (hasItem) {
-          let items = [
+          items = [
             SidebarActionTypes.SidebarType.VIEW_CHANNEL,
             SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST,
             SidebarActionTypes.SidebarType.VIEW_MOD_REPORT,
@@ -675,7 +675,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   THREAD_DELETE: function handleThreadDelete(channel) {
     channel = channel.channel;
     if (null != sidebars[channel.parent_id]) {
-      const items = [
+      items = [
         SidebarActionTypes.SidebarType.VIEW_CHANNEL,
         SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST,
         SidebarActionTypes.SidebarType.VIEW_MOD_REPORT,
@@ -696,7 +696,7 @@ let result = size.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";
 export function isViewChannelSidebar(type) {
-  const items = [
+  items = [
     SidebarActionTypes.SidebarType.VIEW_CHANNEL,
     SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST,
     SidebarActionTypes.SidebarType.VIEW_MOD_REPORT,

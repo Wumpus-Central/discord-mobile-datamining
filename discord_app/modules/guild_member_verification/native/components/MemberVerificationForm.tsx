@@ -9,11 +9,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(6948).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(7068).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1072).VerificationLevels;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
   submitButton: { marginTop: 12, marginBottom: 12 },
@@ -44,7 +44,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -67,10 +67,10 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1113).intl;
                   obj2.text = intl.string(closure_1_0(1113).t.StC497);
-                  closure_1_1(5712).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(5832).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);
@@ -160,7 +160,7 @@ export default function MemberVerificationForm(guild) {
   function getFormFields() {
     if (!userVerificationState) {
       if (null != phone) {
-        const items = [tmp];
+        items = [tmp];
         let formFields;
         if (onClose != null) {
           formFields = onClose.formFields;
@@ -211,7 +211,7 @@ export default function MemberVerificationForm(guild) {
   });
   closure_129_1 = tmp6;
   let obj2 = guild(onClose[10]);
-  let items = [closure_7];
+  items = [closure_7];
   const items1 = [id];
   const stateFromStores = guild(onClose[13]).useStateFromStores(
     items,
@@ -319,7 +319,7 @@ export default function MemberVerificationForm(guild) {
         formFields,
         onChange: function handleFormChange(arg0, response) {
           if (null != first) {
-            const items = [];
+            items = [];
             const arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
             const obj = {};
             const merged = Object.assign(tmp3);

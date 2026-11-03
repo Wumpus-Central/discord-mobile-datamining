@@ -2,28 +2,28 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5807 from "../../../../../_runtime/metro/05807__.js";
+import _modDef5927 from "../../../../../_runtime/metro/05927__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
-import _modDef5854 from "../../../../../_runtime/metro/05854__.js";
+import _modDef5974 from "../../../../../_runtime/metro/05974__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05856_reduce.js";
-import _modDef5859 from "../../../../../_runtime/metro/05859__.js";
+import reduceDefault from "../../../../../_runtime/05976_reduce.js";
+import _modDef5979 from "../../../../../_runtime/metro/05979__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5768);
+let Constants = fn(5888);
 ({
   StatsFilter: hasOwnProperty,
   ExperimentFlags: metroRequire,
   DESKTOP_BITRATE_ENHANCED: closure_7,
   DESKTOP_BITRATE: closure_8,
   MEDIA_SINK_WANTS_PROPERTIES: closure_9,
-  MediaTypes: c10,
+  MediaTypes: closure_10,
   SIMULCAST_HQ_QUALITY: closure_11,
 } = Constants);
-Constants = fn(5791);
+Constants = fn(5911);
 ({
   NATIVE_MODE_VALUES: closure_12,
   InputModes: map1,
@@ -250,7 +250,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5807(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5927(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -288,7 +288,7 @@ class Connection extends tmp4 {
       } else if (ssrc > 0) {
         if (undefined !== obj.remoteVideoSSRCs[arg0]) {
           if (!obj2.includes(ssrc)) {
-            const items = [];
+            items = [];
             items[HermesBuiltin.arraySpread(obj.remoteVideoSSRCs[arg0], 0)] = ssrc;
             obj.remoteVideoSSRCs[arg0] = items;
           }
@@ -349,7 +349,7 @@ class Connection extends tmp4 {
         const conn = closure_0.conn;
         const obj = { encodingVoiceBitRate: null };
         const _Math = Math;
-        obj.encodingVoiceBitRate = Math.max(__initData3, closure_0.voiceBitrate);
+        obj.encodingVoiceBitRate = Math.max(dependencyMap2, closure_0.voiceBitrate);
         conn.setTransportOptions(obj);
         closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached);
       }
@@ -420,9 +420,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef5859(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5979(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef5859(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5979(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -542,7 +542,7 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
   _require = arg0;
   const obj = new Connection(arg0, "0", true);
   voiceEngine = require("inject").getVoiceEngine();
-  let items = [{ type: constants2.VIDEO, rid: "100", ssrc: 0, rtxSsrc: 0, quality: 100, active: false }];
+  items = [{ type: constants2.VIDEO, rid: "100", ssrc: 0, rtxSsrc: 0, quality: 100, active: false }];
   const result = obj.initializeStreamParameters(items);
   const replayConnection = voiceEngine.createReplayConnection(
     "default",
@@ -552,7 +552,7 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
       conn.setOnVideoCallback(obj.handleVideo);
       const codecCapabilities = voiceEngine.getCodecCapabilities((arg0) => {
         closure_0(voiceEngine[8]);
-        const items = [{ type: "audio", name: constants.OPUS, priority: 1, payloadType: 120 }];
+        items = [{ type: "audio", name: constants.OPUS, priority: 1, payloadType: 120 }];
         if (videoSupported.videoSupported) {
           const tmpResult = closure_0(voiceEngine[8]);
           let mapped = closure_0(voiceEngine[8])
@@ -598,7 +598,7 @@ prototype["initialize"] = function initialize(address) {
   this.beginInitializeAt = performance.now();
   ({ ssrc: this.audioSSRC, streamUserId: this.streamUserId } = address);
   let result = this.initializeStreamParameters(address.streamParameters);
-  let items = [
+  items = [
     {
       type: constants2.AUDIO,
       ssrc: this.audioSSRC,
@@ -610,7 +610,7 @@ prototype["initialize"] = function initialize(address) {
   ];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(2008).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(2137).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== constants5.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -682,7 +682,7 @@ prototype["initialize"] = function initialize(address) {
             logger2.info("Experimental codecs: " + JSON.stringify(experimentCodecs));
             let obj = createVoiceConnection(fnResult[8]);
             const parseNativeCodecsResult = createVoiceConnection(fnResult[8]).parseNativeCodecs(arg0);
-            let items = [{ type: "audio", name: constants2.OPUS, priority: 1, payloadType: 120 }];
+            items = [{ type: "audio", name: constants2.OPUS, priority: 1, payloadType: 120 }];
             if (connectionTransportOptions.videoSupported) {
               let result = createVoiceConnection(fnResult[8]).filterParsedVideoCodecs(
                 parseNativeCodecsResult,
@@ -709,7 +709,7 @@ prototype["initialize"] = function initialize(address) {
             connectionTransportOptions.codecs = items;
             new Map(
               parseNativeCodecsResult.map((item) => {
-                const items = [,];
+                items = [,];
                 ({ name: arr[0], encode: arr[1] } = item);
                 return items;
               }),
@@ -985,7 +985,7 @@ prototype["initialize"] = function initialize(address) {
     maxBitrate: 64000,
     soundshare: this.context === constants5.STREAM,
   };
-  let obj2 = createVoiceConnection(2008);
+  let obj2 = createVoiceConnection(2137);
 };
 prototype["setCodecs"] = function setCodecs(OPUS, H264, context) {
   const self = this;
@@ -1019,7 +1019,7 @@ prototype["getStats"] = function getStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1114,7 +1114,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     }
   }
   if (undefined !== this.remoteVideoSSRCs[id]) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(tmp2, 0);
     let sorted = items.sort();
   } else {
@@ -1131,7 +1131,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5854(sorted, sorted1);
+  _modDef5974(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1334,9 +1334,9 @@ prototype["getLocalVolume"] = function getLocalVolume(arg0) {
   let tmp2 = this.localVolumes[arg0];
   if (null != tmp2) {
     if (null == tmp2) {
-      tmp2 = __initData;
+      tmp2 = guild;
     }
-    return tmp2 / __initData;
+    return tmp2 / guild;
   }
 };
 prototype["setLocalVolume"] = function setLocalVolume(arg0, arg1) {
@@ -1384,7 +1384,7 @@ prototype["setVoiceBitRate"] = function setVoiceBitRate(voiceBitrate) {
     let bound = voiceBitrate;
     if (self.soundshareActive) {
       const _Math = Math;
-      bound = Math.max(__initData3, voiceBitrate);
+      bound = Math.max(dependencyMap2, voiceBitrate);
     }
     const conn = self.conn;
     const obj = { encodingVoiceBitRate: bound };
@@ -1657,7 +1657,7 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
       const set1 = new Set(found1.map((name) => name.name));
       const _Set3 = Set;
       const found2 = found.filter((type) => "video" === type.type && type.encode);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(set1, 0);
       self.codecs = found;
       if (someResult) {
@@ -2012,10 +2012,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "Array" };
       } else {
-        const items = [];
-        if (!_modDef5854(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        items = [];
+        if (!_modDef5974(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

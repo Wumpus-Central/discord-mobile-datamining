@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpea
 
 export function useRequestToSpeakPermission(id) {
   _require = id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -21,8 +21,8 @@ export function useRequestToSpeakPermission(id) {
     items1,
   );
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4951).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4951);
+  const canEveryoneRoleResult = stateFromStores(5078).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(5078);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

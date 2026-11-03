@@ -10,17 +10,17 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
     paddingBottom: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   },
-  searchBar: { height: "dispatch", minHeight: false },
+  searchBar: { height: "disabled", minHeight: false },
   searchBarRowContainer: null,
   noResults: null,
 };
@@ -125,9 +125,9 @@ export default function SearchableUserList(selectedUserIds) {
     withFriendRequestsSpam: flag11,
   });
   closure_5 = tmp8;
-  let items = [selectedUserIds];
+  items = [selectedUserIds];
   const memo = ACTIONS.useMemo(() => {
-    let items = selectedUserIds;
+    items = selectedUserIds;
     if (selectedUserIds == null) {
       items = [];
     }

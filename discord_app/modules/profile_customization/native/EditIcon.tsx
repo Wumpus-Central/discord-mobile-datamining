@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   editIcon: {
     alignItems: "center",
@@ -32,7 +32,7 @@ export default function EditIcon(style) {
   }
   const tmp = closure_5();
   const editIcon = tmp;
-  const items = [tmp, style, str];
+  items = [tmp, style, str];
   return (
     <View
       style={

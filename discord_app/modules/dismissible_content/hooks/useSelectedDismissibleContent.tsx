@@ -41,7 +41,7 @@ export function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_
     flag,
     id,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName) {
@@ -67,7 +67,7 @@ export function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_M
     tmp3,
     flag,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringConfig, groupName) {
@@ -85,7 +85,7 @@ export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringCo
     tmp3,
     flag,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
@@ -103,7 +103,7 @@ export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId
     tmp3,
     flag,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
@@ -131,7 +131,7 @@ export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSn
     flag,
     id,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(
@@ -164,7 +164,7 @@ export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(
     tmp3,
     flag,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }
 export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS) {
@@ -189,6 +189,6 @@ export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, cooldo
     false,
     id,
   );
-  const items = [tmp2, tmp3];
+  items = [tmp2, tmp3];
   return items;
 }

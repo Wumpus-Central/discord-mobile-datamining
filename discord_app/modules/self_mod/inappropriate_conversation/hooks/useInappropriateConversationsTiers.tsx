@@ -5,7 +5,7 @@ import SelfModInappropriateConversationExperiment from "../SelfModInappropriateC
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx",
@@ -16,7 +16,7 @@ export function useInappropriateConversationsTiers(channel) {
     SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
       location: "context-menu-item",
     });
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const inappropriateConversationBannerForChannel =
     useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(

@@ -13,7 +13,7 @@ export default function getCoverImageFromActivity(assets, application_id) {
     if (null != assets.assets) {
       assetImage = null;
       if (null != assets.assets.large_image) {
-        const items = [closure_2, closure_2];
+        items = [closure_2, closure_2];
         assetImage = ApplicationAssetUtils.getAssetImage(application_id, assets.assets.large_image, items);
       }
     }

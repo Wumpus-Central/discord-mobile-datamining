@@ -21,7 +21,7 @@ class GuildMemberSearchManager {
     obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
       if (arg1 === obj2.searchQueryString) {
         obj2.isFetching = false;
-        let items = [];
+        items = [];
         const channel = ChannelStore.getChannel(obj2.targetChannelId);
         const item = arr.forEach((type) => {
           if (type.type === obj2(dependencyMap[2]).AutocompleterResultTypes.USER) {
@@ -137,7 +137,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
         obj2.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
           if (arg1 === obj2.searchQueryString) {
             obj2.isFetching = false;
-            let items = [];
+            items = [];
             const channel = ChannelStore.getChannel(obj2.targetChannelId);
             const item = arr.forEach((type) => {
               if (type.type === obj2(dependencyMap[2]).AutocompleterResultTypes.USER) {
@@ -158,7 +158,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
             searchGuildMemberTabStoreImpl.emitChange();
           }
         };
-        let items = [obj2(9135).AutocompleterResultTypes.USER];
+        items = [obj2(9263).AutocompleterResultTypes.USER];
         const tmp42 = new sortByMatchScoreDefault(obj2.onAutocompleterResultsChange, items, 50);
         obj2.autocompleter = tmp42;
         const autocompleter = obj2.autocompleter;

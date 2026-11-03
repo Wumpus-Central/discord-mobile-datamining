@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("design/components/Pile/native/PileOve
 export function PileOverflow(size) {
   size = size.size;
   ({ borderRadius, value } = size);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   const items1 = [closure_6().container];
   const obj2 = { borderRadius, minWidth: size, height: size, paddingHorizontal: null };

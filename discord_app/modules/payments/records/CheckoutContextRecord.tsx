@@ -1,6 +1,6 @@
 // discord_app/modules/payments/records/CheckoutContextRecord.tsx
 import PriceUtils from "../../../utils/PriceUtils.tsx";
-import addDefault from "../../../../_runtime/07415_add.js";
+import addDefault from "../../../../_runtime/07539_add.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import Record from "../../../lib/Record.tsx";
 
@@ -61,7 +61,7 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(discount) {
   }
 };
 prototype["getPlanQuantities"] = function getPlanQuantities() {
-  const items = [,];
+  items = [,];
   ({ id: arr[0], quantity: arr[1] } = this);
   const items1 = [items];
   const map = new Map(items1);

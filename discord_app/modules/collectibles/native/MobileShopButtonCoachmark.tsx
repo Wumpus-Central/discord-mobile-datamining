@@ -4,9 +4,9 @@ import util from "../../../intl/index.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { image: null };
 let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
 obj2.image = size;
@@ -24,7 +24,7 @@ export default function MobileShopButtonCoachmark(marketing) {
   closure_4 = tmp;
   const assetLight = marketing.assetLight;
   closure_6 = onDismiss.useRef(false);
-  const items = [onDismiss, navigateToShop];
+  items = [onDismiss, navigateToShop];
   const onButtonPress = onDismiss.useCallback(() => {
     closure_6.current = true;
     onDismiss(ContentDismissActionType.TAKE_ACTION);

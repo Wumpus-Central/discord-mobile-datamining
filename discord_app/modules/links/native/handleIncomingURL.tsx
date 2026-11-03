@@ -27,7 +27,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -87,7 +87,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                       closure_131_6 = ["campaign", "deep_link_value", "media_source"];
                       closure_2 = 0;
                       let searchParams = str35.searchParams;
-                      const items = [];
+                      items = [];
                       closure_2 = HermesBuiltin.arraySpread(searchParams.keys(), closure_2);
                       const found = items.filter((item) => {
                         let startsWithResult = item.startsWith("af_");
@@ -143,17 +143,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     }
                   }
                   c8 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const parts = url.split("voice/");
                   if (2 !== parts.length) {
                     c8 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     const parts1 = parts[1].split("/");
                     if (0 === parts1.length) {
                       c8 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else if ("user" !== parts1[0]) {
                       if ("invite" === parts1[0]) {
                         const obj15 = { payload: null, isAppStartupNavigation: null };

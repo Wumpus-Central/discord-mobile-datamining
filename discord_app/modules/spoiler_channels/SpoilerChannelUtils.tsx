@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting("modules/spoiler_channels/SpoilerChann
 
 export function useGetSpoilerGatingChannelId(channel) {
   _require = channel;
-  const items = [ChannelSpoilerAgreeStore, ChannelStore];
+  items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(
     items,
@@ -94,7 +94,7 @@ export function useGetSpoilerGatingChannelId(channel) {
 export { isChannelSpoilerGated };
 export function useIsChannelSpoilerGated(channel) {
   _require = channel;
-  const items = [ChannelSpoilerAgreeStore, ChannelStore];
+  items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(
     items,
@@ -104,7 +104,7 @@ export function useIsChannelSpoilerGated(channel) {
 }
 export function useShouldShowSpoilerGateForChannelId(arg0) {
   _require = arg0;
-  const items = [ChannelStore, ChannelSpoilerAgreeStore];
+  items = [ChannelStore, ChannelSpoilerAgreeStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

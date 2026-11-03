@@ -23,7 +23,7 @@ export default function usePremiumGroupMembers(subscriptionId, arg1) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [PremiumGroupStore];
+  items = [PremiumGroupStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     premiumGroupMembers: PremiumGroupStore.getMembers(),
     isFetchingMembers: PremiumGroupStore.isFetchingMembers(),

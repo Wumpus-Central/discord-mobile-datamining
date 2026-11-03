@@ -5,10 +5,10 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _mod6556 from "module_6556" /* 6556 */;
+import _mod6676 from "module_6676" /* 6676 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef12500 from "../../../../../../_runtime/metro/12500__.js";
+import _modDef12636 from "../../../../../../_runtime/metro/12636__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -39,7 +39,7 @@ function Item(arg0) {
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = closure_12();
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-  const match = _mod6556.match(item);
+  const match = _mod6676.match(item);
   let obj = { type: AutoCompleteResultTypes.CHOICE };
   let obj2 = { type: AutoCompleteResultTypes.LABEL };
   const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -94,7 +94,7 @@ function Item(arg0) {
         },
       };
       let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
-      const items = ['"', label.label, '"'];
+      items = ['"', label.label, '"'];
       obj2.children = items;
       obj.label = closure_1_10(Text_Text.Text, obj2);
       return closure_1_9(ListItem, obj);
@@ -132,7 +132,7 @@ function Item(arg0) {
         },
       };
       let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
-      const items = ['"', label.label, '"'];
+      items = ['"', label.label, '"'];
       obj2.children = items;
       obj.label = closure_1_10(Text_Text.Text, obj2);
       return closure_1_9(ListItem, obj);
@@ -141,7 +141,7 @@ function Item(arg0) {
       const obj = { label: null };
       const obj2 = { style: closure_3.commandChoiceLoadingContainer, children: null };
       const obj3 = { style: null };
-      const items = [closure_3.commandChoiceLoadingItem, { width }];
+      items = [closure_3.commandChoiceLoadingItem, { width }];
       obj3.style = items;
       obj2.children = React7(View, obj3);
       obj.label = React7(View, obj2);
@@ -150,7 +150,7 @@ function Item(arg0) {
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12500, darkSource: _modDef12500, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12636, darkSource: _modDef12636, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);
@@ -158,12 +158,12 @@ function AutocompleteFailedEmptyState() {
 const View = fn(17).View;
 fn(1072).AutoCompleteResultTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(6035).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const executeCommand = apply.debounce(executeCommandDefault, fn(6155).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
   commandChoiceLoadingItem: {
@@ -201,7 +201,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const tmp = activeCommand(optionValues.useState(str), 2);
   query = tmp[0];
   ref = obj.useRef(null);
-  let items = [ref];
+  items = [ref];
   let items1 = [channel.id, option.name, query];
   const stateFromStoresObject = option(channel[12]).useStateFromStoresObject(
     items,
@@ -215,7 +215,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   lastErrored = stateFromStoresObject.lastErrored;
   let items2 = [query, autocompleteResults, lastErrored];
   memo = obj.useMemo(() => {
-    const items = [];
+    items = [];
     if ("" !== first) {
       const obj = { type: AutoCompleteResultTypes.LABEL, label: tmp };
       items.push(obj);

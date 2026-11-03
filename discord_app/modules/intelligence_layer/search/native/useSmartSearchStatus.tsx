@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/intelligence_layer/search/nat
 
 export function useSmartSearchStatus(memo) {
   _require = memo;
-  const items = [SmartSearchResultsStore];
+  items = [SmartSearchResultsStore];
   const items1 = [memo];
   return require("initialize").useStateFromStoresObject(
     items,

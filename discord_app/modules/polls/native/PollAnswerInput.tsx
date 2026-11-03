@@ -1,7 +1,7 @@
 // discord_app/modules/polls/native/PollAnswerInput.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
@@ -23,7 +23,7 @@ function ImageInput(openImageInputActionSheet) {
   const tmp3 = answerIndex(upload[10])(channelId, localCreationAnswerId, image, imageSize, emojiSize);
   upload = tmp3.upload;
   const setUploadSize = tmp3.setUploadSize;
-  const items = [image, upload, answerIndex];
+  items = [image, upload, answerIndex];
   const items1 = [setUploadSize];
   const memo = noop.useMemo(() => {
     let emoji;
@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7701).DraftType;
-const PollsConstants = fn(8406);
-({ MAX_POLL_ANSWER_LENGTH: c10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
-const EmojiIntention = fn(1386).EmojiIntention;
+const DraftType = fn(7825).DraftType;
+const PollsConstants = fn(8530);
+({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -159,7 +159,7 @@ export default function PollAnswerInput(answer) {
   if (tmp7Result) {
     tmp7Result = error.length > 0;
   }
-  const items = [tmp.defaultContainer];
+  items = [tmp.defaultContainer];
   let cannotRemove = !canRemoveAnswer;
   if (!canRemoveAnswer) {
     cannotRemove = tmp.cannotRemove;
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12566, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12702, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -207,15 +207,19 @@ export default function PollAnswerInput(answer) {
     onBlur: null,
     blurOnSubmit: false,
     style: null,
-    selectionColor: "children",
-    textContentType: true,
-    accessibilityLabel: true,
-    accessibilityHint: true,
-    maxLength: true,
-    returnKeyType: true,
-    required: true,
-    autoCorrect: true,
-    "aria-invalid": true,
+    selectionColor: "channel_id",
+    textContentType:
+      -198609602824364700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    accessibilityLabel: 65223669510182640000000000000000000000000000000000000000000000000000000000000000000000000000,
+    accessibilityHint:
+      -340770672296109530000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    maxLength:
+      -107304142510939310000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    returnKeyType: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009448812887,
+    required: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000127319747473,
+    autoCorrect:
+      -877951296567152000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    "aria-invalid": 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000031315130741798145,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

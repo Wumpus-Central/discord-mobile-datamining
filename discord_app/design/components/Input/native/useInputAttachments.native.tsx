@@ -20,7 +20,7 @@ class InputAttachmentContainer {
         tmp7 = pressableProps;
         merged = Object.assign(pressableProps);
         pressableProps = function style(pressed) {
-          const items = [style, { pointerEvents: "auto" }];
+          items = [style, { pointerEvents: "auto" }];
           let obj;
           if (pressed.pressed) {
             obj = { opacity: 0.2 };

@@ -24,7 +24,7 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
           return null != user && user.isStaff();
         });
       } else {
-        let guild = GuildStore.getGuild(channel.guild_id);
+        guild = GuildStore.getGuild(channel.guild_id);
         everyResult = null != guild;
         if (everyResult) {
           let features = guild.features;

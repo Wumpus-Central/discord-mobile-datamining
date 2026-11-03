@@ -51,7 +51,7 @@ prototype2["transformParent"] = function transformParent(parent) {
 prototype2["validate"] = function validate() {};
 prototype2["getAncestors"] = function getAncestors(field) {
   const self = this;
-  const items = [];
+  items = [];
   let transformParentResult = this.transformParent(SettingsRendererConfig.SETTING_RENDERER_CONFIG[field].parent);
   if (null != transformParentResult) {
     do {
@@ -106,7 +106,7 @@ prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncest
   }
 };
 prototype2["getBreadcrumbs"] = function getBreadcrumbs(setting) {
-  const items = [];
+  items = [];
   const ancestors = this.getAncestors(setting);
   while (tmp2 !== undefined) {
     let obj = SettingHookHarness;

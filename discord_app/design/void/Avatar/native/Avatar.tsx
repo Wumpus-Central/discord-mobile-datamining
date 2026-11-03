@@ -50,7 +50,7 @@ const StatusConstants = fn(1188);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = {
     status: { position: "absolute", right: -3, bottom: -3 },
@@ -150,11 +150,11 @@ export default noop.memo(function Avatar(isMobileOnline) {
   let statusSizeOverride = isMobileOnline.statusSizeOverride;
   const tmp3 = closure_10(NORMAL);
   const decoration = tmp3;
-  let items = [cutout, autoStatusCutout, flag, flag2, NORMAL, status, typing, statusSizeOverride, tmp3];
+  items = [cutout, autoStatusCutout, flag, flag2, NORMAL, status, typing, statusSizeOverride, tmp3];
   const memo = NORMAL.useMemo(() => {
     if (null != autoStatusCutout) {
       let diff1 = status;
-      let items = statusSizeOverride;
+      items = statusSizeOverride;
       if (null != diff1) {
         if (diff1 !== StatusTypes.UNKNOWN) {
           diff1 = CutoutableAvatarImage.AVATAR_SIZE_MAP[NORMAL];
@@ -381,5 +381,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(14884).AvatarSizes;
+export const AvatarSizes = fn(15015).AvatarSizes;
 export { getStatusSize };

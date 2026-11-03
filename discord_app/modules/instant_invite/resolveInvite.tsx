@@ -8,9 +8,9 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6747);
+const TrackedHTTPUtilsDefault = tmp4(6867);
 require = fn;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const Constants = fn(1072);
 ({
   Endpoints: metroRequire,
@@ -104,7 +104,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
         };
         let id;
         if (body1 != null) {
-          const guild = body1.guild;
+          guild = body1.guild;
           if (guild != null) {
             id = guild.id;
           }
@@ -276,7 +276,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             obj.invite_type = STREAM;
             let id4;
             if (body != null) {
-              const guild = body.guild;
+              guild = body.guild;
               if (guild != null) {
                 id4 = guild.id;
               }

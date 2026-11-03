@@ -14,7 +14,7 @@ export function CollectiblesAnalyticsProvider(children) {
   const newValue = children.newValue;
   context = undefined;
   context = noop.useContext(context);
-  const items = [context, newValue];
+  items = [context, newValue];
   return (
     <context.Provider
       value={noop.useMemo(() => {

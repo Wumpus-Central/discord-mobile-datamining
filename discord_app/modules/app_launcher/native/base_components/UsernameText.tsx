@@ -24,7 +24,7 @@ export default function UsernameText(color) {
     let str1 = user.toString();
   } else {
     const obj3 = { children: null };
-    const items = [user.toString()];
+    items = [user.toString()];
     const obj4 = {};
     const merged = Object.assign(obj);
     obj4.color = "text-muted";

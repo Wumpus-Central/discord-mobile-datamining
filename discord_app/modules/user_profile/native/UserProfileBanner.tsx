@@ -10,7 +10,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   bannerContainer: { position: "relative" },
   gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" },
@@ -117,7 +117,7 @@ export default function UserProfileBanner(displayProfile) {
         };
         const intl = tmp2(tmp3[11]).intl;
         obj4.accessibilityLabel = intl.string(tmp2(tmp3[11]).t["3fzj/l"]);
-        const items = [renderBanner()];
+        items = [renderBanner()];
         let tmp12Result = null;
         if (!tmp7) {
           const obj5 = { style: tmp.gifTag };

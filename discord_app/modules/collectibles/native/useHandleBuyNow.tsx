@@ -24,7 +24,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7719).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7843).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -52,16 +52,16 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5258).hideAllActionSheets();
-          const obj = v1(5258);
+          v1(5381).hideAllActionSheets();
+          const obj = v1(5381);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(14495).open(obj8);
+          v1(14626).open(obj8);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(14434)({
+  const tmp3 = onBuySettled(14565)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -95,7 +95,7 @@ function useHandleBuyNow(product) {
   });
   noop = tmp3;
   let obj2 = { handleBuyNow: null, isBuying };
-  const items = [tmp3, isBuying, product.skuId, onBuySettled];
+  items = [tmp3, isBuying, product.skuId, onBuySettled];
   obj2.handleBuyNow = noop.useCallback(
     isBuying(function* () {
       if (c5 === 2) {
@@ -108,7 +108,7 @@ function useHandleBuyNow(product) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

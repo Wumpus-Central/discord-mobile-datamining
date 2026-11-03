@@ -18,7 +18,7 @@ export function useDrawerOpen() {
   const tmp2 = _slicedToArray(
     noop.useState(() => {
       if (flag) {
-        const state = navigation.getState();
+        state = navigation.getState();
         let tmp6;
         if (state != null) {
           const routes = state.routes;
@@ -49,10 +49,10 @@ export function useDrawerOpen() {
     2,
   );
   _slicedToArray = tmp2[1];
-  const items = [navigation, flag];
+  items = [navigation, flag];
   const effect = noop.useEffect(() => {
     function handleStateChange(data) {
-      const state = data.data.state;
+      state = data.data.state;
       let tmp;
       if (state != null) {
         const routes = state.routes;

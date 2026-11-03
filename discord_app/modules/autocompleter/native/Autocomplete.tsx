@@ -14,7 +14,7 @@ import UnknownGameIcon from "../../../design/components/Icon/native/redesign/gen
 import Form from "../../../design/void/Form/native/index.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8708 from "../../../../_runtime/metro/08708__.js";
+import _modDef8832 from "../../../../_runtime/metro/08832__.js";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
@@ -34,11 +34,11 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   row: {
-    height: fn(10225).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(10355).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -57,7 +57,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(10225).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(10355).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -114,7 +114,7 @@ export default {
     ({ nick, guildId } = user);
     ({ status, onPress } = user);
     const tmp = closure_11();
-    const items = [RelationshipStore];
+    items = [RelationshipStore];
     const stateFromStores = user(504).useStateFromStores(items, () => {
       let nickname = null;
       if (null == guildId) {
@@ -134,8 +134,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(5068).getName(user);
-      const obj3 = guildId(5068);
+      nick = guildId(5195).getName(user);
+      const obj3 = guildId(5195);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
@@ -150,8 +150,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(9201), obj5);
-    return closure_9(user(8177).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(9329), obj5);
+    return closure_9(user(8301).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -160,7 +160,7 @@ export default {
     if (null != badge) {
       const obj2 = { style: tmp.labelRow, children: null };
       const obj3 = { text };
-      const items = [React7(AutocompleteLabel, obj3), badge];
+      items = [React7(AutocompleteLabel, obj3), badge];
       obj2.children = items;
       let tmp2Result = closure_1_10(View, obj2);
     } else {
@@ -175,7 +175,7 @@ export default {
     colorString = colorString.colorString;
     ({ onPress, showDescription, name } = colorString);
     const obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
-    const items = [closure_11().leading];
+    items = [closure_11().leading];
     let tmp5;
     if (null != colorString) {
       const obj2 = { color: colorString };
@@ -196,7 +196,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8708;
+      let channelIconWithGuild = _modDef8832;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }
@@ -225,7 +225,7 @@ export default {
     const tmp = closure_11();
     if ("" !== url) {
       const obj2 = { style: null, source: null };
-      const items = [,];
+      items = [,];
       ({ emoji: arr2[0], emojiImage: arr2[1] } = tmp);
       obj2.style = items;
       const obj3 = { uri: url };
@@ -272,7 +272,7 @@ export default {
     const obj = { DEPRECATED_style: tmp.row, leading: null };
     const obj2 = { style: tmp.commandChoiceLoadingContainer, children: null };
     const obj3 = { style: null };
-    const items = [tmp.commandChoiceLoadingItem, { width: memo }];
+    items = [tmp.commandChoiceLoadingItem, { width: memo }];
     obj3.style = items;
     obj2.children = React7(View, obj3);
     obj.leading = React7(View, obj2);
@@ -306,7 +306,7 @@ export default {
       let tmp6Result = React7(UnknownGameIcon.UnknownGameIcon, obj3);
       let tmp9 = React7;
     } else {
-      const items = [tmp.gameIcon];
+      items = [tmp.gameIcon];
       let gameIconBackground = extraChromeEnabled;
       if (extraChromeEnabled) {
         gameIconBackground = tmp.gameIconBackground;

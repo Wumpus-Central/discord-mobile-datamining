@@ -39,7 +39,7 @@ function PasswordStrength(passwordScore) {
           const merged = Object.assign(obj6);
           const merged1 = Object.assign(obj7);
           obj.variant = "text-xs/medium";
-          const items = [tmp.passwordStrength, strong];
+          items = [tmp.passwordStrength, strong];
           obj.style = items;
           obj.animated = true;
           const intl3 = util.intl;
@@ -53,11 +53,11 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
-({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   weak: { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL },
   medium: null,
@@ -73,15 +73,15 @@ obj2.passwordStrength = { marginTop: 4, marginBottom: 4 };
 obj2.inputHint = { width: "100%" };
 let closure_13 = createStyles.createStyles(obj2);
 let obj6 = { entering: null, exiting: null };
-const FadeIn = fn(5095).FadeIn;
+const FadeIn = fn(1652).FadeIn;
 obj6.entering = FadeIn.duration(300);
-const FadeOut = fn(5095).FadeOut;
+const FadeOut = fn(1652).FadeOut;
 obj6.exiting = FadeOut.duration(300);
 const obj7 = { layout: null };
-const LinearTransition = fn(5095).LinearTransition;
-const Easing = fn(5095).Easing;
+const LinearTransition = fn(1652).LinearTransition;
+const Easing = fn(1652).Easing;
 const obj5 = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-obj7.layout = LinearTransition.easing(Easing.inOut(fn(5095).Easing.quad)).duration(300);
+obj7.layout = LinearTransition.easing(Easing.inOut(fn(1652).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
 
@@ -114,7 +114,7 @@ export function RegisterPasswordInput(ref) {
   const tmp14 = closure_9((errors) => errors.errors);
   user = tmp14;
   const tmp15 = tmp4(isPasswordFocused[13])("password", tmp14);
-  const items = [onPasswordChange, tmp14];
+  items = [onPasswordChange, tmp14];
   const callback = noop.useCallback((arg0) => {
     if (null != user.password) {
       const password = user.password;

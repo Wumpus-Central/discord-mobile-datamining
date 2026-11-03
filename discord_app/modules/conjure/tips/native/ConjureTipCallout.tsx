@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const firstLineInset = nativeDefault.space.PX_12 + 1;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { gap: nativeDefault.space.PX_4 }, title: null, actions: null, dismiss: null };
 let obj3 = { gap: nativeDefault.space.PX_4 };
 obj2.title = { paddingRight: nativeDefault.space.PX_32 };
@@ -31,7 +31,7 @@ export default function ConjureTipCallout(onDismiss) {
   const tmp = closure_7();
   const obj = { icon, tone: "brand", firstLine: "text-md/semibold", firstLineInset, children: null };
   const obj2 = { style: tmp.card, children: null };
-  const items = [children];
+  items = [children];
   let tmp2Result = null;
   const tmp4 = ConjureTipGutterRowDefault;
   if (null != onDismiss) {

@@ -1,7 +1,7 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
 import Record from "../lib/Record.tsx";
 
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_0, PremiumTypes: closure_1, SubscriptionPlans: c2 } = PremiumConstants);
 let SubscriptionPlanRecord;
 class SubscriptionPlanRecord extends tmp2 {
@@ -92,15 +92,15 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
     if (constants.LEGACY !== skuId) {
       if (constants.TIER_2 !== skuId) {
         if (constants.TIER_1 === skuId) {
-          return framebus.TIER_1;
+          return duration.TIER_1;
         } else if (constants.TIER_0 === skuId) {
-          return framebus.TIER_0;
+          return duration.TIER_0;
         } else {
           return null;
         }
       }
     }
-    return framebus.TIER_2;
+    return duration.TIER_2;
   },
   set: undefined,
 });
@@ -139,7 +139,7 @@ export function getPriceFromServer(amount, taxInclusive) {
   return { amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive };
 }
 export function isNoneSubscription(planId) {
-  const items = [, , ,];
+  items = [, , ,];
   ({ NONE_MONTH: arr[0], NONE_3_MONTH: arr[1], NONE_6_MONTH: arr[2], NONE_YEAR: arr[3] } = React2);
   return items.includes(planId);
 }

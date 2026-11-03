@@ -99,7 +99,7 @@ export default function FastestList(inActionSheet) {
     }),
   );
   ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = inActionSheet(keyExtractor[3])(merged, horizontal));
-  const items = [keyExtractor];
+  items = [keyExtractor];
   let obj = onContentLengthChange;
   let tmp2 = inActionSheet;
   const tmp4 = inActionSheet(keyExtractor[3])(merged, horizontal);

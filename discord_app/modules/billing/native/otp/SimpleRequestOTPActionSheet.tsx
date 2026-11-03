@@ -30,7 +30,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -117,18 +117,18 @@ function GiftPurchaseSKUView(selectedSkuId) {
       }
     }
   };
-  const rect = first(1625)();
+  const rect = first(1627)();
   [first, dependencyMap] = noop.useState(false);
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = noop.useRef({});
-  const giftStyle = selectedSkuId(10562).useNativeGiftContext().giftStyle;
+  const giftStyle = selectedSkuId(10692).useNativeGiftContext().giftStyle;
   let obj = noop;
-  let obj2 = selectedSkuId(10562);
+  let obj2 = selectedSkuId(10692);
   const tmp3 = _slicedToArray;
-  let items = [closure_8];
+  items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(11386).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(11524).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -149,7 +149,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           tmp2 = googleSkuIds[closure_9.MOBILE];
         }
         if (null == tmp2) {
-          const items = [tmp2];
+          items = [tmp2];
           let values = items;
         } else {
           const _Object = Object;
@@ -179,7 +179,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -272,9 +272,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
       options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
     },
   };
-  closure_8 = tmp(14434)(obj6);
+  closure_8 = tmp(14565)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(11386);
+  let obj4 = selectedSkuId(11524);
   const obj7 = {
     isGift: true,
     options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
@@ -282,7 +282,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   [tmp16, tmp17] = tmp3(
     obj.useMemo(() => {
       if (null == c5) {
-        let items = ["Loading...", "Loading..."];
+        items = ["Loading...", "Loading..."];
       } else {
         items = [CollectiblesUtils.getFormattedPriceForCollectiblesProduct(c5, true, true)];
         items[1] = CollectiblesUtils.getFormattedPriceForCollectiblesProduct(c5, false, true);
@@ -332,7 +332,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   }
   items6[14] = str;
   const items7 = [
-    closure_11(selectedSkuId(5624).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }),
+    closure_11(selectedSkuId(5747).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }),
     ,
   ];
   let str4 = "Send Gift";
@@ -340,7 +340,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     str4 = "Loading...";
   }
   let obj9 = {
-    children: closure_12(selectedSkuId(5634).Button, {
+    children: closure_12(selectedSkuId(5754).Button, {
       variant: "primary",
       text: str4,
       onPress: function submitGiftPurchase() {
@@ -356,16 +356,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
       disabled: isFetching,
     }),
   };
-  items7[1] = closure_12(selectedSkuId(6977).Card, obj9);
+  items7[1] = closure_12(selectedSkuId(7103).Card, obj9);
   const obj11 = { children: null };
   const obj12 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj12.children = items8;
-  const items9 = [closure_11(selectedSkuId(5624).Text, obj12), closure_12(first(10696), {})];
+  const items9 = [closure_11(selectedSkuId(5747).Text, obj12), closure_12(first(10826), {})];
   obj11.children = items9;
-  items7[2] = closure_11(selectedSkuId(6977).Card, obj11);
+  items7[2] = closure_11(selectedSkuId(7103).Card, obj11);
   obj8.children = items7;
-  return closure_11(selectedSkuId(6027).Stack, obj8);
+  return closure_11(selectedSkuId(6147).Stack, obj8);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
@@ -384,17 +384,17 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         };
         const obj3 = { selectedSkuId, giftRecipientId, giftMessage: giftMessage.giftMessage };
         obj2.children = closure_12(GiftPurchaseSKUView, obj3);
-        let tmp6Result = closure_12(tmp(10562).NativeGiftContextProvider, obj2);
+        let tmp6Result = closure_12(tmp(10692).NativeGiftContextProvider, obj2);
         let tmp8 = closure_12;
       }
       const obj4 = { children: tmp6Result };
-      return tmp8(tmp(5272).BottomSheet, obj4);
+      return tmp8(tmp(5395).BottomSheet, obj4);
     }
   }
   tmp8 = closure_12;
-  const items = [
+  items = [
     closure_12(require("Text/Text").Text, {
-      variant: "text-lg/bold",
+      variant: "text-lg/semibold",
       color: "text-feedback-warning",
       children: "Gift purchasing is the only supported feature on Android in this version.",
     }),
@@ -414,7 +414,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
 }
 const View = fn(17).View;
 let closure_9 = fn(1072).PriceSetAssignmentPurchaseTypes;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsxs: closure_11, jsx: closure_12 } = jsxProd);
 let closure_13 = new LoggerDefault("PaymentFlowTest.android");
@@ -424,6 +424,6 @@ const result = size.fileFinishedImporting("modules/billing/native/otp/SimpleRequ
 export default function SimpleCreateOTPActionSheetWrapper(arg0) {
   const obj = { skuIDs: [], activeSubscription: null, children: null };
   const merged = Object.assign(arg0);
-  obj.children = closure_1_12(SimpleRequestOTPActionSheet, {});
-  return closure_1_12(NativePaymentContext.NativePaymentContextProvider, obj);
+  obj.children = application_id(SimpleRequestOTPActionSheet, {});
+  return application_id(NativePaymentContext.NativePaymentContextProvider, obj);
 }

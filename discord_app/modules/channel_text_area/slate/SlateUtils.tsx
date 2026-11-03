@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/channel_text_area/slate/Slate
 export function createEmptyState() {
   const obj = { textValue: "", richValue: null };
   const element = { type: "line", children: null };
-  const items = [{ text: "" }];
+  items = [{ text: "" }];
   element.children = items;
   const items1 = [element];
   obj.richValue = items1;
@@ -17,7 +17,7 @@ export function createState(textValue) {
   const parts = textValue.split("\n");
   obj.richValue = parts.map((text) => {
     const element = { type: "line", children: null };
-    const items = [{ text }];
+    items = [{ text }];
     element.children = items;
     return element;
   });
@@ -27,7 +27,7 @@ export function toRichValue(content) {
   const parts = content.split("\n");
   return parts.map((text) => {
     const element = { type: "line", children: null };
-    const items = [{ text }];
+    items = [{ text }];
     element.children = items;
     return element;
   });

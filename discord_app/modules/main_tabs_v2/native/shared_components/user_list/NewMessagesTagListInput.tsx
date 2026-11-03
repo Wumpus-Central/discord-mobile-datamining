@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -23,7 +23,7 @@ let obj = {
   showSearchButton: null,
 };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -48,9 +48,9 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
   ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } =
     forceSearchResults.forceSearchResults);
   const tmp = closure_7();
-  let items = [selectedUserIds];
+  items = [selectedUserIds];
   const memo = noop.useMemo(() => {
-    let items = selectedUserIds;
+    items = selectedUserIds;
     if (selectedUserIds == null) {
       items = [];
     }

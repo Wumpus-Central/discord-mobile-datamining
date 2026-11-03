@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 8 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -54,14 +54,14 @@ export default function AppealIngestionBreadcrumbs(reasons) {
   let tmp2 = null;
   if (0 !== reasons.length) {
     let obj = { style: tmp.container, children: null };
-    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
     const intl = require("util").intl;
     obj2.children = intl.string(require("util").t.eQg0Ck);
-    let items = [
+    items = [
       closure_3(require("Text/Text").Text, obj2),
       reasons.map((children, index) => {
         const obj = { style: closure_0.breadCrumbItemContainer, children: null };
-        const items = [
+        items = [
           React3(View, { style: closure_0.breadCrumbBar }),
           React3(View, { style: closure_0.breadCrumbDot }),
           React3(Text_Text.Text, {

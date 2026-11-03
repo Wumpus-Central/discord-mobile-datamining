@@ -23,7 +23,7 @@ function toHeaderResult(intl) {
   return obj;
 }
 function withSameGameSection(mapped) {
-  let application_id;
+  application_id = undefined;
   if (activity != null) {
     application_id = activity.application_id;
   }
@@ -149,9 +149,9 @@ function handleLocalActivityUpdate() {
 const Constants = fn(1072);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
 let items = [
-  fn(9135).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9135).AutocompleterResultTypes.GROUP_DM,
-  fn(9135).AutocompleterResultTypes.USER,
+  fn(9263).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9263).AutocompleterResultTypes.GROUP_DM,
+  fn(9263).AutocompleterResultTypes.USER,
 ];
 let c14 = null;
 let c15 = null;
@@ -314,8 +314,8 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           activity,
           location: "Channel Text Area - Invite to Join Modal",
         };
-        let obj = userId(11544);
-        userId(11544)
+        let obj = userId(11681);
+        userId(11681)
           .sendActivityInvite(obj2)
           .then(() => {
             items = [];
@@ -333,10 +333,10 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
             closure_18 = withSameGameSection(mapped);
             activityInviteModalStoreClass.emitChange();
           });
-        const sendActivityInviteResult = userId(11544).sendActivityInvite(obj2);
+        const sendActivityInviteResult = userId(11681).sendActivityInvite(obj2);
       } else if (null != userId) {
         const obj4 = { userId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        const result = userId(11544).sendActivityInviteUser(obj4);
+        const result = userId(11681).sendActivityInviteUser(obj4);
         result.then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = userId;
@@ -353,7 +353,7 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const obj3 = userId(11544);
+        const obj3 = userId(11681);
       }
       return false;
     }

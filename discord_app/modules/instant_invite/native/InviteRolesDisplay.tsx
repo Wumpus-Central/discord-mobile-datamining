@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { marginTop: 8 },
   label: { marginBottom: 4 },
@@ -20,7 +20,7 @@ export default function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
   const tmp = closure_7();
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [roleIds, guildId];
   const stateFromStoresArray = roleIds(504).useStateFromStoresArray(
     items,
@@ -36,7 +36,7 @@ export default function InviteRolesDisplay(roleIds) {
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.stcSfI);
-    const items2 = [closure_5(tmp2(5624).Text, obj3)];
+    const items2 = [closure_5(tmp2(5747).Text, obj3)];
     const obj4 = {
       style: tmp.rolesRow,
       children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)),

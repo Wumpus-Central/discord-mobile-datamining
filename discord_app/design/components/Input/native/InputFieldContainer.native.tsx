@@ -1,12 +1,13 @@
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import InputTypes from "InputTypes.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function useInputStyles(size) {
@@ -60,8 +61,8 @@ get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5014);
+let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
+let createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -190,24 +191,25 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",
   focused: nativeDefault.colors.INPUT_BORDER_ACTIVE,
 });
-const __initData = {
-  code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}",
+let closure_11 = {
+  code: "(function InputFieldContainerNativeTsx1(){let[status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG]=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
 
 export { useInputStyles };
 export function InputFieldContainer(isFocused) {
-  const tmp = closure_10();
-  _require = tmp;
   isFocused = isFocused.isFocused;
-  importDefault = tmp2;
+  let tmp2 = undefined !== isFocused;
+  if (tmp2) {
+    tmp2 = isFocused;
+  }
   const status = isFocused.status;
   let str = "default";
   if (undefined !== status) {
@@ -229,52 +231,59 @@ export function InputFieldContainer(isFocused) {
   obj.grow = grow;
   obj.hasLeadingIcon = null != leadingIcon;
   const tmp4Result = useInputStyles(obj);
-  const fn = function s() {
-    if ("default" !== str) {
-      str = closure_0.error;
-      let num = 2;
-    } else {
-      str = "transparent";
-      num = 0;
-      if (closure_1) {
-        str = closure_0.focused;
-        num = 1;
+  const tmp = closure_10();
+  items = [closure_11, str, tmp, tmp2, spring_spring.withSpring, closure_7];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items;
+  class InputFieldContainerNativeTsx1 {
+    constructor() {
+      if ("default" !== closure_0) {
+        tmp3 = closure_1;
+        str = closure_1.error;
+        num = 2;
+      } else {
+        tmp = closure_2;
+        str = "transparent";
+        num = 0;
+        if (closure_2) {
+          tmp2 = closure_1;
+          str = closure_1.focused;
+          num = 1;
+        }
       }
+      rect = {
+        borderWidth: closure_3(num, closure_4),
+        borderColor: closure_3(str, closure_4),
+        left: null,
+        right: null,
+        top: null,
+        bottom: null,
+      };
+      tmp4 = -num;
+      rect.left = tmp4;
+      rect.right = tmp4;
+      rect.top = tmp4;
+      rect.bottom = tmp4;
+      return rect;
     }
-    const rect = {
-      borderWidth: spring.withSpring(num, closure_7),
-      borderColor: null,
-      left: null,
-      right: null,
-      top: null,
-      bottom: null,
-    };
-    rect.borderColor = spring.withSpring(str, closure_7);
-    rect.left = -num;
-    rect.right = -num;
-    rect.top = -num;
-    rect.bottom = -num;
-    return rect;
-  };
-  let obj2 = require("ReanimatedRexport");
-  fn.__closure = {
-    status: str,
-    ringColors: tmp,
-    isFocused: undefined !== isFocused && isFocused,
-    withSpring: require("spring").withSpring,
-    RING_SPRING_CONFIG,
-  };
-  fn.__workletHash = 1037178877006;
-  fn.__initData = __initData;
-  const obj4 = { style: null, children: null };
-  const items = [, , ,];
-  ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp4Result);
-  obj4.style = items;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj5 = { style: null };
-  const items1 = [absoluteFill.absoluteFill, tmp4Result.radius, animatedStyle];
-  obj5.style = items1;
-  const items2 = [closure_5(require("ReanimatedRexport").View, obj5), children];
-  obj4.children = items2;
-  return closure_6(closure_4, obj4);
+  }
+  const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13];
+  InputFieldContainerNativeTsx1.__closure = items1;
+  InputFieldContainerNativeTsx1.__workletHash = 14166610550327;
+  InputFieldContainerNativeTsx1.__initData = tmp8;
+  const obj3 = { style: null, children: null };
+  const items2 = [, , ,];
+  ({ container: arr3[0], background: arr3[1], radius: arr3[2], minHeight: arr3[3] } = tmp4Result);
+  obj3.style = items2;
+  const animatedStyle = _mod1652.useAnimatedStyle(InputFieldContainerNativeTsx1);
+  const obj4 = { style: null };
+  const items3 = [React3.absoluteFill, tmp4Result.radius, animatedStyle];
+  obj4.style = items3;
+  const items4 = [hasOwnProperty(_modDef1652.View, obj4), children];
+  obj3.children = items4;
+  return timestampProducer(React4, obj3);
 }

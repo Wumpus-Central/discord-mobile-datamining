@@ -16,7 +16,7 @@ function ChatToast(message) {
   const name = UserUtils.useName(message.author);
   const trimmed = message.content.replace(/\s+/g, " ").trim();
   if ("" !== trimmed) {
-    const items = [message, onOpenChat];
+    items = [message, onOpenChat];
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = {
@@ -51,7 +51,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = {
   position: "absolute",

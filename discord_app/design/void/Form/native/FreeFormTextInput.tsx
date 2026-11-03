@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import _modDef7106 from "../../../../../_runtime/metro/07106__.js";
+import _modDef7232 from "../../../../../_runtime/metro/07232__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function ClearButton(onPress) {
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
   obj.children = React5(native.Icon, {
-    source: _modDef7106,
+    source: _modDef7232,
     style: closure_9().closeIcon,
     size: native.Icon.Sizes.MEDIUM,
   });
@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -131,7 +131,7 @@ export default (editable) => {
     tmp11 = flag;
   }
   _modDef38(!tmp11, "Cannot have an editable input w/ onPress handler");
-  let items = [tmp4.container, ,];
+  items = [tmp4.container, ,];
   let error1 = null;
   if (error) {
     error1 = tmp4.error;

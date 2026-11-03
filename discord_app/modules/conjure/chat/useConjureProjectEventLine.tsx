@@ -14,7 +14,7 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   _require = actor_user_id;
   importDefault = arg2;
   actor_user_id = actor_user_id.actor_user_id;
-  const items = [actor_user_id];
+  items = [actor_user_id];
   const effect = stateFromStores.useEffect(() => {
     const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
   }, items);
@@ -42,7 +42,7 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
     () => {
       let tmp2 = null;
       if (null != actor_user_id.guild_id) {
-        const guild = GuildStore.getGuild(tmp.guild_id);
+        guild = GuildStore.getGuild(tmp.guild_id);
         name = undefined;
         if (guild != null) {
           name = guild.name;

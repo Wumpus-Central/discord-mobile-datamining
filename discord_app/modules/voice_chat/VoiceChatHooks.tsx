@@ -13,12 +13,12 @@ export function useIsConnectedToVoiceChannel(id) {
   if (id != null) {
     id = id.id;
   }
-  const items = [VoiceStateStore, AuthenticationStore];
+  items = [VoiceStateStore, AuthenticationStore];
   return id(504).useStateFromStores(items, () => VoiceStateStore.isInChannel(id, AuthenticationStore.getId()));
 }
 export function useIsConnectedToVoiceChannelForId(arg0) {
   _require = arg0;
-  const items = [VoiceStateStore, AuthenticationStore];
+  items = [VoiceStateStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () =>
     VoiceStateStore.isInChannel(id, AuthenticationStore.getId()),
   );

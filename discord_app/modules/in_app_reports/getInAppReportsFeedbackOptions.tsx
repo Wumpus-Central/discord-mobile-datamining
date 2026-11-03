@@ -14,7 +14,7 @@ export default function getInAppReportsFeedbackOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t.cigGCe);
   obj.value = obj.COULD_NOT_FIND;
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { label: null, code: 3, value: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.ZyXA0q);

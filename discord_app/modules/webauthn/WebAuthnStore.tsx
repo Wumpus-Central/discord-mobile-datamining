@@ -50,7 +50,7 @@ const webAuthnStore = new WebAuthnStore(DispatcherDefault, {
     if (credential.type === Server.AuthenticatorType.WEBAUTHN) {
       const tmp2 = undefined === closure_3.find((id) => id.id === credential.id);
       if (tmp2) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(closure_3, 0)] = credential;
         closure_3 = items;
       }

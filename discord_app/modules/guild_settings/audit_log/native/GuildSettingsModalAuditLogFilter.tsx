@@ -18,8 +18,8 @@ require = fn;
 const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 },
   allUsersIconContainer: { height: 30, width: 30, alignItems: "center" },
@@ -48,7 +48,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
   const navigation = data(guildId[16]).useNavigation();
   let tmp6 = _slicedToArray(navigation.useState(""), 2);
   const first = tmp6[0];
-  const items = [first, data];
+  items = [first, data];
   const memo = navigation.useMemo(
     () => ({
       data: data.filter((label) => {
@@ -183,7 +183,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
 }
 export function createAuditLogFilterUserData(userIdFilter) {
   _require = userIdFilter;
-  const items = [];
+  items = [];
   let obj = { label: null, value: null, selected: null, index: 0 };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.ZRFdsL);

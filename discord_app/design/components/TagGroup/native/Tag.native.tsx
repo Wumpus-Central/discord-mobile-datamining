@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = {
@@ -42,7 +42,7 @@ const result = size.fileFinishedImporting("design/components/TagGroup/native/Tag
 export function Tag(variant) {
   ({ item, size, inline } = variant);
   const tmp = closure_6(size, variant.variant);
-  const items = [tmp.tag];
+  items = [tmp.tag];
   if (inline) {
     inline = tmp.inline;
   }

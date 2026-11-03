@@ -73,7 +73,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
     let obj = require("CheckpointCustomizationUtils");
   }
   const rect = flag(flag2[8])();
-  const items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
+  items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
   let token = require("useToken").useToken("text-subtle");
   const intl = require("util").intl;
   const obj2 = require("useToken");
@@ -127,8 +127,8 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5709);
-              return obj.openURL(flag(2061).getArticleURL(constants.CHECKPOINT));
+              const obj = flag(5829);
+              return obj.openURL(flag(2190).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children,

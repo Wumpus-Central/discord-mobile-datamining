@@ -2,7 +2,7 @@
 import useHandleBuyNowDefault from "../useHandleBuyNow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx",
@@ -32,7 +32,7 @@ export function HeadlessCollectiblesPurchaseRunner(attempt) {
   obj.stageCollectibleChangeForEditProfile = stageCollectibleChangeForEditProfile;
   handleBuyNow = useHandleBuyNowDefault(obj).handleBuyNow;
   noop.useRef(0);
-  const items = [attempt, handleBuyNow, tmp, tmp2];
+  items = [attempt, handleBuyNow, tmp, tmp2];
   const effect = noop.useEffect(() => {
     if (ref.current !== attempt) {
       let tmp3 = closure_2;

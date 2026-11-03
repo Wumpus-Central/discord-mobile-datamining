@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useC
 
 export default function useChatBadge(arg0) {
   _require = arg0;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStores(items, () => {
     let str = "mention";
     if (ReadStateStore.getMentionCount(closure_0) <= 0) {

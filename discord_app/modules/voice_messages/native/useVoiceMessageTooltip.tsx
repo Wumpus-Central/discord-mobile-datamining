@@ -7,7 +7,7 @@ import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboar
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(13725);
+const VoiceMessagesUIStore = fn(13856);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -20,7 +20,7 @@ export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
   const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
   _require = tmp2;
-  const items = [tmp2];
+  items = [tmp2];
   const items1 = [tmp2];
   const memo = noop.useMemo(() => {
     const obj = { position: "top", label: null, visible: null };

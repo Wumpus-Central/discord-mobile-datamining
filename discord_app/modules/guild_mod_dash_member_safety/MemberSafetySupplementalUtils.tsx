@@ -40,7 +40,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ export function useGetIntegrationIconString(arg0) {
   value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
-    const items = [,];
+    items = [,];
     ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
     tmp5 = null;
     if (items.includes(arg0)) {

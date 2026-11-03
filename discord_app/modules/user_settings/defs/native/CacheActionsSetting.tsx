@@ -60,7 +60,7 @@ function CacheActionsActionSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -91,7 +91,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t.GgUIfl));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c2 = tmp;
@@ -99,7 +99,7 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [React5(TableRow.TableRow, obj4), ,];
+  items = [React5(TableRow.TableRow, obj4), ,];
   let tmp7Result3 = null != DiskUsageManagerDefault.calculateSize;
   if (tmp7Result3) {
     let obj5 = {
@@ -147,7 +147,7 @@ function CacheActionsActionSheet() {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t["23xR5w"]));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp21) {
         c2 = tmp;
@@ -204,14 +204,14 @@ const useState = fn(19).useState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(17572).FileWarningIcon,
+  IconComponent: fn(17715).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: CacheActionsActionSheet }),
@@ -219,7 +219,7 @@ const pressable = SettingBuilders.createPressable({
     );
   },
   usePredicate: function useCacheActionsPredicate() {
-    const items = [GatewayConnectionStore];
+    items = [GatewayConnectionStore];
     const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
     const DeveloperMode = UserSettings.DeveloperMode;
     return DeveloperMode.useSetting() && stateFromStores;

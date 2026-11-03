@@ -9,7 +9,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   searchButton: {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
@@ -41,11 +41,7 @@ export function SearchButtonContent(panelVariant) {
   const tmp2 = closure_5();
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [
-    tmp2.searchButton,
-    panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners,
-    merged.style,
-  ];
+  items = [tmp2.searchButton, panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners, merged.style];
   obj.style = items;
   const items1 = [React3(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" })];
   const obj2 = {

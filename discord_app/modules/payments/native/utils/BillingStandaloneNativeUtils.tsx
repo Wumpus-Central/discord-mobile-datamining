@@ -59,7 +59,7 @@ export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selectio
       closure_2(body, searchParams);
     },
     () => {
-      const items = [...arguments];
+      items = [...arguments];
       emitMWRCSentryErrorOnFailure(items, closure_0, loadId.loadId);
       closure_3(...items);
     },
@@ -92,7 +92,7 @@ export function goToStandaloneNitroManagementFromMobileApp(premium_external_mana
       closure_2(body, searchParams);
     },
     () => {
-      const items = [...arguments];
+      items = [...arguments];
       emitMWRCSentryErrorOnFailure(items, closure_0, loadId);
       closure_3(...items);
     },
@@ -122,7 +122,7 @@ export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, ne
       closure_2(body, searchParams);
     },
     () => {
-      const items = [...arguments];
+      items = [...arguments];
       emitMWRCSentryErrorOnFailure(items, closure_0, closure_1);
       closure_3(...items);
     },

@@ -17,7 +17,7 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, onClose: 0 }));
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
   const stateFromStores = guildId(563).useStateFromStores(
     items,
@@ -58,20 +58,20 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7261).ListViewIcon;
+  obj3.icon = guildId(7381).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = tmp2(1113).intl;
   obj5.text = intl3.string(guildId(1113).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5634).Button, obj5)];
+  const items4 = [closure_5(guildId(5754).Button, obj5)];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1113).intl;
   obj6.text = intl4.string(guildId(1113).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5634).Button, obj6);
+  items4[1] = closure_5(guildId(5754).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(6912), obj3);
+  return closure_5(onClose(7032), obj3);
 }

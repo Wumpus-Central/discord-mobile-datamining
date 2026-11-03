@@ -93,10 +93,10 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(width, height) {
-  const bound = Math.max(width, height);
-  const result = 0.25 * Math.ceil((bound * getDevicePixelRatioDefault()) / 1440 / 0.25);
-  return _mod12.clamp(result, 1, 2);
+export function getCheckpointCharacterTextureScale(c3, height) {
+  const result = Math.max(c3, height) / 1440;
+  const result1 = 0.25 * Math.ceil((result * getDevicePixelRatioDefault()) / 0.25);
+  return _mod12.clamp(result1, 1, 2);
 }
 export function getCheckpointCharacterTextureUrl(name, textureScale) {
   ({ url, width, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);

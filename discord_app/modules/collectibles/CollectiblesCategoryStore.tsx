@@ -11,17 +11,17 @@ import CollectiblesCategoryRecord from "records/CollectiblesCategoryRecord.tsx";
 require = fn;
 function updateCategoriesAndProducts(map) {
   closure_14 = map;
-  let items = [...closure_14.values()];
+  items = [...closure_14.values()];
   map = new Map(
     items.map((storeListingId) => {
-      const items = [storeListingId.storeListingId, storeListingId];
+      items = [storeListingId.storeListingId, storeListingId];
       return items;
     }),
   );
   const productsFromCategories = CollectiblesUtils.getProductsFromCategories(closure_14, true);
   map1 = new Map(
     productsFromCategories.map((skuId) => {
-      const items = [skuId.skuId, skuId];
+      items = [skuId.skuId, skuId];
       return items;
     }),
   );
@@ -34,7 +34,7 @@ function updateCategoriesAndProducts(map) {
   const productsFromCategories1 = CollectiblesUtils.getProductsFromCategories(closure_14, false);
   map2 = new Map(
     productsFromCategories1.map((storeListingId) => {
-      const items = [storeListingId.storeListingId, storeListingId];
+      items = [storeListingId.storeListingId, storeListingId];
       return items;
     }),
   );
@@ -75,7 +75,7 @@ const Store = initializeDefault.Store;
 class CollectiblesCategoryStore extends Store {}
 const prototype = CollectiblesCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, reset);
 };
 Object.defineProperty(prototype, "isFetchingCategories", {
@@ -87,7 +87,7 @@ Object.defineProperty(prototype, "isFetchingCategories", {
 prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    let state;
+    state = undefined;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }
@@ -220,14 +220,14 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
       closure_14 = map;
       closure_9 = map1;
     } else {
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_14.values(), 0);
       if (!obj.isEqual(items, mapped)) {
         if (!categories.noOp) {
           const _Map = Map;
           map = new Map(
             mapped.map((skuId) => {
-              const items = [skuId.skuId, skuId];
+              items = [skuId.skuId, skuId];
               return items;
             }),
           );
@@ -281,7 +281,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             const bundledProducts1 = value.bundledProducts;
             map = new Map(
               bundledProducts1.map((item) => {
-                const items = [,];
+                items = [,];
                 ({ skuId: arr[0], prices: arr[1] } = item);
                 return items;
               }),
@@ -343,12 +343,12 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
       const categories = shopHome.shopHome.categories;
       map = new Map(
         categories.map((skuId) => {
-          const items = [skuId.skuId, skuId];
+          items = [skuId.skuId, skuId];
           return items;
         }),
       );
       const _Map2 = Map;
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(map, HermesBuiltin.arraySpread(closure_14, 0));
       map1 = new Map(items);
       updateCategoriesAndProducts(map1);

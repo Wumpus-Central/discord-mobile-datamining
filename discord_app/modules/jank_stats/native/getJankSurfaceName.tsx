@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(18063);
+const JankScreenConstants = fn(18207);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -150,16 +150,16 @@ export function setJankPanelOpen(activity, arg1) {
     }
   }
 }
-export function setJankVoicePanelTab(channelId, arg1) {
-  value = map.get(channelId);
+export function setJankVoicePanelTab(c0, arg1) {
+  value = map.get(c0);
   if (value == null) {
     value = null;
   }
   if (value !== arg1) {
     if (null == arg1) {
-      map.delete(channelId);
+      map.delete(c0);
     } else {
-      const result = map.set(channelId, arg1);
+      const result = map.set(c0, arg1);
     }
     const tmp8 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
     const obj2 = NativeJankSessionModuleDefault;

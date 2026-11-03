@@ -37,9 +37,9 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5615).ReactionTypes.NORMAL;
+    NORMAL = threadId(5738).ReactionTypes.NORMAL;
   }
-  const items = [threadId];
+  items = [threadId];
   const items1 = [threadId];
   const callback = noop.useCallback((containerRef) => {
     ({ messageId: threadId, mediaItems, initialIndex } = containerRef);
@@ -52,7 +52,7 @@ export default function useNativeForumPostHandlers(threadId) {
     const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
     const mapped = mediaItems.map((src) => {
       src = src.src;
-      const str = NORMAL(1377).toURLSafe(src);
+      const str = NORMAL(1378).toURLSafe(src);
       let tmp = null != str;
       if (src.srcIsAnimated) {
         if (tmp) {
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(8928).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(9054).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9831).isAttachmentPathUrl(str);
-            const obj5 = callback1(9831);
+            isAttachmentPathUrlResult = callback1(9962).isAttachmentPathUrl(str);
+            const obj5 = callback1(9962);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(8928).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(9054).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9831).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9831);
+              result = callback1(9962).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9962);
             }
             isAttachmentPathUrlResult = result;
           }

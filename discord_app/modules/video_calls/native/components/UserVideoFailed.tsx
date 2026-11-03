@@ -36,7 +36,7 @@ export default function UserVideoFailed(arg0) {
   const tmp2 = closure_7();
   const obj2 = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.container, style];
+  items = [tmp2.container, style];
   obj2.style = items;
   const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
   const intl = util.intl;

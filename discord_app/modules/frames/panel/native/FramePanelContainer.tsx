@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 const require = fn;
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
 
 export default noop.memo(function FramePanelContainer() {
-  const items = [FramesStore];
+  items = [FramesStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => isLaunched(mainFrame.getMainFrame()))) {
     const obj2 = { children: null };

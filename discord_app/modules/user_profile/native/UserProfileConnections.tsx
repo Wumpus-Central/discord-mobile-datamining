@@ -14,8 +14,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11610 from "../../../../_runtime/metro/11610__.js";
-import _modDef11611 from "../../../../_runtime/metro/11611__.js";
+import _modDef11747 from "../../../../_runtime/metro/11747__.js";
+import _modDef11748 from "../../../../_runtime/metro/11748__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -38,30 +38,30 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11610, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11747, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
-    const items = [closure_1_12(native2.Icon, obj4)];
-    const obj5 = { source: _modDef11611, color: WHITE };
+    items = [application_id(native2.Icon, obj4)];
+    const obj5 = { source: _modDef11748, color: WHITE };
     const merged1 = Object.assign(obj);
-    items[1] = closure_1_12(native2.Icon, obj5);
+    items[1] = application_id(native2.Icon, obj5);
     obj3.children = items;
-    return map1(View, obj3);
+    return state(View, obj3);
   }
   WHITE = nativeDefault.unsafe_rawColors.WHITE;
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7377);
+let Constants = fn(7497);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1072);
-({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7349).MetadataFields;
+({ AnalyticEvents: closure_9, PlatformTypes: closure_10 } = Constants);
+const MetadataFields = fn(7469).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1187).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1187);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 },
   connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -143,7 +143,7 @@ let closure_18 = noop.memo(function UserAccountConnection(userId) {
     if (tmp19) {
       tmp19 = "1" === metadata[MetadataFields.TWITTER_VERIFIED];
     }
-    let items = [account.type, platformUserUrl, trackUserProfileAction, userId];
+    items = [account.type, platformUserUrl, trackUserProfileAction, userId];
     const items1 = [account.name, trackUserProfileAction];
     const callback = createdAtDate.useCallback(() => {
       if (null != platformUserUrl) {
@@ -178,7 +178,7 @@ let closure_18 = noop.memo(function UserAccountConnection(userId) {
     items2[2] = name;
     let name1;
     const memo = createdAtDate.useMemo(() => {
-      const items = [];
+      items = [];
       let str;
       if (_undefined != null) {
         str = _undefined.name;
@@ -333,7 +333,7 @@ let closure_19 = noop.memo(function UserAccountApplicationConnection(application
   if (str == null) {
     str = "";
   }
-  let items = [str, trackUserProfileAction];
+  items = [str, trackUserProfileAction];
   const callback = noop.useCallback(() => {
     trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
@@ -343,7 +343,7 @@ let closure_19 = noop.memo(function UserAccountApplicationConnection(application
   const items1 = [application.name, str];
   const items2 = [application.name];
   const memo = noop.useMemo(() => {
-    const items = [];
+    items = [];
     items.push(application.name);
     items.push(str);
     return items.join(", ");
@@ -391,16 +391,16 @@ const memoResult = noop.memo(function UserAccountConnection(applicationRoleConne
         color: "text-subtle",
         children: applicationRoleConnection.platform_username,
       };
-      tmp7 = closure_1_12(Text_Text.Text, obj4);
+      tmp7 = application_id(Text_Text.Text, obj4);
     }
   }
-  const items = [tmp7, ,];
+  items = [tmp7, ,];
   let tmp9 = null;
   if (null != roleConnectionMetadataItems) {
     tmp9 = null;
     if (roleConnectionMetadataItems.length > 0) {
       const obj5 = { style: tmp.connectionMetadata, children: roleConnectionMetadataItems };
-      tmp9 = closure_1_12(View, obj5);
+      tmp9 = application_id(View, obj5);
     }
   }
   const obj6 = { children: null };
@@ -413,8 +413,8 @@ const memoResult = noop.memo(function UserAccountConnection(applicationRoleConne
       return applicationRoleConnection.application.name;
     },
   });
-  obj7.children = closure_1_12(Text_Text.Text, obj8);
-  items[2] = closure_1_12(View, obj7);
+  obj7.children = application_id(Text_Text.Text, obj8);
+  items[2] = application_id(View, obj7);
   obj6.children = items;
   const obj3 = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
   const obj9 = {
@@ -429,14 +429,14 @@ const memoResult = noop.memo(function UserAccountConnection(applicationRoleConne
   if (name == null) {
     name = applicationRoleConnection.application.name;
   }
-  const obj10 = { label: name, subLabel: map1(closure_1_14, obj6), icon: null };
-  const tmp5Result = map1(closure_1_14, obj6);
-  obj10.icon = closure_1_12(native2.Icon, {
+  const obj10 = { label: name, subLabel: state(gesture, obj6), icon: null };
+  const tmp5Result = state(gesture, obj6);
+  obj10.icon = application_id(native2.Icon, {
     size: native2.Icon.Sizes.MEDIUM,
     source: applicationIconSource,
     disableColor: true,
   });
-  return closure_1_12(TableRow.TableRow, obj10);
+  return application_id(TableRow.TableRow, obj10);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
@@ -445,16 +445,16 @@ export const ApplicationRoleConnection = memoResult;
 export function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5080).useThemeContext().theme;
-  const obj = userId(5080);
-  const items = [LocaleStore];
+  const theme = userId(5207).useThemeContext().theme;
+  const obj = userId(5207);
+  items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
   const items1 = [StreamerModeStore];
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14994)(userId));
+  ({ connections, appIdentities } = theme(15130)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(
@@ -467,13 +467,13 @@ export function UserProfileAccountConnectionsCard(userId) {
         );
       }),
       HermesBuiltin.arraySpread(
-        connections.map((account) => closure_2_12(closure_18, { account, theme, locale, userId }, account.id)),
+        connections.map((account) => application_id(closure_18, { account, theme, locale, userId }, account.id)),
         0,
       ),
     );
     const obj4 = { title: null, style: null, titleStyle: null, children: null };
     const arraySpreadResult = HermesBuiltin.arraySpread(
-      connections.map((account) => closure_2_12(closure_18, { account, theme, locale, userId }, account.id)),
+      connections.map((account) => application_id(closure_18, { account, theme, locale, userId }, account.id)),
       0,
     );
     const intl = tmp2(1113).intl;
@@ -481,8 +481,8 @@ export function UserProfileAccountConnectionsCard(userId) {
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(7060).TableRowGroup, obj5);
-    return closure_12(tmp5(7376), obj4);
+    obj4.children = closure_12(tmp2(7186).TableRowGroup, obj5);
+    return closure_12(tmp5(7496), obj4);
   }
   return null;
 }
@@ -490,7 +490,7 @@ export function UserProfileApplicationRoleConnectionsCard(arg0) {
   ({ userId, style } = arg0);
   const arr = useUserProfileApplicationRoleConnectionsDefault(userId);
   const tmp = closure_16();
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   if (!obj.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation)) {
     if (0 !== arr.length) {
       const mapped = arr.map((applicationRoleConnection) =>
@@ -502,8 +502,8 @@ export function UserProfileApplicationRoleConnectionsCard(arg0) {
       obj2.style = style;
       obj2.titleStyle = tmp.refreshCardTitle;
       const obj3 = { hasIcons: true, children: mapped };
-      obj2.children = closure_1_12(TableRowGroup.TableRowGroup, obj3);
-      return closure_1_12(UserProfileCardDefault, obj2);
+      obj2.children = application_id(TableRowGroup.TableRowGroup, obj3);
+      return application_id(UserProfileCardDefault, obj2);
     }
   }
   return null;

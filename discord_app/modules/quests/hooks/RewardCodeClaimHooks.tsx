@@ -63,7 +63,7 @@ export function useClaimOrFetchRewardCode(isClaimingReward) {
       setHasError(true);
     }
   }, []);
-  const items = [
+  items = [
     claimCode,
     fetchCode,
     hasError,
@@ -122,14 +122,7 @@ export function useHandleRedemptionLinkClick(quest) {
   const questContentPosition = quest.questContentPosition;
   const sourceQuestContent = quest.sourceQuestContent;
   const getQuestImpressionId = quest(questContent[5]).useGetQuestImpressionId();
-  const items = [
-    quest.id,
-    questContent,
-    questContentPosition,
-    sourceQuestContent,
-    getQuestImpressionId,
-    redemptionLink,
-  ];
+  items = [quest.id, questContent, questContentPosition, sourceQuestContent, getQuestImpressionId, redemptionLink];
   return getQuestImpressionId.useCallback(() => {
     if (null != fetchCode) {
       const obj2 = {
@@ -186,7 +179,7 @@ export function useClaimRewardCodePrimaryCtaClickHandler(claimCode) {
   let obj = claimCode(hasError[5]);
   const getQuestImpressionId1 = claimCode(hasError[5]).useGetQuestImpressionId();
   closure_129_5 = getQuestImpressionId1;
-  const items = [
+  items = [
     quest2.id,
     questContent2,
     questContentPosition2,

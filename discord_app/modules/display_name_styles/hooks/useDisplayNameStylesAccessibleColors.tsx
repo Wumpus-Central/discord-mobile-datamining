@@ -11,7 +11,7 @@ export function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   const backgroundColor = displayNameStyles.backgroundColor;
   let stateFromStores;
   let displayNameStylesEffectConfig;
-  let items = [displayNameStylesEffectConfig];
+  items = [displayNameStylesEffectConfig];
   stateFromStores = displayNameStyles(stateFromStores[2]).useStateFromStores(items, () => {
     let num = 1;
     if (displayNameStylesEffectConfig.desaturateUserColors) {
@@ -37,7 +37,7 @@ export function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   ];
   return effectId.useMemo(() => {
     if (null == displayNameStyles) {
-      let items = [];
+      items = [];
     } else {
       const colors = tmp.colors;
       items = colors.map((item) => {

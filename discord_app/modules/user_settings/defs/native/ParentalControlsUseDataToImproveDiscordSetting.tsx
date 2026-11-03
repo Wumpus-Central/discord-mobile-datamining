@@ -6,13 +6,13 @@ import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8432).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8556).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },
@@ -20,7 +20,7 @@ const toggle = SettingBuilders.createToggle({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (arg0) {
-        const items = [Consents.USAGE_STATISTICS];
+        items = [Consents.USAGE_STATISTICS];
         let items1 = items;
       } else {
         items1 = [];

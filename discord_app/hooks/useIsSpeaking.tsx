@@ -21,7 +21,7 @@ export default function useIsSpeaking(checkIsMuted) {
   }
   const context = checkIsMuted.context;
   flag = undefined;
-  const items = [VoiceStateStore, flag];
+  items = [VoiceStateStore, flag];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     let voiceStateForChannel = null;
@@ -74,7 +74,7 @@ export function getIsSpeaking(checkIsMuted) {
   }
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [VoiceStateStore, SelectedChannelStore, SpeakingStore, SoundboardStore];
+    items = [VoiceStateStore, SelectedChannelStore, SpeakingStore, SoundboardStore];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;

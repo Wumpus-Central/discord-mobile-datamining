@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/search/native/hooks/useSearch
 
 export function useSearchMessageTimestamp(message, channel) {
   let id = channel;
-  const items = [message, channel];
+  items = [message, channel];
   return noop.useMemo(() => {
     id = message.id;
     if (id == null) {

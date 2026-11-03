@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/templates/useConjureTemplatePrepare.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const prepareTemplate = fn(10850).prepareTemplate;
+const prepareTemplate = fn(10980).prepareTemplate;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/useConjureTemplatePrepare.tsx");
 
@@ -9,7 +9,7 @@ export default function useConjureTemplatePrepare(arg0, arg1, arg2) {
   noop = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  const items = [arg0, arg1, arg2];
+  items = [arg0, arg1, arg2];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

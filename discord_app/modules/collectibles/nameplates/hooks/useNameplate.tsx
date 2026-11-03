@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks
 export function useNameplate(user) {
   user = user.user;
   const guildId = user.guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {

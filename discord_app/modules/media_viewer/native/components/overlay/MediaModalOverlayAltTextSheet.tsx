@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function MediaViewerAltTextSheet(children) {
   const intl = util.intl;
   obj4.title = intl.string(util.t.J3IOO1);
   obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
-  const items = [tmp.container, { minHeight: num }];
+  items = [tmp.container, { minHeight: num }];
   obj3.contentStyles = items;
   obj3.children = jsx(Text_Text.Text, {
     accessibilityRole: "text",

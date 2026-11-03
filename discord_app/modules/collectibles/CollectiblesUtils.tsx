@@ -115,7 +115,7 @@ const AssetDisplayConfigRecord = ShopAssetConfigRecord.AssetDisplayConfigRecord;
 ({
   EXTERNAL_PRODUCT_SKU_IDS: closure_8,
   LIMITED_TIME_BADGE_DAYS_THRESHOLD: closure_9,
-  SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS: c10,
+  SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS: closure_10,
 } = CollectiblesShopConstants);
 ({ COLLECTIBLES_APPLICATION_ID: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const CurrencyCodes = Constants2.CurrencyCodes;
@@ -292,7 +292,7 @@ export function getBundleItemsPriceSum(bundledProducts, arg1) {
         return acc + num;
       }, 0);
     } else {
-      tmp(1375);
+      tmp(1377);
     }
     DEFAULT = constants2.DEFAULT;
     obj = require("PlatformUtils");
@@ -401,7 +401,7 @@ export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
           return acc + num;
         }, 0);
       } else {
-        tmp(1375);
+        tmp(1377);
       }
       DEFAULT = constants2.DEFAULT;
       obj = require("PlatformUtils");

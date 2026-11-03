@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks
 
 export default function useGuildPowerupConfigureCallback(arg0, skuId) {
   closure_0 = arg0;
-  const items = [arg0, skuId.skuId];
+  items = [arg0, skuId.skuId];
   return noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY);
     skuId = skuId.skuId;

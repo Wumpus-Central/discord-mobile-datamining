@@ -9,6 +9,6 @@ const result = size.fileFinishedImporting(
 );
 
 export function useStaffOrDeveloperSettingPredicate() {
-  const items = [DeveloperExperimentStore];
+  items = [DeveloperExperimentStore];
   return initialize.useStateFromStores(items, () => isDeveloper.isDeveloper);
 }

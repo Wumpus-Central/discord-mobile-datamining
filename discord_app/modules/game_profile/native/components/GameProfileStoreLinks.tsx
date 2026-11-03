@@ -28,7 +28,7 @@ function WebsiteGameStoreLinkButton(data) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -50,7 +50,7 @@ export default function GameProfileStoreLinks(websiteButtons) {
       } else if (2 === websiteButtons.length) {
         const obj3 = { style: tmp.container, children: null };
         const obj4 = { data: websiteButtons[0], trackAction };
-        const items = [closure_4(WebsiteGameStoreLinkButton, obj4)];
+        items = [closure_4(WebsiteGameStoreLinkButton, obj4)];
         const obj5 = { data: websiteButtons[1], trackAction };
         items[1] = closure_4(WebsiteGameStoreLinkButton, obj5);
         obj3.children = items;

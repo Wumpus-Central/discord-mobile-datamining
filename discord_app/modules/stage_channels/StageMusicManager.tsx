@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11030);
+const SoundUtils = fn(11163);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 class StageMusicManager extends tmp2 {
   constructor() {
@@ -142,7 +142,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageMusicMana
 export default stageMusicManager;
 export function useShowStageMusicMuteButton(channelId) {
   _require = channelId;
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   let stateFromStores = require("initialize").useStateFromStores(
     items,
     () => SelectedChannelStore.getVoiceChannelId() === closure_0,

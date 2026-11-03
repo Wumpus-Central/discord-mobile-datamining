@@ -130,7 +130,7 @@ export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
     tmp3(tmp13);
   }
   const obj7 = { anchor: tmp12, beginSearch: null };
-  const items = [arg2];
+  items = [arg2];
   obj7.beginSearch = noop.useCallback((anchor) => {
     if (closure_0) {
       const obj = { kind: "pending", anchor, seenText: null };

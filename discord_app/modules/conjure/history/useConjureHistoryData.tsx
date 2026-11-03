@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/useConjureHistoryData.tsx");
 
 export default function useConjureHistoryData(arg0, arg1) {
-  let items = [arg1];
+  items = [arg1];
   const memo = obj3.useMemo(() => ConjureRestorePanelOp.restorePanelEnvironments(c1), items);
   const hasItem = memo.includes("preview");
   const items1 = [arg0];
@@ -52,12 +52,12 @@ export default function useConjureHistoryData(arg0, arg1) {
   }, []);
   if (null != tmp6) {
     if (tmp6.load === callback) {
-      let state = tmp6.state;
+      state = tmp6.state;
     }
     let obj2 = { state: { status: "loading" }, retry: callback1, refresh: tmp9 };
     const items3 = [arg0];
     const callback2 = obj.useCallback(() => {
-      const items = [conjureHistoryRequests.fetchDatabaseRestorePoints(callback6, "stable")];
+      items = [conjureHistoryRequests.fetchDatabaseRestorePoints(callback6, "stable")];
       items[1] = conjureHistoryRequests.fetchDatabaseRestoreWindow(callback6, "stable");
       return Promise.all(items).then((result) => {
         [tmp, tmp2] = result;
@@ -210,14 +210,14 @@ export default function useConjureHistoryData(arg0, arg1) {
             refresh2();
             refresh3();
           }, items9);
-          let state2 = obj2.state;
+          state2 = obj2.state;
           const items10 = [state2];
           const mapped = memo.map((environment) => {
             const obj = { environment, backups: null };
             if ("preview" === environment) {
               closure_0 = obj4;
               closure_1 = obj5;
-              const state = obj4.state;
+              state = obj4.state;
               state2 = obj5.state;
               if ("failed" !== state.status) {
                 if ("failed" !== state2.status) {
@@ -290,7 +290,7 @@ export function useHistoryLoad(callback) {
   const tmp = _slicedToArray(noop.useState(0), 2);
   closure_1 = tmp[1];
   [tmp3, _slicedToArray] = noop.useState(null);
-  const items = [callback, tmp[0]];
+  items = [callback, tmp[0]];
   const effect = noop.useEffect(() => {
     callback6 = false;
     callback6().then(
@@ -321,7 +321,7 @@ export function useHistoryLoad(callback) {
   }, []);
   if (null != tmp3) {
     if (tmp3.load === callback) {
-      const state = tmp3.state;
+      state = tmp3.state;
     }
     const obj = { state: { status: "loading" }, retry, refresh: tmp6 };
     return obj;

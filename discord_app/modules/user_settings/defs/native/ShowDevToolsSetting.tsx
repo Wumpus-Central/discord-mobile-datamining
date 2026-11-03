@@ -15,7 +15,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: DevToolsNavigator.navigateToDevTools,
   usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [
+    items = [
       ...Object.values(DevToolsScreens.DevToolsScreens),
       ...Object.values(DevToolsScreens.PerformanceTestingScreens),
     ];

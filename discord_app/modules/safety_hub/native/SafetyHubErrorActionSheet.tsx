@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   errorContainer: {
     display: "flex",
@@ -57,8 +57,8 @@ export default function SafetyHubErrorActionSheet(arg0) {
       style: tmp2.redesignErrorIcon,
     };
     obj3.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj4);
-    const items = [hasOwnProperty(View, obj3)];
-    const obj5 = { variant: "heading-lg/normal", children: null };
+    items = [hasOwnProperty(View, obj3)];
+    const obj5 = { variant: "heading-lg/medium", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t.TDRvqs);
     items[1] = hasOwnProperty(Text_Text.Text, obj5);

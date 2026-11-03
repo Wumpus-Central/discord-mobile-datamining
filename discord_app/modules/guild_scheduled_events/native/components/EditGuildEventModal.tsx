@@ -16,9 +16,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4869).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4996).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -45,7 +45,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,10 +73,10 @@ export default noop.memo(function EditGuildEventModal(guild) {
           return obj;
         } else if (null == value) {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(5023).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(5150).AccessibilityAnnouncer;
             const intl = tmp4(1113).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1113).t["5HzXO5"]));
             closure_128_1();
@@ -86,7 +86,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(5023).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(5150).AccessibilityAnnouncer;
           const intl2 = tmp4(1113).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1113).t["F9On+q"]));
         }
@@ -212,7 +212,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
   };
   obj3[PREVIEW(guildEvent[9]).EditGuildEventScreens.PREVIEW] = obj6;
   const obj7 = { style: null, children: null };
-  let items = [tmp.container, { paddingLeft: left, paddingRight: right }];
+  items = [tmp.container, { paddingLeft: left, paddingRight: right }];
   obj7.style = items;
   const tmp6 = first1(
     require("LazyAPIPromise")(() => {
@@ -242,7 +242,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
       noop.useState(() => {
         const obj = { name: EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR };
         if (first1) {
-          const items = [obj];
+          items = [obj];
           const obj2 = { name: EditGuildEventUtils.EditGuildEventScreens.DETAILS };
           items[1] = obj2;
           let items1 = items;

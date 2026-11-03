@@ -12,7 +12,7 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 },
   backgroundDarkMode: null,
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTi
 
 export default function LimitedTimeBadge(unpublishedAt) {
   const tmp = closure_7();
-  const items = [ThemeStore];
+  items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));
   const items1 = [LocaleStore];
   const items2 = ["en-US", "en-GB"];
@@ -73,7 +73,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     }
     const obj6 = {
       color: str2,
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       accessibilityLabel: null,
       allowFontScaling: false,
       children: null,
@@ -84,7 +84,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     obj6.children = sum;
     obj5.children = jsx(Text_Text.Text, {
       color: str2,
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       accessibilityLabel: null,
       allowFontScaling: false,
       children: null,

@@ -10,7 +10,7 @@ require = fn;
 let closure_3 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: null,
   default: null,
@@ -95,7 +95,7 @@ export function TableRowIcon(arg0) {
         }
       }
       const obj = { style: null, children: null };
-      const items = [tmp.container, _objectWithoutProperties(translucent, closure_3)];
+      items = [tmp.container, _objectWithoutProperties(translucent, closure_3)];
       obj.style = items;
       if (null != IconComponent) {
         const obj2 = { size: str3, color };

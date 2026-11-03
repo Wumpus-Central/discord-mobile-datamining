@@ -25,7 +25,7 @@ export function openGuildHighlightNotificationForPush(guild_id2, message, notifi
   const obj = ActionSheetActionCreatorsDefault;
   const intl = require("util").intl;
   obj4.label = intl.string(require("util").t.pLeQp0);
-  const items = [obj4, , , ,];
+  items = [obj4, , , ,];
   const obj5 = { value: constants.IRRELEVANT_CHANNEL, label: null };
   const intl2 = require("util").intl;
   obj5.label = intl2.string(require("util").t.Lu4n25);
@@ -74,5 +74,5 @@ export function openGuildHighlightNotificationForPush(guild_id2, message, notifi
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(10157, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+  obj.openLazy(require("asyncRequireImpl")(10287, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
 }

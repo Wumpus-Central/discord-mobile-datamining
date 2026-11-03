@@ -19,7 +19,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   if (store_page != null) {
     role_subscription1 = store_page.role_subscription;
   }
-  const items = [role_subscription1];
+  items = [role_subscription1];
   const memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
@@ -86,7 +86,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     const result = MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(slug);
   }
   if (store_page != null) {
-    const guild = store_page.guild;
+    guild = store_page.guild;
     if (guild != null) {
       const name = guild.name;
     }

@@ -171,7 +171,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -212,7 +212,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
           const body = closure_129_0.body;
           const mapped = body.map(closure_130_13);
         } else {
-          const items = [];
+          items = [];
         }
         c4 = 3;
       }
@@ -237,7 +237,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -274,7 +274,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;
@@ -350,7 +350,7 @@ export function executeAlertAction() {
 export function removeMentionRaidRestrictionWithFeedback(arg0, decision_id, arg2) {
   _require = arg0;
   dependencyMap = arg2;
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);

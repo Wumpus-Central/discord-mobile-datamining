@@ -1467,7 +1467,7 @@ class DisplayNameStyles$Type extends MessageType6 {
       name: "font_id",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.DisplayNameFont", obj2, "DISPLAY_NAME_FONT_"];
+        items = ["discord_protos.users.v1.DisplayNameFont", obj2, "DISPLAY_NAME_FONT_"];
         return items;
       },
     };
@@ -1620,7 +1620,7 @@ const items5 = [
     name: "font_id",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.DisplayNameFont", obj2, "DISPLAY_NAME_FONT_"];
+      items = ["discord_protos.users.v1.DisplayNameFont", obj2, "DISPLAY_NAME_FONT_"];
       return items;
     },
   },
@@ -1629,7 +1629,7 @@ const items5 = [
     name: "effect_id",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.DisplayNameEffect", obj3, "DISPLAY_NAME_EFFECT_"];
+      items = ["discord_protos.users.v1.DisplayNameEffect", obj3, "DISPLAY_NAME_EFFECT_"];
       return items;
     },
   },
@@ -1700,7 +1700,7 @@ class UserTypingIndicatorStyle$Type extends MessageType7 {
       name: "typing_suggestion",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.TypingSuggestion", obj5, "TYPING_SUGGESTION_"];
+        items = ["discord_protos.users.v1.TypingSuggestion", obj5, "TYPING_SUGGESTION_"];
         return items;
       },
     };
@@ -1813,7 +1813,7 @@ const items6 = [
     name: "animation",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.TypingIndicatorAnimation", obj4, "TYPING_INDICATOR_ANIMATION_"];
+      items = ["discord_protos.users.v1.TypingIndicatorAnimation", obj4, "TYPING_INDICATOR_ANIMATION_"];
       return items;
     },
   },
@@ -1822,7 +1822,7 @@ const items6 = [
     name: "typing_suggestion",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.TypingSuggestion", obj5, "TYPING_SUGGESTION_"];
+      items = ["discord_protos.users.v1.TypingSuggestion", obj5, "TYPING_SUGGESTION_"];
       return items;
     },
   },
@@ -1867,7 +1867,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(partialSettings) {
-  obj = { emoji: { oneofKind: "r" }, animated: false };
+  obj = { emoji: { oneofKind: "Array" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2368,7 +2368,7 @@ class ScheduleRule$Type extends MessageType11 {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = ["discord_protos.users.v1.DayOfWeek", obj];
+        items = ["discord_protos.users.v1.DayOfWeek", obj];
         return items;
       },
     };
@@ -2534,7 +2534,7 @@ const items10 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.users.v1.DayOfWeek", obj];
+      items = ["discord_protos.users.v1.DayOfWeek", obj];
       return items;
     },
   },
@@ -3140,7 +3140,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(partialSettings) {
-  obj = { badge: { oneofKind: "r" } };
+  obj = { badge: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -3402,7 +3402,7 @@ class AnonymizationInfo$Type extends MessageType18 {
       name: "status",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.AnonymizationStatus", obj7, "ANONYMIZATION_STATUS_"];
+        items = ["discord_protos.users.v1.AnonymizationStatus", obj7, "ANONYMIZATION_STATUS_"];
         return items;
       },
     };
@@ -3539,7 +3539,7 @@ const items17 = [
     name: "status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.AnonymizationStatus", obj7, "ANONYMIZATION_STATUS_"];
+      items = ["discord_protos.users.v1.AnonymizationStatus", obj7, "ANONYMIZATION_STATUS_"];
       return items;
     },
   },
@@ -4221,7 +4221,7 @@ class AgeAssuranceData$Type extends MessageType20 {
       name: "method",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.AgeAssuranceMethod", obj9, "AGE_ASSURANCE_METHOD_"];
+        items = ["discord_protos.users.v1.AgeAssuranceMethod", obj9, "AGE_ASSURANCE_METHOD_"];
         return items;
       },
     };
@@ -4231,7 +4231,7 @@ class AgeAssuranceData$Type extends MessageType20 {
       name: "vendor",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.AgeAssuranceVendor", obj10, "AGE_ASSURANCE_VENDOR_"];
+        items = ["discord_protos.users.v1.AgeAssuranceVendor", obj10, "AGE_ASSURANCE_VENDOR_"];
         return items;
       },
     };
@@ -4248,7 +4248,7 @@ class AgeAssuranceData$Type extends MessageType20 {
       name: "estimated_age_group",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.AgeAssuranceGroup", obj11];
+        items = ["discord_protos.users.v1.AgeAssuranceGroup", obj11];
         return items;
       },
     };
@@ -4455,7 +4455,7 @@ const items18 = [
     name: "method",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.AgeAssuranceMethod", obj9, "AGE_ASSURANCE_METHOD_"];
+      items = ["discord_protos.users.v1.AgeAssuranceMethod", obj9, "AGE_ASSURANCE_METHOD_"];
       return items;
     },
   },
@@ -4465,7 +4465,7 @@ const items18 = [
     name: "vendor",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.AgeAssuranceVendor", obj10, "AGE_ASSURANCE_VENDOR_"];
+      items = ["discord_protos.users.v1.AgeAssuranceVendor", obj10, "AGE_ASSURANCE_VENDOR_"];
       return items;
     },
   },
@@ -4482,7 +4482,7 @@ const items18 = [
     name: "estimated_age_group",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.AgeAssuranceGroup", obj11];
+      items = ["discord_protos.users.v1.AgeAssuranceGroup", obj11];
       return items;
     },
   },
@@ -4544,7 +4544,7 @@ class LinkedUser$Type extends MessageType21 {
       name: "link_type",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.UserLinkType", obj12];
+        items = ["discord_protos.users.v1.UserLinkType", obj12];
         return items;
       },
     };
@@ -4553,7 +4553,7 @@ class LinkedUser$Type extends MessageType21 {
       name: "link_status",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.UserLinkStatus", obj13];
+        items = ["discord_protos.users.v1.UserLinkStatus", obj13];
         return items;
       },
     };
@@ -4705,7 +4705,7 @@ const items19 = [
     name: "link_type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.UserLinkType", obj12];
+      items = ["discord_protos.users.v1.UserLinkType", obj12];
       return items;
     },
   },
@@ -4714,7 +4714,7 @@ const items19 = [
     name: "link_status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.UserLinkStatus", obj13];
+      items = ["discord_protos.users.v1.UserLinkStatus", obj13];
       return items;
     },
   },
@@ -5444,7 +5444,7 @@ class PremiumState$Type extends MessageType27 {
       name: "premium_source",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.PremiumSource", obj17, "PREMIUM_SOURCE_"];
+        items = ["discord_protos.users.v1.PremiumSource", obj17, "PREMIUM_SOURCE_"];
         return items;
       },
     };
@@ -5455,7 +5455,7 @@ class PremiumState$Type extends MessageType27 {
       name: "premium_subscription_type",
       kind: "enum",
       T() {
-        const items = ["discord_protos.users.v1.PremiumSubscriptionType", obj18, "PREMIUM_SUBSCRIPTION_TYPE_"];
+        items = ["discord_protos.users.v1.PremiumSubscriptionType", obj18, "PREMIUM_SUBSCRIPTION_TYPE_"];
         return items;
       },
     };
@@ -5588,7 +5588,7 @@ const items25 = [
     name: "premium_source",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.PremiumSource", obj17, "PREMIUM_SOURCE_"];
+      items = ["discord_protos.users.v1.PremiumSource", obj17, "PREMIUM_SOURCE_"];
       return items;
     },
   },
@@ -5597,7 +5597,7 @@ const items25 = [
     name: "premium_subscription_type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.PremiumSubscriptionType", obj18, "PREMIUM_SUBSCRIPTION_TYPE_"];
+      items = ["discord_protos.users.v1.PremiumSubscriptionType", obj18, "PREMIUM_SUBSCRIPTION_TYPE_"];
       return items;
     },
   },
@@ -5606,7 +5606,7 @@ const items25 = [
     name: "premium_subscription_group_role",
     kind: "enum",
     T() {
-      const items = ["discord_protos.users.v1.PremiumSubscriptionGroupRole", obj19, "PREMIUM_SUBSCRIPTION_GROUP_ROLE_"];
+      items = ["discord_protos.users.v1.PremiumSubscriptionGroupRole", obj19, "PREMIUM_SUBSCRIPTION_GROUP_ROLE_"];
       return items;
     },
   },
@@ -5795,7 +5795,7 @@ class PerkConfig$Type extends MessageType29 {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = ["discord_protos.users.v1.PerkSource", obj21];
+        items = ["discord_protos.users.v1.PerkSource", obj21];
         return items;
       },
     };
@@ -5851,7 +5851,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(partialSettings) {
-  obj = { source: [], kind: { oneofKind: "r" } };
+  obj = { source: [], kind: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -6064,7 +6064,7 @@ const items27 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.users.v1.PerkSource", obj21];
+      items = ["discord_protos.users.v1.PerkSource", obj21];
       return items;
     },
   },

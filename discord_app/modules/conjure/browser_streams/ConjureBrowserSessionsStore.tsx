@@ -44,7 +44,7 @@ const conjureBrowserSessionsStore = new ConjureBrowserSessionsStore(DispatcherDe
     if (tmp) {
       return false;
     } else {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(sessions, 0);
       const sorted = items.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at);
       const _Set = Set;

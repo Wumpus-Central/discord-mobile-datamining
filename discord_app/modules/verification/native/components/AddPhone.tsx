@@ -17,7 +17,7 @@ const UserFlags = fn(1072).UserFlags;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16, flex: 1 },
@@ -55,7 +55,7 @@ export default function AddPhone(reason) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ export default function AddPhone(reason) {
     }
   };
   const tmp = closure_15();
-  const items = [currentUser];
+  items = [currentUser];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const items1 = [action];
@@ -313,7 +313,7 @@ export default function AddPhone(reason) {
     const obj13 = {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

@@ -222,7 +222,7 @@ const dependencyMap = {
     data = data.data;
     let tmp = null;
     if (null != data) {
-      const state = data.state;
+      state = data.state;
       let tmp2 = null;
       if (typeof state === "string") {
         tmp2 = state;
@@ -276,7 +276,7 @@ const dependencyMap = {
         tmp4 = stage;
       }
       if (tmp4 == null) {
-        const state = data.state;
+        state = data.state;
         let tmp5 = null;
         if (typeof state === "string") {
           tmp5 = state;
@@ -417,7 +417,7 @@ const dependencyMap2 = {
         tmp13 = view_hierarchy;
       }
       obj2.view_hierarchy = tmp13;
-      const gesture = data.gesture;
+      gesture = data.gesture;
       let tmp14 = null;
       if (typeof gesture === "string") {
         tmp14 = gesture;
@@ -559,7 +559,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "applicationId" };
+      let obj = { message_identity: "unknown", socket_kind: "alignItems" };
     } else {
       const url = data.url;
       let tmp61 = null;
@@ -631,7 +631,7 @@ const dependencyMap2 = {
               }
               str10 = joined;
             }
-            const items = [tmp67, tmp58, tmp59];
+            items = [tmp67, tmp58, tmp59];
             const found = items.filter((item) => null != item);
             joined = found.join("/");
           }

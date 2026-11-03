@@ -13,7 +13,7 @@ const Constants = fn(1072);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round },
 };
@@ -36,7 +36,7 @@ export default function VerifiedRoleIcon(arg0) {
   }
   const tmp = closure_9();
   const obj2 = { backgroundColor: roleColor, colors: null };
-  const items = [WHITE, PRIMARY_630];
+  items = [WHITE, PRIMARY_630];
   obj2.colors = items;
   const diff = size - (size / 8) * 2;
   const higherContrastColor = getHigherContrastColor.getHigherContrastColor(obj2);

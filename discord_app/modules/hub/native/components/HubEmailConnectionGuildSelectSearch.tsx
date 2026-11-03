@@ -6,12 +6,12 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/07019_fuzzysearch.js";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7294 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7414 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef14356 from "../../../../../_runtime/metro/14356__.js";
+import _modDef14487 from "../../../../../_runtime/metro/14487__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,8 +22,8 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef14356 };
-  const items = [React6(FastImageDefault, obj2)];
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef14487 };
+  items = [React6(FastImageDefault, obj2)];
   const obj3 = {
     style: tmp.emptyStateTitle,
     variant: "text-sm/semibold",
@@ -37,10 +37,10 @@ function EmptyState() {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14329).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   fauxHeader: { paddingHorizontal: 0 },
@@ -86,7 +86,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     closure_3.pop();
   };
   obj4.children = anyErrorMessage(SearchBarNavDefault, obj5);
-  const items = [anyErrorMessage(NavigatorHeader.FauxHeader, obj4)];
+  items = [anyErrorMessage(NavigatorHeader.FauxHeader, obj4)];
   let obj6 = {
     keyboardShouldPersistTaps: "always",
     data: found,
@@ -116,7 +116,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -148,7 +148,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6446).APIError(closure_128_0);
+                  const aPIError = new id(6566).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);
@@ -198,7 +198,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   };
   const tmp8Result = SearchBarNavDefault;
   obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = anyErrorMessage(_mod7294.FlashList, obj6);
+  items[1] = anyErrorMessage(_mod7414.FlashList, obj6);
   obj3.children = items;
   return closure_9(closure_10, obj3);
 }

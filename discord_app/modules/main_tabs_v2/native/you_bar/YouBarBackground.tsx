@@ -1,11 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef7038 from "../../../../../_runtime/metro/07038__.js";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _modDef7164 from "../../../../../_runtime/metro/07164__.js";
+import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 function YouBarMaskedBackground(barWidth) {
@@ -27,7 +31,7 @@ function YouBarMaskedBackground(barWidth) {
   };
   obj3.style = rect;
   const tmp = closure_8();
-  const items = [
+  items = [
     timestampProducer(View, obj3),
     timestampProducer(View, {
       style: {
@@ -53,7 +57,7 @@ function YouBarMaskedBackground(barWidth) {
       backgroundColor: "black",
     },
   };
-  const tmp3 = _modDef7038;
+  const tmp3 = _modDef7164;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef671("#000000");
   const items1 = [_modDef671("#000000").alpha(0).hex(), "#000000"];
@@ -70,32 +74,31 @@ function YouBarMaskedBackground(barWidth) {
   obj.children = timestampProducer(View, obj6);
   return timestampProducer(tmp3, obj);
 }
-function YouBarAnimatedBackground(condensedReason) {
-  condensedReason = condensedReason.condensedReason;
-  let token;
-  ({ barWidth, backgroundColor } = condensedReason);
+function YouBarAnimatedBackground(arg0) {
+  ({ barWidth, backgroundColor, condensedReason } = arg0);
   const tmp = closure_8();
-  token = condensedReason(5596).useToken(token(575).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp3 = token(17156)(token);
-  dependencyMap = tmp3;
-  const tmp4 = token(17156)(YOU_BAR_HEIGHT / 2, token);
-  View = tmp4;
-  let obj = condensedReason(5596);
-  class R {
+  const token = useToken.useToken(nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS);
+  const tmp5 = useQuestDockAnimatedBorderRadiusDefault(token);
+  const tmp7 = useQuestDockAnimatedBorderRadiusDefault(YOU_BAR_HEIGHT / 2, token);
+  items = [closure_10, condensedReason, spring_spring.withSpring, tmp5, YOU_BAR_SPRING_CONFIG, tmp7, token];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items;
+  class YouBarBackgroundTsx1 {
     constructor() {
-      if ("quest-bar" === condensedReason) {
+      if ("quest-bar" === closure_0) {
         obj1 = { borderTopRightRadius: null, borderTopLeftRadius: null, borderBottomLeftRadius: null };
-        tmp2 = closure_0;
+        tmp2 = closure_1;
         tmp3 = closure_2;
-        obj3 = closure_0(closure_2[12]);
-        tmp4 = closure_2;
-        tmp5 = YOU_BAR_SPRING_CONFIG;
-        obj1.borderTopRightRadius = obj3.withSpring(closure_2.get(), YOU_BAR_SPRING_CONFIG);
-        obj4 = closure_0(closure_2[12]);
-        obj1.borderTopLeftRadius = obj4.withSpring(closure_2.get(), YOU_BAR_SPRING_CONFIG);
-        obj5 = closure_0(closure_2[12]);
-        tmp6 = closure_3;
-        obj1.borderBottomLeftRadius = obj5.withSpring(closure_3.get(), YOU_BAR_SPRING_CONFIG);
+        tmp4 = closure_3;
+        obj1.borderTopRightRadius = closure_1(closure_2.get(), closure_3);
+        obj1.borderTopLeftRadius = closure_1(closure_2.get(), closure_3);
+        tmp5 = closure_4;
+        obj1.borderBottomLeftRadius = closure_1(closure_4.get(), closure_3);
         obj = obj1;
       } else {
         obj = {
@@ -104,45 +107,38 @@ function YouBarAnimatedBackground(condensedReason) {
           borderBottomLeftRadius: null,
           borderBottomRightRadius: null,
         };
-        tmp = closure_1;
-        obj.borderTopRightRadius = closure_1;
-        obj.borderTopLeftRadius = closure_1;
-        obj.borderBottomLeftRadius = closure_1;
-        obj.borderBottomRightRadius = closure_1;
+        tmp = closure_5;
+        obj.borderTopRightRadius = closure_5;
+        obj.borderTopLeftRadius = closure_5;
+        obj.borderBottomLeftRadius = closure_5;
+        obj.borderBottomRightRadius = closure_5;
       }
       return obj;
     }
   }
-  let obj2 = condensedReason(5095);
-  R.__closure = {
-    condensedReason,
-    withSpring: condensedReason(5637).withSpring,
-    questDockAnimatedBorderRadius: tmp3,
-    YOU_BAR_SPRING_CONFIG,
-    questDockAnimatedBottomLeftRadius: tmp4,
-    borderRadius: token,
-  };
-  R.__workletHash = 2962516190764;
-  R.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(R);
-  let obj4 = { style: null };
-  const items = [
+  const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14];
+  YouBarBackgroundTsx1.__closure = items1;
+  YouBarBackgroundTsx1.__workletHash = 17537455487253;
+  YouBarBackgroundTsx1.__initData = tmp8;
+  const animatedStyle = _mod1652.useAnimatedStyle(YouBarBackgroundTsx1);
+  const obj3 = { style: null };
+  const items2 = [
     { position: "absolute" },
     tmp.youRowFloating,
     { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor },
     { borderTopRightRadius: 0, borderTopLeftRadius: 0 },
     animatedStyle,
   ];
-  obj4.style = items;
-  return closure_6(token(5095).View, obj4);
+  obj3.style = items2;
+  return timestampProducer(_modDef1652.View, obj3);
 }
-let View = fn(17).View;
-const YouBarConstants = fn(17075);
+const View = fn(17).View;
+const YouBarConstants = fn(17218);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   youRowFloating: {
     borderWidth: 1,
@@ -153,8 +149,8 @@ let obj = {
   },
 };
 let closure_8 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function YouBarBackgroundTsx1(){const{condensedReason,withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius,borderRadius}=this.__closure;if(condensedReason==='quest-bar'){return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}return{borderTopRightRadius:borderRadius,borderTopLeftRadius:borderRadius,borderBottomLeftRadius:borderRadius,borderBottomRightRadius:borderRadius};}",
+let closure_10 = {
+  code: "(function YouBarBackgroundTsx1(){let[condensedReason,withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius,borderRadius]=this.__closure;if(condensedReason==='quest-bar'){return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}return{borderTopRightRadius:borderRadius,borderTopLeftRadius:borderRadius,borderBottomLeftRadius:borderRadius,borderBottomRightRadius:borderRadius};})",
 };
 let obj3 = {
   borderWidth: 1,

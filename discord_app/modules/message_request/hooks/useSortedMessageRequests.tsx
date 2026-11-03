@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedMessageRequests.tsx");
 
 export default function useSortedMessageRequests() {
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStores(items, () =>
     ChannelStore.getPrivateChannelsVersion(),
   );

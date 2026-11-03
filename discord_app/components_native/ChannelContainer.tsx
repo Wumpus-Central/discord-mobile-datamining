@@ -21,10 +21,10 @@ function NotificationsContainer() {
 }
 const View = fn(17).View;
 const ChannelTypes = fn(1072).ChannelTypes;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 },
 });
@@ -36,7 +36,7 @@ export function ChannelContainer(children) {
   dependencyMap = undefined;
   noop = undefined;
   closure_4 = undefined;
-  const items = [SelectedChannelStore, ChannelStore];
+  items = [SelectedChannelStore, ChannelStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     const obj = { channel: ChannelStore.getChannel(channelId), voiceChannelId, isStageChannel: null };
@@ -51,7 +51,7 @@ export function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(11192)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11329)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -66,9 +66,9 @@ export function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(6732)(isPrivateResult);
+  const tmp8 = channelId(6852)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(6732)(channelId);
+  const tmp9 = channelId(6852)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -107,13 +107,13 @@ export function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(11194), obj4);
+      tmp15 = closure_10(channelId(11331), obj4);
     }
   }
   const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11210), obj5);
+    tmp5 = closure_10(channelId(11347), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

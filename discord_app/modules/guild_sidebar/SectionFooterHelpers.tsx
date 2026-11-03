@@ -5,7 +5,7 @@ import CategoryCollapseStore from "../../stores/CategoryCollapseStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
@@ -76,12 +76,12 @@ export function getSectionFooterActiveVoiceChannels(arg0) {
     selectedVoiceChannelId: CategoryCollapseStore,
   } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
-    let items = [];
+    items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
       if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
-        let items = require[id.id];
+        items = require[id.id];
         if (items == null) {
           items = [];
         }
@@ -108,12 +108,12 @@ export function isSectionFooterWithActiveVoiceChannels(arg0) {
     selectedVoiceChannelId: CategoryCollapseStore,
   } = arg0);
   if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
-    let items = [];
+    items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
       if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
-        let items = require[id.id];
+        items = require[id.id];
         if (items == null) {
           items = [];
         }

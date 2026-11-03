@@ -212,7 +212,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
       guild1 = form.guild;
     }
     if (null != guild1) {
-      const guild = form.guild;
+      guild = form.guild;
       let features = guild.features;
       const obj = { id: null, name: null, icon: null, features: null, splash: null };
       ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);

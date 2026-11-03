@@ -18,7 +18,7 @@ function renderChannelSecondaryViewChatHeader(arg0) {
 function ChannelSecondaryViewChatScreen(arg0) {
   ({ channelId, guildId } = arg0);
   const obj = { guildId, channelId, children: null };
-  const items = [
+  items = [
     React4(ChatViewDefault, {
       guildId,
       channelId,
@@ -34,9 +34,9 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -47,10 +47,10 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5194)();
-  const accessibilityNativeStackOptions = navigation(7169).useAccessibilityNativeStackOptions();
+  const tmp2 = params(5317)();
+  const accessibilityNativeStackOptions = navigation(7290).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
-  const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
+  items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {
     const obj = {
       header: renderChannelSecondaryViewChatHeader,
@@ -84,5 +84,5 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
     }),
   };
   obj2.children = channelId(closure_6.Navigator, obj3);
-  return channelId(navigation(5080).ThemeContextProvider, obj2);
+  return channelId(navigation(5207).ThemeContextProvider, obj2);
 }

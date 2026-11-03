@@ -27,7 +27,7 @@ export function useTrackShopCardImpression(product, selectedProduct) {
   const ref = analyticsLocations.useRef(null);
   closure_8 = analyticsLocations.useRef(false);
   closure_9 = analyticsLocations.useRef(false);
-  const items = [selectedProduct.skuId];
+  items = [selectedProduct.skuId];
   const effect = analyticsLocations.useEffect(() => {
     closure_8.current = false;
     closure_9.current = false;

@@ -9,10 +9,10 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function StickerPickerPremiumSearchUpsell(guildId) {
   );
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   let obj2 = guildId(analyticsLocations[8]);
-  const items = [analyticsLocations, guildId, useTier0UpsellContent];
+  items = [analyticsLocations, guildId, useTier0UpsellContent];
   ({ loading, onPress } = require("usePremiumFeatureUpsellGetNitro")(
     useTier0UpsellContent,
     premiumUpsellConfig.onViewAllPerks,

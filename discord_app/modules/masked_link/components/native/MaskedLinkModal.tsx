@@ -50,7 +50,7 @@ export default function MaskedLinkModal(isProtocol) {
   }
   const obj4 = { children: null };
   obj3.text = stringResult;
-  const items = [React4(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React4(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj5 = { onPress: handleCancel, variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t["/g10LC"]);

@@ -45,7 +45,7 @@ prototype["isDisabled"] = function isDisabled(arg0) {
   return true === obj.disabledSettings[arg0];
 };
 prototype["getDisabledSettings"] = function getDisabledSettings() {
-  const items = [];
+  items = [];
   const entries = Object.entries(obj.disabledSettings);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

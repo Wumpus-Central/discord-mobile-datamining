@@ -24,7 +24,7 @@ function getVoiceInviteEmbedRenderInfo(state) {
             if (guildInviteExtendedType !== InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL) {
               return null;
             } else {
-              const guild = state.guild;
+              guild = state.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -59,8 +59,8 @@ const Constants = fn(1072);
   InviteStates: closure_8,
   MessageFlags: closure_9,
 } = Constants);
-const LinkType = fn(7832).LinkType;
-const InviteTypes = fn(7879).InviteTypes;
+const LinkType = fn(7956).LinkType;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
 
@@ -78,7 +78,7 @@ export function useShouldTrackAnnouncementMessageViews(messages) {
   if (flag == null) {
     flag = false;
   }
-  const items = [, , , ,];
+  items = [, , , ,];
   ({ type: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag;
   items[3] = isMessagesReady;
@@ -107,7 +107,7 @@ export function useShouldTrackAnnouncementMessageViews(messages) {
 export function useShouldTrackRichPresenceInviteEmbedViews(messages) {
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
-  const items = [messages, isMessagesReady];
+  items = [messages, isMessagesReady];
   return noop.useMemo(() => {
     let someResult = isMessagesReady;
     if (isMessagesReady) {
@@ -123,7 +123,7 @@ export function handleAnnouncementMessageViewTracking(arr, shouldTrackAnnounceme
   importDefault = channel;
   if (shouldTrackAnnouncementMessageViews) {
     if (null != guildId) {
-      const items = [];
+      items = [];
       const item = arr.forEach((message) => {
         message = message.message;
         const messageReference = message.messageReference;
@@ -190,7 +190,7 @@ export function handleRichPresenceInviteEmbedViewTracking(
   _require = guildId;
   importDefault = channel;
   if (shouldTrackRichPresenceInviteEmbedViews) {
-    const items = [];
+    items = [];
     const item = arr.forEach((message) => {
       message = message.message;
       let hasFlagResult = message.hasFlag(constants4.EPHEMERAL);
@@ -237,7 +237,7 @@ export function useShouldTrackOfficialMessageViews(isMessagesReady) {
     id,
     "useShouldTrackOfficialMessageViews",
   );
-  const items = [isGuildOfficialMessagesEnabled, isMessagesReady, messages];
+  items = [isGuildOfficialMessagesEnabled, isMessagesReady, messages];
   return noop.useMemo(() => {
     let someResult = isGuildOfficialMessagesEnabled;
     if (isGuildOfficialMessagesEnabled) {
@@ -254,7 +254,7 @@ export function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessag
   importDefault = channel;
   if (shouldTrackOfficialMessageViews) {
     if (null != guildId) {
-      const items = [];
+      items = [];
       const item = arr.forEach((message) => {
         message = message.message;
         const hasFlagResult = message.hasFlag(constants4.EPHEMERAL);
@@ -283,7 +283,7 @@ export function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessag
 export function useShouldTrackVoiceInviteEmbedViews(messages) {
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
-  const items = [messages, isMessagesReady];
+  items = [messages, isMessagesReady];
   return noop.useMemo(() => {
     let someResult = isMessagesReady;
     if (isMessagesReady) {
@@ -299,7 +299,7 @@ export function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEm
   _require = guildId;
   importDefault = channel;
   if (shouldTrackVoiceInviteEmbedViews) {
-    const items = [];
+    items = [];
     const item = arr.forEach((message) => {
       message = message.message;
       if (!message.hasFlag(constants4.EPHEMERAL)) {
@@ -323,7 +323,7 @@ export function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEm
                   id = null;
                 }
                 let tmp10 = id;
-                let guild = tmp34.guild;
+                guild = tmp34.guild;
                 let id1;
                 if (guild != null) {
                   id1 = guild.id;

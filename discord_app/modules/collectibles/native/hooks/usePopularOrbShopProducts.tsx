@@ -36,7 +36,7 @@ export function usePopularOrbShopProducts(enabled) {
     tmp6 = first;
     POPULARITY = enabled(first[5]).CollectibleSearchSortType.POPULARITY;
   }
-  const items = [enabled, POPULARITY];
+  items = [enabled, POPULARITY];
   const effect = obj.useEffect(() => {
     closure_1 = function _fetchSearchResults() {
       const self = this;
@@ -51,7 +51,7 @@ export function usePopularOrbShopProducts(enabled) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -73,7 +73,7 @@ export function usePopularOrbShopProducts(enabled) {
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(16990).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(17133).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
@@ -82,7 +82,7 @@ export function usePopularOrbShopProducts(enabled) {
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(16989).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(17132).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export function usePopularOrbShopProducts(enabled) {
                 v0(true);
               }
               sort_type = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp34) {
             closure_3 = tmp34;
@@ -198,7 +198,7 @@ export function usePopularOrbShopProducts(enabled) {
     return mapped.filter((item) => null != item);
   }, items2);
   const someResult = first.some((item) => {
-    let state;
+    state = undefined;
     if (collectiblesShopProducts[item] != null) {
       state = tmp.state;
     }

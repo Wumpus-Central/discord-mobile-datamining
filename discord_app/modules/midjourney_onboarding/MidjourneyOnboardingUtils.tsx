@@ -4,7 +4,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(15683);
+const MidjourneyOnboardingConstants = fn(15827);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
@@ -18,7 +18,7 @@ export function isMidjourneyOnboardingFlow() {
   if (guildStore == null) {
     guildStore = GuildStore;
   }
-  const guild = guildStore.getGuild(hasOwnProperty);
+  guild = guildStore.getGuild(hasOwnProperty);
   let joinedAt1;
   if (guild != null) {
     joinedAt1 = guild.joinedAt;
@@ -33,10 +33,10 @@ export function isMidjourneyOnboardingFlow() {
   return 1 === guildStore.getGuildCount() && tmp3;
 }
 export function useIsMidjourneyOnboardingFlow() {
-  const items = [GuildStore];
+  items = [GuildStore];
   return initialize.useStateFromStores(items, () => {
     guildStore = { guildStore }.guildStore;
-    const guild = guildStore.getGuild(closure_1_5);
+    guild = guildStore.getGuild(closure_1_5);
     let joinedAt1;
     if (guild != null) {
       joinedAt1 = guild.joinedAt;
@@ -64,7 +64,7 @@ export function isEligibleForMidjourneyRedirect(channel) {
     if (guildStore == null) {
       guildStore = GuildStore;
     }
-    const guild = guildStore.getGuild(hasOwnProperty);
+    guild = guildStore.getGuild(hasOwnProperty);
     let joinedAt1;
     if (guild != null) {
       joinedAt1 = guild.joinedAt;

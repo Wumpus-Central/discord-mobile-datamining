@@ -9,10 +9,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(13959);
+const ApplicationCommandsCategoriesConstants = fn(14090);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND,
@@ -54,7 +54,7 @@ let closure_9 = noop.memo(function CategoryItem(section) {
   section = section.section;
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: noop } = section);
   const tmp = closure_8();
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = section(504).useStateFromStores(items, () => {
     if (null != noop) {
       let botId;
@@ -97,7 +97,7 @@ let closure_9 = noop.memo(function CategoryItem(section) {
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6980).PressableOpacity, {
+  return jsx(section(7106).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },
@@ -119,7 +119,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
   const ref2 = noop.useRef(null);
   noop.useRef(null);
   const ref = noop.useRef(null);
-  const items = [selectedIndex];
+  items = [selectedIndex];
   const effect = noop.useEffect(() => {
     if (null != ref.current) {
       if (null != ref2.current) {

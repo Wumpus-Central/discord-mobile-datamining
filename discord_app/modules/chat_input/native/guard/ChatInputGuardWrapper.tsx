@@ -15,11 +15,11 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const isThread = fn(4867).isThread;
-const TextAreaCta = fn(12809).TextAreaCta;
+const isThread = fn(4994).isThread;
+const TextAreaCta = fn(12945).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7211).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7332).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
@@ -30,7 +30,7 @@ export default function ChatInputGuardWrapper(channel) {
   ({ screenIndex, canSendMessages, canCreateThreads, children, isReadonly, onJumpToPresent } = channel);
   const guildId = channel.getGuildId();
   const tmp3 = stateFromStores;
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = channel(stateFromStores[12]).useStateFromStores(items, () =>
     MemberVerificationUtils.guildHasVerificationGate(GuildStore.getGuild(guildId)),
   );

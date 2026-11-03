@@ -17,7 +17,7 @@ export function conjureAgentNeedsPreview(id) {
 }
 export function useConjureAgentNeedsPreview(projectId) {
   _require = projectId;
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const items1 = [projectId];
   let stateFromStores = require("initialize").useStateFromStores(
     items,

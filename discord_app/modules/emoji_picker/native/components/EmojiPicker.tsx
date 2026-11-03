@@ -12,10 +12,10 @@ const Constants = fn(1072);
   ChatInputComponentViewedTypes: metroRequire,
   VerticalGradient: closure_7,
 } = Constants);
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1 },
   list: { overflow: "hidden", flex: 1 },
@@ -52,7 +52,7 @@ export default noop.memo(function EmojiPicker(inPortalKeyboard) {
   let handleTextChange;
   ({ bottomSheetRef, onPressEmoji, onBackspace, suggestedEmojis } = inPortalKeyboard);
   const tmp = closure_11();
-  const items = [,];
+  items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {

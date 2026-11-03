@@ -6,7 +6,7 @@ import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
@@ -49,7 +49,7 @@ export function useAuthorizationApp(getOfficialApplicationId) {
     }
   }
   getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(officialApplicationId);
-  const items = [getOfficialApplicationId, getOrFetchApplication];
+  items = [getOfficialApplicationId, getOrFetchApplication];
   return noop.useMemo(() => {
     let application = closure_0;
     if (null == closure_0) {

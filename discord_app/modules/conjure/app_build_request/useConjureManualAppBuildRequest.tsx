@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/useConjureManualAppBuildRequest.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAppBuildRequest from "ConjureAppBuildRequest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -24,13 +24,13 @@ export default function useConjureManualAppBuildRequest(projectId) {
   if (projectId === projectId) {
     tmp5 = tmp2;
   }
-  const items = [projectId, callback];
+  items = [projectId, callback];
   const items1 = [callback];
   const open = noop.useCallback((str, clearComposer) => {
     const obj = { projectId, request: null, clearComposer: null };
     const obj2 = { id: "manual:" + projectId + ":" + Date.now(), summary: null, prompt: null };
     const intl = util.intl;
-    obj2.summary = intl.string(_modDef3868["o2++BO"]);
+    obj2.summary = intl.string(_modDef3995["o2++BO"]);
     const trimmed = str.trim();
     obj2.prompt = trimmed.slice(0, ConjureAppBuildRequest.CONJURE_APP_BUILD_PROMPT_MAX_LENGTH);
     obj.request = obj2;

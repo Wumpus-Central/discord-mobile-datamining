@@ -5,7 +5,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const tmp = stateFromStores;
   const tmp2 = stateFromStoresArray(stateFromStores[6]);
   const tmp3 = analyticsLocations;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   stateFromStoresArray = analyticsLocations(stateFromStores[8]).useStateFromStoresArray(
     items,
     () =>

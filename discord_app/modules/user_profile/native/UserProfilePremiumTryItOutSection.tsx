@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   cardInner: null,
@@ -61,7 +61,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const tmp = closure_7();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   usePremiumTryItOutPresetShuffleDefault();
-  const items = [analyticsLocations];
+  items = [analyticsLocations];
   const callback = noop.useCallback(() => {
     const obj = {
       analyticsLocations,
@@ -90,7 +90,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(8667).LockIcon, {
+  obj4.children = closure_5(analyticsLocations(8791).LockIcon, {
     size: "xs",
     color: nativeDefault.colors.ICON_MUTED,
     style: tmp.lockIcon,

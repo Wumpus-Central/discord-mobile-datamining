@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scrollViewContainer: null,
@@ -43,7 +43,7 @@ export default function PremiumGiftCustomization() {
   const tmp7 = _slicedToArray(noop.useState(0), 2);
   const first = tmp7[0];
   ref = noop.useRef(null);
-  const items = [first];
+  items = [first];
   const callback = noop.useCallback(() => {
     const timerId = setTimeout(() => {
       const current = ref.current;

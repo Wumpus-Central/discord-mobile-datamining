@@ -17,7 +17,7 @@ function refreshSystemNotifPermissions() {
     }
   }
   if (null != androidNotifChannelStates) {
-    const items = [];
+    items = [];
     const _Set = Set;
     const set = new Set();
     const iter = androidNotifChannelStates[Symbol.iterator]();
@@ -51,7 +51,7 @@ function openSystemNotifSettings(arg0) {
         let entry = { key: "android.provider.extra.APP_PACKAGE", value: null };
         let obj4 = ClientInfoUtilsAll;
         entry.value = obj4.getConstants().Identifier;
-        let items = [entry];
+        items = [entry];
         let entry1 = { key: "android.provider.extra.CHANNEL_ID", value: string_id };
         items[1] = entry1;
         let str = "android.settings.CHANNEL_NOTIFICATION_SETTINGS";

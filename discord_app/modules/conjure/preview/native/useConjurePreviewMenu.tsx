@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/native/useConjurePreviewMenu.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import conjureExternalConnections from "../../external_connections/conjureExternalConnections.tsx";
 import conjureProjectMenuItems from "../../projects/conjureProjectMenuItems.tsx";
@@ -25,7 +25,7 @@ export default function useConjurePreviewMenu(projectId) {
   const pending2 = conjureConnectActions.pending;
   const connect = conjureConnectActions.connect;
   let obj = projectId(pending[3]);
-  const items = [pending2];
+  items = [pending2];
   const items1 = [projectId];
   const stateFromStores = projectId(pending[5]).useStateFromStores(
     items,
@@ -54,7 +54,7 @@ export default function useConjurePreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef3868["jCQ/1B"]));
+          ToastUtils.presentError(intl.string(_modDef3995["jCQ/1B"]));
         }
       }
     } else {

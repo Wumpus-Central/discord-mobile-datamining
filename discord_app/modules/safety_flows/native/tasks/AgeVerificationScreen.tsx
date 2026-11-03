@@ -9,7 +9,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
@@ -19,7 +19,7 @@ export default function AgeVerificationScreen() {
   const tmp2 = closure_8();
   const onTaskComplete = memo(stateFromStores[7]).useOnTaskComplete();
   let obj = memo(stateFromStores[7]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = memo(stateFromStores[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = memo(stateFromStores[8]);
   const obj3 = {

@@ -11,7 +11,7 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(10946).FetchState;
+const FetchState = fn(11084).FetchState;
 const localizedStrings = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -23,7 +23,7 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   importDefault = arg1;
   const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
   let obj = require("UserApplicationIdentityActionCreators");
-  let items = [UserApplicationIdentityStore];
+  items = [UserApplicationIdentityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     UserApplicationIdentityStore.getUserIdentityByApplication(closure_0, closure_1),
   );
@@ -32,7 +32,7 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   const items2 = [arg1];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
   const memo = noop.useMemo(() => {
-    const items = [closure_1];
+    items = [closure_1];
     return items;
   }, items2);
   const first = stateFromStores3(require("useApplicationWidgetConfigs")(memo), 1)[0];

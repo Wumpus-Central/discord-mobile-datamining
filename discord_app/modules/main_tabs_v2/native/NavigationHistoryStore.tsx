@@ -81,7 +81,7 @@ const navigationHistoryStore = new NavigationHistoryStore(DispatcherDefault, {
     } else {
       const _HermesInternal = HermesInternal;
       let flag = removeHistoryItem("" + c4 + guild.id);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_6, 0);
       const iter = items[Symbol.iterator]();
       const nextResult = iter.next();

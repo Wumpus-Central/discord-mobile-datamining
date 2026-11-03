@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export function coalesceInvoiceItems(arr) {
-  const items = [];
+  items = [];
   const set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {

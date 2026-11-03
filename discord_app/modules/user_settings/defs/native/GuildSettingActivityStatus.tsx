@@ -32,7 +32,7 @@ const toggle = SettingBuilders.createToggle({
       sanitizedActivityRestrictedGuilds.add(tmp);
     }
     const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
-    const items = [...sanitizedActivityRestrictedGuilds];
+    items = [...sanitizedActivityRestrictedGuilds];
     ActivityRestrictedGuilds.updateSetting(items);
   },
 });

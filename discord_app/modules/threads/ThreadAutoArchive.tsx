@@ -3,7 +3,7 @@ import memoizeDefault from "../../../_runtime/00594_memoize.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getAutoArchiveOptions() {
@@ -11,7 +11,7 @@ function getAutoArchiveOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t.cs8A1c);
   obj.value = DurationsDefault.Minutes.HOUR;
-  const items = [obj, , ,];
+  items = [obj, , ,];
   const obj2 = { id: "24hours", label: null, value: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.zFKbrF);
@@ -49,8 +49,8 @@ export function getAutoArchiveDurationText(arg0) {
     label = found.label;
   }
   if (label == null) {
-    label = _modDef2042.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef2042.duration(arg0, "minutes");
+    label = _modDef2171.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef2171.duration(arg0, "minutes");
   }
   return label;
 }

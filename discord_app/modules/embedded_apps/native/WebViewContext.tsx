@@ -6,7 +6,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 },
 });
@@ -17,7 +17,7 @@ export const WebViewContext = context;
 export function WebViewContextProvider(children) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   closure_0 = tmp3;
-  const items = [tmp2[1]];
+  items = [tmp2[1]];
   const obj = { value: tmp2[0], children: null };
   const tmp = closure_6();
   const items1 = [

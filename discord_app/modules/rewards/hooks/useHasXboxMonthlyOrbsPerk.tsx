@@ -6,7 +6,7 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
@@ -29,7 +29,7 @@ export function hasCrepeMonthlyOrbsPerk(currentUser) {
   return false;
 }
 export function useHasXboxMonthlyOrbsPerk() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {

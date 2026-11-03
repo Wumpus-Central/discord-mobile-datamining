@@ -18,7 +18,7 @@ require = fn;
 function EditableTileBannerImageButtonBase(bannerChange) {
   bannerChange = bannerChange.bannerChange;
   ({ userId, currentProfileBanner, onPress } = bannerChange);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const GifAutoPlay = UserSettings.GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
@@ -78,7 +78,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/TryItOutE
 
 export default function TryItOutEditableTileBannerImageButton(onPress) {
   const user = onPress.user;
-  const items = [UserProfileSettingsStore, UserProfileStore];
+  items = [UserProfileSettingsStore, UserProfileStore];
   const items1 = [user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
     items,

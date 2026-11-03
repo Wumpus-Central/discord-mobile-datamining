@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   topContainer: null,
@@ -51,11 +51,11 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     },
     children: null,
   };
-  const items = [hasOwnProperty(React3, { style: tmp.topContainer }), , , , , ,];
+  items = [hasOwnProperty(React3, { style: tmp.topContainer }), , , , , ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

@@ -12,7 +12,7 @@ export default function useConjureEntryPointPlacement(DMAppChannel) {
   _require = DMAppChannel;
   const hasConjureGuild = require("ConjureGuildExperiment").useHasConjureGuild(DMAppChannel);
   const obj = require("ConjureGuildExperiment");
-  const items = [require("ApexExperiment").ApexExperimentStore];
+  items = [require("ApexExperiment").ApexExperimentStore];
   const items1 = [hasConjureGuild, DMAppChannel];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

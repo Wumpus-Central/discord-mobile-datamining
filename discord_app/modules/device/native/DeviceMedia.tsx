@@ -50,7 +50,7 @@ export default {
                         const edges1 = edges.edges;
                         if (edges1 != null) {
                           const unshift = edges1.unshift;
-                          const items = [];
+                          items = [];
                           HermesBuiltin.arraySpread(tmp2.edges, 0);
                           HermesBuiltin.apply(items, edges1);
                         }
@@ -90,9 +90,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10542)(obj2);
+          lastAssetIndex(10672)(obj2);
         }
-        obj = assets(1375);
+        obj = assets(1377);
       }
     }
   },

@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/html_parser/groupHTMLTextRuns.tsx");
 
 export function groupHTMLTextRuns(runs) {
-  const items = [];
+  items = [];
   const iter = runs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/profiles/native/GuildProfileEmptyStateSvg.tsx
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_settings/profiles/native
 export default function SvgComponent(arg0) {
   const size = { width: "187", height: "162", viewBox: "0 0 187 162", fill: "none" };
   const merged = Object.assign(arg0);
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       d: "M186.5 139.464L171.853 148.774L169.969 149.961L153.555 160.412L151.206 161.902L151.067 161.995H36.77L36.7235 161.972L34.91 160.831L0.5 139.464L17.3098 127.523L21.4948 124.567L35.8633 114.349L38.351 112.58L47.2092 106.296L71.5055 117.468L73.505 118.399L73.7375 118.492L82.2703 118.516H84.572L144.58 118.609H146.719L156.693 118.632H156.763L158.995 117.445L166.97 113.139L169.342 111.859L179.711 106.296L182.199 118.539L182.641 120.634L186.5 139.464Z",
       fill: "#FFE55C",

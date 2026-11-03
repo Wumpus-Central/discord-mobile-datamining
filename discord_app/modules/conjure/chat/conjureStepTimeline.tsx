@@ -99,7 +99,7 @@ export function recordStep(steps, step) {
   return substr;
 }
 export function replayTimeline(steps) {
-  const items = [];
+  items = [];
   const obj = { seenSeq: new Set(), todosAt: -1 };
   set = new Set();
   while (tmp2 !== undefined) {

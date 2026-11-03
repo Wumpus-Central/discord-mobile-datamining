@@ -65,7 +65,7 @@ export default function CheckpointGlobalStatNumber(arg0) {
     accessibilityLabel = toLocaleStringResult;
   }
   const obj2 = { accessible: true, accessibilityLabel, style: null, children: null };
-  const items = [iter.container];
+  items = [iter.container];
   if (obj.isCheckpointStatNumberShrunk(value)) {
     items[1] = iter.croppedContainer;
     obj2.style = items;

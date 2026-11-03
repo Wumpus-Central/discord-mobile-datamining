@@ -10,7 +10,7 @@ class LifecycleManager {
 const prototype = LifecycleManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  const items = [...arguments];
+  items = [...arguments];
   if (!this.isInitialized) {
     self.isInitialized = true;
     const _initialize = self._initialize;

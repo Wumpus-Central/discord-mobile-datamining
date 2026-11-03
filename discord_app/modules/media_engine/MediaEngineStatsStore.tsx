@@ -236,7 +236,7 @@ prototype["getLastConnectionStats"] = function getLastConnectionStats(mediaEngin
 };
 prototype["getStatsHistory"] = function getStatsHistory(arg0) {
   if (null == arg0) {
-    let items = [];
+    items = [];
   } else {
     items = dependencyMap[arg0];
     if (items == null) {

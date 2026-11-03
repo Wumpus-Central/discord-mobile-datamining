@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/07019_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -93,11 +93,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -165,7 +165,7 @@ export default function NewMessageUserList(selectedUserIds) {
   ({ afterSearchContent, forceSearchResults, onForceSearchResults, onSearchFocus } = selectedUserIds);
   const tmp2 = closure_14();
   [str, c5] = onQueryChanged(rowMode.useState(""), 2);
-  let items = [onQueryChanged];
+  items = [onQueryChanged];
   const callback = rowMode.useCallback((arg0) => {
     _undefined(arg0);
     if (onQueryChanged != null) {
@@ -202,7 +202,7 @@ export default function NewMessageUserList(selectedUserIds) {
         const values = Object.values(closure_6.getMutablePrivateChannels());
         const found = values.filter(filterGroupDMs);
         const mapped = found.map((item) => {
-          const items = [item, isMatchNewMessageUserListGroupDM(item, disabledUserIds, closure_0)];
+          items = [item, isMatchNewMessageUserListGroupDM(item, disabledUserIds, closure_0)];
           return items;
         });
         const found1 = mapped.filter((item) => {
@@ -237,7 +237,7 @@ export default function NewMessageUserList(selectedUserIds) {
   const memo = rowMode.useMemo(() => {
     const mapped = closure_6.map((title) => {
       const obj = { title: title.title, items: null };
-      const items = title.items;
+      items = title.items;
       obj.items = items.map((data) => ({ type: "UserSearchItem", data }));
       return obj;
     });
@@ -253,7 +253,7 @@ export default function NewMessageUserList(selectedUserIds) {
         return title.title === intl.string(selectedUserIds(1113).t.y29JXs);
       });
       if (-1 === findIndexResult) {
-        let items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(mapped, 0)] = obj2;
         let items1 = items;
       } else {
@@ -430,7 +430,7 @@ export function useSearchGDMNames(arg0, arg1, arg2) {
   closure_2 = arg2;
   const tmp = _slicedToArray(noop.useState([]), 2);
   _slicedToArray = tmp[1];
-  const items = [arg0, arg1, arg2];
+  items = [arg0, arg1, arg2];
   const effect = noop.useEffect(() => {
     if (closure_0) {
       if ("" !== onSelectUser) {
@@ -439,7 +439,7 @@ export function useSearchGDMNames(arg0, arg1, arg2) {
         const values = Object.values(closure_6.getMutablePrivateChannels());
         const found = values.filter(filterGroupDMs);
         const mapped = found.map((item) => {
-          const items = [item, isMatchNewMessageUserListGroupDM(item, disabledUserIds, closure_0)];
+          items = [item, isMatchNewMessageUserListGroupDM(item, disabledUserIds, closure_0)];
           return items;
         });
         const found1 = mapped.filter((item) => {

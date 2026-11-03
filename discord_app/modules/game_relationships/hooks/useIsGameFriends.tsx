@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/game_relationships/hooks/useI
 
 export function useIsGameFriends(id) {
   _require = id;
-  let items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const items1 = [id];
   return _slicedToArray(
     require("initialize").useStateFromStores(
@@ -21,7 +21,7 @@ export function useIsGameFriends(id) {
           closure_0,
           RelationshipTypes.FRIEND,
         );
-        const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
+        items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
         return items;
       },
       items1,

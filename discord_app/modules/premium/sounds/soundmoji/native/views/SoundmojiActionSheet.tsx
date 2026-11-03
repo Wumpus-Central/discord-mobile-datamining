@@ -7,14 +7,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 },
   soundmojiContainer: { flexDirection: "row", alignItems: "center" },
   emoji: null,
   textContainer: null,
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 32;
@@ -33,7 +33,7 @@ export default function SoundmojiActionSheet(guildId) {
   const messageId = guildId.messageId;
   const soundId = guildId.soundId;
   const tmp = closure_7();
-  const items = [guildId, channelId, messageId, soundId];
+  items = [guildId, channelId, messageId, soundId];
   const memo = soundId.useMemo(
     () => getSoundmojiASTFromString.getSoundmojiFromMessage(guildId, channelId, messageId, soundId, []),
     items,
@@ -60,7 +60,7 @@ export default function SoundmojiActionSheet(guildId) {
     }
     const items1 = [tmp4Result];
     const obj5 = { style: tmp.textContainer, children: null };
-    const obj6 = { variant: "text-sm/bold", children: memo.name };
+    const obj6 = { variant: "text-sm/semibold", children: memo.name };
     const items2 = [closure_5(guildId(messageId[10]).Text, obj6)];
     const obj11 = { variant: "text-sm/normal", children: null };
     const intl = tmp5(tmp6[11]).intl;

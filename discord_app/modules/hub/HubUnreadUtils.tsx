@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export function useHubUnreadCount(arg0) {
   _require = arg0;
-  const items = [GuildDirectoryStore, ReadStateStore];
+  items = [GuildDirectoryStore, ReadStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

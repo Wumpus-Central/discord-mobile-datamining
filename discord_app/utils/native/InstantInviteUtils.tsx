@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = fn(1072).Permissions;
@@ -262,7 +262,7 @@ export function shouldRenderInvite(channels, guild) {
 }
 export function useShouldShowInviteInActionBar(id) {
   _require = id;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [id.id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,

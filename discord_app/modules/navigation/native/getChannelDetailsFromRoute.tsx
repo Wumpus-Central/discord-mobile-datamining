@@ -11,7 +11,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   }
   const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
-    const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
+    items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
     const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 
 require = fn;
-const MessageRequestConstants = fn(14016);
+const MessageRequestConstants = fn(14147);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -55,7 +55,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ export function useMessageRequestActions(user) {
       }
     }
   });
-  let items = [tmp11, onAcceptSuccess, onError];
+  items = [tmp11, onAcceptSuccess, onError];
   acceptMessageRequest = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
@@ -149,7 +149,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -242,7 +242,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -263,7 +263,7 @@ export function useMessageRequestActions(user) {
             closure_131_1 = undefined;
             if (isUserProfileLoading) {
               v3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               let tmp30 = _undefined(true);
               let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp58, closure_8);
@@ -345,7 +345,7 @@ export function useMessageRequestActions(user) {
         let obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -375,7 +375,7 @@ export function useMessageRequestActions(user) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -395,7 +395,7 @@ export function useMessageRequestActions(user) {
                           if (mutualGuilds != null) {
                             mapped = mutualGuilds.map((guild) => guild.guild.id);
                           }
-                          let items = mapped;
+                          items = mapped;
                         } else {
                           items = [];
                         }
@@ -430,7 +430,7 @@ export function useMessageRequestActions(user) {
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp16) {
                     c1 = tmp;
@@ -504,7 +504,7 @@ export function useMessageRequestActions(user) {
               if (mutualGuilds != null) {
                 mapped = mutualGuilds.map((guild) => guild.guild.id);
               }
-              let items = mapped;
+              items = mapped;
             } else {
               items = [];
             }

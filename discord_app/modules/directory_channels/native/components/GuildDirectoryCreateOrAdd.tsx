@@ -20,7 +20,7 @@ function GuildDirectoryCreateOrAddHeader(arg0) {
   const tmp = closure_11();
   const obj2 = { pageWidth: 0, defaultIndex: tabIndex, onSetActiveIndex: setTabIndex, items: null };
   const intl = util.intl;
-  const items = [intl.string(util.t.FTe8HS)];
+  items = [intl.string(util.t.FTe8HS)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.epOumr);
   obj2.items = items.map((id) => ({ id, label: id, page: null }));
@@ -29,7 +29,7 @@ function GuildDirectoryCreateOrAddHeader(arg0) {
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -50,7 +50,7 @@ function GuildDirectoryCreateOrAddHeader(arg0) {
 function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
   const tmp = closure_11();
   const obj = { style: null, children: null };
-  const items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.style = items;
   const obj3 = { style: tmp.footerContainer, children: null };
   const obj4 = {
@@ -73,10 +73,10 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(13858).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13989).GuildDirectoryCreate;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
   container: { flex: 1 },
@@ -111,18 +111,18 @@ let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
   const directoryChannelId = guild.directoryChannelId;
   ({ start, end } = guild);
   const tmp = closure_11();
-  const items = [GuildDirectoryStore];
+  items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () =>
     GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id),
   );
   const obj2 = {
     label: guild.name,
-    icon: closure_9(directoryChannelId(6957), { style: tmp.guildIcon, guild }),
-    trailing: closure_9(directoryChannelId(13861), { entry: stateFromStores }),
+    icon: closure_9(directoryChannelId(7083), { style: tmp.guildIcon, guild }),
+    trailing: closure_9(directoryChannelId(13992), { entry: stateFromStores }),
     start,
     end,
   };
-  return closure_9(guild(6975).TableRow, obj2);
+  return closure_9(guild(7101).TableRow, obj2);
 });
 let closure_13 = noop.memo(function GuildDirectoryEntryAddRow(guild) {
   guild = guild.guild;
@@ -161,7 +161,7 @@ export default function GuildDirectoryCreateOrAdd(current) {
   const tmp9 = availableGuilds(addedGuilds.useState(0), 2);
   const tabIndex = tmp9[0];
   const setTabIndex = tmp9[1];
-  const items = [addedGuilds, availableGuilds, tabIndex];
+  items = [addedGuilds, availableGuilds, tabIndex];
   const memo = addedGuilds.useMemo(() => (0 === first ? availableGuilds : addedGuilds), items);
   const items1 = [navigation];
   const items2 = [memo.length, navigation, tabIndex];

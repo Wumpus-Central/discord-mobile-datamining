@@ -20,7 +20,7 @@ class GuildMFAWarningStore extends Store {}
 const prototype = GuildMFAWarningStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserStore, GuildChannelStore);
-  const items = [UserStore, GuildChannelStore];
+  items = [UserStore, GuildChannelStore];
   this.syncWith(items, handleUserStoreUpdates);
 };
 prototype["isVisible"] = function isVisible(mfaLevel) {

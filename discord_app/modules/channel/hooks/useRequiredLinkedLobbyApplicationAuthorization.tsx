@@ -17,11 +17,11 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   if (require_application_authorization != null) {
     prop = require_application_authorization.require_application_authorization;
   }
-  let application_id = null;
+  application_id = null;
   if (prop) {
     application_id = require_application_authorization.application_id;
   }
-  let items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   const stateFromStoresObject = application_id(stateFromStores[3]).useStateFromStoresObject(items, () => ({
     authorizationsFetchState: AuthorizedAppsStore.getFetchState(),
     applicationOAuth2Token: AuthorizedAppsStore.getNewestTokenForApplication(application_id),
@@ -71,7 +71,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       tmp2 = authorizationsFetchState === FetchState.FETCHED;
     }
     if (tmp2) {
-      const items = [application_id];
+      items = [application_id];
       const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items5);
@@ -85,7 +85,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       tmp2 = authorizationsFetchState === FetchState.FETCHED;
     }
     if (tmp2) {
-      const items = [stateFromStores.parentId];
+      items = [stateFromStores.parentId];
       const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items6);

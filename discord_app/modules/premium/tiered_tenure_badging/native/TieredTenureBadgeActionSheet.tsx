@@ -29,7 +29,7 @@ function TieredTenureBadgeItem(arg0) {
   }
   let tmp9Result = null;
   if (null != tieredTenureBadgeData) {
-    const items = [tmp.badgeContainer];
+    items = [tmp.badgeContainer];
     let usersBadgeContainer = isUsersBadge;
     if (isUsersBadge) {
       usersBadgeContainer = tmp.usersBadgeContainer;
@@ -75,14 +75,14 @@ function TieredTenureBadgeItem(arg0) {
   return tmp9Result;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: metroRequire, TieredTenureBadge: closure_7 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   headerContainer: { paddingHorizontal: 24, alignItems: "center" },
   title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" },
@@ -129,7 +129,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
   let obj = userId(tieredTenureBadgeDataForUser[14]);
   noop = userId(tieredTenureBadgeDataForUser[14]).usePremiumSinceForUser(userId);
   let obj2 = userId(tieredTenureBadgeDataForUser[14]);
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(tieredTenureBadgeDataForUser[15]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
@@ -181,7 +181,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
     let length;
     let sum;
     const values = Object.values(closure_1_7);
-    const items = [];
+    items = [];
     let num = 0;
     if (0 < values.length) {
       do {
@@ -194,7 +194,12 @@ export default function TieredTenureBadgeActionSheet(userId) {
     return items;
   }, []);
   const obj8 = { style: tmp.headerContainer, children: null };
-  const obj9 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const obj9 = {
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    style: tmp.title,
+    children: null,
+  };
   const intl = tmp2(tmp3[13]).intl;
   const string = intl.string;
   const t = tmp2(tmp3[13]).t;
@@ -265,7 +270,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
         }
         return item === id;
       });
-      const items = [closure_1.rowContainer];
+      items = [closure_1.rowContainer];
       let rowContainerWithUsersBadge = someResult;
       if (someResult) {
         rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;

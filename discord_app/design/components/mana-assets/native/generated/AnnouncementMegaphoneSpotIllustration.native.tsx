@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/AnnouncementMegaphoneSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef19893 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-1x.png.js";
-import _modDef19894 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-2x.png.js";
-import _modDef19895 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-3x.png.js";
+import _modDef20043 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-1x.png.js";
+import _modDef20044 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-2x.png.js";
+import _modDef20045 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnnouncementMegaphoneSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19893 }, 3: null };
-let obj2 = { uri: _modDef19893 };
-obj[2] = { uri: _modDef19894 };
-const obj3 = { uri: _modDef19894 };
-obj[3] = { uri: _modDef19895 };
+let obj = { 1: null, 2: { uri: _modDef20043 }, 3: null };
+let obj2 = { uri: _modDef20043 };
+obj[2] = { uri: _modDef20044 };
+const obj3 = { uri: _modDef20044 };
+obj[3] = { uri: _modDef20045 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/AnnouncementMegaphoneSpotIllustration.native.tsx",
@@ -25,7 +25,7 @@ export function AnnouncementMegaphoneSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

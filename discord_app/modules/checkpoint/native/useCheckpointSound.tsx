@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpoi
 
 export default function useCheckpointSound(arg0) {
   _require = arg0;
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => isMuted.isMuted);
   let obj = require("initialize");
   closure_3(

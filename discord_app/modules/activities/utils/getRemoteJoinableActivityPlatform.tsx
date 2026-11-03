@@ -15,7 +15,7 @@ export function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {
     return null;
   } else {
-    const application_id = presenceActivity.application_id;
+    application_id = presenceActivity.application_id;
     if (null != application_id) {
       let num = presenceActivity.flags;
       if (num == null) {

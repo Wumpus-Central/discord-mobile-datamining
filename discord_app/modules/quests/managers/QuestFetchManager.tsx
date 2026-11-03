@@ -51,7 +51,7 @@ class QuestFetchManager extends tmp2 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -69,7 +69,7 @@ class QuestFetchManager extends tmp2 {
                   lastFetchAttemptedAt._fetch("post_connect_recurring");
                 }
                 c0 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp7) {
               c0 = tmp;
@@ -169,7 +169,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
     const currentQuests = QuestActionCreators.fetchCurrentQuests();
     const tmpResult = QuestActionCreators;
     if (tmpResult2.isMac()) {
-      const state = DiscordAppStateDefault.getState();
+      state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
     tmpResult2 = PlatformUtils;

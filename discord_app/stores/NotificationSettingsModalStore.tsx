@@ -21,7 +21,7 @@ const prototype = NotificationSettingsModalStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   this.waitFor(GuildCategoryStore, GuildChannelStore, GuildMemberCountStore, GuildStore, UserGuildSettingsStore);
-  const items = [UserGuildSettingsStore, GuildChannelStore, GuildStore];
+  items = [UserGuildSettingsStore, GuildChannelStore, GuildStore];
   this.syncWith(items, () => self.isOpen());
 };
 prototype["isOpen"] = function isOpen() {

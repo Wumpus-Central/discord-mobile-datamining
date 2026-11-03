@@ -7,7 +7,7 @@ let closure_4 = { ignoreKeyboard: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
 
-export default function useWindowDimensions() {
+export default function useWindowDimensions(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_4;
@@ -20,7 +20,7 @@ export default function useWindowDimensions() {
   if (appEntryKey == null) {
     appEntryKey = obj.useAppEntryKey();
   }
-  const items = [flag, appEntryKey];
+  items = [flag, appEntryKey];
   return DimensionsStore(
     noop.useMemo(() => {
       if (flag) {

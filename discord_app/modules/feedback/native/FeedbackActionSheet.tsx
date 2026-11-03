@@ -1,7 +1,7 @@
 // discord_app/modules/feedback/native/FeedbackActionSheet.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import FeedbackUtils from "../FeedbackUtils.tsx";
@@ -13,10 +13,10 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(10158).FeedbackRating;
+const FeedbackRating = fn(10288).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   ratingsHeader: { textAlign: "center" },
@@ -49,7 +49,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
   closure_7 = tmp5;
   let obj = feedbackReasons(otherKey[9]);
   [arr, c8] = noop.useState(feedbackReasons(otherKey[9]).shuffle(reasons));
-  const items = [reasons, tmp5, otherKey];
+  items = [reasons, tmp5, otherKey];
   const effect = noop.useEffect(() => {
     if (!obj.isEqual(closure_7, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
@@ -78,8 +78,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(10180, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(10180, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(10310, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(10310, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);

@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, badgeClassic: null, mask: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.badgeClassic = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -37,7 +37,7 @@ export default noop.memo(function Badge(size) {
     tmp3 = size;
   }
   const obj = { style: null, children: null };
-  const items = [tmp.mask, tmp3, style];
+  items = [tmp.mask, tmp3, style];
   obj.style = items;
   const obj2 = { style: null };
   const items1 = [flag ? tmp.badgeClassic : tmp.badge, { height: num, width: num, borderRadius: num / 2 }, badgeStyle];

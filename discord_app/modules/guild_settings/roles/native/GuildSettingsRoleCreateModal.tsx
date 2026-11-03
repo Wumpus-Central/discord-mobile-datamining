@@ -3,7 +3,7 @@ import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
@@ -26,7 +26,7 @@ function RoleCreateScene() {
   const tmp = closure_24();
   navigation = navigation(color[22]).useNavigation();
   let obj = navigation(color[22]);
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   const stateFromStores = navigation(color[19]).useStateFromStores(items, () => props.getProps().guild);
   stateFromStores(color[20])(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
   const intl = navigation(color[17]).intl;
@@ -69,13 +69,13 @@ function RoleCreateScene() {
       if (first === closure_1_17) {
         num5 = 0;
       }
-      await tmp3(6902).createRole(stateFromStores.id, str, num5);
+      await tmp3(7022).createRole(stateFromStores.id, str, num5);
       if (1 === tmp7) {
         c2 = 0;
         closure_129_5(false);
-        const result = tmp3(5711).roleCreateFailedToast();
+        const result = tmp3(5831).roleCreateFailedToast();
         c4 = 3;
-        tmp3(5711);
+        tmp3(5831);
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
@@ -91,15 +91,15 @@ function RoleCreateScene() {
           if (null != selectedRoleId) {
             if (null != role) {
               if (null != guild) {
-                closure_0(5711).roleCreatedToast();
-                const obj5 = closure_0(5711);
-                closure_0(19774).setRoleJustCreated(true);
+                closure_0(5831).roleCreatedToast();
+                const obj5 = closure_0(5831);
+                closure_0(19924).setRoleJustCreated(true);
                 let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
                 const guild2 = closure_2_12.getProps().guild;
                 closure_1(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
                 currentUser = currentUser.getCurrentUser();
                 const tmp23 = closure_2_9(guild2, currentUser);
-                const obj6 = closure_0(19774);
+                const obj6 = closure_0(19924);
                 const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
                 let tmp4 = !tmp23;
                 if (!tmp23) {
@@ -109,7 +109,7 @@ function RoleCreateScene() {
                   STEP_MEMBERS = constants4.STEP_MEMBERS;
                 }
                 closure_1_0.push(STEP_MEMBERS);
-                obj7 = c2(4951);
+                obj7 = c2(5078);
                 const obj3 = {
                   flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
                   from_step: dependencyMap2[constants4.STEP_DISPLAY],
@@ -117,7 +117,7 @@ function RoleCreateScene() {
                   skip: false,
                 };
                 const tmp18Result = closure_1(1252);
-                const merged = Object.assign(closure_0(5760).collectGuildAnalyticsMetadata(guild.id));
+                const merged = Object.assign(closure_0(5880).collectGuildAnalyticsMetadata(guild.id));
                 tmp18Result.track(constants.USER_FLOW_TRANSITION, obj3);
                 return false;
               }
@@ -134,7 +134,7 @@ function RoleCreateScene() {
   let obj3 = { title: null, subtitle: null, children: null };
   const callback2 = onSelect.useCallback(() => {
     React6.dismiss();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18367, dependencyMap.paths), "RoleColorPicker", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18512, dependencyMap.paths), "RoleColorPicker", {
       color,
       onSelect,
     });
@@ -205,9 +205,9 @@ function RolePermissionTemplate() {
   const tmp = closure_24();
   navigation = navigation(onSelect[22]).useNavigation();
   let obj = navigation(onSelect[22]);
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   const stateFromStoresObject = navigation(onSelect[19]).useStateFromStoresObject(items, () => props.getProps());
-  const guild = stateFromStoresObject.guild;
+  guild = stateFromStoresObject.guild;
   closure_129_0 = guild;
   const selectedRoleId = stateFromStoresObject.selectedRoleId;
   stateFromStores(onSelect[20])(null != guild, "useGuildSettingsStoreGuildWithRole: Guild cannot be null");
@@ -260,7 +260,7 @@ function RolePermissionTemplate() {
   const items4 = [onSelect];
   const obj4 = { hasSkipButton: false, title: null, subtitle: null, children: null };
   const callback1 = noop.useCallback(() => {
-    callback(map1[closure_2_14].permissions);
+    callback(state[gesture].permissions);
   }, items4);
   const intl = navigation(onSelect[17]).intl;
   obj4.title = intl.string(navigation(onSelect[17]).t.p0IwNA);
@@ -287,11 +287,11 @@ function RoleMembers() {
   const tmp = closure_24();
   navigation = navigation(pendingAdditions[22]).useNavigation();
   let obj = navigation(pendingAdditions[22]);
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   const stateFromStoresObject = navigation(pendingAdditions[19]).useStateFromStoresObject(items, () =>
     props.getProps(),
   );
-  const guild = stateFromStoresObject.guild;
+  guild = stateFromStoresObject.guild;
   closure_129_0 = guild;
   const selectedRoleId = stateFromStoresObject.selectedRoleId;
   stateFromStores(pendingAdditions[20])(null != guild, "useGuildSettingsStoreGuildWithRole: Guild cannot be null");
@@ -406,7 +406,7 @@ function ModalScene(hasSkipButton) {
   const insets = stateFromStores(ref[42])().insets;
   navigation = navigation(ref[22]).useNavigation();
   let obj = navigation(ref[22]);
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = navigation(ref[19]).useStateFromStores(items, () => props.getProps().guild);
   stateFromStores(ref[20])(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
   let obj2 = navigation(ref[19]);
@@ -434,7 +434,7 @@ function ModalScene(hasSkipButton) {
     obj5.paddingBottom = tmp.container.paddingBottom + insets.bottom;
     obj4.style = obj5;
     let obj6 = { style: tmp.sceneHeader, children: null };
-    obj7 = { ref, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
+    obj7 = { ref, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title };
     const items3 = [closure_21(tmp3(tmp2[16]).Heading, obj7)];
     let obj8 = { style: tmp.sceneSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
     items3[1] = closure_21(tmp3(tmp2[16]).Text, obj8);
@@ -459,8 +459,8 @@ function ModalScene(hasSkipButton) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Keyboard: closure_8 } = get_ActivityIndicator);
-const isGuildOwner = fn(4881).isGuildOwner;
-const GuildSettingsRoleConstants = fn(19777);
+const isGuildOwner = fn(5008).isGuildOwner;
+const GuildSettingsRoleConstants = fn(19927);
 ({
   PermissionTemplates: map1,
   DEFAULT_TEMPLATE_TYPE: closure_14,
@@ -480,9 +480,9 @@ let closure_23 = {
   titleContainer: { flexDirection: "row", justifyContent: "center", alignContent: "center", width: "100%" },
   title: { textAlign: "center", flex: 1 },
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
-  container: { marginTop: fn(5586).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 },
+  container: { marginTop: fn(5709).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 },
   sceneHeader: { alignItems: "center", marginBottom: 8, marginHorizontal: 16 },
   sceneSubtitle: { textAlign: "center", paddingTop: 8, maxWidth: 400 },
   sceneContent: { flex: 1 },
@@ -493,7 +493,7 @@ let obj = {
   nextButton: null,
   nextButtonFloating: null,
 };
-let obj3 = { marginTop: fn(5586).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 };
+let obj3 = { marginTop: fn(5709).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 };
 obj.sceneInner = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.colorTrailing = { flexDirection: "row", alignItems: "center" };
 obj.colorBlock = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
@@ -523,32 +523,32 @@ let closure_27 = noop.memo(function SceneTitle(step) {
   const obj2 = {
     style: closure_23.title,
     accessibilityRole: "header",
-    variant: "heading-md/extrabold",
+    variant: "heading-md/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
   obj2.children = intl.format(util.t["8v/u0i"], { number: sum, total: keys.length });
-  obj.children = __initData(Text_Text.Text, obj2);
-  return __initData(React5, obj);
+  obj.children = guild(Text_Text.Text, obj2);
+  return guild(React5, obj);
 });
 const screens = {
   [obj7.STEP_DISPLAY]: {
     fullscreen: true,
     render() {
-      return __initData(RoleCreateScene, {});
+      return guild(RoleCreateScene, {});
     },
   },
   [obj7.STEP_PERMISSIONS]: {
     fullscreen: true,
     render() {
-      return __initData(RolePermissionTemplate, {});
+      return guild(RolePermissionTemplate, {});
     },
   },
   [obj7.STEP_MEMBERS]: {
     fullscreen: true,
     render() {
-      return __initData(RoleMembers, {});
+      return guild(RoleMembers, {});
     },
   },
 };
@@ -556,7 +556,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx");
 
 export default function GuildSettingsRoleCreateModal() {
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => props.getProps().guild);
   _modDef38(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
   useMountEffectDefault(() => {
@@ -570,5 +570,5 @@ export default function GuildSettingsRoleCreateModal() {
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(stateFromStores.id));
     obj.track(constants.USER_FLOW_TRANSITION, obj2);
   });
-  return closure_21(stateFromStores(7169).Navigator, { screens, initialRouteName: obj7.STEP_DISPLAY });
+  return closure_21(stateFromStores(7290).Navigator, { screens, initialRouteName: obj7.STEP_DISPLAY });
 }

@@ -5,19 +5,19 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef10277 from "../../../../_runtime/metro/10277__.js";
-import _modDef10278 from "../../../../_runtime/metro/10278__.js";
+import _modDef10407 from "../../../../_runtime/metro/10407__.js";
+import _modDef10408 from "../../../../_runtime/metro/10408__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10236);
+const StickerPickerConstants = fn(10366);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   section: {
     paddingTop: PADDING_VERTICAL,
@@ -75,11 +75,11 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   const tmp = closure_7();
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headline, children: null };
-  const items = [
+  items = [
     React4(Text_Text.Text, {
       style: tmp.label,
       lineClamp: 1,
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: stickerPack.name,
     }),
@@ -89,7 +89,7 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
     const obj6 = {
-      source: _modDef10277,
+      source: _modDef10407,
       style: tmp.animatedIcon,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp.icon.color,
@@ -102,12 +102,12 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   const obj3 = {
     style: tmp.label,
     lineClamp: 1,
-    variant: "text-md/bold",
+    variant: "text-md/semibold",
     color: "mobile-text-heading-primary",
     children: stickerPack.name,
   };
   obj7.children = React4(native.Icon, {
-    source: _modDef10278,
+    source: _modDef10408,
     style: tmp.premiumIcon,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: tmp.icon.color,

@@ -10,7 +10,7 @@ _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");
 
 export function useBadBundleFilter() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
@@ -21,18 +21,18 @@ export function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(9537);
+          const obj = canUseShopDiscountsResult(9665);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7731).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7855).getProductOrbPrice(obj3);
                 } else {
                   const defaultPriceSetAssignmentPurchaseType =
-                    canUseShopDiscountsResult(7732).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7732);
-                  let result = canUseShopDiscountsResult(7732).extractPriceByPurchaseTypes(
+                    canUseShopDiscountsResult(7856).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7856);
+                  let result = canUseShopDiscountsResult(7856).extractPriceByPurchaseTypes(
                     product,
                     defaultPriceSetAssignmentPurchaseType,
                   );
@@ -61,10 +61,10 @@ export function useBadBundleFilter() {
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7731);
+                tmpResult5 = canUseShopDiscountsResult(7855);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7732);
+            tmpResult = canUseShopDiscountsResult(7856);
           }
           return true;
         });

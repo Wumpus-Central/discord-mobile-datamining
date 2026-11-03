@@ -48,7 +48,7 @@ function getFlattenedDefaultChannels(arg0, arr, arg2) {
       return true;
     };
   }
-  const items = [];
+  items = [];
   const iter = GuildChannelStore.getChannels(arg0)[closure_7][Symbol.iterator]();
   while (iter !== undefined) {
     let channel = iter.next().channel;
@@ -78,11 +78,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7269).OnboardingConnectionType;
+let closure_7 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7389).OnboardingConnectionType;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");
@@ -90,9 +90,9 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboard
 export const ONBOARDING_EPOCH = date;
 export function useGuildOnboardingSettingsAvailable(arg0) {
   _require = arg0;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -110,7 +110,7 @@ export function useGuildOnboardingSettingsAvailable(arg0) {
   });
 }
 export function isGuildOnboardingSettingsAvailable(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -171,8 +171,8 @@ export function showRulesInOnboarding(stateFromStores2, stateFromStores) {
   }
   return tmp4;
 }
-export function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds) {
-  arr = GuildChannelStore.getChannels(guildId)[closure_7];
+export function getChannelCoverageForOnboarding(c0, arr, defaultChannelIds) {
+  arr = GuildChannelStore.getChannels(c0)[closure_7];
   const mapped = arr.map((channel) => channel.channel);
   const set = new Set();
   const item = arr.forEach((options) => {
@@ -200,7 +200,7 @@ export function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds)
     }
     return tmp2;
   });
-  const items = [
+  items = [
     found.filter((id) => {
       let hasItem = set.has(id.id);
       if (!hasItem) {
@@ -222,7 +222,7 @@ export function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds)
 }
 export function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   _require = arg0;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   arr2 = require("initialize").useStateFromStores(items, () => GuildChannelStore.getChannels(closure_0))[closure_7];
   const mapped = arr2.map((channel) => channel.channel);
   const obj = require("initialize");
@@ -296,7 +296,7 @@ export function isChattableChannelId(arg0) {
 export { isChattableChannel };
 export function useIsChattableChannel(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let isNotNullishResult = GlobalUtils.isNotNullish(channel);
@@ -346,7 +346,7 @@ export function getMinimumSetOfDefaultChannelIds(arg0, arr, arr, arg3) {
       }
       const options = required.options;
       const push = navigation.push;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         options.reduce(
           (acc, channelIds) => {
@@ -388,7 +388,7 @@ export function getChattableDefaultChannels(arg0, arr) {
     obj[item10015.channel.id] = item10015;
     continue;
   }
-  const items = [
+  items = [
     (function filterChattableChannels(arr, arg1) {
       closure_0 = arg1;
       return arr.filter((item) => {
@@ -429,12 +429,12 @@ export function getChattableDefaultChannels(arg0, arr) {
 }
 export function useChattableDefaultChannels(arg0, arg1) {
   _require = arg0;
-  let items = [GuildChannelStore];
+  items = [GuildChannelStore];
   let items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [];
+      items = [];
       const items1 = [];
       const iter = GuildChannelStore.getChannels(closure_0)[closure_7][Symbol.iterator]();
       const nextResult = iter.next();

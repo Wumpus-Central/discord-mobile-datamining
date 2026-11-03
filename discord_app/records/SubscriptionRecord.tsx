@@ -16,9 +16,9 @@ const Constants = fn(1072);
   SubscriptionStatusTypesSets: closure_7,
   SubscriptionTypes: closure_8,
 } = Constants);
-const BillingConstants = fn(2057);
-({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
-const PremiumConstants = fn(1385);
+const BillingConstants = fn(2186);
+({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: closure_10 } = BillingConstants);
+const PremiumConstants = fn(1387);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
@@ -155,7 +155,7 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     date4 = new Date(id.trial_ends_at);
   }
   obj.trialEndsAt = date4;
-  const items = id.items;
+  items = id.items;
   obj.items = items.map(createSubscriptionItemFromServer);
   let tmp12 = null;
   if (null != id.renewal_mutations) {
@@ -246,13 +246,13 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
 });
 Object.defineProperty(prototype, "planIdFromItems", {
   get: function planIdFromItems() {
-    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(map1));
+    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(state));
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "premiumPlanIdFromItems", {
   get: function premiumPlanIdFromItems() {
-    const items = [...closure_1_11];
+    items = [...closure_1_11];
     return this.getCurrentSubscriptionPlanIdForGroup(items);
   },
   set: undefined,
@@ -322,16 +322,16 @@ Object.defineProperty(prototype, "hasExternalPlanChange", {
 });
 Object.defineProperty(prototype, "hasPremiumNitroMonthly", {
   get: function hasPremiumNitroMonthly() {
-    const items = this.items;
+    items = this.items;
     return null != items.find((planId) => planId.planId === PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isBoostOnly", {
   get: function isBoostOnly() {
-    let items = this.items;
+    items = this.items;
     return items.every((planId) => {
-      const items = [,];
+      items = [,];
       ({ PREMIUM_MONTH_GUILD: arr[0], PREMIUM_YEAR_GUILD: arr[1] } = closure_1_13);
       return items.includes(planId.planId);
     });
@@ -474,14 +474,14 @@ Object.defineProperty(prototype, "premiumSince", {
 });
 Object.defineProperty(prototype, "hasAnyPremiumNitro", {
   get: function hasAnyPremiumNitro() {
-    const items = this.items;
+    items = this.items;
     return items.some((planId) => set.has(planId.planId));
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "hasAnyPremiumGroup", {
   get: function hasAnyPremiumGroup() {
-    const items = this.items;
+    items = this.items;
     return items.some((planId) => planId.planId === constants.PREMIUM_GROUP_MONTH);
   },
   set: undefined,
@@ -490,7 +490,7 @@ prototype["hasPremiumAtLeast"] = function hasPremiumAtLeast(TIER_2) {
   closure_0 = TIER_2;
   let someResult = this.isPremium;
   if (someResult) {
-    const items = this.items;
+    items = this.items;
     someResult = items.some((item) =>
       PremiumTypeUtils.isPremiumAtLeast(dependencyMap[item.planId].premiumType, closure_0),
     );

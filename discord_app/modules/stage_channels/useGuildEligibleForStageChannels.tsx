@@ -11,11 +11,11 @@ const result = size.fileFinishedImporting("modules/stage_channels/useGuildEligib
 export function isGuildEligibleForStageChannels(id) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [GuildStore];
+    items = [GuildStore];
     tmp = items;
   }
   [obj] = tmp;
-  const guild = obj.getGuild(id);
+  guild = obj.getGuild(id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -25,14 +25,14 @@ export function isGuildEligibleForStageChannels(id) {
 }
 export function useGuildEligibleForStageChannels(arg0) {
   _require = arg0;
-  let items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [GuildStore];
+      items = [GuildStore];
       [obj] = items;
-      const guild = obj.getGuild(closure_0);
+      guild = obj.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;

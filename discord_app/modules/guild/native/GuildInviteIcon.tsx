@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const Sizes = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 let closure_6 = [16, 16, 14, 14, 12];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj3 = {
   icon: { justifyContent: "center", alignItems: "center", overflow: "hidden" },
   iconSmall: { width: 40, height: 40, borderRadius: 20 },
@@ -54,7 +54,7 @@ GuildInviteIcon.prototype["render"] = function render() {
       style: null,
       source: null,
     };
-    const items = [tmp.icon, tmp2, style];
+    items = [tmp.icon, tmp2, style];
     obj4.style = items;
     obj4.source = guildIconSource;
     return jsx(FastImageDefault, {
@@ -104,7 +104,7 @@ GuildInviteIcon.prototype["render"] = function render() {
 };
 GuildInviteIcon.defaultProps = { size: Sizes.SMALL, textScale: 1 };
 GuildInviteIcon.Sizes = Sizes;
-GuildInviteIcon.contextType = fn(5080).ThemeContext;
+GuildInviteIcon.contextType = fn(5207).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild/native/GuildInviteIcon.tsx");
 

@@ -8,7 +8,7 @@ import ButtonEllipsis from "../../../design/components/Button/native/ButtonEllip
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod9553 from "../hooks/index.tsx";
+import _mod9685 from "../hooks/index.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -63,7 +63,7 @@ class OrbsOnboardingMenuDismissibleContent {
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (
         markAsDismissed.visibleContent ===
-        markAsDismissed(4847).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
+        markAsDismissed(4974).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
       ) {
         let obj = { accessibilityLabel: null, onPress: null, trailing: null };
         const intl = tmp(1113).intl;
@@ -77,7 +77,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_10(closure_1(17708), {});
+        obj.trailing = closure_10(closure_1(17851), {});
         return closure_10(closure_11, obj);
       } else {
         return null;
@@ -87,11 +87,11 @@ class OrbsOnboardingMenuDismissibleContent {
   }
 }
 function BalanceWidgetMenu() {
-  str = str(9553).useFetchVirtualCurrencyBalance().balance;
-  let obj = str(9553);
-  const orbBalanceEntrypoint = str(16900).useOrbBalanceEntrypoint({ location: "MobileBalanceWidgetMenu" });
+  str = str(9685).useFetchVirtualCurrencyBalance().balance;
+  let obj = str(9685);
+  const orbBalanceEntrypoint = str(17043).useOrbBalanceEntrypoint({ location: "MobileBalanceWidgetMenu" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
-  let items = [str, openBalanceWidgetActionSheet];
+  items = [str, openBalanceWidgetActionSheet];
   ({ isOrbchievementsEnabled, notificationType } = orbBalanceEntrypoint);
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -109,18 +109,18 @@ function BalanceWidgetMenu() {
       const obj = openBalanceWidgetActionSheet(1252);
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
         type: "GO_TO_SHOP",
-        source: openBalanceWidgetActionSheet(7351).YOU_SCREEN,
+        source: openBalanceWidgetActionSheet(7471).YOU_SCREEN,
         balance,
       });
-      const obj2 = { type: "GO_TO_SHOP", source: openBalanceWidgetActionSheet(7351).YOU_SCREEN, balance };
-      openBalanceWidgetActionSheet(5258).hideActionSheet();
-      const obj3 = openBalanceWidgetActionSheet(5258);
+      const obj2 = { type: "GO_TO_SHOP", source: openBalanceWidgetActionSheet(7471).YOU_SCREEN, balance };
+      openBalanceWidgetActionSheet(5381).hideActionSheet();
+      const obj3 = openBalanceWidgetActionSheet(5381);
       const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [openBalanceWidgetActionSheet(7351).COLLECTIBLES_SHOP];
+      items = [openBalanceWidgetActionSheet(7471).COLLECTIBLES_SHOP];
       obj5.analyticsLocations = items;
-      obj5.analyticsSource = openBalanceWidgetActionSheet(7351).COLLECTIBLES_SHOP;
+      obj5.analyticsSource = openBalanceWidgetActionSheet(7471).COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(7719).openCollectiblesShopMobile(obj5);
+      const result = str(7843).openCollectiblesShopMobile(obj5);
     };
     obj2.primaryButtonConfig = obj3;
     let obj4 = { buttonText: null, onButtonPress: null };
@@ -130,17 +130,17 @@ function BalanceWidgetMenu() {
       const obj = openBalanceWidgetActionSheet(1252);
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, {
         type: "GO_TO_QUEST_HOME",
-        source: openBalanceWidgetActionSheet(7351).YOU_SCREEN,
+        source: openBalanceWidgetActionSheet(7471).YOU_SCREEN,
         balance,
       });
-      const obj2 = { type: "GO_TO_QUEST_HOME", source: openBalanceWidgetActionSheet(7351).YOU_SCREEN, balance };
-      openBalanceWidgetActionSheet(5258).hideActionSheet();
-      const obj3 = openBalanceWidgetActionSheet(5258);
-      const obj4 = str(9678);
+      const obj2 = { type: "GO_TO_QUEST_HOME", source: openBalanceWidgetActionSheet(7471).YOU_SCREEN, balance };
+      openBalanceWidgetActionSheet(5381).hideActionSheet();
+      const obj3 = openBalanceWidgetActionSheet(5381);
+      const obj4 = str(9810);
       obj4.openQuestHome({
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
-        fromContent: str(6784).QuestContent.ORBS_BALANCE_MENU,
+        fromContent: str(6904).QuestContent.ORBS_BALANCE_MENU,
       });
     };
     obj2.secondaryButtonConfig = obj4;
@@ -150,7 +150,7 @@ function BalanceWidgetMenu() {
   }, items);
   if (isOrbchievementsEnabled) {
     let obj3 = { balance: str, notificationType, onPress: callback };
-    let tmp5Result = jsx(tmp(17709).OrbWalletEntryRow, { balance: str, notificationType, onPress: callback });
+    let tmp5Result = jsx(tmp(17852).OrbWalletEntryRow, { balance: str, notificationType, onPress: callback });
   } else {
     let intl = tmp(1113).intl;
     let str2;
@@ -165,7 +165,7 @@ function BalanceWidgetMenu() {
     obj4.accessibilityLabel = intl.formatToPlainString(tmp(1113).t.zPaLL9, obj5);
     obj4.onPress = callback;
     const obj6 = { balance: str, onPress: callback, accessible: false };
-    obj4.trailing = jsx(openBalanceWidgetActionSheet(14511), { balance: str, onPress: callback, accessible: false });
+    obj4.trailing = jsx(openBalanceWidgetActionSheet(14642), { balance: str, onPress: callback, accessible: false });
     tmp5Result = <OrbsBalanceRow accessibilityLabel={null} onPress={null} trailing={null} />;
   }
   return tmp5Result;
@@ -173,15 +173,15 @@ function BalanceWidgetMenu() {
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty } = Constants);
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
-const DismissibleContentConstants = fn(4860);
+const DismissibleContentConstants = fn(4987);
 ({ ContentDismissActionType: closure_7, DismissibleContentGroupName: closure_8 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(6781).RewardFilterTypes;
+const RewardFilterTypes = fn(6901).RewardFilterTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper() {
-  const balance = _mod9553.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod9685.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {
     const obj2 = { accessibilityLabel: null, trailing: null, isBusy: true };

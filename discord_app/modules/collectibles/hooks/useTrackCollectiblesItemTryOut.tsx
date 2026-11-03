@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackCo
 
 export default function useTrackCollectiblesItemTryOut(location_stack) {
   _require = location_stack;
-  const items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores, location_stack];
   return useCallback((skuId) => {

@@ -19,7 +19,7 @@ export function useCanShowTooltip(SCREENSHARE_SWIPE_UP_CONTROLS, arg1) {
   if (arg2 === undefined) {
     flag2 = true;
   }
-  const items = [TooltipStore];
+  items = [TooltipStore];
   const items1 = [flag2, flag, SCREENSHARE_SWIPE_UP_CONTROLS];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

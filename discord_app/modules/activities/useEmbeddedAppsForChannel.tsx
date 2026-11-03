@@ -24,12 +24,12 @@ function useEmbeddedApps(arr, arg1) {
     }
     continue;
   }
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [set];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const items = [];
+      items = [];
       for (const item10006 of set) {
         arr = items.push(UserStore.getUser(item10006));
         continue;
@@ -47,7 +47,7 @@ function useEmbeddedApps(arr, arg1) {
       }
     });
     const mapped = map.map((embeddedActivity, index) => {
-      const items = [];
+      items = [];
       while (tmp2 !== undefined) {
         value = map.get(tmp3);
         if (null != value) {
@@ -70,13 +70,13 @@ function useEmbeddedApps(arr, arg1) {
     return mapped.filter(closure_0(closure_2[7]).isNotNullish);
   }, items2);
 }
-const NO_ACTIVITIES = fn(4862).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4989).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 
 export default function useEmbeddedAppsForChannel(channel, arg1) {
   _require = channel;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   return useEmbeddedApps(
     require("initialize").useStateFromStoresArray(items, () => {
       if (null != user) {
@@ -94,7 +94,7 @@ export default function useEmbeddedAppsForChannel(channel, arg1) {
 }
 export function useEmbeddedAppsByChannel(arg0) {
   _require = arg0;
-  let items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const tmp = useEmbeddedApps(
     require("initialize").useStateFromStores(items, () => {
       if (null != closure_0) {
@@ -114,7 +114,7 @@ export function useEmbeddedAppsByChannel(arg0) {
         embeddedActivity.embeddedActivity.location,
       );
       if (null != embeddedActivityLocationChannelId) {
-        let items = map.get(embeddedActivityLocationChannelId);
+        items = map.get(embeddedActivityLocationChannelId);
         if (items == null) {
           items = [];
         }
@@ -129,7 +129,7 @@ export function useEmbeddedAppsByChannel(arg0) {
 export { useEmbeddedApps };
 export function useEmbeddedAppsWithPresence(arg0) {
   _require = arg0;
-  const items = [PresenceStore];
+  items = [PresenceStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

@@ -8,14 +8,14 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureLiveParts.tsx");
 
 export default function useConjureLiveParts(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -28,7 +28,7 @@ export default function useConjureLiveParts(arg0, arg1) {
     },
     items1,
   );
-  let application_id;
+  application_id = undefined;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -61,7 +61,7 @@ export default function useConjureLiveParts(arg0, arg1) {
     () => {
       let tmp2 = null;
       if (null != closure_1) {
-        let guild = GuildStore.getGuild(tmp);
+        guild = GuildStore.getGuild(tmp);
         if (guild == null) {
           guild = null;
         }

@@ -18,7 +18,7 @@ function EmptyState(arg0) {
   const obj2 = { style: tmp.text, children: null };
   items = [
     React5(Text_Text.Text, {
-      variant: "redesign/heading-18/bold",
+      variant: "redesign/heading-18/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       style: tmp.centeredText,
@@ -101,7 +101,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -120,9 +120,9 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6041).getName(guildId, channelId, user);
+  name = name(6161).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6041);
+  let obj = name(6161);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
@@ -148,7 +148,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5634).Button, obj4);
+  obj3.children = closure_7(user(5754).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

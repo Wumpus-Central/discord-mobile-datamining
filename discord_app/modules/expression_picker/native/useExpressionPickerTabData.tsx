@@ -14,7 +14,7 @@ export default function useExpressionPickerTabData(arg0) {
   if (closure_3.indexOf(expressionType) >= 0) {
     num = closure_3.indexOf(expressionType);
   }
-  const items = [expressionPickerTabs];
+  items = [expressionPickerTabs];
   const memo = noop.useMemo(() => {
     const obj = { EMOJI: null, GIF: null, STICKER: null };
     const obj2 = { label: null, viewType: null, show: null, order: null };

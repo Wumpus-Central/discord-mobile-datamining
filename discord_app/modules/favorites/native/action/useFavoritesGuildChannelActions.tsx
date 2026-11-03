@@ -13,7 +13,7 @@ export default function useFavoritesGuildChannelActions(channelId) {
   _require = channelId;
   let isFavoritableChannelResult = require("FavoritesUtils").isFavoritableChannel(channelId);
   const obj = require("FavoritesUtils");
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => FavoriteStore.isFavorite(channelId.id));
   const obj2 = require("initialize");
   const isFavoritesGuildSelected = require("FavoritesHooks").useIsFavoritesGuildSelected();

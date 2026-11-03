@@ -5,14 +5,14 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
-  useValue: fn(4839).TimestampHourCycle.useSetting,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
+  useValue: fn(4966).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
@@ -23,7 +23,7 @@ const radio = SettingBuilders.createRadio({
       const intl = util.intl;
       obj.label = intl.string(util.t.FMWYvb);
       obj.value = preloaded_user_settings.TimestampHourCycle.AUTO;
-      const items = [obj, ,];
+      items = [obj, ,];
       const obj2 = { label: null, value: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.p8NOwi);
@@ -37,7 +37,7 @@ const radio = SettingBuilders.createRadio({
       return items;
     }, []);
   },
-  usePredicate: fn(5701).supportsSystemDateFormatter,
+  usePredicate: fn(5821).supportsSystemDateFormatter,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

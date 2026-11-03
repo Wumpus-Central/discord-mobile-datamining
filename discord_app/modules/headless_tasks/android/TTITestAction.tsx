@@ -55,7 +55,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -179,7 +179,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
           }
           closure_132_18("error", "Artificial content delay requires a cold message cache");
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         c6 = 3;
       }
@@ -190,7 +190,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
   }
 };
 function resetNavigationToDMs() {
-  return closure_0(5198).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
+  return closure_0(5321).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
 }
 let closure_22 = async function _navigateToDMs() {
   await new Promise((arg0) => closure_1_6(arg0));
@@ -268,7 +268,7 @@ let closure_25 = async function _setupTTITest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -347,7 +347,7 @@ let closure_25 = async function _setupTTITest(arg0) {
                     }
                     const subscription = closure_1(handler[10]).subscribe(LOGIN_SUCCESS, handler);
                   };
-                  const items = ["LOGIN_MFA_STEP", "LOGIN_SUSPENDED_USER", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", "LOGIN_FAILURE"];
+                  items = ["LOGIN_MFA_STEP", "LOGIN_SUSPENDED_USER", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", "LOGIN_FAILURE"];
                   while (tmp !== undefined) {
                     let subscribeOnceResult = subscribeOnce(tmp2, (arg0) => {
                       const error = new Error("Unable to login " + closure_2_2 + ". Login failed with event '" + arg0 + "'");
@@ -383,7 +383,7 @@ let closure_25 = async function _setupTTITest(arg0) {
           } else {
             closure_131_18("error", tmp143.message);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         break;
         case 3:
@@ -500,7 +500,7 @@ let closure_25 = async function _setupTTITest(arg0) {
                 } else {
                   closure_131_18("error", closure_130_8.message);
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 if (!closure_130_1) {
@@ -550,7 +550,7 @@ let closure_25 = async function _setupTTITest(arg0) {
               } else {
                 closure_131_18("error", closure_130_13.message);
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               if (!closure_130_1) {
@@ -651,7 +651,7 @@ let closure_25 = async function _setupTTITest(arg0) {
             } else {
               closure_131_18("error", closure_130_12.message);
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         break;
@@ -685,7 +685,7 @@ let closure_25 = async function _setupTTITest(arg0) {
               closure_131_18("success", "Setup Complete");
             }
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
       }
     } catch (tmp191) {
@@ -720,7 +720,7 @@ let closure_27 = async function _apiLogin(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -861,16 +861,16 @@ let closure_27 = async function _apiLogin(arg0) {
       const promise4 = new Promise((arg0, arg1) => {
         login = arg0;
         password = arg1;
-        const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
+        items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(572);
-          const f140306 = () => {
+          const f141693 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f140306(arg0);
+            return f141693(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -880,7 +880,7 @@ let closure_27 = async function _apiLogin(arg0) {
           continue;
         }
         closure_1_28(password(572), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6740).login({ login, password });
+        password(6860).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
@@ -898,12 +898,12 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f140306(arg0);
+    return f141693(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(19359).applicationReady;
-fn(6932).addPostConnectionCallback;
+const applicationReady = fn(19517).applicationReady;
+fn(7052).addPostConnectionCallback;
 const Constants = fn(1072);
 ({ ME: closure_11, Routes: closure_12 } = Constants);
 const logger = new LoggerDefault("TTITestAction");
@@ -965,34 +965,34 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11096).resetComponentProfiler();
+    const result = closure_0(11233).resetComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
-    obj = closure_0(11096);
+    obj = closure_0(11233);
     const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11096).pauseComponentProfiler();
+    const result = closure_0(11233).pauseComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
-    obj = closure_0(11096);
+    obj = closure_0(11233);
     const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11096).resumeComponentProfiler();
+    const result = closure_0(11233).resumeComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
-    obj = closure_0(11096);
+    obj = closure_0(11233);
     const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(11096).dumpStats() };
+    obj = { stats: closure_0(11233).dumpStats() };
     const merged = Object.assign(obj);
     const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
-    const obj2 = closure_0(11096);
+    const obj2 = closure_0(11233);
     const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
@@ -1052,7 +1052,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1073,9 +1073,9 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
           closure_135_2 = undefined;
           ({ reply: closure_135_0, args } = closure_0);
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
-          const obj5 = { getConstants: closure_0(1374).getConstants };
+          const obj5 = { getConstants: closure_0(1376).getConstants };
           obj4.ClientInfoUtils = obj5;
-          const obj6 = { resetComponentProfiler: closure_0(11096).resetComponentProfiler, resumeComponentProfiler: closure_0(11096).resumeComponentProfiler, pauseComponentProfiler: closure_0(11096).pauseComponentProfiler, dumpStats: closure_0(11096).dumpStats };
+          const obj6 = { resetComponentProfiler: closure_0(11233).resetComponentProfiler, resumeComponentProfiler: closure_0(11233).resumeComponentProfiler, pauseComponentProfiler: closure_0(11233).pauseComponentProfiler, dumpStats: closure_0(11233).dumpStats };
           obj4.ComponentProfiler = obj6;
           obj4.Dispatcher = Dispatcher;
           obj4.ExperimentStore = ExperimentStore;
@@ -1096,7 +1096,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -1110,7 +1110,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
                   return obj;
                 } else {
                   c0 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp4) {
                 c0 = tmp;
@@ -1134,7 +1134,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
           const values2 = Object.values(closure_1);
           c9 = 2;
           closure_2 = 0;
-          const items = [, ];
+          items = [, ];
           const arraySpreadResult = HermesBuiltin.arraySpread(keys, 0);
           closure_2 = arraySpreadResult;
           items[arraySpreadResult] = "imports";

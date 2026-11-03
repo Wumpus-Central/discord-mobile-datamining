@@ -8,12 +8,16 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6997);
-({ useChangeEmailError: c10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
+const ChangeEmailStore = fn(7123);
+({
+  useChangeEmailError: closure_10,
+  useChangeEmailStore: closure_11,
+  ChangeEmailFields: closure_12,
+} = ChangeEmailStore);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -34,7 +38,7 @@ export default function EnterEmail(isChangeEmail) {
   const tmp = closure_16();
   const navigation = isChangeEmail(stateFromStores[10]).useNavigation();
   let obj = isChangeEmail(stateFromStores[10]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = isChangeEmail(stateFromStores[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = _slicedToArray(emailToken.useState(""), 2);
   value = tmp6[0];
@@ -61,7 +65,7 @@ export default function EnterEmail(isChangeEmail) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -141,7 +145,7 @@ export default function EnterEmail(isChangeEmail) {
     let obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

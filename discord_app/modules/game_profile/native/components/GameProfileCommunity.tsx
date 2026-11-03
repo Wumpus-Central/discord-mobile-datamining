@@ -28,7 +28,7 @@ export default function GameProfileCommunityServer(closeModal) {
   const tmp3 = closeModal(invite[5])(game, closeModal.onInviteResolved);
   invite = tmp3.invite;
   const isMember = tmp3.isMember;
-  const items = [invite, isMember, trackAction, closeModal];
+  items = [invite, isMember, trackAction, closeModal];
   const result = trackAction(invite[5]).hasGameProfileDiscordWebsite(game);
   if (null != invite) {
     if (null != invite.guild) {

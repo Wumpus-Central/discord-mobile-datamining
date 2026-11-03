@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/masked_link/SharedStateUtils.
 
 export function useUrlParts(url) {
   closure_0 = url;
-  const items = [url];
+  items = [url];
   const memo = noop.useMemo(() => {
     const url = { protocol: MaskedLinkStoreMethodsAdditional.getProtocol(str), hostname: null };
     url.hostname = MaskedLinkStoreMethodsAdditional.getHostname(str);
@@ -31,7 +31,7 @@ export function useModalState(url) {
   const onClose = url.onClose;
   const tmp = onConfirm(onCancel.useState(false), 2);
   const shouldTrustUrl = tmp[0];
-  const items = [str];
+  items = [str];
   const memo = onCancel.useMemo(() => {
     const url = { protocol: MaskedLinkStoreMethodsAdditional.getProtocol(str), hostname: null };
     url.hostname = MaskedLinkStoreMethodsAdditional.getHostname(str);

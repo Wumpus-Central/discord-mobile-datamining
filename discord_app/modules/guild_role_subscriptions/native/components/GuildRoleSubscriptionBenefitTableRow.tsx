@@ -23,7 +23,7 @@ function ChannelBenefitLabel(benefit) {
   } else {
     const obj3 = { style: tmp.channelLabel, children: null };
     const obj4 = { style: tmp.channelIcon, size: "xs", color: "interactive-text-default" };
-    const items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj4)];
+    items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj4)];
     const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: tmp5 };
     items[1] = hasOwnProperty(Text_Text.Text, obj5);
     obj3.children = items;
@@ -33,10 +33,10 @@ function ChannelBenefitLabel(benefit) {
   return tmp8;
 }
 const View = fn(17).View;
-const constants = fn(17196).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17339).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   channelLabel: { flexDirection: "row", alignItems: "center" },
   channelIcon: { marginEnd: nativeDefault.space.PX_4 },

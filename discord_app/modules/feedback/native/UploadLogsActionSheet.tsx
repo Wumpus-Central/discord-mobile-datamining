@@ -16,7 +16,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -38,7 +38,7 @@ export default function UploadLogsActionSheet(arg0) {
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t["ZvRR/t"]);
-  const items = [closure_6(Text_Text.Text, obj4), , ,];
+  items = [closure_6(Text_Text.Text, obj4), , ,];
   const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj5.text = intl3.string(util.t.EbwFfR);

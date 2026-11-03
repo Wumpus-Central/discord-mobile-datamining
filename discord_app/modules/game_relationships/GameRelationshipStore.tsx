@@ -41,9 +41,9 @@ function GameRelationshipIndexes_BY_APPLICATION_ID(nextResult) {
 }
 function GameRelationshipIndexes_BY_USER_ID(arg0) {}
 function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {}
-const secondaryIndexMap = new fn(4941).SecondaryIndexMap(
+const secondaryIndexMap = new fn(5068).SecondaryIndexMap(
   function gameRelationshipsIndex(arg0) {
-    const items = [];
+    items = [];
     if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {
       const _HermesInternal = HermesInternal;
       tmp("application-id-" + tmp2);

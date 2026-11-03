@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivate
 
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     ChannelStore.getChannel(closure_0),
   );

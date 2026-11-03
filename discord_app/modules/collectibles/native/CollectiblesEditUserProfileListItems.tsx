@@ -13,7 +13,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import _modDef15076 from "../../../../_runtime/metro/15076__.js";
+import _modDef15217 from "../../../../_runtime/metro/15217__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -58,7 +58,7 @@ const View = fn(17).View;
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm },
   item: null,
@@ -99,7 +99,7 @@ export function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef15076, size: native.IconSizes.LARGE })];
+  items = [React5(native.Icon, { source: _modDef15217, size: native.IconSizes.LARGE })];
   const obj3 = {
     variant: "text-sm/medium",
     color: "mobile-text-heading-primary",
@@ -124,8 +124,8 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7326)(analyticsSource).analyticsLocations;
-  const items = [analyticsLocations, analyticsSource];
+  analyticsLocations = analyticsLocations(7446)(analyticsSource).analyticsLocations;
+  items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
     isSelected: false,
@@ -142,7 +142,7 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   const merged1 = Object.assign(merged);
   const items1 = [
     closure_7(analyticsSource(1187).Icon, {
-      source: analyticsLocations(15077),
+      source: analyticsLocations(15218),
       size: analyticsSource(1187).IconSizes.LARGE,
     }),
     ,
@@ -155,8 +155,8 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   };
   const intl = analyticsSource(1113).intl;
   obj3.children = intl.string(analyticsSource(1113).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(5624).Text, obj3);
-  items1[2] = closure_7(analyticsSource(9526).NewBadge, { style: tmp2.newIcon });
+  items1[1] = closure_7(analyticsSource(5747).Text, obj3);
+  items1[2] = closure_7(analyticsSource(9654).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 }
@@ -165,7 +165,7 @@ export function EditCollectiblesListItemProduct(skuId) {
   ({ isSelected, isTryItOut, children } = skuId);
   const merged = Object.assign(skuId, Object.assign({ isSelected: 0, isTryItOut: 0, skuId: 0, children: 0 }));
   const tmp2 = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   PremiumUtilsDefault.canUseCollectibles(stateFromStores);
   ({ purchase, product } = useCollectiblesDataDefault(skuId));

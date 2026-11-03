@@ -13,7 +13,7 @@ export default function useMaybeFetchProfileFrame(arg0) {
   let tmp = useFramePreviewOverrideFrameDefault();
   const tmp2 = useProfileFrameDefault(arg0);
   importDefault = tmp3;
-  const items = [null == tmp && null != arg0 && null == tmp2, arg0];
+  items = [null == tmp && null != arg0 && null == tmp2, arg0];
   const effect = noop.useEffect(() => {
     if (closure_1) {
       const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);

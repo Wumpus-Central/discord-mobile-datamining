@@ -11,7 +11,7 @@ export function useListHasSingleMessageRequest() {
   messageRequestsCount = messageRequestsCount(stateFromStores[3]).useMessageRequestsCount();
   const ref = noop.useRef(messageRequestsCount);
   const obj = messageRequestsCount(stateFromStores[3]);
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   stateFromStores = messageRequestsCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
   noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, messageRequestsCount];
@@ -32,7 +32,7 @@ export function useListHasSingleSpamMessageRequest() {
   spamMessageRequestCount = spamMessageRequestCount(stateFromStores[6]).useSpamMessageRequestCount();
   const ref = noop.useRef(spamMessageRequestCount);
   const obj = spamMessageRequestCount(stateFromStores[6]);
-  const items = [SpamMessageRequestStore];
+  items = [SpamMessageRequestStore];
   stateFromStores = spamMessageRequestCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
   noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, spamMessageRequestCount];

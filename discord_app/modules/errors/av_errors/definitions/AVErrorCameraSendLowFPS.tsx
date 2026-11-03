@@ -39,7 +39,7 @@ export const AVErrorCameraSendLowFPSDefinition = {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               const obj2 = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
               const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-              const items = [obj2];
+              items = [obj2];
               const tmp4Result = AVErrorContext;
               const tmp8 = items;
             }

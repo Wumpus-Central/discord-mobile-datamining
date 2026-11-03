@@ -1,28 +1,35 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalConstants.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function getBountyVideoEndPeekScale(value, memo1) {
-  return 1 + (memo1 - 1) * value;
+const items = [
+  {
+    code: "(function getBountyVideoEndPeekScale_BountiesModalConstantsTsx1(progress,targetScale){return 1+(targetScale-1)*progress;})",
+  },
+];
+[tmp2] = items;
+function getBountyVideoEndPeekScale(arg0, arg1) {
+  return 1 + (arg1 - 1) * arg0;
 }
-getBountyVideoEndPeekScale.__closure = {};
-getBountyVideoEndPeekScale.__workletHash = 16304629459688;
-getBountyVideoEndPeekScale.__initData = {
-  code: "function getBountyVideoEndPeekScale_BountiesModalConstantsTsx1(progress,targetScale){return 1+(targetScale-1)*progress;}",
-};
-function getBountyVideoEndPeekClipHeight(value, width, height) {
-  return height + (Math.min(width, height) - height) * value;
+getBountyVideoEndPeekScale.__workletHash = 14941163546409;
+getBountyVideoEndPeekScale.__initData = tmp2;
+const items1 = [
+  {
+    code: "(function getBountyVideoEndPeekClipHeight_BountiesModalConstantsTsx2(progress,videoWidth,videoHeight){const squareSide=Math.min(videoWidth,videoHeight);return videoHeight+(squareSide-videoHeight)*progress;})",
+  },
+];
+[tmp3] = items1;
+function getBountyVideoEndPeekClipHeight(arg0, arg1, arg2) {
+  return arg2 + (Math.min(arg1, arg2) - arg2) * arg0;
 }
-getBountyVideoEndPeekClipHeight.__closure = {};
-getBountyVideoEndPeekClipHeight.__workletHash = 16660906575916;
-getBountyVideoEndPeekClipHeight.__initData = {
-  code: "function getBountyVideoEndPeekClipHeight_BountiesModalConstantsTsx2(progress,videoWidth,videoHeight){const squareSide=Math.min(videoWidth,videoHeight);return videoHeight+(squareSide-videoHeight)*progress;}",
-};
+getBountyVideoEndPeekClipHeight.__workletHash = 6690604223821;
+getBountyVideoEndPeekClipHeight.__initData = tmp3;
+function getBountyVideoEndAppStoreSheetHeight(arg0) {
+  return 0.6 * arg0;
+}
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalConstants.tsx");
 
 export const BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS = 10000;
-export function getBountyVideoEndAppStoreSheetHeight(arg0) {
-  return 0.6 * arg0;
-}
+export { getBountyVideoEndAppStoreSheetHeight };
 export function getBountyVideoEndPeekTargetScale(windowHeight) {
   windowHeight = windowHeight.windowHeight;
   const bound = Math.min(windowHeight.videoWidth, windowHeight.videoHeight);

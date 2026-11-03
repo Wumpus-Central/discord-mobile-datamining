@@ -11,13 +11,13 @@ const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1622);
+const MetaQuestUtils = fn(1624);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(14106).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(14237).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(19327).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19485).MobilePhoneShareIcon;
 }
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",
@@ -42,7 +42,7 @@ export default function ScreenshareButton(arg0) {
   const tmp3 = closure_8();
   const voicePanelButtonStyles = channelId(isFeatureEnabled[9]).useVoicePanelButtonStyles(wrapperSpecs);
   let obj = channelId(isFeatureEnabled[9]);
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = channelId(isFeatureEnabled[10]).useStateFromStores(items, () =>
     ChannelStore.getChannel(channelId),
   );

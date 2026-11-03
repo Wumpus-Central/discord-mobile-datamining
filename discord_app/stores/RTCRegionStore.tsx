@@ -67,7 +67,7 @@ RTCRegionStore.persistKey = "RTCRegionStore";
 let items = [
   (preferredRegion) => {
     if (preferredRegion.preferredRegion) {
-      const items = [preferredRegion.preferredRegion];
+      items = [preferredRegion.preferredRegion];
       preferredRegion.preferredRegions = items;
     } else {
       preferredRegion.preferredRegions = null;

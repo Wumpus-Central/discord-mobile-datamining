@@ -1,0 +1,31 @@
+// discord_app/modules/checkpoint/native/components/customization/CustomizationControls.tsx
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import TraitPickerControlsDefault from "TraitPickerControls.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
+
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting(
+  "modules/checkpoint/native/components/customization/CustomizationControls.tsx",
+);
+
+export default function CustomizationControls(arg0) {
+  ({ activeCustomizationOption, isFinalizeRoute } = arg0);
+  ({ isCurrentTraitBlocked, isSaving, isLandscape, onSelectFinalizeOption, onSelectTraitOption } = arg0);
+  let str = "finalize";
+  if (!isFinalizeRoute) {
+    str = activeCustomizationOption;
+  }
+  return jsx(
+    TraitPickerControlsDefault,
+    {
+      activeCustomizationOption,
+      isFinalizeRoute,
+      isCurrentTraitBlocked,
+      disabled,
+      isLandscape,
+      onSelectOption,
+      onSelectFinalizeOption,
+    },
+    str,
+  );
+}

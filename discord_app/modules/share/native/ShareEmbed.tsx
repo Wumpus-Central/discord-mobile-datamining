@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -40,7 +40,7 @@ export default function ShareEmbed(embed) {
   let memo3;
   let tmp = closure_8();
   dependencyMap = tmp;
-  let items = [embed];
+  items = [embed];
   const memo = memo3.useMemo(() => {
     if (null != embed) {
       const thumbnail = embed.thumbnail;
@@ -93,7 +93,7 @@ export default function ShareEmbed(embed) {
         obj2.source = obj3;
         tmp5 = hasOwnProperty(FastImageDefault, obj2);
       }
-      const items = [tmp5];
+      items = [tmp5];
       const obj4 = {
         variant: "text-xs/semibold",
         color: "mobile-text-heading-primary",
@@ -161,7 +161,7 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(5717), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(5837), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result];

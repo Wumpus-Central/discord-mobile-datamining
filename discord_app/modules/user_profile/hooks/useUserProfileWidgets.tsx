@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileWidgets(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

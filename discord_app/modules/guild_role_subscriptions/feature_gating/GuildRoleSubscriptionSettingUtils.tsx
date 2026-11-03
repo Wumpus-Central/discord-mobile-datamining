@@ -52,7 +52,7 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   _require = stateFromStores;
   closure_129_0 = stateFromStores;
   const obj = require("initialize");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(
     items,
@@ -169,7 +169,7 @@ export function useCanSeeGuildRoleSubscriptionSettings(guild) {
 }
 export function useCanManageGuildRoleSubscriptions(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   return require("initialize").useStateFromStores(
     items,

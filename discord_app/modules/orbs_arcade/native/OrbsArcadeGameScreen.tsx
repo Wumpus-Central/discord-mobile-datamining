@@ -1,6 +1,6 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeGameScreen.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import leaveFrame from "../../frames/leaveFrame.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -9,15 +9,15 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ getFrameLaunchParams: closure_8, isLaunched: closure_9, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const presentation = {
   layoutMode: FrameLayoutModes.FOCUSED,
-  portraitSafeAreasConfig: fn(19000).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG,
+  portraitSafeAreasConfig: fn(19158).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.wrapper = {
@@ -32,7 +32,7 @@ let rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5657).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT,
+  height: fn(5777).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -55,7 +55,7 @@ export default function OrbsArcadeGameScreen(navigation) {
   const claimableRewardIdsAtLaunch = params.claimableRewardIdsAtLaunch;
   const tmp = closure_13();
   const rect = route(frameId[13])();
-  const items = [closure_5];
+  items = [closure_5];
   const items1 = [frameId];
   const stateFromStores = navigation(frameId[14]).useStateFromStores(
     items,

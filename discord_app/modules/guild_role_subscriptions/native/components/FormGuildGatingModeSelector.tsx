@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, alertHeader: null };
 let obj3 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.alertHeader = { paddingBottom: nativeDefault.space.PX_16 };
@@ -24,8 +24,8 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const onChange = isFullServerGating.onChange;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const roleSubscriptionSettingsDisabled = isFullServerGating(19945).useRoleSubscriptionSettingsDisabled();
-  let items = [onChange];
+  const roleSubscriptionSettingsDisabled = isFullServerGating(20095).useRoleSubscriptionSettingsDisabled();
+  items = [onChange];
   const items1 = [onChange, isFullServerGating, tmp];
   const callback = noop.useCallback(() => {
     onChange(false);
@@ -44,13 +44,13 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
       const obj3 = { children: null };
       const obj4 = {
         style: alertHeader.alertHeader,
-        variant: "heading-lg/bold",
+        variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         children: null,
       };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.dmVoOz);
-      const items = [hasOwnProperty(Text_Text.Text, obj4)];
+      items = [hasOwnProperty(Text_Text.Text, obj4)];
       const obj5 = { variant: "text-md/normal", children: null };
       const intl3 = util.intl;
       obj5.children = intl3.string(util.t.mtwzdD);
@@ -62,8 +62,8 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
     onChange(true);
   }, items1);
   let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  let obj = isFullServerGating(19945);
-  obj3.icon = isFullServerGating(8652).TextIcon;
+  let obj = isFullServerGating(20095);
+  obj3.icon = isFullServerGating(8776).TextIcon;
   let intl = isFullServerGating(1113).intl;
   obj3.title = intl.string(isFullServerGating(1113).t.rXqxhF);
   let intl2 = isFullServerGating(1113).intl;
@@ -71,10 +71,10 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj3.selected = !isFullServerGating;
   obj3.onPress = callback;
   obj3.disabled = roleSubscriptionSettingsDisabled;
-  const items2 = [closure_5(onChange(19947), obj3)];
+  const items2 = [closure_5(onChange(20097), obj3)];
   let obj4 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  const tmp5 = onChange(19947);
-  obj4.icon = isFullServerGating(7125).KeyIcon;
+  const tmp5 = onChange(20097);
+  obj4.icon = isFullServerGating(7251).KeyIcon;
   let intl3 = isFullServerGating(1113).intl;
   obj4.title = intl3.string(isFullServerGating(1113).t.WzC9s6);
   const intl4 = isFullServerGating(1113).intl;
@@ -82,7 +82,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj4.selected = isFullServerGating;
   obj4.onPress = callback1;
   obj4.disabled = roleSubscriptionSettingsDisabled;
-  items2[1] = closure_5(onChange(19947), obj4);
+  items2[1] = closure_5(onChange(20097), obj4);
   obj2.children = items2;
   return closure_7(View, obj2);
 }

@@ -66,7 +66,7 @@ function orderPowerupListings(items) {
   return tmp10;
 }
 function buildPowerupListings(type, arr, gameServerEnabled) {
-  const items = [];
+  items = [];
   closure_1 = arr.reduce((acc, type) => {
     if (type.type !== constants.PERK) {
       return acc;
@@ -117,15 +117,15 @@ function buildPowerupListings(type, arr, gameServerEnabled) {
   }
   return orderPowerupListings(items);
 }
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
 const PERK_SKU_BADGES = GuildPowerupsConstants.PERK_SKU_BADGES;
 const POWERUP_GROUP_TO_SKU_IDS = { guildTagsBadgePacks: null };
 let items = [
-  fn(5233).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-  fn(5233).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  fn(5233).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  fn(5233).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
+  fn(5356).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
+  fn(5356).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
+  fn(5356).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
+  fn(5356).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
 ];
 POWERUP_GROUP_TO_SKU_IDS.guildTagsBadgePacks = items;
 const entries = Object.entries(POWERUP_GROUP_TO_SKU_IDS);
@@ -147,7 +147,7 @@ export { buildPowerupListings };
 export function useBuildGuildPowerupsSections(guildId, gameServerEnabled) {
   _require = guildId;
   dependencyMap = gameServerEnabled;
-  const items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildPowerupsStore.getStateForGuild(closure_0),
   );

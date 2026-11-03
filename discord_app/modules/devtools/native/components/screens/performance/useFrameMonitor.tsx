@@ -12,7 +12,7 @@ export default function useFrameMonitor(current) {
   closure_1 = monitoring[1];
   _slicedToArray = noop.useRef(null);
   noop = noop.useRef(current);
-  const items = [current];
+  items = [current];
   const effect = noop.useEffect(() => {
     closure_3.current = current;
   }, items);

@@ -5,8 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1072).Routes;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
   const obj = {
-    imageSource: markAsDismissed(18309),
+    imageSource: markAsDismissed(18454),
     header: null,
     body: null,
     cta: null,
@@ -34,8 +34,8 @@ export default function IAPUpsellActionSheet(arg0) {
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(18308), {
-    imageSource: markAsDismissed(18309),
+  return jsx(markAsDismissed(18453), {
+    imageSource: markAsDismissed(18454),
     header: null,
     body: null,
     cta: null,

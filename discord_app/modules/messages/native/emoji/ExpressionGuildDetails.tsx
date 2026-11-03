@@ -6,13 +6,13 @@ import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildBadgeDefault = tmp10(6961);
+const GuildBadgeDefault = tmp10(7087);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(6958).ExpressionSourceGuildRecord;
+const React4 = fn(7084).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   guildDetailsContainer: { flexDirection: "column" },
   guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" },
@@ -98,7 +98,7 @@ class ExpressionGuildDetails {
       obj28.size = guild(tmp11[14]).Icon.Sizes.REFRESH_SMALL_16;
       items2 = [,];
       items2[0] = tmp12(tmp10Result, obj28);
-      obj29 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+      obj29 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj29.children = guild.name;
       items2[1] = tmp12(guild(tmp11[9]).Text, obj29);
       obj27.children = items2;

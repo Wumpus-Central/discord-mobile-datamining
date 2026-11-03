@@ -6,9 +6,9 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
 const require = globalThis.__r;
 
-const AlertActionCreatorsDefault = tmp5(5958);
+const AlertActionCreatorsDefault = tmp5(6078);
 require = fn;
-const constants = fn(4959).NotificationSettingsUpdateType;
+const constants = fn(5086).NotificationSettingsUpdateType;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const size = fn(2);

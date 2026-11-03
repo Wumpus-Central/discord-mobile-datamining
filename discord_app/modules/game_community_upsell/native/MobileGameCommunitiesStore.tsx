@@ -59,11 +59,11 @@ prototype["getState"] = function getState() {
   obj.guilds = guilds.map((features) => {
     const obj = {};
     const merged = Object.assign(features);
-    const items = [...features.features];
+    items = [...features.features];
     obj.features = items;
     return obj;
   });
-  let items = [...obj.lastFetchedGameIds];
+  items = [...obj.lastFetchedGameIds];
   obj.lastFetchedGameIds = items;
   return obj;
 };
@@ -144,7 +144,7 @@ const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefa
   MOBILE_GAME_COMMUNITIES_DISMISS_GUILD: function handleDismissGuildAction(guildId) {
     const obj = {};
     const merged = Object.assign(obj);
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(obj.dismissedGuildIds, 0)] = guildId.guildId;
     obj.dismissedGuildIds = new Set(items);
   },

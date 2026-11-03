@@ -12,9 +12,9 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "Boolean", profileEffect: "dispatch", profileFrame: "isArray" };
+    return { collectibles: "replace", profileEffect: "r", profileFrame: "isArray" };
   } else {
-    const items = [];
+    items = [];
     collectibles = collectibles.collectibles;
     const iter = collectibles[Symbol.iterator]();
     const nextResult = iter.next();

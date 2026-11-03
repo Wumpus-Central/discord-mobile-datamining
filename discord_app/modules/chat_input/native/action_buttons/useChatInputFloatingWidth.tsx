@@ -1,57 +1,68 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-let closure_3 = fn(12809).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(12945).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = {
-  code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}",
+  code: "(function useChatInputFloatingWidthTsx1(){let[collapsedWidth,expandedWidth,progress]=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
 
 export default function useChatInputFloatingWidth(expanded) {
   expanded = expanded.expanded;
-  const collapsedWidth = expanded.collapsedWidth;
-  const expandedWidth = expanded.expandedWidth;
+  _require = expanded;
   let num = expanded.enterDelayMs;
+  ({ collapsedWidth, expandedWidth } = expanded);
   if (num === undefined) {
     num = 0;
   }
-  let sharedValue;
+  dependencyMap = num;
+  noop = undefined;
   let num2 = 0;
   if (expanded) {
     num2 = 1;
   }
-  sharedValue = expanded(collapsedWidth[2]).useSharedValue(num2);
-  const items = [expanded, num, sharedValue];
-  const effect = expandedWidth.useEffect(() => {
-    if (expanded) {
-      if (0 > 0) {
-        const obj2 = ReanimatedRexport;
-        const result = sharedValue.set(
-          obj2.withDelay(tmp2, timing.withTiming(1, closure_3, "respect-motion-settings")),
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
+  noop = sharedValue;
+  items = [expanded, num, sharedValue];
+  const effect = noop.useEffect(() => {
+    if (c0) {
+      if (c1 > 0) {
+        const obj2 = _mod1652;
+        const result = _undefined.set(
+          obj2.withDelay(tmp2, timing_timing.withTiming(1, closure_3, "respect-motion-settings")),
         );
       }
     }
     let num2 = 0;
-    if (expanded) {
+    if (c0) {
       num2 = 1;
     }
-    const result1 = sharedValue.set(timing.withTiming(num2, closure_3, "respect-motion-settings"));
+    const result1 = _undefined.set(timing_timing.withTiming(num2, closure_3, "respect-motion-settings"));
   }, items);
-  let obj2 = { animatedStyle: null };
-  let obj = expanded(collapsedWidth[2]);
-  const fn = function p() {
+  let obj = require("../../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_4, collapsedWidth, expandedWidth, sharedValue];
+  _require = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp5, tmp6, tmp7, tmp8] = items1;
+  function useChatInputFloatingWidthTsx1() {
     const obj = { width: null };
-    const diff = expandedWidth - collapsedWidth;
-    obj.width = collapsedWidth + diff * sharedValue.get();
+    const diff = c1 - c0;
+    obj.width = c0 + diff * _undefined.get();
     return obj;
+  }
+  const items2 = [tmp6, tmp7, tmp8];
+  useChatInputFloatingWidthTsx1.__closure = items2;
+  useChatInputFloatingWidthTsx1.__workletHash = 7676837604130;
+  useChatInputFloatingWidthTsx1.__initData = tmp5;
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  return {
+    animatedStyle: require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(useChatInputFloatingWidthTsx1),
   };
-  fn.__closure = { collapsedWidth, expandedWidth, progress: sharedValue };
-  fn.__workletHash = 2289574047387;
-  fn.__initData = sharedValue;
-  obj2.animatedStyle = expanded(collapsedWidth[2]).useAnimatedStyle(fn);
-  return obj2;
 }

@@ -42,7 +42,7 @@ let closure_10 = async function _retryACOMRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -125,7 +125,7 @@ let closure_10 = async function _retryACOMRequest(arg0) {
           const obj9 = { value, done: true };
           return obj9;
         } else {
-          const items = [closure_131_1(closure_131_3[4]).awaitOnline()];
+          items = [closure_131_1(closure_131_3[4]).awaitOnline()];
           const obj13 = closure_131_1(closure_131_3[4]);
           const _Math = Math;
           const _Date2 = Date;

@@ -7,7 +7,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 function useRoleColorSettingValue() {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
@@ -18,7 +18,7 @@ function useRoleColorSettingOptions() {
     const obj = { label: null, value: "username" };
     const intl = util.intl;
     obj.label = intl.string(util.t.YEOEi6);
-    const items = [obj, ,];
+    items = [obj, ,];
     const obj2 = { label: null, value: "dot" };
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t.mQaro3);
@@ -30,13 +30,13 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions,

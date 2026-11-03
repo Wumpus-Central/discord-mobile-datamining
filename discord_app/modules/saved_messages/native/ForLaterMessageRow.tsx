@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" },
   flushToCardBottom: {
@@ -41,7 +41,7 @@ export function ForLaterMessageRow(arg0) {
   const setting1 = InlineEmbedMedia.getSetting();
   const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
   const setting2 = InlineAttachmentMedia.getSetting();
-  const items = [setting, setting1, setting2];
+  items = [setting, setting1, setting2];
   const items1 = [tmp.preview];
   let flushToCardBottom = null;
   const memo = setting1.useMemo(() => {

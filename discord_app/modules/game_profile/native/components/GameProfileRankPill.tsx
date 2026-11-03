@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.gameRankPill = {
@@ -32,7 +32,7 @@ export default function GameProfileRankPill(arg0) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.gameRankPill, children: null };
-  const items = [React4(TrophyIcon.TrophyIcon, { size: "xxs", color: nativeDefault.colors.BLACK })];
+  items = [React4(TrophyIcon.TrophyIcon, { size: "xxs", color: nativeDefault.colors.BLACK })];
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = util.t;
@@ -45,7 +45,7 @@ export default function GameProfileRankPill(arg0) {
   }
   const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
   items[1] = React4(Text_Text.Text, {
-    variant: "text-xs/bold",
+    variant: "text-xs/semibold",
     color: "text-overlay-dark",
     children: str.toUpperCase(),
   });

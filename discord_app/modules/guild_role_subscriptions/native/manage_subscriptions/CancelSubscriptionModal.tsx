@@ -34,7 +34,7 @@ export default function CancelSubscriptionModal(onClose) {
     };
     obj[constants.CANCEL_SUBSCRIPTION] = obj2;
     const obj4 = { screens: obj, initialStack: null };
-    const items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
+    items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
     obj4.initialStack = items;
     return obj4;
   }));

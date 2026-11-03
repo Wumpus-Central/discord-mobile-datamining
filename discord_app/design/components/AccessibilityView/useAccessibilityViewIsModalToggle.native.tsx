@@ -15,7 +15,7 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
   const nativeID = accessibilityViewIsModal.nativeID;
   noop = undefined;
   noop = noop.useRef(undefined);
-  let items = [flag, nativeID];
+  items = [flag, nativeID];
   const callback = noop.useCallback(() => {
     let tmp = arg0;
     if (arg0 === undefined) {
@@ -28,7 +28,7 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
         throw error;
       } else if (ref.current !== nativeID) {
         ref.current = nativeID;
-        const items = [nativeID];
+        items = [nativeID];
         const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
       }
     } else {

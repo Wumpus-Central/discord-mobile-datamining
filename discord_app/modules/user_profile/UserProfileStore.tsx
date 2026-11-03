@@ -149,7 +149,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
     collectibles = value5.collectibles;
   }
   if (null != collectibles) {
-    const items = [];
+    items = [];
     const collectibles1 = value5.collectibles;
     const item = collectibles1.forEach((expiresAt) => {
       if (null != expiresAt.expiresAt) {
@@ -290,7 +290,7 @@ function handleProfileFetch(arg0) {
     const mutual_guilds = userProfile.mutual_guilds;
     const item = mutual_guilds.forEach((id) => {
       id = id.id;
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null != guild) {
         obj = { guild, nick: id.nick };
         set[id] = obj;
@@ -393,7 +393,7 @@ function handleProfileFetch(arg0) {
       }
       if (found1.length > 0) {
         const push = mapped1.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found1, 0);
         HermesBuiltin.apply(items, mapped1);
       }
@@ -615,7 +615,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "cix",
+      fetchError: "assign",
     };
     value4 = obj;
   }
@@ -747,7 +747,7 @@ function handlePinBadgesToProfile(badges) {
       }
       if (found.length > 0) {
         const push = badges.push;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(found, 0);
         HermesBuiltin.apply(items, badges);
       }
@@ -777,7 +777,7 @@ function handleUserUpdate(user) {
   return tmp2;
 }
 function handleGuildStatusChange() {
-  const items = [...map1.keys()];
+  items = [...map1.keys()];
   return items.reduce((acc, item) => resetProfileFetch(item) || acc, false);
 }
 function handleGuildMemberStatusChange(user) {
@@ -893,7 +893,7 @@ class UserProfileStore extends tmp2 {
 const prototype = UserProfileStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(SortedGuildStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleLocaleStoreChange);
   const Storage = Storage2.Storage;
   Storage.remove("ProfileReadStateStore");
@@ -995,14 +995,19 @@ prototype["getWishlistSettings"] = function getWishlistSettings(id, wishlistId) 
   }
   return tmp2;
 };
-prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(id, WISHLIST) {
-  value = map1.get(id);
-  let tmp2;
+prototype["getProfileReadState"] = function getProfileReadState(ownerId) {
+  value = map1.get(ownerId);
+  let profileReadState;
   if (value != null) {
-    const profileReadState = value.profileReadState;
-    if (profileReadState != null) {
-      tmp2 = profileReadState[WISHLIST];
-    }
+    profileReadState = value.profileReadState;
+  }
+  return profileReadState;
+};
+prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(id, WISHLIST) {
+  const profileReadState = this.getProfileReadState(id);
+  let tmp2;
+  if (profileReadState != null) {
+    tmp2 = profileReadState[WISHLIST];
   }
   if (tmp2 == null) {
     tmp2 = null;
@@ -1015,7 +1020,7 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   if (null != value) {
     const obj2 = { version: UserProfileStore.LATEST_SNAPSHOT_VERSION, data: null };
     const obj3 = { userId: id, profile: value };
-    const items = [obj3];
+    items = [obj3];
     obj2.data = items;
     obj = obj2;
   } else {

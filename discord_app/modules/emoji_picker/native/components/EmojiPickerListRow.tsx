@@ -6,7 +6,7 @@ import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7302 from "../../../../../_runtime/metro/07302__.js";
+import _modDef7422 from "../../../../../_runtime/metro/07422__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
@@ -97,12 +97,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9942);
+const EmojiPickerListConstants = fn(10073);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   image: { height: IMAGE_SIZE, width: IMAGE_SIZE },
   surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" },
@@ -112,7 +112,7 @@ let obj = {
   lockContainer: null,
   lock: null,
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 28;
 if (PlatformUtils.isAndroid()) {
   num = 26;
@@ -144,7 +144,7 @@ let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
     animateEmoji,
   } = emojis);
   ({ containerWidth, row, isSectionNitroLocked } = emojis);
-  const items = [];
+  items = [];
   const result = row * rowSize;
   let sum = result;
   if (result < result + rowSize) {
@@ -188,8 +188,8 @@ let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
         dependencyMap(found, importDefault);
       }
     },
-    onLongPressEmoji(callback) {
-      const nativeEvent = callback;
+    onLongPressEmoji(arg0) {
+      const nativeEvent = arg0;
       const found = emojis.find((name) => name.name === nativeEvent.nativeEvent.emojiName);
       if (null != found) {
         closure_1_3(found);
@@ -202,7 +202,7 @@ let closure_13 = noop.memo(function EmojiPickerListRow(arg0) {
   ({ emojisDisabled, rowSize } = arg0);
   ({ emojis, category, row, onPressEmoji, onLongPressEmoji, animateEmoji, isSectionNitroLocked } = arg0);
   const tmp = closure_9();
-  const items = [];
+  items = [];
   const result = row * rowSize;
   let sum = result;
   if (result < result + rowSize) {

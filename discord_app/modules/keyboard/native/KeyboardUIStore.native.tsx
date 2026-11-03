@@ -9,7 +9,7 @@ import KeyboardTypes from "KeyboardTypes.tsx";
 import ChatInputFocused from "ChatInputFocused.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NativeSafeAreaInsetsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01639_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01641_KeyboardChatScrollView.js";
 import KeyboardStateDebuggingDefault from "../KeyboardStateDebugging.tsx";
 import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
 import 00560__ from "../../../../_runtime/metro/00560__.js";
@@ -230,7 +230,7 @@ KeyboardEvents.addListener(str, (height) => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -249,7 +249,7 @@ KeyboardEvents2.addListener(str2, () => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -265,7 +265,7 @@ const subscription = SafeAreaStore.subscribe(() => {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
@@ -300,7 +300,7 @@ export function setKeyboardType(keyboardParams) {
   require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
     let tmp = DEFAULT_APP_ENTRY_KEY;
     if (null != DEFAULT_APP_ENTRY_KEY) {
-      const items = [tmp];
+      items = [tmp];
       let APP_ENTRY_KEYS = items;
     } else {
       APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;

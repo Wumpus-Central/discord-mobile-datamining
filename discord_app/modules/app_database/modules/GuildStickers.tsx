@@ -49,7 +49,7 @@ prototype["getAsync"] = function getAsync(arg0) {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   DatabaseDaosDefault.stickersTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, arg1);

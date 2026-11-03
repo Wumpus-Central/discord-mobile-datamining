@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareCardYear.tsx
-import inlineStyles from "../../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 

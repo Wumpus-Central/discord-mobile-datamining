@@ -16,7 +16,7 @@ export function setMediaViewerSources(sources) {
   }
   if (null != initialIndex) {
     const _Set2 = Set;
-    const items = [initialIndex];
+    items = [initialIndex];
     let set = new Set(items);
   } else {
     const _Set = Set;

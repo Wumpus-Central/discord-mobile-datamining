@@ -63,7 +63,7 @@ export function getColorPresetsForEffect(arg0) {
     if (DisplayNameEffect.DisplayNameEffect.GRADIENT !== arg0) {
       if (DisplayNameEffect.DisplayNameEffect.GLOW !== arg0) {
         return items4.map((item) => {
-          const items = [item];
+          items = [item];
           return items;
         });
       }

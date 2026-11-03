@@ -46,12 +46,12 @@ export function Checkbox(onToggle) {
   obj2.onPress = function onPress() {
     return onToggle(!checked);
   };
-  const items = [React4(FormCheckbox.FormCheckbox, { checked })];
+  items = [React4(FormCheckbox.FormCheckbox, { checked })];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.labelContainer, children: null };
   const items1 = [label];
   if (required) {
-    const obj5 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
+    const obj5 = { variant: "text-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = util.intl;
     obj5["aria-label"] = intl2.string(util.t.EkokLy);
     obj5.children = [" ", "*"];

@@ -1,16 +1,19 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import spring_spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = _mod1652;
+
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
+const createStyles = fn(5141);
+const obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}",
+let closure_6 = {
+  code: "(function SearchBarBottomBorderTsx1(){let[withSpring,scrollPosition,triggerScrollHeight,springStandard]=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
@@ -21,37 +24,41 @@ export function usePinnedSearchBarBottomBorder(arg0) {
     triggerScrollHeight = 1;
   }
   const tmp = closure_5();
-  const sharedValue = triggerScrollHeight(5095).useSharedValue(0);
-  const items = [key, sharedValue];
+  const sharedValue = _mod1652.useSharedValue(0);
+  items = [key, sharedValue];
   const effect = noop.useEffect(() => {
-    const result = sharedValue.set(0);
+    const result = _undefined.set(0);
   }, items);
   const items1 = [sharedValue];
   const callback = noop.useCallback((offset) => {
-    const result = sharedValue.set(offset.offset);
+    const result = _undefined.set(offset.offset);
   }, items1);
-  let obj = triggerScrollHeight(5095);
-  const fn = function u() {
-    let num = 0;
-    if (sharedValue.get() > triggerScrollHeight) {
-      num = 1;
+  const items2 = [closure_6, spring_spring.withSpring, sharedValue, triggerScrollHeight, springPresets.springStandard];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp6, tmp7, tmp8, tmp9, tmp10] = items2;
+  class SearchBarBottomBorderTsx1 {
+    constructor() {
+      tmp = closure_0;
+      num = 0;
+      if (closure_1.get() > closure_2) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_3) };
+      return obj;
     }
-    return { opacity: spring.withSpring(num, springPresets.springStandard) };
-  };
-  const obj2 = triggerScrollHeight(5095);
-  fn.__closure = {
-    withSpring: triggerScrollHeight(5637).withSpring,
-    scrollPosition: sharedValue,
-    triggerScrollHeight,
-    springStandard: triggerScrollHeight(5638).springStandard,
-  };
-  fn.__workletHash = 5466161440826;
-  fn.__initData = __initData;
-  const obj4 = { scrollHandler: callback, bottomBorderComponent: null };
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj5 = { style: null };
-  const items2 = [tmp.border, animatedStyle];
-  obj5.style = items2;
-  obj4.bottomBorderComponent = jsx(sharedValue(5095).View, { style: null }, key);
-  return obj4;
+  }
+  const items3 = [tmp7, tmp8, tmp9, tmp10];
+  SearchBarBottomBorderTsx1.__closure = items3;
+  SearchBarBottomBorderTsx1.__workletHash = 6638827003107;
+  SearchBarBottomBorderTsx1.__initData = tmp6;
+  const obj3 = { scrollHandler: callback, bottomBorderComponent: null };
+  const animatedStyle = _mod1652.useAnimatedStyle(SearchBarBottomBorderTsx1);
+  const obj4 = { style: null };
+  const items4 = [tmp.border, animatedStyle];
+  obj4.style = items4;
+  obj3.bottomBorderComponent = jsx(_modDef1652.View, { style: null }, key);
+  return obj3;
 }

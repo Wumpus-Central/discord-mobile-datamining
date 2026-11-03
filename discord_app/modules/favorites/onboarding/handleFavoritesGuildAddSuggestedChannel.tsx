@@ -14,7 +14,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
             closure_129_0 = value;
             if (null != closure_129_0) {
               const obj8 = { channelIds: null, categoryName: null, source: "suggestions" };
-              const items = [closure_129_0];
+              items = [closure_129_0];
               obj8.channelIds = items;
               const intl = closure_130_0(closure_130_1[3]).intl;
               obj8.categoryName = intl.string(closure_130_0(closure_130_1[3]).t.OGiMXJ);
@@ -68,7 +68,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
           return obj;
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c4 = tmp;

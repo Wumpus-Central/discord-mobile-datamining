@@ -13,7 +13,7 @@ export default function useOpenDeepLinkedProduct(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const shopAnalyticsContext = analyticsLocations.shopAnalyticsContext;
   noop = undefined;
-  const items = [CollectiblesShopStore];
+  items = [CollectiblesShopStore];
   let stateFromStores;
   if (analyticsLocations.enabled) {
     stateFromStores = obj.useStateFromStores(items, () => initialProductSkuId.initialProductSkuId);

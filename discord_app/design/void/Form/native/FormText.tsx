@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_3 = createStyles.createStyles((arg0) => {
   const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
   let num = 16;
@@ -52,7 +52,7 @@ export default function FormText(size) {
   ({ style, ref } = size);
   const tmp = closure_3(str);
   const obj = { ref, style: null, children: null };
-  const items = [tmp.text, ,];
+  items = [tmp.text, ,];
   if (primary == null) {
     primary = tmp.primary;
   }

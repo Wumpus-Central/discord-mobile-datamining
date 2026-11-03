@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 
 export function useSubmittedGuildJoinRequestTotal(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const items1 = [guildId];
   return guildId(504).useStateFromStores(
     items,

@@ -35,7 +35,7 @@ export function SafeAreaPaddingView(top) {
   if (style == null) {
     style = {};
   }
-  let items = [style, , , ,];
+  items = [style, , , ,];
   let tmp9;
   if (flag) {
     const obj = { paddingTop: rect.top + tmp5 };

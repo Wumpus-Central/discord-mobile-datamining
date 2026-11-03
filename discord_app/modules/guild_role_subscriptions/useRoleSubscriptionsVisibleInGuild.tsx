@@ -15,7 +15,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     tmp = items;
   }
   [obj, obj2] = tmp;
-  const guild = obj.getGuild(id1);
+  guild = obj.getGuild(id1);
   if (null == guild) {
     return false;
   } else {
@@ -49,12 +49,12 @@ export function areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles) {
 export function useRoleSubscriptionsVisibleInGuild(id1) {
   _require = id1;
   const tmp = useHasRoleSubscriptionInGuildDefault(id1);
-  const items = [GuildStore, ImpersonateStore];
+  items = [GuildStore, ImpersonateStore];
   const items1 = [id1];
   let stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [GuildStore, ImpersonateStore];
+      items = [GuildStore, ImpersonateStore];
       return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
     },
     items1,
@@ -77,12 +77,12 @@ export function useShowRoleSubscriptionsInChannelList(id) {
   _require = id;
   const tmp2 = useHasRoleSubscriptionInGuildDefault(id);
   const tmp3 = _require;
-  let items = [GuildStore, ImpersonateStore];
+  items = [GuildStore, ImpersonateStore];
   const items1 = [id];
   let stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [GuildStore, ImpersonateStore];
+      items = [GuildStore, ImpersonateStore];
       return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
     },
     items1,
@@ -100,7 +100,7 @@ export function useShowRoleSubscriptionsInChannelList(id) {
     tmp5 = stateFromStores;
   }
   const obj2 = require("CreatorMonetizationRestrictionsHooks");
-  const guildEligibleForGuildProducts = tmp3(7432).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(7556).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

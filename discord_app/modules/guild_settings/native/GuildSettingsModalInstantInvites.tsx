@@ -2,7 +2,7 @@
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -11,7 +11,7 @@ import TableRowIcon from "../../../design/components/TableRow/native/TableRowIco
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef15498 from "../../../../_runtime/metro/15498__.js";
+import _modDef15639 from "../../../../_runtime/metro/15639__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
@@ -22,7 +22,7 @@ import GuildSettingsStore from "../GuildSettingsStore.tsx";
 
 require = fn;
 function InviteSeparator() {
-  return closure_1_12(hasOwnProperty, { style: closure_15().separator });
+  return application_id(hasOwnProperty, { style: closure_15().separator });
 }
 class InvitesDisabledRow {
   constructor(arg0) {
@@ -67,7 +67,7 @@ class InvitesDisabledRow {
 }
 function GuildSettingsModalInstantInvites(invites) {
   invites = invites.invites;
-  const guild = invites.guild;
+  guild = invites.guild;
   let flag = invites.showChannel;
   if (flag === undefined) {
     flag = false;
@@ -80,7 +80,7 @@ function GuildSettingsModalInstantInvites(invites) {
   const tmp = closure_15();
   const invitesDisabledPermission = invites(flag[18]).useInvitesDisabledPermission(guild);
   let obj = invites(flag[18]);
-  let items = [invitesDisabledLoading];
+  items = [invitesDisabledLoading];
   const stateFromStores = invites(flag[19]).useStateFromStores(items, () =>
     GuildIncidentsStore.getGuildIncident(guild.id),
   );
@@ -141,7 +141,7 @@ function GuildSettingsModalInstantInvites(invites) {
   );
   const items3 = [memo, stateFromStoresArray];
   const memo1 = stateFromStores.useMemo(() => {
-    const items = [
+    items = [
       ...memo.map((data) => ({ type: "invite", data })),
       ...stateFromStoresArray.map((data) => ({ type: "channel", data })),
     ];
@@ -166,7 +166,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13255, dependencyMap.paths),
+          asyncRequireImpl(13391, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -222,10 +222,10 @@ function GuildSettingsModalInstantInvites(invites) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
+({ GuildFeatures: closure_10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: { padding: 16 },
   contentWithoutPause: { paddingTop: nativeDefault.space.PX_24 },
@@ -242,7 +242,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 
 export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   guildId = guildId.guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   guildId(504);
   [][0] = GuildSettingsStore;
@@ -255,7 +255,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
       contentContainerStyle: guildId.contentContainerStyle,
       showChannel: true,
     };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5606).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5729).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

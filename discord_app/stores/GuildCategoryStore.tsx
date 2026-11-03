@@ -234,11 +234,11 @@ function handleFavoritesUpdate() {
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
   closure_12[closure_1_10] = obj;
 }
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
+({ ChannelTypes: closure_9, FAVORITES: closure_10 } = Constants);
 let c11 = null;
 const dependencyMap = {};
 let require = null;
@@ -248,7 +248,7 @@ class GuildCategoryStore extends Store {}
 const prototype = GuildCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildChannelStore, GuildStore, AuthenticationStore, ChannelStore, FavoriteStore);
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   this.syncWith(items, handleFavoritesUpdate);
 };
 prototype["getCategories"] = function getCategories(arg0) {

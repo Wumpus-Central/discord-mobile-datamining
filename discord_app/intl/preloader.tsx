@@ -1,5 +1,5 @@
 // discord_app/intl/preloader.tsx
-import asyncRequireImpl from "../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02123_asyncRequireImpl.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -14,7 +14,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -27,7 +27,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        const items = [
+        items = [
           asyncRequireImpl(dependencyMap[1], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[3], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[4], dependencyMap.paths),
@@ -117,7 +117,6 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[88], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[89], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[90], dependencyMap.paths),
-          asyncRequireImpl(dependencyMap[91], dependencyMap.paths),
         ];
         c0 = 3;
         const obj = { value: Promise.all(items), done: true };

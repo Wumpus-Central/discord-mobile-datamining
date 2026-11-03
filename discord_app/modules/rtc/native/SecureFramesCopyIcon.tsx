@@ -10,7 +10,7 @@ let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon
 
 export default function SecureFramesCopyIcon(chunks) {
   chunks = chunks.chunks;
-  const items = [chunks];
+  items = [chunks];
   const memo = noop.useMemo(() => chunks.join(" "), items);
   const items1 = [memo];
   const callback = noop.useCallback(() => {

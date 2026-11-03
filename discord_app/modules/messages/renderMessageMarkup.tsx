@@ -196,7 +196,7 @@ export function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, gu
     (arg0) => {
       let tmp = arg0;
       if (!Array.isArray(arg0)) {
-        const items = [arg0];
+        items = [arg0];
         tmp = items;
       }
       return tmp;
@@ -227,7 +227,7 @@ export function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
     (arg0) => {
       let tmp = arg0;
       if (!Array.isArray(arg0)) {
-        const items = [arg0];
+        items = [arg0];
         tmp = items;
       }
       return tmp;
@@ -258,7 +258,7 @@ export function renderAutomodMessageMarkupToAST(arg0, highlightWord, channelId) 
     (arg0) => {
       let tmp = arg0;
       if (!Array.isArray(arg0)) {
-        const items = [arg0];
+        items = [arg0];
         tmp = items;
       }
       return tmp;

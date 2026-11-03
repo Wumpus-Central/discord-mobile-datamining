@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["N/oRI+"]), ,];
+    items = [intl.string(util.t["N/oRI+"]), ,];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t.QVdYsK);
     const intl3 = util.intl;

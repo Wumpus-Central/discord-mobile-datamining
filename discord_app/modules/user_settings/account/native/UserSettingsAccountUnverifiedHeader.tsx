@@ -31,7 +31,7 @@ function getBannerText(currentUser) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   accountWarning: {
     backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting(
 
 export default function UserSettingsAccountUnverifiedHeader() {
   const tmp = closure_6();
-  const items = [UserStore];
+  items = [UserStore];
   const tmp4 = getBannerText(initialize.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;
   if (null != tmp4) {
@@ -79,7 +79,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     };
     const obj3 = {
       style: tmp.accountWarningText,
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       color: "text-overlay-light",
       children: tmp4.title,
     };

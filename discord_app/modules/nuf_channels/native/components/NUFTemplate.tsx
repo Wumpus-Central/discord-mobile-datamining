@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   title: { textAlign: "center", marginBottom: 8 },
@@ -24,11 +24,11 @@ export default function NUFActionSheetTemplate(arg0) {
   ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [
+  items = [
     React4(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),

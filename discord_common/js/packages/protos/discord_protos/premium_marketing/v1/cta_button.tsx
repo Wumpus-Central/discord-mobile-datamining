@@ -35,7 +35,7 @@ class CTAButton$Type extends MessageType {
       name: "button_action",
       kind: "enum",
       T() {
-        const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
+        items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
         return items;
       },
     };
@@ -184,7 +184,7 @@ let items = [
     name: "button_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
+      items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
       return items;
     },
   },

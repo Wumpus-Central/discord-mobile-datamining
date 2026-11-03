@@ -6,7 +6,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_5 = fn(13292).KEYWORDS_REGEX_PLACEHOLDER;
+let closure_5 = fn(13428).KEYWORDS_REGEX_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -47,7 +47,7 @@ export default function KeywordsActionSheet(description) {
   value = tmp7[0];
   closure_7 = tmp7[1];
   [tmp10, c8] = onSave(noop.useState(null), 2);
-  const items = [type, maxWordCount];
+  items = [type, maxWordCount];
   closure_9 = noop.useMemo(
     () =>
       _mod12.debounce(

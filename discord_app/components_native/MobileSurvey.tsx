@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef11994 from "../../_runtime/metro/11994__.js";
+import _modDef12131 from "../../_runtime/metro/12131__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -13,14 +13,14 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
 
 export default function MobileSurvey() {
   _require = closure_8();
-  const items = [SurveyStore];
+  items = [SurveyStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
@@ -36,7 +36,7 @@ export default function MobileSurvey() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -64,7 +64,7 @@ export default function MobileSurvey() {
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;
@@ -111,10 +111,10 @@ export default function MobileSurvey() {
         style: confirmIcon.confirmIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,
         size: native.Icon.Sizes.SMALL,
-        source: _modDef11994,
+        source: _modDef12131,
       });
     };
-    tmp5 = jsx(stateFromStores(6030), {
+    tmp5 = jsx(stateFromStores(6150), {
       body: null,
       confirmText: null,
       cancelText: null,
@@ -122,7 +122,7 @@ export default function MobileSurvey() {
       onCancel: null,
       renderConfirmRightIcon: null,
     });
-    const tmp8 = stateFromStores(6030);
+    const tmp8 = stateFromStores(6150);
   }
   return tmp5;
 }

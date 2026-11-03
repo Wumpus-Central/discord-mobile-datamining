@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pillContainer: {
     flexDirection: "row",
@@ -45,7 +45,7 @@ export default function IconPill(IconComponent) {
   ({ text, source, style, textStyle, accessibilityLabel } = IconComponent);
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp.pillContainer, style];
+  items = [tmp.pillContainer, style];
   obj.style = items;
   if (null != IconComponent) {
     const obj2 = { size: "xxs", style: tmp.pillIcon };

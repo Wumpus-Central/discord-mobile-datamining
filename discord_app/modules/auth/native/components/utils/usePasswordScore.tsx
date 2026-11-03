@@ -25,7 +25,7 @@ export function usePasswordScore(password) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ export function usePasswordScore(password) {
       }
     };
   }, []);
-  const items = [password];
+  items = [password];
   const effect1 = noop.useEffect(() => {
     let tmp = null != ref.current;
     if (tmp) {

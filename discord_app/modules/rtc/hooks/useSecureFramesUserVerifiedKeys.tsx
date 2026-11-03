@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUser
 
 export function useSecureFramesUserVerifiedKeys(userId) {
   _require = userId;
-  const items = [VerifiedKeyStore];
+  items = [VerifiedKeyStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const entries = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((item) => {

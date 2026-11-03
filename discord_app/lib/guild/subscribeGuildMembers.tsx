@@ -12,7 +12,7 @@ export const MAX_GUILD_MEMBER_SUBSCRIPTIONS = 50;
 export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
   closure_0 = memo;
   closure_1 = AddMembersActionSheet;
-  const items = [memo, AddMembersActionSheet];
+  items = [memo, AddMembersActionSheet];
   const effect = noop.useEffect(() => {
     let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
       let tmp = !c5;
@@ -27,8 +27,8 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7451).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7451);
+      closure_0(7575).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7575);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>
@@ -39,7 +39,7 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
 }
 export function useEnsureHydratedGuildUsers(guild_id, items1) {
   closure_0 = guild_id;
-  const items = [guild_id, items1];
+  items = [guild_id, items1];
   const memo = noop.useMemo(() => {
     if (0 === items1.length) {
       let obj = {};
@@ -71,8 +71,8 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7451).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7451);
+      closure_0(7575).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7575);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>

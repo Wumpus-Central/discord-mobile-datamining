@@ -90,7 +90,7 @@ function GhostInputUsername(defaultValue) {
 }
 function GhostInputActionSheet() {
   const obj = { children: null };
-  const items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Centered" })];
+  items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Centered" })];
   const obj2 = {
     style: { padding: 12 },
     children: timestampProducer(Sample, {
@@ -106,9 +106,7 @@ function GhostInputActionSheet() {
 }
 function GhostInputActionSheetLeftAligned() {
   const obj = { children: null };
-  const items = [
-    timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }),
-  ];
+  items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" })];
   const obj2 = {
     style: { padding: 12 },
     children: timestampProducer(Sample, {
@@ -163,7 +161,7 @@ function CustomAttachmentExample() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl },
@@ -178,7 +176,7 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_8().container, children: null };
   const obj3 = { children: null };
-  const items = [
+  items = [
     timestampProducer(TextInput.TextInput, {
       label: "Input Label",
       placeholder: "Placeholder text",
@@ -206,7 +204,7 @@ export default function UserSettingsDesignSystemTextInput() {
   obj3.children = items;
   const items1 = [
     React5(Sample, obj3),
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Sizing" }),
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Sizing" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/normal",
       children:
@@ -257,7 +255,7 @@ export default function UserSettingsDesignSystemTextInput() {
   ];
   obj4.children = items2;
   items1[3] = React5(Sample, obj4);
-  items1[4] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Attachments" });
+  items1[4] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Attachments" });
   items1[5] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -286,7 +284,7 @@ export default function UserSettingsDesignSystemTextInput() {
     children:
       "Text attachments should be kept as short as possible to preserve space for the user to see their input value while editing.",
   });
-  items1[8] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Pressable Attachments" });
+  items1[8] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Pressable Attachments" });
   items1[9] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -299,7 +297,7 @@ export default function UserSettingsDesignSystemTextInput() {
     children:
       "Note that the props do not allow for changing the styling of the pressable. Styling is instead handled by the Input itself.",
   });
-  items1[12] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Rounding" });
+  items1[12] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Rounding" });
   items1[13] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -320,7 +318,7 @@ export default function UserSettingsDesignSystemTextInput() {
   obj11.children = items4;
   obj10.children = React5(Input.Input, obj11);
   items1[14] = timestampProducer(Sample, obj10);
-  items1[15] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Error States" });
+  items1[15] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Error States" });
   items1[16] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -338,7 +336,7 @@ export default function UserSettingsDesignSystemTextInput() {
   ];
   obj13.children = items5;
   items1[17] = React5(Sample, obj13);
-  items1[18] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Clearable" });
+  items1[18] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Clearable" });
   items1[19] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -360,7 +358,7 @@ export default function UserSettingsDesignSystemTextInput() {
     children:
       "Certain input types automatically control the clearable prop. For example, SearchInput is always clearable. Most inputs will also replace any trailing attachment with the clear button when it is present.",
   });
-  items1[22] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Disableable" });
+  items1[22] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Disableable" });
   items1[23] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -377,7 +375,7 @@ export default function UserSettingsDesignSystemTextInput() {
     children:
       "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed.",
   });
-  items1[26] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Max Length" });
+  items1[26] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Max Length" });
   items1[27] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -394,7 +392,10 @@ export default function UserSettingsDesignSystemTextInput() {
     children:
       "Exceeding the maxLength will prevent the user from inputting any more text for the value until it has been shortened under the maximum length.",
   });
-  items1[30] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Ghost Inputs (Deprecated)" });
+  items1[30] = timestampProducer(Text_Text.Text, {
+    variant: "heading-lg/semibold",
+    children: "Ghost Inputs (Deprecated)",
+  });
   items1[31] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -422,7 +423,7 @@ export default function UserSettingsDesignSystemTextInput() {
     }),
   };
   items1[34] = timestampProducer(Sample, obj19);
-  items1[35] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Split Text Input" });
+  items1[35] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Split Text Input" });
   items1[36] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:
@@ -454,7 +455,7 @@ export default function UserSettingsDesignSystemTextInput() {
   ];
   obj21.children = items6;
   items1[37] = React5(Sample, obj21);
-  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Data Types" });
+  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Data Types" });
   items1[39] = timestampProducer(Text_Text.Text, {
     variant: "text-md/normal",
     children:

@@ -24,7 +24,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     panelVariant = false;
   }
   const channelId = voiceState.channelId;
-  const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
+  items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [channelId];
   const stateFromStoresObject = channelId(563).useStateFromStoresObject(
     items,
@@ -87,7 +87,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
 }
 export function useCallActivityData(channel_id) {
   _require = channel_id;
-  const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
+  items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [channel_id];
   return require("useStateFromStores").useStateFromStoresObject(
     items,

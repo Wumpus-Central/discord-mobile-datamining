@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { section: { gap: nativeDefault.space.PX_12 }, row: null, content: null, track: null, fill: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
@@ -72,7 +72,7 @@ export default function BadgeProgressSection(arg0) {
   const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["2m/g2c"]);
-  const items = [React4(Text_Text.Text, obj3)];
+  items = [React4(Text_Text.Text, obj3)];
   const obj4 = { style: tmp.row, children: null };
   let tmp9Result = null != currentArtUrl;
   if (tmp9Result) {

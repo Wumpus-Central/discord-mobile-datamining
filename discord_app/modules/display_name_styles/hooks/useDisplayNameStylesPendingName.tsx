@@ -13,7 +13,7 @@ export function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   _require = stateFromStores;
   importDefault = guildId;
   const name = UserUtilsDefault.useName(stateFromStores);
-  const items = [UserProfileSettingsStore, GuildMemberStore];
+  items = [UserProfileSettingsStore, GuildMemberStore];
   const items1 = [guildId, stateFromStores];
   let str = require("initialize").useStateFromStores(
     items,

@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -40,7 +40,7 @@ export default function GatedContent(onAgree) {
   const channelId = onAgree.channelId;
   const guildId = onAgree.guildId;
   const tmp = closure_5();
-  const items = [modalType, channelId, guildId];
+  items = [modalType, channelId, guildId];
   const effect = modalType.useEffect(() => {
     const result = AgeVerificationAnalyticsUtils.trackNsfwSpaceWarningModalViewed(modalType, channelId, guildId);
   }, items);
@@ -74,7 +74,7 @@ export default function GatedContent(onAgree) {
   const obj3 = { align: "center", children: null };
   const items3 = [
     channelId(onAgree(onDisagree[7]).Heading, {
-      variant: "heading-xxl/bold",
+      variant: "heading-xxl/semibold",
       maxFontSizeMultiplier: 2,
       style: tmp.title,
       children: title,

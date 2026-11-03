@@ -20,7 +20,7 @@ function Username(userId) {
   userId = userId.userId;
   const tmp = closure_14();
   const obj = { style: tmp.usernameRow, children: null };
-  const items = [
+  items = [
     closure_1_11(UsernameWithEffectsDefault, {
       userId,
       userName: userId.username,
@@ -36,12 +36,12 @@ function Username(userId) {
     closure_1_11(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" }),
   ];
   obj.children = items;
-  return closure_1_12(View, obj);
+  return application_id(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 },
   statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 },
@@ -59,17 +59,17 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/Y
 export default noop.memo(function YouName(username) {
   const userId = username.userId;
   const tmp = closure_14();
-  let items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11394).useCustomStatusActivity();
-  let obj2 = userId(11394);
-  let state;
+  const customStatusActivity = userId(11532).useCustomStatusActivity();
+  let obj2 = userId(11532);
+  state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10749).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10749);
+  const gameMentionsAsPlainText = userId(10879).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10879);
   const items1 = [
     PresenceStore,
     ApplicationStreamingStore,
@@ -82,7 +82,7 @@ export default noop.memo(function YouName(username) {
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
     const activities = PresenceStore.getActivities(userId);
     const found = activities.filter((type) => type.type !== userId(closure_1_2[18]).ActivityTypes.CUSTOM_STATUS);
-    const items = [ApplicationStreamingStore, RelationshipStore];
+    items = [ApplicationStreamingStore, RelationshipStore];
     const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(
       userId,
       items,
@@ -103,7 +103,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(10745), obj6);
+    let tmp9Result = closure_11(stateFromStores(10875), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -112,7 +112,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(10766), obj7);
+      tmp11Result2 = closure_11(stateFromStores(10896), obj7);
     }
     const items3 = [tmp11Result2];
     const obj8 = {
@@ -126,12 +126,12 @@ export default noop.memo(function YouName(username) {
     };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(5068).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(5068);
+      humanizeStatusResult = tmp2(5195).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(5195);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5624).Text, obj8);
+    items3[1] = closure_11(tmp2(5747).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

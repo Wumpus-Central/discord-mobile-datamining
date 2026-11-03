@@ -58,12 +58,12 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(13973).PermissionStateType;
-const NotificationPermissionConstants = fn(13974);
+const PermissionStateType = fn(14104).PermissionStateType;
+const NotificationPermissionConstants = fn(14105);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,

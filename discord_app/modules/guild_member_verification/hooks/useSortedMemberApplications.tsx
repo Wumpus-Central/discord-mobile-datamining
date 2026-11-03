@@ -12,7 +12,7 @@ export function useSortedMemberApplications(guildId) {
   const applicationStatus = guildId.applicationStatus;
   const sortOrder = guildId.sortOrder;
   let stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   const items1 = [applicationStatus, guildId];
   stateFromStores = guildId(applicationStatus[2]).useStateFromStores(
     items,
@@ -23,7 +23,7 @@ export function useSortedMemberApplications(guildId) {
   const items2 = [sortOrder, stateFromStores];
   obj2.guildJoinRequests = sortOrder.useMemo(() => {
     if (sortOrder === MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(stateFromStores, 0);
       let reversed = items.reverse();
     } else {

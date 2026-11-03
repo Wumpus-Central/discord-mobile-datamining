@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useCanDM.t
 export default function useCanDM(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_4];
+  items = [closure_4];
   closure_2 = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
   const obj = require("initialize");
   const items1 = [closure_3];

@@ -4,7 +4,7 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = {
   kind: "user",
   name: "2026-08-show-expressive-modal-subtitle-alt",
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveM
 
 export function useShouldShowExpressiveModalSubtitleAlt(age_verification_expressive_v2_modal) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt(),
   );

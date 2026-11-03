@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/model_settings/native/ConjureEffortPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -188,7 +188,7 @@ export function ConjureEffortPickerSheet(onChange) {
   ({ tiers, choices } = onChange);
   const tmp = _slicedToArray(noop.useState(onChange.initialSettings), 2);
   closure_1 = tmp[1];
-  const items = [onChange];
+  items = [onChange];
   const callback = noop.useCallback((arg0) => {
     closure_1(arg0);
     onChange(arg0);
@@ -196,7 +196,7 @@ export function ConjureEffortPickerSheet(onChange) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3868.aBPQxX);
+  obj2.title = intl.string(_modDef3995.aBPQxX);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = timestampProducer(View, {
     children: timestampProducer(ConjureEffortPicker, {

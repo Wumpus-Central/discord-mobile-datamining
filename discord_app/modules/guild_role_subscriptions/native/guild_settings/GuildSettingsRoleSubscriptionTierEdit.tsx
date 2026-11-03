@@ -37,11 +37,11 @@ function ArchiveOrDeleteTierSection() {
   const allowSelfRemoveMonetization = CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
   const obj4 = { style: tmp.actionSection, children: null };
   const obj5 = { children: null };
-  items = [closure_1_14(TableRowGroup.TableRowGroupTitle, { title: buttonText }), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: descriptionText })];
+  items = [gesture(TableRowGroup.TableRowGroupTitle, { title: buttonText }), gesture(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: descriptionText })];
   obj5.children = items;
-  const items1 = [__initData(timestampProducer, obj5), ];
+  const items1 = [closure_1_15(timestampProducer, obj5), ];
   const obj6 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
-  obj6.icon = closure_1_14(TrashIcon.TrashIcon, { size: "xs", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT });
+  obj6.icon = gesture(TrashIcon.TrashIcon, { size: "xs", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT });
   obj6.onPress = handleArchiveOrDelete;
   let tmp8 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -52,9 +52,9 @@ function ArchiveOrDeleteTierSection() {
   }
   obj6.disabled = tmp8;
   obj6.text = buttonText;
-  items1[1] = closure_1_14(components_Button_Button.Button, obj6);
+  items1[1] = gesture(components_Button_Button.Button, obj6);
   obj4.children = items1;
-  return __initData(timestampProducer, obj4);
+  return closure_1_15(timestampProducer, obj4);
 }
 function TabContent(selectedTab) {
   selectedTab = selectedTab.selectedTab;
@@ -62,17 +62,17 @@ function TabContent(selectedTab) {
   if (GuildRoleSubscriptionsTierScenes.DETAILS === selectedTab) {
     const obj2 = { style: tmp.tabContent, children: null };
     const obj3 = { bottom: true, children: null };
-    items = [closure_1_14(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), closure_1_14(ArchiveOrDeleteTierSection, {})];
+    items = [gesture(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), gesture(ArchiveOrDeleteTierSection, {})];
     obj3.children = items;
-    obj2.children = __initData(common_SafeAreaView.SafeAreaPaddingView, obj3);
-    return closure_1_14(React5, obj2);
+    obj2.children = closure_1_15(common_SafeAreaView.SafeAreaPaddingView, obj3);
+    return gesture(React5, obj2);
   } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     const obj = { style: tmp.tabContent, children: null };
-    const obj4 = { bottom: true, children: closure_1_14(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
-    obj.children = closure_1_14(common_SafeAreaView.SafeAreaPaddingView, obj4);
-    return closure_1_14(React5, obj);
+    const obj4 = { bottom: true, children: gesture(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
+    obj.children = gesture(common_SafeAreaView.SafeAreaPaddingView, obj4);
+    return gesture(React5, obj);
   } else if (GuildRoleSubscriptionsTierScenes.BENEFITS === selectedTab) {
-    return closure_1_14(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
+    return gesture(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -106,9 +106,9 @@ function DraftPublishPrompt(ref) {
           const obj6 = { children: null };
           anyErrorMessage = error.getAnyErrorMessage();
           obj6.children = anyErrorMessage;
-          tmp4 = closure_1_14(ErrorBlockDefault, obj6);
+          tmp4 = gesture(ErrorBlockDefault, obj6);
           obj5.children = tmp4;
-          let tmp15 = closure_1_14(timestampProducer, obj5);
+          let tmp15 = gesture(timestampProducer, obj5);
         } else {
           const obj7 = { message: null, ctaMessage: null, onClick: null, submitting: null, disabled: null };
           const intl = util.intl;
@@ -125,7 +125,7 @@ function DraftPublishPrompt(ref) {
           };
           obj7.submitting = submitting;
           obj7.disabled = roleSubscriptionSettingsDisabled;
-          tmp15 = closure_1_14(ActionableNoticeDefault, obj7);
+          tmp15 = gesture(ActionableNoticeDefault, obj7);
         }
       }
     }
@@ -134,13 +134,13 @@ function DraftPublishPrompt(ref) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4939).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(17196).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(5066).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(17339).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 }, tabsContainerWithDraft: { paddingBottom: 0 }, tabContent: null, publishError: null, actionSection: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -312,7 +312,7 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
               actionSheetKey: "TierTemplateSelected",
               importer: GuildRoleSubscriptionsTierTemplateSelectedActionSheetImporter
             };
-            tmp3 = closure_2_14(DismissibleActionSheet.DismissibleActionSheet, obj);
+            tmp3 = gesture(DismissibleActionSheet.DismissibleActionSheet, obj);
           }
           return tmp3;
         }

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1074).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     overflow: "hidden",
@@ -52,7 +52,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
   defaultVariantIndex = undefined;
   let currentUser;
   const tmp5 = closure_10();
-  const items = [currentUser];
+  items = [currentUser];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     stateFromStores(defaultVariantIndex[9]).canUseShopDiscounts(currentUser.getCurrentUser()),
   );

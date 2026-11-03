@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7701).DraftType;
-const EmojiIntention = fn(1386).EmojiIntention;
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const DraftType = fn(7825).DraftType;
+const EmojiIntention = fn(1388).EmojiIntention;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -27,7 +27,7 @@ export function useReplyActions(content) {
   noop = undefined;
   let sendMessage;
   let callback1;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(user.author_id));
   let str = "unknown";
   hotwheels_gaming_activity = "unknown";
@@ -78,7 +78,7 @@ export function useReplyActions(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ export function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18581, dependencyMap.paths),
+          asyncRequireImpl(18737, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

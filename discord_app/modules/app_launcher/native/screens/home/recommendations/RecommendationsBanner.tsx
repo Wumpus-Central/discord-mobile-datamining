@@ -13,15 +13,15 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11501);
-  heroMediaDimensions = heroMediaDimensions(12412).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(11638);
+  heroMediaDimensions = heroMediaDimensions(12548).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({
@@ -30,7 +30,7 @@ let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) 
     names: ["embedded_cover"],
   });
   importDefault = tmp4;
-  let items = [heroMediaDimensions, tmp4];
+  items = [heroMediaDimensions, tmp4];
   const memo = noop.useMemo(() => {
     const obj = { imageStyle: null, imageSource: null };
     const size = {
@@ -39,7 +39,7 @@ let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) 
       width: heroMediaDimensions.width,
       transform: null,
     };
-    const items = [{ translateY: (timestampProducer - heroMediaDimensions.height) / 2 }];
+    items = [{ translateY: (timestampProducer - heroMediaDimensions.height) / 2 }];
     size.transform = items;
     obj.imageStyle = size;
     let tmp2;

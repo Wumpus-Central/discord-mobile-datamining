@@ -39,7 +39,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ let closure_26 = async function _trackHeartbeat() {
   }
 };
 function isActive() {
-  const items = [];
+  items = [];
   if (tmp) {
     if (closure_22) {
       items.push("foregrounded");
@@ -149,7 +149,7 @@ function scheduleHeartbeatTracking() {
   SentryUtilsDefault.addBreadcrumb({
     message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}`,
   });
-  const items = [];
+  items = [];
   if (tmp4) {
     if (closure_22) {
       items.push("foregrounded");
@@ -261,7 +261,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -337,7 +337,7 @@ function handleAuthenticationChange() {
   scheduleHeartbeatTracking();
 }
 function handleRTCStateChange() {
-  const state = RTCConnectionStore.getState();
+  state = RTCConnectionStore.getState();
   if (closure_21 !== state) {
     closure_21 = state;
     scheduleHeartbeatTracking();
@@ -364,7 +364,7 @@ function handleAppStateUpdate(state) {
   }
 }
 function handleFluxInitialized() {
-  const state = RTCConnectionStore.getState();
+  state = RTCConnectionStore.getState();
   closure_22 = SessionForegroundUtils2.isForegrounded();
   closure_23 = SessionRouteUtils2.isActiveUserRoute();
   handleAuthenticationChange();
@@ -390,7 +390,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -546,7 +546,7 @@ let closure_39 = async function _getSession() {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);
+({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: closure_10 } = Constants);
 let closure_11 = 15 * DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
 const LAST_CLIENT_HEARTBEAT_SESSION = "LAST_CLIENT_HEARTBEAT_SESSION";
@@ -557,9 +557,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7642);
+const SessionForegroundUtils = fn(7766);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7643);
+const SessionRouteUtils = fn(7767);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

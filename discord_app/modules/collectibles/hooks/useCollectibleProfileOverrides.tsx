@@ -4,15 +4,15 @@ import useShopProductItems from "useShopProductItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const isAvatarDecorationRecord = fn(7725).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7849).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 
 export function useCollectibleProfileOverrides(selectedProduct, arg1) {
   closure_1 = arg1;
-  const items = [selectedProduct, arg1];
+  items = [selectedProduct, arg1];
   return noop.useMemo(() => {
     const productItems = useShopProductItems.getProductItems(selectedProduct);
     ({ firstAvatarDecoration, firstProfileEffect, firstProfileFrame } = productItems);

@@ -28,7 +28,7 @@ export function getSummaryFeedbackReasons() {
   obj = { value: obj.DUPLICATED, label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.wwXl5h);
-  const items = [obj, , , , ,];
+  items = [obj, , , , ,];
   const obj2 = { value: obj.TOO_GENERIC, label: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t["t+6knu"]);

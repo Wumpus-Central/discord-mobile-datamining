@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };
@@ -71,7 +71,7 @@ export function ActionSheetHeaderBar(accessibilityLabel) {
   );
   const obj3 = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   const obj4 = { style: null, children: null };
-  const items = [tmp3.header, style];
+  items = [tmp3.header, style];
   obj4.style = items;
   const obj5 = { style: null };
   const items1 = [tmp3.indicator, tabStyle];

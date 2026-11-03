@@ -72,7 +72,7 @@ obj3.description = function description() {
 };
 obj3.contents = function contents() {
   const intl = util.intl;
-  const items = [intl.string(util.t.uwLDAb)];
+  items = [intl.string(util.t.uwLDAb)];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.gqngN7);
   return items;
@@ -105,7 +105,7 @@ obj4.description = function description() {
 };
 obj4.contents = function contents() {
   const intl = util.intl;
-  const items = [intl.string(util.t["9Vhbnl"]), ,];
+  items = [intl.string(util.t["9Vhbnl"]), ,];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["0xn+w1"]);
   const intl3 = util.intl;
@@ -138,7 +138,7 @@ obj5.description = function description() {
 };
 obj5.contents = function contents() {
   const intl = util.intl;
-  const items = [intl.string(util.t.YOSxcd), , ,];
+  items = [intl.string(util.t.YOSxcd), , ,];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.q9H4Fm);
   const intl3 = util.intl;
@@ -176,7 +176,7 @@ obj6.description = function description() {
 };
 obj6.contents = function contents() {
   const intl = util.intl;
-  const items = [intl.string(util.t.Hx1Vox), , ,];
+  items = [intl.string(util.t.Hx1Vox), , ,];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t["aUZ/zD"]);
   const intl3 = util.intl;

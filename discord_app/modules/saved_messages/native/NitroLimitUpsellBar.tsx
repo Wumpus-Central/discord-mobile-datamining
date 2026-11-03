@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import _modDef10048 from "../../../../_runtime/metro/10048__.js";
+import _modDef10178 from "../../../../_runtime/metro/10178__.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -41,13 +41,13 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef10048, style: tmp.icon };
+    const obj3 = { source: _modDef10178, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }
-  const items = [tmp4Result, ,];
+  items = [tmp4Result, ,];
   const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
-  const obj5 = { variant: "text-xs/bold", color: "text-brand", children: null };
+  const obj5 = { variant: "text-xs/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.oW0eUd).toUpperCase();
   const items1 = [tmp9(Text_Text.Text, obj5), " \u00B7 ", text];

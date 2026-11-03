@@ -61,7 +61,7 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   cardWidth = cardWidth.cardWidth;
   const cardHeight = cardWidth.cardHeight;
   const listEdgeSpacing = cardWidth.listEdgeSpacing;
-  const items = [cardWidth, cardHeight];
+  items = [cardWidth, cardHeight];
   ({ listStyle, cardStride } = cardWidth);
   const callback = noop.useCallback(() => {
     const size = { width: cardWidth, height: cardHeight };
@@ -105,14 +105,14 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6781).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6901).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(16988).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5014);
+const data = Array.from({ length: fn(17131).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };
@@ -172,7 +172,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   }
   const sum = COLLECTIBLES_SHOP_CARD_WIDTH + closure_12;
   c7 = sum;
-  const items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
+  items = [COLLECTIBLES_SHOP_CARD_HEIGHT];
   const memo = flag4.useMemo(() => ({ height: COLLECTIBLES_SHOP_CARD_HEIGHT }), items);
   const items1 = [listEdgeSpacing];
   const items2 = [listEdgeSpacing];
@@ -315,7 +315,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
 }
 export function useQuestHomeOrbShopCarouselData(arg0) {
   ({ enabled, sortType } = arg0);
-  const items = [BountyStore];
+  items = [BountyStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let num = 0;
     for (const item10007 of tmp) {

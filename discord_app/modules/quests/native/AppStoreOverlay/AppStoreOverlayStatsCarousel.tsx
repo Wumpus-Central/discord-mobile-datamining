@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -69,7 +69,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   if (tmp16) {
     tmp16 = null != onRatingPress;
   }
-  const items = [tmp.statCard];
+  items = [tmp.statCard];
   if (expanded) {
     expanded = tmp.statCardExpanded;
   }
@@ -138,7 +138,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,
@@ -187,7 +187,7 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
   const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
   dependencyMap = length.useRef(0);
   length = stats.length;
-  const items = [length];
+  items = [length];
   const effect = length.useEffect(() => {
     closure_2.current = 0;
   }, items);

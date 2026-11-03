@@ -9,7 +9,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 function recomputeFromAppTokens() {
-  const items = [...map.values()];
+  items = [...map.values()];
   closure_8 = items;
   closure_9 = items.filter((application) => null == application.application.parent_id);
 }
@@ -135,7 +135,7 @@ const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, {
   OAUTH2_TOKEN_CREATE: function handleOAuth2TokenCreate(application) {
     application = application.application;
     const result = map.set(application.id, { id: application.id, application, scopes: application.scopes });
-    const items = [...map.values()];
+    items = [...map.values()];
     closure_8 = items;
     closure_9 = items.filter((application) => null == application.application.parent_id);
   },
@@ -144,7 +144,7 @@ const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, {
     if (null != value) {
       if (value.id === applicationId.id) {
         map.delete(value.application.id);
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(map.values(), 0);
         closure_8 = items;
         closure_9 = items.filter((application) => null == application.application.parent_id);

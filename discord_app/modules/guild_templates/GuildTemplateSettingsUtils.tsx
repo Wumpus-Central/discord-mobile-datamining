@@ -22,7 +22,7 @@ export function isGuildTemplateNameValid(str) {
 }
 export function useCanViewAllChannels(guildId) {
   _require = guildId;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(
     items,
@@ -38,16 +38,16 @@ export function useGuildTemplate(guildId) {
   [tmp2, importDefault] = noop.useState(null);
   const loadError = _slicedToArray(noop.useState(null), 2);
   dependencyMap = loadError[1];
-  const items = [guildId];
+  items = [guildId];
   const effect = noop.useEffect(() => {
     closure_0 = async function _fetchGuildTemplate(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7499).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7623).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new guildId(6446).APIError(closure_129_1);
+        const aPIError = new guildId(6566).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

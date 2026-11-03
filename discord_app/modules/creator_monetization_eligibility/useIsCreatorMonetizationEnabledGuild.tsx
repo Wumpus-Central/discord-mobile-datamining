@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting(
 
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;

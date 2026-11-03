@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: metroRequire } = noop);
-const OrderStatus = fn(5747).OrderStatus;
+const OrderStatus = fn(5867).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -21,7 +21,7 @@ export function useOrderSigning(order) {
   closure_6 = undefined;
   const tmp = _slicedToArray(closure_6(null), 2);
   _slicedToArray = tmp[1];
-  const items = [onError];
+  items = [onError];
   const tmp2 = closure_5((arg0) => {
     closure_4(arg0);
     if (onError != null) {
@@ -69,7 +69,7 @@ export function useOrderSigning(order) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

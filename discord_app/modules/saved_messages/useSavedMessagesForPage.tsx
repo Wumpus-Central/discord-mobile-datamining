@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/useSavedMessag
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(10192).SavedMessageSortTypes.ALL;
+    ALL = ALL(10322).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;
@@ -38,7 +38,7 @@ export default function useSavedMessagesForPage() {
     return messageBookmarks.map((saveData) => saveData.saveData);
   });
   _slicedToArray = noop.useRef(SavedMessagesStore.getIsStale());
-  let items = [ALL];
+  items = [ALL];
   const effect = noop.useEffect(() => {
     function handleChange() {
       lastChanged = SavedMessagesStore.getLastChanged();
@@ -57,10 +57,10 @@ export default function useSavedMessagesForPage() {
           }
         }
         c2((arg0) => {
-          let items = [...arg0];
+          items = [...arg0];
           const map = new Map(
             closure_2_6(lastChanged).map((saveData) => {
-              const items = [saveData.saveData.messageId, saveData];
+              items = [saveData.saveData.messageId, saveData];
               return items;
             }),
           );
@@ -105,7 +105,7 @@ export default function useSavedMessagesForPage() {
     2,
   );
   const obj = { savedMessages: null };
-  const tmp6Result = useBookmarksPaginationDefault(ALL !== ALL(10192).SavedMessageSortTypes.REMINDER);
+  const tmp6Result = useBookmarksPaginationDefault(ALL !== ALL(10322).SavedMessageSortTypes.REMINDER);
   const items1 = [SavedMessagesStore];
   obj.savedMessages = ALL(504).useStateFromStoresArray(items1, () => {
     const mapped = _undefined.map((channelId) =>

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import GuildAntiRaidTypes from "GuildAntiRaidTypes.tsx";
 import GuildAntiRaidConstants from "GuildAntiRaidConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -17,16 +17,16 @@ export const DATE_CONFIG = date;
 export function hasDetectedActivity(incidentsData) {
   let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef2042(incidentsData.dmSpamDetectedAt);
-    tmp = _modDef2042(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef2042();
-    const addResult = _modDef2042(incidentsData.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef2171(incidentsData.dmSpamDetectedAt);
+    tmp = _modDef2171(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef2171();
+    const addResult = _modDef2171(incidentsData.dmSpamDetectedAt).add(React3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = _modDef2042(incidentsData.raidDetectedAt);
-      tmp6 = _modDef2042(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef2042();
-      const addResult1 = _modDef2042(incidentsData.raidDetectedAt).add(React3, "hours");
+      const obj2 = _modDef2171(incidentsData.raidDetectedAt);
+      tmp6 = _modDef2171(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef2171();
+      const addResult1 = _modDef2171(incidentsData.raidDetectedAt).add(React3, "hours");
     }
     tmp = tmp6;
   }
@@ -35,18 +35,18 @@ export function hasDetectedActivity(incidentsData) {
 export function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    const obj = _modDef2042(raidDetectedAt.raidDetectedAt);
-    tmp = _modDef2042(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef2042();
-    const addResult = _modDef2042(raidDetectedAt.raidDetectedAt).add(React3, "hours");
+    const obj = _modDef2171(raidDetectedAt.raidDetectedAt);
+    tmp = _modDef2171(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef2171();
+    const addResult = _modDef2171(raidDetectedAt.raidDetectedAt).add(React3, "hours");
   }
   return tmp;
 }
 export function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef2042(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = _modDef2042(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef2042();
-    const addResult = _modDef2042(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef2171(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = _modDef2171(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef2171();
+    const addResult = _modDef2171(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
   }
   return tmp;
 }
@@ -54,15 +54,15 @@ export function getIncidentAlertType(guildIncident) {
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      const obj = _modDef2042(guildIncident.raidDetectedAt);
-      tmp = _modDef2042(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef2042();
-      const addResult = _modDef2042(guildIncident.raidDetectedAt).add(React3, "hours");
+      const obj = _modDef2171(guildIncident.raidDetectedAt);
+      tmp = _modDef2171(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef2171();
+      const addResult = _modDef2171(guildIncident.raidDetectedAt).add(React3, "hours");
     }
     const GuildIncidentAlertTypes = GuildAntiRaidTypes.GuildIncidentAlertTypes;
   }
 }
 export function getEnabledInterventions(pauseInvites, pauseDms) {
-  const items = [];
+  items = [];
   if (pauseInvites) {
     items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.INVITES_DISABLED);
   }
@@ -72,7 +72,7 @@ export function getEnabledInterventions(pauseInvites, pauseDms) {
   return items;
 }
 export function getDisabledInterventions(pauseInvites, pauseDms) {
-  const items = [];
+  items = [];
   if (!pauseInvites) {
     items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.INVITES_DISABLED);
   }

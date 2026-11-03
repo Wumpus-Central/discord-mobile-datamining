@@ -24,7 +24,7 @@ let closure_16 = async function _getTwitchGame() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = closure_0;
-  if (null != value[closure_0]) {
+  if (null != gesture[closure_0]) {
     return tmp26;
   }
   await makeTwitchRequest("/games", { id: tmp23 }, tmp24);
@@ -101,7 +101,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -323,7 +323,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
             return obj4;
           } else {
             _null = tmp7;
-            let items;
+            items = undefined;
             closure_129_1 = undefined;
             let id;
             let snippet;
@@ -449,7 +449,7 @@ prototype["_check"] = function _check() {
         const _clearTimeout = clearTimeout;
         clearTimeout(self._nextCheck);
       }
-      const items = [PlatformTypes.TWITCH];
+      items = [PlatformTypes.TWITCH];
       const _Date = Date;
       const timestamp = Date.now();
       if (closure_11 <= timestamp) {
@@ -521,7 +521,7 @@ prototype2["initialize"] = function initialize() {
     obj3.start();
   }
   this.waitFor(ConnectedAccountsStore, StreamerModeStore);
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   this.syncWith(items, streamerModeUpdate);
 };
 prototype2["getStream"] = function getStream() {

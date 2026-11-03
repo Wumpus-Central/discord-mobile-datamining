@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_3 = createStyles.createStyles({ text: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
@@ -17,7 +17,7 @@ export default function ActivityStatusText(variant) {
   }
   const merged = Object.assign(variant, Object.assign({ children: 0, style: 0, variant: 0 }));
   const obj = { variant: str, color: "text-muted", style: null, lineClamp: 1 };
-  const items = [closure_3().text, style];
+  items = [closure_3().text, style];
   obj.style = items;
   const merged1 = Object.assign(merged);
   obj.children = children;

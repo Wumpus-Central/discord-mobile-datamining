@@ -1,12 +1,13 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarGesture.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import shared from "../../../../design/shared.tsx";
-import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -49,7 +50,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     const node = type.node;
     const type4 = node.type;
     if (GuildsNodeType.GUILD === type4) {
-      const guild = GuildStore.getGuild(node.id);
+      guild = GuildStore.getGuild(node.id);
       let name1;
       if (guild != null) {
         name1 = guild.name;
@@ -73,8 +74,8 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
       const obj2 = { itemName: tmp39 };
       AccessibilityAnnouncer.announce(intl12.formatToPlainString(util.t["vHD/Je"], obj2));
     }
-    closure_16(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_START);
-    closure_16.flush();
+    closure_15(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_START);
+    closure_15.flush();
   } else if ("drag-move" === type) {
     let type1;
     if (global != null) {
@@ -108,7 +109,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     if (tmp7 !== tmp8Result) {
       let fKYRlM = dependencyMap;
-      closure_16(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
+      closure_15(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
       ({ dragNode, overNode, overState: overState2 } = type);
       if ("convert-before" !== overState2) {
         if ("convert-after" !== overState2) {
@@ -166,11 +167,11 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
               }
               tmp20 = name;
             }
-            const obj = { itemName: tmp20 };
+            obj = { itemName: tmp20 };
             formatToPlainStringResult1 = intl14.formatToPlainString(util.t.w8FN92, obj);
           }
           if (null != formatToPlainStringResult1) {
-            closure_17(formatToPlainStringResult1);
+            closure_16(formatToPlainStringResult1);
           }
         }
       }
@@ -211,9 +212,9 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     tmp8Result = tmp8(type.dragNode, type.overNode, type.overState);
   } else if ("drag-drop" === type) {
-    closure_16(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_END);
+    closure_15(HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_END);
+    closure_15.flush();
     closure_16.flush();
-    closure_17.flush();
     const AccessibilityAnnouncer2 = shared.AccessibilityAnnouncer;
     const intl13 = util.intl;
     AccessibilityAnnouncer2.announce(intl13.string(util.t.lMkmz7));
@@ -224,8 +225,8 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
   }
   global = tmp57;
 }
-function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
-  const state = GuildsBarDnDStore.getState();
+function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
+  state = GuildsBarDnDStore.getState();
   ({ dragRegion, scrollPosition } = state);
   let GUILDS = scrollPosition.get() + absoluteY;
   let bound = GUILDS;
@@ -235,17 +236,17 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     const _Math2 = Math;
     bound = Math.max(Math.min(GUILDS, range.max - 2), range.min + 2);
   }
-  const current = fastListRef.current;
+  const current = noop.current;
   let sectionItemFromPosition;
   if (current != null) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "dispatch", positionPercentage: false };
+    sectionItemFromPosition = { item: "disabled", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
-    const obj = { item, overPercentage: null, node: null, pointerPosition: null };
+    obj = { item, overPercentage: null, node: null, pointerPosition: null };
     const _Math3 = Math;
     obj.overPercentage = Math.floor(100 * tmp5) / 100;
     obj.node = undefined;
@@ -273,79 +274,80 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6772).GuildsNodeType;
-const GuildsBarConstants = fn(18358);
-({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
+const GuildsNodeType = fn(6892).GuildsNodeType;
+const GuildsBarConstants = fn(18503);
+({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
-let c13 = 16.666666666666668;
-let __closure = { pan: null, itemMeasurements: null, activeIndex: null };
-let ReanimatedRexport = fn(5095);
-__closure.pan = ReanimatedRexport.makeMutable(-1);
-ReanimatedRexport = fn(5095);
-__closure.itemMeasurements = ReanimatedRexport.makeMutable([]);
-ReanimatedRexport = fn(5095);
-__closure.activeIndex = ReanimatedRexport.makeMutable(-1);
-let closure_16 = debounce(fn(5260).triggerHapticFeedback, 16);
-let closure_17 = debounce((intl) => {
+let obj = { pan: null, itemMeasurements: null, activeIndex: null };
+let module_1652 = fn(1652);
+obj.pan = module_1652.makeMutable(-1);
+module_1652 = fn(1652);
+obj.itemMeasurements = module_1652.makeMutable([]);
+module_1652 = fn(1652);
+obj.activeIndex = module_1652.makeMutable(-1);
+let closure_15 = debounce(fn(5383).triggerHapticFeedback, 16);
+let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }, 500);
 let apply = fn(12);
-let closure_18 = apply.throttle((data) => {
+let closure_17 = apply.throttle((data) => {
   SentryUtilsDefault.addBreadcrumb({ category: "GuildsBarGesture", message: "handleGuildDrag started", data });
 }, 2000);
 apply = fn(12);
-let closure_19 = apply.throttle((data) => {
+let closure_18 = apply.throttle((data) => {
   SentryUtilsDefault.addBreadcrumb({ category: "GuildsBarGesture", message: "handleGestureEnd started", data });
 }, 3000);
 let global;
-const __initData = {
-  code: "function useGuildsBarGestureTsx1({timeSincePreviousFrame:timeSincePreviousFrame}){const{gestureState,pushScrollAccumulatedTime,MS_PER_FRAME_60FPS,pushScroll,scrollTo,scrollerRef,roundToNearestPixel,scrollPosition}=this.__closure;if(timeSincePreviousFrame==null||timeSincePreviousFrame<=0||gestureState.get().mode!=='drag'){return;}pushScrollAccumulatedTime.set(pushScrollAccumulatedTime.get()+timeSincePreviousFrame);if(pushScrollAccumulatedTime.get()<MS_PER_FRAME_60FPS){return;}const scrollSpeed=1000*pushScroll.get();const timeInSeconds=pushScrollAccumulatedTime.get()/1000;pushScrollAccumulatedTime.set(0);scrollTo(scrollerRef,0,Math.max(roundToNearestPixel(scrollPosition.get()+timeInSeconds*scrollSpeed),0),false);}",
+let closure_23 = {
+  code: "(function useGuildsBarGestureTsx1({timeSincePreviousFrame:timeSincePreviousFrame}){let[gestureState,pushScrollAccumulatedTime,MS_PER_FRAME_60FPS,pushScroll,scrollTo,scrollerRef,roundToNearestPixel,scrollPosition]=this.__closure;if(timeSincePreviousFrame==null||timeSincePreviousFrame<=0||gestureState.get().mode!=='drag'){return;}pushScrollAccumulatedTime.set(pushScrollAccumulatedTime.get()+timeSincePreviousFrame);if(pushScrollAccumulatedTime.get()<MS_PER_FRAME_60FPS){return;}const scrollSpeed=1000*pushScroll.get();const timeInSeconds=pushScrollAccumulatedTime.get()/1000;pushScrollAccumulatedTime.set(0);scrollTo(scrollerRef,0,Math.max(roundToNearestPixel(scrollPosition.get()+timeInSeconds*scrollSpeed),0),false);})",
+};
+let closure_24 = {
+  code: "(function useGuildsBarGestureTsx2(event,manager){let[scrollPosition,gestureState,dragRegion,scheduleOnRN,handleTouchesDown]=this.__closure;var _touch$absoluteY;const touch=event.changedTouches[0];const pointerY=((_touch$absoluteY=touch===null||touch===void 0?void 0:touch.absoluteY)!==null&&_touch$absoluteY!==void 0?_touch$absoluteY:0)+scrollPosition.get();if(touch==null||gestureState.get().mode==='cancel'||pointerY<dragRegion.get().min||pointerY>dragRegion.get().max){manager.fail();}else if(event.changedTouches.length===1){scheduleOnRN(handleTouchesDown,touch.absoluteX,touch.absoluteY);}})",
 };
 let closure_25 = {
-  code: "function useGuildsBarGestureTsx2(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==null||gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}",
+  code: "(function useGuildsBarGestureTsx3(event,manager){let[gestureState]=this.__closure;if(gestureState.get().mode==='cancel'){manager.fail();}})",
 };
 let closure_26 = {
-  code: "function useGuildsBarGestureTsx3(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}",
+  code: "(function useGuildsBarGestureTsx4({absoluteX:absoluteX,absoluteY:absoluteY}){let[gestureState,scheduleOnRN,handlePress]=this.__closure;if(gestureState.get().mode!=='cancel'){scheduleOnRN(handlePress,absoluteX,absoluteY);}})",
 };
 let closure_27 = {
-  code: "function useGuildsBarGestureTsx4({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,runOnJS,handlePress}=this.__closure;if(gestureState.get().mode!=='cancel'){runOnJS(handlePress)(absoluteX,absoluteY);}}",
+  code: "(function useGuildsBarGestureTsx5(){let[gestureState,scheduleOnRN,handleGestureEnd]=this.__closure;if(gestureState.get().mode==='cancel'){scheduleOnRN(handleGestureEnd,'cancel');}})",
 };
 let closure_28 = {
-  code: "function useGuildsBarGestureTsx5(event,manager){const{gestureState}=this.__closure;if(gestureState.get().mode==='cancel'){manager.fail();}}",
+  code: "(function useGuildsBarGestureTsx6(){let[gestureState,scheduleOnRN,handleGestureEnd]=this.__closure;if(gestureState.get().mode==null||gestureState.get().mode==='cancel'){scheduleOnRN(handleGestureEnd,'cancel');}})",
 };
 let closure_29 = {
-  code: "function useGuildsBarGestureTsx6(event,manager){const{scrollPosition,gestureState,dragRegion,runOnJS,handleTouchesDown}=this.__closure;var _touch$absoluteY;const touch=event.changedTouches[0];const pointerY=((_touch$absoluteY=touch===null||touch===void 0?void 0:touch.absoluteY)!==null&&_touch$absoluteY!==void 0?_touch$absoluteY:0)+scrollPosition.get();if(touch==null||gestureState.get().mode==='cancel'||pointerY<dragRegion.get().min||pointerY>dragRegion.get().max){manager.fail();}else if(event.changedTouches.length===1){runOnJS(handleTouchesDown)(touch.absoluteX,touch.absoluteY);}}",
+  code: "(function useGuildsBarGestureTsx7(event,manager){let[gestureState,dragDropInProgress,DRAG_GESTURE_MINIMUM_DISTANCE,scheduleOnRN,handleContextMenuDrag,handleGuildDrag]=this.__closure;const touch=event.changedTouches[0];if(gestureState.get().mode!=='pressed'||touch==null){if(gestureState.get().mode==='cancel'||touch==null){manager.fail();dragDropInProgress.set(false);}return;}const diffX=touch.absoluteX-gestureState.get().initialX;const absDiffY=Math.abs(touch.absoluteY-gestureState.get().absoluteY);if(diffX>DRAG_GESTURE_MINIMUM_DISTANCE&&diffX>absDiffY){gestureState.set({...gestureState.get(),mode:'contextmenu',absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});dragDropInProgress.set(false);manager.activate();scheduleOnRN(handleContextMenuDrag,touch.absoluteX,touch.absoluteY);}else if(absDiffY>DRAG_GESTURE_MINIMUM_DISTANCE){gestureState.set({...gestureState.get(),mode:'drag',initialX:touch.absoluteX,initialY:touch.absoluteY,absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});manager.activate();dragDropInProgress.set(true);scheduleOnRN(handleGuildDrag,touch.absoluteY);}})",
 };
 let closure_30 = {
-  code: "function useGuildsBarGestureTsx7(){const{runOnJS,handleGestureEnd}=this.__closure;runOnJS(handleGestureEnd)('cancel');}",
+  code: "(function useGuildsBarGestureTsx8({absoluteX:absoluteX,absoluteY:absoluteY}){let[gestureState,listInsets,GESTURE_ACCELERATION_RANGE,windowSize,scheduleOnRN,handleGuildDrag,handleContextMenuDrag]=this.__closure;if(gestureState.get().mode==='drag'){if(absoluteX!==gestureState.get().absoluteX||absoluteY!==gestureState.get().absoluteY){let{initialY:initialY}=gestureState.get();const minPushRange=listInsets.get().start+GESTURE_ACCELERATION_RANGE;const maxPushRange=windowSize-listInsets.get().end-GESTURE_ACCELERATION_RANGE;if(initialY<minPushRange&&absoluteY>initialY){initialY=absoluteY;}else if(initialY>maxPushRange&&absoluteY<initialY){initialY=absoluteY;}gestureState.set({...gestureState.get(),absoluteX:absoluteX,absoluteY:absoluteY,initialY:initialY});scheduleOnRN(handleGuildDrag,absoluteY);}}else if(gestureState.get().mode==='contextmenu'){scheduleOnRN(handleContextMenuDrag,absoluteX,absoluteY);}})",
 };
 let closure_31 = {
-  code: "function useGuildsBarGestureTsx8(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='drag'){runOnJS(handleGestureEnd)('drop');}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleGestureEnd)('contextmenu-open');}else{runOnJS(handleGestureEnd)('cancel');}}",
+  code: "(function useGuildsBarGestureTsx9(){let[gestureState,scheduleOnRN,handleGestureEnd]=this.__closure;if(gestureState.get().mode==='drag'){scheduleOnRN(handleGestureEnd,'drop');}else if(gestureState.get().mode==='contextmenu'){scheduleOnRN(handleGestureEnd,'contextmenu-open');}else{scheduleOnRN(handleGestureEnd,'cancel');}})",
 };
 let closure_32 = {
-  code: "function useGuildsBarGestureTsx9({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,listInsets,GESTURE_ACCELERATION_RANGE,windowSize,runOnJS,handleGuildDrag,handleContextMenuDrag}=this.__closure;if(gestureState.get().mode==='drag'){if(absoluteX!==gestureState.get().absoluteX||absoluteY!==gestureState.get().absoluteY){let{initialY:initialY}=gestureState.get();const minPushRange=listInsets.get().start+GESTURE_ACCELERATION_RANGE;const maxPushRange=windowSize-listInsets.get().end-GESTURE_ACCELERATION_RANGE;if(initialY<minPushRange&&absoluteY>initialY){initialY=absoluteY;}else if(initialY>maxPushRange&&absoluteY<initialY){initialY=absoluteY;}gestureState.set({...gestureState.get(),absoluteX:absoluteX,absoluteY:absoluteY,initialY:initialY});runOnJS(handleGuildDrag)(absoluteY);}}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleContextMenuDrag)(absoluteX,absoluteY);}}",
-};
-let closure_33 = {
-  code: "function useGuildsBarGestureTsx10(event,manager){const{gestureState,dragDropInProgress,DRAG_GESTURE_MINIMUM_DISTANCE,runOnJS,handleContextMenuDrag,handleGuildDrag}=this.__closure;const touch=event.changedTouches[0];if(gestureState.get().mode!=='pressed'||touch==null){if(gestureState.get().mode==='cancel'||touch==null){manager.fail();dragDropInProgress.set(false);}return;}const diffX=touch.absoluteX-gestureState.get().initialX;const absDiffY=Math.abs(touch.absoluteY-gestureState.get().absoluteY);if(diffX>DRAG_GESTURE_MINIMUM_DISTANCE&&diffX>absDiffY){gestureState.set({...gestureState.get(),mode:'contextmenu',absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});dragDropInProgress.set(false);manager.activate();runOnJS(handleContextMenuDrag)(touch.absoluteX,touch.absoluteY);}else if(absDiffY>DRAG_GESTURE_MINIMUM_DISTANCE){gestureState.set({...gestureState.get(),mode:'drag',initialX:touch.absoluteX,initialY:touch.absoluteY,absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});manager.activate();dragDropInProgress.set(true);runOnJS(handleGuildDrag)(touch.absoluteY);}}",
+  code: "(function useGuildsBarGestureTsx10(){let[scheduleOnRN,handleGestureEnd]=this.__closure;scheduleOnRN(handleGestureEnd,'cancel');})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarGesture.tsx");
 
 export default function useGuildsBarGesture() {
-  gesture = gesture(token[15]).useHomeDrawerState().gesture;
-  let tmp = listInsets();
-  importDefault = tmp;
-  let obj = gesture(token[15]);
-  token = gesture(token[16]).useToken(require("native").modules.mobile.GUILD_BAR_ITEM_SIZE);
-  let obj2 = gesture(token[16]);
-  const scrollerRef = gesture(token[7]).useAnimatedRef();
-  fastListRef = fastListRef.useRef(null);
-  let obj3 = gesture(token[7]);
-  const sharedValue = gesture(token[7]).useSharedValue(0);
-  let obj4 = gesture(token[7]);
-  const sharedValue1 = gesture(token[7]).useSharedValue(0);
-  let tmp7 = handleGestureEnd(
+  gesture = require("useHomeDrawerGesture").useHomeDrawerState().gesture;
+  _require = gesture;
+  let tmp3 = listInsets();
+  obj = require("useHomeDrawerGesture");
+  let tmp = _require;
+  const token = require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  let obj2 = require("useToken");
+  const scrollerRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  const fastListRef = noop.useRef(null);
+  noop = fastListRef;
+  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let tmp9 = frameCallback(
     (gestureState) => ({
       gestureState: gestureState.gestureState,
       scrollPosition: gestureState.scrollPosition,
@@ -354,15 +356,15 @@ export default function useGuildsBarGesture() {
       listInsets: gestureState.listInsets,
       dragDropInProgress: gestureState.dragDropInProgress,
     }),
-    gesture(token[18]).shallow,
+    require("../../../../../_runtime/metro/05056__.js").shallow,
   );
-  let gestureState = tmp7.gestureState;
-  let scrollPosition = tmp7.scrollPosition;
-  let dragRegion = tmp7.dragRegion;
-  const windowSize = tmp7.windowSize;
-  listInsets = tmp7.listInsets;
-  const dragDropInProgress = tmp7.dragDropInProgress;
-  const persistantKeys = handleGestureEnd((arg0) => {
+  let gestureState = tmp9.gestureState;
+  let scrollPosition = tmp9.scrollPosition;
+  let dragRegion = tmp9.dragRegion;
+  const windowSize = tmp9.windowSize;
+  listInsets = tmp9.listInsets;
+  const dragDropInProgress = tmp9.dragDropInProgress;
+  const persistantKeys = frameCallback((arg0) => {
     ({ dropSpecs, dragSpecs } = arg0);
     const set = new Set();
     if (null != dragSpecs) {
@@ -377,14 +379,14 @@ export default function useGuildsBarGesture() {
       arr = Array.from(set);
     }
     return arr;
-  }, gesture(token[18]).shallow);
-  const effect = fastListRef.useEffect(() => {
-    const current = fastListRef.current;
+  }, require("../../../../../_runtime/metro/05056__.js").shallow);
+  const effect = noop.useEffect(() => {
+    const current = _undefined5.current;
     scrollPosition = undefined;
     if (current != null) {
       scrollPosition = current.computeScrollPosition(constants.GUILDS);
     }
-    const current2 = fastListRef.current;
+    const current2 = _undefined5.current;
     let sections;
     if (current2 != null) {
       sections = current2.props.sections;
@@ -397,7 +399,7 @@ export default function useGuildsBarGesture() {
     if (num == null) {
       num = 0;
     }
-    const current3 = fastListRef.current;
+    const current3 = _undefined5.current;
     let scrollPosition1;
     if (current3 != null) {
       scrollPosition1 = current3.computeScrollPosition(diff, tmp5);
@@ -421,78 +423,62 @@ export default function useGuildsBarGesture() {
     }
     tmp7 = num2 === range.min && num3 === range.max;
   });
-  let obj5 = gesture(token[7]);
-  class W {
-    constructor(arg0) {
-      timeSincePreviousFrame = arg0.timeSincePreviousFrame;
-      if (null != timeSincePreviousFrame) {
-        num = 0;
-        if (timeSincePreviousFrame > 0) {
-          tmp = gestureState;
-          str = "drag";
-          if ("drag" === gestureState.get().mode) {
-            obj = closure_6;
-            result = closure_6.set(closure_6.get() + timeSincePreviousFrame);
-            tmp3 = c13;
-            if (closure_6.get() >= c13) {
-              tmp4 = closure_5;
-              num2 = 1000;
-              result1 = 1000 * closure_5.get();
-              result2 = obj.get() / 1000;
-              result3 = obj.set(0);
-              tmp8 = closure_0;
-              tmp9 = closure_2;
-              obj2 = closure_0(closure_2[7]);
-              tmp10 = closure_3;
-              tmp11 = globalThis;
-              _Math = Math;
-              tmp12 = closure_1;
-              tmp14 = scrollPosition;
-              tmp13 = closure_1(closure_2[19]);
-              flag = false;
-              tmp15 = obj2;
-              tmp16 = closure_3;
-              num3 = 0;
-              scrollToResult = obj2.scrollTo(
-                closure_3,
-                0,
-                Math.max(tmp13(scrollPosition.get() + result2 * result1), 0),
-                false,
-              );
-            }
+  let obj6 = require("../../../../../_runtime/metro/01652__.js");
+  items = [
+    closure_23,
+    gestureState,
+    sharedValue1,
+    16.666666666666668,
+    sharedValue,
+    require("../../../../../_runtime/metro/01652__.js").scrollTo,
+    scrollerRef,
+    roundToNearestPixelDefault,
+    scrollPosition,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items;
+  function useGuildsBarGestureTsx1(timeSincePreviousFrame) {
+    timeSincePreviousFrame = timeSincePreviousFrame.timeSincePreviousFrame;
+    if (null != timeSincePreviousFrame) {
+      if (timeSincePreviousFrame > 0) {
+        if ("drag" === _undefined.get().mode) {
+          const result = _undefined2.set(_undefined2.get() + timeSincePreviousFrame);
+          if (_undefined2.get() >= c2) {
+            const result1 = 1000 * _undefined4.get();
+            const result2 = _undefined2.get() / 1000;
+            const result3 = _undefined2.set(0);
+            const _Math = Math;
+            _undefined5(c5, 0, Math.max(_undefined7(_undefined8.get() + result2 * result1), 0), false);
           }
         }
       }
-      return;
     }
   }
-  let obj6 = gesture(token[7]);
-  W.__closure = {
-    gestureState,
-    pushScrollAccumulatedTime: sharedValue1,
-    MS_PER_FRAME_60FPS: frameCallback,
-    pushScroll: sharedValue,
-    scrollTo: gesture(token[7]).scrollTo,
-    scrollerRef,
-    roundToNearestPixel: require("roundToNearestPixel"),
-    scrollPosition,
-  };
-  W.__workletHash = 14384524602726;
-  W.__initData = __initData;
-  frameCallback = obj6.useFrameCallback(W, false);
-  let items = [sharedValue, sharedValue1, frameCallback];
-  handleGestureEnd = fastListRef.useCallback((event) => {
+  let items1 = [tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20];
+  useGuildsBarGestureTsx1.__closure = items1;
+  useGuildsBarGestureTsx1.__workletHash = 2533042180415;
+  useGuildsBarGestureTsx1.__initData = tmp12;
+  frameCallback = require("../../../../../_runtime/metro/01652__.js").useFrameCallback(useGuildsBarGestureTsx1, false);
+  let items2 = [sharedValue, sharedValue1, frameCallback];
+  state = obj4.useCallback((event) => {
     const state1 = GuildsBarDnDStore.getState();
     const dragSpecs = state1.dragSpecs;
     ({ overSpecs, gestureState, dragDropInProgress } = state1);
-    const result = sharedValue.set(0);
-    const result1 = sharedValue1.set(0);
+    const result = _undefined6.set(0);
+    const result1 = _undefined7.set(0);
     if (frameCallback.isActive) {
       frameCallback.setActive(false);
     }
     if ("cancel" === event) {
       let obj2 = { event, dragSpecs, overSpecs, gestureState: gestureState.get() };
-      closure_19(obj2);
+      callback4(obj2);
     } else {
       const obj5 = { category: "GuildsBarGesture", message: "handleGestureEnd started", data: null };
       const obj6 = { event, dragSpecs, overSpecs, gestureState: gestureState.get() };
@@ -552,7 +538,7 @@ export default function useGuildsBarGesture() {
             tmp11 = "drop-into" === overSpecs.state;
           }
           closure_5 = tmp11;
-          let state = overSpecs.state;
+          state = overSpecs.state;
           if ("self" !== state) {
             if (null != state) {
               let id = node2.id;
@@ -564,14 +550,14 @@ export default function useGuildsBarGesture() {
                   }
                   ReactBatchUpdates.batchUpdates(() => {
                     if (node.id !== id1) {
-                      const obj = dropPosition(token[21]);
+                      obj = dropPosition(node[21]);
                       const id = node.id;
                       let tmp6 = closure_5;
                       if (!tmp6) {
                         tmp6 = c4;
                       }
                       obj.moveById(id, id1, tmp6, closure_5);
-                      scrollerRef(function* () {
+                      node2(function* () {
                         yield v3(tmp11[22]).saveGuildFolders(compatibleGuildFolders.getCompatibleGuildFolders());
                         if (1 === tmp6) {
                           c3 = 0;
@@ -626,7 +612,7 @@ export default function useGuildsBarGesture() {
               tmp16 = node2.type === GuildsNodeType.FOLDER && node2.expanded && tmp10;
             }
           }
-          const state2 = GuildsBarDnDStore.getState();
+          state2 = GuildsBarDnDStore.getState();
           const obj8 = {
             dragNode: node,
             overNode: node,
@@ -658,7 +644,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "raw", overSpecs: "cix" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "flexDirection" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -667,54 +653,54 @@ export default function useGuildsBarGesture() {
       const result2 = gestureState.set(obj11);
       const result3 = dragDropInProgress.set(false);
     }
-  }, items);
-  const callback1 = fastListRef.useCallback((arg0, absoluteY) => {
-    const state = GuildsBarDnDStore.getState();
+  }, items2);
+  const callback1 = obj4.useCallback((arg0, absoluteY) => {
+    state = GuildsBarDnDStore.getState();
     ({ gestureState, dragDropInProgress } = state);
     value = gestureState.get();
     if (tmp3) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(value);
       obj.mode = "cancel";
       const result = gestureState.set(obj);
       const result1 = dragDropInProgress.set(false);
     }
   }, []);
-  let items1 = [handleGestureEnd, token];
-  const callback2 = fastListRef.useCallback((absoluteX, absoluteY) => {
-    const state = dragRegion.getState();
+  let items3 = [state, token];
+  const callback2 = obj4.useCallback((absoluteX, absoluteY) => {
+    state = dragRegion.getState();
     ({ dragSpecs, scrollPosition, gestureState, dragDropInProgress, setStateShallow } = state);
-    let tmp2 = closure_1;
-    let result2 = token;
-    closure_1(token[12]).addBreadcrumb({
+    let tmp2 = _undefined2;
+    let result2 = _undefined3;
+    _undefined2(_undefined3[12]).addBreadcrumb({
       category: "GuildsBarGesture",
       message: "handlePress started",
       data: { absoluteX, absoluteY },
     });
-    let obj = closure_1(token[12]);
+    obj = _undefined2(_undefined3[12]);
     let obj2 = { category: "GuildsBarGesture", message: "handlePress started", data: { absoluteX, absoluteY } };
-    ({ item, node } = getItemAndNodeFromTouchEvent(absoluteY, false, fastListRef));
+    ({ item, node } = getItemAndNodeFromTouchEvent(absoluteY, false, c4));
     if (null != item) {
       if (null != node) {
         const obj3 = { node, item, itemTop: null, itemSize: null };
         ({ layoutStart: obj4.itemTop, layoutSize: obj4.itemSize } = item);
-        const height = sharedValue.get("window").height;
+        const height = _undefined6.get("window").height;
         let sum = height;
         if (obj5.isAndroid()) {
-          const rect = gesture(result2[25]).getSafeAreaInsets();
+          const rect = _undefined(result2[25]).getSafeAreaInsets();
           sum = height + (rect.top + rect.bottom);
-          const tmp10Result = gesture(result2[25]);
+          const tmp10Result = _undefined(result2[25]);
         }
-        let activeIndex = callback1.activeIndex;
+        let activeIndex = state.activeIndex;
         let result = activeIndex.set(-1);
-        obj5 = gesture(result2[24]);
+        obj5 = _undefined(result2[24]);
         if (tmp10Result4.getIsScreenReaderEnabled()) {
           const obj6 = { type: "drag-start", node };
           triggerHapticsAndAnnouncementsIfNecessary(obj6);
         } else {
           const type = node.type;
           if (scrollPosition.GUILD === type) {
-            let version = sharedValue1.getGuild(node.id);
+            let version = _undefined7.getGuild(node.id);
             const obj7 = { key: node.id, title: null, items: null };
             let name;
             if (version != null) {
@@ -723,7 +709,7 @@ export default function useGuildsBarGesture() {
             obj7.title = name;
             if (null != version) {
               tmp2 = tmp2(result2[27]);
-              version = gestureState.getGuildsTree().version;
+              version = _undefined8.getGuildsTree().version;
               let items1 = tmp2(version.id, version);
             } else {
               items1 = [];
@@ -734,11 +720,11 @@ export default function useGuildsBarGesture() {
             if (tmp14.FOLDER === type) {
               const obj8 = { key: null, title: null, items: null };
               ({ id: obj14.key, name: obj14.title } = node);
-              obj8.items = gesture(result2[28]).getGuildFolderMenuItems(node.id);
+              obj8.items = _undefined(result2[28]).getGuildFolderMenuItems(node.id);
               tmp15 = obj8;
-              const tmp10Result5 = gesture(result2[28]);
+              const tmp10Result5 = _undefined(result2[28]);
             }
-            const items = tmp15.items;
+            items = tmp15.items;
             if (items.length > 0) {
               const sum1 = item.layoutStart - scrollPosition.get() + 6;
               let str2 = "below";
@@ -747,7 +733,7 @@ export default function useGuildsBarGesture() {
               }
               let diff = sum1;
               if ("below" !== str2) {
-                diff = sum - sum1 - token;
+                diff = sum - sum1 - _undefined3;
               }
               const size = {
                 key: null,
@@ -769,15 +755,15 @@ export default function useGuildsBarGesture() {
               size.key = "" + tmp20;
               size.title = tmp21;
               size.items = items;
-              size.x = 12 + token + 12;
+              size.x = 12 + _undefined3 + 12;
               size.y = diff;
               size.positionY = str2;
-              size.width = token;
-              size.height = token;
-              size.state = callback1;
+              size.width = _undefined3;
+              size.height = _undefined3;
+              size.state = state;
               size.dividerIndexes = [];
-              size.requestClose = function requestClose(ContextMenuBackdrop) {
-                if (!ContextMenuBackdrop) {
+              size.requestClose = function requestClose(c19) {
+                if (!c19) {
                   const activeIndex = obj.activeIndex;
                   obj = items[activeIndex.get(activeIndex)];
                   if (obj != null) {
@@ -790,8 +776,8 @@ export default function useGuildsBarGesture() {
                 callback("contextmenu-close");
               };
               size.onClose = function onClose() {};
-              gesture(result2[23]).showContextMenu(size);
-              const tmp10Result6 = gesture(result2[23]);
+              _undefined(result2[23]).showContextMenu(size);
+              const tmp10Result6 = _undefined(result2[23]);
             }
           }
         }
@@ -799,9 +785,9 @@ export default function useGuildsBarGesture() {
         setStateShallow(obj9);
         const obj10 = { mode: "pressed", initialY: absoluteY, initialX: absoluteX, absoluteY, absoluteX };
         const result1 = gestureState.set(obj10);
-        setStateShallow = gesture(result2[9]);
-        result2 = setStateShallow.triggerHapticFeedback(gesture(result2[9]).HapticFeedbackTypes.IMPACT_MEDIUM);
-        tmp10Result4 = gesture(result2[26]);
+        setStateShallow = _undefined(result2[9]);
+        result2 = setStateShallow.triggerHapticFeedback(_undefined(result2[9]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        tmp10Result4 = _undefined(result2[26]);
       }
     }
     const obj11 = {};
@@ -809,18 +795,18 @@ export default function useGuildsBarGesture() {
     obj11.mode = null;
     const result3 = gestureState.set(obj11);
     const result4 = dragDropInProgress.set(false);
-    const tmp5 = getItemAndNodeFromTouchEvent(absoluteY, false, fastListRef);
-  }, items1);
-  const callback3 = fastListRef.useCallback((absoluteX, absoluteY) => {
-    const result = gesture(token[23]).updateContextMenuState(absoluteX, absoluteY, callback1);
+    const tmp5 = getItemAndNodeFromTouchEvent(absoluteY, false, c4);
+  }, items3);
+  const callback3 = obj4.useCallback((arg0, arg1) => {
+    const result = _undefined(_undefined3[23]).updateContextMenuState(arg0, arg1, callback);
   }, []);
-  const items2 = [sharedValue, sharedValue1, frameCallback, tmp];
-  const callback4 = fastListRef.useCallback((absoluteY) => {
-    const state = GuildsBarDnDStore.getState();
+  let items4 = [sharedValue, sharedValue1, frameCallback, tmp3];
+  const callback4 = obj4.useCallback((absoluteY) => {
+    state = GuildsBarDnDStore.getState();
     const overSpecs = state.overSpecs;
     ({ dragSpecs: obj2, windowSize } = state);
-    ({ setStateShallow: scrollerRef, listInsets, gestureState } = state);
-    callback4({ overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() });
+    ({ setStateShallow: c3, listInsets, gestureState } = state);
+    callback3({ overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() });
     if (null != obj2) {
       value = gestureState.get();
       let tmp66 = require;
@@ -847,7 +833,7 @@ export default function useGuildsBarGesture() {
         let result = map.set(obj2.item.recyclerKey, 0);
         const result1 = map.set(overSpecs.item.recyclerKey, 2 * obj2.itemSize);
       }
-      ({ item, overPercentage, node } = getItemAndNodeFromTouchEvent(absoluteY, true, fastListRef, map));
+      ({ item, overPercentage, node } = getItemAndNodeFromTouchEvent(absoluteY, true, c4, map));
       let id;
       if (overSpecs != null) {
         id = overSpecs.node.id;
@@ -857,10 +843,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9875).ContextMenuStore;
+        const ContextMenuStore = tmp66(10006).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9875).hideContextMenu();
-          const tmp66Result = tmp66(9875);
+          tmp66(10006).hideContextMenu();
+          const tmp66Result = tmp66(10006);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -881,14 +867,14 @@ export default function useGuildsBarGesture() {
                 str2 = "";
               }
               const result2 = map.set(str2, 0);
-              const result3 = map.set(item.recyclerKey, 2 * obj2);
+              const result3 = map.set(item.recyclerKey, 2 * c1);
             }
             ({
               item: item2,
               overPercentage: overPercentage2,
               node: node2,
-            } = getItemAndNodeFromTouchEvent(absoluteY, true, fastListRef, tmp12));
-            const tmp18Result = getItemAndNodeFromTouchEvent(absoluteY, true, fastListRef, tmp12);
+            } = getItemAndNodeFromTouchEvent(absoluteY, true, c4, tmp12));
+            const tmp18Result = getItemAndNodeFromTouchEvent(absoluteY, true, c4, tmp12);
           }
         }
         const node3 = obj2.node;
@@ -901,9 +887,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7240).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7361).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7240).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7361).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";
@@ -1030,7 +1016,7 @@ export default function useGuildsBarGesture() {
           num14 = Math.max(Math.min(absoluteY - Math.max(value.initialY, diff), c12) / c12, 0);
         }
       }
-      const result4 = sharedValue.set(num14);
+      const result4 = _undefined6.set(num14);
       let isActive = 0 === num14;
       if (!isActive) {
         if (!isActive) {
@@ -1045,8 +1031,8 @@ export default function useGuildsBarGesture() {
           if (null != obj2) {
             if (obj2.node.type === scrollPosition.FOLDER) {
               if (obj2.node.expanded) {
-                const result = obj2(token[21]).toggleGuildFolderExpand(obj2.node.id);
-                const guildsTree = gestureState.getGuildsTree();
+                const result = obj2(windowSize[21]).toggleGuildFolderExpand(obj2.node.id);
+                guildsTree = guildsTree.getGuildsTree();
                 const node = guildsTree.getNode(obj2.node.id);
                 let tmp9 = node !== obj2.node;
                 if (tmp9) {
@@ -1061,40 +1047,31 @@ export default function useGuildsBarGesture() {
                   const merged = Object.assign(obj2);
                   obj2.node = node;
                 }
-                const obj = obj2(token[21]);
+                obj = obj2(windowSize[21]);
               }
             }
           }
-          scrollerRef({ overSpecs: obj4, dragSpecs: obj2, windowSize });
+          _undefined4({ overSpecs: obj4, dragSpecs: obj2, windowSize });
           const obj3 = { overSpecs: obj4, dragSpecs: obj2, windowSize };
         });
       } else {
         num14 = frameCallback;
       }
-      const result5 = sharedValue1.set(0);
+      const result5 = _undefined7.set(0);
       num14.setActive(false);
-      const tmp23 = getItemAndNodeFromTouchEvent(absoluteY, true, fastListRef, map);
+      const tmp23 = getItemAndNodeFromTouchEvent(absoluteY, true, c4, map);
     }
-    let obj = { overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() };
-  }, items2);
-  let obj7 = {
-    gestureState,
-    pushScrollAccumulatedTime: sharedValue1,
-    MS_PER_FRAME_60FPS: frameCallback,
-    pushScroll: sharedValue,
-    scrollTo: gesture(token[7]).scrollTo,
-    scrollerRef,
-    roundToNearestPixel: require("roundToNearestPixel"),
-    scrollPosition,
-  };
-  const items3 = [callback4];
-  const onFastListScrollWorklet = gesture(token[30]).useExternalScrollEventHandler({ id: "guilds" });
-  const items4 = [
+    obj = { overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() };
+  }, items4);
+  let obj7 = require("../../../../../_runtime/metro/01652__.js");
+  let items5 = [callback4];
+  const onFastListScrollWorklet = tmp(17219).useExternalScrollEventHandler({ id: "guilds" });
+  let items6 = [
     dragDropInProgress,
     dragRegion,
     gestureState,
     callback3,
-    handleGestureEnd,
+    state,
     callback4,
     callback2,
     callback1,
@@ -1104,17 +1081,20 @@ export default function useGuildsBarGesture() {
     windowSize,
     gesture,
   ];
-  const onFastListScroll = fastListRef.useCallback(() => {
-    gestureState = GuildsBarDnDStore.getState().gestureState;
+  const onFastListScroll = obj4.useCallback(() => {
+    const gestureState = GuildsBarDnDStore.getState().gestureState;
     value = gestureState.get();
     if ("drag" === value.mode) {
       callback4(value.absoluteY);
     }
-  }, items3);
-  const gesture1 = fastListRef.useMemo(() => {
+  }, items5);
+  const gesture1 = obj4.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
-    const fn = function h(changedTouches, fail) {
+    items = [closure_24, scrollPosition, c7, dragRegion, _mod1705.scheduleOnRN, callback1];
+    c3 = undefined;
+    [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items;
+    function useGuildsBarGestureTsx2(changedTouches, fail) {
       const first = changedTouches.changedTouches[0];
       let num;
       if (first != null) {
@@ -1123,158 +1103,164 @@ export default function useGuildsBarGesture() {
       if (num == null) {
         num = 0;
       }
-      const sum = num + scrollPosition.get();
+      const sum = num + _undefined.get();
       if (null != first) {
-        if ("cancel" !== gestureState.get().mode) {
-          if (sum >= dragRegion.get().min) {
-            if (sum <= dragRegion.get().max) {
+        if ("cancel" !== _undefined2.get().mode) {
+          if (sum >= _undefined3.get().min) {
+            if (sum <= _undefined3.get().max) {
               if (1 === changedTouches.changedTouches.length) {
-                gesture(token[7]).runOnJS(callback1)(first.absoluteX, first.absoluteY);
-                const obj2 = gesture(token[7]);
+                _undefined4(c4, first.absoluteX, first.absoluteY);
               }
             }
           }
         }
       }
       fail.fail();
-    };
-    __closure = {
-      scrollPosition,
-      gestureState,
-      dragRegion,
-      runOnJS: ReanimatedRexport2.runOnJS,
-      handleTouchesDown: callback1,
-    };
-    fn.__closure = __closure;
-    fn.__workletHash = 5430653816983;
-    fn.__initData = __initData5;
+    }
+    const items1 = [tmp5, tmp6, tmp7, tmp8, tmp9];
+    useGuildsBarGestureTsx2.__closure = items1;
+    useGuildsBarGestureTsx2.__workletHash = 16716177180999;
+    useGuildsBarGestureTsx2.__initData = tmp4;
     const LongPressResult = Gesture2.LongPress();
-    const fn2 = function f(arg0, fail) {
-      if ("cancel" === gestureState.get().mode) {
+    const items2 = [closure_25, c7];
+    [tmp10, tmp11] = items2;
+    function useGuildsBarGestureTsx3(arg0, fail) {
+      if ("cancel" === _undefined.get().mode) {
         fail.fail();
       }
-    };
-    fn2.__closure = { gestureState };
-    fn2.__workletHash = 8960390413776;
-    fn2.__initData = __initData4;
-    const onTouchesDownResult = Gesture2.LongPress().onTouchesDown(fn);
-    const fn3 = function c(arg0) {
+    }
+    const items3 = [tmp11];
+    useGuildsBarGestureTsx3.__closure = items3;
+    useGuildsBarGestureTsx3.__workletHash = 1106386279759;
+    useGuildsBarGestureTsx3.__initData = tmp10;
+    const onTouchesDownResult = Gesture2.LongPress().onTouchesDown(useGuildsBarGestureTsx2);
+    const items4 = [closure_26, c7, _mod1705.scheduleOnRN, callback2];
+    [tmp12, tmp13, tmp14, tmp15] = items4;
+    function useGuildsBarGestureTsx4(arg0) {
       ({ absoluteX, absoluteY } = arg0);
-      if ("cancel" !== gestureState.get().mode) {
-        gesture(token[7]).runOnJS(callback2)(absoluteX, absoluteY);
-        const obj = gesture(token[7]);
+      if ("cancel" !== _undefined.get().mode) {
+        _undefined2(c2, absoluteX, absoluteY);
       }
-    };
-    const onTouchesMoveResult = Gesture2.LongPress().onTouchesDown(fn).onTouchesMove(fn2);
-    fn3.__closure = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handlePress: callback2 };
-    fn3.__workletHash = 2121892092583;
-    fn3.__initData = __initData3;
-    let obj2 = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handlePress: callback2 };
-    const fn4 = function u() {
-      if ("cancel" === gestureState.get().mode) {
-        gesture(token[7]).runOnJS(handleGestureEnd)("cancel");
-        const obj = gesture(token[7]);
+    }
+    const items5 = [tmp13, tmp14, tmp15];
+    useGuildsBarGestureTsx4.__closure = items5;
+    useGuildsBarGestureTsx4.__workletHash = 406167137139;
+    useGuildsBarGestureTsx4.__initData = tmp12;
+    const onTouchesMoveResult = Gesture2.LongPress()
+      .onTouchesDown(useGuildsBarGestureTsx2)
+      .onTouchesMove(useGuildsBarGestureTsx3);
+    const items6 = [closure_27, c7, _mod1705.scheduleOnRN, callback];
+    [tmp17, tmp18, tmp19, tmp20] = items6;
+    function useGuildsBarGestureTsx5() {
+      if ("cancel" === _undefined.get().mode) {
+        _undefined2(c2, "cancel");
       }
-    };
-    const onStartResult = onTouchesMoveResult.onStart(fn3);
-    fn4.__closure = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    fn4.__workletHash = 2371934536573;
-    fn4.__initData = __initData2;
-    let obj3 = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    const fn5 = function l() {
-      let tmp = null != gestureState.get().mode;
+    }
+    const items7 = [tmp18, tmp19, tmp20];
+    useGuildsBarGestureTsx5.__closure = items7;
+    useGuildsBarGestureTsx5.__workletHash = 2590862377263;
+    useGuildsBarGestureTsx5.__initData = tmp17;
+    const onStartResult = Gesture2.LongPress()
+      .onTouchesDown(useGuildsBarGestureTsx2)
+      .onTouchesMove(useGuildsBarGestureTsx3)
+      .onStart(useGuildsBarGestureTsx4);
+    const items8 = [closure_28, c7, _mod1705.scheduleOnRN, callback];
+    c0 = undefined;
+    [tmp21, tmp22, tmp23, tmp24] = items8;
+    function useGuildsBarGestureTsx6() {
+      let tmp = null != _undefined.get().mode;
       if (tmp) {
-        tmp = "cancel" !== gestureState.get().mode;
+        tmp = "cancel" !== _undefined.get().mode;
       }
       if (!tmp) {
-        gesture(token[7]).runOnJS(handleGestureEnd)("cancel");
-        const obj2 = gesture(token[7]);
+        _undefined2(c2, "cancel");
       }
-    };
-    const onEndResult = onStartResult.onEnd(fn4);
-    fn5.__closure = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    fn5.__workletHash = 8240921685123;
-    fn5.__initData = __initData;
-    let obj4 = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
+    }
+    const items9 = [tmp22, tmp23, tmp24];
+    useGuildsBarGestureTsx6.__closure = items9;
+    useGuildsBarGestureTsx6.__workletHash = 14544908011091;
+    useGuildsBarGestureTsx6.__initData = tmp21;
+    const onEndResult = Gesture2.LongPress()
+      .onTouchesDown(useGuildsBarGestureTsx2)
+      .onTouchesMove(useGuildsBarGestureTsx3)
+      .onStart(useGuildsBarGestureTsx4)
+      .onEnd(useGuildsBarGestureTsx5);
     const Gesture3 = LegacyBaseButton.Gesture;
-    const onTouchesCancelledResult = onEndResult.onTouchesCancelled(fn5);
+    const onTouchesCancelledResult = Gesture2.LongPress()
+      .onTouchesDown(useGuildsBarGestureTsx2)
+      .onTouchesMove(useGuildsBarGestureTsx3)
+      .onStart(useGuildsBarGestureTsx4)
+      .onEnd(useGuildsBarGestureTsx5)
+      .onTouchesCancelled(useGuildsBarGestureTsx6);
     const PanResult = Gesture3.Pan();
-    let result = Gesture3.Pan().manualActivation(true).simultaneousWithExternalGesture(scrollerRef, gesture);
+    let result = Gesture3.Pan().manualActivation(true).simultaneousWithExternalGesture(c3, c0);
     let result1 = result.shouldCancelWhenOutside(false);
-    const fn6 = function o(arg0, activate) {
+    const items10 = [closure_29, c7, dragDropInProgress, 10, _mod1705.scheduleOnRN, callback3, callback4];
+    [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34] = items10;
+    function useGuildsBarGestureTsx7(arg0, activate) {
       const first = arg0.changedTouches[0];
-      if ("pressed" === gestureState.get().mode) {
+      if ("pressed" === _undefined.get().mode) {
         if (null != first) {
-          const diff = first.absoluteX - gestureState.get().initialX;
+          const diff = first.absoluteX - _undefined.get().initialX;
           const _Math = Math;
-          const absolute = Math.abs(first.absoluteY - gestureState.get().absoluteY);
-          if (diff > 10) {
+          const absolute = Math.abs(first.absoluteY - _undefined.get().absoluteY);
+          if (diff > c2) {
             if (diff > absolute) {
-              const obj7 = {};
-              const merged = Object.assign(gestureState.get());
-              obj7.mode = "contextmenu";
+              const obj5 = {};
+              const merged = Object.assign(_undefined.get());
+              obj5.mode = "contextmenu";
               ({ absoluteX: obj2.absoluteX, absoluteY: obj2.absoluteY } = first);
-              const result = gestureState.set(obj7);
-              const result1 = GESTURE_ACCELERATION_RANGE.set(false);
+              const result = _undefined.set(obj5);
+              const result1 = _undefined2.set(false);
               activate.activate();
-              gesture(token[7]).runOnJS(callback3)(first.absoluteX, first.absoluteY);
-              const obj3 = gesture(token[7]);
+              _undefined4(c4, first.absoluteX, first.absoluteY);
             }
           }
-          if (absolute > 10) {
-            const obj8 = {};
-            const merged1 = Object.assign(gestureState.get());
-            obj8.mode = "drag";
+          if (absolute > c2) {
+            const obj6 = {};
+            const merged1 = Object.assign(_undefined.get());
+            obj6.mode = "drag";
             ({
-              absoluteX: obj4.initialX,
-              absoluteY: obj4.initialY,
-              absoluteX: obj4.absoluteX,
-              absoluteY: obj4.absoluteY,
+              absoluteX: obj3.initialX,
+              absoluteY: obj3.initialY,
+              absoluteX: obj3.absoluteX,
+              absoluteY: obj3.absoluteY,
             } = first);
-            const result2 = gestureState.set(obj8);
+            const result2 = _undefined.set(obj6);
             activate.activate();
-            const result3 = GESTURE_ACCELERATION_RANGE.set(true);
-            gesture(token[7]).runOnJS(callback4)(first.absoluteY);
-            const obj5 = gesture(token[7]);
+            const result3 = _undefined2.set(true);
+            _undefined4(c5, first.absoluteY);
           }
         }
       }
-      let tmp3 = "cancel" !== gestureState.get().mode;
+      let tmp3 = "cancel" !== _undefined.get().mode;
       if (tmp3) {
         tmp3 = null != first;
       }
       if (!tmp3) {
         activate.fail();
-        const result4 = GESTURE_ACCELERATION_RANGE.set(false);
+        const result4 = _undefined2.set(false);
       }
-    };
+    }
+    const items11 = [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34];
+    useGuildsBarGestureTsx7.__closure = items11;
+    useGuildsBarGestureTsx7.__workletHash = 11364152475385;
+    useGuildsBarGestureTsx7.__initData = tmp28;
     const manualActivationResult = Gesture3.Pan().manualActivation(true);
-    fn6.__closure = {
-      gestureState,
-      dragDropInProgress,
-      DRAG_GESTURE_MINIMUM_DISTANCE: 10,
-      runOnJS: ReanimatedRexport2.runOnJS,
-      handleContextMenuDrag: callback3,
-      handleGuildDrag: callback4,
-    };
-    fn6.__workletHash = 15225957003871;
-    fn6.__initData = __initData9;
-    let obj5 = {
-      gestureState,
-      dragDropInProgress,
-      DRAG_GESTURE_MINIMUM_DISTANCE: 10,
-      runOnJS: ReanimatedRexport2.runOnJS,
-      handleContextMenuDrag: callback3,
-      handleGuildDrag: callback4,
-    };
-    const fn7 = function s(arg0) {
+    const items12 = [closure_30, c7, listInsets, c12, windowSize, _mod1705.scheduleOnRN, callback4, callback3];
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    [tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42] = items12;
+    function useGuildsBarGestureTsx8(arg0) {
       ({ absoluteX, absoluteY } = arg0);
-      if ("drag" === gestureState.get().mode) {
-        if (absoluteX !== gestureState.get().absoluteX) {
-          let initialY = gestureState.get().initialY;
-          const sum = listInsets.get().start + dragDropInProgress;
+      if ("drag" === _undefined.get().mode) {
+        if (absoluteX !== _undefined.get().absoluteX) {
+          let initialY = _undefined.get().initialY;
+          const sum = _undefined2.get().start + c2;
           let tmp6 = initialY < sum;
-          const diff = windowSize - listInsets.get().end - dragDropInProgress;
+          const diff = c3 - _undefined2.get().end - c2;
           if (tmp6) {
             tmp6 = absoluteY > initialY;
           }
@@ -1286,67 +1272,60 @@ export default function useGuildsBarGesture() {
             initialY = absoluteY;
           }
           const obj2 = {};
-          const merged = Object.assign(gestureState.get());
+          const merged = Object.assign(_undefined.get());
           obj2.absoluteX = absoluteX;
           obj2.absoluteY = absoluteY;
           obj2.initialY = initialY;
-          const result = gestureState.set(obj2);
-          gesture(token[7]).runOnJS(callback4)(absoluteY);
-          const obj3 = gesture(token[7]);
+          const result = _undefined.set(obj2);
+          _undefined5(c5, absoluteY);
         }
-      } else if ("contextmenu" === gestureState.get().mode) {
-        gesture(token[7]).runOnJS(callback3)(absoluteX, absoluteY);
-        const obj4 = gesture(token[7]);
+      } else if ("contextmenu" === _undefined.get().mode) {
+        _undefined5(c6, absoluteX, absoluteY);
       }
-    };
-    const onTouchesMoveResult1 = result1.onTouchesMove(fn6);
-    fn7.__closure = {
-      gestureState,
-      listInsets,
-      GESTURE_ACCELERATION_RANGE,
-      windowSize,
-      runOnJS: ReanimatedRexport2.runOnJS,
-      handleGuildDrag: callback4,
-      handleContextMenuDrag: callback3,
-    };
-    fn7.__workletHash = 14488930469604;
-    fn7.__initData = __initData8;
-    const obj6 = {
-      gestureState,
-      listInsets,
-      GESTURE_ACCELERATION_RANGE,
-      windowSize,
-      runOnJS: ReanimatedRexport2.runOnJS,
-      handleGuildDrag: callback4,
-      handleContextMenuDrag: callback3,
-    };
-    const fn8 = function n() {
-      if ("drag" === gestureState.get().mode) {
-        gesture(token[7]).runOnJS(handleGestureEnd)("drop");
-        const obj4 = gesture(token[7]);
-      } else if ("contextmenu" === gestureState.get().mode) {
-        gesture(token[7]).runOnJS(handleGestureEnd)("contextmenu-open");
-        const obj3 = gesture(token[7]);
+    }
+    const items13 = [tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42];
+    useGuildsBarGestureTsx8.__closure = items13;
+    useGuildsBarGestureTsx8.__workletHash = 17309616979285;
+    useGuildsBarGestureTsx8.__initData = tmp35;
+    const onTouchesMoveResult1 = result1.onTouchesMove(useGuildsBarGestureTsx7);
+    const items14 = [closure_31, c7, _mod1705.scheduleOnRN, callback];
+    c2 = undefined;
+    [tmp43, tmp44, tmp45, tmp46] = items14;
+    function useGuildsBarGestureTsx9() {
+      if ("drag" === _undefined.get().mode) {
+        _undefined2(c2, "drop");
+      } else if ("contextmenu" === _undefined.get().mode) {
+        _undefined2(c2, "contextmenu-open");
       } else {
-        gesture(token[7]).runOnJS(handleGestureEnd)("cancel");
-        const obj2 = gesture(token[7]);
+        _undefined2(c2, "cancel");
       }
-    };
-    const onUpdateResult = onTouchesMoveResult1.onUpdate(fn7);
-    fn8.__closure = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    fn8.__workletHash = 9863070264039;
-    fn8.__initData = __initData7;
-    let obj7 = { gestureState, runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    const fn9 = function t() {
-      gesture(token[7]).runOnJS(handleGestureEnd)("cancel");
-    };
-    const onEndResult1 = onUpdateResult.onEnd(fn8);
-    fn9.__closure = { runOnJS: ReanimatedRexport2.runOnJS, handleGestureEnd };
-    fn9.__workletHash = 9715999020978;
-    fn9.__initData = __initData6;
-    return Gesture.Simultaneous(onTouchesCancelledResult, onEndResult1.onTouchesCancelled(fn9));
-  }, items4);
-  const effect1 = fastListRef.useEffect(
+    }
+    const items15 = [tmp44, tmp45, tmp46];
+    useGuildsBarGestureTsx9.__closure = items15;
+    useGuildsBarGestureTsx9.__workletHash = 16673204581970;
+    useGuildsBarGestureTsx9.__initData = tmp43;
+    const onUpdateResult = result1.onTouchesMove(useGuildsBarGestureTsx7).onUpdate(useGuildsBarGestureTsx8);
+    const items16 = [closure_32, _mod1705.scheduleOnRN, callback];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp47, tmp48, tmp49] = items16;
+    function useGuildsBarGestureTsx10() {
+      _undefined(c1, "cancel");
+    }
+    const items17 = [tmp48, tmp49];
+    useGuildsBarGestureTsx10.__closure = items17;
+    useGuildsBarGestureTsx10.__workletHash = 6608047538864;
+    useGuildsBarGestureTsx10.__initData = tmp47;
+    return Gesture.Simultaneous(
+      onTouchesCancelledResult,
+      result1
+        .onTouchesMove(useGuildsBarGestureTsx7)
+        .onUpdate(useGuildsBarGestureTsx8)
+        .onEnd(useGuildsBarGestureTsx9)
+        .onTouchesCancelled(useGuildsBarGestureTsx10),
+    );
+  }, items6);
+  const effect1 = obj4.useEffect(
     () =>
       GuildsBarDnDStore.subscribe((dragSpecs) => {
         if (null == dragSpecs.dragSpecs) {

@@ -10,10 +10,10 @@ const result = size.fileFinishedImporting(
 
 export function useTrackAppLauncherHomeItemImpression() {
   trackAppLauncherItemImpressionOnFirstView =
-    trackAppLauncherItemImpressionOnFirstView(12430).useTrackAppLauncherItemImpressionOnFirstView()
+    trackAppLauncherItemImpressionOnFirstView(12566).useTrackAppLauncherItemImpressionOnFirstView()
       .trackAppLauncherItemImpressionOnFirstView;
   let obj2 = { trackAppLauncherHomeItemImpression: null };
-  const items = [trackAppLauncherItemImpressionOnFirstView];
+  items = [trackAppLauncherItemImpressionOnFirstView];
   obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {

@@ -11,12 +11,12 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 
 export default function useTruncatedGradientColors() {
   const tmp = closure_4();
-  token = token(5596).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  token = token(5719).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
-  let items = [token];
+  items = [token];
   obj2.gradientColors = useMemo(() => {
     const obj = _modDef671(token);
-    const items = [_modDef671(token).alpha(0).hex()];
+    items = [_modDef671(token).alpha(0).hex()];
     const alphaResult = _modDef671(token).alpha(0);
     const obj3 = _modDef671(token);
     items[1] = _modDef671(token).alpha(0.72).hex();

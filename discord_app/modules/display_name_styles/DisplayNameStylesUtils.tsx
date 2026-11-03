@@ -9,7 +9,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1401);
+const DisplayNameStylesConstants = fn(1403);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
@@ -17,10 +17,10 @@ const DisplayNameStylesConstants = fn(1401);
   HEXAGON_CAMPAIGN_FONTS: closure_7,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1402).DisplayNameEffect.NEON,
-  fn(1402).DisplayNameEffect.TOON,
-  fn(1402).DisplayNameEffect.POP,
-  fn(1402).DisplayNameEffect.GUMMY,
+  fn(1404).DisplayNameEffect.NEON,
+  fn(1404).DisplayNameEffect.TOON,
+  fn(1404).DisplayNameEffect.POP,
+  fn(1404).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [
@@ -132,7 +132,7 @@ export function buildGummyColors(color) {
   if (!Number.isNaN(first)) {
     num = first;
   }
-  const items = [num, tmp3[1], tmp3[2]];
+  items = [num, tmp3[1], tmp3[2]];
   _require = _slicedToArray(items, 1)[0];
   return items1.map((item) => {
     ({ hueShift, saturation, lightness } = item);
@@ -152,7 +152,7 @@ export function rebuildGummySourceColor(color) {
     if (!Number.isNaN(first1)) {
       num = first1;
     }
-    const items = [num, tmp15[1], tmp15[2]];
+    items = [num, tmp15[1], tmp15[2]];
     const result = (_slicedToArray(items, 1)[0] - items1[0].hueShift) % 360;
     const tmp12Result = tmp12(utils_ColorUtils.int2hex(first));
     const tmp10Result = _modDef671;
@@ -180,7 +180,7 @@ export function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectO
   }
   const arr3 = timestampProducer(tmp);
   const obj = { fontId: arr[Math.floor(Math, Math.random(Math) * arr.length)], effectId: tmp, colors: null };
-  const items = [...arr3[Math.floor(Math, Math.random(Math) * arr3.length)]];
+  items = [...arr3[Math.floor(Math, Math.random(Math) * arr3.length)]];
   obj.colors = items;
   return obj;
 }

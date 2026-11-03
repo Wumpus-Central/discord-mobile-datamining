@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import VirtualCurrencyStore from "../virtual_currency/stores/VirtualCurrencyStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const orbs_arcade_game_state = tmp(17025);
+const orbs_arcade_game_state = tmp(17168);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;
@@ -126,7 +126,7 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
       const values = Object.values(gameStateByGameId);
       map = new Map(
         values.map((gameId) => {
-          const items = [gameId.gameId, gameId];
+          items = [gameId.gameId, gameId];
           return items;
         }),
       );

@@ -10,19 +10,19 @@ import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    const items = [ThemeStore];
+    items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useValue: function useSyncThemeAcrossClientsValue() {
-    const items = [SelectivelySyncedUserSettingsStore];
+    items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(
       items,
       () => false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance"),

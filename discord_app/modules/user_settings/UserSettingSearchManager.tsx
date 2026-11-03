@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-import fuzzysearchDefault from "../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/07019_fuzzysearch.js";
 import StringMatchUtils from "../search/StringMatchUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,7 +16,7 @@ class SettingSearchManager {
     obj.preprocessed = [];
     item = global.forEach((item) => {
       [tmp, arr] = item;
-      const items = [];
+      items = [];
       const items1 = [];
       const set = new Set();
       item = arr.forEach((toLocaleLowerCase) => {
@@ -55,7 +55,7 @@ prototype["getMatchingSettings"] = function getMatchingSettings(arg0) {
   if (null != value) {
     return value;
   } else {
-    const items = [];
+    items = [];
     const terms = self.terms;
     const item = terms.forEach((item) => {
       [tmp, tmp2] = item;
@@ -87,7 +87,7 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
     if (null != value) {
       return value;
     } else {
-      const items = [];
+      items = [];
       const preprocessed = self.preprocessed;
       let item = preprocessed.forEach((item) => {
         [tmp] = item;

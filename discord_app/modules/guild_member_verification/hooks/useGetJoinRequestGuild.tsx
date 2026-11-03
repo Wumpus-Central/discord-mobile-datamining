@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export default function useGetGuildJoinRequest(arg0) {
   _require = arg0;
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
 import SearchEmpty from "../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   emptyStateContainer: { padding: 0, flex: 1 },
   emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/emoji_picker/native/component
 export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
-  const items = [insetBottom, insetTop];
+  items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom, marginTop: insetTop, flex: 1 }), items);
   const tmp = closure_5();
   const searchEmptySource = SearchEmpty.useSearchEmptySource();

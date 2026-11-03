@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnec
 
 export function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   _require = stateFromStores4;
-  const items = [StreamRTCConnectionStore, AuthenticationStore];
+  items = [StreamRTCConnectionStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
@@ -32,7 +32,7 @@ export function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   });
 }
 export function useIsCallRTCConnectionEmpty() {
-  const items = [RTCConnectionStore, AuthenticationStore];
+  items = [RTCConnectionStore, AuthenticationStore];
   return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;

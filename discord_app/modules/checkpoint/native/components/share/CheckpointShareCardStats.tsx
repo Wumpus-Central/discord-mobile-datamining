@@ -30,7 +30,7 @@ function StatImage(arg0) {
     const obj = { source: null, style: null };
     const obj3 = { uri };
     obj.source = obj3;
-    const items = [tmp.statImage];
+    items = [tmp.statImage];
     const size1 = { width: size, height: size };
     items[1] = size1;
     obj.style = items;
@@ -45,7 +45,7 @@ function StatRow(stat) {
   let tmp5 = null;
   if (null != stat) {
     const obj = { style: null, children: null };
-    const items = [tmp.statRow, rowStyle];
+    items = [tmp.statRow, rowStyle];
     const obj2 = { backgroundColor: tmp4 };
     items[2] = obj2;
     obj.style = items;
@@ -66,7 +66,7 @@ function StatRow(stat) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   statRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 },
   statText: null,
@@ -130,7 +130,7 @@ export default function CheckpointShareCardStats(arg0) {
     let tmp14 = hasOwnProperty;
   } else {
     const obj6 = { style: null, children: null };
-    const items = [, ,];
+    items = [, ,];
     ({ statImage: arr3[0], guildAcronym: arr3[1] } = tmp);
     const size = { width: iconSize, height: iconSize };
     items[2] = size;

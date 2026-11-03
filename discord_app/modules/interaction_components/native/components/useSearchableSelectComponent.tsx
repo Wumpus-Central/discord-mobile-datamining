@@ -28,7 +28,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
       () =>
         new Map(
           closure_4.map((value) => {
-            const items = [value.value, value];
+            items = [value.value, value];
             return items;
           }),
         ),
@@ -37,7 +37,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   );
   const first1 = tmp3[0];
   closure_6 = tmp3[1];
-  let items = [first, queryOptions];
+  items = [first, queryOptions];
   closure_7 = selectActionComponent.maxValues > 1;
   const obj2 = {
     options: noop.useMemo(() => queryOptions(first), items),
@@ -68,7 +68,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
         if (hasItem) {
           let _Map1 = new _Map();
         } else {
-          const items = [value.value, value];
+          items = [value.value, value];
           const items1 = [items];
           _Map1 = new _Map(items1);
         }
@@ -82,7 +82,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
     },
     submitSelection() {
       const obj = { type: selectActionComponent.type, selectedOptions: null };
-      const items = [...first1.values()];
+      items = [...first1.values()];
       obj.selectedOptions = items;
       onSubmit(obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();

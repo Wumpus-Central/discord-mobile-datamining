@@ -18,7 +18,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 16 },
   detailsAction: { marginBottom: 16 },
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = closure_8();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   let stateFromStores = initialize.useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
@@ -82,7 +82,7 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     return React5(AppealIngestionModal.AppealIngestionModalScreen, obj6);
   } else {
     const obj8 = {
-      variant: "heading-md/normal",
+      variant: "heading-md/medium",
       color: "text-link",
       style: tmp.detailsAction,
       onPress() {
@@ -94,10 +94,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(572);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5258).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5258).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
           },
         );

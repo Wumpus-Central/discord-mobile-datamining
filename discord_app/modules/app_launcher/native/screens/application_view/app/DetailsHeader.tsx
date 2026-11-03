@@ -1,19 +1,21 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1705 from "../../../../../../../_runtime/metro/01705__.js";
+import timing_timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import BioMarkupUtils from "../../../../../markup/BioMarkupUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let colors = ["black", "transparent"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   animatedViewContainer: { overflow: "hidden" },
   container: { position: "relative", width: "100%" },
@@ -37,9 +39,9 @@ obj.partnerLabelWrapper = {
   borderRadius: nativeDefault.radii.lg,
 };
 let closure_12 = createStyles.createStyles(obj);
-let __initData = { code: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
+let closure_13 = { code: "(function DetailsHeaderTsx1(){let[height]=this.__closure;return{height:height.get()};})" };
 let closure_14 = {
-  code: "function DetailsHeaderTsx2(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}",
+  code: "(function DetailsHeaderTsx2(){let[scheduleOnRN,setShouldLineClamp]=this.__closure;scheduleOnRN(setShouldLineClamp,true);})",
 };
 let obj4 = {
   justifyContent: "center",
@@ -53,23 +55,25 @@ let result = size.fileFinishedImporting("modules/app_launcher/native/screens/app
 
 export default noop.memo(function DetailsHeader(viewContainerStyle) {
   ({ application, mainContainerStyle, hideName } = viewContainerStyle);
+  _require = undefined;
   let first1;
   noop = undefined;
-  let sharedValue;
+  let str;
   let num2;
   closure_9 = undefined;
   let num3;
   colors = undefined;
   let ref;
-  __initData = undefined;
+  let ref2;
   c14 = undefined;
   let first2;
   closure_16 = undefined;
   let isScreenLandscape;
   closure_18 = undefined;
   let tmp = ref();
-  let obj = sharedValue(9761);
+  let obj = require("AppLauncherUtils");
   ref = noop.useRef(null);
+  _require = ref;
   const tmp7 = first1(noop.useState(false), 2);
   const first = tmp7[0];
   dependencyMap = tmp7[1];
@@ -77,24 +81,30 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   first1 = tmp9[0];
   noop = tmp9[1];
   closure_5 = noop.useRef(true);
-  sharedValue = undefined;
-  const isPartnerApplicationResult = sharedValue(9761).isPartnerApplication(application);
-  sharedValue = sharedValue(5095).useSharedValue(null);
-  let obj3 = sharedValue(5095);
-  let fn = function t() {
-    return { height: sharedValue.get() };
-  };
-  fn.__closure = { height: sharedValue };
-  fn.__workletHash = 23826674246;
-  fn.__initData = __initData;
-  const animatedStyle = sharedValue(5095).useAnimatedStyle(fn);
-  const obj4 = sharedValue(5095);
-  const sectionName = sharedValue(9761).getSectionName(application);
-  const obj5 = sharedValue(9761);
-  const str = sharedValue(9761).getSectionDescription(application);
-  let tmp28Result5 = null != str;
-  if (tmp28Result5) {
-    tmp28Result5 = str.trim().length > 0;
+  const isPartnerApplicationResult = require("AppLauncherUtils").isPartnerApplication(application);
+  const sharedValue = require("../../../../../../../_runtime/metro/01652__.js").useSharedValue(null);
+  const obj3 = require("../../../../../../../_runtime/metro/01652__.js");
+  items = [ref2, sharedValue];
+  _require = undefined;
+  [tmp12, tmp13] = items;
+  class DetailsHeaderTsx1 {
+    constructor() {
+      obj = { height: closure_0.get() };
+      return obj;
+    }
+  }
+  let items1 = [tmp13];
+  DetailsHeaderTsx1.__closure = items1;
+  DetailsHeaderTsx1.__workletHash = 9372666213791;
+  DetailsHeaderTsx1.__initData = tmp12;
+  const animatedStyle = require("../../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(DetailsHeaderTsx1);
+  const obj4 = require("../../../../../../../_runtime/metro/01652__.js");
+  const sectionName = require("AppLauncherUtils").getSectionName(application);
+  const tmp2Result = require("AppLauncherUtils");
+  str = require("AppLauncherUtils").getSectionDescription(application);
+  let tmp30Result5 = null != str;
+  if (tmp30Result5) {
+    tmp30Result5 = str.trim().length > 0;
   }
   const tmp6Result = first1(noop.useState(null), 2);
   num2 = tmp6Result[0];
@@ -103,41 +113,41 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   num3 = tmp6Result4[0];
   colors = tmp6Result4[1];
   ref = obj2.useRef(0);
-  __initData = obj2.useRef(0);
-  const obj6 = sharedValue(9761);
-  [tmp18, c14] = first1(noop.useState(false), 2);
+  ref2 = obj2.useRef(0);
+  const tmp2Result3 = require("AppLauncherUtils");
+  [tmp20, c14] = first1(noop.useState(false), 2);
   const tmp6Result6 = first1(noop.useState(false), 2);
   first2 = tmp6Result6[0];
   closure_16 = tmp6Result6[1];
-  const items = [str];
+  const items2 = [str];
   const memo = obj2.useMemo(() => {
     let result = null;
     if (null != str) {
       result = BioMarkupUtils.parseBioReactWithCachedAST(tmp);
     }
     return result;
-  }, items);
+  }, items2);
   const tmp6Result5 = first1(noop.useState(false), 2);
-  isScreenLandscape = sharedValue(8773).useIsScreenLandscape();
-  const tmp24 = first(6732)(isScreenLandscape);
-  closure_18 = tmp24;
-  const items1 = [isScreenLandscape, tmp24];
+  isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
+  const tmp26 = first(6852)(isScreenLandscape);
+  closure_18 = tmp26;
+  const items3 = [isScreenLandscape, tmp26];
   const effect = obj2.useEffect(() => {
     if (isScreenLandscape !== closure_18) {
       closure_16(false);
       closure_13.current = 0;
       closure_12.current = 0;
     }
-  }, items1);
-  let tmp27 = first;
-  const tmp2Result = sharedValue(8773);
+  }, items3);
+  let tmp29 = first;
+  const tmp2Result4 = require("useIsScreenLandscape");
   if (first) {
-    tmp27 = !first1;
+    tmp29 = !first1;
   }
-  const obj7 = { style: null, children: null };
-  const items2 = [tmp.animatedViewContainer, animatedStyle, viewContainerStyle.viewContainerStyle];
-  obj7.style = items2;
-  const obj8 = {
+  const obj5 = { style: null, children: null };
+  const items4 = [tmp.animatedViewContainer, animatedStyle, viewContainerStyle.viewContainerStyle];
+  obj5.style = items4;
+  const obj6 = {
     style: null,
     onLayout: function handleCollapsedContainerLayout(nativeEvent) {
       if (!first2) {
@@ -151,60 +161,68 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     },
     children: null,
   };
-  const items3 = [tmp.container, mainContainerStyle];
-  obj8.style = items3;
-  const obj9 = { style: tmp.nameContainer, children: null };
-  let tmp30Result = !hideName;
+  const items5 = [tmp.container, mainContainerStyle];
+  obj6.style = items5;
+  const obj7 = { style: tmp.nameContainer, children: null };
+  let tmp32Result = !hideName;
   if (!hideName) {
-    const obj10 = {
+    const obj8 = {
       style: tmp.nameText,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "text-default",
       lineClamp: 1,
       children: sectionName,
     };
-    tmp30Result = tmp30(tmp2(5624).Heading, obj10);
+    tmp32Result = tmp32(tmp2(5747).Heading, obj8);
   }
-  const items4 = [tmp30Result];
-  let tmp30Result5 = null;
+  const items6 = [tmp32Result];
+  let tmp32Result5 = null;
   if (isPartnerApplicationResult) {
-    const obj11 = { style: tmp.partnerLabelWrapper, children: null };
-    const obj12 = { variant: "text-xs/medium", color: "text-default", children: null };
+    const obj9 = { style: tmp.partnerLabelWrapper, children: null };
+    const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl = tmp2(1113).intl;
-    obj12.children = intl.string(tmp2(1113).t.LO4f0P);
-    obj11.children = tmp30(tmp2(5624).Text, obj12);
-    tmp30Result5 = tmp30(tmp31, obj11);
+    obj10.children = intl.string(tmp2(1113).t.LO4f0P);
+    obj9.children = tmp32(tmp2(5747).Text, obj10);
+    tmp32Result5 = tmp32(tmp33, obj9);
   }
-  items4[1] = tmp30Result5;
-  obj9.children = items4;
-  const items5 = [closure_9(closure_5, obj9)];
-  let tmp28Result4 = tmp28Result5;
-  if (tmp28Result5) {
+  items6[1] = tmp32Result5;
+  obj7.children = items6;
+  const items7 = [closure_9(closure_5, obj7)];
+  let tmp30Result4 = tmp30Result5;
+  if (tmp30Result5) {
     let descriptionContainer = !hideName;
     if (!hideName) {
       descriptionContainer = tmp.descriptionContainer;
     }
-    const obj13 = {
+    const obj11 = {
       style: descriptionContainer,
       onPress: function handleApplicationDescriptionPress() {
         if (first) {
           closure_5.current = false;
           if (first1) {
-            const obj2 = timing;
+            const obj2 = timing_timing;
             const current = ref.current;
-            const fn = function t() {
-              sharedValue(closure_2[6]).runOnJS(_undefined)(true);
-            };
-            const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setShouldLineClamp: _undefined };
-            fn.__closure = obj3;
-            fn.__workletHash = 6050776164847;
-            fn.__initData = _undefined;
+            const timingStandard = timingPresets.timingStandard;
+            items = [closure_14, _mod1705.scheduleOnRN, _undefined2];
+            c0 = undefined;
+            c1 = undefined;
+            [tmp23, tmp24, tmp25] = items;
+            class DetailsHeaderTsx2 {
+              constructor() {
+                tmp = closure_0(closure_1, true);
+                return;
+              }
+            }
+            const items1 = [tmp24, tmp25];
+            DetailsHeaderTsx2.__closure = items1;
+            DetailsHeaderTsx2.__workletHash = 15470146172891;
+            DetailsHeaderTsx2.__initData = tmp23;
             const result = sharedValue.set(
-              obj2.withTiming(current, timingPresets.timingStandard, "respect-motion-settings", fn),
+              obj2.withTiming(current, timingStandard, "respect-motion-settings", DetailsHeaderTsx2),
             );
           } else {
-            _undefined(false);
-            const result1 = sharedValue.set(timing.withTiming(ref2.current, timingPresets.timingStandard));
+            _undefined2(false);
+            const result1 = sharedValue.set(timing_timing.withTiming(ref2.current, timingPresets.timingStandard));
           }
           closure_4(!first1);
         }
@@ -212,54 +230,54 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       accessibilityRole: "button",
       children: null,
     };
-    const obj14 = { style: null };
+    const obj12 = { style: null };
     const absoluteFill = str.absoluteFill;
-    if (tmp27) {
-      const obj15 = { style: absoluteFill, children: null };
-      obj14.style = tmp.maskFill;
-      const items6 = [tmp30(tmp31, obj14)];
-      const items7 = [tmp.maskLastLine];
+    if (tmp29) {
+      const obj13 = { style: absoluteFill, children: null };
+      obj12.style = tmp.maskFill;
+      const items8 = [tmp32(tmp33, obj12)];
+      const items9 = [tmp.maskLastLine];
       if (num3 == null) {
         num3 = 0;
       }
-      const obj16 = { style: null, children: null };
-      const obj17 = { height: num3 };
-      items7[1] = obj17;
-      obj16.style = items7;
-      const obj18 = { style: tmp.maskFill };
-      const items8 = [tmp30(tmp31, obj18), ,];
-      const obj19 = {
+      const obj14 = { style: null, children: null };
+      const obj15 = { height: num3 };
+      items9[1] = obj15;
+      obj14.style = items9;
+      const obj16 = { style: tmp.maskFill };
+      const items10 = [tmp32(tmp33, obj16), ,];
+      const obj17 = {
         start: tmp2(1092).HorizontalGradient.START,
         end: tmp2(1092).HorizontalGradient.END,
         colors,
         style: tmp.maskFade,
       };
-      items8[1] = tmp30(tmp23(5587), obj19);
+      items10[1] = tmp32(tmp25(5710), obj17);
       if (num2 == null) {
         num2 = 0;
       }
-      const obj20 = { style: null };
-      const obj21 = { width: num2 };
-      obj20.style = obj21;
-      items8[2] = tmp30(tmp31, obj20);
-      obj16.children = items8;
-      items6[1] = tmp28(tmp31, obj16);
-      obj15.children = items6;
-      let tmp30Result6 = tmp28(tmp31, obj15);
-      const tmp23Result2 = tmp23(5587);
+      const obj18 = { style: null };
+      const obj19 = { width: num2 };
+      obj18.style = obj19;
+      items10[2] = tmp32(tmp33, obj18);
+      obj14.children = items10;
+      items8[1] = tmp30(tmp33, obj14);
+      obj13.children = items8;
+      let tmp32Result6 = tmp30(tmp33, obj13);
+      const tmp25Result2 = tmp25(5710);
     } else {
-      const items9 = [absoluteFill, tmp.maskFill];
-      obj14.style = items9;
-      tmp30Result6 = tmp30(tmp31, obj14);
+      const items11 = [absoluteFill, tmp.maskFill];
+      obj12.style = items11;
+      tmp32Result6 = tmp32(tmp33, obj12);
     }
-    const obj22 = { maskElement: tmp30Result6, children: null };
-    const obj23 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
-    obj22.children = tmp30(tmp2(5624).Text, obj23);
-    const items10 = [tmp30(tmp23(7038), obj22), ,];
-    let tmp30Result7 = null;
-    if (tmp27) {
-      const obj24 = { style: tmp.viewMoreCTA, children: null };
-      const obj25 = {
+    const obj20 = { maskElement: tmp32Result6, children: null };
+    const obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
+    obj20.children = tmp32(tmp2(5747).Text, obj21);
+    const items12 = [tmp32(tmp25(7164), obj20), ,];
+    let tmp32Result7 = null;
+    if (tmp29) {
+      const obj22 = { style: tmp.viewMoreCTA, children: null };
+      const obj23 = {
         onLayout(nativeEvent) {
           if (null == num2) {
             closure_9(nativeEvent.nativeEvent.layout.width);
@@ -270,42 +288,42 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         children: null,
       };
       const intl2 = tmp2(1113).intl;
-      const items11 = ["\u2026 ", intl2.string(tmp2(1113).t["OBCR+p"])];
-      obj25.children = items11;
-      obj24.children = tmp28(tmp2(5624).Text, obj25);
-      tmp30Result7 = tmp30(tmp31, obj24);
+      const items13 = ["\u2026 ", intl2.string(tmp2(1113).t["OBCR+p"])];
+      obj23.children = items13;
+      obj22.children = tmp30(tmp2(5747).Text, obj23);
+      tmp32Result7 = tmp32(tmp33, obj22);
     }
-    items10[1] = tmp30Result7;
-    let tmp30Result8 = null;
+    items12[1] = tmp32Result7;
+    let tmp32Result8 = null;
     if (first) {
-      tmp30Result8 = null;
+      tmp32Result8 = null;
       if (first1) {
-        const obj26 = {
+        const obj24 = {
           variant: "text-sm/medium",
           color: "text-brand",
           style: tmp.collapseDescriptionCTA,
           children: null,
         };
         const intl3 = tmp2(1113).intl;
-        obj26.children = intl3.string(tmp2(1113).t.D5xGUK);
-        tmp30Result8 = tmp30(tmp2(5624).Text, obj26);
+        obj24.children = intl3.string(tmp2(1113).t.D5xGUK);
+        tmp32Result8 = tmp32(tmp2(5747).Text, obj24);
       }
     }
-    items10[2] = tmp30Result8;
-    obj13.children = items10;
-    tmp28Result4 = tmp28(sharedValue, obj13);
-    const tmp23Result = tmp23(7038);
+    items12[2] = tmp32Result8;
+    obj11.children = items12;
+    tmp30Result4 = tmp30(sharedValue, obj11);
+    const tmp25Result = tmp25(7164);
   }
-  items5[1] = tmp28Result4;
-  obj8.children = items5;
-  obj7.children = closure_9(closure_5, obj8);
-  const children = [num2(first(5095).View, obj7)];
-  let tmp28Result6 = !first2;
+  items7[1] = tmp30Result4;
+  obj6.children = items7;
+  obj5.children = closure_9(closure_5, obj6);
+  const children = [num2(first(1652).View, obj5)];
+  let tmp30Result6 = !first2;
   if (!first2) {
-    const obj27 = { style: null, onLayout: null, children: null };
-    const items13 = [mainContainerStyle, tmp.measuringContainer, { opacity: 0, pointerEvents: "none" }];
-    obj27.style = items13;
-    obj27.onLayout = function handleExpandedContainerLayout(nativeEvent) {
+    const obj25 = { style: null, onLayout: null, children: null };
+    const items15 = [mainContainerStyle, tmp.measuringContainer, { opacity: 0, pointerEvents: "none" }];
+    obj25.style = items15;
+    obj25.onLayout = function handleExpandedContainerLayout(nativeEvent) {
       ref2.current = nativeEvent.nativeEvent.layout.height;
       let tmp = ref2.current > 0;
       if (tmp) {
@@ -315,19 +333,19 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         closure_16(true);
       }
     };
-    let tmp30Result9 = !hideName;
+    let tmp32Result9 = !hideName;
     if (!hideName) {
-      const obj28 = { variant: "heading-lg/bold", color: "text-default", children: sectionName };
-      tmp30Result9 = tmp30(tmp2(5624).Heading, obj28);
+      const obj26 = { variant: "heading-lg/semibold", color: "text-default", children: sectionName };
+      tmp32Result9 = tmp32(tmp2(5747).Heading, obj26);
     }
-    const items14 = [tmp30Result9];
-    if (tmp28Result5) {
+    const items16 = [tmp32Result9];
+    if (tmp30Result5) {
       let descriptionContainer2 = !hideName;
       if (!hideName) {
         descriptionContainer2 = tmp.descriptionContainer;
       }
-      const obj29 = { style: descriptionContainer2, children: null };
-      const obj30 = {
+      const obj27 = { style: descriptionContainer2, children: null };
+      const obj28 = {
         variant: "text-sm/medium",
         color: "text-default",
         onTextLayout: function handleApplicationDescriptionTextLayout(nativeEvent) {
@@ -335,34 +353,34 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
           if (tmp) {
             closure_11(lines[0].height);
           }
-          if (null == sharedValue.current) {
-            sharedValue.current = length;
+          if (null == _undefined.current) {
+            _undefined.current = length;
           }
           if (lines.length > 3) {
-            _undefined(true);
+            _undefined2(true);
             closure_2(true);
           }
           tmp = null == num3 && null != lines[0];
         },
         children: memo,
       };
-      const items15 = [tmp30(tmp2(5624).Text, obj30)];
-      const obj31 = {
+      const items17 = [tmp32(tmp2(5747).Text, obj28)];
+      const obj29 = {
         variant: "text-sm/medium",
         color: "text-brand",
         style: tmp.collapseDescriptionCTA,
         children: null,
       };
       const intl4 = tmp2(1113).intl;
-      obj31.children = intl4.string(tmp2(1113).t.D5xGUK);
-      items15[1] = tmp30(tmp2(5624).Text, obj31);
-      obj29.children = items15;
-      tmp28Result5 = tmp28(tmp31, obj29);
+      obj29.children = intl4.string(tmp2(1113).t.D5xGUK);
+      items17[1] = tmp32(tmp2(5747).Text, obj29);
+      obj27.children = items17;
+      tmp30Result5 = tmp30(tmp33, obj27);
     }
-    items14[1] = tmp28Result5;
-    obj27.children = items14;
-    tmp28Result6 = tmp28(tmp31, obj27);
+    items16[1] = tmp30Result5;
+    obj25.children = items16;
+    tmp30Result6 = tmp30(tmp33, obj25);
   }
-  children[1] = tmp28Result6;
+  children[1] = tmp30Result6;
   return closure_9(num3, { children });
 });

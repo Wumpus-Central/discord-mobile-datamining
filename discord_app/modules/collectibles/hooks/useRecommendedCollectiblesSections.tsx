@@ -33,7 +33,7 @@ export default function useRecommendedCollectiblesSections(arg0, arg1) {
     return tmp;
   });
   useMemo = tmp;
-  const items = [arg1, tmp, arg0];
+  items = [arg1, tmp, arg0];
   return useMemo(() => {
     if (0 === length.length) {
       let mapped = closure_0;

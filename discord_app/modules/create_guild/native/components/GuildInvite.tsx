@@ -5,7 +5,7 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7294 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7414 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
@@ -66,15 +66,15 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     obj3.getItemType = function getItemType(type) {
       return type.type;
     };
-    obj2.children = closure_17(_mod7294.FlashList, obj3);
+    obj2.children = closure_17(_mod7414.FlashList, obj3);
     tmp6Result2 = closure_17(closure_5, obj2);
   }
   return tmp6Result2;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(9199).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7147).CreateGuildModalStates;
+let closure_6 = fn(9327).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7270).CreateGuildModalStates;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -85,10 +85,10 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
-    marginTop: fn(5586).NAV_BAR_HEIGHT,
+    marginTop: fn(5709).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -107,7 +107,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(5586).NAV_BAR_HEIGHT,
+  marginTop: fn(5709).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",
@@ -176,7 +176,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
   const first = tmp7[0];
   closure_6 = tmp7[1];
   let obj2 = flag(navigation[21]);
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = flag(navigation[22]).useStateFromStores(items, () => stateFromStores1.getInvite());
   let obj4 = flag(navigation[22]);
   const items1 = [stateFromStores1, stateFromStores, defaultChannel];
@@ -323,7 +323,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
         ref,
         style: tmp.header,
         accessibilityRole: "header",
-        variant: "heading-xl/extrabold",
+        variant: "heading-xl/semibold",
         color: "mobile-text-heading-primary",
         children: null,
       };

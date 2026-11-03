@@ -5,7 +5,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
 import ColorUtils from "../../../../../../utils/ColorUtils.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -17,8 +17,8 @@ require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(8749).useCurrentUser();
-  const items = [isSelected, currentUser];
+  const currentUser = isSelected(8873).useCurrentUser();
+  items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
     if (isSelected) {
@@ -28,22 +28,22 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(9520), obj2);
+    let tmp8 = closure_10(currentUser(9648), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9506), obj3);
+    tmp8 = closure_10(currentUser(9634), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(9519) };
+    const obj6 = { uri: currentUser(9647) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5717), obj5)];
+    const items1 = [closure_10(currentUser(5837), obj5)];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9497), obj7);
+    items1[1] = closure_10(currentUser(9625), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5717);
+    const tmp19 = currentUser(5837);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
@@ -54,9 +54,9 @@ function GiftingSKUCardItemPreview(arg0) {
         previewHeight,
         profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW,
       };
-      obj8.children = closure_10(currentUser(9518), obj9);
+      obj8.children = closure_10(currentUser(9646), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(9518);
+      const tmp12 = currentUser(9646);
     }
   }
   return tmp8;
@@ -74,7 +74,7 @@ function CollectibleTextFade() {
     start: VerticalGradient.START,
     end: VerticalGradient.END,
   };
-  const items = [obj4.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0)), hexToRgbaStringResult, token];
+  items = [obj4.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0)), hexToRgbaStringResult, token];
   obj6.colors = items;
   return closure_1_10(LinearGradientDefault, obj6);
 }
@@ -83,7 +83,7 @@ function GiftingSKUCardPreview(isSelected) {
   const tmp = closure_18();
   let tmp7Result = isProfileEffectRecord(item);
   const tmp3 = isProfileFrameRecord(item);
-  const items = [tmp.previewContainer];
+  items = [tmp.previewContainer];
   let expandedPreviewContainer = tmp7Result;
   if (!tmp7Result) {
     expandedPreviewContainer = tmp3;
@@ -119,24 +119,24 @@ function GiftingSKUCardPreview(isSelected) {
     tmp7Result = closure_1_10(CollectibleTextFade, {});
   }
   children[1] = tmp7Result;
-  return closure_1_11(closure_1_12, { children });
+  return closure_1_11(application_id, { children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7725).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1985).isNameplateRecord;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7849).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2114).isNameplateRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = 100;
 const PX_12 = nativeDefault.space.PX_12;
 const previewWidth = 150 - nativeDefault.space.PX_32;
 const sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_17 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj = {
   card: {
     width: 150,
@@ -202,7 +202,7 @@ const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9494).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9622).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = {
   position: "absolute",
@@ -228,7 +228,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     return null;
   } else {
     const first = product.items[0];
-    const items = [tmp.card];
+    items = [tmp.card];
     let selected = isSelected;
     if (isSelected) {
       selected = tmp.selected;
@@ -258,7 +258,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     const items1 = [tmp5];
     const obj5 = { style: tmp.textContainer, children: null };
     const obj6 = {
-      variant: "heading-sm/bold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       accessibilityRole: "header",
@@ -286,7 +286,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     return closure_1_11(Pressables.PressableOpacity, obj3);
   }
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_23 = createStyles.createStyles({
   grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 },
   row: { flexDirection: "row", gap: PX_122 },
@@ -300,7 +300,7 @@ export default function GiftingSKUCardsGrid(rewardsToDisplay) {
   const tmp = closure_23();
   const row = tmp;
   let length = Math.max(1, Math.floor((useWindowDimensionsDefault().width - closure_17 + PX_122) / (150 + PX_122)));
-  const items = [rewardsToDisplay, length];
+  items = [rewardsToDisplay, length];
   const memo = noop.useMemo(() => _modDef12.chunk(rewardsToDisplay, length), items);
   if (memo.length <= 1) {
     length = rewardsToDisplay.length;

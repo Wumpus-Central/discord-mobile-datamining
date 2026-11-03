@@ -1,5 +1,5 @@
 // discord_app/modules/activities/native/ActivityAnnouncement.tsx
-import inlineStyles from "../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/activities/native/ActivityAnn
 export default function SvgComponent(arg0) {
   const size = { width: 324, height: 227, fill: "none" };
   const merged = Object.assign(arg0);
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       fill: "#5865F2",
       d: "m180.747 219.024 29.309.136s-13.284-17.969-30.586-3.674a2.005 2.005 0 0 0-.598 2.215 2.006 2.006 0 0 0 1.875 1.323ZM279.165 161.961l20.489 16.006a2.122 2.122 0 0 1-.058 3.413 2.13 2.13 0 0 1-1.238.397c-6.35-.045-16.711-1.75-23.911-11.113l4.718-8.703Z",

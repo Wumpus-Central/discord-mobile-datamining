@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export function useUserAvailableGuildsWithTags() {
-  const items = [GuildStore, GuildMemberStore];
+  items = [GuildStore, GuildMemberStore];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {

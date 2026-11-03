@@ -66,7 +66,7 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
       const tmp = closure_1().displayedQuestions[arg0];
       if (null != tmp) {
         const _Array = Array;
-        let items = Array.from(tmp);
+        items = Array.from(tmp);
       } else {
         items = [];
       }

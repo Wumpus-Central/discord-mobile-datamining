@@ -80,7 +80,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
       }
       const channel1 = obj.getChannel(channel_id);
       if (null == channel1) {
-        const guild = obj3.getGuild(channel.guild_id);
+        guild = obj3.getGuild(channel.guild_id);
         if (null == guild) {
           const obj6 = { snapshotIndex };
           let obj7 = obj6;

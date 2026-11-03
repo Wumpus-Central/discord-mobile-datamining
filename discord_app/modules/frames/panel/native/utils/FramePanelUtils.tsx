@@ -3,8 +3,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(6847).asLaunched;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const asLaunched = fn(6967).asLaunched;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
 
@@ -17,7 +17,7 @@ export function isFramePanelFullscreen() {
   return tmp2;
 }
 export function useIsActivityPanelFullscreen() {
-  const items = [FramesStore];
+  items = [FramesStore];
   return initialize.useStateFromStores(items, () => {
     const tmp = asLaunched(mainFrame.getMainFrame());
     let tmp2 = null != tmp;

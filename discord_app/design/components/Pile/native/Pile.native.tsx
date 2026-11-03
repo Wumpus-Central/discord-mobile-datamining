@@ -10,7 +10,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
@@ -104,7 +104,7 @@ export function Pile(aria_label) {
         tmp3Result4 = _mod12;
       }
       const obj2 = { height: tmp6, marginLeft: num7, marginTop: num6 };
-      const items = [obj2];
+      items = [obj2];
       if (type.type === PileOverflow.PileOverflow) {
         const obj3 = { minWidth: tmp6 };
         let obj4 = obj3;

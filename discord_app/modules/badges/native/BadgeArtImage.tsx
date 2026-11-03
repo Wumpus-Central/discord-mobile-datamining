@@ -22,7 +22,7 @@ export default function BadgeArtImage(style) {
   }
   const size = { width, height };
   const obj = { style: null, "aria-hidden": true, children: null };
-  const items = [size, style.style];
+  items = [size, style.style];
   obj.style = items;
   const formatted = url.split(/[?#]/)[0].toLowerCase();
   if (formatted.endsWith(".svg")) {
@@ -45,9 +45,9 @@ export default function BadgeArtImage(style) {
           enableAnimation: null,
         });
       } else {
-        APNGPlayer(1375);
+        APNGPlayer(1377);
       }
-      APNGPlayer = APNGPlayer(9504).APNGPlayer;
+      APNGPlayer = APNGPlayer(9632).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

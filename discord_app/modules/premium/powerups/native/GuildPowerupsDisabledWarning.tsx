@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsDisabledWarning(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [
+  items = [
     React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }),
     React4(Text_Text.Text, {
       style: tmp.text,

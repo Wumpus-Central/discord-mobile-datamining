@@ -3,11 +3,10 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
-import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
 import ChevronSmallUpIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
@@ -16,26 +15,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
-  const tmp = closure_11();
-  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
-    "TierTemplatePreviewCard",
-    "text-xs/bold",
-  );
-  const obj2 = { variant: typeConsolidationEyebrow.variant, color: "text-muted", style: null, children: null };
-  const items = [tmp.contentHeader, typeConsolidationEyebrow.style];
-  obj2.style = items;
-  const items1 = [
-    React7(Text_Text.Text, {
-      variant: typeConsolidationEyebrow.variant,
-      color: "text-default",
-      style: tmp.contentHeader,
-      children: count,
-    }),
-    " ",
-    title,
-  ];
-  obj2.children = items1;
-  return closure_1_10(Text_Text.Text, obj2);
+  const obj = { variant: "body-sm/medium", color: "text-muted", children: null };
+  items = [React7(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: count }), " ", title];
+  obj.children = items;
+  return closure_1_10(Text_Text.Text, obj);
 }
 function Separator() {
   return React7(timestampProducer, { style: closure_11().separator });
@@ -48,7 +31,7 @@ function BenefitShowCase(children) {
     tmp3 = React7(Text_Text.Text, obj2);
   }
   const obj = { children: null };
-  const items = [
+  items = [
     tmp3,
     React7(native.Spacer, { size: 2 }),
     React7(Text_Text.Text, {
@@ -64,7 +47,7 @@ function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
   const tmp = closure_11();
   const obj2 = { style: tmp.channelTitle, children: null };
-  const items = [
+  items = [
     React7(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }),
     React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
   ];
@@ -83,7 +66,7 @@ function ViewEntireTemplateFooter() {
   };
   const intl = util.intl;
   obj3.children = intl.string(util.t.kejaOD);
-  const items = [
+  items = [
     React7(Text_Text.Text, obj3),
     React7(native.Spacer, { size: 3 }),
     React7(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline }),
@@ -101,8 +84,8 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_16,
@@ -116,7 +99,6 @@ let obj2 = {
   contentContainer: null,
   channelTitle: null,
   viewEntireTemplateText: null,
-  contentHeader: null,
   viewEntireTemplateFooter: null,
   viewEntireTemplateFooterUnderline: null,
 };
@@ -161,7 +143,6 @@ const obj6 = {
 };
 obj2.channelTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.viewEntireTemplateText = { marginTop: -1 };
-obj2.contentHeader = { textTransform: "uppercase" };
 let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.viewEntireTemplateFooter = {
   paddingVertical: nativeDefault.space.PX_16,
@@ -199,9 +180,9 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   closure_7 = undefined;
   let callback1;
   const tmp = closure_11();
-  navigation = template(navigation[16]).useNavigation();
-  let obj = template(navigation[16]);
-  const addNewEditStateFromTemplate = groupListingId(navigation[17]).useEditStateIds(
+  navigation = template(navigation[15]).useNavigation();
+  let obj = template(navigation[15]);
+  const addNewEditStateFromTemplate = groupListingId(navigation[16]).useEditStateIds(
     groupListingId,
     template.editGroupId,
     { includeSoftDeleted: true },
@@ -209,7 +190,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const first = template.listings[0];
   ({ channels, additional_perks } = first);
   const first1 = additional_perks[0];
-  const items = [addNewEditStateFromTemplate, groupListingId, navigation, guildId];
+  items = [addNewEditStateFromTemplate, groupListingId, navigation, guildId];
   const handleCreateFromTemplate = addNewEditStateFromTemplate.useCallback((selectedTemplate, arg1) => {
     const result = GuildRoleSubscriptionTierTemplateActionCreators.stashTemplateChannels(selectedTemplate, guildId);
     if (arg1) {
@@ -227,9 +208,9 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     const obj5 = { groupListingId, initialEditStateId: tmp5 };
     const tmpResult = AppAnalyticsUtils;
   }, items);
-  let obj2 = groupListingId(navigation[17]);
+  let obj2 = groupListingId(navigation[16]);
   let obj3 = addNewEditStateFromTemplate;
-  const suggestedUnusedPrices = template(navigation[21]).useSuggestedUnusedPrices(
+  const suggestedUnusedPrices = template(navigation[20]).useSuggestedUnusedPrices(
     guildId,
     priceTiers,
     first.price_tier,
@@ -244,7 +225,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(20004, dependencyMap.paths),
+        asyncRequireImpl(20154, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -254,7 +235,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   }, items1);
   let obj5 = { style: tmp.container, children: null };
   const items2 = [
-    closure_9(template(navigation[22]).GuildRoleSubscriptionTierTemplateBasicInfo, {
+    closure_9(template(navigation[21]).GuildRoleSubscriptionTierTemplateBasicInfo, {
       template,
       handleSelectTemplateInPreview: callback1,
       subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle,
@@ -266,7 +247,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20000, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20150, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,
@@ -277,32 +258,32 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj8 = { separator: closure_9(Separator, {}), children: null };
   const obj9 = { children: null };
   const obj10 = { title: null, count: null };
-  const intl = tmp2(tmp3[14]).intl;
-  obj10.title = intl.formatToPlainString(template(navigation[14]).t.y7dUrm, { numChannels: channels.length });
+  const intl = tmp2(tmp3[13]).intl;
+  obj10.title = intl.formatToPlainString(template(navigation[13]).t.y7dUrm, { numChannels: channels.length });
   obj10.count = channels.length;
   const items3 = [
     closure_9(ContentHeader, obj10),
-    closure_9(template(navigation[12]).Spacer, { size: 12 }),
+    closure_9(template(navigation[11]).Spacer, { size: 12 }),
     closure_9(ChannelBenefitShowCase, { channel: channels[0] }),
-    closure_9(template(navigation[12]).Spacer, { size: 6 }),
+    closure_9(template(navigation[11]).Spacer, { size: 6 }),
   ];
   obj9.children = items3;
   const items4 = [closure_10(suggestedUnusedPrices, obj9)];
   const obj11 = { children: null };
   const obj12 = { title: null, count: null };
-  const intl2 = tmp2(tmp3[14]).intl;
-  obj12.title = intl2.formatToPlainString(template(navigation[14]).t.MR7oOF, { numBenefits: additional_perks.length });
+  const intl2 = tmp2(tmp3[13]).intl;
+  obj12.title = intl2.formatToPlainString(template(navigation[13]).t.MR7oOF, { numBenefits: additional_perks.length });
   obj12.count = additional_perks.length;
   const items5 = [
     closure_9(ContentHeader, obj12),
-    closure_9(template(navigation[12]).Spacer, { size: 12 }),
+    closure_9(template(navigation[11]).Spacer, { size: 12 }),
     closure_9(BenefitShowCase, { title: first1.name, description: first1.description }),
-    closure_9(template(navigation[12]).Spacer, { size: 6 }),
+    closure_9(template(navigation[11]).Spacer, { size: 6 }),
   ];
   obj11.children = items5;
   items4[1] = closure_10(suggestedUnusedPrices, obj11);
   obj8.children = items4;
-  const items6 = [closure_10(template(navigation[23]).SeparatedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
+  const items6 = [closure_10(template(navigation[22]).SeparatedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
   obj7.children = items6;
   items2[1] = closure_10(handleCreateFromTemplate, obj7);
   obj5.children = items2;

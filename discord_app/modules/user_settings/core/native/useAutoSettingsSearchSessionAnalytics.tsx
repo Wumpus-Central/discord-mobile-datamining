@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export function useAutoSettingsSearchSessionAnalytics() {
-  const items = [AppStateStore];
+  items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
     return state === stateFromStores(dependencyMap[4]).AppStates.ACTIVE;

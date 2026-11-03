@@ -4,10 +4,10 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../../../user_settings/LocaleStore.tsx";
 
 const require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   header: { marginBottom: 16 },
   headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING },
@@ -23,7 +23,7 @@ export default function HistoricalIndexingHeader(searchContext) {
   const tab = searchContext.tab;
   const tmp = closure_7();
   noop = tmp;
-  const items = [documentsIndexed];
+  items = [documentsIndexed];
   const items1 = [tmp.headerMessages, tab];
   const memo = noop.useMemo(() => Number(documentsIndexed).toLocaleString(LocaleStore.locale), items);
   const items2 = [documentsIndexed, searchContext];
@@ -43,11 +43,11 @@ export default function HistoricalIndexingHeader(searchContext) {
   const obj = { variant: "primary", border: "subtle", style: null, children: null };
   const items3 = [tmp.header, memo1];
   obj.style = items3;
-  const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", children: null };
+  const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", children: null };
   const intl = searchContext(tab[8]).intl;
   obj2.children = intl.format(searchContext(tab[8]).t["4Y3O+O"], { count: memo });
   obj.children = jsx(searchContext(tab[7]).Text, {
-    variant: "heading-sm/normal",
+    variant: "heading-sm/medium",
     color: "interactive-text-default",
     children: null,
   });

@@ -71,16 +71,12 @@ export default {
     const searchContextId = SearchUtils.getSearchContextId(searchContext);
     DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_UPDATE", id: searchContextId, searchContext, updater });
   },
-  deleteSearchQuery(searchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+  deleteSearchQuery(c0) {
+    const searchContextId = SearchUtils.getSearchContextId(c0);
     DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_DELETE", id: searchContextId });
   },
-  initializeSearchQuery(channelDetailsSearchContext) {
-    const searchContextId = SearchUtils.getSearchContextId(channelDetailsSearchContext);
-    DispatcherDefault.dispatch({
-      type: "SEARCH_QUERY_NATIVE_INITIALIZE",
-      id: searchContextId,
-      searchContext: channelDetailsSearchContext,
-    });
+  initializeSearchQuery(c5) {
+    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+    DispatcherDefault.dispatch({ type: "SEARCH_QUERY_NATIVE_INITIALIZE", id: searchContextId, searchContext });
   },
 };

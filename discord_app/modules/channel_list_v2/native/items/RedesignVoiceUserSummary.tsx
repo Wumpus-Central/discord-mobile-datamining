@@ -13,7 +13,7 @@ export default function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
   const guildId = channels.guildId;
   let stateFromStores;
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [guildId];
   stateFromStores = channels(stateFromStores[4]).useStateFromStores(
     items,

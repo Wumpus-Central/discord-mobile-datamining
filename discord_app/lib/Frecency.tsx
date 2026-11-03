@@ -1,6 +1,6 @@
 // discord_app/lib/Frecency.tsx
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import _modDef2042 from "../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../_runtime/metro/02171__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
@@ -99,7 +99,7 @@ prototype["track"] = function track(arg0) {
   ({ timestamp, usesSinceLastTrack } = obj);
   if (null != arg0) {
     const self = this;
-    let items = globalThis;
+    items = globalThis;
     const _Object = Object;
     let tmp;
     if (Object.hasOwn(this.usageHistory, arg0)) {
@@ -149,9 +149,9 @@ prototype["track"] = function track(arg0) {
     self.markDirty();
   }
 };
-prototype["getEntry"] = function getEntry(id) {
+prototype["getEntry"] = function getEntry(key10009) {
   let tmp = null;
-  if (null != id) {
+  if (null != key10009) {
     const self = this;
     if (this.dirty) {
       self.compute();
@@ -161,8 +161,8 @@ prototype["getEntry"] = function getEntry(id) {
     const call = hasOwnProperty.call;
     const usageHistory = self.usageHistory;
     let tmp4;
-    if (typeof call === "unknown" ? hasOwnProperty(id) : call(usageHistory, id)) {
-      tmp4 = self.usageHistory[id];
+    if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(usageHistory, key10009)) {
+      tmp4 = self.usageHistory[key10009];
     }
     tmp = tmp4;
   }
@@ -186,7 +186,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 };
 prototype["compute"] = function compute() {
   const self = this;
-  dependencyMap = _modDef2042();
+  dependencyMap = _modDef2171();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     const _Object = Object;
@@ -203,7 +203,7 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2042(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2171(arg0), "days"));
         }
       });
       if (recentUses.score > 0) {
@@ -229,7 +229,7 @@ prototype["compute"] = function compute() {
     const lookupKeyResult = self.lookupKey(index);
     let tmp2 = null;
     if (null != lookupKeyResult) {
-      const items = [lookupKeyResult, frecency.frecency];
+      items = [lookupKeyResult, frecency.frecency];
       tmp2 = items;
     }
     return tmp2;

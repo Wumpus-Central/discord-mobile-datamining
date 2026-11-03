@@ -51,14 +51,14 @@ prototype["insert"] = function insert(arg0) {
       }
     }
   }
-  const items = self.items;
+  items = self.items;
   items.splice(tmp2, 0, arg0);
   self.cached = null;
 };
 prototype["trim"] = function trim(arg0) {
   const self = this;
   if (this.items.length > arg0) {
-    const items = self.items;
+    items = self.items;
     items.splice(0, self.items.length - arg0);
     self.cached = null;
   }
@@ -66,7 +66,7 @@ prototype["trim"] = function trim(arg0) {
 prototype["snapshot"] = function snapshot() {
   const self = this;
   if (this.cached == null) {
-    const items = self.items;
+    items = self.items;
     self.cached = items.slice();
   }
   return self.cached;

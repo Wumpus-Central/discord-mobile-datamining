@@ -76,7 +76,7 @@ export function parseVtt(text) {
       }
     }
     obj3 = tmp5;
-    const items = [];
+    items = [];
     const mapped = parts.map((item, index) => {
       try {
         return (function parseCue(item, index, arg2) {

@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -132,7 +132,7 @@ let closure_11 = noop.memo(function GameProfileLinkAccountSkeleton() {
   const tmp4 = useIsWindowLargeDefault();
   const obj = { style: tmp.card, children: null };
   const obj2 = { style: tmp.skeletonAnimationRoot, children: null };
-  const items = [tmp.cardImagesContainer];
+  items = [tmp.cardImagesContainer];
   let skeletonCardImagesContainerSmall = !tmp4;
   if (!tmp4) {
     skeletonCardImagesContainerSmall = tmp.skeletonCardImagesContainerSmall;
@@ -183,7 +183,7 @@ export default function GameProfileLinkAccount(analyticsLocations) {
   startAuthorization = tmp4.startAuthorization;
   const connectionApp = tmp4.connectionApp;
   ({ fetched, hasAlreadyLinked, canStartAuthorization } = tmp4);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = trackAction(startAuthorization[11]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );

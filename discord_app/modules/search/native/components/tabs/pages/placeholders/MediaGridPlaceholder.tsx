@@ -2,7 +2,7 @@
 import _mod12 from "../../../../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import ReanimatedRexportDefault from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
 import Text_Text from "../../../../../../../design/components/Text/native/Text.tsx";
 import SearchPlatformUtils from "../../../../SearchPlatformUtils.tsx";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: metroRequire,
@@ -22,7 +22,7 @@ const SearchConstants = fn(9827);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },
@@ -54,16 +54,16 @@ export default function MediaGridPlaceholderItem(arg0) {
     pointerEvents: "none",
     children: React5(GridItemPlaceholderDefault, { height: size, width: size, style: containerStyle }),
   };
-  const items = [containerStyle, placeholderAnimatedStyle];
+  items = [containerStyle, placeholderAnimatedStyle];
   obj2.style = items;
-  return React5(ReanimatedRexportDefault.View, obj2);
+  return React5(_modDef1652.View, obj2);
 }
 export function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
   let memo;
   let tmp = closure_9();
   dependencyMap = tmp;
-  const items = [numRows];
+  items = [numRows];
   memo = memo.useMemo(() => _mod12.range(0, numRows * numColumns), items);
   const items1 = [memo];
   const memo1 = memo.useMemo(() => _mod12.chunk(memo, numColumns), items1);
@@ -123,5 +123,5 @@ export function RecentsMediaGridPlaceholder(visible) {
     }),
   ];
   obj2.children = items4;
-  return closure_8(numRows(5095).View, obj2);
+  return closure_8(numRows(1652).View, obj2);
 }

@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointApngPlayer(staticUri) {
   ({ animatedUri, style } = staticUri);
   const tmp = closure_6();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const obj2 = { style: tmp.container, children: null };
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     const obj3 = { source: null, style: null, resizeMode: "cover" };

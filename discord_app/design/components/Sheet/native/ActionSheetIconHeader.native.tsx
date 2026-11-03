@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 },
   titles: { justifyContent: "center", flex: 1 },
@@ -19,11 +19,11 @@ export function ActionSheetIconHeader(subtitle) {
   ({ title, icon } = subtitle);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  const items = [React3(View, { children: icon })];
+  items = [React3(View, { children: icon })];
   const obj2 = { style: tmp.titles, children: null };
   const items1 = [
     React3(Text_Text.Text, {
-      variant: "redesign/heading-18/bold",
+      variant: "redesign/heading-18/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       lineClamp: 2,

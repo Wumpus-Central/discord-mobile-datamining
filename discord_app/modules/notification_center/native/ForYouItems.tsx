@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import _mod674 from "../../../../_runtime/metro/00674__.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import CustomMarkupAll from "../../markup/CustomMarkup.native.tsx";
@@ -34,7 +34,7 @@ require = fn;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = __initData(ForYouMentionPlaceholder.ForYouMentionPlaceholder, {});
+    tmp = guild(ForYouMentionPlaceholder.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -43,7 +43,7 @@ function Callout(arg0) {
   const tmp = closure_29();
   const obj2 = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
   const parser = CustomMarkupAll.getParser(closure_26());
-  const items = [__initData(React5, { style: tmp.messagePreviewBarV2 })];
+  items = [guild(React5, { style: tmp.messagePreviewBarV2 })];
   const obj4 = {
     style: acked ? tmp.calloutTextAcked : tmp.calloutTextNotAcked,
     variant: "redesign/message-preview/medium",
@@ -56,9 +56,9 @@ function Callout(arg0) {
   }
   obj4.lineClamp = num;
   obj4.children = parser(item.callout);
-  items[1] = __initData(Text_Text.Text, obj4);
+  items[1] = guild(Text_Text.Text, obj4);
   obj2.children = items;
-  return __initData2(React5, obj2);
+  return closure_1_22(React5, obj2);
 }
 function ForYouMessagePreviewV2(item) {
   item = item.item;
@@ -68,14 +68,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6031).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(6151).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
   const intl = item(1113).intl;
   const stringResult = intl.string(item(1113).t.BOi07B);
-  const obj = message_channel_id(6031);
+  const obj = message_channel_id(6151);
   let message = item.message;
   let num;
   if (message != null) {
@@ -86,7 +86,7 @@ function ForYouMessagePreviewV2(item) {
   }
   let message2 = item.message;
   let type;
-  const obj2 = item(1396);
+  const obj2 = item(1398);
   if (message2 != null) {
     type = message2.type;
   }
@@ -127,11 +127,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8510)(first);
+    const tmp15 = guild_id(8634)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8403).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8403);
+      result = tmp2(8527).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8527);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1113).intl;
@@ -165,7 +165,7 @@ function ForYouMessagePreviewV2(item) {
       }
       tmp8 = attachments.length > 0 || embeds1.length > 0;
     }
-    tmp2Result6 = tmp2(1396);
+    tmp2Result6 = tmp2(1398);
   }
   const message9 = item.message;
   let content;
@@ -181,8 +181,8 @@ function ForYouMessagePreviewV2(item) {
   }
   guild_id = item.guild_id;
   message_channel_id = item.message_channel_id;
-  hasFlagResult = item(1396).hasFlag(num, constants2.IS_VOICE_MESSAGE);
-  let items = [GuildStore];
+  hasFlagResult = item(1398).hasFlag(num, constants2.IS_VOICE_MESSAGE);
+  items = [GuildStore];
   const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   const tmp2Result7 = item(504);
   const items1 = [ChannelStore];
@@ -195,7 +195,7 @@ function ForYouMessagePreviewV2(item) {
     if (message != null) {
       id = message.author.id;
     }
-    const items = [UserStore.getUser(id)];
+    items = [UserStore.getUser(id)];
     const message2 = item.message;
     let mapped;
     if (message2 != null) {
@@ -245,17 +245,17 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8582).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(8706).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(5624).Text, obj5);
+    items3[1] = closure_22(tmp2(5747).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(13771);
+      let tmp29 = guild_id(13902);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -266,16 +266,16 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8174);
+        tmp29 = guild_id(8298);
       }
     }
-    tmp29 = guild_id(10305);
+    tmp29 = guild_id(10435);
   }
-  const tmp2Result10 = item(8582);
+  const tmp2Result10 = item(8706);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = applicationId(504).useStateFromStores(items, () =>
     ApplicationStore.getApplication(applicationId),
   );
@@ -325,36 +325,36 @@ const Constants = fn(1072);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6743).NotificationTypes;
+const NotificationTypes = fn(6863).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5624).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(5747).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5624).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(5747).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -493,7 +493,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
   }
   let obj = item(notificationCenterItemAcked[29]);
   navigation = item(notificationCenterItemAcked[30]).useNavigation();
-  let items = [item];
+  items = [item];
   callback = str.useCallback(() => {
     if (null != item.deeplink) {
       const obj = {
@@ -536,7 +536,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
   }, items1);
   const items2 = [item];
   const callback2 = str.useCallback(() => {
-    const items = [];
+    items = [];
     if (item.type === item(notificationCenterItemAcked[33]).NotificationCenterItems.TRENDING_CONTENT) {
       let obj = { label: null, icon: null, IconComponent: null, onPress: null };
       let intl = tmp2(notificationCenterItemAcked[18]).intl;
@@ -612,15 +612,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(18488).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18642).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
           const intl = tmp3(1113).intl;
           obj7.text = intl.string(tmp3(1113).t.WDxhvB);
-          rowIndex(5712).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          rowIndex(5832).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(5712);
+          rowIndex(5832);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -700,7 +700,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
     let obj3 = {
       item,
       renderApplication(applicationId) {
-        return __initData(ApplicationName, { applicationId, textVariant: str });
+        return guild(ApplicationName, { applicationId, textVariant: str });
       },
     };
     tmp10 = rowIndex(tmp3[47])(obj3);
@@ -897,14 +897,14 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
     item = item.item;
     switch (item.kind) {
       case "read-section-header":
-        return __initData(ForYouReadSectionHeader.ForYouReadSectionHeader, {});
+        return guild(ForYouReadSectionHeader.ForYouReadSectionHeader, {});
       case "recent-activity-section-header":
-        return __initData(ForYouRecentActivitySectionHeader.ForYouRecentActivitySectionHeader, {});
+        return guild(ForYouRecentActivitySectionHeader.ForYouRecentActivitySectionHeader, {});
       case "hoisted-items-header":
-        return __initData(ForYouHoistedItemsHeader.ForYouHoistedItemsHeader, {});
+        return guild(ForYouHoistedItemsHeader.ForYouHoistedItemsHeader, {});
       case "suggested-friends-header":
         const obj2 = { showDivider: item.showDivider };
-        return __initData(ForYouSuggestedFriendsSectionHeaderDefault, obj2);
+        return guild(ForYouSuggestedFriendsSectionHeaderDefault, obj2);
       case "suggested-friends-row":
         const obj3 = {
           suggestedFriend: item.suggestedFriend,
@@ -912,13 +912,13 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
           onAddSuggestionAnimationFinish,
           panelVariant: flag,
         };
-        return __initData(ForYouSuggestedFriendRowDefault, obj3);
+        return guild(ForYouSuggestedFriendRowDefault, obj3);
       case "suggested-friends-show-all-row":
         const obj4 = { suggestedFriends: item.suggestedFriends, panelVariant: flag };
-        return __initData(ForYouShowAllRow.ForYouSuggestedFriendShowAllRow, obj4);
+        return guild(ForYouShowAllRow.ForYouSuggestedFriendShowAllRow, obj4);
       case "for-you-divider":
         const obj5 = { style: closure_9.forYouDivider };
-        return __initData(React5, obj5);
+        return guild(React5, obj5);
       case "notification-center-item":
         const obj6 = { children: null };
         const obj7 = {
@@ -933,15 +933,15 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
           roleStyle: stateFromStores,
         };
         const _HermesInternal = HermesInternal;
-        obj6.children = __initData(closure_35, obj7, "" + item.id + "-" + stateFromStores);
-        return __initData(_mod674.ErrorBoundary, obj6);
+        obj6.children = guild(closure_35, obj7, "" + item.id + "-" + stateFromStores);
+        return guild(_mod674.ErrorBoundary, obj6);
       case "mentions-placeholder":
-        return __initData(ForYouMentionPlaceholder.ForYouMentionPlaceholder, {});
+        return guild(ForYouMentionPlaceholder.ForYouMentionPlaceholder, {});
       case "unread-cleared-placeholder":
-        return __initData(ForYouUnreadClearedState.ForYouUnreadClearedState, {});
+        return guild(ForYouUnreadClearedState.ForYouUnreadClearedState, {});
       case "load-more":
         const obj = { onPressLoad };
-        return __initData(ForYouLoadMore.ForYouLoadMore, obj);
+        return guild(ForYouLoadMore.ForYouLoadMore, obj);
       default:
         GlobalUtils.assertNever(item);
     }

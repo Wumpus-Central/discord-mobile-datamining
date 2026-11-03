@@ -10,20 +10,20 @@ import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8432).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8556).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    const items = [ConsentStore];
+    items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
-      let items = [Consents.PERSONALIZATION];
+      items = [Consents.PERSONALIZATION];
       ConsentActionCreators.setConsents(items, []).catch((error) =>
         showDataPrivacyRateLimitAlert.showDataPrivacyRateLimitAlert(error.message),
       );
@@ -47,7 +47,7 @@ const toggle = SettingBuilders.createToggle({
       obj2.cancelText = intl4.string(util.t["+ZLPw9"]);
       obj2.confirmColor = common_AlertDefault.Colors.RED;
       obj2.onConfirm = function onConfirm() {
-        const items = [constants.PERSONALIZATION];
+        items = [constants.PERSONALIZATION];
         return ConsentActionCreators.setConsents([], items);
       };
       AlertActionCreatorsDefault.show(obj2);

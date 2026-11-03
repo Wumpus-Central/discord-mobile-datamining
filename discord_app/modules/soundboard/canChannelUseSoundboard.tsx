@@ -42,7 +42,7 @@ export function canSelectedVoiceChannelUseSoundboard() {
 }
 export function useCanChannelUseSoundboard(arg0) {
   _require = arg0;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

@@ -13,12 +13,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(17072);
+const QuestDockConstants = fn(17215);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   rewardTile: { borderRadius: nativeDefault.radii.lg },
   wrapper: {
@@ -102,7 +102,7 @@ export default noop.memo(function QuestDockInsetHeaderBody(showBonusOrbsGradient
   const tmp = closure_8();
   const isQuestDockExpanded = QuestDockHooks.useIsQuestDockExpanded();
   const obj2 = { visible: flag, glow: true, style: null, children: null };
-  const items = [tmp.wrapper];
+  items = [tmp.wrapper];
   const obj3 = { paddingBottom: null };
   obj3.paddingBottom = Math.max(useSafeAreaInsetsDefault().bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM);
   items[1] = obj3;

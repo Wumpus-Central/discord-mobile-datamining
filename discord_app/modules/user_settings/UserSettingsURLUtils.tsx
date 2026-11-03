@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
-import keysSorter from "../../../_runtime/06793_keysSorter.js";
+import keysSorter from "../../../_runtime/06913_keysSorter.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -35,7 +35,7 @@ export function parseSettingsUrl(arg0) {
     str5 = str2.toLowerCase().replace(re7, "-");
     const str6 = str2.toLowerCase();
   }
-  const items = [str5];
+  items = [str5];
   if (null != tmp[3]) {
     str4 = str3.toLowerCase().replace(re7, "-");
     const str8 = str3.toLowerCase();

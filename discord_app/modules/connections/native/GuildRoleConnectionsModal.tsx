@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/connections/native/GuildRoleC
 export default noop.memo(function GuildRoleConnectionsModal(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
-  const items = [guildId, onClose];
+  items = [guildId, onClose];
   const memo = noop.useMemo(() => {
     closure_1 = onClose;
     let obj = {};
@@ -22,16 +22,16 @@ export default noop.memo(function GuildRoleConnectionsModal(guildId) {
       return null;
     };
     obj2.headerRight = function headerRight() {
-      const obj = { source: onClose(8359), onPress, accessibilityLabel: null };
+      const obj = { source: onClose(8483), onPress, accessibilityLabel: null };
       const intl = guildId(1113).intl;
       obj.accessibilityLabel = intl.string(guildId(1113).t.cpT0Cq);
-      return jsx(guildId(7558).HeaderActionButton, { source: onClose(8359), onPress, accessibilityLabel: null });
+      return jsx(guildId(7682).HeaderActionButton, { source: onClose(8483), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11600), { guildId, onCloseModal });
+      return jsx(onClose(11737), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;
   }, items);
-  return jsx(guildId(7169).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(7290).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });

@@ -18,11 +18,11 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/usePurchas
 
 export function usePurchasedProductsSort(memo) {
   _require = memo;
-  let items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => purchases.purchases);
   const items1 = [stateFromStores];
   const tmp2 = useMemo(() => {
-    const items = [...stateFromStores];
+    items = [...stateFromStores];
     return items.map((item) => {
       [tmp] = item;
       return tmp;
@@ -31,11 +31,11 @@ export function usePurchasedProductsSort(memo) {
   useMemo = tmp2;
   let items2 = [memo, tmp2];
   return useMemo(() => {
-    let items = [...closure_0];
+    items = [...closure_0];
     return items.sort((type, type2) => {
       const obj = closure_1_2;
       if (type.type === closure_0(stateFromStores[2]).CollectiblesItemType.BUNDLE) {
-        const items = type.items;
+        items = type.items;
         if (items.some((skuId) => obj.includes(skuId.skuId))) {
           let NOT_PURCHASED = constants.PARTIAL_OWNED_BUNDLE;
           let tmp4 = constants;

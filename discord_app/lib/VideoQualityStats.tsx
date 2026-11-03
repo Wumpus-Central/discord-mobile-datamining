@@ -757,7 +757,7 @@ class InboundStats {
     values = Object.values(closure_12);
     obj.decoderBuckets = Object.fromEntries(
       values.map((item) => {
-        const items = [item, 0];
+        items = [item, 0];
         return items;
       }),
     );
@@ -953,7 +953,7 @@ Object.defineProperty(prototype, "videoStoppedReasons", {
 prototype["continueAggregationFrom"] = function continueAggregationFrom(previousAggregationStats, flag) {
   this.previousAggregationStats = previousAggregationStats.previousAggregationStats;
   if (flag) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(previousAggregationStats.statsWindow, 0);
     tmp.statsWindow = items;
   }
@@ -1203,7 +1203,7 @@ class OutboundStats extends InboundStats {
     values = Object.values(closure_11);
     applyArgumentsResult.encoderBuckets = Object.fromEntries(
       values.map((item) => {
-        const items = [item, 0];
+        items = [item, 0];
         return items;
       }),
     );

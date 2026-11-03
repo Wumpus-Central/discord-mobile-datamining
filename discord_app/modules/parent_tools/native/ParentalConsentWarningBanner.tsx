@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
-import tinycolorDefault from "../../../../_runtime/07730_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07854_tinycolor.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -13,14 +13,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7716).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7840).FamilyCenterSubPages;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
+({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = {
   position: "absolute",
@@ -61,10 +61,10 @@ export default function ParentalConsentWarningBanner(children) {
   const obj4 = require("useIsOnMainSurface");
   const obj5 = require("useGlobalStatusIndicatorState");
   token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
-  let items = [token];
+  items = [token];
   daysRemaining = undefined;
   const memo = noop.useMemo(() => {
-    const items = [token];
+    items = [token];
     const obj = tinycolorDefault(token);
     items[1] = tinycolorDefault(token).setAlpha(0).toRgbString();
     return items;

@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 export function useCanRing(user, selectedVoiceChannelId) {
   _require = user;
   dependencyMap = selectedVoiceChannelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_1));
   const obj = require("initialize");
   const items1 = [AuthenticationStore];

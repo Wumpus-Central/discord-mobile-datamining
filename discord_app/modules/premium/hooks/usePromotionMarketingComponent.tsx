@@ -16,7 +16,7 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
   const effect = noop.useEffect(() => {
     const result = PREMIUM_TAB(stateFromStores[4]).maybeFetchActivePromotions();
   }, []);
-  const items = [PromotionsStore, ref];
+  items = [PromotionsStore, ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const marketingComponentByType = PromotionsStore.getMarketingComponentByType(closure_0);
     if (null == marketingComponentByType) {

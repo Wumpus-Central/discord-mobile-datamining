@@ -12,7 +12,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   wrapper: { minHeight: 16 },
   listStyle: { flex: 0 },
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMem
 
 export default noop.memo(function LaunchPadMembers() {
   const tmp = closure_7();
-  const items = [SelectedChannelStore, ChannelStore];
+  items = [SelectedChannelStore, ChannelStore];
   const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
     channel = channel.getChannel(currentlySelectedChannelId);
@@ -45,7 +45,11 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "children", type: true };
+    return {
+      channelId: "channel_id",
+      type:
+        -198609602824364700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

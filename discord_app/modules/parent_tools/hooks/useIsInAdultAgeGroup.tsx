@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInAdultAgeGroup.tsx");
 
 export default function useIsInAdultAgeGroup() {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   return "adult" === initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 }

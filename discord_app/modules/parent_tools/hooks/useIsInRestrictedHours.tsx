@@ -8,6 +8,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
 export default function useIsInRestrictedHours() {
-  const items = [UserStore, FamilyCenterStore];
+  items = [UserStore, FamilyCenterStore];
   return initialize.useStateFromStores(items, () => currentUserInRestrictedHours.isCurrentUserInRestrictedHours());
 }

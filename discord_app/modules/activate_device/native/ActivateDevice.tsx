@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import NativeImageManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import ConsoleOAuthApplications from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
-import _modDef15707 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
-import _modDef15708 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
+import _modDef15850 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
+import _modDef15851 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -43,7 +43,7 @@ export (onClose) => {
   importDefault = tmp4;
   [first1, _slicedToArray] = deviceCodeAuthorizeCallback.useState(null);
   const activateDeviceStepTracking = first(first1[6]).useActivateDeviceStepTracking(first);
-  let items = [tmp2[1]];
+  items = [tmp2[1]];
   const callback = deviceCodeAuthorizeCallback.useCallback(() => {
     closure_1({ type: "user-code-input" });
   }, items);
@@ -77,13 +77,13 @@ export (onClose) => {
   const effect = deviceCodeAuthorizeCallback.useEffect(() => {
     if ("userCodeData" in first) {
       const userCodeData = first.userCodeData;
-      const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
+      items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef15707);
+        closure_3(_modDef15850);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef15708);
+          closure_3(_modDef15851);
         }
       }
     }

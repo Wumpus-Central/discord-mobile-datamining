@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/useBot
 
 export function useBottomSheetRef() {
   const ref = noop.useRef(null);
-  const items = [ref];
+  items = [ref];
   return {
     bottomSheetRef: ref,
     bottomSheetClose: noop.useCallback(() => {

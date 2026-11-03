@@ -97,11 +97,11 @@ function encryptAndStoreTokens() {
       }
       const _Object = Object;
       const entries = Object.entries(closure_10);
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         entries.map((item) => {
           [tmp, obj] = item;
-          const items = [tmp];
+          items = [tmp];
           let result;
           if (safeStorage != null) {
             result = safeStorage.isEncryptionAvailable();
@@ -215,12 +215,12 @@ export function init() {
             obj3 = { decryptedToken: arr, wasEncrypted: false };
           }
           ({ wasEncrypted, decryptedToken } = obj3);
-          const items = [tmp, decryptedToken];
+          items = [tmp, decryptedToken];
           return items;
         }
         obj3 = { decryptedToken: null, wasEncrypted: false };
       });
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         mapped.filter((item) => {
           [, tmp] = item;

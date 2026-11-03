@@ -9,7 +9,7 @@ import SentGiftsStore from "../SentGiftsStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
   position: "absolute",
@@ -46,7 +46,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let stateFromStores1;
   let memo;
-  const items = [memo];
+  items = [memo];
   const items1 = [sku.id, wishlistOwnerId];
   const applicationId = sku.applicationId;
   const stateFromStores = sku(size[6]).useStateFromStores(

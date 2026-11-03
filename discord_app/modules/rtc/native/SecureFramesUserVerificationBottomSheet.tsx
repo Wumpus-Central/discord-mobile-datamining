@@ -16,16 +16,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9266);
+const SecureFramesConstants = fn(9394);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
-  SECURE_FRAMES_PUBLIC_KEY_VERSION: c10,
+  SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10,
   USER_VERIFIED_TOAST_KEY: closure_11,
 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = {
   height: 80,
@@ -71,7 +71,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   const isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
   let loading = isPersistentSecureFramesFingerprint.loading;
   let obj4 = userId(fingerprint[13]);
-  const items = [isUserSecureFramesVerified];
+  items = [isUserSecureFramesVerified];
   const stateFromStores = userId(fingerprint[14]).useStateFromStores(items, () =>
     isUserSecureFramesVerified.isConnected(),
   );
@@ -141,10 +141,10 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     if (constants.OTHER_USER_ALREADY_VERIFIED !== memo) {
       if (constants.MATCH !== tmp) {
         const obj = { style: closure_3.icon, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-        return map1(XLargeBoldIcon.XLargeBoldIcon, obj);
+        return state(XLargeBoldIcon.XLargeBoldIcon, obj);
       }
     }
-    return map1(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, {
+    return state(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, {
       style: closure_3.icon,
       color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE,
     });
@@ -189,7 +189,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   if (!loading) {
     obj13.children = memo1;
     const items9 = [tmp23(tmp25, obj13), , , ,];
-    const obj14 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp17 };
+    const obj14 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: tmp17 };
     items9[1] = tmp23(tmp2(tmp3[28]).Text, obj14);
     const obj15 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: tmp18 };
     items9[2] = tmp23(tmp2(tmp3[28]).Text, obj15);

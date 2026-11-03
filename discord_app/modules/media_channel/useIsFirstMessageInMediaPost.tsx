@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/media_channel/useIsFirstMessa
 
 export function useIsFirstMessageInMediaPost(arg0) {
   _require = arg0;
-  const items = [arg0];
+  items = [arg0];
   return require("useStateFromStores").useStateFromStores(
     [],
     () => {

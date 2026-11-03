@@ -14,7 +14,7 @@ require = fn;
 function PricingSubheadingCopy() {
   let tmp = closure_21();
   _require = tmp;
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const hasBoostDiscountResult = require("PremiumUtils").hasBoostDiscount(stateFromStores);
@@ -48,7 +48,7 @@ function PricingSubheadingCopy() {
   const obj7 = require("initialize");
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(
     require("initialize").useStateFromStoresArray(items4, () => {
-      const items = [
+      items = [
         IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_GUILD_1_MONTHLY),
         IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_MONTHLY),
         IAPStore.getProduct(closure_0(str3[16]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY),
@@ -217,7 +217,7 @@ function PricingSubheadingCopy() {
 }
 const View = fn(17).View;
 const CurrencyCodes = fn(1072).CurrencyCodes;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   SubscriptionPlans: closure_12,
   SubscriptionPlanInfo: map1,
@@ -228,7 +228,7 @@ const PremiumConstants = fn(1385);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_21 = createStyles.createStyles({
   title: { marginTop: 16 },
   pricingSection: { alignItems: "center" },
@@ -251,7 +251,7 @@ export default function PremiumSubscriptionPricingUpsell() {
   };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3x1PFE"]);
-  const items = [collapsedCategories(Text_Text.Text, obj3)];
+  items = [collapsedCategories(Text_Text.Text, obj3)];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = collapsedCategories(PricingSubheadingCopy, {});

@@ -7,7 +7,7 @@ function sortSoundsOldestToNewestCreationDate(value7) {
   if (arg1 === undefined) {
     flag = true;
   }
-  const items = [...value7];
+  items = [...value7];
   const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
   let sorted1 = sorted;
   if (flag) {
@@ -41,7 +41,7 @@ export function sortSoundsOldestToNewestFavoriteDate(arg0) {
   }
   let sorted = arg0;
   if (flag) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arg0, 0);
     sorted = items.sort((available, available2) => {
       if (!available.available) {

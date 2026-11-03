@@ -17,8 +17,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-md/semibold";
 let c8 = "text-sm/medium";
-let closure_9 = fn(17072).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(5014);
+let closure_9 = fn(17215).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   wrapper: {
     alignItems: "center",
@@ -66,7 +66,7 @@ export default noop.memo(function QuestDockEnrolledHeader() {
     loading: false,
     hasConfetti: true,
   });
-  const items = [hasOwnProperty(View, obj10)];
+  items = [hasOwnProperty(View, obj10)];
   const obj12 = { style: tmp4.copy, children: null };
   const items1 = [
     hasOwnProperty(Text_Text.Text, {

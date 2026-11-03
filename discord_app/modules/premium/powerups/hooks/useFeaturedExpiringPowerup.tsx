@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useFea
 
 export default function useFeaturedExpiringPowerup(arg0) {
   _require = arg0;
-  let items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
@@ -35,7 +35,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
       if (unlockedPowerups == null) {
         unlockedPowerups = {};
       }
-      const items = [];
+      items = [];
       const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
       let entitlements;
       if (stateFromStores1 != null) {

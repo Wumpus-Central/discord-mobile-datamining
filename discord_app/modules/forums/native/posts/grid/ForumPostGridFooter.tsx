@@ -11,7 +11,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 },
   dot: null,
@@ -34,7 +34,7 @@ export default function ForumPostGridFooter(parentChannel) {
   const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   const obj2 = { style: tmp.footer, children: null };
-  const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), ,];
+  items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), ,];
   if (tmp5Result) {
     const obj3 = { children: null };
     const obj4 = { style: tmp.dot };

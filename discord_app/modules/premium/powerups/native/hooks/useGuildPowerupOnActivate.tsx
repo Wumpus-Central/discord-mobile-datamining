@@ -8,7 +8,7 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -19,7 +19,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
   const tmp = require("useGuildPowerupOnToggle")(arg0, arg1);
   onToggle = tmp.onToggle;
   ({ isLoading, error } = tmp);
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const tmp3 = require("useAvailableBoostCountForPowerup")(arg0, arg1);
   closure_4 = tmp3;
@@ -76,7 +76,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                return PERK(6744).popWithKey(diff(7595).PREMIUM_KEY);
+                return PERK(6864).popWithKey(diff(7719).PREMIUM_KEY);
               },
               onPaymentSuccess() {
                 const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -98,7 +98,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 }
               },
               onPaymentDismiss() {
-                return PERK(6744).popWithKey(diff(7595).PREMIUM_KEY);
+                return PERK(6864).popWithKey(diff(7719).PREMIUM_KEY);
               },
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

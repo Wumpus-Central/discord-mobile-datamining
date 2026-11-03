@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   text: null,
@@ -70,7 +70,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   if (contained_image != null) {
     image = contained_image.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
+  items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const items1 = [header.header];
   const obj5 = { style: tmp.contentRow, children: null };

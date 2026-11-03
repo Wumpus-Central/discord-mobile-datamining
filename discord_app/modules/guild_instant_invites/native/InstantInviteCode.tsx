@@ -58,10 +58,10 @@ class InstantInviteDetails {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(4867).createChannelRecordFromInvite;
+let closure_5 = fn(4994).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -69,18 +69,18 @@ const result = size.fileFinishedImporting("modules/guild_instant_invites/native/
 
 export default function InstantInviteCode(invite) {
   invite = invite.invite;
-  const items = [invite.channel];
+  items = [invite.channel];
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
   const items1 = [
-    closure_8(invite(5624).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
+    closure_8(invite(5747).Text, { variant: "text-lg/semibold", tabularNumbers: true, children: invite.code }),
   ];
-  const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj3 = { variant: "text-lg/semibold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(6027).Stack, obj2);
+  obj.children = closure_9(invite(6147).Stack, obj2);
   return closure_8(View, obj);
 }
 export { InstantInviteDetails };

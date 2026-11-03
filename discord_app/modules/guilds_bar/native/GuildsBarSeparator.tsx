@@ -1,34 +1,44 @@
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
 import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   const tmp = closure_4(guildItemSize);
-  const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-  const fn = function n() {
-    const obj = { transform: null };
-    const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { panelTranslateX, guildItemSize };
-  fn.__workletHash = 7666765056610;
-  fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  let obj = useHomeDrawerGesture;
+  items = [closure_5, obj.useHomeDrawerState().panelTranslateX, guildItemSize];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp3, tmp4, tmp5] = items;
+  class GuildsBarSeparatorTsx1 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { scaleX: Math.max(1, (closure_0.get() + closure_1) / closure_1) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items1 = [tmp4, tmp5];
+  GuildsBarSeparatorTsx1.__closure = items1;
+  GuildsBarSeparatorTsx1.__workletHash = 16141865753371;
+  GuildsBarSeparatorTsx1.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(GuildsBarSeparatorTsx1);
   const obj3 = { style: null };
-  let items = [tmp.separator, animatedStyle];
-  obj3.style = items;
-  return jsx(ReanimatedNativeViewDefault, { style: null });
+  const items2 = [tmp.separator, animatedStyle];
+  obj3.style = items2;
+  return jsx(_modDef1652.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = {
@@ -44,8 +54,8 @@ let closure_4 = createStyles.createStyles((width) => {
   obj.separator = size;
   return obj;
 });
-const __initData = {
-  code: "function GuildsBarSeparatorTsx1(){const{panelTranslateX,guildItemSize}=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};}",
+let closure_5 = {
+  code: "(function GuildsBarSeparatorTsx1(){let[panelTranslateX,guildItemSize]=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};})",
 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");

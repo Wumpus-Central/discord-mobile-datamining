@@ -17,13 +17,13 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
   const guildId = selectionActionComponent.guildId;
   GuildStore = undefined;
   ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let id;
   if (guild != null) {
     id = guild.id;
   }
   GuildStore = channelId(guildId[3])(id, selectionActionComponent(tmp3[4]).MIN_REREQUEST_TIME);
-  const items = [selectionActionComponent, channelId];
+  items = [selectionActionComponent, channelId];
   const callback = guild.useCallback(
     (query) => SearchableSelectActionComponentUtils.queryMentionables(selectionActionComponent.type, query, channelId),
     items,

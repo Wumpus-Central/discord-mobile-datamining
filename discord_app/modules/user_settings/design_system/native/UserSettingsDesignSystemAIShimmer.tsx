@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16 },
   buttonRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
@@ -67,8 +67,8 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };
   const obj4 = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Variant" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Variant" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -84,7 +84,7 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const obj8 = { children: null };
   const obj9 = { children: null };
   const items2 = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Colors" }),
+    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -103,7 +103,7 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const obj14 = { children: null };
   const obj15 = { children: null };
   const items3 = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/bold", children: "Manual Trigger" }),
+    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Manual Trigger" }),
     React5(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",

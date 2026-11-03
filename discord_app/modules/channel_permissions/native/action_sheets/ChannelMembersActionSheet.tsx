@@ -6,7 +6,7 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -30,10 +30,10 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
+({ ChannelSettingsSections: closure_9, Permissions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
@@ -52,7 +52,7 @@ export default function ChannelMembersActionSheet(arg0) {
   const tmp = closure_13();
   dependencyMap = tmp;
   const tmp4 = useSafeAreaInsetsDefault();
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const items1 = [GuildStore, GuildRoleStore];
   const items2 = [stateFromStores];
@@ -63,7 +63,7 @@ export default function ChannelMembersActionSheet(arg0) {
       if (stateFromStores != null) {
         guildId = stateFromStores.getGuildId();
       }
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       const obj2 = { guild, sortedGuildRoles: null };
       let sortedRoles;
       if (null != guild) {

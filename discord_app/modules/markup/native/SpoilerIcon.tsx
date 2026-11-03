@@ -1,5 +1,5 @@
 // discord_app/modules/markup/native/SpoilerIcon.tsx
-import inlineStyles from "../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -26,7 +26,7 @@ export default function Spoiler(width) {
   const merged1 = Object.assign(merged);
   obj.width = num;
   obj.height = num2;
-  const items = [
+  items = [
     React2(inlineStyles.Path, {
       fill: str,
       d: "M9.09091 12C9.09091 13.5786 10.3935 14.8571 12 14.8571C13.6065 14.8571 14.9091 13.5786 14.9091 12C14.9091 10.4214 13.6065 9.14286 12 9.14286C10.3935 9.14286 9.09091 10.4214 9.09091 12ZM13.3402 12C13.3402 12.789 12.689 13.4286 11.8857 13.4286C11.0823 13.4286 10.4311 12.789 10.4311 12C10.4311 11.211 11.0823 10.5714 11.8857 10.5714C12.689 10.5714 13.3402 11.211 13.3402 12Z",

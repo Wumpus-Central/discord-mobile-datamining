@@ -1,7 +1,7 @@
 // discord_app/modules/channel/native/ChannelLongPressActionSheet.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import StageChannelPermissions from "../../stage_channels/StageChannelPermissions.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -83,7 +83,7 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   let tmp3 = onClose(guildId[92]);
   const isFavoritesGuildSelected = channel(guildId[94]).useIsFavoritesGuildSelected();
   let obj = channel(guildId[94]);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = channel(guildId[95]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj2 = channel(guildId[95]);
   const items1 = [PermissionStore];
@@ -185,7 +185,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     let tmp = guildId;
     obj.isParentOptedIn = null != channel.parent_id && UserGuildSettingsStore.isChannelOptedIn(tmp, channel.parent_id);
     if (tmp == null) {
-      tmp = __initData9;
+      tmp = state2;
     }
     obj.isPinned = UserGuildSettingsStore.isFavorite(tmp, channel.id);
     return obj;
@@ -454,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10807, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10937, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -515,7 +515,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     const obj22 = { label: null, IconComponent: null, onPress: null };
     const intl7 = tmp5(tmp2[23]).intl;
     obj22.label = intl7.string(tmp(tmp2[42])["276ll6"]);
-    obj22.IconComponent = tmp5(tmp2[43]).RemixIcon;
+    obj22.IconComponent = tmp5(tmp2[43]).PaperPlusIcon;
     obj22.onPress = function onPress() {
       const obj2 = {
         key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY,
@@ -837,7 +837,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[73]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10998, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11131, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);
@@ -871,7 +871,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -900,7 +900,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -1107,11 +1107,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_33(
-              channel(7368).ActionSheetRow,
+              channel(7488).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_33(channel(7368).ActionSheetRow.Icon, {
+                icon: closure_1_33(channel(7488).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1249,11 +1249,11 @@ function ChannelLongPressActionSheetConnected(channel) {
   tmp70 = null != remixProject && null != guildId1;
   tmp72 = null != tmp52 && null != guildId1;
 }
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
-const ChannelRecord = fn(4867);
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
+const ChannelRecord = fn(4994);
 ({
   isGuildTextChannelType: closure_9,
-  isGuildVocalChannelType: c10,
+  isGuildVocalChannelType: closure_10,
   isReadableType: closure_11,
   isTextChannel: closure_12,
 } = ChannelRecord);
@@ -1269,7 +1269,7 @@ const Constants = fn(1072);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: closure_31,
 } = Constants);
-let closure_32 = fn(10137).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10267).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");
@@ -1277,7 +1277,7 @@ let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPress
 export default function ChannelLongPressActionSheet(arg0) {
   ({ channelId: require, onClose } = arg0);
   let stateFromStores;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(require));
   const items1 = [stateFromStores, onClose];
   const effect = noop.useEffect(() => {

@@ -3,7 +3,7 @@ import ExplicitMediaRedactionActionCreators from "../../ExplicitMediaRedactionAc
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(7466).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_4 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -68,7 +68,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     messageId(tmp2[7]).hideActionSheet();
     const obj5 = messageId(tmp2[7]);
   }
-  const items = [reportFalsePositive];
+  items = [reportFalsePositive];
   const callback = redactableMediaEmbedsForMessage.useCallback(() => {
     reportFalsePositive();
   }, items);

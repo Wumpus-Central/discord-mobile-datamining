@@ -118,7 +118,7 @@ function GameCoverArtFallback(arg0) {
       accessibilityLabel: null,
       children: null,
     };
-    const items = [tmp.container, style, tmp.compactFallback];
+    items = [tmp.container, style, tmp.compactFallback];
     obj2.style = items;
     obj2.accessible = accessible;
     obj2.accessibilityLabel = gameName;
@@ -181,7 +181,7 @@ let closure_7 = {
   [GameCoverArtSize.SMALL]: { nameVariant: "text-xs/medium", nameLineClamp: 3, releaseYearVariant: "text-xxs/normal" },
   [GameCoverArtSize.LARGE]: { nameVariant: "text-md/medium", nameLineClamp: 4, releaseYearVariant: "text-sm/normal" },
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   container: { borderRadius: nativeDefault.radii.sm },
   image: null,

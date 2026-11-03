@@ -22,13 +22,13 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
     return null;
   }
 }
-let closure_3 = fn(7724).transformSKUToCollectiblesItem;
+let closure_3 = fn(7848).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1072).SKUProductLines;
 const prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   const tmp2 = new prototype(bundle_items, tmp);
   tmp2.skuProductLine = SKUProductLines.COLLECTIBLES;
   if (null != bundle_items.bundle_items) {
-    const items = [];
+    items = [];
     bundle_items = bundle_items.bundle_items;
     const tmp16 = bundle_items[Symbol.iterator]();
     while (tmp16 !== undefined) {
@@ -90,7 +90,7 @@ prototype["fromSKU"] = function fromSKU(id) {
       item = tmp.item;
     }
     tmp8.collectiblesItem = item;
-    let items;
+    items = undefined;
     if ("bundle" === tmp.type) {
       items = tmp.items;
     }

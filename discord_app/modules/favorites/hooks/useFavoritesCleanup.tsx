@@ -27,7 +27,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ export default function useFavoritesCleanup(arg0) {
               closure_129_4(false);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           c3 = 0;
           closure_129_11.current = false;
@@ -143,7 +143,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -268,13 +268,13 @@ export default function useFavoritesCleanup(arg0) {
   }
   let obj2 = /^\d+$/;
   let set = new Set();
-  let items = [first4, closure_6, first3, closure_8];
+  items = [first4, closure_6, first3, closure_8];
   const items1 = [first2, NumberResult, first1, first3];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
       if ("filter" === first2) {
-        let items = [];
+        items = [];
       } else {
         const obj2 = { days: NumberResult, categoryId: first1 };
         const favoritesCleanupCandidates = FavoritesCleanup.getFavoritesCleanupCandidates(obj2);
@@ -290,7 +290,7 @@ export default function useFavoritesCleanup(arg0) {
   return {
     categories: obj.flatMap((id) => {
       if (null == id.id) {
-        let items = [];
+        items = [];
       } else {
         const obj = { id: null, name: null };
         ({ id: obj.id, name: obj.name } = id);
@@ -315,7 +315,7 @@ export default function useFavoritesCleanup(arg0) {
     allSelected: stateFromStoresArray.length > 0 && found.length === stateFromStoresArray.length,
     toggleSelection() {
       if (closure_17) {
-        let items = [];
+        items = [];
       } else {
         items = stateFromStoresArray.map((id) => id.id);
       }

@@ -25,7 +25,7 @@ export function toAnnouncementMessages(messages) {
         const first = tmp2Result.embeds[0];
         let tmp9 = null;
         if (null != first) {
-          const items = [];
+          items = [];
           if (null != first.rawTitle) {
             const _HermesInternal = HermesInternal;
             items.push("# " + first.rawTitle);

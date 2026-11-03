@@ -13,7 +13,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(12379).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(12515).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -34,11 +34,11 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12384), obj3);
+    tmp6 = closure_5(application(12520), obj3);
   }
-  const items = [
+  items = [
     tmp6,
-    closure_5(onAppSelected(5624).Text, {
+    closure_5(onAppSelected(5747).Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
@@ -46,13 +46,13 @@ function AppInThisServer(onAppSelected) {
     }),
   ];
   obj2.children = items;
-  return closure_6(onAppSelected(8992).PressableScale, obj2, application.id);
+  return closure_6(onAppSelected(9120).PressableScale, obj2, application.id);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginBottom: 16 },
   headerContainer: { justifyContent: "center" },
@@ -104,7 +104,7 @@ export default function InThisServerSection(arg0) {
     }
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.headerContainer, children: null };
-    const obj3 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+    const obj3 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t.oJyzCu);
     const items2 = [closure_5(Text_Text.Text, obj3)];

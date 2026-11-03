@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   alert: { marginTop: 120 },
   header: { marginTop: 40, textAlign: "center" },
@@ -33,7 +33,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
   const handleConfirmAndAck = guildId.handleConfirmAndAck;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, handleConfirmAndAck: 0 }));
   const tmp2 = closure_8();
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(merged[6]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   guildId(merged[6]);
@@ -65,7 +65,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
     const items2 = [closure_6(View, obj3), ,];
     const obj5 = {
       style: tmp2.header,
-      variant: "heading-lg/extrabold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

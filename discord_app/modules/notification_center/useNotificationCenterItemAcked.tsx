@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/notification_center/useNotifi
 
 export function useNotificationCenterItemAcked(forceUnacked, ackedBeforeId) {
   _require = forceUnacked;
-  const items = [NotificationCenterStore];
+  items = [NotificationCenterStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () =>
     NotificationCenterStore.isLocalItemAcked(closure_0),
   );

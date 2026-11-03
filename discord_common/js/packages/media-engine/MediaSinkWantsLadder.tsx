@@ -91,7 +91,7 @@ prototype["getResolution"] = function getResolution(arg0) {
 };
 MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) {
   const set = new Set([0, 4, 8, 10]);
-  const items = [];
+  items = [];
   let num = 1;
   do {
     let result = (16 * num) / 9;
@@ -154,7 +154,7 @@ MediaSinkWantsLadder["getMutedFramerate"] = function getMutedFramerate(arg0) {
   return arg0 <= 20 ? React2 : React3;
 };
 MediaSinkWantsLadder["calculateOrderedLadder"] = function calculateOrderedLadder(ladder) {
-  const items = [];
+  items = [];
   const keys = Object.keys(ladder);
   const mapped = keys.map((item) => Number(item));
   const sorted = mapped.sort((arg0, arg1) => arg0 - arg1);

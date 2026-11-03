@@ -2,7 +2,7 @@
 import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -40,19 +40,19 @@ function forumKeyExtractor(arg0, arg1) {
 function ArchivedSection() {
   const tmp = closure_25();
   const obj2 = { style: null, children: null };
-  const items = [tmp.section, ClientThemesOverrides.useClientThemesOverride()];
+  items = [tmp.section, ClientThemesOverrides.useClientThemesOverride()];
   obj2.style = items;
-  const obj3 = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
+  const obj3 = { style: tmp.divider, variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3+LO1w"]);
-  obj2.children = __initData(Text_Text.Text, obj3);
-  return __initData(View, obj2);
+  obj2.children = closure_1_15(Text_Text.Text, obj3);
+  return closure_1_15(View, obj2);
 }
 function SearchSection(numPosts) {
   numPosts = numPosts.numPosts;
   const tmp = closure_25();
   const obj = { style: tmp.section, children: null };
-  const obj2 = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
+  const obj2 = { style: tmp.divider, variant: "text-xs/semibold", color: "text-muted", children: null };
   if (0 === numPosts) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.DbgHxi);
@@ -62,8 +62,8 @@ function SearchSection(numPosts) {
     stringResult = intl.formatToPlainString(util.t["tBz/8b"], obj3);
   }
   obj2.children = stringResult;
-  obj.children = __initData(Text_Text.Text, obj2);
-  return __initData(View, obj);
+  obj.children = closure_1_15(Text_Text.Text, obj2);
+  return closure_1_15(View, obj);
 }
 function ArchivedMissingReadHistoryPermission(channelName) {
   const tmp = closure_25();
@@ -71,8 +71,8 @@ function ArchivedMissingReadHistoryPermission(channelName) {
   const obj2 = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.TycmzM, { channelName: channelName.channelName });
-  obj.children = __initData(Text_Text.Text, obj2);
-  return __initData(View, obj);
+  obj.children = closure_1_15(Text_Text.Text, obj2);
+  return closure_1_15(View, obj);
 }
 function SearchMissingReadHistoryPermission(channelName) {
   const tmp = closure_25();
@@ -80,8 +80,8 @@ function SearchMissingReadHistoryPermission(channelName) {
   const obj2 = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.OWZJdS, { channelName: channelName.channelName });
-  obj.children = __initData(Text_Text.Text, obj2);
-  return __initData(View, obj);
+  obj.children = closure_1_15(Text_Text.Text, obj2);
+  return closure_1_15(View, obj);
 }
 function GameInvitesChannelHeaderGameIcon(channel) {
   _require = undefined;
@@ -142,10 +142,10 @@ function GameInvitesChannelHeaderGameIcon(channel) {
 function SortAndViewOptions(channel) {
   channel = channel.channel;
   const id = channel.id;
-  const items = [id];
+  items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14376, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14507, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -161,12 +161,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5634).Button, {
+  return closure_15(id(5754).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(12482).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(12618).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,13 +176,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14377, dependencyMap.paths),
+      asyncRequireImpl(14508, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_15(channel(9566).TagIcon, { size: "xxs" });
-  return closure_15(channel(5634).Button, obj);
+  obj.icon = closure_15(channel(9698).TagIcon, { size: "xxs" });
+  return closure_15(channel(5754).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -233,7 +233,7 @@ function ForumChannelContent(channel) {
     guildId: channel.guild_id,
     channelId: channel.id,
   });
-  let items = [channel.id];
+  items = [channel.id];
   const effect = activeThreadIds.useEffect(() => {
     const current = ref.current;
     if (current != null) {
@@ -367,7 +367,7 @@ function ForumChannelContent(channel) {
   }, items5);
   let length;
   const memo = obj.useMemo(() => {
-    const items = [];
+    items = [];
     if (null != searchResults) {
       items.push(search_section);
       const push3 = items.push;
@@ -471,10 +471,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13763).useForumChannelStore;
+const useForumChannelStore = fn(13894).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11241).getVoicePanelDockButtonsTop;
+let closure_14 = fn(11378).getVoicePanelDockButtonsTop;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -491,7 +491,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -550,7 +550,7 @@ export default function ForumChannel(channel) {
   let stateFromStores1;
   let callback;
   const tmp = closure_25();
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const stateFromStores = channel(analyticsLocations[20]).useStateFromStores(items, () =>
     GuildVerificationStore.canChatInGuild(channel.guild_id),
   );
@@ -773,7 +773,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj17.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj17.icon = require("../../../../_runtime/metro/14386__.js");
+  obj17.icon = require("../../../../_runtime/metro/14517__.js");
   obj17.disabled = tmp17;
   obj17.positionBottom = sum;
   obj17.onPress = callback1;

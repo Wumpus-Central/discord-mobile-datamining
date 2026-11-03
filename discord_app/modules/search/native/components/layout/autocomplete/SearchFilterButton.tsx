@@ -2,7 +2,7 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -14,7 +14,7 @@ export default noop.memo(function SearchFilterButton(searchContext) {
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
   validOrderedFilterTokens = searchContext(validOrderedFilterTokens[3]).useValidOrderedFilterTokens(searchContext);
-  const items = [searchContext, validOrderedFilterTokens];
+  items = [searchContext, validOrderedFilterTokens];
   const memo = noop.useMemo(
     () =>
       validOrderedFilterTokens.map((item) => {

@@ -30,7 +30,7 @@ let closure_12 = async function _ensureEnrollment(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -110,7 +110,7 @@ let closure_13 = async function _launchGame(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ let closure_13 = async function _launchGame(arg0, arg1) {
               ActionSheetActionCreatorsDefault.hideActionSheet();
               c4 = 1;
               if (null == application.getApplication(applicationId)) {
-                const items = [applicationId];
+                items = [applicationId];
                 c5 = 2;
                 c6 = 1;
                 const obj8 = { value: ApplicationActionCreatorsDefault.fetchApplications(items, false), done: false };
@@ -152,13 +152,13 @@ let closure_13 = async function _launchGame(arg0, arg1) {
             closure_131_0(closure_131_2[14]).leaveFrame(closure_130_6);
             closure_131_11();
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp8) {
           c4 = 0;
           closure_131_11();
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
@@ -225,7 +225,7 @@ let closure_13 = async function _launchGame(arg0, arg1) {
         } else if (4 === tmp8) {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -302,7 +302,7 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -376,8 +376,8 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
   })();
 };
 const AbortCodes = fn(1072).AbortCodes;
-const FramesConstants = fn(6847);
-({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
+const FramesConstants = fn(6967);
+({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: closure_10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");
 

@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   button: {
     flexGrow: 0,
@@ -39,7 +39,7 @@ TouchableHitBox.prototype["render"] = function render() {
   let tmp8Result;
   ({ accessibilityLabel, accessibilityRole, accessibilityState } = props);
   if (null != source) {
-    const items = [tmp.buttonIcon, ,];
+    items = [tmp.buttonIcon, ,];
     let buttonDisabled = disabled;
     if (disabled) {
       buttonDisabled = tmp.buttonDisabled;
@@ -121,7 +121,7 @@ TouchableHitBox.prototype["render"] = function render() {
     children: null,
   });
 };
-TouchableHitBox.contextType = fn(5080).ThemeContext;
+TouchableHitBox.contextType = fn(5207).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {},
 };

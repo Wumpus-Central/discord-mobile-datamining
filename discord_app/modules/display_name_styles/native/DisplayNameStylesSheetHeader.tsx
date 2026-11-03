@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 },
   row: null,
@@ -37,13 +37,13 @@ export default function DisplayNameStylesSheetHeader(children) {
   const obj3 = {
     style: tmp.title,
     children: React3(Text_Text.Heading, {
-      variant: "redesign/heading-18/bold",
+      variant: "redesign/heading-18/semibold",
       color: "text-default",
       style: tmp.titleText,
       children: children.title,
     }),
   };
-  const items = [React3(View, obj3), ,];
+  items = [React3(View, obj3), ,];
   let tmp2Result = null != leading;
   if (tmp2Result) {
     const obj5 = { style: tmp.leading, children: leading };

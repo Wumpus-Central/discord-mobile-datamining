@@ -15,7 +15,7 @@ function GuildRoleSubscriptionsSectionHeader() {
   const obj2 = { variant: "eyebrow", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["KzCF/6"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj2)];
+  items = [hasOwnProperty(Text_Text.Text, obj2)];
   const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t["Y+ucR7"]);
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1 },
   list: { flex: 1 },
@@ -71,7 +71,7 @@ export default function UserSettingsGuildRoleSubscriptions() {
     };
     ({ listContentContainer: obj3.contentContainerStyle, list: obj3.style } = tmp);
     const obj7 = { key, data: tmp5 };
-    const items = [obj7];
+    items = [obj7];
     obj4.sections = items;
     obj4.keyExtractor = function keyExtractor(id) {
       return id.id;

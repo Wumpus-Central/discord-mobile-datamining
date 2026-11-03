@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 },
   headerSpacer: null,
@@ -38,7 +38,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   let tmp4Result2 = null != onBack;
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.header];
+  items = [tmp2.header];
   let str = "center";
   if (tmp4Result2) {
     str = "space-between";
@@ -57,7 +57,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   const items1 = [
     tmp4Result,
     React4(Text_Text.Text, {
-      variant: "redesign/heading-18/bold",
+      variant: "redesign/heading-18/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: title,
@@ -86,19 +86,19 @@ export function UserProfileStackedActionSheetList(data) {
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React4(Form.FormDivider, { style: divider.divider });
   };
-  const items = [tmp2.contentContainer, ,];
+  items = [tmp2.contentContainer, ,];
   let num = 0;
   if (obj2.isAndroid()) {
     num = renderItem(575).space.PX_16;
   }
-  items[1] = { paddingBottom: renderItem(1625)().bottom + num };
+  items[1] = { paddingBottom: renderItem(1627)().bottom + num };
   items[2] = data.contentContainerStyle;
   obj.contentContainerStyle = items;
   obj.renderItem = function renderItem(index) {
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(7294).BottomSheetFlashList, obj);
+  return closure_4(data(7414).BottomSheetFlashList, obj);
 }
 export function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
@@ -114,5 +114,5 @@ export function UserProfileStackedActionSheetSectionList(renderItem) {
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React4(Form.FormDivider, { style: divider.divider });
   };
-  return closure_4(renderItem(5275).BottomSheetSectionList, obj);
+  return closure_4(renderItem(5398).BottomSheetSectionList, obj);
 }

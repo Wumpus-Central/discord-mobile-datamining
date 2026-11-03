@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
 export function useUserIsTeen() {
-  const items = [UserStore];
+  items = [UserStore];
   return (
     false ===
     initialize.useStateFromStores(items, () => {

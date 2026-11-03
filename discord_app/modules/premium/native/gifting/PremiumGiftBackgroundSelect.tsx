@@ -1,11 +1,15 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NativeGiftContext from "../../../payments/native/NativeGiftContext.tsx";
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation.android.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+
+const module_1652 = _mod1652;
 
 require = fn;
 class GiftBackgroundSelect {
@@ -18,10 +22,12 @@ class GiftBackgroundSelect {
     closure_1 = undefined;
     closure_2 = undefined;
     tmp = closure_9();
-    tmp2 = closure_3(closure_4.useState(), 2);
-    first = tmp2[0];
+    tmp2 = closure_1;
+    tmp3 = closure_2;
+    tmp4 = closure_3(closure_4.useState(), 2);
+    first = tmp4[0];
     closure_0 = first;
-    closure_1 = tmp2[1];
+    closure_1 = tmp4[1];
     obj = closure_0(closure_2[4]);
     sharedValue = obj.useSharedValue(false);
     closure_2 = sharedValue;
@@ -29,42 +35,48 @@ class GiftBackgroundSelect {
     items[0] = first;
     items[1] = sharedValue;
     effect = closure_4.useEffect(() => {
-      const result = sharedValue.set(null != first);
+      const result = _undefined2.set(null != c0);
     }, items);
     obj2 = closure_0(closure_2[4]);
-    class N {
+    items1 = [, , ,];
+    items1[0] = closure_10;
+    items1[1] = closure_0(closure_2[8]).STANDARD_EASING;
+    items1[2] = closure_0(closure_2[9]).withTiming;
+    items1[3] = sharedValue;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    [tmp8, tmp9, tmp10, tmp11] = items1;
+    class PremiumGiftBackgroundSelectTsx1 {
       constructor() {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj = closure_0(closure_2[8]);
+        tmp = closure_1;
         num = 0;
         if (closure_2.get()) {
           num = 1;
         }
-        obj1 = { opacity: null };
-        obj4 = { easing: tmp(tmp2[9]).STANDARD_EASING, duration: 100 };
-        obj1.opacity = obj.withTiming(num, obj4);
-        return obj1;
+        obj = { opacity: null };
+        obj1 = { easing: closure_0, duration: 100 };
+        obj.opacity = tmp(num, obj1);
+        return obj;
       }
     }
+    items2 = [, ,];
+    items2[0] = tmp9;
+    items2[1] = tmp10;
+    items2[2] = tmp11;
+    PremiumGiftBackgroundSelectTsx1.__closure = items2;
+    PremiumGiftBackgroundSelectTsx1.__workletHash = 9299891037117;
+    PremiumGiftBackgroundSelectTsx1.__initData = tmp8;
+    animatedStyle = obj2.useAnimatedStyle(PremiumGiftBackgroundSelectTsx1);
+    tmp13 = jsxs;
+    tmp14 = Fragment;
+    tmp15 = jsx;
+    items3 = [,];
+    items3[0] = jsx(tmp2(tmp3[10]), { giftStyle: global.giftStyle, withConsistentHeight: flag });
     obj1 = {
-      STANDARD_EASING: closure_0(closure_2[9]).STANDARD_EASING,
-      withTiming: closure_0(closure_2[8]).withTiming,
-      visibility: sharedValue,
-    };
-    N.__closure = obj1;
-    N.__workletHash = 5743780040676;
-    N.__initData = closure_10;
-    animatedStyle = obj2.useAnimatedStyle(N);
-    tmp7 = jsxs;
-    tmp8 = Fragment;
-    tmp9 = jsx;
-    items1 = [,];
-    items1[0] = jsx(closure_1(closure_2[10]), { giftStyle: global.giftStyle, withConsistentHeight: flag });
-    obj7 = {
       onContentSizeChange(arg0) {
-        if (null == first) {
-          closure_1(arg0);
+        if (null == c0) {
+          _undefined(arg0);
         }
       },
       contentContainerStyle: null,
@@ -72,39 +84,39 @@ class GiftBackgroundSelect {
       horizontal: true,
       showsHorizontalScrollIndicator: false,
     };
-    items2 = [,];
-    items2[0] = tmp.contentContainer;
-    obj8 = null != first;
-    tmp10 = closure_8;
-    if (obj8) {
-      obj8 = first < closure_1(closure_2[7])().width;
+    items4 = [,];
+    items4[0] = tmp.contentContainer;
+    obj6 = null != first;
+    tmp16 = closure_8;
+    if (obj6) {
+      obj6 = first < closure_1(closure_2[7])().width;
     }
-    if (obj8) {
-      obj8 = { flex: 1 };
+    if (obj6) {
+      obj6 = { flex: 1 };
     }
-    obj9 = { children: null };
-    items2[1] = obj8;
-    obj7.contentContainerStyle = items2;
-    items3 = [,];
-    items3[0] = tmp.scrollView;
-    items3[1] = animatedStyle;
-    obj7.style = items3;
-    items1[1] = tmp9(tmp10, obj7);
-    obj9.children = items1;
-    return tmp7(tmp8, obj9);
+    obj7 = { children: null };
+    items4[1] = obj6;
+    obj1.contentContainerStyle = items4;
+    items5 = [,];
+    items5[0] = tmp.scrollView;
+    items5[1] = animatedStyle;
+    obj1.style = items5;
+    items3[1] = tmp15(tmp16, obj1);
+    obj7.children = items3;
+    return tmp13(tmp14, obj7);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(5014);
+let closure_8 = module_1652.createAnimatedComponent(fn(17).ScrollView);
+const createStyles = fn(5141);
 let obj = {
   scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
   contentContainer: { justifyContent: "center" },
 };
 const React7 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}",
+let closure_10 = {
+  code: "(function PremiumGiftBackgroundSelectTsx1(){let[STANDARD_EASING,withTiming,visibility]=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");

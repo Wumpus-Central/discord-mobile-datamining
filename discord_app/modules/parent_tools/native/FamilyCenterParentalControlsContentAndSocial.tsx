@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting(
 export default function FamilyCenterParentalControlsContentAndSocial() {
   const obj2 = { sections: null };
   const obj3 = { settings: null, subLabel: null };
-  const items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
+  items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
   obj3.settings = items;
   const intl = util.intl;
   const obj4 = { learnMoreLink: null };

@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting("modules/voice_calls/useIsVoiceChannel
 
 export default function useIsVoiceChannelFull(arg0) {
   _require = arg0;
-  const items = [VoiceStateStore, GuildStore];
+  items = [VoiceStateStore, GuildStore];
   return require("initialize").useStateFromStores(items, () =>
     ChannelUtils.isChannelFull(closure_0, VoiceStateStore, GuildStore),
   );
 }
 export function useIsVoiceChannelLocked(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(
     items,

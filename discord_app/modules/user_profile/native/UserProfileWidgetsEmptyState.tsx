@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" },
   textContainer: null,
@@ -29,7 +29,7 @@ export default function UserProfileWidgetsEmptyState() {
   const obj3 = { variant: "heading-md/semibold", color: "text-strong", style: tmp.centeredText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["oqalC+"]);
-  const items = [React3(Text_Text.Heading, obj3)];
+  items = [React3(Text_Text.Heading, obj3)];
   const obj4 = { variant: "text-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.O9SQ1c);

@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting(
 
 export default function useIsEligibleForTierTemplateUpsell(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const obj = require("initialize");
   let hasItem;

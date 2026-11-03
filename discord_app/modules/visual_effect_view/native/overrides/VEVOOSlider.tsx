@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-const PlatformUtils = fn(1375);
+const createStyles = fn(5141);
+const PlatformUtils = fn(1377);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;
@@ -21,7 +21,7 @@ const memoResult = noop.memo(function VEVOOSlider(disabled) {
     flag = false;
   }
   ({ initialValue, onValueChange, accessibilityLabel } = disabled);
-  const items = [closure_4().slider];
+  items = [closure_4().slider];
   let num = 1;
   if (flag) {
     num = 0.5;
@@ -59,7 +59,7 @@ export default noop.memo(function VEVOOSlider(disabled) {
     flag = false;
   }
   ({ initialValue, onValueChange, accessibilityLabel } = disabled);
-  const items = [closure_4().slider];
+  items = [closure_4().slider];
   let num = 1;
   if (flag) {
     num = 0.5;

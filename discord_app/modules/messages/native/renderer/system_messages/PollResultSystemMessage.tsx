@@ -57,7 +57,7 @@ export function createPollResultSystemMessage(message) {
         obj8.percentage = combined;
         formatToPartsResult = intl2.formatToParts(util.t.dqftZ2, obj8);
       } else {
-        const items = [];
+        items = [];
         let id = tmp3.victorEmoji;
         if (null == id) {
           const obj9 = { type: "text", content: tmp3.victorAnswerText };

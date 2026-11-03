@@ -102,7 +102,7 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp52(6032).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp52(6152).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }
@@ -134,7 +134,7 @@ function transformNode(type, channelId) {
   }
 }
 function transformNativeInline(value, channelId) {
-  const items = [];
+  items = [];
   while (tmp !== undefined) {
     let tmp4 = transformNode(tmp2, channelId);
     let tmp5 = tmp4;
@@ -152,7 +152,7 @@ function transformNativeInline(value, channelId) {
   return items;
 }
 function transformNativeBlocks(value, channelId, quote) {
-  const items = [];
+  items = [];
   let flag = false;
   const entries = value.entries();
   while (tmp2 !== undefined) {

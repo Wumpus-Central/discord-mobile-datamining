@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/stage_channels/useToggleRequest
 
 export default function useToggleRequestToSpeak(id) {
   _require = id;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => id2.getId());
   const tmp4 = useAudienceRequestToSpeakStateDefault(stateFromStores, id.id);
   importDefault = tmp4;

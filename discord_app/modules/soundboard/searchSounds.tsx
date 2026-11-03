@@ -58,7 +58,7 @@ export function searchSounds(arg0, availableSounds, stateFromStores, channel, ar
       byName = UnicodeEmojisDefault.getByName(result);
     }
     if (null != customEmojiById) {
-      const items = [customEmojiById.name];
+      items = [customEmojiById.name];
       let names = items;
     } else {
       names = undefined;

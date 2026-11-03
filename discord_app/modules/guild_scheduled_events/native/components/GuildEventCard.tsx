@@ -13,7 +13,7 @@ function GuildEventCardControls(onCloseAction) {
   const tmp = styles();
   const primaryActionButtonType = GuildEventCardComponents.usePrimaryActionButtonType(event, isConnected);
   const obj2 = { direction: "horizontal", style: tmp.actionContainer, children: null };
-  const items = [
+  items = [
     React5(GuildEventCardComponents.GuildEventCardPrimaryAction, {
       event,
       onCloseAction: onCloseAction.onCloseAction,
@@ -32,11 +32,11 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(6855).isGuildScheduledEventActive;
-fn(4869).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+let closure_5 = fn(6975).isGuildScheduledEventActive;
+fn(4996).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 };
@@ -58,7 +58,7 @@ export default noop.memo(function GuildEventCard(event) {
     flag2 = false;
   }
   const channel_id = event.channel_id;
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const items1 = [channel_id];
   let stateFromStores = event(channel_id[10]).useStateFromStores(
     items,

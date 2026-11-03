@@ -25,14 +25,14 @@ function PressableBase(androidRippleConfig) {
     }),
   );
   const backgroundColor = closure_8().pressedHighlight.backgroundColor;
-  let items = [type, activeOpacity, underlayColor, style, backgroundColor];
+  items = [type, activeOpacity, underlayColor, style, backgroundColor];
   const items1 = [androidRippleConfig, style];
   const memo = activeOpacity.useMemo(
     () =>
       PlatformUtils.isAndroid()
         ? style
         : (pressed) => {
-            const items = [style, ,];
+            items = [style, ,];
             if (!pressed.pressed) {
               items[1] = null;
               items[2] = backgroundColor;
@@ -111,10 +111,10 @@ function PressableBase(androidRippleConfig) {
   );
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5644).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5764).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1191).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

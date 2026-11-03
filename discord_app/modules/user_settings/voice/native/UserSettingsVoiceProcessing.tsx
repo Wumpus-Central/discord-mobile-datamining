@@ -9,11 +9,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const util = EUNgko(1113);
-const Text_Text = EUNgko(5624);
-const TableRadioGroup = EUNgko(7058);
-const TableRadioRow = EUNgko(7061);
-const TableSwitchRow = EUNgko(7369);
-const UserSettingsVoice = EUNgko(11940);
+const Text_Text = EUNgko(5747);
+const TableRadioGroup = EUNgko(7184);
+const TableRadioRow = EUNgko(7187);
+const TableSwitchRow = EUNgko(7489);
+const UserSettingsVoice = EUNgko(12077);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {
@@ -120,7 +120,7 @@ class VoiceProcessingOptions {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   optionsParentContainer: { marginTop: 12 },
   optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 },
@@ -131,7 +131,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
 
 export default function UserSettingsVoiceProcessing() {
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     echoCancellation: MediaEngineStore.getEchoCancellation(),
     advancedVoiceActivitySupported: MediaEngineStore.isAdvancedVoiceActivitySupported(),

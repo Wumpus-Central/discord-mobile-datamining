@@ -41,7 +41,7 @@ export default function NativeLottieView(accessibilityLabel) {
   LOOP(() => {
     closure_3.current = size;
   });
-  const items = [LOOP];
+  items = [LOOP];
   LOOP(() => {
     ({ asset, url, width, height, animating, accessibilityLabel } = ref.current);
     let tmp2 = "" !== url;

@@ -26,7 +26,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -68,7 +68,7 @@ export function getGuildFolderMenuItems(id) {
       }
     })();
   };
-  const items = [obj];
+  items = [obj];
   let obj2 = { IconComponent: require("SettingsIcon").SettingsIcon, label: null, action: null };
   const intl2 = require("util").intl;
   obj2.label = intl2.string(require("util").t.Dx7im5);
@@ -84,7 +84,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export function getGuildFolderMenuItems(id) {
           } else {
             const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

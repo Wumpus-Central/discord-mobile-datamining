@@ -10,7 +10,7 @@ export function filterPerfTraces(stateFromStoresArray, str) {
   if ("" !== formatted) {
     found = stateFromStoresArray.filter((item) =>
       (function perfTraceText(item) {
-        const items = [];
+        items = [];
         ({ name: arr[0], spans } = item);
         const iter = spans[Symbol.iterator]();
         const nextResult = iter.next();

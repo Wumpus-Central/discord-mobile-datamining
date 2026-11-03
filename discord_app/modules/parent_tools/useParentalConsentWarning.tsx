@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
 
 export function useParentalConsentWarning() {
-  const items = [ParentalConsentWarningStore];
+  items = [ParentalConsentWarningStore];
   return initialize.useStateFromStores(items, () => warning.getWarning());
 }

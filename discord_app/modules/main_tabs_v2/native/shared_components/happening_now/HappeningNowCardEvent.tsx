@@ -8,7 +8,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17287);
+const HappeningNowConstants = fn(17430);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
   HappeningNowCardTrackingType: closure_8,
@@ -18,7 +18,7 @@ const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 },
   infoNoImage: {
@@ -104,7 +104,7 @@ let obj5 = {
 };
 obj.avatarContainer = { width: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9509).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9637).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_15 = noop.memo(function DottedLineSeparator() {
   const tmp = closure_13();
@@ -251,7 +251,7 @@ export default noop.memo(function HappeningNowCardEvent(event) {
   const obj15 = { color: str2, variant: null, children: null };
   let str3;
   if (isLive) {
-    str3 = "text-xs/bold";
+    str3 = "text-xs/semibold";
   }
   obj15.variant = str3;
   if (isLive) {

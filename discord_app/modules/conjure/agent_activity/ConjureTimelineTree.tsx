@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -122,9 +122,9 @@ function buildTimelineTree(steps, arg1) {
     }
     return task;
   }
-  let items = [];
+  items = [];
   const map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   let sum1 = 0;
   const map2 = new Map();
   const map3 = new Map();
@@ -475,7 +475,7 @@ function unkeyed(append_detail, append_detail_error, detail_driven_by) {
   });
 }
 function scanTurnColumn(arr) {
-  const items = [];
+  items = [];
   const segmentOf = [];
   let tmp = null;
   let tmp2 = null;
@@ -636,15 +636,15 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef3868.iwOTgo,
-  preview_ready: _modDef3868.okkgSB,
-  working: _modDef3868.t8skVB,
-  error: _modDef3868.avt0ax,
-  error_service_unavailable: _modDef3868.yreXyD,
-  error_rate_limited: _modDef3868.d8lNBq,
-  error_timeout: _modDef3868.t1R7Rt,
-  error_usage_limit: _modDef3868["9zBM8L"],
-  error_internal_error: _modDef3868.ZnbiGS,
+  healthcheck_failed: _modDef3995.iwOTgo,
+  preview_ready: _modDef3995.okkgSB,
+  working: _modDef3995.t8skVB,
+  error: _modDef3995.avt0ax,
+  error_service_unavailable: _modDef3995.yreXyD,
+  error_rate_limited: _modDef3995.d8lNBq,
+  error_timeout: _modDef3995.t1R7Rt,
+  error_usage_limit: _modDef3995["9zBM8L"],
+  error_internal_error: _modDef3995.ZnbiGS,
 };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -670,7 +670,7 @@ export function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3868.t8skVB;
+    t8skVB = _modDef3995.t8skVB;
   }
   return intl.string(t8skVB);
 }
@@ -707,7 +707,7 @@ export function turnSegments(steps, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  const items = (function sharedScan(steps) {
+  items = (function sharedScan(steps) {
     value = weakMap.get(steps);
     if (null == value) {
       const tmp3 = scanTurnColumn(steps);
@@ -844,12 +844,12 @@ export function turnLifecycle(memo1, turnActive) {
   return {};
 }
 export function streamedMessages(arr) {
-  let items = scanTurnColumn(arr).items;
+  items = scanTurnColumn(arr).items;
   return items.flatMap((type) => {
     if ("message" === type.type) {
       obj = { key: null, content: null, segment: null };
       ({ key: obj.key, content: obj.content, segment: obj.segment } = type);
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       items1 = [];

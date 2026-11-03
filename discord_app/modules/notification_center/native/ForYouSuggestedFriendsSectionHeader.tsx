@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     borderTopWidth: 1,
@@ -40,7 +40,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   showDivider = showDivider.showDivider;
   const tmp = closure_4();
-  const items = [tmp.container];
+  items = [tmp.container];
   let noDivider = !showDivider;
   if (!showDivider) {
     noDivider = tmp.noDivider;

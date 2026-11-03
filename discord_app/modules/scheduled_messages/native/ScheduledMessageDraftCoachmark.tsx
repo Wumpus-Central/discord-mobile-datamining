@@ -9,14 +9,14 @@ function AttachedCoachmark(buttonRef) {
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 }
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");
 
 export default function ScheduledMessageDraftCoachmark(onDismiss) {
   onDismiss = onDismiss.onDismiss;
-  const items = [onDismiss];
+  items = [onDismiss];
   ({ buttonRef, isVisible } = onDismiss);
   const memo = noop.useMemo(() => {
     const obj = {

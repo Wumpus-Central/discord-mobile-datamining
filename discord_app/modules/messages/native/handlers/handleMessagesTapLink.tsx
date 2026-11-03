@@ -3,7 +3,7 @@ import router_utils from "../../../routing/router_utils.tsx";
 import ThreadConstants from "../../../threads/ThreadConstants.tsx";
 import AppLauncherNativeConstants from "../../../app_launcher/native/AppLauncherNativeConstants.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import parseURLDefault from "../../../../utils/native/parseURL.tsx";
@@ -152,11 +152,11 @@ export function handleMessagesTapLink(tapLinkData) {
                 const obj19 = ActionSheetActionCreatorsDefault;
                 const obj9 = { guildId: guild_id };
                 obj19.openLazy(
-                  asyncRequireImpl(9296, dependencyMap.paths),
+                  asyncRequireImpl(9424, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj9,
                 );
-                const tmp97 = asyncRequireImpl(9296, dependencyMap.paths);
+                const tmp97 = asyncRequireImpl(9424, dependencyMap.paths);
               }
             }
             break;
@@ -199,7 +199,7 @@ export function handleMessagesTapLink(tapLinkData) {
           case "bindTapUsername":
             const obj11 = { userId: null, channelId: null, messageId: null, sourceAnalyticsLocations: null };
             ({ userId: obj13.userId, messageChannelId: obj13.channelId, messageId: obj13.messageId } = data);
-            const items = [AnalyticsLocationDefault.USERNAME];
+            items = [AnalyticsLocationDefault.USERNAME];
             obj11.sourceAnalyticsLocations = items;
             showUserProfileActionSheetDefault(obj11);
             break;
@@ -352,7 +352,7 @@ export function handleMessagesTapLink(tapLinkData) {
             const obj31 = { channelId: null, messageId: null, flash: true, returnMessageId: null };
             break;
           case "bindOpenRoleSubscriptionOverview":
-            router_utils.transitionTo(closure_1_14.CHANNEL(data.guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+            router_utils.transitionTo(gesture.CHANNEL(data.guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
             const obj6 = GuildRoleSubscriptionSystemMessageUtils;
             const result3 = obj6.trackRoleSubscriptionPurchaseMessageTierClick(
               data.guildId,
@@ -398,7 +398,7 @@ export function handleMessagesTapLink(tapLinkData) {
                   constants.MESSAGE_EMBED,
                 );
               } else {
-                const tmp106 = asyncRequireImpl(10178, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(10308, dependencyMap.paths);
                 const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {

@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => {
   const obj = {
     tagWrapper: {
@@ -74,7 +74,7 @@ export function TagListInputTagComponent(end) {
     () => require("remove"),
     formatToPlainStringResult,
   ));
-  const items = [tmp.tagWrapper, , ,];
+  items = [tmp.tagWrapper, , ,];
   let prop;
   if (selected) {
     prop = tmp.highlightedTagWrapper;

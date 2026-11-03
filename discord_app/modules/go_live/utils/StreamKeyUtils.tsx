@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/utils/StreamKeyUtils.tsx
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-const StreamTypes = fn(6715).StreamTypes;
+const StreamTypes = fn(6835).StreamTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/StreamKeyUtils.tsx");
 
@@ -33,7 +33,7 @@ export function decodeStreamKey(streamKey) {
 export function encodeStreamKey(currentUserActiveStream) {
   ({ streamType, channelId, ownerId } = currentUserActiveStream);
   if (StreamTypes.GUILD === streamType) {
-    const items = [streamType, tmp, channelId, ownerId];
+    items = [streamType, tmp, channelId, ownerId];
     return items.join(":");
   } else if (tmp2.CALL === streamType) {
     const items1 = [streamType, channelId, ownerId];

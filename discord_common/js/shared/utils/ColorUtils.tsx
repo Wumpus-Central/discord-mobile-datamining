@@ -231,11 +231,11 @@ export function isValidHex(variantValue) {
   return _modDef671.valid(variantValue);
 }
 export function int2rgbArray(modalV2BackgroundColor) {
-  const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];
+  items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];
   return items;
 }
 export function getLuminance(arg0, arg1, arg2) {
-  const items = [arg0, arg1, arg2];
+  items = [arg0, arg1, arg2];
   const mapped = items.map((item) => {
     const result = item / 255;
     if (result <= 0.03928) {
@@ -249,7 +249,7 @@ export function getLuminance(arg0, arg1, arg2) {
   return 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
 }
 export function getContrast(hex2intResult, hex2intResult1) {
-  const items = [hex2intResult >> 16 & 255, hex2intResult >> 8 & 255, 255 & hex2intResult];
+  items = [hex2intResult >> 16 & 255, hex2intResult >> 8 & 255, 255 & hex2intResult];
   const items1 = [hex2intResult1 >> 16 & 255, hex2intResult1 >> 8 & 255, 255 & hex2intResult1];
   const items2 = [, , ];
   [arr3[0], arr3[1], arr3[2]] = items;

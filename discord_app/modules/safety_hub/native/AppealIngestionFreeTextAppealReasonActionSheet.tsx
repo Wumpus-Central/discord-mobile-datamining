@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   footerText: { textAlign: "center" },
   textArea: { marginTop: -16, marginBottom: 36 },
@@ -25,7 +25,7 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   const onSave = onPress.onSave;
   value = undefined;
   const tmp = closure_8();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = onSave(value[7]).useStateFromStores(items, () =>
     freeTextAppealReason.getFreeTextAppealReason(),
   );

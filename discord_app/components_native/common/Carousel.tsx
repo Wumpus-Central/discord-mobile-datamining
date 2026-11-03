@@ -1,7 +1,7 @@
 // discord_app/components_native/common/Carousel.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
-import LegacyBaseButton from "../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { alignItems: "center" },
   carouselContentWrapper: { flexDirection: "row" },
@@ -33,7 +33,7 @@ PageIndicator.prototype["render"] = function render() {
   const tmp = closure_6(this.context);
   const props = this.props;
   const count = props.count;
-  const items = [];
+  items = [];
   let num = 0;
   ({ indicatorSpace, pageIndicatorStyle } = props);
   if (0 < count) {
@@ -52,7 +52,7 @@ PageIndicator.prototype["render"] = function render() {
   obj3.style = items2;
   return React4(React2, obj3);
 };
-PageIndicator.contextType = fn(5080).ThemeContext;
+PageIndicator.contextType = fn(5207).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
 const Component2 = noop.Component;
 class Carousel extends Component2 {
@@ -93,7 +93,7 @@ Carousel.prototype["render"] = function render() {
     scrollViewProps = {};
   }
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, self.props.style];
+  items = [tmp.container, self.props.style];
   obj2.style = items;
   const obj3 = {
     automaticallyAdjustContentInsets: false,
@@ -116,7 +116,7 @@ Carousel.prototype["render"] = function render() {
   obj2.children = items1;
   return hasOwnProperty(React2, obj2);
 };
-Carousel.contextType = fn(5080).ThemeContext;
+Carousel.contextType = fn(5207).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Carousel.tsx");

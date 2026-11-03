@@ -19,7 +19,7 @@ let closure_14 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ let closure_14 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c5 = tmp;
@@ -73,9 +73,14 @@ let closure_14 = async function _handleBoostPress() {
 };
 let View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
-let closure_11 = fn(6770).PremiumGuildSubscribeModalScenes;
-const FractionalPremiumStates = fn(1385).FractionalPremiumStates;
+({
+  AnalyticsObjects: closure_7,
+  AnalyticsObjectTypes: closure_8,
+  AnalyticsPages: closure_9,
+  NOOP: closure_10,
+} = Constants);
+let closure_11 = fn(6890).PremiumGuildSubscribeModalScenes;
+const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
@@ -94,7 +99,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[13])().analyticsLocations;
   let obj = guild(analyticsSection[12]);
   const tmp = previousGuildSubscriptionSlot;
-  let items = [boostSlots];
+  items = [boostSlots];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
     const keys = Object.keys(boostSlots.boostSlots);
     return keys.some(
@@ -110,7 +115,7 @@ export default function GuildBoostingSubscribeButton(guild) {
       const obj2 = { guildId, guildBoostSlots: null, location: null, intent: null, onResult: null };
       let tmp2;
       if (null != arg1) {
-        const items = [arg1];
+        items = [arg1];
         tmp2 = items;
       }
       obj2.guildBoostSlots = tmp2;

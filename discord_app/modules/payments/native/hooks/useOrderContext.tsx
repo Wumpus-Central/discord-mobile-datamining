@@ -21,7 +21,7 @@ export function useOrderContext(initialOrder) {
       return tmp;
     });
   }, []);
-  const items = [order, tmp[1], setRevision];
+  items = [order, tmp[1], setRevision];
   return noop.useMemo(() => {
     const obj = { order, setOrder, setRevision, orderId: null, orderLineItemId: null, revision: null };
     let id;

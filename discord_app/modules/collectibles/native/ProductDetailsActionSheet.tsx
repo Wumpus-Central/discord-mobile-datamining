@@ -15,19 +15,19 @@ require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
   handlePreviewPress = handlePreviewPress.handlePreviewPress;
   const onTrackPress = handlePreviewPress.onTrackPress;
-  const tmp = closure_17();
+  const tmp = closure_18();
   dependencyMap = tmp;
-  const theme = handlePreviewPress(5080).useThemeContext().theme;
-  const obj = handlePreviewPress(5080);
-  const isThemeLightResult = handlePreviewPress(5021).isThemeLight(theme);
+  const theme = handlePreviewPress(5207).useThemeContext().theme;
+  const obj = handlePreviewPress(5207);
+  const isThemeLightResult = handlePreviewPress(5148).isThemeLight(theme);
   closure_3 = theme === ThemeTypes.ONYX;
   noop = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
-  let items = [handlePreviewPress, onTrackPress];
+  items = [handlePreviewPress, onTrackPress];
   const obj3 = {
     style(pressed) {
       pressed = pressed.pressed;
-      const items = [closure_2.previewProfileButton, closure_4, ,];
+      items = [closure_2.previewProfileButton, closure_4, ,];
       let previewProfileButtonMidnight = closure_3;
       if (closure_3) {
         previewProfileButtonMidnight = closure_2.previewProfileButtonMidnight;
@@ -49,12 +49,12 @@ function PreviewProfileTrigger(handlePreviewPress) {
   };
   const intl = tmp2(1113).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1113).t["3Qcx6K"]);
-  const obj2 = handlePreviewPress(5021);
-  obj3.children = closure_13(handlePreviewPress(7137).EyeIcon, {
+  const obj2 = handlePreviewPress(5148);
+  obj3.children = closure_14(handlePreviewPress(7263).EyeIcon, {
     size: "md",
     color: onTrackPress(575).colors.INTERACTIVE_ICON_DEFAULT,
   });
-  return closure_13(closure_7, obj3);
+  return closure_14(closure_7, obj3);
 }
 function ProductDetailsActionSheetContent(product) {
   product = product.product;
@@ -71,6 +71,7 @@ function ProductDetailsActionSheetContent(product) {
   let ref;
   let selectedProduct;
   let trackPdpClick;
+  c5 = undefined;
   let id;
   c7 = undefined;
   c8 = undefined;
@@ -78,24 +79,35 @@ function ProductDetailsActionSheetContent(product) {
   closure_10 = undefined;
   const OTPACOMOrderExperiment = require("ACOMExperiments").OTPACOMOrderExperiment;
   const config = OTPACOMOrderExperiment.useConfig({ location: "ProductDetailsActionSheetInner" });
-  const tmp4 = closure_17();
+  const tmp4 = closure_18();
+  const collectiblesPromotionEndpointReferenceMobile =
+    require("CollectiblesPromotionsEndpointMobileExperiment").useCollectiblesPromotionEndpointReferenceMobile(
+      "ProductDetailsActionSheet",
+    );
+  let tmp8;
+  let obj = require("CollectiblesPromotionsEndpointMobileExperiment");
+  if (collectiblesPromotionEndpointReferenceMobile) {
+    tmp8 = closure_12;
+  }
+  analyticsLocations1(ref[23])(tmp8);
   ref = trackPdpClick.useRef(null);
-  const items = [];
-  const tmp7 = analyticsLocations1(ref[22]);
+  items = [];
+  const tmp7 = analyticsLocations1(ref[23]);
+  const tmp6Result = analyticsLocations1(ref[24]);
   items[HermesBuiltin.arraySpread(analyticsLocations1, 0)] = analyticsLocations1(
-    ref[23],
+    ref[25],
   ).COLLECTIBLES_SHOP_PROFILE_PREVIEW;
-  const analyticsLocations = tmp7(items).analyticsLocations;
+  const analyticsLocations = tmp6Result(items).analyticsLocations;
   const items1 = [product];
-  const tmp9 = id(() => CollectiblesProductUtils.getProductSkuIds(product), items1);
+  const tmp13 = id(() => CollectiblesProductUtils.getProductSkuIds(product), items1);
   const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations1, 0);
-  [tmp12, tmp13] = selectedProduct(trackPdpClick.useState(num), 2);
-  const tmp11 = selectedProduct(trackPdpClick.useState(num), 2);
-  selectedProduct = require("CollectiblesProductUtils").getSelectedProduct(product, tmp12);
-  let obj2 = require("CollectiblesProductUtils");
+  [tmp16, tmp17] = selectedProduct(trackPdpClick.useState(num), 2);
+  const tmp15 = selectedProduct(trackPdpClick.useState(num), 2);
+  selectedProduct = require("CollectiblesProductUtils").getSelectedProduct(product, tmp16);
+  const tmpResult = require("CollectiblesProductUtils");
   trackPdpClick = require("useTrackPdpClick").useTrackPdpClick({
     skuId: selectedProduct.skuId,
-    productSkuIds: tmp9,
+    productSkuIds: tmp13,
     analyticsLocations,
   });
   const items2 = [trackPdpClick];
@@ -116,27 +128,27 @@ function ProductDetailsActionSheetContent(product) {
     }),
     items2,
   );
-  let obj3 = require("useTrackPdpClick");
-  let obj4 = { skuId: selectedProduct.skuId, productSkuIds: tmp9, analyticsLocations };
-  [tmp18, tmp19] = selectedProduct(trackPdpClick.useState(undefined), 2);
-  c5 = tmp19;
-  const tmp17 = selectedProduct(trackPdpClick.useState(undefined), 2);
-  if (selectedProduct.skuId !== tmp20[0]) {
-    tmp21(selectedProduct.skuId);
-    tmp19(undefined);
+  let obj3 = { skuId: selectedProduct.skuId, productSkuIds: tmp13, analyticsLocations };
+  const tmpResult13 = require("useTrackPdpClick");
+  [tmp22, tmp23] = selectedProduct(trackPdpClick.useState(undefined), 2);
+  c5 = tmp23;
+  const tmp21 = selectedProduct(trackPdpClick.useState(undefined), 2);
+  if (selectedProduct.skuId !== tmp24[0]) {
+    tmp25(selectedProduct.skuId);
+    tmp23(undefined);
   }
-  tmp20 = selectedProduct(trackPdpClick.useState(selectedProduct.skuId), 2);
+  tmp24 = selectedProduct(trackPdpClick.useState(selectedProduct.skuId), 2);
   const collectibleProfileOverrides = require("useCollectibleProfileOverrides").useCollectibleProfileOverrides(
     selectedProduct,
-    tmp18,
+    tmp22,
   );
-  const tmpResult = require("useCollectibleProfileOverrides");
+  const tmpResult14 = require("useCollectibleProfileOverrides");
   const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
-  let obj5 = { type: null, name: null, properties: null };
-  const tmpResult9 = require("CollectiblesAnalyticsContext");
-  obj5.type = require("discord_common/AnalyticsUtils").ImpressionTypes.HALFSHEET;
-  obj5.name = require("discord_common/AnalyticsUtils").ImpressionNames.SHOP_PRODUCT_DETAIL;
-  const obj6 = {
+  let obj4 = { type: null, name: null, properties: null };
+  const tmpResult15 = require("CollectiblesAnalyticsContext");
+  obj4.type = require("discord_common/AnalyticsUtils").ImpressionTypes.HALFSHEET;
+  obj4.name = require("discord_common/AnalyticsUtils").ImpressionNames.SHOP_PRODUCT_DETAIL;
+  let obj5 = {
     sku_id: selectedProduct.skuId,
     location_stack: analyticsLocations,
     card_id: null,
@@ -148,39 +160,39 @@ function ProductDetailsActionSheetContent(product) {
   if (collectiblesAnalyticsContext != null) {
     cardId = collectiblesAnalyticsContext.cardId;
   }
-  obj6.card_id = cardId;
+  obj5.card_id = cardId;
   let tilePosition;
   if (collectiblesAnalyticsContext != null) {
     tilePosition = collectiblesAnalyticsContext.tilePosition;
   }
-  obj6.position_in_section = tilePosition;
+  obj5.position_in_section = tilePosition;
   let sessionId;
   if (collectiblesAnalyticsContext != null) {
     sessionId = collectiblesAnalyticsContext.sessionId;
   }
-  obj6.shop_session_id = sessionId;
-  obj6.product_sku_ids = tmp9;
-  obj5.properties = obj6;
-  analyticsLocations1(ref[27])(obj5);
+  obj5.shop_session_id = sessionId;
+  obj5.product_sku_ids = tmp13;
+  obj4.properties = obj5;
+  analyticsLocations1(ref[29])(obj4);
   closure_129_0 = product;
-  closure_129_1 = tmp12;
+  closure_129_1 = tmp16;
   closure_129_2 = analyticsLocations;
-  closure_129_3 = tmp31;
+  closure_129_3 = tmp35;
   closure_129_4 = collectibleProfileOverrides;
   closure_129_5 = stageCollectibleChangeForEditProfile;
-  const tmp6Result = analyticsLocations1(ref[27]);
+  const tmp6Result2 = analyticsLocations1(ref[29]);
   const currentUser = require("useCurrentUser").useCurrentUser();
   closure_129_6 = currentUser;
   const items3 = [
     product,
-    tmp12,
+    tmp16,
     collectibleProfileOverrides,
     currentUser.id,
     analyticsLocations,
     collectiblesAnalyticsContext,
     stageCollectibleChangeForEditProfile,
   ];
-  const callback = obj.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     showUserProfileActionSheetDefault({
       userId: id.id,
       isPreviewingChanges: true,
@@ -211,9 +223,9 @@ function ProductDetailsActionSheetContent(product) {
       },
     });
   }, items3);
-  const tmp34 = product.type === require("CollectiblesItemType").CollectiblesItemType.BUNDLE;
-  id = tmp34;
-  const tmpResult10 = require("useCurrentUser");
+  const tmp38 = product.type === require("CollectiblesItemType").CollectiblesItemType.BUNDLE;
+  id = tmp38;
+  const tmpResult16 = require("useCurrentUser");
   [type, c7] = selectedProduct(
     trackPdpClick.useState(() => {
       let tmp;
@@ -229,7 +241,7 @@ function ProductDetailsActionSheetContent(product) {
     }),
     2,
   );
-  const tmp10Result = selectedProduct(
+  const tmp14Result = selectedProduct(
     trackPdpClick.useState(() => {
       let tmp;
       if (closure_6) {
@@ -244,40 +256,40 @@ function ProductDetailsActionSheetContent(product) {
     }),
     2,
   );
-  if (!tmp34) {
+  if (!tmp38) {
     type = selectedProduct.type;
   }
-  let tmp37 = null != type;
-  if (tmp37) {
-    tmp37 =
+  let tmp41 = null != type;
+  if (tmp41) {
+    tmp41 =
       type === tmp(tmp2[16]).CollectiblesItemType.PROFILE_EFFECT ||
       type === tmp(tmp2[16]).CollectiblesItemType.PROFILE_FRAME ||
       type === tmp(tmp2[16]).CollectiblesItemType.AVATAR_DECORATION;
-    const tmp38 =
+    const tmp42 =
       type === tmp(tmp2[16]).CollectiblesItemType.PROFILE_EFFECT ||
       type === tmp(tmp2[16]).CollectiblesItemType.PROFILE_FRAME ||
       type === tmp(tmp2[16]).CollectiblesItemType.AVATAR_DECORATION;
   }
   const items4 = [analyticsLocations1, product.skuId];
-  const effect = obj.useEffect(() => {
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
+  const effect = obj2.useEffect(() => {
+    AnalyticsUtilsDefault.track(constants.OPEN_MODAL, {
       type: "Collectibles Shop Details Modal",
       location_stack: analyticsLocations1,
       sku_id: product.skuId,
     });
   }, items4);
   const hideBadge = product.hideBadge;
-  const tmp36 = c5((type) => {
+  const tmp40 = c5((type) => {
     _undefined(type);
     _undefined2(type.type);
   }, []);
-  const tmpResult11 = require("native");
-  const isThemeDarkResult = require("shared").isThemeDark(tmpResult11.useThemeContext().theme);
-  const tmpResult12 = require("shared");
+  const tmpResult17 = require("native");
+  const isThemeDarkResult = require("shared").isThemeDark(tmpResult17.useThemeContext().theme);
+  const tmpResult18 = require("shared");
   const items5 = [c9];
   let categoryWillUnpublishAt = product.categoryWillUnpublishAt;
   if (categoryWillUnpublishAt == null) {
-    categoryWillUnpublishAt = tmpResult13.useStateFromStores(items5, () => {
+    categoryWillUnpublishAt = tmpResult19.useStateFromStores(items5, () => {
       const category = CollectiblesCategoryStore.getCategory(product.categorySkuId);
       let unpublishedAt;
       if (category != null) {
@@ -286,101 +298,117 @@ function ProductDetailsActionSheetContent(product) {
       return unpublishedAt;
     });
   }
-  let tmp41 = selectedProduct;
-  if (tmp34) {
-    tmp41 = selectedProduct;
-    if (null != tmp18) {
-      const obj7 = { skuId: null, type: null, items: null };
-      ({ skuId: obj13.skuId, type: obj13.type } = tmp18);
-      const items6 = [tmp18];
-      obj7.items = items6;
-      tmp41 = obj7;
+  let tmp45 = selectedProduct;
+  if (tmp38) {
+    tmp45 = selectedProduct;
+    if (null != tmp22) {
+      const obj6 = { skuId: null, type: null, items: null };
+      ({ skuId: obj14.skuId, type: obj14.type } = tmp22);
+      const items6 = [tmp22];
+      obj6.items = items6;
+      tmp45 = obj6;
     }
   }
-  let tmp42 = null;
+  let tmp46 = null;
   if (null == product.badgeOverride) {
-    if (tmpResult14.isDynamicProduct(tmp41)) {
+    if (tmpResult20.isDynamicProduct(tmp45)) {
       if (!hideBadge) {
-        const obj8 = { accessibilityLabel: null, children: null };
+        const obj7 = { accessibilityLabel: null, children: null };
         const intl = tmp(tmp2[14]).intl;
-        obj8.accessibilityLabel = intl.string(tmp(tmp2[14]).t["+drfVi"]);
-        const obj9 = { icon: tmp(tmp2[33]).DiceIcon, label: null, isDark: null };
+        obj7.accessibilityLabel = intl.string(tmp(tmp2[14]).t["+drfVi"]);
+        const obj8 = { icon: tmp(tmp2[35]).DiceIcon, label: null, isDark: null };
         const intl2 = tmp(tmp2[14]).intl;
-        obj9.label = intl2.string(tmp(tmp2[14]).t["+drfVi"]);
-        obj9.isDark = isThemeDarkResult;
-        obj8.children = closure_13(tmp(tmp2[32]).IconTextBadge, obj9);
-        tmp42 = closure_13(tmp(tmp2[31]).DynamicBadgeTooltip, obj8);
+        obj8.label = intl2.string(tmp(tmp2[14]).t["+drfVi"]);
+        obj8.isDark = isThemeDarkResult;
+        obj7.children = closure_14(tmp(tmp2[34]).IconTextBadge, obj8);
+        tmp46 = closure_14(tmp(tmp2[33]).DynamicBadgeTooltip, obj7);
       }
     }
     if (null != categoryWillUnpublishAt) {
-      if (tmpResult15.shouldShowLimitedTimeBadge(categoryWillUnpublishAt)) {
+      if (tmpResult21.shouldShowLimitedTimeBadge(categoryWillUnpublishAt)) {
         if (!hideBadge) {
-          const obj10 = { unpublishedAt: categoryWillUnpublishAt };
-          tmp42 = closure_13(tmp6(tmp2[35]), obj10);
+          const obj9 = { unpublishedAt: categoryWillUnpublishAt };
+          tmp46 = closure_14(tmp6(tmp2[37]), obj9);
         }
       }
-      tmpResult15 = tmp(tmp2[34]);
+      tmpResult21 = tmp(tmp2[36]);
     }
-    tmpResult14 = tmp(tmp2[20]);
-    const tmpResult16 = tmp(tmp2[20]);
-    tmp42 = null;
-    if (tmp45) {
-      const obj11 = { icon: tmp(tmp2[36]).OrbsIcon, label: null, isDark: null };
+    tmpResult20 = tmp(tmp2[20]);
+    const tmpResult22 = tmp(tmp2[20]);
+    tmp46 = null;
+    if (tmp49) {
+      const obj10 = { icon: tmp(tmp2[38]).OrbsIcon, label: null, isDark: null };
       const intl3 = tmp(tmp2[14]).intl;
-      obj11.label = intl3.string(tmp(tmp2[14]).t["0TmQRG"]);
-      obj11.isDark = isThemeDarkResult;
-      tmp42 = closure_13(tmp(tmp2[32]).IconTextBadge, obj11);
+      obj10.label = intl3.string(tmp(tmp2[14]).t["0TmQRG"]);
+      obj10.isDark = isThemeDarkResult;
+      tmp46 = closure_14(tmp(tmp2[34]).IconTextBadge, obj10);
     }
-    tmp45 = tmp(tmp2[20]).isOrbsExclusiveProduct(selectedProduct) && !hideBadge;
+    tmp49 = tmp(tmp2[20]).isOrbsExclusiveProduct(selectedProduct) && !hideBadge;
   }
-  tmpResult13 = require("initialize");
-  [tmp48, c8] = selectedProduct(trackPdpClick.useState(false), 2);
-  const tmp10Result4 = selectedProduct(trackPdpClick.useState(false), 2);
-  [tmp50, c9] = selectedProduct(trackPdpClick.useState(null), 2);
-  const tmp10Result6 = selectedProduct(trackPdpClick.useState(0), 2);
-  closure_10 = tmp10Result6[1];
-  const obj12 = { value: analyticsLocations, children: null };
-  const obj14 = { scrollsToTop: false, style: tmp4.container, ref, children: null };
-  const obj15 = { style: tmp4.actionButtons, children: null };
-  if (tmp37) {
-    const obj16 = { handlePreviewPress: callback, onTrackPress: trackPdpClick };
-    tmp37 = closure_13(PreviewProfileTrigger, obj16);
+  tmpResult19 = require("initialize");
+  const collectiblesPromotionForProduct =
+    require("useCollectiblesPromotionForProduct").useCollectiblesPromotionForProduct(selectedProduct);
+  const tmpResult23 = require("useCollectiblesPromotionForProduct");
+  let tmp62Result =
+    require("CollectiblesPromotionBadgeUtils").shouldShowPromotionBadge(collectiblesPromotionForProduct) && !hideBadge;
+  const tmpResult24 = require("CollectiblesPromotionBadgeUtils");
+  [tmp54, c8] = selectedProduct(trackPdpClick.useState(false), 2);
+  const tmp14Result4 = selectedProduct(trackPdpClick.useState(false), 2);
+  [tmp56, c9] = selectedProduct(trackPdpClick.useState(null), 2);
+  const tmp14Result6 = selectedProduct(trackPdpClick.useState(0), 2);
+  closure_10 = tmp14Result6[1];
+  const obj11 = { value: analyticsLocations, children: null };
+  const obj12 = { scrollsToTop: false, style: tmp4.container, ref, children: null };
+  const obj13 = { style: tmp4.actionButtons, children: null };
+  if (tmp41) {
+    const obj15 = { handlePreviewPress: callback, onTrackPress: trackPdpClick };
+    tmp41 = closure_14(PreviewProfileTrigger, obj15);
   }
   const items7 = [
-    tmp37,
-    closure_13(analyticsLocations1(ref[38]), { selectedProduct, size: "md", onTrackPress: trackPdpClick }),
+    tmp41,
+    closure_14(analyticsLocations1(ref[42]), { selectedProduct, size: "md", onTrackPress: trackPdpClick }),
   ];
-  obj15.children = items7;
-  const items8 = [closure_14(c8, obj15), , , , ,];
-  let tmp56Result = null != tmp42;
-  if (tmp56Result) {
-    const obj17 = { style: tmp4.badgeWrapper, children: tmp42 };
-    tmp56Result = closure_13(tmp53, obj17);
+  obj13.children = items7;
+  const items8 = [closure_15(c8, obj13), , , , ,];
+  let tmp58Result = null != tmp46 || tmp62Result;
+  if (tmp58Result) {
+    const obj16 = { style: tmp4.badgeWrapper, children: null };
+    const items9 = [tmp46];
+    if (tmp62Result) {
+      const obj17 = { icon: tmp(tmp2[43]).TagIcon, label: null, isDark: null };
+      const intl4 = tmp(tmp2[14]).intl;
+      obj17.label = intl4.string(tmp(tmp2[14]).t["nb5PC/"]);
+      obj17.isDark = isThemeDarkResult;
+      tmp62Result = closure_14(tmp(tmp2[34]).IconTextBadge, obj17);
+    }
+    items9[1] = tmp62Result;
+    obj16.children = items9;
+    tmp58Result = closure_15(tmp59, obj16);
   }
-  items8[1] = tmp56Result;
-  items8[2] = closure_13(analyticsLocations1(ref[39]), {
+  items8[1] = tmp58Result;
+  items8[2] = closure_14(analyticsLocations1(ref[44]), {
     product: selectedProduct,
     handlePreviewPress: callback,
     onTrackPress: trackPdpClick,
-    onBundleActiveItemChange: tmp36,
+    onBundleActiveItemChange: tmp40,
   });
-  items8[3] = closure_13(analyticsLocations1(ref[40]), { product: selectedProduct, onTrackPress: trackPdpClick });
-  items8[4] = closure_13(analyticsLocations1(ref[41]), {
+  items8[3] = closure_14(analyticsLocations1(ref[45]), { product: selectedProduct, onTrackPress: trackPdpClick });
+  items8[4] = closure_14(analyticsLocations1(ref[46]), {
     product,
-    selectedVariantIndex: tmp12,
-    disabled: tmp48,
-    onVariantSelect: tmp13,
+    selectedVariantIndex: tmp16,
+    disabled: tmp54,
+    onVariantSelect: tmp17,
   });
-  const tmp10Result5 = selectedProduct(trackPdpClick.useState(null), 2);
-  items8[5] = closure_13(require("native").Spacer, { size: analyticsLocations1(ref[10]).space.PX_16 });
-  obj14.children = items8;
-  const items9 = [
-    closure_14(require("BottomSheetModal").BottomSheetScrollView, obj14),
-    closure_13(analyticsLocations1(ref[43]), {
+  const tmp14Result5 = selectedProduct(trackPdpClick.useState(null), 2);
+  items8[5] = closure_14(require("native").Spacer, { size: analyticsLocations1(ref[10]).space.PX_16 });
+  obj12.children = items8;
+  const items10 = [
+    closure_15(require("BottomSheetModal").BottomSheetScrollView, obj12),
+    closure_14(analyticsLocations1(ref[48]), {
       product: selectedProduct,
       analyticsLocations,
       onTrackPress: trackPdpClick,
-      isBuying: tmp48,
+      isBuying: tmp54,
       onStartPurchase() {
         _undefined4(selectedProduct);
         closure_10((arg0) => arg0 + 1);
@@ -389,28 +417,28 @@ function ProductDetailsActionSheetContent(product) {
       stageCollectibleChangeForEditProfile,
     }),
   ];
-  let tmp56Result2 = null != tmp50;
-  if (tmp56Result2) {
+  let tmp62Result2 = null != tmp56;
+  if (tmp62Result2) {
     const obj20 = {
-      product: tmp50,
-      attempt: tmp10Result6[0],
+      product: tmp56,
+      attempt: tmp14Result6[0],
       analyticsLocations,
       onBuySettled() {
         return _undefined3(false);
       },
       stageCollectibleChangeForEditProfile,
     };
-    tmp56Result2 = closure_13(tmp6(tmp2[44]), obj20);
+    tmp62Result2 = closure_14(tmp6(tmp2[49]), obj20);
   }
-  items9[2] = tmp56Result2;
-  obj12.children = items9;
-  return closure_14(require("useAnalyticsLocations").AnalyticsLocationProvider, obj12);
+  items10[2] = tmp62Result2;
+  obj11.children = items10;
+  return closure_15(require("useAnalyticsLocations").AnalyticsLocationProvider, obj11);
 }
 function ProductDetailsActionSheetInner(arg0) {
   ({ product, initialVariantIndex, analyticsLocations, stageCollectibleChangeForEditProfile } = arg0);
   const ref1 = noop.useRef(null);
   const ref = noop.useRef(null);
-  return map1(Sheet_BottomSheet.BottomSheet, {
+  return gesture(Sheet_BottomSheet.BottomSheet, {
     scrollable: true,
     startExpanded: true,
     onExpand() {
@@ -430,7 +458,7 @@ function ProductDetailsActionSheetInner(arg0) {
       return notifyDismissedResult;
     },
     ref: noop.useRef(null),
-    children: map1(ProductDetailsActionSheetContent, {
+    children: gesture(ProductDetailsActionSheetContent, {
       ref: ref1,
       product,
       initialVariantIndex,
@@ -443,19 +471,19 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(9580).useCollectiblesShopProduct(skuId, {
+  const collectiblesShopProduct = skuId(9712).useCollectiblesShopProduct(skuId, {
     needsCategory: false,
     seedCategoryStore: true,
   });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(9580);
-  const getOrFetchPurchases = skuId(10604).useGetOrFetchPurchases();
+  const obj = skuId(9712);
+  const getOrFetchPurchases = skuId(10734).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10604);
+  const obj2 = skuId(10734);
   const ref1 = noop.useRef(null);
-  const items = [product, skuId, initialVariantIndex];
+  items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
     if (hasPreviouslyFetched) {
       if (null != product) {
@@ -486,24 +514,24 @@ function ManagedProductDetailsActionSheetInner(skuId) {
             return notifyDismissedResult;
           },
           ref,
-          children: closure_13(ProductDetailsActionSheetContent, obj3),
+          children: closure_14(ProductDetailsActionSheetContent, obj3),
         };
-        return closure_13(tmp(5272).BottomSheet, obj4);
+        return closure_14(tmp(5395).BottomSheet, obj4);
       }
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(8805).NoResults, body: null, children: null };
+    const obj5 = { Illustration: tmp(8929).NoResults, body: null, children: null };
     const intl = tmp(1113).intl;
     obj5.body = intl.string(tmp(1113).t.eAn6z2);
     const obj6 = { text: null, onPress: null };
     const intl2 = tmp(1113).intl;
     obj6.text = intl2.string(tmp(1113).t["+hivLW"]);
     obj6.onPress = retry;
-    obj5.children = closure_13(tmp(5634).Button, obj6);
-    closure_13(tmp(1187).EmptyState, obj5);
+    obj5.children = closure_14(tmp(5754).Button, obj6);
+    closure_14(tmp(1187).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(15066), {});
+    closure_14(initialVariantIndex(15207), {});
   }
   ref = noop.useRef(null);
 }
@@ -527,12 +555,12 @@ function ProductDetailsActionSheetWithOrderCTX(arg0) {
       stageCollectibleChangeForEditProfile,
     } = stageCollectibleChangeForEditProfile);
     obj2.stageCollectibleChangeForEditProfile = stageCollectibleChangeForEditProfile;
-    map1(ManagedProductDetailsActionSheetInner, obj2);
+    gesture(ManagedProductDetailsActionSheetInner, obj2);
   } else {
     if ("product" in stageCollectibleChangeForEditProfile) {
       const obj5 = {};
       const merged = Object.assign(stageCollectibleChangeForEditProfile);
-      let tmp3 = map1(ProductDetailsActionSheetInner, obj5);
+      let tmp3 = gesture(ProductDetailsActionSheetInner, obj5);
     } else {
       logger.error("ProductDetailsActionSheet opened with a skuId but no product, and the experiment is disabled");
       tmp3 = null;
@@ -546,13 +574,14 @@ let noop = fn(19);
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
 const ShopCtaEnum = fn(1074).ShopCtaEnum;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const Constants = fn(1072);
+({ AnalyticEvents: closure_11, COLLECTIBLES_APPLICATION_ID: closure_12 } = Constants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = {};
+({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+let closure_16 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { position: "relative", flex: 1 },
   actionButtons: null,
@@ -574,8 +603,8 @@ const rect = {
 };
 obj2.actionButtons = rect;
 let size = {
-  width: fn(5640).MEDIUM_BUTTON_HEIGHT,
-  height: fn(5640).MEDIUM_BUTTON_HEIGHT,
+  width: fn(5760).MEDIUM_BUTTON_HEIGHT,
+  height: fn(5760).MEDIUM_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderRadius: nativeDefault.radii.round,
@@ -584,14 +613,14 @@ let size = {
 };
 obj2.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
-let native = fn(5080);
+let native = fn(5207);
 obj3.backgroundColor = native.setColorOpacity("white", 0.72);
 obj2.previewProfileButtonLight = obj3;
 let obj4 = { backgroundColor: null };
-native = fn(5080);
+native = fn(5207);
 obj4.backgroundColor = native.setColorOpacity("white", 0.62);
 obj2.previewProfileButtonLightPressed = obj4;
-const tmp5 = new LoggerDefault("ProductDetailsActionSheet");
+const tmp6 = new LoggerDefault("ProductDetailsActionSheet");
 obj2.previewProfileButtonDark = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 let obj5 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.previewProfileButtonDarkPressed = {
@@ -599,20 +628,27 @@ obj2.previewProfileButtonDarkPressed = {
 };
 let obj7 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
 obj2.previewProfileButtonMidnight = { borderColor: nativeDefault.colors.BORDER_STRONG };
-const rect1 = { position: "absolute", top: 0, left: nativeDefault.space.PX_16, zIndex: 2 };
+const rect1 = {
+  position: "absolute",
+  top: 0,
+  left: nativeDefault.space.PX_16,
+  zIndex: 2,
+  flexDirection: "row",
+  gap: nativeDefault.space.PX_8,
+};
 obj2.badgeWrapper = rect1;
-let closure_17 = createStyles.createStyles(obj2);
+let closure_18 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheet.tsx");
 
 export default function ProductDetailsActionSheet(shopAnalyticsContext) {
   shopAnalyticsContext = shopAnalyticsContext.shopAnalyticsContext;
   if (shopAnalyticsContext === undefined) {
-    shopAnalyticsContext = closure_15;
+    shopAnalyticsContext = closure_16;
   }
   const merged = Object.assign(shopAnalyticsContext, Object.assign({ shopAnalyticsContext: 0 }));
   const obj = { newValue: shopAnalyticsContext, children: null };
   const merged1 = Object.assign(merged);
-  obj.children = map1(ProductDetailsActionSheetWithOrderCTX, {});
-  return map1(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+  obj.children = gesture(ProductDetailsActionSheetWithOrderCTX, {});
+  return gesture(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
 }

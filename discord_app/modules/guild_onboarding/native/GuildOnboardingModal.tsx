@@ -16,9 +16,9 @@ function headerTitle() {
 function headerRight() {
   return null;
 }
-let closure_9 = fn(7265).GuildOnboardingModalStates;
+let closure_9 = fn(7385).GuildOnboardingModalStates;
 const Constants = fn(1072);
-({ GuildFeatures: c10, Routes: closure_11 } = Constants);
+({ GuildFeatures: closure_10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
@@ -32,9 +32,9 @@ export default function GuildOnboardingModal(guildId) {
   const backShouldLeaveGuild = guildId.backShouldLeaveGuild;
   let stateFromStores;
   let callback;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = guildId(onClose[16]).useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;

@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { cover: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.cover = {
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/GameCover
 
 export default noop.memo(function GameCoverImage(arg0) {
   ({ coverImageUrl, iconImageUrl, gameName, hasGameData, isLoading, width } = arg0);
-  const items = [closure_4().cover, { width }];
+  items = [closure_4().cover, { width }];
   if (!isLoading) {
     if (hasGameData) {
       const obj = {

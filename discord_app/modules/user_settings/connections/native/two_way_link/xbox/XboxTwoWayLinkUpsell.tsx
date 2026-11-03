@@ -5,14 +5,14 @@ import dismissible_content from "../../../../../../../discord_common/js/packages
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef16851 from "../../../../../../../_runtime/metro/16851__.js";
+import _modDef16994 from "../../../../../../../_runtime/metro/16994__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Constants = fn(1072);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -28,11 +28,11 @@ export function XboxTwoWayLinkUpsell() {
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef16851;
+  obj3.source = _modDef16994;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {
-    const items = [constants.RELINK_UPSELL];
+    items = [constants.RELINK_UPSELL];
     return XboxLinkModalActionCreatorsDefault.showModal(items);
   };
   return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, {

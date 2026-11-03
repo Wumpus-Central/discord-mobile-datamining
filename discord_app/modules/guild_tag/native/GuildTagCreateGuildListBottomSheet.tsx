@@ -13,7 +13,7 @@ require = fn;
 function GuildRow(guild) {
   guild = guild.guild;
   const analyticsLocation = guild.analyticsLocation;
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildMemberCountStore.getMemberCount(guild.id));
   let obj2 = { label: guild.name, subLabel: null, icon: null, arrow: true, onPress: null };
   let formatToPlainStringResult = null;
@@ -25,8 +25,8 @@ function GuildRow(guild) {
   obj2.subLabel = formatToPlainStringResult;
   const obj4 = { guild, size: null };
   let obj = guild(504);
-  obj4.size = guild(6957).GuildIconSizes.SMALL_32;
-  obj2.icon = closure_4(analyticsLocation(6957), obj4);
+  obj4.size = guild(7083).GuildIconSizes.SMALL_32;
+  obj2.icon = closure_4(analyticsLocation(7083), obj4);
   obj2.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = { guildId: guild.id, autoOpenPerkId: null, analyticsLocation: null };
@@ -34,7 +34,7 @@ function GuildRow(guild) {
     obj2.analyticsLocation = analyticsLocation;
     openGuildPowerupsModalDefault(obj2);
   };
-  return closure_4(guild(6975).TableRow, obj2);
+  return closure_4(guild(7101).TableRow, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -49,7 +49,7 @@ export default function GuildTagCreateGuildListBottomSheet(arg0) {
   obj2.title = intl.string(util.t.xO5QzM);
   const intl2 = util.intl;
   obj2.subtitle = intl2.string(util.t["h+7Yx3"]);
-  const items = [
+  items = [
     closure_4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2),
     closure_4(TableRowGroup.TableRowGroup, {
       hasIcons: true,

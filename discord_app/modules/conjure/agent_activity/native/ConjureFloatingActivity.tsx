@@ -1,17 +1,19 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureFloatingActivity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
-let obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
+const createStyles = fn(5141);
+const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = {
   position: "absolute",
   left: nativeDefault.space.PX_16,
@@ -66,8 +68,8 @@ obj2.panel = {
 };
 obj2.label = { flexShrink: 1 };
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function ConjureFloatingActivityTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+let closure_9 = {
+  code: "(function ConjureFloatingActivityTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureFloatingActivity.tsx");
@@ -78,45 +80,52 @@ export default function ConjureFloatingActivity(agents) {
   if (todosLive === undefined) {
     todosLive = true;
   }
-  let sharedValue;
+  _require = undefined;
   importDefault = undefined;
   const tmp = closure_8();
-  sharedValue = sharedValue(5095).useSharedValue(0);
-  const items = [sharedValue];
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  _require = sharedValue;
+  items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
-    return () => sharedValue(dependencyMap[6]).cancelAnimation(closure_1_0);
+    const result = _undefined.set(timing_timing.withTiming(1, { duration: 150 }));
+    return () => c0(dependencyMap[6]).cancelAnimation(_undefined);
   }, items);
-  const obj = sharedValue(5095);
-  class P {
+  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_9, sharedValue];
+  _require = undefined;
+  [tmp6, tmp7] = items1;
+  class ConjureFloatingActivityTsx1 {
     constructor() {
       obj = { opacity: closure_0.get() };
       return obj;
     }
   }
-  P.__closure = { opacity: sharedValue };
-  P.__workletHash = 451170179306;
-  P.__initData = __initData;
-  const animatedStyle = sharedValue(5095).useAnimatedStyle(P);
-  const obj2 = sharedValue(5095);
-  [tmp8, c1] = noop.useState(false);
-  const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
-  const obj3 = { style: null, pointerEvents: "box-none", children: null };
-  const items1 = [tmp.root, { bottom }, animatedStyle];
-  obj3.style = items1;
-  let tmp12 = null;
-  if (tmp8) {
-    tmp12 = null;
+  const items2 = [tmp7];
+  ConjureFloatingActivityTsx1.__closure = items2;
+  ConjureFloatingActivityTsx1.__workletHash = 8355728640531;
+  ConjureFloatingActivityTsx1.__initData = tmp6;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ConjureFloatingActivityTsx1,
+  );
+  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  [tmp10, c1] = noop.useState(false);
+  const callback = noop.useCallback(() => _undefined2((arg0) => !arg0), []);
+  const obj4 = { style: null, pointerEvents: "box-none", children: null };
+  const items3 = [tmp.root, { bottom }, animatedStyle];
+  obj4.style = items3;
+  let tmp14 = null;
+  if (tmp10) {
+    tmp14 = null;
     if (null != todos) {
-      const obj4 = { style: tmp.panel, children: null };
-      const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj4.children = closure_6(tmp11(12720), obj5);
-      tmp12 = closure_6(View, obj4);
+      const obj5 = { style: tmp.panel, children: null };
+      const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
+      obj5.children = closure_6(tmp13(12856), obj6);
+      tmp14 = closure_6(View, obj5);
     }
   }
-  const items2 = [tmp12];
-  const obj6 = { style: tmp.pill, children: null };
-  const obj7 = {
+  const items4 = [tmp14];
+  const obj7 = { style: tmp.pill, children: null };
+  const obj8 = {
     style: tmp.pillMain,
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -125,42 +134,44 @@ export default function ConjureFloatingActivity(agents) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj7.accessibilityLabel = intl.formatToPlainString(_modDef3868.xuQfOT, { activity: line });
-  obj7.onPress = onJumpToActivity;
-  const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(12123).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
-  const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-  items3[1] = closure_6(View, {
+  obj8.accessibilityLabel = intl.formatToPlainString(_modDef3995.xuQfOT, { activity: line });
+  obj8.onPress = onJumpToActivity;
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  const items5 = [
+    closure_6(require("MagicWandIcon").MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }),
+  ];
+  const obj9 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
+  items5[1] = closure_6(View, {
     style: tmp.label,
-    children: closure_6(sharedValue(5624).Text, {
+    children: closure_6(require("Text/Text").Text, {
       variant: "text-sm/medium",
       color: "text-default",
       lineClamp: 1,
       children: line,
     }),
   });
-  obj7.children = items3;
-  const items4 = [closure_7(sharedValue(6980).PressableOpacity, obj7)];
-  let tmp16Result = null;
+  obj8.children = items5;
+  const items6 = [closure_7(require("Pressables").PressableOpacity, obj8)];
+  let tmp18Result = null;
   if (null != todos) {
-    const obj10 = { style: tmp.checklistButton, children: null };
-    const obj11 = {
+    const obj11 = { style: tmp.checklistButton, children: null };
+    const obj12 = {
       variant: "default",
       size: "sm",
-      icon: tmp11(6914),
-      pressed: tmp8,
+      icon: tmp13(7034),
+      pressed: tmp10,
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp2(1113).intl;
-    obj11.accessibilityLabel = intl2.string(tmp11(3868).Qp2isI);
-    obj11.onPress = callback;
-    obj10.children = closure_6(tmp2(12782).ToggleIconButton, obj11);
-    tmp16Result = closure_6(View, obj10);
+    obj12.accessibilityLabel = intl2.string(tmp13(3995).Qp2isI);
+    obj12.onPress = callback;
+    obj11.children = closure_6(tmp2(12918).ToggleIconButton, obj12);
+    tmp18Result = closure_6(View, obj11);
   }
-  items4[1] = tmp16Result;
-  obj6.children = items4;
-  items2[1] = closure_7(View, obj6);
-  obj3.children = items2;
-  return closure_7(ReanimatedRexportDefault.View, obj3);
+  items6[1] = tmp18Result;
+  obj7.children = items6;
+  items4[1] = closure_7(View, obj7);
+  obj4.children = items4;
+  return closure_7(_modDef1652.View, obj4);
 }

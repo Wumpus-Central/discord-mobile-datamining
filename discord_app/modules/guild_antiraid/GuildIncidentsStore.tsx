@@ -24,7 +24,7 @@ function computeAlertSettings() {
   }
 }
 function updateGuildIncident(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let incidentsData;
   if (guild != null) {
     incidentsData = guild.incidentsData;
@@ -59,7 +59,7 @@ class GuildIncidentsStore extends Store {}
 const prototype = GuildIncidentsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore);
-  const items = [UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore];
+  items = [UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore];
   this.syncWith(items, computeAlertSettings);
 };
 prototype["getGuildIncident"] = function getGuildIncident(id) {

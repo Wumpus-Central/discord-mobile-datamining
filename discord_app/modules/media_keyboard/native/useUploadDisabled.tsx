@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/media_keyboard/native/useUplo
 
 export default function useUploadDisabled(arg0) {
   _require = arg0;
-  const items = [PermissionStore, UploadAttachmentStore];
+  items = [PermissionStore, UploadAttachmentStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = UploadAttachmentStore.getUploads(id.id, DraftType.ChannelMessage).length >= hasOwnProperty;
     if (!tmp) {

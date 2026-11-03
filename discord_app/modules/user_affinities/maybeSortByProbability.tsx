@@ -10,7 +10,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(sort, 0);
     sort = items.sort;
     let sorted = sort((id, id2) => {

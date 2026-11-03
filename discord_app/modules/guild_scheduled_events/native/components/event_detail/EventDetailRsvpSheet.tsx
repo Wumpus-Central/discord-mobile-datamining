@@ -1,13 +1,13 @@
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import BottomSheetModal from "../../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05398_BottomSheetModal.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
-import _modDef9218 from "../../../../../../_runtime/metro/09218__.js";
+import _modDef9346 from "../../../../../../_runtime/metro/09346__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -17,9 +17,9 @@ require = fn;
 function EmptyDisplay(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, children: null };
-  const items = [closure_9().emptyDisplayContainer, style];
+  items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef9218 };
+  const obj2 = { icon: _modDef9346 };
   const items1 = [React5(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React6(View, obj);
@@ -28,7 +28,7 @@ function FetchErrorDisplay(style) {
   const obj = { style: style.style, children: null };
   const obj2 = {
     style: closure_9().emptyDisplayTitle,
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -41,7 +41,7 @@ function NoUsersDisplay(style) {
   const obj = { style: style.style, children: null };
   const obj2 = {
     style: closure_9().emptyDisplayTitle,
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -54,7 +54,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef9218, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef9346, style: tmp.remainingUsersIcon };
   obj2.children = React5(FastImageDefault, obj3);
   obj.leading = React5(View, obj2);
   const intl = util.intl;
@@ -76,7 +76,7 @@ const View = fn(17).View;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   staticMessageContentContainer: { flex: 1, padding: 16 },
   userList: { paddingTop: 16 },
@@ -110,8 +110,8 @@ const memoResult = noop.memo(function UserRow(eventUser) {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = closure_9();
-  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
-  const items = [UserStore];
+  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
+  items = [UserStore];
   const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
   const obj = eventUser(504);
   const items1 = [PresenceStore];
@@ -149,16 +149,16 @@ const memoResult = noop.memo(function UserRow(eventUser) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(5068).getName(eventUser.user);
-    const tmp2Result2 = tmp2(5068);
+    nick = tmp2(5195).getName(eventUser.user);
+    const tmp2Result2 = tmp2(5195);
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(9201), obj6);
+  obj3.label = closure_7(analyticsLocations(9329), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8177).FormRow, obj3, eventUser.user_id);
+  return closure_7(eventUser(8301).FormRow, obj3, eventUser.user_id);
 });
 size = fn(2);
 const result = size.fileFinishedImporting(
@@ -184,7 +184,7 @@ export default function EventDetailRsvpSheet(arg0) {
   }
   ({ loading, error } = arg0);
   let tmp = closure_9();
-  let items = [guildId];
+  items = [guildId];
   const callback = noop.useCallback((item) => {
     item = item.item;
     if (obj.isRemainingUsersGroup(item)) {
@@ -217,7 +217,7 @@ export default function EventDetailRsvpSheet(arg0) {
       }
       items1[1] = { paddingBottom: safeBottomPadding };
       obj3.style = items1;
-      obj2.children = closure_7(guildId(6953).ActivityIndicator, obj3);
+      obj2.children = closure_7(guildId(7080).ActivityIndicator, obj3);
       let tmp8 = closure_7(StaticMessageContainer, obj2);
     }
     return tmp8;
@@ -292,9 +292,9 @@ export default function EventDetailRsvpSheet(arg0) {
     obj.contentContainerStyle = items4;
     obj.data = userListItems;
     obj.renderItem = callback;
-    obj.ItemSeparatorComponent = guildId(8177).FormDivider;
+    obj.ItemSeparatorComponent = guildId(8301).FormDivider;
     obj.keyExtractor = keyExtractor;
-    tmp8 = closure_7(guildId(7294).BottomSheetFlashList, obj);
+    tmp8 = closure_7(guildId(7414).BottomSheetFlashList, obj);
   }
 }
 export const UserRow = memoResult;

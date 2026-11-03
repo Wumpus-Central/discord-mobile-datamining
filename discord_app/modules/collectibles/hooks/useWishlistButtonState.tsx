@@ -24,7 +24,7 @@ export function useWishlistButtonState(onRemoveSuccess) {
   let isSkuInWishlist;
   const tmp2 = skuId(onAddSuccess[4]);
   if (obj.isNullOrEmpty(_location)) {
-    let items = [];
+    items = [];
   } else {
     items = [_location];
   }
@@ -76,7 +76,7 @@ export function useWishlistButtonState(onRemoveSuccess) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

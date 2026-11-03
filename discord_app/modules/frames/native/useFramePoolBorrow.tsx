@@ -14,7 +14,7 @@ export default function useFramePoolBorrow(arg0, arg1, arg2) {
     first.useState(() => Symbol("frame-render-target")),
     1,
   )[0];
-  const items = [arg0, first, arg1];
+  items = [arg0, first, arg1];
   const effect = first.useEffect(() => {
     FramePoolManagerDefault.registerFrameTarget(closure_0, first, closure_1, closure_2);
     return () => {

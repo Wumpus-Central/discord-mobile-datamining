@@ -8,12 +8,12 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.t
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
 
 const GuildFeatures = fn(1072).GuildFeatures;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 
 export function hasPendingMemberAction(guild_id, selectedChannelId) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   const channel = ChannelStore.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {

@@ -10,9 +10,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   iconUploader: null,
@@ -60,7 +60,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
   c10 = undefined;
   closure_11 = undefined;
   const tmp = closure_13();
-  const items = [first2];
+  items = [first2];
   stateFromStores = channelId(stateFromStores[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj = channelId(stateFromStores[10]);
   let str = channelId(stateFromStores[11]).useComputedGroupDmName(stateFromStores);
@@ -157,7 +157,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

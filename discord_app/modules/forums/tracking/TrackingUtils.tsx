@@ -84,9 +84,9 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const Permissions = fn(1072).Permissions;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const constants = fn(1112).ThreadSortOrderReadableForAnalytics;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
@@ -148,7 +148,7 @@ export function getForumPostAttachmentMimetypes(arg0) {
     firstMessage = message.firstMessage;
   }
   if (null == firstMessage) {
-    let items = [];
+    items = [];
   } else {
     const attachments = firstMessage.attachments;
     items = attachments.map((content_type) => {
@@ -228,7 +228,7 @@ export function collectForumPostAnalyticsMetadata(channelId) {
           let set;
           const channel2 = ChannelStore.getChannel(channel.id);
           if (null == channel2) {
-            let items = [];
+            items = [];
           } else {
             const channel3 = ChannelStore.getChannel(channel2.parent_id);
             if (channel3 != null) {

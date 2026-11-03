@@ -25,7 +25,7 @@ class StreamerModeStore extends PersistedStore {}
 const prototype = StreamerModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let merged = Object.assign(closure_6, arg0);
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   this.syncWith(items, () => {
     id = id.getId();
     if (null != id) {

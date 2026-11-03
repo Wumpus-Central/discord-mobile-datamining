@@ -1,12 +1,16 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = _mod1652;
+
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17072).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6901).QuestDockMode;
+let closure_5 = fn(17215).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { questDockContentCollapsed: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -14,71 +18,75 @@ obj3.bottom = undefined;
 obj3.zIndex = 2;
 obj.questDockContentCollapsed = obj3;
 let closure_7 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function QuestDockContentCollapsedTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,hideOnExpand,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS)};}",
+let closure_8 = {
+  code: "(function QuestDockContentCollapsedTsx1(){let[withSpring,activeQuestDockMode,QuestDockMode,hideOnExpand,QUEST_DOCK_MODE_CHANGE_PHYSICS]=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS)};})",
 };
-const __initData2 = {
-  code: "function QuestDockContentCollapsedTsx2(){const{activeQuestDockMode,QuestDockMode,hideOnExpand}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?'auto':'none'};}",
+let closure_9 = {
+  code: "(function QuestDockContentCollapsedTsx2(){let[activeQuestDockMode,QuestDockMode,hideOnExpand]=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?'auto':'none'};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx");
 
 export default noop.memo(function QuestDockContentCollapsed(children) {
-  let hideOnExpand = children.hideOnExpand;
+  const hideOnExpand = children.hideOnExpand;
   let tmp = undefined === hideOnExpand;
   if (!tmp) {
     tmp = hideOnExpand;
   }
-  hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(17073).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(QuestDockGestureContext.QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
-  const fn = function l() {
-    let num = 1;
-    if (activeQuestDockMode.get() !== QuestDockMode.COLLAPSED) {
+  items = [closure_8, spring_spring.withSpring, activeQuestDockMode, QuestDockMode, tmp, closure_5];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp6, tmp7, tmp8, tmp9, tmp10, tmp11] = items;
+  class QuestDockContentCollapsedTsx1 {
+    constructor() {
+      tmp = closure_0;
       num = 1;
-      if (hideOnExpand) {
-        num = 0;
+      if (closure_1.get() !== closure_2.COLLAPSED) {
+        tmp2 = closure_3;
+        num = 1;
+        if (closure_3) {
+          num = 0;
+        }
       }
+      obj = { opacity: tmp(num, closure_4) };
+      return obj;
     }
-    return { opacity: spring.withSpring(num, closure_5) };
-  };
-  let obj = hideOnExpand(5095);
-  fn.__closure = {
-    withSpring: hideOnExpand(5637).withSpring,
-    activeQuestDockMode,
-    QuestDockMode,
-    hideOnExpand: tmp,
-    QUEST_DOCK_MODE_CHANGE_PHYSICS,
-  };
-  fn.__workletHash = 13361221764426;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj2 = {
-    withSpring: hideOnExpand(5637).withSpring,
-    activeQuestDockMode,
-    QuestDockMode,
-    hideOnExpand: tmp,
-    QUEST_DOCK_MODE_CHANGE_PHYSICS,
-  };
-  class C {
+  }
+  const items1 = [tmp7, tmp8, tmp9, tmp10, tmp11];
+  QuestDockContentCollapsedTsx1.__closure = items1;
+  QuestDockContentCollapsedTsx1.__workletHash = 8739411300627;
+  QuestDockContentCollapsedTsx1.__initData = tmp6;
+  const animatedStyle = _mod1652.useAnimatedStyle(QuestDockContentCollapsedTsx1);
+  const items2 = [closure_9, activeQuestDockMode, QuestDockMode, tmp];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp13, tmp14, tmp15, tmp16] = items2;
+  class QuestDockContentCollapsedTsx2 {
     constructor() {
       pointerEvents = "auto";
-      if (activeQuestDockMode.get() !== QuestDockMode.COLLAPSED) {
-        tmp = hideOnExpand;
+      if (closure_0.get() !== closure_1.COLLAPSED) {
+        tmp = closure_2;
         pointerEvents = "auto";
-        if (hideOnExpand) {
+        if (closure_2) {
           pointerEvents = "none";
         }
       }
       return { pointerEvents };
     }
   }
-  C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
-  C.__workletHash = 14339269503421;
-  C.__initData = __initData2;
-  const animatedProps = hideOnExpand(5095).useAnimatedProps(C);
-  const obj4 = { style: null, animatedProps, children: children.children };
-  const items = [tmp2.questDockContentCollapsed, animatedStyle];
-  obj4.style = items;
-  return jsx(activeQuestDockMode(7241), { style: null, animatedProps, children: children.children });
+  const items3 = [tmp14, tmp15, tmp16];
+  QuestDockContentCollapsedTsx2.__closure = items3;
+  QuestDockContentCollapsedTsx2.__workletHash = 6789144201508;
+  QuestDockContentCollapsedTsx2.__initData = tmp13;
+  const animatedProps = _mod1652.useAnimatedProps(QuestDockContentCollapsedTsx2);
+  const obj2 = { style: null, animatedProps, children: children.children };
+  const items4 = [tmp2.questDockContentCollapsed, animatedStyle];
+  obj2.style = items4;
+  return jsx(_modDef1652.View, { style: null, animatedProps, children: children.children });
 });

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx
 
 export default function useDeafStates(arg0) {
   _require = arg0;
-  const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
+  items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(
     items,

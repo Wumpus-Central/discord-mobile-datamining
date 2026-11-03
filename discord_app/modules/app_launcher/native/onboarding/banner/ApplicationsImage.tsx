@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   appIconContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -57,7 +57,7 @@ export default function ApplicationsImage(arg0) {
   }
   const obj5 = { children: null };
   const obj6 = { style: null, children: tmp12 };
-  const items = [,];
+  items = [,];
   ({ appIconContainer: arr[0], appIconLeftContainer: arr[1] } = tmp);
   obj6.style = items;
   const items1 = [React4(View, obj6)];

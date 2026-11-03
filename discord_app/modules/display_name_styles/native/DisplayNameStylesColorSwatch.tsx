@@ -4,7 +4,7 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size_mod from "../../../../_runtime/metro/00002__.js";
@@ -25,7 +25,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
   if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       const obj = { style: null, children: null };
-      const items = [,];
+      items = [,];
       ({ colorSwatch: arr3[0], gummySwatch: arr3[1] } = tmp);
       obj.style = items;
       const obj2 = { colors };

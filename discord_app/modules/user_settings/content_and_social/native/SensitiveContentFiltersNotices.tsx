@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(7490).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7614).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -18,11 +18,11 @@ let result = size.fileFinishedImporting(
 
 export function SensitiveContentFiltersTeenNotice() {
   const isTinyBroncoSettingsNoticeEnabled =
-    require("TinyBroncoSettingsNoticesLazy").useIsTinyBroncoSettingsNoticeEnabled();
-  let obj = require("TinyBroncoSettingsNoticesLazy");
+    require("AgeNoticeSettingsNoticesLazy").useIsTinyBroncoSettingsNoticeEnabled();
+  let obj = require("AgeNoticeSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16719).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16862).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1113).t.EUo0yj,

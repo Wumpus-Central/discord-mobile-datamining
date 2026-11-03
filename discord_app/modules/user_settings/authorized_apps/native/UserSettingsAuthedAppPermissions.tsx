@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   permissionContainer: { flexDirection: "row", marginTop: 8 },
@@ -31,7 +31,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
   return closure_5(c3, {
     contentContainerStyle: tmp.container,
     children: (function renderPermissions() {
-      let items = [];
+      items = [];
       const iter = _undefined2[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -62,12 +62,12 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [,];
-        items[0] = closure_2_5(items(7340).CircleCheckIcon, {
+        items[0] = closure_2_5(items(7460).CircleCheckIcon, {
           style: items.permissionIcon,
           size: "xs",
           color: c1(575).colors.STATUS_POSITIVE,
         });
-        items[1] = closure_2_5(items(5624).Text, {
+        items[1] = closure_2_5(items(5747).Text, {
           style: items.permissionText,
           variant: "text-sm/normal",
           color: "text-default",

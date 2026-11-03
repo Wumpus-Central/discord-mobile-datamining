@@ -4,7 +4,7 @@ import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   SearchListItemTypes: closure_4,
   CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty,
@@ -28,7 +28,7 @@ export default noop.memo(function FilesScreen(searchContext) {
   fileOrLinkImageDimensions = searchContext(fileOrLinkImageDimensions[5]).useFileOrLinkImageDimensions(width);
   let obj3 = searchContext(fileOrLinkImageDimensions[5]);
   const onPressMessageItem = searchContext(fileOrLinkImageDimensions[6]).useOnPressMessageItem({ searchContext });
-  let items = [onPressMessageItem, searchContext];
+  items = [onPressMessageItem, searchContext];
   const callback = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
     const result = BaseMessagesScreen.trackMessageItemPress({ searchContext, channelId, messageId, index });
@@ -45,7 +45,7 @@ export default noop.memo(function FilesScreen(searchContext) {
   const items1 = [callback, fileOrLinkImageDimensions, searchMessages, placeholderCount];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const memo = onPressMessageItem.useMemo(() => {
-    const items = [];
+    items = [];
     searchMessages = 0;
     if (searchMessages != null) {
       let item = searchMessages.forEach((item) => {

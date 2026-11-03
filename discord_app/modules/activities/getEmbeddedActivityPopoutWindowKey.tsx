@@ -5,7 +5,7 @@ import PopoutWindowStore from "../popout-window/PopoutWindowStore.native.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const PopoutWindowKeys = fn(1072).PopoutWindowKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivityPopoutWindowKey.tsx");
@@ -37,7 +37,7 @@ export function getEmbeddedActivityPopoutWindowKeyForApplication(applicationId) 
 }
 export function usePopoutWindowForActivity(channelId) {
   channelId = channelId.channelId;
-  const items = [PopoutWindowStore, EmbeddedActivitiesStore, ApplicationStore];
+  items = [PopoutWindowStore, EmbeddedActivitiesStore, ApplicationStore];
   return channelId(504).useStateFromStores(items, () => {
     let connectedActivityChannelId = channelId;
     if (channelId == null) {

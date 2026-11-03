@@ -1,29 +1,33 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerPager.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 let closure_6 = {
-  code: "function MediaViewerPagerTsx1(){const{zoomScale,isClosing}=this.__closure;return zoomScale.get()<=1&&!isClosing.get();}",
+  code: "(function MediaViewerPagerTsx1(){let[zoomScale,isClosing]=this.__closure;return zoomScale.get()<=1&&!isClosing.get();})",
 };
 let closure_7 = {
-  code: "function MediaViewerPagerTsx2(_,manager){const{isPaging}=this.__closure;if(isPaging.get())manager.fail();}",
+  code: "(function MediaViewerPagerTsx2(_,manager){let[isPaging]=this.__closure;if(isPaging.get())manager.fail();})",
 };
-let closure_8 = { code: "function MediaViewerPagerTsx3(){const{zoomScale}=this.__closure;return zoomScale.get()>1;}" };
+let closure_8 = { code: "(function MediaViewerPagerTsx3(){let[zoomScale]=this.__closure;return zoomScale.get()>1;})" };
 let closure_9 = {
-  code: "function MediaViewerPagerTsx4(isZoomed,previous){const{zoomed,isInteracting}=this.__closure;if(previous===isZoomed)return;zoomed.set(isZoomed);isInteracting.set(isZoomed);}",
+  code: "(function MediaViewerPagerTsx4(isZoomed,previous){let[zoomed,isInteracting]=this.__closure;if(previous===isZoomed)return;zoomed.set(isZoomed);isInteracting.set(isZoomed);})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerPager.tsx");
 
 export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
+  _require = entranceAnimationDriver;
   const onLongPress = entranceAnimationDriver.onLongPress;
+  importDefault = onLongPress;
   ({ onScrollWorklets, pagerIndex } = entranceAnimationDriver);
   const panGestureConfig = entranceAnimationDriver.panGestureConfig;
   const sources = entranceAnimationDriver.sources;
@@ -39,11 +43,8 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   let ref;
   let ref1;
   let sharedValue;
-  let sharedValue1;
-  let isInteracting;
-  let isClosing;
   let overlayEnabled;
-  c22 = undefined;
+  c19 = undefined;
   let callback1;
   let callback2;
   let callback3;
@@ -54,82 +55,101 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   const first = tmp[0];
   let flattenSourceResult;
   if (null != sources[first]) {
-    flattenSourceResult = entranceAnimationDriver(pagerIndex[3]).flattenSource(tmp3);
-    const obj2 = entranceAnimationDriver(pagerIndex[3]);
+    flattenSourceResult = require("MediaSourceUtil").flattenSource(tmp3);
+    const obj2 = require("MediaSourceUtil");
   }
   c12 = flattenSourceResult;
-  mediaItemHasSpoiler = entranceAnimationDriver(pagerIndex[4]).useMediaItemHasSpoiler(first);
+  mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(first);
   let channelId;
-  const obj3 = entranceAnimationDriver(pagerIndex[4]);
+  const obj3 = require("useMediaItemHasSpoiler");
   if (flattenSourceResult != null) {
     channelId = flattenSourceResult.channelId;
   }
-  const tmp11Result = onLongPress(pagerIndex[5])(channelId);
+  const tmp11Result = require("useShouldHideMediaOptions")(channelId);
   closure_14 = tmp11Result;
-  const tmp11 = onLongPress(pagerIndex[5]);
-  ({ width, height, maximumZoomScale } = onLongPress(pagerIndex[6])(windowWidth, windowHeight, sources[first]));
+  const tmp11 = require("useShouldHideMediaOptions");
+  ({ width, height, maximumZoomScale } = require("getMediaViewerStateForScreen")(
+    windowWidth,
+    windowHeight,
+    sources[first],
+  ));
   ref = obj.useRef(null);
   ref1 = obj.useRef(undefined);
-  const tmp14 = onLongPress(pagerIndex[6])(windowWidth, windowHeight, sources[first]);
-  sharedValue = entranceAnimationDriver(pagerIndex[7]).useSharedValue(false);
-  const tmp7Result = entranceAnimationDriver(pagerIndex[7]);
-  sharedValue1 = entranceAnimationDriver(pagerIndex[7]).useSharedValue(1);
-  isInteracting = panGestureConfig.isInteracting;
-  isClosing = panGestureConfig.isClosing;
+  const tmp14 = require("getMediaViewerStateForScreen")(windowWidth, windowHeight, sources[first]);
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmp7Result = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
   overlayEnabled = panGestureConfig.overlayEnabled;
-  const tmp7Result5 = entranceAnimationDriver(pagerIndex[7]);
-  let fn = function z() {
-    let tmp = sharedValue1.get() <= 1;
-    if (tmp) {
-      tmp = !isClosing.get();
+  ({ isInteracting, isClosing } = panGestureConfig);
+  const tmp7Result5 = require("../../../../../_runtime/metro/01652__.js");
+  items = [originLayout, sharedValue1, isClosing];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp19, tmp20, tmp21] = items;
+  class MediaViewerPagerTsx1 {
+    constructor() {
+      tmp = closure_0.get() <= 1;
+      if (tmp) {
+        tmp2 = closure_1;
+        tmp = !closure_1.get();
+      }
+      return tmp;
     }
-    return tmp;
-  };
-  fn.__closure = { zoomScale: sharedValue1, isClosing };
-  fn.__workletHash = 2867564605891;
-  fn.__initData = originLayout;
-  const derivedValue = entranceAnimationDriver(pagerIndex[7]).useDerivedValue(fn);
-  const tmp7Result6 = entranceAnimationDriver(pagerIndex[7]);
-  const mediaViewerPanGesture = entranceAnimationDriver(pagerIndex[8]).useMediaViewerPanGesture(
+  }
+  let items1 = [tmp20, tmp21];
+  MediaViewerPagerTsx1.__closure = items1;
+  MediaViewerPagerTsx1.__workletHash = 2156756597178;
+  MediaViewerPagerTsx1.__initData = tmp19;
+  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(MediaViewerPagerTsx1);
+  const tmp7Result6 = require("../../../../../_runtime/metro/01652__.js");
+  const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(
     panGestureConfig,
     derivedValue,
   );
   const panGestureGeneratorResult = mediaViewerPanGesture.panGestureGenerator(0);
-  c22 = panGestureGeneratorResult;
+  c19 = panGestureGeneratorResult;
   const effect = obj.useEffect(() => entranceAnimationDriver(pagerIndex[9]).dismissKeyboard(), []);
-  const items = [first, windowWidth, windowHeight, mediaItemHasSpoiler];
+  const items2 = [first, windowWidth, windowHeight, mediaItemHasSpoiler];
   const effect1 = obj.useEffect(() => {
     const current = ref.current;
     if (current != null) {
       current.unzoom({ animated: false });
     }
-  }, items);
-  const items1 = [panGestureGeneratorResult, sharedValue];
-  const items2 = [mediaItemHasSpoiler, first, zoomed, overlayEnabled];
+  }, items2);
+  const items3 = [panGestureGeneratorResult, sharedValue];
+  const items4 = [mediaItemHasSpoiler, first, zoomed, overlayEnabled];
   const callback = obj.useCallback((simultaneousWithExternalGesture, simultaneousWithExternalGesture2) => {
     const Gesture = LegacyBaseButton.Gesture;
-    const result = simultaneousWithExternalGesture.simultaneousWithExternalGesture(ref1, c22);
-    const fn = function o(arg0, fail) {
-      if (sharedValue.get()) {
-        fail.fail();
+    const result = simultaneousWithExternalGesture.simultaneousWithExternalGesture(ref1, c19);
+    items = [closure_7, sharedValue];
+    c0 = undefined;
+    [tmp3, tmp4] = items;
+    class MediaViewerPagerTsx2 {
+      constructor(arg0, arg1) {
+        if (closure_0.get()) {
+          tmp = simultaneousWithExternalGesture2;
+          failResult = simultaneousWithExternalGesture2.fail();
+        }
+        return;
       }
-    };
-    fn.__closure = { isPaging: sharedValue };
-    fn.__workletHash = 119388263678;
-    fn.__initData = __initData;
+    }
+    const items1 = [tmp4];
+    MediaViewerPagerTsx2.__closure = items1;
+    MediaViewerPagerTsx2.__workletHash = 6628945464135;
+    MediaViewerPagerTsx2.__initData = tmp3;
     return Gesture.Simultaneous(
-      result.onTouchesDown(fn),
-      simultaneousWithExternalGesture2.simultaneousWithExternalGesture(ref1, c22),
+      result.onTouchesDown(MediaViewerPagerTsx2),
+      simultaneousWithExternalGesture2.simultaneousWithExternalGesture(ref1, c19),
     );
-  }, items1);
+  }, items3);
   callback1 = obj.useCallback(() => {
     if (mediaItemHasSpoiler) {
       useMediaViewerSources.removeSpoiler(first);
     } else if (!zoomed.get()) {
       const result = overlayEnabled.set(!overlayEnabled.get());
     }
-  }, items2);
-  const items3 = [zoomed];
+  }, items4);
+  const items5 = [zoomed];
   callback2 = obj.useCallback((arg0) => {
     ({ x, y } = arg0);
     const current = ref.current;
@@ -141,25 +161,25 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
       const point = { x, y };
       current.zoomTo(point);
     }
-  }, items3);
-  const items4 = [tmp11Result, onLongPress];
+  }, items5);
+  const items6 = [tmp11Result, onLongPress];
   callback3 = obj.useCallback(() => {
     if (!closure_14) {
-      if (onLongPress != null) {
+      if (c1 != null) {
         tmp();
       }
     }
-  }, items4);
-  const items5 = [mediaItemHasSpoiler, , , , ,];
+  }, items6);
+  const items7 = [mediaItemHasSpoiler, , , , ,];
   let obscure;
   if (flattenSourceResult != null) {
     obscure = flattenSourceResult.obscure;
   }
-  items5[1] = obscure;
-  items5[2] = callback2;
-  items5[3] = callback1;
-  items5[4] = callback3;
-  items5[5] = panGestureGeneratorResult;
+  items7[1] = obscure;
+  items7[2] = callback2;
+  items7[3] = callback1;
+  items7[4] = callback3;
+  items7[5] = panGestureGeneratorResult;
   const callback4 = obj.useCallback((onFinalizeResult) => {
     let num = 10;
     if (obj.isAndroid()) {
@@ -187,8 +207,8 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     let tmp5 = !mediaItemHasSpoiler;
     if (mediaItemHasSpoiler) {
       let obscure;
-      if (_undefined != null) {
-        obscure = _undefined.obscure;
+      if (_undefined2 != null) {
+        obscure = _undefined2.obscure;
       }
       tmp5 = true !== obscure;
     }
@@ -205,36 +225,48 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     const onStartResult2 = Gesture3.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler).onStart(callback3);
     const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture4.Simultaneous(
-      Gesture5.Race(onFinalizeResult, c22),
+      Gesture5.Race(onFinalizeResult, c19),
       Gesture6.Exclusive(onStartResult, onStartResult1),
       onStartResult2,
     );
-  }, items5);
-  const tmp7Result7 = entranceAnimationDriver(pagerIndex[8]);
-  class Q {
+  }, items7);
+  const tmp7Result7 = require("useMediaViewerPanGesture");
+  const items8 = [windowWidth, sharedValue1];
+  _require = undefined;
+  [tmp32, tmp33] = items8;
+  class MediaViewerPagerTsx3 {
     constructor() {
-      return closure_18.get() > 1;
+      return closure_0.get() > 1;
     }
   }
-  Q.__closure = { zoomScale: sharedValue1 };
-  Q.__workletHash = 14368392963786;
-  Q.__initData = windowWidth;
-  class N {
+  const items9 = [tmp33];
+  MediaViewerPagerTsx3.__closure = items9;
+  MediaViewerPagerTsx3.__workletHash = 14562595785907;
+  MediaViewerPagerTsx3.__initData = tmp32;
+  const items10 = [windowHeight, zoomed, isInteracting];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp34, tmp35, tmp36] = items10;
+  class MediaViewerPagerTsx4 {
     constructor(arg0, arg1) {
       if (arg1 !== entranceAnimationDriver) {
-        tmp = zoomed;
-        result = zoomed.set(entranceAnimationDriver);
-        tmp3 = isInteracting;
-        result1 = isInteracting.set(entranceAnimationDriver);
+        tmp = closure_0;
+        result = closure_0.set(entranceAnimationDriver);
+        tmp3 = closure_1;
+        result1 = closure_1.set(entranceAnimationDriver);
       }
       return;
     }
   }
-  N.__closure = { zoomed, isInteracting };
-  N.__workletHash = 16737291391784;
-  N.__initData = windowHeight;
-  const animatedReaction = entranceAnimationDriver(pagerIndex[7]).useAnimatedReaction(Q, N);
-  const items6 = [
+  const items11 = [tmp35, tmp36];
+  MediaViewerPagerTsx4.__closure = items11;
+  MediaViewerPagerTsx4.__workletHash = 3436017293841;
+  MediaViewerPagerTsx4.__initData = tmp34;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    MediaViewerPagerTsx3,
+    MediaViewerPagerTsx4,
+  );
+  const items12 = [
     entranceAnimationDriver,
     originLayout,
     panGestureConfig,
@@ -257,7 +289,7 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
         entranceAnimationDriver,
         panGestureConfig,
       }),
-    items6,
+    items12,
   );
   const obj4 = {
     ref,
@@ -269,9 +301,9 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     maximumZoomScale,
     children: null,
   };
-  const tmp7Result8 = entranceAnimationDriver(pagerIndex[7]);
+  const tmp7Result8 = require("../../../../../_runtime/metro/01652__.js");
   const obj5 = {};
-  const tmp10Result = onLongPress(pagerIndex[14]);
+  const tmp10Result = require("ZoomLayoutGesture");
   const merged = Object.assign(onScrollWorklets);
   obj5.selectedPage = pagerIndex;
   obj5.onPageChanged = tmp[1];
@@ -283,6 +315,6 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   obj5.height = windowHeight;
   obj5.gestureRef = ref1;
   obj5.gestureEnabled = derivedValue;
-  obj4.children = renderMedia(onLongPress(pagerIndex[15]), obj5);
+  obj4.children = renderMedia(require("ZoomLayoutPager"), obj5);
   return renderMedia(tmp10Result, obj4);
 });

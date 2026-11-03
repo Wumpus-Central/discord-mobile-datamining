@@ -23,7 +23,7 @@ function Content() {
     }
   });
   const effect1 = noop.useEffect(() => () => visible(dependencyMap[5]).lockOrientationForiOS(), []);
-  const items = [first1, tmp4[1]];
+  items = [first1, tmp4[1]];
   const tmp = closure_8();
   [tmp9, tmp10] = first2(items, 2);
   const tmp11 = first2(noop.useState("top"), 2);
@@ -46,11 +46,11 @@ function Content() {
     items1,
   );
   const tmp8 = first2(items, 2);
-  const tooltip = visible(9955).useTooltip(ref, memo);
+  const tooltip = visible(10086).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(visible(5634).Button, {
+    children: closure_5(visible(5754).Button, {
       ref,
       onPress() {
         dependencyMap(!first);
@@ -62,10 +62,10 @@ function Content() {
   };
   const items2 = [
     closure_5(View, obj4),
-    closure_5(visible(7369).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
+    closure_5(visible(7489).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
     ,
   ];
-  const obj2 = visible(9955);
+  const obj2 = visible(10086);
   const obj5 = {
     ref,
     onPress() {
@@ -75,12 +75,12 @@ function Content() {
     text: str,
     size: "md",
   };
-  items2[2] = closure_5(visible(7058).TableRadioGroup, {
+  items2[2] = closure_5(visible(7184).TableRadioGroup, {
     title: "Position",
     value: first2,
     onChange: tmp11[1],
     hasIcons: false,
-    children: closure_9.map((label) => closure_1_5(first(7061).TableRadioRow, { label, value: label }, label)),
+    children: closure_9.map((label) => closure_1_5(first(7187).TableRadioRow, { label, value: label }, label)),
   });
   items2[3] = closure_5(TooltipNote, {});
   obj3.children = items2;
@@ -92,7 +92,7 @@ class TooltipNote {
     items = [
       "Note: If your tooltip is not displaying or it is not in the right position/zIndex, consider adding or moving an existing",
     ];
-    items[1] = jsx(closure_0(closure_1[11]).Text, { variant: "text-sm/bold", children: " <LayerScope/>" });
+    items[1] = jsx(closure_0(closure_1[11]).Text, { variant: "text-sm/semibold", children: " <LayerScope/>" });
     items[2] = " on the surface you expect to see the tooltip.";
     obj.children = items;
     return jsxs(closure_0(closure_1[11]).Text, obj);
@@ -101,7 +101,7 @@ class TooltipNote {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" },
   flex: { flex: 1 },
@@ -130,7 +130,7 @@ export function useCanRotate() {
     }
   });
   const effect1 = noop.useEffect(() => () => visible(dependencyMap[5]).lockOrientationForiOS(), []);
-  const items = [first, tmp[1]];
+  items = [first, tmp[1]];
   return items;
 }
 export { TooltipNote };

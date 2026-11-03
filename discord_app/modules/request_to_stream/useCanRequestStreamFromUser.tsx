@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/request_to_stream/useCanReque
 export default function useCanRequestStreamFromUser(user, arg1) {
   _require = user;
   closure_1 = arg1;
-  const items = [PermissionStore, ChannelStore, GuildMemberStore, GuildRoleStore];
+  items = [PermissionStore, ChannelStore, GuildMemberStore, GuildRoleStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {
       return false;

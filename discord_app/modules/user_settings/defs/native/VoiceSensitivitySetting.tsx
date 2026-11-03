@@ -21,7 +21,7 @@ const obj = {
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({
       inputMode: MediaEngineStore.getMode(),
       vadThreshold: MediaEngineStore.getModeOptions().threshold,
@@ -53,7 +53,7 @@ const obj = {
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   },
 };
@@ -67,7 +67,7 @@ export default SettingBuilders.createStatic({
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({
       inputMode: MediaEngineStore.getMode(),
       vadThreshold: MediaEngineStore.getModeOptions().threshold,
@@ -99,7 +99,7 @@ export default SettingBuilders.createStatic({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.nuFtHH)];
+    items = [intl.string(util.t.nuFtHH)];
     return items;
   },
 });

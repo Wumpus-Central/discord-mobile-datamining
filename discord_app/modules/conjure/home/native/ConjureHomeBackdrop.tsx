@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/home/native/ConjureHomeBackdrop.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useTheme from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -32,7 +32,7 @@ export default noop.memo(function ConjureHomeBackdrop() {
       children: null,
     };
     const obj5 = { style: React3.absoluteFill, colors, start, end };
-    const items = [hasOwnProperty(LinearGradientDefault, obj5)];
+    items = [hasOwnProperty(LinearGradientDefault, obj5)];
     const size = { style: React3.absoluteFill, width: "100%", height: "100%", children: null };
     const obj6 = { children: null };
     const obj7 = {

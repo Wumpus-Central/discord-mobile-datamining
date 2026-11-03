@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import gif_picker_GIFPickerUtils from "GIFPickerUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = {
@@ -36,7 +36,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const index = onPressGIF.index;
   const selected = onPressGIF.selected;
   const tmp = closure_6(onPressGIF.height);
-  const items = [item, index, onPressGIF];
+  items = [item, index, onPressGIF];
   const items1 = [item];
   const callback = noop.useCallback(() => {
     onPressGIF(item, index);
@@ -45,7 +45,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10259, dependencyMap.paths),
+      asyncRequireImpl(10389, dependencyMap.paths),
       "GIFPickerItemActionSheet",
       { item },
       "stack",

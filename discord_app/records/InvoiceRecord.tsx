@@ -450,6 +450,13 @@ prototype2["getWalletAmount"] = function getWalletAmount() {
 prototype2["getAmountDue"] = function getAmountDue() {
   return this.total - this.getWalletAmount();
 };
+Object.defineProperty(prototype2, "isSplitWithGiftCard", {
+  get: function isSplitWithGiftCard() {
+    const walletAmount = this.getWalletAmount();
+    return walletAmount > 0 && walletAmount < this.total;
+  },
+  set: undefined,
+});
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;
   const invoiceItems = this.invoiceItems;

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useIsUserInCreatorMonetizationEligibleCountry() {
-  const items = [UserStore, BillingInfoStore];
+  items = [UserStore, BillingInfoStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;

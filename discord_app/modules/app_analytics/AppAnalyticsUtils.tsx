@@ -26,7 +26,7 @@ function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       return null;
     } else {
@@ -275,7 +275,7 @@ export function collectVoiceAnalyticsMetadata(id) {
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(15662).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(15805).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

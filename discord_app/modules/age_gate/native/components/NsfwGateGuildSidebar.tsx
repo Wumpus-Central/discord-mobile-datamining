@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7388).NsfwGateSource;
+const NsfwGateSource = fn(7508).NsfwGateSource;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, HelpdeskArticles: closure_10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function NsfwGateGuildSidebar(guildId) {
   guildId = guildId.guildId;
   let currentUser;
   const tmp = closure_14();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(currentUser[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   currentUser = UserStore.getCurrentUser();
   const items1 = [guildId, stateFromStores, currentUser];

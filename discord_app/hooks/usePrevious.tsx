@@ -8,8 +8,8 @@ const result = size.fileFinishedImporting("hooks/usePrevious.tsx");
 export default function usePrevious(current) {
   const tmp = React(null);
   closure_1 = tmp;
-  const items = [current];
-  framebus(() => {
+  items = [current];
+  duration(() => {
     closure_1.current = current;
   }, items);
   return tmp.current;
@@ -19,8 +19,8 @@ export function usePreviousWhen(value) {
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
   closure_2 = tmp;
-  const items = [value, shouldUpdate];
-  framebus(() => {
+  items = [value, shouldUpdate];
+  duration(() => {
     if (shouldUpdate) {
       closure_2.current = value;
     }
@@ -32,8 +32,8 @@ export function useCurrentWhen(value) {
   const shouldUpdate = value.shouldUpdate;
   const tmp = React(null);
   closure_2 = tmp;
-  const items = [current, shouldUpdate];
-  framebus(() => {
+  items = [current, shouldUpdate];
+  duration(() => {
     if (shouldUpdate) {
       closure_2.current = current;
     }

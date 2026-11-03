@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -52,7 +52,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
@@ -61,12 +61,11 @@ const SafetyHubConstants = fn(7970);
 const Constants = fn(1072);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
 const result = 182 * DurationsDefault.Millis.DAY;
-let c10 = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef2042().to(_modDef2042(timestamp));
+  return _modDef2171().to(_modDef2171(timestamp));
 }
 export function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -184,7 +183,7 @@ export function getClassificationAccountStatusExpiration(classification) {
   }
 }
 export function useIsSuspendedUser() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
 }
 export function isCurrentUserSuspended() {

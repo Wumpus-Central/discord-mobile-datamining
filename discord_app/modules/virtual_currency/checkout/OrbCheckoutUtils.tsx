@@ -50,7 +50,7 @@ export function getOrbCheckoutDisclaimerMessage(skuId) {
     const intl4 = util.intl;
     stringResult = intl4.string(util.t.FhJ74j);
   }
-  const items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
+  items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
   return items;
 }
 export function resolveOrbCheckoutErrorMessage(code, arg1) {

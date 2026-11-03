@@ -15,7 +15,7 @@ export function useVideoExternallyPaused(id, arg1) {
   const activeContextMenu = ContextMenuState.useActiveContextMenu();
   const openModalKey = NavigationRouteUtils.useOpenModalKey();
   const videoQuestModalKey = VideoQuestUtils.getVideoQuestModalKey(id);
-  const items = [ActionSheetStore];
+  items = [ActionSheetStore];
   const stateFromStores = initialize.useStateFromStores(items, () => key.getKey());
   const tmp5 = useAlertStore.useAlertStore((alerts) => alerts.alerts).length > 0;
   let tmp6 = PlatformUtils.isIOS() && arg1;

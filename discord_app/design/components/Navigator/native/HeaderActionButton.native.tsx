@@ -10,7 +10,7 @@ require = fn;
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
   text: { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" },
@@ -47,7 +47,7 @@ export function HeaderActionButton(arg0) {
       maxFontSizeMultiplier: null,
       children: null,
     };
-    const items = [, ,];
+    items = [, ,];
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;
     obj2.style = items;

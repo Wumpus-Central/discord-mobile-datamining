@@ -13,7 +13,7 @@ import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettin
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(7490).SafetyToastType;
+const SafetyToastType = fn(7614).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -117,14 +117,14 @@ export function useDefaultGuildsRestricted() {
   return controlledSetting1;
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8371).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16722).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8495).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(16865).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
   controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(id);
-  const items = [controlledSetting];
+  items = [controlledSetting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items);
   return memo.mutualGuilds && !memo.all;
 }
@@ -135,7 +135,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
   _require = PERSONALIZATION;
   closure_1 = require("useSelectedTeen").useSelectedTeenId();
   let obj = require("useSelectedTeen");
-  let items = [FamilyCenterControlledSettingsStore];
+  items = [FamilyCenterControlledSettingsStore];
   closure_129_0 = PERSONALIZATION;
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     FamilyCenterControlledSettingsStore.hasConsented(closure_1, closure_0),
@@ -154,7 +154,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
             return obj5;
           } else if (null != tmp3) {
             if (closure_0) {
-              const items = [closure_0];
+              items = [closure_0];
               let items1 = items;
             } else {
               items1 = [];
@@ -180,16 +180,16 @@ export function useParentalControlledConsent(PERSONALIZATION) {
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(7717).updateTeenConsents(tmp28, items1, items2);
+            tmp3(7841).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(7717);
+            const obj3 = tmp3(7841);
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(7496).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(7496);
+            tmp3(7620).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(7620);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

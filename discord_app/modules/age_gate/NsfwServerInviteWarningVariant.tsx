@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
-import getTinyBroncoWarningDescriptions from "../tiny_bronco/getTinyBroncoWarningDescriptions.tsx";
+import getAgeNoticeWarningDescriptions from "../age_assurance/age_notice/getAgeNoticeWarningDescriptions.tsx";
 import useAgeGroupPresentation from "../age_assurance/useAgeGroupPresentation.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -10,7 +10,7 @@ const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/age_gate/NsfwServerInviteWarningVariant.tsx");
 
 export function getNsfwServerInviteWarningVariant(arg0) {
-  const tmp3 = getTinyBroncoWarningDescriptions.getTinyBroncoServerDescriptions()[arg0];
+  const tmp3 = getAgeNoticeWarningDescriptions.getTinyBroncoServerDescriptions()[arg0];
   const obj2 = { text: null, joins: false };
   const intl = util.intl;
   obj2.text = intl.string(util.t.FDSSia);

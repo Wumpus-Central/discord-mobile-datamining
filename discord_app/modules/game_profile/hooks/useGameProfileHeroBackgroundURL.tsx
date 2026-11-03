@@ -12,7 +12,7 @@ export default function useGameProfileHeroBackgroundURL(arg0, arg1) {
     noop.useState(() => Math.random()),
     1,
   )[0];
-  const items = [arg1, arg0, first];
+  items = [arg1, arg0, first];
   return noop.useMemo(() => {
     bannerURL = bannerURL.getBannerURL(closure_1);
     if (null != bannerURL) {

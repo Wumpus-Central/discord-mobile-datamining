@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/07019_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import DesignTogglesStore from "../../../design_toggles/DesignTogglesStore.tsx";
@@ -28,7 +28,7 @@ function ToggleTableRow(toggleName) {
   const description = toggleName.description;
   ({ value, onValueChange } = toggleName);
   return closure_9(
-    toggleName(6975).TableRow,
+    toggleName(7101).TableRow,
     {
       label: description,
       labelLineClamp: 1,
@@ -37,14 +37,14 @@ function ToggleTableRow(toggleName) {
       onPress() {
         ToastActionCreatorsDefault.open(toggleName, { text: description });
       },
-      trailing: closure_9(toggleName(7370).FormSwitch, { value, onValueChange }),
+      trailing: closure_9(toggleName(7490).FormSwitch, { value, onValueChange }),
     },
     toggleName,
   );
 }
 function DevTogglesForCategory(title) {
   ({ category, query } = title);
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const items1 = [query, category];
   const stateFromStores = category(504).useStateFromStores(
     items,
@@ -77,15 +77,15 @@ function DevTogglesForCategory(title) {
         );
       }),
     };
-    tmp3 = closure_9(category(7060).TableRowGroup, obj2);
+    tmp3 = closure_9(category(7186).TableRowGroup, obj2);
   }
   return tmp3;
 }
 const ScrollView = fn(17).ScrollView;
-const CATEGORY_LABELS = fn(5627).CATEGORY_LABELS;
+const CATEGORY_LABELS = fn(5750).CATEGORY_LABELS;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   container: null,
@@ -100,10 +100,10 @@ export default function DevToolsTogglesScreen() {
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  const manaTextMigrationHighlightRestartNotice = query(15861).useManaTextMigrationHighlightRestartNotice();
-  let obj = query(15861);
+  const manaTextMigrationHighlightRestartNotice = query(16004).useManaTextMigrationHighlightRestartNotice();
+  let obj = query(16004);
   const tmp5 = query;
-  const items = [DesignTogglesStore];
+  items = [DesignTogglesStore];
   const items1 = [query];
   const stateFromStores = query(504).useStateFromStores(
     items,
@@ -136,13 +136,13 @@ export default function DevToolsTogglesScreen() {
   obj3.contentContainerStyle = items2;
   const obj5 = { title: "Actions", hasIcons: false, children: null };
   const items3 = [
-    closure_9(query(6975).TableRow, {
+    closure_9(query(7101).TableRow, {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(17721).clearAll();
-        const obj = first(17721);
-        first(17702).clearAll();
+        first(17864).clearAll();
+        const obj = first(17864);
+        first(17845).clearAll();
       },
       arrow: true,
     }),
@@ -155,17 +155,17 @@ export default function DevToolsTogglesScreen() {
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(17721).clearAll();
-      const obj = first(17721);
-      first(17702).clearAll();
+      first(17864).clearAll();
+      const obj = first(17864);
+      first(17845).clearAll();
     },
     arrow: true,
   };
-  items3[1] = closure_9(query(6975).TableRow, {
-    label: closure_9(query(7218).SearchBar, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }),
+  items3[1] = closure_9(query(7101).TableRow, {
+    label: closure_9(query(7339).SearchBar, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }),
   });
   obj5.children = items3;
-  const items4 = [closure_10(query(7060).TableRowGroup, obj5), ,];
+  const items4 = [closure_10(query(7186).TableRowGroup, obj5), ,];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj8 = {
@@ -180,14 +180,14 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(17721).toggle(query, arg0);
+              return first(17864).toggle(query, arg0);
             },
           },
           tmp,
         );
       }),
     };
-    tmp7Result = closure_9(tmp5(7060).TableRowGroup, obj8);
+    tmp7Result = closure_9(tmp5(7186).TableRowGroup, obj8);
   }
   const obj9 = { spacing: 16, children: null };
   items4[1] = tmp7Result;
@@ -197,6 +197,6 @@ export default function DevToolsTogglesScreen() {
     return React7(DevTogglesForCategory, { category: parseInt(tmp), title: tmp2, query }, tmp);
   });
   obj9.children = items4;
-  obj3.children = closure_10(query(6027).Stack, obj9);
+  obj3.children = closure_10(query(6147).Stack, obj9);
   return closure_9(ScrollView, obj3);
 }

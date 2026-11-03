@@ -19,7 +19,7 @@ require = fn;
 function BalanceWidgetMenuSection() {
   const tmp = closure_10();
   const obj = { spacing: 16, style: tmp.container, children: null };
-  const items = [
+  items = [
     React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }),
     React5(BalanceWidgetMenuDefault, {}),
   ];
@@ -30,7 +30,7 @@ function BalanceWidgetPillSection() {
   const tmp = closure_10();
   [balance, closure_1] = noop.useState(1000);
   [first1, _slicedToArray] = noop.useState("1000");
-  const items = [first1];
+  items = [first1];
   const callback = noop.useCallback((arg0) => {
     closure_3(arg0);
   }, []);
@@ -106,7 +106,7 @@ function OrbsFlowTest() {
     },
     children: null,
   };
-  const items = [
+  items = [
     React5(BalanceWidgetMenuSection, {}),
     React5(BalanceWidgetPillSection, {}),
     React5(OrbCheckoutMenuDefault, {}),
@@ -119,9 +119,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,

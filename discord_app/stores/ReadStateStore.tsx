@@ -6,7 +6,7 @@ import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppStateStore from "native/AppStateStore.tsx";
-import asyncRequireImpl from "../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02123_asyncRequireImpl.js";
 import TypeUtils from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import BasicPermissionUtilsDefault from "../utils/BasicPermissionUtils.tsx";
@@ -123,7 +123,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -171,7 +171,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         closure_130_67.length = 0;
         closure_130_68 = false;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -183,7 +183,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         } else {
           closure_130_79(closure_129_0);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -491,9 +491,9 @@ function mergeForGuild(guild) {
   }
   const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(2042);
-  const tmp12Result = id(2042)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(2042)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(2171);
+  const tmp12Result = id(2171)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(2171)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -506,7 +506,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(2042)(Date.now()).subtract(24, "h");
+  const subtractResult = id(2171)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -819,18 +819,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6855).isEventUpcoming;
-const ChannelRecord = fn(4867);
+const isEventUpcoming = fn(6975).isEventUpcoming;
+const ChannelRecord = fn(4994);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5657);
+const ActivityPanelConstants = fn(5777);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4870);
+const ChannelConstants = fn(4997);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4869).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const GuildScheduledEventStatus = fn(4996).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -876,7 +876,7 @@ prototype["isChannelAckable"] = function isChannelAckable(arg0) {
 };
 prototype["getAllWindowIds"] = function getAllWindowIds(arg0) {
   if (null == this.channelWindowIds[arg0]) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(tmp.channelWindowIds[arg0]);
@@ -946,7 +946,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1007,7 +1007,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1073,7 +1073,7 @@ ReadState["getIfExists"] = function getIfExists(id) {
   return value2;
 };
 ReadState["getMentionChannelIds"] = function getMentionChannelIds() {
-  const items = [];
+  items = [];
   const iter = ReadState._mentionChannels[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -1573,7 +1573,7 @@ prototype2["canBeUnread"] = function canBeUnread() {
       return false;
     }
   }
-  const items = [MessageRequestStore, SpamMessageRequestStore];
+  items = [MessageRequestStore, SpamMessageRequestStore];
   if (obj.isMessageRequestOrSpamRequest(self.channelId, items)) {
     return false;
   } else {
@@ -1601,7 +1601,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
   if (tmp) {
     let tmp3 = !tmp2;
     if (!(self._isThread && !self._isJoinedThread)) {
-      const items = [MessageRequestStore, SpamMessageRequestStore];
+      items = [MessageRequestStore, SpamMessageRequestStore];
       const result = MessageRequestUtils.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
@@ -1708,7 +1708,7 @@ prototype2["ackPins"] = function ackPins() {
         self._persisted = true;
         networkAwareRetryDefault(() => {
           const HTTP = HTTPUtils.HTTP;
-          return HTTP.post({ url: BottomSheet.PINS_ACK(self.channelId), oldFormErrors: true, rejectWithError: true });
+          return HTTP.post({ url: closure_2_40.PINS_ACK(self.channelId), oldFormErrors: true, rejectWithError: true });
         });
       }
     }
@@ -1911,7 +1911,7 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
     const require = tmp4;
     networkAwareRetryDefault(() => {
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: BottomSheet.MESSAGE_ACK(self.channelId, outgoingAck), body: { token, last_viewed: self.lastViewed, flags: recalculateFlagsResult }, oldFormErrors: true, rejectWithError: true };
+      const request = { url: closure_2_40.MESSAGE_ACK(self.channelId, outgoingAck), body: { token, last_viewed: self.lastViewed, flags: recalculateFlagsResult }, oldFormErrors: true, rejectWithError: true };
       return HTTP.post(request);
     }).then((body) => {
       if (null != body) {
@@ -1924,20 +1924,20 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6890, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(7010, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6890, dependencyMap.paths);
+          const promise = asyncRequireImpl(7010, dependencyMap.paths);
         }
       }
     });
     let promise = networkAwareRetryDefault(() => {
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: BottomSheet.MESSAGE_ACK(self.channelId, outgoingAck), body: { token, last_viewed: self.lastViewed, flags: recalculateFlagsResult }, oldFormErrors: true, rejectWithError: true };
+      const request = { url: closure_2_40.MESSAGE_ACK(self.channelId, outgoingAck), body: { token, last_viewed: self.lastViewed, flags: recalculateFlagsResult }, oldFormErrors: true, rejectWithError: true };
       return HTTP.post(request);
     });
   }
@@ -2039,7 +2039,7 @@ prototype2["delete"] = function delete() {
   }
   if (flag) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: BottomSheet.CHANNEL_ACK(self.channelId), body: null, oldFormErrors: true, rejectWithError: true };
+    const request = { url: closure_1_40.CHANNEL_ACK(self.channelId), body: null, oldFormErrors: true, rejectWithError: true };
     const obj3 = { version: 2, read_state_type: self.type };
     request.body = obj3;
     HTTP.del(request);
@@ -2187,7 +2187,7 @@ prototype2["getAckTimestamp"] = function getAckTimestamp() {
     if (self.type !== ReadStateTypes.GUILD_EVENT) {
       if (self.type !== tmp2.GUILD_ONBOARDING_QUESTION) {
         if (closure_1_55(self.channelId)) {
-          let guild = GuildStore.getGuild(self.guildId);
+          guild = GuildStore.getGuild(self.guildId);
         } else {
           const channel = ChannelStore.getChannel(self.channelId);
           if (null != channel) {
@@ -2300,7 +2300,7 @@ class ReadStateStoreClass extends Store {
 }
 const prototype3 = ReadStateStoreClass.prototype;
 prototype3["initialize"] = function initialize() {
-  const items = [DimensionStore, UserStore, GuildStore, GuildAvailabilityStore, ChannelStore, SelectedChannelStore, MessageStore, PermissionStore, ChannelRTCStore, ActiveThreadsStore, JoinedThreadsStore, ChannelSectionStore, GuildScheduledEventStore, ExperimentStore, GatedChannelStore, UserGuildSettingsStore, WindowStore, NotificationCenterItemsStore, MessageRequestStore, UserSettingsProtoStore, SpamMessageRequestStore];
+  items = [DimensionStore, UserStore, GuildStore, GuildAvailabilityStore, ChannelStore, SelectedChannelStore, MessageStore, PermissionStore, ChannelRTCStore, ActiveThreadsStore, JoinedThreadsStore, ChannelSectionStore, GuildScheduledEventStore, ExperimentStore, GatedChannelStore, UserGuildSettingsStore, WindowStore, NotificationCenterItemsStore, MessageRequestStore, UserSettingsProtoStore, SpamMessageRequestStore];
   items.push(AppStateStore.default);
   this.waitFor(ActiveThreadsStore, AuthenticationStore, ChannelRTCStore, ChannelSectionStore, ChannelStore, DimensionStore, EmbeddedActivitiesStore, GatedChannelStore, GuildAvailabilityStore, GuildScheduledEventStore, GuildStore, IdleStore, JoinedThreadsStore, MessageStore, NotificationCenterItemsStore, PermissionStore, RelationshipStore, SelectedChannelStore, UserGuildSettingsStore, UserSettingsProtoStore, UserStore, WindowStore);
   const items1 = [ChannelSectionStore];
@@ -2552,7 +2552,7 @@ prototype3["isNewForumThread"] = function isNewForumThread(id, parent_id, guild)
 };
 prototype3["getAllReadStates"] = function getAllReadStates(arg0) {
   closure_0 = arg0;
-  const items = [];
+  items = [];
   const item = ReadState.forEach((type) => {
     type = type.type;
     if (ReadStateTypes.GUILD_HOME !== type) {
@@ -2640,7 +2640,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         if (new_messages != null) {
           first = new_messages[0];
         }
-        let items = [first];
+        items = [first];
         let modified_messages = tmp12.modified_messages;
         if (modified_messages == null) {
           modified_messages = [];
@@ -2887,7 +2887,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       }
     });
     if ("full_sync" === guild.channels.op) {
-      let items = guild.channels.items;
+      items = guild.channels.items;
     } else {
       items = guild.channels.writes;
     }
@@ -3255,7 +3255,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "Sloven\u010Dina", isExplicitUserAction: "Slovak", trackAnalytics: "sk" });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "1000000000000000000", isExplicitUserAction: null, trackAnalytics: "1000000000000000001" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3642,11 +3642,11 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "hasEvents", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "giftIconCoachmark", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found.map((channelId) => ({ channel_id: channelId.channelId, message_id: channelId.messageId, read_state_type: channelId.readStateType })), 0);
       HermesBuiltin.apply(items, navigation);
       if (!c68) {
@@ -3703,7 +3703,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     const currentUser = UserStore.getCurrentUser();
     let tmp3 = !tmp2;
     if (!(null != guildScheduledEvent.creator_id && null != currentUser && guildScheduledEvent.creator_id === currentUser.id)) {
-      const items = [, ];
+      items = [, ];
       ({ CANCELED: arr[0], COMPLETED: arr[1] } = GuildScheduledEventStatus);
       const hasItem = items.includes(guildScheduledEvent.status);
       if (hasItem) {

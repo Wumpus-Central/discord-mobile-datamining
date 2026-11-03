@@ -12,7 +12,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 
@@ -102,7 +102,7 @@ function GradientBase(angleCenter) {
     const obj2 = { width };
     wide = obj2;
   }
-  const items = [wide, , , ,];
+  items = [wide, , , ,];
   if (tall) {
     const obj3 = { height };
     tall = obj3;
@@ -229,7 +229,7 @@ function CustomThemesGradient(arg0) {
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1491)());
+  ({ width, height } = reduced(1493)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -294,7 +294,7 @@ function CustomThemesGradient(arg0) {
   }
   let arr2 = mapped;
   if (1 === mapped.length) {
-    const items = [mapped[0], mapped[0]];
+    items = [mapped[0], mapped[0]];
     arr2 = items;
   }
   let result = ((gradientAngle - 90) * Math.PI) / 180;
@@ -357,8 +357,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5587), obj);
-    const tmp2Result = reduced(5587);
+    tmp10Result = closure_6(reduced(5710), obj);
+    const tmp2Result = reduced(5710);
   }
   return tmp10Result;
 }
@@ -369,7 +369,7 @@ function ActiveGuildThemeGradient(arg0) {
     const customUserThemeSettings = activeGuildTheme.customUserThemeSettings;
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(
       GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], theme),
       0,
@@ -398,7 +398,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },
@@ -424,7 +424,7 @@ export default function ThemedGradient(overlayOpacity) {
   const withOverlay = merged.withOverlay;
   const isThemeDarkResult = shared.isThemeDark(tmp5);
   const tmp9 = useThemeDefault();
-  const items = [ClientThemesBackgroundStore];
+  items = [ClientThemesBackgroundStore];
   const preset = useStateFromStores.useStateFromStoresObject(items, () => ({
     preset: gradientPreset.gradientPreset,
   })).preset;
@@ -585,7 +585,7 @@ export function CustomThemedGradient(overlayOpacity) {
   let tmp12 = tmp11;
   if (merged.withOverlay) {
     const obj3 = { style: tmp2.absolute, children: null };
-    const items = [tmp11];
+    items = [tmp11];
     const obj4 = { style: null };
     const items1 = [tmp2.softenGradient];
     const obj5 = { backgroundColor: ColorUtils.hexWithOpacity(tmp7, num) };

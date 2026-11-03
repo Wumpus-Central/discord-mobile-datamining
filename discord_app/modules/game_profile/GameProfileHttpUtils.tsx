@@ -68,7 +68,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
         closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c5 = tmp;
@@ -124,7 +124,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
     }
   }
 };
-let closure_11 = async function _getGameAnnouncements() {
+let closure_12 = async function _getGameAnnouncements() {
   closure_1 = arg1;
   c8 = 0;
   c9 = 0;
@@ -183,44 +183,111 @@ let closure_11 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1072).Endpoints;
-let closure_8 = fn(9456).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(9584).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
-const fetchStore = initialize.createFetchStore(GameProfileStore, {
+let obj2 = {
   getQueryId(arg0, arg1) {
     let combined = null;
     if (arg1) {
-      const _HermesInternal = HermesInternal;
-      combined = "similar-games:" + arg0;
+      combined = null;
+      if (null != arg0) {
+        const _HermesInternal = HermesInternal;
+        combined = "similar-games:" + arg0;
+      }
     }
     return combined;
   },
   get(gameId) {
-    let similarGames = GameProfileStore.getSimilarGames(gameId);
-    if (similarGames == null) {
-      similarGames = null;
-    }
-    return similarGames;
-  },
-  load(arg0) {
-    return (function fetchSimilarGames() {
-      const self = this;
-      const apply = closure_1_10.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+    let tmp = null;
+    if (null != gameId) {
+      let similarGames = GameProfileStore.getSimilarGames(gameId);
+      if (similarGames == null) {
+        similarGames = null;
       }
-      return applyArgumentsResult;
-    })(arg0);
+      tmp = similarGames;
+    }
+    return tmp;
   },
-  retryConfig: {
-    backoff() {
-      const result = 5 * DurationsDefault.Millis.SECOND;
-      return new BackoffDefault(result, 5 * DurationsDefault.Millis.MINUTE);
-    },
-  },
-  failureStaleAfter: DurationsDefault.Seconds.MINUTE,
+  load: null,
+  retryConfig: null,
+  failureStaleAfter: null,
+};
+let closure_11 = asyncGeneratorStep(async (arg0) => {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else if (null != closure_0) {
+          c2 = 1;
+          c1 = 1;
+          const obj4 = {
+            value: (function fetchSimilarGames() {
+              const self = this;
+              const apply = closure_1_10.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })(tmp5),
+            done: false,
+          };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      c1 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp7) {
+      c1 = tmp;
+      throw tmp7;
+    }
+  }
 });
+obj2.load = function load() {
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+obj2.retryConfig = {
+  backoff() {
+    const result = 5 * DurationsDefault.Millis.SECOND;
+    return new BackoffDefault(result, 5 * DurationsDefault.Millis.MINUTE);
+  },
+};
+obj2.failureStaleAfter = DurationsDefault.Seconds.MINUTE;
+const fetchStore = initialize.createFetchStore(GameProfileStore, obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/GameProfileHttpUtils.tsx");
 
@@ -237,7 +304,7 @@ export function getShopCollection() {
 export const useSimilarGameIds = fetchStore;
 export function getGameAnnouncements() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

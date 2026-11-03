@@ -14,7 +14,7 @@ let obj = {
   windowDispatch: componentDispatcher,
   windowId: null,
 };
-const WindowIdUtils = fn(6868);
+const WindowIdUtils = fn(6988);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();
@@ -116,7 +116,7 @@ export function AppWindowContextProvider(children) {
     const componentDispatcher = new appContext(renderWindow[5]).ComponentDispatcher();
     return componentDispatcher;
   }, []);
-  const items = [appContext, renderWindow, memo, windowId];
+  items = [appContext, renderWindow, memo, windowId];
   value = noop.useMemo(() => ({ appContext, renderWindow, windowDispatch: memo, windowId }), items);
   jsx = value;
   const items1 = [renderWindow, windowId];

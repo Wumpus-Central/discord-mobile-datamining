@@ -350,7 +350,7 @@ function hydratePreviouslyUnavailableGuild(data_mode) {
   return obj8;
 }
 function collectThreadMessages(threads) {
-  const items = [];
+  items = [];
   if (null != threads) {
     const iter = threads[Symbol.iterator]();
     const nextResult = iter.next();
@@ -376,7 +376,7 @@ export function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
     friends = merged_presences.friends;
   }
   closure_129_0 = closure_5;
-  let items = [];
+  items = [];
   closure_129_1 = items;
   if (friends != null) {
     let item = friends.forEach((user_id) => {
@@ -401,7 +401,7 @@ export function hydrateReadySupplementalPayload(arg0, identifyStartTime) {
         tmp2 = merged_presences.guilds[index];
       }
       closure_0 = closure_5;
-      const items = [];
+      items = [];
       let items1 = items;
       if (tmp2 != null) {
         const item = tmp2.forEach((user_id) => {
@@ -509,7 +509,7 @@ export function preloadReadyPayloadData() {
   } else {
     okAsyncResult = Promise.resolve(false);
   }
-  const items = [committedVersions, guildIds, okAsyncResult];
+  items = [committedVersions, guildIds, okAsyncResult];
   tmp4Result = isCacheEnabled;
   return Promise.all(items).then((result) => {
     [tmp, tmp2, tmp3] = result;
@@ -554,7 +554,7 @@ export function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTi
           tmp5 = tmp3[index];
         }
         dependencyMap = closure_5;
-        const items = [];
+        items = [];
         if (tmp5 != null) {
           const item = tmp5.forEach((user_id) => {
             if (null != user_id) {

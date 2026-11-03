@@ -1,7 +1,7 @@
 // discord_app/modules/frames/panel/native/QuestActivityButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import QuestMatchingUtils from "../../../quests/utils/QuestMatchingUtils.tsx";
@@ -9,53 +9,45 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 import UnenrolledActivityQuestStore from "../../../quests/UnenrolledActivityQuestStore.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import 01652__ from "../../../../../_runtime/metro/01652__.js";
 
 require = fn;
 function QuestActivityButtonInner(quest) {
   quest = quest.quest;
-  dependencyMap = undefined;
+  _require = quest;
   let num;
-  closure_4 = undefined;
+  noop = undefined;
   let sharedValue;
   let sharedValue1;
   let ref;
   let confetti;
-  let obj = quest(9681);
-  let items = [sharedValue];
-  const stateFromStores = quest(504).useStateFromStores(items, () => sharedValue.useReducedMotion);
-  const items1 = [,];
+  let obj = require("hooks/QuestHooks");
+  items = [sharedValue1];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => sharedValue1.useReducedMotion);
+  importDefault = stateFromStores;
+  const items1 = [, ];
   ({ id: arr2[0], userStatus } = quest);
   let enrolledAt;
   if (userStatus != null) {
     enrolledAt = userStatus.enrolledAt;
   }
   items1[1] = enrolledAt;
-  let result = 2 * Math.PI * 14.3;
-  dependencyMap = result;
   let enrolledAt1;
-  const callback = num.useCallback(() => {
-    const userStatus = quest.userStatus;
+  const callback = noop.useCallback(() => {
+    const userStatus = _undefined.userStatus;
     let enrolledAt;
     if (userStatus != null) {
       enrolledAt = userStatus.enrolledAt;
     }
     if (null == enrolledAt) {
-      const obj2 = { questId: quest.id };
-      ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(19148, dependencyMap.paths),
-        obj2,
-        QUEST_ACTIVITY_UNENROLLED_MODAL_KEY,
-      );
+      const obj2 = { questId: _undefined.id };
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19306, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
-      const obj4 = { questId: quest.id };
-      ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19149, dependencyMap.paths),
-        "QuestProgressBottomSheet",
-        obj4,
-      );
+      const obj4 = { questId: _undefined.id };
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19307, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
     }
   }, items1);
+  let result = 2 * Math.PI;
   if (quest != null) {
     const userStatus2 = quest.userStatus;
     if (userStatus2 != null) {
@@ -84,60 +76,76 @@ function QuestActivityButtonInner(quest) {
     }
     tmp9 = null != completedAt;
   }
-  closure_4 = tmp9;
-  let obj2 = quest(504);
-  sharedValue = quest(5095).useSharedValue(num);
-  const tmpResult = quest(5095);
+  noop = tmp9;
+  let obj2 = require("initialize");
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
   let num2 = 0;
   if (tmp9) {
     num2 = 1;
   }
-  sharedValue1 = quest(5095).useSharedValue(num2);
+  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
   ref = obj3.useRef(null);
   const tmp14 = closure_13();
   confetti = tmp14;
-  const tmpResult4 = quest(5095);
-  const fn = function u() {
-    return { shadowOpacity: sharedValue1.get() };
-  };
-  fn.__closure = { glowOpacity: sharedValue1 };
-  fn.__workletHash = 4459043613798;
-  fn.__initData = __initData;
-  const items2 = [tmp14.confetti];
-  const animatedStyle = quest(5095).useAnimatedStyle(fn);
+  const tmpResult4 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_14, sharedValue1];
+  _require = undefined;
+  [tmp15, tmp16] = items2;
+  let result1 = result * 14.3;
+  class QuestActivityButtonTsx1 {
+    constructor() {
+      obj = { shadowOpacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items3 = [tmp16];
+  QuestActivityButtonTsx1.__closure = items3;
+  QuestActivityButtonTsx1.__workletHash = 8919500662559;
+  QuestActivityButtonTsx1.__initData = tmp15;
+  const items4 = [tmp14.confetti];
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(QuestActivityButtonTsx1);
   const memo = obj3.useMemo(() => {
     const obj = {};
     const merged = Object.assign(confetti.confetti);
     obj.width = height;
     obj.height = height;
-    const items = [{ scale: 1.6 }];
+    items = [{ scale: 1.6 }];
     obj.transform = items;
     return obj;
-  }, items2);
-  const tmpResult5 = quest(5095);
-  const fn2 = function l() {
-    return { strokeDashoffset: c2 - c2 * sharedValue.get() };
-  };
-  fn2.__closure = { circumference: result, animatedProgress: sharedValue };
-  fn2.__workletHash = 3373122453897;
-  fn2.__initData = __initData2;
-  const items3 = [sharedValue, num, stateFromStores];
-  const animatedProps = quest(5095).useAnimatedProps(fn2);
+  }, items4);
+  const tmpResult5 = require("../../../../../_runtime/metro/01652__.js");
+  const items5 = [closure_15, result1, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp20, tmp21, tmp22] = items5;
+  class QuestActivityButtonTsx2 {
+    constructor() {
+      obj = { strokeDashoffset: closure_0 - closure_0 * closure_1.get() };
+      return obj;
+    }
+  }
+  const items6 = [tmp21, tmp22];
+  QuestActivityButtonTsx2.__closure = items6;
+  QuestActivityButtonTsx2.__workletHash = 1636159470064;
+  QuestActivityButtonTsx2.__initData = tmp20;
+  const items7 = [sharedValue, num, stateFromStores];
+  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(QuestActivityButtonTsx2);
   const effect = obj3.useEffect(() => {
     num = 500;
-    if (stateFromStores) {
+    if (c1) {
       num = 0;
     }
-    const result = sharedValue.set(timing.withTiming(num, { duration: num }));
+    const result = sharedValue.set(timing_timing.withTiming(num, { duration: num }));
     return () => {
-      quest(c2[7]).cancelAnimation(sharedValue);
+      c0(num[7]).cancelAnimation(sharedValue);
     };
-  }, items3);
-  const items4 = [sharedValue1, tmp9, stateFromStores];
+  }, items7);
+  const items8 = [sharedValue1, tmp9, stateFromStores];
   const effect1 = obj3.useEffect(() => {
-    if (!stateFromStores) {
-      if (closure_4) {
-        const result = sharedValue1.set(timing.withTiming(1, { duration: 500 }));
+    if (!c1) {
+      if (closure_3) {
+        const result = sharedValue1.set(timing_timing.withTiming(1, { duration: 500 }));
         const current = ref.current;
         if (current != null) {
           current.play();
@@ -149,93 +157,55 @@ function QuestActivityButtonInner(quest) {
     if (current2 != null) {
       current2.reset();
     }
-  }, items4);
+  }, items8);
   let obj4 = { style: null, pointerEvents: "box-none", children: null };
-  const items5 = [, ,];
-  ({ container: arr6[0], completionGlow: arr6[1] } = tmp14);
-  items5[2] = animatedStyle;
-  obj4.style = items5;
+  const items9 = [, , ];
+  ({ container: arr10[0], completionGlow: arr10[1] } = tmp14);
+  items9[2] = animatedStyle;
+  obj4.style = items9;
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
-  const tmpResult6 = quest(5095);
-  obj6.source = quest(17056);
-  obj5.children = closure_9(stateFromStores(5618), obj6);
-  const items6 = [closure_9(closure_4, obj5), , ,];
+  const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");
+  obj6.source = require("../../../../../_runtime/metro/17199__.js");
+  obj5.children = closure_9(require("LottieAnimationView"), obj6);
+  const items10 = [closure_9(sharedValue, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
-  const tmp20 = stateFromStores(5618);
-  obj8.icon = stateFromStores(14719);
+  const tmp26 = require("LottieAnimationView");
+  obj8.icon = require("../../../../../_runtime/metro/14850__.js");
   obj8.onPress = callback;
-  const intl = tmp(1113).intl;
-  obj8.accessibilityLabel = intl.string(quest(1113).t.JALI2K);
-  obj7.children = closure_9(stateFromStores(19150), obj8);
-  items6[1] = closure_9(closure_4, obj7);
+  const intl = tmp(tmp2[23]).intl;
+  obj8.accessibilityLabel = intl.string(require("util").t.JALI2K);
+  obj7.children = closure_9(require("VoicePanelIconButton"), obj8);
+  items10[1] = closure_9(sharedValue, obj7);
   const obj9 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(19150);
-  size.children = closure_9(quest(8031).Circle, {
-    cx: 16,
-    cy: 16,
-    r: 14.3,
-    fill: "none",
-    stroke: stateFromStores(575).unsafe_rawColors.OPACITY_32,
-    strokeWidth: 3.4,
-    strokeDasharray: result,
-  });
-  obj9.children = closure_9(quest(8031).Svg, size);
-  items6[2] = closure_9(closure_4, obj9);
+  const tmp27 = require("VoicePanelIconButton");
+  size.children = closure_9(require("inlineStyles").Circle, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: require("native").unsafe_rawColors.OPACITY_32, strokeWidth: 3.4, strokeDasharray: result1 });
+  obj9.children = closure_9(require("inlineStyles").Svg, size);
+  items10[2] = closure_9(sharedValue, obj9);
   const obj11 = { pointerEvents: "none", style: tmp14.canvas, children: null };
-  const size1 = {
-    height: v32,
-    width: v32,
-    children: closure_9(closure_12, {
-      cx: 16,
-      cy: 16,
-      r: 14.3,
-      fill: "none",
-      stroke: tmp14.progressPath.color,
-      strokeWidth: 3.4,
-      strokeDasharray: result,
-      animatedProps,
-    }),
-  };
-  obj11.children = closure_9(quest(8031).Svg, size1);
-  items6[3] = closure_9(closure_4, obj11);
-  obj4.children = items6;
-  return closure_10(stateFromStores(5095).View, obj4);
+  const size1 = { height: v32, width: v32, children: closure_9(closure_12, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: tmp14.progressPath.color, strokeWidth: 3.4, strokeDasharray: result1, animatedProps }) };
+  obj11.children = closure_9(require("inlineStyles").Svg, size1);
+  items10[3] = closure_9(sharedValue, obj11);
+  obj4.children = items10;
+  return closure_10(require("../../../../../_runtime/metro/01652__.js").View, obj4);
 }
 const View = fn(17).View;
-const QuestVariants = fn(6781).QuestVariants;
+const QuestVariants = fn(6901).QuestVariants;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let c11 = 32;
-let closure_12 = ReanimatedRexport.createAnimatedComponent(fn(8031).Circle);
-const createStyles = fn(5014);
-let obj = {
-  container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" },
-  completionGlow: {
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 12,
-    shadowOpacity: 0,
-    elevation: 4,
-    shadowColor: "#30C77399",
-  },
-  canvas: null,
-  progressPath: { color: nativeDefault.colors.STATUS_POSITIVE },
-  buttonWrapper: { position: "absolute", borderRadius: 16, overflow: "hidden" },
-  confetti: { position: "absolute" },
-};
+let closure_12 = module_1652.createAnimatedComponent(fn(8155).Circle);
+const createStyles = fn(5141);
+let obj = { container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: null, progressPath: { color: nativeDefault.colors.STATUS_POSITIVE }, buttonWrapper: { position: "absolute", borderRadius: 16, overflow: "hidden" }, confetti: { position: "absolute" } };
 let obj2 = { position: "absolute", transform: null };
 let items = [{ rotate: "-90deg" }];
 obj2.transform = items;
 obj.canvas = obj2;
 let closure_13 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function QuestActivityButtonTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}",
-};
-const __initData2 = {
-  code: "function QuestActivityButtonTsx2(){const{circumference,animatedProgress}=this.__closure;return{strokeDashoffset:circumference-circumference*animatedProgress.get()};}",
-};
+let closure_14 = { code: "(function QuestActivityButtonTsx1(){let[glowOpacity]=this.__closure;return{shadowOpacity:glowOpacity.get()};})" };
+let closure_15 = { code: "(function QuestActivityButtonTsx2(){let[circumference,animatedProgress]=this.__closure;return{strokeDashoffset:circumference-circumference*animatedProgress.get()};})" };
 const QUEST_ACTIVITY_UNENROLLED_MODAL_KEY = "QUEST_ACTIVITY_UNENROLLED_MODAL_KEY";
 let obj4 = { color: nativeDefault.colors.STATUS_POSITIVE };
 let size = fn(2);
@@ -245,18 +215,14 @@ export default noop.memo(function QuestActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
   let stateFromStores1;
   let memo;
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = applicationId(stateFromStores1[12]).useStateFromStores(items, () => quests.quests);
   let obj = applicationId(stateFromStores1[12]);
   const items1 = [UnenrolledActivityQuestStore];
   stateFromStores1 = applicationId(stateFromStores1[12]).useStateFromStores(items1, () => state.getState().autoEnroll);
   const items2 = [stateFromStores, applicationId];
   memo = memo.useMemo(() => {
-    const eligibleQuestsForApplicationId = QuestMatchingUtils.getEligibleQuestsForApplicationId(
-      stateFromStores,
-      applicationId,
-      true,
-    );
+    const eligibleQuestsForApplicationId = QuestMatchingUtils.getEligibleQuestsForApplicationId(stateFromStores, applicationId, true);
     return eligibleQuestsForApplicationId.find((config) => {
       const features = config.config.features;
       return features.includes(constants.MOBILE_ACTIVITY_QUEST);
@@ -290,11 +256,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj2 = { questId: memo.id };
-      ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(19148, dependencyMap.paths),
-        obj2,
-        QUEST_ACTIVITY_UNENROLLED_MODAL_KEY,
-      );
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19306, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

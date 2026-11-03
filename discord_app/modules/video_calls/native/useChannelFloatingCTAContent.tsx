@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/useChannel
 
 export default function useChannelFloatingCTAContent(arg0) {
   _require = arg0;
-  let items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
@@ -29,7 +29,7 @@ export default function useChannelFloatingCTAContent(arg0) {
   );
   const items2 = [stateFromStores1, tmp2, stateFromStores];
   return stateFromStores1.useMemo(() => {
-    const items = [];
+    items = [];
     if (stateFromStores1) {
       items.push(dismissible_content.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
     }

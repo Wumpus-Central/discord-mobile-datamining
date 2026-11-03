@@ -9,7 +9,7 @@ require = fn;
 function useChangelog(changelogId, stateFromStores) {
   _require = changelogId;
   closure_1 = stateFromStores;
-  const items = [ChangelogStore];
+  items = [ChangelogStore];
   const items1 = [changelogId, stateFromStores];
   const stateFromStoresObject = require("useStateFromStores").useStateFromStoresObject(
     items,
@@ -68,13 +68,13 @@ function useChangelog(changelogId, stateFromStores) {
   }
   return obj4;
 }
-const ChangelogLoadState = fn(4916).ChangelogLoadState;
+const ChangelogLoadState = fn(5043).ChangelogLoadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
 
 export { useChangelog };
 export function useCurrentChangelog() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   const items1 = [ChangelogStore];
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => ChangelogStore.latestChangelogId());

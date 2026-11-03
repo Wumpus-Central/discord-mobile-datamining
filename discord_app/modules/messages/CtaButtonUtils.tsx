@@ -36,7 +36,7 @@ export function useCtaButtonType(id, channel_id) {
   const obj = useShouldRenderReportFalsePositiveButton;
   const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
   const result = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);
-  const items = [FamilyCenterPendingConnectionStore];
+  items = [FamilyCenterPendingConnectionStore];
   let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
   if (result1) {
     result1 = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);

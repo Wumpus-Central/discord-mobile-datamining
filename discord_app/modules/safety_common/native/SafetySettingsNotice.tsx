@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7490).SafetySettingsNoticeAction;
+let closure_4 = fn(7614).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   blockedIgnoredRedirect: {
     display: "flex",
@@ -32,7 +32,7 @@ export default function SafetySettingsNotice(noticeType) {
   noticeType = noticeType.noticeType;
   const count = noticeType.count;
   noop = undefined;
-  const items = [noticeType];
+  items = [noticeType];
   const effect = noop.useEffect(() => {
     const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.VIEWED);
   }, items);

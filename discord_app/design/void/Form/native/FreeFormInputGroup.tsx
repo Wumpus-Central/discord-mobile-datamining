@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   label: { marginBottom: 8 },
   input: { flexGrow: 1, marginBottom: 8 },
@@ -85,7 +85,7 @@ export default (accessibilityLabel) => {
       const obj5 = { style: tmp2.label, nativeID: id, children: label };
       tmp14 = hasOwnProperty(FreeFormLabelDefault, obj5);
     }
-    const items = [tmp14, , ,];
+    items = [tmp14, , ,];
     const obj6 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {

@@ -60,7 +60,7 @@ class FacepileGroupDMAvatar {
         y: closure_1 - result1 - sum1,
         size: result1,
       };
-      const items = [point];
+      items = [point];
       obj.nativeCutouts = items;
       return obj;
     }, items1);
@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "text-overlay-light",
+      animate: "text-xs/medium",
     };
     obj12.animate = animate;
     if (null == users) {
@@ -116,7 +116,7 @@ obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
 obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
 obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
 obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const React6 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
@@ -127,7 +127,7 @@ let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.t
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStoresArray = channel(504).useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((item) => user.getUser(item));

@@ -16,11 +16,11 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: { padding: nativeDefault.space.PX_16, justifyContent: "center" },
   videoContainer: null,
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   [tmp3, c2] = noop.useState(0);
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   _slicedToArray = useIsScreenLandscape.useIsScreenLandscape();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const items1 = [markAsDismissed];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = noop.useEffect(() => () => markAsDismissed(constants.UNKNOWN), items1);
@@ -82,7 +82,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(8873), size);
+  obj5.children = closure_10(markAsDismissed(8997), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {

@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexportDefault from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -8,14 +8,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   itemContainer: {
     flexDirection: "row",
     paddingHorizontal: 16,
     overflow: "hidden",
     height: 64,
-    paddingVertical: fn(9827).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(9958).SEARCH_ROW_TAP_STATE_PADDING,
     alignItems: "center",
   },
   avatar: null,
@@ -58,7 +58,7 @@ export default function FormRowPlaceholderItem(style) {
   const tmp = closure_6();
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const obj2 = { style: null, pointerEvents: "none", children: null };
-  const items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
+  items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
   obj2.style = items;
   const items1 = [React4(View, { style: tmp.avatar })];
   const obj4 = { style: tmp.innerContainer, children: null };
@@ -66,5 +66,5 @@ export default function FormRowPlaceholderItem(style) {
   obj4.children = items2;
   items1[1] = hasOwnProperty(View, obj4);
   obj2.children = items1;
-  return hasOwnProperty(ReanimatedRexportDefault.View, obj2);
+  return hasOwnProperty(_modDef1652.View, obj2);
 }

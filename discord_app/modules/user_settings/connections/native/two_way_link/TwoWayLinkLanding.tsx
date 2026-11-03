@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   image: { marginBottom: 32 },
   valueProps: { marginTop: 24, maxWidth: "100%" },
@@ -31,7 +31,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   ({ img, body, onNext } = learnMoreLink);
   const tmp = closure_8();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
   const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -49,9 +49,9 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5717), obj5), , ,];
+  const items2 = [closure_6(valueProps(5837), obj5), , ,];
   const obj6 = {
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: twoWayLinkStyles.title,
     accessibilityRole: "header",
@@ -73,7 +73,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
     children: body,
   });
   const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5717);
+  const tmp10 = valueProps(5837);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

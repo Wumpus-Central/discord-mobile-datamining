@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
   giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -99,7 +99,7 @@ prototype["render"] = function render() {
   importDefault = tmp;
   const props = this.props;
   const giftCode = props.giftCode;
-  let items = [tmp.giftCodeRow];
+  items = [tmp.giftCodeRow];
   let firstRow = null;
   if (props.isFirst) {
     firstRow = tmp.firstRow;
@@ -137,7 +137,7 @@ prototype["render"] = function render() {
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj11.hours = expiresAt.diff(require("../../../_runtime/metro/02042__.js")(), "h");
+    obj11.hours = expiresAt.diff(require("../../../_runtime/metro/02171__.js")(), "h");
     obj11.revokeHook = function revokeHook(children, arg1) {
       const obj = {
         accessibilityRole: "button",
@@ -147,7 +147,7 @@ prototype["render"] = function render() {
         children: null,
       };
       const obj2 = { style: null, children };
-      const items = [,];
+      items = [,];
       ({ expiryText: arr[0], revokeHint: arr[1] } = closure_1);
       obj2.style = items;
       obj.children = timestampProducer(native.LegacyText, obj2);
@@ -161,7 +161,7 @@ prototype["render"] = function render() {
   obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = fn(5080).ThemeContext;
+GiftCodeRow.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 

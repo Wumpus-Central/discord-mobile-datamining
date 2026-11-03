@@ -75,7 +75,7 @@ function CacheLogEntry(entry) {
     name = channel.name;
   }
   const obj = { label: "" + name, subLabel: null };
-  const items = [combined, combined1, str3, str7, str11];
+  items = [combined, combined1, str3, str7, str11];
   obj.subLabel = items.join("\n");
   return hasOwnProperty(TableRow.TableRow, obj);
 }
@@ -92,7 +92,7 @@ export default function DevToolsLocalMessageCache() {
   const obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const obj2 = { spacing: 8, children: null };
   const obj3 = { title: "Local Message Cache Stats", hasIcons: false, children: null };
-  const items = [
+  items = [
     hasOwnProperty(TableRow.TableRow, {
       label: "Channels Fetched",
       subLabel: MessageCacheStatsDefault.channelsFetchStarted.size,

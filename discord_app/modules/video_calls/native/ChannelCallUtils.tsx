@@ -1,17 +1,17 @@
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
-import _modDef8350 from "../../../../_runtime/metro/08350__.js";
+import _modDef8474 from "../../../../_runtime/metro/08474__.js";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef11968 from "../../../../_runtime/metro/11968__.js";
-import _modDef19343 from "../../../../_runtime/metro/19343__.js";
-import _modDef19344 from "../../../../_runtime/metro/19344__.js";
+import _modDef12105 from "../../../../_runtime/metro/12105__.js";
+import _modDef19501 from "../../../../_runtime/metro/19501__.js";
+import _modDef19502 from "../../../../_runtime/metro/19502__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -33,7 +33,7 @@ export function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef19343;
+  obj.icon = _modDef19501;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -59,7 +59,7 @@ export function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(19340, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(19498, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -89,7 +89,7 @@ export function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef19344;
+  obj.icon = _modDef19502;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -104,11 +104,11 @@ export function reportStreamIssue(stream) {
       max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult),
     };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(19345, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(19503, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj3,
     });
-    const tmp6 = asyncRequireImpl(19345, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(19503, dependencyMap.paths);
   };
   return obj;
 }
@@ -146,7 +146,7 @@ export function invite(dependencyMap, stream, targetApplicationId) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef11968;
+  obj.icon = _modDef12105;
   obj.onPress = onPress;
   return obj;
 }
@@ -155,7 +155,7 @@ export function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef8350;
+  obj.icon = _modDef8474;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -166,9 +166,9 @@ export function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef8350;
+  obj.icon = _modDef8474;
   obj.onPress = function onPress() {
-    const items = [closure_1_7];
+    items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);
     if ("" === json) {
       const obj2 = { text: null };

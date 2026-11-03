@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07730_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07854_tinycolor.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   cardContainer: {
     borderRadius: nativeDefault.radii.md,
@@ -49,7 +49,7 @@ export default function SlayerStorefrontItemCard(sku) {
     size = size1;
   }
   bound = Math.max(size.width, size.height);
-  let items = [sku, bound];
+  items = [sku, bound];
   const str = noop.useMemo(() => SlayerStorefrontUtils.getCardImageURL(sku, { size: bound }), items);
   let items1 = [sku, bound];
   const str2 = noop.useMemo(() => SlayerStorefrontUtils.getCardBackgroundImageURL(sku, { size: bound }), items1);

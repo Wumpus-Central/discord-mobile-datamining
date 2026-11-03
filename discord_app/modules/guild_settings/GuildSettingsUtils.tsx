@@ -13,7 +13,7 @@ export function isRolePowerful(role) {
   return BigFlagUtilsAll.hasAny(role.permissions, React4);
 }
 export function getPowerfulPermissionTitles(arg0, arg1) {
-  const items = [];
+  items = [];
   PermissionSpecUtilsDefault;
   for (const item10015 of closure_1_5) {
     if (hasPermission(arg1, item10015)) {

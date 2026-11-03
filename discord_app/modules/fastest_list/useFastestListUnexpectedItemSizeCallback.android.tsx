@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
-  const items = [arg0];
+  items = [arg0];
   return noop.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const current = ref.current;

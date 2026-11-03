@@ -23,7 +23,7 @@ function FriendsEmptyComponent() {
   const intl2 = util.intl;
   obj3.body = intl2.string(util.t.MBQBI7);
   ({ emptyTitle: obj2.titleStyle, emptyBody: obj2.bodyStyle } = tmp);
-  const items = [React4(native.RefreshEmptyState, obj3)];
+  items = [React4(native.RefreshEmptyState, obj3)];
   const obj4 = {
     onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -52,7 +52,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;
@@ -77,7 +77,7 @@ export default function InstantInviteFriendsList(code) {
   const onInviteSent = code.onInviteSent;
   const data = code.data;
   const source = code.source;
-  const items = [onPressAvatar, onInviteSent, code, source, data.length];
+  items = [onPressAvatar, onInviteSent, code, source, data.length];
   const callback = data.useCallback((row) => {
     const index = row.index;
     return React4(InstantInviteRowDefault, {

@@ -67,7 +67,7 @@ export function createMessageAccessibilityActions(message, channel) {
     const intl6 = util.intl;
     obj2.label = intl6.string(util.t.iXAna6);
     obj2.name = obj.VIEW_PROFILE;
-    const items = [obj2];
+    items = [obj2];
     if (canAddNewReactionsDefault(channel)) {
       obj = { label: null, name: null };
       const intl = util.intl;

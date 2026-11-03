@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/use
 export function useGuildHeaderCounts(id) {
   _require = id;
   closure_129_0 = id;
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let num = GuildMemberCountStore.getMemberCount(closure_0);
     if (num == null) {

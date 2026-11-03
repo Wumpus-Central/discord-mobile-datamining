@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriends
 
 export function useFriendsSinceDate(userId) {
   _require = userId;
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
   const obj = require("useStateFromStores");
   const items1 = [RelationshipStore];

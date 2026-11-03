@@ -14,7 +14,7 @@ export default function useCurrentUserStageRoles(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [StageChannelRoleStore, AuthenticationStore];
+  items = [StageChannelRoleStore, AuthenticationStore];
   const items1 = [arg0, flag];
   return require("initialize").useStateFromStoresObject(
     items,

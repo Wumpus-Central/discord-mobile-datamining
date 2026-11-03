@@ -11,13 +11,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   let str = screenKey.screenKey;
   _require = undefined;
   _require = require("Navigator").useAccessibilityNativeStackOptions();
-  let items = [closure_4(SettingHookHarnessDefault, {})];
+  items = [closure_4(SettingHookHarnessDefault, {})];
   if (str == null) {
     str = "home";
   }
@@ -48,14 +48,14 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(12997).HammerIcon, { size: "sm" })];
+            items = [closure_1_4(closure_1_0(13133).HammerIcon, { size: "sm" })];
             const obj2 = {
               style: { marginLeft: closure_1_1(575).space.PX_8 },
               variant: "heading-md/semibold",
               color: "mobile-text-heading-primary",
               children: "DevTools",
             };
-            items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(5747).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -65,8 +65,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(17579).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17579).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17722).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17722).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -89,14 +89,14 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(12997).HammerIcon, { size: "sm" })];
+          items = [closure_1_4(closure_1_0(13133).HammerIcon, { size: "sm" })];
           const obj2 = {
             style: { marginLeft: closure_1_1(575).space.PX_8 },
             variant: "heading-md/semibold",
             color: "mobile-text-heading-primary",
             children: "DevTools",
           };
-          items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(5747).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },

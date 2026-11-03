@@ -1,70 +1,79 @@
 // discord_app/modules/conjure/builder/native/ConjureModeTabBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import useStateFromSharedValue from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function ConjureModeTab(index) {
   index = index.index;
-  const activeIndex = index.activeIndex;
-  const pressed = index.pressed;
-  ({ extras, onSelect: noop } = index);
+  c0 = index;
+  ({ activeIndex, pressed } = index);
+  c1 = pressed;
+  ({ extras, onSelect: c2 } = index);
   let onShowMenu;
   let menuLabel;
   ({ label, itemCount, itemStyle, labelStyle, labelTextStyle, prefixStyle } = index);
   let tmp = closure_12();
-  inactive = tmp;
-  const derivedStateFromSharedValue = index(pressed[9]).useDerivedStateFromSharedValue(
+  const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(
     activeIndex,
-    (arg0) => Math.round(arg0) === index,
+    (arg0) => Math.round(arg0) === c0,
   );
-  let obj = index(pressed[9]);
-  const derivedStateFromSharedValue1 = index(pressed[9]).useDerivedStateFromSharedValue(
+  c3 = derivedStateFromSharedValue;
+  const derivedStateFromSharedValue1 = useStateFromSharedValue.useDerivedStateFromSharedValue(
     pressed,
-    (arg0) => arg0 === index,
+    (arg0) => arg0 === c0,
   );
-  index(pressed[9]);
+  useStateFromSharedValue;
   if (derivedStateFromSharedValue1) {
-    inactive = tmp.active;
+    let inactive = tmp.active;
   } else {
     inactive = tmp.inactive;
   }
-  const obj2 = index(pressed[9]);
-  class E {
+  items = [closure_17, pressed, tmp, index, activeIndex, spring_spring.withSpring, closure_10];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  onShowMenu = undefined;
+  menuLabel = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items;
+  class ConjureModeTabBarTsx5 {
     constructor() {
-      value = pressed.get();
-      active = closure_4.inactive;
-      tmp4 = value === index;
-      tmp2 = closure_4;
+      value = closure_0.get();
+      active = closure_1.inactive;
+      tmp4 = value === closure_2;
+      tmp2 = closure_1;
       if (!tmp4) {
         num = 0;
         tmp5 = value < 0;
         if (tmp5) {
           tmp6 = globalThis;
           _Math = Math;
-          tmp7 = activeIndex;
-          tmp5 = Math.round(activeIndex.get()) === tmp3;
+          tmp7 = closure_3;
+          tmp5 = Math.round(closure_3.get()) === tmp3;
         }
         tmp4 = tmp5;
       }
       if (tmp4) {
         active = tmp2.active;
       }
-      obj = { color: null };
-      obj2 = closure_0(closure_2[7]);
-      obj.color = obj2.withSpring(active, closure_10, "animate-always");
+      obj = { color: onShowMenu(active, menuLabel, "animate-always") };
       return obj;
     }
   }
-  const tmp2Result = index(pressed[6]);
-  E.__closure = { pressed, colors: tmp, index, activeIndex, withSpring: index(pressed[7]).withSpring, TEXT_SPRING };
-  E.__workletHash = 11237016080020;
-  E.__initData = __initData5;
+  const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14];
+  ConjureModeTabBarTsx5.__closure = items1;
+  ConjureModeTabBarTsx5.__workletHash = 1750569862445;
+  ConjureModeTabBarTsx5.__initData = tmp8;
   onShowMenu = undefined;
-  const animatedStyle = tmp2Result.useAnimatedStyle(E);
+  const animatedStyle = _mod1652.useAnimatedStyle(ConjureModeTabBarTsx5);
   if (extras != null) {
     onShowMenu = extras.onShowMenu;
   }
@@ -72,36 +81,36 @@ function ConjureModeTab(index) {
   if (extras != null) {
     menuLabel = extras.menuLabel;
   }
-  let items = [menuLabel, onShowMenu];
-  const items1 = [onShowMenu];
+  const items2 = [menuLabel, onShowMenu];
+  const items3 = [onShowMenu];
   const memo = noop.useMemo(() => {
     let tmp;
     if (null != onShowMenu) {
       if (null != menuLabel) {
         const obj = { name: "longpress", label: tmp2 };
-        const items = [obj];
+        items = [obj];
         tmp = items;
       }
     }
     return tmp;
-  }, items);
-  const obj4 = {
+  }, items2);
+  const obj3 = {
     style: itemStyle,
     onPress() {
-      if (derivedStateFromSharedValue) {
+      if (c3) {
         if (null != onShowMenu) {
           let tmpResult = tmp();
         }
         return tmpResult;
       }
-      tmpResult = noop(index);
+      tmpResult = _undefined3(c0);
     },
     onLongPress: onShowMenu,
     onPressIn() {
-      return pressed.set(index);
+      return _undefined2.set(c0);
     },
     onPressOut() {
-      return pressed.set(-1);
+      return _undefined2.set(-1);
     },
     accessibilityRole: "tab",
     accessibilityState: { selected: derivedStateFromSharedValue },
@@ -112,34 +121,33 @@ function ConjureModeTab(index) {
           tmp();
         }
       }
-    }, items1),
+    }, items3),
     accessibilityHint: null,
     children: null,
   };
-  const obj3 = { pressed, colors: tmp, index, activeIndex, withSpring: index(pressed[7]).withSpring, TEXT_SPRING };
-  const tmp13 = inactive;
+  const tmp2Result = _mod1652;
   let formatToPlainStringResult;
   if (tmp2Result2.isAndroid()) {
-    const intl = tmp2(tmp3[10]).intl;
-    const obj5 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[10]).t["4EsQA1"], obj5);
+    const intl = util.intl;
+    const obj4 = { position: index + 1, tabCount: itemCount };
+    formatToPlainStringResult = intl.formatToPlainString(util.t["4EsQA1"], obj4);
   }
-  obj4.accessibilityHint = formatToPlainStringResult;
-  const obj6 = { style: labelStyle, children: null };
+  obj3.accessibilityHint = formatToPlainStringResult;
+  const obj5 = { style: labelStyle, children: null };
   let prefix;
   if (extras != null) {
     prefix = extras.prefix;
   }
-  let tmp12Result = null;
+  let tmp19Result = null;
   if (null != prefix) {
-    const obj7 = { variant: "text-sm/medium", color: "text-muted", style: prefixStyle, children: extras.prefix };
-    tmp12Result = tmp12(tmp2(tmp3[11]).Text, obj7);
+    const obj6 = { variant: "text-sm/medium", color: "text-muted", style: prefixStyle, children: extras.prefix };
+    tmp19Result = React5(Text_Text.Text, obj6);
   }
-  const items2 = [tmp12Result, ,];
-  const obj8 = { animated: true, variant: "text-sm/semibold", style: null, lineClamp: 1, children: label };
-  const items3 = [labelTextStyle, animatedStyle];
-  obj8.style = items3;
-  items2[1] = menuLabel(index(pressed[11]).Text, obj8);
+  const items4 = [tmp19Result, ,];
+  const obj7 = { animated: true, variant: "text-sm/semibold", style: null, lineClamp: 1, children: label };
+  const items5 = [labelTextStyle, animatedStyle];
+  obj7.style = items5;
+  items4[1] = React5(Text_Text.Text, obj7);
   let renderTrailingIconResult;
   if (extras != null) {
     const renderTrailingIcon = extras.renderTrailingIcon;
@@ -147,18 +155,18 @@ function ConjureModeTab(index) {
       renderTrailingIconResult = renderTrailingIcon(inactive);
     }
   }
-  items2[2] = renderTrailingIconResult;
-  obj6.children = items2;
-  obj4.children = closure_8(onShowMenu, obj6);
-  return menuLabel(tmp13, obj4);
+  items4[2] = renderTrailingIconResult;
+  obj5.children = items4;
+  obj3.children = React6(timestampProducer, obj5);
+  return React5(React4, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const TEXT_SPRING = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5014);
+let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
+let closure_10 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
+let createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   const obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -218,179 +226,215 @@ let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   obj.prefix = { flexShrink: 0 };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_12 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
 });
-const __initData = {
-  code: "function ConjureModeTabBarTsx1(){const{indicatorWidth}=this.__closure;return indicatorWidth.get();}",
+let closure_13 = {
+  code: "(function ConjureModeTabBarTsx1(){let[indicatorWidth]=this.__closure;return indicatorWidth.get();})",
 };
-const __initData2 = {
-  code: "function ConjureModeTabBarTsx2(_,previous){const{previousIndicatorWidth}=this.__closure;if(previous!=null)previousIndicatorWidth.set(previous);}",
+let closure_14 = {
+  code: "(function ConjureModeTabBarTsx2(_,previous){let[previousIndicatorWidth]=this.__closure;if(previous!=null)previousIndicatorWidth.set(previous);})",
 };
-const __initData3 = {
-  code: "function ConjureModeTabBarTsx3(){const{activeIndex,itemCount}=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);}",
+let closure_15 = {
+  code: "(function ConjureModeTabBarTsx3(){let[activeIndex,itemCount]=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);})",
 };
-const __initData4 = {
-  code: "function ConjureModeTabBarTsx4(){const{clampedActiveIndex,defaultActiveIndex,indicatorWidth,pressedIndex,PRESSED_TRANSLATE_AMOUNT,SEGMENT_SPACING,itemCount,previousIndicatorWidth,withSpring,INDICATOR_SPRING}=this.__closure;let translateX=(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();let scaleX=1;if(pressedIndex.get()>=0&&pressedIndex.get()!==clampedActiveIndex.get()){const direction=pressedIndex.get()<clampedActiveIndex.get()?-1:1;scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=direction*indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}if(clampedActiveIndex.get()===0)translateX+=SEGMENT_SPACING;else if(clampedActiveIndex.get()===itemCount-1)translateX-=SEGMENT_SPACING;const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated)previousIndicatorWidth.set(indicatorWidth.get());return{transform:[{translateX:animated?withSpring(translateX,INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,INDICATOR_SPRING)}]};}",
+let closure_16 = {
+  code: "(function ConjureModeTabBarTsx4(){let[clampedActiveIndex,defaultActiveIndex,indicatorWidth,pressedIndex,PRESSED_TRANSLATE_AMOUNT,SEGMENT_SPACING,itemCount,previousIndicatorWidth,withSpring,INDICATOR_SPRING]=this.__closure;let translateX=(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();let scaleX=1;if(pressedIndex.get()>=0&&pressedIndex.get()!==clampedActiveIndex.get()){const direction=pressedIndex.get()<clampedActiveIndex.get()?-1:1;scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=direction*indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}if(clampedActiveIndex.get()===0)translateX+=SEGMENT_SPACING;else if(clampedActiveIndex.get()===itemCount-1)translateX-=SEGMENT_SPACING;const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated)previousIndicatorWidth.set(indicatorWidth.get());return{transform:[{translateX:animated?withSpring(translateX,INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,INDICATOR_SPRING)}]};})",
 };
-const __initData5 = {
-  code: "function ConjureModeTabBarTsx5(){const{pressed,colors,index,activeIndex,withSpring,TEXT_SPRING}=this.__closure;const pressedIndex=pressed.get();let color=colors.inactive;if(pressedIndex===index)color=colors.active;else if(pressedIndex<0&&Math.round(activeIndex.get())===index)color=colors.active;return{color:withSpring(color,TEXT_SPRING,'animate-always')};}",
+let closure_17 = {
+  code: "(function ConjureModeTabBarTsx5(){let[pressed,colors,index,activeIndex,withSpring,TEXT_SPRING]=this.__closure;const pressedIndex=pressed.get();let color=colors.inactive;if(pressedIndex===index)color=colors.active;else if(pressedIndex<0&&Math.round(activeIndex.get())===index)color=colors.active;return{color:withSpring(color,TEXT_SPRING,'animate-always')};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/builder/native/ConjureModeTabBar.tsx");
 
 export default function ConjureModeTabBar(arg0) {
-  ({ state, extras: require } = arg0);
-  pressedIndex = undefined;
-  closure_11 = undefined;
+  ({ state, extras: c0 } = arg0);
+  c7 = undefined;
+  c8 = undefined;
+  closure_9 = undefined;
   const activeIndex = state.activeIndex;
+  importDefault = activeIndex;
   ({ items, pressedIndex } = state);
-  const setActiveIndex = state.setActiveIndex;
-  const length = items.length;
+  dependencyMap = pressedIndex;
+  noop = state.setActiveIndex;
+  c4 = length;
   let tmp3 = closure_11(
-    require("useToken").useToken(activeIndex(pressedIndex[4]).modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS),
-    length,
+    require("useToken").useToken(nativeDefault.modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS),
+    items.length,
   );
-  closure_5 = tmp3;
+  c5 = tmp3;
   let obj = require("useToken");
-  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
-  const obj2 = require("ReanimatedRexport");
-  const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
-  const obj3 = require("ReanimatedRexport");
-  const fn = function h() {
-    return sharedValue.get();
-  };
-  fn.__closure = { indicatorWidth: sharedValue };
-  fn.__workletHash = 21525623447;
-  fn.__initData = __initData;
-  const fn2 = function c(arg0, arg1) {
-    if (null != arg1) {
-      const result = sharedValue1.set(arg1);
-    }
-  };
-  fn2.__closure = { previousIndicatorWidth: sharedValue1 };
-  fn2.__workletHash = 1770845496481;
-  fn2.__initData = __initData2;
-  const animatedReaction = require("ReanimatedRexport").useAnimatedReaction(fn, fn2);
-  const items1 = [sharedValue];
-  closure_8 = setActiveIndex.useCallback(
-    (nativeEvent) => sharedValue.set(nativeEvent.nativeEvent.layout.width),
-    items1,
-  );
-  const obj4 = require("ReanimatedRexport");
-  const sharedValue2 = require("ReanimatedRexport").useSharedValue(activeIndex.get());
-  let obj5 = require("ReanimatedRexport");
-  const fn3 = function w() {
-    return Math.min(Math.max(activeIndex.get(), 0), length - 1);
-  };
-  fn3.__closure = { activeIndex, itemCount: length };
-  fn3.__workletHash = 5614191421067;
-  fn3.__initData = __initData3;
-  const derivedValue = require("ReanimatedRexport").useDerivedValue(fn3);
-  let obj6 = require("ReanimatedRexport");
-  class D {
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  c6 = sharedValue;
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_13, sharedValue];
+  _require = undefined;
+  [tmp6, tmp7] = items1;
+  class ConjureModeTabBarTsx1 {
     constructor() {
-      obj = closure_10;
-      value = closure_10.get();
-      obj2 = closure_6;
-      diff = value - closure_9.get();
-      result = diff * closure_6.get();
-      obj3 = pressedIndex;
-      tmp4 = pressedIndex.get() >= 0;
-      if (tmp4) {
-        value1 = obj3.get();
-        tmp4 = value1 !== obj.get();
+      return closure_0.get();
+    }
+  }
+  const items2 = [tmp7];
+  ConjureModeTabBarTsx1.__closure = items2;
+  ConjureModeTabBarTsx1.__workletHash = 4356434098862;
+  ConjureModeTabBarTsx1.__initData = tmp6;
+  const items3 = [closure_14, sharedValue1];
+  _require = undefined;
+  [tmp8, tmp9] = items3;
+  class ConjureModeTabBarTsx2 {
+    constructor(arg0, arg1) {
+      if (null != arg1) {
+        tmp = closure_0;
+        result = closure_0.set(arg1);
       }
+      return;
+    }
+  }
+  const items4 = [tmp9];
+  ConjureModeTabBarTsx2.__closure = items4;
+  ConjureModeTabBarTsx2.__workletHash = 12016602073272;
+  ConjureModeTabBarTsx2.__initData = tmp8;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    ConjureModeTabBarTsx1,
+    ConjureModeTabBarTsx2,
+  );
+  const items5 = [sharedValue];
+  c7 = noop.useCallback((nativeEvent) => _undefined3.set(nativeEvent.nativeEvent.layout.width), items5);
+  const obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  c8 = sharedValue2;
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const items6 = [closure_15, activeIndex, items.length];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp12, tmp13, tmp14] = items6;
+  class ConjureModeTabBarTsx3 {
+    constructor() {
+      return Math.min(Math.max(closure_0.get(), 0), closure_1 - 1);
+    }
+  }
+  const items7 = [tmp13, tmp14];
+  ConjureModeTabBarTsx3.__closure = items7;
+  ConjureModeTabBarTsx3.__workletHash = 12987911031538;
+  ConjureModeTabBarTsx3.__initData = tmp12;
+  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(ConjureModeTabBarTsx3);
+  const tmpResult5 = require("../../../../../_runtime/metro/01652__.js");
+  const items8 = [
+    closure_16,
+    derivedValue,
+    sharedValue2,
+    sharedValue,
+    pressedIndex,
+    0.04,
+    4,
+    items.length,
+    sharedValue1,
+    require("spring/spring").withSpring,
+    closure_9,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  closure_9 = undefined;
+  [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items8;
+  class ConjureModeTabBarTsx4 {
+    constructor() {
+      obj = closure_0;
+      value = closure_0.get();
+      obj2 = closure_2;
+      diff = value - closure_1.get();
+      result = diff * closure_2.get();
+      obj3 = closure_3;
       num = 1;
       sum = result;
-      if (tmp4) {
-        value2 = obj3.get();
-        num2 = 1;
-        if (value2 < obj.get()) {
-          num2 = -1;
+      if (closure_3.get() >= 0) {
+        value1 = obj3.get();
+        num = 1;
+        sum = result;
+        if (value1 !== obj.get()) {
+          value2 = obj3.get();
+          num2 = 1;
+          if (value2 < obj.get()) {
+            num2 = -1;
+          }
+          tmp7 = closure_4;
+          num = 1 + closure_4;
+          num3 = 2;
+          sum = result + num2 * obj2.get() * (closure_4 / 2);
         }
-        num3 = 0.02;
-        sum = result + num2 * obj2.get() * 0.02;
-        num = 1.04;
       }
       if (0 === obj.get()) {
-        num5 = 4;
-        sum1 = sum + 4;
+        tmp11 = closure_5;
+        sum1 = sum + closure_5;
       } else {
-        tmp8 = length;
+        tmp8 = closure_6;
         sum1 = sum;
-        if (obj.get() === length - 1) {
-          num4 = 4;
-          sum1 = sum - 4;
+        if (obj.get() === closure_6 - 1) {
+          tmp10 = closure_5;
+          sum1 = sum - closure_5;
         }
       }
       obj4 = closure_7;
       value3 = obj2.get();
-      tmp11 = value3 === closure_7.get();
-      if (!tmp11) {
+      tmp13 = value3 === closure_7.get();
+      if (!tmp13) {
         result1 = obj4.set(obj2.get());
       }
-      withSpringResult = sum1;
-      if (tmp11) {
-        tmp14 = closure_0;
-        tmp15 = closure_2;
-        obj5 = closure_0(closure_2[7]);
-        tmp16 = closure_9;
-        withSpringResult = obj5.withSpring(sum1, closure_9);
+      tmp15 = sum1;
+      if (tmp13) {
+        tmp16 = closure_8;
+        tmp17 = closure_9;
+        tmp15 = closure_8(sum1, closure_9);
       }
       obj1 = { transform: null };
       items = [,];
-      items[0] = { translateX: withSpringResult };
-      obj9 = { scaleX: null };
-      obj8 = closure_0(closure_2[7]);
-      obj9.scaleX = obj8.withSpring(num, closure_9);
-      items[1] = obj9;
+      items[0] = { translateX: tmp15 };
+      obj7 = { scaleX: closure_8(num, closure_9) };
+      items[1] = obj7;
       obj1.transform = items;
       return obj1;
     }
   }
-  let obj7 = require("ReanimatedRexport");
-  D.__closure = {
-    clampedActiveIndex: derivedValue,
-    defaultActiveIndex: sharedValue2,
-    indicatorWidth: sharedValue,
-    pressedIndex,
-    PRESSED_TRANSLATE_AMOUNT: 0.04,
-    SEGMENT_SPACING: 4,
-    itemCount: length,
-    previousIndicatorWidth: sharedValue1,
-    withSpring: require("spring").withSpring,
-    INDICATOR_SPRING: sharedValue2,
-  };
-  D.__workletHash = 4115478604721;
-  D.__initData = __initData4;
-  closure_11 = obj7.useAnimatedStyle(D);
+  const items9 = [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+  ConjureModeTabBarTsx4.__closure = items9;
+  ConjureModeTabBarTsx4.__workletHash = 680934149064;
+  ConjureModeTabBarTsx4.__initData = tmp16;
+  closure_9 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureModeTabBarTsx4);
   const mapped = items.map((id, index) => {
-    const tmp = sharedValue2.get() === index;
+    const tmp = _undefined5.get() === index;
     let tmp3;
     if (tmp) {
-      tmp3 = closure_8;
+      tmp3 = c7;
     }
     const obj = { onLayout: tmp3, style: null };
-    const items = [closure_5.indicator, tmp ? closure_11 : closure_5.indicatorHidden];
+    items = [_undefined2.indicator, tmp ? closure_9 : _undefined2.indicatorHidden];
     obj.style = items;
-    return React5(ReanimatedRexportDefault.View, obj, id.id);
+    return React5(_modDef1652.View, obj, id.id);
   });
   const mapped1 = items.map((id, index) => {
     id = id.id;
     if (0 === index) {
-      let itemLast = closure_5.itemFirst;
-    } else if (index === length - 1) {
-      itemLast = closure_5.itemLast;
+      let itemLast = _undefined2.itemFirst;
+    } else if (index === itemCount - 1) {
+      itemLast = _undefined2.itemLast;
     }
     const obj = {
       label: id.label,
       index,
-      itemCount: length,
+      itemCount,
       activeIndex,
-      pressed: pressedIndex,
+      pressed,
       extras: null,
       onSelect: null,
       itemStyle: null,
@@ -399,52 +443,38 @@ export default function ConjureModeTabBar(arg0) {
       prefixStyle: null,
     };
     let tmp6;
-    if (_require != null) {
-      tmp6 = _require[id];
+    if (_undefined != null) {
+      tmp6 = _undefined[id];
     }
     obj.extras = tmp6;
-    obj.onSelect = setActiveIndex;
-    const items = [closure_5.item, itemLast];
+    obj.onSelect = onSelect;
+    items = [_undefined2.item, itemLast];
     obj.itemStyle = items;
-    ({ label: obj.labelStyle, labelText: obj.labelTextStyle, prefix: obj.prefixStyle } = closure_5);
+    ({ label: obj.labelStyle, labelText: obj.labelTextStyle, prefix: obj.prefixStyle } = _undefined2);
     return React5(ConjureModeTab, obj, id);
   });
-  const obj8 = {
-    clampedActiveIndex: derivedValue,
-    defaultActiveIndex: sharedValue2,
-    indicatorWidth: sharedValue,
-    pressedIndex,
-    PRESSED_TRANSLATE_AMOUNT: 0.04,
-    SEGMENT_SPACING: 4,
-    itemCount: length,
-    previousIndicatorWidth: sharedValue1,
-    withSpring: require("spring").withSpring,
-    INDICATOR_SPRING: sharedValue2,
-  };
-  const tmp12 = closure_5;
+  const tmp30 = c5;
+  const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");
   let str;
-  if (obj9.isIOS()) {
+  if (tmpResult7.isIOS()) {
     str = "tabbar";
   }
-  const obj10 = {
+  let obj5 = {
     horizontal: true,
     accessibilityRole: str,
     alwaysBounceHorizontal: false,
     contentContainerStyle: tmp3.scrollContentContainer,
     children: null,
   };
-  obj9 = require("PlatformUtils");
-  const tmp13 = closure_8;
+  const tmp31 = c8;
+  tmpResult7 = require("PlatformUtils");
   let str2;
-  if (tmpResult.isAndroid()) {
+  if (tmpResult8.isAndroid()) {
     str2 = "tablist";
   }
-  const obj11 = { accessibilityRole: str2, style: tmp3.controlsContainer, children: null };
-  const items2 = [
-    sharedValue1(sharedValue, { accessible: false, style: tmp3.indicatorContainer, children: mapped }),
-    mapped1,
-  ];
-  obj11.children = items2;
-  obj10.children = tmp13(sharedValue, obj11, items.length);
-  return sharedValue1(tmp12, obj10);
+  const obj6 = { accessibilityRole: str2, style: tmp3.controlsContainer, children: null };
+  const items10 = [c7(c6, { accessible: false, style: tmp3.indicatorContainer, children: mapped }), mapped1];
+  obj6.children = items10;
+  obj5.children = tmp31(c6, obj6, items.length);
+  return c7(tmp30, obj5);
 }

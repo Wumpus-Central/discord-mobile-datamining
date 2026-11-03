@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventModalActionCreators.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -28,7 +28,7 @@ require = fn;
 function openCreateOrEditGuildEventModal(guild, arg1) {
   ({ guildEvent, onClose: require, recurrenceId } = arg1);
   function handleClose() {
-    ModalActionCreatorsDefault.popWithKey(map1);
+    ModalActionCreatorsDefault.popWithKey(state);
     if (_require != null) {
       _require();
     }
@@ -36,11 +36,11 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
   if (null != recurrenceId) {
     _modDef38(null != guildEvent, "recurrence editing requires a guild event");
     const obj3 = { guildEvent, recurrenceId, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8986, dependencyMap.paths), obj3, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9114, dependencyMap.paths), obj3, closure_13);
   } else {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     const obj5 = { guild, targetChannel: tmp, initialGuildEvent: guildEvent, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9017, dependencyMap.paths), obj5, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9145, dependencyMap.paths), obj5, closure_13);
   }
 }
 let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
@@ -54,7 +54,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
           const obj = closure_131_0(closure_131_2[32]);
         }
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -106,11 +106,11 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(6855);
-({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
+let GuildScheduledEventStore = fn(6975);
+({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: closure_10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-let closure_12 = fn(4869).GuildScheduledEventUserResponses;
-const GuildEventModalConstants = fn(8963);
+let closure_12 = fn(4996).GuildScheduledEventUserResponses;
+const GuildEventModalConstants = fn(9091);
 ({
   CREATE_GUILD_EVENT_MODAL_KEY: map1,
   GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14,
@@ -126,17 +126,17 @@ let result = size.fileFinishedImporting(
 
 export { openCreateOrEditGuildEventModal };
 export function openGuildEventListActionSheet(guild) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9088, dependencyMap.paths), closure_1_14, { guild });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9216, dependencyMap.paths), gesture, { guild });
 }
 export function closeGuildEventListActionSheet() {
-  ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_14);
+  ActionSheetActionCreatorsDefault.hideActionSheet(gesture);
 }
 export function openStartGuildEventModal(event, recurrenceId, onCloseActionSheet) {
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(9101, dependencyMap.paths),
+    asyncRequireImpl(9229, dependencyMap.paths),
     { event, recurrenceId, onCloseActionSheet },
-    __initData,
+    closure_1_15,
   );
 }
 export function openDeleteGuildEventActionSheet(eventId, guildId, recurrenceId) {
@@ -233,7 +233,7 @@ export function openShareEvent(event, id) {
   if (null != channel) {
     const result = useCanInviteForGuildEvent.isGuildEventInvitable(event);
     if (result) {
-      const guild = GuildStore.getGuild(event.guild_id);
+      guild = GuildStore.getGuild(event.guild_id);
       let vanityURLCode;
       if (guild != null) {
         vanityURLCode = guild.vanityURLCode;
@@ -293,7 +293,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
   _require = event;
   importDefault = recurrenceId;
   const guild_id = event.guild_id;
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let result = GuildScheduledEventStore.isInterestedInEventRecurrence(event.id, recurrenceId);
   const eventException = require("useEventException").getEventException(recurrenceId, event.id);
   let flag;
@@ -366,13 +366,13 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
                 "stack",
               );
             },
-            onRsvp: "applicationId",
+            onRsvp: "ao",
           });
         },
       };
     }
   }
-  const items = [];
+  items = [];
   if (null != guild) {
     if (arg1) {
       if (!closure_9(event)) {
@@ -391,9 +391,9 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
             obj2.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               ModalActionCreatorsDefault.pushLazy(
-                asyncRequireImpl(9101, dependencyMap.paths),
+                asyncRequireImpl(9229, dependencyMap.paths),
                 { event, recurrenceId, onCloseActionSheet: "Array" },
-                __initData,
+                closure_2_15,
               );
             };
             items.push(obj2);

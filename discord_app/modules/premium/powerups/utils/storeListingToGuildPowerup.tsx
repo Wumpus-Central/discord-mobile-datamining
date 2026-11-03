@@ -33,7 +33,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
         deactivationCooldownPeriodDays: null,
       };
       if (null != powerup_metadata.sku.dependent_sku_id) {
-        const items = [powerup_metadata.sku.dependent_sku_id];
+        items = [powerup_metadata.sku.dependent_sku_id];
         let items1 = items;
       } else {
         items1 = [];
@@ -78,7 +78,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
         if (null != guild_features1) {
           const sum = DEFAULT_EMOJI_SLOTS + guild_features1.additional_emoji_slots;
           let sum1 = React + guild_features1.additional_sound_slots;
-          let sum2 = framebus + guild_features1.additional_sticker_slots;
+          let sum2 = duration + guild_features1.additional_sticker_slots;
           const dependent_sku_id = powerup_metadata.sku.dependent_sku_id;
           let dependent_sku_id1 = dependent_sku_id;
           let tmp22 = sum;

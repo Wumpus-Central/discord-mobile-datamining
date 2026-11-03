@@ -9,7 +9,7 @@ const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
 export function useDisplayNameStylesEnabled() {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let overrideSettings = initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
   if (!overrideSettings) {
     overrideSettings = useContext(DisplayNameStylesContext.DisplayNameStylesContext).overrideSettings;

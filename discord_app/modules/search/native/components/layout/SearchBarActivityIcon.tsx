@@ -1,18 +1,20 @@
 // discord_app/modules/search/native/components/layout/SearchBarActivityIcon.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SearchMessageStore from "../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(9827).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9958).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" },
@@ -22,11 +24,11 @@ let closure_11 = createStyles.createStyles(obj);
 let obj4 = { START: 0, [0]: "START", END: 1, [1]: "END" };
 let items = [,];
 ({ START: arr[0], END: arr[1] } = obj4);
-const __initData = {
-  code: "function SearchBarActivityIconTsx1(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[0,0.5])};}",
+let closure_14 = {
+  code: "(function SearchBarActivityIconTsx1(){let[interpolate,fadeAnimationState,ANIMATION_STATE_INPUT]=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[0,0.5])};})",
 };
-const __initData2 = {
-  code: "function SearchBarActivityIconTsx2(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[1,0])};}",
+let closure_15 = {
+  code: "(function SearchBarActivityIconTsx2(){let[interpolate,fadeAnimationState,ANIMATION_STATE_INPUT]=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[1,0])};})",
 };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const size = fn(2);
@@ -34,19 +36,19 @@ let result = size.fileFinishedImporting("modules/search/native/components/layout
 
 export default noop.memo(function SearchBarActivityIcon(searchContext) {
   searchContext = searchContext.searchContext;
-  let sharedValue;
+  _require = searchContext;
   const tmp = closure_11();
   items = [SearchQueryStore, SearchMessageStore];
   const items1 = [searchContext];
-  const stateFromStores = searchContext(sharedValue[8]).useStateFromStores(
+  const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
     () => {
-      const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
+      const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(c0);
       const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(
-        SearchUtils.getSearchTabFetchId(searchContext, closure_7, searchResultsQuery),
+        SearchUtils.getSearchTabFetchId(c0, closure_7, searchResultsQuery),
       );
       let tmp3 = !isInitialFetchComplete;
-      const result = SearchQueryStore.isAutocompleteVisible(searchContext);
+      const result = SearchQueryStore.isAutocompleteVisible(c0);
       if (!isInitialFetchComplete) {
         tmp3 = !isInitialSearchQueryResult;
       }
@@ -57,71 +59,74 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
     },
     items1,
   );
-  let obj = searchContext(sharedValue[8]);
-  sharedValue = searchContext(sharedValue[10]).useSharedValue(obj4.START);
+  let obj = require("useStateFromStores");
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(obj4.START);
   const items2 = [stateFromStores, sharedValue];
   const effect = noop.useEffect(() => {
-    const withTiming = timing.withTiming;
-    if (stateFromStores) {
+    const withTiming = timing_timing.withTiming;
+    if (c1) {
       const result = set(withTiming(obj4.END));
     } else {
       const result1 = set(withTiming(obj4.START));
     }
   }, items2);
-  const obj2 = searchContext(sharedValue[10]);
-  class E {
+  const obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_14, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue, items];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp8, tmp9, tmp10, tmp11] = items3;
+  class SearchBarActivityIconTsx1 {
     constructor() {
-      obj = { opacity: null };
-      obj2 = closure_0(closure_2[10]);
-      obj.opacity = obj2.interpolate(closure_2.get(), closure_13, [0, 0.5]);
+      obj = { opacity: closure_0(closure_1.get(), closure_2, [0, 0.5]) };
       return obj;
     }
   }
-  obj4 = {
-    interpolate: searchContext(sharedValue[10]).interpolate,
-    fadeAnimationState: sharedValue,
-    ANIMATION_STATE_INPUT: items,
-  };
-  E.__closure = obj4;
-  E.__workletHash = 12880513119188;
-  E.__initData = __initData;
-  const animatedStyle = searchContext(sharedValue[10]).useAnimatedStyle(E);
-  const obj3 = searchContext(sharedValue[10]);
-  const fn = function v() {
-    const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), items, [1, 0]) };
-    return obj;
-  };
-  const obj5 = searchContext(sharedValue[10]);
-  fn.__closure = {
-    interpolate: searchContext(sharedValue[10]).interpolate,
-    fadeAnimationState: sharedValue,
-    ANIMATION_STATE_INPUT: items,
-  };
-  fn.__workletHash = 11061952032557;
-  fn.__initData = __initData2;
-  const animatedStyle1 = obj5.useAnimatedStyle(fn);
-  const obj7 = { style: animatedStyle, children: null };
-  const obj8 = { color: tmp.spinnerColor.color, style: null };
-  const items3 = [,];
-  ({ icon: arr4[0], spinner: arr4[1] } = tmp);
-  obj8.style = items3;
-  obj7.children = closure_8(ActivityIndicator, obj8);
-  const items4 = [closure_8(stateFromStores(sharedValue[10]).View, obj7)];
-  const obj9 = { style: animatedStyle1, children: null };
-  const obj10 = { style: tmp.icon, size: null, color: "interactive-text-default" };
-  const obj6 = {
-    interpolate: searchContext(sharedValue[10]).interpolate,
-    fadeAnimationState: sharedValue,
-    ANIMATION_STATE_INPUT: items,
-  };
+  const items4 = [tmp9, tmp10, tmp11];
+  SearchBarActivityIconTsx1.__closure = items4;
+  SearchBarActivityIconTsx1.__workletHash = 14380742529421;
+  SearchBarActivityIconTsx1.__initData = tmp8;
+  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    SearchBarActivityIconTsx1,
+  );
+  const obj3 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp7 = items;
+  const items5 = [closure_15, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue, tmp7];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp13, tmp14, tmp15, tmp16] = items5;
+  class SearchBarActivityIconTsx2 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), closure_2, [1, 0]) };
+      return obj;
+    }
+  }
+  const items6 = [tmp14, tmp15, tmp16];
+  SearchBarActivityIconTsx2.__closure = items6;
+  SearchBarActivityIconTsx2.__workletHash = 4711746497812;
+  SearchBarActivityIconTsx2.__initData = tmp13;
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    SearchBarActivityIconTsx2,
+  );
+  obj4 = { style: animatedStyle, children: null };
+  const obj5 = { color: tmp.spinnerColor.color, style: null };
+  const items7 = [,];
+  ({ icon: arr8[0], spinner: arr8[1] } = tmp);
+  obj5.style = items7;
+  obj4.children = closure_8(ActivityIndicator, obj5);
+  const items8 = [closure_8(_modDef1652.View, obj4)];
+  const obj6 = { style: animatedStyle1, children: null };
+  const obj7 = { style: tmp.icon, size: null, color: "interactive-text-default" };
+  const tmp2Result = require("../../../../../../_runtime/metro/01652__.js");
   let str = "xs";
-  if (obj11.isAndroid()) {
+  if (tmp2Result2.isAndroid()) {
     str = "sm";
   }
-  const obj12 = { children: null };
-  obj10.size = str;
-  obj9.children = closure_8(searchContext(sharedValue[12]).MagnifyingGlassIcon, obj10);
-  items4[1] = closure_8(stateFromStores(sharedValue[10]).View, obj9);
-  obj12.children = items4;
-  return closure_10(closure_9, obj12);
+  const obj8 = { children: null };
+  obj7.size = str;
+  obj6.children = closure_8(require("MagnifyingGlassIcon").MagnifyingGlassIcon, obj7);
+  items8[1] = closure_8(_modDef1652.View, obj6);
+  obj8.children = items8;
+  return closure_10(closure_9, obj8);
 });

@@ -9,7 +9,7 @@ const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 0 },
   title: { marginHorizontal: 24, marginTop: 16 },
@@ -22,16 +22,16 @@ const result = size.fileFinishedImporting(
 export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   onRequireModeratorMFAClick = onRequireModeratorMFAClick.onRequireModeratorMFAClick;
   const tmp = closure_8();
-  const items = [onRequireModeratorMFAClick];
+  items = [onRequireModeratorMFAClick];
   const memo = noop.useMemo(
     () => ({
       actions: {
         onEnableMFAClick() {
-          closure_1_1(5258).hideActionSheet(closure_1_7);
-          const obj = closure_1_1(5258);
-          closure_1_1(9074).close();
-          const obj2 = closure_1_1(9074);
-          onRequireModeratorMFAClick(7563).openUserSettings({ screen: constants.ACCOUNT });
+          closure_1_1(5381).hideActionSheet(closure_1_7);
+          const obj = closure_1_1(5381);
+          closure_1_1(9202).close();
+          const obj2 = closure_1_1(9202);
+          onRequireModeratorMFAClick(7687).openUserSettings({ screen: constants.ACCOUNT });
         },
         onRequireModeratorMFAClick() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -46,13 +46,13 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   let obj2 = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1113).intl;
   obj2.children = intl.string(onRequireModeratorMFAClick(1113).t["3s47iN"]);
-  const items1 = [closure_5(onRequireModeratorMFAClick(5624).Heading, obj2)];
+  const items1 = [closure_5(onRequireModeratorMFAClick(5747).Heading, obj2)];
   const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
   items1[1] = closure_5(EligibilityChecklistDefault, {
     style: tmp.container,
     items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
   });
   obj.children = items1;
-  return closure_6(onRequireModeratorMFAClick(5272).BottomSheet, obj);
+  return closure_6(onRequireModeratorMFAClick(5395).BottomSheet, obj);
 }
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

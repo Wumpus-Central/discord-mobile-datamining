@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/NativeCheckoutStore.tsx
 import _mod1254 from "../../../../_runtime/metro/01254__.js";
-import _mod4929 from "../../../../_runtime/metro/04929__.js";
+import _mod5056 from "../../../../_runtime/metro/05056__.js";
 import OrderActionCreators from "../../payments/OrderActionCreators.tsx";
 import ContextUtilsDefault from "../../../utils/ContextUtils.tsx";
 import payments_OrderActionCreators from "../../payments/native/OrderActionCreators.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrderRecord from "../../payments/records/OrderRecord.tsx";
 
 require = fn;
-const OrderStatus = fn(5747).OrderStatus;
+const OrderStatus = fn(5867).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const size = fn(2);
@@ -19,14 +19,14 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export function useNativeCheckoutStore(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4929.shallow;
+    shallow = _mod5056.shallow;
   }
   const tmp3 = closure_7();
   return _mod1254.useStoreWithEqualityFn(tmp3, arg0, shallow);
 }
 export function useNativeCheckoutStoreOrNull(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4929.shallow;
+    shallow = _mod5056.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
@@ -108,7 +108,7 @@ export function createNativeStore(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -218,7 +218,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -362,7 +362,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -480,7 +480,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -555,7 +555,7 @@ export function createNativeStore(arg0) {
             c4 = 0;
             closure_130_0({ isCreateOrderLoading: false });
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp42) {
           closure_3 = tmp42;
@@ -591,7 +591,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -668,7 +668,7 @@ export function createNativeStore(arg0) {
             c3 = 0;
             closure_129_0({ isCreateOrderLoading: false });
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp41) {
           closure_2 = tmp41;
@@ -711,5 +711,5 @@ export function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4929.shallow);
+  }, _mod5056.shallow);
 }

@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ spacer: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
@@ -20,7 +20,7 @@ export function ModalActionButton(variant) {
     tmp5 = React3(View, obj);
   }
   const obj2 = { children: null };
-  const items = [tmp5];
+  items = [tmp5];
   const obj3 = {};
   const merged1 = Object.assign(merged);
   obj3.variant = variant;

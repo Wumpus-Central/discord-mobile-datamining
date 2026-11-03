@@ -8,11 +8,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6997);
-({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
+const ChangeEmailStore = fn(7123);
+({ useChangeEmailError: closure_9, ChangeEmailFields: closure_10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   background: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -44,7 +44,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
   noop = undefined;
   ({ headerText, confirmButtonText } = onFormSubmit);
   const tmp = closure_13();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = onFormSubmit(onResend[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp5 = _slicedToArray(noop.useState(""), 2);
   value = tmp5[0];
@@ -65,7 +65,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -150,7 +150,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
     const obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: headerText,
     };

@@ -10,8 +10,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" },
   input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" },
@@ -40,7 +40,7 @@ export default function MFACodeInput(appState) {
   const tmp7 = value(noop.useState(null), 2);
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
-  const items = [first1];
+  items = [first1];
   const callback = noop.useCallback(() => {
     const string = ClipboardUtils.getString();
     string.then((result) => {

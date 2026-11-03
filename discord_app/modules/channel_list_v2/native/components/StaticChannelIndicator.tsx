@@ -36,7 +36,7 @@ export default function ChannelIndicator(arg0) {
   if (unread) {
     const obj = { style: tmp.indicatorContainer, children: null };
     const obj2 = { style: null };
-    const items = [tmp.indicator, ,];
+    items = [tmp.indicator, ,];
     const obj3 = { backgroundColor: tmp6 };
     items[1] = obj3;
     items[2] = style;

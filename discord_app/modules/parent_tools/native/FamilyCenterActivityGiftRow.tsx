@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     display: "flex",
@@ -70,7 +70,7 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj5.product = product;
     obj5.isSubscription = isSubscription;
     obj5.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(FamilyCenterActivityItemPreviewDefault, obj5)];
+    items = [React4(FamilyCenterActivityItemPreviewDefault, obj5)];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = {
       variant: "text-md/semibold",

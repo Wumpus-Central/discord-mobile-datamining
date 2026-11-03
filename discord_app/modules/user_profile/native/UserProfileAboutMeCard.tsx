@@ -53,11 +53,11 @@ function TextWithIcon(themeType) {
     tmp2 = closure_14;
   }
   const obj = { style: null, accessible: true, accessibilityLabel, children: null };
-  const items = [closure_16().textWithIcon, { columnGap: tmp2.columnGap }];
+  items = [closure_16().textWithIcon, { columnGap: tmp2.columnGap }];
   obj.style = items;
   const items1 = [icon, closure_1_11(Text_Text.Text, { variant: tmp2.textVariant, color: "text-default", children })];
   obj.children = items1;
-  return closure_1_12(View, obj);
+  return application_id(View, obj);
 }
 function Bio(arg0) {
   ({ displayProfile, themeType } = arg0);
@@ -81,7 +81,7 @@ function Bio(arg0) {
       const obj2 = { themeType, children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.ZzAR2Y);
-      const items = [closure_1_11(Heading, obj2)];
+      items = [closure_1_11(Heading, obj2)];
       const obj3 = { bio: previewBio, userId, guildId: null, textVariant: null, lineClamp: null };
       let guildId;
       if (context != null) {
@@ -93,7 +93,7 @@ function Bio(arg0) {
       obj3.lineClamp = lineClamp;
       items[1] = closure_1_11(BioTextDefault, obj3);
       obj4.children = items;
-      tmp8Result = closure_1_12(View, obj4);
+      tmp8Result = application_id(View, obj4);
     }
   }
   return tmp8Result;
@@ -110,12 +110,12 @@ function MemberJoinDates(userId) {
   }
   ({ textVariant, columnGap } = tmp2);
   const tmp = closure_16();
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => locale.locale);
   const obj = userId(504);
   const items1 = [GuildStore];
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
-    let guild = null;
+    guild = null;
     if (null != importDefault) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -131,13 +131,13 @@ function MemberJoinDates(userId) {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(7348);
+  const obj4 = userId(7468);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(7348).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(7468).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1113).intl;
   obj7.children = intl.string(userId(1113).t.a6XYD9);
@@ -147,7 +147,7 @@ function MemberJoinDates(userId) {
   obj8.style = items4;
   const obj9 = {
     themeType,
-    icon: closure_11(userId(10685).ClydeIcon, { size: "xs" }),
+    icon: closure_11(userId(10815).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };
@@ -165,9 +165,9 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(5624).Text, obj11)];
+    const items6 = [closure_11(tmp4(5747).Text, obj11)];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(6957).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(7083).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1113).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -201,11 +201,11 @@ function FriendsSinceDate(themeType) {
     const obj3 = { themeType, children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t.wlTO8v);
-    const items = [closure_1_11(Heading, obj3)];
+    items = [closure_1_11(Heading, obj3)];
     const obj4 = { variant: tmp.textVariant, color: "text-default", children: friendsSinceDate };
     items[1] = closure_1_11(Text_Text.Text, obj4);
     obj2.children = items;
-    tmp6 = closure_1_12(View, obj2);
+    tmp6 = application_id(View, obj2);
   }
   return tmp6;
 }
@@ -215,7 +215,7 @@ function PolicyLinks(arg0) {
     const obj = { themeType, children: null };
     const intl = util.intl;
     obj.children = intl.string(util.t.l6DP2n);
-    const items = [closure_1_11(Heading, obj)];
+    items = [closure_1_11(Heading, obj)];
     const obj2 = { style: tmp.policyLinks, children: null };
     let tmp5Result = null != termsOfServiceUrl;
     if (tmp5Result) {
@@ -237,9 +237,9 @@ function PolicyLinks(arg0) {
     const obj5 = { children: null };
     items1[1] = tmp5Result2;
     obj2.children = items1;
-    items[1] = closure_1_12(View, obj2);
+    items[1] = application_id(View, obj2);
     obj5.children = items;
-    let tmp3Result = closure_1_12(View, obj5);
+    let tmp3Result = application_id(View, obj5);
   } else {
     tmp3Result = null;
   }
@@ -273,7 +273,7 @@ function BotSlashCommands(channel) {
   context = channel(context[13]).useUserProfileAnalyticsContext().context;
   let obj = channel(context[13]);
   ({ commands, application } = analyticsLocations(context[25])(channel, applicationId, commandIds));
-  const items = [application, , , ,];
+  items = [application, , , ,];
   ({ id: arr[1], guild_id: arr[2] } = channel);
   items[3] = context;
   items[4] = analyticsLocations;
@@ -309,10 +309,10 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7377);
+const Constants = fn(7497);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1072).Routes;
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = {
@@ -331,7 +331,7 @@ const dependencyMap = {
     columnGap: 3,
   },
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },
@@ -357,7 +357,7 @@ export default function UserProfileAboutMeCard(arg0) {
     application = displayProfile.application;
   }
   const obj = { style: null, children: null };
-  const items = [closure_16().card, { rowGap: tmp2.rowGap }, style];
+  items = [closure_16().card, { rowGap: tmp2.rowGap }, style];
   obj.style = items;
   const tmp = closure_16();
   const items1 = [closure_1_11(Bio, { userId, displayProfile, pendingBio, themeType, lineClamp: bioLineClamp }), , , ,];
@@ -398,5 +398,5 @@ export default function UserProfileAboutMeCard(arg0) {
   }
   items1[4] = tmp7Result;
   obj.children = items1;
-  return closure_1_12(UserProfileCardDefault, obj);
+  return application_id(UserProfileCardDefault, obj);
 }

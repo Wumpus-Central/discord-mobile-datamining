@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(10850).sendUserMessage;
+const sendUserMessage = fn(10980).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureDesignRemarkSheet = "ConjureDesignRemarkSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -28,7 +28,7 @@ export default function ConjureDesignRemarkSheet(projectId) {
   const tmp = closure_10();
   const tmp2 = value(onPress.useState(""), 2);
   value = tmp2[0];
-  const items = [onClose];
+  items = [onClose];
   onPress = onPress.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureDesignRemarkSheet);
     onClose();

@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
@@ -18,10 +18,11 @@ export default function RoleIcon(arg0) {
   const obj = {
     fontFamily: "System",
     fontSize: size * num,
-    lineHeight: "children",
-    textAlign: "<string:4268818845>",
+    lineHeight: "channel_id",
+    textAlign:
+      -15731819779118550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
     width: size,
-    marginBottom: "<string:3780197049>",
+    marginBottom: 16247960436100152000000000000000000000000000000000000000000000000000000000000000000,
   };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
@@ -33,7 +34,7 @@ export default function RoleIcon(arg0) {
     tmp = null;
     if (null != unicodeEmoji) {
       const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null };
-      const items = [size1, obj];
+      items = [size1, obj];
       obj4.style = items;
       obj4.children = unicodeEmoji.surrogates;
       tmp = jsx(Text_Text.Text, {

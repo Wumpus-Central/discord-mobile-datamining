@@ -21,7 +21,7 @@ function filterPlayingActivities(arg0) {
   if (0 === arg0.length) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     const items1 = [];
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
@@ -137,7 +137,7 @@ function handleUpdate() {
     }
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
-      const items = [];
+      items = [];
       const tmp12Result = _modDef12;
       HermesBuiltin.arraySpread(
         remoteActivities.filter((type) => type.type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS),
@@ -166,7 +166,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5761).sortActivity;
+const sortActivity = fn(5881).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;
@@ -193,7 +193,7 @@ prototype["initialize"] = function initialize() {
     SpotifyStore,
     UserSettingsProtoStore,
   );
-  const items = [LocalActivityStore];
+  items = [LocalActivityStore];
   this.syncWith(items, handleUpdate);
 };
 prototype["getLocalPresence"] = function getLocalPresence() {

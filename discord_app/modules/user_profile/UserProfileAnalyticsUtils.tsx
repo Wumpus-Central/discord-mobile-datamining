@@ -25,7 +25,7 @@ function getProfileProperties(guildMemberProfile) {
   if (guildMember != null) {
     nick = guildMember.nick;
   }
-  const items = [];
+  items = [];
   if (Boolean(nick)) {
     items.push(constants.NICKNAME);
   }
@@ -281,8 +281,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7276).FetchState;
-const constants = fn(8754).TrackUserProfileProperties;
+const FetchState = fn(7396).FetchState;
+const constants = fn(8878).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
@@ -571,7 +571,7 @@ export function trackUserProfileActivityAction(userId) {
     session_id = activity.session_id;
   }
   obj2.activity_session_id = session_id;
-  let application_id;
+  application_id = undefined;
   if (activity != null) {
     application_id = activity.application_id;
   }
@@ -786,7 +786,7 @@ export function trackUserProfileWishlistAction(dependencyMap) {
   obj3.sku_id = skuId;
   if (null != productLines) {
     const _Array = Array;
-    let items = Array.from(productLines);
+    items = Array.from(productLines);
   } else {
     items = [];
   }

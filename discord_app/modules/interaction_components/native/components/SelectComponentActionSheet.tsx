@@ -17,7 +17,7 @@ function SelectionHeader(renderIcon) {
   let tmp = closure_11();
   closure_5 = tmp;
   noop.useRef(null);
-  const items = [selectedOptions, tmp, renderIcon];
+  items = [selectedOptions, tmp, renderIcon];
   const memo = noop.useMemo(() => {
     let mapped;
     if (selectedOptions != null) {
@@ -72,10 +72,10 @@ function SelectionHeader(renderIcon) {
     };
     const intl3 = tmp6(1113).intl;
     obj3.text = intl3.string(tmp6(1113).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5634).Button, obj3);
+    tmp5Result = closure_8(tmp6(5754).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(7321).BottomSheetTitleHeader, obj)];
+  const children = [closure_8(renderIcon(7441).BottomSheetTitleHeader, obj)];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -109,15 +109,15 @@ function SelectionHeader(renderIcon) {
           tmp2(arg0, tmp);
         }
       };
-      obj4.onChangeText = function onChangeText(ref) {
+      obj4.onChangeText = function onChangeText(arg0) {
         const current = ref.current;
         if (current != null) {
           current.scrollTo({ y: 0, animated: false });
         }
-        onQueryChange(ref);
+        onQueryChange(arg0);
       };
-      tmp5Result4 = closure_8(selectedOptions(9062), obj4);
-      const tmp13 = selectedOptions(9062);
+      tmp5Result4 = closure_8(selectedOptions(9190), obj4);
+      const tmp13 = selectedOptions(9190);
     }
   }
   children[1] = tmp5Result4;
@@ -176,7 +176,7 @@ function SelectionOptionItem(item) {
   let tmp6Result = null;
   if (!skipIcon) {
     const obj3 = { style: null, children: null };
-    const items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
+    items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
     obj3.style = items;
     obj3.children = renderIcon(item);
     tmp6Result = React6(View, obj3);
@@ -215,10 +215,10 @@ function SelectionOptionItem(item) {
   return React6(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;
-let closure_7 = fn(5273).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(5396).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" },
   tagListIconWrapper: null,
@@ -275,7 +275,7 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
         safeAreaInsets.top)
     );
   }, []);
-  const items = [renderDescription];
+  items = [renderDescription];
   const stateFromStores = selectionActionComponent(selectedCount[21]).useStateFromStores(items, () =>
     renderDescription.getChannelId(),
   );

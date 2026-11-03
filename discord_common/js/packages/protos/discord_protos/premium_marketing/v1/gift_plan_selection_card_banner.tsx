@@ -101,7 +101,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "asset_variant",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner.AssetVariant",
           GiftPlanSelectionCardBanner_AssetVariant,
           "ASSET_VARIANT_",

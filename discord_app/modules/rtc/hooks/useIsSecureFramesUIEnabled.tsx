@@ -3,18 +3,18 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-let closure_4 = fn(9266).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9394).END_TO_END_ENCRYPTION_DISABLED;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
 export function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
-  let items = [RTCConnectionStore, ChannelStore];
+  items = [RTCConnectionStore, ChannelStore];
   const items1 = [channelId];
   return channelId(504).useStateFromStores(
     items,
     () => {
-      const items = [RTCConnectionStore, ChannelStore];
+      items = [RTCConnectionStore, ChannelStore];
       [obj, obj2] = items;
       let flag = false;
       if (null != channelId) {

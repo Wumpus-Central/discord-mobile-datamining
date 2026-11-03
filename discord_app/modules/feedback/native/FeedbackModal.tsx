@@ -24,10 +24,7 @@ function FeedbackForm(result) {
     titleLabel = intl.string(tmp6(tmp7[6]).t.vcqwCj);
   }
   obj.title = titleLabel;
-  const items = [
-    closure_7(require("Form").FormInput, obj, "channel-input"),
-    closure_7(require("Form").FormDivider, {}),
-  ];
+  items = [closure_7(require("Form").FormInput, obj, "channel-input"), closure_7(require("Form").FormDivider, {})];
   const obj2 = { value, title: null, onChange: null, multiline: true, numberOfLines: 4, autoCorrect: true };
   if (descriptionLabel == null) {
     const intl2 = tmp6(tmp7[6]).intl;
@@ -76,7 +73,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   helpDeskLabel: { lineHeight: 16, marginTop: 8 },
   bottomContainer: { paddingHorizontal: 16 },

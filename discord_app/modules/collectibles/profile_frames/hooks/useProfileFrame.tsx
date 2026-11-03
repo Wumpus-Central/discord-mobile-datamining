@@ -5,13 +5,13 @@ import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
 
 export default function useProfileFrame(arg0) {
   _require = arg0;
-  const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
+  items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = CollectiblesCategoryStore.getProduct(closure_0);

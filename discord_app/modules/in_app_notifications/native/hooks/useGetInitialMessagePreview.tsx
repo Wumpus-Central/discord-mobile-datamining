@@ -3,13 +3,13 @@ import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
-const MessageSnapshotRecord = fn(4957).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(5084).MessageSnapshotRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 
 export function useGetInitialMessagePreview(message) {
   message = message.message;
-  const items = [message];
+  items = [message];
   return noop.useMemo(() => {
     const tmp2 = new MessageRecord(message);
     tmp2.attachments = [];

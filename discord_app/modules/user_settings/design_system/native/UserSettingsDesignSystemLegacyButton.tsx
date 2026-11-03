@@ -756,7 +756,7 @@ items[40] = {
 };
 let items1 = [fn(1187).ButtonColors.WHITE];
 let set = new Set(items1);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj43 = {
   comboRow: null,
   darkText: null,
@@ -867,7 +867,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { spacing: 4, style: tmp.header, children: null };
   items = [
-    hasOwnProperty(Text_Text.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }),
+    hasOwnProperty(Text_Text.Text, { variant: "heading-xl/semibold", children: "Migration Mapping" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
@@ -887,7 +887,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   });
   const obj4 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [
-    hasOwnProperty(Text_Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }),
+    hasOwnProperty(Text_Text.Text, { variant: "heading-xl/semibold", children: "Legacy Button Audit" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-muted",

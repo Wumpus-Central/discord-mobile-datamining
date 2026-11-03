@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
@@ -11,7 +11,7 @@ function ProgressBar(percent) {
   const tmp = closure_12();
   const obj = { style: tmp.progressBackground, children: null };
   const obj2 = { style: null, colors: null, useAngle: true, angle: -90 };
-  const items = [tmp.progressForeground];
+  items = [tmp.progressForeground];
   const obj3 = { width: "" + percent.percent + "%" };
   items[1] = obj3;
   obj2.style = items;
@@ -20,11 +20,11 @@ function ProgressBar(percent) {
   return closure_1_10(View, obj);
 }
 const View = fn(17).View;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
-const GuildMemberFlags = fn(4932).GuildMemberFlags;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
+const GuildMemberFlags = fn(5059).GuildMemberFlags;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", alignItems: "center" },
@@ -55,7 +55,7 @@ export function NewMemberActionsProgress(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   const tmp = closure_12();
-  const items = [GuildOnboardingHomeSettingsStore];
+  items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guildId];
   const stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(
     items,
@@ -121,18 +121,18 @@ export function NewMemberActionsProgress(guildId) {
         const items5 = [, ,];
         ({ horizontal: arr7[0], spaceBetween: arr7[1], spaceBelow: arr7[2] } = tmp);
         obj5.style = items5;
-        const obj6 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
+        const obj6 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp2(tmp3[16]).intl;
         obj6.children = intl.string(tmp2(tmp3[16]).t.LhlgY9);
         const items6 = [closure_10(tmp2(tmp3[15]).Text, obj6)];
         const obj7 = { style: tmp.horizontal, children: null };
-        const obj8 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: memo };
+        const obj8 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: memo };
         const items7 = [
           closure_10(tmp2(tmp3[15]).Text, obj8),
           closure_10(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }),
           ,
         ];
-        const obj9 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: num };
+        const obj9 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: num };
         items7[2] = closure_10(tmp2(tmp3[15]).Text, obj9);
         const obj10 = { size: tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores(tmp3[18]) };
         items7[3] = closure_10(tmp2(tmp3[17]).Icon, obj10);

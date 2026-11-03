@@ -204,9 +204,9 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
-  SearchTabs: c10,
+  SearchTabs: closure_10,
   SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11,
   SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12,
 } = SearchConstants);
@@ -225,7 +225,7 @@ prototype["initialize"] = function initialize() {
     ChannelStore,
     SmartSearchResultsStore,
   );
-  const items = [
+  items = [
     SearchMessageStore,
     SearchMemberTabStore,
     SearchGuildChannelTabStore,

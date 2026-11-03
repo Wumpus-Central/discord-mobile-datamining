@@ -27,7 +27,7 @@ export function useRequestToStreamData(id, requestToStreamChannel) {
     location: "useRequestToStreamData",
   }).enabled;
   let obj = require("RequestToStreamNonGamesExperiment");
-  const items = [id];
+  items = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => id.getId());
   let guild_id;
   let obj2 = require("initialize");
@@ -45,7 +45,7 @@ export function useRequestToStreamData(id, requestToStreamChannel) {
     return null != ApplicationStreamingStore.getStreamForUser(closure_0, guildId);
   });
   const tmp3Result = require("initialize");
-  let application_id;
+  application_id = undefined;
   if (activity != null) {
     application_id = activity.application_id;
   }

@@ -17,7 +17,7 @@ export default function useChangelogRenderedAnalytics(arg0) {
   _require = arg0;
   const tmp2 = require("useChangelogIdFromChannel")(arg0);
   importDefault = tmp2;
-  const items = [locale];
+  items = [locale];
   stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   let obj = require("initialize");
   let tmp = stateFromStores;

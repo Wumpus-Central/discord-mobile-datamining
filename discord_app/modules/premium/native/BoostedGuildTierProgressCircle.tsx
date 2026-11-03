@@ -6,9 +6,9 @@ import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import ProgressCircleDefault from "components/ProgressCircle.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef15399 from "../../../../_runtime/metro/15399__.js";
-import _modDef15400 from "../../../../_runtime/metro/15400__.js";
-import _modDef15401 from "../../../../_runtime/metro/15401__.js";
+import _modDef15540 from "../../../../_runtime/metro/15540__.js";
+import _modDef15541 from "../../../../_runtime/metro/15541__.js";
+import _modDef15542 from "../../../../_runtime/metro/15542__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ const Constants = fn(1072);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
   guildTierBackground: null,
@@ -75,11 +75,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef15399;
+          let tmp2Result4 = _modDef15540;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef15400;
+          tmp2Result4 = _modDef15541;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef15401;
+          tmp2Result4 = _modDef15542;
         }
       }
       const obj5 = {
@@ -88,7 +88,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
         accessibilityElementsHidden: true,
         importantForAccessibility: "no",
       };
-      const items = [timestampProducer(tmp12, obj5)];
+      items = [timestampProducer(tmp12, obj5)];
       const obj6 = {
         style: tmp.guildTierName,
         variant: "text-xs/semibold",

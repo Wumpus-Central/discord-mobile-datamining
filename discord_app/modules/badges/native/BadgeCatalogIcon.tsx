@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 function BadgeCatalogRasterIcon(style) {
   ({ badge, size } = style);
-  const items = [, ,];
+  items = [, ,];
   ({ simple_icon_raster_url: arr[0], complex_icon_static_url: arr[1], complex_icon_animated_url: arr[2] } = badge);
   const found = items.filter((item) => null != item);
   const joined = found.join("|");

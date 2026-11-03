@@ -6,7 +6,7 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { fieldHeader: null };
 const obj3 = {};
 let merged = Object.assign(
@@ -24,7 +24,7 @@ export default function FormHeader(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [closure_3().fieldHeader, merged.style];
+  items = [closure_3().fieldHeader, merged.style];
   obj.style = items;
   obj.children = children.children;
   return jsx(native.LegacyText, {});

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((color) => {
   const size = {
     width: nativeDefault.space.PX_40,
@@ -68,7 +68,7 @@ export default function DisplayNameStylesCustomColorButton(onPress) {
     tmp2 = first;
   }
   const tmpResult = closure_8(tmp2);
-  let items = activeColors;
+  items = activeColors;
   if (activeColors == null) {
     items = [];
   }

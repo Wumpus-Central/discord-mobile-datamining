@@ -10,7 +10,7 @@ export default function useStableCallback(current) {
     closure_1.current = current;
   });
   return noop.useCallback(() => {
-    const items = [...HermesBuiltin.copyRestArgs()];
+    items = [...HermesBuiltin.copyRestArgs()];
     return ref.current.apply(items);
   }, []);
 }

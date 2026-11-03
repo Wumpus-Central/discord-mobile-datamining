@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 export default noop.memo(function BlankAudienceTile() {
   const audienceTileStyles = AudienceTile.useAudienceTileStyles();
   const obj3 = { style: null };
-  const items = [audienceTileStyles.container];
+  items = [audienceTileStyles.container];
   items[1] = { width: AudienceTile.getTileWidthStyle(useWindowDimensionsDefault().width) };
   obj3.style = items;
   return <View style={null} />;

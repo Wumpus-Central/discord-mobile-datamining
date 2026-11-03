@@ -4,7 +4,6 @@ import util from "../../../../intl/index.native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
-import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -13,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -41,37 +40,20 @@ const result = size.fileFinishedImporting(
 export default function GuildPreview(guild) {
   guild = guild.guild;
   const tmp = closure_6();
-  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
-    "InAppReportsGuildPreview",
-    "text-xs/bold",
-  );
-  const obj3 = { style: tmp.container, children: null };
-  if (null != typeConsolidationEyebrow.style) {
-    const items = [tmp.title, typeConsolidationEyebrow.style];
-    let title = items;
-  } else {
-    title = tmp.title;
-  }
-  const obj4 = { style: title, accessibilityRole: "header", variant: typeConsolidationEyebrow.variant, children: null };
-  if (null != typeConsolidationEyebrow.style) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t["0ox7Hq"]);
-  } else {
-    const intl = util.intl;
-    stringResult = intl.string(util.t["0ox7Hq"]).toUpperCase();
-    const str = intl.string(util.t["0ox7Hq"]);
-  }
-  obj4.children = stringResult;
-  const items1 = [React4(Text_Text.Text, obj4)];
-  const obj5 = { style: null, children: null };
-  const items2 = [tmp.guildContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
-  obj5.style = items2;
-  const obj6 = { size: null, guild: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["0ox7Hq"]);
+  items = [React4(Text_Text.Text, obj3)];
+  const obj4 = { style: null, children: null };
+  const items1 = [tmp.guildContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj4.style = items1;
+  const obj5 = { size: null, guild: null };
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  obj6.size = GuildIcon.GuildIconSizes.LARGE;
-  obj6.guild = guild;
-  const items3 = [
-    React4(GuildIconDefault, obj6),
+  obj5.size = GuildIcon.GuildIconSizes.LARGE;
+  obj5.guild = guild;
+  const items2 = [
+    React4(GuildIconDefault, obj5),
     React4(Text_Text.Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
@@ -79,8 +61,8 @@ export default function GuildPreview(guild) {
       children: guild.name,
     }),
   ];
-  obj5.children = items3;
-  items1[1] = hasOwnProperty(View, obj5);
-  obj3.children = items1;
-  return hasOwnProperty(View, obj3);
+  obj4.children = items2;
+  items[1] = hasOwnProperty(View, obj4);
+  obj2.children = items;
+  return hasOwnProperty(View, obj2);
 }

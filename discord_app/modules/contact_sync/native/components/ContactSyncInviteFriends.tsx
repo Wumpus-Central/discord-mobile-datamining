@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
-import _modDef14273 from "../../../../../_runtime/metro/14273__.js";
+import _modDef14404 from "../../../../../_runtime/metro/14404__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -17,7 +17,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 },
   art: { marginBottom: 16 },
@@ -35,18 +35,18 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/component
 
 export default function ContactSyncInviteFriends() {
   const tmp = closure_10();
-  const items = [UserStore];
+  items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef14273;
+  obj4.source = _modDef14404;
   const items1 = [closure_7(FastImageDefault, obj4), ,];
   const obj5 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

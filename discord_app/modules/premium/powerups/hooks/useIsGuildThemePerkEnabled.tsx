@@ -12,14 +12,14 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsG
 
 export default function useIsGuildThemePerkEnabled(arg0) {
   _require = arg0;
-  const items = [GuildStore, GuildPowerupsStore];
+  items = [GuildStore, GuildPowerupsStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const guild = GuildStore.getGuild(closure_0);
+        guild = GuildStore.getGuild(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;

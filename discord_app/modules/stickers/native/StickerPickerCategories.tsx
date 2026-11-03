@@ -10,12 +10,12 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10269).useStickerPickerStore;
+let useStickerPickerStore = fn(10399).useStickerPickerStore;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
   AnalyticsPages: closure_9,
-  CATEGORY_ICON_RIPPLE_CONFIG: c10,
+  CATEGORY_ICON_RIPPLE_CONFIG: closure_10,
   CATEGORY_ICON_SIZE,
 } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -74,11 +74,11 @@ let closure_17 = noop.memo(function StickerCategoryItem(category) {
   const AnimateStickers = category(index[10]).AnimateStickers;
   const setting = AnimateStickers.useSetting();
   let shouldAnimateStickerResult = category(index[11]).shouldAnimateSticker(setting, false);
-  let guild = null;
+  guild = null;
   if (category.type === category(index[12]).StickerCategoryTypes.GUILD) {
     guild = GuildStore.getGuild(category.id);
   }
-  const items = [category, guild, index, onPressCategory];
+  items = [category, guild, index, onPressCategory];
   const callback = noop.useCallback(() => {
     let tmp4 = category.type !== StickersTypes.StickerCategoryTypes.PACK;
     if (tmp4) {
@@ -176,9 +176,9 @@ export default function _default(categories) {
   const tmp = closure_16();
   dependencyMap = first.useRef(undefined);
   const ref = first.useRef(null);
-  let items = [categories];
+  items = [categories];
   const memo = first.useMemo(() => {
-    const items = [categories.length];
+    items = [categories.length];
     return items;
   }, items);
   const tmp4 = ref(first.useState(null), 2);
@@ -261,7 +261,7 @@ export default function _default(categories) {
   }, items7);
   const callback5 = first.useCallback(
     (arg0, index) =>
-      closure_2_14(closure_17, {
+      gesture(closure_17, {
         category: categories[index],
         index,
         isActive: index === categoryIndex,
@@ -272,9 +272,9 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10086)();
+  const tmp19 = categoryIndex(10216)();
   const items9 = [
-    closure_14(categoryIndex(7223), {
+    closure_14(categoryIndex(7344), {
       estimatedListSize: "windowSize",
       horizontal: true,
       itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -300,12 +300,12 @@ export default function _default(categories) {
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj4.style = items10;
-    const obj5 = { style: tmp.guildIcon, source: tmp17(10305) };
+    const obj5 = { style: tmp.guildIcon, source: tmp17(10435) };
     obj4.children = closure_14(categories(1187).Icon, obj5);
     obj3.children = closure_14(closure_5, obj4);
-    tmp22Result = closure_14(categories(6980).PressableOpacity, obj3);
+    tmp22Result = closure_14(categories(7106).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10087), obj);
+  return closure_15(categoryIndex(10217), obj);
 }

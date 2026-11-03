@@ -52,7 +52,7 @@ class ICYMIForumThreadRow {
         if (stateFromStores != null) {
           id1 = stateFromStores.id;
         }
-        const items = [author.id];
+        items = [author.id];
         const membersById = GuildActionCreatorsDefault.requestMembersById(id1, items);
       }
     }, items2);
@@ -211,7 +211,7 @@ class ICYMIForumThreadRow {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 const React7 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: marginHorizontal.inset },

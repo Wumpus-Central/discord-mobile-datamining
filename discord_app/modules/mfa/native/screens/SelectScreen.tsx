@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(17669).SELECT_NAMES;
+const SELECT_NAMES = fn(17812).SELECT_NAMES;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginLeft: 16, marginRight: 16 }, selectContainer: null };
   const NAV_BAR_HEIGHT = NavigatorConstants.NAV_BAR_HEIGHT;
@@ -33,10 +33,10 @@ export default function SelectScreen(mfaChallenge) {
   importDefault = require("useNavigation").useNavigation();
   const obj2 = { top: !tmp, style: tmp2.container, children: null };
   const obj3 = { style: tmp2.selectContainer, children: null };
-  const obj4 = { variant: "heading-xl/extrabold", children: null };
+  const obj4 = { variant: "heading-xl/semibold", children: null };
   const intl = require("util").intl;
   obj4.children = intl.string(require("util").t.S9b9bX);
-  const items = [closure_5(require("Text/Text").Heading, obj4)];
+  items = [closure_5(require("Text/Text").Heading, obj4)];
   const obj5 = { variant: "text-sm/medium", children: null };
   const intl2 = require("util").intl;
   obj5.children = intl2.string(require("util").t.Jz1lXO);

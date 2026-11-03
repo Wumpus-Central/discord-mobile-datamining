@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { position: "relative", overflow: "hidden" },
   content: { pointerEvents: "none", userSelect: "none" },
@@ -57,7 +57,7 @@ export default function ObscuredSurface(obscured) {
       "aria-hidden": true,
       children,
     };
-    const items = [React4(View, obj3), ,];
+    items = [React4(View, obj3), ,];
     const obj4 = { style: tmp.cover };
     items[1] = React4(View, obj4);
     const obj5 = { style: tmp.warning, children: null };

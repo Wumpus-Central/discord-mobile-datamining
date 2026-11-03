@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2932 from "../intl/DisplayNameStyles.messages.js";
+import _modDef3059 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
@@ -27,7 +27,7 @@ function ChatPreview(chatMessage) {
   const tmp = closure_9();
   const avatarDecoration = useAvatarDecoration.useAvatarDecoration(user, guildId);
   const pendingAvatarDecoration = usePendingAvatarSettingsDefault({ guildId, isTryItOut }).pendingAvatarDecoration;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp8 = avatarDecoration;
   const memo = noop.useMemo(() => {
@@ -78,7 +78,7 @@ function ChatPreview(chatMessage) {
   const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   if (chatMessage == null) {
     const intl = util.intl;
-    chatMessage = intl.string(_modDef2932.h5Cuej);
+    chatMessage = intl.string(_modDef3059.h5Cuej);
   }
   obj10.children = chatMessage;
   items3[1] = React5(Text_Text.Text, obj10);
@@ -90,7 +90,7 @@ function ChatPreview(chatMessage) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -156,7 +156,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = {
@@ -168,7 +168,7 @@ let closure_10 = createStyles.createStyles((scale) => {
     borderWidth: 0,
     transform: null,
   };
-  const items = [{ rotate: "15deg" }, { scale }];
+  items = [{ rotate: "15deg" }, { scale }];
   rect.transform = items;
   obj.appIconTilted = rect;
   return obj;
@@ -220,7 +220,7 @@ export default function DisplayNameStylesEditPreview(chatMessage) {
   const obj = user(selectedFontId[7]);
   let nameplateData = user(selectedFontId[8]).getNameplateData(guildNameplate);
   const obj2 = user(selectedFontId[8]);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStores = user(selectedFontId[9]).useStateFromStores(items, () => {
     if (flag) {
       let pendingAvatar = UserProfileSettingsStore.getTryItOutChanges().tryItOutAvatar;

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/model_settings/native/ConjureModelSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import conjureModelSettingsConnection from "../conjureModelSettingsConnection.tsx";
@@ -46,7 +46,7 @@ class ConjureModelSettingsContent {
 function ModelSettingsPicker(projectId) {
   projectId = projectId.projectId;
   const modelSettings = projectId.modelSettings;
-  const items = [ConjureConnectionStore];
+  items = [ConjureConnectionStore];
   const items1 = [projectId];
   const tmp =
     "open" !== projectId(504).useStateFromStores(items, () => ConjureConnectionStore.getConnState(projectId), items1);
@@ -69,19 +69,19 @@ function ModelSettingsPicker(projectId) {
   ];
   const intl = projectId(1113).intl;
   const string = intl.string;
-  const tmp8 = _modDef3868;
+  const tmp8 = _modDef3995;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5624).Text, {
+  items3[1] = closure_8(projectId(5747).Text, {
     variant: "text-xs/normal",
     color: "text-muted",
     children: stringResult,
   });
   obj2.children = items3;
-  return closure_9(projectId(6027).Stack, obj2);
+  return closure_9(projectId(6147).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -93,7 +93,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3868["3E7Yc0"]);
+  obj2.title = intl.string(_modDef3995["3E7Yc0"]);
   obj.header = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React6(View, { children: React6(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React6(ActionSheet.ActionSheet, obj);

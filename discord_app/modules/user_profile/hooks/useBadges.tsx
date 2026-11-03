@@ -16,7 +16,7 @@ export default function useBadges(getBadges, arg1) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   useStateFromStores;
   [][0] = StreamerModeStore;

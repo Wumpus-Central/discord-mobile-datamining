@@ -37,7 +37,7 @@ const conjureLastIntegrationStatusStore = new ConjureLastIntegrationStatusStore(
     projectId = projectId.projectId;
     const statuses = closure_1.statuses;
     obj = { statuses: null };
-    const items = [];
+    items = [];
     items[
       HermesBuiltin.arraySpread(
         statuses.filter((projectId) => projectId.projectId !== projectId),

@@ -63,10 +63,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(5767).makeSortedVoiceState;
+const makeSortedVoiceState = fn(5887).makeSortedVoiceState;
 const Constants = fn(1072);
-({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = fn(5681).ParticipantTypes;
+({ ME: closure_9, RTCConnectionStates: closure_10 } = Constants);
+const ParticipantTypes = fn(5801).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
@@ -75,7 +75,7 @@ class RTCConnectionDesyncStore extends Store {}
 const prototype = RTCConnectionDesyncStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(VoiceStateStore, UserStore, ChannelStore, RTCConnectionStore);
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, retryFailedUsers);
 };
 Object.defineProperty(prototype, "desyncedVoiceStatesCount", {

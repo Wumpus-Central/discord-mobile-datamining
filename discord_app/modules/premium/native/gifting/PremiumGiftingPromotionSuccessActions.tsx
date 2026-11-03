@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 },
   promoDetails: null,
@@ -45,7 +45,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   if (tmp12Result) {
     tmp12Result = product.items.length > 0;
   }
-  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
+  items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
   onCancel = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {

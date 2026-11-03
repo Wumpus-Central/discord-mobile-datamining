@@ -11,7 +11,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx",
@@ -31,7 +31,7 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
       }
     }
   };
-  const items = [StickersStore];
+  items = [StickersStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const stickersByGuildId = StickersStore.getStickersByGuildId(guildId);
     let found;

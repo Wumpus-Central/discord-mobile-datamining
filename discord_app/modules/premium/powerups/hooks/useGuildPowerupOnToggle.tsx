@@ -14,7 +14,7 @@ export default function useGuildPowerupOnToggle(arg0, arg1) {
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   noop = tmp3[1];
   const obj = { isLoading: tmp2, error: tmp3[0], onToggle: null };
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   obj.onToggle = noop.useCallback((arg0) => {
     if (null == closure_1) {
       return Promise.resolve();

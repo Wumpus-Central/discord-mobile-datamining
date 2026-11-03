@@ -19,7 +19,7 @@ export function shouldShowVoiceChannelChangeConfirmation(id) {
       if (VoiceStateStore.isInChannel(id.id)) {
         return false;
       } else {
-        const guild = GuildStore.getGuild(id.getGuildId());
+        guild = GuildStore.getGuild(id.getGuildId());
         let afkChannelId;
         if (guild != null) {
           afkChannelId = guild.afkChannelId;

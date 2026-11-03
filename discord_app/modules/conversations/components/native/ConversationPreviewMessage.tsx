@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { container: { gap: nativeDefault.space.PX_4 }, header: null, authorRow: null, headerTimestamp: null };
 let obj4 = { gap: nativeDefault.space.PX_4 };
 obj3.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -34,7 +34,7 @@ export default function ConversationPreviewMessage(message) {
   let setting;
   const tmp = closure_11();
   rowGenerator = message(setting[9]);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () => roleStyle.roleStyle);
   const items1 = [GuildMemberStore];
   const items2 = [guildId, message.author.id];

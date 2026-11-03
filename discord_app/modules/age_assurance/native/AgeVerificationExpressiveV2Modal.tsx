@@ -33,7 +33,7 @@ function MethodsScreen(onClose) {
   ({ footerMessage, outageBannerMessage, refetch, error } = ageVerificationMethodsV2);
   let obj2 = require("useAgeVerificationMethodsV2");
   const availableMethodsV2 = require("AgeVerificationMethodAvailability").useAvailableMethodsV2(methods);
-  let items = [onComplete, onClose];
+  items = [onComplete, onClose];
   onComplete = onComplete.useCallback(() => {
     if (onComplete != null) {
       tmp();
@@ -66,7 +66,7 @@ function MethodsScreen(onClose) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -238,7 +238,7 @@ function MethodsScreen(onClose) {
     const items7 = [tmp19(tmp2(tmp3[29]).AgeVerificationSpotIllustration, { width: 150, height: 100 })];
     const obj11 = {
       accessibilityRole: "header",
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: tmp2(tmp3[24]).getAgeVerificationGetStartedTitle(entryPoint, true),
     };
@@ -356,7 +356,7 @@ function MethodsScreen(onClose) {
                 subLabel: null,
                 onPress: null,
               };
-              const items = [
+              items = [
                 tmp5(closure_0(onComplete[30]).Text, {
                   variant: "text-sm/normal",
                   color: "text-muted",
@@ -436,11 +436,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6728).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6848).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" },
   container: { alignSelf: "stretch" },
@@ -470,7 +470,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   const tmp = closure_11();
   closure_3 = tmp;
   const memo = noop.useMemo(() => entryPoint(onComplete[45]).v4(), []);
-  const items = [tmp, memo, entryPoint, onClose, onComplete];
+  items = [tmp, memo, entryPoint, onClose, onComplete];
   const items1 = [memo, entryPoint];
   const memo1 = noop.useMemo(() => {
     const modalSessionId = memo;

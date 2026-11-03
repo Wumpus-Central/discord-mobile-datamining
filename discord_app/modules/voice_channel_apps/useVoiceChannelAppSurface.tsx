@@ -24,7 +24,7 @@ export function useVoiceChannelAppOpen(channel, inCall) {
   let stateFromStores = inCall;
   const voiceChannelApplicationId = require("useVoiceChannelApp").useVoiceChannelApplicationId(channel);
   let obj = require("useVoiceChannelApp");
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [channel.id, voiceChannelApplicationId];
   if (inCall) {
     stateFromStores = obj2.useStateFromStores(
@@ -45,7 +45,7 @@ export function useVoiceChannelAppVisible(channel) {
   _require = channel;
   const voiceChannelApplicationId = require("useVoiceChannelApp").useVoiceChannelApplicationId(channel);
   const obj = require("useVoiceChannelApp");
-  const items = [VoiceChannelAppStore];
+  items = [VoiceChannelAppStore];
   const items1 = [channel.id, voiceChannelApplicationId];
   return require("initialize").useStateFromStores(
     items,

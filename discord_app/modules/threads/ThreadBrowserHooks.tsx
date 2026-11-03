@@ -15,7 +15,7 @@ import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(14375).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(14506).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
@@ -27,7 +27,7 @@ export function useTrackThreadBrowserTab() {
 }
 export function useActiveThreadIds(arg0) {
   _require = arg0;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [,];
   ({ guild_id: arr2[0], id: arr2[1] } = arg0);
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -54,7 +54,7 @@ export function useActiveThreadIds(arg0) {
 }
 export function useActiveThreads(channel) {
   closure_129_0 = channel;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [,];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
   const stateFromStoresArray = memo(504).useStateFromStoresArray(
@@ -95,7 +95,7 @@ export function useActiveThreads(channel) {
 }
 export function useActiveGuildThreads(arg0) {
   _require = arg0;
-  const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
+  items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -129,7 +129,7 @@ export function useArchivedThreads(channel, LATEST_ACTIVITY, loadMore, MATCH_SOM
   const result = channel.isModeratorReportChannel();
   noop = result;
   showResolvedFlags = showResolvedFlags(channel.id).showResolvedFlags;
-  const items = [ArchivedThreadsStore];
+  items = [ArchivedThreadsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     loading: ArchivedThreadsStore.isLoading(user.id, closure_1, closure_2, closure_3),
     isInitialLoad: ArchivedThreadsStore.getIsInitialLoad(user.id, closure_1, closure_2, closure_3),

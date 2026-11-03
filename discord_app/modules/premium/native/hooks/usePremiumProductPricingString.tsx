@@ -4,7 +4,7 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PRICE_PLACEHOLDER = fn(1385).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1387).PRICE_PLACEHOLDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
@@ -13,7 +13,7 @@ export default function usePremiumProductPricingString(premiumType, YEAR) {
   const obj = require("PremiumUtils");
   _require = require("ProductIds").getProductIdForGift(planIdForPremiumType);
   const obj2 = require("ProductIds");
-  const items = [IAPStore];
+  items = [IAPStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => IAPStore.getProduct(closure_0));
   let priceString;
   if (stateFromStores != null) {

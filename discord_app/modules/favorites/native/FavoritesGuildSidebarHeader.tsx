@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/FavoritesGuildSidebarHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3450 from "../intl/FavoritesGuild.messages.js";
+import _modDef3577 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -17,7 +17,7 @@ function EmptyBody() {
   }, []);
   const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3450.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3577.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 function PlaceholderRows() {
@@ -29,7 +29,7 @@ function PlaceholderRows() {
     children: null,
   };
   const obj2 = { style: tmp.placeholderRow, children: null };
-  const items = [timestampProducer(TextIcon.TextIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED })];
+  items = [timestampProducer(TextIcon.TextIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED })];
   const obj4 = { style: null };
   const items1 = [,];
   ({ placeholderBar: arr2[0], placeholderBarShort: arr2[1] } = tmp);
@@ -63,10 +63,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(18262).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(18406).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   divider: null,
@@ -131,11 +131,11 @@ export default function FavoritesGuildSidebarHeader() {
     const obj2 = { style: tmp.divider };
     tmp7 = timestampProducer(View, obj2);
   }
-  const items = [tmp7, ,];
+  items = [tmp7, ,];
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj4 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3450["1n0TGE"]);
+  obj4.children = intl.string(_modDef3577["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);

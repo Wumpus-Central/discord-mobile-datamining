@@ -10,11 +10,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7377);
+const Constants = fn(7497);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   statusPreviewContainer: {
     flexDirection: "row",
@@ -41,7 +41,7 @@ export default function UserProfileCustomStatusActionSheet(user) {
   user = user.user;
   ({ guildId, channelId, previewEmoji, previewText } = user);
   const tmp = closure_7();
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [user];
   const stateFromStores = user(504).useStateFromStores(
     items,

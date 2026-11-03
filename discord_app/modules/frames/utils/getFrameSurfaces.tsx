@@ -23,7 +23,7 @@ function getFrameSurfaces(application) {
       }
       if ("conjureProjectId" in application) {
         if (null != application.conjureProjectId) {
-          const items = [
+          items = [
             EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
             EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL,
           ];

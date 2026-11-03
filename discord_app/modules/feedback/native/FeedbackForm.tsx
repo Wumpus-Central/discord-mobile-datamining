@@ -6,10 +6,10 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let FeedbackRating = fn(10158).FeedbackRating;
+let FeedbackRating = fn(10288).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   ratingsLabel: { textAlign: "center" },
   reasonsHeader: { marginBottom: 8 },
@@ -42,7 +42,7 @@ export function FeedbackForm(otherKey) {
   let obj = otherKey(onFeedbackChanged[7]);
   let tmp2 = otherKey;
   [arr, c6] = trackOpen(noop.useState(otherKey(onFeedbackChanged[7]).shuffle(reasons)), 2);
-  let items = [reasons, tmp4, otherKey];
+  items = [reasons, tmp4, otherKey];
   const effect = noop.useEffect(() => {
     if (!obj.isEqual(closure_5, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));

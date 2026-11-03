@@ -30,7 +30,7 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(DispatcherDefault, {
     let set1;
     if (0 === offset) {
       categoryIds = categoryIds.categoryIds;
-      let items = [];
+      items = [];
       offset = 0;
     }
     set = new Set(items.map((id) => id.id));

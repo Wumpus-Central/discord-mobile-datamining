@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
 let obj = { items: [], keys: new Map(), keyIndex: 0 };
 let map = new Map();
@@ -37,9 +37,9 @@ export default noop.memo(function FastestListChildren(listFooterAlwaysMounted) {
   }
   let tmp = marginStart();
   const portal = tmp;
-  let items = [tmp.portal, marginStart, marginEnd];
+  items = [tmp.portal, marginStart, marginEnd];
   const memo = listHeaderAlwaysMounted.useMemo(() => {
-    const items = [portal.portal];
+    items = [portal.portal];
     const rect = { left: marginStart, right: marginEnd };
     items[1] = rect;
     return items;
@@ -125,8 +125,8 @@ export default noop.memo(function FastestListChildren(listFooterAlwaysMounted) {
       const _Map = Map;
       const map = new Map(ref.current.keys);
       const _Map2 = Map;
-      map1 = new Map();
-      const items = [];
+      const map1 = new Map();
+      items = [];
       const items1 = [];
       const tmp95 = estimatedListSize(horizontal[7])(listId, tmp4, sections);
       let sectionStart = tmp95.sectionStart;

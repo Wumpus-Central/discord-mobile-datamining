@@ -18,7 +18,7 @@ export default function OngoingCallStatusLabel(style) {
     useAllAloneText = true;
   }
   const id = AuthenticationStore.getId();
-  const items = [VoiceStateStore, CallStore];
+  items = [VoiceStateStore, CallStore];
   const items1 = [id, channel];
   const stateFromStores = channel(id[5]).useStateFromStores(
     items,

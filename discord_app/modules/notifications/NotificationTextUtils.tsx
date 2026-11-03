@@ -161,7 +161,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1072);
 ({
@@ -173,7 +173,7 @@ const Constants = fn(1072);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
@@ -435,7 +435,7 @@ export function shouldNotifyForReaction(arg0) {
   return tmp5;
 }
 export function shouldIncludeSelectedChannel() {
-  const state = VoicePanelStore.getState();
+  state = VoicePanelStore.getState();
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
     if (null == EmbeddedActivitiesStore.getConnectedActivityLocation()) {
@@ -498,7 +498,7 @@ export function makeTextChatNotification(getGuildId, content, bot) {
               } else {
                 result = isForwardMessageDefault(content);
               }
-              const items = [];
+              items = [];
               if (result) {
                 const intl8 = util.intl;
                 let stringResult = intl8.string(util.t["9ddYKt"]);
@@ -712,7 +712,7 @@ export function useAllowInAppNotifications() {
   const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
   const setting = ShowInAppNotifications.useSetting();
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
-  const items = [UserRequiredActionStore];
+  items = [UserRequiredActionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => UserRequiredActionStore.hasAction());
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {

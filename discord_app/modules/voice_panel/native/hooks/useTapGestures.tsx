@@ -1,36 +1,37 @@
 // discord_app/modules/voice_panel/native/hooks/useTapGestures.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_4 = {
-  code: "function useTapGesturesTsx1(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('double');}",
+  code: "(function useTapGesturesTsx1(event,manager){let[isFocusedVideoZoomed]=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}})",
 };
 let closure_5 = {
-  code: "function useTapGesturesTsx2(event,manager){const{isFocusedVideoZoomed}=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}}",
+  code: "(function useTapGesturesTsx2(){let[scheduleOnRN,handleEvent]=this.__closure;return scheduleOnRN(handleEvent,'double');})",
 };
 let closure_6 = {
-  code: "function useTapGesturesTsx3(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('single');}",
+  code: "(function useTapGesturesTsx3(){let[scheduleOnRN,handleEvent]=this.__closure;return scheduleOnRN(handleEvent,'single');})",
 };
 let closure_7 = {
-  code: "function useTapGesturesTsx4(){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes,handleEvent}=this.__closure;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);runOnJS(handleEvent)('long');}",
+  code: "(function useTapGesturesTsx4(){let[scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes,handleEvent]=this.__closure;scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_MEDIUM);scheduleOnRN(handleEvent,'long');})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11222)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11359)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
-  __initData = tmp2;
-  __initData2 = tmp3;
+  closure_4 = tmp2;
+  closure_5 = tmp3;
   const gesturesEnabled = onSingleTap.gesturesEnabled;
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [
+  items = [
     null != onSingleTap.onSingleTap,
     null != onSingleTap.onDoubleTap,
     null != onSingleTap.onLongPress,
@@ -38,95 +39,120 @@ export default function useTapGestures(onSingleTap) {
     isFocusedVideoZoomed,
   ];
   return noop.useMemo(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const Gesture2 = LegacyBaseButton.Gesture;
+    let tmp3 = gesturesEnabled;
+    let tmp4 = gesturesEnabled;
+    if (gesturesEnabled) {
+      tmp4 = closure_4;
+    }
+    const TapResult = Gesture2.Tap();
+    const enabledResult = Gesture2.Tap().enabled(tmp4);
+    const maxDistanceResult = Gesture2.Tap().enabled(tmp4).maxDistance(30);
+    items = [closure_4, isFocusedVideoZoomed];
+    [tmp5, tmp6] = items;
     function handleEvent(arg0) {
       if ("single" === arg0) {
-        const current3 = ref.current;
+        const current3 = _undefined2.current;
         const onSingleTap = current3.onSingleTap;
         if (onSingleTap != null) {
           onSingleTap();
         }
       } else if ("double" === arg0) {
-        const current2 = ref.current;
+        const current2 = _undefined2.current;
         const onDoubleTap = current2.onDoubleTap;
         if (onDoubleTap != null) {
           onDoubleTap();
         }
       } else if ("long" === arg0) {
-        current = ref.current;
+        current = _undefined2.current;
         const onLongPress = current.onLongPress;
         if (onLongPress != null) {
           onLongPress();
         }
       }
     }
-    const Gesture = current(5303).Gesture;
-    const Gesture2 = current(5303).Gesture;
-    let tmp3 = gesturesEnabled;
-    let tmp4 = gesturesEnabled;
-    if (gesturesEnabled) {
-      tmp4 = __initData;
-    }
-    const TapResult = Gesture2.Tap();
-    const enabledResult = Gesture2.Tap().enabled(tmp4);
-    const maxDistanceResult = Gesture2.Tap().enabled(tmp4).maxDistance(30);
-    class S {
-      constructor(arg0, arg1) {
-        if (closure_1_1.get()) {
-          tmp = arg1;
-          failResult = arg1.fail();
-        }
-        return;
+    function useTapGesturesTsx1(arg0, fail) {
+      if (_undefined.get()) {
+        fail.fail();
       }
     }
-    S.__closure = { isFocusedVideoZoomed };
-    S.__workletHash = 3236469126950;
-    S.__initData = __initData2;
+    const items1 = [tmp6];
+    useTapGesturesTsx1.__closure = items1;
+    useTapGesturesTsx1.__workletHash = 2872964709820;
+    useTapGesturesTsx1.__initData = tmp5;
     const numberOfTapsResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2);
-    let obj = { isFocusedVideoZoomed };
-    const fn = function b() {
-      return ReanimatedRexport.runOnJS(handleEvent)("double");
-    };
-    const onTouchesDownResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S);
-    fn.__closure = { runOnJS: current(5095).runOnJS, handleEvent };
-    fn.__workletHash = 13571114432746;
-    fn.__initData = __initData;
-    const obj2 = { runOnJS: current(5095).runOnJS, handleEvent };
-    const Gesture3 = current(5303).Gesture;
-    const onStartResult = onTouchesDownResult.onStart(fn);
-    let tmp6 = tmp3;
+    const items2 = [closure_5, _mod1705.scheduleOnRN, handleEvent];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp7, tmp8, tmp9] = items2;
+    function useTapGesturesTsx2() {
+      return _undefined(c1, "double");
+    }
+    const items3 = [tmp8, tmp9];
+    useTapGesturesTsx2.__closure = items3;
+    useTapGesturesTsx2.__workletHash = 11156632838205;
+    useTapGesturesTsx2.__initData = tmp7;
+    const onTouchesDownResult = Gesture2.Tap()
+      .enabled(tmp4)
+      .maxDistance(30)
+      .numberOfTaps(2)
+      .onTouchesDown(useTapGesturesTsx1);
+    const Gesture3 = LegacyBaseButton.Gesture;
+    const onStartResult = Gesture2.Tap()
+      .enabled(tmp4)
+      .maxDistance(30)
+      .numberOfTaps(2)
+      .onTouchesDown(useTapGesturesTsx1)
+      .onStart(useTapGesturesTsx2);
+    let tmp11 = tmp3;
     if (tmp3) {
-      tmp6 = closure_3;
+      tmp11 = closure_3;
     }
     const TapResult1 = Gesture3.Tap();
-    const enabledResult1 = Gesture3.Tap().enabled(tmp6);
-    const fn2 = function c() {
-      return ReanimatedRexport.runOnJS(handleEvent)("single");
-    };
-    const maxDistanceResult1 = Gesture3.Tap().enabled(tmp6).maxDistance(30);
-    fn2.__closure = { runOnJS: current(5095).runOnJS, handleEvent };
-    fn2.__workletHash = 14109132753191;
-    fn2.__initData = gesturesEnabled;
-    const obj3 = { runOnJS: current(5095).runOnJS, handleEvent };
-    const Gesture4 = current(5303).Gesture;
-    const onStartResult1 = maxDistanceResult1.onStart(fn2);
+    const enabledResult1 = Gesture3.Tap().enabled(tmp11);
+    const items4 = [closure_6, _mod1705.scheduleOnRN, handleEvent];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp12, tmp13, tmp14] = items4;
+    function useTapGesturesTsx3() {
+      return _undefined(c1, "single");
+    }
+    const items5 = [tmp13, tmp14];
+    useTapGesturesTsx3.__closure = items5;
+    useTapGesturesTsx3.__workletHash = 9691651382035;
+    useTapGesturesTsx3.__initData = tmp12;
+    const maxDistanceResult1 = Gesture3.Tap().enabled(tmp11).maxDistance(30);
+    const Gesture4 = LegacyBaseButton.Gesture;
+    const onStartResult1 = Gesture3.Tap().enabled(tmp11).maxDistance(30).onStart(useTapGesturesTsx3);
     if (tmp3) {
-      tmp3 = __initData2;
+      tmp3 = closure_5;
     }
     const LongPressResult = Gesture4.LongPress();
-    const fn3 = function n() {
-      ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback)(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-      const runOnJSResult = ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback);
-      ReanimatedRexport.runOnJS(handleEvent)("long");
-    };
-    const enabledResult2 = Gesture4.LongPress().enabled(tmp3);
-    fn3.__closure = {
-      runOnJS: current(5095).runOnJS,
-      triggerHapticFeedback: current(5260).triggerHapticFeedback,
-      HapticFeedbackTypes: current(5260).HapticFeedbackTypes,
+    const items6 = [
+      closure_7,
+      _mod1705.scheduleOnRN,
+      HapticUtils.triggerHapticFeedback,
+      HapticUtils.HapticFeedbackTypes,
       handleEvent,
-    };
-    fn3.__workletHash = 1947700378974;
-    fn3.__initData = __initData3;
-    return Gesture.Exclusive(onStartResult, onStartResult1, enabledResult2.onStart(fn3));
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp16, tmp17, tmp18, tmp19, tmp20] = items6;
+    function useTapGesturesTsx4() {
+      _undefined(c1, _undefined2.IMPACT_MEDIUM);
+      _undefined(c3, "long");
+    }
+    const items7 = [tmp17, tmp18, tmp19, tmp20];
+    useTapGesturesTsx4.__closure = items7;
+    useTapGesturesTsx4.__workletHash = 6834611527822;
+    useTapGesturesTsx4.__initData = tmp16;
+    return Gesture.Exclusive(
+      onStartResult,
+      onStartResult1,
+      Gesture4.LongPress().enabled(tmp3).onStart(useTapGesturesTsx4),
+    );
   }, items);
 }

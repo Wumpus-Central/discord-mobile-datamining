@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05090_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05217_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
@@ -54,7 +54,7 @@ export const BaseRive = function BaseRiveInner(renderDataBinding) {
     }
     return tmpResult;
   });
-  const items = [riveFile];
+  items = [riveFile];
   const effect = noop.useEffect(() => {
     let tmp2 = riveFile;
     if (riveFile == null) {
@@ -196,7 +196,7 @@ export function useNumberBinding(chapterID, instance, prop, prop1, playIfNeeded)
   const iter = DataBindByName.useRiveNumber(chapterID, instance);
   const setValue = iter.setValue;
   value = iter.value;
-  const items = [prop, setValue, playIfNeeded];
+  items = [prop, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != prop) {
       if (typeof prop !== "number") {
@@ -239,7 +239,7 @@ export function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   const iter = DataBindByName.useRiveString(LVL, instance);
   const setValue = iter.setValue;
   value = iter.value;
-  const items = [LVL2, setValue, playIfNeeded];
+  items = [LVL2, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != LVL2) {
       closure_2(LVL2.toString());
@@ -269,7 +269,7 @@ export function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled,
   const iter = DataBindByName.useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   value = iter.value;
-  const items = [reducedMotionEnabled, setValue, playIfNeeded];
+  items = [reducedMotionEnabled, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != closure_0) {
       const _Boolean = Boolean;
@@ -300,7 +300,7 @@ export function useColorBinding(FillColor, instance, FillColor2, FillColor1, pla
   const iter = DataBindByName.useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   value = iter.value;
-  const items = [FillColor2, setValue, playIfNeeded];
+  items = [FillColor2, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != FillColor2) {
       setValue(FillColor2.toString());
@@ -328,7 +328,7 @@ export function useEnumBinding(device, instance, device2, device1, playIfNeeded)
   const iter = DataBindByName.useRiveEnum(device, instance);
   const setValue = iter.setValue;
   value = iter.value;
-  const items = [device2, setValue, playIfNeeded];
+  items = [device2, setValue, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != device2) {
       ref(device2.toString());
@@ -362,7 +362,7 @@ export function useTriggerBinding(faceStateChange, instance, faceStateChange2, f
     tmp = obj2;
   }
   const trigger = DataBindByName.useRiveTrigger(faceStateChange, instance, tmp).trigger;
-  const items = [faceStateChange2, trigger, playIfNeeded];
+  items = [faceStateChange2, trigger, playIfNeeded];
   const effect = noop.useEffect(() => {
     let tmp2 = closure_0;
     if (typeof closure_0 !== "boolean") {
@@ -396,7 +396,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
     [],
   );
   closure_6 = noop.useRef(playIfNeeded);
-  const items = [playIfNeeded];
+  items = [playIfNeeded];
   const effect1 = noop.useEffect(() => {
     closure_6.current = current2;
   }, items);
@@ -419,7 +419,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -438,7 +438,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   closure_128_1 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj3 = { value: tmp2(5144).ignoreErrors(ref3.current), done: false };
+                  const obj3 = { value: tmp2(5267).ignoreErrors(ref3.current), done: false };
                   return obj3;
                 }
               } else {
@@ -453,7 +453,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   } else if (dependencyMap()) {
                     c3 = 3;
                   } else {
-                    const RiveImages = tmp2(5090).RiveImages;
+                    const RiveImages = tmp2(5217).RiveImages;
                     closure_128_0 = RiveImages.loadFromURLAsync(
                       (function ensureImageUri(source) {
                         if (typeof source === "number") {
@@ -546,7 +546,7 @@ export function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
   const bindableArtboard = file;
   closure_3 = Icon2;
   closure_4 = playIfNeeded;
-  const items = [Icon, instance, file, Icon2, playIfNeeded];
+  items = [Icon, instance, file, Icon2, playIfNeeded];
   const effect = noop.useEffect(() => {
     if (null != instance) {
       if (null != bindableArtboard) {

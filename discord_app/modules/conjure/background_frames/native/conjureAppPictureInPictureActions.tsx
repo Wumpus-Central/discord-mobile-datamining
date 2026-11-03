@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
@@ -11,11 +11,11 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
-function getConjureAppPictureInPictureActions(id, appName, arg2) {
+function getConjureAppPictureInPictureActions(id, c8, c9) {
   _require = id;
   let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef3868.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef3995.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     if (obj.isConjurePreviewSurface(id.surface)) {
@@ -29,8 +29,8 @@ function getConjureAppPictureInPictureActions(id, appName, arg2) {
     }
     obj = conjurePreviewSurface;
   };
-  const items = [obj];
-  if (arg2) {
+  items = [obj];
+  if (c9) {
     items.push(getConjureAppSoundButtonDefault(id.id, id.data.userMuted));
   }
   const obj3 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
@@ -43,7 +43,7 @@ function getConjureAppPictureInPictureActions(id, appName, arg2) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6847).asLaunched;
+const asLaunched = fn(6967).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -64,8 +64,8 @@ export function openConjureAppPictureInPictureFrame(surface) {
   obj = conjurePreviewSurface;
 }
 export { getConjureAppPictureInPictureActions };
-export function showConjureAppPictureInPictureActions(frameId, title) {
-  const tmp = asLaunched(FramesStore.getFrame(frameId));
+export function showConjureAppPictureInPictureActions(c0, c8) {
+  const tmp = asLaunched(FramesStore.getFrame(c0));
   if (null != tmp) {
     const obj2 = { key: "ConjureAppPictureInPicture", header: null, options: null, hasIcons: true };
     const obj3 = { title };

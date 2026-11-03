@@ -12,7 +12,7 @@ function getUploadPayload(self) {
     filename: self.filename,
     file_size: self.currentSize,
     id: _modDef12.uniqueId(),
-    original_content_type: "a",
+    original_content_type: "Array",
   };
   return obj;
 }
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.
 
 export default { getUploadPayload };
 export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
-  const items = [];
+  items = [];
   const item = arr.forEach((item, index) => {
     const merged = Object.assign(UploadUtils.getAttachmentPayload(item, index));
     items.push({});

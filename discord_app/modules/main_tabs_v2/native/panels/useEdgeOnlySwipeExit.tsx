@@ -19,7 +19,7 @@ export default function useEdgeOnlySwipeExit(arg0) {
   if (edgeSwipeOnly1 == null) {
     edgeSwipeOnly1 = null;
   }
-  const items = [arg0, edgeSwipeOnly, edgeSwipeOnly1];
+  items = [arg0, edgeSwipeOnly, edgeSwipeOnly1];
   const effect = noop.useEffect(() => {
     if (closure_0) {
       let result = edgeSwipeOnly.set(true);

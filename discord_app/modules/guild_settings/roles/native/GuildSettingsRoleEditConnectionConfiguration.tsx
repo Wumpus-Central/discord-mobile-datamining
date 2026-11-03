@@ -44,7 +44,7 @@ function Header(arg0) {
       }
     }
     obj2.user = bot;
-    let tmp8Result = closure_1_12(native.Avatar, obj2);
+    let tmp8Result = application_id(native.Avatar, obj2);
     let name = integration.application.name;
   } else if (null != applicationId) {
     if (undefined === getOrFetchApplicationBatched) {
@@ -57,7 +57,7 @@ function Header(arg0) {
       let tmp11;
       if (null != bot1) {
         const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
-        tmp11 = closure_1_12(native.Avatar, obj3);
+        tmp11 = application_id(native.Avatar, obj3);
       }
       let name1;
       if (getOrFetchApplicationBatched != null) {
@@ -73,7 +73,7 @@ function Header(arg0) {
       source: tmp3Result.makeSource(shared.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG),
       disableColor: true,
     };
-    tmp8Result = closure_1_12(native.Icon, obj4);
+    tmp8Result = application_id(native.Icon, obj4);
     const tmp3Result2 = shared;
   }
   const obj5 = { icon: tmp8Result, label: null, trailing: null };
@@ -91,9 +91,9 @@ function Header(arg0) {
   obj6["aria-label"] = intl2.string(util.t.N86XcP);
   obj6.onPress = onRemove;
   obj6.disabled = locked;
-  obj6.children = closure_1_12(XSmallIcon.XSmallIcon, {});
-  obj5.trailing = closure_1_12(Pressables.PressableOpacity, obj6);
-  return closure_1_12(TableRow.TableRow, obj5);
+  obj6.children = application_id(XSmallIcon.XSmallIcon, {});
+  obj5.trailing = application_id(Pressables.PressableOpacity, obj6);
+  return application_id(TableRow.TableRow, obj5);
 }
 function BooleanConfigRule(metadataField) {
   metadataField = metadataField.metadataField;
@@ -133,7 +133,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7369).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7489).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19807).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(19957).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(19807);
-  const tmpResult = metadataField(19807);
-  str1 = metadataField(19807).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(19957);
+  const tmpResult = metadataField(19957);
+  str1 = metadataField(19957).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -221,14 +221,14 @@ function NumericalConfigRule(existingPendingConfiguration) {
   }
   closure_11 = tmp14;
   if (undefined !== fieldTextHook) {
-    closure_13 = metadataField(1375).isIOS()
+    closure_13 = metadataField(1377).isIOS()
       ? map.numericalInputContainerIOSInline
       : map.numericalInputContainerAndroidInline;
     const intl = metadataField(1113).intl;
     let obj2 = {
       metadataHook() {
         const obj = { style: null, children: null };
-        const items = [closure_13, map.numericalInputContainerBase];
+        items = [closure_13, map.numericalInputContainerBase];
         obj.style = items;
         const items1 = [map.numericalInput];
         let numericalInputDisabled = closure_11;
@@ -236,7 +236,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
           numericalInputDisabled = map.numericalInputDisabled;
         }
         items1[1] = numericalInputDisabled;
-        obj.children = closure_2_12(
+        obj.children = application_id(
           native.TextInput,
           {
             keyboardType: "number-pad",
@@ -248,11 +248,11 @@ function NumericalConfigRule(existingPendingConfiguration) {
           },
           metadataField,
         );
-        return closure_2_12(View, obj, "_numericalInputContainer");
+        return application_id(View, obj, "_numericalInputContainer");
       },
     };
     const obj3 = { style: map.metadataRow, children: null };
-    const tmpResult2 = metadataField(1375);
+    const tmpResult2 = metadataField(1377);
     fieldTextHook = mapped.Children;
     map = fieldTextHook.map;
     mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
@@ -260,7 +260,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       if (typeof children === "string") {
         const obj = { variant: "text-md/semibold", style: map.metadataRowText, children };
         const _HermesInternal = HermesInternal;
-        tmp = closure_2_12(Text_Text.Text, obj, "t-" + arg1);
+        tmp = application_id(Text_Text.Text, obj, "t-" + arg1);
       }
       return tmp;
     });
@@ -271,7 +271,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     let tmp21Result;
     if (undefined !== fieldText) {
       const obj4 = { style: map.appNumericalInputContainer, children: null };
-      let items = [map.appNumericalInput];
+      items = [map.appNumericalInput];
       let numericalInputDisabled = tmp14;
       if (tmp14) {
         numericalInputDisabled = map.numericalInputDisabled;
@@ -286,7 +286,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj5.children = onInputValueChange(metadataField(1187).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5624).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5747).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -328,16 +328,16 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7369).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7489).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19807).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(19957).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.BLUESKY);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -355,7 +355,7 @@ function BlueskyMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
     metadataField: React5.BLUESKY_FOLLOWERS_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT),
@@ -371,7 +371,7 @@ function BlueskyMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[2] = closure_1_12(NumericalConfigRule, {
+  items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["5I4mVS"],
     metadataField: React5.BLUESKY_STATUSES_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_STATUSES_COUNT),
@@ -380,14 +380,14 @@ function BlueskyMetadataRules(arg0) {
     locked,
   });
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function LetterboxdMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.LETTERBOXD);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["4hoFk3"],
       metadataField: React5.LETTERBOXD_WATCHES,
       existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_WATCHES),
@@ -404,7 +404,7 @@ function LetterboxdMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["6wOYUY"],
     metadataField: React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR,
     existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR),
@@ -413,14 +413,14 @@ function LetterboxdMetadataRules(arg0) {
     locked,
   });
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function SteamMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.STEAM);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -439,7 +439,7 @@ function SteamMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.zVJxqj,
     metadataField: React5.STEAM_GAME_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.STEAM_GAME_COUNT),
@@ -455,7 +455,7 @@ function SteamMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[2] = closure_1_12(NumericalConfigRule, {
+  items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["ZCNdD/"],
     metadataField: React5.STEAM_ITEM_COUNT_DOTA2,
     existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2),
@@ -471,7 +471,7 @@ function SteamMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[3] = closure_1_12(NumericalConfigRule, {
+  items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["MCHnK+"],
     metadataField: React5.STEAM_ITEM_COUNT_TF2,
     existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_TF2),
@@ -480,14 +480,14 @@ function SteamMetadataRules(arg0) {
     locked,
   });
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function TwitterMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.TWITTER);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -506,7 +506,7 @@ function TwitterMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
     metadataField: React5.TWITTER_FOLLOWERS_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_FOLLOWERS_COUNT),
@@ -522,7 +522,7 @@ function TwitterMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[2] = closure_1_12(NumericalConfigRule, {
+  items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["+NFH7k"],
     metadataField: React5.TWITTER_STATUSES_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_STATUSES_COUNT),
@@ -545,16 +545,16 @@ function TwitterMetadataRules(arg0) {
   obj6.platform = value;
   obj6.onConfigurationChange = onConfigurationChange;
   obj6.locked = locked;
-  items[3] = closure_1_12(BooleanConfigRule, obj6);
+  items[3] = application_id(BooleanConfigRule, obj6);
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function RedditMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.REDDIT);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -573,7 +573,7 @@ function RedditMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.TLgZhv,
     metadataField: React5.REDDIT_TOTAL_KARMA,
     existingPendingConfiguration: configMetadataMap.get(React5.REDDIT_TOTAL_KARMA),
@@ -596,7 +596,7 @@ function RedditMetadataRules(arg0) {
   obj5.platform = value;
   obj5.onConfigurationChange = onConfigurationChange;
   obj5.locked = locked;
-  items[2] = closure_1_12(BooleanConfigRule, obj5);
+  items[2] = application_id(BooleanConfigRule, obj5);
   const obj6 = {
     fieldText: null,
     metadataField: null,
@@ -612,16 +612,16 @@ function RedditMetadataRules(arg0) {
   obj6.platform = value;
   obj6.onConfigurationChange = onConfigurationChange;
   obj6.locked = locked;
-  items[3] = closure_1_12(BooleanConfigRule, obj6);
+  items[3] = application_id(BooleanConfigRule, obj6);
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function PaypalMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.PAYPAL);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -645,16 +645,16 @@ function PaypalMetadataRules(arg0) {
   obj4.platform = value;
   obj4.onConfigurationChange = onConfigurationChange;
   obj4.locked = locked;
-  items[1] = closure_1_12(BooleanConfigRule, obj4);
+  items[1] = application_id(BooleanConfigRule, obj4);
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function EbayMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
   value = PlatformsDefault.get(PlatformTypes.EBAY);
   const obj2 = { children: null };
-  const items = [
-    closure_1_12(NumericalConfigRule, {
+  items = [
+    application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
       metadataField: React5.CREATED_AT,
       existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
@@ -674,7 +674,7 @@ function EbayMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.oTFOe5,
     metadataField: React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
     existingPendingConfiguration: configMetadataMap.get(React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
@@ -690,7 +690,7 @@ function EbayMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[2] = closure_1_12(NumericalConfigRule, {
+  items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["v5a2+Q"],
     metadataField: React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
@@ -706,7 +706,7 @@ function EbayMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[3] = closure_1_12(NumericalConfigRule, {
+  items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.yYbR2r,
     metadataField: React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT),
@@ -730,9 +730,9 @@ function EbayMetadataRules(arg0) {
   obj7.platform = value;
   obj7.onConfigurationChange = onConfigurationChange;
   obj7.locked = locked;
-  items[4] = closure_1_12(BooleanConfigRule, obj7);
+  items[4] = application_id(BooleanConfigRule, obj7);
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function TikTokMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -753,8 +753,8 @@ function TikTokMetadataRules(arg0) {
   obj3.platform = value;
   obj3.onConfigurationChange = onConfigurationChange;
   obj3.locked = locked;
-  const items = [closure_1_12(BooleanConfigRule, obj3), , ,];
-  items[1] = closure_1_12(NumericalConfigRule, {
+  items = [application_id(BooleanConfigRule, obj3), , ,];
+  items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
     metadataField: React5.TIKTOK_FOLLOWER_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWER_COUNT),
@@ -770,7 +770,7 @@ function TikTokMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[2] = closure_1_12(NumericalConfigRule, {
+  items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.JHEsYw,
     metadataField: React5.TIKTOK_FOLLOWING_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT),
@@ -786,7 +786,7 @@ function TikTokMetadataRules(arg0) {
     onConfigurationChange,
     locked,
   };
-  items[3] = closure_1_12(NumericalConfigRule, {
+  items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.tEFCYA,
     metadataField: React5.TIKTOK_LIKES_COUNT,
     existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_LIKES_COUNT),
@@ -795,7 +795,7 @@ function TikTokMetadataRules(arg0) {
     locked,
   });
   obj2.children = items;
-  return map1(closure_1_14, obj2);
+  return state(gesture, obj2);
 }
 function ApplicationMetadataRules(arg0) {
   ({ configMetadataMap: require, onConfigurationChange: importDefault, locked: dependencyMap, integration } = arg0);
@@ -853,7 +853,7 @@ function ApplicationMetadataRules(arg0) {
                         id = application.id;
                       }
                       obj.applicationId = id;
-                      return closure_2_12(BooleanConfigRule, obj, type.key);
+                      return application_id(BooleanConfigRule, obj, type.key);
                     }
                   }
                 }
@@ -881,7 +881,7 @@ function ApplicationMetadataRules(arg0) {
             id1 = application2.id;
           }
           obj3.applicationId = id1;
-          return closure_2_12(NumericalConfigRule, obj3, type.key);
+          return application_id(NumericalConfigRule, obj3, type.key);
         }
         LESS_THAN = constants.LESS_THAN;
       });
@@ -891,17 +891,17 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1072).PlatformTypes;
-const Constants = fn(7349);
+const Constants = fn(7469);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
   MetadataItemTypes: closure_9,
-  GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10,
+  GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_10,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,
@@ -996,8 +996,8 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
         },
         locked,
       };
-      obj2.children = closure_1_12(Header, obj3);
-      return closure_1_12(TableRowGroup.TableRowGroup, obj2);
+      obj2.children = application_id(Header, obj3);
+      return application_id(TableRowGroup.TableRowGroup, obj2);
     } else {
       try {
         value = PlatformsDefault.get(configurationItems[0].configuration.connectionType);
@@ -1021,49 +1021,49 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
         if (PlatformTypes.STEAM === type) {
           const obj5 = {};
           const merged = Object.assign(obj4);
-          let tmp21 = closure_1_12(SteamMetadataRules, obj5);
-          let tmp22 = closure_1_12;
+          let tmp21 = application_id(SteamMetadataRules, obj5);
+          let tmp22 = application_id;
         } else if (PlatformTypes.TWITTER === type) {
           const obj6 = {};
           const merged1 = Object.assign(obj4);
-          tmp21 = closure_1_12(TwitterMetadataRules, obj6);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(TwitterMetadataRules, obj6);
+          tmp22 = application_id;
         } else if (PlatformTypes.REDDIT === type) {
           const obj7 = {};
           const merged2 = Object.assign(obj4);
-          tmp21 = closure_1_12(RedditMetadataRules, obj7);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(RedditMetadataRules, obj7);
+          tmp22 = application_id;
         } else if (PlatformTypes.BLUESKY === type) {
           const obj8 = {};
           const merged3 = Object.assign(obj4);
-          tmp21 = closure_1_12(BlueskyMetadataRules, obj8);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(BlueskyMetadataRules, obj8);
+          tmp22 = application_id;
         } else if (PlatformTypes.LETTERBOXD === type) {
           const obj9 = {};
           const merged4 = Object.assign(obj4);
-          tmp21 = closure_1_12(LetterboxdMetadataRules, obj9);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(LetterboxdMetadataRules, obj9);
+          tmp22 = application_id;
         } else if (PlatformTypes.PAYPAL === type) {
           const obj10 = {};
           const merged5 = Object.assign(obj4);
-          tmp21 = closure_1_12(PaypalMetadataRules, obj10);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(PaypalMetadataRules, obj10);
+          tmp22 = application_id;
         } else if (PlatformTypes.EBAY === type) {
           const obj11 = {};
           const merged6 = Object.assign(obj4);
-          tmp21 = closure_1_12(EbayMetadataRules, obj11);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(EbayMetadataRules, obj11);
+          tmp22 = application_id;
         } else if (PlatformTypes.TIKTOK === type) {
           const obj12 = {};
           const merged7 = Object.assign(obj4);
-          tmp21 = closure_1_12(TikTokMetadataRules, obj12);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(TikTokMetadataRules, obj12);
+          tmp22 = application_id;
         } else {
           const obj13 = {};
           const merged8 = Object.assign(obj4);
           obj13.integration = tmp;
-          tmp21 = closure_1_12(ApplicationMetadataRules, obj13);
-          tmp22 = closure_1_12;
+          tmp21 = application_id(ApplicationMetadataRules, obj13);
+          tmp22 = application_id;
         }
         const obj14 = { hasIcons: true, children: null };
         const obj15 = {
@@ -1074,9 +1074,9 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
           },
           locked,
         };
-        const items = [tmp22(Header, obj15), tmp21];
+        items = [tmp22(Header, obj15), tmp21];
         obj14.children = items;
-        return map1(TableRowGroup.TableRowGroup, obj14);
+        return state(TableRowGroup.TableRowGroup, obj14);
       } catch (err) {}
     }
   }

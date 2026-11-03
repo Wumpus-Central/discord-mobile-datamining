@@ -15,14 +15,14 @@ export default function useCaptchaModalEffects(arg0) {
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = noop.useRef(true);
-  analyticsType(5593)(() => () => {
+  analyticsType(5716)(() => () => {
     if (ref.current) {
       if (closure_1_0 != null) {
         tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);
       }
     }
   });
-  const items = [analyticsType];
+  items = [analyticsType];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: analyticsType });
     return () => {

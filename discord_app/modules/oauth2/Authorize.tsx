@@ -2,7 +2,7 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import keysSorter from "../../../_runtime/06793_keysSorter.js";
+import keysSorter from "../../../_runtime/06913_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -54,7 +54,7 @@ export function parseOAuth2AuthorizeProps(query) {
     }
     const deserializeResult = deserializer.deserialize(str2);
     const tmp12 = (function sanitizeOAuthGuild(guild_id) {
-      const items = [closure_1_7, closure_1_6, closure_1_5];
+      items = [closure_1_7, closure_1_6, closure_1_5];
       if (!items.includes(guild_id)) {
         return tmp;
       }

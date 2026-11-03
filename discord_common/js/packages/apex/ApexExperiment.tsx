@@ -22,7 +22,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       dependencyMap = tmp;
       let tmp2 = closure_2("user", location);
       closure_2 = tmp2;
-      const items = [evaluationAndAssignment];
+      items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
       const tmp3 = closure_2(
         evaluationAndAssignment(504).useStateFromStoresArray(

@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export function useIsInReverseTrial() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

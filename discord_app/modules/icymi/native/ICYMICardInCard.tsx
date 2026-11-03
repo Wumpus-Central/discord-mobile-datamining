@@ -24,7 +24,7 @@ function CutoutGuildIconWithUserCustom(guild) {
   const point = { shape: null, x: 18, y: 18, size: 24 };
   const tmp = closure_12();
   point.shape = ClipView.CutoutShape.Circle;
-  const items = [point];
+  items = [point];
   obj2.cutouts = items;
   const obj3 = { guild, size: null };
   const tmp2 = ClipViewDefault;
@@ -44,8 +44,8 @@ function CutoutGuildIconWithUserCustom(guild) {
 const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(18528);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createICYMIStyles = fn(18682);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: { marginTop: marginHorizontal.margin },
@@ -137,7 +137,7 @@ export default function ICYMICardInCard(message) {
   closure_7 = tmp;
   const fontScale = message(id[12]).useFontScale();
   let obj = message(id[12]);
-  let items = [channelId];
+  items = [channelId];
   let items1 = [channelId];
   const stateFromStores = message(id[13]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let guild_id;
@@ -153,7 +153,7 @@ export default function ICYMICardInCard(message) {
   stateFromStores1 = message(id[13]).useStateFromStores(
     items2,
     () => {
-      let guild = null;
+      guild = null;
       if (null != guild_id) {
         guild = GuildStore.getGuild(tmp);
       }
@@ -301,7 +301,7 @@ export default function ICYMICardInCard(message) {
               const obj2 = { style: closure_7.genContentSubtitle, children: null };
               const iconForChannel = getIconForChannel.getIconForChannel(tmp4);
               const obj3 = { color: colorString };
-              const items = [obj3];
+              items = [obj3];
               let tmp42;
               if (null != displayNameStylesFont) {
                 const obj4 = { fontFamily: tmp41 };

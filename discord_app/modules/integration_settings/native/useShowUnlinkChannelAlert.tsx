@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/integration_settings/native/u
 export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
   closure_0 = arg0;
   closure_2 = arg2;
-  const items = [arg0, arg2];
+  items = [arg0, arg2];
   onConfirm = noop.useCallback(
     onConfirm(function* () {
       yield v2(tmp23[2]).removeLinkedLobby(tmp3);

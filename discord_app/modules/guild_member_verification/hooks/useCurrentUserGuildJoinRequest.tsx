@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/hoo
 
 export function useCurrentUserGuildJoinRequest(guildId) {
   _require = guildId;
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(
     items,

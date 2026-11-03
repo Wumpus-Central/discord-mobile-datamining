@@ -33,7 +33,7 @@ export function getGuildTemplatesMap() {
   const intl3 = util.intl;
   obj4.name = intl3.string(util.t.mobYpC);
   obj4.type = constants.GUILD_CATEGORY;
-  const items = [obj4, , , , ,];
+  items = [obj4, , , , ,];
   const obj5 = { id: "01", parent_id: "00", name: null, type: null };
   const intl4 = util.intl;
   obj5.name = intl4.string(util.t.ao2wxq);

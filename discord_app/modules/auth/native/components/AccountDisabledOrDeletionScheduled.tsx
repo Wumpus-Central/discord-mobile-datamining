@@ -9,7 +9,7 @@ const View = fn(17).View;
 const LoginStates = fn(1072).LoginStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
   if (arg0) {
@@ -59,7 +59,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   let navigation;
   navigation = handleLogin(navigation[7]).useNavigation();
   let obj = handleLogin(navigation[7]);
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = handleLogin(navigation[8]).useStateFromStores(items, () => loginStatus.getLoginStatus());
   const ref = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
@@ -121,7 +121,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
     closure_7(handleLogin(navigation[14]).Text, {
       style: tmp9.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: stringResult,
     }),

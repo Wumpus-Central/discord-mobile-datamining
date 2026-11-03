@@ -25,7 +25,7 @@ export const GAME_MENTION_RAW_RE = tmp2;
 export const GAME_MENTION_RAW_RE_GLOBAL = regExp;
 export function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
     let mapped = items.map((item) => item[1]);
     if (mapped.length <= 0) {

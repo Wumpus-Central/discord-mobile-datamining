@@ -12,31 +12,31 @@ import InviteSuggestionsStore from "../../../../stores/InviteSuggestionsStore.ts
 require = fn;
 function Loading() {
   const tmp = closure_15();
-  const items = [];
+  items = [];
   let num = 0;
   do {
     let obj = { row: num };
-    let arr = items.push(closure_1_12(UserPlaceholderRowDefault, obj, num));
+    let arr = items.push(application_id(UserPlaceholderRowDefault, obj, num));
     num = num + 1;
   } while (num < 10);
   const obj2 = { children: null };
   const items1 = [
-    closure_1_12(View, { style: tmp.placeholderHeader }),
-    closure_1_12(View, { style: tmp.placeholderLabel }),
+    application_id(View, { style: tmp.placeholderHeader }),
+    application_id(View, { style: tmp.placeholderLabel }),
     items,
   ];
   obj2.children = items1;
-  return closure_1_14(map1, obj2);
+  return gesture(state, obj2);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9199);
+const InstantInviteSendStateStore = fn(9327);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const InviteSendStates = fn(7879).InviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
 let size = {
   height: 16,
@@ -75,13 +75,13 @@ export default function ActivityInviteSheet(activity) {
   dependencyMap = undefined;
   noop = undefined;
   const tmp = closure_15();
-  analyticsLocations = analyticsLocations(7326)(analyticsLocations(7351).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7326);
+  const tmp4 = analyticsLocations(7446);
   [tmp6, c2] = noop.useState(null);
   const tmp7 = closure_7((arg0) => arg0);
   _slicedToArray = tmp7;
-  const items = [activity, tmp7];
+  items = [activity, tmp7];
   const items1 = [analyticsLocations];
   const callback = noop.useCallback((arg0) => {
     const party = activity.party;
@@ -190,19 +190,19 @@ export default function ActivityInviteSheet(activity) {
   let obj4 = { title: null };
   const intl = tmp11(1113).intl;
   obj4.title = intl.string(activity(1113).t["OzOM/q"]);
-  obj3.header = closure_12(activity(7321).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_12(activity(7441).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9153).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9281).AppCrash, title: tmp6 };
     let tmp19Result = closure_12(tmp11(1187).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(9150).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(9278).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1113).intl;
     obj8.placeholder = intl2.string(tmp11(1113).t.iI1gMg);
-    obj7.children = closure_12(tmp11(7218).SearchBar, obj8);
+    obj7.children = closure_12(tmp11(7339).SearchBar, obj8);
     obj6.children = closure_12(View, obj7);
     const items4 = [closure_12(View, obj6)];
     if (tmp16) {
@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19143), obj10);
+      tmp17Result2 = closure_12(tmp2(19301), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -226,6 +226,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_14(closure_13, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_12(activity(5272).BottomSheet, obj3);
-  return closure_12(activity(7326).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_12(activity(5395).BottomSheet, obj3);
+  return closure_12(activity(7446).AnalyticsLocationProvider, obj2);
 }

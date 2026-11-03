@@ -30,7 +30,7 @@ function flush() {
   let length;
   let sum;
   closure_5 = null;
-  const items = [...set];
+  items = [...set];
   let num = 0;
   set.clear();
   if (0 < items.length) {

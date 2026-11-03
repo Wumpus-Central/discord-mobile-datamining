@@ -108,7 +108,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -179,9 +179,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7517).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7517);
-                  const result = closure_1_0(7527).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7641).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7641);
+                  const result = closure_1_0(7651).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -192,16 +192,16 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         }
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp33) {
       c4 = tmp;
       throw tmp33;
     }
   }
 };
-let closure_5 = fn(4867).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
-const SoundboardConstants = fn(6060);
-({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
+let closure_5 = fn(4994).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
+const SoundboardConstants = fn(6180);
+({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: closure_10 } = SoundboardConstants);
 const Constants = fn(1072);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
@@ -260,7 +260,7 @@ export function useSoundBoardDismissContentTypes(isSoundboardButtonDisabled) {
   if (flag === undefined) {
     flag = false;
   }
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [];
   if (!flag) {
@@ -335,9 +335,9 @@ export function updateCustomJoinSound(guildId, guildId, location_stack) {
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        let ADDED = tmp6(7518).AnalyticsChangeType.UPDATED;
+        let ADDED = tmp6(7642).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(7518).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(7642).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = {
         soundId: guildId.soundId,
@@ -351,7 +351,7 @@ export function updateCustomJoinSound(guildId, guildId, location_stack) {
       }
       obj2.guild_id = num;
       obj2.change_type = ADDED;
-      obj2.sound_type = tmp6(7518).AnalyticsSoundType.ENTRY;
+      obj2.sound_type = tmp6(7642).AnalyticsSoundType.ENTRY;
       obj2.sound_source = CUSTOM;
       AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
     },

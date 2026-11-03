@@ -6,14 +6,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelAutocompleteConstants = fn(6036);
+const ChannelAutocompleteConstants = fn(6156);
 ({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
 
 export function useGameMentionsAsPlainText(state) {
   _require = state;
-  const items = [state];
+  items = [state];
   const memo = noop.useMemo(() => {
     let str = closure_0;
     if (closure_0 == null) {

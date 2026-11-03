@@ -13,7 +13,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
   error: {
@@ -46,7 +46,7 @@ prototype["renderLabel"] = function renderLabel() {
   let tmp3 = null;
   if (null != label) {
     const obj = { style: null, children: null };
-    const items = [tmp.label, tmp2];
+    items = [tmp.label, tmp2];
     obj.style = items;
     obj.children = label;
     tmp3 = timestampProducer(native.LegacyText, obj);
@@ -64,7 +64,7 @@ prototype["renderText"] = function renderText() {
       accessibilityRole: null,
       children: null,
     };
-    const items = [tmp.text, tmp2];
+    items = [tmp.text, tmp2];
     obj.style = items;
     obj.accessibilityRole = tmp3;
     obj.children = text;
@@ -81,7 +81,7 @@ prototype["renderIcon"] = function renderIcon() {
     const obj3 = {};
     const tmp12 = _objectWithoutProperties(iconProps, closure_3);
     const merged = Object.assign(tmp12);
-    const items = [timestampProducer(IconUploaderDefault, obj3)];
+    items = [timestampProducer(IconUploaderDefault, obj3)];
     let tmp15Result = null;
     if (null != error) {
       const obj4 = { style: null };
@@ -108,13 +108,13 @@ prototype["renderIcon"] = function renderIcon() {
 };
 prototype["render"] = function render() {
   const obj = { style: null, children: null };
-  const items = [closure_8(this.context).wrapper, this.props.wrapperStyles];
+  items = [closure_8(this.context).wrapper, this.props.wrapperStyles];
   obj.style = items;
   const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
   obj.children = items1;
   return React5(View, obj);
 };
-IconLabelBlock.contextType = fn(5080).ThemeContext;
+IconLabelBlock.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

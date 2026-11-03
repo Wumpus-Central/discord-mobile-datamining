@@ -12,7 +12,7 @@ require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4, useMemo: hasOwnProperty } = noop);
 const CollectiblesShopConstants = fn(1074);
-({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_9, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: c10 } =
+({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_9, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_10 } =
   CollectiblesShopConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchShopHome.tsx");
@@ -33,7 +33,7 @@ export function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
   closure_8 = undefined;
   let hasExpiredShopBlocks;
   closure_16 = undefined;
-  let items = [c6];
+  items = [c6];
   const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined.hasLoadedExperiments);
   let obj = require("initialize");
   const items1 = [skipNumCategories];
@@ -42,7 +42,7 @@ export function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
   const items2 = [closure_8];
   const tmp3 = _slicedToArray(
     require("initialize").useStateFromStoresArray(items2, () => {
-      const items = [CollectiblesShopHomeStore.getShopBlocks(closure_0), , , , , , ,];
+      items = [CollectiblesShopHomeStore.getShopBlocks(closure_0), , , , , , ,];
       let num = CollectiblesShopHomeStore.getLastSuccessfulFetch(closure_0);
       if (num == null) {
         num = 0;

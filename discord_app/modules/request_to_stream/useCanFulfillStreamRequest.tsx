@@ -36,25 +36,25 @@ function canFulfillStreamRequest(channel_id) {
   dependencyMap = undefined;
   const channel = obj2.getChannel(channel_id.channel_id);
   if (null == channel) {
-    const items = [false, obj.NOT_IN_VOICE_CHANNEL];
+    items = [false, obj.NOT_IN_VOICE_CHANNEL];
     return items;
   } else {
     const channelId = obj4.getChannelId();
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(11915).getVideoPermission(channel);
+    const videoPermission = flag(12052).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    tmp19(9738).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(11915);
-    const tmp19Result = flag(1375);
-    const ActivityGamePlatforms = tmp19(9738).ActivityGamePlatforms;
-    dependencyMap = flag(1375).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
-    const isAndroidResult = flag(1375).isAndroid();
+    tmp19(9870).ActivityGamePlatforms.DESKTOP;
+    const obj8 = flag(12052);
+    const tmp19Result = flag(1377);
+    const ActivityGamePlatforms = tmp19(9870).ActivityGamePlatforms;
+    dependencyMap = flag(1377).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
+    const isAndroidResult = flag(1377).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11681).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11818).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];
@@ -99,7 +99,7 @@ export default function useCanFulfillStreamRequest(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [
+  items = [
     ApplicationStreamingStore,
     ChannelStore,
     PresenceStore,

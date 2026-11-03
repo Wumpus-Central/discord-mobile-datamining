@@ -4,14 +4,14 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod8363 from "../../../../_runtime/metro/08363__.js";
+import _mod8487 from "../../../../_runtime/metro/08487__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs },
   childContainer: null,
@@ -62,14 +62,14 @@ export default function AppealIngestionExternalLink(children) {
     children: null,
   };
   const obj2 = { style: tmp.childContainer, children: null };
-  const items = [
+  items = [
     closure_4(Text_Text.Text, {
       style: tmp.childButtonText,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: children.text,
     }),
-    closure_4(native.Icon, { source: _mod8363, color: tmp.chevron.color }),
+    closure_4(native.Icon, { source: _mod8487, color: tmp.chevron.color }),
   ];
   obj2.children = items;
   obj.children = closure_5(View, obj2);

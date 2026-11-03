@@ -2,7 +2,7 @@
 import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const SearchTabs = fn(9827).SearchTabs;
+const SearchTabs = fn(9958).SearchTabs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 
@@ -11,7 +11,7 @@ export function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
   const visibleTabCounts = searchContext.visibleTabCounts;
   const visibleTabs = searchContext.visibleTabs;
   closure_3 = visibleTabs.useRef(visibleTabs);
-  const items = [visibleTabs];
+  items = [visibleTabs];
   const effect = visibleTabs.useEffect(() => {
     closure_3.current = visibleTabs;
   }, items);

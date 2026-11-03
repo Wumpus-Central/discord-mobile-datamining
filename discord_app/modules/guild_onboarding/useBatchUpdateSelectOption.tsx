@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdate
 
 export default function useBatchUpdateSelectOption(guildId) {
   _require = guildId;
-  let items = [GuildOnboardingPromptsStore];
+  items = [GuildOnboardingPromptsStore];
   let items1 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -119,7 +119,7 @@ export default function useBatchUpdateSelectOption(guildId) {
         }
         if (obj12.hasNotSetUpChannelOptIn(tmp)) {
           const push = items1.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(GuildOnboardingPromptsStore.getDefaultChannelIds(tmp), 0);
           HermesBuiltin.apply(items, items1);
         }
@@ -128,7 +128,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           items1.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1396).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+            obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -137,7 +137,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           differenceResult3.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1396).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+            obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
             acc[item] = obj;
             return acc;
           }, {}),

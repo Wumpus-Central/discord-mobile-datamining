@@ -79,7 +79,7 @@ function updateSpeaker(arg0) {
     if (null == tmp21) {
       const _Date = Date;
       const id1 = AuthenticationStore.getId();
-      const items = [];
+      items = [];
       const items1 = [];
       const timestamp = Date.now();
       const videoParticipants = ChannelRTCStore.getVideoParticipants(global);
@@ -104,7 +104,7 @@ function updateSpeaker(arg0) {
         continue;
       }
       for (const item10094 of items1) {
-        let duration = item10094.duration;
+        duration = item10094.duration;
         let tmp50 = null == tmp;
         if (!tmp50) {
           tmp50 = duration < tmp;
@@ -134,14 +134,14 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {}
 const prototype = VideoSpeakerStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelRTCStore, AuthenticationStore, SpeakingStore, ApplicationStreamingStore, MediaEngineStore);
-  const items = [ChannelRTCStore, ApplicationStreamingStore];
+  items = [ChannelRTCStore, ApplicationStreamingStore];
   this.syncWith(items, handleChannelRTCUpdate);
 };
 prototype["getSpeaker"] = function getSpeaker(isActivityViewFocused) {

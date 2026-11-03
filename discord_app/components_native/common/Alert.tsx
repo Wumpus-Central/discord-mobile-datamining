@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   alert: {
     borderRadius: nativeDefault.radii.sm,
@@ -141,7 +141,7 @@ prototype["renderHeader"] = function renderHeader() {
         ref: self.titleRef,
         accessible: true,
         accessibilityRole: "header",
-        variant: "heading-md/extrabold",
+        variant: "heading-md/semibold",
         color: "text-default",
         style: tmp.titleText,
         children: null,
@@ -152,7 +152,7 @@ prototype["renderHeader"] = function renderHeader() {
       }
       const obj = { children: null };
       obj2.children = renderContentResult;
-      const items = [React5(Text_Text.Text, obj2)];
+      items = [React5(Text_Text.Text, obj2)];
       const obj3 = { style: tmp.divider };
       items[1] = React5(hasOwnProperty, obj3);
       obj.children = items;
@@ -180,7 +180,7 @@ prototype["renderBody"] = function renderBody() {
     tmp5Result = React5(timestampProducer, obj);
   }
   const obj4 = { children: null };
-  const items = [tmp5Result, props.children];
+  items = [tmp5Result, props.children];
   obj4.children = items;
   return React6(React7, obj4);
 };
@@ -283,7 +283,7 @@ prototype["renderButtons"] = function renderButtons() {
       obj6.iconPosition = str2;
       renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
     }
-    const items = [renderConfirmButtonResult, tmp6, tmp11];
+    items = [renderConfirmButtonResult, tmp6, tmp11];
     obj5.children = items;
     tmp15Result = React6(hasOwnProperty, obj5);
   }
@@ -304,7 +304,7 @@ prototype["render"] = function render() {
   const width = props.width;
   const obj = { children: null };
   ({ style, isLandscape, onClose } = props);
-  const items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient })];
+  items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient })];
   const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
   const items1 = [tmp.alert, style, { width }];
   obj3.style = items1;
@@ -323,7 +323,7 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(5080).ThemeContext;
+Alert.contextType = fn(5207).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
 Alert.defaultProps = { confirmColor: fn(1187).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = noop.memo(function AlertConnected(arg0) {

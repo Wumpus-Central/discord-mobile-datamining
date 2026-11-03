@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -36,15 +36,15 @@ export default function BetaTag(gradient) {
     flag = false;
   }
   const tmp2 = closure_6();
-  let str = "text-xs/bold";
+  let str = "text-xs/semibold";
   if (obj4.SMALL !== size) {
     if (obj4.MEDIUM === size) {
-      str = "text-sm/bold";
+      str = "text-sm/semibold";
     }
   }
   if (flag) {
     const obj2 = { style: null, start: null, end: null, colors: null, children: null };
-    const items = [tmp2.container, style];
+    items = [tmp2.container, style];
     obj2.style = items;
     obj2.start = ConstantsIOS.HorizontalGradient.START;
     obj2.end = ConstantsIOS.HorizontalGradient.END;

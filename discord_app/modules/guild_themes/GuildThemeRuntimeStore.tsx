@@ -18,7 +18,7 @@ function snapshotSelectedGuildId(guildId) {
     }
     let flag = flag3;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let guildTheme;
     if (guild != null) {
       guildTheme = guild.guildTheme;
@@ -58,7 +58,7 @@ function handleSavedGuildTheme(guildId) {
   let tmp = guildId === SelectedGuildStore.getGuildId();
   if (tmp) {
     const cloneGuildThemeResult = guildThemeSerialization.cloneGuildTheme(guildId.guildTheme);
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

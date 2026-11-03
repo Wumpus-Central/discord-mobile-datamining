@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/channel_sorting/useChannelMov
 
 export default function useChannelMoveAction(getGuildId) {
   _require = getGuildId;
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
   const isFavoritesGuildIdResult = require("FavoritesUtils").isFavoritesGuildId(stateFromStores);
@@ -77,8 +77,8 @@ export default function useChannelMoveAction(getGuildId) {
     let _categories = categories._categories;
     let found = _categories.filter((channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID);
   } else {
-    found = tmp(14411).getSectionSiblings(listChannel, categories);
-    const tmpResult5 = tmp(14411);
+    found = tmp(14542).getSectionSiblings(listChannel, categories);
+    const tmpResult5 = tmp(14542);
   }
   let id1 = null;
   if (found.length > 1) {

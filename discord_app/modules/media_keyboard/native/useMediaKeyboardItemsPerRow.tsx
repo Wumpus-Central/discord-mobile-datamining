@@ -28,7 +28,7 @@ export function useMediaKeyboardItemsPerRow() {
   }
   const itemsPageSize = 17 * itemsPerRow;
   const itemsPageSizeRef = noop.useRef(itemsPageSize);
-  const items = [itemsPerRow];
+  items = [itemsPerRow];
   const effect = noop.useEffect(() => {
     itemsPageSizeRef.current = 17 * itemsPerRow;
   }, items);

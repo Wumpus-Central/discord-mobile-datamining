@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/collectibles/records/Collecti
 function transformSKUToCollectiblesItem(productLine) {
   if (productLine.productLine === constants.COLLECTIBLES) {
     if (productLine.type === constants2.BUNDLE) {
-      const items = [];
+      items = [];
       let bundledSkus = productLine.bundledSkus;
       if (bundledSkus == null) {
         bundledSkus = [];
@@ -130,7 +130,7 @@ function transformSKUToCollectiblesItem(productLine) {
 
 export function createCollectiblesItemsFromServerResponse(arr) {
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.reduce((arr, type) => {
       type = type.type;

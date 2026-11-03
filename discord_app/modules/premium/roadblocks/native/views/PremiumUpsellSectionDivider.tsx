@@ -1,18 +1,18 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05710_LinearGradient.js";
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const LockIcon2 = LockIcon(8667);
+const LockIcon2 = LockIcon(8791);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0 === obj2.START) {
@@ -60,7 +60,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
   };
   let LockIcon = require;
   let WHITE = dependencyMap;
-  const items = [timestampProducer(React4, obj2), ,];
+  items = [timestampProducer(React4, obj2), ,];
   const obj3 = {
     style: lock.divider,
     start: ConstantsIOS.HorizontalGradient.START,

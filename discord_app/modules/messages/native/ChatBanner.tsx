@@ -70,7 +70,7 @@ class OptInChannelBanner {
 function ArchivedLockedThreadChatBanner(channel) {
   channel = channel.channel;
   const tmp = closure_14();
-  const items = [channel];
+  items = [channel];
   const effect = noop.useEffect(() => {
     const obj2 = {};
     const obj = AnalyticsUtilsDefault;
@@ -79,7 +79,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let canUnarchiveThread = channel(7443).useCanUnarchiveThread(channel);
+  let canUnarchiveThread = channel(7567).useCanUnarchiveThread(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -88,7 +88,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7443);
+  let obj = channel(7567);
   const intl = channel(1113).intl;
   const string = intl.string;
   const t = channel(1113).t;
@@ -98,7 +98,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     stringResult = string(t.rEeodK);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5624).Text, obj3)];
+  const items1 = [closure_12(channel(5747).Text, obj3)];
   if (canUnarchiveThread) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
@@ -114,7 +114,7 @@ function ArchivedLockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unarchiveThread(channel, false);
     };
-    obj4.children = closure_12(tmp3(5634).Button, obj5);
+    obj4.children = closure_12(tmp3(5754).Button, obj5);
     canUnarchiveThread = closure_12(closure_4, obj4);
   }
   items1[1] = canUnarchiveThread;
@@ -124,7 +124,7 @@ function ArchivedLockedThreadChatBanner(channel) {
 function LockedThreadChatBanner(channel) {
   channel = channel.channel;
   const tmp = closure_14();
-  const items = [channel];
+  items = [channel];
   const effect = noop.useEffect(() => {
     const obj2 = {};
     const obj = AnalyticsUtilsDefault;
@@ -133,7 +133,7 @@ function LockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let isThreadModerator = channel(7443).useIsThreadModerator(channel);
+  let isThreadModerator = channel(7567).useIsThreadModerator(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -142,7 +142,7 @@ function LockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7443);
+  let obj = channel(7567);
   const intl = channel(1113).intl;
   const string = intl.string;
   const t = channel(1113).t;
@@ -152,7 +152,7 @@ function LockedThreadChatBanner(channel) {
     stringResult = string(t["V/JF2N"]);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5624).Text, obj3)];
+  const items1 = [closure_12(channel(5747).Text, obj3)];
   if (isThreadModerator) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
@@ -168,7 +168,7 @@ function LockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unlockThread(channel);
     };
-    obj4.children = closure_12(tmp3(5634).Button, obj5);
+    obj4.children = closure_12(tmp3(5754).Button, obj5);
     isThreadModerator = closure_12(closure_4, obj4);
   }
   items1[1] = isThreadModerator;
@@ -181,7 +181,7 @@ function NewMessagesChatBar(channel) {
   let stringResult = closure_14();
   let XSmallBoldIcon = channel;
   let WHITE = dependencyMap;
-  const items = [GatewayConnectionStore];
+  items = [GatewayConnectionStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => connected.isConnected(), [])) {
     if (unreadCount <= 0) {
@@ -200,9 +200,9 @@ function NewMessagesChatBar(channel) {
       const intl = XSmallBoldIcon(1113).intl;
       const obj4 = { count: unreadCount, timestamp: channel.oldestUnreadTimestamp };
       obj3.children = intl.format(ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj4);
-      obj2.children = closure_12(XSmallBoldIcon(5624).Text, obj3);
-      const items1 = [closure_12(XSmallBoldIcon(6980).PressableOpacity, obj2)];
-      handleScrollToNewMessages = XSmallBoldIcon(6980).PressableOpacity;
+      obj2.children = closure_12(XSmallBoldIcon(5747).Text, obj3);
+      const items1 = [closure_12(XSmallBoldIcon(7106).PressableOpacity, obj2)];
+      handleScrollToNewMessages = XSmallBoldIcon(7106).PressableOpacity;
       const obj5 = {
         style: stringResult.newMessageBarCloseButton,
         accessibilityRole: "button",
@@ -220,7 +220,7 @@ function NewMessagesChatBar(channel) {
           objectType: constants.ACK_MANUAL,
         });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11360).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11497).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -235,17 +235,17 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11357).ChatOverlays;
+const ChatOverlays = fn(11494).ChatOverlays;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_8,
   AnalyticsObjects: closure_9,
-  AnalyticEvents: c10,
+  AnalyticEvents: closure_10,
   AnalyticsSections: closure_11,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   threadBannerContainer: {
     alignSelf: "stretch",
@@ -328,7 +328,7 @@ let obj5 = {
 obj2.topBorder = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.CHAT_BORDER };
 obj2.optInChannelBannerText = { flex: 1 };
 obj2.optInChannelBannerButtonContainer = { flexShrink: 0, marginLeft: 8 };
-const value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/ChatBanner.tsx");
 
@@ -336,7 +336,7 @@ export default function ChatBanner(channel) {
   channel = channel.channel;
   let obj = useAllowedChatOverlaysDefault();
   const tmp = useShowChannelOptInNoticeDefault(channel);
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const items1 = [channel.id];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items,

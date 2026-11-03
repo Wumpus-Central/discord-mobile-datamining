@@ -10,12 +10,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(11000).resetFocusTimer;
+const resetFocusTimer = fn(11133).resetFocusTimer;
 const Constants = fn(1072);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pressableContainer: { marginHorizontal: 4 },
   pressable: { borderRadius: nativeDefault.radii.lg },
@@ -70,7 +70,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     },
     children: null,
   };
-  const items = [tmp2.container, disableBackground.containerStyle];
+  items = [tmp2.container, disableBackground.containerStyle];
   if (disabled) {
     disabled = tmp2.disabled;
   }

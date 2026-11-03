@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx")
 export default function useIsNsfwGated(nsfw) {
   _require = nsfw;
   nsfw = nsfw.nsfw;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

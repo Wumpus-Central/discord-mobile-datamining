@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _mod7005 from "../../../../../_runtime/metro/07005__.js";
+import _mod7131 from "../../../../../_runtime/metro/07131__.js";
 import PressableNavigatorBackIcon from "navigator/PressableNavigatorBackIcon.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -48,7 +48,7 @@ class GenericHeaderTitle {
     renderTitleContainer = function renderTitleContainer(header) {
       if (null != dependencyMap) {
         const obj2 = { accessible: true, accessibilityRole: header, style: closure_5.titleContainer, children: null };
-        const items = [tmp];
+        items = [tmp];
         const obj3 = { lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
         items[1] = timestampProducer(Text_Text.Text, obj3);
         obj2.children = items;
@@ -141,10 +141,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9813).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9944).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   headerRightContainer: { marginRight: 16 },
   headerWrapper: {
@@ -176,7 +176,7 @@ obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFA
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 let obj5 = {};
-let merged = Object.assign(fn(5624).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(5747).TextStyleSheet["text-md/semibold"]);
 obj5.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
@@ -212,9 +212,9 @@ const memoResult = noop.memo(
     const obj = style(num[14]);
     const tmp2 = importDefault;
     gradientTop = style(num[15]).useGradientTop();
-    let items = [num, gradientTop, tmp, style];
+    items = [num, gradientTop, tmp, style];
     const memo = gradientTop.useMemo(() => {
-      const items = [
+      items = [
         headerWrapper.headerWrapper,
         gradientTop,
         { paddingTop: num, minHeight: num + MIN_HEADER_HEIGHT },

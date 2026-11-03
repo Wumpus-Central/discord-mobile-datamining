@@ -26,7 +26,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
           let application;
           let iconURL;
           if ("application_id" in _require.extra) {
-            const application_id = _require.extra.application_id;
+            application_id = _require.extra.application_id;
             closure_129_0 = application_id;
             c3 = 1;
             c4 = 1;
@@ -54,7 +54,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
               value: (function fetchApplication(application_id) {
                 closure_0 = application_id;
                 return closure_9.one(application_id, () => {
-                  const items = [closure_0];
+                  items = [closure_0];
                   return closure_2_1(closure_2_2[7]).fetchApplications(items);
                 });
               })(application_id),
@@ -91,7 +91,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp6) {
       c4 = tmp;
       throw tmp6;
@@ -113,7 +113,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -173,7 +173,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                           return obj;
                         } else {
                           v3 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } catch (tmp8) {
                         v3 = tmp;
@@ -196,7 +196,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -220,7 +220,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
             return obj4;
           } else if ("application_id" in extra.extra) {
             if ("media_assets_large_image" in extra.extra) {
-              const items = [,];
+              items = [,];
               ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
               const assetImage = require("ApplicationAssetUtils").getAssetImage(
                 extra.extra.application_id,
@@ -260,7 +260,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c1 = tmp;
         throw tmp11;
@@ -279,7 +279,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -310,7 +310,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -328,7 +328,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -358,7 +358,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -381,7 +381,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -409,7 +409,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                   let obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -436,7 +436,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: "HermesInternal" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else {
                             try {
@@ -464,7 +464,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                                 return obj;
                               } else {
                                 c0 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             } catch (tmp7) {
                               c0 = tmp;
@@ -482,7 +482,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                         return applyArgumentsResult;
                       };
                       const contentInventoryEntry = components.contentInventoryEntry;
-                      const items = [];
+                      items = [];
                       items.push(
                         (function fetchApplicationParts() {
                           const self = this;
@@ -557,7 +557,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                       );
                     }
                     v3 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp4) {
                   v3 = tmp;
@@ -596,7 +596,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
             return obj5;
           } else {
             c11 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           if (3 === tmp8) {
@@ -704,10 +704,10 @@ function isMessageRenderable(message) {
   }
   return true;
 }
-const ImageSizes = fn(2018).ImageSizes;
-const promiseDeduper = new fn(5144).PromiseDeduper();
-const promiseDeduper3 = new fn(5144).PromiseDeduper();
-const promiseDeduper4 = new fn(5144).PromiseDeduper();
+const ImageSizes = fn(2147).ImageSizes;
+const promiseDeduper = new fn(5267).PromiseDeduper();
+const promiseDeduper3 = new fn(5267).PromiseDeduper();
+const promiseDeduper4 = new fn(5267).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx",
@@ -717,7 +717,7 @@ export default function useLoadMessageContentEntries(arg0) {
   closure_1 = first1.useRef(new Map());
   const map = new Map();
   dependencyMap = first1.useRef(new Map());
-  map1 = new Map();
+  const map1 = new Map();
   const tmp4 = unloadedContentEntryMessageIds(first1.useState(new Set()), 2);
   unloadedContentEntryMessageIds = tmp4[0];
   asyncGeneratorStep = tmp4[1];
@@ -739,7 +739,7 @@ export default function useLoadMessageContentEntries(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -762,7 +762,7 @@ export default function useLoadMessageContentEntries(arg0) {
                 const current5 = closure_1.current;
                 const result = current5.set(closure_0, "loading");
                 tmp42((arg0) => {
-                  const items = [];
+                  items = [];
                   items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_0;
                   return new Set(items);
                 });
@@ -796,11 +796,11 @@ export default function useLoadMessageContentEntries(arg0) {
             const current4 = tmp5.current;
             current4.delete(closure_130_0);
             tmp42((arg0) => {
-              const items = [...arg0];
+              items = [...arg0];
               return new Set(items.filter((item) => item !== closure_1_0));
             });
             v2((arg0) => {
-              const items = [];
+              items = [];
               items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_0;
               return new Set(items);
             });
@@ -814,7 +814,7 @@ export default function useLoadMessageContentEntries(arg0) {
               const current2 = tmp5.current;
               current2.delete(closure_130_0);
               tmp42((arg0) => {
-                const items = [...arg0];
+                items = [...arg0];
                 return new Set(items.filter((item) => item !== closure_1_0));
               });
             }
@@ -846,10 +846,10 @@ export default function useLoadMessageContentEntries(arg0) {
     }
     return applyArgumentsResult;
   }, []);
-  let items = [colorStore];
+  items = [colorStore];
   const effect = first1.useEffect(() => {
     if (0 !== ref.current.size) {
-      const items = [];
+      items = [];
       let current = tmp.current;
       let item = current.forEach((item, index) => {
         if (isMessageRenderable(item)) {

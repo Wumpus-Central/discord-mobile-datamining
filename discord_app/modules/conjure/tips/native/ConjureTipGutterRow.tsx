@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0, marginTop) => {
   const obj = {
     row: {
@@ -54,7 +54,7 @@ export default function ConjureTipGutterRow(children) {
     ICON_MUTED = nativeDefault.colors.ICON_MUTED;
   }
   obj2.children = React4(icon, { size: "sm", color: ICON_MUTED });
-  const items = [React4(View, obj2), React4(View, { style: tmp.content, children: children.children })];
+  items = [React4(View, obj2), React4(View, { style: tmp.content, children: children.children })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

@@ -1,19 +1,22 @@
 // discord_app/modules/conjure/preview/native/ConjureNativeControlOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../design/animation/reanimated/spring/springPresets.tsx";
 import useConjureControlBar from "../useConjureControlBar.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   root: { flex: 1 },
   content: { flex: 1 },
@@ -54,159 +57,181 @@ obj2.bar = rect;
 obj2.title = { flexGrow: 1, flexShrink: 1 };
 obj2.actions = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function ConjureNativeControlOverlayTsx1(){const{shown,barHeight}=this.__closure;return{height:Math.max(0,shown.get())*barHeight.get()};}",
+let closure_10 = {
+  code: "(function ConjureNativeControlOverlayTsx1(){let[shown,barHeight]=this.__closure;return{height:Math.max(0,shown.get())*barHeight.get()};})",
 };
-const __initData2 = {
-  code: "function ConjureNativeControlOverlayTsx2(){const{shown,barHeight}=this.__closure;return{transform:[{translateY:(shown.get()-1)*barHeight.get()}]};}",
+let closure_11 = {
+  code: "(function ConjureNativeControlOverlayTsx2(){let[shown,barHeight]=this.__closure;return{transform:[{translateY:(shown.get()-1)*barHeight.get()}]};})",
 };
-const __initData3 = {
-  code: "function ConjureNativeControlOverlayTsx3(){const{pulse}=this.__closure;return{opacity:pulse.get()};}",
+let closure_12 = {
+  code: "(function ConjureNativeControlOverlayTsx3(){let[pulse]=this.__closure;return{opacity:pulse.get()};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/native/ConjureNativeControlOverlay.tsx");
 
 export default function ConjureNativeControlOverlay(arg0) {
   ({ projectId, visible } = arg0);
-  let conjureControlPhase;
+  _require = undefined;
   dependencyMap = undefined;
   let sharedValue;
   let sharedValue1;
   let sharedValue2;
   ({ active, children } = arg0);
   const tmp = closure_9();
-  conjureControlPhase = conjureControlPhase(12243).useConjureControlPhase(active);
-  let obj = conjureControlPhase(12243);
-  const conjureControlStop = conjureControlPhase(12243).useConjureControlStop(projectId);
+  const conjureControlPhase = require("useConjureControlBar").useConjureControlPhase(active);
+  _require = conjureControlPhase;
+  let obj = require("useConjureControlBar");
+  const conjureControlStop = require("useConjureControlBar").useConjureControlStop(projectId);
   ({ stop, stopping } = conjureControlStop);
-  let obj2 = conjureControlPhase(12243);
-  const conjureControlTuning = conjureControlPhase(10923).useConjureControlTuning(projectId);
-  let obj3 = conjureControlPhase(10923);
-  let items = [sharedValue2];
-  const stateFromStores = conjureControlPhase(504).useStateFromStores(items, () => sharedValue2.useReducedMotion);
+  let obj2 = require("useConjureControlBar");
+  const conjureControlTuning = require("conjurePreviewControlLease").useConjureControlTuning(projectId);
+  let obj3 = require("conjurePreviewControlLease");
+  items = [sharedValue2];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => sharedValue2.useReducedMotion);
+  importDefault = stateFromStores;
   let tmp8 = visible;
   if (visible) {
     tmp8 = "controlling" === conjureControlPhase;
   }
   dependencyMap = tmp8;
-  let obj4 = conjureControlPhase(504);
-  sharedValue = conjureControlPhase(5095).useSharedValue(0);
-  const tmp2Result = conjureControlPhase(5095);
-  sharedValue1 = conjureControlPhase(5095).useSharedValue(0);
+  let obj4 = require("initialize");
+  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
   const items1 = [sharedValue1, conjureControlPhase, stateFromStores];
   const effect = sharedValue.useEffect(() => {
-    if ("controlling" === conjureControlPhase) {
+    if ("controlling" === c0) {
       let num5 = 1;
-      if (!stateFromStores) {
-        num5 = spring.withSpring(1, springPresets.SUBTLE_SPRING);
+      if (!c1) {
+        num5 = spring_spring.withSpring(1, springPresets.SUBTLE_SPRING);
       }
       const result = sharedValue1.set(num5);
     } else if ("handoff" === tmp) {
       let num2 = 280;
       const diff = useConjureControlBar.CONJURE_CONTROL_HANDOFF_MS - 280;
-      const obj = ReanimatedRexport;
-      if (stateFromStores) {
+      const obj = _mod1652;
+      if (c1) {
         num2 = 0;
       }
       const obj3 = { duration: num2, easing: null };
-      const Easing = ReanimatedRexport.Easing;
-      obj3.easing = Easing.in(ReanimatedRexport.Easing.ease);
-      const result1 = sharedValue1.set(obj.withDelay(diff, timing.withTiming(0, obj3)));
+      const Easing = _mod1652.Easing;
+      obj3.easing = Easing.in(_mod1652.Easing.ease);
+      const result1 = sharedValue1.set(obj.withDelay(diff, timing_timing.withTiming(0, obj3)));
     } else {
       const result2 = sharedValue1.set(0);
     }
   }, items1);
-  const tmp2Result6 = conjureControlPhase(5095);
-  sharedValue2 = conjureControlPhase(5095).useSharedValue(0.5);
+  const tmp2Result6 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0.5);
   const items2 = [tmp8, sharedValue2, stateFromStores];
   const effect1 = sharedValue.useEffect(() => {
     if (closure_2) {
-      if (!stateFromStores) {
+      if (!c1) {
         const result = sharedValue2.set(0.2);
-        const obj = ReanimatedRexport;
+        const obj = _mod1652;
         const obj3 = { duration: 1200, easing: null };
-        const Easing = ReanimatedRexport.Easing;
-        obj3.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
-        const result1 = sharedValue2.set(obj.withRepeat(timing.withTiming(0.7, obj3), -1, true));
-        const fn = () => conjureControlPhase(closure_2[9]).cancelAnimation(sharedValue2);
+        const Easing = _mod1652.Easing;
+        obj3.easing = Easing.inOut(_mod1652.Easing.ease);
+        const result1 = sharedValue2.set(obj.withRepeat(timing_timing.withTiming(0.7, obj3), -1, true));
+        const fn = () => c0(closure_2[9]).cancelAnimation(sharedValue2);
       }
       return fn;
     }
-    ReanimatedRexport.cancelAnimation(sharedValue2);
+    _mod1652.cancelAnimation(sharedValue2);
     const result2 = sharedValue2.set(0.5);
   }, items2);
-  const tmp2Result7 = conjureControlPhase(5095);
-  class H {
+  const tmp2Result7 = require("../../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_10, sharedValue1, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp14, tmp15, tmp16] = items3;
+  class ConjureNativeControlOverlayTsx1 {
     constructor() {
       obj = { height: null };
-      bound = Math.max(0, closure_4.get());
-      obj.height = bound * closure_3.get();
+      bound = Math.max(0, closure_0.get());
+      obj.height = bound * closure_1.get();
       return obj;
     }
   }
-  H.__closure = { shown: sharedValue1, barHeight: sharedValue };
-  H.__workletHash = 5735939888549;
-  H.__initData = __initData;
-  const animatedStyle = conjureControlPhase(5095).useAnimatedStyle(H);
-  const tmp2Result8 = conjureControlPhase(5095);
-  class T {
+  const items4 = [tmp15, tmp16];
+  ConjureNativeControlOverlayTsx1.__closure = items4;
+  ConjureNativeControlOverlayTsx1.__workletHash = 2210719149660;
+  ConjureNativeControlOverlayTsx1.__initData = tmp14;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ConjureNativeControlOverlayTsx1,
+  );
+  const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
+  const items5 = [closure_11, sharedValue1, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp18, tmp19, tmp20] = items5;
+  class ConjureNativeControlOverlayTsx2 {
     constructor() {
       obj = { transform: null };
       obj1 = { translateY: null };
-      diff = closure_4.get() - 1;
-      obj1.translateY = diff * closure_3.get();
+      diff = closure_0.get() - 1;
+      obj1.translateY = diff * closure_1.get();
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  T.__closure = { shown: sharedValue1, barHeight: sharedValue };
-  T.__workletHash = 11424550793114;
-  T.__initData = __initData2;
-  const animatedStyle1 = conjureControlPhase(5095).useAnimatedStyle(T);
-  const tmp2Result9 = conjureControlPhase(5095);
-  class P {
+  const items6 = [tmp19, tmp20];
+  ConjureNativeControlOverlayTsx2.__closure = items6;
+  ConjureNativeControlOverlayTsx2.__workletHash = 12257928691075;
+  ConjureNativeControlOverlayTsx2.__initData = tmp18;
+  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ConjureNativeControlOverlayTsx2,
+  );
+  const tmp2Result9 = require("../../../../../_runtime/metro/01652__.js");
+  const items7 = [closure_12, sharedValue2];
+  _require = undefined;
+  [tmp22, tmp23] = items7;
+  class ConjureNativeControlOverlayTsx3 {
     constructor() {
-      obj = { opacity: closure_5.get() };
+      obj = { opacity: closure_0.get() };
       return obj;
     }
   }
-  P.__closure = { pulse: sharedValue2 };
-  P.__workletHash = 3342596553897;
-  P.__initData = __initData3;
-  const animatedStyle2 = conjureControlPhase(5095).useAnimatedStyle(P);
+  const items8 = [tmp23];
+  ConjureNativeControlOverlayTsx3.__closure = items8;
+  ConjureNativeControlOverlayTsx3.__workletHash = 14753805314992;
+  ConjureNativeControlOverlayTsx3.__initData = tmp22;
+  const animatedStyle2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    ConjureNativeControlOverlayTsx3,
+  );
   const intl = tmp2(1113).intl;
-  const tmp18 = stateFromStores(3868);
+  const tmp26 = _modDef3995;
   if (tmp8) {
     if (conjureControlTuning) {
-      let prop = tmp18["VJW/5P"];
+      let prop = tmp26["VJW/5P"];
     } else {
-      prop = tmp18["+hD2Iz"];
+      prop = tmp26["+hD2Iz"];
     }
   } else {
-    const stringResult = intl.string(tmp18["h+i1r9"]);
+    const stringResult = intl.string(tmp26["h+i1r9"]);
     const obj5 = { style: tmp.root, children: null };
-    let tmp38Result4 = null;
+    let tmp46Result4 = null;
     if (visible) {
-      tmp38Result4 = null;
+      tmp46Result4 = null;
       if ("idle" !== conjureControlPhase) {
         const obj6 = { style: null, children: null };
-        const items3 = [tmp.barArea, animatedStyle];
-        obj6.style = items3;
+        const items9 = [tmp.barArea, animatedStyle];
+        obj6.style = items9;
         const obj7 = { style: null, onLayout: null, accessibilityLiveRegion: "polite", children: null };
-        const items4 = [tmp.bar, animatedStyle1];
-        obj7.style = items4;
+        const items10 = [tmp.bar, animatedStyle1];
+        obj7.style = items10;
         obj7.onLayout = function onLayout(nativeEvent) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp38Result = closure_6(tmp2(12244).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(12380).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
-          const obj8 = { size: "sm", color: tmp17(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp38Result = closure_6(tmp2(12248).SparklesIcon, obj8);
+          const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
+          tmp46Result = closure_6(tmp2(12384).SparklesIcon, obj8);
         }
-        const items5 = [tmp38Result, ,];
+        const items11 = [tmp46Result, ,];
         const obj9 = {
           variant: "text-sm/semibold",
           color: "text-overlay-light",
@@ -219,57 +244,57 @@ export default function ConjureNativeControlOverlay(arg0) {
         if (tmp8) {
           const intl2 = tmp2(1113).intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + stringResult + ". " + intl2.string(tmp17(3868).fg1sor);
+          combined = "" + stringResult + ". " + intl2.string(tmp25(3995).fg1sor);
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items5[1] = closure_6(tmp2(5624).Text, obj9);
-        let tmp38Result3 = null;
+        items11[1] = closure_6(tmp2(5747).Text, obj9);
+        let tmp46Result3 = null;
         if (tmp8) {
-          tmp38Result3 = null;
+          tmp46Result3 = null;
           if (null != stop) {
             const obj10 = { style: tmp.actions, children: null };
             const obj11 = { variant: "primary-overlay", size: "sm", text: null, loading: null, onPress: null };
             const intl3 = tmp2(1113).intl;
-            obj11.text = intl3.string(tmp17(3868).oU59sU);
+            obj11.text = intl3.string(tmp25(3995).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5634).Button, obj11);
-            tmp38Result3 = closure_6(tmp26, obj10);
+            obj10.children = closure_6(tmp2(5754).Button, obj11);
+            tmp46Result3 = closure_6(tmp34, obj10);
           }
         }
-        items5[2] = tmp38Result3;
-        obj7.children = items5;
-        obj6.children = closure_7(tmp17(5095).View, obj7);
-        tmp38Result4 = closure_6(tmp17(5095).View, obj6);
+        items11[2] = tmp46Result3;
+        obj7.children = items11;
+        obj6.children = closure_7(tmp25(1652).View, obj7);
+        tmp46Result4 = closure_6(tmp25(1652).View, obj6);
       }
     }
-    const items6 = [tmp38Result4, ,];
+    const items12 = [tmp46Result4, ,];
     const obj12 = { style: tmp.content, children: null };
-    const items7 = [children];
-    let tmp33 = null;
+    const items13 = [children];
+    let tmp41 = null;
     if (tmp8) {
       const obj13 = { style: tmp.block, pointerEvents: "box-only" };
-      tmp33 = closure_6(tmp26, obj13);
+      tmp41 = closure_6(tmp34, obj13);
     }
-    items7[1] = tmp33;
-    obj12.children = items7;
-    items6[1] = closure_7(sharedValue1, obj12);
-    let tmp25Result = null;
+    items13[1] = tmp41;
+    obj12.children = items13;
+    items12[1] = closure_7(sharedValue1, obj12);
+    let tmp33Result = null;
     if (tmp8) {
       const obj14 = { children: null };
       const obj15 = { style: null, pointerEvents: "none" };
-      const items8 = [tmp.glow, animatedStyle2];
-      obj15.style = items8;
-      const items9 = [closure_6(tmp17(5095).View, obj15)];
+      const items14 = [tmp.glow, animatedStyle2];
+      obj15.style = items14;
+      const items15 = [closure_6(tmp25(1652).View, obj15)];
       const obj16 = { style: tmp.border, pointerEvents: "none" };
-      items9[1] = closure_6(tmp26, obj16);
-      obj14.children = items9;
-      tmp25Result = closure_7(closure_8, obj14);
+      items15[1] = closure_6(tmp34, obj16);
+      obj14.children = items15;
+      tmp33Result = closure_7(closure_8, obj14);
     }
-    items6[2] = tmp25Result;
-    obj5.children = items6;
+    items12[2] = tmp33Result;
+    obj5.children = items12;
     return closure_7(sharedValue1, obj5);
   }
-  const tmp2Result10 = conjureControlPhase(5095);
+  const tmp2Result10 = require("../../../../../_runtime/metro/01652__.js");
 }

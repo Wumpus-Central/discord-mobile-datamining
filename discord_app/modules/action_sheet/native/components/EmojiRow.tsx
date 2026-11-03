@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" },
   emojiRow: {
@@ -50,7 +50,7 @@ export default function EmojiRow(arg0) {
   const tmp3 = closure_7();
   let obj7 = { style: tmp3.emojiRowContainer, children: null };
   const obj8 = { style: tmp3.emojiRow, children: null };
-  const items = [
+  items = [
     emojisForReactionRow.map((emoji, index) => {
       closure_0 = emoji;
       return token(
@@ -103,7 +103,7 @@ export default function EmojiRow(arg0) {
     },
   };
   items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, {
-    location: channel(7351).MESSAGE_LONG_PRESS_MENU,
+    location: channel(7471).MESSAGE_LONG_PRESS_MENU,
   });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);

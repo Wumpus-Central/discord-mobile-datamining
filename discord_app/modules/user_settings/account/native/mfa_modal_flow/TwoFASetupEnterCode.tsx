@@ -8,10 +8,10 @@ import AppStateStore from "../../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TwoFAModalSetupSections = fn(16658).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(16801).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -29,7 +29,7 @@ export default function TwoFASetupEnterCode(current) {
   let obj = require("TwoFASetupStyles");
   navigation = require("useNavigation").useNavigation();
   let obj2 = require("useNavigation");
-  const items = [ref1];
+  items = [ref1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ref1.getState());
   const tmp6 = _slicedToArray(ref.useState(false), 2);
   _slicedToArray = tmp6[1];

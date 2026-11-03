@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/conjure/device_permissions/useC
 
 export default function useConjureDevicePermissionsAppName(arg0) {
   _require = arg0;
-  const items = [ApplicationStore, ConjureProjectStore];
+  items = [ApplicationStore, ConjureProjectStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

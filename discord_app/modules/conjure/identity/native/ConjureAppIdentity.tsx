@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/identity/native/ConjureAppIdentity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ImagePickerDefault from "../../../image/native/ImagePicker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -18,7 +18,7 @@ let closure_12 = async function _pickConjureAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_12 = async function _pickConjureAppIcon() {
           return { value: null, done: true };
         } else {
           closure_129_2 = (function pickedIconType(arg0) {
-            const items = [, , ];
+            items = [, , ];
             ({ mimeType: arr[0], fileType: arr[1], type: arr[2] } = arg0);
             const str = items.find((arr) => {
               let hasItem;
@@ -159,7 +159,7 @@ class ConjureAppIconTile {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ class ConjureAppIconTile {
           } else if (1 === tmp7) {
             c2 = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -288,7 +288,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { nameRow: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16 }, tileFrame: { alignSelf: "flex-start" }, tile: { padding: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }, tileEmpty: { borderStyle: "dashed" }, tileImage: { width: "100%", height: "100%" }, editIcon: null, nameField: null };
 const rect = { position: "absolute", top: -nativeDefault.space.PX_4, right: -nativeDefault.space.PX_4, pointerEvents: "none" };
 obj2.editIcon = rect;
@@ -310,7 +310,7 @@ export function ConjureAppIdentitySection(nameError) {
   const first = tmp2[0];
   const tmp4 = _slicedToArray(noop.useState(80), 2);
   importDefault = tmp4[1];
-  const items = [nameError];
+  items = [nameError];
   const callback = noop.useCallback((nativeEvent) => {
     if (null == nameError) {
       const _Math = Math;
@@ -323,13 +323,13 @@ export function ConjureAppIdentitySection(nameError) {
   const obj3 = { style: tmp.nameField, onLayout: callback, children: null };
   const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
   const intl = nameError(1113).intl;
-  obj4.label = intl.string(_modDef3868.GWBCF9);
+  obj4.label = intl.string(_modDef3995.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(6845).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(6965).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(7082).TextInput, obj4);
+  obj3.children = closure_7(nameError(7208).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -337,23 +337,23 @@ export function ConjureAppIdentitySection(nameError) {
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5624).Text, obj6);
+    obj5.children = closure_7(tmp8(5747).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(6027).Stack, obj), ];
+  const items3 = [closure_8(nameError(6147).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1113).intl;
-  obj8.label = intl2.string(_modDef3868.ynaGa1);
+  obj8.label = intl2.string(_modDef3995.ynaGa1);
   const intl3 = tmp8(1113).intl;
-  obj8.placeholder = intl3.string(_modDef3868["I+3UTL"]);
+  obj8.placeholder = intl3.string(_modDef3995["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(6845).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(6965).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(7253).TextArea, obj8);
+  items3[1] = closure_7(nameError(7373).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 }

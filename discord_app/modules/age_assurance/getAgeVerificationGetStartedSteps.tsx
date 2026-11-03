@@ -17,7 +17,7 @@ export function getAgeVerificationGetStartedSteps(modalSessionId) {
   obj.title = intl.string(require("util").t.HphYKp);
   const intl2 = require("util").intl;
   obj.description = intl2.string(require("util").t["GCZC+9"]);
-  const items = [obj, ,];
+  items = [obj, ,];
   let obj2 = { title: null, description: null };
   const intl3 = require("util").intl;
   obj2.title = intl3.string(require("util").t.nkO4L3);

@@ -7,8 +7,8 @@ import dismissible_content from "../../../../../discord_common/js/packages/proto
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useAgeGroupPresentation from "../../../age_assurance/useAgeGroupPresentation.tsx";
-import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
-import TinyBroncoLazy from "../../../tiny_bronco/native/TinyBroncoLazy.tsx";
+import AgeNoticeSettingsPredicate from "../../../age_assurance/age_notice/native/AgeNoticeSettingsPredicate.tsx";
+import AgeNoticeLazy from "../../../age_assurance/age_notice/native/AgeNoticeLazy.tsx";
 import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -39,7 +39,7 @@ let obj3 = {
   useTrailing: function useAccountAgeGroupTrailing() {
     const tmp = closure_6();
     const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
-    const shouldShowAgeNotice = TinyBroncoLazy.useShouldShowAgeNotice();
+    const shouldShowAgeNotice = AgeNoticeLazy.useShouldShowAgeNotice();
     const obj3 = { style: tmp.trailing, children: null };
     let tmp8 = shouldShowAgeNotice;
     if (shouldShowAgeNotice) {
@@ -50,7 +50,7 @@ let obj3 = {
       };
       tmp8 = React4(DismissiblePremiumNewBadgeDefault, obj4);
     }
-    const items = [tmp8, React4(TableRow.TableRow.TrailingText, { text: ageGroupValueLabel })];
+    items = [tmp8, React4(TableRow.TableRow.TrailingText, { text: ageGroupValueLabel })];
     obj3.children = items;
     return hasOwnProperty(View, obj3);
   },
@@ -60,9 +60,9 @@ let obj3 = {
 };
 obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
   dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
-  TinyBroncoLazy.useShouldShowAgeNotice,
+  AgeNoticeLazy.useShouldShowAgeNotice,
 );
-obj3.usePredicate = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled;
+obj3.usePredicate = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled;
 obj3.screen = {
   route: Constants.UserSettingsSections.AGE_GROUP,
   getComponent() {

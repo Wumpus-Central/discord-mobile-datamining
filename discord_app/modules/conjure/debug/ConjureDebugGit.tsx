@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 function decimalBytes(bytes) {
-  const items = [
+  items = [
     ["GB", 1000000000],
     ["MB", 1000000],
     ["KB", 1000],
@@ -59,7 +59,7 @@ function comparisonRow(local) {
     num6 = 0;
   }
   const obj = { label: closure_9[local.ref], icon: "remote", hint: combined };
-  const state = local.state;
+  state = local.state;
   if ("in_sync" === state) {
     const obj2 = {};
     const merged = Object.assign(obj);
@@ -130,7 +130,7 @@ export function gitInfoRows(info) {
   if (info.running) {
     if (null == info.localError) {
       if (info.checkout) {
-        const items = [{ label: "Resume", value: "OK", icon: "checkout", state: "ok" }];
+        items = [{ label: "Resume", value: "OK", icon: "checkout", state: "ok" }];
         if (undefined !== info.dirtyFiles) {
           let str6 = "Unknown";
           if (null != info.dirtyFiles) {
@@ -399,7 +399,7 @@ export function gitInfoStatus(state) {
   } else if (null == observedAt) {
     return { line: "", critical: false };
   } else {
-    const items = [];
+    items = [];
     if (null != info) {
       if (info.running) {
         if (null != info.localError) {
@@ -469,7 +469,7 @@ export function restartAgentStatusLine(state) {
 export function useConjureDebugGitInfo(projectId) {
   _require = projectId;
   const obj = { state: null, load: null };
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [projectId];
   obj.state = require("initialize").useStateFromStores(
     items,
@@ -482,7 +482,7 @@ export function useConjureDebugGitInfo(projectId) {
 }
 export function useConjureRestartAgent(projectId) {
   _require = projectId;
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

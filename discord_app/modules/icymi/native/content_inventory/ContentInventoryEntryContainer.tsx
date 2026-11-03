@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
@@ -79,7 +79,7 @@ export default function ContentInventoryEntryContainer(contentId) {
   }
   const onPress = contentId.onPress;
   const tmp = iCYMIStyles(flag);
-  const items = [contentId, type, userId, onPress];
+  items = [contentId, type, userId, onPress];
   const callback = onPress.useCallback(() => {
     if (null != onPress) {
       ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "press");

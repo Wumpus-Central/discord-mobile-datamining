@@ -13,7 +13,7 @@ export function useFriendRequestActions(userId) {
   const onConfirm = userId.onConfirm;
   const onCancel = userId.onCancel;
   const onFinally = userId.onFinally;
-  const items = [applicationId, isGameRelationship, _location, userId];
+  items = [applicationId, isGameRelationship, _location, userId];
   const obj = { acceptFriendRequest: null, cancelFriendRequest: null };
   const items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
   const callback = isGameRelationship.useCallback(() => {

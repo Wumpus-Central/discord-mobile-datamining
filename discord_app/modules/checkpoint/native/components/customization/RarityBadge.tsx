@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import inlineStyles from "../../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6066);
+const CheckpointConstants = fn(6186);
 ({
   CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire,
   CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7,
@@ -21,8 +21,8 @@ const CheckpointConstants = fn(6066);
   CHECKPOINT_RARITY_TO_LABEL_MESSAGE: closure_9,
 } = CheckpointConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 const obj2 = {
   badge: {
     paddingVertical: nativeDefault.space.PX_4,
@@ -52,7 +52,7 @@ export default function RarityBadge(rarity) {
   c0 = undefined;
   const tmp = closure_12();
   [size, c0] = noop.useState(null);
-  const items = [tmp.badge];
+  items = [tmp.badge];
   let badgeHidden = null == size;
   if (badgeHidden) {
     badgeHidden = tmp.badgeHidden;
@@ -112,7 +112,7 @@ export default function RarityBadge(rarity) {
   }
   const items3 = [tmp5Result];
   const obj8 = { style: tmp.badgeContent, children: null };
-  const obj9 = { variant: "experimental/mono-md/bold", style: tmp.badgeLabel, children: null };
+  const obj9 = { variant: "mono-md/bold", style: tmp.badgeLabel, children: null };
   const intl = util.intl;
   obj9.children = intl.string(React7[rarity]);
   const items4 = [closure_1_10(Text_Text.Text, obj9)];

@@ -5,7 +5,7 @@ import UserUtilsAll from "UserUtils.tsx";
 import GuildActionCreatorsDefault from "../actions/GuildActionCreators.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
-import priv from "../../_runtime/01451_priv.js";
+import priv from "../../_runtime/01453_priv.js";
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {
@@ -45,7 +45,7 @@ export default {
       num = 10;
     }
     const isArray = Array.isArray(arr);
-    let items = [];
+    items = [];
     if (isArray) {
       let item = arr.forEach((item) => {
         let str = item;

@@ -17,7 +17,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
           let authorizationApp;
           closure_130_2 = undefined;
           invite = invite.getInvite(closure_0);
-          let state;
+          state = undefined;
           if (invite != null) {
             state = invite.state;
           }
@@ -45,7 +45,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
             let id = invite.application.id;
             closure_130_0 = id;
             c4 = 1;
-            const items = [id];
+            items = [id];
             c5 = 2;
             c6 = 1;
             const obj5 = { value: ApplicationActionCreatorsDefault.fetchApplications(items, false), done: false };
@@ -57,7 +57,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -95,8 +95,8 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
     }
   }
 };
-const FetchState = fn(7276).FetchState;
-let closure_8 = fn(11364).GameOrganizationInviteStates;
+const FetchState = fn(7396).FetchState;
+let closure_8 = fn(11501).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/prefetchGameOrganizationAccountLinkState.tsx",

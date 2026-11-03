@@ -34,7 +34,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f98380 = (id) => id.id;
+    const f98581 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -111,13 +111,13 @@ export function removeAllowedHost(projectId, remove_host) {
 }
 export function useConjureHostApprovals(projectId) {
   _require = projectId;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(items, () => hostAccessStore.getApprovals(closure_0), items1);
 }
 export function useConjureAllowedHosts(projectId) {
   _require = projectId;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(
     items,
@@ -138,7 +138,7 @@ export function useConjureAllowedHosts(projectId) {
 }
 export function useConjureRequireHostApprovalSetting(arg0) {
   _require = arg0;
-  const items = [hostAccessStore];
+  items = [hostAccessStore];
   const items1 = [arg0];
   const items2 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(

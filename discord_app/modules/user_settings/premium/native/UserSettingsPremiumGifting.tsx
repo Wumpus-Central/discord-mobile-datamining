@@ -21,17 +21,17 @@ const require = globalThis.__r;
 
 require = fn;
 function GiftingSectionTitle(title) {
-  return map1(TableRowGroup.TableRowGroupTitle, { title: title.title });
+  return state(TableRowGroup.TableRowGroupTitle, { title: title.title });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ UserSettingsSections: closure_9, AnalyticsPages: c10 } = Constants);
-const PremiumConstants = fn(1385);
+({ UserSettingsSections: closure_9, AnalyticsPages: closure_10 } = Constants);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },
@@ -91,7 +91,7 @@ export default function UserSettingsPremiumGifting(ref) {
   stateFromStoresArray(memo[11])();
   _require = require("useNavigation").useNavigation();
   let obj2 = require("useNavigation");
-  const items = [EntitlementStore];
+  items = [EntitlementStore];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => giftable.getGiftable());
   const items1 = [stateFromStoresArray];
   memo = enabled.useMemo(
@@ -220,7 +220,7 @@ export default function UserSettingsPremiumGifting(ref) {
                 );
               }),
               activeOutboundPromotions.map((outboundPromotion) =>
-                map1(
+                state(
                   OutboundPromotionCardDefault,
                   { outboundPromotion, code: _undefined[outboundPromotion.id] },
                   outboundPromotion.id,
@@ -243,7 +243,7 @@ export default function UserSettingsPremiumGifting(ref) {
               closure_13(tmp18, obj27),
               keys.map((item) => {
                 ({ skuId, subscriptionPlanId, giftStyle } = GiftCodeUtils.parseComboId(item));
-                return map1(
+                return state(
                   EntitlementGiftGroupCardDefault,
                   { skuId, subscriptionPlanId, entitlements: memo[item], giftStyle },
                   item,

@@ -1,90 +1,122 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
+import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
 import setAccessibilityFocus from "../../../../a11y/native/setAccessibilityFocus.android.tsx";
+import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import roundToNearestPixelDefault from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import useHomeDrawerGesture from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
 import GuildsBarDefault from "../../../../guilds_bar/native/GuildsBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import HomeDrawerStore from "../../../../home_drawer/native/HomeDrawerStore.tsx";
 
+const _modDef1652 = _mod1652;
+
 require = fn;
 function ContentMaskGradient(offsetX) {
-  offsetX = offsetX.offsetX;
-  const guildsBarPullX = offsetX(18080).useHomeDrawerState().guildsBarPullX;
-  let obj = offsetX(18080);
-  const fn = function n() {
-    const obj = { transform: null };
-    const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
-    const items = [obj2];
-    obj.transform = items;
-    return obj;
-  };
-  let obj2 = offsetX(5095);
-  fn.__closure = { roundToNearestPixel: guildsBarPullX(12411), offsetX, guildsBarPullX };
-  fn.__workletHash = 7539125302557;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj4 = { pointerEvents: "none", style: null, children: null };
-  let items = [absoluteFill.absoluteFill, animatedStyle];
-  obj4.style = items;
-  const obj3 = { roundToNearestPixel: guildsBarPullX(12411), offsetX, guildsBarPullX };
-  obj4.children = closure_9(guildsBarPullX(10736), {
+  let obj = useHomeDrawerGesture;
+  items = [closure_12, roundToNearestPixelDefault, offsetX.offsetX, obj.useHomeDrawerState().guildsBarPullX];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp3, tmp4, tmp5, tmp6] = items;
+  class HomePanelContentTsx1 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateX: null };
+      tmp = -closure_1;
+      obj1.translateX = closure_0(tmp - closure_2.get());
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items1 = [tmp4, tmp5, tmp6];
+  HomePanelContentTsx1.__closure = items1;
+  HomePanelContentTsx1.__workletHash = 2135715759940;
+  HomePanelContentTsx1.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(HomePanelContentTsx1);
+  const obj3 = { pointerEvents: "none", style: null, children: null };
+  const items2 = [absoluteFill.absoluteFill, animatedStyle];
+  obj3.style = items2;
+  obj3.children = React7(ThemedGradientDefault, {
     absolute: true,
     tall: true,
     wide: true,
     mix: true,
-    componentStyles: { height: guildsBarPullX(1491)({ ignoreKeyboard: true }).height },
+    componentStyles: { height: useWindowDimensionsDefault({ ignoreKeyboard: true }).height },
   });
-  return closure_9(guildsBarPullX(5095).View, obj4);
+  return React7(_modDef1652.View, obj3);
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
-  const drawerOpen = ref(18083).useDrawerOpen();
-  let obj = ref(18083);
-  const doesLandOnHomeDrawer = ref(18080).useDoesLandOnHomeDrawer();
-  ref = isClientThemeOrCustomThemeActive.useRef(null);
-  let obj2 = ref(18080);
-  const homeDrawerState = ref(18080).useHomeDrawerState();
+  const drawerOpen = require("useDrawerState").useDrawerOpen();
+  let obj = require("useDrawerState");
+  const doesLandOnHomeDrawer = require("useHomeDrawerGesture").useDoesLandOnHomeDrawer();
+  const ref = noop.useRef(null);
+  _require = ref;
+  let obj2 = require("useHomeDrawerGesture");
+  const homeDrawerState = require("useHomeDrawerGesture").useHomeDrawerState();
   const panelTranslateX = homeDrawerState.panelTranslateX;
-  const tmp8 = HomeDrawerStore((maxX) => maxX.maxX);
-  dependencyMap = tmp8;
-  let obj3 = ref(18080);
-  isClientThemeOrCustomThemeActive = ref(9823).useIsClientThemeOrCustomThemeActive();
-  let obj4 = ref(9823);
-  const token = ref(5596).useToken(panelTranslateX(575).colors.BACKGROUND_BASE_LOWEST);
-  const obj5 = ref(5596);
-  const token1 = ref(5596).useToken(panelTranslateX(575).colors.PANEL_BG);
-  const obj6 = ref(5596);
-  const fn = function n() {
-    if (!isClientThemeOrCustomThemeActive) {
-      if (closure_2 > 0) {
-        let obj = { backgroundColor: null };
-        const items = [0, tmp];
-        const items1 = [token, token1];
-        obj.backgroundColor = ReanimatedRexport.interpolateColor(panelTranslateX.get(), items, items1);
-      }
-      return obj;
-    }
-    obj = { backgroundColor: "transparent" };
-  };
-  const obj7 = ref(5095);
-  fn.__closure = {
-    isGradientTheme: isClientThemeOrCustomThemeActive,
-    maxX: tmp8,
-    interpolateColor: ref(5095).interpolateColor,
+  const tmp9 = HomeDrawerStore((maxX) => maxX.maxX);
+  const obj4 = require("useHomeDrawerGesture");
+  const isClientThemeOrCustomThemeActive = require("useActiveTheme").useIsClientThemeOrCustomThemeActive();
+  const obj5 = require("useActiveTheme");
+  const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const obj6 = require("useToken");
+  const token1 = require("useToken").useToken(nativeDefault.colors.PANEL_BG);
+  const obj7 = require("useToken");
+  items = [
+    closure_14,
+    isClientThemeOrCustomThemeActive,
+    tmp9,
+    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
     panelTranslateX,
-    baseLowest: token,
-    panelBg: token1,
-  };
-  fn.__workletHash = 11992338029652;
-  fn.__initData = __initData2;
-  const animatedStyle = obj7.useAnimatedStyle(fn);
-  HomeDrawerStore = isClientThemeOrCustomThemeActive.useRef(false);
-  let items = [drawerOpen];
-  const effect = isClientThemeOrCustomThemeActive.useEffect(() => {
+    token,
+    token1,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items;
+  class HomePanelContentTsx2 {
+    constructor() {
+      if (!closure_0) {
+        num = 0;
+        if (closure_1 > 0) {
+          obj = { backgroundColor: null };
+          tmp2 = closure_2;
+          tmp3 = closure_3;
+          items = [0];
+          items[1] = tmp;
+          tmp4 = closure_4;
+          items1 = [,];
+          items1[0] = closure_4;
+          tmp5 = closure_5;
+          items1[1] = closure_5;
+          obj.backgroundColor = closure_2(closure_3.get(), items, items1);
+        }
+        return obj;
+      }
+      obj = { backgroundColor: "transparent" };
+      return;
+    }
+  }
+  let items1 = [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20];
+  HomePanelContentTsx2.__closure = items1;
+  HomePanelContentTsx2.__workletHash = 7998740320749;
+  HomePanelContentTsx2.__initData = tmp14;
+  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HomePanelContentTsx2);
+  obj3.useRef(false);
+  let items2 = [drawerOpen];
+  const effect = obj3.useEffect(() => {
     if (obj.isIOS()) {
-      if (ref.current) {
+      if (_undefined.current) {
         const obj2 = { ref, delay: 100 };
         const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
         const tmpResult = setAccessibilityFocus;
@@ -93,88 +125,98 @@ function HomeDrawerPanelContent() {
       }
     }
     obj = utils_PlatformUtils;
-  }, items);
-  const obj8 = {
-    isGradientTheme: isClientThemeOrCustomThemeActive,
-    maxX: tmp8,
-    interpolateColor: ref(5095).interpolateColor,
+  }, items2);
+  const obj8 = require("../../../../../../_runtime/metro/01652__.js");
+  const items3 = [
+    closure_15,
+    require("../../../../../../_runtime/metro/01652__.js").interpolate,
     panelTranslateX,
-    baseLowest: token,
-    panelBg: token1,
-  };
-  const fn2 = function k() {
-    value = panelTranslateX.get();
-    const items = [0, useHomeDrawerGesture.INITIAL_OPEN_WIDTH];
-    const interpolateResult = ReanimatedRexport.interpolate(
-      value,
-      items,
-      [1, 0],
-      ReanimatedRexport.Extrapolation.CLAMP,
-    );
-    if (isClientThemeOrCustomThemeActive) {
-      const obj3 = { backgroundColor: "transparent", opacity: interpolateResult };
-      let obj4 = obj3;
-    } else {
-      obj4 = { backgroundColor: null, opacity: null };
-      const items1 = [0, closure_2];
-      const items2 = [token, token1];
-      obj4.backgroundColor = ReanimatedRexport.interpolateColor(panelTranslateX.get(), items1, items2);
-      obj4.opacity = interpolateResult;
-      const tmpResult = ReanimatedRexport;
+    require("useHomeDrawerGesture").INITIAL_OPEN_WIDTH,
+    require("../../../../../../_runtime/metro/01652__.js").Extrapolation,
+    isClientThemeOrCustomThemeActive,
+    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    tmp9,
+    token,
+    token1,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  HomeDrawerStore = undefined;
+  c7 = undefined;
+  left = undefined;
+  [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32] = items3;
+  class HomePanelContentTsx3 {
+    constructor() {
+      obj = closure_1;
+      items = [0];
+      items[1] = closure_2;
+      tmp = closure_0(closure_1.get(), items, [1, 0], closure_3.CLAMP);
+      if (closure_4) {
+        obj1 = { backgroundColor: "transparent", opacity: null };
+        obj1.opacity = tmp;
+        obj4 = obj1;
+      } else {
+        obj4 = { backgroundColor: null, opacity: null };
+        tmp2 = closure_5;
+        tmp3 = closure_6;
+        items1 = [0];
+        items1[1] = closure_6;
+        tmp4 = closure_7;
+        items2 = [,];
+        items2[0] = closure_7;
+        tmp5 = closure_8;
+        items2[1] = closure_8;
+        obj4.backgroundColor = closure_5(obj.get(), items1, items2);
+        obj4.opacity = tmp;
+      }
+      return obj4;
     }
-    return obj4;
-  };
-  const obj9 = ref(5095);
-  fn2.__closure = {
-    interpolate: ref(5095).interpolate,
-    panelTranslateX,
-    INITIAL_OPEN_WIDTH: ref(18080).INITIAL_OPEN_WIDTH,
-    Extrapolation: ref(5095).Extrapolation,
-    isGradientTheme: isClientThemeOrCustomThemeActive,
-    interpolateColor: ref(5095).interpolateColor,
-    maxX: tmp8,
-    baseLowest: token,
-    panelBg: token1,
-  };
-  fn2.__workletHash = 380238951470;
-  fn2.__initData = __initData3;
-  const animatedStyle1 = obj9.useAnimatedStyle(fn2);
-  const obj11 = { style: null, children: null };
-  let items1 = [tmp2.container, animatedStyle];
-  obj11.style = items1;
-  const obj12 = { ref, style: null, children: null };
-  let items2 = [
+  }
+  const items4 = [tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32];
+  HomePanelContentTsx3.__closure = items4;
+  HomePanelContentTsx3.__workletHash = 9398673657751;
+  HomePanelContentTsx3.__initData = tmp23;
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HomePanelContentTsx3);
+  const obj9 = { style: null, children: null };
+  const items5 = [tmp2.container, animatedStyle];
+  obj9.style = items5;
+  const obj10 = { ref, style: null, children: null };
+  const items6 = [
     drawerOpen ? tmp2.guildsListContainerGestured : tmp2.guildLisetContainerDefault,
     homeDrawerState.guildsBarDrawerStyle,
   ];
-  obj12.style = items2;
-  const items3 = [closure_9(panelTranslateX(18359), { enableHome: true }), ,];
-  const obj13 = { style: null, pointerEvents: "none", collapsable: false, children: null };
-  const items4 = [tmp2.contentMask, { left: GUILD_LIST_WIDTH }, animatedStyle1];
-  obj13.style = items4;
-  let tmp16Result = null;
+  obj10.style = items6;
+  const items7 = [closure_9(GuildsBarDefault, { enableHome: true }), ,];
+  const obj11 = { style: null, pointerEvents: "none", collapsable: false, children: null };
+  const items8 = [tmp2.contentMask, { left }, animatedStyle1];
+  obj11.style = items8;
+  let tmp34Result = null;
   if (isClientThemeOrCustomThemeActive) {
-    const obj14 = { offsetX: GUILD_LIST_WIDTH };
-    tmp16Result = closure_9(ContentMaskGradient, obj14);
+    const obj12 = { offsetX: tmp };
+    tmp34Result = closure_9(ContentMaskGradient, obj12);
   }
-  obj13.children = tmp16Result;
-  items3[1] = closure_9(panelTranslateX(5095).View, obj13);
-  let tmp16Result2 = null;
+  obj11.children = tmp34Result;
+  items7[1] = closure_9(_modDef1652.View, obj11);
+  let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp16Result2 = closure_9(tmp10(18433), {});
+    tmp34Result2 = closure_9(tmp11(18587), {});
   }
-  items3[2] = tmp16Result2;
-  obj12.children = items3;
-  obj11.children = closure_10(panelTranslateX(5095).View, obj12);
-  return closure_9(panelTranslateX(5095).View, obj11);
+  items7[2] = tmp34Result2;
+  obj10.children = items7;
+  obj9.children = closure_10(_modDef1652.View, obj10);
+  return closure_9(_modDef1652.View, obj9);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(18358).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(18503).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = {
     container: { flex: 1 },
@@ -184,14 +226,14 @@ let closure_11 = createStyles.createStyles((width) => {
   };
   return obj;
 });
-const __initData = {
-  code: "function HomePanelContentTsx1(){const{roundToNearestPixel,offsetX,guildsBarPullX}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-guildsBarPullX.get())}]};}",
+let closure_12 = {
+  code: "(function HomePanelContentTsx1(){let[roundToNearestPixel,offsetX,guildsBarPullX]=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-guildsBarPullX.get())}]};})",
 };
-const __initData2 = {
-  code: "function HomePanelContentTsx2(){const{isGradientTheme,maxX,interpolateColor,panelTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}",
+let closure_14 = {
+  code: "(function HomePanelContentTsx2(){let[isGradientTheme,maxX,interpolateColor,panelTranslateX,baseLowest,panelBg]=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg])};})",
 };
-const __initData3 = {
-  code: "function HomePanelContentTsx3(){const{interpolate,panelTranslateX,INITIAL_OPEN_WIDTH,Extrapolation,isGradientTheme,interpolateColor,maxX,baseLowest,panelBg}=this.__closure;const opacity=interpolate(panelTranslateX.get(),[0,INITIAL_OPEN_WIDTH],[1,0],Extrapolation.CLAMP);if(isGradientTheme){return{backgroundColor:'transparent',opacity:opacity};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg]),opacity:opacity};}",
+let closure_15 = {
+  code: "(function HomePanelContentTsx3(){let[interpolate,panelTranslateX,INITIAL_OPEN_WIDTH,Extrapolation,isGradientTheme,interpolateColor,maxX,baseLowest,panelBg]=this.__closure;const opacity=interpolate(panelTranslateX.get(),[0,INITIAL_OPEN_WIDTH],[1,0],Extrapolation.CLAMP);if(isGradientTheme){return{backgroundColor:'transparent',opacity:opacity};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg]),opacity:opacity};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");

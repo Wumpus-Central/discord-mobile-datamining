@@ -7,7 +7,7 @@ import AnalyticsTypes from "../quests/lib/analytics/AnalyticsTypes.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HexagonCampaignConstants = fn(5039);
+const HexagonCampaignConstants = fn(5166);
 ({
   HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4,
   HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty,
@@ -55,7 +55,7 @@ export function useTrackHexagonCampaignContentViewed(
   const content = DISPLAY_NAME_STYLES_SETTINGS;
   const contentSurface = APP_ICON_PICKER;
   closure_2 = isThumbstickScrollDevice;
-  const items = [DISPLAY_NAME_STYLES_SETTINGS, APP_ICON_PICKER, isThumbstickScrollDevice];
+  items = [DISPLAY_NAME_STYLES_SETTINGS, APP_ICON_PICKER, isThumbstickScrollDevice];
   const effect = noop.useEffect(() => {
     if (closure_2) {
       const obj = { content, contentSurface };

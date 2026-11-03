@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2868 from "../../NotificationSettings.messages.js";
+import _modDef2995 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -9,8 +9,8 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 export function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2868["/UdAvP"]);
-  const items = [
+  obj.label = intl.string(_modDef2995["/UdAvP"]);
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
@@ -21,7 +21,7 @@ export function buildOverviewCategoriesSection() {
 }
 export function buildCategoryCallsMessagesSettingsSection() {
   const obj = { settings: null };
-  const items = [
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_REQUESTS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CALLS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW,
@@ -32,7 +32,7 @@ export function buildCategoryCallsMessagesSettingsSection() {
 }
 export function buildCategoryDiscoveryHighlightsSettingsSection() {
   const obj = { settings: null };
-  const items = [
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_INVITES_RECONNECTING,
     MobileNotifSettings.MobileNotifSettings.NOTIF_TRENDING_SUGGESTIONS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_UPDATES_OFFERS,
@@ -42,7 +42,7 @@ export function buildCategoryDiscoveryHighlightsSettingsSection() {
 }
 export function buildCategoryFriendsActivitySettingsSection() {
   const obj = { settings: null };
-  const items = [
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIENDS_GAMING_LOW,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIENDS_GAMING_DEFAULT,
@@ -59,7 +59,7 @@ export function buildCategoryFriendsActivitySettingsSection() {
 }
 export function buildFriendActivityTitleSettingsSection() {
   const obj = { settings: null };
-  const items = [
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CUSTOM_STATUS_UPDATE,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ONLINE,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_REQUEST_REMINDER,
@@ -72,7 +72,7 @@ export function buildFriendActivityTitleSettingsSection() {
 }
 export function buildCategoryServersSettingsSection() {
   const obj = { settings: null };
-  const items = [
+  items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_GUILD_EVENT_NOTIFICATIONS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FORUM_NOTIFICATIONS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_OTHER_GUILD,

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/accessibility/native/SettingsAccessibilityScreen.tsx
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2932 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef3059 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import getSettingsOverrideReasonDefault from "../getSettingsOverrideReason.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import UserSettingsOverridesStore from "../../UserSettingsOverridesStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/user_settings/accessibility/n
 export default function SettingsAccessibilityScreen() {
   stackNavigation = stackNavigation(animateEmojiOverrideReason[12]).useStackNavigation();
   let obj = stackNavigation(animateEmojiOverrideReason[12]);
-  let items = [UserSettingsOverridesStore];
+  items = [UserSettingsOverridesStore];
   const stateFromStoresObject = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStoresObject(items, () => ({
     gifAutoPlayOverrideReason: UserSettingsOverridesStore.getAppliedOverrideReasonKey("gifAutoPlay"),
     animateEmojiOverrideReason: UserSettingsOverridesStore.getAppliedOverrideReasonKey("animateEmoji"),
@@ -47,7 +47,7 @@ export default function SettingsAccessibilityScreen() {
   const node = animateStickersOverrideReason.useMemo(() => {
     closure_0 = stackNavigation;
     const obj2 = { settings: null, subLabel: null };
-    const items = [MobileUserSettings.ROLE_COLORS];
+    items = [MobileUserSettings.ROLE_COLORS];
     obj2.settings = items;
     const intl = util.intl;
     const obj3 = { learnMoreLink: null };
@@ -65,7 +65,7 @@ export default function SettingsAccessibilityScreen() {
     const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
     obj6.settings = items3;
     const intl3 = util.intl;
-    obj6.subLabel = intl3.format(_modDef2932.L8U56h, {
+    obj6.subLabel = intl3.format(_modDef3059.L8U56h, {
       onClickOpenModal() {
         closure_0(animateEmojiOverrideReason[9]).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
           closure_1_0(closure_1_2[10]).runAfterInteractions(() => {

@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/kv-stor
 
 export function combineKey(prefix, key) {
   if (Array.isArray(key)) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(key, HermesBuiltin.arraySpread(prefix, 0));
     let items1 = items;
   } else {

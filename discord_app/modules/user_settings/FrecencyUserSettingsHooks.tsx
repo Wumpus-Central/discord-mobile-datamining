@@ -11,7 +11,7 @@ export function useFrecencySettings() {
   if (flag === undefined) {
     flag = true;
   }
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     if (flag) {
       const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;

@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   upsell: { minHeight: 44, alignItems: "center", justifyContent: "center" },
 });
@@ -18,9 +18,9 @@ export default function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(14731).useGuildTagCreationUpsell(
+  const guildTagCreationUpsell = guildId(14862).useGuildTagCreationUpsell(
     "GuildProfileCreateTagUpsell",
-    creatableGuilds(14733),
+    creatableGuilds(14864),
   );
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;
@@ -37,7 +37,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.J0YWRq);
-    obj2.children = jsx(tmp2(5624).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+    obj2.children = jsx(tmp2(5747).Text, { variant: "text-md/medium", color: "text-muted", children: null });
     tmp5 = (
       <Pressable
         style={tmp.upsell}

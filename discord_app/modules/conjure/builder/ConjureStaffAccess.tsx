@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/conjure/builder/ConjureStaffA
 export const CONJURE_STAFF_ACCESS_CHANNEL_NAME = "conjuring-help";
 export const CONJURE_STAFF_ACCESS_URL = "https://i.dis.gd/conjuring-access";
 export function useConjureStaffAccessTarget() {
-  const items = [UserStore, GuildStore, GuildChannelStore, RelationshipStore];
+  items = [UserStore, GuildStore, GuildChannelStore, RelationshipStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

@@ -7,7 +7,7 @@ export function callOnce(arg0) {
   closure_0 = arg0;
   c2 = false;
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     if (!c2) {
       c2 = true;
       const items1 = [];

@@ -48,7 +48,7 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
   let tmp = useMessageMaxLengthDefault();
   _slicedToArray = tmp;
   [first, closure_5] = first.useState(false);
-  const items = [tmp, arg1, arg2];
+  items = [tmp, arg1, arg2];
   const memo = first.useMemo(
     () =>
       _modDef12.debounce(
@@ -68,9 +68,9 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
             if (!(arr.length < 5 || arr.length > closure_1_3)) {
               let flag = -1 !== arr.indexOf(memo);
               if (flag) {
-                closure_0(7451).subscribeChannel(closure_1_1, dependencyMap, closure_0(7449).DEFAULT_RANGES);
+                closure_0(7575).subscribeChannel(closure_1_1, dependencyMap, closure_0(7573).DEFAULT_RANGES);
                 flag = true;
-                const obj = closure_0(7451);
+                const obj = closure_0(7575);
               }
               tmp9 = flag;
             }

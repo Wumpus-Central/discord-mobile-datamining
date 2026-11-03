@@ -70,7 +70,7 @@ export function registerPortalKeyboardRenderer(id) {
     let tmp2 = renderers;
     if (!renderers.includes(closure_0)) {
       const obj = { renderers: null };
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(renderers.renderers, 0)] = closure_0;
       obj.renderers = items;
       tmp2 = obj;
@@ -109,7 +109,7 @@ export function closePortalKeyboard() {
   zustandStore.setState({ state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null });
 }
 export function closePortalKeyboardIfUnhandled() {
-  const state = zustandStore.getState();
+  state = zustandStore.getState();
   const keyboard = state.keyboard;
   let tmp3 = null == keyboard;
   if (tmp3) {

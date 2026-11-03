@@ -4,6 +4,6 @@ import noop from "../../_runtime/metro/00019__.js";
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
-export default function useInitialValue(stickerById) {
-  return noop.useState(stickerById)[0];
+export default function useInitialValue(bound) {
+  return noop.useState(bound)[0];
 }

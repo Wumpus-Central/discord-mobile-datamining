@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function ConjureUserMention(userId) {
   userId = userId.userId;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userId];
   let stateFromStores = userId(504).useStateFromStores(
     items,
@@ -33,7 +33,7 @@ export default function ConjureMentionText(text) {
   require = text;
   const variant = text.variant;
   const requestConjureMentionedUsers = conjureMentions.useRequestConjureMentionedUsers(text);
-  const items = [text];
+  items = [text];
   const memo = noop.useMemo(() => conjureMentions.splitConjureMentions(text), items);
   return closure_5(closure_6, {
     children: memo.map((kind, index) => {

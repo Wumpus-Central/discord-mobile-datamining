@@ -10,7 +10,7 @@ const View = fn(17).View;
 const MessageFlags = fn(1072).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ export default function AutomodRemovedContentSheet(action) {
   const tmp = closure_8();
   let message = action.message;
   const thread = action.thread;
-  const items = [message];
+  items = [message];
   const callback = noop.useCallback((message) => {
     message = message.message;
     let ephemeralIndication;
@@ -67,7 +67,7 @@ export default function AutomodRemovedContentSheet(action) {
     name = thread.name;
   }
   let obj2 = {
-    header: jsx(message(7321).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+    header: jsx(message(7441).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   };
   obj.subtitle = name;
@@ -79,12 +79,12 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5624).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5747).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7366).ActionSheet, {
-    header: jsx(message(7321).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+  return jsx(message(7486).ActionSheet, {
+    header: jsx(message(7441).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   });
 }

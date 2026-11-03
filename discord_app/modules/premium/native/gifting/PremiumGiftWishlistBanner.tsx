@@ -11,17 +11,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_7 = fn(7405).WishlistRecommendationReason;
-const PremiumConstants = fn(1385);
+let closure_7 = fn(7529).WishlistRecommendationReason;
+const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1072);
-({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1074).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8754).UserProfileSections;
+const UserProfileSections = fn(8878).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },
@@ -74,7 +74,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
   const status = wishlistRecommendationsForSingleUser.status;
   let totalUnownedWishlistItemCount = wishlistRecommendationsForSingleUser.totalUnownedWishlistItemCount;
   const defaultWishlistId = wishlistRecommendationsForSingleUser.defaultWishlistId;
-  let items = [wishlistAndRecommendations, giftRecipient.id, skusToUserAndReason];
+  items = [wishlistAndRecommendations, giftRecipient.id, skusToUserAndReason];
   const memo = skusToUserAndReason.useMemo(() => {
     const found = wishlistAndRecommendations.filter(
       (productLine) =>
@@ -161,7 +161,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -200,7 +200,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
                   if (num3 != rootNavigationRef) {
                     if (rootNavigationRef.isReady()) {
                       const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
-                      const items = [size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
+                      items = [size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST];
                       obj5.analyticsLocations = items;
                       obj5.analyticsSource = size(items1[16]).GIFT_SELECTION_MODAL_WISHLIST;
                       obj5.screen = constants2.FEATURED_PAGE;
@@ -312,7 +312,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
       let _Array = Array;
       let obj9 = { length: WISHLIST_IN_DM_LENGTH_MOBILE };
       obj8.children = Array.from(obj9, (arg0, arg1) =>
-        closure_2_14(timestampProducer, { style: closure_14.placeholder }, arg1),
+        gesture(timestampProducer, { style: closure_14.placeholder }, arg1),
       );
       let tmp17Result = tmp19(tmp18, obj8);
     } else {

@@ -16,7 +16,7 @@ export default function CutoutableAvatarDecoration(size) {
   const animate = size.animate;
   let nativeCutouts = size.cutout;
   let tmp2 = decorationStyle;
-  let items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = size(decorationStyle[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [animate, size, avatarDecoration, decorationStyle, stateFromStores];
   const memo = animate.useMemo(() => {
@@ -39,7 +39,7 @@ export default function CutoutableAvatarDecoration(size) {
       source: null,
     };
     size = { width: size, height: size };
-    const items = [size, decorationStyle];
+    items = [size, decorationStyle];
     obj3.style = items;
     let str2 = avatarDecorationURL;
     if (avatarDecorationURL == null) {

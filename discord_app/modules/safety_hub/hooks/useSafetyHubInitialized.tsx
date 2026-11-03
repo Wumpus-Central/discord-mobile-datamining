@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubInitialized.tsx");
 
 export function useSafetyHubInitialized() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => initialized.isInitialized());
 }

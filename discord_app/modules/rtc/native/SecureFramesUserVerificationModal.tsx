@@ -13,11 +13,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9266);
+const SecureFramesConstants = fn(9394);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_8,
   USER_VERIFICATION_LENGTH: closure_9,
-  USER_VERIFICATION_NUM_COLUMNS: c10,
+  USER_VERIFICATION_NUM_COLUMNS: closure_10,
   USER_VERIFIED_TOAST_KEY: closure_11,
 } = SecureFramesConstants);
 const Constants = fn(1072);
@@ -25,7 +25,7 @@ const Constants = fn(1072);
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -53,7 +53,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   let isOtherUserKeyPersistent;
   let enabled;
   const tmp = closure_17();
-  const items = [isCurrentUserKeyPersistent];
+  items = [isCurrentUserKeyPersistent];
   const stateFromStores = userId(name[10]).useStateFromStores(items, () => UserStore.getUser(userId));
   let obj = userId(name[10]);
   const items1 = [isUserSecureFramesVerified];
@@ -100,7 +100,7 @@ export default function SecureFramesUserVerificationModal(userId) {
         fingerprintUserKey,
         isOtherUserKeyPersistent,
         channelId,
-        closure_2_12.E2EE_USER_VERIFY_MODAL,
+        application_id.E2EE_USER_VERIFY_MODAL,
       );
       ModalActionCreatorsDefault.pop();
       const obj3 = { text: null, variant: "success" };
@@ -131,15 +131,15 @@ export default function SecureFramesUserVerificationModal(userId) {
         const obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9265).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9265);
+          let userVerificationDeeplink = showShareActionSheet(9393).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9393);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }
-        showShareActionSheet = showShareActionSheet(8931).showShareActionSheet;
+        showShareActionSheet = showShareActionSheet(9059).showShareActionSheet;
         obj2 = { message: userVerificationDeeplink };
         showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(8931);
+        const showShareActionSheetResult1 = showShareActionSheet(9059);
       }
     }
   }, items4);
@@ -230,7 +230,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   obj12.children = items9;
   const items10 = [closure_16(readableSecureFramesFingerprint, obj12), , ,];
   const obj16 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
-  const obj17 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj17 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(tmp3[19]).intl;
   obj17.children = intl4.string(userId(name[19]).t["/WPGnF"]);
   const items11 = [closure_15(userId(name[29]).Text, obj17)];

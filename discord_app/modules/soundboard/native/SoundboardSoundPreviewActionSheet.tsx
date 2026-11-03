@@ -13,10 +13,10 @@ import SoundboardStore from "../SoundboardStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsObjects: c10 } = Constants);
+({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   soundPresentation: {
     borderWidth: 2,
@@ -43,7 +43,7 @@ obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAK
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;
@@ -77,7 +77,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   let obj = channel(soundGridLocation[11]);
   const soundboardSoundLock = channel(soundGridLocation[12]).useSoundboardSoundLock(sound, channel);
   ({ isLocked, onLockedPress } = soundboardSoundLock);
-  let items = [channel, soundGridLocation, soundboardSoundPreviewMenuEnabled, analyticsSource];
+  items = [channel, soundGridLocation, soundboardSoundPreviewMenuEnabled, analyticsSource];
   const onDismiss = id.useCallback(() => {
     if (soundboardSoundPreviewMenuEnabled) {
       const obj2 = { channel, analyticsSource, initialScrollLocation: soundGridLocation };
@@ -168,7 +168,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
         guild_id = channel.guild_id;
       }
       obj4.location_guild_id = guild_id;
-      const items = [analyticsSource];
+      items = [analyticsSource];
       obj4.location_stack = items;
       AnalyticsUtilsDefault.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, obj4);
       SoundboardActionCreators.playSoundLocally(id, sound);
@@ -176,7 +176,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   }, items9);
   const callback4 = obj3.useCallback(() => {
     _undefined(false);
-    const items = [analyticsSource];
+    items = [analyticsSource];
     SoundboardUtils.playSound(sound, id, items);
   }, items10);
   let str = "primary";
@@ -256,7 +256,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
     stateFromStores3(sound(stringResult1[26]), obj16),
     stateFromStores3(channel(stringResult1[28]).Text, {
       style: primaryIcon.text,
-      variant: "heading-lg/extrabold",
+      variant: "heading-lg/semibold",
       children: sound.name,
     }),
   ];
@@ -304,6 +304,6 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
     obj13.children = closure_12(tmp25, obj22);
     return tmp17(tmp(stringResult1[25]).ActionSheet, obj13);
   }
-  const obj17 = { style: primaryIcon.text, variant: "heading-lg/extrabold", children: sound.name };
+  const obj17 = { style: primaryIcon.text, variant: "heading-lg/semibold", children: sound.name };
   const tmp28 = sound(stringResult1[26]);
 }

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLin
 
 export function useShouldShowHelplineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
   const obj = stateFromStores(563);
   const items1 = [LocaleStore];
@@ -40,7 +40,7 @@ export function useShouldShowThroughlineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   let stateFromStores;
   const tmp2 = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
   let obj = stateFromStores(563);
   const items1 = [LocaleStore];

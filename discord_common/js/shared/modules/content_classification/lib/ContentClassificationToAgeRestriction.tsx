@@ -16,7 +16,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
   if (null == data) {
     return obj2;
   } else {
-    const items = [];
+    items = [];
     data = data.data;
     if (data.type === obj.MINIMAL) {
       if (null != data.discord_classifications) {
@@ -156,7 +156,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj7 = { source: tmp21(5662).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj7 = { source: tmp21(5782).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj7);
               someResult = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

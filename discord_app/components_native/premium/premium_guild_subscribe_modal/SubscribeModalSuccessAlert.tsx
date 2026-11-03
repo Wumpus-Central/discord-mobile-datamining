@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod15515 from "../../../../_runtime/metro/15515__.js";
+import _mod15656 from "../../../../_runtime/metro/15656__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(7617).Gradients;
+const Gradients = fn(7741).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -63,7 +63,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const items = [GuildStore];
+  items = [GuildStore];
   let someResult = null != guildBoostSlots;
   const stateFromStores = initialize.useStateFromStores(items, () => GuildStore.getGuild(require));
   if (someResult) {
@@ -87,8 +87,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(5959).close();
-    const obj = closure_1(5959);
+    closure_1(6079).close();
+    const obj = closure_1(6079);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(15516);
+    let tmp8Result = tmp8(15657);
   } else {
-    tmp8Result = tmp8(15517);
+    tmp8Result = tmp8(15658);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

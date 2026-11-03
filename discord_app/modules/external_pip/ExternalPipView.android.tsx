@@ -33,16 +33,16 @@ const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.
 
 export default function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = callback(19107);
-  obj.disabled = !callback(5874).isSupported();
+  const tmp = callback(19265);
+  obj.disabled = !callback(5994).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;
-  let obj2 = callback(5874);
+  let obj2 = callback(5994);
   [tmp3, closure_129_0] = noop.useState(false);
   callback = noop.useCallback((arg0) => {
     externalPipEnabled(arg0);
     if (!arg0) {
-      const state = AppFreezeStore.getState();
+      state = AppFreezeStore.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
@@ -53,7 +53,7 @@ export default function ExternalPipView() {
     },
     [],
   );
-  const items = [externalPipEnabled];
+  items = [externalPipEnabled];
   const effect1 = noop.useEffect(() => {
     if (externalPipEnabled) {
       const obj = ExternalPipDefault;
@@ -63,7 +63,7 @@ export default function ExternalPipView() {
   }, items);
   const items1 = [callback];
   const effect2 = noop.useEffect(() => {
-    closure_0 = callback(5874).addOnPipModeChangedListener((arg0) => {
+    closure_0 = callback(5994).addOnPipModeChangedListener((arg0) => {
       callback(arg0);
     });
     return () => {
@@ -76,7 +76,7 @@ export default function ExternalPipView() {
   }, items1);
   const items2 = [callback];
   const effect3 = noop.useEffect(() => {
-    closure_0 = callback(5874).addOnPipModeWillChangeListener(() => {
+    closure_0 = callback(5994).addOnPipModeWillChangeListener(() => {
       callback(true);
     });
     return () => {

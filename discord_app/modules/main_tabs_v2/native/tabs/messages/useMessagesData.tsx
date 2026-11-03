@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
-  let items = [numFriendSuggestions, friendSuggestions];
+  items = [numFriendSuggestions, friendSuggestions];
   const stateFromStoresObject = connected(channelFavorites[6]).useStateFromStoresObject(items, () => ({
     connected: null != numFriendSuggestions.getSessionId(),
     connectedToGateway: friendSuggestions.isConnected(),
@@ -76,7 +76,7 @@ export default function useMessagesData() {
       const _Math = Math;
       bound = Math.min(tmp4, 5);
     }
-    const items = [];
+    items = [];
     items.push(channelFavorites.length);
     items.push(length.length);
     let num4 = 0;

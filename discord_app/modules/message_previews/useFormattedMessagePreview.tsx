@@ -385,7 +385,7 @@ export function isMessageContentPreviewable(messageRecord) {
 }
 export function useFormattedMessagePreview(message, channel) {
   _require = message;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [message.author.id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,

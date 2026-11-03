@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -54,7 +54,7 @@ export function GuildRoleSubscriptionRolePreview(content) {
   const roleImage = content.roleImage;
   ({ style, textStyle, roleColor, roleName, guildId } = content);
   const tmp3 = closure_8();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj3 = { style: null, children: null };
   const items1 = [tmp3.container, style];

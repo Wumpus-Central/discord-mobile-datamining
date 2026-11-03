@@ -115,7 +115,7 @@ export function getNoRolesRow() {
     const intl = util.intl;
     stringResult = intl.string(util.t["gnsna/"]);
   }
-  const items = [{ rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
+  items = [{ rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
   return items;
 }
 export function isEveryoneRoleId(guildId, id) {
@@ -332,7 +332,7 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
       stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
-    const items = [obj];
+    items = [obj];
     mapped = items;
   }
   return mapped;
@@ -399,7 +399,7 @@ export function getExistingRolesRowWithPermissionDisabled(
       stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
-    const items = [obj];
+    items = [obj];
     mapped = items;
   }
   return mapped;
@@ -626,7 +626,7 @@ export function grantUserChannelAccess(id, accessPermissions) {
         allow: BigFlagUtilsAll.add(PermissionUtilsAll.NONE, accessPermissions),
         deny: PermissionUtilsAll.NONE,
       };
-      const items = [obj3];
+      items = [obj3];
       return ChannelSettingsPermissionsActionCreators.savePermissionUpdates(id.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
@@ -710,7 +710,7 @@ export function getPrivateChannelHintText(first1) {
 }
 export function extractPermissionOverwrites(arg0, arg1) {
   closure_0 = arg1;
-  const items = [];
+  items = [];
   const values = Object.values(arg0);
   const item = values.forEach((row) => {
     row = row.row;

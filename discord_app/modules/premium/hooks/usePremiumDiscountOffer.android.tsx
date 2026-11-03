@@ -5,7 +5,7 @@ import useDiscountOfferDefault from "useDiscountOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_4,
   PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: hasOwnProperty,
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
 
 export function usePremiumDiscountOffer() {
-  const items = [IAPStore];
+  items = [IAPStore];
   const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({
     isFetchingProducts: IAPStore.isFetchingProducts(),
     offerIds: IAPStore.getOfferIds(),

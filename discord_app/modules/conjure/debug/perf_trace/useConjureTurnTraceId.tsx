@@ -35,7 +35,7 @@ export default function useConjureTurnTraceId(arg0, role) {
   }
   turn_id = tmp3;
   obj = require("useConjureDebugAccess");
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [arg0, tmp3];
   return require("initialize").useStateFromStores(
     items,

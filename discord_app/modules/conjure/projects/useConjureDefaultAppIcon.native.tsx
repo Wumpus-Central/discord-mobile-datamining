@@ -12,7 +12,7 @@ export default function useConjureDefaultAppIcon(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   token = require("useToken").useToken(require("native").colors.BACKGROUND_BASE_LOWER);
-  const items = [arg0, arg1, token];
+  items = [arg0, arg1, token];
   return noop.useMemo(() => {
     const conjureDefaultAppIcon = conjureDefaultAppIcon2.getConjureDefaultAppIcon(closure_0, closure_1);
     const obj2 = { character: conjureDefaultAppIcon.character };

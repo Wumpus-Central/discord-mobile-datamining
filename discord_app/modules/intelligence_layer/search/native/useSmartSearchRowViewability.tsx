@@ -10,18 +10,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
 
 export function useSmartSearchRowViewability() {
-  const currentNavigationRouteName = stateFromStores(5198).useCurrentNavigationRouteName();
-  const context = noop.useContext(stateFromStores(13998).SwipeForMemberListContext);
-  const obj = stateFromStores(5198);
-  const isFocused = stateFromStores(1498).useIsFocused();
+  const currentNavigationRouteName = stateFromStores(5321).useCurrentNavigationRouteName();
+  const context = noop.useContext(stateFromStores(14129).SwipeForMemberListContext);
+  const obj = stateFromStores(5321);
+  const isFocused = stateFromStores(1500).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
-  const obj3 = stateFromStores(1498);
-  let tmp6 = null != stateFromStores(5198).coerceChannelRoute({ name: currentNavigationRouteName });
+  const obj3 = stateFromStores(1500);
+  let tmp6 = null != stateFromStores(5321).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5198).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5198);
+      isChatLockedOpen = null != tmp(5321).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5321);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -31,14 +31,14 @@ export function useSmartSearchRowViewability() {
     const tmp8 = context.isPanelActive && tmp6;
   }
   closure_129_0 = tmp7;
-  const items = [tmp7];
+  items = [tmp7];
   const effect = noop.useEffect(() => {
     const result = SmartSearchAnalyticsManagerDefault.setIsNavigationFocused(
       stateFromStores,
       SearchSessionAnalyticsManagerDefault,
     );
   }, items);
-  const obj4 = stateFromStores(5198);
+  const obj4 = stateFromStores(5321);
   const items1 = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items1, () => {
     state = state.getState();
@@ -50,7 +50,7 @@ export function useSmartSearchRowViewability() {
   }, items2);
   const effect2 = noop.useEffect(
     () => () => {
-      closure_1_1(13910).setIsRowViewable(false, closure_1_1(13908));
+      closure_1_1(14041).setIsRowViewable(false, closure_1_1(14039));
     },
     [],
   );

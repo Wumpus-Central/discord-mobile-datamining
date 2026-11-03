@@ -4,22 +4,22 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../search/native/stores/SearchQueryStore.tsx";
 
 const require = fn;
-let closure_5 = fn(9825).setIsChannelDetailsSearchActive;
+let closure_5 = fn(9956).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   back: {
     justifyContent: "center",
-    height: fn(13928).SEARCH_BAR_HEIGHT,
-    paddingStart: fn(10137).CHANNEL_DETAILS_MARGIN,
+    height: fn(14059).SEARCH_BAR_HEIGHT,
+    paddingStart: fn(10267).CHANNEL_DETAILS_MARGIN,
     paddingEnd: 8,
   },
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = {
   justifyContent: "center",
-  height: fn(13928).SEARCH_BAR_HEIGHT,
-  paddingStart: fn(10137).CHANNEL_DETAILS_MARGIN,
+  height: fn(14059).SEARCH_BAR_HEIGHT,
+  paddingStart: fn(10267).CHANNEL_DETAILS_MARGIN,
   paddingEnd: 8,
 };
 const size = fn(2);
@@ -39,7 +39,7 @@ export default noop.memo(function ChannelDetailsSearchBar(channelId) {
     channelId,
     channelId.guildId,
   );
-  const items = [channelId, channelDetailsSearchContext];
+  items = [channelId, channelDetailsSearchContext];
   const effect = callback.useEffect(
     () => () => {
       onBackPress(channelDetailsSearchContext[8]).trackSearchClosed({ searchContext });

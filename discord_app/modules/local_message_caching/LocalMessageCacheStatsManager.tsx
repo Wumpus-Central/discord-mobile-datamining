@@ -6,7 +6,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function makeLogLine(channelId) {
-  const items = [channelId.channelId, , ,];
+  items = [channelId.channelId, , ,];
   let str = "-1";
   let str2 = "-1";
   if (null != channelId.localMessageDetails) {

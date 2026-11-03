@@ -31,7 +31,7 @@ export function createRoleSubscriptionPurchaseSystemMessage(message) {
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     const guildMemberAvatar = useMessageAuthor.getMessageAuthor(message).guildMemberAvatar;
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     if (null != guildId) {

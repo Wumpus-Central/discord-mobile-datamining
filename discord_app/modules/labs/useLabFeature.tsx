@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/labs/useLabFeature.tsx");
 
 export default function useLabFeature(ICYMI_LAB_FEATURE) {
   _require = ICYMI_LAB_FEATURE;
-  const items = [LabFeatureStore];
+  items = [LabFeatureStore];
   const items1 = [ICYMI_LAB_FEATURE];
   return require("initialize").useStateFromStores(items, () => LabFeatureStore.get(closure_0), items1);
 }

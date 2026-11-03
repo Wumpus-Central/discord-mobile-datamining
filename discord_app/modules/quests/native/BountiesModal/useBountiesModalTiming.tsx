@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_2 = fn(6781).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_2 = fn(6901).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = {
   END_CARD: "END_CARD",
   END_CARD_WITH_CTA: "END_CARD_WITH_CTA",
@@ -85,7 +85,7 @@ export function useBountiesModalTiming(endMode) {
   rewardDurationMs.useRef(num3);
   rewardDurationMs.useRef(0);
   rewardDurationMs.useRef(num);
-  const items = [onVideoProgress, onRewardEarned, rewardDurationMs];
+  items = [onVideoProgress, onRewardEarned, rewardDurationMs];
   const items1 = [endMode, onVideoEnd, onVideoLooped, onRewardEarned];
   const callback = obj.useCallback((progress) => {
     ({ currentTime, seekableDuration } = progress);

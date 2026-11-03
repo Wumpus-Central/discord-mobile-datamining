@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import _mod2028 from "../../../../_runtime/metro/02028__.js";
+import _mod2157 from "../../../../_runtime/metro/02157__.js";
 import DOMUtils from "DOMUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -18,9 +18,9 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2028;
+    closure_0 = _mod2157;
     dependencyMap = "";
-    const items = [...str.normalize("NFD")];
+    items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {
       let tmp2 = closure_0[item];
       if (tmp2 == null) {
@@ -58,7 +58,7 @@ export (name, React6) => {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(concat, 0);
           const substr = items.slice(0, React6 - str.length);
           let str3 = substr.join("");

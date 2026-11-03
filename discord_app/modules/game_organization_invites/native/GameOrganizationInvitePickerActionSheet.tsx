@@ -4,7 +4,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7338 from "../../../../_runtime/metro/07338__.js";
+import _modDef7458 from "../../../../_runtime/metro/07458__.js";
 import GameOrganizationInvitePickerRowDefault from "GameOrganizationInvitePickerRow.tsx";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
 import groupInvitableGameOrganizationsByApplicationDefault from "../groupInvitableGameOrganizationsByApplication.tsx";
@@ -26,9 +26,9 @@ function GameSection(arg0) {
     const obj3 = { uri: application.iconUrl };
     let tmp5Result = obj3;
   } else {
-    tmp5Result = _modDef7338;
+    tmp5Result = _modDef7458;
   }
-  const items = [
+  items = [
     closure_7(FastImageDefault, { source: tmp5Result, style: tmp.gameIcon }),
     closure_7(Text_Text.Text, {
       accessibilityRole: "header",
@@ -50,10 +50,10 @@ function GameSection(arg0) {
   return closure_8(Stack_Stack.Stack, obj);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const days = fn(11364).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
+const days = fn(11501).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { paddingTop: nativeDefault.space.PX_8 },
   centeredText: { textAlign: "center" },
@@ -82,7 +82,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
   let data;
   noop = undefined;
   const tmp = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(data[13]).useStateFromStores(items, () => UserStore.getUser(userId));
   const tmp6 = stateFromStores(data[14])("game_organization_invite_picker");
   data = tmp6.data;
@@ -139,7 +139,7 @@ export default function GameOrganizationInvitePickerActionSheet(userId) {
     obj6.dismissAccessibilityLabel = intl3.string(tmp2(tmp3[19]).t.cpT0Cq);
     const obj7 = { spacing: tmp5(tmp3[6]).space.PX_4, style: tmp.header, children: null };
     const obj8 = {
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.centeredText,
       children: null,

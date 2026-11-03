@@ -1,16 +1,16 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import Suspender from "../../../../../_runtime/05989_Suspender.js";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import Suspender from "../../../../../_runtime/06109_Suspender.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";
-import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
 import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls.tsx";
 import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function renderChat(shown) {
@@ -23,11 +23,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11223);
+const VoicePanelConstants = fn(11360);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function LazyContentFreezer(shown) {
@@ -51,7 +51,7 @@ const memoResult = noop.memo(function LazyContentFreezer(shown) {
     }
     ref.current = current;
   });
-  const items = [shown];
+  items = [shown];
   const effect1 = noop.useEffect(() => {
     if (!shown) {
       _undefined(true);
@@ -67,164 +67,170 @@ const memoResult = noop.memo(function LazyContentFreezer(shown) {
   }
   return tmp11;
 });
-const __initData = {
-  code: "function VoicePanelControlsDrawerTsx1(){const{getControlsDrawerOpenWidth,windowDimensions,safeArea,withSpring,wrapperSpecs,TRANSITIONAL_HEIGHT,MODE_CHANGE_PHYSICS}=this.__closure;return{width:getControlsDrawerOpenWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right),opacity:withSpring(wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?1:0,MODE_CHANGE_PHYSICS)};}",
+let closure_14 = {
+  code: "(function VoicePanelControlsDrawerTsx1(){let[getControlsDrawerOpenWidth,windowDimensions,safeArea,withSpring,wrapperSpecs,TRANSITIONAL_HEIGHT,MODE_CHANGE_PHYSICS]=this.__closure;return{width:getControlsDrawerOpenWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right),opacity:withSpring(wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?1:0,MODE_CHANGE_PHYSICS)};})",
 };
-const __initData2 = {
-  code: "function VoicePanelControlsDrawerTsx2(){const{wrapperSpecs,mode}=this.__closure;return[wrapperSpecs.get().drawerMode,mode.get()];}",
+let closure_15 = {
+  code: "(function VoicePanelControlsDrawerTsx2(){let[wrapperSpecs,mode]=this.__closure;return[wrapperSpecs.get().drawerMode,mode.get()];})",
 };
-const __initData3 = {
-  code: "function VoicePanelControlsDrawerTsx3(props,previous){const{cheapWorkletArrayShallowEqual,VoicePanelModes,runOnJS,setFreeze}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[isDrawer,mode]=props;if(previous!=null&&isDrawer===previous[0]&&mode===previous[1]){return;}if(mode!==VoicePanelModes.PANEL||!isDrawer){runOnJS(setFreeze)(true);}else{runOnJS(setFreeze)(false);}}",
+let closure_16 = {
+  code: "(function VoicePanelControlsDrawerTsx3(props,previous){let[cheapWorkletArrayShallowEqual,VoicePanelModes,scheduleOnRN,setFreeze]=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[isDrawer,mode]=props;if(previous!=null&&isDrawer===previous[0]&&mode===previous[1]){return;}if(mode!==VoicePanelModes.PANEL||!isDrawer){scheduleOnRN(setFreeze,true);}else{scheduleOnRN(setFreeze,false);}})",
 };
 let obj3 = { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
 
-export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
-  ({ tab, sharedTab, wrapperSpecs } = gestureSpecs);
-  gestureSpecs = gestureSpecs.gestureSpecs;
-  const openTab = gestureSpecs.openTab;
-  let windowDimensions;
-  const context = windowDimensions.useContext(gestureSpecs(openTab[10]));
+export default noop.memo(function VoicePanelControlsDrawer(openTab) {
+  ({ tab, sharedTab, wrapperSpecs, gestureSpecs } = openTab);
+  _require = gestureSpecs;
+  openTab = openTab.openTab;
+  importDefault = openTab;
+  const context = noop.useContext(VoicePanelStateContextDefault);
   const mode = context.mode;
-  windowDimensions = context.windowDimensions;
-  const safeArea = context.safeArea;
-  const tmp4 = closure_11();
-  [tmp6, tmp7] = mode(windowDimensions.useState(null == tab), 2);
-  c6 = tmp7;
-  let tmp5 = mode(windowDimensions.useState(null == tab), 2);
+  ({ channelId, windowDimensions, safeArea } = context);
+  let tmp4 = closure_11();
+  [tmp6, tmp7] = noop.useState(null == tab);
+  const tmp5 = _slicedToArray(noop.useState(null == tab), 2);
   if (tmp8) {
     tmp7(false);
   }
   tmp8 = tab !== sharedTab.get() && tmp6;
-  const fn = function k() {
-    const obj = {
-      width: VoicePanelControlsUtils.getControlsDrawerOpenWidth(
-        windowDimensions.get().width,
-        safeArea.get().left,
-        safeArea.get().right,
-      ),
-      opacity: null,
-    };
-    let num = 0;
-    if (wrapperSpecs.get().height >= 200) {
-      num = 1;
+  items = [
+    closure_14,
+    require("VoicePanelControlsUtils").getControlsDrawerOpenWidth,
+    windowDimensions,
+    safeArea,
+    require("spring/spring").withSpring,
+    wrapperSpecs,
+    200,
+    closure_7,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18] = items;
+  class VoicePanelControlsDrawerTsx1 {
+    constructor() {
+      obj = { width: closure_0(closure_1.get().width, closure_2.get().left, closure_2.get().right), opacity: null };
+      tmp = closure_3;
+      num = 0;
+      if (closure_4.get().height >= closure_5) {
+        num = 1;
+      }
+      obj.opacity = tmp(num, closure_6);
+      return obj;
     }
-    obj.opacity = spring.withSpring(num, MODE_CHANGE_PHYSICS);
-    return obj;
-  };
-  let obj2 = wrapperSpecs(openTab[11]);
-  fn.__closure = {
-    getControlsDrawerOpenWidth: wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth,
-    windowDimensions,
-    safeArea,
-    withSpring: wrapperSpecs(openTab[13]).withSpring,
-    wrapperSpecs,
-    TRANSITIONAL_HEIGHT: 200,
-    MODE_CHANGE_PHYSICS,
-  };
-  fn.__workletHash = 8777106499672;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj3 = {
-    getControlsDrawerOpenWidth: wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth,
-    windowDimensions,
-    safeArea,
-    withSpring: wrapperSpecs(openTab[13]).withSpring,
-    wrapperSpecs,
-    TRANSITIONAL_HEIGHT: 200,
-    MODE_CHANGE_PHYSICS,
-  };
-  class V {
+  }
+  const items1 = [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18];
+  VoicePanelControlsDrawerTsx1.__closure = items1;
+  VoicePanelControlsDrawerTsx1.__workletHash = 12678028952961;
+  VoicePanelControlsDrawerTsx1.__initData = tmp11;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    VoicePanelControlsDrawerTsx1,
+  );
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_15, wrapperSpecs, mode];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp20, tmp21, tmp22] = items2;
+  class VoicePanelControlsDrawerTsx2 {
     constructor() {
       items = [,];
-      items[0] = wrapperSpecs.get().drawerMode;
-      items[1] = mode.get();
+      items[0] = closure_0.get().drawerMode;
+      items[1] = closure_1.get();
       return items;
     }
   }
-  V.__closure = { wrapperSpecs, mode };
-  V.__workletHash = 16802013961309;
-  V.__initData = __initData2;
-  class M {
+  const items3 = [tmp21, tmp22];
+  VoicePanelControlsDrawerTsx2.__closure = items3;
+  VoicePanelControlsDrawerTsx2.__workletHash = 7594507638980;
+  VoicePanelControlsDrawerTsx2.__initData = tmp20;
+  const items4 = [
+    closure_16,
+    require("cheapWorkletShallowEqual").cheapWorkletArrayShallowEqual,
+    closure_8,
+    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    tmp7,
+  ];
+  closure_129_0 = undefined;
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  [tmp23, tmp24, tmp25, tmp26, tmp27] = items4;
+  class VoicePanelControlsDrawerTsx3 {
     constructor(arg0, arg1) {
+      tmp2 = arg1;
       tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[14]);
-      tmp3 = arg1;
-      if (!obj.cheapWorkletArrayShallowEqual(gestureSpecs, tmp3)) {
-        tmp4 = closure_3;
+      if (!tmp(openTab, tmp2)) {
+        tmp3 = closure_3;
         num = 2;
-        tmp5 = closure_3(gestureSpecs, 2);
-        [tmp6, tmp7] = tmp5;
-        tmp8 = null != arg1 && tmp6 === arg1[0] && tmp7 === arg1[1];
-        if (!tmp8) {
-          tmp9 = VoicePanelModes;
-          if (tmp7 === VoicePanelModes.PANEL) {
-            if (tmp6) {
-              tmpResult = tmp(tmp2[11]);
-              tmp12 = closure_6;
+        tmp4 = closure_3(openTab, 2);
+        [tmp5, tmp6] = tmp4;
+        tmp7 = null != arg1 && tmp5 === arg1[0] && tmp6 === arg1[1];
+        if (!tmp7) {
+          tmp8 = closure_1;
+          if (tmp6 === closure_1.PANEL) {
+            if (tmp5) {
+              tmp12 = closure_2;
+              tmp13 = closure_3;
               flag2 = false;
-              tmp13 = tmpResult.runOnJS(closure_6)(false);
+              tmp14 = closure_2(closure_3, false);
             }
           }
-          tmpResult1 = tmp(tmp2[11]);
-          tmp10 = closure_6;
+          tmp9 = closure_2;
+          tmp10 = closure_3;
           flag = true;
-          tmp11 = tmpResult1.runOnJS(closure_6)(true);
+          tmp11 = closure_2(closure_3, true);
         }
       }
       return;
     }
   }
-  const obj4 = wrapperSpecs(openTab[11]);
-  M.__closure = {
-    cheapWorkletArrayShallowEqual: wrapperSpecs(openTab[14]).cheapWorkletArrayShallowEqual,
-    VoicePanelModes,
-    runOnJS: wrapperSpecs(openTab[11]).runOnJS,
-    setFreeze: tmp7,
-  };
-  M.__workletHash = 10375596551326;
-  M.__initData = __initData3;
-  const animatedReaction = obj4.useAnimatedReaction(V, M);
-  let items = [openTab];
-  const items1 = [gestureSpecs];
+  const items5 = [tmp24, tmp25, tmp26, tmp27];
+  VoicePanelControlsDrawerTsx3.__closure = items5;
+  VoicePanelControlsDrawerTsx3.__workletHash = 8293489565998;
+  VoicePanelControlsDrawerTsx3.__initData = tmp23;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    VoicePanelControlsDrawerTsx2,
+    VoicePanelControlsDrawerTsx3,
+  );
+  const items6 = [openTab];
+  const items7 = [gestureSpecs];
   const callback = obj.useCallback(
     (isVisible) => React7(VoicePanelVoiceControlsDefault, { isVisible, openTab }),
-    items,
+    items6,
   );
-  const callback1 = obj.useCallback(() => React7(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items1);
-  const obj6 = { style: null, children: null };
-  const items2 = [tmp4.drawer, animatedStyle];
-  obj6.style = items2;
-  const obj5 = {
-    cheapWorkletArrayShallowEqual: wrapperSpecs(openTab[14]).cheapWorkletArrayShallowEqual,
-    VoicePanelModes,
-    runOnJS: wrapperSpecs(openTab[11]).runOnJS,
-    setFreeze: tmp7,
-  };
-  let tmp15 = null;
-  if (obj7.isJankScreenReportingEnabled()) {
-    const obj8 = { channelId: context.channelId, tab, wrapperSpecs, mode };
-    tmp15 = closure_9(tmp(tmp2[18]), obj8);
+  const callback1 = obj.useCallback(() => React7(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items7);
+  const obj3 = { style: null, children: null };
+  const items8 = [tmp4.drawer, animatedStyle];
+  obj3.style = items8;
+  const tmp10Result = require("../../../../../_runtime/metro/01652__.js");
+  let tmp32 = null;
+  if (tmp10Result2.isJankScreenReportingEnabled()) {
+    const obj4 = { channelId, tab, wrapperSpecs, mode };
+    tmp32 = closure_9(tmp(19491), obj4);
   }
-  const items3 = [tmp15, , ,];
-  let tmp19 = !tmp6;
+  const items9 = [tmp32, , ,];
+  let tmp36 = !tmp6;
   if (!tmp6) {
-    tmp19 = "chat" === tab;
+    tmp36 = "chat" === tab;
   }
-  items3[1] = closure_9(closure_12, { shown: tmp19, renderContent: renderChat });
-  let tmp20 = !tmp6;
+  items9[1] = closure_9(closure_12, { shown: tmp36, renderContent: renderChat });
+  let tmp37 = !tmp6;
   if (!tmp6) {
-    tmp20 = "settings" === tab;
+    tmp37 = "settings" === tab;
   }
-  items3[2] = closure_9(closure_12, { shown: tmp20, renderContent: callback });
-  let tmp21 = !tmp6;
+  items9[2] = closure_9(closure_12, { shown: tmp37, renderContent: callback });
+  let tmp38 = !tmp6;
   if (!tmp6) {
-    tmp21 = "app_launcher" === tab;
+    tmp38 = "app_launcher" === tab;
   }
-  items3[3] = closure_9(closure_12, { shown: tmp21, renderContent: callback1 });
-  obj6.children = items3;
-  return closure_10(gestureSpecs(openTab[11]).View, obj6);
+  items9[3] = closure_9(closure_12, { shown: tmp38, renderContent: callback1 });
+  obj3.children = items9;
+  return closure_10(_modDef1652.View, obj3);
 });
 export const LazyContentFreezer = memoResult;

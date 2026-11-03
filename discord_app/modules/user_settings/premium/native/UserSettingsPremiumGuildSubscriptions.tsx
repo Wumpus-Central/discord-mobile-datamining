@@ -27,14 +27,14 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_11, UserSettingsSections: closure_12 } = Constants);
-const FractionalPremiumStates = fn(1385).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6778).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6898).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -86,17 +86,17 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
   if (props.hasSlots) {
     const obj = { style: tmp.subscriptionHeader, children: null };
     const obj2 = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-    const items = [,];
+    items = [,];
     ({ blurb: arr[0], blurbNotLast: arr[1] } = tmp);
     obj2.style = items;
     const intl = util.intl;
     obj2.children = intl.string(util.t.GwnFO5);
-    const items1 = [closure_1_14(Text_Text.Text, obj2), ,];
+    const items1 = [gesture(Text_Text.Text, obj2), ,];
     const obj3 = { style: tmp.blurb, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     const intl2 = util.intl;
     const obj4 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.GUILD_SUBSCRIPTIONS) };
     obj3.children = intl2.format(util.t.A4UTjH, obj4);
-    items1[1] = closure_1_14(Text_Text.Text, obj3);
+    items1[1] = gesture(Text_Text.Text, obj3);
     let tmp6Result = null != externalManagementMessage;
     if (tmp6Result) {
       const obj6 = {
@@ -105,14 +105,14 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
         color: "text-default",
         children: externalManagementMessage,
       };
-      tmp6Result = closure_1_14(Text_Text.Text, obj6);
+      tmp6Result = gesture(Text_Text.Text, obj6);
     }
     const obj7 = { children: null };
     items1[2] = tmp6Result;
     obj.children = items1;
-    const items2 = [__initData(React4, obj), closure_1_14(GuildBoostSlotsInventoryDefault, {})];
+    const items2 = [closure_1_15(React4, obj), gesture(GuildBoostSlotsInventoryDefault, {})];
     obj7.children = items2;
-    tmp3Result = __initData(noop.Fragment, obj7);
+    tmp3Result = closure_1_15(noop.Fragment, obj7);
   }
   return tmp3Result;
 };
@@ -124,18 +124,18 @@ prototype["render"] = function render() {
   ({ hasFetchedSubscriptionPlans, hasAvailableSlots, fpDurationText, premiumGroupRole } = props);
   if (premiumGroupRole === user.PremiumSubscriptionGroupRole.MEMBER) {
     const obj2 = { style: tmp.boostingUnavailablePill };
-    let tmp5 = closure_1_14(BoostingUnavailablePillDefault, obj2);
+    let tmp5 = gesture(BoostingUnavailablePillDefault, obj2);
   } else {
     tmp5 = null;
     if (fractionalState !== FractionalPremiumStates.NONE) {
       const obj = { fpDurationText, isInReverseTrial, style: tmp.boostingUnavailablePill };
-      tmp5 = closure_1_14(BoostingCountDownPillDefault, obj);
+      tmp5 = gesture(BoostingCountDownPillDefault, obj);
     }
   }
   const obj3 = { style: tmp.scroller, children: null };
-  const items = [tmp5, self.renderPremiumGuildSubscriptions()];
+  items = [tmp5, self.renderPremiumGuildSubscriptions()];
   const obj4 = { style: tmp.upsellSection, children: null };
-  const items1 = [closure_1_14(TopPattern.TopPattern, { style: tmp.background })];
+  const items1 = [gesture(TopPattern.TopPattern, { style: tmp.background })];
   let tmp13Result = null;
   if (hasFetchedSubscriptionPlans) {
     const obj6 = {
@@ -144,15 +144,15 @@ prototype["render"] = function render() {
       isInReverseTrial,
       hasAvailableSlots,
     };
-    tmp13Result = closure_1_14(GuildBoostingUpsellDefault, obj6);
+    tmp13Result = gesture(GuildBoostingUpsellDefault, obj6);
   }
   items1[1] = tmp13Result;
   obj4.children = items1;
-  items[2] = __initData(React4, obj4);
+  items[2] = closure_1_15(React4, obj4);
   obj3.children = items;
-  return __initData(hasOwnProperty, obj3);
+  return closure_1_15(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(5080).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -176,13 +176,13 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(7578)({ forceFetch: true }));
-  const tmp3 = flag(7578)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(7702)({ forceFetch: true }));
+  const tmp3 = flag(7702)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(15350)(endsAt, tmp(15350).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(15350);
-  const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
+  fpDurationText = flag(15491)(endsAt, tmp(15491).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(15491);
+  items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {
       hasFetchedSlots: GuildBoostSlotStore.hasFetched,

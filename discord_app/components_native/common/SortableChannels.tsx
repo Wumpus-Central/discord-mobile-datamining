@@ -17,12 +17,12 @@ const createElement = fn(19).createElement;
 let closure_10 = 24 + StyleSheet.hairlineWidth;
 let closure_11 = apply.memoize((arr) => {
   const mapped = arr.map((category) => {
-    const items = [{ type: "section", data: category.category }, ...data.map((data) => ({ type: "row", data }))];
+    items = [{ type: "section", data: category.category }, ...data.map((data) => ({ type: "row", data }))];
     data = category.data;
     return items;
   });
   return mapped.reduce((acc, item) => {
-    const items = [...item];
+    items = [...item];
     return items;
   }, []);
 });
@@ -81,7 +81,7 @@ Row.prototype["render"] = function render() {
     obj3 = { opacity: 0.2 };
   }
   const obj4 = { style: null, ref: self.setViewRef, collapsable: false, children: null };
-  const items = [obj3, style];
+  items = [obj3, style];
   obj4.style = items;
   let tmp8 = null;
   if (!isAfter) {
@@ -150,7 +150,7 @@ class SortRow extends Component2 {
 SortRow.prototype["render"] = function render() {
   const props = this.props;
   const obj = { style: null, children: null };
-  const items = [this.state.style, props.sortRowStyle];
+  items = [this.state.style, props.sortRowStyle];
   const pan = props.list.state.pan;
   ({ rowData, renderItem } = props);
   items[2] = pan.getLayout();
@@ -320,7 +320,7 @@ class SortableChannels extends Component3 {
     };
     obj.renderSectionHeader = function renderSectionHeader(data, arg1) {
       let tmp = arg1;
-      const state = list.state;
+      state = list.state;
       ({ active, hoveringIndex } = state);
       const order = list.props.order;
       ({ activeIndex, panResponder } = state);
@@ -367,7 +367,7 @@ class SortableChannels extends Component3 {
     };
     obj.renderItem = function renderItem(data, arg1) {
       let tmp = arg1;
-      const state = list.state;
+      state = list.state;
       ({ active, hoveringIndex } = state);
       let tmp3 = !tmp;
       ({ activeIndex, panResponder } = state);
@@ -471,7 +471,7 @@ class SortableChannels extends Component3 {
       }
     };
     obj.scrollTo = function scrollTo() {
-      const items = [...arguments];
+      items = [...arguments];
       const scrollResponder = obj.getScrollResponder();
       if (null != scrollResponder) {
         const scrollTo = scrollResponder.scrollTo;
@@ -523,7 +523,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
   const self = this;
   closure_1 = arg0;
   closure_2 = point;
-  const items = [null, { dx: valueXY.x, dy: valueXY.y }];
+  items = [null, { dx: valueXY.x, dy: valueXY.y }];
   closure_0 = RN.event(items, { useNativeDriver: false });
   return hasOwnProperty.create({
     onStartShouldSetPanResponder() {
@@ -553,7 +553,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       }
     },
     onPanResponderGrant() {
-      const state = self.state;
+      state = self.state;
       const pan = state.pan;
       const onMoveStart = closure_1.onMoveStart;
       if (null != state.active) {
@@ -654,7 +654,7 @@ prototype["render"] = function render() {
     return key.key;
   };
   obj3.getItemLayout = self.getItemLayout;
-  const items = [React6(timestampProducer, obj3), self.renderActive()];
+  items = [React6(timestampProducer, obj3), self.renderActive()];
   obj.children = items;
   return React5(React3, obj);
 };

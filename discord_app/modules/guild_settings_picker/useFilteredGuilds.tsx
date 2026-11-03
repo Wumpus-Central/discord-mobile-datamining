@@ -12,7 +12,7 @@ export default function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
   let stateFromStores1;
-  let items = [SortedGuildStore];
+  items = [SortedGuildStore];
   const stateFromStores = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items, () =>
     flattenedGuildIds.getFlattenedGuildIds(),
   );
@@ -28,7 +28,7 @@ export default function useFilteredGuilds(isGuildIncluded) {
   const items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
   obj4.options = stateFromStores2.useMemo(() => {
     if (null == stateFromStores2) {
-      let items = [];
+      items = [];
     } else {
       if (null == isGuildIncluded) {
         let found = stateFromStores;

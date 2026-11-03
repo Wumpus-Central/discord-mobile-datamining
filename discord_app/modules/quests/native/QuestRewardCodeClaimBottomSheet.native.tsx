@@ -20,7 +20,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   let memo;
   ({ questContentPosition, sourceQuestContent } = quest);
   const tmp3 = closure_10(rewardCode(hasError[7])().bottom);
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStoresObject = quest(hasError[8]).useStateFromStoresObject(items, () => ({
     rewardCode: QuestStore.getRewardCode(quest.id),
     isFetchingRewardCode: QuestStore.isFetchingRewardCode(quest.id),
@@ -119,8 +119,8 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         const obj2 = { text: null, icon: null };
         const intl = quest(1113).intl;
         obj2.text = intl.string(quest(1113).t.MSaeTe);
-        obj2.icon = quest(5731).CopyIcon;
-        rewardCode(5712).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        obj2.icon = quest(5851).CopyIcon;
+        rewardCode(5832).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);
@@ -242,10 +242,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6781).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6901).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -263,7 +263,7 @@ export default function QuestRewardCodeClaimBottomSheetConnected(questContentPos
   ({ questId: require, questContent } = questContentPosition);
   questContentPosition = questContentPosition.questContentPosition;
   const sourceQuestContent = questContentPosition.sourceQuestContent;
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(require));
   if (null == stateFromStores) {
     questContent(tmp2[12]).hideActionSheet();

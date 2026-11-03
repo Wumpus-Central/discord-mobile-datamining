@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  const items = [AppliedGuildBoostStore];
+  items = [AppliedGuildBoostStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -54,10 +54,10 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2570.n5hQhc);
+      obj.title = intl.string(_modDef2699.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2570.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2699.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

@@ -52,7 +52,7 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
     let obj2;
     if (null != webhooks) {
       c2 = null;
-      let items = [];
+      items = [];
       if (null != channelId) {
         if (null == dependencyMap[guildId]) {
           dependencyMap[guildId] = {};

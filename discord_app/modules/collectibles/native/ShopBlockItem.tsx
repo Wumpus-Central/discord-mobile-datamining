@@ -7,7 +7,7 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { shopBlockSpacing: { marginTop: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -18,7 +18,7 @@ export default function _default(block) {
   ({ screen, preferVCPrice } = block);
   let stateFromStores1;
   const tmp = closure_7();
-  const items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const stateFromStores = block(stateFromStores1[6]).useStateFromStores(
     items,
     () => CollectiblesCategoryStore.categories,

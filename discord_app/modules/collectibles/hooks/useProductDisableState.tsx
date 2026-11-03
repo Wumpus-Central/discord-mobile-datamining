@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export function useProductDisableState(skuId) {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;

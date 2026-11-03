@@ -4,7 +4,7 @@ import wrappers from "../../../discord_common/js/packages/protos/google/protobuf
 import PinotMemberSettingStore from "PinotMemberSettingStore.tsx";
 
 require = fn;
-const UserSettingDefinitions = fn(4843);
+const UserSettingDefinitions = fn(4970);
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "swpMessagePromotionOptedOut",
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/pinot/PinotMemberSettingState
 export const PinotMemberOptedOut = defineProtoSettingResult;
 export function usePinotMemberSettingState() {
   let setting = defineProtoSettingResult.useSetting();
-  const items = [PinotMemberSettingStore];
+  items = [PinotMemberSettingStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     locked: PinotMemberSettingStore.isLocked(),
     defaultOptedOut: PinotMemberSettingStore.defaultsToOptedOut(),

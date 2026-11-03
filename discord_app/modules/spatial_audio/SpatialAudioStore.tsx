@@ -73,8 +73,8 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5917).DEFAULT_SPATIAL_AUDIO_OPTIONS;
-const Constants = fn(5768);
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(6037).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const Constants = fn(5888);
 ({ Features: closure_7, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -92,13 +92,13 @@ prototype["initialize"] = function initialize(enabled) {
   }
   closure_10 = { enabled };
   self.waitFor(ApexExperimentStore, MediaEngineStore, RTCConnectionStore);
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5789).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
+  mediaEngine.on(self(5909).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
     setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial),
   );
-  mediaEngine.on(self(5789).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5909).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

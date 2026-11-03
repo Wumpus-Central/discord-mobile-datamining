@@ -23,9 +23,9 @@ function isStreamRequestActivity(platform) {
   return tmp;
 }
 let items = [
-  fn(9738).ActivityGamePlatforms.XBOX,
-  fn(9738).ActivityGamePlatforms.PLAYSTATION_4,
-  fn(9738).ActivityGamePlatforms.PLAYSTATION_5,
+  fn(9870).ActivityGamePlatforms.XBOX,
+  fn(9870).ActivityGamePlatforms.PLAYSTATION_4,
+  fn(9870).ActivityGamePlatforms.PLAYSTATION_5,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/request_to_stream/useStreamRe
 export default function useStreamRequestActivities(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
+  items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() === closure_0) {
       let activities = SelfPresenceStore.getActivities();

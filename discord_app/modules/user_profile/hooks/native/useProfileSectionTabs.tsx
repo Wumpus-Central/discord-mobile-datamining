@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfileSections = fn(8754).UserProfileSections;
+const UserProfileSections = fn(8878).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
@@ -74,7 +74,7 @@ export function useProfileSectionTabs(boardTabIndex) {
   if (num >= 0) {
     num2 = num;
   }
-  const items = [wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange];
+  items = [wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange];
   const items1 = [num2];
   const callback = obj.useCallback((arg0) => {
     if (wishlistTabIndex === arg0) {

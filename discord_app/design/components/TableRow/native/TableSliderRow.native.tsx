@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" },
   label: { flexShrink: 1 },
@@ -59,7 +59,7 @@ export function TableSliderRow(end) {
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",

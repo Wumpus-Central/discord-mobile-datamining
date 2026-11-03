@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -17,7 +17,7 @@ export default function SettingsOverviewScreen() {
     mapleSyrup1Enabled[7],
   ).useHasPremiumSubscriptionToDisplay();
   const obj = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[7]);
-  let items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = hasPremiumSubscriptionToDisplay(mapleSyrup1Enabled[8]).useStateFromStores(
     items,
     () => locale.locale,
@@ -39,7 +39,7 @@ export default function SettingsOverviewScreen() {
     if (!hasPremiumSubscriptionToDisplay) {
       PREMIUM = MobileUserSettings.PREMIUM;
     }
-    const items = [PREMIUM, , , , , , , , ,];
+    items = [PREMIUM, , , , , , , , ,];
     ({
       ACCOUNT: arr[1],
       CONTENT_AND_SOCIAL: arr[2],

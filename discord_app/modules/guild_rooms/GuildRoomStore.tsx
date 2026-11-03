@@ -75,7 +75,7 @@ class GuildRoomStore extends PersistedStore {}
 const prototype = GuildRoomStore.prototype;
 prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   this.waitFor(AuthenticationStore, RTCConnectionStore, SelectedChannelStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, handleSelectedChannelStoreChange);
   let flag;
   if (rememberVideoOverlayVisibility != null) {
@@ -346,7 +346,7 @@ const guildRoomStore = new GuildRoomStore(DispatcherDefault, {
   },
   GUILD_ROOM_NOTE_CREATE_START: function handleNoteCreateStart(roomId) {
     roomId = roomId.roomId;
-    let items = dependencyMap5[roomId];
+    items = dependencyMap5[roomId];
     ({ localId, position } = roomId);
     if (items == null) {
       items = [];

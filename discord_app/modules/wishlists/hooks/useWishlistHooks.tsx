@@ -30,11 +30,11 @@ function useFetchWishlist(wishlistId) {
   }
   let wishlist;
   let stateFromStores;
-  let items = [WishlistStore];
+  items = [WishlistStore];
   const tmp3 = wishlist(
     wishlistId(source[8]).useStateFromStoresArray(items, () => {
       if (null == wishlistId) {
-        const items = [null, "success", undefined, undefined];
+        items = [null, "success", undefined, undefined];
         let items1 = items;
       } else {
         items1 = [
@@ -54,7 +54,7 @@ function useFetchWishlist(wishlistId) {
   let items1 = [wishlist];
   const memo = noop.useMemo(() => {
     if (null == first) {
-      let items = [];
+      items = [];
     } else {
       items = _mod12.uniq(getWishlistSkuIds(tmp));
     }
@@ -111,7 +111,7 @@ function useFetchWishlist(wishlistId) {
   return obj4;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(9472).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9600).getWishlistSkuIds;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");
 
@@ -126,7 +126,7 @@ export function useFetchWishlists(wishlistIdsAndUsers) {
     USER_PROFILE = wishlistIdsAndUsers(stateFromStoresArray2[7]).WishlistFetchSource.USER_PROFILE;
   }
   stateFromStoresArray2 = undefined;
-  const items = [WishlistStore];
+  items = [WishlistStore];
   const items1 = [wishlistIdsAndUsers];
   const wishlists = wishlistIdsAndUsers(stateFromStoresArray2[8]).useStateFromStoresArray(
     items,
@@ -248,7 +248,7 @@ export { useFetchWishlist };
 export function useIsSkuInWishlist(stateFromStores, skuId) {
   _require = stateFromStores;
   closure_1 = skuId;
-  const items = [WishlistStore];
+  items = [WishlistStore];
   return require("initialize").useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
@@ -269,7 +269,7 @@ export function useShouldShowWishlistInDMGifting(isGift) {
   if (giftRecipient != null) {
     id = giftRecipient.id;
   }
-  const items = [id];
+  items = [id];
   const effect = wishlistGiftableItems.useEffect(() => {
     let id;
     if (giftRecipient != null) {
@@ -338,7 +338,7 @@ export function useShouldShowWishlistInDMGifting(isGift) {
   }, items2);
 }
 export function useCurrentUserWishlist() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   stateFromStores = stateFromStores(userProfile[8]).useStateFromStores(items, () => id.getId());
   userProfile = undefined;
   let obj = stateFromStores(userProfile[8]);
@@ -392,7 +392,7 @@ export function useCurrentUserWishlist() {
 }
 export function useFetchWishlistAndProfileInfoForUser(recipientUserId) {
   _require = recipientUserId;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(stateFromStores));
   const obj = require("initialize");
   const items1 = [UserProfileStore];

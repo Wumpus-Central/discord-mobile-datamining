@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import privDefault from "../../_runtime/01451_priv.js";
+import privDefault from "../../_runtime/01453_priv.js";
 import StageChannelPermissions from "../modules/stage_channels/StageChannelPermissions.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -60,7 +60,7 @@ const Constants = fn(1072);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -863,14 +863,14 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "ind",
+    parentChannelThreadType: "fill",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "tokyo_tower",
+    rtcRegion: "ring_buoy",
     safetyWarnings: false,
     blockedUserWarningDismissed: false,
     template: false,
@@ -1042,11 +1042,11 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(4875).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(5002).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
-      let items = [];
+      items = [];
     } else {
       items = available_tags.map((id) => {
         obj = { id: id.id, name: id.name, emojiId: null, emojiName: null, moderated: null, color: null };
@@ -1199,7 +1199,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4875).dangerouslyCast(obj, tmp7);
+  return obj6(5002).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1331,7 +1331,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(4875).dangerouslyCast(obj, tmp7);
+  return obj6(5002).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1387,7 +1387,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
   if (null != available_tags.available_tags) {
     available_tags = available_tags.available_tags;
     if (null == available_tags) {
-      let items = [];
+      items = [];
     } else {
       items = available_tags.map((id) => {
         obj = { id: id.id, name: id.name, emojiId: null, emojiName: null, moderated: null, color: null };
@@ -1506,7 +1506,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(4875).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(5002).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1574,7 +1574,7 @@ class PrivateChannelRecord extends ChannelRecordBase {
 }
 const prototype2 = PrivateChannelRecord.prototype;
 PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, id) {
-  let items = rawRecipients;
+  items = rawRecipients;
   let orCompute = obj.getOrCompute(id);
   if (rawRecipients == null) {
     items = [];
@@ -1669,7 +1669,7 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
     if (recipients == null) {
       recipients = [];
     }
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(recipients, 0)] = arg0;
     const result = self.set("recipients", _modDef12.uniq(items).sort(SnowflakeUtilsDefault.compare));
     let result1 = result;

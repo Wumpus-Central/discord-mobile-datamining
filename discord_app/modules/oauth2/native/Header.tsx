@@ -13,7 +13,7 @@ const View = fn(17).View;
 const UserFlags = fn(1072).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: {
     paddingBottom: 16,
@@ -59,7 +59,7 @@ export default function Header(accountScopes) {
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { style: tmp.headerIcons, children: null };
   const obj2 = { id: application.id, icon: application.icon };
-  const items = [hasOwnProperty(native.Avatar, { source: applicationIconSource, size: native.AvatarSizes.XLARGE }), ,];
+  items = [hasOwnProperty(native.Avatar, { source: applicationIconSource, size: native.AvatarSizes.XLARGE }), ,];
   const obj6 = { style: tmp.ellipseGroup, children: null };
   const items1 = [
     hasOwnProperty(View, { style: tmp.ellipse }),
@@ -78,7 +78,7 @@ export default function Header(accountScopes) {
   const obj11 = { style: tmp.applicationNameWrapper, children: null };
   const items3 = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-lg/bold",
+      variant: "text-lg/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
@@ -106,7 +106,7 @@ export default function Header(accountScopes) {
     stringResult = intl.string(util.t["X+Fdpo"]);
   }
   items2[2] = hasOwnProperty(Text_Text.Text, {
-    variant: "heading-md/normal",
+    variant: "heading-md/medium",
     color: "text-default",
     children: stringResult,
   });

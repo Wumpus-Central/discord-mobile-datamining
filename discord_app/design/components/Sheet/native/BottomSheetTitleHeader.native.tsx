@@ -13,7 +13,7 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.titles, children: null };
-  const items = [timestampProducer(Title, { lineClamp: 2, children: children.title })];
+  items = [timestampProducer(Title, { lineClamp: 2, children: children.title })];
   let tmp2Result = null;
   if (null != subtitle) {
     const obj3 = { children: subtitle };
@@ -30,7 +30,7 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   const tmp = closure_8();
   const tmp2 = closure_10();
   const obj = { style: null, children: null };
-  const items = [tmp.container, tmp2.container];
+  items = [tmp.container, tmp2.container];
   obj.style = items;
   const obj2 = { style: tmp2.accessories, children: null };
   const items1 = [
@@ -73,7 +73,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
     });
   }, []);
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(View, { style: { width: tmp5 } }), , , ,];
+  items = [timestampProducer(View, { style: { width: tmp5 } }), , , ,];
   const obj4 = { style: tmp.titles, children: null };
   const items1 = [timestampProducer(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title })];
   let tmp9Result = null;
@@ -125,7 +125,7 @@ function Subtitle(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -140,13 +140,13 @@ let closure_8 = createStyles.createStyles(() => {
   };
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => ({
   container: { flexDirection: "column" },
   accessories: { flexDirection: "row", justifyContent: "space-between" },
   item: { flexShrink: 0 },
 }));
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_12 = createStyles.createStyles(() => {
   const obj = {
     accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 },
@@ -185,7 +185,7 @@ export function BottomSheetTitleHeader(arg0) {
   let tmp16 = tmp5;
   if (null != tmp3) {
     const obj4 = { style: { position: "relative" }, children: null };
-    const items = [tmp5, tmp3];
+    items = [tmp5, tmp3];
     obj4.children = items;
     tmp16 = React5(View, obj4);
   }

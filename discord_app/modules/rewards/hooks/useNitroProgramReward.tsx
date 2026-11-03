@@ -10,7 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rewards/hooks/useNitroProgramReward.tsx");
 
 export function useNitroProgramReward() {
-  const items = [ProgramRewardsStore];
+  items = [ProgramRewardsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     isReady: ProgramRewardsStore.isReady(),
     programReward: ProgramRewardsStore.getRewardForProgram(ProgramRewardsTypes.RewardProgram.NITRO),

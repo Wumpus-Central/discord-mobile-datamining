@@ -25,7 +25,7 @@ export default function useEmbeddedActivityBackground(applicationId) {
   noop = tmp3[1];
   const tmp = _slicedToArray(noop.useState(null), 2);
   const url = applicationId(names[2]).getAssetImage(applicationId, tmp2, size, str);
-  let state = "loading";
+  state = "loading";
   if (!tmp3[0]) {
     let str3 = "not-found";
     if (null != url) {
@@ -37,7 +37,7 @@ export default function useEmbeddedActivityBackground(applicationId) {
   const effect = obj.useEffect(() => {
     closure_4.current = names;
   });
-  const items = [applicationId];
+  items = [applicationId];
   const effect1 = obj.useEffect(() => {
     const current = ref.current;
     if (null != current) {

@@ -7,7 +7,7 @@ import n from "../../../../../../_runtime/metro/00671__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = {
   position: "absolute",
@@ -41,7 +41,7 @@ export function VideoQuestCaptions(currentTime) {
   const tmp = closure_6();
   const videoQuestCaptions = currentTime(captions[6]).useVideoQuestCaptions(quest);
   captions = videoQuestCaptions.captions;
-  const items = [captions, currentTime, flag];
+  items = [captions, currentTime, flag];
   const memo = noop.useMemo(() => {
     let findActiveCaptionResult = null;
     if (null != captions) {

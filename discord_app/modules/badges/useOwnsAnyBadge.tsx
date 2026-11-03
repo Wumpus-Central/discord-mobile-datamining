@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
 
 export default function useOwnsAnyBadge() {
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

@@ -10,11 +10,11 @@ import SKUStore from "../../../../stores/game_store/SKUStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1387).SubscriptionIntervalTypes;
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   disclaimer: { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 },
   title: null,
@@ -37,24 +37,24 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10562).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10692).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10562);
-  const giftCodeURL = giftCodeRecord(6444).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10692);
+  const giftCodeURL = giftCodeRecord(6564).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(2047).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(2047);
+    subscriptionPlanId = tmp2(2176).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(2176);
   }
-  let obj2 = giftCodeRecord(6444);
+  let obj2 = giftCodeRecord(6564);
   const tmp6 = giftCodeURL;
-  const tierDisplayNameByPlanId = giftCodeURL(2047).getTierDisplayNameByPlanId(subscriptionPlanId);
-  const obj4 = giftCodeURL(2047);
-  const items = [giftCodeRecord, giftCodeURL];
+  const tierDisplayNameByPlanId = giftCodeURL(2176).getTierDisplayNameByPlanId(subscriptionPlanId);
+  const obj4 = giftCodeURL(2176);
+  items = [giftCodeRecord, giftCodeURL];
   let obj3 = { children: null };
   const callback = noop.useCallback(() => {
     value = SKUStore.get(giftCodeRecord.skuId);
@@ -64,12 +64,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10697), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10827), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
-  const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
+  const obj6 = { style: tmp.title, variant: "heading-lg/semibold", children: null };
   const intl = tmp2(1113).intl;
   obj6.children = intl.string(giftCodeRecord(1113).t["/s1xR7"]);
-  items1[1] = closure_8(giftCodeRecord(5624).Text, obj6);
+  items1[1] = closure_8(giftCodeRecord(5747).Text, obj6);
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl2 = tmp2(1113).intl;
   if (obj5.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
@@ -79,16 +79,16 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   }
   const obj8 = { children: null };
   obj7.children = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
-  items1[2] = closure_8(giftCodeRecord(5624).Text, obj7);
+  items1[2] = closure_8(giftCodeRecord(5747).Text, obj7);
   const obj9 = { style: tmp.input, children: null };
-  const obj10 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
+  const obj10 = { style: tmp.inputLabel, variant: "heading-md/semibold", children: null };
   const intl3 = tmp2(1113).intl;
   obj10.children = intl3.string(giftCodeRecord(1113).t["qS+yMo"]);
-  const items2 = [closure_8(giftCodeRecord(5624).Text, obj10)];
-  obj5 = giftCodeURL(2047);
-  items2[1] = closure_8(giftCodeRecord(8992).InputButton, {
+  const items2 = [closure_8(giftCodeRecord(5747).Text, obj10)];
+  obj5 = giftCodeURL(2176);
+  items2[1] = closure_8(giftCodeRecord(9120).InputButton, {
     text: giftCodeURL,
-    icon: tmp6(5732),
+    icon: tmp6(5852),
     iconPosition: "end",
     onPress: callback,
   });
@@ -97,7 +97,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
   const intl4 = tmp2(1113).intl;
   obj12.children = intl4.string(giftCodeRecord(1113).t.As9eLl);
-  items1[4] = closure_8(giftCodeRecord(5624).Text, obj12);
+  items1[4] = closure_8(giftCodeRecord(5747).Text, obj12);
   obj8.children = items1;
   return closure_10(closure_9, obj8);
 }
@@ -113,7 +113,7 @@ export function PremiumGiftSuccessActions(giftCodeRecord) {
   const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
   let obj2 = onClose(navigation[9]);
   const giftCodeURL = onClose(navigation[11]).getGiftCodeURL(giftCodeRecord.giftCodeRecord.code);
-  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
+  items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
   const items1 = [giftCodeURL, enabled, prePurchaseGiftingBadgeProgress, navigation];
   const callback = enabled.useCallback(() => {
     if (enabled) {

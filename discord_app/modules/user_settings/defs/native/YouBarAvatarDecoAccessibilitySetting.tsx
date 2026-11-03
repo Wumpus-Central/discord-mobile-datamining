@@ -5,15 +5,15 @@ import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreato
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["34XN2f"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useValue() {
-    const items = [AccessibilityStore];
+    items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);
   },
   onValueChange(animateAvatarDeco) {

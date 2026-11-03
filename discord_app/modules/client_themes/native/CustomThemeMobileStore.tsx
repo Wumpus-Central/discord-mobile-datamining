@@ -67,7 +67,7 @@ prototype["initialize"] = function initialize(arg0) {
     const self = this;
     const self2 = this;
     this.waitFor(SelectivelySyncedUserSettingsStore, ThemeStore, UnsyncedUserSettingsStore, UserSettingsProtoStore);
-    const items = [SelectivelySyncedUserSettingsStore];
+    items = [SelectivelySyncedUserSettingsStore];
     this.syncWith(items, handleSelectivelySyncedUserSettingsUpdate);
   } else {
     if (null == customTheme.theme) {
@@ -93,7 +93,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "raw", customTheme: "cix" };
+    obj = { theme: "Array", customTheme: "flexDirection" };
   }
   return obj;
 };

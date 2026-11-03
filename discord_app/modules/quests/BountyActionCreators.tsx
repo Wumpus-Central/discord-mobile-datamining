@@ -61,7 +61,7 @@ let closure_12 = async function _fetchBountiesAndDispatch(arg0) {
             bountyFromServerResult.id,
             closure_0(request_id[11]).questAdDecisionFromAdDecision(creative, obj),
           );
-          const items = [bountyFromServerResult];
+          items = [bountyFromServerResult];
           return items;
         }
       }
@@ -91,7 +91,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -111,9 +111,9 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
             value: fetchBountiesAndDispatch(
               tmp5,
               asyncGeneratorStep(async () => {
-                await tmp2(7641).getSession();
+                await tmp2(7765).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(7865).getOrRefreshAdSession();
+                const orRefreshAdSession = tmp2(7989).getOrRefreshAdSession();
                 const HTTP = tmp2(1282).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,
@@ -150,7 +150,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -168,7 +168,7 @@ let closure_14 = async function _fetchBountyPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -190,10 +190,10 @@ let closure_14 = async function _fetchBountyPreview(arg0) {
               asyncGeneratorStep(async () => {
                 const _URLSearchParams = URLSearchParams;
                 closure_0 = 0;
-                let items = [];
+                items = [];
                 closure_0 = HermesBuiltin.arraySpread(
                   closure_0.map((item) => {
-                    const items = ["ad_creative_ids", item];
+                    items = ["ad_creative_ids", item];
                     return items;
                   }),
                   closure_0,
@@ -224,7 +224,7 @@ let closure_14 = async function _fetchBountyPreview(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
@@ -247,7 +247,7 @@ let closure_15 = async function _fetchQuestBarCreativePreview(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -290,7 +290,7 @@ let closure_15 = async function _fetchQuestBarCreativePreview(arg0) {
               DispatcherDefault.dispatch(obj6);
               c7 = 1;
               const _URLSearchParams = URLSearchParams;
-              const items = ["ad_creative_ids", closure_0];
+              items = ["ad_creative_ids", closure_0];
               const items1 = [items];
               const _String = String;
               const items2 = ["placement", String(placement)];
@@ -507,7 +507,7 @@ let closure_16 = async function _claimBountyReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -639,7 +639,7 @@ let closure_17 = async function _dismissAdContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -759,7 +759,7 @@ let closure_18 = async function _resetCreativePreviewDeliveryState(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -804,7 +804,7 @@ let closure_18 = async function _resetCreativePreviewDeliveryState(arg0) {
           const obj7 = { type: "ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET", adCreativeId: closure_130_0 };
           closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -827,7 +827,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -865,7 +865,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
         } else {
           closure_129_1(closure_129_2[8]).dispatch({ type: "ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET" });
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -874,7 +874,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
     }
   })();
 };
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const Endpoints = fn(1072).Endpoints;
 let closure_10 = new LoggerDefault("BountyActionCreators");
 const size = fn(2);

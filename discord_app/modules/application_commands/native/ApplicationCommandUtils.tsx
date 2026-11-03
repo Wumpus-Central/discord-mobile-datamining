@@ -1,13 +1,13 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1982 from "../../../../_runtime/metro/01982__.js";
+import _modDef2111 from "../../../../_runtime/metro/02111__.js";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import ApplicationCommandConstants from "../ApplicationCommandConstants.tsx";
 import DraftStore from "../../../stores/DraftStore.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import _modDef13794 from "../../../../_runtime/metro/13794__.js";
-import _modDef13795 from "../../../../_runtime/metro/13795__.js";
+import _modDef13925 from "../../../../_runtime/metro/13925__.js";
+import _modDef13926 from "../../../../_runtime/metro/13926__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,9 +21,9 @@ export function getApplicationCommandsIconSource(section, stateFromStores) {
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13794);
+      return AvatarUtilsDefault.makeSource(_modDef13925);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13795);
+      return AvatarUtilsDefault.makeSource(_modDef13926);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
@@ -36,7 +36,7 @@ export function getApplicationCommandsIconSource(section, stateFromStores) {
         obj5.guildMember = stateFromStores;
         let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
       } else {
-        applicationIconSource = _modDef1982;
+        applicationIconSource = _modDef2111;
       }
       return applicationIconSource;
     }

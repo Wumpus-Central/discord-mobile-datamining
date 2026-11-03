@@ -18,8 +18,8 @@ export function useRoleIconProps(guildId) {
     num = 20;
   }
   let role = guildId.role;
-  let guild = guildId.guild;
-  const items = [guild, role];
+  guild = guildId.guild;
+  items = [guild, role];
   const items1 = [guildId, roleId, role, guild];
   const stateFromStores = guildId(roleId[3]).useStateFromStores(
     items,
@@ -85,7 +85,7 @@ export function getRoleIconProps(roleIconRole, size) {
 export function useRoleIconPropsForPreview(guildId, role) {
   _require = guildId;
   dependencyMap = role;
-  const items = [GuildStore, GuildRoleStore];
+  items = [GuildStore, GuildRoleStore];
   const items1 = [guildId, role];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -127,7 +127,7 @@ export function useRoleIconPropsForPreview(guildId, role) {
     if (null != stateFromStores) {
       const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: false };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj3;

@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export function makeFormatter(arg0) {
-  locale = LocaleStore.locale;
+  const locale = LocaleStore.locale;
   let tmp = (function tryMakeNativeFormatter(locale, arg1) {
     closure_0 = locale;
     closure_1 = arg1;

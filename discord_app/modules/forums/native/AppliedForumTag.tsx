@@ -42,7 +42,7 @@ class AppliedForumTag {
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
-        const items = [container.container, closure_1_0];
+        items = [container.container, closure_1_0];
         obj.style = items;
         const intl = util.intl;
         obj.accessibilityLabel = intl.formatToPlainString(util.t.tXXD6v, { tagName });
@@ -89,10 +89,10 @@ class AppliedForumTag {
   }
 }
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   pill: {
     height: 24,
@@ -118,7 +118,7 @@ export function AppliedForumTagPill(arg0) {
   ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
   const tmp = closure_8();
   const obj = { tag, hasUnreads, containerStyle: null };
-  const items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
+  items = [tmp.pill, containerStyle, disableEndMargin ? tmp.disableEndMargin : {}];
   obj.containerStyle = items;
   return timestampProducer(AppliedForumTag, obj);
 }

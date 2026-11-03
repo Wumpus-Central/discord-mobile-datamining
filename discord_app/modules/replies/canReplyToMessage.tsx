@@ -26,7 +26,7 @@ export function useCanReplyToMessage(channel, message) {
     guildId = channel.getGuildId();
   }
   const obj2 = require("useUserCommunicationDisabled");
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = tmp(504).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {

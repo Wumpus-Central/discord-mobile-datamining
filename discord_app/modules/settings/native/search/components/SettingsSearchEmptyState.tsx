@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: { paddingTop: 24, justifyContent: "center", alignItems: "center" },
   textContainer: { marginTop: 24 },
@@ -26,7 +26,7 @@ export default noop.memo(function SettingsSearchEmptyState() {
     AccessibilityAnnouncer.announce(intl.string(util.t.zihbmv), "polite");
   }, []);
   const obj = { style: tmp.container, children: null };
-  const items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" })];
+  items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" })];
   const obj2 = { style: tmp.textContainer, align: "center", justify: "center", children: null };
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;

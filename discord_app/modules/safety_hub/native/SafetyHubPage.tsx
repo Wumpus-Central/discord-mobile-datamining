@@ -3,8 +3,8 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
-import _modDef3192 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import _modDef3319 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -40,16 +40,16 @@ function RetryBanner() {
   obj2.text = intl2.string(util.t.IcA9iD);
   obj2.onPress = handleRetryClick;
   obj.action = obj2;
-  return closure_1_12(InlineNotice.InlineNotice, obj);
+  return application_id(InlineNotice.InlineNotice, obj);
 }
 function AgeCheckLoadingBanner() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled(),
   );
   const intl = util.intl;
   const t = util.t;
-  return closure_1_12(InlineNotice.InlineNotice, {
+  return application_id(InlineNotice.InlineNotice, {
     type: "info",
     message: intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]),
     role: "status",
@@ -59,9 +59,9 @@ function ManualOrAutomatedReviewBanner() {
   _require = closure_22();
   const obj = { type: "critical", message: null, role: "alert", action: null };
   const intl = require("util").intl;
-  obj.message = intl.format(_modDef3192.vPoM8y, {
+  obj.message = intl.format(_modDef3319.vPoM8y, {
     manualReviewHook(children, arg1) {
-      return closure_2_12(
+      return application_id(
         Text_Text.Text,
         {
           onPress: handleManualReviewClick,
@@ -85,14 +85,14 @@ function ManualReviewBanner() {
   const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
   const methods = availableAgeVerificationMethods.methods;
   if (availableAgeVerificationMethods.loading) {
-    let tmp5Result = closure_1_12(AgeCheckLoadingBanner, {});
+    let tmp5Result = application_id(AgeCheckLoadingBanner, {});
   } else {
     if (null != methods) {
       if (0 !== methods.length) {
         if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
-          tmp5Result = closure_1_12(ManualOrAutomatedReviewBanner, {});
+          tmp5Result = application_id(ManualOrAutomatedReviewBanner, {});
         } else {
-          tmp5Result = closure_1_12(RetryBanner, {});
+          tmp5Result = application_id(RetryBanner, {});
         }
       }
     }
@@ -104,18 +104,18 @@ function ManualReviewBanner() {
     obj3.text = intl2.string(util.t.NkTGsC);
     obj3.onPress = handleManualReviewClick;
     obj2.action = obj3;
-    tmp5Result = closure_1_12(InlineNotice.InlineNotice, obj2);
+    tmp5Result = application_id(InlineNotice.InlineNotice, obj2);
   }
   return tmp5Result;
 }
 function AutomatedUnderageAppealStatus() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   useShouldShowInitialGoogleWalletBanner;
   if (stateFromStores === AgeCheckStatus.NONE) {
     let tmp20 = null;
     if (tmp5) {
-      tmp20 = closure_1_12(ManualOrAutomatedReviewBanner, {});
+      tmp20 = application_id(ManualOrAutomatedReviewBanner, {});
     }
     let tmp9 = tmp20;
   } else if (stateFromStores === AgeCheckStatus.SUCCESS) {
@@ -134,7 +134,7 @@ function AutomatedUnderageAppealStatus() {
       },
     };
     obj2.message = intl6.format(util.t.hyh4ls, obj3);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj2);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj2);
   } else if (stateFromStores === AgeCheckStatus.VERIFIED) {
     const obj4 = { type: "success", message: null, role: "status", action: null };
     const intl4 = util.intl;
@@ -144,39 +144,39 @@ function AutomatedUnderageAppealStatus() {
     obj5.text = intl5.string(util.t["2jvQ6K"]);
     obj5.onPress = handleLogInClick;
     obj4.action = obj5;
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj4);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj4);
   } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
     const obj6 = { type: "success", message: null, role: "status" };
     const intl3 = util.intl;
     obj6.message = intl3.string(util.t.Ie7p1Q);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj6);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj6);
   } else if (stateFromStores === AgeCheckStatus.ERROR) {
     const obj7 = { type: "critical", message: null, role: "alert" };
     const intl2 = util.intl;
     obj7.message = intl2.string(util.t["4sILBU"]);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj7);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj7);
   } else if (stateFromStores === AgeCheckStatus.FAILURE) {
     const obj8 = { type: "critical", message: null, role: "alert" };
     const intl = util.intl;
     obj8.message = intl.string(util.t["40R63o"]);
-    tmp9 = closure_1_12(InlineNotice.InlineNotice, obj8);
+    tmp9 = application_id(InlineNotice.InlineNotice, obj8);
   } else if (stateFromStores === AgeCheckStatus.UNDERAGE) {
-    tmp9 = closure_1_12(RetryBanner, {});
+    tmp9 = application_id(RetryBanner, {});
   } else if (stateFromStores === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW) {
-    tmp9 = closure_1_12(ManualReviewBanner, {});
+    tmp9 = application_id(ManualReviewBanner, {});
   } else {
-    tmp9 = closure_1_12(AgeCheckLoadingBanner, {});
+    tmp9 = application_id(AgeCheckLoadingBanner, {});
   }
   return tmp9;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7970).AgeCheckStatus;
+const AgeCheckStatus = fn(8094).AgeCheckStatus;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -200,7 +200,7 @@ export default function SafetyHubPage(visible) {
   const tmp5 = visible;
   importDefault = visible(safetyHubFetchError[20]).useSafetyHubInitialized();
   let obj = visible(safetyHubFetchError[20]);
-  const state = visible(safetyHubFetchError[21]).useSafetyHubAccountStanding();
+  state = visible(safetyHubFetchError[21]).useSafetyHubAccountStanding();
   let obj2 = visible(safetyHubFetchError[21]);
   safetyHubFetchError = visible(safetyHubFetchError[22]).useSafetyHubFetchError();
   require("useMountEffect")(() => {
@@ -212,12 +212,12 @@ export default function SafetyHubPage(visible) {
       MonitoringAgentDefault.increment(obj5);
     }
   });
-  const items = [safetyHubFetchError, visible];
+  items = [safetyHubFetchError, visible];
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16645, dependencyMap.paths),
+          asyncRequireImpl(16788, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

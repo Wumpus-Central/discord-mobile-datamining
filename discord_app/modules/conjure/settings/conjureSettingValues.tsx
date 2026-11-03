@@ -35,7 +35,7 @@ export function conjureSettingSubmitValue(found, num) {
       const str = String(num);
     }
     if (0 === found.length) {
-      let items = null;
+      items = null;
       if ("game" === found.type) {
         const _Array2 = Array;
         items = null;

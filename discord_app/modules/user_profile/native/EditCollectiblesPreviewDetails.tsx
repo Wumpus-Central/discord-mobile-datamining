@@ -14,7 +14,7 @@ function EditCollectiblesPreviewDescription(arg0) {
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
   ({ product, nitroJoinCTA, nitroUpgradeCTA } = arg0);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => locale.locale);
   const canUseCollectiblesResult = PremiumUtilsDefault.canUseCollectibles(user);
   let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
@@ -115,7 +115,7 @@ function EditCollectiblesPreviewDescription(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   productDetailsContainer: { width: "100%", marginVertical: 12, alignItems: "center", gap: 2 },
 });
@@ -142,8 +142,8 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
         }
         name = name1;
       }
-      const obj2 = { variant: "text-md/bold", color: "text-default", children: name };
-      const items = [hasOwnProperty(Text_Text.Text, obj2)];
+      const obj2 = { variant: "text-md/semibold", color: "text-default", children: name };
+      items = [hasOwnProperty(Text_Text.Text, obj2)];
       const obj3 = { user, product, purchase, nitroJoinCTA, nitroUpgradeCTA };
       items[1] = hasOwnProperty(EditCollectiblesPreviewDescription, obj3);
       obj.children = items;

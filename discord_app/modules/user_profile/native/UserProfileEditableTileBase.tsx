@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   tile: {
     height: 100,
@@ -49,7 +49,7 @@ export default function UserProfileEditableTileBase(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityHint = intl.string(util.t["4lAcxv"]);
-  const items = [tmp.tile, style];
+  items = [tmp.tile, style];
   obj.style = items;
   const items1 = [children, React3(View, { style: tmp.borderOverlay, pointerEvents: "none" })];
   obj.children = items1;

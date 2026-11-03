@@ -35,7 +35,7 @@ function questMatchesActivity(arg0, id) {
         if (!tmp12) {
           let tmp15 = tmp2 != formatted.application_id;
           if (tmp15) {
-            const application_id = formatted.application_id;
+            application_id = formatted.application_id;
             const allApplicationIds = QuestTaskUtils.getAllApplicationIds(id);
             const tmp9Result = QuestTaskUtils;
             tmp15 = tmp2 != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
@@ -79,13 +79,13 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({
   DISCORD_APPLICATION_ID: metroRequire,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7,
   PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestConstants);
-let closure_9 = fn(2018).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_9 = fn(2147).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
@@ -148,7 +148,7 @@ export function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
     flag = false;
   }
   if (null == applicationId) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(quests.values()).filter((userStatus) => {

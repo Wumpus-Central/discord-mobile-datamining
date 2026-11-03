@@ -10,8 +10,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 ({ CHECKPOINT_BUTTON_SHADOW: c2, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/bold" }, lg: null };
-let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/bold" };
+let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/semibold" }, lg: null };
+let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/semibold" };
 obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "text-lg/medium" };
 let obj4 = {
   container: { paddingRight: PX_4, paddingBottom: PX_4 },
@@ -51,7 +51,7 @@ export default function CheckpointPressable(arg0) {
   const tmp2 = closure_5();
   const pressable = tmp2;
   const obj = { style: null, children: null };
-  let items = [tmp2.container, containerStyle];
+  items = [tmp2.container, containerStyle];
   obj.style = items;
   let tmp5 = !disabled;
   if (!disabled) {
@@ -60,7 +60,7 @@ export default function CheckpointPressable(arg0) {
     const obj3 = { backgroundColor: shadowColor };
     items1[1] = obj3;
     obj2.style = items1;
-    tmp5 = React3(framebus, obj2);
+    tmp5 = React3(duration, obj2);
   }
   const items2 = [tmp5];
   const obj4 = {};
@@ -68,7 +68,7 @@ export default function CheckpointPressable(arg0) {
   obj4.onPress = onPress;
   obj4.style = function style(pressed) {
     pressed = pressed.pressed;
-    const items = [pressable.pressable, pressable[closure_1_2], closure_1_0];
+    items = [pressable.pressable, pressable[closure_1_2], closure_1_0];
     if (pressed) {
       pressed = !disabled;
     }
@@ -81,7 +81,7 @@ export default function CheckpointPressable(arg0) {
   obj4.children = children;
   items2[1] = React3(React, obj4);
   obj.children = items2;
-  return React4(framebus, obj);
+  return React4(duration, obj);
 }
 export const SHADOW_OFFSET = PX_4;
 export const CHECKPOINT_PRESSABLE_SIZES = obj;

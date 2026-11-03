@@ -1,7 +1,7 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export function canBypassSlowmode(channel) {
 }
 export function useCanBypassSlowmode(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0),
   );
@@ -29,20 +29,20 @@ export function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const time2 = _modDef2042.duration(stateFromStores);
+    const time2 = _modDef2171.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
-    const tmp2Result = _modDef2042;
+    const tmp2Result = _modDef2171;
     const _HermesInternal4 = HermesInternal;
     const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    const time = _modDef2042.duration(stateFromStores);
+    const time = _modDef2171.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
-    const tmp2Result2 = _modDef2042;
+    const tmp2Result2 = _modDef2171;
     const _HermesInternal2 = HermesInternal;
     return "" + time.minutes() + ":" + combined2.padStart(2, "0");
   } else {

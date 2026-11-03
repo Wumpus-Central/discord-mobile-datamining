@@ -300,7 +300,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       if (patchNotesSent == null) {
         patchNotesSent = closure_9;
       }
-      const items = [];
+      items = [];
       items[
         HermesBuiltin.arraySpread(
           patchNotesSent.filter((publishedRevision) => publishedRevision.publishedRevision !== sent.publishedRevision),

@@ -23,7 +23,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
   const tmp2 = width;
   const tmp3 = height;
   const sharedValue1 = frameIds(height[10]).useSharedValue(false);
-  const items = [width, height, tmp4];
+  items = [width, height, tmp4];
   const memo = noop.useMemo(
     () => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_3),
     items,
@@ -95,7 +95,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
 function ConjureAppPictureInPictureWithSize(frameId) {
   frameId = frameId.frameId;
   const windowWidth = frameId.windowWidth;
-  const items = [FramesStore];
+  items = [FramesStore];
   const items1 = [frameId];
   stateFromStores = frameId(stateFromStores[12]).useStateFromStores(
     items,
@@ -114,11 +114,11 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   return closure_8(windowWidth(stateFromStores[14]), obj2);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   layer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   hidden: { opacity: 0 },

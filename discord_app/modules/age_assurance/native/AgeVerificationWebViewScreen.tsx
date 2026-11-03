@@ -10,17 +10,17 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6728).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(7956);
+let closure_6 = fn(6848).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8080);
 ({
   AgeVerificationIncodeResultStatus: closure_7,
   buildIncodeFallbackSessionInjection: closure_8,
   parseIncodeWebViewMessage: closure_9,
 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
 obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -57,7 +57,7 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
       _undefined(false);
     }
   }, []);
-  const items = [callback];
+  items = [callback];
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       if (!ref.current) {

@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressable = fn(17).Pressable;
-const CHECKPOINT_PRIMARY = fn(6066).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   button: { width: 32, height: 32, alignItems: "center", justifyContent: "center", borderWidth: 1 },
 });
@@ -18,7 +18,7 @@ export default function CheckpointHeaderButton(color) {
   if (color === undefined) {
     color = CHECKPOINT_PRIMARY;
   }
-  const items = [color];
+  items = [color];
   const obj = {
     style: null,
     hitSlop: null,
@@ -39,3 +39,4 @@ export default function CheckpointHeaderButton(color) {
     </Pressable>
   );
 }
+export const CHECKPOINT_HEADER_BUTTON_SIZE = 32;

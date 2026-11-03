@@ -10,7 +10,7 @@ const prototype = function VoicePanelManager() {
     VOICE_CHANNEL_SELECT() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         const channel = ChannelStore.getChannel(channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {
@@ -29,7 +29,7 @@ const prototype = function VoicePanelManager() {
     RTC_CONNECTION_STATE() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         const channel = ChannelStore.getChannel(channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {

@@ -14,7 +14,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;
-  const guild = GuildStore.getGuild(guild_id.guild_id);
+  guild = GuildStore.getGuild(guild_id.guild_id);
   let name;
   if (guild != null) {
     name = guild.name;

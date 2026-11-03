@@ -13,11 +13,11 @@ function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = closure_8();
   const obj = { top: true, style: tmp.headerContainer, children: null };
-  const items = [
+  items = [
     timestampProducer(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),
@@ -44,11 +44,11 @@ function Footer(arg0) {
     tmp5 = require;
   }
   const obj = { style: null, children: null };
-  const items = [closure_8().footerContainer];
+  items = [closure_8().footerContainer];
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5634).Button, {
+  obj.children = timestampProducer(tmp5(5754).Button, {
     loading: submitting,
     disabled: !canProceedToNextStep,
     text: stringResult,
@@ -60,7 +60,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" },
   scrollContainer: { flexGrow: 1 },
@@ -104,7 +104,7 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
   const navigation = useNavigation.useNavigation();
   const nextStep = merged.nextStep;
   const onProceed = merged.onProceed;
-  const items = [navigation, nextStep, onProceed];
+  items = [navigation, nextStep, onProceed];
   const callback = noop.useCallback(() => {
     if (null != onProceed) {
       tmp();

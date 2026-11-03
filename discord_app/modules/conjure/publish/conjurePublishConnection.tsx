@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/publish/conjurePublishConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
-import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
-import requestConjureDevicePermissionsDefault from "../device_permissions/requestConjureDevicePermissions.tsx";
 import conjureDevicePermissions from "../device_permissions/conjureDevicePermissions.tsx";
+import requestConjureDevicePermissionsDefault from "../device_permissions/requestConjureDevicePermissions.tsx";
+import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
 import conjureVoiceChannelPin from "../voice_channel_pin/conjureVoiceChannelPin.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
@@ -35,7 +35,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10960).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(11093).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
@@ -134,7 +134,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -151,7 +151,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);
@@ -302,7 +302,7 @@ export const publishStepHandlers = {
                     channel_id: obj.channelId,
                     message_id: obj.messageId,
                   } = published_revision);
-                  const items = [obj];
+                  items = [obj];
                 }
                 return [];
               }
@@ -357,7 +357,7 @@ export const publishStepHandlers = {
       if ("user" === install_scope) {
         if ("" !== project.application_id) {
           if (null != previewDevicePermissions) {
-            const application_id = project.application_id;
+            application_id = project.application_id;
             const obj2 = { applicationId: application_id, appName: null, iframeId: null, permissions: null };
             const application = ApplicationStore.getApplication(application_id);
             let name;
@@ -678,7 +678,7 @@ export function requestPublishOptions(id) {
       const str1 = Math.random().toString(36);
     } else {
       const obj3 = { destinations: null, selected_destination_id: "conjuring" };
-      const items = [{ id: "conjuring", label: "Conjuring" }];
+      items = [{ id: "conjuring", label: "Conjuring" }];
       obj3.destinations = items;
       resolve(obj3);
     }

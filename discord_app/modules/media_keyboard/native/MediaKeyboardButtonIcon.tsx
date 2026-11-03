@@ -1,17 +1,18 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
+import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const __initData = {
-  code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}",
+let closure_4 = {
+  code: "(function MediaKeyboardButtonIconTsx1(){let[keyboard,KeyboardTypes,withTiming,timingStandard]=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
@@ -21,35 +22,38 @@ export function MediaKeyboardButtonIcon(arg0) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const merged = Object.assign(arg0, undefined);
-    const tmp5 = useKeyboardTypeDefault();
-    _require = tmp5;
-    const fn = function s() {
-      const tmp4 =
-        closure_0 === KeyboardTypes.KeyboardTypes.MEDIA || closure_0 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER;
-      let str = "0deg";
-      if (tmp4) {
-        str = "45deg";
+    const tmp15 = useKeyboardTypeDefault();
+    items = [closure_4, tmp15, KeyboardTypes.KeyboardTypes, timing_timing.withTiming, timingPresets.timingStandard];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp, tmp2, tmp3, tmp4, tmp5] = items;
+    class MediaKeyboardButtonIconTsx1 {
+      constructor() {
+        tmp2 = closure_0 === closure_1.MEDIA || tmp === closure_1.APP_LAUNCHER;
+        str = "0deg";
+        tmp3 = closure_2;
+        if (tmp2) {
+          str = "45deg";
+        }
+        obj = { transform: null };
+        obj1 = { rotate: tmp3(str, closure_3) };
+        items = [];
+        items[0] = obj1;
+        obj.transform = items;
+        return obj;
       }
-      const obj = { transform: null };
-      const tmp2Result = timing;
-      const items = [{ rotate: timing.withTiming(str, timingPresets.timingStandard) }];
-      obj.transform = items;
-      return obj;
-    };
-    const obj2 = {
-      keyboard: tmp5,
-      KeyboardTypes: require("KeyboardTypes").KeyboardTypes,
-      withTiming: require("timing").withTiming,
-      timingStandard: require("timingPresets").timingStandard,
-    };
-    fn.__closure = obj2;
-    fn.__workletHash = 10698563185643;
-    fn.__initData = __initData;
-    const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
-    const obj3 = { style: animatedStyle, children: null };
-    const obj4 = {};
+    }
+    const items1 = [tmp2, tmp3, tmp4, tmp5];
+    MediaKeyboardButtonIconTsx1.__closure = items1;
+    MediaKeyboardButtonIconTsx1.__workletHash = 8539740243314;
+    MediaKeyboardButtonIconTsx1.__initData = tmp;
+    const animatedStyle = _mod1652.useAnimatedStyle(MediaKeyboardButtonIconTsx1);
+    let obj = { style: animatedStyle, children: null };
+    const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj3.children = jsx(require("PlusLargeIcon").PlusLargeIcon, {});
-    return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
+    obj.children = jsx(PlusLargeIcon.PlusLargeIcon, {});
+    return jsx(_modDef1652.View, { style: animatedStyle, children: null });
   }
 }

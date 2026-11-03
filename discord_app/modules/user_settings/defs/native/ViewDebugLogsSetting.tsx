@@ -23,7 +23,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7368).ActionSheetRow, {
+  return closure_5(title(7488).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -50,7 +50,7 @@ function ViewDebugLogsActionSheet() {
   obj3.render = function render() {
     return closure_1_5(UserSettingsDebugLogsDefault, {});
   };
-  const items = [hasOwnProperty(ViewDebugLogsActionSheetRow, obj3), ,];
+  items = [hasOwnProperty(ViewDebugLogsActionSheetRow, obj3), ,];
   const obj4 = { icon: hasOwnProperty(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = util.intl;
   obj4.title = intl3.string(util.t.b0nJvk);

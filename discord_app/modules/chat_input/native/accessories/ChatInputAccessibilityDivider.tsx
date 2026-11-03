@@ -24,7 +24,7 @@ export const ChatInputAccessibilityDivider = noop.memo(function ChatInputAccessi
       };
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t["uKZtC/"]);
-      const items = [absoluteFill.absoluteFill, { height: 1 }];
+      items = [absoluteFill.absoluteFill, { height: 1 }];
       obj2.style = items;
       tmp3 = (
         <React3

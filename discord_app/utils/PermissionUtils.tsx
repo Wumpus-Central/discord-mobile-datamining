@@ -166,7 +166,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
       }
       let removeResult = found1;
       if (!mfaEnabled) {
-        removeResult = BigFlagUtils.remove(found1, guild_id);
+        removeResult = BigFlagUtils.remove(found1, expandedHeight);
         const tmp21Result4 = BigFlagUtils;
       }
       tmp39 = removeResult;
@@ -230,7 +230,7 @@ function computePermissions(excludeGuildPermissions) {
           permissionOverwrites = context.permissionOverwrites;
         }
         const guildId = context.getGuildId();
-        let guild = null;
+        guild = null;
         if (null != guildId) {
           guild = GuildStore.getGuild(guildId);
         }
@@ -275,7 +275,7 @@ function computePermissions(excludeGuildPermissions) {
             }
             let removeResult = applyResult;
             if (!mfaEnabled) {
-              removeResult = BigFlagUtils.remove(applyResult, guild_id);
+              removeResult = BigFlagUtils.remove(applyResult, expandedHeight);
             }
             tmp21 = removeResult;
           }
@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4881);
-({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(4921).hasPermission;
+const GuildRecord = fn(5008);
+({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
+const hasPermission = fn(5048).hasPermission;
 const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({
@@ -479,7 +479,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
         permissionOverwrites = context.permissionOverwrites;
       }
       const guildId = context.getGuildId();
-      let guild = null;
+      guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
@@ -563,7 +563,7 @@ export function areChannelsLocked(c18, c19, appChannelBotUserId) {
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(1992).PermissionOverwriteType.ROLE,
+              type: obj2(2121).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };
@@ -698,7 +698,7 @@ export function canEveryoneRole(VIEW_CHANNEL, channel) {
         }
       }
       const guildId = channel.getGuildId();
-      let guild = null;
+      guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
@@ -733,7 +733,7 @@ export function canEveryone(VIEW_CHANNEL, channel) {
         }
       }
       const guildId = channel.getGuildId();
-      let guild = null;
+      guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }

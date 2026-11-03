@@ -11,7 +11,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const CommandListSortOrder = fn(12465).CommandListSortOrder;
+const CommandListSortOrder = fn(12601).CommandListSortOrder;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -44,7 +44,7 @@ export default function CommandListSortActionSheet(sortOrder) {
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.SzxiqK);
   obj5.value = CommandListSortOrder.POPULAR;
-  const items = [obj5];
+  items = [obj5];
   const obj6 = { label: null, value: null };
   const intl3 = util.intl;
   obj6.label = intl3.string(util.t.m8xsti);

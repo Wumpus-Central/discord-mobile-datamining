@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -22,7 +22,7 @@ export const BackgroundBlurView = function BackgroundBlurViewComponent(arg0) {
   );
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [closure_5().container, style];
+  items = [closure_5().container, style];
   obj.style = items;
   obj.ref = ref;
   if (null != pressed) {

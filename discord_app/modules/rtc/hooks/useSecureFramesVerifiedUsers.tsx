@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export function useSecureFramesVerifiedUserIds() {
-  const items = [VerifiedKeyStore];
+  items = [VerifiedKeyStore];
   return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 }

@@ -15,6 +15,6 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/ManaTypeConsolidationExperiment.tsx");
 
 export default apexExperiment;
-export function useManaTypeConsolidationExperiment(ChannelHeaderAppSubTitle) {
-  return apexExperiment.useConfig({ location: ChannelHeaderAppSubTitle }).enabled;
+export function useManaTypeConsolidationExperiment(RootThemeContextProvider) {
+  return apexExperiment.useConfig({ location: RootThemeContextProvider }).enabled;
 }

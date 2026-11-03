@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFet
 
 export function useFetchVirtualCurrencyTotalRedeemed(disableFetch) {
   _require = disableFetch;
-  const items = [error];
+  items = [error];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     totalRedeemed: error.totalRedeemed,
     isFetching: error.isFetchingTotalRedeemed,

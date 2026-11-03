@@ -7,7 +7,7 @@ import NoticeStore from "../../../../../premium/native/NoticeStore.tsx";
 
 require = fn;
 const NoticeTypes = fn(1072).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1385).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useShouldShowExpiringTrialOfferCard() {
-  const items = [NoticeStore];
+  items = [NoticeStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => noticeType.getNoticeType());
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let num = 0;

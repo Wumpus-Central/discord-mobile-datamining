@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import VoiceStateIconUtils from "../utils/VoiceStateIconUtils.tsx";
 import HeadphonesDenyIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MicrophoneSlashIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import _modDef9244 from "../../../../../_runtime/metro/09244__.js";
-import _modDef9245 from "../../../../../_runtime/metro/09245__.js";
+import _modDef9372 from "../../../../../_runtime/metro/09372__.js";
+import _modDef9373 from "../../../../../_runtime/metro/09373__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -33,7 +33,7 @@ function VideoDisabledSvgIcon(size) {
   }
   const obj2 = {};
   const merged1 = Object.assign(merged);
-  const items = [iconStyle, flattenResult];
+  items = [iconStyle, flattenResult];
   obj2.style = items;
   obj2.viewBox = "0 0 24 24";
   const items1 = [
@@ -56,11 +56,11 @@ function VideoDisabledSvgIcon(size) {
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj.noTint = { tintColor: "r" };
+obj.noTint = { tintColor: "Array" };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const memoResult = noop.memo(function MuteDeafenIcon(arg0) {
@@ -70,7 +70,7 @@ const memoResult = noop.memo(function MuteDeafenIcon(arg0) {
   }
   const tmp = closure_6();
   if (VoiceStateIconUtils.MuteDeafenIconState.DEAFENED_SERVER === state) {
-    const items = [style];
+    items = [style];
     let redTint = null;
     if (!alwaysWhite) {
       redTint = tmp.redTint;
@@ -113,8 +113,8 @@ export const VideoIcon = noop.memo(function VideoIcon(state) {
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef9244;
-    const items = [merged.style, tmp2.noTint];
+    obj.source = _modDef9372;
+    items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React4(native.Icon, obj);
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL === state) {
@@ -124,7 +124,7 @@ export const VideoIcon = noop.memo(function VideoIcon(state) {
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef9245;
+    obj3.source = _modDef9373;
     return React4(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

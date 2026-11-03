@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = {
     bodyContainer: {
@@ -64,7 +64,7 @@ export default function PremiumGiftSuccess() {
     false,
   );
   let obj2 = require("useFetchCollectiblesCategoriesAndPurchases");
-  const items = [PromotionsStore];
+  items = [PromotionsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     giftPromotion = giftPromotion.getGiftPromotion();
     let id;

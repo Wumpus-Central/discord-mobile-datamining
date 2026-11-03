@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/useConjurePublishButton.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import useConjurePublishActionDefault from "useConjurePublishAction.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef3868["120EFN"]);
+    let label = intl2.string(_modDef3995["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -23,7 +23,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef3868.kAfbEN);
+        label = intl.string(_modDef3995.kAfbEN);
       }
     }
     label = upToDate.label;
@@ -43,7 +43,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
     }
     ref.current = null;
   }, []);
-  const items = [callback];
+  items = [callback];
   const effect = noop.useEffect(() => callback, items);
   const items1 = [arg3, callback];
   const memo = noop.useMemo(() => {

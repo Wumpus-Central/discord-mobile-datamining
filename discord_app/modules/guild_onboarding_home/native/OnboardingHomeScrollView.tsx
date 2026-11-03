@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { guildFeedBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function OnboardingHomeScrollView(children) {
   closure_2 = noop.useRef(false);
   noop.useRef(null);
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const items = [guildId];
+  items = [guildId];
   const effect = noop.useEffect(() => {
     closure_2.current = false;
   }, items);

@@ -17,8 +17,7 @@ import Pressables from "../../../../../design/void/Pressables/native/Pressables.
 import useDesignToggleDefault from "../../../../devtools/design_toggles/useDesignToggle.tsx";
 import TableRadioGroup from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
-import _modDef7257 from "../../../../../../_runtime/metro/07257__.js";
+import _modDef7377 from "../../../../../../_runtime/metro/07377__.js";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
@@ -37,8 +36,10 @@ import MultiAccountActionCreatorsAll from "../../../../multi_account/MultiAccoun
 import ClientThemesBackgroundActionCreators from "../../../../client_themes/ClientThemesBackgroundActionCreators.tsx";
 import ThemeLightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
 import ThemeMidnightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
+import DevToolsContentDefault from "../../../../devtools/native/components/DevToolsContent.tsx";
 import ThemeGrayIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeGrayIcon.tsx";
 import openManageAccountsModalDefault from "../../../../multi_account/native/openManageAccountsModal.tsx";
+import YouSwitchClientsRadioGroupDefault from "YouSwitchClientsRadioGroup.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import MultiAccountStore from "../../../../multi_account/MultiAccountStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -47,17 +48,15 @@ import DeveloperExperimentStore from "../../../../../stores/DeveloperExperimentS
 import StreamerModeStore from "../../../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const TableRowGroup = currentLocale(7060);
-const TableSwitchRow = currentLocale(7369);
-const BellSlashIcon = currentLocale(10992);
-const DevToolsContentDefault = tmp4(17757);
-const YouSwitchClientsRadioGroupDefault = tmp4(18454);
+const TableRowGroup = currentLocale(7186);
+const TableSwitchRow = currentLocale(7489);
+const BellSlashIcon = currentLocale(11125);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
-  return closure_1_19(Text_Text.Text, {
+  return expandedHeight(Text_Text.Text, {
     accessibilityRole: "header",
-    variant: "experimental/body-sm/medium",
+    variant: "body-sm/medium",
     color: "text-subtle",
     style: closure_21().sectionHeading,
     children: children.children,
@@ -66,102 +65,112 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15996), variant: "text-status-online" }),
+      icon: closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16139), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
-    const items = [obj, , ,];
+    items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(15996), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15993), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(16139), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16136), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(15993), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15994), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(16136), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16137), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(15994), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15995), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(16137), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16138), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
   }, []);
-  const StatusSetting = setting(4839).StatusSetting;
+  const StatusSetting = setting(4966).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(4839).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(4966).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
-  const manaTypeConsolidationExperiment = setting(7149).useManaTypeConsolidationExperiment(
-    "YouAccountActionSheetOnlineStatus",
-  );
-  let items = [setting];
+  items = [setting];
   const callback = noop.useCallback((nextStatus) => {
     setUserStatusDefault({ prevStatus: setting, nextStatus });
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   let intl = setting(1113).intl;
   const stringResult = intl.string(setting(1113).t["0DPAZH"]);
-  let tmp6;
-  if (!manaTypeConsolidationExperiment) {
-    tmp6 = stringResult;
-  }
-  let obj2 = {
-    title: tmp6,
-    accessibilityLabel: null,
-    onChange: null,
-    defaultValue: null,
+  let obj2 = { children: null };
+  let obj = {
+    accessibilityLabel: stringResult,
+    onChange: callback,
+    defaultValue: setting,
     hasIcons: true,
-    children: null,
-  };
-  let tmp7;
-  if (manaTypeConsolidationExperiment) {
-    tmp7 = stringResult;
-  }
-  obj2.accessibilityLabel = tmp7;
-  obj2.onChange = callback;
-  obj2.defaultValue = setting;
-  obj2.children = memo.map((value) => {
-    const obj = {};
-    const merged = Object.assign(value);
-    obj.label = getChannelA11yLabel.getStatusLabel(value.value);
-    let formatToPlainStringResult;
-    if (value.value === setting) {
-      if (null != closure_1) {
-        if ("0" !== closure_1) {
-          const intl = util.intl;
-          const obj3 = { endTime: null };
-          const _Date = Date;
-          const _Number = Number;
-          const date = new Date(Number(closure_1));
-          obj3.endTime = date.toLocaleString(util.intl.currentLocale, {
-            month: "numeric",
-            day: "numeric",
-            hour: "numeric",
-            minute: "2-digit",
-          });
-          formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj3);
+    children: memo.map((value) => {
+      const obj = {};
+      const merged = Object.assign(value);
+      obj.label = getChannelA11yLabel.getStatusLabel(value.value);
+      let formatToPlainStringResult;
+      if (value.value === setting) {
+        if (null != closure_1) {
+          if ("0" !== closure_1) {
+            const intl = util.intl;
+            const obj3 = { endTime: null };
+            const _Date = Date;
+            const _Number = Number;
+            const date = new Date(Number(closure_1));
+            obj3.endTime = date.toLocaleString(util.intl.currentLocale, {
+              month: "numeric",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
+            });
+            formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj3);
+          }
         }
       }
-    }
-    obj.subLabel = formatToPlainStringResult;
-    return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
-  });
-  const tmp5Result = closure_19(setting(7058).TableRadioGroup, obj2);
-  let tmp9 = tmp5Result;
-  if (manaTypeConsolidationExperiment) {
-    let obj3 = { children: null };
-    let obj4 = { children: stringResult };
-    const items1 = [closure_19(AccountSectionHeading, obj4), tmp5Result];
-    obj3.children = items1;
-    tmp9 = closure_20(View, obj3);
-  }
-  return tmp9;
+      obj.subLabel = formatToPlainStringResult;
+      return expandedHeight(TableRadioRow.TableRadioRow, obj, value.value);
+    }),
+  };
+  const items1 = [
+    closure_19(AccountSectionHeading, { children: stringResult }),
+    closure_19(setting(7184).TableRadioGroup, {
+      accessibilityLabel: stringResult,
+      onChange: callback,
+      defaultValue: setting,
+      hasIcons: true,
+      children: memo.map((value) => {
+        const obj = {};
+        const merged = Object.assign(value);
+        obj.label = getChannelA11yLabel.getStatusLabel(value.value);
+        let formatToPlainStringResult;
+        if (value.value === setting) {
+          if (null != closure_1) {
+            if ("0" !== closure_1) {
+              const intl = util.intl;
+              const obj3 = { endTime: null };
+              const _Date = Date;
+              const _Number = Number;
+              const date = new Date(Number(closure_1));
+              obj3.endTime = date.toLocaleString(util.intl.currentLocale, {
+                month: "numeric",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit",
+              });
+              formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj3);
+            }
+          }
+        }
+        obj.subLabel = formatToPlainStringResult;
+        return expandedHeight(TableRadioRow.TableRadioRow, obj, value.value);
+      }),
+    }),
+  ];
+  obj2.children = items1;
+  return closure_20(View, obj2);
 }
 function ThemeRadioGroup() {
-  const items = [ThemeStore];
+  items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
   const callback = noop.useCallback((arg0) => {
     const result = ClientThemesBackgroundActionCreators.resetBackgroundGradientPreset();
     CustomThemeMobileActionCreators.resetCustomTheme();
@@ -169,64 +178,44 @@ function ThemeRadioGroup() {
   }, []);
   const intl = util.intl;
   const stringResult = intl.string(util.t.Ksh3ik);
-  let tmp9 = manaTypeConsolidationExperiment;
-  if (manaTypeConsolidationExperiment) {
-    const obj3 = { children: stringResult };
-    tmp9 = closure_1_19(AccountSectionHeading, obj3);
-  }
-  const items1 = [tmp9];
-  let tmp12;
-  if (!manaTypeConsolidationExperiment) {
-    tmp12 = stringResult;
-  }
-  const obj4 = {
-    title: tmp12,
-    accessibilityLabel: null,
-    onChange: null,
-    defaultValue: null,
+  let obj2 = { children: null };
+  const items1 = [expandedHeight(AccountSectionHeading, { children: stringResult })];
+  const obj3 = {
+    accessibilityLabel: stringResult,
+    onChange: callback,
+    defaultValue: stateFromStores,
     hasIcons: true,
     children: null,
   };
-  let tmp13;
-  if (manaTypeConsolidationExperiment) {
-    tmp13 = stringResult;
-  }
-  const obj5 = { children: null };
-  obj4.accessibilityLabel = tmp13;
-  obj4.onChange = callback;
-  obj4.defaultValue = stateFromStores;
-  const obj6 = { icon: closure_1_19(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
-  obj6.label = ClientThemesUtils.getThemeName(constants3.LIGHT);
-  obj6.value = constants3.LIGHT;
-  const items2 = [closure_1_19(TableRadioRow.TableRadioRow, obj6), , ,];
-  const obj7 = { icon: closure_1_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: null, value: null };
-  const tmpResult = ClientThemesUtils;
-  obj7.label = ClientThemesUtils.getThemeName(constants3.ASH);
-  obj7.value = constants3.ASH;
-  items2[1] = closure_1_19(TableRadioRow.TableRadioRow, obj7);
-  const obj8 = { icon: closure_1_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
-  const tmpResult4 = ClientThemesUtils;
+  const obj4 = { icon: expandedHeight(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
+  obj4.label = ClientThemesUtils.getThemeName(constants3.LIGHT);
+  obj4.value = constants3.LIGHT;
+  const items2 = [expandedHeight(TableRadioRow.TableRadioRow, obj4), , ,];
+  const obj6 = { icon: expandedHeight(ThemeGrayIcon.ThemeGrayIcon, {}), label: null, value: null };
+  obj6.label = ClientThemesUtils.getThemeName(constants3.ASH);
+  obj6.value = constants3.ASH;
+  items2[1] = expandedHeight(TableRadioRow.TableRadioRow, obj6);
+  const obj8 = { icon: expandedHeight(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
   obj8.label = ClientThemesUtils.getThemeName(constants3.DARK);
   obj8.value = constants3.DARK;
-  items2[2] = closure_1_19(TableRadioRow.TableRadioRow, obj8);
-  const obj9 = { icon: closure_1_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
-  const tmpResult5 = ClientThemesUtils;
-  obj9.label = ClientThemesUtils.getThemeName(constants3.ONYX);
-  obj9.value = constants3.ONYX;
-  items2[3] = closure_1_19(TableRadioRow.TableRadioRow, obj9);
-  obj4.children = items2;
-  items1[1] = dependencyMap(TableRadioGroup.TableRadioGroup, obj4);
-  obj5.children = items1;
-  return dependencyMap(View, obj5);
+  items2[2] = expandedHeight(TableRadioRow.TableRadioRow, obj8);
+  const obj10 = { icon: expandedHeight(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
+  obj10.label = ClientThemesUtils.getThemeName(constants3.ONYX);
+  obj10.value = constants3.ONYX;
+  items2[3] = expandedHeight(TableRadioRow.TableRadioRow, obj10);
+  obj3.children = items2;
+  items1[1] = dependencyMap(TableRadioGroup.TableRadioGroup, obj3);
+  obj2.children = items1;
+  return dependencyMap(View, obj2);
 }
 function YouAccountRadioGroup() {
   const tmp = closure_21();
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17994).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(18138).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(17994);
+  let obj2 = stateFromStores(18138);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -251,7 +240,7 @@ function YouAccountRadioGroup() {
           str2 = "never";
         }
         const obj3 = {
-          label: multiAccountUsers(5068).getUserTag(obj, { mode: "username", identifiable: str2 }),
+          label: multiAccountUsers(5195).getUserTag(obj, { mode: "username", identifiable: str2 }),
           value: id.id,
           subLabel: combined,
           icon: null,
@@ -261,10 +250,6 @@ function YouAccountRadioGroup() {
         return obj3;
       }),
     items2,
-  );
-  let obj3 = stateFromStores(504);
-  const manaTypeConsolidationExperiment = stateFromStores(7149).useManaTypeConsolidationExperiment(
-    "YouAccountActionSheetSwitchAccounts",
   );
   const items3 = [multiAccountUsers];
   let id;
@@ -277,54 +262,37 @@ function YouAccountRadioGroup() {
   } else {
     const intl = tmp2(1113).intl;
     const stringResult = intl.string(tmp2(1113).t.oMNyYN);
-    let obj5 = { style: tmp.account, children: null };
-    const obj6 = { style: tmp.manage, children: null };
-    const obj7 = {
+    let obj4 = { style: tmp.account, children: null };
+    let obj5 = { style: tmp.manage, children: null };
+    const obj6 = {
       onPress() {
-        return multiAccountUsers(18448)();
+        return multiAccountUsers(18602)();
       },
       children: null,
     };
-    const obj8 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+    const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1113).intl;
-    obj8.children = intl2.string(tmp2(1113).t.HxrBOZ);
-    obj7.children = closure_19(tmp2(5624).Text, obj8);
-    obj6.children = closure_19(tmp2(6980).PressableOpacity, obj7);
-    const items4 = [closure_19(View, obj6), ,];
-    let tmp16Result = manaTypeConsolidationExperiment;
-    if (manaTypeConsolidationExperiment) {
-      const obj9 = { children: stringResult };
-      tmp16Result = closure_19(AccountSectionHeading, obj9);
-    }
-    items4[1] = tmp16Result;
-    let tmp11;
-    if (!manaTypeConsolidationExperiment) {
-      tmp11 = stringResult;
-    }
-    const obj10 = {
-      title: tmp11,
-      accessibilityLabel: null,
-      onChange: null,
-      defaultValue: null,
+    obj7.children = intl2.string(tmp2(1113).t.HxrBOZ);
+    obj6.children = closure_19(tmp2(5747).Text, obj7);
+    obj5.children = closure_19(tmp2(7106).PressableOpacity, obj6);
+    const items4 = [closure_19(View, obj5), ,];
+    const obj8 = { children: stringResult };
+    items4[1] = closure_19(AccountSectionHeading, obj8);
+    const obj9 = {
+      accessibilityLabel: stringResult,
+      onChange: tmp7,
+      defaultValue: stateFromStores.id,
       hasIcons: true,
-      children: null,
+      children: memo.map((value) => {
+        const merged = Object.assign(value);
+        return closure_1_19(stateFromStores(7187).TableRadioRow, {}, value.value);
+      }),
     };
-    let tmp12;
-    if (manaTypeConsolidationExperiment) {
-      tmp12 = stringResult;
-    }
-    obj10.accessibilityLabel = tmp12;
-    obj10.onChange = tmp8;
-    obj10.defaultValue = stateFromStores.id;
-    obj10.children = memo.map((value) => {
-      const merged = Object.assign(value);
-      return closure_1_19(stateFromStores(7061).TableRadioRow, {}, value.value);
-    });
-    items4[2] = closure_19(tmp2(7058).TableRadioGroup, obj10);
-    obj5.children = items4;
-    return closure_20(View, obj5);
+    items4[2] = closure_19(tmp2(7184).TableRadioGroup, obj9);
+    obj4.children = items4;
+    return closure_20(View, obj4);
   }
-  let obj4 = stateFromStores(7149);
+  let obj3 = stateFromStores(504);
 }
 function FocusModeSetting() {
   let currentLocale = require;
@@ -350,20 +318,20 @@ function FocusModeSetting() {
     const intl2 = util.intl;
     obj2.accessibilityHint = intl2.string(util.t.wCxBOc);
     let obj3 = { style: tmp.leadingIcon };
-    obj2.icon = closure_1_19(BellSlashIcon.BellSlashIcon, obj3);
+    obj2.icon = expandedHeight(BellSlashIcon.BellSlashIcon, obj3);
     obj2.onValueChange = function onValueChange(arg0) {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-            closure_1_0(11018).setFocusMode(quiet_mode_enabled, arg1);
-            const obj = closure_1_0(11018);
-            closure_1_1(5258).hideActionSheet();
-            const obj2 = closure_1_1(5258);
-            const result = closure_1_0(18443).showYouAccountActionSheet();
+            closure_1_0(11151).setFocusMode(quiet_mode_enabled, arg1);
+            const obj = closure_1_0(11151);
+            closure_1_1(5381).hideActionSheet();
+            const obj2 = closure_1_1(5381);
+            const result = closure_1_0(18597).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
-          require("asyncRequireImpl")(paths[49], paths.paths),
+          require("asyncRequireImpl")(paths[48], paths.paths),
           "FocusModeOptionsActionSheet",
           obj3,
         );
@@ -381,9 +349,9 @@ function FocusModeSetting() {
       let stringResult = intl4.string(util.t.i0nsoY);
       const obj4 = { hasIcons: true, children: null };
       obj2.subLabel = stringResult;
-      obj2 = closure_1_19(TableSwitchRow.TableSwitchRow, obj2);
+      obj2 = expandedHeight(TableSwitchRow.TableSwitchRow, obj2);
       obj4.children = obj2;
-      closure_1_19(TableRowGroup.TableRowGroup, obj4);
+      expandedHeight(TableRowGroup.TableRowGroup, obj4);
     }
     const intl5 = util.intl;
     const obj5 = { endTime: null };
@@ -424,7 +392,7 @@ function CustomStatus() {
     const emojiURL = obj2.getEmojiURL(obj3);
     const tmp12 = Boolean(emoji1.animated) && setting;
   }
-  let state;
+  state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
@@ -484,7 +452,7 @@ function CustomStatus() {
   obj5.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj3 = { analyticsLocations: null };
-    const items = [AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET];
+    items = [AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET];
     obj3.analyticsLocations = items;
     const result = CustomStatusUtils.openEditCustomStatusModal(obj3);
   };
@@ -500,19 +468,19 @@ function CustomStatus() {
     obj7.textEmojiStyle = obj8;
     const size = { width, height: width };
     obj7.fastImageStyle = size;
-    let tmp21Result = closure_1_19(EmojiDefault, obj7);
+    let tmp21Result = expandedHeight(EmojiDefault, obj7);
   } else {
     const obj9 = { size: "md", style: tmp.leadingIcon };
-    tmp21Result = closure_1_19(ReactionIcon.ReactionIcon, obj9);
+    tmp21Result = expandedHeight(ReactionIcon.ReactionIcon, obj9);
   }
-  let items = [tmp21Result];
+  items = [tmp21Result];
   const obj10 = { variant: token, color: token1, lineClamp: 2, style: tmp.customStatusText, children: null };
   if (!tmp14) {
     const intl3 = util.intl;
     gameMentionsAsPlainText = intl3.string(util.t["/UonHN"]);
   }
   obj10.children = gameMentionsAsPlainText;
-  items[1] = closure_1_19(Text_Text.Text, obj10);
+  items[1] = expandedHeight(Text_Text.Text, obj10);
   obj5.children = items;
   const items1 = [dependencyMap(Pressables.PressableOpacity, obj5)];
   let tmp21Result2 = null;
@@ -530,25 +498,25 @@ function CustomStatus() {
     const intl4 = util.intl;
     obj11.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj11.style = tmp.customStatusRemoveButton;
-    const obj12 = { style: tmp.trailingIcon, source: _modDef7257 };
-    obj11.children = closure_1_19(FastImageDefault, obj12);
-    tmp21Result2 = closure_1_19(Pressables.PressableOpacity, obj11);
+    const obj12 = { style: tmp.trailingIcon, source: _modDef7377 };
+    obj11.children = expandedHeight(FastImageDefault, obj12);
+    tmp21Result2 = expandedHeight(Pressables.PressableOpacity, obj11);
     const tmp18Result = FastImageDefault;
   }
   const tmp2Result4 = useToken;
   items1[1] = tmp21Result2;
   obj4.children = items1;
-  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
+  return expandedHeight(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13977).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14108).MultiAccountTokenStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(13978).MultiAccountSwitchLocation;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+let closure_18 = fn(14109).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   account: { position: "relative" },
   manage: { position: "absolute", right: 0, zIndex: 100 },
@@ -617,19 +585,14 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
   if (flag === undefined) {
     flag = false;
   }
-  let tmp8Result6 = dependencyMap;
-  const items = [MultiAccountStore];
+  items = [MultiAccountStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     canUseMultiAccountMobile.getCanUseMultiAccountMobile(),
   );
-  let tmp4 = importDefault;
   const tmp5 = useDesignToggleDefault("theme_setting_in_account_sheet");
   const items1 = [DeveloperExperimentStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => isDeveloper.isDeveloper);
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment(
-    "YouAccountActionSheetDeveloperTools",
-  );
-  const obj4 = { startExpanded: stateFromStores, header: null, showGradient: true, children: null };
+  const obj3 = { startExpanded: stateFromStores, header: null, showGradient: true, children: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -640,54 +603,49 @@ export default noop.memo(function YouAccountActionSheet(statusOnly) {
   } else {
     stringResult = string(t["qP/i6k"]);
   }
-  obj4.header = closure_1_19(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
-  let tmp8Result = tmp5;
+  obj3.header = expandedHeight(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
+  let tmp7Result = tmp5;
   if (tmp5) {
-    tmp8Result = closure_1_19(ThemeRadioGroup, {});
+    tmp7Result = expandedHeight(ThemeRadioGroup, {});
   }
   const items2 = [
-    tmp8Result,
-    closure_1_19(YouStatusRadioGroup, {}),
-    closure_1_19(FocusModeSetting, {}),
-    closure_1_19(CustomStatus, {}),
+    tmp7Result,
+    expandedHeight(YouStatusRadioGroup, {}),
+    expandedHeight(FocusModeSetting, {}),
+    expandedHeight(CustomStatus, {}),
     ,
     ,
   ];
-  let tmp8Result4 = !flag;
+  let tmp7Result3 = !flag;
   if (!flag) {
-    tmp8Result4 = stateFromStores;
+    tmp7Result3 = stateFromStores;
   }
-  if (tmp8Result4) {
-    tmp8Result4 = closure_1_19(YouAccountRadioGroup, {});
+  if (tmp7Result3) {
+    tmp7Result3 = expandedHeight(YouAccountRadioGroup, {});
   }
-  items2[4] = tmp8Result4;
-  let tmp8Result5 = !flag;
+  items2[4] = tmp7Result3;
+  let tmp7Result4 = !flag;
   if (!flag) {
-    tmp8Result5 = stateFromStores1;
+    tmp7Result4 = stateFromStores1;
   }
-  if (tmp8Result5) {
-    tmp8Result5 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
+  if (tmp7Result4) {
+    tmp7Result4 = expandedHeight(YouSwitchClientsRadioGroupDefault, {});
   }
-  items2[5] = tmp8Result5;
-  let tmp16 = !flag;
+  items2[5] = tmp7Result4;
+  let tmp9Result = !flag;
   if (!flag) {
-    tmp16 = stateFromStores1;
+    tmp9Result = stateFromStores1;
   }
-  if (!tmp16) {
-    const obj5 = { spacing: 24, children: null };
-    items2[6] = tmp16;
-    obj5.children = items2;
-    obj4.children = closure_1_20(Stack_Stack.Stack, obj5);
-    return closure_1_19(ActionSheet.ActionSheet, obj4);
-  } else if (manaTypeConsolidationExperiment) {
-    const obj6 = { children: null };
-    const items3 = [closure_1_19(AccountSectionHeading, { children: "Developer Tools" })];
-    tmp4 = DevToolsContentDefault;
-    tmp8Result6 = closure_1_19(tmp4, { embedded: true });
-    items3[1] = tmp8Result6;
-    obj6.children = items3;
-    let tmp8Result7 = closure_1_20(View, obj6);
-  } else {
-    tmp8Result7 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
+  if (tmp9Result) {
+    const obj4 = { children: null };
+    const items3 = [
+      expandedHeight(AccountSectionHeading, { children: "Developer Tools" }),
+      expandedHeight(DevToolsContentDefault, { embedded: true }),
+    ];
+    obj4.children = items3;
+    tmp9Result = dependencyMap(View, obj4);
   }
+  items2[6] = tmp9Result;
+  obj3.children = dependencyMap(Stack_Stack.Stack, { spacing: 24, children: items2 });
+  return expandedHeight(ActionSheet.ActionSheet, obj3);
 });

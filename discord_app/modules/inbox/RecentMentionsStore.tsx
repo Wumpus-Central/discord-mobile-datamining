@@ -276,7 +276,7 @@ function handleRelationshipUpdate() {
 }
 function handleDeleteChannel(channel) {
   channel = channel.channel;
-  const items = [];
+  items = [];
   closure_18 = items(12).filter(closure_18, (channel_id) => {
     let flag = channel_id.channel_id !== channel.id;
     if (!flag) {
@@ -539,7 +539,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const items = [];
+    items = [];
     closure_18 = items(12).filter(closure_18, (channel_id) => {
       const channel = ChannelStore.getChannel(channel_id.channel_id);
       let flag = null != channel;
@@ -578,8 +578,8 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      const obj2 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
-      if (obj.isRawMessageMentioned(obj2)) {
+      const obj3 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
+      if (obj2.isRawMessageMentioned(obj3)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -587,10 +587,10 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           substr = substr.slice();
           substr.unshift(tmp3);
           closure_20[tmp3.id] = true;
-          const obj3 = { addedMessages: null };
-          const items = [tmp3];
-          obj3.addedMessages = items;
-          ({ addedMessages, deletedMessages } = obj3);
+          const obj = { addedMessages: null };
+          items = [tmp3];
+          obj.addedMessages = items;
+          ({ addedMessages, deletedMessages } = obj);
           if (null != addedMessages) {
             const item = addedMessages.forEach((getChannelId) => {
               if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
@@ -611,7 +611,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           }
         }
       }
-      obj = isMessageMentioned;
+      obj2 = isMessageMentioned;
     }
     return false;
   },

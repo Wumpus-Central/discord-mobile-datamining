@@ -8,15 +8,15 @@ import ApexExperimentStore from "../../../experiments/apex/ApexExperimentStore.t
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(17584).BeakerIcon,
+  IconComponent: fn(17727).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
-    const items = [ExperimentStore];
+    items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(
       items,
       () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
@@ -37,7 +37,7 @@ const pressable = SettingBuilders.createPressable({
   usePredicate: function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate =
       useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    const items = [ExperimentStore];
+    items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(
       items,
       () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,

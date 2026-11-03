@@ -25,7 +25,7 @@ export default function useMediaLoading(onLoad) {
       ref.current = null;
     }
   }, []);
-  const items = [callback];
+  items = [callback];
   const effect = noop.useEffect(() => callback, items);
   const tmp7 = hooks_useStableCallbackDefault(() => {
     let tmp;

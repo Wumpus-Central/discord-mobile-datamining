@@ -16,7 +16,7 @@ export default function useGuildRoleMemberCounts(arg0) {
   if (arg1 === undefined) {
     num = 0;
   }
-  const items = [GuildRoleMemberCountStore];
+  items = [GuildRoleMemberCountStore];
   const items1 = [arg0, num];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleMemberCountStore.getRoleMemberCount(closure_0),

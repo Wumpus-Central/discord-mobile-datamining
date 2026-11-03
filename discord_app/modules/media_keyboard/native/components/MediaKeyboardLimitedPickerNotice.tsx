@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" },
   absoluteContainer: { position: "absolute" },
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting(
 export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
   const tmp = closure_6();
-  const items = [onHeightChange];
+  items = [onHeightChange];
   const items1 = [tmp.container];
   let absoluteContainer;
   const callback = noop.useCallback((nativeEvent) => {

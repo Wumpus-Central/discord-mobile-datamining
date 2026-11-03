@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -32,7 +32,7 @@ export default function AppLauncherRoleOption(option) {
     }
     return roleId;
   });
-  const items = [onPress];
+  items = [onPress];
   const stateFromStores = option(onRolePress[4]).useStateFromStores(items, () => {
     if (null != first) {
       let role;
@@ -75,7 +75,7 @@ export default function AppLauncherRoleOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12516, dependencyMap.paths),
+      asyncRequireImpl(12652, dependencyMap.paths),
       AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
       {
         option,

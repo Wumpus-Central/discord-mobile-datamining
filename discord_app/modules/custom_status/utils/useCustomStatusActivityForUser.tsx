@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/custom_status/utils/useCustom
 
 export default function useCustomStatusActivityForUser(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => AuthenticationStore.getId() === closure_0,

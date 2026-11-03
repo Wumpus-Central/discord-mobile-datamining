@@ -548,7 +548,7 @@ prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
     firstPaint,
     settled,
   };
-  const items = [...active.components];
+  items = [...active.components];
   obj2.components = items;
   return obj2;
 };

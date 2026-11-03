@@ -15,13 +15,13 @@ function useFetchPurchases() {
   let ref;
   let ref2;
   CollectiblesPurchaseStore = undefined;
-  let items = [ref2];
+  items = [ref2];
   const stateFromStores = flag(isFetching[4]).useStateFromStores(items, () => ref2.hasLoadedExperiments);
   let obj = flag(isFetching[4]);
   const items1 = [CollectiblesPurchaseStore];
   const isClaiming = fetchPurchasesError(
     flag(isFetching[4]).useStateFromStoresArray(items1, () => {
-      const items = [, , , , ,];
+      items = [, , , , ,];
       ({
         isFetching: arr[0],
         isClaiming: arr[1],

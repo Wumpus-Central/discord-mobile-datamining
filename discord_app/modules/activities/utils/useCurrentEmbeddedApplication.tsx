@@ -17,7 +17,7 @@ export default function useCurrentEmbeddedApplication() {
   }
   const tmp = useCurrentEmbeddedActivityDefault();
   if (null == tmp) {
-    let items = [];
+    items = [];
   } else {
     items = [tmp.applicationId];
   }

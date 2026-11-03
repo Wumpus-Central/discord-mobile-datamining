@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -29,7 +29,7 @@ export default function UserVerification(arg0) {
       };
       tmp5 = React3(IdentityVerificationFieldDefault, obj);
     }
-    const items = [tmp5, ,];
+    items = [tmp5, ,];
     const obj2 = {
       passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL],
       platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL,

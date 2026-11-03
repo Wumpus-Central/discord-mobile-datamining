@@ -11,7 +11,7 @@ function handleUserSettingsProtoStoreChange() {
   const LastReceivedChangelogId = UserSettings.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
 }
-const ChangelogConstants = fn(4916);
+const ChangelogConstants = fn(5043);
 ({ AssetType: closure_4, ChangelogLoadState: hasOwnProperty } = ChangelogConstants);
 const dependencyMap = {};
 const loadedChangelogs = {};
@@ -26,7 +26,7 @@ class ChangelogStore extends Store {}
 const prototype = ChangelogStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore, UserSettingsProtoStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, () => true);
   const items1 = [UserSettingsProtoStore];
   this.syncWith(items1, handleUserSettingsProtoStoreChange);

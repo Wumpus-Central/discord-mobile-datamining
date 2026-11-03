@@ -21,7 +21,7 @@ export default function useUserProfileActivityTabContent(userId) {
   let voiceChannel;
   let voiceActivity;
   closure_4 = undefined;
-  const items = [userId];
+  items = [userId];
   ({ currentUserId, guildId } = userId);
   const effect = voiceActivity.useEffect(() => {
     const promise = maybeFetchContentInventoryOutboxDefault(userId);

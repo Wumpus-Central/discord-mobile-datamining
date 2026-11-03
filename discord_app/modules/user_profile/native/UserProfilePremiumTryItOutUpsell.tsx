@@ -1,17 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumTryItOutUpsell.tsx
+import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = _mod1652;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7377).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
-const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5014);
+let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },
@@ -19,93 +21,97 @@ let closure_6 = createStyles.createStyles((bottom) => {
   };
   return obj;
 });
-const __initData = {
-  code: "function UserProfilePremiumTryItOutUpsellTsx1(){const{isVisible,withSpring,FLOATING_UPSELL_SPRING,DISMISSED_TRANSLATE_Y,DISMISSED_SCALE}=this.__closure;const visible=isVisible.get();return{opacity:withSpring(visible?1:0,FLOATING_UPSELL_SPRING),transform:[{translateY:withSpring(visible?0:DISMISSED_TRANSLATE_Y,FLOATING_UPSELL_SPRING)},{scale:withSpring(visible?1:DISMISSED_SCALE,FLOATING_UPSELL_SPRING)}]};}",
+let closure_7 = {
+  code: "(function UserProfilePremiumTryItOutUpsellTsx1(){let[isVisible,withSpring,FLOATING_UPSELL_SPRING,DISMISSED_TRANSLATE_Y,DISMISSED_SCALE]=this.__closure;const visible=isVisible.get();return{opacity:withSpring(visible?1:0,FLOATING_UPSELL_SPRING),transform:[{translateY:withSpring(visible?0:DISMISSED_TRANSLATE_Y,FLOATING_UPSELL_SPRING)},{scale:withSpring(visible?1:DISMISSED_SCALE,FLOATING_UPSELL_SPRING)}]};})",
 };
-const __initData2 = {
-  code: "function UserProfilePremiumTryItOutUpsellTsx2(){const{isVisible}=this.__closure;const visible=isVisible.get();return{pointerEvents:visible?'box-none':'none',accessibilityElementsHidden:!visible,importantForAccessibility:visible?'auto':'no-hide-descendants'};}",
+let closure_8 = {
+  code: "(function UserProfilePremiumTryItOutUpsellTsx2(){let[isVisible]=this.__closure;const visible=isVisible.get();return{pointerEvents:visible?'box-none':'none',accessibilityElementsHidden:!visible,importantForAccessibility:visible?'auto':'no-hide-descendants'};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePremiumTryItOutUpsell.tsx");
 
 export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   isVisible = isVisible.isVisible;
-  const tmp = closure_6(useSafeAreaInsetsDefault().bottom);
-  const fn = function c() {
-    value = isVisible.get();
-    let num = 0;
-    if (value) {
-      num = 1;
-    }
-    const obj2 = { opacity: spring.withSpring(num, closure_5), transform: null };
-    let num2 = 60;
-    if (value) {
+  const tmp3 = closure_6(useSafeAreaInsetsDefault().bottom);
+  items = [closure_7, isVisible, spring_spring.withSpring, closure_5, 60, 0.9];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items;
+  class UserProfilePremiumTryItOutUpsellTsx1 {
+    constructor() {
+      value = closure_0.get();
+      tmp2 = closure_1;
+      num = 0;
+      if (value) {
+        num = 1;
+      }
+      obj = { opacity: tmp2(num, closure_2), transform: null };
+      tmp3 = closure_2;
       num2 = 0;
-    }
-    const tmp2Result = spring;
-    const items = [{ translateY: spring.withSpring(num2, closure_5) }];
-    const obj3 = { translateY: spring.withSpring(num2, closure_5) };
-    let num3 = 0.9;
-    if (value) {
+      if (!value) {
+        num2 = closure_3;
+      }
+      obj1 = { translateY: tmp2(num2, tmp3) };
+      items = [,];
+      items[0] = obj1;
       num3 = 1;
+      if (!value) {
+        num3 = closure_4;
+      }
+      obj4 = { scale: tmp2(num3, tmp3) };
+      items[1] = obj4;
+      obj.transform = items;
+      return obj;
     }
-    const tmp2Result2 = spring;
-    items[1] = { scale: spring.withSpring(num3, closure_5) };
-    obj2.transform = items;
-    return obj2;
-  };
-  let obj = isVisible(5095);
-  fn.__closure = {
-    isVisible,
-    withSpring: isVisible(5637).withSpring,
-    FLOATING_UPSELL_SPRING,
-    DISMISSED_TRANSLATE_Y: 60,
-    DISMISSED_SCALE: 0.9,
-  };
-  fn.__workletHash = 7434922701119;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = {
-    isVisible,
-    withSpring: isVisible(5637).withSpring,
-    FLOATING_UPSELL_SPRING,
-    DISMISSED_TRANSLATE_Y: 60,
-    DISMISSED_SCALE: 0.9,
-  };
-  const fn2 = function u() {
-    value = isVisible.get();
-    let str = "none";
-    if (value) {
-      str = "box-none";
+  }
+  const items1 = [tmp6, tmp7, tmp8, tmp9, tmp10];
+  UserProfilePremiumTryItOutUpsellTsx1.__closure = items1;
+  UserProfilePremiumTryItOutUpsellTsx1.__workletHash = 3911087995142;
+  UserProfilePremiumTryItOutUpsellTsx1.__initData = tmp5;
+  const animatedStyle = _mod1652.useAnimatedStyle(UserProfilePremiumTryItOutUpsellTsx1);
+  const items2 = [closure_8, isVisible];
+  c0 = undefined;
+  [tmp12, tmp13] = items2;
+  class UserProfilePremiumTryItOutUpsellTsx2 {
+    constructor() {
+      value = closure_0.get();
+      str = "none";
+      if (value) {
+        str = "box-none";
+      }
+      obj = { pointerEvents: str, accessibilityElementsHidden: !value, importantForAccessibility: null };
+      str2 = "no-hide-descendants";
+      if (value) {
+        str2 = "auto";
+      }
+      obj.importantForAccessibility = str2;
+      return obj;
     }
-    const obj = { pointerEvents: str, accessibilityElementsHidden: !value, importantForAccessibility: null };
-    let str2 = "no-hide-descendants";
-    if (value) {
-      str2 = "auto";
-    }
-    obj.importantForAccessibility = str2;
-    return obj;
-  };
-  fn2.__closure = { isVisible };
-  fn2.__workletHash = 4173826125285;
-  fn2.__initData = __initData2;
-  const animatedProps = isVisible(5095).useAnimatedProps(fn2);
-  const obj4 = { animatedProps, style: null, children: null };
-  let items = [tmp.container, animatedStyle];
-  obj4.style = items;
-  const obj5 = { style: tmp.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-  let obj3 = isVisible(5095);
-  const intl = isVisible(1113).intl;
-  obj5.text = intl.string(isVisible(1113).t["MswR/h"]);
-  const intl2 = isVisible(1113).intl;
-  obj5.buttonText = intl2.string(isVisible(1113).t.PxUx8e);
-  obj5.onButtonPress = isVisible.onPreviewPremium;
-  obj4.children = jsx(UserProfileUpsellCardV2Default, {
-    style: tmp.card,
+  }
+  const items3 = [tmp13];
+  UserProfilePremiumTryItOutUpsellTsx2.__closure = items3;
+  UserProfilePremiumTryItOutUpsellTsx2.__workletHash = 15138098665436;
+  UserProfilePremiumTryItOutUpsellTsx2.__initData = tmp12;
+  const animatedProps = _mod1652.useAnimatedProps(UserProfilePremiumTryItOutUpsellTsx2);
+  let obj2 = { animatedProps, style: null, children: null };
+  const items4 = [tmp3.container, animatedStyle];
+  obj2.style = items4;
+  const obj3 = { style: tmp3.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
+  const tmp4Result = _mod1652;
+  const intl = util.intl;
+  obj3.text = intl.string(util.t["MswR/h"]);
+  const intl2 = util.intl;
+  obj3.buttonText = intl2.string(util.t.PxUx8e);
+  obj3.onButtonPress = isVisible.onPreviewPremium;
+  obj2.children = jsx(UserProfileUpsellCardV2Default, {
+    style: tmp3.card,
     text: null,
     buttonText: null,
     onButtonPress: null,
     buttonVariant: "primary",
   });
-  return jsx(ReanimatedRexportDefault.View, { animatedProps, style: null, children: null });
+  return jsx(_modDef1652.View, { animatedProps, style: null, children: null });
 }

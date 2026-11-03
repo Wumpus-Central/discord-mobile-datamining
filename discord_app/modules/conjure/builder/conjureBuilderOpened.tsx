@@ -16,7 +16,7 @@ export function useTrackConjureBuilderOpened(projectId) {
     str = "unknown";
   }
   let ref;
-  const items = [ref];
+  items = [ref];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -41,4 +41,5 @@ export function useTrackConjureBuilderOpened(projectId) {
       const result = ConjureAnalytics.trackConjureBuilderOpened(current, str);
     }
   }, items2);
+  return stateFromStores.useCallback((arg0) => ref.current === arg0, []);
 }

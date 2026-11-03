@@ -25,6 +25,7 @@ import VoiceChannelStartTimeStore from "../channel/VoiceChannelStartTimeStore.ts
 import ClientThemesBackgroundStore from "../client_themes/ClientThemesBackgroundStore.tsx";
 import CustomThemeMobileStore from "../client_themes/native/CustomThemeMobileStore.tsx";
 import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
+import ConjureServerProjectActivityStore from "../conjure/server_workspace/ConjureServerProjectActivityStore.tsx";
 import ConnectivityIndicatorStateStore from "../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import ContentInventoryActivityStore from "../content_inventory/ContentInventoryActivityStore.tsx";
 import ContentInventoryOutboxStore from "../content_inventory/ContentInventoryOutboxStore.tsx";
@@ -137,6 +138,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import EmailSettingsStore from "../user_settings/notifications/EmailSettingsStore.tsx";
 import OrbChallengesStore from "../virtual_currency/stores/OrbChallengesStore.tsx";
 import PIPSpeakerStore from "../voice_panel/native/pip/PIPSpeakerStore.tsx";
+import InterestPickerSessionStore from "../waterwheels/interest/InterestPickerSessionStore.tsx";
 import ActivityInviteModalStore from "../../stores/ActivityInviteModalStore.tsx";
 import ActivityTrackingStore from "../../stores/ActivityTrackingStore.tsx";
 import AnalyticsTrackingStore from "../../stores/AnalyticsTrackingStore.tsx";

@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
 
 export default function useMessageMaxLength() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () =>
     PremiumUtilsDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_1_4 : closure_1_5,
   );

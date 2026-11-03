@@ -56,7 +56,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -75,7 +75,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
           closure_129_0 = user_ids;
           closure_129_1 = undefined;
           const _Date2 = Date;
-          if (Date.now() >= map1) {
+          if (Date.now() >= state) {
             const obj5 = { type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_START", recipientIds: user_ids };
             DispatcherDefault.dispatch(obj5);
             c3 = 1;
@@ -153,7 +153,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

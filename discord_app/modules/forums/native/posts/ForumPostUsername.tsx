@@ -21,7 +21,7 @@ function ForumPostUsername(arg0) {
   }
   const diff = useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
   const tmp4 = useChatWidthDefault();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != authorColor) {
@@ -74,10 +74,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13763).useForumChannelStore;
+const useForumChannelStore = fn(13894).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
   roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },

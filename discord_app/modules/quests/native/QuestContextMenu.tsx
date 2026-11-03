@@ -10,14 +10,14 @@ import CheckmarkLargeIcon2 from "../../../design/components/Icon/native/redesign
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef9207 from "../../../../_runtime/metro/09207__.js";
+import _modDef9335 from "../../../../_runtime/metro/09335__.js";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
-import _modDef17063 from "../../../../_runtime/metro/17063__.js";
+import _modDef17206 from "../../../../_runtime/metro/17206__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef9207;
+  obj.icon = _modDef9335;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -75,7 +75,7 @@ export default noop.memo(function QuestContextMenu(children) {
   const handleOverridePreviewClick = questPreviewActions.handleOverridePreviewClick;
   const handleResetHasBeenSeenClick = questPreviewActions.handleResetHasBeenSeenClick;
   let obj = quest(sourceQuestContent[8]);
-  let items = [handleResetStatusClick];
+  items = [handleResetStatusClick];
   stateFromStores = quest(sourceQuestContent[9]).useStateFromStores(
     items,
     () => handleResetStatusClick.getQuestPreviewOverride(quest(sourceQuestContent[10]).QuestContent.QUEST_BAR_MOBILE),
@@ -155,7 +155,7 @@ export default noop.memo(function QuestContextMenu(children) {
   );
   const items6 = [externalCtaLabel, action, callback2, flag, callback1];
   memo = handleResetDismissibilityClick.useMemo(() => {
-    const items = [
+    items = [
       {
         label: externalCtaLabel,
         IconComponent: LinkExternalSmallIcon.LinkExternalSmallIcon,
@@ -167,7 +167,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef17063;
+    obj2.iconSource = _modDef17206;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };
@@ -187,7 +187,7 @@ export default noop.memo(function QuestContextMenu(children) {
   memo1 = handleResetDismissibilityClick.useMemo(() => {
     if (obj.isConsoleQuest(quest)) {
       const obj2 = { label: "Start Console Heartbeat", action: callback3 };
-      const items = [obj2];
+      items = [obj2];
       const obj3 = { label: "Stop Console Heartbeat", action: callback4 };
       items[1] = obj3;
       let items1 = items;
@@ -206,7 +206,7 @@ export default noop.memo(function QuestContextMenu(children) {
     quest.id,
   ];
   memo2 = handleResetDismissibilityClick.useMemo(() => {
-    const items = [
+    items = [
       {
         label: "Set Random Quest Progress",
         action() {
@@ -257,7 +257,7 @@ export default noop.memo(function QuestContextMenu(children) {
   const items11 = [quest.id, getQuestImpressionId, sourceQuestContent];
   const items12 = obj6.useMemo(() => {
     if (null != additionalItems) {
-      const items = [memo, tmp];
+      items = [memo, tmp];
       let items1 = items;
     } else {
       items1 = [memo];

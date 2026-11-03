@@ -17,7 +17,7 @@ export default function usePipDimensions(channelId) {
   const size = isViewingActivity(width[2])();
   width = size.width;
   let height = size.height;
-  const items = [height, width, forcedOrientation, isViewingActivity];
+  items = [height, width, forcedOrientation, isViewingActivity];
   return height.useMemo(() => {
     let tmp3 = width > height;
     let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;

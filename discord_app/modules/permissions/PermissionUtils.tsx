@@ -413,7 +413,7 @@ const result = size.fileFinishedImporting("modules/permissions/PermissionUtils.t
 export { getGuildPermissionSpec };
 export function generateGuildPermissionSpec(showCreatorMonetizationAnalyticsPermission) {
   const tmp = getGuildPermissionSpec(showCreatorMonetizationAnalyticsPermission);
-  const items = [, , , , , ,];
+  items = [, , , , , ,];
   ({
     VIEW_CHANNEL: arr[0],
     MANAGE_CHANNELS: arr[1],
@@ -577,7 +577,7 @@ export function generateChannelGeneralSection(arg0, intl16, arg2) {
   }
   const VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
   if (showManageWebhooks) {
-    const items = [VIEW_CHANNEL, , ,];
+    items = [VIEW_CHANNEL, , ,];
     ({ MANAGE_CHANNELS: arr2[1], MANAGE_ROLES: arr2[2], MANAGE_WEBHOOKS: arr2[3] } = Permissions);
     let items1 = items;
   } else {
@@ -590,13 +590,13 @@ export function generateChannelGeneralSection(arg0, intl16, arg2) {
 }
 export function generateChannelMembershipSection(arg0, intl17) {
   const obj = { title: intl17, permissions: null };
-  const items = [Permissions.CREATE_INSTANT_INVITE];
+  items = [Permissions.CREATE_INSTANT_INVITE];
   closure_0 = arg0;
   obj.permissions = items.map((item) => closure_0[item.toString(item)]);
   return obj;
 }
 export function generateChannelTextSection(arg0, intl25, description) {
-  const items = [, , , , , , , , , , , , , , , , , , ,];
+  items = [, , , , , , , , , , , , , , , , , , ,];
   ({
     SEND_MESSAGES: arr[0],
     SEND_MESSAGES_IN_THREADS: arr[1],
@@ -640,7 +640,7 @@ export function generateChannelTextSection(arg0, intl25, description) {
 }
 export function generateChannelVoiceSection(arg0, intl) {
   const obj = { title: intl, permissions: null };
-  const items = [, , , , , , , , , ,];
+  items = [, , , , , , , , , ,];
   ({
     CONNECT: arr[0],
     SPEAK: arr[1],
@@ -659,7 +659,7 @@ export function generateChannelVoiceSection(arg0, intl) {
   return obj;
 }
 export function generateChannelVoiceChatSection(arg0, stringResult, description) {
-  const items = [, , , , , , , , , , , , ,];
+  items = [, , , , , , , , , , , , ,];
   ({
     SEND_MESSAGES: arr[0],
     EMBED_LINKS: arr[1],
@@ -693,7 +693,7 @@ export function generateChannelAppsSection(arg0, intl15, arg2) {
     obj = { showActivities: true };
   }
   const obj2 = { title: intl15, permissions: null };
-  const items = [Permissions.USE_APPLICATION_COMMANDS, ,];
+  items = [Permissions.USE_APPLICATION_COMMANDS, ,];
   let prop = null;
   if (obj.showActivities) {
     prop = Permissions.USE_EMBEDDED_ACTIVITIES;
@@ -709,7 +709,7 @@ export function generateChannelStageVoiceSection(arg0, intl10, isStageVideoEnabl
   const obj = { title: intl10, permissions: null };
   const CONNECT = Permissions.CONNECT;
   if (isStageVideoEnabledResult) {
-    const items = [CONNECT, , ,];
+    items = [CONNECT, , ,];
     ({ STREAM: arr2[1], MUTE_MEMBERS: arr2[2], MOVE_MEMBERS: arr2[3] } = Permissions);
     let items1 = items;
   } else {
@@ -722,7 +722,7 @@ export function generateChannelStageVoiceSection(arg0, intl10, isStageVideoEnabl
 }
 export function generateChannelStageSection(arg0, intl11) {
   const obj = { title: intl11, permissions: null };
-  const items = [,];
+  items = [,];
   ({ REQUEST_TO_SPEAK: arr[0], MENTION_EVERYONE: arr[1] } = Permissions);
   closure_0 = arg0;
   obj.permissions = items.map((item) => closure_0[item.toString(item)]);
@@ -730,7 +730,7 @@ export function generateChannelStageSection(arg0, intl11) {
 }
 export function generateChannelEventsSection(arg0, intl12) {
   const obj = { title: intl12, permissions: null };
-  const items = [,];
+  items = [,];
   ({ CREATE_EVENTS: arr[0], MANAGE_EVENTS: arr[1] } = Permissions);
   closure_0 = arg0;
   obj.permissions = items.map((item) => closure_0[item.toString(item)]);

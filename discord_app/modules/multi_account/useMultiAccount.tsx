@@ -6,12 +6,12 @@ import UserStore from "../../stores/UserStore.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 require = fn;
-const MultiAccountTokenStatus = fn(13977).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14108).MultiAccountTokenStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 
 export function useMultiAccountUsers() {
-  let items = [MultiAccountStore, UserStore];
+  items = [MultiAccountStore, UserStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();
@@ -33,7 +33,7 @@ export function useMultiAccountUsers() {
           discriminator: obj4.discriminator,
         } = currentUser);
         obj3.tokenStatus = constants.VALID;
-        const items = [obj3];
+        items = [obj3];
         HermesBuiltin.arraySpread(users, 1);
         obj2.multiAccountUsers = items;
       }

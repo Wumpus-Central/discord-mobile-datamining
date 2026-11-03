@@ -95,7 +95,7 @@ prototype["showNotice"] = function showNotice() {
 prototype["canSubmit"] = function canSubmit() {
   const self = this;
   BioMaxLengthExperiment;
-  const items = [React3, guildId];
+  items = [React3, guildId];
   for (const item10016 of items) {
     let pendingChanges = self.getPendingChanges(item10016);
     if (undefined !== pendingChanges.pendingBio) {
@@ -258,7 +258,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     closure_9 = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp];
+        items = [tmp];
         obj = {};
         const merged = Object.assign(tmp2);
         obj.pendingGlobalName = undefined;
@@ -278,7 +278,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     closure_9 = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp];
+        items = [tmp];
         obj = {};
         const merged = Object.assign(tmp2);
         obj.pendingPronouns = undefined;

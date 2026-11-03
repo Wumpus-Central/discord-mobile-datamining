@@ -911,7 +911,7 @@ class InboxSettings$Type extends MessageType2 {
       name: "current_tab",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.InboxTab", InboxTab, "INBOX_TAB_"];
+        items = ["discord_protos.discord_users.v1.InboxTab", InboxTab, "INBOX_TAB_"];
         return items;
       },
     };
@@ -1000,7 +1000,7 @@ let items = [
     name: "current_tab",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.InboxTab", InboxTab, "INBOX_TAB_"];
+      items = ["discord_protos.discord_users.v1.InboxTab", InboxTab, "INBOX_TAB_"];
       return items;
     },
   },
@@ -1398,11 +1398,7 @@ class GuildSettings$Type extends MessageType5 {
       name: "guild_theme_source_preference",
       kind: "enum",
       T() {
-        const items = [
-          "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-          obj16,
-          "GUILD_THEME_SOURCE_PREFERENCE_",
-        ];
+        items = ["discord_protos.discord_users.v1.GuildThemeSourcePreference", obj16, "GUILD_THEME_SOURCE_PREFERENCE_"];
         return items;
       },
     };
@@ -2897,7 +2893,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -3168,7 +3164,7 @@ class ExplicitContentSettings$Type extends MessageType14 {
       name: "explicit_content_guilds",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3189,7 +3185,7 @@ class ExplicitContentSettings$Type extends MessageType14 {
       name: "explicit_content_non_friend_dm",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3281,7 +3277,7 @@ const items11 = [
     name: "explicit_content_guilds",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3290,7 +3286,7 @@ const items11 = [
     name: "explicit_content_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3299,7 +3295,7 @@ const items11 = [
     name: "explicit_content_non_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3329,7 +3325,7 @@ class GoreContentSettings$Type extends MessageType15 {
       name: "gore_content_guilds",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3350,7 +3346,7 @@ class GoreContentSettings$Type extends MessageType15 {
       name: "gore_content_non_friend_dm",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3442,7 +3438,7 @@ const items12 = [
     name: "gore_content_guilds",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3451,7 +3447,7 @@ const items12 = [
     name: "gore_content_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3460,7 +3456,7 @@ const items12 = [
     name: "gore_content_non_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3490,7 +3486,7 @@ class SelfHarmContentSettings$Type extends MessageType16 {
       name: "self_harm_content_guilds",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3511,7 +3507,7 @@ class SelfHarmContentSettings$Type extends MessageType16 {
       name: "self_harm_content_non_friend_dm",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+        items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
         return items;
       },
     };
@@ -3603,7 +3599,7 @@ const items13 = [
     name: "self_harm_content_guilds",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3612,7 +3608,7 @@ const items13 = [
     name: "self_harm_content_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -3621,7 +3617,7 @@ const items13 = [
     name: "self_harm_content_non_friend_dm",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
+      items = ["discord_protos.discord_users.v1.ExplicitContentRedaction", obj4];
       return items;
     },
   },
@@ -4019,7 +4015,7 @@ class TextAndImagesSettings$Type extends MessageType18 {
       name: "dm_spam_filter_v2",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.DmSpamFilterV2", obj5];
+        items = ["discord_protos.discord_users.v1.DmSpamFilterV2", obj5];
         return items;
       },
     };
@@ -4100,7 +4096,7 @@ class TextAndImagesSettings$Type extends MessageType18 {
       name: "search_provider",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.SearchProvider", obj9, "SEARCH_PROVIDER_"];
+        items = ["discord_protos.discord_users.v1.SearchProvider", obj9, "SEARCH_PROVIDER_"];
         return items;
       },
     };
@@ -4758,7 +4754,7 @@ class NotificationSettings$Type extends MessageType19 {
       name: "reaction_notifications",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ReactionNotificationType", obj6];
+        items = ["discord_protos.discord_users.v1.ReactionNotificationType", obj6];
         return items;
       },
     };
@@ -4767,7 +4763,7 @@ class NotificationSettings$Type extends MessageType19 {
       name: "game_activity_notifications",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.GameActivityNotificationType", obj7];
+        items = ["discord_protos.discord_users.v1.GameActivityNotificationType", obj7];
         return items;
       },
     };
@@ -4776,7 +4772,7 @@ class NotificationSettings$Type extends MessageType19 {
       name: "custom_status_push_notifications",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.CustomStatusPushNotificationType", obj8];
+        items = ["discord_protos.discord_users.v1.CustomStatusPushNotificationType", obj8];
         return items;
       },
     };
@@ -5345,7 +5341,7 @@ class PrivacySettings$Type extends MessageType20 {
       name: "default_guilds_activity_restricted",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.GuildActivityStatusRestrictionDefault", obj10];
+        items = ["discord_protos.discord_users.v1.GuildActivityStatusRestrictionDefault", obj10];
         return items;
       },
     };
@@ -5420,7 +5416,7 @@ class PrivacySettings$Type extends MessageType20 {
       name: "guilds_leaderboard_opt_out_default",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.GuildsLeaderboardOptOutDefault", obj12];
+        items = ["discord_protos.discord_users.v1.GuildsLeaderboardOptOutDefault", obj12];
         return items;
       },
     };
@@ -5445,7 +5441,7 @@ class PrivacySettings$Type extends MessageType20 {
       name: "slayer_sdk_receive_dms_in_game",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.SlayerSDKReceiveInGameDMs", obj13];
+        items = ["discord_protos.discord_users.v1.SlayerSDKReceiveInGameDMs", obj13];
         return items;
       },
     };
@@ -5454,7 +5450,7 @@ class PrivacySettings$Type extends MessageType20 {
       name: "default_guilds_activity_restricted_v2",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.GuildActivityStatusRestrictionDefaultV2", obj11];
+        items = ["discord_protos.discord_users.v1.GuildActivityStatusRestrictionDefaultV2", obj11];
         return items;
       },
     };
@@ -5480,7 +5476,7 @@ class PrivacySettings$Type extends MessageType20 {
       name: "profile_visibility",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ProfileVisibility", obj14, "PROFILE_VISIBILITY_"];
+        items = ["discord_protos.discord_users.v1.ProfileVisibility", obj14, "PROFILE_VISIBILITY_"];
         return items;
       },
     };
@@ -5498,7 +5494,7 @@ class PrivacySettings$Type extends MessageType20 {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = ["discord_protos.discord_users.v1.AdTopic", obj15, "AD_TOPIC_"];
+        items = ["discord_protos.discord_users.v1.AdTopic", obj15, "AD_TOPIC_"];
         return items;
       },
     };
@@ -7049,7 +7045,7 @@ class AppearanceSettings$Type extends MessageType27 {
       name: "theme",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.Theme", obj18];
+        items = ["discord_protos.discord_users.v1.Theme", obj18];
         return items;
       },
     };
@@ -7094,7 +7090,7 @@ class AppearanceSettings$Type extends MessageType27 {
       name: "timestamp_hour_cycle",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.TimestampHourCycle", obj20];
+        items = ["discord_protos.discord_users.v1.TimestampHourCycle", obj20];
         return items;
       },
     };
@@ -7111,7 +7107,7 @@ class AppearanceSettings$Type extends MessageType27 {
       name: "launch_pad_mode",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.LaunchPadMode", obj21];
+        items = ["discord_protos.discord_users.v1.LaunchPadMode", obj21];
         return items;
       },
     };
@@ -7120,7 +7116,7 @@ class AppearanceSettings$Type extends MessageType27 {
       name: "ui_density",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.UIDensity", obj17];
+        items = ["discord_protos.discord_users.v1.UIDensity", obj17];
         return items;
       },
     };
@@ -7139,11 +7135,7 @@ class AppearanceSettings$Type extends MessageType27 {
       name: "default_guild_theme_preference",
       kind: "enum",
       T() {
-        const items = [
-          "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-          obj16,
-          "GUILD_THEME_SOURCE_PREFERENCE_",
-        ];
+        items = ["discord_protos.discord_users.v1.GuildThemeSourcePreference", obj16, "GUILD_THEME_SOURCE_PREFERENCE_"];
         return items;
       },
     };
@@ -8351,7 +8343,7 @@ const items26 = [
     name: "type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.FavoriteChannelType", obj23];
+      items = ["discord_protos.discord_users.v1.FavoriteChannelType", obj23];
       return items;
     },
   },
@@ -9646,7 +9638,7 @@ class SafetySettings$Type extends MessageType43 {
       name: "safety_settings_preset",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.SafetySettingsPresetType", obj24];
+        items = ["discord_protos.discord_users.v1.SafetySettingsPresetType", obj24];
         return items;
       },
     };
@@ -9765,7 +9757,7 @@ const items36 = [
     name: "safety_settings_preset",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.SafetySettingsPresetType", obj24];
+      items = ["discord_protos.discord_users.v1.SafetySettingsPresetType", obj24];
       return items;
     },
   },
@@ -9804,7 +9796,7 @@ class ForLaterSettings$Type extends MessageType44 {
       name: "current_tab",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.ForLaterTab", obj25, "FOR_LATER_TAB_"];
+        items = ["discord_protos.discord_users.v1.ForLaterTab", obj25, "FOR_LATER_TAB_"];
         return items;
       },
     };
@@ -9886,7 +9878,7 @@ const items37 = [
     name: "current_tab",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.ForLaterTab", obj25, "FOR_LATER_TAB_"];
+      items = ["discord_protos.discord_users.v1.ForLaterTab", obj25, "FOR_LATER_TAB_"];
       return items;
     },
   },
@@ -11695,15 +11687,16 @@ const inAppFeedbackSettingsType1 = new InAppFeedbackSettings$Type(
 const MessageType56 = fn(1197).MessageType;
 class ConjureProjectSettings$Type extends MessageType56 {
   constructor() {
-    items = [];
+    items = [,];
     items[0] = { no: 1, name: "muted", kind: "scalar", T: 8 };
+    items[1] = { no: 2, name: "sidebar_dismissed_at", kind: "scalar", T: 4 };
     tmp1 = new tmp("discord_protos.discord_users.v1.ConjureProjectSettings", items, new.target);
     return tmp1;
   }
 }
 const prototype56 = ConjureProjectSettings$Type.prototype;
 prototype56["create"] = function create(partialSettings) {
-  const obj = { muted: false };
+  const obj = { muted: false, sidebarDismissedAt: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -11725,6 +11718,9 @@ prototype56["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.muted = pos.bool();
+      } else if (2 === tmp5) {
+        let str4 = pos.uint64();
+        obj.sidebarDismissedAt = str4.toString();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -11757,6 +11753,10 @@ prototype56["internalBinaryWrite"] = function internalBinaryWrite(muted, tag, wr
     tag.tag(1, _mod1197.WireType.Varint).bool(muted.muted);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
   }
+  if ("0" !== muted.sidebarDismissedAt) {
+    tag.tag(2, _mod1197.WireType.Varint).uint64(muted.sidebarDismissedAt);
+    const tagResult1 = tag.tag(2, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -11767,9 +11767,9 @@ prototype56["internalBinaryWrite"] = function internalBinaryWrite(muted, tag, wr
   }
   return tag;
 };
-const items49 = [];
-const obj60 = { no: 1, name: "muted", kind: "scalar", T: 8 };
-items49[0] = obj60;
+const items49 = [{ no: 1, name: "muted", kind: "scalar", T: 8 }];
+const obj60 = { no: 2, name: "sidebar_dismissed_at", kind: "scalar", T: 4 };
+items49[1] = obj60;
 const tmp63 = new "internalBinaryRead"(
   "discord_protos.discord_users.v1.ConjureProjectSettings",
   items49,

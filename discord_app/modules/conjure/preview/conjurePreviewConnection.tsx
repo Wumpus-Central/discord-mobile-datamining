@@ -7,10 +7,10 @@ import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame.tsx";
 import ConjurePreviewActionCreators from "ConjurePreviewActionCreators.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
+import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
 import ConjurePublishActionCreators from "../publish/ConjurePublishActionCreators.tsx";
 import UserApplicationIdentityActionCreatorsDefault from "../../user_application_identity/UserApplicationIdentityActionCreators.tsx";
-import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import conjurePreviewModeRequests from "conjurePreviewModeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -29,7 +29,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -175,7 +175,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -449,6 +449,14 @@ export const previewFrameHandlers = {
       projectId: projectId.projectId,
       blur: blur.blur,
       imageEtag: blur.image_etag,
+    });
+  },
+  game_captures(captures, projectId) {
+    DispatcherDefault.dispatch({
+      type: "CONJURE_GAME_CAPTURES_SET",
+      projectId: projectId.projectId,
+      captures: captures.captures,
+      selectedId: captures.selected_id,
     });
   },
 };

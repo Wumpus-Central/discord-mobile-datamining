@@ -36,8 +36,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5767).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11046);
+const NO_VOICE_STATES = fn(5887).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11186);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
@@ -68,7 +68,7 @@ let closure_18 = noop.memo(function VoiceChannel(channel) {
   let obj3 = channel(ensureSyncedChannelVoiceStates[18]);
   const isConnectedToVoiceChannel = channel(ensureSyncedChannelVoiceStates[19]).useIsConnectedToVoiceChannel(channel);
   const obj4 = channel(ensureSyncedChannelVoiceStates[19]);
-  const items = [ReadStateStore, UserGuildSettingsStore];
+  items = [ReadStateStore, UserGuildSettingsStore];
   const items1 = [channel];
   const stateFromStoresObject = channel(ensureSyncedChannelVoiceStates[20]).useStateFromStoresObject(
     items,
@@ -266,7 +266,7 @@ let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/Vo
 export default noop.memo(function ConnectedVoiceChannel(channel) {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
-  const items = [SortedVoiceStateStore];
+  items = [SortedVoiceStateStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(
     items,

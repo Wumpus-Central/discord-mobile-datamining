@@ -20,7 +20,7 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -223,7 +223,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
       }
     }
   });
-  const items = [openURL, first];
+  items = [openURL, first];
   return noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;

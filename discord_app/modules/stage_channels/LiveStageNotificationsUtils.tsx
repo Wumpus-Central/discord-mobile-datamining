@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/LiveStageNotif
 
 export function useCanSendStageStartNotification(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(
     items,
@@ -30,7 +30,7 @@ export function useDefaultSendStartStageNotificationToggle(guild_id) {
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   const items1 = [guild_id];
   const stateFromStores = guild_id(504).useStateFromStores(
     items,

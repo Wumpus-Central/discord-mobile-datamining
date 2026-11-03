@@ -24,7 +24,7 @@ export const IosAttributionClickResult = {
 export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
   let str = activeIosAttributionFramework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
-  const items = ["result:" + NO_FRAMEWORK];
+  items = ["result:" + NO_FRAMEWORK];
   let str2 = activeIosAttributionFramework;
   if (activeIosAttributionFramework == null) {
     str2 = "none";
@@ -44,7 +44,7 @@ export function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttribution
 export function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
   const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
-  const items = ["result:" + ATTRIBUTED];
+  items = ["result:" + ATTRIBUTED];
   let str2 = framework;
   if (framework == null) {
     str2 = "none";

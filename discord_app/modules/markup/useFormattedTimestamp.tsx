@@ -1,6 +1,6 @@
 // discord_app/modules/markup/useFormattedTimestamp.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ const require = fn;
 function getTimestampUpdateInterval(parsed) {
   let tmp = timestamp;
   if (timestamp === undefined) {
-    tmp = _modDef2042();
+    tmp = _modDef2171();
   }
   const absolute = Math.abs(parsed.diff(tmp));
   const obj = items1[Symbol.iterator]();
@@ -39,7 +39,7 @@ let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.ts
 export default function useFormattedTimestamp(format) {
   _require = format;
   [tmp2, importDefault] = noop.useState(null);
-  const items = [,];
+  items = [,];
   ({ format: arr[0], parsed: arr[1] } = format);
   const effect = noop.useEffect(() => {
     if ("R" === format.format) {

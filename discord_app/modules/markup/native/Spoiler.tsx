@@ -11,8 +11,8 @@ function createSpoilerStore() {
     closure_0 = arg0;
     let obj = {
       revealedIds: new Set(),
-      reveal(dependencyMap) {
-        closure_0 = dependencyMap;
+      reveal(_require) {
+        closure_0 = _require;
         closure_0((revealedIds) => {
           const obj = { revealedIds: new Set(revealedIds.revealedIds).add(closure_0) };
           return obj;
@@ -33,7 +33,7 @@ function SharedSpoiler(arg0) {
   const merged1 = Object.assign(merged);
   obj2.revealed = store1;
   obj2.onReveal = function onReveal() {
-    const state = store.getState();
+    state = store.getState();
     return state.reveal(_require);
   };
   return <Spoiler />;
@@ -42,8 +42,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1072).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-const PlatformUtils = fn(1375);
+const createStyles = fn(5141);
+const PlatformUtils = fn(1377);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
@@ -53,7 +53,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(11046).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(11186).MUTED_OPACITY_CONTENT };
 let closure_7 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 const PureComponent = noop.PureComponent;
@@ -92,7 +92,7 @@ Spoiler.prototype["render"] = function render() {
   }
   const children = self.props.children;
   if (revealed) {
-    let items = [tmp.spoilerRevealed, tmp3];
+    items = [tmp.spoilerRevealed, tmp3];
     let items1 = items;
   } else {
     items1 = [tmp.spoiler, tmp2];
@@ -161,22 +161,22 @@ Spoiler.prototype["render"] = function render() {
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F98700 */ function() { ... });
-                        const items = [flattenResult, spoiler.spoiler];
+                        obj.children = Children.map(props.props.children, /* F98905 */ function() { ... });
+                        items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);
                       } else {
                         return props;
                       }
                     });
-                    const items = [flattenResult, spoiler.spoiler];
+                    items = [flattenResult, spoiler.spoiler];
                     obj.style = items;
                     return cloneElement(props, obj);
                   } else {
                     return props;
                   }
                 });
-                const items = [flattenResult, spoiler.spoiler];
+                items = [flattenResult, spoiler.spoiler];
                 obj.style = items;
                 return cloneElement(props, obj);
               } else {
@@ -204,7 +204,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5080).ThemeContext;
+Spoiler.contextType = fn(5207).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

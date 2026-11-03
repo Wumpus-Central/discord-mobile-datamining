@@ -60,7 +60,7 @@ prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(arg0
     let applyResult = null;
     if (0 !== values.length) {
       const _Math = Math;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         values.map((baseCost) => baseCost.baseCost),
         0,

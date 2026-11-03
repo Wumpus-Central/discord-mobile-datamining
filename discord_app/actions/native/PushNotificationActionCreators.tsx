@@ -38,7 +38,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,8 +114,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1072);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(13978).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6743);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(14109).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6863);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -154,15 +154,15 @@ export default {
         rejectWithError: false,
       };
       if (flag) {
-        let tmp8 = closure_1_12;
+        let tmp8 = application_id;
       } else {
-        tmp8 = map1();
+        tmp8 = state();
       }
       const obj2 = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
       const obj = TrackedHTTPUtilsDefault;
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
-        isAndroidResult = !closure_1_14;
+        isAndroidResult = !gesture;
       }
       obj2.bypass_server_throttling_supported = isAndroidResult;
       obj2.bundle_id = bundle_id;
@@ -216,11 +216,11 @@ export default {
               const obj7 = {
                 provider: tmp9,
                 token: closure_129_0,
-                push_sync_tokens: closure_128_1.filter(tmp2(1379).isNotNullish),
+                push_sync_tokens: closure_128_1.filter(tmp2(1380).isNotNullish),
                 bypass_server_throttling_supported: null,
                 bundle_id: null,
               };
-              let isAndroidResult = tmp2(1375).isAndroid();
+              let isAndroidResult = tmp2(1377).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(13981).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(13981);
+          const result = v2(14112).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(14112);
         }
       }
       return value;
@@ -251,8 +251,8 @@ export default {
     logger.log("Unregistering push notification token: " + token);
     const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     const obj = TrackedHTTPUtilsDefault;
-    request.body = { provider: map1(), token };
-    const obj2 = { provider: map1(), token };
+    request.body = { provider: state(), token };
+    const obj2 = { provider: state(), token };
     request.trackedActionData = {
       event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN,
     };

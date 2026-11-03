@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScre
 export default function useWelcomeScreenEnabled(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  const items = [ChannelStore, GuildStore, SelectedChannelStore];
+  items = [ChannelStore, GuildStore, SelectedChannelStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_1);
+    guild = GuildStore.getGuild(closure_1);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

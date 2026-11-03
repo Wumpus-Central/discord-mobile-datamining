@@ -17,7 +17,7 @@ export function useFilteredAndSortedProducts(products) {
   const androidUnsyncedFilter = products(bypassAndroidUnsyncedFilter[4]).useAndroidUnsyncedFilter();
   closure_129_0 = tmp3;
   const obj2 = products(bypassAndroidUnsyncedFilter[4]);
-  let items = [androidUnsyncedFilter];
+  items = [androidUnsyncedFilter];
   const stateFromStores = products(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () =>
     androidUnsyncedFilter.getCurrentUser(),
   );
@@ -41,7 +41,7 @@ export function useFilteredAndSortedProducts(products) {
     } else {
       fn = androidUnsyncedFilter;
     }
-    const items = [fn, badBundleFilter, callback];
+    items = [fn, badBundleFilter, callback];
     return items.reduce((acc, fn) => fn(acc), products);
   }, items2);
   const obj4 = maxProducts(bypassAndroidUnsyncedFilter[7]);

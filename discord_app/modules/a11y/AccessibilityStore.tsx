@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1072);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5019);
+const MessageConstants = fn(5146);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,
@@ -183,7 +183,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (closure_11.indexOf(num2) < 0) {
     obj.messageGroupSpacing = null;
   }
-  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
+  items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
   let isThrottling = false;
   const items1 = [GameModeStore];
@@ -320,7 +320,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
       const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_1_12 : map1;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? application_id : state;
     }
     return messageGroupSpacing;
   },
@@ -329,14 +329,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? application_id : state);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? application_id : state);
   },
   set: undefined,
 });

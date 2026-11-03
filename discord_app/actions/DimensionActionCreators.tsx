@@ -19,7 +19,7 @@ export default {
     }
   },
   updateChannelListScroll(guildId, scrollTop) {
-    let items = arg2;
+    items = arg2;
     if (arg2 === undefined) {
       items = [];
     }

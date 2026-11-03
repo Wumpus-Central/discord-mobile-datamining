@@ -12,7 +12,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" },
 });
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting(
 export function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
   const tmp = closure_6();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = voiceState(504).useStateFromStores(items, () =>
     ChannelStore.getChannel(voiceState.channelId),
   );
@@ -35,7 +35,7 @@ export function HappeningNowVoiceCardSubtitle(voiceState) {
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(17288).HappeningNowCardSubtitle, {
+  obj2.children = jsx(voiceState(17431).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: useChannelNameDefault(stateFromStores),

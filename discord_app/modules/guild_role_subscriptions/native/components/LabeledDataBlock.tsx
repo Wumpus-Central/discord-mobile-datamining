@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.CARD_MUTED_BG,
@@ -29,7 +29,7 @@ export default function LabeledDataBlock(arg0) {
   ({ title, style, onPressIcon } = arg0);
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const obj2 = { style: tmp.titleSection, children: null };
   const items1 = [

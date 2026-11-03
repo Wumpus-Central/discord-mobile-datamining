@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
   return noop.useCallback((type, arg1) => {

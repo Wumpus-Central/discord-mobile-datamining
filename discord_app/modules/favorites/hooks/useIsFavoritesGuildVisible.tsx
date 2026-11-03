@@ -12,7 +12,7 @@ export default function useIsFavoritesGuildVisible() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const items = [FavoriteStore, SelectedGuildStore];
+  items = [FavoriteStore, SelectedGuildStore];
   const items1 = [flag];
   return flag(504).useStateFromStores(
     items,

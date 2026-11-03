@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 
 require = fn;
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -32,7 +32,7 @@ export function RegisterPhoneOrEmailInput(loginPhone) {
   obj3.enabled = autoFocus;
   loginEmail(setLoginPhone[5])(obj3);
   const tmp6 = loginEmail(setLoginPhone[5]);
-  const items = [inputMode];
+  items = [inputMode];
   const stateFromStores = loginPhone(setLoginPhone[6]).useStateFromStores(items, () => inputMode.getCountryCode());
   const tmp9 = ref((errors) => errors.errors);
   closure_7 = tmp9;

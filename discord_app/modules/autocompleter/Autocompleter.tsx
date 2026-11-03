@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef1943 from "../../../_runtime/metro/01943__.js";
+import _modDef2072 from "../../../_runtime/metro/02072__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import CodedLink from "../coded_links/CodedLink.tsx";
@@ -25,8 +25,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
-fn(6897).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
+fn(7017).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -97,7 +97,7 @@ class Autocompleter {
     };
     obj.updateAllResults = function updateAllResults() {
       clearTimeout(obj._asyncTimeout);
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(
         obj._inAppNavigations,
         HermesBuiltin.arraySpread(
@@ -261,7 +261,7 @@ prototype["_willRefetchIfSingleCategoryResults"] = function _willRefetchIfSingle
   if (!_refetched) {
     let tmp3 = null == self.options.voiceChannelGuildFilter && null == self.options.userFilters;
     if (tmp3) {
-      const items = [, , , , , , , ,];
+      items = [, , , , , , , ,];
       ({
         _userResults: arr[0],
         _groupDMResults: arr[1],
@@ -482,7 +482,7 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
         userSearchContext.setQuery(obj3);
       } else {
         const memberListSections = ThreadMemberListStore.getMemberListSections(userFilters.thread);
-        const items = [];
+        items = [];
         for (const key10017 in memberListSections) {
           let tmp30 = memberListSections[key10017];
           let userIds = tmp30.userIds;
@@ -603,10 +603,10 @@ prototype["queryLink"] = function queryLink(query) {
         record: LinkRecord.fromInviteCode(findCodedLinkResult.code),
         score: AutocompleteUtils.calculateScore(11),
       };
-      const items = [obj2];
+      items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef1943.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef2072.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

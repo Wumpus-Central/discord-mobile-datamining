@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16, flex: 1, alignItems: "center" },
   block: {
@@ -35,8 +35,8 @@ export default function UserSettingsDesignSystemStack() {
   const obj3 = { spacing: 16, children: null };
   const obj4 = { children: null };
   const obj5 = { children: null };
-  const items = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }),
+  items = [
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Basic Example" }),
     React4(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -53,7 +53,7 @@ export default function UserSettingsDesignSystemStack() {
   const obj7 = { children: null };
   const obj8 = { children: null };
   const items3 = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Spacing" }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Spacing" }),
     React4(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -71,7 +71,7 @@ export default function UserSettingsDesignSystemStack() {
   const obj10 = { children: null };
   const obj11 = { children: null };
   const items5 = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Horizontal" }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Horizontal" }),
     React4(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",

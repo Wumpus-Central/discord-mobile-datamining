@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const labelPressable = {
     paddingBottom: nativeDefault.space.PX_4,
@@ -46,7 +46,7 @@ export function IconButton(grow) {
     obj3.accessibilityLabel = "";
     obj3.size = "lg";
     obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [React3(BaseIconButton.BaseIconButton, obj3)];
+    items = [React3(BaseIconButton.BaseIconButton, obj3)];
     const obj4 = {
       style: tmp2.label,
       variant: "text-xs/medium",

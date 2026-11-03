@@ -23,7 +23,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9468).HeartIcon, {
+    children: closure_5(toastText(9596).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   card: {
     borderWidth: 1,
@@ -104,7 +104,7 @@ export default function WishlistItemCardBase(arg0) {
   if (null != primaryColor) {
     containerBackground = obj2.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
-  const items = [tmp.card, { backgroundColor: containerBackground }];
+  items = [tmp.card, { backgroundColor: containerBackground }];
   if (typeof size === "object") {
     const size1 = { width: null, height: null };
     ({ width: obj4.width, height: obj4.height } = size);

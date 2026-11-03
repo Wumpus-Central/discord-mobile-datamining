@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   informationContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -38,7 +38,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   ({ onClose, style } = stickerPack);
   const tmp = closure_5();
   _require = tmp;
-  let items = [];
+  items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
     const intl = tmp2(1113).intl;
@@ -61,7 +61,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1113).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
-  const obj8 = { variant: "text-md/bold", color: "text-brand", children: null };
+  const obj8 = { variant: "text-md/semibold", color: "text-brand", children: null };
   const intl4 = tmp2(1113).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_3(require("Text/Text").Text, obj8);
@@ -71,7 +71,7 @@ export default function StickerPackInformationPopout(stickerPack) {
     closure_4(View, obj4),
     items.map(function renderItem(children) {
       const obj = { style: closure_0.informationContentContainer, children: null };
-      const items = [
+      items = [
         React3(Text_Text.Text, {
           style: closure_0.informationContent,
           variant: "text-md/medium",
@@ -92,7 +92,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   return closure_4(View, obj3);
 }
 export function doesStickerPackHavePopoutInformation(stickerPack) {
-  const items = [];
+  items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
     const intl = util.intl;

@@ -9,11 +9,11 @@ function handleConnectionOpenOrResumed() {
   closure_5 = {};
   closure_6 = {};
 }
-const INVITE_EXPIRATION_MS = fn(2018).INVITE_EXPIRATION_MS;
+const INVITE_EXPIRATION_MS = fn(2147).INVITE_EXPIRATION_MS;
 let closure_5 = {};
 let closure_6 = {};
-const delayedCall = new fn(4858).DelayedCall(3000, function flush() {
-  const items = [];
+const delayedCall = new fn(4985).DelayedCall(3000, function flush() {
+  items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {
     let tmp7 = _slicedToArray(tmp5, 2);

@@ -21,7 +21,7 @@ export function useConjureRevealedText(source, streaming) {
   closure_5 = undefined;
   closure_6 = undefined;
   target = _require;
-  const items = [ref];
+  items = [ref];
   if (streaming) {
     streaming = !obj.useStateFromStores(items, () => ref.useReducedMotion);
   }
@@ -101,7 +101,7 @@ export function useConjureRevealedText(source, streaming) {
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(12201);
+          obj = closure_0(12337);
         }
         obj = conjurePageVisibility;
         return conjurePageVisibility.subscribePageVisibility(flushIfHidden);
@@ -123,8 +123,8 @@ export function useConjureRevealedText(source, streaming) {
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(12200).reconcileRevealedLength(target, source, length);
-      const targetResult = target(12200);
+      let length2 = target(12336).reconcileRevealedLength(target, source, length);
+      const targetResult = target(12336);
     } else {
       length2 = source.length;
     }

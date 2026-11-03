@@ -6,9 +6,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting(
 export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   importDefault = noop.useRef(false);
-  const items = [markAsDismissed];
+  items = [markAsDismissed];
   const callback = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;

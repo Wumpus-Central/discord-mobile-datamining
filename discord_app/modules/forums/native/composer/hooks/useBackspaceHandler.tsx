@@ -10,7 +10,7 @@ export function useBackspaceHandler(selection) {
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;
-  const items = [selection, draftContent, handleTextChange];
+  items = [selection, draftContent, handleTextChange];
   return selection.useCallback(() => {
     let num2;
     ({ start, end } = selection);

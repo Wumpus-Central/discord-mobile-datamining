@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -23,7 +23,7 @@ function ApplicationStatusNotice(arg0) {
   const tmp = closure_14();
   if (null != resubmissionError) {
     const obj2 = { style: null, children: null };
-    const items = [tmp.statusNoticeContainer, style];
+    items = [tmp.statusNoticeContainer, style];
     obj2.style = items;
     const obj3 = { children: resubmissionError.getAnyErrorMessage() };
     obj2.children = closure_1_11(ErrorBlockDefault, obj3);
@@ -73,7 +73,7 @@ class SectionContainer {
     tmp6 = closure_3;
     obj5 = {
       style: tmp.sectionTitle,
-      variant: "heading-lg/extrabold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     };
@@ -104,13 +104,13 @@ function StartEarningButton(isTermsAccepted) {
   const tmp4 = require("useCreatorMonetizationAcceptTerms")(guildId);
   ({ error, loading, submitAcceptTermsRequest } = tmp4);
   const navigation = isTermsAccepted(submitAcceptTermsRequest[14]).useNavigation();
-  const items = [submitAcceptTermsRequest];
+  items = [submitAcceptTermsRequest];
   const items1 = [eligibility, navigation];
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(19881, dependencyMap.paths),
+      asyncRequireImpl(20031, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -249,12 +249,12 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const React6 = fn(17196).CREATOR_REVENUE_PORTAL_URL;
+const React6 = fn(17339).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const constants = fn(19877).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(20027).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },
@@ -278,7 +278,7 @@ obj2.divider = size;
 obj2.sectionTitle = { marginTop: 36, marginBottom: 10 };
 obj2.sectionFooter = { marginTop: 36 };
 obj2.statusNoticeContainer = { marginHorizontal: 0, marginTop: 14 };
-const value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx",
@@ -314,7 +314,7 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   [tmp10, tmp11] = first(noop.useState(false), 2);
   ref = noop.useRef(true);
   const tmp9 = first(noop.useState(false), 2);
-  const items = [ref, refreshEligibility];
+  items = [ref, refreshEligibility];
   const focusEffect = refreshEligibility(ref1[29]).useFocusEffect(
     noop.useCallback(() => {
       if (!ref.current) {
@@ -379,7 +379,7 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         obj10.children = closure_11(tmp2(tmp3[36]).MarketStallSpotIllustration, obj11);
         const items3 = [closure_11(closure_6, obj10)];
         const obj12 = { ref: ref1, style: tmp.contentContainer, collapsable: false, children: null };
-        const obj13 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+        const obj13 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
         const intl3 = tmp2(tmp3[10]).intl;
         obj13.children = intl3.string(tmp2(tmp3[10]).t.QYqDQ0);
         const items4 = [closure_11(tmp2(tmp3[12]).Text, obj13), , ,];

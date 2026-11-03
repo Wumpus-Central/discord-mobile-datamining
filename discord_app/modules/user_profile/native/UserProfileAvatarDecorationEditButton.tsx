@@ -7,10 +7,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7377).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7497).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1083).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = {
   position: "relative",
@@ -35,7 +35,7 @@ export default function UserProfileAvatarDecorationEditButton(user) {
   let userAvatarDecoration;
   const tmp = closure_10();
   noop = tmp2;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = user(isTryItOut[8]).useStateFromStores(items, () => {
     let member = null;
     if (closure_3) {

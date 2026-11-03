@@ -11,7 +11,7 @@ export function useAppChannelApplication(stateFromStores) {
   if (stateFromStores != null) {
     type = stateFromStores.type;
   }
-  let application_id;
+  application_id = undefined;
   if (type === ChannelTypes.GUILD_APP) {
     application_id = stateFromStores.application_id;
   }

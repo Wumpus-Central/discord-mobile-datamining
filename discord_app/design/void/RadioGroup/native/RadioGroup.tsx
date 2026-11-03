@@ -19,7 +19,7 @@ function RadioEmpty(size) {
 function RadioSelected(style) {
   ({ size, active } = style);
   const tmp = closure_10();
-  const items = [tmp.radioIcon, , ,];
+  items = [tmp.radioIcon, , ,];
   let MEDIUM = size;
   if (size === undefined) {
     MEDIUM = obj.MEDIUM;
@@ -85,7 +85,7 @@ function RadioBar(arg0) {
     tmp7 = onPress;
   }
   obj3.onPress = tmp7;
-  const items = [style, ,];
+  items = [style, ,];
   if (disabled) {
     disabled = tmp.disabled;
   }
@@ -257,7 +257,7 @@ class RadioGroup {
           indicatorLeft: null,
           showIndicator: null,
         };
-        const items = [dependencyMap];
+        items = [dependencyMap];
         if (index === options.length - 1) {
           let obj2 = { marginBottom: 0 };
         } else {
@@ -294,7 +294,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const Sizes = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 const dependencyMap = { [Sizes.SMALL]: 2, [Sizes.MEDIUM]: 3, [Sizes.LARGE]: 4 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   radioIcon: {
     flex: 0,

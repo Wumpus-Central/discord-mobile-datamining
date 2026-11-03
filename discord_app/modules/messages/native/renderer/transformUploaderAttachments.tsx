@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/tran
 export default function createUploaderAttachments(uploaderFile) {
   uploaderFile = uploaderFile.uploaderFile;
   ({ isFailedMessage: dependencyMap, shouldInlineAttachmentMedia: AttachmentType } = uploaderFile);
-  const items = uploaderFile.items;
+  items = uploaderFile.items;
   let mapped;
   if (items != null) {
     mapped = items.map((filename) => {

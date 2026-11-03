@@ -40,7 +40,7 @@ obj = {
       if (pinnedUserIds.includes(id) !== pinned) {
         const pinnedUserIds1 = obj.pinnedUserIds;
         if (pinned) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(pinnedUserIds1, 0)] = id;
           let found = items;
         } else {

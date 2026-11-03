@@ -28,7 +28,7 @@ export function useDownloadedFile(url, arg1) {
   _slicedToArray = fileContents[1];
   const bytesLeft = _slicedToArray(noop.useState(1), 2);
   noop = bytesLeft[1];
-  const items = [url, arg1];
+  items = [url, arg1];
   const effect = noop.useEffect(() => {
     closure_0 = async function _download() {
       closure_5 = tmp3;

@@ -41,7 +41,7 @@ const Store = initializeDefault.Store;
 class GooglePlayPriceChangeStore extends Store {}
 const prototype = GooglePlayPriceChangeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   this.syncWith(items, onInitializeSync);
   this.waitFor(SubscriptionStore);
 };

@@ -10,10 +10,10 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   pill: {
     display: "flex",
@@ -72,7 +72,7 @@ export default function AvailableForumTag(tag) {
   const tmp = closure_8();
   const pill = tmp;
   ({ name: c5, emojiId: c6, emojiName: c7 } = tag);
-  let items = [pill];
+  items = [pill];
   closure_8 = tag(disabled[6]).useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != c6) {
@@ -82,7 +82,7 @@ export default function AvailableForumTag(tag) {
   });
   const items1 = [disabled, selected, tmp];
   const style = selected.useMemo(() => {
-    const items = [];
+    items = [];
     items.push(pill.pill);
     if (selected) {
       items.push(pill.pillSelected);
@@ -122,7 +122,7 @@ export default function AvailableForumTag(tag) {
         obj4.name = str;
         tmp9Result = timestampProducer(EmojiDefault, obj4);
       }
-      const items = [
+      items = [
         tmp9Result,
         timestampProducer(Text_Text.Text, {
           variant: "text-sm/semibold",

@@ -5,7 +5,7 @@ import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
@@ -17,7 +17,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export function useHasActiveTrial() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
@@ -57,7 +57,7 @@ export function isEligibleTrialSub(trialId) {
   return tmp2;
 }
 export function useCurrentPremiumTrialTier() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );

@@ -9,7 +9,7 @@ export default function useInterval(current, MINUTE) {
   closure_1 = MINUTE;
   closure_2 = ref(current);
   ref = ref(null);
-  const items = [current];
+  items = [current];
   closure_2(() => {
     closure_2.current = current;
   }, items);

@@ -6,13 +6,13 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
-export function getChannelDetailsButtons(channel) {
-  let flag = stateFromStores;
-  if (stateFromStores === undefined) {
+export function getChannelDetailsButtons(c0) {
+  let flag = c2;
+  if (c2 === undefined) {
     flag = false;
   }
-  if (channel.type === ChannelTypes.ChannelTypes.GUILD_DIRECTORY) {
-    let items = [];
+  if (_require.type === ChannelTypes.ChannelTypes.GUILD_DIRECTORY) {
+    items = [];
   } else {
     items = [, ,];
     ({ SEARCH: arr[0], MUTE: arr[1], SETTINGS: arr[2] } = ChannelDetailsButtonTypes);

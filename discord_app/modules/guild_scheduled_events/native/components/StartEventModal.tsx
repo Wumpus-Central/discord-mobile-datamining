@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7257 from "../../../../../_runtime/metro/07257__.js";
+import _modDef7377 from "../../../../../_runtime/metro/07377__.js";
 import GuildEventCardDefault from "GuildEventCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -23,24 +23,24 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7257 });
-  obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
-  return closure_1_12(View, obj);
+  obj2.children = application_id(native.Icon, { source: _modDef7377 });
+  obj.children = application_id(Pressables.PressableOpacity, obj2);
+  return application_id(View, obj);
 }
 function StartEventHeader(children) {
   const tmp = closure_14();
   const obj = { style: tmp.header, children: null };
   const obj2 = {
     style: tmp.headerPrivacyLevel,
-    variant: "heading-lg/bold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t["q+fFJv"]);
-  const items = [
-    closure_1_12(Text_Text.Text, obj2),
-    closure_1_12(Text_Text.Text, {
+  items = [
+    application_id(Text_Text.Text, obj2),
+    application_id(Text_Text.Text, {
       style: tmp.headerTitle,
       variant: "text-md/medium",
       color: "text-default",
@@ -48,7 +48,7 @@ function StartEventHeader(children) {
     }),
   ];
   obj.children = items;
-  return map1(View, obj);
+  return state(View, obj);
 }
 class PreviewEventCard {
   constructor(arg0) {
@@ -58,13 +58,13 @@ class PreviewEventCard {
   }
 }
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(4869);
-({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
+const GuildScheduledEventsConstants = fn(4996);
+({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8963).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9091).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   mainContainer: {
     flex: 1,
@@ -108,7 +108,7 @@ obj2.previewCard = {
   shadowOffset: { height: 8, width: 0 },
 };
 obj2.headerPrivacyLevel = { textAlign: "center", lineHeight: 18 };
-const value = createStyles.createStyles(obj2);
+const gesture = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
 
@@ -140,7 +140,7 @@ export default function StartEventModal(event) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ export default function StartEventModal(event) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c0 = tmp;
         throw tmp11;
@@ -187,7 +187,7 @@ export default function StartEventModal(event) {
   };
   const tmp = closure_14();
   const guild_id = event.guild_id;
-  const items = [closure_8];
+  items = [closure_8];
   const stateFromStores = event(guild_id[18]).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   let obj = event(guild_id[18]);
   const items1 = [onCloseModal];

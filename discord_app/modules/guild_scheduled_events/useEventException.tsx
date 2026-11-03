@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEve
 
 export default function useEventException(arg0, arg1) {
   _require = arg1;
-  const items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(closure_0);
     let prop;

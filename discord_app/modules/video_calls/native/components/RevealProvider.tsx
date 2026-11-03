@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
-  const items = [ActionSheetStore];
+  items = [ActionSheetStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => null != key.getKey());
   const obj = stateFromStores1(504);
   const tmp2 = stateFromStores1;
@@ -41,12 +41,12 @@ function useRevealProviderValue(arg0, channel) {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(channel.id);
-  const tmp10 = tmp2(1375).isIOS() && tmp8;
+  const tmp10 = tmp2(1377).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(11000);
+const ChannelCallStore = fn(11133);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,
@@ -54,7 +54,7 @@ const ChannelCallStore = fn(11000);
   useIsVoiceChatFocused: closure_9,
 } = ChannelCallStore);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const context = noop.createContext({ reveal: true });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
@@ -73,7 +73,7 @@ export default function RevealProvider(showStatus) {
   _require = tmp;
   const tmp2 = useRevealProviderValue(tmp, channel);
   ({ reveal, prefersDeferringSystemGestures } = tmp2);
-  const items = [tmp];
+  items = [tmp];
   const effect = noop.useEffect(() => {
     if (closure_0) {
       React6();

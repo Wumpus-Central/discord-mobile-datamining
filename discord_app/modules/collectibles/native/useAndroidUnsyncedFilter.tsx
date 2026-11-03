@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/useAndroi
 export function useAndroidUnsyncedFilter() {
   isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(stateFromStores[3]).useIsInImprovedMobileShopLoading();
   const obj = isInImprovedMobileShopLoading(stateFromStores[3]);
-  const items = [IAPStore];
+  items = [IAPStore];
   const items1 = [isInImprovedMobileShopLoading];
   stateFromStores = isInImprovedMobileShopLoading(stateFromStores[4]).useStateFromStores(
     items,

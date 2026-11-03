@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/modal/FavoritesGuildCleanupModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3450 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3577 from "../../intl/FavoritesGuild.messages.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
@@ -30,7 +30,7 @@ function CleanupScreen() {
   const obj4 = { variant: "text-md/normal", children: null };
   const intl = validDays(loading[10]).intl;
   obj4.children = intl.string(stage(loading[11]).DbeF7Y);
-  let items = [closure_6(validDays(loading[9]).Text, obj4), ,];
+  items = [closure_6(validDays(loading[9]).Text, obj4), ,];
   const obj5 = { children: null };
   if ("filter" === stage) {
     const obj6 = {
@@ -122,7 +122,7 @@ function CleanupScreen() {
             selectedIds = arg0;
             return selectedIds.setSelectedIds((arr) => {
               if (id) {
-                const items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(arr, 0)] = id.id;
                 let found = items;
               } else {
@@ -243,7 +243,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -265,13 +265,13 @@ export default function FavoritesGuildCleanupModal() {
     let obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
     let intl = util.intl;
-    obj2.title = intl.string(_modDef3450["b081B+"]);
+    obj2.title = intl.string(_modDef3577["b081B+"]);
     obj2.headerLeft = function headerLeft() {
       const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
       const intl = closure_1_0(1113).intl;
       obj.text = intl.string(closure_1_0(1113).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5634).Button, obj);
+      return closure_1_6(closure_1_0(5754).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

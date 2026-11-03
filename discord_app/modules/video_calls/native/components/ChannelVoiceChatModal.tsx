@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
   const tmp2 = useChannelNameDefault(channel);
-  const items = [channel.id];
+  items = [channel.id];
   const effect = noop.useEffect(() => {
     ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
     return () => {
@@ -38,7 +38,7 @@ export default function ChannelVoiceChatModal(channel) {
     <tmp5
       screenKey="StageVoiceChat"
       title={str}
-      titleIcon={jsx(channel(8669).StageIcon, { size: "sm" })}
+      titleIcon={jsx(channel(8793).StageIcon, { size: "sm" })}
       render={function render() {
         let guild_id = channel.guild_id;
         if (guild_id == null) {

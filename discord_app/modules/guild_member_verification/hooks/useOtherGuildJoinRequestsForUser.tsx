@@ -13,7 +13,7 @@ export function useOtherGuildJoinRequestsForUser(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const selectedJoinRequestId = guildId.selectedJoinRequestId;
-  let items = [GuildJoinRequestStore];
+  items = [GuildJoinRequestStore];
   const items1 = [guildId, userId];
   const stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(
     items,
@@ -31,7 +31,7 @@ export function useOtherGuildJoinRequestsForUser(guildId) {
   }, items2);
   const items3 = [stateFromStores, selectedJoinRequestId];
   return stateFromStores.useMemo(() => {
-    let items = stateFromStores;
+    items = stateFromStores;
     if (stateFromStores == null) {
       items = [];
     }

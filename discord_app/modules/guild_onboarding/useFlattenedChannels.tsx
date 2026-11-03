@@ -6,7 +6,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-function getFlattenedChannels(guildId, set, found) {
+function getFlattenedChannels(c0, set, found) {
   _require = set;
   importDefault = found;
   if (flag === undefined) {
@@ -15,11 +15,9 @@ function getFlattenedChannels(guildId, set, found) {
   ChannelStore = undefined;
   const tmp = require("../../../_runtime/metro/00012__.js");
   const values = require("../../../_runtime/metro/00012__.js")(
-    ChannelStore.getMutableGuildChannelsForGuild(guildId),
+    ChannelStore.getMutableGuildChannelsForGuild(c0),
   ).values();
-  const tmpResult = require("../../../_runtime/metro/00012__.js")(
-    ChannelStore.getMutableGuildChannelsForGuild(guildId),
-  );
+  const tmpResult = require("../../../_runtime/metro/00012__.js")(ChannelStore.getMutableGuildChannelsForGuild(c0));
   ChannelStore = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
   const mapped = require("../../../_runtime/metro/00012__.js")(found).map((isCategory) =>
@@ -66,7 +64,7 @@ function getFlattenedChannels(guildId, set, found) {
     if (found == null) {
       found = [];
     }
-    const items = [
+    items = [
       ..._modDef12.sortBy(found, (position) => {
         position = position.position;
         if (position.isGuildVocal()) {
@@ -98,7 +96,7 @@ export function useFlattenedChannels(arg0, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const items = [ChannelStore];
+  items = [ChannelStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     const mapped = Array.from(closure_1).map((item) => channel.getChannel(item));
     return getFlattenedChannels(closure_0, closure_1, mapped.filter(GlobalUtils.isNotNullish), flag);

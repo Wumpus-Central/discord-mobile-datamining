@@ -71,14 +71,14 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
     if (0 === purchases.purchases.length) {
       closure_3 = map;
     } else {
-      let items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_3.values(), 0);
       if (!obj.isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
         map = new Map(
           purchases.map((skuId) => {
-            const items = [skuId.skuId, skuId];
+            items = [skuId.skuId, skuId];
             return items;
           }),
         );
@@ -103,14 +103,14 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
   COLLECTIBLES_CLAIM_SUCCESS: function handleClaimSuccess(purchases) {
     if (null != purchases.purchases) {
       if (0 !== purchases.purchases.length) {
-        let items = [];
+        items = [];
         HermesBuiltin.arraySpread(closure_3.values(), 0);
         if (!obj.isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
           map = new Map(
             purchases.map((skuId) => {
-              const items = [skuId.skuId, skuId];
+              items = [skuId.skuId, skuId];
               return items;
             }),
           );

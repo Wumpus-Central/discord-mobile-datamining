@@ -4,7 +4,7 @@ import guild_automod_PermissionUtils from "PermissionUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(13292);
+const Constants = fn(13428);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -237,7 +237,7 @@ export function useAvailableTriggerTypes(guildId) {
   isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[3]).useIsUserProfileRuleEnabled(guildId);
   const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[3]);
   isApplicationRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).useIsApplicationRuleEnabled(guildId);
-  const items = [isUserProfileRuleEnabled, isApplicationRuleEnabled];
+  items = [isUserProfileRuleEnabled, isApplicationRuleEnabled];
   return noop.useMemo(() => {
     const keys = Object.keys(obj12);
     return keys.reduce(

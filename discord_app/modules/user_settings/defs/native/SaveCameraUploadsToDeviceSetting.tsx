@@ -5,15 +5,15 @@ import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsA
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(8432).MobileUserSettings.CHAT,
+  parent: fn(8556).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
-    const items = [UnsyncedUserSettingsStore];
+    items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {

@@ -56,7 +56,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
-  const items = [];
+  items = [];
   const iter = LocalAppDetectionTypes.ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

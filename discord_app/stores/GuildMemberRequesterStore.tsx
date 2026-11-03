@@ -60,7 +60,7 @@ function handleLoadSearchResults(arg0) {
   if (null == guildId) {
     return false;
   } else {
-    const items = [];
+    items = [];
     guildId = items;
     let item = data.forEach((messages) => {
       messages = messages.messages;
@@ -90,7 +90,7 @@ function handleLoadSearchResults(arg0) {
 }
 const navigation = new GuildMemberRequesterDefault(GuildMemberStore.isMember, (arg0, userIds) => {
   const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: null, userIds };
-  const items = [arg0];
+  items = [arg0];
   obj2.guildIds = items;
   DispatcherDefault.dispatch(obj2);
 });

@@ -23,7 +23,7 @@ export default function UserProfileWidgetReportButton(arg0) {
   obj.action = function action() {
     return showReportModalForUserWidget.showReportModalForUserWidget(closure_1_0, importDefault);
   };
-  const items = [obj];
+  items = [obj];
   return jsx(ContextMenu.ContextMenu, {
     items,
     children(ref) {

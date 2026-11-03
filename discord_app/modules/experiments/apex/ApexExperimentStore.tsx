@@ -59,7 +59,7 @@ class ApexExperimentStore extends tmp2 {
     tmp1 = new tmp(tmp2, obj, closure_0(closure_2[4]).DispatchBand.Early, new.target, tmp, tmp2, obj, new.target);
     closure_0 = tmp1;
     tmp1.track = () => {
-      const items = [...arguments];
+      items = [...arguments];
       const items1 = [...items];
       return AnalyticsUtilsDefault.track.apply(items1);
     };

@@ -68,9 +68,9 @@ function handleSubscriptionStoreUpdate() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
-  ANNUAL_DISCOUNT_IDS: c10,
+  ANNUAL_DISCOUNT_IDS: closure_10,
   CHURN_DISCOUNT_IDS: closure_11,
   DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12,
   SubscriptionPlanInfo: map1,
@@ -83,7 +83,7 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F473}\u{1F3FF}\u200D\u2642\uFE0F",
+  userDiscounts: "\u{1F468}\u{1F3FF}\u200D\u{1F3A4}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,
@@ -111,7 +111,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
     obj.userTrialOffers = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp];
+        items = [tmp];
         if (tmp2 instanceof UserTrialOfferRecord) {
           items[1] = tmp2;
           return items;
@@ -144,7 +144,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
     obj.userDiscountOffers = Object.fromEntries(
       entries1.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp, rehydrateDiscountOffer(tmp2)];
+        items = [tmp, rehydrateDiscountOffer(tmp2)];
         return items;
       }),
     );
@@ -154,7 +154,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
   }
   closure_19 = tmp;
   this.waitFor(EntitlementStore, ReferralTrialStore, SubscriptionStore, UserStore);
-  let items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, emitChanges);
   const items1 = [SubscriptionStore];
   this.syncWith(items1, handleSubscriptionStoreUpdate);
@@ -218,7 +218,7 @@ prototype["shouldFetchReferralOffer"] = function shouldFetchReferralOffer(tmp9Re
   }
 };
 prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminder(trialId) {
-  const hasItem = __initData.includes(trialId.trialId);
+  const hasItem = closure_1_15.includes(trialId.trialId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -262,7 +262,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_1_12.includes(discountId.discountId);
+  const hasItem = application_id.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -275,7 +275,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
   const currentUser = UserStore.getCurrentUser();
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -305,7 +305,7 @@ prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -323,7 +323,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -347,7 +347,7 @@ prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
-      let items = [];
+      items = [];
     }
     return items;
   }
@@ -466,7 +466,7 @@ let items = [
       obj.userDiscountOffers = Object.fromEntries(
         entries.map((item) => {
           [tmp, tmp2] = item;
-          const items = [tmp, rehydrateDiscountOffer(tmp2)];
+          items = [tmp, rehydrateDiscountOffer(tmp2)];
           return items;
         }),
       );

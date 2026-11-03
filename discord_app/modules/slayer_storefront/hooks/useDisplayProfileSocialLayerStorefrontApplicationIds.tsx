@@ -22,14 +22,14 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
     usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[2],
   )(userId.userId);
   _require = tmp;
-  let items = [tmp];
+  items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
     if (application != null) {
       userId = application.userId;
     }
     if (null != userId) {
-      const items = [application.userId];
+      items = [application.userId];
       let items1 = items;
     } else {
       items1 = [];
@@ -114,7 +114,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
       application = application.application;
     }
     if (null != application) {
-      let items = [];
+      items = [];
     } else {
       const items1 = [];
       HermesBuiltin.arraySpread(

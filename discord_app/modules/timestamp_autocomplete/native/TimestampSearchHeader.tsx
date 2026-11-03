@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "text-sm/semibold";
 let c7 = "text-sm/medium";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND },
   headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 },
@@ -34,7 +34,7 @@ export default noop.memo(function TimestampSearchHeader() {
   const obj = { style: tmp.container, children: null };
   const obj2 = { accessible: true, accessibilityRole: "header", children: null };
   const obj3 = { style: tmp.headerRow, children: null };
-  const items = [
+  items = [
     React4(ClockIcon.ClockIcon, { size: "sm", style: tmp.icon }),
     React4(Text_Text.Text, { variant, color: "mobile-text-heading-primary", children: "@time" }),
   ];

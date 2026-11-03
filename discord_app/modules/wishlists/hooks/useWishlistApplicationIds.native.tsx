@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistAp
 
 export function useWishlistApplicationIds() {
   return noop.useMemo(() => {
-    const items = [closure_1_1];
+    items = [closure_1_1];
     return items;
   }, []);
 }

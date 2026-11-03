@@ -1,6 +1,6 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeGameContextMenu.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef9207 from "../../../../_runtime/metro/09207__.js";
+import _modDef9335 from "../../../../_runtime/metro/09335__.js";
 import RefreshIcon from "../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
 import OrbsArcadeActionCreators from "../OrbsArcadeActionCreators.tsx";
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 
 export default function OrbsArcadeGameContextMenu(game) {
   game = game.game;
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [game.id];
   const stateFromStores = game(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -53,9 +53,9 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      return game(17041).openOrbsArcadeInfoSheet(id.id);
+      return game(17184).openOrbsArcadeInfoSheet(id.id);
     };
-    const items = [obj];
+    items = [obj];
     return items;
   }, items1);
   const items2 = [game.id];
@@ -76,7 +76,7 @@ export default function OrbsArcadeGameContextMenu(game) {
         return applyArgumentsResult;
       })(id.id);
     };
-    const items = [obj];
+    items = [obj];
     return items;
   }, items2);
   if (stateFromStores) {
@@ -85,7 +85,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(9874).ContextMenu, {
+  return jsx(game(10005).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {
@@ -94,12 +94,12 @@ export default function OrbsArcadeGameContextMenu(game) {
       const merged1 = Object.assign(merged);
       obj.variant = "secondary-overlay";
       obj.size = "sm";
-      obj.icon = _modDef9207;
+      obj.icon = _modDef9335;
       const intl = game(1113).intl;
       obj.accessibilityLabel = intl.string(game(1113).t.reWgFH);
       const intl2 = game(1113).intl;
       obj.accessibilityHint = intl2.string(game(1113).t.hd0b7t);
-      return jsx(game(8028).IconButton, { ref: ref.ref });
+      return jsx(game(8152).IconButton, { ref: ref.ref });
     },
   });
 }

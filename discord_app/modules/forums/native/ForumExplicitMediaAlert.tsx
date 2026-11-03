@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" },
   title: null,
@@ -34,12 +34,12 @@ export default function ForumExplicitMediaAlert(arg0) {
   const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
   const obj2 = {
     accessibilityRole: "header",
-    variant: "heading-md/extrabold",
+    variant: "heading-md/semibold",
     color: "text-default",
     style: null,
     children: null,
   };
-  const items = [,];
+  items = [,];
   ({ title: arr[0], text: arr[1] } = tmp);
   obj2.style = items;
   const intl = require("util").intl;

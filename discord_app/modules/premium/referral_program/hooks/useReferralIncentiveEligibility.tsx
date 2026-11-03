@@ -19,7 +19,7 @@ export function useReferralIncentiveEligibility(preventFetch) {
     preventFetch.location,
   );
   ({ referralRewardType, useAltReferralCardArt } = premiumReferralIncentivesVariant);
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );

@@ -15,7 +15,7 @@ const IconSizes = {
   REFRESH_SMALL_16: "refreshSmall16",
   SMALL_14: "small14",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles(() => {
   obj = { iconColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
   return obj;
@@ -70,7 +70,7 @@ const memoResult = noop.memo(function Icon(size) {
       }
     }
     size = { width: num, height: num };
-    const items = [size, undefined, style];
+    items = [size, undefined, style];
     obj2.style = items;
     obj2.accessible = accessible;
     obj2.accessibilityLabel = accessibilityLabel;

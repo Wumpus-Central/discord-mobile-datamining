@@ -267,7 +267,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: "\u{1F6B5}\u{1F3FB}\u200D\u2640\uFE0F",
+      functionCache: 10,
     });
     merged[0] = [];
     merged[1] = {};
@@ -448,10 +448,10 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   profiling.mark(type.type);
   LastFewActionsAll.add(type.type);
   const actionLogger = this.actionLogger;
-  const logResult1 = actionLogger.log(type, (fn) => {
+  const logResult1 = actionLogger.log(type, (arg0) => {
     try {
       self._currentDispatchActionType = type.type;
-      self._dispatch(type, fn);
+      self._dispatch(type, arg0);
       self._currentDispatchActionType = null;
     } catch (tmp8) {
       self._currentDispatchActionType = null;

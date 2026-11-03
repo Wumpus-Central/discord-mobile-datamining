@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePub
 
 export default function useConjurePublishedAppName(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore, ApplicationStore];
+  items = [ConjureProjectStore, ApplicationStore];
   return require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let str = "";

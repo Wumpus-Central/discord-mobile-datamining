@@ -25,7 +25,7 @@ export function getSortedVoiceSessionParticipants(message) {
       if (null != user) {
         tmp2 = acc;
         if (user.id !== author.author.id) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }
@@ -45,7 +45,7 @@ export function getSortedVoiceSessionParticipants(message) {
 }
 export function useSortedVoiceSessionParticipants(author) {
   closure_129_0 = author;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [author.author.id, author.call];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(
     items,
@@ -100,7 +100,7 @@ export function getVoiceSessionMessageContent(channel_id) {
       if (null != user) {
         tmp2 = acc;
         if (user.id !== author.author.id) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }

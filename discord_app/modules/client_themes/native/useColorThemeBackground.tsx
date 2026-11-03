@@ -17,9 +17,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(5197)();
+  const tmp = stateFromStores(5320)();
   _require = tmp;
-  let items = [ThemeStore];
+  items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);
   let obj = require("useStateFromStores");
   const items1 = [ClientThemesBackgroundStore];
@@ -42,7 +42,7 @@ export default function useColorThemeBackground() {
           customThemeSettings: null,
         };
         const obj2 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(
           GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], stateFromStores),
           0,

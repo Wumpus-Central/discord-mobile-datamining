@@ -2,9 +2,10 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import Client from "../../../flow/Client.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import ReadStateActionCreators from "../../../actions/ReadStateActionCreators.tsx";
@@ -25,6 +26,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = globalThis.__r;
 
+const _modDef1652 = tmp2(1652);
 require = fn;
 class Separator {
   constructor() {
@@ -150,7 +152,7 @@ class GuildContentPost {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({
-  AnalyticsObjects: c10,
+  AnalyticsObjects: closure_10,
   AnalyticsObjectTypes: closure_11,
   AnalyticsPages: closure_12,
   DEFAULT_ROLE_COLOR_HEX: map1,
@@ -161,8 +163,8 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18528);
-createICYMIStyles.createICYMIStyles((paddingBottom) => {
+const createICYMIStyles = fn(18682);
+let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
     num = -2;
@@ -266,8 +268,8 @@ createICYMIStyles.createICYMIStyles((paddingBottom) => {
   obj2.chevron = { tintColor: nativeDefault.colors.TEXT_MUTED };
   return obj2;
 });
-const __initData = {
-  code: "function ICYMISharedTsx1(){const{interpolateColor,progress,bgColor,bgColorHighlighted}=this.__closure;return{backgroundColor:interpolateColor(progress.get(),[0,1],[bgColor,bgColorHighlighted])};}",
+let closure_26 = {
+  code: "(function ICYMISharedTsx1(){let[interpolateColor,progress,bgColor,bgColorHighlighted]=this.__closure;return{backgroundColor:interpolateColor(progress.get(),[0,1],[bgColor,bgColorHighlighted])};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIShared.tsx");
@@ -313,7 +315,7 @@ export function AnnouncementContentPost(guild) {
   const id = guild.id;
   ({ timestamp, children, mentioned, onHeaderPress, onHeaderLongPress } = guild);
   const tmp = closure_21();
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = guild(author[31]).useStateFromStores(items, () =>
     GuildMemberStore.getMember(guild.id, author.id),
   );
@@ -405,7 +407,7 @@ export function GuildEventPost(guild) {
   }
   const tmp = closure_21();
   if (null != creator_id) {
-    const items = [creator_id];
+    items = [creator_id];
     let items1 = items;
   } else {
     items1 = [];
@@ -556,7 +558,7 @@ export function MessageContentPost(guild) {
   const message = guild.message;
   const id = guild.id;
   const type = guild.type;
-  const items = [channel, message];
+  items = [channel, message];
   ({ timestamp, children, onHeaderPress, onHeaderLongPress } = guild);
   const memo = message.useMemo(() => ICYMIUtils.determineContentType(channel, message), items);
   const items1 = [GuildMemberStore];
@@ -659,70 +661,80 @@ export function SimplePost(arg0) {
   if (highlight === undefined) {
     highlight = false;
   }
-  let token;
+  _require = highlight;
+  importDefault = undefined;
   const tmp = closure_21();
-  const tmp2 = token;
-  const tmp4 = token(5253)();
-  token = highlight(5596).useToken(token(575).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-  let obj = highlight(5596);
-  const hexWithOpacityResult = highlight(5011).hexWithOpacity(token(575).unsafe_rawColors.BRAND_360, 0.25);
-  dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(5011);
-  const sharedValue = highlight(5095).useSharedValue(0);
-  let obj3 = highlight(5095);
-  const fn = function c() {
-    const obj = { backgroundColor: null };
-    const items = [token, c2];
-    obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
-    return obj;
-  };
-  let obj4 = highlight(5095);
-  fn.__closure = {
-    interpolateColor: highlight(5095).interpolateColor,
-    progress: sharedValue,
-    bgColor: token,
-    bgColorHighlighted: hexWithOpacityResult,
-  };
-  fn.__workletHash = 11116019021445;
-  fn.__initData = __initData;
-  let items = [highlight, sharedValue];
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  const effect = sharedValue.useEffect(() => {
-    if (highlight) {
-      const obj = ReanimatedRexport;
-      const withTimingResult = timing.withTiming(1, { duration: 500 });
-      const obj3 = ReanimatedRexport;
-      const result = sharedValue.set(
-        obj.withSequence(withTimingResult, obj3.withDelay(500, timing.withTiming(0, { duration: 350 }))),
+  const tmp4 = useThemeDefault();
+  const token = require("useToken").useToken(nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+  let obj = require("useToken");
+  let obj2 = require("ColorUtils");
+  const hexWithOpacityResult = require("ColorUtils").hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_360, 0.25);
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj3 = require("../../../../_runtime/metro/01652__.js");
+  items = [
+    closure_26,
+    require("../../../../_runtime/metro/01652__.js").interpolateColor,
+    sharedValue,
+    token,
+    hexWithOpacityResult,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12] = items;
+  class ICYMISharedTsx1 {
+    constructor() {
+      obj = { backgroundColor: null };
+      items = [,];
+      items[0] = closure_2;
+      items[1] = closure_3;
+      obj.backgroundColor = closure_0(closure_1.get(), [0, 1], items);
+      return obj;
+    }
+  }
+  const items1 = [tmp9, tmp10, tmp11, tmp12];
+  ICYMISharedTsx1.__closure = items1;
+  ICYMISharedTsx1.__workletHash = 3035270374140;
+  ICYMISharedTsx1.__initData = tmp8;
+  const items2 = [highlight, sharedValue];
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(ICYMISharedTsx1);
+  const effect = noop.useEffect(() => {
+    if (c0) {
+      const obj = _mod1652;
+      const withTimingResult = timing_timing.withTiming(1, { duration: 500 });
+      const obj3 = _mod1652;
+      const result = _undefined2.set(
+        obj.withSequence(withTimingResult, obj3.withDelay(500, timing_timing.withTiming(0, { duration: 350 }))),
       );
     }
-  }, items);
-  const obj6 = { children: null };
+  }, items2);
+  const obj5 = { children: null };
   if (highlight) {
-    const obj7 = { style: null, children: null };
-    const items1 = [tmp.simplePostContent, animatedStyle];
-    obj7.style = items1;
-    obj7.children = children;
-    const items2 = [closure_18(tmp2(5095).View, obj7)];
-    let tmp12Result = null;
+    const obj6 = { style: null, children: null };
+    const items3 = [tmp.simplePostContent, animatedStyle];
+    obj6.style = items3;
+    obj6.children = children;
+    const items4 = [closure_18(_modDef1652.View, obj6)];
+    let tmp17Result = null;
     if (!hideDivider) {
-      tmp12Result = closure_18(Separator, {});
+      tmp17Result = closure_18(Separator, {});
     }
-    items2[1] = tmp12Result;
-    obj6.children = items2;
-    let tmp16 = obj6;
+    items4[1] = tmp17Result;
+    obj5.children = items4;
+    let tmp21 = obj5;
   } else {
-    const obj8 = { style: tmp.simplePostContent, children };
-    const items3 = [closure_18(View, obj8)];
-    let tmp12Result2 = null;
+    const obj7 = { style: tmp.simplePostContent, children };
+    const items5 = [closure_18(View, obj7)];
+    let tmp17Result2 = null;
     if (!hideDivider) {
-      tmp12Result2 = closure_18(Separator, {});
+      tmp17Result2 = closure_18(Separator, {});
     }
-    items3[1] = tmp12Result2;
-    obj6.children = items3;
-    tmp16 = obj6;
+    items5[1] = tmp17Result2;
+    obj5.children = items5;
+    tmp21 = obj5;
   }
-  return closure_19(closure_20, tmp16);
+  return closure_19(closure_20, tmp21);
 }
 export function ThreadAsComments(arg0) {
   ({ guild, parentMessage } = arg0);
@@ -734,7 +746,7 @@ export function ThreadAsComments(arg0) {
   closure_129_0 = guild;
   closure_129_1 = parentMessage;
   closure_129_2 = inForum;
-  const items = [ChannelStore, ThreadMessageStore];
+  items = [ChannelStore, ThreadMessageStore];
   const stateFromStoresObject = parentMessage(504).useStateFromStoresObject(items, () => {
     const obj = { thread: ChannelStore.getChannel(importDefault.id), messageCount: null, mostRecentMessage: null };
     let num = ThreadMessageStore.getCount(importDefault.id);
@@ -789,18 +801,18 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5624).Text, obj5);
+        items4[1] = closure_18(parentMessage(5747).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(8643).ChatIcon, obj8), ,];
-        const obj9 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5624).Text, obj9);
+        const items5 = [closure_18(parentMessage(8767).ChatIcon, obj8), ,];
+        const obj9 = { variant: "text-sm/semibold", color: "interactive-text-default", children: str };
+        items5[1] = closure_18(parentMessage(5747).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7378).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(parentMessage(7498).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(parentMessage(6980).PressableHighlight, obj3);
+        return closure_19(parentMessage(7106).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -816,16 +828,16 @@ export function ThreadAsComments(arg0) {
     };
     const intl2 = parentMessage(1113).intl;
     obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5624).Text, obj12)];
+    const items7 = [closure_18(parentMessage(5747).Text, obj12)];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(8643).ChatIcon, obj14)];
+    const items8 = [closure_18(parentMessage(8767).ChatIcon, obj14)];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7378).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(parentMessage(7498).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(parentMessage(6980).PressableHighlight, obj11);
+    return closure_19(parentMessage(7106).PressableHighlight, obj11);
   } else {
     return null;
   }

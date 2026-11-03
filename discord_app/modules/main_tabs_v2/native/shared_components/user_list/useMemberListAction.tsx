@@ -9,13 +9,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10734).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10864).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1072);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "raw", listActionHeight: "cix" };
-const createStyles = fn(5014);
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "flexDirection" };
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -45,7 +45,7 @@ export default function useMemberListAction(channel) {
   let callback1;
   let tmp = closure_17();
   importDefault = tmp;
-  let items = [flag2];
+  items = [flag2];
   stateFromStores = channel(stateFromStores[11]).useStateFromStores(items, () => {
     let isDMResult;
     if (channel != null) {
@@ -293,7 +293,7 @@ export default function useMemberListAction(channel) {
           obj6.subLabel = sublabel;
           tmp42Result = closure_14(channel(stateFromStores[30]).RowButton, obj6);
         }
-        const items = [tmp42Result];
+        items = [tmp42Result];
         let tmp42Result2 = null;
         if (closure_6) {
           tmp42Result2 = null;

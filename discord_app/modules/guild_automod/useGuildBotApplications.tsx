@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/useGuildBotAppl
 
 export function useGuildBotApplications(guildId) {
   _require = guildId;
-  const items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => props.getProps().integrations);
   const items1 = [guildId, stateFromStores];
   const effect = noop.useEffect(() => {

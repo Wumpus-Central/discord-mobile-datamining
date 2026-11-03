@@ -257,7 +257,7 @@ export function getReadyPayloadByteSizeAnalytics(data) {
     const timestamp = Date.now();
     ({ read_state, private_channels, user_guild_settings, relationships, users } = data);
     let obj2 = items5(data, items2);
-    const items = [];
+    items = [];
     const items1 = [];
     items2 = [];
     const items3 = [];

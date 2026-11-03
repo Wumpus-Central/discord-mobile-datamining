@@ -19,7 +19,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({
   topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });
@@ -30,9 +30,9 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   _require = arg0;
   const tmp = closure_15();
   importDefault = tmp;
-  let items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
@@ -75,7 +75,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const stateFromStores2 = require("initialize").useStateFromStores(
     items3,
     () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       if (null != guild) {
         if (PermissionStore.can(constants2.MANAGE_GUILD, guild)) {
           const guildIncident = GuildIncidentsStore.getGuildIncident(closure_0);
@@ -117,7 +117,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const token1 = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const items5 = [tmp.topRightBadge, token1];
   memo = token1.useMemo(() => {
-    const items = [topRightBadge.topRightBadge, { top: token1 - native.BADGE_PADDING }];
+    items = [topRightBadge.topRightBadge, { top: token1 - native.BADGE_PADDING }];
     return items;
   }, items5);
   const items6 = [tmp5, memo, token];
@@ -168,7 +168,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const obj7 = { badgeTopRight: memo1.badgeTopRight, badgeBottomRight: tmp10.badge, cutouts: null, mediaState: tmp5 };
   const items7 = [cutoutTopRight, cutout];
   obj7.cutouts = token1.useMemo(() => {
-    const items = [];
+    items = [];
     if (null != cutoutTopRight) {
       items.push(tmp);
     }

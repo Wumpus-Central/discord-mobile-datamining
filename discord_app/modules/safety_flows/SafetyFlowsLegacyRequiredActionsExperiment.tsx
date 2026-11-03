@@ -9,11 +9,11 @@ function config() {
   return obj;
 }
 function union() {
-  let items = [...arguments];
+  items = [...arguments];
   const obj = {
     requiredActions: new Set(
       items.flatMap((requiredActions) => {
-        const items = [...requiredActions.requiredActions];
+        items = [...requiredActions.requiredActions];
         return items;
       }),
     ),

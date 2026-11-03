@@ -3,7 +3,7 @@ import _mod12 from "../../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05426_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -174,7 +174,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17287);
+const HappeningNowConstants = fn(17430);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -183,9 +183,9 @@ const HappeningNowConstants = fn(17287);
 } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(7242);
+const ReanimatedHelperTypes = fn(7362);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   containerInner: {
     paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING,
@@ -194,7 +194,7 @@ let obj = {
   loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 },
 };
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(5303).Gesture;
+const Gesture = fn(5426).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
@@ -215,7 +215,7 @@ export default noop.memo(function HappeningNow(listRef) {
   const obj2 = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003459238038463649,
+    showMultipleActivitiesPerChannel: "thumbnailSrc",
     isFocused: isFocused1,
   };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
@@ -247,7 +247,7 @@ export default noop.memo(function HappeningNow(listRef) {
   const effect = ref.useEffect(() => {
     closure_3.current = listRef;
   });
-  const items = [isFocused, tmp11];
+  items = [isFocused, tmp11];
   const effect1 = ref.useEffect(() => {
     let tmp = !first;
     if (!first) {

@@ -24,7 +24,7 @@ export default function CheckpointCountUpStatNumber(start) {
   closure_129_0 = end;
   closure_129_1 = num;
   closure_129_3 = undefined;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = end(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   closure_129_2 = stateFromStores;
   let obj = end(504);
@@ -64,7 +64,7 @@ export default function CheckpointCountUpStatNumber(start) {
         return obj;
       }, items2)}
     >
-      {jsx(num2(13642), { value: tmp4, size: num2 })}
+      {jsx(num2(13782), { value: tmp4, size: num2 })}
     </View>
   );
 }

@@ -112,7 +112,7 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(Dispat
     for (const item10017 of tmp) {
       if (!set1.has(item10017)) {
         let itemImpressions = closure_2.itemImpressions;
-        let items = [item10017, tmp4];
+        items = [item10017, tmp4];
         let arr = itemImpressions.push(items);
         flag = true;
       }

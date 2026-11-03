@@ -4,8 +4,9 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import Client from "../flow/Client.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
-import SortedArrayUtilsAll from "../utils/SortedArrayUtils.tsx";
+import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment.tsx";
 import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
+import SortedArrayUtilsAll from "../utils/SortedArrayUtils.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -49,7 +50,8 @@ function mergeMessage(self, id) {
   MAX_LOADED_MESSAGES: hasOwnProperty,
   MAX_MESSAGE_CACHE_SIZE: metroRequire,
   TRUNCATED_MESSAGE_VIEW_SIZE: closure_7,
-  MessageStates: closure_8,
+  LOCAL_BOT_ID: closure_8,
+  MessageStates: closure_9,
 } = Constants);
 const logger = new LoggerDefault("ChannelMessages");
 let MessageCache;
@@ -75,7 +77,7 @@ prototype["clone"] = function clone() {
     const obj = {};
     const merged = Object.assign(self._map);
     obj2._map = obj;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(self._messages, 0);
     obj2._messages = items;
     obj2._wasAtEdge = self._wasAtEdge;
@@ -186,7 +188,7 @@ prototype["cache"] = function cache(arg0) {
       }
     }
   }
-  const items = [];
+  items = [];
   if (self._isCacheBefore) {
     HermesBuiltin.arraySpread(arg0, HermesBuiltin.arraySpread(self._messages, 0));
     let tmp7 = items;
@@ -258,7 +260,7 @@ class ChannelMessages {
       _after: null,
       _map: null,
     });
-    merged[2] = closure_0(closure_3[4]).JumpType.ANIMATED;
+    merged[2] = closure_0(closure_3[6]).JumpType.ANIMATED;
     merged[21] = [];
     tmp2 = MessageCache;
     if (typeof MessageCache === "function") {
@@ -435,7 +437,7 @@ prototype2["mutate"] = function mutate(ready) {
         merged.channelId = tmp;
         const _array = self._array;
         if (flag) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(_array, 0);
           let tmp10 = items;
         } else {
@@ -569,7 +571,7 @@ Object.defineProperty(prototype2, "length", {
   set: undefined,
 });
 prototype2["toArray"] = function toArray() {
-  const items = [...this._array];
+  items = [...this._array];
   return items;
 };
 prototype2["forEach"] = function forEach(call, arg1) {
@@ -707,7 +709,7 @@ prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, fn) {
     if (-1 === index) {
       return null;
     } else {
-      const items = [];
+      items = [];
       const sum = index + 1;
       if (sum < self.length) {
         let tmp4 = sum;
@@ -755,7 +757,7 @@ prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, fn) {
     if (-1 === index) {
       return null;
     } else {
-      const items = [];
+      items = [];
       const diff = index - 1;
       if (0 <= diff) {
         let tmp4 = diff;
@@ -974,7 +976,7 @@ prototype2["removeMany"] = function removeMany(arr) {
   let self2 = this;
   if (arr.some((item) => self.has(item))) {
     self2 = self.mutate((_array) => {
-      self(dependencyMap[3]).each(_array, (arg0) => {
+      self(dependencyMap[5]).each(_array, (arg0) => {
         delete tmp2[tmp];
       });
       _array = _array._array;
@@ -1020,7 +1022,7 @@ prototype2["_merge"] = function _merge(arr) {
     return flag;
   });
   if (!flag2) {
-    const items = [];
+    items = [];
     if (flag) {
       HermesBuiltin.arraySpread(self._array, HermesBuiltin.arraySpread(found, 0));
       let tmp7 = items;
@@ -1034,8 +1036,118 @@ prototype2["_merge"] = function _merge(arr) {
     const obj = flag ? self._before : self._after;
   }
 };
+prototype2["insertInOrder"] = function insertInOrder(messageRecord1) {
+  const self = this;
+  if (null == this._map[messageRecord1.id]) {
+    if (self.hasFetched) {
+      if (self.hasMoreBefore) {
+        let tmp2 = messageRecord1.state === constants.SENDING || messageRecord1.state === tmp.SEND_FAILED;
+        if (!tmp2) {
+          let author = messageRecord1.author;
+          let id;
+          if (author != null) {
+            id = author.id;
+          }
+          tmp2 = id === React6;
+        }
+        if (!tmp2) {
+          const _array = self._array;
+          const found = _array.find((state) => {
+            let tmp2 = state.state === constants.SENDING || state.state === tmp.SEND_FAILED;
+            if (!tmp2) {
+              const author = state.author;
+              let id;
+              if (author != null) {
+                id = author.id;
+              }
+              tmp2 = id === closure_1_8;
+            }
+            return !tmp2;
+          });
+          if (null != found) {
+            if (obj.compare(messageRecord1.id, found.id) < 0) {
+              return self;
+            }
+            obj = SnowflakeUtilsDefault;
+          }
+        }
+      }
+    }
+  }
+  return self._insertInOrder(messageRecord1);
+};
+prototype2["_insertInOrder"] = function _insertInOrder(messageRecord) {
+  return this.mutate((_map) => {
+    _map._map[messageRecord.id] = messageRecord;
+    if (null != _map._map[messageRecord.id]) {
+      ({ _array: _array2, _array } = _map);
+      _array[_array2.indexOf(tmp2)] = messageRecord;
+    } else {
+      const _array1 = _map._array;
+      let tmp3 = messageRecord.state === constants.SENDING || messageRecord.state === constants.SEND_FAILED;
+      if (!tmp3) {
+        const author = messageRecord.author;
+        let id;
+        if (author != null) {
+          id = author.id;
+        }
+        tmp3 = id === React6;
+      }
+      if (tmp3) {
+        _array1.push(messageRecord);
+      } else {
+        let tmp6 = length;
+        if (_array1.length > 0) {
+          let tmp7 = tmp22.state === constants.SENDING || tmp22.state === constants.SEND_FAILED;
+          if (!tmp7) {
+            const author2 = tmp22.author;
+            let id1;
+            if (author2 != null) {
+              id1 = author2.id;
+            }
+            tmp7 = id1 === React6;
+          }
+          let tmp10 = length;
+          if (tmp7) {
+            const diff = tmp10 - 1;
+            tmp6 = diff;
+            while (diff > 0) {
+              let tmp23 = _array1[diff - 1];
+              let tmp14 = tmp23.state === constants.SENDING || tmp23.state === tmp24.SEND_FAILED;
+              if (!tmp14) {
+                let author3 = tmp23.author;
+                let id2;
+                if (author3 != null) {
+                  id2 = author3.id;
+                }
+                tmp14 = id2 === React6;
+              }
+              tmp10 = diff;
+              if (tmp14) {
+                continue;
+              } else {
+                let obj2 = SnowflakeUtilsDefault;
+                tmp10 = diff;
+                tmp6 = diff;
+                if (obj2.compare(_array1[diff - 1].id, messageRecord.id) <= 0) {
+                  break;
+                }
+              }
+              continue;
+            }
+          } else {
+            SnowflakeUtilsDefault;
+            tmp10 = length;
+            tmp6 = length;
+          }
+        }
+        _array1.splice(tmp6, 0, messageRecord);
+      }
+    }
+  }, true);
+};
 prototype2["mergeDelta"] = function mergeDelta() {
-  let items = new_messages;
+  items = new_messages;
   if (new_messages === undefined) {
     items = [];
   }
@@ -1057,10 +1169,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(6063).createMessageRecord(item));
+    const mapped = items.map((item) => set(6183).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(6063).createMessageRecord(item)),
+      items1.map((item) => set(6183).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1084,12 +1196,12 @@ prototype2["reset"] = function reset(_array) {
     _after.clear();
   });
 };
-prototype2["truncateTop"] = function truncateTop(React5) {
+prototype2["truncateTop"] = function truncateTop(React4) {
   if (flag === undefined) {
     flag = true;
   }
   const self = this;
-  const diff = this._array.length - React5;
+  const diff = this._array.length - React4;
   c0 = diff;
   let self2 = this;
   if (diff > 0) {
@@ -1114,7 +1226,7 @@ prototype2["truncateTop"] = function truncateTop(React5) {
   }
   return self2;
 };
-prototype2["truncateBottom"] = function truncateBottom(React5) {
+prototype2["truncateBottom"] = function truncateBottom(React4) {
   return this;
 };
 prototype2["jumpToPresent"] = function jumpToPresent(arg0) {
@@ -1193,9 +1305,9 @@ prototype2["focusOnMessage"] = function focusOnMessage(messageId) {
     focusSequenceId.loadingMore = false;
   }, false);
 };
-prototype2["loadFromCache"] = function loadFromCache(arg0, limit) {
-  closure_0 = arg0;
-  closure_1 = limit;
+prototype2["loadFromCache"] = function loadFromCache(flag, length) {
+  closure_0 = flag;
+  closure_1 = length;
   return this.mutate((_before) => {
     const arr = closure_0 ? _before._before : _before._after;
     _before._merge(arr.extract(closure_1), closure_0);
@@ -1227,7 +1339,6 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     flag = true;
   }
   const self = this;
-  let messageRecord1;
   value = null;
   if (null != nonce.nonce) {
     value = self.get(nonce.nonce, true);
@@ -1246,11 +1357,19 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(6063).createMessageRecord(nonce);
+          const messageRecord = MessageRecordUtils.createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
-          return self.replace(nonce.nonce, messageRecord);
+          if (obj5.getConfig({ location: "receiveMessage" }).enabled) {
+            if (null != self._map[nonce.nonce]) {
+              let _insertInOrderResult = self.remove(nonce.nonce)._insertInOrder(messageRecord);
+              const removeResult = self.remove(nonce.nonce);
+            }
+            return _insertInOrderResult;
+          }
+          _insertInOrderResult = self.replace(nonce.nonce, messageRecord);
+          obj5 = EnsureReceivedMessagesAddedInOrderExperimentDefault;
         }
       }
     }
@@ -1261,47 +1380,22 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(6063).createMessageRecord(nonce);
-    const lastResult = self.last();
-    if (null != lastResult) {
-      if (obj5.compare(nonce.id, lastResult.id) < 0) {
-        let tmp8 = messageRecord1.state === constants.SENDING;
-        if (!tmp8) {
-          tmp8 = messageRecord1.state === tmp18.SEND_FAILED;
-        }
-        if (!tmp8) {
-          const _array = self._array;
-          if (!_array.some(isPending)) {
-            if (tmp16Result.getConfig({ location: "receiveMessage" }).enabled) {
-              let mutation = self.mutate((_map) => {
-                _map._map[messageRecord1.id] = messageRecord1;
-                if (null != _map._map[messageRecord1.id]) {
-                  ({ _array: _array2, _array } = _map);
-                  _array[_array2.indexOf(tmp2)] = messageRecord1;
-                } else {
-                  SortedArrayUtilsAll.insert(_map._array, messageRecord1, (id, id2) =>
-                    closure_1_1(closure_1_3[5]).compare(id.id, id2.id),
-                  );
-                }
-              }, true);
-            }
-            if (flag) {
-              let truncateTopResult = mutation.truncateTop(closure_4, false);
-            } else {
-              truncateTopResult = mutation;
-              if (self.length > closure_5) {
-                truncateTopResult = mutation.truncateBottom(closure_4, false);
-              }
-            }
-            return truncateTopResult;
-          }
-        }
-      }
-      obj5 = SnowflakeUtilsDefault;
+    const messageRecord1 = MessageRecordUtils.createMessageRecord(nonce);
+    if (obj2.getConfig({ location: "receiveMessage" }).enabled) {
+      let insertInOrderResult = self.insertInOrder(messageRecord1);
+    } else {
+      items = [messageRecord1];
+      insertInOrderResult = self.merge(items);
     }
-    const items = [messageRecord1];
-    mutation = self.merge(items);
-    let obj = messageRecord1(6063);
+    if (flag) {
+      let truncateTopResult = insertInOrderResult.truncateTop(React4, false);
+    } else {
+      truncateTopResult = insertInOrderResult;
+      if (self.length > hasOwnProperty) {
+        truncateTopResult = insertInOrderResult.truncateBottom(React4, false);
+      }
+    }
+    return truncateTopResult;
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1316,29 +1410,21 @@ prototype2["receivePushNotification"] = function receivePushNotification(message
     return self;
   } else {
     const result = IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled();
-    let tmp5 = !result;
+    let tmp3 = !result;
     if (result) {
-      tmp5 = !isConnectedResult;
+      tmp3 = !isConnectedResult;
     }
-    const obj2 = { ready: true, cached: tmp5 };
-    const mutation = self.mutate(obj2);
-    const items = [mergeMessage(self, message)];
-    return mutation.merge(items);
+    const obj = { ready: true, cached: tmp3 };
+    const mutation = self.mutate(obj);
+    const tmp5 = mergeMessage(self, message);
+    if (obj3.getConfig({ location: "receiveMessage" }).enabled) {
+      let insertInOrderResult = mutation.insertInOrder(tmp5);
+    } else {
+      items = [tmp5];
+      insertInOrderResult = mutation.merge(items);
+    }
+    return insertInOrderResult;
   }
-};
-prototype2["receiveReactionInAppNotification"] = function receiveReactionInAppNotification(nonce) {
-  const self = this;
-  value = null;
-  if (null != nonce.nonce) {
-    value = self.get(nonce.nonce, true);
-  }
-  let mergeResult = self;
-  if (null == value) {
-    const mutation = self.mutate({ ready: true, cached: true });
-    const items = [mergeMessage(self, nonce)];
-    mergeResult = mutation.merge(items);
-  }
-  return mergeResult;
 };
 prototype2["loadStart"] = function loadStart(jump) {
   const self = this;
@@ -1396,7 +1482,7 @@ prototype2["loadStart"] = function loadStart(jump) {
   return this.mutate(obj);
 };
 prototype2["loadComplete"] = function loadComplete(newMessages) {
-  const items = [...newMessages.newMessages];
+  items = [...newMessages.newMessages];
   let flag = newMessages.isBefore;
   if (flag == null) {
     flag = false;
@@ -1425,10 +1511,53 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   if (flag6 == null) {
     flag6 = false;
   }
-  const self = this;
   const reversed = requestStartTime(12)(items).reverse();
   let obj = requestStartTime(12)(items);
-  const valueResult = reversed.map((item) => id(dependencyMap[2]).createMessageRecord(item)).value();
+  const valueResult = reversed.map((item) => id(dependencyMap[4]).createMessageRecord(item)).value();
+  const tmp3 = flag ? newMessages.before : newMessages.after;
+  const self = this;
+  if (null == jump) {
+    if (self.ready) {
+      if (flag !== flag2) {
+        if (null != tmp3) {
+          if (flag) {
+            let firstResult = self.first();
+          } else {
+            firstResult = self.last();
+          }
+          if (null != firstResult) {
+            if (firstResult.id !== tmp3) {
+              let str6 = "after";
+              if (flag) {
+                str6 = "before";
+              }
+              const _HermesInternal4 = HermesInternal;
+              logger.info(
+                "loadComplete: dropping stale " +
+                  str6 +
+                  " page for channelId=" +
+                  self.channelId +
+                  ", anchor=" +
+                  tmp3 +
+                  ", edge=" +
+                  firstResult.id,
+              );
+              if (flag ? self._before : self._after.length > 0) {
+                let length = newMessages.limit;
+                if (length == null) {
+                  length = items.length;
+                }
+                let fromCache = self.loadFromCache(flag, length);
+              } else {
+                fromCache = self.mutate({ loadingMore: false });
+              }
+              return fromCache;
+            }
+          }
+        }
+      }
+    }
+  }
   if (flag) {
     if (null == jump) {
       if (self.ready) {
@@ -1446,7 +1575,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(5249).JumpType.ANIMATED;
+        jumpType = id(5372).JumpType.ANIMATED;
       }
       let obj2 = {
         ready: true,
@@ -1568,7 +1697,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   const found1 = _array1.filter((state) => state.state === constants.SEND_FAILED);
   id = undefined;
   if (valueResult[valueResult.length - 1] != null) {
-    id = tmp3.id;
+    id = tmp5.id;
   }
   requestStartTime = newMessages.requestStartTime;
   if (null != id) {
@@ -1586,7 +1715,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       });
     }
     const resetResult = self.reset(valueResult);
-    if (tmp5) {
+    if (tmp7) {
       if (!flag) {
         if (!flag2) {
           let messageId1;
@@ -1618,7 +1747,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
               }
               mergeResult = mergeResult2;
               if (found.length > 0) {
-                const _HermesInternal4 = HermesInternal;
+                const _HermesInternal5 = HermesInternal;
                 logger.info("loadComplete: merging with SENDING messages for channelId=" + self.channelId);
                 mergeResult = mergeResult2.merge(found);
               }
@@ -1630,29 +1759,29 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     const _HermesInternal3 = HermesInternal;
     logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
     mergeResult = resetResult;
-    tmp5 = found.length > 0 || found1.length > 0 || found2.length > 0;
+    tmp7 = found.length > 0 || found1.length > 0 || found2.length > 0;
   }
   found2 = [];
-  const iter = reversed.map((item) => id(dependencyMap[2]).createMessageRecord(item));
+  const iter = reversed.map((item) => id(dependencyMap[4]).createMessageRecord(item));
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6567).requireSortedDescending(messages);
+  const result = reversed(6686).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
   const found = _array.filter((item) => !reversed.some((id) => id.id === item.id));
   const found1 = found.filter((state) => !(state.state === constants.SENDING || state.state === tmp.SEND_FAILED));
   let item = found1.forEach((item) =>
-    SortedArrayUtilsAll.insert(reversed, item, (id, id2) => self(closure_1_3[5]).compare(id.id, id2.id)),
+    SortedArrayUtilsAll.insert(reversed, item, (id, id2) => self(closure_1_3[3]).compare(id.id, id2.id)),
   );
-  const items = [...found.filter(isPending)];
+  items = [...found.filter(isPending)];
   reversed.push.apply(items);
   let cached = !stale;
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6567);
+  const obj = reversed(6686);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

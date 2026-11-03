@@ -812,14 +812,14 @@ function handleGuildDelete(guild) {
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
-  const items = [channel.id];
+  items = [channel.id];
   return recountChannels(channel.guild_id, items);
 }
 function handleWindowFocus() {
   const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
   let tmp = null != channel;
   if (tmp) {
-    const items = [channel.id];
+    items = [channel.id];
     tmp = recountChannels(channel.getGuildId(), items);
   }
   return tmp;
@@ -835,7 +835,7 @@ function handleGenericUpdate(channelId) {
   const channel = ChannelStore.getChannel(channelId.channelId);
   let tmp = null != channel;
   if (tmp) {
-    const items = [channel.id];
+    items = [channel.id];
     tmp = recountChannels(channel.getGuildId(), items);
   }
   return tmp;
@@ -898,7 +898,7 @@ function handleMessageCreate(channelId) {
         }
       }
     }
-    const items = [channel.id];
+    items = [channel.id];
     return recountChannels(channel.getGuildId(), items);
   }
 }
@@ -909,7 +909,7 @@ function handleChannelSelect(arg0) {
   if (!isFavoritesGuildIdResult) {
     let tmp4 = null != channelId;
     if (tmp4) {
-      const items = [channelId];
+      items = [channelId];
       tmp4 = recountChannels(guildId, items);
     }
     tmp2 = tmp4;
@@ -918,7 +918,7 @@ function handleChannelSelect(arg0) {
 }
 function handleChannelUpdate(channel) {
   channel = channel.channel;
-  const items = [channel.id];
+  items = [channel.id];
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
@@ -951,7 +951,7 @@ function handleBulkAck(channels) {
 }
 function handleThreadUpdate(channel) {
   channel = channel.channel;
-  const items = [,];
+  items = [,];
   ({ id: arr[0], parent_id: arr[1] } = channel);
   return recountChannels(channel.getGuildId(), items);
 }
@@ -965,13 +965,13 @@ function handleGuildFeatureAck(id) {
   return updateNonChannel(id.id, id.ackType);
 }
 function handleThreadMemberUpdate(id) {
-  const items = [id.id];
+  items = [id.id];
   return recountChannels(id.guildId, items);
 }
 function handleThreadMembersUpdate(id) {
   let result = ThreadActionUtils.doesThreadMembersActionAffectMe(id);
   if (result) {
-    const items = [id.id];
+    items = [id.id];
     result = recountChannels(id.guildId, items);
   }
   return result;
@@ -1059,16 +1059,16 @@ function handleRecentMentionsSuccess(messages) {
   const item = new Set(messages.map((channel_id) => channel_id.channel_id)).forEach((item) => {
     channel = channel.getChannel(item);
     if (null != channel) {
-      const items = [item];
+      items = [item];
       recountChannels(channel.getGuildId(), items);
     }
   });
 }
-const ChannelRecord = fn(4867);
-({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
-const isGuildNSFW = fn(4881).isGuildNSFW;
-const ChannelFlags = fn(4870).ChannelFlags;
-const ReadStateConstants = fn(6776);
+const ChannelRecord = fn(4994);
+({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: closure_10 } = ChannelRecord);
+const isGuildNSFW = fn(5008).isGuildNSFW;
+const ChannelFlags = fn(4997).ChannelFlags;
+const ReadStateConstants = fn(6896);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};

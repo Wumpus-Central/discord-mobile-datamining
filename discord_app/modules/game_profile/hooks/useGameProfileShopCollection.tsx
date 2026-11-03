@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfi
 
 export function useGameProfileShopCollectionState(arg0) {
   _require = arg0;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const isFetching = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {
@@ -50,7 +50,7 @@ export function useGameProfileShopCollectionState(arg0) {
 }
 export function useGameProfileShopCollection(arg0) {
   _require = arg0;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {
@@ -88,7 +88,7 @@ export function useGameProfileShopCollection(arg0) {
 }
 export function useGameProfileShopCollectionProducts(collectionId) {
   let skuIds = collectionId;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = skuIds(collectiblesShopProducts[2]).useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {

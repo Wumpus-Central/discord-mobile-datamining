@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/calls/useCallA11yState.tsx");
 
 export default function useCallA11yState(arg0) {
   _require = arg0;
-  const items = [CallStore, AuthenticationStore];
+  items = [CallStore, AuthenticationStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const call = CallStore.getCall(closure_0);
     const id = AuthenticationStore.getId();

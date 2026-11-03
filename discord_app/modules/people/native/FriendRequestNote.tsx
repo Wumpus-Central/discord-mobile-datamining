@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     width: "100%",
@@ -49,7 +49,7 @@ export default function FriendRequestNote(styles) {
   const tmp = closure_10();
   const hideFriendRequestNotes = require("HideFriendRequestNotesUtils").useHideFriendRequestNotes();
   const obj = require("HideFriendRequestNotesUtils");
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     note: RelationshipStore.getNote(require),
     type: RelationshipStore.getRelationshipType(require),
@@ -90,7 +90,7 @@ export default function FriendRequestNote(styles) {
           accessible: tmp7,
           accessibilityElementsHidden: !tmp7,
           accessibilityLabel: str,
-          variant: "redesign/message-preview/normal",
+          variant: "redesign/message-preview/medium",
           children: note,
         };
         obj4.children = closure_8(require("Text/Text").Text, obj5);

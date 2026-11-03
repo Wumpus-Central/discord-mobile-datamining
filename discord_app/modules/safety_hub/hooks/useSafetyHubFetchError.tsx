@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubFetchError.tsx");
 
 export function useSafetyHubFetchError() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => fetchError.getFetchError());
 }

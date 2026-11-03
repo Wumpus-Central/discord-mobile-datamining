@@ -5,16 +5,16 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef18306 from "../../../../../_runtime/metro/18306__.js";
+import _modDef18451 from "../../../../../_runtime/metro/18451__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   title: { marginTop: 24, textAlign: "center" },
   description: { marginTop: 8, marginBottom: 24, textAlign: "center" },
@@ -35,12 +35,12 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null,
   };
-  const obj2 = { source: _modDef18306 };
-  const items = [closure_6(FastImageDefault, obj2), , , ,];
+  const obj2 = { source: _modDef18451 };
+  items = [closure_6(FastImageDefault, obj2), , , ,];
   const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

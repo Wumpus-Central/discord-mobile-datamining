@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8756 from "../../../../_runtime/metro/08756__.js";
+import _modDef8880 from "../../../../_runtime/metro/08880__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -15,12 +15,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 function InformationTable(speedBumpType) {
-  let items;
-  let obj = { icon: _modDef8756, text: null };
+  items = undefined;
+  let obj = { icon: _modDef8880, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj];
-  const obj2 = { icon: _modDef8756, text: null };
+  const obj2 = { icon: _modDef8880, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -30,26 +30,26 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7060).TableRowGroup, {
+  return closure_12(items(7186).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = {
         start: 0 === index,
         end: items.length === index,
-        icon: closure_2_12(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }),
+        icon: application_id(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }),
         label: icon.text,
       };
-      return closure_2_12(TableRow.TableRow, obj, index);
+      return application_id(TableRow.TableRow, obj, index);
     }),
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8754).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8878).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 },
   tableContainer: null,
@@ -116,7 +116,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
   let tmp = closure_14();
   let obj = userId(onClose[16]);
   const isThemeLightResult = userId(onClose[16]).isThemeLight(channelId(onClose[17])());
-  const items = [stateFromStores2];
+  items = [stateFromStores2];
   const stateFromStores = userId(onClose[18]).useStateFromStores(items, () => UserStore.getUser(userId));
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -275,7 +275,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     const items9 = [createUserProfileAnalyticsContext(stateFromStores, obj6), ,];
     const obj10 = {
       style: tmp.headerText,
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: null,

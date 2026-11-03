@@ -1,11 +1,11 @@
 // discord_app/modules/coded_links/findCodedLinks.tsx
 import BuildOverrideUtils from "../build_overrides/BuildOverrideUtils.tsx";
-import Url from "../../../_runtime/01380_Url.js";
+import Url from "../../../_runtime/01381_Url.js";
 import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
 import CodedLink from "CodedLink.tsx";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
-import keysSorter from "../../../_runtime/06793_keysSorter.js";
+import keysSorter from "../../../_runtime/06913_keysSorter.js";
 import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
 import InviteTypeUtils from "../instant_invite/InviteTypeUtils.tsx";
 import ExperimentEmbedUtils from "../experiments/ExperimentEmbedUtils.tsx";
@@ -225,7 +225,8 @@ const re9 = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((a
 const re10 = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/;
 const re11 = /^\/activities\/([0-9-]+)\/?$/;
 const re12 = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
-const re13 = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))(?:\/([0-9]+)(?:\/([^\/]+))?)?\/?$/;
+const re13 =
+  /^(?:\/game-shop\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?|\/channels\/([0-9]+)\/game-shop(?:\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?)?)\/?$/;
 const re14 = /^\/channels\/([0-9]+)\/shop$/;
 const re15 = /^\/quests\/([0-9-]+)\/?$/;
 const re16 = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/;
@@ -239,10 +240,10 @@ const re22 = tmp3;
 if (null == INVITE_HOST) {
   let obj = { host: null, pathPrefix: null };
 } else if (INVITE_HOST.indexOf("/") >= 0) {
-  let parsed = fn(1380).parse(INVITE_HOST, undefined, true);
+  let parsed = fn(1381).parse(INVITE_HOST, undefined, true);
   ({ host: obj3.host, pathname: obj3.pathPrefix } = parsed);
   obj = { host: null, pathPrefix: null };
-  let obj2 = fn(1380);
+  let obj2 = fn(1381);
   let obj4 = { host: null, pathPrefix: null };
 } else {
   obj = { host: INVITE_HOST, pathPrefix: null };
@@ -250,11 +251,11 @@ if (null == INVITE_HOST) {
 if (null == GUILD_TEMPLATE_HOST) {
   let obj7 = { host: null, pathPrefix: null };
 } else if (GUILD_TEMPLATE_HOST.indexOf("/") >= 0) {
-  let parsed1 = fn(1380).parse(GUILD_TEMPLATE_HOST, undefined, true);
+  let parsed1 = fn(1381).parse(GUILD_TEMPLATE_HOST, undefined, true);
   ({ host: obj6.host, pathname: obj6.pathPrefix } = parsed1);
   obj7 = { host: null, pathPrefix: null };
   let obj10 = { host: null, pathPrefix: null };
-  const obj5 = fn(1380);
+  const obj5 = fn(1381);
 } else {
   obj7 = { host: GUILD_TEMPLATE_HOST, pathPrefix: null };
 }
@@ -265,11 +266,11 @@ if (WEBAPP_ENDPOINT == null) {
 if (null == WEBAPP_ENDPOINT) {
   let obj13 = { host: null, pathPrefix: null };
 } else if (WEBAPP_ENDPOINT.indexOf("/") >= 0) {
-  const parsed2 = fn(1380).parse(WEBAPP_ENDPOINT, undefined, true);
+  const parsed2 = fn(1381).parse(WEBAPP_ENDPOINT, undefined, true);
   ({ host: obj9.host, pathname: obj9.pathPrefix } = parsed2);
   obj13 = { host: null, pathPrefix: null };
   const obj16 = { host: null, pathPrefix: null };
-  const obj8 = fn(1380);
+  const obj8 = fn(1381);
 } else {
   obj13 = { host: WEBAPP_ENDPOINT, pathPrefix: null };
 }
@@ -277,10 +278,10 @@ let combined = "//canary." + PRIMARY_DOMAIN;
 if (null == combined) {
   let obj19 = { host: null, pathPrefix: null };
 } else if (combined.indexOf("/") >= 0) {
-  const parsed3 = fn(1380).parse(combined, undefined, true);
+  const parsed3 = fn(1381).parse(combined, undefined, true);
   ({ host: obj12.host, pathname: obj12.pathPrefix } = parsed3);
   obj19 = { host: null, pathPrefix: null };
-  let obj11 = fn(1380);
+  let obj11 = fn(1381);
   let obj22 = { host: null, pathPrefix: null };
 } else {
   obj19 = { host: combined, pathPrefix: null };
@@ -289,28 +290,28 @@ let combined1 = "//ptb." + PRIMARY_DOMAIN;
 if (null == combined1) {
   let obj23 = { host: null, pathPrefix: null };
 } else if (combined1.indexOf("/") >= 0) {
-  const parsed4 = fn(1380).parse(combined1, undefined, true);
+  const parsed4 = fn(1381).parse(combined1, undefined, true);
   ({ host: obj15.host, pathname: obj15.pathPrefix } = parsed4);
   obj23 = { host: null, pathPrefix: null };
-  const obj14 = fn(1380);
+  const obj14 = fn(1381);
   let obj24 = { host: null, pathPrefix: null };
 } else {
   obj23 = { host: combined1, pathPrefix: null };
 }
 if ("discordapp.com".indexOf("/") >= 0) {
-  const parsed5 = fn(1380).parse("discordapp.com", undefined, true);
+  const parsed5 = fn(1381).parse("discordapp.com", undefined, true);
   ({ host: obj18.host, pathname: obj18.pathPrefix } = parsed5);
   let obj26 = { host: null, pathPrefix: null };
-  let obj17 = fn(1380);
+  let obj17 = fn(1381);
   let obj25 = { host: null, pathPrefix: null };
 } else {
   obj26 = { host: "discordapp.com", pathPrefix: null };
 }
 if ("discord.com".indexOf("/") >= 0) {
-  const parsed6 = fn(1380).parse("discord.com", undefined, true);
+  const parsed6 = fn(1381).parse("discord.com", undefined, true);
   ({ host: obj21.host, pathname: obj21.pathPrefix } = parsed6);
   let obj41 = { host: null, pathPrefix: null };
-  let obj20 = fn(1380);
+  let obj20 = fn(1381);
   let obj27 = { host: null, pathPrefix: null };
 } else {
   obj41 = { host: "discord.com", pathPrefix: null };
@@ -344,6 +345,40 @@ let str11 = obj41.host;
 if (str11 == null) {
   str11 = "";
 }
+function tryParseSocialLayerStorefrontPath(pathname, arg1) {
+  obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.allowUnpagedChannelPath;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let match;
+  if (pathname != null) {
+    match = pathname.match(re13);
+  }
+  let tmp3 = null;
+  if (null != match) {
+    if (!flag) {
+      if (null != match[3]) {
+        tmp3 = null;
+      }
+    }
+    let tmp4 = match[1];
+    if (tmp4 == null) {
+      tmp4 = match[3];
+    }
+    const obj2 = { guildId: tmp4, skuId: null };
+    let tmp5 = match[2];
+    if (tmp5 == null) {
+      tmp5 = match[5];
+    }
+    obj2.skuId = tmp5;
+    tmp3 = obj2;
+  }
+  return tmp3;
+}
 function findCodedLinks(str) {
   if (null == str) {
     return [];
@@ -365,7 +400,7 @@ function findCodedLinks(str) {
         if (0 !== arg0.length) {
           const _Set = Set;
           const set = new Set();
-          let items = [];
+          items = [];
           function _loop(iter) {
             ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } =
               getPathsFromURL(iter));
@@ -572,8 +607,8 @@ function findCodedLinks(str) {
                 if (null != match7) {
                   if (null != match7[3]) {
                     const storefrontSKUCodedLink = storefrontMessageEmbedCodedLink.makeStorefrontSKUCodedLink(
-                      tmp158,
                       tmp159,
+                      tmp160,
                     );
                     if (!set.has(storefrontSKUCodedLink)) {
                       set.add(storefrontSKUCodedLink);
@@ -585,9 +620,9 @@ function findCodedLinks(str) {
                       items.push(obj24);
                     }
                     const tmp4Result22 = storefrontMessageEmbedCodedLink;
-                  } else if (!set.has(tmp158)) {
-                    set.add(tmp158);
-                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp158, url: iter };
+                  } else if (!set.has(tmp159)) {
+                    set.add(tmp159);
+                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp159, url: iter };
                     items.push(obj25);
                   }
                 }
@@ -626,22 +661,42 @@ function findCodedLinks(str) {
                     items.push(obj31);
                   }
                 }
+                let flag = {}.allowUnpagedChannelPath;
+                if (flag === undefined) {
+                  flag = false;
+                }
                 let match11;
                 if (primaryHostRemainingPath != null) {
                   match11 = primaryHostRemainingPath.match(closure_2_13);
                 }
+                let tmp99 = null;
                 if (null != match11) {
-                  let tmp99 = match11[1];
-                  if (tmp99 == null) {
-                    tmp99 = match11[2];
+                  if (!flag) {
+                    if (null != match11[3]) {
+                      tmp99 = null;
+                    }
                   }
+                  let tmp100 = match11[1];
+                  if (tmp100 == null) {
+                    tmp100 = match11[3];
+                  }
+                  const obj33 = { guildId: tmp100, skuId: null };
+                  let tmp101 = match11[2];
+                  if (tmp101 == null) {
+                    tmp101 = match11[5];
+                  }
+                  obj33.skuId = tmp101;
+                  tmp99 = obj33;
+                }
+                if (null != tmp99) {
+                  const skuId = tmp99.skuId;
                   let parsed = null;
                   if (null != query) {
                     parsed = keysSorter.parse(query);
                     const tmp4Result23 = keysSorter;
                   }
-                  if (typeof match11[3] === "string") {
-                    items = [tmp100];
+                  if (typeof skuId === "string") {
+                    items = [skuId];
                     let result1 = storefrontCodedLink2.normalizeStorefrontSkuIds(items);
                     const tmp4Result24 = storefrontCodedLink2;
                   } else {
@@ -672,15 +727,15 @@ function findCodedLinks(str) {
                     }
                   }
                   if (result1.length > 0) {
-                    const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99);
+                    const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99.guildId);
                     if (!set.has(storefrontCodedLink)) {
                       set.add(storefrontCodedLink);
-                      const obj33 = {
+                      const obj34 = {
                         type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT,
                         code: storefrontCodedLink,
                         url: iter,
                       };
-                      items.push(obj33);
+                      items.push(obj34);
                     }
                     const tmp4Result27 = storefrontCodedLink2;
                   }
@@ -690,18 +745,18 @@ function findCodedLinks(str) {
                 if (str12 != null) {
                   match12 = str12.match(closure_2_15);
                 }
-                let tmp109;
+                let tmp110;
                 if (match12 != null) {
-                  tmp109 = match12[1];
+                  tmp110 = match12[1];
                 }
-                if (tmp109 == null) {
-                  tmp109 = null;
+                if (tmp110 == null) {
+                  tmp110 = null;
                 }
-                if (null != tmp109) {
-                  if (!set.has(tmp109)) {
-                    set.add(tmp109);
-                    const obj34 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp109, url: iter };
-                    items.push(obj34);
+                if (null != tmp110) {
+                  if (!set.has(tmp110)) {
+                    set.add(tmp110);
+                    const obj36 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp110, url: iter };
+                    items.push(obj36);
                   }
                 }
                 let match13;
@@ -710,9 +765,9 @@ function findCodedLinks(str) {
                 }
                 if (null != match13) {
                   if (!set.has(match13[1])) {
-                    set.add(tmp115);
-                    const obj36 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp115, url: iter };
-                    items.push(obj36);
+                    set.add(tmp116);
+                    const obj38 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp116, url: iter };
+                    items.push(obj38);
                   }
                 }
                 let match14;
@@ -721,9 +776,9 @@ function findCodedLinks(str) {
                 }
                 if (null != match14) {
                   if (!set.has(match14[1])) {
-                    set.add(tmp121);
-                    const obj38 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp121, url: iter };
-                    items.push(obj38);
+                    set.add(tmp122);
+                    const obj40 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp122, url: iter };
+                    items.push(obj40);
                   }
                 }
                 let match15;
@@ -732,9 +787,9 @@ function findCodedLinks(str) {
                 }
                 if (null != match15) {
                   if (!set.has(match15[1])) {
-                    set.add(tmp127);
-                    const obj40 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp127, url: iter };
-                    items.push(obj40);
+                    set.add(tmp128);
+                    const obj42 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp128, url: iter };
+                    items.push(obj42);
                   }
                 }
                 let match16;
@@ -743,9 +798,9 @@ function findCodedLinks(str) {
                 }
                 if (null != match16) {
                   if (!set.has(match16[1])) {
-                    set.add(tmp133);
-                    const obj42 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp133, url: iter };
-                    items.push(obj42);
+                    set.add(tmp134);
+                    const obj43 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp134, url: iter };
+                    items.push(obj43);
                   }
                 }
                 if ("/shop" === primaryHostRemainingPath) {
@@ -764,12 +819,12 @@ function findCodedLinks(str) {
                   }
                   if (str14 === constants.GAME_SHOPS) {
                     if (typeof applicationId === "string") {
-                      let skuId;
+                      let skuId1;
                       if (parsed1 != null) {
-                        skuId = parsed1.skuId;
+                        skuId1 = parsed1.skuId;
                       }
-                      if (typeof skuId === "string") {
-                        const items1 = [skuId];
+                      if (typeof skuId1 === "string") {
+                        const items1 = [skuId1];
                         let result2 = storefrontCodedLink2.normalizeStorefrontSkuIds(items1);
                         const tmp4Result29 = storefrontCodedLink2;
                       } else {
@@ -807,12 +862,12 @@ function findCodedLinks(str) {
                       const storefrontCodedLink1 = storefrontCodedLink2.makeStorefrontCodedLink(items2, applicationId);
                       if (!set.has(storefrontCodedLink1)) {
                         set.add(storefrontCodedLink1);
-                        const obj43 = {
+                        const obj44 = {
                           type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP,
                           code: storefrontCodedLink1,
                           url: iter,
                         };
-                        items.push(obj43);
+                        items.push(obj44);
                       }
                       const tmp4Result32 = storefrontCodedLink2;
                     }
@@ -835,8 +890,8 @@ function findCodedLinks(str) {
                   const combined2 = "" + str14 + "-" + str17;
                   if (!set.has(combined2)) {
                     set.add(combined2);
-                    const obj44 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
-                    items.push(obj44);
+                    const obj45 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
+                    items.push(obj45);
                   }
                 }
                 tmp4Result17 = ExperimentEmbedUtils;
@@ -1016,6 +1071,7 @@ export function remainingPathFromDiscordHostMatch(parseURLSafelyResult) {
   }
   return tmp3;
 }
+export { tryParseSocialLayerStorefrontPath };
 export { getPathsFromURL };
 export function isSuspiciousCodedLink(arr) {
   if (arr.includes("\\")) {
@@ -1030,7 +1086,7 @@ export function isSuspiciousCodedLink(arr) {
       if (replaced === obj.host) {
         return true;
       } else {
-        const items = [obj13, obj19, obj23, obj26, obj41];
+        items = [obj13, obj19, obj23, obj26, obj41];
         if (
           items.some((host) => {
             let replaced;
@@ -1089,7 +1145,7 @@ export function parseGameServerShareCode(target) {
 export { parseURLSafely };
 export function findCodedLink(sanitizeUrlResult) {
   if (null == sanitizeUrlResult) {
-    let items = [];
+    items = [];
   } else {
     const str = sanitizeUrlResult.replace(regExp1, (arg0, arg1, arg2, arg3) => {
       let combined = arg0;
@@ -1108,7 +1164,7 @@ export function findCodedLink(sanitizeUrlResult) {
         if (0 !== arg0.length) {
           const _Set = Set;
           const set = new Set();
-          let items = [];
+          items = [];
           function _loop(iter) {
             ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } =
               getPathsFromURL(iter));
@@ -1315,8 +1371,8 @@ export function findCodedLink(sanitizeUrlResult) {
                 if (null != match7) {
                   if (null != match7[3]) {
                     const storefrontSKUCodedLink = storefrontMessageEmbedCodedLink.makeStorefrontSKUCodedLink(
-                      tmp158,
                       tmp159,
+                      tmp160,
                     );
                     if (!set.has(storefrontSKUCodedLink)) {
                       set.add(storefrontSKUCodedLink);
@@ -1328,9 +1384,9 @@ export function findCodedLink(sanitizeUrlResult) {
                       items.push(obj24);
                     }
                     const tmp4Result22 = storefrontMessageEmbedCodedLink;
-                  } else if (!set.has(tmp158)) {
-                    set.add(tmp158);
-                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp158, url: iter };
+                  } else if (!set.has(tmp159)) {
+                    set.add(tmp159);
+                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp159, url: iter };
                     items.push(obj25);
                   }
                 }
@@ -1369,22 +1425,42 @@ export function findCodedLink(sanitizeUrlResult) {
                     items.push(obj31);
                   }
                 }
+                let flag = {}.allowUnpagedChannelPath;
+                if (flag === undefined) {
+                  flag = false;
+                }
                 let match11;
                 if (primaryHostRemainingPath != null) {
                   match11 = primaryHostRemainingPath.match(closure_2_13);
                 }
+                let tmp99 = null;
                 if (null != match11) {
-                  let tmp99 = match11[1];
-                  if (tmp99 == null) {
-                    tmp99 = match11[2];
+                  if (!flag) {
+                    if (null != match11[3]) {
+                      tmp99 = null;
+                    }
                   }
+                  let tmp100 = match11[1];
+                  if (tmp100 == null) {
+                    tmp100 = match11[3];
+                  }
+                  const obj33 = { guildId: tmp100, skuId: null };
+                  let tmp101 = match11[2];
+                  if (tmp101 == null) {
+                    tmp101 = match11[5];
+                  }
+                  obj33.skuId = tmp101;
+                  tmp99 = obj33;
+                }
+                if (null != tmp99) {
+                  const skuId = tmp99.skuId;
                   let parsed = null;
                   if (null != query) {
                     parsed = keysSorter.parse(query);
                     const tmp4Result23 = keysSorter;
                   }
-                  if (typeof match11[3] === "string") {
-                    items = [tmp100];
+                  if (typeof skuId === "string") {
+                    items = [skuId];
                     let result1 = storefrontCodedLink2.normalizeStorefrontSkuIds(items);
                     const tmp4Result24 = storefrontCodedLink2;
                   } else {
@@ -1415,15 +1491,15 @@ export function findCodedLink(sanitizeUrlResult) {
                     }
                   }
                   if (result1.length > 0) {
-                    const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99);
+                    const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99.guildId);
                     if (!set.has(storefrontCodedLink)) {
                       set.add(storefrontCodedLink);
-                      const obj33 = {
+                      const obj34 = {
                         type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT,
                         code: storefrontCodedLink,
                         url: iter,
                       };
-                      items.push(obj33);
+                      items.push(obj34);
                     }
                     const tmp4Result27 = storefrontCodedLink2;
                   }
@@ -1433,18 +1509,18 @@ export function findCodedLink(sanitizeUrlResult) {
                 if (str12 != null) {
                   match12 = str12.match(closure_2_15);
                 }
-                let tmp109;
+                let tmp110;
                 if (match12 != null) {
-                  tmp109 = match12[1];
+                  tmp110 = match12[1];
                 }
-                if (tmp109 == null) {
-                  tmp109 = null;
+                if (tmp110 == null) {
+                  tmp110 = null;
                 }
-                if (null != tmp109) {
-                  if (!set.has(tmp109)) {
-                    set.add(tmp109);
-                    const obj34 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp109, url: iter };
-                    items.push(obj34);
+                if (null != tmp110) {
+                  if (!set.has(tmp110)) {
+                    set.add(tmp110);
+                    const obj36 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp110, url: iter };
+                    items.push(obj36);
                   }
                 }
                 let match13;
@@ -1453,9 +1529,9 @@ export function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match13) {
                   if (!set.has(match13[1])) {
-                    set.add(tmp115);
-                    const obj36 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp115, url: iter };
-                    items.push(obj36);
+                    set.add(tmp116);
+                    const obj38 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp116, url: iter };
+                    items.push(obj38);
                   }
                 }
                 let match14;
@@ -1464,9 +1540,9 @@ export function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match14) {
                   if (!set.has(match14[1])) {
-                    set.add(tmp121);
-                    const obj38 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp121, url: iter };
-                    items.push(obj38);
+                    set.add(tmp122);
+                    const obj40 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp122, url: iter };
+                    items.push(obj40);
                   }
                 }
                 let match15;
@@ -1475,9 +1551,9 @@ export function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match15) {
                   if (!set.has(match15[1])) {
-                    set.add(tmp127);
-                    const obj40 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp127, url: iter };
-                    items.push(obj40);
+                    set.add(tmp128);
+                    const obj42 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp128, url: iter };
+                    items.push(obj42);
                   }
                 }
                 let match16;
@@ -1486,9 +1562,9 @@ export function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match16) {
                   if (!set.has(match16[1])) {
-                    set.add(tmp133);
-                    const obj42 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp133, url: iter };
-                    items.push(obj42);
+                    set.add(tmp134);
+                    const obj43 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp134, url: iter };
+                    items.push(obj43);
                   }
                 }
                 if ("/shop" === primaryHostRemainingPath) {
@@ -1507,12 +1583,12 @@ export function findCodedLink(sanitizeUrlResult) {
                   }
                   if (str14 === constants.GAME_SHOPS) {
                     if (typeof applicationId === "string") {
-                      let skuId;
+                      let skuId1;
                       if (parsed1 != null) {
-                        skuId = parsed1.skuId;
+                        skuId1 = parsed1.skuId;
                       }
-                      if (typeof skuId === "string") {
-                        const items1 = [skuId];
+                      if (typeof skuId1 === "string") {
+                        const items1 = [skuId1];
                         let result2 = storefrontCodedLink2.normalizeStorefrontSkuIds(items1);
                         const tmp4Result29 = storefrontCodedLink2;
                       } else {
@@ -1550,12 +1626,12 @@ export function findCodedLink(sanitizeUrlResult) {
                       const storefrontCodedLink1 = storefrontCodedLink2.makeStorefrontCodedLink(items2, applicationId);
                       if (!set.has(storefrontCodedLink1)) {
                         set.add(storefrontCodedLink1);
-                        const obj43 = {
+                        const obj44 = {
                           type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP,
                           code: storefrontCodedLink1,
                           url: iter,
                         };
-                        items.push(obj43);
+                        items.push(obj44);
                       }
                       const tmp4Result32 = storefrontCodedLink2;
                     }
@@ -1578,8 +1654,8 @@ export function findCodedLink(sanitizeUrlResult) {
                   const combined2 = "" + str14 + "-" + str17;
                   if (!set.has(combined2)) {
                     set.add(combined2);
-                    const obj44 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
-                    items.push(obj44);
+                    const obj45 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
+                    items.push(obj45);
                   }
                 }
                 tmp4Result17 = ExperimentEmbedUtils;
@@ -1609,7 +1685,7 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
   } else {
     const str = UnicodeSanitizationUtils.sanitizeUnicodeConfusables(sanitizeWhitespaceResult);
     if (null == str) {
-      let items = [];
+      items = [];
     } else {
       const str2 = str.replace(regExp1, (arg0, arg1, arg2, arg3) => {
         let combined = arg0;
@@ -1628,7 +1704,7 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
           if (0 !== arg0.length) {
             const _Set = Set;
             const set = new Set();
-            let items = [];
+            items = [];
             function _loop(iter) {
               ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } =
                 getPathsFromURL(iter));
@@ -1835,8 +1911,8 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   if (null != match7) {
                     if (null != match7[3]) {
                       const storefrontSKUCodedLink = storefrontMessageEmbedCodedLink.makeStorefrontSKUCodedLink(
-                        tmp158,
                         tmp159,
+                        tmp160,
                       );
                       if (!set.has(storefrontSKUCodedLink)) {
                         set.add(storefrontSKUCodedLink);
@@ -1848,9 +1924,9 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                         items.push(obj24);
                       }
                       const tmp4Result22 = storefrontMessageEmbedCodedLink;
-                    } else if (!set.has(tmp158)) {
-                      set.add(tmp158);
-                      const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp158, url: iter };
+                    } else if (!set.has(tmp159)) {
+                      set.add(tmp159);
+                      const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp159, url: iter };
                       items.push(obj25);
                     }
                   }
@@ -1889,22 +1965,42 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                       items.push(obj31);
                     }
                   }
+                  let flag = {}.allowUnpagedChannelPath;
+                  if (flag === undefined) {
+                    flag = false;
+                  }
                   let match11;
                   if (primaryHostRemainingPath != null) {
                     match11 = primaryHostRemainingPath.match(closure_2_13);
                   }
+                  let tmp99 = null;
                   if (null != match11) {
-                    let tmp99 = match11[1];
-                    if (tmp99 == null) {
-                      tmp99 = match11[2];
+                    if (!flag) {
+                      if (null != match11[3]) {
+                        tmp99 = null;
+                      }
                     }
+                    let tmp100 = match11[1];
+                    if (tmp100 == null) {
+                      tmp100 = match11[3];
+                    }
+                    const obj33 = { guildId: tmp100, skuId: null };
+                    let tmp101 = match11[2];
+                    if (tmp101 == null) {
+                      tmp101 = match11[5];
+                    }
+                    obj33.skuId = tmp101;
+                    tmp99 = obj33;
+                  }
+                  if (null != tmp99) {
+                    const skuId = tmp99.skuId;
                     let parsed = null;
                     if (null != query) {
                       parsed = keysSorter.parse(query);
                       const tmp4Result23 = keysSorter;
                     }
-                    if (typeof match11[3] === "string") {
-                      items = [tmp100];
+                    if (typeof skuId === "string") {
+                      items = [skuId];
                       let result1 = storefrontCodedLink2.normalizeStorefrontSkuIds(items);
                       const tmp4Result24 = storefrontCodedLink2;
                     } else {
@@ -1935,15 +2031,15 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                       }
                     }
                     if (result1.length > 0) {
-                      const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99);
+                      const storefrontCodedLink = storefrontCodedLink2.makeStorefrontCodedLink(result1, tmp99.guildId);
                       if (!set.has(storefrontCodedLink)) {
                         set.add(storefrontCodedLink);
-                        const obj33 = {
+                        const obj34 = {
                           type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT,
                           code: storefrontCodedLink,
                           url: iter,
                         };
-                        items.push(obj33);
+                        items.push(obj34);
                       }
                       const tmp4Result27 = storefrontCodedLink2;
                     }
@@ -1953,18 +2049,18 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   if (str12 != null) {
                     match12 = str12.match(closure_2_15);
                   }
-                  let tmp109;
+                  let tmp110;
                   if (match12 != null) {
-                    tmp109 = match12[1];
+                    tmp110 = match12[1];
                   }
-                  if (tmp109 == null) {
-                    tmp109 = null;
+                  if (tmp110 == null) {
+                    tmp110 = null;
                   }
-                  if (null != tmp109) {
-                    if (!set.has(tmp109)) {
-                      set.add(tmp109);
-                      const obj34 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp109, url: iter };
-                      items.push(obj34);
+                  if (null != tmp110) {
+                    if (!set.has(tmp110)) {
+                      set.add(tmp110);
+                      const obj36 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp110, url: iter };
+                      items.push(obj36);
                     }
                   }
                   let match13;
@@ -1973,9 +2069,9 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   }
                   if (null != match13) {
                     if (!set.has(match13[1])) {
-                      set.add(tmp115);
-                      const obj36 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp115, url: iter };
-                      items.push(obj36);
+                      set.add(tmp116);
+                      const obj38 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp116, url: iter };
+                      items.push(obj38);
                     }
                   }
                   let match14;
@@ -1984,9 +2080,9 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   }
                   if (null != match14) {
                     if (!set.has(match14[1])) {
-                      set.add(tmp121);
-                      const obj38 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp121, url: iter };
-                      items.push(obj38);
+                      set.add(tmp122);
+                      const obj40 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp122, url: iter };
+                      items.push(obj40);
                     }
                   }
                   let match15;
@@ -1995,9 +2091,9 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   }
                   if (null != match15) {
                     if (!set.has(match15[1])) {
-                      set.add(tmp127);
-                      const obj40 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp127, url: iter };
-                      items.push(obj40);
+                      set.add(tmp128);
+                      const obj42 = { type: CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE, code: tmp128, url: iter };
+                      items.push(obj42);
                     }
                   }
                   let match16;
@@ -2006,9 +2102,9 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                   }
                   if (null != match16) {
                     if (!set.has(match16[1])) {
-                      set.add(tmp133);
-                      const obj42 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp133, url: iter };
-                      items.push(obj42);
+                      set.add(tmp134);
+                      const obj43 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp134, url: iter };
+                      items.push(obj43);
                     }
                   }
                   if ("/shop" === primaryHostRemainingPath) {
@@ -2027,12 +2123,12 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                     }
                     if (str14 === constants.GAME_SHOPS) {
                       if (typeof applicationId === "string") {
-                        let skuId;
+                        let skuId1;
                         if (parsed1 != null) {
-                          skuId = parsed1.skuId;
+                          skuId1 = parsed1.skuId;
                         }
-                        if (typeof skuId === "string") {
-                          const items1 = [skuId];
+                        if (typeof skuId1 === "string") {
+                          const items1 = [skuId1];
                           let result2 = storefrontCodedLink2.normalizeStorefrontSkuIds(items1);
                           const tmp4Result29 = storefrontCodedLink2;
                         } else {
@@ -2073,12 +2169,12 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                         );
                         if (!set.has(storefrontCodedLink1)) {
                           set.add(storefrontCodedLink1);
-                          const obj43 = {
+                          const obj44 = {
                             type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP,
                             code: storefrontCodedLink1,
                             url: iter,
                           };
-                          items.push(obj43);
+                          items.push(obj44);
                         }
                         const tmp4Result32 = storefrontCodedLink2;
                       }
@@ -2101,8 +2197,8 @@ export function containsCodedLink(sanitizeWhitespaceResult) {
                     const combined2 = "" + str14 + "-" + str17;
                     if (!set.has(combined2)) {
                       set.add(combined2);
-                      const obj44 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
-                      items.push(obj44);
+                      const obj45 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined2, url: iter };
+                      items.push(obj45);
                     }
                   }
                   tmp4Result17 = ExperimentEmbedUtils;

@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { chain: { marginHorizontal: nativeDefault.space.PX_8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -17,7 +17,7 @@ export default function OrbsArcadeRewardUnlockedSheet(gameId) {
   gameId = gameId.gameId;
   let stateFromStores1;
   const tmp = closure_8();
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [gameId];
   const stateFromStores = gameId(stateFromStores1[6]).useStateFromStores(
     items,

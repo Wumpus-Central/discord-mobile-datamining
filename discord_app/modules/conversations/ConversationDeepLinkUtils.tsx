@@ -1,8 +1,9 @@
 // discord_app/modules/conversations/ConversationDeepLinkUtils.tsx
+import ChannelUtils from "../../utils/ChannelUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ConversationPreviewStore from "ConversationPreviewStore.tsx";
 
-const require = fn;
+require = fn;
 function resolveConversationFocusLink() {
   const self = this;
   const apply = closure_8.apply;
@@ -24,7 +25,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +62,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
           c3 = 2;
           c4 = 1;
           const obj6 = {
-            value: closure_130_0(closure_130_2[4]).fetchConversation(closure_129_0, closure_129_1),
+            value: closure_130_0(closure_130_2[5]).fetchConversation(closure_129_0, closure_129_1),
             done: false,
           };
           return obj6;
@@ -84,12 +85,12 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
           const messageIds = conversation.messageIds;
           let flag = messageIds.includes(closure_129_2);
           if (flag) {
-            const result = closure_130_0(closure_130_2[4]).setSelectedConversation(closure_129_0, conversation.id, {
+            const result = closure_130_0(closure_130_2[5]).setSelectedConversation(closure_129_0, conversation.id, {
               cacheType: "preview",
               shouldJump: false,
             });
             flag = true;
-            const obj = closure_130_0(closure_130_2[4]);
+            const obj = closure_130_0(closure_130_2[5]);
           }
           tmp9 = flag;
         }
@@ -103,11 +104,18 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6932).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5655).CONVERSATION_QUERY_PARAM;
+fn(7052).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5775).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
+export function getConversationPermalink(id) {
+  ({ guildId, channelId, startMessageId } = id);
+  const obj = { [closure_1_6]: id.id };
+  const str = new URLSearchParams({ [closure_1_6]: id.id });
+  const channelPermalink = ChannelUtils.getChannelPermalink(guildId, channelId, startMessageId);
+  return "" + channelPermalink + "?" + str.toString();
+}
 export { resolveConversationFocusLink };
 export function consumeConversationFocusParam(state) {
   ({ pathname, hash } = state);
@@ -121,7 +129,7 @@ export function consumeConversationFocusParam(state) {
     return null;
   } else {
     str.delete(CONVERSATION_QUERY_PARAM);
-    const tryParseChannelPathResult = channelId(guildId[5]).tryParseChannelPath(pathname);
+    const tryParseChannelPathResult = channelId(guildId[6]).tryParseChannelPath(pathname);
     channelId = undefined;
     if (tryParseChannelPathResult != null) {
       channelId = tryParseChannelPathResult.channelId;
@@ -135,7 +143,7 @@ export function consumeConversationFocusParam(state) {
         if (null != messageId) {
           if (obj.isProbablyAValidSnowflake(value)) {
             guildId = tryParseChannelPathResult.guildId;
-            asyncGeneratorStep = tmp5(tmp16[6]).cast(value);
+            asyncGeneratorStep = tmp5(tmp16[7]).cast(value);
             addPostConnectionCallback(
               asyncGeneratorStep(async () => {
                 if (dependencyMap === 2) {
@@ -148,7 +156,7 @@ export function consumeConversationFocusParam(state) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -165,7 +173,7 @@ export function consumeConversationFocusParam(state) {
                         channelId = tmp4;
                         v2 = 1;
                         dependencyMap = 1;
-                        const obj4 = { value: v2(10186)(guildId), done: false };
+                        const obj4 = { value: v2(10316)(guildId), done: false };
                         return obj4;
                       }
                     } else if (1 === tmp4) {
@@ -196,11 +204,11 @@ export function consumeConversationFocusParam(state) {
                       return obj8;
                     } else {
                       if (value) {
-                        const conversationFocus = channelId(9849).requestConversationFocus();
-                        const obj = channelId(9849);
+                        const conversationFocus = channelId(9980).requestConversationFocus();
+                        const obj = channelId(9980);
                       }
                       dependencyMap = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp17) {
                     dependencyMap = tmp;
@@ -209,9 +217,9 @@ export function consumeConversationFocusParam(state) {
                 }
               }),
             );
-            const tmp5Result = tmp5(tmp16[6]);
+            const tmp5Result = tmp5(tmp16[7]);
           }
-          obj = messageId(tmp16[6]);
+          obj = messageId(tmp16[7]);
           tmp5 = messageId;
         }
       }

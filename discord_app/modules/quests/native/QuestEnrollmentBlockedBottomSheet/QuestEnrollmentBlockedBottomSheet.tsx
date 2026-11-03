@@ -29,10 +29,10 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   if (null != questEnrollmentBlockedUntil) {
     const obj = { header: null, footer: null, startExpanded: true, children: null };
     const obj2 = { style: tmp.heading, children: null };
-    const obj3 = { variant: "heading-xl/bold", children: null };
+    const obj3 = { variant: "heading-xl/semibold", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["XEHDT/"]);
-    obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/bold", children: null });
+    obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/semibold", children: null });
     obj.header = <View style={tmp.heading}>{null}</View>;
     const obj4 = { style: tmp.container, children: null };
     const obj5 = { variant: "text-md/normal", children: null };
@@ -49,7 +49,7 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   heading: {
     display: "flex",
@@ -84,7 +84,7 @@ const result = size.fileFinishedImporting(
 
 export default function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
   ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
-  const items = [QuestStore];
+  items = [QuestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(questId));
   let tmp4 = null;
   if (null != stateFromStores) {

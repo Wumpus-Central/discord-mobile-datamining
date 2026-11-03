@@ -52,6 +52,6 @@ export function UseThemeContext(children) {
     throw error;
   } else {
     const obj = { children: children.children(context) };
-    return React2(framebus, obj);
+    return React2(duration, obj);
   }
 }

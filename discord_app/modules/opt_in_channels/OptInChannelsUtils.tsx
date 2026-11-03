@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2042 from "../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/07019_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -22,11 +22,11 @@ function setIndex(arg0, index) {
   arg0.index = index;
 }
 const Constants = fn(1072);
-({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(4870);
+({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
+const ChannelConstants = fn(4997);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -34,7 +34,7 @@ export function useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromS
   _require = stateFromStores1;
   let formatted = str.toLowerCase();
   const canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(guildId);
-  const items = [canSeeOnboardingHome];
+  items = [canSeeOnboardingHome];
   const callback = canSeeOnboardingHome.useCallback((channel, arg1) => {
     let tmp = !canSeeOnboardingHome;
     if (canSeeOnboardingHome) {
@@ -149,7 +149,7 @@ export function useChannelBrowserSections(guildId, filterCategoriesByQuery, arg2
     require("dismissible_content").DismissibleContent.CHANNEL_BROWSER_NUX,
   );
   let obj = require("DismissibleContentUnsafeUtils");
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [guildId];
   closure_3 = require("initialize").useStateFromStoresObject(
     items,
@@ -200,7 +200,7 @@ export function useChannelBrowserSections(guildId, filterCategoriesByQuery, arg2
 }
 export function useChannelBrowserChannelCount(arg0) {
   _require = arg0;
-  const items = [GuildCategoryStore];
+  items = [GuildCategoryStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildCategoryStore.getCategories(closure_0),
   );
@@ -228,7 +228,7 @@ export function useChannelBrowserChannelCount(arg0) {
 }
 export function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef2042;
+  const tmp = _modDef2171;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

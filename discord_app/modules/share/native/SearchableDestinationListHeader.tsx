@@ -1,16 +1,16 @@
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7005 from "../../../../_runtime/metro/07005__.js";
+import _mod7131 from "../../../../_runtime/metro/07131__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -52,7 +52,7 @@ export default function SearchableDestinationListHeader(arg0) {
         title: children.children,
         subtitle,
         subtitleColor,
-        variant: "redesign/heading-18/bold",
+        variant: "redesign/heading-18/semibold",
       });
     },
     headerTitleAlign: "center",
@@ -78,7 +78,7 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod7005.Header, {
+  return jsx(_mod7131.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
@@ -86,7 +86,7 @@ export default function SearchableDestinationListHeader(arg0) {
         title: children.children,
         subtitle,
         subtitleColor,
-        variant: "redesign/heading-18/bold",
+        variant: "redesign/heading-18/semibold",
       });
     },
     headerTitleAlign: "center",

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
@@ -34,7 +34,7 @@ const radio = SettingBuilders.createRadio({
         mappedActivityValue: obj3.mappedActivityValue,
       } = profileToActivityUpsell);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16756, dependencyMap.paths),
+        asyncRequireImpl(16899, dependencyMap.paths),
         "ProfileToActivityPrivacyUpsellActionSheet",
         { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null },
       );
@@ -48,7 +48,7 @@ const radio = SettingBuilders.createRadio({
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t["nLj+nc"]);
     obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-    const items = [obj, ,];
+    items = [obj, ,];
     const obj2 = { label: null, subLabel: null, value: null };
     const intl3 = util.intl;
     obj2.label = intl3.string(util.t.YOIKBt);

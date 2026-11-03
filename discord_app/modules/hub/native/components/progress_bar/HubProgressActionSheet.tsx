@@ -11,21 +11,21 @@ import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9131);
+const HubProgressBarConstants = fn(9259);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
   AnalyticsLocations: closure_9,
-  InstantInviteSources: c10,
+  InstantInviteSources: closure_10,
   Routes: closure_11,
 } = Constants);
-let closure_12 = fn(13858).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(14042);
+let closure_12 = fn(13989).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(14173);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles({
   container: { padding: 16 },
   footer: { marginTop: 12, display: "flex", alignItems: "center" },
@@ -45,7 +45,7 @@ export default function HubProgressActionSheet(guild) {
   const effect = size.useEffect(() => {
     closure_4.current = analyticsSource;
   });
-  const items = [guild.id];
+  items = [guild.id];
   const effect1 = size.useEffect(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, {
       type: "Hub Progress Action Sheet",

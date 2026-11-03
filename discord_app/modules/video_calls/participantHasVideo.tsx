@@ -51,9 +51,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(5681);
+const CallConstants = fn(5801);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(5768).Features;
+const Features = fn(5888).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
 
@@ -83,6 +83,6 @@ export default function participantHasVideo(type) {
 export { canRenderParticipantVideo };
 export function useCanRenderParticipantVideo(stateFromStores) {
   _require = stateFromStores;
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   return require("initialize").useStateFromStores(items, () => canRenderParticipantVideo(closure_0, MediaEngineStore));
 }

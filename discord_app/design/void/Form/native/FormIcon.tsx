@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_3 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
@@ -15,7 +15,7 @@ export default function FormIcon(color) {
   const tmp2 = closure_3();
   if (null != themedColor) {
     const obj2 = { style: null, themedColor: null };
-    const items = [tmp2.icon, style];
+    items = [tmp2.icon, style];
     obj2.style = items;
     obj2.themedColor = themedColor;
     const merged1 = Object.assign(merged);

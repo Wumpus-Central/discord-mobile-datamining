@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useExplicitContentSettingOrDefault() {
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let prop;
@@ -54,7 +54,7 @@ export function useExplicitContentSettingOrDefault() {
   return obj3;
 }
 export function useGoreContentSettingOrDefault() {
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let goreContentSettings;

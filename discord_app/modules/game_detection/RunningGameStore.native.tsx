@@ -130,7 +130,7 @@ export function gameKey() {
 }
 export function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
-    const items = [DetectableGameStore, LibraryApplicationStore, GameStore];
+    items = [DetectableGameStore, LibraryApplicationStore, GameStore];
   }
   return {
     source: OverlayTypes.OverlayGameStatusSource.UNKNOWN,

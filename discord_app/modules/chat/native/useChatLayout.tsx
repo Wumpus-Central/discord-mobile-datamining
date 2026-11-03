@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx
 export default function useChatLayout() {
   const tmp = useWindowSizeClassifierDefault();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(
     () => ({
       isChatBesideChannelList: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,

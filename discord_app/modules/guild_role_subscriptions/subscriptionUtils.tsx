@@ -10,7 +10,7 @@ export function getRoleSubscriptionPlanId(items) {
   return items[0].planId;
 }
 export function getRoleSubscriptionMutationPlanId(renewalMutations) {
-  let items;
+  items = undefined;
   if (renewalMutations != null) {
     renewalMutations = renewalMutations.renewalMutations;
     if (renewalMutations != null) {

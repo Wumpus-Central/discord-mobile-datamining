@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 },
   cancel: { alignSelf: "center" },
@@ -38,7 +38,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
   const obj = { style: tmp.container, children: null };
   const obj2 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
       variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",

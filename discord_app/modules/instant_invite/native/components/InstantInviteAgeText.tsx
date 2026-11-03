@@ -3,7 +3,6 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import instant_invite_InstantInviteUtils from "../InstantInviteUtils.tsx";
 import InstantInviteUtils from "../../../../utils/InstantInviteUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
 });
@@ -27,26 +26,19 @@ export default function InstantInviteAgeText(style) {
   }
   ({ onEdit: View, source: CreateInviteModalStore } = style);
   const tmp = closure_6();
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("InstantInviteAgeText");
-  const items = [CreateInviteModalStore];
+  items = [CreateInviteModalStore];
   const stateFromStores = initialize.useStateFromStores(items, () => inviteSettings.getInviteSettings());
-  let tmp7Result = null;
+  let tmp6Result = null;
   if (null != stateFromStores) {
-    const obj3 = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items1 = [tmp.inviteAgeContainer, style.style];
-    obj3.style = items1;
-    let str = "text-xs/normal";
-    let str2 = "text-xs/normal";
-    if (manaTypeConsolidationExperiment) {
-      str2 = "experimental/body-md/normal";
-    }
-    const obj4 = { variant: str2, children: null };
+    obj2.style = items1;
+    const obj3 = { variant: "body-md/normal", children: null };
     const items2 = [InstantInviteUtils.maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
-    obj4.children = items2;
-    const items3 = [closure_4(Text_Text.Text, obj4)];
+    obj3.children = items2;
+    const items3 = [closure_4(Text_Text.Text, obj3)];
     if (canEditInvite) {
-      const obj5 = {
+      const obj4 = {
         onPress() {
           instant_invite_InstantInviteUtils.handlePressSettings(closure_1_0, dependencyMap, inviteSettings);
           if (View != null) {
@@ -59,21 +51,18 @@ export default function InstantInviteAgeText(style) {
         children: null,
       };
       const intl = util.intl;
-      obj5.accessibilityLabel = intl.string(util.t["VNe8P/"]);
-      obj5.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
-      if (manaTypeConsolidationExperiment) {
-        str = "experimental/body-md/medium";
-      }
-      const obj6 = { variant: str, color: "text-link", children: null };
+      obj4.accessibilityLabel = intl.string(util.t["VNe8P/"]);
+      obj4.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
+      const obj5 = { variant: "body-md/medium", color: "text-link", children: null };
       const intl2 = util.intl;
-      obj6.children = intl2.string(util.t["VNe8P/"]);
-      obj5.children = closure_5(Text_Text.Text, obj6);
-      canEditInvite = closure_5(Pressables.PressableOpacity, obj5);
+      obj5.children = intl2.string(util.t["VNe8P/"]);
+      obj4.children = closure_5(Text_Text.Text, obj5);
+      canEditInvite = closure_5(Pressables.PressableOpacity, obj4);
     }
     items3[1] = canEditInvite;
-    obj3.children = items3;
-    tmp7Result = closure_4(View, obj3);
+    obj2.children = items3;
+    tmp6Result = closure_4(View, obj2);
     const tmp2Result = InstantInviteUtils;
   }
-  return tmp7Result;
+  return tmp6Result;
 }

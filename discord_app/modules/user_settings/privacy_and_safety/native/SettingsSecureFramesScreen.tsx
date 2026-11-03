@@ -14,7 +14,7 @@ function UserListItem(userId) {
   const onPress = userId.onPress;
   let analyticsLocations;
   ({ start, end } = userId);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = userId(analyticsLocations[7]).useStateFromStores(items, () => UserStore.getUser(userId));
   const obj = userId(analyticsLocations[7]);
   const secureFramesUserVerifiedKeys = userId(analyticsLocations[8]).useSecureFramesUserVerifiedKeys(userId);
@@ -81,7 +81,7 @@ function SettingsSecureFramesFooter() {
   );
   const obj = navigation(secureFramesVerifiedUserIds[17]);
   navigation = navigation(secureFramesVerifiedUserIds[18]).useNavigation();
-  const items = [navigation];
+  items = [navigation];
   callback = noop.useCallback((userId) => {
     navigation.navigate(UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
   }, items);
@@ -116,7 +116,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
   header: null,
@@ -140,7 +140,7 @@ export default function SettingsSecureFramesScreen() {
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["9Q/PQv"]);
-  const items = [React5(Text_Text.Text, obj3)];
+  items = [React5(Text_Text.Text, obj3)];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   const obj5 = { helpArticle: SecureFramesUtils.getSecureFramesHelpdeskArticle() };

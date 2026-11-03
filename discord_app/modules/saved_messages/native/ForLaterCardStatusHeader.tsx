@@ -66,7 +66,7 @@ export function ForLaterCardStatusHeader(isCritical) {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
   }
   obj2.children = React4(IconComponent, { size: "xxs", color: INTERACTIVE_TEXT_DEFAULT });
-  const items = [React4(View, obj2), ,];
+  items = [React4(View, obj2), ,];
   let str = "mobile-text-heading-primary";
   if (flag) {
     str = "text-feedback-critical";

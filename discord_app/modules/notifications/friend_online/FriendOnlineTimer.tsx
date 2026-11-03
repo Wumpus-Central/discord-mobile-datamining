@@ -71,7 +71,7 @@ class FriendOnlineTimerManager extends tmp2 {
         setting = null == applyArgumentsResult.timerId;
       }
       if (setting) {
-        let items = [,];
+        items = [,];
         ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
         setting = items.includes(SelfPresenceStore.getStatus());
       }
@@ -79,7 +79,7 @@ class FriendOnlineTimerManager extends tmp2 {
         const _setTimeout = setTimeout;
         applyArgumentsResult.timerId = setTimeout(() => {
           closure_1_0.timerId = null;
-          const items = [,];
+          items = [,];
           ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
           let hasItem = items.includes(status.getStatus());
           if (hasItem) {

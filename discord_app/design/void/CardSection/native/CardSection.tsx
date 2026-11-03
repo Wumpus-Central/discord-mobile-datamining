@@ -7,7 +7,7 @@ import TextStyles from "../../../../modules/rebrand/native/TextStyles.tsx";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
 obj2.title = TextStyles(fn(1072).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, {
   uppercase: true,
@@ -27,7 +27,7 @@ export default function CardSection(arg0) {
   ({ titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } = arg0);
   const tmp = closure_5();
   const obj = { style: null, accessibilityRole, accessibilityLabel, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   let tmp4 = null;
   if (null != title) {

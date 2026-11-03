@@ -1,13 +1,13 @@
 // discord_app/modules/emoji_picker/hooks/useEmojiHotrail.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EMOJI_ROW_SIZE = fn(6799).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(6919).EMOJI_ROW_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 
 export default function useEmojiHotrail(arg0) {
   noop = arg0;
-  const items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => {
     ({ topEmojis, newlyAddedEmojis, rowSize } = closure_0);
     if (rowSize === undefined) {

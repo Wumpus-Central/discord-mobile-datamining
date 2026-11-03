@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 export default function PremiumGiftDMSuccessBody() {
   const tmp = closure_8();
   const obj2 = { children: null };
-  const items = [
+  items = [
     hasOwnProperty(View, {
       children: hasOwnProperty(PremiumGiftBackgroundAnimationDefault, {
         giftStyle: NativeGiftContext.useNativeGiftContext().giftStyle,
@@ -30,7 +30,7 @@ export default function PremiumGiftDMSuccessBody() {
     }),
     ,
   ];
-  const obj4 = { style: tmp.title, variant: "heading-lg/bold", children: null };
+  const obj4 = { style: tmp.title, variant: "heading-lg/semibold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.MqZXbv);
   items[1] = hasOwnProperty(Text_Text.Text, obj4);
@@ -49,7 +49,7 @@ export function PremiumGiftDMSuccessActions() {
   navigation = onClose(navigation[6]).useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftDMSuccessActions" }).enabled;
-  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
+  items = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
   const callback = enabled.useCallback(() => {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {

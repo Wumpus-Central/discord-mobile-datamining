@@ -25,7 +25,7 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.N86XcP);
   obj4.onPress = onConfirm;
-  const items = [React3(AlertModal.AlertActionButton, obj4, "remove-user-from-thread")];
+  items = [React3(AlertModal.AlertActionButton, obj4, "remove-user-from-thread")];
   const obj5 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t.yNbnce);

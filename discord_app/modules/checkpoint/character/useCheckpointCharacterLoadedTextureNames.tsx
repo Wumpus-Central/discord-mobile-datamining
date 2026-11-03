@@ -20,14 +20,14 @@ export function useCheckpointCharacterLoadedTextureNames(visibleTextureNames) {
     const item = visibleTextureNames.forEach((item) => set.add(item));
     tmp3(set);
   }
-  let items = [visibleTextureNames];
+  items = [visibleTextureNames];
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => closure_1_3(closure_0), 600);
     return () => clearTimeout(closure_0);
   }, items);
   const items1 = [first, requestedTextureNames];
   return noop.useMemo(() => {
-    const items = [...requestedTextureNames];
+    items = [...requestedTextureNames];
     return new Set(items);
   }, items1);
 }

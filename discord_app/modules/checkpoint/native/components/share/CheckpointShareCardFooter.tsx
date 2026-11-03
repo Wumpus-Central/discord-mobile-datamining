@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import inlineStyles from "../../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import ArrowLargeRightIcon from "../../../../../design/components/Icon/native/redesign/generated/ArrowLargeRightIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = { width: 145, height: 28 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   footer: null,
   portraitFooter: null,
@@ -67,7 +67,7 @@ export default function CheckpointShareCardFooter(isCharacterAndStats) {
   const context = noop.useContext(CheckpointShareCardContext.CheckpointShareCardColorsContext);
   ({ primaryBackgroundColor, tertiaryBackgroundColor } = context);
   ({ width, height } = size);
-  const items = [tmp.footer];
+  items = [tmp.footer];
   const obj2 = { style: items, children: null };
   items[1] = isCharacterAndStats ? tmp.characterAndStatsFooter : tmp.portraitFooter;
   const token = useToken.useToken(nativeDefault.colors.BLACK);

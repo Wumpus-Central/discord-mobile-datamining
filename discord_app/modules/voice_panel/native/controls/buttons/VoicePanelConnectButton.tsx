@@ -19,7 +19,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   connectButton: {
     backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
@@ -49,7 +49,7 @@ export default function ConnectButton(props) {
   const tmp5 = channelId(guildId[6])(channelId);
   canConnect = tmp5.canConnect;
   let isAtMaxCapacity = tmp5.isAtMaxCapacity;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   if (isAtMaxCapacity) {
     let isGuildStageVoiceResult;

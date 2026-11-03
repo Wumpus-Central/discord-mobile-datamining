@@ -29,7 +29,7 @@ function UpsellCardLayout(arg0) {
 }
 function PreviewNitroCard(style) {
   let navigation;
-  navigation = navigation(1497).useNavigation();
+  navigation = navigation(1499).useNavigation();
   items = [navigation];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
   const callback = noop.useCallback(() => {
@@ -45,7 +45,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7626).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -80,7 +80,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

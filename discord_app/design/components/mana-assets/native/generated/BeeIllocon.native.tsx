@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/BeeIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12709 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-1x.png.js";
-import _modDef12710 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
-import _modDef12711 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-3x.png.js";
+import _modDef12845 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-1x.png.js";
+import _modDef12846 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
+import _modDef12847 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12709 }, 3: null };
-const obj2 = { uri: _modDef12709 };
-obj[2] = { uri: _modDef12710 };
-const obj3 = { uri: _modDef12710 };
-obj[3] = { uri: _modDef12711 };
+let obj = { 1: null, 2: { uri: _modDef12845 }, 3: null };
+const obj2 = { uri: _modDef12845 };
+obj[2] = { uri: _modDef12846 };
+const obj3 = { uri: _modDef12846 };
+obj[3] = { uri: _modDef12847 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
@@ -22,13 +22,13 @@ export function BeeIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  const items = [num];
+  items = [num];
   const memo = noop.useMemo(() => {
     const size = { width: num, height: num, intrinsicWidth: 64, intrinsicHeight: 64 };
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7069).getAssetSource(obj);
+  obj.source = num(7195).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

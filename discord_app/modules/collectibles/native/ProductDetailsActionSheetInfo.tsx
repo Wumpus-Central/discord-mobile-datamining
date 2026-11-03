@@ -17,9 +17,9 @@ function ProductNameAndDescription(product) {
   const tmp = closure_6();
   const obj2 = { style: tmp.description, children: null };
   const productDescription = useProductDescription.useProductDescription(product);
-  const items = [
+  items = [
     React4(Text_Text.Text, {
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.title,
       accessibilityRole: "header",
@@ -56,7 +56,7 @@ function ProductPurchaseStatus(product) {
 function BundleProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
   const obj = { style: null, children: React4(ProductPurchaseStatus, { product, onTrackPress }) };
-  const items = [,];
+  items = [,];
   ({ body: arr[0], bundleBody: arr[1] } = closure_6());
   obj.style = items;
   return React4(View, obj);
@@ -85,7 +85,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
   } else {
     const obj = { style: tmp.body, children: null };
     const obj3 = { product };
-    const items = [React4(ProductNameAndDescription, obj3)];
+    items = [React4(ProductNameAndDescription, obj3)];
     const obj4 = { product, onTrackPress };
     items[1] = React4(ProductPurchaseStatus, obj4);
     obj.children = items;

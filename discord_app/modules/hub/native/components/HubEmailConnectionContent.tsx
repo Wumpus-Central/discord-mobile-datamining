@@ -17,12 +17,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(14329);
-({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
+const HubConstants = fn(14460);
+({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { marginTop: 16, marginBottom: 16, alignSelf: "center" },
@@ -58,7 +58,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -81,7 +81,7 @@ export default function HubEmailConnectionContent(arg0) {
             c5 = 2;
             let id;
             if (invite != null) {
-              const guild = invite.guild;
+              guild = invite.guild;
               if (guild != null) {
                 id = guild.id;
               }
@@ -203,7 +203,7 @@ export default function HubEmailConnectionContent(arg0) {
   const ref = noop.useRef(null);
   const intl = util.intl;
   const stringResult = intl.string(util.t.H1jCHH);
-  let guild;
+  guild = undefined;
   if (invite != null) {
     guild = invite.guild;
   }
@@ -224,12 +224,12 @@ export default function HubEmailConnectionContent(arg0) {
     }
   }
   const obj4 = { ref, contentContainerStyle: null, children: null };
-  const items = [tmp.scrollViewContainer];
+  items = [tmp.scrollViewContainer];
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
+  items[1] = { paddingBottom: invite(5730)().insets.bottom + invite(575).space.PX_16 };
   obj4.contentContainerStyle = items;
   let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
+  let obj5 = { paddingBottom: invite(5730)().insets.bottom + invite(575).space.PX_16 };
   const tmp16 = closure_7;
   const items1 = [
     closure_12(ref, {
@@ -237,7 +237,7 @@ export default function HubEmailConnectionContent(arg0) {
       children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }),
     }),
     closure_12(Text_Text.Text, {
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.title,
       accessibilityRole: "header",
@@ -285,7 +285,7 @@ export default function HubEmailConnectionContent(arg0) {
     children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }),
   };
   let obj8 = {
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.title,
     accessibilityRole: "header",
@@ -323,7 +323,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7081), obj11);
+  items1[3] = closure_12(invite(7207), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing })];
   const obj15 = { style: tmp.buttonContainer, children: null };

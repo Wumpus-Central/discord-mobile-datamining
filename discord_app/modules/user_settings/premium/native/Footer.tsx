@@ -5,14 +5,14 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import _modDef15382 from "../../../../../_runtime/metro/15382__.js";
+import _modDef15523 from "../../../../../_runtime/metro/15523__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" },
   footerText: { marginBottom: 24 },
@@ -27,14 +27,14 @@ export default function Footer(showSubscribeButton) {
   const tmp = closure_7();
   useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
   const obj = { style: null, children: null };
-  const items = [tmp.container, showSubscribeButton.style];
+  items = [tmp.container, showSubscribeButton.style];
   obj.style = items;
   let tmp8Result = showSubscribeButton;
   if (showSubscribeButton) {
     const obj2 = { children: null };
     const obj3 = {
       style: tmp.footerText,
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
@@ -54,7 +54,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef15382 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef15523 });
   obj.children = items2;
   return timestampProducer(View, obj);
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/AppLauncherActionSheet.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetContextDefault from "../../action_sheet/native/ActionSheetContext.tsx";
 import AppLauncherContext from "AppLauncherContext.tsx";
@@ -14,12 +14,12 @@ require = fn;
 function AppLauncherActionSheet(arg0) {
   ({ chatInputRef: require, channel } = arg0);
   const ref = noop.useRef(null);
-  const sharedValue = ReanimatedRexport.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const sharedValue = _mod1652.useSharedValue(-1);
+  const sharedValue1 = _mod1652.useSharedValue(0);
   const ref1 = noop.useRef(undefined);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const ref2 = noop.useRef(AppLauncherContext.AppLauncherKeyboardCloseReason.DISMISSED);
-  const items = [channel];
+  items = [channel];
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   const memo = noop.useMemo(() => ({ channel, type: "channel" }), items);
   const obj4 = {
@@ -149,7 +149,7 @@ function AppLauncherActionSheet(arg0) {
     children: null,
   });
 }
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
@@ -171,7 +171,7 @@ export function useAppLauncherActionSheet(arg0) {
     [],
   );
   let obj = { appLauncherActionSheet: null, setAppLauncherActionSheetEnabled: tmp[1] };
-  const items = [memo, first, arg0];
+  items = [memo, first, arg0];
   obj.appLauncherActionSheet = noop.useMemo(() => {
     let tmp = null;
     if (first) {

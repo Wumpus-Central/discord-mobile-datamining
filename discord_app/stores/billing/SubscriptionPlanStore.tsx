@@ -20,7 +20,7 @@ function addSubscriptionPlan(fromServer) {
       set1 = new Set();
     }
     const _Set2 = Set;
-    const items = [];
+    items = [];
     const _Array = Array;
     HermesBuiltin.arraySpread(Array.from(set), HermesBuiltin.arraySpread(Array.from(set1), 0));
     const set2 = new Set(items);
@@ -46,7 +46,7 @@ function reset() {
   set1.clear();
   FunctionUtils.clearObject(closure_14);
   FunctionUtils.clearObject(closure_15);
-  const items = [
+  items = [
     SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
     SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
     SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH],
@@ -70,7 +70,7 @@ function reset() {
 }
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);
@@ -136,7 +136,7 @@ prototype["getFetchedSKUIDs"] = function getFetchedSKUIDs() {
   return SnowflakeUtilsDefault.keys(closure_11);
 };
 prototype["getForSKU"] = function getForSKU(arg0) {
-  let items = dependencyMap[arg0];
+  items = dependencyMap[arg0];
   if (items == null) {
     items = [];
   }

@@ -20,7 +20,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11333).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11470).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -37,14 +37,14 @@ function CommunityPill(guildVisibility) {
       secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT,
       style: tmp.communityPillIcon,
     };
-    let tmp7Result = closure_9(tmp2(9307).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(9435).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9311), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9439), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }
-  const items = [tmp7Result];
+  items = [tmp7Result];
   const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl2 = tmp2(1113).intl;
   const t2 = tmp2(1113).t;
@@ -56,8 +56,8 @@ function CommunityPill(guildVisibility) {
 const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },
@@ -98,7 +98,7 @@ obj2.communityPill = {
   borderRadius: nativeDefault.radii.round,
 };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1357);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -117,7 +117,7 @@ export default function GuildActionSheetHeader(guild) {
   const tmp = closure_11();
   importDefault = tmp;
   const tmp4 = require("useIsWindowLarge")();
-  const items = [GuildSubscriptionsStore];
+  items = [GuildSubscriptionsStore];
   stateFromStores = guild(stateFromStores[20]).useStateFromStores(items, () =>
     GuildSubscriptionsStore.isSubscribedToAnyGuildChannel(guild.id),
   );

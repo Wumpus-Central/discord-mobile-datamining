@@ -14,9 +14,9 @@ export function getIncomingFriendRequestCount(items) {
   return pendingCount + obj2.getPendingIncomingCount();
 }
 export function useIncomingFriendRequestCount() {
-  let items = [RelationshipStore, GameRelationshipStore];
+  items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [RelationshipStore, GameRelationshipStore];
+    items = [RelationshipStore, GameRelationshipStore];
     [obj, obj2] = items;
     const pendingCount = obj.getPendingCount();
     return pendingCount + obj2.getPendingIncomingCount();
@@ -25,7 +25,7 @@ export function useIncomingFriendRequestCount() {
 export function getOutgoingFriendRequestCount() {
   let tmp = items1;
   if (items1 === undefined) {
-    const items = [globalThis.o];
+    items = [globalThis.o];
     items[1] = globalThis.s;
     tmp = items;
   }

@@ -27,7 +27,7 @@ let closure_9 = async function _fetchShelf(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_9 = async function _fetchShelf(arg0) {
                     const subscription = closure_1(572).subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", closure_5);
                   });
                   closure_132_7 = promise2;
-                  const items = [closure_132_6, closure_132_7];
+                  items = [closure_132_6, closure_132_7];
                   c8 = 3;
                   c9 = 1;
                   const obj6 = { value: Promise.race(items), done: false };

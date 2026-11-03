@@ -29,7 +29,7 @@ prototype["initialize"] = function initialize(dismissedQuestIds) {
 };
 prototype["getState"] = function getState() {
   const obj = { dismissedQuestIds: null, autoEnroll };
-  const items = [...set];
+  items = [...set];
   obj.dismissedQuestIds = items;
   return obj;
 };

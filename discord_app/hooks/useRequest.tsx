@@ -13,7 +13,7 @@ export default function useRequest(archiveSubscriptionListing) {
   closure_1 = tmp[1];
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_2 = tmp2[1];
-  let items = [archiveSubscriptionListing];
+  items = [archiveSubscriptionListing];
   const items1 = [
     noop.useCallback(
       asyncGeneratorStep(async () => {
@@ -32,7 +32,7 @@ export default function useRequest(archiveSubscriptionListing) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -63,7 +63,7 @@ export default function useRequest(archiveSubscriptionListing) {
                   c4 = 2;
                   closure_130_2(null);
                   closure_130_1(true);
-                  const items = [];
+                  items = [];
                   HermesBuiltin.arraySpread(closure_129_0, 0);
                   c5 = 4;
                   c6 = 1;
@@ -82,7 +82,7 @@ export default function useRequest(archiveSubscriptionListing) {
                   c4 = 0;
                   closure_130_1(false);
                   c6 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   if (closure_129_1 instanceof tmp6(tmp4[4])) {
                     let tmp37 = closure_129_1;

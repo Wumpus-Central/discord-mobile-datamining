@@ -2,7 +2,7 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
-import asyncRequireImpl from "../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02123_asyncRequireImpl.js";
 import openURLDefault from "openURL.tsx";
 import CodedLink from "../modules/coded_links/CodedLink.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
@@ -57,7 +57,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_18 = async function _openInviteModal() {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
-              deeplinkAttemptId: "applicationId",
+              deeplinkAttemptId: "alignItems",
               invite_instance_id,
             };
             c3 = 1;
@@ -92,7 +92,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -117,7 +117,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
                       flattenedGuildIds = closure_133_11.getFlattenedGuildIds();
                       let id;
                       if (invite2 != null) {
-                        const guild = invite2.guild;
+                        guild = invite2.guild;
                         if (guild != null) {
                           id = guild.id;
                         }
@@ -256,7 +256,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -268,7 +268,7 @@ const Constants = fn(1072);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1074);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7407).isGameShopPath;
+const isGameShopPath = fn(7531).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -313,7 +313,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "raw", skuId: "cix" };
+            result = { applicationId: "Array", skuId: "flexDirection" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -326,16 +326,16 @@ export default function getOnClick(assetURL) {
             guild_id: guildId,
             channel_id: SelectedChannelStore.getChannelId(),
           };
-          AnalyticsUtilsDefault.track(closure_2_12.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, obj);
+          AnalyticsUtilsDefault.track(application_id.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, obj);
         }
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "y" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -427,14 +427,14 @@ export default function getOnClick(assetURL) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14757, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14888, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -442,7 +442,7 @@ export default function getOnClick(assetURL) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -465,7 +465,7 @@ export default function getOnClick(assetURL) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -488,7 +488,7 @@ export default function getOnClick(assetURL) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.QUESTS_EMBED) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.QUESTS_EMBED) {
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -523,11 +523,11 @@ export default function getOnClick(assetURL) {
           return true;
         };
       }
-      tmp2Result = tmp2(9673);
+      tmp2Result = tmp2(9805);
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -616,12 +616,12 @@ export default function getOnClick(assetURL) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5752).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(5872).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        AppAnalyticsUtilsDefault.trackWithMetadata(closure_2_12.APP_OAUTH2_LINK_EMBED_URL_CLICKED, {
+        AppAnalyticsUtilsDefault.trackWithMetadata(application_id.APP_OAUTH2_LINK_EMBED_URL_CLICKED, {
           application_id: _undefined.code,
         });
         openURLDefault(closure_0);
@@ -642,7 +642,7 @@ export default function getOnClick(assetURL) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8711);
+    tmp2Result4 = tmp2(8835);
   }
   const tmp2Result3 = require("LinkUtils");
 }

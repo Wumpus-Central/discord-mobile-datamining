@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
   _require = arg0;
-  let items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores, arg0];
   return useMemo(() => {
@@ -21,7 +21,7 @@ export default function useCollectiblesExternalGatewayFacet(arg0) {
     if (null != collectibleGoogleSkuId) {
       const obj2 = { line_items: null };
       const obj3 = { external_product_id: collectibleGoogleSkuId };
-      const items = [obj3];
+      items = [obj3];
       obj2.line_items = items;
       return obj2;
     }

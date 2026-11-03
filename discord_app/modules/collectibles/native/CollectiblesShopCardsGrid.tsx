@@ -8,7 +8,7 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 require = fn;
 function ShopCardGridItem(index) {
   index = index.index;
-  const items = [index];
+  items = [index];
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } =
     index);
   const memo = noop.useMemo(() => ({ tilePosition: index }), items);
@@ -27,8 +27,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9459).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(5141);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9587).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -42,10 +42,10 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(17865).useCardLayout();
+  const cardLayout = products(18008).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
-  const items = [products, columns];
+  items = [products, columns];
   ({ rowWidth, ref, onLayout } = cardLayout);
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = {
@@ -59,9 +59,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(17865);
+  let obj = products(18008);
   obj2.contentContainerStyle = {
-    gap: products(9459).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(9587).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: rowWidth,

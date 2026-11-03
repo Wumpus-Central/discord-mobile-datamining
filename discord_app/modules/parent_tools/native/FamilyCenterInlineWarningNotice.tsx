@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: {
     flexDirection: "row",
@@ -41,7 +41,7 @@ export default function FamilyCenterInlineWarningNotice(arg0) {
   ({ text, style } = arg0);
   const tmp = closure_6();
   const obj = { style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   obj.style = items;
   const items1 = [
     React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewOverlay.tsx
-import inlineStyles from "../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -19,7 +19,7 @@ export default function GuildThemePreviewOverlay(arg0) {
   obj.viewBox = "0 0 259.862 154.514";
   obj.fill = "none";
   const obj2 = { children: null };
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       d: "M20.8821 7.1867C20.8821 3.21759 24.0659 0 27.9932 0H84.8821V154.514H20.8821V7.1867Z",
       fill: "black",

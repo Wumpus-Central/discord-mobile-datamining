@@ -14,7 +14,7 @@ export default function useConjureModelSettingsDraft(arg0, arg1) {
     tmp4[1](arg0);
     tmp3(null);
   }
-  const items = [tmp2];
+  items = [tmp2];
   const items1 = [arg1];
   items[1] = noop.useCallback((arg0) => {
     tmp3(arg0);

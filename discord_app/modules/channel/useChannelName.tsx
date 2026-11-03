@@ -159,7 +159,7 @@ export default function useChannelName(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [UserStore, ExperimentStore, RelationshipStore];
+  items = [UserStore, ExperimentStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
@@ -211,7 +211,7 @@ export function computeDefaultGroupDmName(recipients, getUser, arg2) {
 }
 export function useComputedGroupDmName(stateFromStores) {
   _require = stateFromStores;
-  const items = [UserStore, RelationshipStore];
+  items = [UserStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null;
     if (null != nickname) {

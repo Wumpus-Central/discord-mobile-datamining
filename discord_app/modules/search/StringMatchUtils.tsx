@@ -3,7 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 function calculateJaroWinklerDistance(formatted, item) {
   const diff = Math.floor(Math.max(formatted.length, item.length) / 2) - 1;
-  const items = [];
+  items = [];
   let num = 0;
   let num2 = 0;
   let num3 = 0;

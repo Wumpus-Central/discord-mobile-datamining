@@ -90,10 +90,10 @@ class RoleRow {
     return tmp7(guildRole(closure_3[11]).TableRow, obj1, guildRole.id);
   }
 }
-const isEveryoneRole = fn(4921).isEveryoneRole;
+const isEveryoneRole = fn(5048).isEveryoneRole;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -108,7 +108,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
   const guild_id = channel.channel.guild_id;
   [first, _slicedToArray] = ref.useState("");
   ref = ref.useRef(null);
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleStore.getSortedRoles(guild_id),
   );

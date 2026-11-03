@@ -36,10 +36,10 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
     let obj2 = { title: header.title, trailing: tmp4 };
     tmp3 = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj2);
   }
-  let items;
+  items = undefined;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("../../../../_runtime/metro/11201__.js") };
+    let obj4 = { source: require("../../../../_runtime/metro/11338__.js") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

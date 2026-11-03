@@ -2,7 +2,7 @@
 import Constants from "../../../Constants.tsx";
 import CollectiblesShopConstants from "../../collectibles/CollectiblesShopConstants.tsx";
 import util from "../../../intl/index.native.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import openURLDefault from "../../../lib/openURL.tsx";
 import QuestContent from "../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
@@ -41,7 +41,7 @@ obj[BadgeId.BadgeId.GIFTING] = {
   },
   ctaAction() {
     const obj2 = { analyticsLocations: null };
-    const items = [AnalyticsLocationDefault.BADGE];
+    items = [AnalyticsLocationDefault.BADGE];
     obj2.analyticsLocations = items;
     return utils_openGiftModal.openGiftModal(obj2);
   },

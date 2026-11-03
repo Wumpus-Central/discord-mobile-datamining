@@ -1,8 +1,11 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import Backdrop from "../../../../design/components/Backdrop/native/Backdrop.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../design/animation/reanimated/spring/springPresets.tsx";
+import Dialog from "../../../../design/components/Dialog/native/Dialog.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -14,8 +17,8 @@ function BackdropCard(arg0) {
   ({ buttonLabel, title, description } = arg0);
   const obj = { children: null };
   const obj2 = { spacing: 12, children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: title }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: title }),
     timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }),
     timestampProducer(components_Button_Button.Button, {
       text: buttonLabel,
@@ -33,7 +36,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -42,8 +45,8 @@ obj3.justifyContent = "center";
 obj3.padding = 16;
 obj2.backdropContent = obj3;
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function UserSettingsDesignSystemBackdropTsx1(){const{withSpring,showBackdrop,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};}",
+let closure_10 = {
+  code: "(function UserSettingsDesignSystemBackdropTsx1(){let[withSpring,showBackdrop,SUBTLE_SPRING]=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -52,79 +55,83 @@ const result = size.fileFinishedImporting(
 
 export default function UserSettingsDesignSystemBackdrop() {
   const tmp = closure_8();
+  [tmp3, tmp4] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  let showBackdrop = tmp2[0];
-  dependencyMap = tmp4;
   [tmp6, tmp7] = noop.useState("none");
   const tmp5 = _slicedToArray(noop.useState("none"), 2);
-  const fn = function n() {
-    let num = 0;
-    if (first) {
-      num = 1;
+  items = [closure_10, spring_spring.withSpring, tmp15Result, springPresets.SUBTLE_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp10, tmp11, tmp12, tmp13] = items;
+  class UserSettingsDesignSystemBackdropTsx1 {
+    constructor() {
+      num = 0;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 1;
+      }
+      obj = { opacity: tmp(num, closure_2, "animate-always") };
+      return obj;
     }
-    return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
-  };
-  let obj = showBackdrop(5095);
-  fn.__closure = {
-    withSpring: showBackdrop(5637).withSpring,
-    showBackdrop,
-    SUBTLE_SPRING: showBackdrop(5638).SUBTLE_SPRING,
-  };
-  fn.__workletHash = 1929832617927;
-  fn.__initData = __initData;
-  const obj3 = { contentContainerStyle: tmp.container, children: null };
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj4 = { spacing: 24, children: null };
-  const items = [
-    closure_6(BackdropCard, {
+  }
+  const items1 = [tmp11, tmp12, tmp13];
+  UserSettingsDesignSystemBackdropTsx1.__closure = items1;
+  UserSettingsDesignSystemBackdropTsx1.__workletHash = 10294771591742;
+  UserSettingsDesignSystemBackdropTsx1.__initData = tmp10;
+  const obj2 = { contentContainerStyle: tmp.container, children: null };
+  const animatedStyle = _mod1652.useAnimatedStyle(UserSettingsDesignSystemBackdropTsx1);
+  const obj3 = { spacing: 24, children: null };
+  const items2 = [
+    timestampProducer(BackdropCard, {
       title: "Backdrop",
       description:
         "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.",
       buttonLabel: "Show Backdrop",
       blur: "none",
-      setShowBackdrop: tmp2[1],
+      setShowBackdrop: tmp4,
       setBlurAmount: tmp7,
     }),
-    closure_6(BackdropCard, {
+    timestampProducer(BackdropCard, {
       title: "Subtle Blur",
       description:
         "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context",
       buttonLabel: "Show Subtle Blur Backdrop",
       blur: "subtle",
-      setShowBackdrop: tmp2[1],
+      setShowBackdrop: tmp4,
       setBlurAmount: tmp7,
     }),
-    closure_6(BackdropCard, {
+    timestampProducer(BackdropCard, {
       title: "Strong Blur",
       description:
         "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals",
       buttonLabel: "Show Strong Blur Backdrop",
       blur: "strong",
-      setShowBackdrop: tmp2[1],
+      setShowBackdrop: tmp4,
       setBlurAmount: tmp7,
     }),
   ];
-  obj4.children = items;
-  const items1 = [closure_7(showBackdrop(6027).Stack, obj4)];
-  if (showBackdrop) {
+  obj3.children = items2;
+  const items3 = [React5(Stack_Stack.Stack, obj3)];
+  if (tmp15Result) {
     function handleClose() {
-      closure_1(false);
+      _undefined(false);
     }
-    const obj5 = { onDismiss: handleClose, children: null };
-    const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [closure_6(tmp8(5598).Backdrop, obj6)];
-    const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
-    const obj8 = { children: null };
-    const obj9 = { variant: "text-md/normal", children: null };
-    const items3 = ["blur style: ", tmp6];
-    obj9.children = items3;
-    obj8.children = closure_7(tmp8(5624).Text, obj9);
-    obj7.children = closure_6(tmp8(6977).Card, obj8);
-    items2[1] = closure_6(closure_5, obj7);
-    obj5.children = items2;
-    showBackdrop = closure_7(tmp8(6017).Dialog, obj5);
+    const obj4 = { onDismiss: handleClose, children: null };
+    const obj5 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
+    const items4 = [timestampProducer(Backdrop.Backdrop, obj5)];
+    const obj6 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
+    const obj7 = { children: null };
+    const obj8 = { variant: "text-md/normal", children: null };
+    const items5 = ["blur style: ", tmp6];
+    obj8.children = items5;
+    obj7.children = React5(Text_Text.Text, obj8);
+    obj6.children = timestampProducer(Card.Card, obj7);
+    items4[1] = timestampProducer(hasOwnProperty, obj6);
+    obj4.children = items4;
+    tmp15Result = React5(Dialog.Dialog, obj4);
   }
-  items1[1] = showBackdrop;
-  obj3.children = items1;
-  return closure_7(closure_4, obj3);
+  items3[1] = tmp15Result;
+  obj2.children = items3;
+  return React5(React4, obj2);
 }

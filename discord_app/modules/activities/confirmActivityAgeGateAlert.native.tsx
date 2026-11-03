@@ -11,7 +11,7 @@ require = fn;
 function ConfirmActivityGateContent(children) {
   const tmp = closure_6();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [
+  items = [
     React4(ActivityAnnouncementDefault, {}),
     React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description }),
   ];
@@ -21,7 +21,7 @@ function ConfirmActivityGateContent(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertBodyText: {

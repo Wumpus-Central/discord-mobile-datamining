@@ -13,8 +13,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },
@@ -32,7 +32,7 @@ let obj2 = {
   emojiImage: null,
   overflowIcon: null,
 };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -45,7 +45,7 @@ obj2.activeNameContainer = {
   flexDirection: "row",
 };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;
@@ -78,7 +78,7 @@ export function EmojiRow(guildId) {
   let children;
   ({ start, end } = guildId);
   const tmp = closure_11();
-  const items = [emoji.id];
+  items = [emoji.id];
   const tmp4 = children(guildId(onSelectRolesForEmoji[9]).useRecyclingState(emoji.name, items), 2);
   children = tmp4[0];
   noop = tmp4[1];

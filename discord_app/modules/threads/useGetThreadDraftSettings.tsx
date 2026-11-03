@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/threads/useGetThreadDraftSett
 
 export default function useGetThreadDraftSettings(arg0) {
   _require = arg0;
-  const items = [DraftStore];
+  items = [DraftStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
@@ -27,7 +27,7 @@ export default function useGetThreadDraftSettings(arg0) {
 }
 export function useHasThreadDraft(arg0) {
   _require = arg0;
-  const items = [DraftStore];
+  items = [DraftStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

@@ -17,7 +17,7 @@ export default function getEmojiPickerDataRowItemNativeSection(
     flag = false;
   }
   if (flag) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(emojisDisabled);

@@ -38,7 +38,7 @@ export default noop.memo(function MediaModalWebVideoFile(visible) {
   if (controls != null) {
     props1 = controls.props;
   }
-  const items = [props1];
+  items = [props1];
   const callback = obj.useCallback((value) => {
     const iter = (function safeParse(value) {
       try {

@@ -22,7 +22,7 @@ function getBundleDescription(bundledProducts) {
     if (bundledProducts1 == null) {
       bundledProducts1 = [];
     }
-    const items = [];
+    items = [];
     let flag2 = false;
     for (const item10012 of bundledProducts1) {
       let type = item10012.type;
@@ -105,6 +105,6 @@ export function useProductDescription(product) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [product, flag];
+  items = [product, flag];
   return useMemo(() => getProductDescription(closure_0, flag), items);
 }

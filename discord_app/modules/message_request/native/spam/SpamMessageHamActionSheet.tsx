@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -43,7 +43,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   const tmp2 = value(noop.useState(false), 2);
   value = tmp2[0];
   noop = tmp2[1];
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(recipientId.getRecipientId()));
   const messageRequestActions = useMessageRequestActions.useMessageRequestActions({
     user: stateFromStores,

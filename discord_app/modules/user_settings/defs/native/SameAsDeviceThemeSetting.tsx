@@ -5,15 +5,15 @@ import UserSettingsAppearanceThemeUtils from "../../appearance/native/UserSettin
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
   useValue: function useSameAsDeviceThemeValue() {
-    const items = [ThemeStore];
+    items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {

@@ -12,7 +12,7 @@ export default function CheckpointDisplayText(style) {
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.variant = "display-lg";
-  const items = [closure_3, style.style];
+  items = [closure_3, style.style];
   obj.style = items;
   return jsx(CheckpointTextDefault, {});
 }

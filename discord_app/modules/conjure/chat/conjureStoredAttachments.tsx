@@ -20,14 +20,14 @@ export function fetchConjureStoredAttachments(projectId) {
     const obj2 = require("conjureAttachmentRequests");
     const nextPromise = result.then((result) => {
       const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-      const items = [...result];
+      items = [...result];
       obj2.attachments = items.reverse();
       closure_1(closure_2[3]).dispatch(obj2);
     });
     result
       .then((result) => {
         const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-        const items = [...result];
+        items = [...result];
         obj2.attachments = items.reverse();
         closure_1(closure_2[3]).dispatch(obj2);
       })
@@ -36,7 +36,7 @@ export function fetchConjureStoredAttachments(projectId) {
     const catchPromise = result
       .then((result) => {
         const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-        const items = [...result];
+        items = [...result];
         obj2.attachments = items.reverse();
         closure_1(closure_2[3]).dispatch(obj2);
       })
@@ -45,7 +45,7 @@ export function fetchConjureStoredAttachments(projectId) {
 }
 export function useConjureStoredAttachments(projectId) {
   _require = projectId;
-  const items = [ConjureStoredAttachmentStore];
+  items = [ConjureStoredAttachmentStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(
     items,
@@ -61,7 +61,7 @@ export function useConjureStoredAttachments(projectId) {
 }
 export function useConjureStoredAttachment(context, attachmentId) {
   _require = context;
-  let items = [ConjureStoredAttachmentStore];
+  items = [ConjureStoredAttachmentStore];
   const items1 = [attachmentId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -86,14 +86,14 @@ export function useConjureStoredAttachment(context, attachmentId) {
         const result = conjureAttachmentRequests.listStoredAttachments(projectId);
         const nextPromise = result.then((result) => {
           const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-          const items = [...result];
+          items = [...result];
           obj2.attachments = items.reverse();
           closure_1(closure_2[3]).dispatch(obj2);
         });
         result
           .then((result) => {
             const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-            const items = [...result];
+            items = [...result];
             obj2.attachments = items.reverse();
             closure_1(closure_2[3]).dispatch(obj2);
           })
@@ -102,7 +102,7 @@ export function useConjureStoredAttachment(context, attachmentId) {
         const catchPromise = result
           .then((result) => {
             const obj2 = { type: "CONJURE_STORED_ATTACHMENTS_FETCHED", projectId, attachments: null };
-            const items = [...result];
+            items = [...result];
             obj2.attachments = items.reverse();
             closure_1(closure_2[3]).dispatch(obj2);
           })

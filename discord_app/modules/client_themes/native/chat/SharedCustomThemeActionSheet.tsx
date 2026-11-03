@@ -18,7 +18,7 @@ require = fn;
 function PrimaryActionButton(onPressApply) {
   const tmp = closure_14();
   _require = tmp;
-  let items = [SubscriptionStore];
+  items = [SubscriptionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
@@ -29,13 +29,13 @@ function PrimaryActionButton(onPressApply) {
     obj3.text = intl2.string(tmp2(1113).t.pj0XBN);
     obj3.onPress = function onPressSubscribe() {
       const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-      const items = [AnalyticsLocationDefault.SHARE_CUSTOM_CLIENT_THEME_EMBED];
+      items = [AnalyticsLocationDefault.SHARE_CUSTOM_CLIENT_THEME_EMBED];
       obj.analyticsLocations = items;
       obj.analyticsLocation = {};
       openPremiumPlanSelectionActionSheetDefault(obj);
     };
     obj3.renderIcon = function renderIcon() {
-      return closure_2_12(native.NitroWheel, { style: nitroWheelButton.nitroWheelButton });
+      return application_id(native.NitroWheel, { style: nitroWheelButton.nitroWheelButton });
     };
     obj3.style = tmp.getNitroButton;
     let tmp6 = closure_12(tmp2(1187).ShinyButton, obj3);
@@ -44,7 +44,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1113).intl;
     obj4.text = intl.string(tmp2(1113).t["1Qm822"]);
     obj4.onPress = onPressApply.onPressApply;
-    tmp6 = closure_12(tmp2(5634).Button, obj4);
+    tmp6 = closure_12(tmp2(5754).Button, obj4);
   }
   return tmp6;
 }
@@ -52,10 +52,10 @@ const noop = fn(19);
 ({ useEffect: hasOwnProperty, useLayoutEffect: metroRequire, useRef: closure_7 } = noop);
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 },
   centeredText: { textAlign: "center" },
@@ -90,7 +90,7 @@ export default function _default(message) {
   [first1, closure_5] = first1.useState(baseTheme);
   [first2, closure_7] = first1.useState(false);
   const ref = obj.useRef(true);
-  const items = [sharedClientTheme];
+  items = [sharedClientTheme];
   closure_5(() => {
     let tmp4;
     if (undefined !== sharedClientTheme) {

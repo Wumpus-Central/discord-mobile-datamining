@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: {
     paddingHorizontal: 12,
@@ -40,7 +40,7 @@ export default noop.memo(function StageActionBar(channel) {
   let obj4 = channel(actionBarPrimaryButton[8]);
   const isStageVideoEnabledResult = tmp2(tmp3[9]).isStageVideoEnabled(channel.guild_id);
   c5 = isStageVideoEnabledResult;
-  let items = [actionBarPrimaryButton, channel];
+  items = [actionBarPrimaryButton, channel];
   const callback = noop.useCallback((isSmallSize) => {
     if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_STREAM) {
       const obj2 = { channel, isSmallSize };
@@ -65,7 +65,7 @@ export default noop.memo(function StageActionBar(channel) {
           const obj2 = { channel, isSmallSize };
           tmp24 = hasOwnProperty(ChannelCallActionBar.VideoButton, obj2);
         }
-        const items = [tmp24, , , ,];
+        items = [tmp24, , , ,];
         const obj3 = { channel, isSmallSize };
         items[1] = hasOwnProperty(ChannelCallMicButton.ChannelCallMicButton, obj3);
         const obj4 = { children: null };

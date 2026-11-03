@@ -6,22 +6,22 @@ import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudi
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
   onValueChange: AudioActionCreatorsDefault.setOutputVolume,
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3182VD"])];
+    items = [intl.string(util.t["3182VD"])];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["DGq/PR"]);
     return items;

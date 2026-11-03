@@ -14,7 +14,7 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
   const openedAt = skuId.openedAt;
   ({ context: closure_2, analyticsLocations: closure_3 } = skuId);
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = skuId(openedAt[2]).useStateFromStores(items, () =>
     CollectiblesCategoryStore.getProductFetch(skuId),
   );
@@ -41,7 +41,7 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         if (ref.current == null) {
           ref.current = timestamp - openedAt;
         }
-        let state;
+        state = undefined;
         if (stateFromStores != null) {
           state = stateFromStores.state;
         }

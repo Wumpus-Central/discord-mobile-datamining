@@ -7,7 +7,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
@@ -18,7 +18,7 @@ export default noop.memo(function GenericTextRow(text) {
   ({ icon, onPress } = text);
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
   const tmp = closure_6();
-  const items = [onPress, text];
+  items = [onPress, text];
   let obj = { style: tmp.title, children: null };
   const onPress1 = noop.useCallback(
     asyncGeneratorStep(async () => {
@@ -32,7 +32,7 @@ export default noop.memo(function GenericTextRow(text) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ export default noop.memo(function GenericTextRow(text) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           c0 = tmp;

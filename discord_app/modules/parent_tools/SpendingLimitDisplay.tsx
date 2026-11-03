@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2538 from "FamilyCenter.messages.js";
+import _modDef2667 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import utils_PriceUtils from "../../../discord_common/js/shared/utils/PriceUtils.tsx";
 import SpendingLimitUtils from "SpendingLimitUtils.tsx";
@@ -35,7 +35,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = util.intl;
         const obj4 = { amount: PriceUtils.formatPrice(diff, currency) };
-        obj3.remainingText = intl.formatToPlainString(_modDef2538["+Q+bU1"], obj4);
+        obj3.remainingText = intl.formatToPlainString(_modDef2667["+Q+bU1"], obj4);
         let obj = obj3;
         const tmp5Result = PriceUtils;
       } else {
@@ -45,12 +45,12 @@ function getSpendingLimitDisplayState(amount, arg1) {
     }
   }
 }
-const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1387).SubscriptionIntervalTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
 
 export function useSpendingLimitFromUserSettings() {
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   return initialize.useStateFromStores(
     items,
     () => {
@@ -79,7 +79,7 @@ export function useSpendingLimitFromUserSettings() {
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };
 export function useSpendingLimitDisplayState(cap) {
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStores = initialize.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
   let num;
   if (stateFromStores != null) {

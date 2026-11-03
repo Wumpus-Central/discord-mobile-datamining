@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conjure/clarification/useConj
 export default function useConjureProjectPickerOptions(arg0) {
   closure_0 = arg0;
   const conjureProjects = useConjureProjects.useConjureProjects("ConjureClarificationProjectPicker");
-  const items = [conjureProjects, arg0];
+  items = [conjureProjects, arg0];
   return noop.useMemo(() => {
     const found = conjureProjects.filter((projectId) => projectId.projectId !== closure_1_0);
     return found.map((projectId) => ({

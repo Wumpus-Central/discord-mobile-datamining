@@ -32,7 +32,7 @@ function useStickerPackCategories(channel) {
   }
   closure_129_0 = stickerIds;
   let obj = require("FrecencyUserSettingsHooks");
-  let items = [StickersStore];
+  items = [StickersStore];
   const items1 = [stickerIds];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -79,7 +79,7 @@ function useStickerPackCategories(channel) {
   const items5 = [SortedGuildStore, GuildStore];
   const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items5, () => {
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-    const items = [];
+    items = [];
     const item = flattenedGuildIds.forEach((item) => {
       guild = guild.getGuild(item);
       if (null != guild) {
@@ -95,7 +95,7 @@ function useStickerPackCategories(channel) {
   closure_130_3 = stateFromStores2;
   const items7 = [stateFromStores1, stateFromStoresArray1, stateFromStores2, channel];
   memo = memo.useMemo(() => {
-    const items = [];
+    items = [];
     const iter = packs[Symbol.iterator]();
     while (iter !== undefined) {
       ({ name, id } = nextResult);
@@ -156,7 +156,7 @@ function useStickerPackCategories(channel) {
     const intl = util.intl;
     obj.name = intl.string(util.t.y3LQCG);
     obj.stickers = stateFromStoresArray;
-    const items = [obj];
+    items = [obj];
     const obj2 = {
       type: StickersTypes.StickerCategoryTypes.RECENT,
       id: StickersTypes.StickerCategoryTypes.RECENT,
@@ -211,7 +211,7 @@ export function useFetchStickerPack(pack_id) {
   const effect = noop.useEffect(() => {
     const stickerPacks = pack_id(dependencyMap[11]).fetchStickerPacks();
   }, []);
-  const items = [StickersStore];
+  items = [StickersStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const items1 = [pack_id, stateFromStores];
   const effect1 = noop.useEffect(() => {
@@ -250,19 +250,10 @@ export function useStickersGrid(collapsedStickersCategories) {
   if (flag === undefined) {
     flag = false;
   }
-  let items = [
-    collapsedStickersCategories,
-    filteredStickers,
-    num,
-    num2,
-    num3,
-    stickerNodeWidth,
-    stickersCategories,
-    flag,
-  ];
+  items = [collapsedStickersCategories, filteredStickers, num, num2, num3, stickerNodeWidth, stickersCategories, flag];
   return stickerNodeWidth.useMemo(() => {
     let rounded = Math.floor((items2 - items1 + rowCount) / (gridSectionIndex + rowCount));
-    const items = [];
+    items = [];
     items1 = [];
     items2 = [];
     rowCount = 0;
@@ -275,7 +266,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         if (flag === undefined) {
           flag = false;
         }
-        let guild;
+        guild = undefined;
         if (obj.isGuildSticker(sendable[0])) {
           guild = stickersCategories.getGuild(sendable[0].guild_id);
         }
@@ -284,7 +275,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         const tmpResult = collapsedStickersCategories(num[14]);
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(6561).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(6681).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -372,7 +363,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         }
         gridSectionIndex = gridSectionIndex + 1;
         findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(6561).StickerCategoryTypes.RECENT,
+          (type) => type.type === category(6681).StickerCategoryTypes.RECENT,
         );
       }
       if (null == items) {
@@ -431,7 +422,7 @@ export function useFavoriteStickerIds() {
   return stickerIds;
 }
 export function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10249).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10379).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -439,8 +430,8 @@ export function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10249);
-  const items = [StickersStore];
+  const obj = stickerIds(10379);
+  items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(
     items,
@@ -487,7 +478,7 @@ export function useLatestFrecentStickerIds() {
   return keys;
 }
 export function useLatestFrecentStickers() {
-  const frecencySettings = keys(10249).useFrecencySettings();
+  const frecencySettings = keys(10379).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -506,8 +497,8 @@ export function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10249);
-  const items = [StickersStore];
+  const obj = keys(10379);
+  items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(
     items,
@@ -528,7 +519,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
   c3 = undefined;
   let obj4;
   noop = undefined;
-  const items = [StickersStore];
+  items = [StickersStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => StickersStore.getStickerById(id.id));
   const tmp4 = obj4(noop.useState(true), 2);
   dependencyMap = tmp4[1];
@@ -538,8 +529,8 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(6560).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(6560);
+    isGuildStickerResult = tmp(6680).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(6680);
   }
   obj4 = {
     hasFetched: tmp6,
@@ -565,7 +556,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -640,7 +631,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
 export function useFilteredStickerPackCategories(channel) {
   let tmp = useStickerPackCategories(channel);
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(
     () =>
       closure_0.filter((type) => {

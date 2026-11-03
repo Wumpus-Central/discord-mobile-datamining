@@ -4,7 +4,7 @@ import guild_channels_ChannelSubtitle from "../../../../../main_tabs_v2/native/s
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(9827).CHANNEL_LIST_SEARCH_LAYOUT;
+let closure_4 = fn(9958).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
@@ -22,7 +22,7 @@ export default noop.memo(function GuildTextChannelRow(channel) {
     const obj = onPress(id[3]);
   }
   c4 = extractTimestampResult;
-  const items = [id, guild_id, extractTimestampResult];
+  items = [id, guild_id, extractTimestampResult];
   const items1 = [channel.id, onPress];
   const memo = guild_id.useMemo(() => {
     let channelActiveAgoTimestamp = null;

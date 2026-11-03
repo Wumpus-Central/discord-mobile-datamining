@@ -7,13 +7,13 @@ import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1385).CHURN_DISCOUNT_IDS;
+const CHURN_DISCOUNT_IDS = fn(1387).CHURN_DISCOUNT_IDS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
 
 export default function useDiscountOffer(arg0, arg1) {
   _require = arg0;
-  const items = [UserOfferStore];
+  items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserDiscountOffer(closure_0));
   let flag;
   if (stateFromStores != null) {
@@ -107,7 +107,7 @@ export default function useDiscountOffer(arg0, arg1) {
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          closure_1_0.start(num, /* F135715 */ function() { ... });
+                          closure_1_0.start(num, /* F136493 */ function() { ... });
                         }
                       }
                     });

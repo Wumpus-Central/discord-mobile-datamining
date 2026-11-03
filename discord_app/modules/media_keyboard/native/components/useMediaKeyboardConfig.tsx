@@ -4,7 +4,7 @@ import useUploadDisabledDefault from "../useUploadDisabled.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let MediaKeyboardTarget = fn(1621).MediaKeyboardTarget;
+let MediaKeyboardTarget = fn(1623).MediaKeyboardTarget;
 const Constants = fn(1072);
 ({ ChannelTypesSets: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 const size = fn(2);
@@ -14,12 +14,12 @@ export default function useMediaKeyboardConfig(arg0) {
   ({ channel, context } = arg0);
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  const tmp4 = context(8403).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(8527).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  let obj = context(8403);
-  let canStartThread = context(7443).useCanStartThread(channel);
+  let obj = context(8527);
+  let canStartThread = context(7567).useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -30,12 +30,12 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  const tmp2Result = context(7443);
-  const tmp8 = context(8961).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp2Result = context(7567);
+  const tmp8 = context(9089).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  const tmp2Result3 = context(8961);
-  mediaKeyboardDraftType = context(10530).getMediaKeyboardDraftType(context.target);
-  let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
+  const tmp2Result3 = context(9089);
+  mediaKeyboardDraftType = context(10660).getMediaKeyboardDraftType(context.target);
+  items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;
     if (target !== MediaKeyboardTarget.CHAT) {
@@ -69,7 +69,7 @@ export default function useMediaKeyboardConfig(arg0) {
     };
     let tmp6;
     if (target !== MediaKeyboardTarget.CHAT) {
-      const items = [context.option.name];
+      items = [context.option.name];
       tmp6 = items;
     }
     obj.includedUploadIds = tmp6;

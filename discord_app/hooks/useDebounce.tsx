@@ -10,7 +10,7 @@ export default function useDebounce(arg0, arg1) {
   closure_1 = arg1;
   const tmp = _slicedToArray(noop.useState(arg0), 2);
   closure_2 = tmp[1];
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_1_2(closure_0);

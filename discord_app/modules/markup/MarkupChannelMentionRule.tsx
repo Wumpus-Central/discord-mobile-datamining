@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
-import _modDef1943 from "../../../_runtime/metro/01943__.js";
+import _modDef2072 from "../../../_runtime/metro/02072__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -92,7 +92,7 @@ function getChannel(id, arr) {
   return tmp4;
 }
 function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelId, url) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const obj = {
     type: "channelMention",
     guildId,
@@ -113,7 +113,7 @@ function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelI
       const obj3 = { type: "guild", guildId: guild.id, content: StringUtils.truncateText(guild.name, 32), icon: null };
       ({ id: obj9.id, icon: obj9.icon } = guild);
       obj3.icon = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 40 });
-      const items = [obj3];
+      items = [obj3];
       tmp2 = items;
       const obj4 = { id: null, icon: null, size: 40 };
     }
@@ -139,7 +139,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
       ({ id: obj5.channelId, guildId: obj5.guildId } = channel);
       obj2.messageId = messageId;
       obj2.originalLink = url;
-      const guild = GuildStore.getGuild(channel.guildId);
+      guild = GuildStore.getGuild(channel.guildId);
       if (null == guild) {
         if (channel.isDm) {
           const obj4 = {};
@@ -147,7 +147,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.guildId = guildId;
           const obj6 = { type: "text", content: StringUtils.truncateText(channel.name, 32) };
           const obj7 = { type: "channel", content: null, channelType: null, iconType: null };
-          const items = [obj6];
+          items = [obj6];
           obj7.content = items;
           ({ type: obj22.channelType, iconType: obj22.iconType } = channel);
           const items1 = [obj7];
@@ -160,7 +160,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "children" };
+          const obj9 = { type: "link", content: null, target: null, title: "channel_id" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -305,7 +305,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
   }
 }
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, ME: c10 } = Constants);
+({ ChannelTypes: closure_9, ME: closure_10 } = Constants);
 let obj = {
   channelMention: {
     order: MarkupTextRuleDefault.order,
@@ -373,7 +373,7 @@ let obj2 = {
   },
 };
 obj.channelOrMessageUrl = {
-  order: _modDef1943.defaultRules.url.order - 0.5,
+  order: _modDef2072.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -398,9 +398,9 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "children" };
+      const obj = { type: "link", content: null, target: null, title: "channel_id" };
       const obj2 = { type: "text", content: tmp };
-      const items = [obj2];
+      items = [obj2];
       obj.content = items;
       obj.target = tmp;
       return obj;
@@ -433,7 +433,7 @@ obj.channelOrMessageUrl = {
   },
 };
 let obj3 = {
-  order: _modDef1943.defaultRules.url.order - 0.5,
+  order: _modDef2072.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -458,9 +458,9 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "children" };
+      const obj = { type: "link", content: null, target: null, title: "channel_id" };
       const obj2 = { type: "text", content: tmp };
-      const items = [obj2];
+      items = [obj2];
       obj.content = items;
       obj.target = tmp;
       return obj;
@@ -493,7 +493,7 @@ let obj3 = {
   },
 };
 obj.mediaPostLink = {
-  order: _modDef1943.defaultRules.url.order - 0.5,
+  order: _modDef2072.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -532,8 +532,8 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "children" };
-    const items = [{ type: "text", content: tmp }];
+    const obj = { type: "link", content: null, target: tmp, title: "channel_id" };
+    items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;
   },

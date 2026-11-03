@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -34,7 +34,7 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
     stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM,
   ));
   const tmp4Result = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM);
-  const items = [visibleEffectOrder];
+  items = [visibleEffectOrder];
   stateFromStores = sourceAnalyticsLocations(categories[10]).useStateFromStores(items, () =>
     visibleEffectOrder.getCurrentUser(),
   );

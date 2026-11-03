@@ -1,5 +1,9 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -9,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = {
   justifyContent: "center",
@@ -20,94 +24,103 @@ let size = {
 };
 obj2.itemInner = size;
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx1(){const{blockRef}=this.__closure;return blockRef.get();}",
+let closure_9 = {
+  code: "(function EmojiPickerCategoriesUnicodeShortcutItemTsx1(){let[blockRef]=this.__closure;return blockRef.get();})",
 };
-const __initData2 = {
-  code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx2(blockRef,previous){const{cheapWorkletShallowEqual,categoryIndex,EXPRESSION_FOOTER_HEIGHT,unicodeShortcutVisible,runOnJS,setUnicodeShortcutVisible}=this.__closure;if(blockRef==null||cheapWorkletShallowEqual(blockRef,previous!==null&&previous!==void 0?previous:undefined)){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;const categoryUnicodeShortcutVisible=categoryScrollPos>blockRef.end-(unicodeShortcutVisible?0:EXPRESSION_FOOTER_HEIGHT);runOnJS(setUnicodeShortcutVisible)(categoryUnicodeShortcutVisible);}",
+let closure_10 = {
+  code: "(function EmojiPickerCategoriesUnicodeShortcutItemTsx2(blockRef,previous){let[cheapWorkletShallowEqual,categoryIndex,EXPRESSION_FOOTER_HEIGHT,unicodeShortcutVisible,scheduleOnRN,setUnicodeShortcutVisible]=this.__closure;if(blockRef==null||cheapWorkletShallowEqual(blockRef,previous!==null&&previous!==void 0?previous:undefined)){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;const categoryUnicodeShortcutVisible=categoryScrollPos>blockRef.end-(unicodeShortcutVisible?0:EXPRESSION_FOOTER_HEIGHT);scheduleOnRN(setUnicodeShortcutVisible,categoryUnicodeShortcutVisible);})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx",
 );
 
-export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
-  blockRef = blockRef.blockRef;
-  const category = blockRef.category;
-  const categoryIndex = blockRef.categoryIndex;
-  const onPress = blockRef.onPress;
-  let unicodeShortcutVisible;
-  let tmp = onPress(unicodeShortcutVisible.useState(false), 2);
-  unicodeShortcutVisible = tmp[0];
-  closure_5 = tmp3;
-  const fn = function f() {
-    return blockRef.get();
-  };
-  fn.__closure = { blockRef };
-  fn.__workletHash = 805688584630;
-  fn.__initData = __initData;
-  const fn2 = function b(end, current) {
-    if (null != end) {
-      if (!obj.cheapWorkletShallowEqual(end, tmp)) {
-        let num = 0;
-        const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
-        if (!first) {
-          num = EXPRESSION_FOOTER_HEIGHT;
-        }
-        const diff = end.end - num;
-        ReanimatedRexport.runOnJS(closure_5)(result > diff);
-        const tmp2Result = ReanimatedRexport;
-      }
-      obj = cheapWorkletShallowEqual;
-      tmp = current;
+export default function EmojiPickerCategoriesUnicodeShortcutItem(category) {
+  category = category.category;
+  const categoryIndex = category.categoryIndex;
+  c1 = categoryIndex;
+  const onPress = category.onPress;
+  c2 = onPress;
+  ({ blockRef, style } = category);
+  let tmp = _slicedToArray(noop.useState(false), 2);
+  const first = tmp[0];
+  items = [closure_9, blockRef];
+  c0 = undefined;
+  [tmp5, tmp6] = items;
+  class EmojiPickerCategoriesUnicodeShortcutItemTsx1 {
+    constructor() {
+      return closure_0.get();
     }
-  };
-  let obj = blockRef(categoryIndex[6]);
-  fn2.__closure = {
-    cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual,
+  }
+  const items1 = [tmp6];
+  EmojiPickerCategoriesUnicodeShortcutItemTsx1.__closure = items1;
+  EmojiPickerCategoriesUnicodeShortcutItemTsx1.__workletHash = 6335031605135;
+  EmojiPickerCategoriesUnicodeShortcutItemTsx1.__initData = tmp5;
+  const items2 = [
+    closure_10,
+    cheapWorkletShallowEqual.cheapWorkletShallowEqual,
     categoryIndex,
-    EXPRESSION_FOOTER_HEIGHT,
-    unicodeShortcutVisible,
-    runOnJS: blockRef(categoryIndex[6]).runOnJS,
-    setUnicodeShortcutVisible: tmp[1],
-  };
-  fn2.__workletHash = 4994136030029;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  const obj2 = {
-    cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual,
-    categoryIndex,
-    EXPRESSION_FOOTER_HEIGHT,
-    unicodeShortcutVisible,
-    runOnJS: blockRef(categoryIndex[6]).runOnJS,
-    setUnicodeShortcutVisible: tmp[1],
-  };
-  const items = [categoryIndex, category, onPress];
-  let tmp9 = null;
-  if (unicodeShortcutVisible) {
-    const obj3 = {
-      style: blockRef.style,
-      onPress: tmp8,
-      accessibilityRole: "button",
-      accessibilityLabel: null,
-      children: null,
-    };
-    const intl = tmp4(tmp5[9]).intl;
-    obj3.accessibilityLabel = intl.string(tmp4(tmp5[9]).t.gg3lOG);
-    const obj4 = { style: null, children: null };
-    const items1 = [,];
-    ({ itemInner: arr2[0], fadedItemOpacity: arr2[1] } = tmp7);
-    obj4.style = items1;
-    const obj5 = { id: category.id };
-    obj4.children = jsx(category(tmp5[10]), { id: category.id });
-    obj3.children = <closure_5 style={null}>{null}</closure_5>;
-    tmp9 = jsx(tmp4(tmp5[8]).PressableOpacity, {
-      style: blockRef.style,
-      onPress: tmp8,
+    timestampProducer,
+    first,
+    _mod1705.scheduleOnRN,
+    tmp[1],
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items2;
+  class EmojiPickerCategoriesUnicodeShortcutItemTsx2 {
+    constructor(arg0, arg1) {
+      if (null != category) {
+        tmp = arg1;
+        tmp2 = closure_0;
+        if (!tmp2(category, tmp)) {
+          tmp3 = closure_1;
+          tmp5 = closure_3;
+          num = 0;
+          result = closure_1 * closure_2;
+          if (!closure_3) {
+            num = closure_2;
+          }
+          tmp6 = closure_4;
+          tmp7 = closure_5;
+          tmp8 = closure_4(closure_5, result > category.end - num);
+        }
+      }
+      return;
+    }
+  }
+  const items3 = [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13];
+  EmojiPickerCategoriesUnicodeShortcutItemTsx2.__closure = items3;
+  EmojiPickerCategoriesUnicodeShortcutItemTsx2.__workletHash = 7076312301625;
+  EmojiPickerCategoriesUnicodeShortcutItemTsx2.__initData = tmp7;
+  const animatedReaction = _mod1652.useAnimatedReaction(
+    EmojiPickerCategoriesUnicodeShortcutItemTsx1,
+    EmojiPickerCategoriesUnicodeShortcutItemTsx2,
+  );
+  const items4 = [categoryIndex, category, onPress];
+  let tmp17 = null;
+  if (first) {
+    const obj2 = { style, onPress: tmp16, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t.gg3lOG);
+    const obj3 = { style: null, children: null };
+    const items5 = [,];
+    ({ itemInner: arr6[0], fadedItemOpacity: arr6[1] } = tmp15);
+    obj3.style = items5;
+    const obj4 = { id: category.id };
+    obj3.children = jsx(EmojiPickerCategoryIconDefault, { id: category.id });
+    obj2.children = <View style={null}>{null}</View>;
+    tmp17 = jsx(Pressables.PressableOpacity, {
+      style,
+      onPress: tmp16,
       accessibilityRole: "button",
       accessibilityLabel: null,
       children: null,
     });
   }
-  return tmp9;
+  return tmp17;
 }

@@ -1,5 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
-import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
+import MobileGoLiveEntrypointExperimentDefault from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
 import VoicePanelMicButton from "buttons/VoicePanelMicButton.tsx";
 import VoicePanelConnectButtonDefault from "buttons/VoicePanelConnectButton.tsx";
 import VoicePanelChatButtonDefault from "buttons/VoicePanelChatButton.tsx";
@@ -8,11 +9,15 @@ import VoicePanelVideoButtonDefault from "buttons/VoicePanelVideoButton.tsx";
 import VoicePanelSoundboardButtonDefault from "buttons/VoicePanelSoundboardButton.tsx";
 import VoicePanelScreenshareButtonDefault from "buttons/VoicePanelScreenshareButton.tsx";
 import VoicePanelDrawerToggleButtonDefault from "buttons/VoicePanelDrawerToggleButton.tsx";
+import useShowConnectedControlsDefault from "useShowConnectedControls.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
+const require = globalThis.__r;
+
+const useStateFromSharedValueDefault = tmp(8965);
 require = fn;
-const VoicePanelControlsConstants = fn(11221);
+const VoicePanelControlsConstants = fn(11358);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } =
   VoicePanelControlsConstants);
 const InputModes = fn(1072).InputModes;
@@ -59,70 +64,69 @@ let closure_9 = {
     return jsx(VoicePanelDrawerToggleButtonDefault, {}, key);
   },
 };
-const __initData = {
-  code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}",
+let closure_10 = {
+  code: "(function useControlsButtonsTsx1(){let[getControlsDefaultWidth,windowDimensions,safeArea]=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(11222));
-  const windowDimensions = context.windowDimensions;
-  safeArea = context.safeArea;
-  const tmp2 = safeArea(19332)(context.channelId);
-  dependencyMap = tmp2;
-  treatment = safeArea(19215).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(19215);
-  let items = [stateFromStores];
-  stateFromStores = windowDimensions(504).useStateFromStores(
+  const context = noop.useContext(VoicePanelStateContextDefault);
+  ({ channelId, windowDimensions, safeArea } = context);
+  const tmp4 = useShowConnectedControlsDefault(channelId);
+  _require = tmp4;
+  const treatment = MobileGoLiveEntrypointExperimentDefault.useConfig({
+    location: "VoicePanelControlButtons",
+  }).treatment;
+  importDefault = treatment;
+  let obj = noop;
+  items = [MediaEngineStore];
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => stateFromStores.getMode() === constants.PUSH_TO_TALK,
+    () => mode.getMode() === constants.PUSH_TO_TALK,
   );
-  let obj2 = windowDimensions(504);
-  const fn = function o() {
-    return VoicePanelControlsUtils.getControlsDefaultWidth(
-      windowDimensions.get().width,
-      safeArea.get().left,
-      safeArea.get().right,
-    );
-  };
-  let obj3 = windowDimensions(5095);
-  fn.__closure = {
-    getControlsDefaultWidth: windowDimensions(13828).getControlsDefaultWidth,
-    windowDimensions,
-    safeArea,
-  };
-  fn.__workletHash = 16456936876254;
-  fn.__initData = __initData;
-  const derivedValue = obj3.useDerivedValue(fn);
-  const tmp5 = safeArea(8841)(derivedValue);
-  closure_5 = tmp5;
-  const items1 = [tmp2, stateFromStores, tmp5, treatment];
-  return treatment.useMemo(() => {
+  let obj3 = require("initialize");
+  const items1 = [closure_10, require("VoicePanelControlsUtils").getControlsDefaultWidth, windowDimensions, safeArea];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp6, tmp7, tmp8, tmp9] = items1;
+  function useControlsButtonsTsx1() {
+    return _undefined(_undefined2.get().width, _undefined3.get().left, _undefined3.get().right);
+  }
+  const items2 = [tmp7, tmp8, tmp9];
+  useControlsButtonsTsx1.__closure = items2;
+  useControlsButtonsTsx1.__workletHash = 5736026634823;
+  useControlsButtonsTsx1.__initData = tmp6;
+  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(useControlsButtonsTsx1);
+  const tmp11 = useStateFromSharedValueDefault(derivedValue);
+  noop = tmp11;
+  const items3 = [tmp4, stateFromStores, tmp11, treatment];
+  return obj.useMemo(() => {
     c0 = false;
     closure_1 = 0;
-    const mapped = (function getButtons(dependencyMap, stateFromStores, treatment) {
-      const items = [];
+    const mapped = (function getButtons(c0, c2, c1) {
+      items = [];
       const push = items.push;
-      if (dependencyMap) {
+      if (c0) {
         const obj2 = { type: "icon-normal", key: "connected-video", render: redux.video };
         push(obj2);
-        if (!stateFromStores) {
+        if (!c2) {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(19215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (c1 === _true(19373).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
           const obj5 = { type: "icon-normal", key: "connected-chat", render: redux.chat };
           items.push(obj5);
         }
-        if (stateFromStores) {
+        if (c2) {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(19215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (c1 === _true(19373).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {
@@ -144,14 +148,14 @@ export default function useControlsButtons() {
         }
         return items;
       }
-    })(dependencyMap, stateFromStores, treatment).map((type) => {
+    })(c0, c2, c1).map((type) => {
       if ("label" === type.type) {
         c0 = true;
       }
       let tmp = closure_2_6;
       if ("icon-large" === type.type) {
         closure_1 = closure_1 + 1;
-        tmp = closure_5;
+        tmp = closure_2_5;
       }
       const obj = {};
       const merged = Object.assign(type);
@@ -168,7 +172,7 @@ export default function useControlsButtons() {
     let num = 16;
     if (!c0) {
       num =
-        (closure_5 - closure_1 * hasOwnProperty - (mapped.length - closure_1) * timestampProducer - 32) /
+        (closure_3 - closure_1 * hasOwnProperty - (mapped.length - closure_1) * timestampProducer - 32) /
         (mapped.length - 1);
     }
     let num4 = 16;
@@ -179,14 +183,14 @@ export default function useControlsButtons() {
       let width = nextResult.width;
       let tmp8 = width;
       if (-1 === width) {
-        let diff = closure_5 - (32 + (mapped.length - 1) * timestampProducer + (mapped.length - 1) * num);
+        let diff = closure_3 - (32 + (mapped.length - 1) * timestampProducer + (mapped.length - 1) * num);
         tmp8 = diff;
         tmp7.width = diff;
       }
-      tmp7.x = num4 - closure_5 / 2 + tmp8 / 2;
+      tmp7.x = num4 - closure_3 / 2 + tmp8 / 2;
       num4 = num4 + (tmp8 + num);
       continue;
     }
     return mapped;
-  }, items1);
+  }, items3);
 }

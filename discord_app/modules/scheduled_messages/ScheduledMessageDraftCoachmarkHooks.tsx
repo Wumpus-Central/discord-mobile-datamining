@@ -3,13 +3,13 @@ import useSelectedDismissibleContent from "../dismissible_content/hooks/useSelec
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-let closure_3 = fn(4847).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+let closure_3 = fn(4974).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
 export function useScheduledMessageDraftCoachmarkState(isEligible) {
   if (isEligible.isEligible) {
-    const items = [closure_3];
+    items = [closure_3];
     let items1 = items;
   } else {
     items1 = [];

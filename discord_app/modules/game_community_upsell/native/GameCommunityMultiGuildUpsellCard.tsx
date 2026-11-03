@@ -16,10 +16,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ GuildFeatures: c10, JoinGuildSources: closure_11 } = Constants);
+({ GuildFeatures: closure_10, JoinGuildSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
@@ -121,7 +121,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   let name;
   const tmp = closure_14();
   [loading, _slicedToArray] = stateFromStores.useState(false);
-  let items = [name];
+  items = [name];
   stateFromStores = guild(onDismiss[11]).useStateFromStores(items, () => name.useReducedMotion);
   let obj2 = guild(onDismiss[11]);
   const items1 = [GuildStore, LurkingStore];
@@ -197,7 +197,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -283,7 +283,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   );
   const memo2 = obj.useMemo(() => {
     if (null == onDismiss) {
-      let items = [];
+      items = [];
     } else {
       const obj = { label: null, variant: "destructive", action: null };
       const intl = util.intl;
@@ -339,7 +339,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   const items10 = [
     closure_12(gameId(onDismiss[22]), obj13),
     closure_12(guild(onDismiss[24]).Text, {
-      variant: "heading-md/bold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       style: tmp.guildName,
@@ -431,12 +431,12 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = { ref: ref.ref };
         const merged1 = Object.assign(merged);
-        obj.icon = closure_2_12(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
+        obj.icon = application_id(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
         obj.size = "sm";
         obj.variant = "secondary-overlay";
         const intl = util.intl;
         obj.accessibilityLabel = intl.formatToPlainString(util.t.nosl52, { guildName: name });
-        return closure_2_12(IconButton.IconButton, obj);
+        return application_id(IconButton.IconButton, obj);
       },
     };
     obj30.children = closure_12(tmp4(tmp5[26]).ContextMenu, obj31);

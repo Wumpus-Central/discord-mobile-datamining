@@ -1,36 +1,42 @@
 // discord_app/modules/conjure/tips/native/ConjureTipSwap.tsx
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function TipFade(children) {
-  let sharedValue;
-  sharedValue = sharedValue(5095).useSharedValue(0);
-  const items = [sharedValue];
+  _require = undefined;
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  _require = sharedValue;
+  items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj2 = { duration: 260, easing: null };
-    const Easing = ReanimatedRexport.Easing;
-    obj2.easing = Easing.out(ReanimatedRexport.Easing.ease);
-    const result = sharedValue.set(timing.withTiming(1, obj2));
-    return () => sharedValue(dependencyMap[2]).cancelAnimation(closure_1_0);
+    const Easing = _mod1652.Easing;
+    obj2.easing = Easing.out(_mod1652.Easing.ease);
+    const result = _undefined.set(timing_timing.withTiming(1, obj2));
+    return () => c0(dependencyMap[2]).cancelAnimation(_undefined);
   }, items);
-  const obj = sharedValue(5095);
-  const fn = function u() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 14074417751279;
-  fn.__initData = __initData;
-  const style = sharedValue(5095).useAnimatedStyle(fn);
-  return jsx(ReanimatedRexportDefault.View, { style, children: children.children });
+  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_5, sharedValue];
+  _require = undefined;
+  [tmp4, tmp5] = items1;
+  class ConjureTipSwapTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items2 = [tmp5];
+  ConjureTipSwapTsx1.__closure = items2;
+  ConjureTipSwapTsx1.__workletHash = 17472917410134;
+  ConjureTipSwapTsx1.__initData = tmp4;
+  const style = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureTipSwapTsx1);
+  return jsx(_modDef1652.View, { style, children: children.children });
 }
 const jsx = fn(21).jsx;
-const __initData = {
-  code: "function ConjureTipSwapTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
-};
+let closure_5 = { code: "(function ConjureTipSwapTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipSwap.tsx");
 

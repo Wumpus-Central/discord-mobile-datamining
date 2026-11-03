@@ -227,7 +227,7 @@ function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1379).isNotNullish);
+          let found = mapped.filter(tmp(1380).isNotNullish);
         }
         return found;
       }
@@ -238,7 +238,7 @@ function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
 }
 function useForumPostMediaProperties(firstResult, flag) {
   const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
-  const items = [
+  items = [
     ...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()),
     ...useForumPostEmbeds(firstResult, flag),
   ];
@@ -305,7 +305,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -412,7 +412,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -595,7 +595,7 @@ export function useForumPostComponentsMedia(components) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -702,7 +702,7 @@ export function useForumPostComponentsMedia(components) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -770,7 +770,7 @@ export function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
   }
   const tmp = useForumPostMediaProperties(firstMessage, flag);
   closure_1 = tmp;
-  let items = [stateFromStores1, tmp];
+  items = [stateFromStores1, tmp];
   return noop.useMemo(() => {
     if (null == stateFromStores1) {
       return [];
@@ -779,7 +779,7 @@ export function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
       if (stateFromStores1.isMediaChannel()) {
         const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
         if (null != found) {
-          const items = [found];
+          items = [found];
           arr = items;
         }
         return arr;
@@ -795,7 +795,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
   if (null == firstMessage) {
-    let items = [];
+    items = [];
   } else {
     const components = firstMessage.components;
     if (tmp5) {
@@ -856,7 +856,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -963,7 +963,7 @@ export function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -1039,7 +1039,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
   if (null == firstMessage) {
-    let items = [];
+    items = [];
   } else {
     const components = firstMessage.components;
     if (tmp5) {
@@ -1100,7 +1100,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
@@ -1207,7 +1207,7 @@ export function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
+              items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {

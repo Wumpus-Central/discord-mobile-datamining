@@ -16,17 +16,17 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11514).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11651).YouBarNavigatorScreens;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const NativeStackNavigator = fn(9987);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
 
 export default noop.memo(function YouBarStackNavigator() {
   const ref = noop.useRef(undefined);
-  let items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = current(accessibilityNativeStackOptions[10]).useStateFromStores(items, () =>
     guildId.getGuildId(),
   );
@@ -57,7 +57,7 @@ export default noop.memo(function YouBarStackNavigator() {
   const obj6 = { id: "tabs", screenOptions: memo, children: null };
   const items2 = [current, iCYMIEnabled, accessibilityNativeStackOptions];
   obj6.children = noop.useMemo(() => {
-    const items = [
+    items = [
       React7(Screen.Screen, {
         name: YouBarNavigatorScreens.GUILDS,
         initialParams: current,

@@ -164,7 +164,7 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
 };
 prototype["waitFor"] = function waitFor() {
   const self = this;
-  const items = [...arguments];
+  items = [...arguments];
   const mapped = items.map((_dispatcher, index) => {
     let dispatchToken = null;
     _modDef38(

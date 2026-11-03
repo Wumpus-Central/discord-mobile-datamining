@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7466);
+const ExplicitMediaRedactionConstants = fn(7590);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
   EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
@@ -112,7 +112,7 @@ export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
   const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
-  const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
+  items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj2.tags = items;
   MonitoringAgentDefault.increment(obj2);
 }

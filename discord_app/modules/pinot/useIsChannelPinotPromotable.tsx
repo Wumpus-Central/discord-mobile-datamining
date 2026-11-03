@@ -21,7 +21,7 @@ export function usePinotPromotableChannelId(guild_id, mobile_member_coachmark) {
   }
   isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, mobile_member_coachmark);
   const obj = require("PinotExperiment");
-  const items = [GuildStore, GuildRoleStore, ChannelStore];
+  items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];
   return require("initialize").useStateFromStores(
     items,
@@ -58,7 +58,7 @@ export function useIsChannelPinotPromotable(guild_id, create_guild_channel) {
   }
   isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, create_guild_channel);
   let obj = require("PinotExperiment");
-  const items = [GuildStore, GuildRoleStore, ChannelStore];
+  items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];
   return (
     null !=

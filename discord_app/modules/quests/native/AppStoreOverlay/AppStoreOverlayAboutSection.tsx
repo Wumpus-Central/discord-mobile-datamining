@@ -16,7 +16,7 @@ const rect = {
   left: nativeDefault.space.PX_12,
   right: nativeDefault.space.PX_12,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   aboutSection: {
     borderRadius: nativeDefault.space.PX_16,
@@ -37,7 +37,7 @@ export default function AppStoreOverlayAboutSection(children) {
   const tmp = closure_9();
   [tmp3, c1] = noop.useState(false);
   [first, closure_3] = noop.useState(null);
-  const items = [first];
+  items = [first];
   const items1 = [onSeeMorePress];
   const callback = noop.useCallback((nativeEvent) => {
     if (null == first) {

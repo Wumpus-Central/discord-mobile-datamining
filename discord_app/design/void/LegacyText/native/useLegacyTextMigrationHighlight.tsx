@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 
 const require = fn;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("design/void/LegacyText/native/useLega
 
 export function useLegacyTextMigrationHighlight() {
   const tmp = closure_3();
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   let highlight = null;
   if (obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {
     highlight = tmp.highlight;

@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -41,7 +41,7 @@ export function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7208).SceneLoadingIndicator, {});
+    children = jsx(first(7329).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
@@ -49,7 +49,7 @@ export function PostponeRender(children) {
     tmp4Result = KeyboardAwareViewDefault;
   }
   const obj = { style: null, children };
-  const items = [closure_7().view, viewStyle];
+  items = [closure_7().view, viewStyle];
   obj.style = items;
   return <tmp4Result style={null}>{children}</tmp4Result>;
 }

@@ -117,14 +117,14 @@ let items = [
     version: 3,
     run(textAndImages) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const items = [
+      items = [
         () => {
           const Storage = Storage4.Storage;
           const diversitySurrogate = Storage.get("EmojiDiversitySurrogate") || "";
           return { diversitySurrogate };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -602,7 +602,7 @@ let items = [
     version: 17,
     run(textAndImages) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
+      state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
       if (null == state) {
         return false;
       } else {

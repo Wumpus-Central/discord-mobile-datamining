@@ -2,7 +2,7 @@
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod6551 from "../../_runtime/metro/06551__.js";
+import _mod6671 from "../../_runtime/metro/06671__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -12,7 +12,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6551.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6671.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -31,7 +31,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -262,7 +262,7 @@ export function validateExpiry(arg0) {
         return parsed;
       });
       if (mapped[0] > 12) {
-        const items = [,];
+        items = [,];
         [arr3[1], arr3[0]] = mapped;
         let items1 = items;
       } else {
@@ -395,7 +395,7 @@ export function getStripeElementLocale(arg0) {
   return tmp;
 }
 export function useStripeLocale() {
-  const items = [LocaleStore];
+  items = [LocaleStore];
   return initialize.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = closure_1_12[locale];

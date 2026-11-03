@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useAudienceReq
 export default function useAudienceRequestToSpeakState(stateFromStores, id) {
   _require = stateFromStores;
   dependencyMap = id;
-  const items = [VoiceStateStore];
+  items = [VoiceStateStore];
   const items1 = [stateFromStores, id];
   return require("initialize").useStateFromStores(
     items,

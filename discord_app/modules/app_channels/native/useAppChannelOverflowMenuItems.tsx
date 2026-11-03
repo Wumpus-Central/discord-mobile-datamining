@@ -1,6 +1,6 @@
 // discord_app/modules/app_channels/native/useAppChannelOverflowMenuItems.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../../conjure/intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../conjure/intl/ConjureUntranslated.messages.js";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
@@ -14,11 +14,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 function useAppChannelAppActions(channel) {
   _require = channel;
-  let application_id = channel.application_id;
+  application_id = channel.application_id;
   if (application_id == null) {
     application_id = null;
   }
-  const items = [,];
+  items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const memo = bot.useMemo(
     () => ({
@@ -28,16 +28,16 @@ function useAppChannelAppActions(channel) {
     }),
     items,
   );
-  const tmp5 = application_id(12204)(application_id, memo);
+  const tmp5 = application_id(12340)(application_id, memo);
   dependencyMap = tmp5;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(channel);
   bot = undefined;
   if (appChannelApplication != null) {
     bot = appChannelApplication.bot;
   }
-  const tmp8 = application_id(14557)(application_id);
+  const tmp8 = application_id(14688)(application_id);
   closure_4 = tmp8;
-  const tmp9 = application_id(14558)(application_id).length > 0;
+  const tmp9 = application_id(14689)(application_id).length > 0;
   closure_5 = tmp9;
   const items1 = [application_id, bot, channel, tmp8, tmp5, tmp9];
   return bot.useMemo(() => {
@@ -65,7 +65,7 @@ function useAppChannelAppActions(channel) {
       if (null != appName) {
         fn3 = null;
         if (closure_5) {
-          fn3 = () => application_id(14559)({ applicationId, appName });
+          fn3 = () => application_id(14690)({ applicationId, appName });
         }
       }
     }
@@ -74,19 +74,19 @@ function useAppChannelAppActions(channel) {
     if (null != application_id) {
       fn4 = null;
       if (null != bot) {
-        fn4 = () => application_id(8750)({ userId: localUser.id, channelId: user.id, localUser });
+        fn4 = () => application_id(8874)({ userId: localUser.id, channelId: user.id, localUser });
       }
     }
     obj.appInfo = fn4;
     let fn5 = null;
     if (null != application_id) {
-      fn5 = () => application_id(14562)(applicationId, closure_0, "app_channel_header_mobile");
+      fn5 = () => application_id(14693)(applicationId, closure_0, "app_channel_header_mobile");
     }
     obj.report = fn5;
     return obj;
   }, items1);
 }
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/native/useAppChannelOverflowMenuItems.tsx");
 
@@ -97,12 +97,12 @@ export default function useAppChannelOverflowMenuItems(channel) {
   const devicePermissions = tmp.devicePermissions;
   const appInfo = tmp.appInfo;
   const report = tmp.report;
-  let items = [reload, close, devicePermissions, appInfo, report];
+  items = [reload, close, devicePermissions, appInfo, report];
   return appInfo.useMemo(() => {
     if (null == report) {
       return [];
     } else {
-      const items = [];
+      items = [];
       if (null != reload) {
         const obj2 = { label: null, IconComponent: null, action: null };
         const intl4 = util.intl;
@@ -123,7 +123,7 @@ export default function useAppChannelOverflowMenuItems(channel) {
       if (null != devicePermissions) {
         const obj3 = { label: null, IconComponent: null, action: null };
         const intl2 = util.intl;
-        obj3.label = intl2.string(_modDef3868.wum6n2);
+        obj3.label = intl2.string(_modDef3995.wum6n2);
         obj3.IconComponent = ShieldIcon.ShieldIcon;
         obj3.action = tmp10;
         items1.push(obj3);

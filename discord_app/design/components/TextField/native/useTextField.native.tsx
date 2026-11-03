@@ -22,7 +22,7 @@ export function useTextFieldState(onClear) {
   if (first == null) {
     first = tmp[0];
   }
-  const items = [onChange];
+  items = [onChange];
   const setTextValue = noop.useCallback((arg0) => {
     obj3(arg0);
     if (onChange != null) {
@@ -44,7 +44,7 @@ export function useTextFieldState(onClear) {
 }
 export function useTextField(merged, ref) {
   ref = callback1.useRef(null);
-  const items = [ref, merged.onClear];
+  items = [ref, merged.onClear];
   const obj2 = {};
   const callback = callback1.useCallback(() => {
     const current = onClear.current;

@@ -1,7 +1,8 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesUIStore.tsx
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import VoiceMessageConstants from "../VoiceMessageConstants.tsx";
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,10 +11,10 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "2026-10-game-profiles-v3-communities-tab-mobile", savedVoiceMessageUploadData: "user", isVoiceMessageButtonMounted: null, isUsingHoldGesture: null };
-  const items = [, ];
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "TYPING_START_LOCAL", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: "no_text_color", isUsingHoldGesture: "TYPING_STOP_LOCAL" };
+  items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
-  obj.voiceMessageAnimationState = ReanimatedRexport.makeMutable(items);
+  obj.voiceMessageAnimationState = _mod1652.makeMutable(items);
   obj.waveform = [];
   return obj;
 });
@@ -62,10 +63,11 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5637);
-    const result = currWaveHeight.set(obj.withSpring(arg0 / closure_3));
+    obj = waveformVersion(5757);
+    const result = arg0 / closure_3;
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5758).Reanimated3DefaultSpringConfig));
   }
-  const items = [arg0, waveformVersion];
+  items = [arg0, waveformVersion];
   waveform.push(items);
   waveformVersion(1259).batchUpdates(() => {
     obj = { waveformVersion: waveformVersion + 1 };
@@ -86,12 +88,12 @@ export function hideVoiceMessagesTooltip() {
 export function resetVoiceMessageState() {
   obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "dispatch", savedVoiceMessageUploadData: "isArray" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "disabled", savedVoiceMessageUploadData: "isArray" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    const result = currWaveHeight.set(spring.withSpring(0));
-    const tmpResult = spring;
+    const result = currWaveHeight.set(spring_spring.withSpring(0, springPresets.Reanimated3DefaultSpringConfig));
+    const tmpResult = spring_spring;
   }
 }
 export function setSavedVoiceMessageUploadData(savedVoiceMessageUploadData) {

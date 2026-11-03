@@ -10,13 +10,13 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   EMPTY_VOICE_STATES: closure_7,
   SearchListItemTypes: closure_8,
   CHANNELS_ESTIMATED_ITEM_SIZE: closure_9,
 } = SearchConstants);
-let closure_10 = fn(9826).SearchResultContentEntityTypes;
+let closure_10 = fn(9957).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
@@ -28,7 +28,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
   closure_5 = undefined;
   importDefault = searchContext(stateFromStores[7]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[7]);
-  let items = [closure_5];
+  items = [closure_5];
   stateFromStores = searchContext(stateFromStores[8]).useStateFromStores(items, () =>
     SearchGuildChannelTabStore.getTextChannels(closure_1),
   );
@@ -116,7 +116,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
     stateFromStores2,
   ];
   const memo = stateFromStores1.useMemo(() => {
-    const items = [];
+    items = [];
     closure_0 = items;
     closure_1 = 0;
     if (stateFromStores.length > 0) {

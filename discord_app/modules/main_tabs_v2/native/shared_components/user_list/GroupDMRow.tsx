@@ -9,7 +9,7 @@ import useRecipientsLabel from "../../../useRecipientsLabel.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
@@ -31,7 +31,7 @@ export default function GroupDMRow(channel) {
   const onPress = channel.onPress;
   const merged = Object.assign(channel, Object.assign({ channel: 0, mode: 0, selected: 0, disabled: 0, onPress: 0 }));
   let str = useChannelNameDefault(channel);
-  const items = [channel, onPress];
+  items = [channel, onPress];
   const callback = noop.useCallback(() => {
     if (onPress != null) {
       tmp(channel);

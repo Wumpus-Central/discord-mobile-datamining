@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" },
   title: { flexDirection: "row" },
@@ -49,7 +49,7 @@ export default function UserProfileSection(title) {
     }
     obj3.borderColor = borderColor;
     const obj4 = { style: null };
-    const items = [tmp2.section, style];
+    items = [tmp2.section, style];
     obj4.style = items;
     const merged2 = Object.assign(merged);
     let tmp8Result = null;

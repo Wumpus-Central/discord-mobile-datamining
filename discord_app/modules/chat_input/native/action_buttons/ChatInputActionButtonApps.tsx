@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12809).ChatInputActionType;
+const ChatInputActionType = fn(12945).ChatInputActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default noop.memo(function ChatInputActionButtonApps(onPress) {
     canShowOnboarding = !tmp4.fromTriggeredOnboarding;
   }
   ref = obj.useRef(-1);
-  const items = [canShowOnboarding, canShowAppsOrActivitiesBanner, canShowBotsBanner, , ,];
+  items = [canShowOnboarding, canShowAppsOrActivitiesBanner, canShowBotsBanner, , ,];
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;

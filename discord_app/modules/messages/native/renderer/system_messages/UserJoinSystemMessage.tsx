@@ -57,7 +57,7 @@ export function createUserJoinSystemMessage(message) {
     let transformStickerResult;
     if (null != guildId) {
       if (null != channel) {
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         let tmp13 = null != guild;
         if (tmp13) {
           tmp13 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);

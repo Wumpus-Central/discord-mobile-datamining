@@ -24,8 +24,13 @@ function ConjureAppChannelSheetHeader(channel) {
   const tmp3 = useChannelNameDefault(channel);
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
   const obj2 = { spacing: nativeDefault.space.PX_4, align: "center", children: null };
-  const items = [
-    closure_1_10(Text_Text.Heading, { variant: "heading-lg/bold", lineClamp: 1, style: tmp.centered, children: tmp3 }),
+  items = [
+    closure_1_10(Text_Text.Heading, {
+      variant: "heading-lg/semibold",
+      lineClamp: 1,
+      style: tmp.centered,
+      children: tmp3,
+    }),
   ];
   let tmp7Result = null;
   if (null != appChannelApplication) {
@@ -68,7 +73,7 @@ function ConjureAppChannelSheetContent(channel) {
     "ConjureAppChannelSheet",
   );
   let obj3 = channel(remixProject[15]);
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [channel];
   const stateFromStoresObject = channel(remixProject[17]).useStateFromStoresObject(
     items,
@@ -240,7 +245,7 @@ function ConjureAppChannelSheetContent(channel) {
       tmp24Result9 = null;
       if (null != guild_id) {
         const obj11 = { onPress: callback, icon: null, label: null };
-        const obj12 = { IconComponent: tmp2(tmp3[29]).RemixIcon };
+        const obj12 = { IconComponent: tmp2(tmp3[29]).PaperPlusIcon };
         obj11.icon = closure_10(tmp2(tmp3[25]).TableRowIcon, obj12);
         const intl3 = tmp2(tmp3[27]).intl;
         obj11.label = intl3.string(tmp5(tmp3[30])["276ll6"]);
@@ -343,8 +348,8 @@ function ConjureAppChannelSheetContent(channel) {
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_7, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },
   centered: { textAlign: "center" },
@@ -357,7 +362,7 @@ let result = size.fileFinishedImporting("modules/conjure/app_channel/native/Conj
 export default noop.memo(function ConjureAppChannelSheet(channelId) {
   channelId = channelId.channelId;
   const tmp = closure_13();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores];
@@ -374,10 +379,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6027).Stack, obj5);
-    obj3.children = closure_10(tmp2(7292).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5275).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5272).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6147).Stack, obj5);
+    obj3.children = closure_10(tmp2(7412).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5398).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5395).BottomSheet, obj2);
   }
   return tmp6;
 });

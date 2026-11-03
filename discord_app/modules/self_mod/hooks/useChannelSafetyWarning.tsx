@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/self_mod/hooks/useChannelSafe
 export function useChannelSafetyWarning(channelId, LIKELY_ATO) {
   _require = channelId;
   dependencyMap = LIKELY_ATO;
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

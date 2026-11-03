@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   root: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   image: null,
@@ -60,7 +60,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if (objective != null) {
     image = objective.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
+  items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const singleStringOrSkeleton = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
     objective,

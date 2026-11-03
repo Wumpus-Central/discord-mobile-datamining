@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9813).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9944).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = {
     header: {
@@ -58,7 +58,7 @@ export default function ConjureChatHeader(actions) {
   ({ title, onBack, showBorder } = actions);
   const tmp2 = closure_8(useSafeAreaInsetsDefault().top);
   const obj2 = { style: null, children: null };
-  const items = [tmp2.header, ClientThemesOverrides.useGradientTop()];
+  items = [tmp2.header, ClientThemesOverrides.useGradientTop()];
   obj2.style = items;
   let tmp6 = null;
   if (showBorder) {

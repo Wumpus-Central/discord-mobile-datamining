@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 },
   headerWithBackButton: { paddingLeft: 0 },
@@ -28,7 +28,7 @@ export default noop.memo(function SearchScreenSearchBar(arg0) {
   ({ searchContext, backButton, ref } = arg0);
   const tmp = closure_7();
   importDefault = noop.useRef(null);
-  const items = [ref];
+  items = [ref];
   const memo = noop.useMemo(() => mergeProps.mergeRefs(ref, closure_1), items);
   dependencyMap = noop.useRef(false);
   const callback = noop.useCallback(() => {

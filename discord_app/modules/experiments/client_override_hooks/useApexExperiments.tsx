@@ -37,7 +37,7 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
       title: variants.title,
       variants: null,
     };
-    const items = [...mapped2];
+    items = [...mapped2];
     obj.variants = items.sort((id, id2) => id.id - id2.id);
     obj[_slicedToArray] = obj;
   }
@@ -107,7 +107,7 @@ export function useApexExperiments() {
       stateFromStores(stateFromStores1[3]).Experiment_Surface.APP,
     );
   }, []);
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   stateFromStores = stateFromStores(stateFromStores1[7]).useStateFromStores(items, () =>
     ApexExperimentStore.getExperimentsMetadata(),
   );

@@ -36,9 +36,9 @@ prototype["getSelectedTab"] = function getSelectedTab(searchContext) {
   const selectedTabs = this.selectedTabs;
   return selectedTabs.get(SearchUtils.getSearchContextId(searchContext));
 };
-prototype["setSelectedTab"] = function setSelectedTab(searchContext, arg1) {
+prototype["setSelectedTab"] = function setSelectedTab(c0, arg1) {
   const selectedTabs = this.selectedTabs;
-  const result = selectedTabs.set(SearchUtils.getSearchContextId(searchContext), closure_2[arg1]);
+  const result = selectedTabs.set(SearchUtils.getSearchContextId(c0), closure_2[arg1]);
 };
 const searchSessionAnalyticsManager = new SearchSessionAnalyticsManager();
 let result = size.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");

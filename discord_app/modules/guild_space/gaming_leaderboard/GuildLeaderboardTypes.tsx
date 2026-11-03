@@ -27,7 +27,7 @@ export { GamingLeaderboardStat };
 export const GuildSpaceLeaderboardEvent = obj2;
 export function getGuildSpaceLeaderboardUserIds(leaderboard) {
   if (null == leaderboard) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [,];
     ({ user_id: arr[0], secondary_user_id: arr[1] } = leaderboard);

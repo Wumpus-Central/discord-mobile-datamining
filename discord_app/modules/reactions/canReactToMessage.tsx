@@ -46,15 +46,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
 export function canReactToMessage(message, channel) {
-  const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
 }
 export function useCanReactToMessage(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+    items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
     return canReactToMessageInternal(closure_0, closure_1, items);
   });
 }

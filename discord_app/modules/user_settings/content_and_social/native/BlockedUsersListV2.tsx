@@ -32,7 +32,7 @@ function BlockedUsersList(userIds) {
     const intl2 = util.intl;
     const obj6 = { numberOfBlockedUsers: userIds.length };
     obj5.children = intl2.formatToPlainString(util.t["c+JVEB"], obj6);
-    const items = [hasOwnProperty(Text_Text.Text, obj5)];
+    items = [hasOwnProperty(Text_Text.Text, obj5)];
     const obj7 = {
       hasIcons: true,
       children: userIds.map((userId) => closure_1_5(BlockedUserRowV2Default, { userId }, userId)),
@@ -49,7 +49,7 @@ function BlockedUsersList(userIds) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   list: { flex: 1, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },
   sectionLabelStyle: null,
@@ -61,7 +61,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   return hasOwnProperty(BlockedUsersList, {
     userIds: initialize.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()),
   });

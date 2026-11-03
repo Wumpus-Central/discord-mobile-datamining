@@ -6,8 +6,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9762).useGuildIndexState;
-const limit = fn(6035).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9894).useGuildIndexState;
+const limit = fn(6155).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
@@ -28,7 +28,7 @@ export default function useAppsInThisServer(context) {
   }
   const tmp2Result = useGuildIndexState(guild_id, true);
   _require = tmp2Result;
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

@@ -16,7 +16,7 @@ function ConversationListItemBase(conversation) {
   const navigation = conversation(stateFromStores[8]).useNavigation();
   let obj = conversation(stateFromStores[8]);
   const tmp2 = stateFromStores;
-  const items = [ChannelConversationsStore];
+  items = [ChannelConversationsStore];
   const items1 = [,];
   ({ channelId: arr2[0], id: arr2[1] } = conversation);
   stateFromStores = conversation(stateFromStores[9]).useStateFromStores(
@@ -125,13 +125,13 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(5655).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(5775).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   card: {
     marginBottom: nativeDefault.space.PX_12,
@@ -189,7 +189,7 @@ let result = size.fileFinishedImporting("modules/conversations/components/native
 export default noop.memo(function ConversationListItem(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
-  const items = [ChannelConversationsStore];
+  items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,

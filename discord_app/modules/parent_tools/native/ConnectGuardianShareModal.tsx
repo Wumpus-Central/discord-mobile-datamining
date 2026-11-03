@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianShareModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2538 from "../FamilyCenter.messages.js";
+import _modDef2667 from "../FamilyCenter.messages.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
@@ -12,17 +12,17 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 require = fn;
 function ConnectGuardianShareScreen() {
   const tmp = closure_8();
-  const syncMessages = getLinkCode(1113).useSyncMessages(getLinkCode(2538).messagesLoader);
+  const syncMessages = getLinkCode(1113).useSyncMessages(getLinkCode(2667).messagesLoader);
   const callback = noop.useCallback(() => {
     const intl = getLinkCode(1113).intl;
-    getLinkCode(5711).presentFailedToast(intl.string(getLinkCode(1113).t.R0RpRX));
-    const obj = getLinkCode(5711);
+    getLinkCode(5831).presentFailedToast(intl.string(getLinkCode(1113).t.R0RpRX));
+    const obj = getLinkCode(5831);
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1113);
-  getLinkCode = getLinkCode(13359).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(13359);
-  const items = [FamilyCenterStore];
+  getLinkCode = getLinkCode(13495).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(13495);
+  items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(563).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(563);
   const items1 = [FamilyCenterStore];
@@ -36,20 +36,20 @@ function ConnectGuardianShareScreen() {
   const obj6 = { spacing: nativeDefault.space.PX_8, children: null };
   const obj7 = {
     style: tmp.title,
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,
   };
   let intl = getLinkCode(1113).intl;
-  obj7.children = intl.string(_modDef2538.ITlV6p);
-  const items2 = [closure_6(getLinkCode(5624).Text, obj7)];
+  obj7.children = intl.string(_modDef2667.ITlV6p);
+  const items2 = [closure_6(getLinkCode(5747).Text, obj7)];
   const obj8 = { style: tmp.body, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = getLinkCode(1113).intl;
-  obj8.children = intl2.format(_modDef2538.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-  items2[1] = closure_6(getLinkCode(5624).Text, obj8);
+  obj8.children = intl2.format(_modDef2667.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+  items2[1] = closure_6(getLinkCode(5747).Text, obj8);
   obj6.children = items2;
-  const items3 = [closure_7(getLinkCode(6027).Stack, obj6)];
+  const items3 = [closure_7(getLinkCode(6147).Stack, obj6)];
   const obj9 = { spacing: nativeDefault.space.PX_24, style: tmp.cardSection, children: null };
   const obj10 = {
     style: tmp.qrLabel,
@@ -58,8 +58,8 @@ function ConnectGuardianShareScreen() {
     children: null,
   };
   const intl3 = getLinkCode(1113).intl;
-  obj10.children = intl3.string(_modDef2538.pojgfk);
-  const items4 = [closure_6(getLinkCode(5624).Text, obj10)];
+  obj10.children = intl3.string(_modDef2667.pojgfk);
+  const items4 = [closure_6(getLinkCode(5747).Text, obj10)];
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = {
@@ -68,25 +68,25 @@ function ConnectGuardianShareScreen() {
         expiresAt: stateFromStores1,
         onRefresh: getLinkCode,
       };
-      let tmp11Result = closure_6(tmp2(16785).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(16928).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };
     items4[1] = tmp11Result;
     obj9.children = items4;
-    items3[1] = closure_7(getLinkCode(6027).Stack, obj9);
+    items3[1] = closure_7(getLinkCode(6147).Stack, obj9);
     obj5.children = items3;
-    obj13.children = closure_7(getLinkCode(6027).Stack, obj5);
-    obj12.children = closure_6(getLinkCode(7973).ModalContent, obj13);
-    return closure_6(getLinkCode(7972).ModalScreen, obj12);
+    obj13.children = closure_7(getLinkCode(6147).Stack, obj5);
+    obj12.children = closure_6(getLinkCode(8097).ModalContent, obj13);
+    return closure_6(getLinkCode(8096).ModalScreen, obj12);
   }
-  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(6953).ActivityIndicator, {}) });
-  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(6953).ActivityIndicator, {}) };
+  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(7080).ActivityIndicator, {}) });
+  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(7080).ActivityIndicator, {}) };
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   title: { textAlign: "center" },
   body: { textAlign: "center" },

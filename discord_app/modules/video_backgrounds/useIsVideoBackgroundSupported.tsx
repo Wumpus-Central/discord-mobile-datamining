@@ -8,6 +8,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/useIsVideoBackgroundSupported.tsx");
 
 export default function useIsVideoBackgroundSupported() {
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => isVideoBackgroundSupportedDefault(MediaEngineStore));
 }

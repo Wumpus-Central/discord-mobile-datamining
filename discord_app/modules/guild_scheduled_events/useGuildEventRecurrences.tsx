@@ -17,7 +17,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = byWeekday;
-  let items = [recurrenceStartTimes];
+  items = [recurrenceStartTimes];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildScheduledEventStore.getGuildScheduledEvent(closure_0),
   );
@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(8969);
+      const tmpResult = tmp(9097);
       let _Date = Date;
-      let rRule = tmp(8969).getRRule(byWeekday);
+      let rRule = tmp(9097).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(8969);
+      const tmpResult2 = tmp(9097);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -94,7 +94,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
         if (null != closure_2) {
           if (null != stateFromStores) {
             const rRule = ScheduleUtils.getRRule(tmp);
-            const items = [];
+            items = [];
             const arraySpreadResult = HermesBuiltin.arraySpread(first, 0);
             const obj2 = ScheduleUtils;
             HermesBuiltin.arraySpread(

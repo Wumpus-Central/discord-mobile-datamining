@@ -38,7 +38,7 @@ export function onTapContentInventoryEntryEmbed(authorId) {
       }
       showUserProfileResult.channelId = id;
       showUserProfileResult.messageId = message.id;
-      let items = AnalyticsLocationDefault;
+      items = AnalyticsLocationDefault;
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;

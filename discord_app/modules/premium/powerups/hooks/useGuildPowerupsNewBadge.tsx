@@ -8,9 +8,9 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5230).GuildPowerupNewPerkMarketingVersion;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_8 = fn(4847).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
+const constants = fn(5353).GuildPowerupNewPerkMarketingVersion;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+let closure_8 = fn(4974).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
@@ -22,7 +22,7 @@ export default function useGuildPowerupsNewBadge(guildId) {
   _require = undefined;
   importDefault = undefined;
   closure_129_0 = guildId;
-  const items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
@@ -40,11 +40,11 @@ export default function useGuildPowerupsNewBadge(guildId) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = _slicedToArray(tmp(7569).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = _slicedToArray(tmp(7693).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
-  const tmpResult = tmp(7569);
+  const tmpResult = tmp(7693);
   return {
     showNewBadgeOnRow: tmp7[0] === closure_8,
     dismissNewBadgeIfShown: noop.useCallback(() => {
@@ -61,12 +61,12 @@ export default function useGuildPowerupsNewBadge(guildId) {
 export function useAutoDismissGuildPowerupsNewBadge(guildId) {
   _require = guildId;
   closure_129_0 = guildId;
-  const items = [GuildPowerupsStore];
+  items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   let obj = require("initialize");
-  const tmp2Result = num(14079)(guildId, stateFromStores);
+  const tmp2Result = num(14210)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

@@ -34,7 +34,7 @@ function IncomingRequestRow(user) {
   );
   const sharedValue = user(accepted[6]).useSharedValue(false);
   let obj = user(accepted[6]);
-  let items = [onDeclineIncomingRequest];
+  items = [onDeclineIncomingRequest];
   const stateFromStores = user(accepted[7]).useStateFromStores(items, () => onDeclineIncomingRequest.useReducedMotion);
   let items1 = [accepted, sharedValue];
   const effect = onAcceptIncomingRequest.useEffect(() => {
@@ -49,7 +49,7 @@ function IncomingRequestRow(user) {
       const intl = util.intl;
       const obj2 = { username: UserUtilsDefault.getName(user) };
       obj.label = intl.formatToPlainString(util.t.m0zYbV, obj2);
-      const items = [obj];
+      items = [obj];
       let items1 = items;
     } else {
       obj.name = stateFromStores1.ACCEPT;
@@ -180,7 +180,7 @@ function IncomingGameFriendRequestRow(arg0) {
     />
   );
 }
-const UserRowModes = fn(10727).UserRowModes;
+const UserRowModes = fn(10857).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
@@ -225,7 +225,7 @@ export function ConnectedIncomingGameFriendRequestRow(applicationId) {
   applicationId = applicationId.applicationId;
   let tmp = null;
   const merged = Object.assign(applicationId, Object.assign({ user: 0, applicationId: 0 }));
-  const items = [ApplicationStore];
+  items = [ApplicationStore];
   const stateFromStores = applicationId(563).useStateFromStores(items, () =>
     ApplicationStore.getApplication(applicationId),
   );

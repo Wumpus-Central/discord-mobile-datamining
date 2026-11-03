@@ -8,7 +8,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
 
 export function useGuildIdsToFetchSoundsFor() {
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStoresArray = stateFromStoresArray(stateFromStores[3]).useStateFromStoresArray(items, () =>
     guildIds.getGuildIds(),
   );

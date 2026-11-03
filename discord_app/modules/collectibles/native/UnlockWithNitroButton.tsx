@@ -22,7 +22,7 @@ export function UnlockWithNitroButton(shouldShrink) {
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  const items = [CollectiblesPurchaseStore, IAPStore];
+  items = [CollectiblesPurchaseStore, IAPStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {

@@ -73,7 +73,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -121,7 +121,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj8;
         } else {
           closure_129_0 = value.map((item) => {
-            const items = [,];
+            items = [,];
             ({ id: arr[0], version: arr[1] } = item);
             return items;
           });
@@ -157,7 +157,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      let items = [tmp2];
+      items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.id, items);
     }
     if (null == GuildStore.getGuild(tmp2.id)) {
@@ -170,7 +170,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   this.reset();
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   const result = DatabaseDaosDefault.guildVersionsTransaction(database);
   result.deleteAllExcept(items);
   for (const item10029 of tmp3) {
@@ -184,7 +184,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
   const self = this;
   guild = guild.guild;
   const id = guild.guild.id;
-  const items = [guild];
+  items = [guild];
   this.updateWith(id, items);
   const emojis = guild.emojis;
   const op = emojis.op;
@@ -231,7 +231,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild, arg1) {
   guild = guild.guild;
   const id = guild.guild.id;
-  const items = [guild];
+  items = [guild];
   this.updateWith(id, items);
   this.updateWith(id, guild.emojis);
   this.updateWith(id, guild.stickers);
@@ -243,12 +243,12 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   this.commit(arg1);
 };
 prototype["handleGuildRoleChange"] = function handleGuildRoleChange(role, arg1) {
-  const items = [role.role];
+  items = [role.role];
   this.updateWith(role.guildId, items);
   this.commit(arg1);
 };
 prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(version, arg1) {
-  const items = [{ version: version.version }];
+  items = [{ version: version.version }];
   this.updateWith(version.guildId, items);
   this.commit(arg1);
 };
@@ -263,7 +263,7 @@ prototype["handleGuildStickersUpdate"] = function handleGuildStickersUpdate(guil
 prototype["handleChannelCreate"] = function handleChannelCreate(channel, arg1) {
   const self = this;
   if (null != channel.channel.guild_id) {
-    const items = [channel.channel];
+    items = [channel.channel];
     self.updateWith(channel.channel.guild_id, items);
   }
   self.commit(arg1);
@@ -275,7 +275,7 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.guild_id) {
-      let items = [tmp2];
+      items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.guild_id, items);
     }
     continue;
@@ -285,7 +285,7 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(arg0, arg1) {
 prototype["handleChannelDelete"] = function handleChannelDelete(channel, arg1) {
   const self = this;
   if (null != channel.channel.guild_id) {
-    const items = [channel.channel];
+    items = [channel.channel];
     self.updateWith(channel.channel.guild_id, items);
   }
   self.commit(arg1);

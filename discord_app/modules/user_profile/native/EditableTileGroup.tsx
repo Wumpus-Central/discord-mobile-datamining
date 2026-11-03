@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, labelRow: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.labelRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -25,7 +25,7 @@ export function EditableTileGroup(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.labelRow, children: null };
-  const items = [
+  items = [
     React4(Text_Text.Text, {
       accessibilityRole: "header",
       variant: "text-sm/semibold",

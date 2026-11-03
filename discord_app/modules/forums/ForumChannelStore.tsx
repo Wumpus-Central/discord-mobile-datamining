@@ -6,10 +6,10 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = fn;
 let set = new Set();
 let obj = {
-  layoutType: fn(4873).ForumLayout.LIST,
-  sortOrder: fn(4872).ThreadSortOrder.CREATION_DATE,
+  layoutType: fn(5000).ForumLayout.LIST,
+  sortOrder: fn(4999).ThreadSortOrder.CREATION_DATE,
   tagFilter: set,
-  tagSetting: fn(4874).ThreadSearchTagSetting.MATCH_SOME,
+  tagSetting: fn(5001).ThreadSearchTagSetting.MATCH_SOME,
 };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
@@ -158,7 +158,7 @@ const result = size.fileFinishedImporting("modules/forums/ForumChannelStore.tsx"
 export function useForumChannelStore(parent_id) {
   _require = parent_id;
   obj = closure_7();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   if (null == obj2.useStateFromStores(items, () => ChannelStore.getChannel(closure_0))) {
     let channelState = obj;
   } else {

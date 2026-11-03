@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/applications/getApplicationFr
 
 export default function useGetApplicationFromBotUserId(id) {
   _require = id;
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp = closure_0;
     let tmp2;

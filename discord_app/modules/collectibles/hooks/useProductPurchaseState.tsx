@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import compactDefault from "../../../../_runtime/09538_compact.js";
+import compactDefault from "../../../../_runtime/09666_compact.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 const require = globalThis.__r;
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 require = fn;
 function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
   let tmp = null != CollectiblesPurchaseStore.getPurchase(skuId.skuId);
-  let items = skuId.items;
+  items = skuId.items;
   if (items == null) {
     items = [];
   }
@@ -63,7 +63,7 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useProduct
 export { getProductPurchaseState };
 export function useProductPurchaseState(product) {
   _require = product;
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   return require("initialize").useStateFromStoresObject(items, () =>
     getProductPurchaseState(CollectiblesPurchaseStore, closure_0),
   );

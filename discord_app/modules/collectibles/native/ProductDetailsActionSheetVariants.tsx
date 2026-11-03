@@ -34,7 +34,7 @@ function VariantOption(arg0) {
   obj2.onPress = onSelect;
   obj2.style = tmp.variantOption;
   const obj4 = { style: null, children: null };
-  const items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
+  items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
   obj4.style = items;
   if (isPurchased) {
     const obj5 = { variant };
@@ -55,7 +55,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -88,7 +88,7 @@ obj2.variantsContainer = {
 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = {
     width: 28,
@@ -129,10 +129,10 @@ export default function ProductDetailsActionSheetVariants(disabled) {
   if (obj.getIsVariantProduct(product)) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.headerRow, children: null };
-    const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = selectedVariantIndex(tmp3[7]).intl;
     obj4.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
-    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4)];
+    items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4)];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj5 = {

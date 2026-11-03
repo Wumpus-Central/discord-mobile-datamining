@@ -4,7 +4,7 @@ import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -36,7 +36,7 @@ class ShopNitroUpsellBanner {
     callback = closure_3.useCallback(() => {
       const obj2 = { analyticsLocations: null, title: null, description: null };
       const obj = require("ActionSheetActionCreators");
-      const items = [require("AnalyticsLocation").COLLECTIBLES_SHOP_INDEX_PAGE];
+      items = [require("AnalyticsLocation").COLLECTIBLES_SHOP_INDEX_PAGE];
       obj2.analyticsLocations = items;
       const intl = require("util").intl;
       obj2.title = intl.string(require("util").t.GZWBoL);
@@ -96,7 +96,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     overflow: "hidden",

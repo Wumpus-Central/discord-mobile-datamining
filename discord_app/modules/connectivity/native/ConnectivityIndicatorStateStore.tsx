@@ -34,12 +34,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj4 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num2 = state(15578).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num2 = state(15720).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
               }
               let tmp23 = num2;
-              const obj16 = state(15578);
+              const obj16 = state(15720);
             } else {
               tmp23 = delayMs2;
             }
@@ -62,12 +62,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj8 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num = state(15578).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num = state(15720).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;
               }
               let tmp18 = num;
-              const obj11 = state(15578);
+              const obj11 = state(15720);
             } else {
               tmp18 = delayMs2;
             }
@@ -257,7 +257,7 @@ class ConnectivityIndicatorStateStore extends Store {}
 const prototype = ConnectivityIndicatorStateStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore, CacheStore, MessageStore, SelectedChannelStore, AppStateStore);
-  const items = [MessageStore];
+  items = [MessageStore];
   this.syncWith(items, handleLoadingMessagesChanged);
   const items1 = [AuthenticationStore];
   this.syncWith(items1, handleAuthStoreChanged);

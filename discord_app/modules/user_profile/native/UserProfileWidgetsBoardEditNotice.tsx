@@ -14,10 +14,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -37,7 +37,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
   _require = closure_7();
   importDefault = UserProfileSharedStylesDefault();
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };
-  let items = [require("dismissible_content").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+  items = [require("dismissible_content").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
   obj.contentTypes = items;
   obj.children = function children(markAsDismissed) {
     markAsDismissed = markAsDismissed.markAsDismissed;
@@ -47,7 +47,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
       dismissible_content.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE
     ) {
       const obj = { style: null, children: null };
-      const items = [card.card, closure_0.container];
+      items = [card.card, closure_0.container];
       obj.style = items;
       const obj2 = { style: closure_0.icon, children: null };
       const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };

@@ -13,11 +13,11 @@ const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9199);
-({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7879).InviteSendStates;
+const InstantInviteSendStateStore = fn(9327);
+({ setSendState: closure_9, useInstantInviteSendStates: closure_10 } = InstantInviteSendStateStore);
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { acronym: null };
 let size = {
   width: 32,
@@ -46,7 +46,7 @@ export default noop.memo(function InstantInviteRow(row) {
   ({ start, end } = row);
   const id = row.item.id;
   let tmp = closure_13();
-  const items = [id];
+  items = [id];
   const stateFromStores = row(onPressAvatar[12]).useStateFromStores(items, () => id.isSubmitting());
   let obj = row(onPressAvatar[12]);
   const items1 = [id];
@@ -97,7 +97,7 @@ export default noop.memo(function InstantInviteRow(row) {
           if (stateFromStores2 != null) {
             guild_id = stateFromStores2.guild_id;
           }
-          let guild;
+          guild = undefined;
           if (null != guild_id) {
             guild = GuildStore.getGuild(stateFromStores2.guild_id);
           }
@@ -116,8 +116,8 @@ export default noop.memo(function InstantInviteRow(row) {
             } else {
               let obj8 = { style: tmp.acronym, children: null };
               const acronym = tmp2(tmp3[22]).getAcronym(guild.name);
-              let obj9 = { variant: "text-sm/bold", children: acronym };
-              obj8.children = jsx(tmp2(tmp3[23]).Text, { variant: "text-sm/bold", children: acronym });
+              let obj9 = { variant: "text-sm/semibold", children: acronym };
+              obj8.children = jsx(tmp2(tmp3[23]).Text, { variant: "text-sm/semibold", children: acronym });
               tmp15 = <View style={tmp.acronym}>{null}</View>;
               const tmp2Result = tmp2(tmp3[22]);
             }

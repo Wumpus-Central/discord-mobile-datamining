@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgress.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2634 from "../../GiftingBadge.messages.js";
+import _modDef2763 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
@@ -12,16 +12,16 @@ function GiftingBadgeProgressBar(percent) {
   const tmp = closure_8();
   const obj = { style: tmp.progressBarTrack, children: null };
   const obj2 = { style: null };
-  const items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" }];
+  items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" }];
   obj2.style = items;
   obj.children = hasOwnProperty(View, obj2);
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(8763).getSingleRequirementThreshold;
+let closure_4 = fn(8887).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 },
   content: null,
@@ -90,7 +90,7 @@ export default function GiftingBadgeProgress(title) {
     const obj4 = { icon: giftingBadgeTierIconUrl, size: iconSize };
     tmp11 = hasOwnProperty(GiftingBadgeIconDefault, obj4);
   }
-  const items = [tmp11, ,];
+  items = [tmp11, ,];
   const obj5 = { style: tmp.content, children: null };
   let tmp14 = null != title;
   if (tmp14) {
@@ -104,7 +104,7 @@ export default function GiftingBadgeProgress(title) {
     const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     const obj9 = { count: progress, threshold: tmp6 };
-    obj8.children = intl.format(_modDef2634.iIpfQe, obj9);
+    obj8.children = intl.format(_modDef2763.iIpfQe, obj9);
     tmp16Result = hasOwnProperty(Text_Text.Text, obj8);
   }
   obj7.children = tmp16Result;

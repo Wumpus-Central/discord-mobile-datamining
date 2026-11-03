@@ -187,9 +187,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4867).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4994).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5039).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5166).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
@@ -251,7 +251,7 @@ prototype["initialize"] = function initialize(gradientPresetId) {
     UserSettingsProtoStore,
     UserStore,
   );
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, handleUserStoreChange);
   const items1 = [SelectivelySyncedUserSettingsStore];
   this.syncWith(items1, handleSelectivelySyncedStoreChange);

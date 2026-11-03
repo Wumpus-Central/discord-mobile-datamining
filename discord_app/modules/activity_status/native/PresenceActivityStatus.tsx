@@ -57,7 +57,7 @@ export default function PresenceActivityStatus(hideText) {
       const obj2 = { icon: GameControllerIcon, style: iconStyle };
       tmp7 = React3(ActivityStatusIconDefault, obj2);
     }
-    const items = [tmp7];
+    items = [tmp7];
     let tmp10 = !flag;
     if (!flag) {
       const obj3 = {

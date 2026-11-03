@@ -25,7 +25,7 @@ export default function useGiftOptionsSyncDebounce(arg0) {
       continue;
     }
   }, []);
-  const items = [tmp, resolveSyncs];
+  items = [tmp, resolveSyncs];
   const effect = noop.useEffect(
     () => () => {
       closure_1_4.cancel();

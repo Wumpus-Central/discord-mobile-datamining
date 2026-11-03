@@ -9,7 +9,7 @@ import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5039);
+const HexagonCampaignConstants = fn(5166);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty,
   HexagonCampaignPerk: metroRequire,
@@ -24,7 +24,7 @@ export function useHexagonCampaignNewFontBadge(DisplayNameStylesEditScreen) {
       constants.DISPLAY_NAME_STYLE,
       DisplayNameStylesEditScreen,
     ) === constants2.SELECTABLE;
-  const items = [DisplayNameStylesSeenStore];
+  items = [DisplayNameStylesSeenStore];
   if (tmp) {
     tmp = !obj2.useStateFromStores(items, () => {
       seenFonts = seenFonts.getSeenFonts();
@@ -40,7 +40,7 @@ export function useHexagonCampaignNewFontBadge(DisplayNameStylesEditScreen) {
   };
 }
 export function useHexagonCampaignHasVisitedDisplayNameStyles() {
-  const items = [HexagonCampaignPersistedStore];
+  items = [HexagonCampaignPersistedStore];
   return initialize.useStateFromStores(items, () => HexagonCampaignPersistedStore.hasVisitedDisplayNameStyles);
 }
 export function useMarkHexagonCampaignDisplayNameStylesVisited(DisplayNameStylesEditScreen) {
@@ -51,7 +51,7 @@ export function useMarkHexagonCampaignDisplayNameStylesVisited(DisplayNameStyles
     ) === constants2.SELECTABLE;
   _require = tmp;
   let obj = require("HexagonCampaignPerkAvailability");
-  const items = [HexagonCampaignPersistedStore];
+  items = [HexagonCampaignPersistedStore];
   stateFromStores = require("initialize").useStateFromStores(
     items,
     () => HexagonCampaignPersistedStore.hasVisitedDisplayNameStyles,

@@ -62,15 +62,15 @@ export function presentChannelSecondaryViewChat(guildId, channelId) {
 }
 export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
   closure_0 = channelId;
-  const items = [channelId];
+  items = [channelId];
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(5199).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(5322).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(5199);
+        const obj2 = handleFrameDeepLinkQueued(5322);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(5199).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(5322).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -90,13 +90,13 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
           if (-1 !== num) {
             const rootState = rootNavigationRef.getRootState();
             const obj = {};
-            const StackActions = tmp6(1498).StackActions;
+            const StackActions = tmp6(1500).StackActions;
             const merged = Object.assign(StackActions.pop(rootState.routes.length - num));
             obj.target = rootState.key;
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(5199);
+        const obj4 = handleFrameDeepLinkQueued(5322);
       }
     }
     if (null != handleFrameDeepLinkQueued) {

@@ -6,7 +6,7 @@ import SoundboardStore from "SoundboardStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SoundOutputChannel = fn(5920).SoundOutputChannel;
+const SoundOutputChannel = fn(6040).SoundOutputChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 
@@ -26,7 +26,7 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
   }
   audioRef = undefined;
   audioRef = noop.useContext(require("SoundPlayerContext")).audioRef;
-  const items = [SoundboardStore];
+  items = [SoundboardStore];
   const items1 = [arg0];
   const obj2 = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
   const items2 = [arg0, audioRef, arg1];

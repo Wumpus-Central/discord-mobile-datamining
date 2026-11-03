@@ -12,7 +12,7 @@ export default function useSimpleGuildSize(size) {
   if (null != size) {
     num = size;
   }
-  let items = [num];
+  items = [num];
   memo = noop.useMemo(() => {
     size = { width: num, height: num };
     return size;
@@ -32,7 +32,7 @@ export default function useSimpleGuildSize(size) {
         num2 = 4;
       }
       obj.marginRight = num2;
-      const items = [obj, memo, style];
+      items = [obj, memo, style];
       return items;
     }, items1),
   };

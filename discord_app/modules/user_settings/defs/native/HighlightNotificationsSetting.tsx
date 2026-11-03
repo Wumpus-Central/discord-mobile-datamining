@@ -5,16 +5,16 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 function useHighlightNotifications() {
-  const items = [GuildStore];
+  items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8432).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8556).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

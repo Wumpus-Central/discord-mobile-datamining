@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   fullGradientContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -75,7 +75,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     orbMultiplierEligibility(575).colors.BACKGROUND_BASE_LOWEST,
     questOrbRewardMultiplier.DARK,
   );
-  const items = [ColorUtils.hexOpacityToRgba(token, 1)];
+  items = [ColorUtils.hexOpacityToRgba(token, 1)];
   items[1] = ColorUtils.hexOpacityToRgba(token1, 0.5);
   const token3 = useToken.useToken(orbMultiplierEligibility(575).colors.BACKGROUND_BRAND);
   questOrbRewardMultiplier = hooks_QuestHooks.useQuestOrbRewardMultiplier(questId.questId);
@@ -127,7 +127,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5587), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5710), obj18);
     }
     const items4 = [tmp21Result];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

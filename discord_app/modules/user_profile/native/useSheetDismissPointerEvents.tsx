@@ -1,42 +1,48 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
-import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import BottomSheetModal from "../../../../_runtime/05398_BottomSheetModal.js";
+import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const __initData = {
-  code: "function useSheetDismissPointerEventsTsx1(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}",
+let closure_2 = {
+  code: "(function useSheetDismissPointerEventsTsx1(){let[contentGestureState,State,handleGestureState]=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};})",
 };
 const result = size.fileFinishedImporting("modules/user_profile/native/useSheetDismissPointerEvents.tsx");
 
 export default function useSheetDismissPointerEvents() {
-  const bottomSheetInternal = prop(prop1[0]).useBottomSheetInternal(true);
-  prop = undefined;
+  const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
+  let prop;
   if (bottomSheetInternal != null) {
     prop = bottomSheetInternal.animatedContentGestureState;
   }
-  prop1 = undefined;
+  let prop1;
   if (bottomSheetInternal != null) {
     prop1 = bottomSheetInternal.animatedHandleGestureState;
   }
-  const obj = prop(prop1[0]);
-  const fn = function n() {
+  items = [_undefined2, prop, LegacyBaseButton.State, prop1];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp6, tmp7, tmp8, tmp9] = items;
+  function useSheetDismissPointerEventsTsx1() {
     value = undefined;
-    if (prop != null) {
-      value = prop.get();
+    if (_undefined != null) {
+      value = _undefined.get();
     }
-    if (value === LegacyBaseButton.State.ACTIVE) {
+    if (value === _undefined.ACTIVE) {
       let pointerEvents = "none";
     } else {
       value2 = undefined;
-      if (prop1 != null) {
-        value2 = prop1.get();
+      if (_undefined2 != null) {
+        value2 = _undefined2.get();
       }
       pointerEvents = "box-none";
     }
     return { pointerEvents };
-  };
-  const tmpResult = prop(prop1[1]);
-  fn.__closure = { contentGestureState: prop, State: prop(prop1[2]).State, handleGestureState: prop1 };
-  fn.__workletHash = 16631714570992;
-  fn.__initData = __initData;
-  return tmpResult.useAnimatedStyle(fn);
+  }
+  const items1 = [tmp7, tmp8, tmp9];
+  useSheetDismissPointerEventsTsx1.__closure = items1;
+  useSheetDismissPointerEventsTsx1.__workletHash = 6909948922505;
+  useSheetDismissPointerEventsTsx1.__initData = tmp6;
+  return _mod1652.useAnimatedStyle(useSheetDismissPointerEventsTsx1);
 }

@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: {
     padding: 10,
@@ -17,7 +17,7 @@ const obj2 = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: fn(6778).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(6898).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: { marginRight: 10 },
   text: { flexShrink: 1 },
@@ -30,7 +30,7 @@ export default function PaymentFlowWarningMessage(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-  const items = [
+  items = [
     React4(native.WarningCircle, size),
     React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp.text, children: children.message }),
   ];

@@ -19,18 +19,18 @@ import MobileVoiceOverlayStore from "../../../stores/native/MobileVoiceOverlaySt
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(16384);
-fn(16385);
-fn(16386);
-fn(16387);
-fn(8359);
-fn(15200);
-fn(16388);
-fn(16389);
-const registerAsset = fn(8197);
+fn(16527);
+fn(16528);
+fn(16529);
+fn(16530);
+fn(8483);
+fn(15341);
+fn(16531);
+fn(16532);
+const registerAsset = fn(8321);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = {
   DISABLED: 0,
@@ -285,7 +285,7 @@ class MobileVoiceOverlayManager {
                         };
                         let obj6 = useChannelName;
                         obj5.channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
-                        let guild = GuildStore.getGuild(currentGuildId);
+                        guild = GuildStore.getGuild(currentGuildId);
                         let str2;
                         if (guild != null) {
                           str2 = guild.name;

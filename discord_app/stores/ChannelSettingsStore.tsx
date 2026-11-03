@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import ThreadConstants from "../modules/threads/ThreadConstants.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2042 from "../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../_runtime/metro/02171__.js";
 import ChannelRecord from "../records/ChannelRecord.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
@@ -110,7 +110,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef2042(code.created_at);
+  obj.createdAt = _modDef2171(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -319,7 +319,7 @@ invites = {
       if (tmp15) {
         c21 = true;
         const HTTP = HTTPUtils.HTTP;
-        const obj2 = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        const obj2 = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         value = HTTP.get(obj2);
         value.then(
           (body) => {
@@ -495,7 +495,7 @@ invites = {
     if (tmp) {
       c21 = true;
       const HTTP = HTTPUtils.HTTP;
-      const obj = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+      const obj = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj);
       value.then(
         (body) => {

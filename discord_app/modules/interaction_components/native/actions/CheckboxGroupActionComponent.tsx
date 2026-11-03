@@ -12,7 +12,7 @@ export default noop.memo(function CheckboxGroupActionComponent(type) {
   type = type.type;
   const options = type.options;
   const maxValues = type.maxValues;
-  let items = [options];
+  items = [options];
   const memo = maxValues.useMemo(() => {
     const found = options.filter((item) => item.default);
     return found.map((value) => value.value);
@@ -23,7 +23,7 @@ export default noop.memo(function CheckboxGroupActionComponent(type) {
     tmp3 = obj3;
   }
   const componentState = type(options[2]).useComponentState(type, tmp3);
-  const state = componentState.state;
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
   closure_5 = maxValues.useMemo(() => {
@@ -46,7 +46,7 @@ export default noop.memo(function CheckboxGroupActionComponent(type) {
         checked: hasItem,
         onPress: (arg0) => {
           if (arg0) {
-            const items = [];
+            items = [];
             items[HermesBuiltin.arraySpread(closure_5, 0)] = value;
             let found = items;
           } else {

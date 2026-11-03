@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2538 from "../FamilyCenter.messages.js";
+import _modDef2667 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import GuildBadgeDefault from "../../guild/native/GuildBadge.tsx";
@@ -16,11 +16,11 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7716).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7840).ACTION_TO_TEXT;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj = {
   container: {
     display: "flex",
@@ -54,7 +54,7 @@ const memoResult = noop.memo((action) => {
   const tmp = closure_10();
   value = ACTION_TO_TEXT.get(action.display_type);
   _modDef38(null != value, "No text for action type");
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = action(563).useStateFromStores(items, () => UserStore.getUser(action.entity_id));
   if (null == stateFromStores) {
     return null;
@@ -82,13 +82,13 @@ const memoResult = noop.memo((action) => {
     };
     const tmp3Result = SnowflakeUtilsDefault;
     obj6.children = UserUtilsDefault.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(5624).Text, obj6)];
+    const items2 = [closure_8(tmp6(5747).Text, obj6)];
     const obj7 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(8372).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(5624).Text, obj7);
+    obj7.children = tmp6(8496).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(5747).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
     obj2.children = items1;
@@ -97,7 +97,7 @@ const memoResult = noop.memo((action) => {
   const obj = action(563);
 });
 memoResult.displayName = "FamilyCenterActivityRowUser";
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj5 = {
   container: null,
   avatar: null,
@@ -148,7 +148,7 @@ let closure_12 = createStyles.createStyles(obj5);
 const memoResult1 = noop.memo((action) => {
   action = action.action;
   const tmp = closure_12();
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStores = action(563).useStateFromStores(items, () => FamilyCenterStore.getGuild(action.entity_id));
   value = ACTION_TO_TEXT.get(action.display_type);
   _modDef38(null != value, "No text for action type");
@@ -165,7 +165,7 @@ const memoResult1 = noop.memo((action) => {
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(6957).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(7083).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4)];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };
@@ -190,7 +190,7 @@ const memoResult1 = noop.memo((action) => {
       lineClamp: 1,
       children: stateFromStores.name,
     };
-    items2[1] = closure_8(tmp2(5624).Text, obj9);
+    items2[1] = closure_8(tmp2(5747).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_9(View, obj7);
     const items3 = [closure_8(View, obj6)];
@@ -199,8 +199,8 @@ const memoResult1 = noop.memo((action) => {
       const obj10 = { variant: "text-xs/medium", color: "channels-default", children: null };
       const intl = tmp2(1113).intl;
       const obj19 = { members: stateFromStores.approximateMemberCount };
-      obj10.children = intl.format(_modDef2538["5JmNgg"], obj19);
-      tmp11Result2 = closure_8(tmp2(5624).Text, obj10);
+      obj10.children = intl.format(_modDef2667["5JmNgg"], obj19);
+      tmp11Result2 = closure_8(tmp2(5747).Text, obj10);
     }
     items3[1] = tmp11Result2;
     obj5.children = items3;

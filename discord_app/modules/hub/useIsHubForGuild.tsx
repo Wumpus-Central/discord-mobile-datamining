@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
 export default function useIsHubForGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
@@ -18,7 +18,7 @@ export default function useIsHubForGuild(arg0) {
       if (null == closure_0) {
         return false;
       } else {
-        const guild = GuildStore.getGuild(tmp);
+        guild = GuildStore.getGuild(tmp);
         let flag;
         if (guild != null) {
           const features = guild.features;

@@ -11,7 +11,7 @@ class SKUPricesStore extends Store {}
 const prototype = SKUPricesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, resetStoreState);
 };
 prototype["getPricesForSkuId"] = function getPricesForSkuId(id) {
@@ -115,7 +115,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
               const _HermesInternal = HermesInternal;
               combined = "skus:" + obj.skuId;
             }
-            const items = [combined, obj];
+            items = [combined, obj];
             return items;
           }),
         ),
@@ -157,7 +157,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
               const _HermesInternal = HermesInternal;
               combined = "skus:" + obj.skuId;
             }
-            const items = [combined, obj];
+            items = [combined, obj];
             return items;
           }),
         ),
@@ -197,7 +197,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
                   const _HermesInternal = HermesInternal;
                   combined = "skus:" + obj.skuId;
                 }
-                const items = [combined, obj];
+                items = [combined, obj];
                 return items;
               }),
             ),
@@ -252,7 +252,7 @@ const sKUPricesStore = new SKUPricesStore(DispatcherDefault, {
               const _HermesInternal = HermesInternal;
               combined = "skus:" + obj.skuId;
             }
-            const items = [combined, obj];
+            items = [combined, obj];
             return items;
           }),
         ),

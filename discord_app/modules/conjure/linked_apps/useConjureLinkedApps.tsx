@@ -17,7 +17,7 @@ export default function useConjureLinkedApps(arg0, arg1) {
   [callers, asyncGeneratorStep] = stateFromStoresObject.useState(closure_7);
   const tmp3 = _slicedToArray(stateFromStoresObject.useState(false), 2);
   _slicedToArray = tmp3[1];
-  let items = [arg0, arg1];
+  items = [arg0, arg1];
   const effect = stateFromStoresObject.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
@@ -62,7 +62,7 @@ export default function useConjureLinkedApps(arg0, arg1) {
       Object.fromEntries(
         first.map((project_id) => {
           project_id = project_id.project_id;
-          const items = [project_id, project.getProject(project_id)];
+          items = [project_id, project.getProject(project_id)];
           return items;
         }),
       ),
@@ -74,7 +74,7 @@ export default function useConjureLinkedApps(arg0, arg1) {
       Object.fromEntries(
         first.map((project_id) => {
           project_id = project_id.project_id;
-          const items = [project_id];
+          items = [project_id];
           let name;
           if (stateFromStoresObject[project_id] != null) {
             name = tmp.name;

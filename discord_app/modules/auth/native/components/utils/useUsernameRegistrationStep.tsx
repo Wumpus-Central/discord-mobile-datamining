@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../../_runtime/01500_Link.js";
 import UniqueUsernamesTypes from "../../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import RegistrationStepsUtils from "../../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -10,8 +10,8 @@ import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesSt
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(17989).useRegistrationUIStore;
-const RegistrationConstants = fn(17990);
+const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
+const RegistrationConstants = fn(18133);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);
@@ -43,7 +43,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
     obj3 = { type: tmp(tmp2[9]).NameValidationState.ERROR, message: tmp10 };
     tmp12 = obj3;
   }
-  let items = [tmp12, navigation, context, REGISTER_ACCOUNT_INFORMATION];
+  items = [tmp12, navigation, context, REGISTER_ACCOUNT_INFORMATION];
   const items1 = [username, tmp12];
   const callback = obj.useCallback((arg0) => {
     let type;
@@ -52,7 +52,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
     }
     if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
       const obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
-      const items = [obj3.message];
+      items = [obj3.message];
       obj.details = items;
       context(obj);
     }

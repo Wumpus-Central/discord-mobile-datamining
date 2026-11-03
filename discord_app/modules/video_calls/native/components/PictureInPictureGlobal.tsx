@@ -1,10 +1,12 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureGlobal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native2 from "../../../../design/void/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
+import isChannelFocused from "../../../panels/isChannelFocused.native.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import PictureInPictureDefault from "PictureInPicture.tsx";
@@ -16,18 +18,17 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9895).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(10026).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let c17 = 12;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -43,8 +44,8 @@ obj.background = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
 };
-let closure_18 = createStyles.createStyles(obj);
-let closure_19 = noop.memo(function PIPContent(channel) {
+let closure_17 = createStyles.createStyles(obj);
+let closure_18 = noop.memo(function PIPContent(channel) {
   channel = channel.channel;
   let stateFromStores1;
   let onDoubleTap;
@@ -52,9 +53,9 @@ let closure_19 = noop.memo(function PIPContent(channel) {
   let isScreenLandscape;
   let width;
   let height;
-  const tmp = closure_18();
+  const tmp = closure_17();
   let tmp4 = stateFromStores1(onDoubleTap[14])(channel.id);
-  const items = [ChannelRTCStore, AuthenticationStore];
+  items = [ChannelRTCStore, AuthenticationStore];
   const stateFromStores = channel(onDoubleTap[15]).useStateFromStores(items, () => {
     const streamParticipants = ChannelRTCStore.getStreamParticipants(channel.id);
     return streamParticipants.find((user) => user.user.id === id.getId());
@@ -232,7 +233,7 @@ let closure_19 = noop.memo(function PIPContent(channel) {
   tmp21 = closure_15(stateFromStores1(onDoubleTap[24]), obj12);
   const tmp2Result4 = stateFromStores1(onDoubleTap[24]);
 });
-let closure_20 = noop.memo(function PIPContentContainer(channel) {
+let closure_19 = noop.memo(function PIPContentContainer(channel) {
   channel = channel.channel;
   [tmp2, tmp3] = noop.useState(() => constants.TOP_RIGHT);
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
@@ -240,81 +241,89 @@ let closure_20 = noop.memo(function PIPContentContainer(channel) {
     noop.useState(() => constants.TOP_RIGHT),
     2,
   );
-  obj.children = __initData(closure_19, { channel });
-  return __initData(PictureInPictureDefault, obj);
+  obj.children = closure_1_15(closure_18, { channel });
+  return closure_1_15(PictureInPictureDefault, obj);
 });
-const __initData = {
-  code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}",
+let closure_20 = {
+  code: "(function PictureInPictureGlobalTsx1(){let[withTiming,drawerState,STANDARD_EASING]=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});})",
 };
-const __initData2 = {
-  code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}",
+let closure_21 = {
+  code: "(function PictureInPictureGlobalTsx2(){let[interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT]=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};})",
 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
 
 export default function PictureInPictureGlobal(channel) {
-  importDefault = undefined;
-  let derivedValue;
-  const tmp = closure_18();
+  const tmp = closure_17();
   let num = 1;
   if (obj.useIsChannelFocused()) {
     num = 0;
   }
+  obj = isChannelFocused;
   const tmp4 = closure_10();
-  importDefault = tmp4;
-  obj = num(derivedValue[31]);
-  const fn = function n() {
-    const obj = timing;
-    return obj.withTiming(num, { easing: native2.STANDARD_EASING, duration: 250 });
-  };
-  const tmp2Result = num(derivedValue[32]);
-  fn.__closure = {
-    withTiming: num(derivedValue[33]).withTiming,
-    drawerState: num,
-    STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING,
-  };
-  fn.__workletHash = 5168896066356;
-  fn.__initData = __initData;
-  derivedValue = tmp2Result.useDerivedValue(fn);
-  let obj2 = {
-    withTiming: num(derivedValue[33]).withTiming,
-    drawerState: num,
-    STANDARD_EASING: num(derivedValue[12]).STANDARD_EASING,
-  };
-  const fn2 = function o() {
-    const obj = { marginTop: null, marginBottom: null };
-    value = derivedValue.get();
-    const items = [NavigatorConstants.NAV_BAR_HEIGHT + c17, c17];
-    obj.marginTop = ReanimatedRexport.interpolate(value, [0, 1], items);
-    const items1 = [closure_1 + c17];
-    value2 = derivedValue.get();
-    items1[1] = getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT + c17;
-    obj.marginBottom = ReanimatedRexport.interpolate(value2, [0, 1], items1);
-    return obj;
-  };
-  const tmp2Result2 = num(derivedValue[32]);
-  fn2.__closure = {
-    interpolate: num(derivedValue[32]).interpolate,
-    animatedDrawerState: derivedValue,
-    NAV_BAR_HEIGHT: num(derivedValue[34]).NAV_BAR_HEIGHT,
-    PADDING,
-    chatInputContainerHeight: tmp4,
-    PIP_AVOIDANCE_TAB_BAR_HEIGHT: num(derivedValue[35]).PIP_AVOIDANCE_TAB_BAR_HEIGHT,
-  };
-  fn2.__workletHash = 8833756900366;
-  fn2.__initData = __initData2;
-  const animatedStyle = tmp2Result2.useAnimatedStyle(fn2);
-  const rect = require("useSafeAreaInsets")();
-  const obj4 = { style: null, pointerEvents: "box-none", children: null };
-  let items = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj4.style = items;
-  const obj5 = {
+  items = [closure_20, timing_timing.withTiming, num, native2.STANDARD_EASING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp5, tmp6, tmp7, tmp8] = items;
+  class PictureInPictureGlobalTsx1 {
+    constructor() {
+      obj = { easing: closure_2, duration: 250 };
+      return closure_0(closure_1, obj);
+    }
+  }
+  let items1 = [tmp6, tmp7, tmp8];
+  PictureInPictureGlobalTsx1.__closure = items1;
+  PictureInPictureGlobalTsx1.__workletHash = 16919925230637;
+  PictureInPictureGlobalTsx1.__initData = tmp5;
+  const derivedValue = _mod1652.useDerivedValue(PictureInPictureGlobalTsx1);
+  const tmp2Result = _mod1652;
+  const items2 = [
+    closure_21,
+    _mod1652.interpolate,
+    derivedValue,
+    NavigatorConstants.NAV_BAR_HEIGHT,
+    12,
+    tmp4,
+    getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16] = items2;
+  class PictureInPictureGlobalTsx2 {
+    constructor() {
+      obj = { marginTop: null, marginBottom: null };
+      items = [,];
+      items[0] = closure_2 + closure_3;
+      items[1] = closure_3;
+      obj.marginTop = closure_0(closure_1.get(), [0, 1], items);
+      items1 = [,];
+      items1[0] = closure_4 + closure_3;
+      items1[1] = closure_5 + closure_3;
+      obj.marginBottom = closure_0(closure_1.get(), [0, 1], items1);
+      return obj;
+    }
+  }
+  const items3 = [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16];
+  PictureInPictureGlobalTsx2.__closure = items3;
+  PictureInPictureGlobalTsx2.__workletHash = 6177116209527;
+  PictureInPictureGlobalTsx2.__initData = tmp10;
+  const animatedStyle = _mod1652.useAnimatedStyle(PictureInPictureGlobalTsx2);
+  const rect = useSafeAreaInsetsDefault();
+  const obj2 = { style: null, pointerEvents: "box-none", children: null };
+  const items4 = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj2.style = items4;
+  const obj3 = {
     style: null,
     pointerEvents: "box-none",
-    children: closure_15(closure_20, { channel: channel.channel }),
+    children: closure_1_15(closure_19, { channel: channel.channel }),
   };
-  let items1 = [tmp.container, animatedStyle];
-  obj5.style = items1;
-  obj4.children = closure_15(require("ReanimatedRexport").View, obj5);
-  return closure_15(closure_5, obj4);
+  const items5 = [tmp.container, animatedStyle];
+  obj3.style = items5;
+  obj2.children = closure_1_15(_modDef1652.View, obj3);
+  return closure_1_15(hasOwnProperty, obj2);
 }

@@ -21,7 +21,7 @@ prototype["initialize"] = function initialize(channelAffinities) {
     channelAffinities = obj.channelAffinities;
     map = new Map(
       channelAffinities.map((channelId) => {
-        const items = [channelId.channelId, channelId];
+        items = [channelId.channelId, channelId];
         return items;
       }),
     );
@@ -80,7 +80,7 @@ const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault,
     const channelAffinities = obj.channelAffinities;
     map = new Map(
       channelAffinities.map((channelId) => {
-        const items = [channelId.channelId, channelId];
+        items = [channelId.channelId, channelId];
         return items;
       }),
     );

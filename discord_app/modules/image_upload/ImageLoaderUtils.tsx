@@ -2,8 +2,8 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "AttachmentImageLadder.tsx";
-import privDefault from "../../../_runtime/01451_priv.js";
-import _modDef1485 from "../../../_runtime/metro/01485__.js";
+import privDefault from "../../../_runtime/01453_priv.js";
+import _modDef1487 from "../../../_runtime/metro/01487__.js";
 import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -39,11 +39,11 @@ function getSrcWithWidthAndHeight(quality) {
   }
   if (!src.startsWith("data:image")) {
     if (!obj.isDiscordCdnUrl(src)) {
-      const items = [, ];
+      items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1485.parse(tmp6);
-      const tmp2Result = _modDef1485;
+      items[1] = _modDef1487.parse(tmp6);
+      const tmp2Result = _modDef1487;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -86,9 +86,10 @@ function getSrcWithWidthAndHeight(quality) {
         })("ImageLoaderUtils.getSrcWithWidthAndHeight");
         let size = { width, height };
         if (null != tmp18) {
-          const obj2 = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null };
+          const obj2 = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null, ladder: null };
           const tmp15Result = AttachmentImageLadder;
           obj2.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp18, getDevicePixelRatioDefault());
+          obj2.ladder = tmp18.ladder;
           size = tmp15Result.snapAttachmentDimensions(obj2);
           const tmp15Result2 = AttachmentImageLadder;
         }
@@ -101,7 +102,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1485;
+        _modDef1487;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -174,7 +175,7 @@ export function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -222,7 +223,7 @@ export function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -259,7 +260,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F121258 */ function() { ... });
+                            image.onerror = closure_2_4(/* F120961 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

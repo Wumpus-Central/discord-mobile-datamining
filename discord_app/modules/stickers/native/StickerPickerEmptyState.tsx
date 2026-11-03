@@ -21,13 +21,13 @@ function EmptyStateSticker(sticker) {
   return closure_1_11(StickerDefault, { sticker, size: 60, animated }, id);
 }
 const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(4842).EMPTY_STATE_STICKERS;
+const EMPTY_STATE_STICKERS = fn(4969).EMPTY_STATE_STICKERS;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({
   header: { marginBottom: 8, textAlign: "center" },
   blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 },
@@ -44,9 +44,9 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7326)(analyticsLocations(7351).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7326);
-  const items = [StickersStore];
+  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7446);
+  items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
     return mapped.filter((item) => null != item);
@@ -66,7 +66,7 @@ export default function _default() {
   const obj4 = {
     style: tmp.header,
     accessibilityRole: "header",
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -94,7 +94,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6980).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7106).PressableOpacity, obj, id);
     }),
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -116,16 +116,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6980).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7106).PressableOpacity, obj, id);
     }),
   };
-  obj9.source = analyticsLocations(10015);
+  obj9.source = analyticsLocations(10146);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5717), obj9);
+  obj8.icon = closure_11(analyticsLocations(5837), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10291)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10421)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

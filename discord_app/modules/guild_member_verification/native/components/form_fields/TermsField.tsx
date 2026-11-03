@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -20,7 +20,7 @@ export default function TermsField(field) {
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
   const obj = { style: closure_6().container, children: null };
-  const items = [React4(TermsFieldListDefault, { rules: field.values, rulesChannelId })];
+  items = [React4(TermsFieldListDefault, { rules: field.values, rulesChannelId })];
   if (flag == null) {
     flag = false;
   }

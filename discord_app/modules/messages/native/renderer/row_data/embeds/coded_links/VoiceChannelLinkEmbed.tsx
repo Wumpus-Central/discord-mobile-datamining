@@ -14,9 +14,9 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(4881).getGuildAcronym;
+const getGuildAcronym = fn(5008).getGuildAcronym;
 const Permissions = fn(1072).Permissions;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting(
 export function createVoiceChannelLinkEmbed(code, theme) {
   const tmp = _slicedToArray(code.split("/"), 2);
   const channel = ChannelStore.getChannel(tmp[1]);
-  const guild = GuildStore.getGuild(tmp[0]);
+  guild = GuildStore.getGuild(tmp[0]);
   if (null != channel) {
     if (channel.isGuildVocal()) {
       if (null != guild) {

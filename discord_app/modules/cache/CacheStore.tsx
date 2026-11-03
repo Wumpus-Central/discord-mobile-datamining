@@ -26,7 +26,7 @@ function handleClearCaches(type) {
   const Storage2 = Storage4.Storage;
   Storage2.remove(closure_1_11);
   const Storage3 = Storage4.Storage;
-  Storage3.remove(closure_1_12);
+  Storage3.remove(application_id);
   c15 = "no-cache";
   if (tmp5) {
     c14 = true;
@@ -43,7 +43,7 @@ let closure_20 = async function _loadChannelHistory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,9 +77,9 @@ let closure_20 = async function _loadChannelHistory(arg0) {
             }
           }
           const _HermesInternal = HermesInternal;
-          map1.verbose("skipped loaded messages (channel: " + closure_2 + ", database: " + closure_0 + ").");
+          state.verbose("skipped loaded messages (channel: " + closure_2 + ", database: " + closure_0 + ").");
           const _performance = performance;
-          const items = [performance.now() - nowResult];
+          items = [performance.now() - nowResult];
           const obj6 = { guildId: null, channelId: null, users: [], members: [], messages: [] };
           items[1] = obj6;
           c6 = 3;
@@ -145,7 +145,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -183,7 +183,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
           closure_134_19 = undefined;
           closure_134_20 = undefined;
           let guildId2;
-          map1.verbose("loading early cache");
+          state.verbose("loading early cache");
           socket = socket.getSocket();
           closure_134_3 = socket;
           socket.connect();
@@ -233,7 +233,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             let timeAsyncResult = AppStartPerformanceDefault.timeAsync(
               "\u{1F4BE}",
               "cache: private_channels",
-              async () => closure_1(4913).getAsync(closure_1_0, null),
+              async () => closure_1(5040).getAsync(closure_1_0, null),
             );
           } else {
             timeAsyncResult = Promise.resolve([]);
@@ -242,14 +242,14 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             let resolved = Promise.resolve({});
           } else {
             resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () =>
-              closure_1(7668).getAll(closure_1_0),
+              closure_1(7792).getAll(closure_1_0),
             );
           }
           if (null == closure_0) {
             let resolved1 = Promise.resolve([]);
           } else {
             resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () =>
-              closure_1(7669).getAll(closure_1_0),
+              closure_1(7793).getAll(closure_1_0),
             );
           }
           if (null == closure_0) {
@@ -257,12 +257,12 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             const _Promise5 = allResult.Promise;
           } else {
             resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () =>
-              closure_1(7670).getAll(closure_1_0),
+              closure_1(7794).getAll(closure_1_0),
             );
           }
-          timeRequireDefault("AllCacheStores", () => closure_1_0(7672));
-          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7786));
-          let items = [
+          timeRequireDefault("AllCacheStores", () => closure_1_0(7796));
+          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7910));
+          items = [
             result,
             measureAsyncResult,
             fetchGuildCache2.measureAsync(async () =>
@@ -335,7 +335,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             const members = closure_134_11.members;
             closure_134_19 = Object.fromEntries(
               members.map((userId) => {
-                const items = [userId.userId, userId];
+                items = [userId.userId, userId];
                 return items;
               }),
             );
@@ -368,7 +368,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
                     channels = [];
                   }
                   obj2.initialGuildChannels = channels;
-                  const items = [...closure_2_11.users];
+                  items = [...closure_2_11.users];
                   obj2.users = items;
                   if (null == closure_2_11.channelId) {
                     let obj3 = {};
@@ -499,7 +499,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -539,7 +539,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
                 const obj6 = {
                   value: TryLoad.tryLoadAsync(async () =>
                     closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () =>
-                      closure_2_1(7792).getAsync(closure_1_0),
+                      closure_2_1(7916).getAsync(closure_1_0),
                     ),
                   ),
                   done: false,
@@ -592,7 +592,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
               c7 = 1;
               const obj13 = {
                 value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () =>
-                  closure_1(7792).getOneAsync(closure_1_0, dependencyMap),
+                  closure_1(7916).getOneAsync(closure_1_0, dependencyMap),
                 ),
                 done: false,
               };
@@ -613,7 +613,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
       } else {
         closure_132_3 = value;
         if (null != closure_132_3) {
-          const items = [closure_132_3];
+          items = [closure_132_3];
         } else {
           const items1 = [];
         }
@@ -636,7 +636,7 @@ let closure_24 = async function _loadInitialGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -738,7 +738,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -765,19 +765,19 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           closure_132_8 = undefined;
           closure_132_9 = undefined;
           let socket;
-          map1.verbose("loading late lazy cache");
+          state.verbose("loading late lazy cache");
           const fetchLazyCache = TTITrackerDefault.fetchLazyCache;
           c6 = 1;
           c7 = 1;
           let obj6 = {
             value: fetchLazyCache.measureAsync(async () => {
-              const items = [
+              items = [
                 closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                   if (null != closure_1_0) {
                     let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync(
                       "\u{1F4BE}",
                       "cache: cache_version",
-                      async () => closure_2_1(7796).okAsync(closure_1_0),
+                      async () => closure_2_1(7920).okAsync(closure_1_0),
                     );
                     const obj = closure_2_1(initialGuildId[13]);
                   } else {
@@ -794,7 +794,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                     let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync(
                       "\u{1F4BE}",
                       "cache: lazy guilds",
-                      async () => closure_2_1(7792).getAsync(closure_1_0),
+                      async () => closure_2_1(7916).getAsync(closure_1_0),
                     );
                     const obj = closure_2_1(initialGuildId[13]);
                   }
@@ -808,7 +808,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                   let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync(
                     "\u{1F4BE}",
                     "cache: basic_channels",
-                    async () => closure_2_1(7790).getAsync(closure_1_0),
+                    async () => closure_2_1(7914).getAsync(closure_1_0),
                   );
                   const obj2 = closure_2_1(initialGuildId[13]);
                 } else {
@@ -856,7 +856,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                           closure_0 = item;
                           const async = closure_2_1(initialGuildId[14]).getAsync(closure_0, item);
                           return async.then((result) => {
-                            const items = [closure_0, result];
+                            items = [closure_0, result];
                             return items;
                           });
                         }),
@@ -1057,7 +1057,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           }
         });
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c7 = tmp;
@@ -1072,7 +1072,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f139104();
+      f140311();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -1111,7 +1111,7 @@ function resumeFluxAndSocket(arg0) {
 const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_9,
-  CACHE_STORE_KEY: c10,
+  CACHE_STORE_KEY: closure_10,
   CACHE_STORE_LAZY_KEY: closure_11,
   CACHE_STORE_CHANNELS_LAZY_KEY: closure_12,
 } = Constants);
@@ -1177,7 +1177,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1313,13 +1313,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                    const f139104 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                    const f140311 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                     const socket = closure_5.getSocket();
                     dependencyMap = false;
                     const Emitter = socket(504).Emitter;
                     Emitter.batched(() => {
                       try {
-                        f139104();
+                        f140311();
                         dispatcher = dispatcher.dispatcher;
                         if (dispatcher.hasStuffToDispatchNow()) {
                           c2 = true;
@@ -1425,7 +1425,7 @@ const cacheStoreClass = new CacheStoreClass(DispatcherDefault, {
     const Storage = Storage4.Storage;
     Storage.remove(closure_1_10);
     const Storage2 = Storage4.Storage;
-    Storage2.remove(closure_1_12);
+    Storage2.remove(application_id);
     const Storage3 = Storage4.Storage;
     Storage3.remove(closure_1_11);
   },

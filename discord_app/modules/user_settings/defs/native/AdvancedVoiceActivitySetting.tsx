@@ -5,15 +5,15 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
@@ -25,7 +25,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.LoOB1F);
   },
   usePredicate: function useHasAdvancedVoiceActivitySetting() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () =>
       advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported(),
     );

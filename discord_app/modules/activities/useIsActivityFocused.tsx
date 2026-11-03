@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/activities/useIsActivityFocus
 
 export default function useIsActivityFocused(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore, EmbeddedActivitiesStore];
+  items = [ChannelRTCStore, EmbeddedActivitiesStore];
   return require("initialize").useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();

@@ -1,6 +1,7 @@
 // discord_app/modules/game_organization_invites/GameOrganizationInviteStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import GameOrganizationModels from "../game_organizations/GameOrganizationModels.tsx";
 import fromServerGameOrganization from "fromServerGameOrganization.tsx";
 import GameOrganizationInviteConstants from "GameOrganizationInviteConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -25,7 +26,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE: function handleResolve(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }
@@ -48,7 +49,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       inviterId: invite.inviter_id,
       accepted: invite.accepted,
       guildId: invite.guild.id,
-      organization: fromServerGameOrganization.fromServerGameOrganization(game_organization),
+      organization: GameOrganizationModels.gameOrganizationFromServer(game_organization),
       application: null,
       displayNoun: null,
       characterMode: null,
@@ -79,7 +80,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function handleResolveFailure(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }
@@ -95,7 +96,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_ACCEPT_SUCCESS: function handleAcceptSuccess(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }

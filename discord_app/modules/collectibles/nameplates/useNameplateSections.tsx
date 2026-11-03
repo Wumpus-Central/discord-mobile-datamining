@@ -15,12 +15,12 @@ let result = size.fileFinishedImporting("modules/collectibles/nameplates/useName
 
 export default function useNameplateSections() {
   let obj = stateFromStores(563);
-  let items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   stateFromStores = obj.useStateFromStores(items, () => purchases.purchases);
   let items1 = [CollectiblesCategoryStore];
   const tmp2 = _slicedToArray(
     stateFromStores(563).useStateFromStoresArray(items1, () => {
-      const items = [,];
+      items = [,];
       ({ categories: arr[0], products: arr[1] } = CollectiblesCategoryStore);
       return items;
     }),
@@ -30,7 +30,7 @@ export default function useNameplateSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15068)(
+  return first(15209)(
     useMemo(() => {
       let obj = CollectiblesUtils;
       const nameplates = obj.getNameplates(stateFromStores, first);
@@ -67,7 +67,7 @@ export default function useNameplateSections() {
         { purchase: [], premium_purchase: [], preview: [] },
       );
       obj2 = { section: obj.PURCHASE, items: null, height: 12, header: null };
-      const items = [obj2, obj3, ...reduced.purchase];
+      items = [obj2, obj3, ...reduced.purchase];
       obj2.items = items;
       const intl = util.intl;
       obj2.header = intl.string(util.t.WfGV52);

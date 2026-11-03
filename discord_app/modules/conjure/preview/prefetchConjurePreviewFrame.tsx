@@ -20,7 +20,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -34,7 +34,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          const items = [loadEmbeddedAppCSPForLaunchDefault(closure_0)];
+          items = [loadEmbeddedAppCSPForLaunchDefault(closure_0)];
           const useApplication = ApplicationActionCreators.useApplication;
           const items1 = [closure_0];
           items[1] = useApplication.fetchMany(items1);
@@ -52,7 +52,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -60,7 +60,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
     }
   }
 };
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/prefetchConjurePreviewFrame.tsx");
 

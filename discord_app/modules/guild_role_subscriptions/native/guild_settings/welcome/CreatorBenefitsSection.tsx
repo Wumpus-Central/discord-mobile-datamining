@@ -16,7 +16,7 @@ require = fn;
 function EarningPreview() {
   const tmp2 = useThemeDefault();
   const tmp3 = closure_7();
-  const items = [tmp3.earningMetricsShadowContainer];
+  items = [tmp3.earningMetricsShadowContainer];
   const obj2 = { style: items, children: null };
   items[1] = shared.isThemeDark(tmp2) && tmp3.earningMetricsShadowContainerDarkMode;
   const items1 = [, ,];
@@ -33,7 +33,7 @@ function EarningPreview() {
   const obj5 = { children: null };
   const obj6 = {
     style: shared.isThemeDark(tmp2) ? tmp3.greenTextDarkMode : tmp3.greenTextLightMode,
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     children: null,
   };
   const intl2 = util.intl;
@@ -51,7 +51,7 @@ function ConsistentEarningBenefit() {
   const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["9CdmS8"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {})];
+  items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {})];
   const obj3 = { style: null, children: null };
   const items1 = [,];
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp);
@@ -72,7 +72,7 @@ function FollowerAwardBenefit() {
   const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.qsKRUQ);
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, obj2),
     hasOwnProperty(View, {
       style: tmp.starKeyIllo,
@@ -85,12 +85,12 @@ function FollowerAwardBenefit() {
 function RevenueShareBenefit() {
   const tmp3 = closure_7();
   const obj = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ benefitCard: arr[0], revenueShareContainer: arr[1] } = tmp3);
   obj.style = items;
   const items1 = [tmp3.revenueShare];
   const tmp2 = useThemeDefault();
-  const obj3 = { style: null, variant: "heading-xxl/extrabold", color: "status-positive", children: null };
+  const obj3 = { style: null, variant: "heading-xxl/semibold", color: "status-positive", children: null };
   items1[1] = shared.isThemeDark(tmp2) ? tmp3.greenTextDarkMode : tmp3.greenTextLightMode;
   obj3.style = items1;
   obj3.children = `${closure_4}%`;
@@ -123,10 +123,10 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(17196).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(17339).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },
   benefitAvatarContainer: {
@@ -223,7 +223,7 @@ const result = size.fileFinishedImporting(
 
 export default function CreatorBenefitsSection() {
   const obj = { children: null };
-  const items = [
+  items = [
     hasOwnProperty(ConsistentEarningBenefit, {}),
     hasOwnProperty(FollowerAwardBenefit, {}),
     hasOwnProperty(RevenueShareBenefit, {}),

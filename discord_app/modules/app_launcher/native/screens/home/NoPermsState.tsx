@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     paddingVertical: 16,
@@ -35,12 +35,12 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12444 : 12445);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12580 : 12581);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
     AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );
   const obj2 = { style: tmp.container, children: null };
-  const items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result })];
+  items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result })];
   const obj4 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.uDnXXj);

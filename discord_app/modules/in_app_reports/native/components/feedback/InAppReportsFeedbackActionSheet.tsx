@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const FeedbackType = fn(10158).FeedbackType;
+const FeedbackType = fn(10288).FeedbackType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -41,7 +41,7 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   const intl3 = util.intl;
   obj2.reasonsHeaderLabel = intl3.string(util.t.FJmoxF);
   obj2.reasons = tmp;
-  const items = [result];
+  items = [result];
   obj2.feedbackReasons = items;
   obj2.otherKey = result;
   obj2.trackOpen = function trackOpen() {

@@ -1,5 +1,5 @@
 // discord_app/modules/notifications/settings/native/useIsNotifSettingDisabled.tsx
-import _modDef2868 from "../../NotificationSettings.messages.js";
+import _modDef2995 from "../../NotificationSettings.messages.js";
 import DeclarativeSystemNotifPermissionHelpersDefault from "../DeclarativeSystemNotifPermissionHelpers.android.tsx";
 import DeclarativeSystemNotifPermissionAnalytics from "../DeclarativeSystemNotifPermissionAnalytics.tsx";
 import DeclarativeSystemNotifPermissionStore from "../DeclarativeSystemNotifPermissionStore.tsx";
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/notifications/settings/native/u
 
 export default function useIsNotifSettingDisabled(CALLS) {
   _require = CALLS;
-  const items = [DeclarativeSystemNotifPermissionStore];
+  items = [DeclarativeSystemNotifPermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     DeclarativeSystemNotifPermissionStore.isDisabled(closure_0),
   );
@@ -24,7 +24,7 @@ export default function useIsNotifSettingDisabled(CALLS) {
   if (!tmp4) {
     const obj2 = { label: null, onPress: null };
     const intl = require("util").intl;
-    obj2.label = intl.string(_modDef2868.TVZ0Fm);
+    obj2.label = intl.string(_modDef2995.TVZ0Fm);
     obj2.onPress = function handleOpenSystem() {
       const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
       const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;

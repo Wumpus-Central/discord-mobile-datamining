@@ -17,11 +17,11 @@ export const Commands = {
     renderElement.dispatchCommand(current, "refreshEmojis", []);
   },
   scrollingEnabled(current, arg1) {
-    const items = [arg1];
+    items = [arg1];
     renderElement.dispatchCommand(current, "scrollingEnabled", items);
   },
-  scrollToHeaderIndex(arg0, arg1, arg2) {
-    const items = [arg1, arg2];
-    renderElement.dispatchCommand(arg0, "scrollToHeaderIndex", items);
+  scrollToHeaderIndex(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollToHeaderIndex", items);
   }
 };

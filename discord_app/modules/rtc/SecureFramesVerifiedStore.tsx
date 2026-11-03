@@ -44,7 +44,7 @@ function handleUserUpdate(userId) {
       if (!isKeyVerifiedResult) {
         isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
       }
-      const items = [RTCConnectionStore, StreamRTCConnectionStore];
+      items = [RTCConnectionStore, StreamRTCConnectionStore];
       if (isKeyVerifiedResult) {
         isKeyVerifiedResult = !obj.getIsSecureFramesKeyInconsistent(userId, items);
       }

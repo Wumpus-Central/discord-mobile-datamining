@@ -1,8 +1,8 @@
 // discord_app/components_native/warnings/Suppressed.tsx
 import util from "../../intl/index.native.tsx";
 import PermissionActionCreatorsDefault from "../../actions/PermissionActionCreators.tsx";
-import _modDef19014 from "../../../_runtime/metro/19014__.js";
-import _modDef19015 from "../../../_runtime/metro/19015__.js";
+import _modDef19172 from "../../../_runtime/metro/19172__.js";
+import _modDef19173 from "../../../_runtime/metro/19173__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 
@@ -26,16 +26,16 @@ Suppressed.prototype["render"] = function render() {
     let stringResult = string(t.KuYcnU);
     const intl3 = util.intl;
     let stringResult1 = intl3.string(util.t["RaFZ3+"]);
-    let tmp7 = _modDef19014;
+    let tmp7 = _modDef19172;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = util.intl;
     stringResult1 = intl2.string(util.t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = _modDef19015;
+    tmp7 = _modDef19173;
   }
-  return jsx(tmp6(6030), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(6150), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");

@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/applications/useIsSocialLayer
 
 export default function useIsSocialLayerParentApplication(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);
 }
 export function getIsSocialLayerParentApplication(application) {

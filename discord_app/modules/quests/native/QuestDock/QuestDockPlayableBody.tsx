@@ -9,7 +9,7 @@ import GamesActionCreatorsDefault from "../../../../actions/GamesActionCreators.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");
@@ -25,7 +25,7 @@ export default noop.memo(function QuestDockPlayableBody() {
   let obj2 = questDockPlayable(getQuestImpressionId[5]);
   getQuestImpressionId = questDockPlayable(getQuestImpressionId[7]).useGetQuestImpressionId();
   analyticsLocations = setRestingQuestDockMode(getQuestImpressionId[8])().analyticsLocations;
-  const items = [, , , ,];
+  items = [, , , ,];
   ({ id: arr[0], applicationId: arr[1] } = questDockPlayable);
   items[2] = analyticsLocations;
   items[3] = getQuestImpressionId;

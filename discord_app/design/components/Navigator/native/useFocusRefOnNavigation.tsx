@@ -12,7 +12,7 @@ export default function useFocusRefOnNavigation(inputRef) {
     flag = true;
   }
   const isFocused = inputRef(flag[1]).useIsFocused();
-  const items = [flag, inputRef, isFocused];
+  items = [flag, inputRef, isFocused];
   const effect = isFocused.useEffect(() => {
     inputRef(flag[2]).runAfterInteractions(() => {
       let tmp = flag;

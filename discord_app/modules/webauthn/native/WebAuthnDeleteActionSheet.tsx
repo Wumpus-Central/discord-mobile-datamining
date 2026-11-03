@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: { alignItems: "center" },
   subtitle: { textAlign: "center", marginTop: nativeDefault.space.PX_16 },
@@ -34,20 +34,20 @@ export default function WebAuthnDeleteActionSheet(credential) {
   const obj2 = { title: null, trailing: null };
   const intl = credential(1113).intl;
   obj2.title = intl.formatToPlainString(credential(1113).t.mI3CoL, { keyName: credential.name });
-  obj2.trailing = closure_4(credential(7367).ActionSheetCloseButton, { onPress: handleClose });
-  const items = [closure_4(credential(7321).BottomSheetTitleHeader, obj2), , ,];
+  obj2.trailing = closure_4(credential(7487).ActionSheetCloseButton, { onPress: handleClose });
+  items = [closure_4(credential(7441).BottomSheetTitleHeader, obj2), , ,];
   const obj4 = { style: tmp.content, children: null };
-  const obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
+  const obj5 = { variant: "heading-md/medium", style: tmp.subtitle, children: null };
   const intl2 = credential(1113).intl;
   obj5.children = intl2.string(credential(1113).t.IfTbc1);
-  obj4.children = closure_4(credential(5624).Text, obj5);
+  obj4.children = closure_4(credential(5747).Text, obj5);
   items[1] = closure_4(View, obj4);
   const obj6 = { children: null };
   const obj7 = { text: null, onPress: null, variant: "primary", grow: true };
   const intl3 = credential(1113).intl;
   obj7.text = intl3.string(credential(1113).t["lqK//z"]);
   obj7.onPress = handleClose;
-  obj6.children = closure_4(credential(5634).Button, obj7);
+  obj6.children = closure_4(credential(5754).Button, obj7);
   items[2] = closure_4(View, obj6);
   const obj8 = { children: null };
   const obj9 = { text: null, onPress: null, variant: "destructive", disabled: null, loading: null, grow: true };
@@ -63,8 +63,8 @@ export default function WebAuthnDeleteActionSheet(credential) {
   };
   obj9.disabled = deleting;
   obj9.loading = deleting;
-  obj8.children = closure_4(credential(5634).Button, obj9);
+  obj8.children = closure_4(credential(5754).Button, obj9);
   items[3] = closure_4(View, obj8);
   obj.children = items;
-  return closure_5(credential(5272).BottomSheet, obj);
+  return closure_5(credential(5395).BottomSheet, obj);
 }

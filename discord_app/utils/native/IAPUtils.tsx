@@ -61,7 +61,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,7 +94,7 @@ let closure_16 = async function _makeIAPRequest() {
               };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("../../../_runtime/metro/14467__.js").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("../../../_runtime/metro/14598__.js").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -157,7 +157,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -184,7 +184,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("../../../_runtime/metro/14467__.js").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("../../../_runtime/metro/14598__.js").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -244,7 +244,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -471,7 +471,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -492,7 +492,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("../../../_runtime/metro/14467__.js").getStorefront(), done: false };
+            const obj6 = { value: require("../../../_runtime/metro/14598__.js").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -532,20 +532,20 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5695).convertToAlpha2;
+const convertToAlpha2 = fn(5815).convertToAlpha2;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1385).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1387).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(14466).default;
+  _default = fn(14597).default;
 }
 let items = [
-  fn(14467).ErrorCode.E_USER_CANCELLED,
+  fn(14598).ErrorCode.E_USER_CANCELLED,
   Constants.StoreKitErrors.PAYMENT_CANCELED,
-  fn(14467).ErrorCode.E_UNKNOWN,
+  fn(14598).ErrorCode.E_UNKNOWN,
 ];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
@@ -553,13 +553,13 @@ let obj = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(ProductIds.ProductIds))];
+      items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(ProductIds.ProductIds))];
       const _Object2 = Object;
       items[1] = StorekitIAPQueueDefault.fetchProducts(Object.values(ProductIds.ProductIds));
       let nextPromise = _Promise.all(items).then((result) => {
         [r10007, tmp] = result;
         set = new Set();
-        const items = [...tmp];
+        items = [...tmp];
         return _modDef12.filter(items, (identifier) => {
           const hasItem = set.has(identifier.identifier);
           let flag = !hasItem;
@@ -622,17 +622,17 @@ let obj = {
     return applyArgumentsResult;
   },
 };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1375).isIOS();
+  let isIOSResult1 = fn(1377).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4971).getIsRunningOnSimulator();
-      let obj7 = fn(4971);
+      isRunningOnSimulator = fn(5098).getIsRunningOnSimulator();
+      let obj7 = fn(5098);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -642,10 +642,10 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj5 = fn(1375);
+  let obj5 = fn(1377);
 }
 if (PlatformUtils) {
-  obj = fn(14488).default;
+  obj = fn(14619).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -678,7 +678,7 @@ export function makeIAPRequest() {
 }
 export function useCanPurchaseIAP(productId) {
   _require = productId;
-  const items = [UserStore];
+  items = [UserStore];
   closure_1 = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

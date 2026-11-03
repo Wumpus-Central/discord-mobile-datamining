@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrame.tsx
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import FramePreviewOverrideFrameDefault from "tooling/FramePreviewOverrideFrame.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ function ProfileFrameLayer(skuId) {
   const tmp5 = overflowTop(overflowBottom[7])({ skuId: skuId.skuId, layer, width: sum });
   const assetUrl = tmp5.assetUrl;
   const imageHeight = tmp5.imageHeight;
-  const items = [, , , , ,];
+  items = [, , , , ,];
   ({ anchor: arr[0], type: arr[1], order: arr[2] } = layer);
   items[3] = overflowTop;
   items[4] = overflowBottom;
@@ -124,8 +124,8 @@ function LiveProfileFrame(frame) {
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8795).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
-  const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
+  const settled = frame(8919).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
     return layers.filter((order) => {
@@ -137,17 +137,17 @@ function LiveProfileFrame(frame) {
       return result;
     });
   }, items);
-  let obj = frame(8795);
+  let obj = frame(8919);
   let num = 0;
   if (settled) {
     num = 1;
   }
-  sharedValue = frame(5095).useSharedValue(num);
+  sharedValue = frame(1652).useSharedValue(num);
   const items1 = [settled, sharedValue];
   const effect = profileThemeType.useEffect(() => {
     let num = 0;
     if (settled) {
-      const obj = timing;
+      const obj = timing_timing;
       num = obj.withTiming(1, obj);
     }
     const result = sharedValue.set(num);
@@ -159,7 +159,7 @@ function LiveProfileFrame(frame) {
           overflowTop: c8,
           overflowBottom: c9,
           overflowHorizontal: c10,
-        } = containerWidth(8797)(frame, containerWidth));
+        } = containerWidth(8921)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container];
         const obj5 = { opacity: sharedValue };
@@ -177,7 +177,7 @@ function LiveProfileFrame(frame) {
             containerHeight={containerHeight}
           />
         ));
-        return jsx(containerWidth(5095).View, { style: null, children: null });
+        return jsx(containerWidth(1652).View, { style: null, children: null });
       }
     }
   }
@@ -185,15 +185,15 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8776).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8794);
+let closure_5 = fn(8900).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8918);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(5095).Easing;
-source.easing = Easing.in(fn(5095).Easing.ease);
-const createStyles = fn(5014);
+const Easing = fn(1652).Easing;
+source.easing = Easing.in(fn(1652).Easing.ease);
+const createStyles = fn(5141);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

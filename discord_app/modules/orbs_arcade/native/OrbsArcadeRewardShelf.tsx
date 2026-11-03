@@ -30,9 +30,9 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(13424).Pile, {
+    closure_9(rewards(13560).Pile, {
       "aria-label": memo,
-      shape: rewards(9509).CutoutShape.Circle,
+      shape: rewards(9637).CutoutShape.Circle,
       size: v50,
       gap: 2,
       depthX: 0.28,
@@ -44,8 +44,8 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
   const items3 = [
-    closure_9(rewards(5624).Text, obj5),
-    closure_9(rewards(5624).Text, {
+    closure_9(rewards(5747).Text, obj5),
+    closure_9(rewards(5747).Text, {
       variant: "heading-sm/semibold",
       color: "text-subtle",
       lineClamp: 2,
@@ -132,10 +132,10 @@ function OrbsArcadeAllRewardsClaimedShelfContent(windowEndsAt) {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   rewardShelf: {
     flexDirection: "row",
@@ -159,8 +159,8 @@ let obj2 = {
 };
 let size = {
   marginLeft: "auto",
-  width: fn(5640).SMALL_BUTTON_HEIGHT,
-  height: fn(5640).SMALL_BUTTON_HEIGHT,
+  width: fn(5760).SMALL_BUTTON_HEIGHT,
+  height: fn(5760).SMALL_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -177,7 +177,7 @@ let items2 = [{ scaleX: -1 }];
 obj5.transform = items2;
 obj2.chestLogoMirrored = obj5;
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_17 = createStyles.createStyles((width) => ({
   nitroCoin: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));
@@ -329,7 +329,7 @@ export default function OrbsArcadeRewardShelf(game) {
       obj13.children = intl2.string(tmp2(tmp3[12]).t.ehbzo8);
       const items8 = [closure_9(tmp2(tmp3[11]).Text, obj13)];
       const obj14 = {
-        variant: "experimental/body-xs/medium",
+        variant: "body-xs/medium",
         color: "text-muted",
         textBreakStrategy: "balanced",
         lineBreakStrategyIOS: "standard",

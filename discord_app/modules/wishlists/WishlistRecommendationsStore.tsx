@@ -16,7 +16,7 @@ class WishlistRecommendationsStore extends Store {}
 const prototype = WishlistRecommendationsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(LocaleStore);
-  const items = [LocaleStore];
+  items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
   locale = LocaleStore.locale;
 };
@@ -28,7 +28,7 @@ prototype["getRecommendations"] = function getRecommendations(arg0, arg1) {
         const error = new Error("No user IDs provided");
         throw error;
       } else {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(arg1, HermesBuiltin.arraySpread(arg0, 0));
         return tmp2[items.join(items, ",")];
       }
@@ -46,7 +46,7 @@ obj = {
           const error = new Error("No user IDs provided");
           throw error;
         } else {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
           obj = {};
           const joined = items.join(",");
@@ -66,7 +66,7 @@ obj = {
           const error = new Error("No user IDs provided");
           throw error;
         } else {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
           obj = {};
           const joined = items.join(",");
@@ -89,10 +89,10 @@ obj = {
           const error = new Error("No user IDs provided");
           throw error;
         } else {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
           const joined = items.join(",");
-          let state;
+          state = undefined;
           if (obj[joined] != null) {
             state = tmp18.state;
           }

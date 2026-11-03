@@ -13,13 +13,13 @@ export default function useTypingText(channelId) {
   const typingUserIds = channelId.typingUserIds;
   let lJ9sZX = channelId;
   let obj = typingUserIds;
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [channelId, guildId, typingUserIds];
   const obj2 = channelId(typingUserIds[2]);
   [tmp2, tmp3, tmp4] = channelId(typingUserIds[2]).useStateFromStoresArray(
     items,
     () => {
-      const items = [];
+      items = [];
       while (tmp2 !== undefined) {
         let user = UserStore.getUser(tmp3);
         if (null != user) {

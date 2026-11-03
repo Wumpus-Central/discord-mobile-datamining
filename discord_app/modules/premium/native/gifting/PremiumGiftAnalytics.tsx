@@ -22,7 +22,7 @@ export default function PremiumGiftAnalytics(currentStep) {
   let timestamp = Date.now();
   const ref = basePurchaseAnalytics.useRef(timestamp);
   basePurchaseAnalytics.useRef(timestamp);
-  const items = [basePurchaseAnalytics, currentStep, ref, customGiftMessage, productId];
+  items = [basePurchaseAnalytics, currentStep, ref, customGiftMessage, productId];
   const effect = basePurchaseAnalytics.useEffect(() => {
     if (currentStep !== ref.current) {
       const _Date = Date;

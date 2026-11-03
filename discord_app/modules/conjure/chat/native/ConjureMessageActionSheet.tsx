@@ -16,7 +16,7 @@ function ConjureMessageActionSheet(content) {
   const onQueuedAction = content.onQueuedAction;
   const onRestoreVersion = content.onRestoreVersion;
   const onViewTrace = content.onViewTrace;
-  const items = [content];
+  items = [content];
   const items1 = [userId];
   const callback = onRestoreVersion.useCallback(() => {
     ClipboardUtils.copy(content);

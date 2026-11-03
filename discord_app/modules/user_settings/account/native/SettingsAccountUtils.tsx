@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export function useIs2FAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -22,11 +22,11 @@ export function useIs2FAEnabled() {
   });
 }
 export function useIsTOTPEnabled() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
 }
 export function useIsUserVerified() {
-  const items = [UserStore];
+  items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

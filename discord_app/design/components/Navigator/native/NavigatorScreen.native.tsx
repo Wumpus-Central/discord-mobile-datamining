@@ -19,7 +19,7 @@ export const NavigatorScreen = noop.memo(function NavigatorScreen(arg0) {
     customNavbarResult = customNavbar();
   }
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
-  const items = [customNavbarResult, screen.render(route.params, navigation)];
+  items = [customNavbarResult, screen.render(route.params, navigation)];
   obj.children = items;
   return jsxs(PostponeRender.PostponeRender, {
     postpone: screen.postponeRender,

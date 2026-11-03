@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -43,7 +43,7 @@ export default noop.memo(function QuestDockRewardTile(assetUrl) {
     const obj = assetUrl(height[7]);
   }
   noop = undefined;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = assetUrl(height[8]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp6 = closure_9();
   const obj2 = assetUrl(height[8]);

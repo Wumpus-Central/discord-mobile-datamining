@@ -18,7 +18,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   nitroWheel: { marginLeft: nativeDefault.space.PX_8 },
   sublabel: null,
@@ -65,7 +65,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     flag = false;
   }
   const tmp = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
   const obj4 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };

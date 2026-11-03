@@ -14,8 +14,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getState"] = function getState() {
   return closure_0;
 };
-prototype["getCountForGuild"] = function getCountForGuild(guildId) {
-  return closure_0[guildId];
+prototype["getCountForGuild"] = function getCountForGuild(c0) {
+  return closure_0[c0];
 };
 GuildBoostingProgressBarPersistedStore.displayName = "GuildBoostingProgressBarPersistedStore";
 GuildBoostingProgressBarPersistedStore.persistKey = "PremiumGuildProgressBarPersistedStore";

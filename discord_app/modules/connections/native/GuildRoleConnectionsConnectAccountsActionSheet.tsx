@@ -25,10 +25,10 @@ import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef11592 from "../../../../_runtime/metro/11592__.js";
-import _modDef11593 from "../../../../_runtime/metro/11593__.js";
+import _modDef11729 from "../../../../_runtime/metro/11729__.js";
+import _modDef11730 from "../../../../_runtime/metro/11730__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
-import _modDef11597 from "../../../../_runtime/metro/11597__.js";
+import _modDef11734 from "../../../../_runtime/metro/11734__.js";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -50,23 +50,23 @@ function PlatformIcon(platformType) {
   const obj2 = AvatarUtils;
   const icon = value.icon;
   const source = obj2.makeSource(shared.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
-  return __initData7(native.Icon, { source, style: tmp.platformIcon, disableColor: true });
+  return closure_1_29(native.Icon, { source, style: tmp.platformIcon, disableColor: true });
 }
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = closure_32();
   const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
   const obj2 = { style: null, children: null };
-  const items = [tmp.channelName, channel.style];
+  items = [tmp.channelName, channel.style];
   obj2.style = items;
   let tmp8 = null;
   if (null != channelIcon) {
     const obj3 = { source: channelIcon, style: tmp.channelNameIcon };
-    tmp8 = __initData7(native.Icon, obj3);
+    tmp8 = closure_1_29(native.Icon, obj3);
   }
   const items1 = [tmp8];
   const tmp5 = useChannelNameDefault(channel);
-  items1[1] = __initData7(Text_Text.Text, {
+  items1[1] = closure_1_29(Text_Text.Text, {
     variant: "heading-lg/semibold",
     color: "text-default",
     style: tmp.channelNameText,
@@ -74,7 +74,7 @@ function ChannelName(channel) {
     children: useChannelNameDefault(channel),
   });
   obj2.children = items1;
-  return __initData8(React6, obj2);
+  return closure_1_30(React6, obj2);
 }
 function ConnectionsCheck(result) {
   ({ connectionType, connectionMetadataField, operator, value, description } = result);
@@ -129,7 +129,7 @@ function ConnectionsCheck(result) {
         str = "text-default";
       }
       const obj5 = { variant: "text-xs/normal", color: str, style: tmp.connectionsCheck, children: formatResult };
-      tmp22Result = __initData7(Text_Text.Text, obj5);
+      tmp22Result = closure_1_29(Text_Text.Text, obj5);
     }
     return tmp22Result;
   }
@@ -168,7 +168,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     }
   }
   application = eligibilityState.application;
-  const items = [application];
+  items = [application];
   const memo = noop.useMemo(() => {
     let bot;
     if (application != null) {
@@ -218,7 +218,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
         if (!someResult) {
           connection_type = eligibilityState.connection_type;
         }
-        let application_id = eligibilityState.application_id;
+        application_id = eligibilityState.application_id;
         if (application_id == null) {
           application_id = null;
         }
@@ -278,7 +278,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "a" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Array" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, ,];
@@ -346,7 +346,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     initialAttemptedApplicationId = null;
   }
   [first1, closure_13] = noop.useState(initialAttemptedApplicationId);
-  let items = [eligibilityStatesGroups];
+  items = [eligibilityStatesGroups];
   memo = obj.useMemo(() => _modDef12.flatten(eligibilityStatesGroups), items);
   let items1 = [memo];
   memo1 = obj.useMemo(
@@ -397,7 +397,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = _slicedToArray(noop.useState(0), 2);
-  roleColor = eligibilityStatesGroups(5596).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  roleColor = eligibilityStatesGroups(5719).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
   let obj3 = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -452,7 +452,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(7348).officialApplicationIds;
+    const officialApplicationIds = eligibilityStatesGroups(7468).officialApplicationIds;
     let str;
     if (application != null) {
       str = application.id;
@@ -476,24 +476,24 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11592, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11729, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1187).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
       const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl2 = tmp15(1113).intl;
       obj4.children = intl2.string(tmp15(1113).t["5911Lb"]);
-      tmp22Result = closure_1_29(tmp15(5624).Text, obj4);
+      tmp22Result = closure_1_29(tmp15(5747).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11593, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11730, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1187).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
       const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
       const intl = tmp15(1113).intl;
       obj6.children = intl.string(tmp15(1113).t.cEts68);
-      tmp22Result = closure_1_29(tmp15(5624).Text, obj6);
+      tmp22Result = closure_1_29(tmp15(5747).Text, obj6);
       tmp24 = closure_1_29;
     }
     let type1;
@@ -515,7 +515,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp24Result = tmp24(BotTagDefault, obj8);
       const tmp5Result = BotTagDefault;
     }
-    const items = [closure_5.connectionsChecksGroup, ,];
+    items = [closure_5.connectionsChecksGroup, ,];
     let prop = null;
     if (tmp3) {
       prop = closure_5.connectionsChecksGroupPassed;
@@ -538,7 +538,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         type = value.type;
       }
       if (type == null) {
-        type = closure_3_19;
+        type = expandedHeight;
       }
       let tmp2 = application;
       if (application == null) {
@@ -568,7 +568,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         const obj11 = { variant: "text-xs/normal", color: "text-overlay-light", children: null };
         const intl4 = tmp15(1113).intl;
         obj11.children = intl4.string(tmp15(1113).t.UB3hKo);
-        obj10.children = tmp24(tmp15(5624).Text, obj11);
+        obj10.children = tmp24(tmp15(5747).Text, obj11);
         tmp24Result5 = tmp24(c8, obj10);
       }
     }
@@ -581,7 +581,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "a" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "Array" };
       tmp24Result7 = tmp24(tmp15(1187).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -599,7 +599,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       name = name1;
     }
     const items2 = [
-      tmp24(eligibilityStatesGroups(5624).Text, {
+      tmp24(eligibilityStatesGroups(5747).Text, {
         variant: "text-md/medium",
         color: "mobile-text-heading-primary",
         children: name,
@@ -620,7 +620,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         children: null,
       };
       const obj17 = {
-        source: _modDef11597,
+        source: _modDef11734,
         size: tmp15(1187).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -683,7 +683,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(enabled);
       ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
     };
-    tmp12 = closure_29(account(8177).FormSwitchRow, obj2);
+    tmp12 = closure_29(account(8301).FormSwitchRow, obj2);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -696,7 +696,7 @@ function ConnectedUserAccountOptions(account) {
       closure_4(show_activity);
       ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
     };
-    tmp15 = closure_29(account(8177).FormSwitchRow, obj3);
+    tmp15 = closure_29(account(8301).FormSwitchRow, obj3);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -715,7 +715,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
     };
-    tmp18 = closure_29(account(8177).FormSwitchRow, obj5);
+    tmp18 = closure_29(account(8301).FormSwitchRow, obj5);
   }
   const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj7 = { label: null, value: null, onValueChange: null };
@@ -732,13 +732,13 @@ function ConnectedUserAccountOptions(account) {
     }
     ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
   };
-  const items = [closure_29(account(8177).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
+  items = [closure_29(account(8301).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
   obj6.children = items;
   return closure_30(closure_8, obj6);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-let Constants = fn(7349);
+let Constants = fn(7469);
 ({
   MetadataFields: closure_17,
   OperatorTypes: closure_18,
@@ -758,7 +758,7 @@ Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 12 },
   connectionsChecksGroups: { marginTop: 16, flexDirection: "column" },
@@ -918,8 +918,8 @@ obj2.manageConnectionsButton = { marginTop: 8 };
 obj2.loading = { marginTop: 24, marginBottom: 32, alignSelf: "center" };
 obj2.appIcon = { marginRight: 8 };
 obj2.botTag = { marginLeft: 4 };
-const __initData10 = createStyles.createStyles(obj2);
-const __initData17 = {
+let closure_32 = createStyles.createStyles(obj2);
+const constants2 = {
   CHECKS_REQUIRED: 0,
   [0]: "CHECKS_REQUIRED",
   ACCOUNT_CONNECTED: 1,
@@ -964,7 +964,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -996,7 +996,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c0 = tmp;
@@ -1153,7 +1153,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     if (closure_39.CHECKS_REQUIRED === tmp4) {
       obj51 = { style: null, children: null };
       obj51.style = tmp.header;
-      obj52 = { variant: "heading-lg/extrabold", children: null };
+      obj52 = { variant: "heading-lg/semibold", children: null };
       intl2 = tmp17(tmp18[25]).intl;
       obj52.children = intl2.string(tmp17(tmp18[25]).t.zOZh3R);
       obj51.children = tmp36(tmp17(tmp18[24]).Text, obj52);
@@ -1174,7 +1174,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
         }
         name = name1;
       }
-      obj53 = { variant: "heading-lg/extrabold", style: null, children: null };
+      obj53 = { variant: "heading-lg/semibold", style: null, children: null };
       obj53.style = tmp.header;
       intl = tmp17(tmp18[25]).intl;
       obj54 = { platformName: null };
@@ -1184,7 +1184,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     } else {
       tmp36Result = null;
       if (tmp2.ROLE_GRANTED === tmp4) {
-        obj55 = { variant: "heading-lg/extrabold", style: null, children: null };
+        obj55 = { variant: "heading-lg/semibold", style: null, children: null };
         obj55.style = tmp.header;
         intl12 = tmp17(tmp18[25]).intl;
         obj55.children = intl12.string(tmp17(tmp18[25]).t.najNdz);
@@ -1260,7 +1260,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                   prop = closure_1.role_connections_verification_url;
                 }
                 const resolved = Promise.resolve({ default: closure_1_40 });
-                const obj = closure_1(5258);
+                const obj = closure_1(5381);
                 const obj2 = { default: closure_1_40 };
                 const obj4 = {
                   role,
@@ -1272,7 +1272,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  11598,
+                  11735,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1281,7 +1281,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11598);
+                const obj3 = platformType(11735);
               },
               overrideUrl: null,
             };

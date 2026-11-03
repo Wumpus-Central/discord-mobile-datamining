@@ -3,14 +3,14 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import SubscriptionRoleStore from "SubscriptionRoleStore.tsx";
 
 require = fn;
-const constants = fn(17196).UserGuildRoleSubscriptionRelationship;
+const constants = fn(17339).UserGuildRoleSubscriptionRelationship;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 
 export default function useUserRoleSubscriptionRelationship() {
-  let items = [SubscriptionRoleStore];
+  items = [SubscriptionRoleStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [SubscriptionRoleStore];
+    items = [SubscriptionRoleStore];
     [obj] = items;
     const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
     c1 = false;
@@ -32,7 +32,7 @@ export default function useUserRoleSubscriptionRelationship() {
 export function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [SubscriptionRoleStore];
+    items = [SubscriptionRoleStore];
     tmp = items;
   }
   [obj] = tmp;

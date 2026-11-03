@@ -70,7 +70,7 @@ prototype["requestStream"] = function requestStream() {
   if (null != this.videoStream) {
     const obj = {};
     obj[self.videoStream.ssrc] = 100;
-    const items = [self.videoStream.ssrc];
+    items = [self.videoStream.ssrc];
     self.request(obj, items);
   }
 };

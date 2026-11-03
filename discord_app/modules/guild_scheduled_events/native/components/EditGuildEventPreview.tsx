@@ -16,14 +16,14 @@ function PreviewBody(event) {
   const tmp = closure_8();
   _require = tmp;
   const channel_id = event.channel_id;
-  let items = [eventLocationIconSource];
+  items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => ChannelStore.getChannel(channel_id),
     items1,
   );
-  const tmp6 = channel_id(5652)(stateFromStores);
+  const tmp6 = channel_id(5772)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -38,7 +38,7 @@ function PreviewBody(event) {
   let obj3 = { style: tmp.header, children: null };
   const obj4 = {
     style: tmp.headerTitle,
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -57,7 +57,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1113).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9085)(obj7);
+    obj6.channelName = tmp5(9213)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -73,7 +73,7 @@ function PreviewBody(event) {
           tmp2Result = timestampProducer(native.Icon, obj2);
         }
         obj.children = tmp2Result;
-        const items = [timestampProducer(View, obj)];
+        items = [timestampProducer(View, obj)];
         let tmp11 = closure_2;
         if (closure_2 == null) {
           let result = null;
@@ -112,7 +112,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -159,7 +159,7 @@ obj2.eventContainer = {
 };
 obj2.channelContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
 let obj5 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -209,7 +209,7 @@ export default function EditGuildEventPreview(guild) {
     tmp5 = guildEvent;
     tmp6 = tmp2;
   }
-  const items = [guildEvent, guild.id];
+  items = [guildEvent, guild.id];
   const memo = isEdit.useMemo(() => EditGuildEventUtils.convertToFakeGuildEvent(guildEvent, guild.id), items);
   let obj = { bottom: true, style: tmp.container, children: null };
   let obj2 = { style: null, children: null };

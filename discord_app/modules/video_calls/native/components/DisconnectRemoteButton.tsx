@@ -12,14 +12,14 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export function DisconnectRemoteButton(channel) {
   channel = channel.channel;
-  const items = [GameConsoleStore];
+  items = [GameConsoleStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({
     awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(),
     remoteSessionId: GameConsoleStore.getRemoteSessionId(),
   }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
   let obj2 = {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11935),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8483 : 12072),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,
@@ -36,7 +36,7 @@ export function DisconnectRemoteButton(channel) {
     }
   };
   return jsx(CallBarActionAll.PrimaryActionButton, {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8359 : 11935),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8483 : 12072),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,

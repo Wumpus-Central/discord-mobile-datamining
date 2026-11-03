@@ -1,10 +1,13 @@
 // discord_app/design/animation/reanimated/spring/springPresets.tsx
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import SUBTLE_SPRING from "../../../../../discord_common/js/packages/tokens/motion/generated/generated-definitions.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = SUBTLE_SPRING.SUBTLE_SPRING;
+export const Reanimated3DefaultSpringConfig = _mod1652.Reanimated3DefaultSpringConfig;
+export const Reanimated3DefaultSpringConfigWithDuration = _mod1652.Reanimated3DefaultSpringConfigWithDuration;
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 export const springSlow = { mass: 1, damping: 30, stiffness: 380 };
 export const springUnclamped = { mass: 0.35, damping: 13, stiffness: 250 };

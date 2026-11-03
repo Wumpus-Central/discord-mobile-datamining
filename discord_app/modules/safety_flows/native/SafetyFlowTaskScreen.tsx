@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
@@ -34,11 +34,11 @@ export default function SafetyFlowTaskScreen(action) {
   if (tmp6) {
     tmp6 = ImageComponent;
   }
-  const items = [
+  items = [
     tmp6,
     React3(Text_Text.Text, {
       accessibilityRole: "header",
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: tmp2.header,
       children: action.title,

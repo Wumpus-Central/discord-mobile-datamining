@@ -9,7 +9,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire } = Constants);
-const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/PremiumTryItOutModal.tsx");
@@ -19,7 +19,7 @@ export default function PremiumTryItOutModal(initialTarget) {
   const onClose = initialTarget.onClose;
   let stateFromStores;
   let shuffleButtonLocation;
-  const items = [shuffleButtonLocation];
+  items = [shuffleButtonLocation];
   stateFromStores = initialTarget(stateFromStores[5]).useStateFromStores(items, () =>
     shuffleButtonLocation.getCurrentUser(),
   );

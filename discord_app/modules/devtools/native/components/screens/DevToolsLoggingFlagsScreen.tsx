@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 
 export default function DevToolsLoggingFlagsScreen() {
   const tmp = closure_6();
-  const items = [DeveloperOptionsStore];
+  items = [DeveloperOptionsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents,
     isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents,

@@ -73,7 +73,7 @@ export function useSearchFetchPendingManager(searchContext) {
     }
   });
   dependencyMap = tmp;
-  const items = [searchContext, tmp];
+  items = [searchContext, tmp];
   const effect = noop.useEffect(
     () =>
       SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, (arg0, arg1) => {

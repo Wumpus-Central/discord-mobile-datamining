@@ -1,34 +1,24 @@
 // discord_app/modules/waterwheels/interest/native/InterestPickerStep.tsx
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
-import InterestPickerCatalogs from "InterestPickerCatalogs.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const require = fn;
+let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestPickerStep.tsx");
 
 export default function InterestPickerStep(navigation) {
   navigation = navigation.navigation;
-  let interestPickerGameList;
   const onComplete = navigation.route.params.onComplete;
-  interestPickerGameList = navigation(interestPickerGameList[2]).useInterestPickerGameList("InterestPickerStep");
-  let obj = navigation(interestPickerGameList[2]);
-  const setPicks = navigation(interestPickerGameList[3]).useInterestPickerPicks().setPicks;
-  const items = [interestPickerGameList];
-  const memo = setPicks.useMemo(() => {
-    let interestPickerCatalog = null;
-    if (null != interestPickerGameList) {
-      interestPickerCatalog = InterestPickerCatalogs.getInterestPickerCatalog(tmp);
-    }
-    return interestPickerCatalog;
-  }, items);
-  setPicks.useRef(false);
-  const items1 = [navigation, onComplete, setPicks];
-  const callback = setPicks.useCallback((arg0, arg1) => {
+  const tmp3 = onComplete(18571)("InterestPickerStep");
+  dependencyMap = tmp3;
+  const setPicks = navigation(19722).useInterestPickerPicks().setPicks;
+  jsx = setPicks.useRef(false);
+  items = [navigation, onComplete, setPicks];
+  const callback = setPicks.useCallback((gameIds, arg1) => {
     if (!ref.current) {
       tmp.current = true;
-      setPicks(arg0);
+      setPicks(gameIds);
       if (null == onComplete) {
         const obj2 = { tags: { reason: "missing_on_complete" } };
         SentryUtilsDefault.captureMessage("waterwheels picker step missing completion callback", obj2);
@@ -37,27 +27,34 @@ export default function InterestPickerStep(navigation) {
         tmp5(arg1);
       }
     }
-  }, items1);
-  const items2 = [memo, callback];
+  }, items);
+  const items1 = [tmp3, callback];
   const effect = setPicks.useEffect(() => {
-    if (null == memo) {
+    if (null == closure_2) {
       callback([], true);
     }
-  }, items2);
-  const items3 = [callback];
+  }, items1);
+  const items2 = [callback];
   [][0] = callback;
-  const callback1 = setPicks.useCallback((arg0) => callback(arg0, false), items3);
+  const callback1 = setPicks.useCallback((arg0) => callback(arg0, false), items2);
   let tmp9 = null;
-  if (null != memo) {
-    const obj3 = { catalog: memo, title: null, subtitle: null, minSelection: 1, onContinue: null, onSkip: null };
-    const intl = tmp(tmp2[7]).intl;
-    obj3.title = intl.string(onComplete(tmp2[8])["5MUKTF"]);
-    const intl2 = tmp(tmp2[7]).intl;
-    obj3.subtitle = intl2.string(onComplete(tmp2[8])["z/57xV"]);
-    obj3.onContinue = callback1;
-    obj3.onSkip = tmp8;
-    tmp9 = memo(onComplete(tmp2[6]), obj3);
-    const tmp12 = onComplete(tmp2[6]);
+  if (null != tmp3) {
+    let obj2 = { catalog: tmp3, title: null, subtitle: null, minSelection: 1, onContinue: null, onSkip: null };
+    const intl = tmp4(1113).intl;
+    obj2.title = intl.string(tmp(2537)["5MUKTF"]);
+    const intl2 = tmp4(1113).intl;
+    obj2.subtitle = intl2.string(tmp(2537)["z/57xV"]);
+    obj2.onContinue = callback1;
+    obj2.onSkip = tmp8;
+    tmp9 = jsx(tmp(18575), {
+      catalog: tmp3,
+      title: null,
+      subtitle: null,
+      minSelection: 1,
+      onContinue: null,
+      onSkip: null,
+    });
+    const tmpResult = tmp(18575);
   }
   return tmp9;
 }

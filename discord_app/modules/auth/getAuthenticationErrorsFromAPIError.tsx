@@ -9,7 +9,7 @@ export function getAuthenticationErrorsFromAPIError(error) {
     const _Object = Object;
     const keys = Object.keys(error.errors);
     for (const item10017 of keys) {
-      let items = [arg0.getFirstFieldErrorMessage(item10017)];
+      items = [arg0.getFirstFieldErrorMessage(item10017)];
       obj[item10017] = items;
       continue;
     }

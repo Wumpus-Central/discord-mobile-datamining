@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/FileUpIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12226 from "../../../../../../../_runtime/metro/12226__.js";
+import _mod12362 from "../../../../../../../_runtime/metro/12362__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function FileUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12226, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12362, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

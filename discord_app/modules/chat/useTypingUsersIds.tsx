@@ -16,7 +16,7 @@ export function useTypingUserIds(id, arg1) {
     const _Number = Number;
     MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
   }
-  let items = [UserStore, TypingStore, RelationshipStore];
+  items = [UserStore, TypingStore, RelationshipStore];
   const items1 = [id, MAX_SAFE_INTEGER];
   return require("initialize").useStateFromStoresArray(
     items,
@@ -26,7 +26,7 @@ export function useTypingUserIds(id, arg1) {
         id = currentUser.id;
       }
       const typingUsers = TypingStore.getTypingUsers(closure_0);
-      const items = [];
+      items = [];
       for (const key10013 in typingUsers) {
         if (items.length >= MAX_SAFE_INTEGER) {
           break;

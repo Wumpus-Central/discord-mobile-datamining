@@ -338,7 +338,7 @@ const navigation = {
     };
   },
   forgetTransientFailures() {
-    const items = [...map5.keys()];
+    items = [...map5.keys()];
     const values = map5.values();
     for (const item10013 of values) {
       let cancelResult = item10013.cancel();
@@ -680,7 +680,7 @@ let obj = {
     };
   },
   forgetTransientFailures() {
-    const items = [...map5.keys()];
+    items = [...map5.keys()];
     const values = map5.values();
     for (const item10013 of values) {
       let cancelResult = item10013.cancel();

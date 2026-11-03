@@ -18,13 +18,13 @@ const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9895).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(10026).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
 export function useMessageAuthorActivities(arg0) {
   _require = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     const obj = {};
     const item = closure_0.forEach((author) => {
@@ -45,7 +45,7 @@ export function useMessageAuthorActivities(arg0) {
 }
 export function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
-  const items = [arg0];
+  items = [arg0];
   const memo = noop.useMemo(() => {
     const set = new Set();
     const item = closure_0.forEach((applicationId) => {
@@ -72,7 +72,7 @@ export function useFetchMessageApplications(arg0) {
 }
 export function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
   _require = stateFromStores4;
-  const items = [GuildStore, GuildAvailabilityStore];
+  items = [GuildStore, GuildAvailabilityStore];
   const items1 = [stateFromStores4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -157,7 +157,7 @@ export function useMessagesLifecycle(screenIndex) {
     };
     messages_MessagesUtils.recordTimings(channelId, messages);
   }, []);
-  const items = [channelId, screenIndex];
+  items = [channelId, screenIndex];
   const effect1 = screenIndex.useEffect(
     () => () => {
       closure_2_7(channelId, screenIndex, false);
@@ -181,7 +181,7 @@ export function useScrollState() {
     2,
   );
   closure_0 = tmp[1];
-  const items = [
+  items = [
     tmp[0],
     noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -197,7 +197,7 @@ export function useScrollState() {
 export function useChatUpdatesQueue(ref5, callback) {
   closure_0 = ref5;
   closure_1 = callback;
-  const items = [ref5, callback];
+  items = [ref5, callback];
   const memo = noop.useMemo(
     () =>
       new ChatUpdatesQueueDefault(

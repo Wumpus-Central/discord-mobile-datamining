@@ -8,7 +8,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08155_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ require = fn;
 function StatusBubbleConnector(arg0) {
   ({ backgroundColor, borderColor, style } = arg0);
   const size = { pointerEvents: "none", style, width: 20, height: 11, viewBox: "0 0 20 11", children: null };
-  const items = [
+  items = [
     React7(inlineStyles.Path, { d: "M0 10 A10 10 0 0 1 20 10 L20 11 L0 11 Z", fill: backgroundColor }),
     React7(inlineStyles.Path, {
       d: "M0.5 10 A9.5 9.5 0 0 1 19.5 10",
@@ -40,7 +40,7 @@ function EmojiImage(id) {
   const AnimateEmoji = UserSettings.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   const obj = { style: null, source: null, resizeMode: "contain" };
-  const items = [{ height: size, width: size }, id.style];
+  items = [{ height: size, width: size }, id.style];
   obj.style = items;
   const tmp3 = FastImageDefault;
   const obj3 = { id: id.emojiId, animated: null, size: null };
@@ -72,7 +72,7 @@ function TextStatusContent(arg0) {
       const obj7 = { marginBottom: 0.1 * -lineHeight };
       obj6.style = obj7;
       obj5.children = React7(EmojiImage, obj6);
-      const items = [React7(timestampProducer, obj5)];
+      items = [React7(timestampProducer, obj5)];
       const obj8 = { style: null };
       const obj9 = { width: 0.5 * lineHeight };
       obj8.style = obj9;
@@ -155,16 +155,16 @@ function EmojiOnlyStatusContent(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const PlatformUtils = fn(1375);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const PlatformUtils = fn(1377);
 let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -214,7 +214,7 @@ let closure_15 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_16 = {
-  [fn(7377).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7497).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -222,7 +222,7 @@ let closure_16 = {
     statusBubblePaddingVertical: 6,
   },
 };
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_19 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
@@ -276,7 +276,7 @@ export default function UserProfileCustomStatusBubble(ref) {
     require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp5Result6 = require("UserProfileAnalyticsContext");
   if (undefined === previewText) {
-    let state;
+    state = undefined;
     if (customStatusActivity != null) {
       state = customStatusActivity.state;
     }
@@ -372,7 +372,7 @@ export default function UserProfileCustomStatusBubble(ref) {
     name = previewEmoji.name;
   }
   let obj3 = { text: null };
-  let items = [name, str4];
+  items = [name, str4];
   const found = items.filter((item) => null != item);
   obj3.text = found.join(" ");
   const items1 = [style];
@@ -424,7 +424,7 @@ export default function UserProfileCustomStatusBubble(ref) {
     trackUserProfileAction({ action: "PRESS_EDIT_CUSTOM_STATUS" });
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj3 = { analyticsLocations: null, prompt: null };
-    const items = [AnalyticsLocationDefault.USER_PROFILE_CUSTOM_STATUS_BUBBLE];
+    items = [AnalyticsLocationDefault.USER_PROFILE_CUSTOM_STATUS_BUBBLE];
     obj3.analyticsLocations = items;
     obj3.prompt = _prompt;
     const result = CustomStatusUtils.openEditCustomStatusModal(obj3);

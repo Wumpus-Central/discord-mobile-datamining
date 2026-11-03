@@ -47,7 +47,7 @@ export default function TotpScreen(finish) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default function TotpScreen(finish) {
       }
     })();
   });
-  const items = [finish];
+  items = [finish];
   const onChangeCode = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;

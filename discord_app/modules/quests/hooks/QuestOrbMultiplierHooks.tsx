@@ -36,7 +36,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
 
 export function useQuestOrbMultiplierEligibility() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () =>
     getQuestOrbMultiplierEligibilityForUser(currentUser.getCurrentUser()),
   );

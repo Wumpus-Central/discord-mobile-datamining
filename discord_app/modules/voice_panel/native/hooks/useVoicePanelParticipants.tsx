@@ -20,7 +20,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11223);
+const VoicePanelConstants = fn(11360);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 let closure_14 = [];
@@ -45,7 +45,7 @@ export default function useVoicePanelCards(arg0, arg1) {
     noop.useState(() => new Map()),
     1,
   )[0];
-  let items = [first];
+  items = [first];
   const effect = noop.useEffect(() => () => first.clear(), items);
   let items1 = [RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(
@@ -64,7 +64,7 @@ export default function useVoicePanelCards(arg0, arg1) {
       let tmp;
       if (closure_4) {
         let voiceParticipantsHidden = ChannelRTCStore.getVoiceParticipantsHidden(closure_0);
-        const items = [];
+        items = [];
         const filteredParticipants = ChannelRTCStore.getFilteredParticipants(closure_0);
         for (const item10024 of filteredParticipants) {
           let arr = items.push(item10024);
@@ -149,7 +149,7 @@ export function useChunkedParticipants(channelId, arg1) {
     managerSubscription.useState(() => new Map()),
     1,
   )[0];
-  let items = [first];
+  items = [first];
   const effect = managerSubscription.useEffect(() => () => first.clear(), items);
   let obj = require("VoicePanelCardLayoutManager");
   let items1 = [VoiceStateStore, first];
@@ -160,13 +160,13 @@ export function useChunkedParticipants(channelId, arg1) {
       if (managerSubscription < 0) {
         return closure_14;
       } else {
-        let items = [];
+        items = [];
         if (VoiceStateStore.isInChannel(closure_0, id)) {
           const _Set = Set;
           const set = new Set(
             (() => {
               let end;
-              const items = [];
+              items = [];
               let start = closure_1_1.start;
               if (start <= closure_1_1.end) {
                 do {

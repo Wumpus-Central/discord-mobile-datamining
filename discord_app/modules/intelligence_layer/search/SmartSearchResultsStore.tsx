@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/SmartSearchResultsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01451_priv.js";
+import privDefault from "../../../../_runtime/01453_priv.js";
 import SmartSearchTypes from "SmartSearchTypes.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -10,7 +10,7 @@ require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(13888);
+const SmartSearchConstants = fn(14019);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -179,7 +179,7 @@ let obj2 = {
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
     c1 = undefined;
-    let items;
+    items = undefined;
     if (null == channel.guild_id) {
       return false;
     } else {
@@ -317,7 +317,7 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
     c1 = undefined;
-    let items;
+    items = undefined;
     if (null == channel.guild_id) {
       return false;
     } else {

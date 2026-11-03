@@ -6,8 +6,8 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const InputModes = fn(1072).InputModes;
-let closure_5 = fn(5273).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(11715).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+let closure_5 = fn(5396).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(11852).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const metroRequire = sum;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/useActionB
 export default function useActionBarHeight(id) {
   const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(id);
   const tmp2 = useCanSpeakInChannelDefault(id);
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   let num = 88;
   const stateFromStores = initialize.useStateFromStores(items, () => mode.getMode() === constants.PUSH_TO_TALK);
   if (isFiveButtonLayout) {

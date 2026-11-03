@@ -26,7 +26,7 @@ export default function MentionSubtitle(channel) {
     channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   const obj2 = { style: subtitleStyles.subtitleRow, children: null };
-  const items = [
+  items = [
     React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }),
   ];
   const obj4 = {

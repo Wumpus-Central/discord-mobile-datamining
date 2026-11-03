@@ -8,13 +8,13 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const src = {
   videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   videoContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   bottomSheetWrapper: { paddingHorizontal: 24 },
@@ -35,7 +35,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   isScreenLandscape = markAsDismissed(isScreenLandscape[8]).useIsScreenLandscape();
   const obj = markAsDismissed(isScreenLandscape[8]);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   let num = 1.5;
   const stateFromStores = markAsDismissed(isScreenLandscape[9]).useStateFromStores(
     items,
@@ -77,7 +77,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   const obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

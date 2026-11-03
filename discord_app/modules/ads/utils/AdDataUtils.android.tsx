@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AdUserStore from "../native/AdUserStore.tsx";
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7874).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7998).DEFAULT_TIMEOUT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 
@@ -51,7 +51,7 @@ export function useAdUser(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(AdUserStore.adUser), 2);
   dependencyMap = tmp[1];
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     function handleStoreChange() {
       if (tmp2) {

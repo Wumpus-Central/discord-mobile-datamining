@@ -29,7 +29,7 @@ export const RequestToSpeakPermissionStates = {
 };
 export function getStagePublicInfoText() {
   const intl = util.intl;
-  const items = [intl.string(util.t["9XlQ9W"]), , ,];
+  items = [intl.string(util.t["9XlQ9W"]), , ,];
   const intl2 = util.intl;
   items[1] = intl2.string(util.t.lF0IbB);
   const intl3 = util.intl;

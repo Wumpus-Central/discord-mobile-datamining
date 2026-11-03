@@ -7,7 +7,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { gap: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function UserProfileTryItOutFields(initialTarget) {
   let fn4 = initialTarget(onPress[10])({ user: currentUser, isTryItOut: true });
   let fn5 = initialTarget(onPress[11])({ user: currentUser, isTryItOut: true });
   const ref = fn2.useRef(false);
-  const items = [mode, initialTarget, onPress, fn2, fn3, fn4, fn5];
+  items = [mode, initialTarget, onPress, fn2, fn3, fn4, fn5];
   const effect = fn2.useEffect(() => {
     if ("edit" === mode) {
       if (!ref.current) {

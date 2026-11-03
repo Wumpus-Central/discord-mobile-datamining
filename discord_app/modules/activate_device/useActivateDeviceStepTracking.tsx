@@ -13,7 +13,7 @@ export function useActivateDeviceStepTracking(arg0) {
   closure_0 = arg0;
   const tmp = usePreviousDefault(arg0);
   importDefault = tmp;
-  const items = [tmp, arg0];
+  items = [tmp, arg0];
   const effect = noop.useEffect(() => {
     if (closure_0 !== type) {
       let tmp3 = "user-code-input" !== closure_0.type;

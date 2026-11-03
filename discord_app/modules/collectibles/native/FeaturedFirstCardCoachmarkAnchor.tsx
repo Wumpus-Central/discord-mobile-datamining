@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedF
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = noop.useRef(null);
   const obj = { collapsable: false, children: null };
-  const items = [
+  items = [
     React4(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }),
     children.children,
     React4(WishlistButtonCoachmarkDefault, { anchorRef: ref }),

@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
@@ -25,7 +25,7 @@ export default function ProfileBanner(bannerHeight) {
   const tmp = closure_6();
   const obj = { backgroundColor: utils_ColorUtils.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
   const obj3 = { style: null, children: null };
-  const items = [tmp.root, obj, style];
+  items = [tmp.root, obj, style];
   obj3.style = items;
   let tmp3Result = null;
   if (null != bannerSource) {

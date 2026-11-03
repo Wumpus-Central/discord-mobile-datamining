@@ -14,13 +14,13 @@ function areParticipantStatesEqual(arg0, arg1) {
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const isActivityParticipant = fn(5681).isActivityParticipant;
+const isActivityParticipant = fn(5801).isActivityParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 
 export default function useIsPrivateAudioOnlyCall(id) {
   _require = id;
-  let items = [ChannelRTCStore];
+  items = [ChannelRTCStore];
   const items1 = [id];
   let tmp3 = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(id.id).length > 0;
   if (!tmp3) {
@@ -29,7 +29,7 @@ export default function useIsPrivateAudioOnlyCall(id) {
         obj.useStateFromStores(
           items,
           () => {
-            const items = [
+            items = [
               ChannelRTCStore.getSelectedParticipant(_private.id),
               ChannelRTCStore.getParticipantsVersion(_private.id),
             ];

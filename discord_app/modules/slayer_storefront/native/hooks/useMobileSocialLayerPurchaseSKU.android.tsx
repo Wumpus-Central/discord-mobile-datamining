@@ -35,10 +35,10 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
       tmp4 = null;
     }
     c0 = tmp4;
-    let items = [tmp4];
+    items = [tmp4];
     const effect = noop.useEffect(() => {
       if (null != c0) {
-        const items = [tmp];
+        items = [tmp];
         const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
       }
     }, items);

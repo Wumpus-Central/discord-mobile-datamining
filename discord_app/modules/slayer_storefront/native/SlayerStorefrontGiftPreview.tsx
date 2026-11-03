@@ -20,7 +20,7 @@ function WarningBox(application) {
     const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3738).BMMo2K;
+      BMMo2K = name(3865).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -49,7 +49,7 @@ function WarningBox(application) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
   text: { textAlign: "center", paddingHorizontal: 32 },
@@ -69,9 +69,9 @@ export default function SlayerStorefrontGiftPreview(arg0) {
   if (null != sku) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { sku };
-    const items = [React4(SlayerStorefrontItemCardDefault, obj2), ,];
+    items = [React4(SlayerStorefrontItemCardDefault, obj2), ,];
     const obj3 = {
-      variant: "heading-md/normal",
+      variant: "heading-md/medium",
       color: "mobile-text-heading-primary",
       style: tmp.text,
       children: null,

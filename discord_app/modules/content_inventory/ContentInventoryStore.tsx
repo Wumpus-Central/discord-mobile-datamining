@@ -45,7 +45,7 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
       const entries = feed.entries;
       const reduced = entries.reduce((acc, content) => {
         if (content.content.author_id === require) {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(acc, 0)] = content.content;
           let items1 = items;
         } else {

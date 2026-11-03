@@ -15,7 +15,7 @@ export default noop.memo(function RedesignSettingsCategoryCallsMessagesScreen() 
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj = SettingBuilders;
-    const items = [MobileNotifSettingsRouteBuilders.buildCategoryCallsMessagesSettingsSection()];
+    items = [MobileNotifSettingsRouteBuilders.buildCategoryCallsMessagesSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

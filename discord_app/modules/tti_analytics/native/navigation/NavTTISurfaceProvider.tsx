@@ -13,7 +13,7 @@ function NavTTISurfaceView(onLayout) {
   ({ measurementProps, children } = onLayout);
   const merged = Object.assign(onLayout, Object.assign({ measurementProps: 0, onLayout: 0, children: 0 }));
   const onLayout2 = measurementProps.onLayout;
-  const items = [onLayout2, onLayout];
+  items = [onLayout2, onLayout];
   const obj = {};
   const callback = noop.useCallback((arg0) => {
     if (onLayout2 != null) {
@@ -46,7 +46,7 @@ function VisualizedNavTTISurfaceView(arg0) {
   );
   const merged = Object.assign(tmp);
   obj4.measurementProps = navigationTTIRegionMeasurement;
-  const items = [
+  items = [
     React6(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
       value: navigationTTIRegionHierarchy.contextValue,
       children,
@@ -90,7 +90,7 @@ export function NavTTISurfaceProvider(navigationKey) {
     tmp5 = true === isVisible;
   }
   isVisible = tmp5;
-  const items = [definition, result, navigationKey];
+  items = [definition, result, navigationKey];
   const items1 = [definition, result, navigationKey];
   const callback = syncExternalStore.useCallback((arg0) => {
     if (c3) {

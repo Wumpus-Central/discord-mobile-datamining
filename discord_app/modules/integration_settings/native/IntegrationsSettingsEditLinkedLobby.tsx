@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   screenContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   header: { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 },
@@ -40,7 +40,7 @@ export default function EditLinkedLobby(channel) {
   ).analyticsLocations;
   const tmp7 = numScreensToPop(navigation[8]);
   let linkedLobby = channel.linkedLobby;
-  let application_id;
+  application_id = undefined;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
@@ -52,7 +52,7 @@ export default function EditLinkedLobby(channel) {
     linked_at = linkedLobby2.linked_at;
   }
   const tmp10 = numScreensToPop(navigation[11])(channel, true);
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = channel(navigation[12]).useStateFromStores(items, () => {
     const linkedLobby = channel.linkedLobby;
     let linked_by;

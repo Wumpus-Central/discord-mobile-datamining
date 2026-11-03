@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildP
 
 export function useGuildProfile(guildId) {
   _require = guildId;
-  const items = [GuildProfileStore];
+  items = [GuildProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildProfileStore.getProfile(closure_0),
   );
@@ -34,7 +34,7 @@ export function useGuildProfile(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

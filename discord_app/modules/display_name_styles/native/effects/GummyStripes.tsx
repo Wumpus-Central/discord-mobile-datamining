@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
@@ -16,7 +16,7 @@ export default function GummyStripes(colors) {
   closure_0 = closure_5();
   return closure_3(closure_4, {
     children: colors.map((item, index) => {
-      const items = [closure_0.stripe, ,];
+      items = [closure_0.stripe, ,];
       let stripeOverlap = index > 0;
       if (stripeOverlap) {
         stripeOverlap = closure_0.stripeOverlap;

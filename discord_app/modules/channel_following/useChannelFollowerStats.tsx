@@ -17,7 +17,7 @@ export default function useChannelFollowerStats(arg0) {
   const tmp = stateFromStores(noop.useState(false), 2);
   const first = tmp[0];
   dependencyMap = tmp[1];
-  const items = [ChannelFollowerStatsStore];
+  items = [ChannelFollowerStatsStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(
     items,

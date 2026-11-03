@@ -1,7 +1,7 @@
 // discord_app/modules/waterwheels/interest/InterestPickerExperiment.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-interest-picker",
   kind: "user",
@@ -25,9 +25,9 @@ export function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
     return false;
   }
 }
-export function useInterestPickerGameList(InterestPickerStep) {
-  noop = InterestPickerStep;
-  const items = [InterestPickerStep];
+export function useInterestPickerGameList(_location) {
+  noop = _location;
+  items = [_location];
   return noop.useMemo(() => {
     try {
       const obj = { location: _location };

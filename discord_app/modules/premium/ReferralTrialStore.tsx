@@ -65,7 +65,7 @@ class ReferralTrialStore extends Store {}
 const prototype = ReferralTrialStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserStore);
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, emitChanges);
 };
 prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRemaining() {

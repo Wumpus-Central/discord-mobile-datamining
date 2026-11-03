@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useIn
 export default function useInAppBrowserReturn(gameId) {
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
-  const items = [gameId, scrollY];
+  items = [gameId, scrollY];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       if (obj.isIOS()) {

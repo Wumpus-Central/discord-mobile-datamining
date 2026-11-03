@@ -89,7 +89,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
           AdminEditorTestSelectOption,
           "ADMIN_EDITOR_TEST_SELECT_OPTION_",
@@ -332,7 +332,7 @@ items[11] = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = [
+    items = [
       "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
       AdminEditorTestSelectOption,
       "ADMIN_EDITOR_TEST_SELECT_OPTION_",

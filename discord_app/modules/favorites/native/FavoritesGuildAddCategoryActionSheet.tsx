@@ -11,9 +11,9 @@ require = fn;
 function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(4888).isFavoritesGuildCategoryNameValid(value);
+  const result = value(5015).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
-  const items = [result, value];
+  items = [result, value];
   const callback = noop.useCallback(() => {
     if (result) {
       FavoritesActionCreators.addFavoriteCategory(first);
@@ -30,7 +30,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1113).intl;
   obj3.title = intl.string(value(1113).t["ISN+NM"]);
-  obj2.header = closure_6(value(7321).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(7441).BottomSheetTitleHeader, obj3);
   const obj4 = {
     label: null,
     placeholder: null,
@@ -49,21 +49,21 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(7082).TextInput, obj4)];
+  const items1 = [closure_6(value(7208).TextInput, obj4)];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1113).intl;
   obj5.text = intl4.string(value(1113).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5634).Button, obj5);
+  items1[1] = closure_6(value(5754).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5272).BottomSheet, obj2);
+  return closure_7(value(5395).BottomSheet, obj2);
 }
-const maxLength = fn(4876).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(5003).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };

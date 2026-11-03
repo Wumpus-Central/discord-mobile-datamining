@@ -17,7 +17,7 @@ export function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;
   const getQuestImpressionId = quest(sourceQuestContent[2]).useGetQuestImpressionId();
-  const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
+  items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
     const tmp2 = parseURLDefault;
     if (tmp2(obj.getCtaLink(quest.config)).payload.type !== LinkingTypes.NONE) {

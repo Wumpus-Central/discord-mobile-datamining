@@ -12,7 +12,7 @@ import VoicePanelStore from "../voice_panel/VoicePanelStore.tsx";
 
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(5198);
+const NavigationRouteUtils = params(5321);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -64,12 +64,12 @@ function getFocusedChannelId() {
     } else {
       routes2 = NavigationRouteUtils;
       if (!isChatLockedOpen) {
-        const state = num3.state;
+        state = num3.state;
         let tmp11;
         if (state != tmp2) {
           const routes3 = state.routes;
           if (routes3 != tmp2) {
-            const state2 = num3.state;
+            state2 = num3.state;
             let num4;
             if (state2 != tmp2) {
               num4 = state2.index;
@@ -140,7 +140,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6874).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6994).CHANNEL_PREFIX;
 let c9 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
@@ -155,7 +155,7 @@ export function useIsChannelFocused() {
     2,
   );
   closure_0 = tmp[1];
-  const items = [useChatLayoutDefault()];
+  items = [useChatLayoutDefault()];
   const effect = noop.useEffect(() => {
     closure_0(null != getFocusedChannelId());
   }, items);
@@ -178,7 +178,7 @@ export function isChannelFocusedForReadStateAck(channelId, arg1) {
   if (ChannelRTCStore.getChatOpen(channelId)) {
     return true;
   } else {
-    const state = VoicePanelStore.getState();
+    state = VoicePanelStore.getState();
     if (state.isVoicePanelFullscreen()) {
       return false;
     } else if (hasSecondaryViewChatDefault(channelId)) {

@@ -3,9 +3,9 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9188 from "../../../../../_runtime/metro/09188__.js";
+import _modDef9316 from "../../../../../_runtime/metro/09316__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod18087 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod18231 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -15,7 +15,7 @@ const IconActionButtonDefault = IconActionButton;
 require = fn;
 function MessageRequestAnimation(color) {
   const ref = noop.useRef(null);
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   const stateFromStores = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
   const items1 = [SpamMessageRequestStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount());
@@ -30,12 +30,12 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod18087.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod18231.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
@@ -47,7 +47,7 @@ export default function MessageRequestsButton(alternateVariant) {
   }
   const merged = Object.assign(alternateVariant, Object.assign({ alternateVariant: 0 }));
   const tmp2 = closure_9();
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   const str = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
   const items1 = [SpamMessageRequestStore];
   if (0 === str) {
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return React6(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef9188,
+      source: _modDef9316,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,

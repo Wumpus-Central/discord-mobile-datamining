@@ -13,7 +13,7 @@ export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const filteredAppIdentities = require("useConnectionFilteredAppIdentities")(arg0).filteredAppIdentities;
   const tmp = require("useUserProfileConnections")(arg0);
   importDefault = tmp;
-  const items = [filteredAppIdentities];
+  items = [filteredAppIdentities];
   memo = found.useMemo(() => {
     let mapped;
     if (filteredAppIdentities != null) {

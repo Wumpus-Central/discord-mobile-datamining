@@ -20,11 +20,11 @@ function PriceTier(arg0) {
   const tmp2 = closure_9();
   const obj = { style: tmp2.priceGroup, children: null };
   const obj2 = {
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: PriceUtils.formatPrice(price, currency),
   };
-  const items = [timestampProducer(Text_Text.Text, obj2)];
+  items = [timestampProducer(Text_Text.Text, obj2)];
   const obj4 = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
   const intl = util.intl;
   const obj5 = { period: null };
@@ -41,7 +41,7 @@ function Header(onPress) {
   const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
   let str = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(listingId), 1)[0];
   const obj5 = { style: tmp.header, children: null };
-  const items = [
+  items = [
     timestampProducer(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "interactive-text-active",
@@ -102,7 +102,7 @@ function LabeledSection(arg0) {
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.label = label;
-  const items = [timestampProducer(SectionLabel, obj2)];
+  items = [timestampProducer(SectionLabel, obj2)];
   const obj3 = {};
   const merged2 = Object.assign(merged);
   obj3.children = children;
@@ -180,7 +180,7 @@ class BenefitsSection {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   header: null,
@@ -258,7 +258,7 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
   const obj4 = { style: tmp.container, children: null };
   const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
-  const items = [timestampProducer(Header, {}), , , ,];
+  items = [timestampProducer(Header, {}), , , ,];
   const obj6 = { label: null, children: null };
   const intl = util.intl;
   obj6.label = intl.string(util.t.FJZmYx);

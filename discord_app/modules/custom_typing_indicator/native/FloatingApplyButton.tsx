@@ -1,51 +1,62 @@
 // discord_app/modules/custom_typing_indicator/native/FloatingApplyButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1621).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_5 = fn(1623).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const __initData = {
-  code: "function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}",
+let closure_7 = {
+  code: "(function FloatingApplyButtonTsx1(){let[visible]=this.__closure;return{pointerEvents:visible?'box-none':'none'};})",
 };
-const __initData2 = {
-  code: "function FloatingApplyButtonTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}",
+let closure_8 = {
+  code: "(function FloatingApplyButtonTsx2(){let[visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING]=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/FloatingApplyButton.tsx");
 
-export default function FloatingApplyButton(visible) {
-  visible = visible.visible;
-  ({ disabled, text, onPress } = visible);
-  const renderButton = visible.renderButton;
-  let stateFromStores;
-  let items = [AccessibilityStore];
-  stateFromStores = visible(stateFromStores[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const obj = visible(stateFromStores[4]);
-  const tmp = visible;
-  const tmp2 = stateFromStores;
-  class I {
+export default function FloatingApplyButton(renderButton) {
+  ({ visible, disabled, text, onPress } = renderButton);
+  _require = onPress;
+  renderButton = renderButton.renderButton;
+  items = [c4];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined4.useReducedMotion);
+  const obj = require("initialize");
+  const items1 = [closure_7, visible];
+  _require = undefined;
+  [tmp5, tmp6] = items1;
+  class FloatingApplyButtonTsx1 {
     constructor() {
       pointerEvents = "none";
-      if (visible) {
+      if (closure_0) {
         pointerEvents = "box-none";
       }
       return { pointerEvents };
     }
   }
-  I.__closure = { visible };
-  I.__workletHash = 8866673550486;
-  I.__initData = __initData;
-  const animatedProps = visible(stateFromStores[6]).useAnimatedProps(I);
-  let obj2 = visible(stateFromStores[6]);
-  class P {
+  const items2 = [tmp6];
+  FloatingApplyButtonTsx1.__closure = items2;
+  FloatingApplyButtonTsx1.__workletHash = 4329148887087;
+  FloatingApplyButtonTsx1.__initData = tmp5;
+  const animatedProps = require("../../../../_runtime/metro/01652__.js").useAnimatedProps(FloatingApplyButtonTsx1);
+  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_8, visible, nativeDefault, stateFromStores, require("spring/spring").withSpring, closure_5];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items3;
+  class FloatingApplyButtonTsx2 {
     constructor() {
-      tmp = visible;
+      tmp = closure_0;
       num = 0;
-      if (visible) {
+      if (closure_0) {
         num = 1;
       }
       num2 = 60;
@@ -61,82 +72,72 @@ export default function FloatingApplyButton(visible) {
         bottom: 0,
         left: 0,
         right: 0,
-        marginHorizontal: closure_1(closure_2[7]).space.PX_16,
+        marginHorizontal: closure_1.space.PX_16,
         flexDirection: "column",
         justifyContent: "flex-end",
         transform: null,
         opacity: null,
       };
       tmp2 = closure_2;
-      tmp3 = closure_2;
-      withSpringResult = num2;
+      tmp3 = num2;
       if (!closure_2) {
-        tmp5 = closure_0;
-        obj2 = closure_0(tmp2[8]);
-        tmp6 = closure_5;
-        withSpringResult = obj2.withSpring(num2, closure_5);
+        tmp4 = closure_3;
+        tmp5 = closure_4;
+        tmp3 = closure_3(num2, closure_4);
       }
       items = [,];
-      items[0] = { translateY: withSpringResult };
-      withSpringResult1 = num3;
-      if (!tmp3) {
-        tmp8 = closure_0;
-        obj3 = closure_0(tmp2[8]);
-        tmp9 = closure_5;
-        withSpringResult1 = obj3.withSpring(num3, closure_5);
+      items[0] = { translateY: tmp3 };
+      tmp6 = num3;
+      if (!tmp2) {
+        tmp7 = closure_3;
+        tmp8 = closure_4;
+        tmp6 = closure_3(num3, closure_4);
       }
-      items[1] = { scale: withSpringResult1 };
+      items[1] = { scale: tmp6 };
       rect.transform = items;
-      withSpringResult2 = num;
-      if (!tmp3) {
-        tmp11 = closure_0;
-        obj4 = closure_0(tmp2[8]);
-        tmp12 = closure_5;
-        withSpringResult2 = obj4.withSpring(num, closure_5);
+      tmp9 = num;
+      if (!tmp2) {
+        tmp10 = closure_3;
+        tmp11 = closure_4;
+        tmp9 = closure_3(num, closure_4);
       }
-      rect.opacity = withSpringResult2;
+      rect.opacity = tmp9;
       return rect;
     }
   }
-  let obj3 = visible(stateFromStores[6]);
-  P.__closure = {
-    visible,
-    tokens: onPress(stateFromStores[7]),
-    reducedMotion: stateFromStores,
-    withSpring: visible(stateFromStores[8]).withSpring,
-    MEDIA_PICKER_SEND_BUTTON_SPRING,
-  };
-  P.__workletHash = 17409059357308;
-  P.__initData = __initData2;
-  const items1 = [onPress];
-  const animatedStyle = obj3.useAnimatedStyle(P);
+  const items4 = [tmp9, tmp10, tmp11, tmp12, tmp13];
+  FloatingApplyButtonTsx2.__closure = items4;
+  FloatingApplyButtonTsx2.__workletHash = 13112691757829;
+  FloatingApplyButtonTsx2.__initData = tmp8;
+  const items5 = [onPress];
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(FloatingApplyButtonTsx2);
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-    onPress();
-  }, items1);
-  const obj5 = { style: animatedStyle, children: null };
-  const obj6 = { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null };
+    _undefined();
+  }, items5);
+  const obj3 = { style: animatedStyle, children: null };
+  const obj4 = { style: { marginBottom: useSafeAreaInsetsDefault().bottom }, animatedProps, children: null };
   let renderButtonResult;
   if (renderButton != null) {
-    const obj7 = { text, disabled, onPress: callback };
-    renderButtonResult = renderButton(obj7);
+    const obj5 = { text, disabled, onPress: callback };
+    renderButtonResult = renderButton(obj5);
   }
   if (renderButtonResult == null) {
-    const obj8 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading };
-    renderButtonResult = jsx(tmp(tmp2[10]).Button, {
+    const obj6 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading };
+    renderButtonResult = jsx(tmp(5754).Button, {
       variant: "primary",
       size: "lg",
       disabled,
       onPress: callback,
       text,
-      loading: visible.loading,
+      loading: renderButton.loading,
     });
   }
-  obj6.children = renderButtonResult;
-  obj5.children = jsx(onPress(stateFromStores[6]).View, {
-    style: { marginBottom: onPress(stateFromStores[5])().bottom },
+  obj4.children = renderButtonResult;
+  obj3.children = jsx(_modDef1652.View, {
+    style: { marginBottom: useSafeAreaInsetsDefault().bottom },
     animatedProps,
     children: null,
   });
-  return jsx(onPress(stateFromStores[6]).View, { style: animatedStyle, children: null });
+  return jsx(_modDef1652.View, { style: animatedStyle, children: null });
 }

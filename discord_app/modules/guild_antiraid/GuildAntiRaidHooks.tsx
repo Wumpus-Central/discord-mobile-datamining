@@ -49,14 +49,14 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8483).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8607).IncidentAlertModeratorPermissions;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidHooks.tsx");
 
 export function useFirstGuildIncidentId() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = stateFromStores1(563).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = stateFromStores1(563);
   const items1 = [GuildIncidentsStore];
@@ -76,7 +76,7 @@ export function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8482);
+        let obj8 = stateFromStores1(8606);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -87,7 +87,7 @@ export function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(8482);
+          let tmp18Result = tmp18(8606);
         }
       }
     }
@@ -97,9 +97,9 @@ export function useFirstGuildIncidentId() {
 }
 export function useGuildIncidentsState(id) {
   _require = id;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     if (null == guild) {
       return false;
     } else {
@@ -124,8 +124,8 @@ export function useGuildIncidentsState(id) {
   const obj3 = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = tmp(8482).isUnderLockdown(stateFromStores1);
-    const tmpResult = tmp(8482);
+    isUnderLockdownResult = tmp(8606).isUnderLockdown(stateFromStores1);
+    const tmpResult = tmp(8606);
   }
   obj3.isUnderLockdown = isUnderLockdownResult;
   return obj3;
@@ -214,7 +214,7 @@ export function useDisabledActions(id) {
   if (id == null) {
     id = closure_11;
   }
-  const items = [GuildIncidentsStore];
+  items = [GuildIncidentsStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(items, () => GuildIncidentsStore.getGuildIncident(id), items1);
   if (null == id) {
@@ -259,9 +259,9 @@ export function useDisabledActions(id) {
 }
 export function useShowAntiRaidInGuildNotifSettings(arg0) {
   _require = arg0;
-  const items = [PermissionStore, GuildStore];
+  items = [PermissionStore, GuildStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     return GuildAntiRaidPermissionsUtils.canReportRaid(guild, PermissionStore);
   });
 }

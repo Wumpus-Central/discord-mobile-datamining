@@ -13,9 +13,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(5642).useFontScale();
-  top = top(1625)().top;
-  const items = [fontScale, top];
+  fontScale = fontScale(5762).useFontScale();
+  top = top(1627)().top;
+  items = [fontScale, top];
   return noop.useMemo(() => {
     const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
     const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);

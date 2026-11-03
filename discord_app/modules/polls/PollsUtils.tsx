@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(5615).ReactionTypes.VOTE,
+    channel(5738).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -32,7 +32,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
       guildId = channel.getGuildId();
     }
   }
-  let items;
+  items = undefined;
   if (reactions != null) {
     items = reactions.values();
   }
@@ -104,15 +104,15 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8406);
+const PollsConstants = fn(8530);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1072);
-({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
+({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "isArray", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "flexDirection", localCreationAnswerId: v1.v4() };
   return obj;
 }
 export function generateLocalCreationAnswerId() {
@@ -134,7 +134,7 @@ export function hasNonVoteReactions(message) {
 }
 export function useCanPostPollsInChannel(channel) {
   _require = channel;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp = null != _private;
     if (tmp) {
@@ -241,7 +241,7 @@ export function createPollServerDataFromCreateRequest(poll) {
         });
       }
     }
-    let duration;
+    duration = undefined;
     if (poll != null) {
       duration = poll.duration;
     }

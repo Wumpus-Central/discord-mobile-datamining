@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
 
 export function useSettingSearchResults() {
-  const items = [memo1];
+  items = [memo1];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => memo1.locale);
   const items1 = [stateFromStores];
   const memo = noop.useMemo(() => {
@@ -35,10 +35,10 @@ export function useSettingSearchResults() {
         scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
         const found = scoredSearchResults.filter((setting) => {
           setting = setting.setting;
-          const isBlockedResult = scoredSearchResults(16593).isBlocked(setting, closure_0);
+          const isBlockedResult = scoredSearchResults(16736).isBlocked(setting, closure_0);
           let tmp3 = !isBlockedResult;
           if (!isBlockedResult) {
-            tmp3 = !stateFromStores(16438).SETTING_RENDERER_CONFIG[setting].unsearchable;
+            tmp3 = !stateFromStores(16582).SETTING_RENDERER_CONFIG[setting].unsearchable;
           }
           return tmp3;
         });

@@ -1,6 +1,12 @@
 // discord_app/modules/media_viewer/native/portraitThumbnailHelpers.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+const items = [
+  {
+    code: "(function lerpVarWidthThumbnailScrollBounds_portraitThumbnailHelpersTsx1(positions,position){if(positions.length===0)return 0;if(position<0){return 0;}if(position>=positions.length){position=positions.length;}const index=Math.floor(position);const fraction=position-index;if(index>=positions.length){return positions[positions.length-1].scrollStart;}const startPos=positions[index].scrollStart;const endPos=index<positions.length-1?positions[index+1].scrollStart:startPos;return startPos+fraction*(endPos-startPos);})",
+  },
+];
+[tmp2] = items;
 function lerpVarWidthThumbnailScrollBounds(items, arg1) {
   if (0 === items.length) {
     return 0;
@@ -27,11 +33,8 @@ function lerpVarWidthThumbnailScrollBounds(items, arg1) {
     }
   }
 }
-lerpVarWidthThumbnailScrollBounds.__closure = {};
-lerpVarWidthThumbnailScrollBounds.__workletHash = 5256874583737;
-lerpVarWidthThumbnailScrollBounds.__initData = {
-  code: "function lerpVarWidthThumbnailScrollBounds_portraitThumbnailHelpersTsx1(positions,position){if(positions.length===0)return 0;if(position<0){return 0;}if(position>=positions.length){position=positions.length;}const index=Math.floor(position);const fraction=position-index;if(index>=positions.length){return positions[positions.length-1].scrollStart;}const startPos=positions[index].scrollStart;const endPos=index<positions.length-1?positions[index+1].scrollStart:startPos;return startPos+fraction*(endPos-startPos);}",
-};
+lerpVarWidthThumbnailScrollBounds.__workletHash = 6973206407480;
+lerpVarWidthThumbnailScrollBounds.__initData = tmp2;
 const result = size.fileFinishedImporting("modules/media_viewer/native/portraitThumbnailHelpers.tsx");
 
 export { lerpVarWidthThumbnailScrollBounds };

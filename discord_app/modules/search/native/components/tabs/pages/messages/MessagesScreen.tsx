@@ -5,14 +5,14 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
   SearchFilter: metroRequire,
   SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7,
   SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9,
-  SearchListItemTypes: c10,
+  SearchListItemTypes: closure_10,
 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -29,7 +29,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   let item;
   const searchMessages = searchContext(stateFromStores[4]).useSearchMessages(searchContext, tab);
   const obj = searchContext(stateFromStores[4]);
-  let items = [callback];
+  items = [callback];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(
     items,
@@ -80,7 +80,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   item = smartSearchMessages.item;
   const items4 = [callback, item, tmp6, searchMessages, memo, placeholderCount];
   const memo1 = obj4.useMemo(() => {
-    const items = [];
+    items = [];
     if (null != item) {
       items.push(tmp);
     }

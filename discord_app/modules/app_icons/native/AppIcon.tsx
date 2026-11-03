@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const getIconById = fn(9979).getIconById;
+const getIconById = fn(10111).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   image: { resizeMode: "contain", height: "100%", width: "100%" },
@@ -30,7 +30,7 @@ export default function AppIcon(size) {
     num2 = 0;
   }
   const obj2 = { style: null, children: jsx(FastImageDefault, { style: tmp.image, source: tmp5.iconSource }) };
-  const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
+  items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
   obj2.style = items;
   return <View style={null}>{jsx(FastImageDefault, { style: tmp.image, source: tmp5.iconSource })}</View>;
 }

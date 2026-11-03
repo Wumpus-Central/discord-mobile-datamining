@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -30,7 +30,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let items = [UserAffinitiesV2Store];
+  items = [UserAffinitiesV2Store];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9151).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9279).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -65,7 +65,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
         .map(UserStore.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
       const valueResult2 = mapped2.filter(GlobalUtils.isNotNullish).value();
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(valueResult2, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
       const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
@@ -84,10 +84,15 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
           {first.map((user, index) => {
             const obj = { style: null, children: null };
             const obj2 = { transform: null };
-            const items = [{ translateX: 4 * (first.length - 1 - index) }];
+            items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1187).AvatarSizes.XSMALL,
+              cutout: "/assets/modules/video_calls/native/images",
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -97,7 +102,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: "/assets/modules/video_calls/native/images",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -114,10 +119,15 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
           {first.map((user, index) => {
             const obj = { style: null, children: null };
             const obj2 = { transform: null };
-            const items = [{ translateX: 4 * (first.length - 1 - index) }];
+            items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1187).AvatarSizes.XSMALL,
+              cutout: "/assets/modules/video_calls/native/images",
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -127,7 +137,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: "/assets/modules/video_calls/native/images",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

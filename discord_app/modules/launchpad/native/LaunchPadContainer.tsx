@@ -1,16 +1,26 @@
 // discord_app/modules/launchpad/native/LaunchPadContainer.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import HomeDrawerExperiment from "../../home_drawer/native/HomeDrawerExperiment.tsx";
+import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
+import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import useLaunchPadTypeDefault from "useLaunchPadType.tsx";
+import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext.tsx";
+import useLaunchPadStateDefault from "useLaunchPadState.native.tsx";
+import useLaunchPadGestureDefault from "useLaunchPadGesture.tsx";
+import LaunchPadWrapperDefault from "LaunchPadWrapper.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11536);
+const LaunchPadConstants = fn(11673);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -21,26 +31,25 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.overflow = "hidden";
 obj2.container = obj4;
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function LaunchPadContainerTsx1(){const{windowDimensions}=this.__closure;return windowDimensions.get().height;}",
+let closure_9 = {
+  code: "(function LaunchPadContainerTsx1(){let[windowDimensions]=this.__closure;return windowDimensions.get().height;})",
 };
-const __initData2 = {
-  code: "function LaunchPadContainerTsx2(height,lastHeight){const{updaters}=this.__closure;if(lastHeight==null)return;if(lastHeight<=height)return;updaters.onWindowHeightChange();}",
+let closure_10 = {
+  code: "(function LaunchPadContainerTsx2(height,lastHeight){let[updaters]=this.__closure;if(lastHeight==null)return;if(lastHeight<=height)return;updaters.onWindowHeightChange();})",
 };
-const __initData3 = {
-  code: "function LaunchPadContainerTsx3(){const{interpolate,launchPadSharedState,withSpring,windowDimensions,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{borderRadius:interpolate(launchPadSharedState.get(),[0,1],[0,16]),transform:[{scale:withSpring(interpolate(launchPadSharedState.get(),[0,1],[1,(windowDimensions.get().width-16*3)/windowDimensions.get().width]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')},{translateY:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,-4]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')}]};}",
+let closure_11 = {
+  code: "(function LaunchPadContainerTsx3(){let[interpolate,launchPadSharedState,withSpring,windowDimensions,LAUNCH_PAD_SPRING_CONFIG]=this.__closure;return{borderRadius:interpolate(launchPadSharedState.get(),[0,1],[0,16]),transform:[{scale:withSpring(interpolate(launchPadSharedState.get(),[0,1],[1,(windowDimensions.get().width-16*3)/windowDimensions.get().width]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')},{translateY:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,-4]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')}]};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadContainer.tsx");
 
 export default function LaunchPadContainer(children) {
-  updaters = undefined;
   const tmp = closure_8();
-  const tmp4 = updaters(11537)();
-  const tmp5 = updaters(19065)();
-  const launchPadSharedState = tmp5.launchPadSharedState;
-  ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(19067)({
+  const tmp4 = useLaunchPadTypeDefault();
+  ({ launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters } =
+    useLaunchPadStateDefault());
+  const tmp5 = useLaunchPadStateDefault();
+  ({ gesture, gestureRef } = useLaunchPadGestureDefault({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -48,10 +57,8 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   }));
-  const tmp7 = updaters(12814)();
-  dependencyMap = tmp7;
-  const tmp2 = updaters;
-  const tmp6 = updaters(19067)({
+  const tmp7 = useWindowDimensionsSharedValueDefault();
+  const tmp6 = useLaunchPadGestureDefault({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -59,72 +66,77 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   });
-  const fn = function o() {
-    return closure_2.get().height;
-  };
-  fn.__closure = { windowDimensions: tmp7 };
-  fn.__workletHash = 9985296176902;
-  fn.__initData = __initData;
-  const fn2 = function l(arg0, arg1) {
-    if (null != arg1) {
-      if (arg1 > arg0) {
-        updaters.onWindowHeightChange();
-      }
+  items = [closure_9, tmp7];
+  c0 = undefined;
+  [tmp9, tmp10] = items;
+  class LaunchPadContainerTsx1 {
+    constructor() {
+      return closure_0.get().height;
     }
-  };
-  fn2.__closure = { updaters };
-  fn2.__workletHash = 418963589215;
-  fn2.__initData = __initData2;
-  const animatedReaction = launchPadSharedState(5095).useAnimatedReaction(fn, fn2);
-  let obj = launchPadSharedState(5095);
-  const fn3 = function v() {
-    const obj = {
-      borderRadius: ReanimatedRexport.interpolate(launchPadSharedState.get(), [0, 1], [0, 16]),
-      transform: null,
-    };
-    const obj3 = { scale: null };
-    const obj4 = spring;
-    value = launchPadSharedState.get();
-    const diff = closure_2.get().width - 48;
-    const items = [1, diff / closure_2.get().width];
-    obj3.scale = obj4.withSpring(
-      ReanimatedRexport.interpolate(value, [0, 1], items),
-      LAUNCH_PAD_SPRING_CONFIG,
-      "animate-always",
-    );
-    const items1 = [obj3];
-    const obj6 = { translateY: null };
-    const obj7 = spring;
-    obj6.translateY = obj7.withSpring(
-      ReanimatedRexport.interpolate(launchPadSharedState.get(), [0, 1], [0, -4]),
-      LAUNCH_PAD_SPRING_CONFIG,
-      "animate-always",
-    );
-    items1[1] = obj6;
-    obj.transform = items1;
-    return obj;
-  };
-  let obj2 = launchPadSharedState(5095);
-  fn3.__closure = {
-    interpolate: launchPadSharedState(5095).interpolate,
-    launchPadSharedState,
-    withSpring: launchPadSharedState(5637).withSpring,
-    windowDimensions: tmp7,
-    LAUNCH_PAD_SPRING_CONFIG,
-  };
-  fn3.__workletHash = 13886247172712;
-  fn3.__initData = __initData3;
-  const animatedStyle = obj2.useAnimatedStyle(fn3);
-  const MobileHomeDrawerExperiment = launchPadSharedState(5204).MobileHomeDrawerExperiment;
-  let obj4 = { value: gestureRef, children: null };
-  let obj5 = { gesture, children: null };
-  let obj6 = { style: tmp.wrapper, children: null };
-  let obj7 = { style: null, children: children.children };
-  let items = [tmp.container, animatedStyle];
-  obj7.style = items;
-  let items1 = [closure_6(updaters(5095).View, obj7)];
+  }
+  let items1 = [tmp10];
+  LaunchPadContainerTsx1.__closure = items1;
+  LaunchPadContainerTsx1.__workletHash = 5429128433055;
+  LaunchPadContainerTsx1.__initData = tmp9;
+  const items2 = [closure_10, updaters];
+  c0 = undefined;
+  [tmp11, tmp12] = items2;
+  class LaunchPadContainerTsx2 {
+    constructor(arg0, arg1) {
+      if (null != arg1) {
+        tmp = children;
+        if (arg1 > children) {
+          tmp2 = closure_0;
+          onWindowHeightChangeResult = closure_0.onWindowHeightChange();
+        }
+      }
+      return;
+    }
+  }
+  const items3 = [tmp12];
+  LaunchPadContainerTsx2.__closure = items3;
+  LaunchPadContainerTsx2.__workletHash = 8587684116006;
+  LaunchPadContainerTsx2.__initData = tmp11;
+  const animatedReaction = _mod1652.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
+  const items4 = [closure_11, _mod1652.interpolate, launchPadSharedState, spring_spring.withSpring, tmp7, React4];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19] = items4;
+  class LaunchPadContainerTsx3 {
+    constructor() {
+      obj = { borderRadius: closure_0(closure_1.get(), [0, 1], [0, 16]), transform: null };
+      obj1 = { scale: null };
+      value = closure_1.get();
+      diff = closure_3.get().width - 48;
+      items = [1];
+      items[1] = diff / closure_3.get().width;
+      obj1.scale = closure_2(closure_0(value, [0, 1], items), closure_4, "animate-always");
+      items1 = [,];
+      items1[0] = obj1;
+      obj4 = { translateY: closure_2(closure_0(closure_1.get(), [0, 1], [0, -4]), closure_4, "animate-always") };
+      items1[1] = obj4;
+      obj.transform = items1;
+      return obj;
+    }
+  }
+  const items5 = [tmp15, tmp16, tmp17, tmp18, tmp19];
+  LaunchPadContainerTsx3.__closure = items5;
+  LaunchPadContainerTsx3.__workletHash = 13015105508497;
+  LaunchPadContainerTsx3.__initData = tmp14;
+  const animatedStyle = _mod1652.useAnimatedStyle(LaunchPadContainerTsx3);
+  const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
+  let obj2 = { value: gestureRef, children: null };
+  const obj3 = { gesture, children: null };
+  const obj4 = { style: tmp.wrapper, children: null };
+  const obj5 = { style: null, children: children.children };
+  const items6 = [tmp.container, animatedStyle];
+  obj5.style = items6;
+  const items7 = [timestampProducer(_modDef1652.View, obj5)];
   if (tmp4 !== constants.DISABLED) {
-    const obj8 = {
+    const obj6 = {
       launchPadType: tmp4,
       gestureState,
       launchPadShown,
@@ -132,11 +144,11 @@ export default function LaunchPadContainer(children) {
       launchPadPullTabState,
       updaters,
     };
-    const tmp10Result = closure_6(tmp2(19068), obj8);
+    const tmp21Result = timestampProducer(LaunchPadWrapperDefault, obj6);
   }
-  items1[1] = tmp10Result;
-  obj6.children = items1;
-  obj5.children = closure_7(closure_3, obj6);
-  obj4.children = closure_6(launchPadSharedState(5303).GestureDetector, obj5);
-  return closure_6(updaters(18058).Provider, obj4);
+  items7[1] = tmp21Result;
+  obj4.children = items7;
+  obj3.children = React5(React3, obj4);
+  obj2.children = timestampProducer(LegacyBaseButton.GestureDetector, obj3);
+  return timestampProducer(LaunchPadGestureRefContextDefault.Provider, obj2);
 }

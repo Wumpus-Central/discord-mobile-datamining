@@ -6,7 +6,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_5 = fn(7609).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(7733).useNativeCheckoutStoreOrNull;
 let closure_6 = new LoggerDefault("useSyncGiftOptionsToOrder");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
@@ -39,7 +39,7 @@ export default function useSyncGiftOptionsToOrder(arg0, current) {
     },
     [],
   );
-  const items = [arg0, current, tmp[0], resolveSyncs, tmp3, waitForPause];
+  items = [arg0, current, tmp[0], resolveSyncs, tmp3, waitForPause];
   const effect1 = noop.useEffect(() => {
     if (null != id) {
       id = tmp.id;

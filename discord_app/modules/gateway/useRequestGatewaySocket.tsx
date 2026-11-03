@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySock
 export function useRequestGatewaySocket(arg0) {
   importDefault = arg0;
   const canUIRequestGatewaySocket = DiscordAppStateDefault.useCanUIRequestGatewaySocket();
-  const items = [arg0, canUIRequestGatewaySocket];
+  items = [arg0, canUIRequestGatewaySocket];
   const effect = noop.useEffect(() => {
     if (canUIRequestGatewaySocket) {
       RequestGatewaySocketAll.setRequestedBy(closure_0);

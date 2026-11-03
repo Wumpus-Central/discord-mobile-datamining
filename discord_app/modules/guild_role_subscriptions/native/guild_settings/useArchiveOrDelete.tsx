@@ -31,7 +31,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -48,7 +48,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1187).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5959).confirm(obj4), done: false };
+            const obj5 = { value: v2(6079).confirm(obj4), done: false };
             return obj5;
           }
         } else {
@@ -150,7 +150,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
       _slicedToArray = intl5.string(tmp(1113).t.TEKiiP);
       const intl6 = tmp(1113).intl;
       stringResult3 = intl6.string(tmp(1113).t["170XOL"]);
-      const items = [error];
+      items = [error];
       stringResult3(() => {
         let tmp2;
         if (ref.current !== error) {

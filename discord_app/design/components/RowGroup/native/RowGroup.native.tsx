@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { overflow: "hidden" },
   content: {
@@ -33,7 +33,7 @@ export function RowGroup(children) {
       tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj2);
     }
     const obj3 = { direction: "horizontal", spacing: 4, children: null };
-    const items = [tmp7, trailing];
+    items = [tmp7, trailing];
     obj3.children = items;
     tmp2Result = React4(Stack_Stack.Stack, obj3);
   }

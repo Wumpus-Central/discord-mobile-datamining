@@ -32,7 +32,7 @@ function handleInit() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   c23 = false;
   c24 = false;
   c6 = undefined;
@@ -108,7 +108,7 @@ function syncGuildChanges(guildId) {
   guildId = guildId.guildId;
   items = undefined;
   map = undefined;
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   if (null != guild) {
     if (guildId === guild.id) {
       if (OPEN !== FormStates.SUBMITTING) {

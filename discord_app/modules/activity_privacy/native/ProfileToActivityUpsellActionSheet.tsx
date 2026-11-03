@@ -16,7 +16,7 @@ export default function ProfileToActivityUpsellActionSheet(direction) {
     direction === direction(mappedActivityValue[2]).ChangeDirection.RESTRICTING,
     direction.settingName,
   );
-  const items = [mappedActivityValue, direction, affectedGuildIds];
+  items = [mappedActivityValue, direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = profileToActivityUpsellStrings);
   const onConfirm = noop.useCallback(() => {
     const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;

@@ -19,7 +19,7 @@ export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
     },
     [],
   );
-  const items = [onCloseCallback.onCloseCallback];
+  items = [onCloseCallback.onCloseCallback];
   const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();

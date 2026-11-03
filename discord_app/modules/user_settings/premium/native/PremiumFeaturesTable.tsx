@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef15364 from "../../../../../_runtime/metro/15364__.js";
-import _modDef15365 from "../../../../../_runtime/metro/15365__.js";
+import _modDef15505 from "../../../../../_runtime/metro/15505__.js";
+import _modDef15506 from "../../../../../_runtime/metro/15506__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,20 +18,22 @@ function CheckIcon() {
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   return closure_1_11(native.Icon, {
-    source: _modDef15364,
+    source: _modDef15505,
     color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
     size: native.IconSizes.SMALL,
   });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef15365, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15506, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
-function CellText(children) {
+function CellText(arg0) {
+  ({ text, style } = arg0);
   return closure_1_11(Text_Text.Text, {
+    style,
     variant: "text-md/medium",
     color: "mobile-text-heading-primary",
-    children: children.text,
+    children,
   });
 }
 function Row(withTopBorderRadius) {
@@ -76,7 +78,7 @@ function Row(withTopBorderRadius) {
   if (flag2) {
     num3 = 2;
   }
-  const items = [tmp.row];
+  items = [tmp.row];
   if (withBottomBorder) {
     withBottomBorder = tmp.bottomBorder;
   }
@@ -186,7 +188,7 @@ function Row(withTopBorderRadius) {
       }
       items2[2] = closure_1_11(View, obj7);
       obj.children = items2;
-      return closure_1_12(View, obj);
+      return application_id(View, obj);
     }
   }
   const items6 = [, , , ,];
@@ -229,17 +231,17 @@ function Row(withTopBorderRadius) {
 }
 const View = fn(17).View;
 const HorizontalGradient = fn(1072).HorizontalGradient;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7,
   PRICE_PLACEHOLDER: closure_8,
   PremiumTypes: closure_9,
-  SubscriptionPlans: c10,
+  SubscriptionPlans: closure_10,
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", flex: 1, width: "100%" },
   headerText: { textAlign: "center" },
@@ -256,6 +258,7 @@ let obj2 = {
   nitroHomeHightlightedBorderLeftRight: null,
   premiumGroupCard: null,
   priceContainer: null,
+  priceText: null,
 };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj2.bottomBorderRadius = {
@@ -266,7 +269,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6778).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = {
   borderLeftColor: "rgba(184, 69, 193, 0.5)",
   borderLeftWidth: 2,
@@ -275,10 +278,11 @@ obj2.nitroHomeHightlightedBorderLeftRight = {
 };
 obj2.premiumGroupCard = { marginTop: 16 };
 obj2.priceContainer = { alignItems: "center" };
+obj2.priceText = { textAlign: "center" };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj7 = { icon: null };
-let obj5 = { backgroundColor: fn(6778).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj7.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj7);
 let size = fn(2);
@@ -299,6 +303,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   }
   const premiumGroupRole = highlightNitroBasic.premiumGroupRole;
   const tmp = closure_14();
+  closure_3 = tmp;
   const tmp3 = isPremiumGroup;
   const tmp4 = str(isPremiumGroup[9])();
   const tmp5 = str(isPremiumGroup[17])(closure_10.PREMIUM_MONTH_TIER_0);
@@ -332,7 +337,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj3.column1 = closure_11(str(tmp3[19]), size);
   const size1 = { style: tmp.logo, width: 50, height: 9 };
   obj3.column2 = closure_11(str(tmp3[20]), size1);
-  const items = [obj3, , , , , , , , , ,];
+  items = [obj3, , , , , , , , , ,];
   const obj4 = { accessible: true, accessibilityLabel: null, style: null, source: null };
   const obj2 = flag(tmp3[18]);
   const intl = flag(tmp3[15]).intl;
@@ -384,12 +389,12 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj8.rowName = intl4.string(tmp9(tmp3[15]).t.LkKGZ2);
   const obj10 = { style: tmp.priceContainer, children: null };
   const parts = priceString.split(/ (?=\()/g);
-  obj10.children = parts.map((text) => closure_1_11(CellText, { text }, text));
+  obj10.children = parts.map((text) => closure_2_11(CellText, { text, style: closure_3.priceText }, text));
   obj8.column1 = closure_11(View, obj10);
   obj8.column1AccessibilityLabel = priceString;
   const obj11 = { style: tmp.priceContainer, children: null };
   const parts1 = priceString1.split(/ (?=\()/g);
-  obj11.children = parts1.map((text) => closure_1_11(CellText, { text }, text));
+  obj11.children = parts1.map((text) => closure_2_11(CellText, { text, style: closure_3.priceText }, text));
   obj8.column2 = closure_11(View, obj11);
   obj8.column2AccessibilityLabel = priceString1;
   items[2] = obj8;
@@ -557,7 +562,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj28.style = items1;
   const obj29 = {
     style: tmp.headerText,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,

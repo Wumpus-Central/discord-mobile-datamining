@@ -6,15 +6,15 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11606 from "../../../../_runtime/metro/11606__.js";
-import _modDef11607 from "../../../../_runtime/metro/11607__.js";
+import _modDef11743 from "../../../../_runtime/metro/11743__.js";
+import _modDef11744 from "../../../../_runtime/metro/11744__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function PaypalVanityTag(style) {
   const tmp = closure_8();
   const obj = { style: null, label: null, textStyle: null };
-  const items = [tmp.paypalVerifiedTag, style.style];
+  items = [tmp.paypalVerifiedTag, style.style];
   obj.style = items;
   const intl = util.intl;
   obj.label = intl.string(util.t.IhXLyx);
@@ -41,7 +41,7 @@ function VanityMetric(label) {
     formatResult = intl2.format(label, obj3);
   }
   const obj4 = { variant: "text-xs/normal", color: "text-muted", style: null, children: formatResult };
-  const items = [tmp.connectedAccountVanityMetadata, style];
+  items = [tmp.connectedAccountVanityMetadata, style];
   obj4.style = items;
   return timestampProducer(Text_Text.Text, obj4);
 }
@@ -50,7 +50,7 @@ function VanityItem(style) {
   ({ label, imageSrc, imageAlt } = style);
   const tmp = closure_8();
   const obj = { style: null, children: null };
-  const items = [, ,];
+  items = [, ,];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
@@ -77,7 +77,7 @@ function VanityTag(arg0) {
       children: label,
     }),
   };
-  const items = [, ,];
+  items = [, ,];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = closure_8());
   items[2] = style;
   obj.style = items;
@@ -86,7 +86,7 @@ function VanityTag(arg0) {
 function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
   const obj = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
-  const items = [closure_8().connectedAccountVanityMetadata, style];
+  items = [closure_8().connectedAccountVanityMetadata, style];
   obj.style = items;
   const intl = util.intl;
   const obj2 = { value: null, name: null };
@@ -97,11 +97,11 @@ function VanityDate(arg0) {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-const Constants = fn(7349);
+const Constants = fn(7469);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
   connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" },
@@ -135,7 +135,7 @@ export function generateRedditMetadataItems(metadata) {
   if (num == null) {
     num = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult = Number(num);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.SbCNox };
@@ -165,7 +165,7 @@ export function generateTwitterMetadataItems(metadata) {
   if (num2 == null) {
     num2 = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.llwqqe };
@@ -187,7 +187,7 @@ export function generateBlueskyMetadataItems(arg0) {
   if (num2 == null) {
     num2 = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.thA2ir };
@@ -209,7 +209,7 @@ export function generateLetterboxdMetadataItems(metadata) {
   if (num2 == null) {
     num2 = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.wvFh8m };
@@ -236,7 +236,7 @@ export function generateSteamMetadataItems(metadata) {
   if (num3 == null) {
     num3 = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t["ppXMu/"] };
@@ -247,7 +247,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11606;
+    obj2.imageSrc = _modDef11743;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -257,7 +257,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11607;
+    obj4.imageSrc = _modDef11744;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));
@@ -265,7 +265,7 @@ export function generateSteamMetadataItems(metadata) {
   return items;
 }
 export function generatePaypalMetadataItems(metadata) {
-  const items = [];
+  items = [];
   if ("1" === metadata[constants.PAYPAL_VERIFIED]) {
     const obj = { style: metadataItem };
     items.push(timestampProducer(PaypalVanityTag, obj));
@@ -277,7 +277,7 @@ export function generateEbayMetadataItems(metadata) {
   if (num == null) {
     num = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult = Number(num);
   if (NumberResult > 0) {
     const obj = { style: tmp, count: NumberResult, label: util.t.YmL22d, percent: true };
@@ -306,7 +306,7 @@ export function generateTikTokMetadataItems(metadata) {
   if (num3 == null) {
     num3 = -1;
   }
-  const items = [];
+  items = [];
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t["Mpm/Bc"] };
@@ -329,7 +329,7 @@ export function generateTikTokMetadataItems(metadata) {
   return items;
 }
 export function generateRoleConnectionMetadataItems(applicationRoleConnection) {
-  const items = [];
+  items = [];
   const keys = Object.keys(applicationRoleConnection.metadata);
   if (null != applicationRoleConnection.application_metadata) {
     const _Object = Object;

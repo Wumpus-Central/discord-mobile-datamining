@@ -1,6 +1,6 @@
 // discord_app/modules/pinot/PinotDiscoverable.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3160 from "Pinot.messages.js";
+import _modDef3287 from "Pinot.messages.js";
 import PinotConstants from "PinotConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/pinot/PinotDiscoverable.tsx")
 
 export { PinotDiscoverableOption };
 export const PINOT_DISCOVERABLE_OPTION_LABELS = {
-  [ALL_CONTENT]: _modDef3160.QsbbMS,
+  [ALL_CONTENT]: _modDef3287.QsbbMS,
   [SUMMARIES]: util.t.q21fUr,
   [MESSAGES]: util.t.OIgYlQ,
   [NONE]: util.t.PoWNfe,

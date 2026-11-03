@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 
 export function getWideBannerDismissibleContentVersion() {
-  const items = [, ,];
+  items = [, ,];
   ({ HOME: arr[0], ORBS: arr[1], CATALOG: arr[2] } = CollectibleShopTab);
   const obj = items[Symbol.iterator]();
   while (obj !== undefined) {

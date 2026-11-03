@@ -27,9 +27,9 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8722).FetchState;
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
+const FetchState = fn(8846).FetchState;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
+const CodedLinkExtendedType = fn(10247).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
@@ -119,7 +119,7 @@ export function createAppMessageEmbed(arg0) {
       const obj2 = { count: maxParticipants };
       let formatToPlainStringResult = intl2.formatToPlainString(util.t.z8EAJW, obj2);
     }
-    const items = [];
+    items = [];
     const tmp2Result9 = getFrameSurfaces;
     if (isActivityAppResult) {
       if (canOpenFrameResult) {
@@ -246,7 +246,7 @@ export function handleTapAppMessageEmbed(appId) {
       analyticsLocations: null,
       commandOrigin: null,
     };
-    const items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
+    items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
     obj3.analyticsLocations = items;
     obj3.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
     GamesActionCreatorsDefault.launch(obj3);

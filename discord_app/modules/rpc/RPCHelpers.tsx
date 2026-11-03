@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01380_Url.js";
+import UrlDefault from "../../../_runtime/01381_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
@@ -27,7 +27,7 @@ import RegexUtils from "../../utils/RegexUtils.tsx";
 
 require = fn;
 function validateOrigin(arg0) {
-  let items = arg1;
+  items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
@@ -60,7 +60,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -97,7 +97,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
                 const toOriginSafeResult = URLUtils.toOriginSafe(getURLForApplicationDefault(closure_1));
                 if (null != toOriginSafeResult) {
                   if (null != toOriginSafeResult1) {
-                    const items = [toOriginSafeResult];
+                    items = [toOriginSafeResult];
                   }
                 }
                 const obj4 = { closeCode: constants2.INVALID_ORIGIN };
@@ -185,7 +185,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4867).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6450);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4994).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6570);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -433,7 +433,7 @@ export function transformChannel(channel, result, arg2) {
   }
   const guild_id = channel.getGuildId();
   if (flag) {
-    const items = [constants3.GUILD_CATEGORY];
+    items = [constants3.GUILD_CATEGORY];
     HermesBuiltin.arraySpread(GUILD_VOCAL_CHANNEL_TYPES, 1);
     flag = !items.includes(channel.type);
   }
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6041).getName(dependencyMap, id.id, user),
+            nick: closure_1(6161).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9331)(user);
+          obj.user = closure_1(9459)(user);
           return obj;
         }
       });
@@ -573,9 +573,9 @@ export function isMatchingOrigin(str) {
   }
 }
 export function hasMessageReadPermission(channel, id, scopes) {
-  const guild = GuildStore.getGuild(channel.getGuildId());
+  guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
-    let application_id = guild.application_id;
+    application_id = guild.application_id;
   } else {
     application_id = channel.getApplicationId();
   }
@@ -629,7 +629,7 @@ export function processSocketThrottlers() {
 export function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
     const _Set = Set;
-    const items = [map1];
+    items = [state];
     const set = new Set(items);
     authorization.authorization.scopes = set;
   }

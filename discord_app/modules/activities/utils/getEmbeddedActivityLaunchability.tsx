@@ -23,7 +23,7 @@ function getEmbeddedActivityLaunchability(arg0) {
           if (null == guildId) {
             return obj.NO_GUILD;
           } else {
-            const guild = GuildStore.getGuild(guildId);
+            guild = GuildStore.getGuild(guildId);
             let afkChannelId;
             if (guild != null) {
               afkChannelId = guild.afkChannelId;
@@ -59,7 +59,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2018).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+let closure_6 = fn(2147).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
 const Permissions = fn(1072).Permissions;
 const EmbeddedActivityLaunchability = {
   CAN_LAUNCH: 0,
@@ -105,7 +105,7 @@ export function getEmbeddedActivityLaunchabilityForChannel(channelId) {
 }
 export function useEmbeddedActivityLaunchability(channelId) {
   _require = channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

@@ -3,8 +3,8 @@ import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
 require = fn;
-let closure_3 = fn(9827).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(18759).CachedSearchResultParser;
+let closure_3 = fn(9958).EMBED_TYPES_WITHOUT_DESCRIPTION;
+fn(18917).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -19,9 +19,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(18760).analyze(tokenizedQueryContent));
+      set = new Set(set(18918).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(18760).shouldHighlight(item, set));
+      const found = parts.find((item) => set(18918).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -41,7 +41,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(18760);
+      const obj = set(18918);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {
@@ -92,7 +92,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           const valueResult = mapped.find((truncated) => null != truncated.truncated).value();
           if (null != valueResult) {
             const tmp5 = new MessageRecord(content);
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(tmp5.embeds, 0);
             tmp5.embeds = items;
             let obj2 = {};

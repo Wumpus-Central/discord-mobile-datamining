@@ -11,7 +11,7 @@ function GridAvatar(user) {
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
   const tmp = closure_7();
-  const items = [PresenceStore];
+  items = [PresenceStore];
   const stateFromStores = user(504).useStateFromStores(items, () => PresenceStore.getStatus(user.id));
   const obj = user(504);
   const items1 = [AccessibilityStore];
@@ -29,7 +29,7 @@ function GridAvatar(user) {
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(8820);
+    const tmp2Result = tmp2(8944);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;
@@ -42,7 +42,7 @@ function GridAvatar(user) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
   avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -57,7 +57,7 @@ export default function AvatarGrid(arg0) {
   const obj = { style: tmp.gridContainer, children: null };
   const obj2 = { style: tmp.avatarRow, children: null };
   const merged = Object.assign(arg0);
-  const items = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL })];
+  items = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL })];
   const obj3 = { size: native.AvatarSizes.NORMAL };
   const merged1 = Object.assign(arg0);
   items[1] = hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL, showStatus: true });

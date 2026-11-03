@@ -9,13 +9,13 @@ const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
 
 export default function useIsSelectedResourceChannel(arg0) {
   _require = arg0;
-  const items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
+  items = [ChannelStore, SelectedChannelStore, ChannelSectionStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {

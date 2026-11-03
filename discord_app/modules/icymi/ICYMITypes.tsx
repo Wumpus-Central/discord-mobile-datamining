@@ -14,9 +14,11 @@ const ICYMIItemTypes = {
   [5]: "GUILD_EVENT",
   RECOMMENDED_GUILDS: 6,
   [6]: "RECOMMENDED_GUILDS",
+  DISCOVER_ITEM: 100,
+  [100]: "DISCOVER_ITEM",
 };
-const items = [,];
-({ MESSAGE: arr[0], CUSTOM_STATUS: arr[1] } = ICYMIItemTypes);
+const items = [, ,];
+({ MESSAGE: arr[0], CUSTOM_STATUS: arr[1], DISCOVER_ITEM: arr[2] } = ICYMIItemTypes);
 const items1 = [,];
 ({ IMAGE: arr2[0], GIFV: arr2[1] } = MessageEmbedTypes);
 const set = new Set(items);
@@ -30,20 +32,20 @@ export { ICYMIItemTypes };
 export function typeToString(type) {
   type = type.type;
   if (obj.MESSAGE === type) {
-    let str5 = "announcement";
+    let str6 = "announcement";
     if (type.data.channel_type !== constants.GUILD_ANNOUNCEMENT) {
       const message_context = type.data.message_context;
       let prop;
       if (message_context != null) {
         prop = message_context.external_content_application_id;
       }
-      let str6 = "message";
+      let str7 = "message";
       if (null != prop) {
-        str6 = "game_message";
+        str7 = "game_message";
       }
-      str5 = str6;
+      str6 = str7;
     }
-    return str5;
+    return str6;
   } else if (obj.ACTIVITY === type) {
     return "hotwheels_gaming_activity";
   } else if (obj.CUSTOM_STATUS === type) {
@@ -52,6 +54,8 @@ export function typeToString(type) {
     return "guild_event";
   } else if (obj.RECOMMENDED_GUILDS === type) {
     return "recommended_guilds";
+  } else if (obj.DISCOVER_ITEM === type) {
+    return "discover_item";
   }
 }
 export const SUPPORTED_ITEM_TYPES = set;

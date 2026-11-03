@@ -12,7 +12,7 @@ function UserProfileActivityTabSkeleton() {
     style: tmp.loading,
     children: Array.from({ length: 8 }).map((item, index) => {
       const obj = { style: closure_0.loadingRow, children: null };
-      const items = [
+      items = [
         hasOwnProperty(View, { style: closure_0.loadingThumbnail }),
         hasOwnProperty(View, { style: closure_0.loadingLine }),
       ];
@@ -27,7 +27,7 @@ function Section(introText) {
   ({ heading, children } = introText);
   const tmp = closure_8();
   const obj = { style: tmp.section, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
       style: tmp.sectionHeading,
       variant: "text-sm/medium",
@@ -61,8 +61,8 @@ function RecentActivityIntroText() {
           accessibilityRole: "link",
           onPress() {
             const obj2 = { href: null };
-            const obj = learnMore(8940);
-            obj2.href = closure_1_1(2061).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+            const obj = learnMore(9068);
+            obj2.href = closure_1_1(2190).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
             return obj.handleClick(obj2);
           },
           children,
@@ -76,7 +76,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   section: { gap: nativeDefault.space.PX_16 },
   sectionHeading: null,
@@ -123,7 +123,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14974)({
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(15110)({
     userId: user.id,
     currentUserId: currentUser.id,
     guildId,
@@ -133,7 +133,7 @@ export default function UserProfileActivityTab(user) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(14977);
+        const tmp7 = user(15113);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -149,10 +149,10 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1113).intl;
     obj3.heading = intl.string(user(1113).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(14842), obj4);
+    obj3.children = closure_5(cardStyle(14973), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
-  const items = [hasCurrentActivity];
+  items = [hasCurrentActivity];
   if (hasRecentActivity) {
     const obj5 = { heading: null, introText: null, children: null };
     const intl2 = user(1113).intl;
@@ -170,5 +170,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(14974)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(15110)({ userId: user.id, currentUserId: currentUser.id, guildId });
 }

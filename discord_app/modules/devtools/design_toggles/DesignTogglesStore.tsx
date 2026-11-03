@@ -54,7 +54,7 @@ prototype["allWithDescriptions"] = function allWithDescriptions() {
   const entries = Object.entries(closure_1);
   return entries.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, tmp2, toggles[tmp]];
+    items = [tmp, tmp2, toggles[tmp]];
     return items;
   });
 };

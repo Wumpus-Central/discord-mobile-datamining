@@ -11,7 +11,7 @@ const Store = initializeDefault.Store;
 class SelectedConversationStore extends Store {}
 const prototype = SelectedConversationStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [ChannelConversationsStore, ConversationPreviewStore];
+  items = [ChannelConversationsStore, ConversationPreviewStore];
   this.syncWith(items, () => null != _null);
 };
 prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0) {

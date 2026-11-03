@@ -26,7 +26,7 @@ function BadgeAccessoryLine(segments) {
         tmp2 = closure_2_10(React4, obj);
       }
       const obj2 = { children: null };
-      const items = [tmp2, node];
+      items = [tmp2, node];
       obj2.children = items;
       return closure_2_11(noop.Fragment, obj2, key);
     }),
@@ -35,7 +35,7 @@ function BadgeAccessoryLine(segments) {
 function InfoNotice(children) {
   const tmp = closure_13();
   const obj = { style: tmp.notice, children: null };
-  const items = [
+  items = [
     closure_1_10(CircleInformationIcon.CircleInformationIcon, {
       size: "xs",
       color: nativeDefault.colors.ICON_FEEDBACK_INFO,
@@ -58,7 +58,7 @@ function BadgeDetailsSheetContent(badge) {
   const isViewerOwnershipKnown = badge.isViewerOwnershipKnown;
   let badgeDetailsCta;
   const tmp = closure_13();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = badge(isViewingOtherUser[12]).useStateFromStores(
     items,
     () => useReducedMotion.useReducedMotion,
@@ -197,7 +197,7 @@ function BadgeDetailsSheetContent(badge) {
   let isBetaBadgeIdResult = badge(isViewingOtherUser[16]).isBetaBadgeId(badge.badge_id);
   if (isBetaBadgeIdResult) {
     const obj15 = { style: tmp.betaPill, children: null };
-    const obj16 = { variant: "text-xs/bold", color: "text-default", style: tmp.uppercase, children: null };
+    const obj16 = { variant: "text-xs/semibold", color: "text-default", style: tmp.uppercase, children: null };
     const intl2 = tmp2(tmp3[27]).intl;
     obj16.children = intl2.string(tmp2(tmp3[27]).t.oW0eUd);
     obj15.children = closure_10(tmp2(tmp3[11]).Text, obj16);
@@ -346,7 +346,7 @@ function BadgeDetailsPage(badgeId) {
   const currentUserId = badgeId.currentUserId;
   ({ isViewingOtherUser, targetUsername, isViewerOwnershipKnown } = badgeId);
   const tmp = closure_13();
-  const items = [BadgeDirectoryStore];
+  items = [BadgeDirectoryStore];
   const items1 = [badgeId, displayedUserId];
   const stateFromStores = badgeId(currentUserId[12]).useStateFromStores(
     items,
@@ -375,10 +375,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_9 = fn(5273).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   content: { flexGrow: 1 },
   page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -481,7 +481,7 @@ export default function BadgeDetailsSheet(badgeId) {
   const isViewingOtherUser = badgeId.isViewingOtherUser;
   let tmp = closure_13();
   const sum = Math.max(displayedUserId(isViewingOtherUser[32])().bottom, closure_9) + 4;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = badgeId(isViewingOtherUser[12]).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

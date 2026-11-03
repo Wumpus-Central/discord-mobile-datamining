@@ -10,7 +10,7 @@ export function useDMPermissionsOverrideCount() {
   setting = RestrictedGuildIds.useSetting();
   defaultGuildsRestricted = setting(defaultGuildsRestricted[2]).useDefaultGuildsRestricted();
   const obj = setting(defaultGuildsRestricted[2]);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [setting, defaultGuildsRestricted];
   return setting(defaultGuildsRestricted[3]).useStateFromStores(
     items,

@@ -12,7 +12,7 @@ function StepImage(image) {
   let tmp = closure_9();
   const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(image.projectId, image.id);
   const src = conjureAttachmentImage.src;
-  const items = [image, onOpen];
+  items = [image, onOpen];
   ({ gone, handleError } = conjureAttachmentImage);
   if (gone) {
     return null;
@@ -45,7 +45,7 @@ get_ActivityIndicator = fn(17);
   View: closure_7,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 },
   thumb: null,
@@ -79,7 +79,7 @@ let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNati
 export default function ConjureNativeStepImages(projectId) {
   projectId = projectId.projectId;
   const images = projectId.images;
-  const items = [images, projectId];
+  items = [images, projectId];
   const onOpen = noop.useCallback((arg0) => {
     const id = arg0;
     const mapped = images.map((id) => ({ id: id.id, alt: id.name }));

@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import LinkUtils from "../../links/LinkUtils.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../actions/ChannelSettingsActionCreators.tsx";
@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7454).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(7578).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   scrollContainer: { paddingHorizontal: 16 },
   header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 },
@@ -80,7 +80,7 @@ export default function ForumGuidelinesActionSheet(channel) {
   const tmp6 = first(noop.useState(), 2);
   first = tmp6[0];
   noop = tmp6[1];
-  const items = [bottom, first];
+  items = [bottom, first];
   let obj = channel(bottom[7]);
   const tmp5 = onPress;
   const memo = noop.useMemo(() => {
@@ -188,7 +188,7 @@ export default function ForumGuidelinesActionSheet(channel) {
   const items7 = [tmp19Result];
   const obj12 = {
     style: tmp.headerTitle,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -230,5 +230,5 @@ export function openForumGuidelinesActionSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10229, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(10359, dependencyMap.paths), closure_6, obj2);
 }

@@ -7,7 +7,7 @@ import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 const require = fn;
 function MultiGuildDevTools() {
   const tmp = closure_9();
-  const items = [LocalAppDetectionStore];
+  items = [LocalAppDetectionStore];
   _require = require("initialize").useStateFromStores(items, () => LocalAppDetectionStore.getUserAgnosticState());
   let obj = require("initialize");
   const items1 = [MobileGameCommunitiesStore];
@@ -163,7 +163,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scrollView: { flex: 1 },

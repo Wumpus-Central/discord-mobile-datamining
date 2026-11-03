@@ -14,7 +14,7 @@ function CollectionItem(arg0) {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
+  items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const singleStringOrSkeleton = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
     componentConfig,
@@ -74,7 +74,7 @@ function CollectionItem(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   grid: {
     flexDirection: "row",
@@ -112,7 +112,7 @@ const result = size.fileFinishedImporting(
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
   const obj = { style: closure_6().grid, children: null };
-  const items = [
+  items = [
     React4(CollectionItem, { componentConfig: bottomConfig.components.item_1, resolveFieldValue }),
     React4(CollectionItem, { componentConfig: bottomConfig.components.item_2, resolveFieldValue }),
     React4(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue }),

@@ -1,14 +1,18 @@
 // discord_app/design/components/AlertModal/native/AlertModal.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import Backdrop from "../../Backdrop/native/Backdrop.native.tsx";
 import useAlertStore2 from "useAlertStore.native.tsx";
 import OverlayViewDefault from "../../../void/OverlayView/native/OverlayView.tsx";
 import Dialog from "../../Dialog/native/Dialog.native.tsx";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import useBackPressHandlerDefault from "../../../../modules/routing/native/useBackPressHandler.tsx";
 import Stack_Stack from "../../Stack/native/Stack.native.tsx";
 import useTrackImpressionDefault from "../../../../modules/app_analytics/useTrackImpression.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -34,21 +38,20 @@ function dismissTopAlert() {
     if (first != null) {
       key = first.key;
     }
-    tmp(5960).dismissAlert(key);
-    const tmpResult = tmp(5960);
+    tmp(6080).dismissAlert(key);
+    const tmpResult = tmp(6080);
     tmp(1259).batchUpdates(() => {
-      const useAlertStore = context(context2[11]).useAlertStore;
+      const useAlertStore = alerts(c2[11]).useAlertStore;
       return useAlertStore.setState({ alerts });
     });
     const tmpResult2 = tmp(1259);
   }
 }
 function AlertModalBackdrop() {
-  const context = noop.useContext(closure_17);
+  const context = noop.useContext(closure_16);
+  [tmp3, tmp4] = useSharedAnimationState();
   const tmp2 = _slicedToArray(useSharedAnimationState(), 2);
-  const sharedTransitionState = tmp2[0];
-  dependencyMap = tmp4;
-  const alertStore = context(5960).useAlertStore((arg0) => {
+  const alertStore = useAlertStore2.useAlertStore((arg0) => {
     const first = arg0.alerts[0];
     let dismissable;
     if (first != null) {
@@ -56,53 +59,47 @@ function AlertModalBackdrop() {
     }
     return false !== dismissable;
   });
-  let obj = context(5960);
-  let fn = function t() {
-    value = closure_2.get();
-    if (typeof withAlertModalSpring === "function") {
-      let obj = { opacity: null };
-      const fn = (arg0) => {
-        let tmp = true === arg0;
-        if (tmp) {
-          tmp = 0 === closure_1_2.get();
-        }
-        if (tmp) {
-          value = sharedTransitionState.get();
-          tmp = value === context(closure_2[10]).TransitionStates.YEETED;
-        }
-        if (tmp) {
-          context(closure_2[12]).runOnJS(closure_1_0)();
-          const obj = context(closure_2[12]);
-        }
+  items = [closure_22, withAlertModalSpring, tmp4, tmp3, native.TransitionStates, _mod1705.scheduleOnRN, context];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items;
+  class AlertModalNativeTsx1 {
+    constructor() {
+      obj = {
+        opacity: closure_0(closure_1.get(), (arg0) => {
+          let tmp = true === arg0;
+          if (tmp) {
+            tmp = 0 === _undefined2.get();
+          }
+          if (tmp) {
+            tmp = closure_1_2.get() === constants.YEETED;
+          }
+          if (tmp) {
+            closure_1_4(closure_1_5);
+          }
+        }),
       };
-      const obj2 = spring;
-      obj.opacity = obj2.withSpring(value, obj3, "animate-always", fn);
       return obj;
-    } else {
-      throw new TypeError("Trying to call a non-function");
     }
-  };
-  let obj2 = context(5095);
-  fn.__closure = {
-    withAlertModalSpring,
-    sharedVisible: tmp2[1],
-    sharedTransitionState,
-    TransitionStates: context(5080).TransitionStates,
-    runOnJS: context(5095).runOnJS,
-    cleanUp: context,
-  };
-  fn.__workletHash = 4470729133936;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj4 = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
-  let tmp10 = null;
-  if (alertStore) {
-    tmp10 = dismissTopAlert;
   }
-  obj4.onDismiss = tmp10;
-  const intl = tmp5(1113).intl;
-  obj4.accessibilityLabel = intl.string(context(1113).t.Xkfav5);
-  return closure_11(context(5598).Backdrop, obj4);
+  const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14];
+  AlertModalNativeTsx1.__closure = items1;
+  AlertModalNativeTsx1.__workletHash = 8433984846056;
+  AlertModalNativeTsx1.__initData = tmp8;
+  const animatedStyle = _mod1652.useAnimatedStyle(AlertModalNativeTsx1);
+  const obj3 = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
+  let tmp17 = null;
+  if (alertStore) {
+    tmp17 = dismissTopAlert;
+  }
+  obj3.onDismiss = tmp17;
+  const intl = util.intl;
+  obj3.accessibilityLabel = intl.string(util.t.Xkfav5);
+  return closure_1_11(Backdrop.Backdrop, obj3);
 }
 class AlertModal {
   constructor(arg0) {
@@ -110,180 +107,155 @@ class AlertModal {
     closure_0 = undefined;
     closure_1 = undefined;
     closure_2 = undefined;
-    enabled = undefined;
-    closure_4 = undefined;
-    closure_5 = undefined;
-    closure_6 = undefined;
-    closure_7 = undefined;
-    top = undefined;
-    bottom = undefined;
-    height = undefined;
+    closure_3 = undefined;
+    obj = closure_6;
     ({ header, title, extraContent } = global);
-    context = closure_6.useContext(closure_17);
-    closure_0 = context;
-    context1 = closure_6.useContext(closure_18);
-    closure_1 = context1;
+    context = closure_6.useContext(closure_16);
+    context1 = closure_6.useContext(closure_17);
+    closure_0 = context1;
     tmp3 = closure_14();
-    context2 = closure_6.useContext(closure_20);
-    closure_2 = context2;
+    context2 = closure_6.useContext(closure_19);
+    closure_1 = context2;
     tmp5 = closure_0;
     tmp6 = closure_2;
-    enabled = closure_6.useContext(closure_0(closure_2[19]).AccessibilityPreferencesContext).reducedMotion.enabled;
     ref = closure_6.useRef(null);
-    closure_4 = ref;
-    obj = closure_0(closure_2[12]);
-    sharedValue = obj.useSharedValue(context1);
-    closure_5 = sharedValue;
+    closure_2 = ref;
+    obj2 = closure_0(closure_2[12]);
+    sharedValue = obj2.useSharedValue(context1);
+    closure_3 = sharedValue;
     tmp9 = closure_4(useSharedAnimationState(), 2);
-    first = tmp9[0];
-    closure_6 = first;
-    tmp11 = tmp9[1];
-    closure_7 = tmp11;
-    rect = closure_1(closure_2[20])();
-    top = rect.top;
-    bottom = rect.bottom;
+    tmp12 = closure_1;
+    [tmp10, tmp11] = tmp9;
+    tmp13 = closure_1(closure_2[21])();
     items = [];
     items[0] = context1;
+    ({ top, bottom } = tmp13);
     effect = closure_6.useEffect(() => {
-      if (0 === context1) {
+      if (0 === c0) {
         const obj2 = { ref, delay: 300 };
         const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
       }
     }, items);
-    height = closure_1(closure_2[22])().height;
-    obj2 = closure_0(closure_2[12]);
-    class B {
+    obj3 = closure_0(closure_2[12]);
+    items1 = [, , , , , , , , , , , , ,];
+    items1[0] = closure_24;
+    items1[1] = tmp11;
+    items1[2] = tmp10;
+    items1[3] = closure_0(closure_2[10]).TransitionStates;
+    items1[4] = closure_0(closure_2[17]).scheduleOnRN;
+    items1[5] = context;
+    items1[6] = closure_1(closure_2[23])().height;
+    items1[7] = 16;
+    items1[8] = top;
+    items1[9] = bottom;
+    items1[10] = withAlertModalSpring;
+    items1[11] = sharedValue;
+    items1[12] = context2;
+    items1[13] = closure_6.useContext(closure_0(closure_2[20]).AccessibilityPreferencesContext).reducedMotion.enabled;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_8 = undefined;
+    closure_9 = undefined;
+    closure_10 = undefined;
+    closure_11 = undefined;
+    closure_12 = undefined;
+    [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28] = items1;
+    class AlertModalNativeTsx2 {
       constructor() {
-        diff = height - 32;
-        tmp3 = withAlertModalSpring;
-        obj = closure_7;
-        result = 2 * Math.max(top, bottom);
-        value = closure_7.get();
-        if (typeof withAlertModalSpring === "function") {
-          obj1 = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
-          tmp5 = closure_0;
-          tmp6 = closure_2;
-          onComplete = function onComplete(arg0) {
-            let tmp = true === arg0;
-            if (tmp) {
-              tmp = 0 === closure_1_7.get();
-            }
-            if (tmp) {
-              value = sharedTransitionState.get();
-              tmp = value === context(context2[10]).TransitionStates.YEETED;
-            }
-            if (tmp) {
-              context(context2[12]).runOnJS(closure_1_0)();
-              const obj = context(context2[12]);
-            }
-          };
-          obj3 = closure_0(closure_2[27]);
-          tmp7 = closure_15;
-          str = "animate-always";
-          tmp8 = obj3;
-          tmp9 = value;
-          tmp10 = closure_15;
-          str2 = "animate-always";
-          obj1.opacity = obj3.withSpring(value, closure_15, "animate-always", onComplete);
-          obj4 = closure_5;
-          num = 10;
-          obj1.zIndex = 10 - closure_5.get();
-          num2 = 0;
-          str3 = "auto";
-          if (closure_5.get() > 0) {
-            tmp11 = closure_2;
-            str3 = closure_2.get();
+        diff = closure_5 - 2 * closure_6;
+        obj = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
+        tmp3 = closure_9;
+        obj2 = closure_0;
+        result = 2 * Math.max(closure_7, closure_8);
+        obj.opacity = closure_9(closure_0.get(), function onComplete(arg0) {
+          let tmp = true === arg0;
+          if (tmp) {
+            tmp = 0 === _undefined.get();
           }
-          obj1.height = str3;
-          obj1.maxHeight = diff - result;
-          tmp12 = enabled;
-          if (enabled) {
-            items = [];
-          } else {
-            num3 = 0.7;
-            num4 = 1;
-            if (1 === obj.get()) {
-              num5 = 0.1;
-              num3 = 1 - 0.1 * obj4.get();
-            }
-            if (typeof tmp3 === "function") {
-              obj9 = { scale: null };
-              tmp5Result = tmp5(tmp6[27]);
-              tmp13 = tmp5Result;
-              tmp14 = num3;
-              tmp15 = tmp7;
-              str4 = "animate-always";
-              obj9.scale = tmp5Result.withSpring(num3, tmp7, "animate-always", undefined);
-              items = [,];
-              items[0] = obj9;
-              if (1 === obj.get()) {
-                result1 = [0, -20, -34][obj4.get(obj4)];
-                tmp18 = null;
-                if (result1 == null) {
-                  num7 = -12;
-                  result1 = -12 * obj.get();
-                }
-                diff1 = result1;
-              } else {
-                num6 = 50;
-                diff1 = 50 - 50 * obj4.get();
-              }
-              if (typeof tmp3 === "function") {
-                obj10 = { translateY: null };
-                tmp5Result1 = tmp5(tmp6[27]);
-                tmp19 = tmp5Result1;
-                tmp20 = diff1;
-                tmp21 = tmp7;
-                str5 = "animate-always";
-                obj10.translateY = tmp5Result1.withSpring(diff1, tmp7, "animate-always", undefined);
-                items[1] = obj10;
-              } else {
-                str8 = "Trying to call a non-function";
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              str7 = "Trying to call a non-function";
-              throw new TypeError("Trying to call a non-function");
-            }
+          if (tmp) {
+            tmp = _undefined2.get() === constants.YEETED;
           }
-          obj1.transform = items;
-          return obj1;
-        } else {
-          str6 = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
+          if (tmp) {
+            _undefined3(closure_1_4);
+          }
+        });
+        obj3 = closure_10;
+        obj.zIndex = 10 - closure_10.get();
+        str = "auto";
+        if (closure_10.get() > 0) {
+          tmp4 = closure_11;
+          str = closure_11.get();
         }
+        obj.height = str;
+        obj.maxHeight = diff - result;
+        if (closure_12) {
+          items = [];
+        } else {
+          num = 0.7;
+          num2 = 1;
+          if (1 === obj2.get()) {
+            num3 = 0.1;
+            num = 1 - 0.1 * obj3.get();
+          }
+          obj1 = { scale: null };
+          obj1.scale = tmp3(num);
+          items = [,];
+          items[0] = obj1;
+          if (1 === obj2.get()) {
+            result1 = [0, -20, -34][obj3.get(obj3)];
+            tmp7 = null;
+            if (result1 == null) {
+              num5 = -12;
+              result1 = -12 * obj2.get();
+            }
+            diff1 = result1;
+          } else {
+            num4 = 50;
+            diff1 = 50 - 50 * obj3.get();
+          }
+          obj6 = { translateY: null };
+          obj6.translateY = tmp3(diff1);
+          items[1] = obj6;
+        }
+        obj.transform = items;
+        return obj;
       }
     }
-    obj1 = {
-      sharedVisible: tmp11,
-      sharedTransitionState: first,
-      TransitionStates: closure_0(closure_2[10]).TransitionStates,
-      runOnJS: closure_0(closure_2[12]).runOnJS,
-      cleanUp: context,
-      windowHeight: height,
-      ALERT_MODAL_MARGIN: 16,
-      safeAreaTop: top,
-      safeAreaBottom: bottom,
-      withAlertModalSpring,
-      sharedIndex: sharedValue,
-      sharedTopHeight: context2,
-      useReducedMotion: enabled,
-    };
-    B.__closure = obj1;
-    B.__workletHash = 655123755546;
-    B.__initData = closure_25;
-    items1 = [,];
-    items1[0] = context1;
-    items1[1] = sharedValue;
-    animatedStyle = obj2.useAnimatedStyle(B);
-    layoutEffect = closure_6.useLayoutEffect(() => {
-      const result = sharedValue.set(context1);
-    }, items1);
-    tmp15 = closure_1(closure_2[23])(() => {
-      let useAlertStore = context(context2[11]).useAlertStore;
-      const arr = sharedValue(useAlertStore.getState().alerts);
+    items2 = [, , , , , , , , , , , ,];
+    items2[0] = tmp16;
+    items2[1] = tmp17;
+    items2[2] = tmp18;
+    items2[3] = tmp19;
+    items2[4] = tmp20;
+    items2[5] = tmp21;
+    items2[6] = tmp22;
+    items2[7] = tmp23;
+    items2[8] = tmp24;
+    items2[9] = tmp25;
+    items2[10] = tmp26;
+    items2[11] = tmp27;
+    items2[12] = tmp28;
+    AlertModalNativeTsx2.__closure = items2;
+    AlertModalNativeTsx2.__workletHash = 6860087159970;
+    AlertModalNativeTsx2.__initData = tmp15;
+    items3 = [,];
+    items3[0] = context1;
+    items3[1] = sharedValue;
+    animatedStyle = obj3.useAnimatedStyle(AlertModalNativeTsx2);
+    layoutEffect = obj.useLayoutEffect(() => {
+      const result = _undefined3.set(c0);
+    }, items3);
+    tmp31 = tmp12(tmp6[24])(() => {
+      let useAlertStore = _undefined(ref[11]).useAlertStore;
+      const arr = _undefined4(useAlertStore.getState().alerts);
       const first = arr[0];
-      context = arr.slice(1);
+      _undefined = arr.slice(1);
       let tmp4 = null != first;
       if (tmp4) {
         tmp4 = false === first.dismissable;
@@ -293,92 +265,92 @@ class AlertModal {
         if (first != null) {
           key = first.key;
         }
-        tmp(context2[11]).dismissAlert(key);
-        const tmpResult = tmp(context2[11]);
-        tmp(context2[16]).batchUpdates(() => {
-          const useAlertStore = context(context2[11]).useAlertStore;
+        tmp(ref[11]).dismissAlert(key);
+        const tmpResult = tmp(ref[11]);
+        tmp(ref[16]).batchUpdates(() => {
+          const useAlertStore = alerts(c2[11]).useAlertStore;
           return useAlertStore.setState({ alerts });
         });
-        const tmpResult2 = tmp(context2[16]);
+        const tmpResult2 = tmp(ref[16]);
       }
       return true;
     });
-    tmp16 = jsxs;
-    tmp17 = 0 === context1;
+    tmp32 = closure_12;
+    tmp33 = 0 === context1;
     str = "no-hide-descendants";
-    if (tmp17) {
+    if (tmp33) {
       str = "auto";
     }
-    obj11 = {
+    obj1 = {
       importantForAccessibility: str,
       accessibilityElementsHidden: 0 !== context1,
       style: null,
       onLayout(nativeEvent) {
-        const result = context2.set(nativeEvent.nativeEvent.layout.height);
+        const result = _undefined2.set(nativeEvent.nativeEvent.layout.height);
       },
       children: null,
     };
-    items2 = [,];
-    items2[0] = tmp3.content;
-    items2[1] = animatedStyle;
-    obj11.style = items2;
-    tmp18 = null;
-    if (tmp17) {
-      tmp18 = null;
+    items4 = [,];
+    items4[0] = tmp3.content;
+    items4[1] = animatedStyle;
+    obj1.style = items4;
+    tmp34 = null;
+    if (tmp33) {
+      tmp34 = null;
       if (null != trackingProps) {
-        tmp19 = jsx;
-        tmp20 = AlertModalImpression;
-        obj12 = { trackingProps: null };
-        obj12.trackingProps = trackingProps;
-        tmp18 = jsx(AlertModalImpression, obj12);
+        tmp35 = closure_11;
+        tmp36 = AlertModalImpression;
+        obj11 = { trackingProps: null };
+        obj11.trackingProps = trackingProps;
+        tmp34 = closure_11(AlertModalImpression, obj11);
       }
     }
-    items3 = [,];
-    items3[0] = tmp18;
-    tmp21 = jsx;
-    obj13 = { style: tmp3.overflow, children: null };
-    tmp22 = bottom;
-    tmp23 = closure_7;
-    items4 = [, , ,];
-    items4[0] = header;
-    obj14 = { spacing: 8, style: tmp3.body, children: null };
     items5 = [,];
-    items5[0] = jsx(tmp5(tmp6[25]).Text, {
+    items5[0] = tmp34;
+    tmp37 = closure_11;
+    obj12 = { style: tmp3.overflow, children: null };
+    tmp38 = closure_9;
+    tmp39 = closure_7;
+    items6 = [, , ,];
+    items6[0] = header;
+    obj13 = { spacing: 8, style: tmp3.body, children: null };
+    items7 = [,];
+    items7[0] = closure_11(tmp5(tmp6[26]).Text, {
       ref,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       accessibilityRole: "header",
       color: "mobile-text-heading-primary",
       children: title,
     });
-    tmp21Result = null;
+    tmp37Result = null;
     if (null != content) {
       str2 = "";
-      tmp21Result = null;
+      tmp37Result = null;
       if ("" !== content) {
-        obj15 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-        obj15.style = tmp3.contentText;
-        obj15.children = content;
-        tmp21Result = tmp21(tmp5(tmp6[25]).Text, obj15);
+        obj14 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
+        obj14.style = tmp3.contentText;
+        obj14.children = content;
+        tmp37Result = tmp37(tmp5(tmp6[26]).Text, obj14);
       }
     }
-    items5[1] = tmp21Result;
-    obj14.children = items5;
-    items4[1] = tmp16(tmp5(tmp6[24]).Stack, obj14);
-    items4[2] = extraContent;
-    tmp21Result1 = null;
+    items7[1] = tmp37Result;
+    obj13.children = items7;
+    items6[1] = tmp32(tmp5(tmp6[25]).Stack, obj13);
+    items6[2] = extraContent;
+    tmp37Result1 = null;
     if (null != actions) {
-      tmp26 = AlertActions;
-      obj16 = { children: null };
-      obj16.children = actions;
-      tmp21Result1 = tmp21(AlertActions, obj16);
+      tmp42 = AlertActions;
+      obj15 = { children: null };
+      obj15.children = actions;
+      tmp37Result1 = tmp37(AlertActions, obj15);
     }
-    obj17 = { alwaysBounceVertical: false, children: null };
-    items4[3] = tmp21Result1;
-    obj13.children = tmp16(tmp5(tmp6[24]).Stack, { spacing: 24, children: items4 });
-    obj17.children = tmp21(tmp23, obj13);
-    items3[1] = tmp21(tmp22, obj17);
-    obj11.children = items3;
-    return tmp16(closure_1(closure_2[12]).View, obj11);
+    obj16 = { alwaysBounceVertical: false, children: null };
+    items6[3] = tmp37Result1;
+    obj12.children = tmp32(tmp5(tmp6[25]).Stack, { spacing: 24, children: items6 });
+    obj16.children = tmp37(tmp39, obj12);
+    items5[1] = tmp37(tmp38, obj16);
+    obj1.children = items5;
+    return tmp32(tmp12(tmp6[12]).View, obj1);
   }
 }
 function AlertModalImpression(trackingProps) {
@@ -404,54 +376,71 @@ function AlertModalImpression(trackingProps) {
   return null;
 }
 function useSharedAnimationState() {
-  const context = noop.useContext(closure_16);
-  const context1 = noop.useContext(closure_17);
+  const context = noop.useContext(closure_15);
+  c0 = context;
+  const context1 = noop.useContext(closure_16);
   let num = 0;
-  if (context === context(sharedValue[10]).TransitionStates.MOUNTED) {
+  if (context === native.TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = context(sharedValue[12]).useSharedValue(num);
-  const obj2 = context(sharedValue[12]);
-  const sharedValue1 = context(sharedValue[12]).useSharedValue(context);
-  const items = [sharedValue, context, sharedValue1];
+  const sharedValue = _mod1652.useSharedValue(num);
+  const sharedValue1 = _mod1652.useSharedValue(context);
+  c1 = sharedValue1;
+  items = [sharedValue, context, sharedValue1];
   const layoutEffect = noop.useLayoutEffect(() => {
-    const result = sharedValue1.set(context);
+    const result = _undefined2.set(c0);
   }, items);
-  const tmp3Result = context(sharedValue[12]);
-  const fn = function n() {
-    return sharedValue1.get();
-  };
-  fn.__closure = { sharedTransitionState: sharedValue1 };
-  fn.__workletHash = 14603144870585;
-  fn.__initData = __initData3;
-  const fn2 = function t(arg0) {
-    if (arg0 === native.TransitionStates.YEETED) {
-      if (1 === sharedValue.get()) {
-        const result = sharedValue.set(0);
-      } else {
-        ReanimatedRexport.runOnJS(context1)();
-        const tmpResult = ReanimatedRexport;
-      }
-    } else {
-      const result1 = sharedValue.set(1);
+  const tmp3Result = _mod1652;
+  const items1 = [closure_28, sharedValue1];
+  c0 = undefined;
+  [tmp8, tmp9] = items1;
+  class AlertModalNativeTsx4 {
+    constructor() {
+      return closure_0.get();
     }
-  };
-  const tmp3Result2 = context(sharedValue[12]);
-  fn2.__closure = {
-    TransitionStates: context(sharedValue[10]).TransitionStates,
-    sharedVisible: sharedValue,
-    runOnJS: context(sharedValue[12]).runOnJS,
-    cleanUp: context1,
-  };
-  fn2.__workletHash = 9486923983340;
-  fn2.__initData = __initData4;
-  const animatedReaction = tmp3Result2.useAnimatedReaction(fn, fn2);
-  const items1 = [sharedValue1, sharedValue];
-  return items1;
+  }
+  const items2 = [tmp9];
+  AlertModalNativeTsx4.__closure = items2;
+  AlertModalNativeTsx4.__workletHash = 2986600542944;
+  AlertModalNativeTsx4.__initData = tmp8;
+  const items3 = [closure_29, native.TransitionStates, sharedValue, _mod1705.scheduleOnRN, context1];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14] = items3;
+  class AlertModalNativeTsx5 {
+    constructor(arg0) {
+      if (arg0 === closure_0.YEETED) {
+        obj = closure_1;
+        num2 = 1;
+        if (1 === closure_1.get()) {
+          num3 = 0;
+          result = obj.set(0);
+        } else {
+          tmp3 = closure_2;
+          tmp4 = closure_3;
+          tmp5 = closure_2(closure_3);
+        }
+      } else {
+        tmp = closure_1;
+        num = 1;
+        result1 = closure_1.set(1);
+      }
+      return;
+    }
+  }
+  const items4 = [tmp11, tmp12, tmp13, tmp14];
+  AlertModalNativeTsx5.__closure = items4;
+  AlertModalNativeTsx5.__workletHash = 3535842432212;
+  AlertModalNativeTsx5.__initData = tmp10;
+  const animatedReaction = _mod1652.useAnimatedReaction(AlertModalNativeTsx4, AlertModalNativeTsx5);
+  const items5 = [sharedValue1, sharedValue];
+  return items5;
 }
 class AlertActions {
   constructor(arg0) {
-    return jsx(closure_0(closure_2[24]).Stack, { spacing: 12, children: global.children });
+    return jsx(closure_0(closure_2[25]).Stack, { spacing: 12, children: global.children });
   }
 }
 class AlertActionButton {
@@ -462,7 +451,7 @@ class AlertActionButton {
     closure_2 = undefined;
     tmp2 = closure_4(closure_6.useState(false), 2);
     closure_1 = tmp2[1];
-    closure_2 = closure_6.useContext(closure_19);
+    closure_2 = closure_6.useContext(closure_18);
     tmp3 = jsx;
     obj = {};
     merged1 = Object.assign(merged);
@@ -483,7 +472,7 @@ class AlertActionButton {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -513,7 +502,7 @@ class AlertActionButton {
               }
               closure_0(dependencyMap[11]).dismissAlert(c2);
               c4 = 3;
-              obj3 = closure_0(dependencyMap[11]);
+              const obj3 = closure_0(dependencyMap[11]);
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -551,7 +540,7 @@ class AlertActionButton {
       }
       return applyArgumentsResult;
     };
-    return tmp3(closure_0(closure_2[28]).Button, obj);
+    return tmp3(closure_0(closure_2[29]).Button, obj);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -559,7 +548,7 @@ get_ActivityIndicator = fn(17);
 const ImpressionTypes = fn(1340).ImpressionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 },
   content: null,
@@ -582,40 +571,47 @@ obj.content = size;
 obj.overflow = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
 obj.body = { alignItems: "center" };
 obj.contentText = { textAlign: "center" };
-let value = createStyles.createStyles(obj);
-let obj3 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let context = noop.createContext(fn(5080).TransitionStates.YEETED);
+const gesture = createStyles.createStyles(obj);
+let context = noop.createContext(fn(5207).TransitionStates.YEETED);
 let context2 = noop.createContext(fn(1083).NOOP);
 const context3 = noop.createContext(0);
 const context4 = noop.createContext("");
 const context5 = noop.createContext(null);
-const __initData = {
-  code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}",
+let closure_22 = {
+  code: "(function AlertModalNativeTsx1(){let[withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){scheduleOnRN(cleanUp);}})};})",
 };
-let __initData4 = {
-  code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}",
+let closure_24 = {
+  code: "(function AlertModalNativeTsx2(){let[sharedVisible,sharedTransitionState,TransitionStates,scheduleOnRN,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion]=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){scheduleOnRN(cleanUp);}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};})",
 };
-function withAlertModalSpring(value, fn) {
-  return spring.withSpring(value, obj3, "animate-always", fn);
+let items = [
+  {
+    code: "(function withAlertModalSpring_AlertModalNativeTsx3(value,callback){let[withSpring,MODAL_SPRING]=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);})",
+  },
+  fn(5757).withSpring,
+  { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5 },
+];
+let closure_129_0;
+let closure_129_1;
+[tmp6, tmp7, tmp8] = items;
+function withAlertModalSpring(arg0, arg1) {
+  return require(arg0, importDefault, "animate-always", arg1);
 }
-let obj4 = { withSpring: fn(5637).withSpring, MODAL_SPRING: obj3 };
-withAlertModalSpring.__closure = obj4;
-withAlertModalSpring.__workletHash = 15556562210180;
-withAlertModalSpring.__initData = {
-  code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}",
+let items1 = [tmp7, tmp8];
+withAlertModalSpring.__closure = items1;
+withAlertModalSpring.__workletHash = 11763504821693;
+withAlertModalSpring.__initData = tmp6;
+let closure_28 = {
+  code: "(function AlertModalNativeTsx4(){let[sharedTransitionState]=this.__closure;return sharedTransitionState.get();})",
 };
-const __initData3 = {
-  code: "function AlertModalNativeTsx4(){const{sharedTransitionState}=this.__closure;return sharedTransitionState.get();}",
-};
-__initData4 = {
-  code: "function AlertModalNativeTsx5(transitionState){const{TransitionStates,sharedVisible,runOnJS,cleanUp}=this.__closure;if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else{sharedVisible.set(1);}}",
+let closure_29 = {
+  code: "(function AlertModalNativeTsx5(transitionState){let[TransitionStates,sharedVisible,scheduleOnRN,cleanUp]=this.__closure;if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1){sharedVisible.set(0);}else{scheduleOnRN(cleanUp);}}else{sharedVisible.set(1);}})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
 
 export const AlertModalContainer = noop.memo(function AlertModalContainer() {
   const tmp = closure_14();
-  let items = tmp;
+  items = tmp;
   const alertStore = items(items[11]).useAlertStore((alerts) => alerts.alerts);
   let obj = items(items[11]);
   const tmp2 = items;
@@ -660,7 +656,7 @@ export const AlertModalContainer = noop.memo(function AlertModalContainer() {
     }
     const obj = { value: sharedValue, children: null };
     const obj2 = { value: value3, children: null };
-    obj3 = { value: value2, children: null };
+    const obj3 = { value: value2, children: null };
     const obj4 = {
       value: num,
       children: closure_2_11(redux4.Provider, {
@@ -681,8 +677,8 @@ export const AlertModalContainer = noop.memo(function AlertModalContainer() {
   });
 });
 export function useDismissModalCallback() {
-  const context = noop.useContext(closure_19);
-  const items = [context];
+  const context = noop.useContext(closure_18);
+  items = [context];
   return noop.useCallback(() => {
     useAlertStore2.dismissAlert(context);
   }, items);
@@ -703,13 +699,13 @@ export function showConfirmModal(arg0) {
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
   const obj2 = { title, content, extraContent, actions: null };
-  obj3 = { children: null };
-  const items = [
+  const obj3 = { children: null };
+  items = [
     closure_1_11(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }),
     closure_1_11(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel }),
   ];
   obj3.children = items;
-  obj2.actions = closure_1_12(map1, obj3);
+  obj2.actions = application_id(state, obj3);
   useAlertStore2.openAlert(key, closure_1_11(AlertModal, obj2), onCloseCallback, { dismissable });
   const obj4 = { dismissable };
 }

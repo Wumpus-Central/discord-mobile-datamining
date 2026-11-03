@@ -15,7 +15,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -39,7 +39,7 @@ let closure_5 = async function _readFile(arg0) {
               if (!obj.isAndroid()) {
                 return closure_1_1(1149).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1375);
+              obj = closure_1_0(1377);
             }
             if ("cache" === arg0) {
               let DocumentsDirPath = closure_1_1(1149).getConstants().CacheDirPath;

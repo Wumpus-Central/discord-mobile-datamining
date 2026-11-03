@@ -25,10 +25,10 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7490).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7614).SafetySettingsNoticeType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export default noop.memo(function SettingsAccountHeader() {
   const tmp = closure_11();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const bannerText = UserSettingsAccountUnverifiedHeader.getBannerText(stateFromStores);
   const items1 = [RelationshipStore];

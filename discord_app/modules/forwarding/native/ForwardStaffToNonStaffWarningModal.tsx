@@ -19,7 +19,7 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.X7eUJq);
   obj3.onPress = onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj4 = { variant: "secondary", text: null, onPress: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["13/7kX"]);

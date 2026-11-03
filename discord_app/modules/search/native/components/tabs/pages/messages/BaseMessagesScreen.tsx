@@ -8,7 +8,7 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(9826).SearchResultContentEntityTypes;
+const constants = fn(9957).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
@@ -36,7 +36,7 @@ export default function BaseMessagesScreen(tab) {
   if (keywordResultCount == null) {
     keywordResultCount = data.length;
   }
-  const items = [isHistoricalIndexing, keywordResultCount];
+  items = [isHistoricalIndexing, keywordResultCount];
   const stateFromStoresObject = searchContext(isFocused[6]).useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);

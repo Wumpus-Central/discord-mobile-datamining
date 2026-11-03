@@ -10,11 +10,11 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   scrollContainer: { minHeight: "100%" },
   container: { flexGrow: 1, alignItems: "center", justifyContent: "center" },
-  alertContainer: { paddingTop: 80 + fn(5586).NAV_BAR_HEIGHT },
+  alertContainer: { paddingTop: 80 + fn(5709).NAV_BAR_HEIGHT },
   alertContainerInsideCard: null,
   alert: null,
   alertInsideCard: null,
@@ -27,7 +27,7 @@ let obj2 = {
   primaryButtonContainer: null,
   trailing: null,
 };
-let obj3 = { paddingTop: 80 + fn(5586).NAV_BAR_HEIGHT };
+let obj3 = { paddingTop: 80 + fn(5709).NAV_BAR_HEIGHT };
 obj2.alertContainerInsideCard = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 let obj4 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -77,7 +77,7 @@ export default function NewUserPermissionsOnboarding(arg0) {
   const tmp = closure_6();
   const obj = { contentContainerStyle: tmp.scrollContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [tmp.alertContainer];
+  items = [tmp.alertContainer];
   let alertContainerInsideCard = headerInsideCard;
   if (headerInsideCard) {
     alertContainerInsideCard = tmp.alertContainerInsideCard;
@@ -114,7 +114,7 @@ export default function NewUserPermissionsOnboarding(arg0) {
     headerInsideCard,
     React4(Text_Text.Text, {
       style: tmp.alertTitle,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "text-default",
       children: title,
     }),

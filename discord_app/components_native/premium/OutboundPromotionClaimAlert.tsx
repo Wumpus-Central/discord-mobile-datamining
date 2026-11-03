@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   loading: { marginVertical: 80 },
   body: { alignItems: "center" },
@@ -79,7 +79,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
   closure_6 = tmp8;
   const tmp6 = outboundPromotion(onClaim(code[6])(false, 2000), 2);
   const analyticsLocations = onClaim(code[7])(onClaim(code[8]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
-  const items = [null != code, , , , ,];
+  items = [null != code, , , , ,];
   ({ id: arr[1], outboundTitle: arr[2], partnerId: arr[3] } = outboundPromotion);
   items[4] = onClaim;
   items[5] = analyticsLocations;
@@ -98,7 +98,12 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     let obj3 = { source: tmp4(tmp5[11]), style: tmp.promotionArt };
     const items1 = [closure_8(tmp4(tmp5[10]), obj3), , ,];
     let Text = onCancel;
-    const obj4 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = {
+      style: tmp.title,
+      variant: "heading-xl/semibold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     const intl = onCancel(tmp5[13]).intl;
     obj4.children = intl.string(onCancel(tmp5[13]).t["23BfZh"]);
     items1[1] = closure_8(onCancel(tmp5[12]).Heading, obj4);
@@ -183,7 +188,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const items4 = [closure_8(tmp4(tmp5[10]), obj16), ,];
     const obj17 = {
       style: tmp.errorTitle,
-      variant: "text-lg/bold",
+      variant: "text-lg/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

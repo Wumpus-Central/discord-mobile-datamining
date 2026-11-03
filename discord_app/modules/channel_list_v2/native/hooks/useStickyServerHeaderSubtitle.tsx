@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/
 
 export default function useStickyServerHeaderSubtitle(arg0) {
   _require = arg0;
-  const items = [GuildMemberCountStore];
+  items = [GuildMemberCountStore];
   return require("initialize").useStateFromStores(items, () => {
     features = features.features;
     let memberCount;

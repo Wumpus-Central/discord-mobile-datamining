@@ -27,7 +27,7 @@ const Store = initializeDefault.Store;
 class GuildBoostSlotStore extends Store {}
 const prototype = GuildBoostSlotStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SubscriptionStore];
+  items = [SubscriptionStore];
   this.syncWith(items, handleSubscriptionStoreUpdate);
 };
 Object.defineProperty(prototype, "hasFetched", {

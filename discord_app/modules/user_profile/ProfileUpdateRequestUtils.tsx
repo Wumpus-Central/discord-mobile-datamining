@@ -56,7 +56,7 @@ export function getProfileChangesForUpdateRequest(pendingBanner, id) {
   if (collectibles == null) {
     collectibles = [];
   }
-  const items = [...collectibles];
+  items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
     const found = items.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;

@@ -59,7 +59,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset_variant",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant",
           GiftCustomizationBanner_AssetVariant,
           "ASSET_VARIANT_",
@@ -267,7 +267,7 @@ let items = [
     name: "asset_variant",
     kind: "enum",
     T() {
-      const items = [
+      items = [
         "discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant",
         GiftCustomizationBanner_AssetVariant,
         "ASSET_VARIANT_",

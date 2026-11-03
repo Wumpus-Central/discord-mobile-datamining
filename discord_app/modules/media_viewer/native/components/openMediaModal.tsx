@@ -5,7 +5,7 @@ import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx"
 
 const require = fn;
 let closure_7 = async function _openMediaModal() {
-  const items = [
+  items = [
     closure_130_0(closure_130_2[6])(closure_130_2[5], closure_130_2.paths),
     closure_130_0(closure_130_2[6])(closure_130_2[7], closure_130_2.paths),
     closure_130_0(closure_130_2[6])(closure_130_2[8], closure_130_2.paths),

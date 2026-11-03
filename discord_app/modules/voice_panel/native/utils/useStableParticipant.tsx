@@ -22,16 +22,16 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5681).ParticipantTypes;
+const ParticipantTypes = fn(5801).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
-export default function useStableParticipant(id, arg1, arg2) {
+export default function useStableParticipant(id, channelId, guildId) {
   _require = id;
-  closure_1 = arg1;
-  dependencyMap = arg2;
-  const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
-  const items1 = [id, arg1, arg2];
+  closure_1 = channelId;
+  dependencyMap = guildId;
+  items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
+  const items1 = [id, channelId, guildId];
   return require("initialize").useStateFromStores(
     items,
     () => {
@@ -50,8 +50,8 @@ export default function useStableParticipant(id, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "PX_8",
               ringing: null,
-              hasVideo: 95.221,
-              isSelf: 193.223,
+              hasVideo: 181.956,
+              isSelf: 181.956,
             };
             id = AuthenticationStore.getId();
             obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -119,7 +119,7 @@ export default function useStableParticipant(id, arg1, arg2) {
             ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
             const id2 = AuthenticationStore.getId();
             obj9.streamId = streamId2;
-            const guildId = participant.stream.guildId;
+            guildId = participant.stream.guildId;
             obj9.streamGuildId = guildId;
             obj9.hasVideo = tmp15;
             obj9.isSelf = participant.user.id === id2;
@@ -132,16 +132,16 @@ export default function useStableParticipant(id, arg1, arg2) {
     areStableParticipantsEqual,
   );
 }
-export function isStableStreamParticipant(participant) {
+export function isStableStreamParticipant(c0) {
   let type;
-  if (participant != null) {
-    type = participant.type;
+  if (_require != null) {
+    type = _require.type;
   }
   let tmp3 = type === ParticipantTypes.STREAM;
   if (!tmp3) {
     let type1;
-    if (participant != null) {
-      type1 = participant.type;
+    if (_require != null) {
+      type1 = _require.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }

@@ -4,7 +4,7 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const SpeakingFlags = fn(5768).SpeakingFlags;
+const SpeakingFlags = fn(5888).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -124,7 +124,7 @@ prototype["setChannelId"] = function setChannelId(channelId) {
   if (channelId !== this.channelId) {
     self.channelId = channelId;
     const _Set = Set;
-    const items = [self.userId];
+    items = [self.userId];
     const set = new Set(items);
     self.totalParticipants = set;
     const _Object = Object;

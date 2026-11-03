@@ -34,7 +34,7 @@ function syncExperimentAssignment() {
   }
   return false;
 }
-const DefaultGameModeSettings = fn(5017).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(5144).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c6 = false;
@@ -57,7 +57,7 @@ prototype["initialize"] = function initialize(enabled) {
     hasDetectedGame = DefaultGameModeSettings.hasDetectedGame;
   }
   obj.hasDetectedGame = hasDetectedGame;
-  const items = [RunningGameStore];
+  items = [RunningGameStore];
   this.syncWith(items, syncRunningGame);
   const items1 = [ApexExperimentStore];
   this.syncWith(items1, syncExperimentAssignment);

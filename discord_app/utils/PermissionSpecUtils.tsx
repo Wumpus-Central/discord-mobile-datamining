@@ -17,7 +17,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 function getPermissionOptions(id) {
   const result = useGuildEligibleForStageChannels.isGuildEligibleForStageChannels(id);
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let result1 = null != guild;
   if (result1) {
     result1 = useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
@@ -60,7 +60,7 @@ ChannelRecord.VOICE_THREAD_PARENT_CHANNEL_TYPES;
   ChannelTypes: closure_7,
   GuildFeatures: closure_8,
   Permissions: closure_9,
-  GuildSettingsSections: c10,
+  GuildSettingsSections: closure_10,
 } = Constants);
 let closure_11 = ChannelPermissionsConstants.getChannelPermissionSpecMap;
 let result = size.fileFinishedImporting("utils/PermissionSpecUtils.tsx");
@@ -75,19 +75,19 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7443).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(7567).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(6712);
-    const isStageVideoEnabledResult = tmp4(6712).isStageVideoEnabled(guild_id);
-    let result = tmp4(18921).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(6832);
+    const isStageVideoEnabledResult = tmp4(6832).isStageVideoEnabled(guild_id);
+    let result = tmp4(19079).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -105,7 +105,7 @@ export default {
     if (constants2.GUILD_CATEGORY === type) {
       let obj33 = importAll;
       const intl23 = tmp4(1113).intl;
-      const items = [
+      items = [
         permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl23.string(tmp4(1113).t["AkPxc+"])),
         ,
         ,
@@ -133,13 +133,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1113).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1113).intl;
-        const items1 = [obj33(18922).generateChannelStageSection(tmp3, intl28.string(tmp4(1113).t.yniauk))];
+        const items1 = [obj33(19080).generateChannelStageSection(tmp3, intl28.string(tmp4(1113).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(18922);
+        const obj33Result = obj33(19080);
       } else {
         items2 = [];
       }
-      obj33 = obj33(18922);
+      obj33 = obj33(19080);
       const intl29 = tmp4(1113).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1113).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -365,7 +365,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(18921);
+    const tmp4Result2 = tmp4(19079);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

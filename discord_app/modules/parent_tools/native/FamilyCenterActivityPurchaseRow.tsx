@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     display: "flex",
@@ -63,7 +63,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj3.product = product;
     obj3.isSubscription = isSubscription;
     obj3.subscriptionPlanId = subscriptionPlanId;
-    const items = [React4(FamilyCenterActivityItemPreviewDefault, obj3)];
+    items = [React4(FamilyCenterActivityItemPreviewDefault, obj3)];
     const obj4 = { style: tmp.textContainer, children: null };
     const obj5 = {
       variant: "text-md/semibold",

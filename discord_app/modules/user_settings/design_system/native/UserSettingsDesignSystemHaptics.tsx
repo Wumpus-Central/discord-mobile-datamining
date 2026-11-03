@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemHaptics.tsx
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import Patterns from "../../../../../_runtime/05262_Patterns.js";
+import Patterns from "../../../../../_runtime/05385_Patterns.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5634).Button, {
+  return closure_3(type(5754).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -21,7 +21,7 @@ function HapticButton(text) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let items = [{ type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" }, , , , , , , ,];
 let obj2 = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
@@ -107,7 +107,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    React3(Text_Text.Text, { variant: "text-lg/bold", children: "Semantic Types" }),
+    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Semantic Types" }),
     React3(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -124,7 +124,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj5 = { children: null };
   const obj6 = { children: null };
   items2 = [
-    React3(Text_Text.Text, { variant: "text-lg/bold", children: "Impact / Notification Types" }),
+    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Impact / Notification Types" }),
     React3(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -141,7 +141,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj7 = { children: null };
   const obj8 = { children: null };
   items3 = [
-    React3(Text_Text.Text, { variant: "text-lg/bold", children: "Gesture / UI Types" }),
+    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Gesture / UI Types" }),
     React3(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -158,7 +158,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj9 = { children: null };
   const obj10 = { children: null };
   items4 = [
-    React3(Text_Text.Text, { variant: "text-lg/bold", children: "Platform Haptic Types" }),
+    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Platform Haptic Types" }),
     React3(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -175,7 +175,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj11 = { children: null };
   const obj12 = { children: null };
   const items5 = [
-    React3(Text_Text.Text, { variant: "text-lg/bold", children: "Pattern Presets" }),
+    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Pattern Presets" }),
     React3(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -185,7 +185,7 @@ export default function UserSettingsDesignSystemHaptics() {
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
       return closure_3(
-        closure_0(5634).Button,
+        closure_0(5754).Button,
         {
           variant: "secondary",
           onPress() {

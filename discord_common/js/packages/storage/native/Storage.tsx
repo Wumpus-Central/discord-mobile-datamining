@@ -33,7 +33,7 @@ class ProxyAsyncStorage {
 const prototype = ProxyAsyncStorage.prototype;
 prototype["refresh"] = function refresh() {
   const self = this;
-  let items = arg0;
+  items = arg0;
   if (arg0 === undefined) {
     items = [];
   }
@@ -77,7 +77,7 @@ prototype["refresh"] = function refresh() {
     }
     AppStartPerformanceDefault.addDetail("TotalStorageSize", num2);
     self.hasLoaded = true;
-    const items = [tmp2, tmp3];
+    items = [tmp2, tmp3];
     return items;
   });
 };
@@ -186,7 +186,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -297,7 +297,7 @@ prototype["clear"] = function clear() {
   this.storage = {};
   NativeCacheModuleDefault.clear();
   if (DCDStrongboxManager != null) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(this.secureKeys, 0);
     DCDStrongboxManager.clear(items);
   }

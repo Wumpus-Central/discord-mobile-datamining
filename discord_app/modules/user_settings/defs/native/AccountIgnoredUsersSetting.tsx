@@ -4,20 +4,20 @@ import util from "../../../../intl/index.native.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(7135).EyeSlashIcon,
+  IconComponent: fn(7261).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
-    const items = [RelationshipStore];
+    items = [RelationshipStore];
     const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
     const intl = util.intl;
     return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
   },
-  parent: fn(8432).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8556).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1072).UserSettingsSections.IGNORED_USERS,
     getComponent() {

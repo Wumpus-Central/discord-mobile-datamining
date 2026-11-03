@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/native/useCon
 export default function useConjureNativePublishButton(arg0, arg1) {
   _require = arg0;
   obj = require("initialize");
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(
     items,

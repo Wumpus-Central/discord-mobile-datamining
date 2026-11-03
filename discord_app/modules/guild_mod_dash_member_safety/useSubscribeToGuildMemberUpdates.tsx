@@ -7,7 +7,7 @@ let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/us
 
 export function useSubscribeToGuildMemberUpdates(guildId) {
   closure_0 = guildId;
-  const items = [guildId];
+  items = [guildId];
   const effect = noop.useEffect(() => {
     let result = GuildSubscriptionsActionCreatorsAll.subscribeToMemberUpdates(closure_0);
     return () => {

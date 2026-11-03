@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -35,7 +35,7 @@ export function FrameSurfaceExplanation(icon) {
   ({ heading, description, error, action } = icon);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  const items = [icon.icon, , , ,];
+  items = [icon.icon, , , ,];
   let tmp4 = null;
   if (null != heading) {
     const obj2 = { variant: "heading-md/semibold", color: "text-default", children: heading };

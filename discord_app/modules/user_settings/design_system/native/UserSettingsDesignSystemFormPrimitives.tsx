@@ -18,8 +18,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function Radio() {
   const obj = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Radio" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/normal",
       children: "Select a single option from a short list of multiple options",
@@ -80,8 +80,8 @@ function Switch() {
   [tmp8, c0] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const obj5 = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Switch" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Switch" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/normal",
       children: "Toggle the state of a single setting on or off, immediately",
@@ -137,8 +137,8 @@ function InlineCheckbox(startChecked) {
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Inline Checkbox" }),
     timestampProducer(InlineCheckbox, {
       label: "Checkbox label",
       description: "This is a description",
@@ -152,8 +152,8 @@ function InlineCheckboxDemo() {
 }
 function CheckboxRowDemo() {
   const obj = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Checkbox" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/normal",
       children: "Select one or more options from a short list of options",
@@ -187,7 +187,7 @@ function CheckboxRowDemo() {
 }
 function SliderDemo() {
   const obj = { children: null };
-  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" })];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Slider" })];
   const obj2 = {
     start: true,
     end: true,
@@ -205,8 +205,8 @@ function SliderDemo() {
 }
 function TableSliderRowDemo() {
   const obj = { children: null };
-  const items = [
-    timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "TableSliderRow" }),
+  items = [
+    timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "TableSliderRow" }),
     timestampProducer(Text_Text.Text, {
       variant: "text-md/normal",
       children: "A slider setting with its label and current value, for settings tables",
@@ -232,7 +232,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -242,7 +242,7 @@ const result = size.fileFinishedImporting(
 export default function UserSettingsDesignSystemFormPrimitives() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_9().container, children: null };
-  const items = [
+  items = [
     timestampProducer(Radio, {}),
     timestampProducer(Switch, {}),
     timestampProducer(CheckboxRowDemo, {}),

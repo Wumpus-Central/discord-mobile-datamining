@@ -9,7 +9,7 @@ require = fn;
 function chunk(arr) {
   let length;
   let sum;
-  const items = [];
+  items = [];
   let num = 0;
   if (0 < arr.length) {
     do {
@@ -23,7 +23,7 @@ function chunk(arr) {
 }
 function flushProducts() {
   c6 = null;
-  const items = [...set];
+  items = [...set];
   set.clear();
   for (const item10016 of tmp2) {
     let obj = StorefrontProductActionCreators;
@@ -35,7 +35,7 @@ function flushProducts() {
 }
 function flushCollections() {
   c7 = null;
-  const items = [...set1];
+  items = [...set1];
   set1.clear();
   c8 = false;
   c9 = false;

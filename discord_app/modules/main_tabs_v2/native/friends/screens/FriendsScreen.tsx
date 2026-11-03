@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import _modDef18516 from "../../../../../../_runtime/metro/18516__.js";
+import _modDef18670 from "../../../../../../_runtime/metro/18670__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -47,10 +47,10 @@ export default function FriendsScreen() {
   analyticsLocations = require("useAnalyticsLocations")(require("AnalyticsLocation").FRIENDS_LIST).analyticsLocations;
   const bottom = require("useSafeAreaInsets")().bottom;
   const tmp3 = require("useAnalyticsLocations");
-  let items = [spam, outgoing];
+  items = [spam, outgoing];
   const stateFromStoresObject = navigation(analyticsLocations[11]).useStateFromStoresObject(items, () => {
     const obj = { incoming: null, outgoing: null, spam: null, pendingIgnored: null };
-    const items = [spam, outgoing];
+    items = [spam, outgoing];
     obj.incoming = navigation(analyticsLocations[12]).getIncomingFriendRequestCount(items);
     const obj2 = navigation(analyticsLocations[12]);
     const items1 = [spam, outgoing];
@@ -88,10 +88,10 @@ export default function FriendsScreen() {
     if (!tmp2) {
       tmp2 = outgoing > 0;
     }
-    const items = [];
+    items = [];
     if (tmp2) {
       const obj = {
-        icon: _modDef18516,
+        icon: _modDef18670,
         IconComponent: SendMessageIcon.SendMessageIcon,
         iconVariant: "default",
         label: null,
@@ -113,7 +113,7 @@ export default function FriendsScreen() {
   const memo1 = bottom.useMemo(() => {
     const obj = { style: closure_1.container, children: null };
     if (incoming + outgoing + spam <= 0) {
-      const items = [null];
+      items = [null];
       const obj2 = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
       const intl3 = util.intl;
       obj2.title = intl3.string(util.t["oi+B4p"]);
@@ -140,7 +140,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18516 };
+      const obj8 = { source: _modDef18670 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

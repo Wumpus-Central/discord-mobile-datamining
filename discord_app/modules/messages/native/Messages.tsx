@@ -253,7 +253,7 @@ class MessagesConnected {
     items17[0] = closure_6;
     items17[1] = tmp21;
     stateFromStoresArray4 = tmp2Result11.useStateFromStoresArray(items17, () => {
-      const items = [];
+      items = [];
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(id);
       function _loop(iter) {
         const userIds = iter.userIds;
@@ -304,7 +304,7 @@ class MessagesConnected {
     items19[0] = closure_6;
     stateFromStoresArray6 = tmp2Result13.useStateFromStoresArray(items19, () => {
       const launchStates = stateFromStores7.getLaunchStates();
-      const items = [];
+      items = [];
       while (tmp2 !== undefined) {
         let tmp5 = guildId(tmp3, 2);
         [r10016, tmp6] = tmp5;
@@ -343,7 +343,7 @@ class MessagesConnected {
     stateFromStoresArray7 = tmp2Result17.useStateFromStoresArray(
       items23,
       () => {
-        const items = [];
+        items = [];
         const values = stateFromStores7.values();
         const iter = values[Symbol.iterator]();
         const nextResult = iter.next();
@@ -577,7 +577,7 @@ class MessagesConnected {
       tmp2Result39.useStateFromStores(
         items54,
         () => {
-          const items = [
+          items = [
             LocalInteractionComponentStateStore.getInteractionComponentStates(),
             LocalInteractionComponentStateStore.getInteractionComponentStateVersion(),
           ];
@@ -869,7 +869,7 @@ class MessagesConnected {
           let obj4 = channel(id[92]);
           if (obj4.isVoiceChannelInvite(tmp3)) {
             id = tmp3.channel.id;
-            let guild = tmp3.guild;
+            guild = tmp3.guild;
             let id2;
             if (guild != null) {
               id2 = guild.id;
@@ -899,7 +899,7 @@ class MessagesConnected {
     items81 = [];
     items81[0] = closure_52;
     stateFromStoresArray9 = tmp2Result73.useStateFromStoresArray(items81, () => {
-      const items = [...closure_1_52.getRemoteActivities(), ...closure_1_52.getHiddenActivities()];
+      items = [...closure_1_52.getRemoteActivities(), ...closure_1_52.getHiddenActivities()];
       return items.filter(channel(id[63]).isNotNullish);
     });
     closure_10 = stateFromStoresArray9;
@@ -923,7 +923,7 @@ class MessagesConnected {
     items83 = [];
     items83[0] = closure_26;
     stateFromStoresArray10 = tmp2Result75.useStateFromStoresArray(items83, () => {
-      const items = [authStore.getNewestTokens(), authStore.getApplicationFetchStateVersion()];
+      items = [authStore.getNewestTokens(), authStore.getApplicationFetchStateVersion()];
       return items;
     }, []);
     tmp2Result76 = tmp2(tmp3[59]);
@@ -1125,7 +1125,7 @@ class MessagesConnected {
     return tmp124(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11368);
+const PollsInteractionStore = fn(11506);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({
@@ -1135,8 +1135,8 @@ const Constants = fn(1072);
   MessageTypes: closure_62,
   Permissions: closure_63,
 } = Constants);
-let closure_64 = fn(11364).GameOrganizationInviteStates;
-const PremiumConstants = fn(1385);
+let closure_64 = fn(11501).GameOrganizationInviteStates;
+const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_67, jsxs: closure_68 } = jsxProd);

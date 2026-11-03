@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(17989).useRegistrationUIStore;
+const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 
@@ -25,7 +25,7 @@ export function usePasswordRegistrationStep() {
   const tmpResult = useRegistrationUIStore((errors) => errors.errors);
   const passwordScore = password(passwordValid[5]).usePasswordScore(password);
   passwordValid = passwordScore.passwordValid;
-  const items = [password, tmp5, passwordValid];
+  items = [password, tmp5, passwordValid];
   const memo = noop.useMemo(() => {
     let tmp = null == first;
     if (!tmp) {
@@ -62,7 +62,7 @@ export function usePasswordRegistrationStep() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

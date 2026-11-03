@@ -1,224 +1,299 @@
 // discord_app/modules/zoom_layout/ZoomLayoutPager.native.tsx
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../_runtime/05303_LegacyBaseButton.js";
+import _modDef1652 from "../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../_runtime/metro/01705__.js";
+import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const jsx = fn(21).jsx;
-let __closure = {};
-let merged = Object.assign(fn(5638).springStandard);
-__closure.stiffness = 100;
-__closure.overshootClamping = true;
-let __initData = {
-  code: "function ZoomLayoutPagerNativeTsx1(){const{cancelAnimation,translateX,dragging,onEndDrag,onMomentumEnd,isPaging}=this.__closure;var _onMomentumEnd;cancelAnimation(translateX);if(dragging.get()){var _onEndDrag;dragging.set(false);(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();isPaging.set(false);}",
+let jsx = fn(21).jsx;
+let obj = {};
+let merged = Object.assign(fn(5758).springStandard);
+obj.stiffness = 100;
+obj.overshootClamping = true;
+let closure_8 = {
+  code: "(function ZoomLayoutPagerNativeTsx1(){let[cancelAnimation,translateX,dragging,onEndDrag,onMomentumEnd,isPaging]=this.__closure;var _onMomentumEnd;cancelAnimation(translateX);if(dragging.get()){var _onEndDrag;dragging.set(false);(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();isPaging.set(false);})",
 };
 let closure_9 = {
-  code: "function ZoomLayoutPagerNativeTsx2(index,animated=true,velocity=0){const{stopPaging,pageCount,currentPageShared,runOnJS,updateCurrentPage,isPaging,onMomentumBegin,translateX,withSpring,width,SPRING_CONFIG,onScroll,onMomentumEnd}=this.__closure;stopPaging();const page=Math.max(0,Math.min(pageCount-1,index));currentPageShared.set(page);runOnJS(updateCurrentPage)(page);if(animated){var _onMomentumBegin;isPaging.set(true);(_onMomentumBegin=onMomentumBegin)===null||_onMomentumBegin===void 0||_onMomentumBegin();translateX.set(withSpring(-page*width,{...SPRING_CONFIG,velocity:velocity},'respect-motion-settings',function(finished){var _onScroll,_onMomentumEnd;if(!finished)return;(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(page*width);isPaging.set(false);(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();}));}else{var _onScroll2;translateX.set(-page*width);(_onScroll2=onScroll)===null||_onScroll2===void 0||_onScroll2(page*width);}}",
+  code: "(function ZoomLayoutPagerNativeTsx2(finished){let[onScroll,page,width,isPaging,onMomentumEnd]=this.__closure;var _onScroll,_onMomentumEnd;if(!finished)return;(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(page*width);isPaging.set(false);(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();})",
 };
 let closure_10 = {
-  code: "function ZoomLayoutPagerNativeTsx3(finished){const{onScroll,page,width,isPaging,onMomentumEnd}=this.__closure;var _onScroll,_onMomentumEnd;if(!finished)return;(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(page*width);isPaging.set(false);(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();}",
+  code: "(function ZoomLayoutPagerNativeTsx3(index,animated=true,velocity=0){let[stopPaging,pageCount,currentPageShared,scheduleOnRN,updateCurrentPage,isPaging,onMomentumBegin,translateX,withSpring,width,SPRING_CONFIG,_worklet_7743549908746_init_data,onScroll,onMomentumEnd]=this.__closure;stopPaging();const page=Math.max(0,Math.min(pageCount-1,index));currentPageShared.set(page);scheduleOnRN(updateCurrentPage,page);if(animated){var _onMomentumBegin;isPaging.set(true);(_onMomentumBegin=onMomentumBegin)===null||_onMomentumBegin===void 0||_onMomentumBegin();translateX.set(withSpring(-page*width,{...SPRING_CONFIG,velocity:velocity},'respect-motion-settings',function ZoomLayoutPagerNativeTsx2Factory([_worklet_7743549908746_init_data,onScroll,page,width,isPaging,onMomentumEnd]){const ZoomLayoutPagerNativeTsx2=function(finished){if(!finished)return;onScroll===null||onScroll===void 0||onScroll(page*width);isPaging.set(false);onMomentumEnd===null||onMomentumEnd===void 0||onMomentumEnd();};ZoomLayoutPagerNativeTsx2.__closure=[onScroll,page,width,isPaging,onMomentumEnd];ZoomLayoutPagerNativeTsx2.__workletHash=7743549908746;ZoomLayoutPagerNativeTsx2.__initData=_worklet_7743549908746_init_data;return ZoomLayoutPagerNativeTsx2;}([_worklet_7743549908746_init_data,onScroll,page,width,isPaging,onMomentumEnd])));}else{var _onScroll;translateX.set(-page*width);(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(page*width);}})",
 };
 let closure_11 = {
-  code: "function ZoomLayoutPagerNativeTsx4(){const{dragging,goToPage,translateX,width}=this.__closure;if(dragging.get())goToPage(Math.round(-translateX.get()/width));}",
+  code: "(function ZoomLayoutPagerNativeTsx4(_,manager){let[gestureEnabled]=this.__closure;if(!gestureEnabled.get())manager.fail();})",
 };
 let closure_12 = {
-  code: "function ZoomLayoutPagerNativeTsx5(event,success){const{translateX,savedTranslateX,width,pageChangeVelocityThreshold,pageChangePositionThreshold,goToPage}=this.__closure;const distance=translateX.get()-savedTranslateX.get();const startPage=Math.round(-savedTranslateX.get()/width);let page=Math.round(-translateX.get()/width);if(success&&Math.abs(event.velocityX)>pageChangeVelocityThreshold){const forward=event.velocityX<0;const reversed=forward?distance>0:distance<0;page=reversed?startPage:startPage+(forward?1:-1);}else if(success&&Math.abs(distance)>pageChangePositionThreshold*width){page=startPage+(distance<0?1:-1);}goToPage(page,true,success?event.velocityX:0);}",
+  code: "(function ZoomLayoutPagerNativeTsx5(){let[stopPaging,savedTranslateX,translateX,dragging,isPaging,onBeginDrag]=this.__closure;var _onBeginDrag;stopPaging();savedTranslateX.set(translateX.get());dragging.set(true);isPaging.set(true);(_onBeginDrag=onBeginDrag)===null||_onBeginDrag===void 0||_onBeginDrag();})",
 };
 let closure_13 = {
-  code: "function ZoomLayoutPagerNativeTsx6(event){const{savedTranslateX,pageCount,width,translateX}=this.__closure;let position=savedTranslateX.get()+event.translationX;const minimum=-Math.max(0,pageCount-1)*width;if(position>0)position*=0.3;else if(position<minimum)position=minimum+(position-minimum)*0.3;translateX.set(position);}",
+  code: "(function ZoomLayoutPagerNativeTsx6(event){let[savedTranslateX,pageCount,width,translateX]=this.__closure;let position=savedTranslateX.get()+event.translationX;const minimum=-Math.max(0,pageCount-1)*width;if(position>0)position*=0.3;else if(position<minimum)position=minimum+(position-minimum)*0.3;translateX.set(position);})",
 };
 let closure_14 = {
-  code: "function ZoomLayoutPagerNativeTsx7(){const{stopPaging,savedTranslateX,translateX,dragging,isPaging,onBeginDrag}=this.__closure;var _onBeginDrag;stopPaging();savedTranslateX.set(translateX.get());dragging.set(true);isPaging.set(true);(_onBeginDrag=onBeginDrag)===null||_onBeginDrag===void 0||_onBeginDrag();}",
+  code: "(function ZoomLayoutPagerNativeTsx7(event,success){let[translateX,savedTranslateX,width,pageChangeVelocityThreshold,pageChangePositionThreshold,goToPage]=this.__closure;const distance=translateX.get()-savedTranslateX.get();const startPage=Math.round(-savedTranslateX.get()/width);let page=Math.round(-translateX.get()/width);if(success&&Math.abs(event.velocityX)>pageChangeVelocityThreshold){const forward=event.velocityX<0;const reversed=forward?distance>0:distance<0;page=reversed?startPage:startPage+(forward?1:-1);}else if(success&&Math.abs(distance)>pageChangePositionThreshold*width){page=startPage+(distance<0?1:-1);}goToPage(page,true,success?event.velocityX:0);})",
 };
 let closure_15 = {
-  code: "function ZoomLayoutPagerNativeTsx8(_,manager){const{gestureEnabled}=this.__closure;if(!gestureEnabled.get())manager.fail();}",
+  code: "(function ZoomLayoutPagerNativeTsx8(){let[dragging,goToPage,translateX,width]=this.__closure;if(dragging.get())goToPage(Math.round(-translateX.get()/width));})",
 };
 let closure_16 = {
-  code: "function ZoomLayoutPagerNativeTsx9(){const{translateX}=this.__closure;return translateX.get();}",
+  code: "(function ZoomLayoutPagerNativeTsx9(){let[translateX]=this.__closure;return translateX.get();})",
 };
 let closure_17 = {
-  code: "function ZoomLayoutPagerNativeTsx10(position){const{isPaging,onScroll}=this.__closure;var _onScroll;if(isPaging.get())(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(-position);}",
+  code: "(function ZoomLayoutPagerNativeTsx10(position){let[isPaging,onScroll]=this.__closure;var _onScroll;if(isPaging.get())(_onScroll=onScroll)===null||_onScroll===void 0||_onScroll(-position);})",
 };
 let closure_18 = {
-  code: "function ZoomLayoutPagerNativeTsx11(){const{selectedPage,isPaging}=this.__closure;return{page:selectedPage.get(),paging:isPaging.get()};}",
+  code: "(function ZoomLayoutPagerNativeTsx11(){let[selectedPage,isPaging]=this.__closure;return{page:selectedPage.get(),paging:isPaging.get()};})",
 };
-let __initData2 = {
-  code: "function ZoomLayoutPagerNativeTsx12({page:page,paging:paging}){const{currentPageShared,goToPage}=this.__closure;if(!paging&&page!==currentPageShared.get())goToPage(page,false);}",
+let closure_19 = {
+  code: "(function ZoomLayoutPagerNativeTsx12({page:page,paging:paging}){let[currentPageShared,goToPage]=this.__closure;if(!paging&&page!==currentPageShared.get())goToPage(page,false);})",
 };
 let closure_20 = {
-  code: "function ZoomLayoutPagerNativeTsx13(){const{goToPage,currentPageShared}=this.__closure;return goToPage(currentPageShared.get(),false);}",
+  code: "(function ZoomLayoutPagerNativeTsx13(){let[goToPage,currentPageShared]=this.__closure;return goToPage(currentPageShared.get(),false);})",
 };
 let closure_21 = {
-  code: "function ZoomLayoutPagerNativeTsx14(){const{translateX,pageCount,width,height}=this.__closure;return{transform:[{translateX:translateX.get()}],width:pageCount*width,height:height};}",
+  code: "(function ZoomLayoutPagerNativeTsx14(){let[translateX,pageCount,width,height]=this.__closure;return{transform:[{translateX:translateX.get()}],width:pageCount*width,height:height};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/zoom_layout/ZoomLayoutPager.native.tsx");
 
 export default noop.memo(function ZoomLayoutPager(pageCount) {
   pageCount = pageCount.pageCount;
+  _require = pageCount;
   let num = pageCount.pageChangePositionThreshold;
   if (num === undefined) {
     num = 0.3;
   }
+  importDefault = num;
   let num2 = pageCount.pageChangeVelocityThreshold;
   if (num2 === undefined) {
     num2 = 500;
   }
+  dependencyMap = num2;
   const width = pageCount.width;
-  const height = pageCount.height;
+  height = pageCount.height;
+  noop = height;
   const selectedPage = pageCount.selectedPage;
+  c5 = selectedPage;
   const isPaging = pageCount.isPaging;
+  jsx = isPaging;
   let num3 = pageCount.renderAheadCount;
   if (num3 === undefined) {
     num3 = 1;
   }
-  ({ onRenderPage: closure_8, onPageChanged } = pageCount);
-  const onScroll = pageCount.onScroll;
-  const onBeginDrag = pageCount.onBeginDrag;
-  const onEndDrag = pageCount.onEndDrag;
-  const onMomentumBegin = pageCount.onMomentumBegin;
-  const onMomentumEnd = pageCount.onMomentumEnd;
-  const onCreateGesture = pageCount.onCreateGesture;
+  c7 = num3;
+  ({ onRenderPage: c8, onPageChanged } = pageCount);
+  c9 = onPageChanged;
+  ({ onScroll, onBeginDrag } = pageCount);
+  c10 = onBeginDrag;
+  ({ onEndDrag, onMomentumBegin, onMomentumEnd, onCreateGesture } = pageCount);
+  c11 = onCreateGesture;
   const gestureRef = pageCount.gestureRef;
+  c12 = gestureRef;
   const gestureEnabled = pageCount.gestureEnabled;
+  c13 = gestureEnabled;
   let callback1;
   let callback2;
   let memo;
-  closure_28 = undefined;
-  const tmp = width(
-    height.useState(() => selectedPage.get()),
+  closure_23 = undefined;
+  const tmp = height(
+    noop.useState(() => _undefined5.get()),
     2,
   );
-  __initData = tmp[0];
-  __initData2 = tmp[1];
-  const sharedValue = pageCount(num2[5]).useSharedValue(__initData);
-  let obj = pageCount(num2[5]);
-  const sharedValue1 = pageCount(num2[5]).useSharedValue(-__initData * width);
-  let obj2 = pageCount(num2[5]);
-  const sharedValue2 = pageCount(num2[5]).useSharedValue(-__initData * width);
-  let obj3 = pageCount(num2[5]);
-  const sharedValue3 = pageCount(num2[5]).useSharedValue(false);
-  let items = [onPageChanged];
-  const updateCurrentPage = height.useCallback((arg0) => {
-    closure_19(arg0);
-    if (onPageChanged != null) {
-      onPageChanged(arg0);
+  const first = tmp[0];
+  closure_15 = tmp[1];
+  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(first);
+  const obj2 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../_runtime/metro/01652__.js").useSharedValue(-first * width);
+  const obj3 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../_runtime/metro/01652__.js").useSharedValue(-first * width);
+  const obj4 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue3 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  items = [onPageChanged];
+  const callback = noop.useCallback((arg0) => {
+    closure_15(arg0);
+    if (_undefined9 != null) {
+      _undefined9(arg0);
     }
   }, items);
-  class U {
+  let items1 = [
+    c8,
+    require("../../../_runtime/metro/01652__.js").cancelAnimation,
+    sharedValue1,
+    sharedValue3,
+    onEndDrag,
+    onMomentumEnd,
+    isPaging,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  height = undefined;
+  noop = undefined;
+  c5 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16] = items1;
+  class ZoomLayoutPagerNativeTsx1 {
     constructor() {
-      obj = closure_0(closure_2[5]);
-      cancelAnimationResult = obj.cancelAnimation(closure_21);
-      obj2 = closure_23;
-      if (closure_23.get()) {
+      tmp = closure_0(closure_1);
+      obj = closure_2;
+      if (closure_2.get()) {
         flag = false;
-        result = obj2.set(false);
+        result = obj.set(false);
         tmp3 = null;
-        if (onEndDrag != null) {
-          tmp4 = onEndDrag();
+        if (closure_3 != null) {
+          tmp4 = closure_3();
         }
       }
-      if (onMomentumEnd != null) {
-        tmp5 = onMomentumEnd();
+      if (closure_4 != null) {
+        tmp5 = closure_4();
       }
-      result1 = isPaging.set(false);
+      result1 = closure_5.set(false);
       return;
     }
   }
-  let obj4 = pageCount(num2[5]);
-  U.__closure = {
-    cancelAnimation: pageCount(num2[5]).cancelAnimation,
-    translateX: sharedValue1,
-    dragging: sharedValue3,
-    onEndDrag,
-    onMomentumEnd,
-    isPaging,
-  };
-  U.__workletHash = 386048727981;
-  U.__initData = __initData;
-  const items1 = [sharedValue1, sharedValue3, onEndDrag, onMomentumEnd, isPaging];
-  callback1 = height.useCallback(U, items1);
-  let fn = function j(arg0) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = true;
-    }
-    num = arg2;
-    if (arg2 === undefined) {
-      num = 0;
-    }
-    let bound;
-    callback1();
-    bound = Math.max(0, Math.min(bound - 1, arg0));
-    let result = sharedValue.set(bound);
-    pageCount(num2[5]).runOnJS(callback)(bound);
-    if (flag) {
-      const result1 = isPaging.set(true);
-      if (onMomentumBegin != null) {
-        onMomentumBegin();
-      }
-      const tmp4Result = pageCount(tmp5[6]);
-      const result2 = -bound * width;
-      const obj2 = {};
-      const merged = Object.assign(num3);
-      obj2.velocity = num;
-      const fn = function s(arg0) {
-        if (arg0) {
-          if (onScroll != null) {
-            tmp(bound * width);
-          }
-          const result = isPaging.set(false);
-          if (onMomentumEnd != null) {
-            tmp8();
-          }
-        }
-      };
-      const obj3 = { onScroll, page: bound, width, isPaging, onMomentumEnd };
-      fn.__closure = obj3;
-      fn.__workletHash = 16161900631154;
-      fn.__initData = onScroll;
-      const result3 = sharedValue1.set(tmp4Result.withSpring(result2, obj2, "respect-motion-settings", fn));
-    } else {
-      const result4 = sharedValue1.set(-bound * width);
-      if (onScroll != null) {
-        tmp10(bound * width);
-      }
-    }
-    const obj = pageCount(num2[5]);
-    tmp5 = num2;
-  };
-  const obj5 = {
-    cancelAnimation: pageCount(num2[5]).cancelAnimation,
-    translateX: sharedValue1,
-    dragging: sharedValue3,
-    onEndDrag,
-    onMomentumEnd,
-    isPaging,
-  };
-  fn.__closure = {
-    stopPaging: callback1,
-    pageCount,
-    currentPageShared: sharedValue,
-    runOnJS: pageCount(num2[5]).runOnJS,
-    updateCurrentPage,
-    isPaging,
-    onMomentumBegin,
-    translateX: sharedValue1,
-    withSpring: pageCount(num2[6]).withSpring,
-    width,
-    SPRING_CONFIG: num3,
-    onScroll,
-    onMomentumEnd,
-  };
-  fn.__workletHash = 17482366564447;
-  fn.__initData = onPageChanged;
-  const items2 = [
+  let items2 = [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16];
+  ZoomLayoutPagerNativeTsx1.__closure = items2;
+  ZoomLayoutPagerNativeTsx1.__workletHash = 7395508593940;
+  ZoomLayoutPagerNativeTsx1.__initData = tmp10;
+  let items3 = [sharedValue1, sharedValue3, onEndDrag, onMomentumEnd, isPaging];
+  callback1 = noop.useCallback(ZoomLayoutPagerNativeTsx1, items3);
+  let items4 = [
+    c10,
     callback1,
     pageCount,
     sharedValue,
-    updateCurrentPage,
+    require("../../../_runtime/metro/01705__.js").scheduleOnRN,
+    callback,
+    isPaging,
+    onMomentumBegin,
+    sharedValue1,
+    require("spring/spring").withSpring,
+    width,
+    c7,
+    c9,
+    onScroll,
+    onMomentumEnd,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  height = undefined;
+  noop = undefined;
+  c5 = undefined;
+  jsx = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
+  c12 = undefined;
+  c13 = undefined;
+  [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32] = items4;
+  class ZoomLayoutPagerNativeTsx3 {
+    constructor(arg0) {
+      flag = arg1;
+      if (arg1 === undefined) {
+        flag = true;
+      }
+      num = arg2;
+      if (arg2 === undefined) {
+        num = 0;
+      }
+      tmp = closure_0();
+      bound = Math.max(0, Math.min(closure_1 - 1, pageCount));
+      result = closure_2.set(bound);
+      tmp4 = closure_3(closure_4, bound);
+      if (flag) {
+        flag2 = true;
+        tmp10 = closure_5;
+        result1 = closure_5.set(true);
+        tmp12 = null;
+        if (closure_6 != null) {
+          tmp13 = closure_6();
+        }
+        tmp16 = closure_9;
+        result2 = -bound * closure_9;
+        obj = {};
+        tmp18 = closure_10;
+        tmp19 = obj;
+        tmp14 = closure_7;
+        tmp15 = closure_8;
+        merged = Object.assign(closure_10);
+        obj.velocity = num;
+        tmp21 = closure_11;
+        items = [, , , , ,];
+        items[0] = closure_11;
+        tmp22 = closure_12;
+        items[1] = closure_12;
+        items[2] = bound;
+        items[3] = closure_9;
+        items[4] = tmp10;
+        tmp23 = closure_13;
+        items[5] = closure_13;
+        closure_0 = undefined;
+        closure_1 = undefined;
+        closure_2 = undefined;
+        closure_3 = undefined;
+        closure_4 = undefined;
+        tmp24 = items;
+        [tmp25, tmp26, tmp27, tmp28, tmp29, tmp30] = items;
+        class ZoomLayoutPagerNativeTsx2 {
+          constructor(arg0) {
+            if (pageCount) {
+              tmp2 = null;
+              if (closure_0 != null) {
+                tmp3 = closure_1;
+                tmp4 = closure_2;
+                tmpResult = tmp(closure_1 * closure_2);
+              }
+              tmp6 = closure_3;
+              flag = false;
+              result = closure_3.set(false);
+              if (closure_4 != null) {
+                tmp8Result = tmp8();
+              }
+            }
+            return;
+          }
+        }
+        items1 = [, , , ,];
+        items1[0] = tmp26;
+        items1[1] = tmp27;
+        items1[2] = tmp28;
+        items1[3] = tmp29;
+        items1[4] = tmp30;
+        ZoomLayoutPagerNativeTsx2.__closure = items1;
+        num2 = 7743549908746;
+        ZoomLayoutPagerNativeTsx2.__workletHash = 7743549908746;
+        ZoomLayoutPagerNativeTsx2.__initData = tmp25;
+        str = "respect-motion-settings";
+        tmp31 = result2;
+        tmp32 = obj;
+        tmp33 = ZoomLayoutPagerNativeTsx2;
+        result3 = closure_7.set(tmp15(result2, obj, "respect-motion-settings", ZoomLayoutPagerNativeTsx2));
+      } else {
+        tmp5 = closure_7;
+        tmp6 = closure_9;
+        result4 = closure_7.set(-bound * closure_9);
+        tmp9 = null;
+        if (closure_12 != null) {
+          tmp8Result = tmp8(bound * tmp6);
+        }
+      }
+      return;
+    }
+  }
+  let items5 = [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32];
+  ZoomLayoutPagerNativeTsx3.__closure = items5;
+  ZoomLayoutPagerNativeTsx3.__workletHash = 15580971465797;
+  ZoomLayoutPagerNativeTsx3.__initData = tmp18;
+  let items6 = [
+    callback1,
+    pageCount,
+    sharedValue,
+    callback,
     isPaging,
     onMomentumBegin,
     sharedValue1,
@@ -226,8 +301,8 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     onScroll,
     onMomentumEnd,
   ];
-  callback2 = height.useCallback(fn, items2);
-  const items3 = [
+  callback2 = obj.useCallback(ZoomLayoutPagerNativeTsx3, items6);
+  let items7 = [
     gestureRef,
     gestureEnabled,
     callback1,
@@ -242,301 +317,372 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     num2,
     callback2,
   ];
-  memo = height.useMemo(() => {
+  memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    const withRefResult = Gesture.Pan().withRef(gestureRef);
-    const maxPointersResult = Gesture.Pan().withRef(gestureRef).maxPointers(1);
-    const activeOffsetXResult = Gesture.Pan().withRef(gestureRef).maxPointers(1).activeOffsetX([-10, 10]);
-    const fn = function l(arg0, fail) {
-      if (!gestureEnabled.get()) {
-        fail.fail();
+    const withRefResult = Gesture.Pan().withRef(c12);
+    const maxPointersResult = Gesture.Pan().withRef(c12).maxPointers(1);
+    const activeOffsetXResult = Gesture.Pan().withRef(c12).maxPointers(1).activeOffsetX([-10, 10]);
+    items = [closure_11, c13];
+    c0 = undefined;
+    [tmp, tmp2] = items;
+    class ZoomLayoutPagerNativeTsx4 {
+      constructor(arg0, arg1) {
+        if (!closure_0.get()) {
+          tmp = arg1;
+          failResult = arg1.fail();
+        }
+        return;
       }
-    };
-    __closure = { gestureEnabled };
-    fn.__closure = __closure;
-    fn.__workletHash = 17118741038439;
-    fn.__initData = __initData5;
-    const failOffsetYResult = Gesture.Pan()
-      .withRef(gestureRef)
-      .maxPointers(1)
-      .activeOffsetX([-10, 10])
-      .failOffsetY([-10, 10]);
-    const fn2 = function s() {
-      callback1();
-      const result = sharedValue2.set(sharedValue1.get());
-      const result1 = sharedValue3.set(true);
-      const result2 = isPaging.set(true);
-      if (__initData != null) {
-        __initData();
+    }
+    const items1 = [tmp2];
+    ZoomLayoutPagerNativeTsx4.__closure = items1;
+    ZoomLayoutPagerNativeTsx4.__workletHash = 8449633442098;
+    ZoomLayoutPagerNativeTsx4.__initData = tmp;
+    const failOffsetYResult = Gesture.Pan().withRef(c12).maxPointers(1).activeOffsetX([-10, 10]).failOffsetY([-10, 10]);
+    const items2 = [closure_12, callback1, sharedValue2, sharedValue1, sharedValue3, c6, c10];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    [tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items2;
+    class ZoomLayoutPagerNativeTsx5 {
+      constructor() {
+        tmp = closure_0();
+        result = closure_1.set(closure_2.get());
+        result1 = closure_3.set(true);
+        result2 = closure_4.set(true);
+        if (closure_5 != null) {
+          tmp5 = closure_5();
+        }
+        return;
       }
-    };
-    fn2.__closure = {
-      stopPaging: callback1,
-      savedTranslateX: sharedValue2,
-      translateX: sharedValue1,
-      dragging: sharedValue3,
-      isPaging,
-      onBeginDrag,
-    };
-    fn2.__workletHash = 10573957091429;
-    fn2.__initData = __initData4;
-    const obj2 = {
-      stopPaging: callback1,
-      savedTranslateX: sharedValue2,
-      translateX: sharedValue1,
-      dragging: sharedValue3,
-      isPaging,
-      onBeginDrag,
-    };
+    }
+    const items3 = [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
+    ZoomLayoutPagerNativeTsx5.__closure = items3;
+    ZoomLayoutPagerNativeTsx5.__workletHash = 14265668669150;
+    ZoomLayoutPagerNativeTsx5.__initData = tmp6;
     const onTouchesDownResult = Gesture.Pan()
-      .withRef(gestureRef)
+      .withRef(c12)
       .maxPointers(1)
       .activeOffsetX([-10, 10])
       .failOffsetY([-10, 10])
-      .onTouchesDown(fn);
-    const fn3 = function o(translationX) {
-      const sum = sharedValue2.get() + translationX.translationX;
-      const result = -Math.max(0, pageCount - 1) * width;
-      if (sum > 0) {
-        let result1 = sum * 0.3;
-      } else {
-        result1 = sum;
-        if (sum < result) {
-          result1 = result + 0.3 * (sum - result);
-        }
-      }
-      const result2 = sharedValue1.set(result1);
-    };
-    fn3.__closure = { savedTranslateX: sharedValue2, pageCount, width, translateX: sharedValue1 };
-    fn3.__workletHash = 6113088723368;
-    fn3.__initData = __initData3;
-    const obj3 = { savedTranslateX: sharedValue2, pageCount, width, translateX: sharedValue1 };
-    const onStartResult = Gesture.Pan()
-      .withRef(gestureRef)
-      .maxPointers(1)
-      .activeOffsetX([-10, 10])
-      .failOffsetY([-10, 10])
-      .onTouchesDown(fn)
-      .onStart(fn2);
-    const fn4 = function n(velocityX, arg1) {
-      value = sharedValue1.get();
-      const diff = value - sharedValue2.get();
-      const rounded = Math.round(-sharedValue2.get() / width);
-      let rounded1 = Math.round(-sharedValue1.get() / width);
-      if (arg1) {
-        const _Math = Math;
-        if (Math.abs(velocityX.velocityX) > num2) {
-          let sum = rounded;
-          if (!(velocityX.velocityX < 0 ? diff > 0 : diff < 0)) {
-            let num4 = -1;
-            if (tmp9) {
-              num4 = 1;
-            }
-            sum = rounded + num4;
+      .onTouchesDown(ZoomLayoutPagerNativeTsx4);
+    const items4 = [closure_13, sharedValue2, c0, c3, sharedValue1];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp14, tmp15, tmp16, tmp17, tmp18] = items4;
+    class ZoomLayoutPagerNativeTsx6 {
+      constructor(arg0) {
+        sum = closure_0.get() + arg0.translationX;
+        result = -Math.max(0, closure_1 - 1) * closure_2;
+        if (sum > 0) {
+          num2 = 0.3;
+          result1 = sum * 0.3;
+        } else {
+          result1 = sum;
+          if (sum < result) {
+            num = 0.3;
+            result1 = result + 0.3 * (sum - result);
           }
-          rounded1 = sum;
         }
-        let num5 = 0;
+        result2 = closure_3.set(result1);
+        return;
+      }
+    }
+    const items5 = [tmp15, tmp16, tmp17, tmp18];
+    ZoomLayoutPagerNativeTsx6.__closure = items5;
+    ZoomLayoutPagerNativeTsx6.__workletHash = 4355817730097;
+    ZoomLayoutPagerNativeTsx6.__initData = tmp14;
+    const onStartResult = Gesture.Pan()
+      .withRef(c12)
+      .maxPointers(1)
+      .activeOffsetX([-10, 10])
+      .failOffsetY([-10, 10])
+      .onTouchesDown(ZoomLayoutPagerNativeTsx4)
+      .onStart(ZoomLayoutPagerNativeTsx5);
+    const items6 = [closure_14, sharedValue1, sharedValue2, c3, c2, c1, callback2];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items6;
+    class ZoomLayoutPagerNativeTsx7 {
+      constructor(arg0, arg1) {
+        value = closure_0.get();
+        diff = value - closure_1.get();
+        tmp3 = closure_2;
+        rounded = Math.round(-closure_1.get() / closure_2);
+        rounded1 = Math.round(-closure_0.get() / closure_2);
         if (arg1) {
-          num5 = velocityX.velocityX;
+          _Math = Math;
+          tmp6 = closure_3;
+          if (Math.abs(arg0.velocityX) > closure_3) {
+            num3 = 0;
+            tmp9 = arg0.velocityX < 0;
+            sum = rounded;
+            if (!(tmp9 ? diff > 0 : diff < 0)) {
+              num4 = -1;
+              if (tmp9) {
+                num4 = 1;
+              }
+              sum = rounded + num4;
+            }
+            rounded1 = sum;
+          }
+          num5 = 0;
+          tmp11 = closure_5;
+          if (arg1) {
+            num5 = arg0.velocityX;
+          }
+          flag = true;
+          tmp11Result = tmp11(rounded1, true, num5);
+          return;
         }
-        callback2(rounded1, true, num5);
-      }
-      let tmp7 = arg1;
-      if (arg1) {
-        const _Math2 = Math;
-        tmp7 = Math.abs(diff) > closure_1_1 * width;
-      }
-      if (tmp7) {
-        num = -1;
-        if (diff < 0) {
-          num = 1;
+        tmp7 = arg1;
+        if (arg1) {
+          _Math2 = Math;
+          tmp8 = closure_4;
+          tmp7 = Math.abs(diff) > closure_4 * tmp3;
         }
-        rounded1 = rounded + num;
+        if (tmp7) {
+          num = -1;
+          num2 = 0;
+          if (diff < 0) {
+            num = 1;
+          }
+          rounded1 = rounded + num;
+        }
+        return;
       }
-    };
-    fn4.__closure = {
-      translateX: sharedValue1,
-      savedTranslateX: sharedValue2,
-      width,
-      pageChangeVelocityThreshold: num2,
-      pageChangePositionThreshold: num,
-      goToPage: callback2,
-    };
-    fn4.__workletHash = 6083161663837;
-    fn4.__initData = __initData2;
-    const obj4 = {
-      translateX: sharedValue1,
-      savedTranslateX: sharedValue2,
-      width,
-      pageChangeVelocityThreshold: num2,
-      pageChangePositionThreshold: num,
-      goToPage: callback2,
-    };
+    }
+    const items7 = [tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+    ZoomLayoutPagerNativeTsx7.__closure = items7;
+    ZoomLayoutPagerNativeTsx7.__workletHash = 11667777990278;
+    ZoomLayoutPagerNativeTsx7.__initData = tmp20;
     const onUpdateResult = Gesture.Pan()
-      .withRef(gestureRef)
+      .withRef(c12)
       .maxPointers(1)
       .activeOffsetX([-10, 10])
       .failOffsetY([-10, 10])
-      .onTouchesDown(fn)
-      .onStart(fn2)
-      .onUpdate(fn3);
-    const fn5 = function t() {
-      if (sharedValue3.get()) {
-        const _Math = Math;
-        callback2(Math.round(-sharedValue1.get() / width));
+      .onTouchesDown(ZoomLayoutPagerNativeTsx4)
+      .onStart(ZoomLayoutPagerNativeTsx5)
+      .onUpdate(ZoomLayoutPagerNativeTsx6);
+    const items8 = [closure_15, sharedValue3, callback2, sharedValue1, c3];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp27, tmp28, tmp29, tmp30, tmp31] = items8;
+    class ZoomLayoutPagerNativeTsx8 {
+      constructor() {
+        if (closure_0.get()) {
+          tmp = closure_1;
+          tmp2 = globalThis;
+          _Math = Math;
+          tmp3 = closure_2;
+          tmp4 = closure_3;
+          tmp5 = closure_1(Math.round(-closure_2.get() / closure_3));
+        }
+        return;
       }
-    };
-    fn5.__closure = { dragging: sharedValue3, goToPage: callback2, translateX: sharedValue1, width };
-    fn5.__workletHash = 4326990924287;
-    fn5.__initData = __initData;
+    }
+    const items9 = [tmp28, tmp29, tmp30, tmp31];
+    ZoomLayoutPagerNativeTsx8.__closure = items9;
+    ZoomLayoutPagerNativeTsx8.__workletHash = 7231016856330;
+    ZoomLayoutPagerNativeTsx8.__initData = tmp27;
     return Gesture.Pan()
-      .withRef(gestureRef)
+      .withRef(c12)
       .maxPointers(1)
       .activeOffsetX([-10, 10])
       .failOffsetY([-10, 10])
-      .onTouchesDown(fn)
-      .onStart(fn2)
-      .onUpdate(fn3)
-      .onEnd(fn4)
-      .onFinalize(fn5);
-  }, items3);
-  const items4 = [onCreateGesture, memo];
-  const memo1 = height.useMemo(() => {
+      .onTouchesDown(ZoomLayoutPagerNativeTsx4)
+      .onStart(ZoomLayoutPagerNativeTsx5)
+      .onUpdate(ZoomLayoutPagerNativeTsx6)
+      .onEnd(ZoomLayoutPagerNativeTsx7)
+      .onFinalize(ZoomLayoutPagerNativeTsx8);
+  }, items7);
+  let items8 = [onCreateGesture, memo];
+  const memo1 = obj.useMemo(() => {
     let tmpResult;
-    if (onCreateGesture != null) {
+    if (c11 != null) {
       tmpResult = tmp(memo);
     }
     if (tmpResult == null) {
       tmpResult = memo;
     }
     return tmpResult;
-  }, items4);
-  const obj6 = {
-    stopPaging: callback1,
-    pageCount,
-    currentPageShared: sharedValue,
-    runOnJS: pageCount(num2[5]).runOnJS,
-    updateCurrentPage,
-    isPaging,
-    onMomentumBegin,
-    translateX: sharedValue1,
-    withSpring: pageCount(num2[6]).withSpring,
-    width,
-    SPRING_CONFIG: num3,
-    onScroll,
-    onMomentumEnd,
-  };
-  class Y {
+  }, items8);
+  const obj5 = require("../../../_runtime/metro/01652__.js");
+  let items9 = [sharedValue, sharedValue1];
+  _require = undefined;
+  [tmp36, tmp37] = items9;
+  class ZoomLayoutPagerNativeTsx9 {
     constructor() {
-      return closure_21.get();
+      return closure_0.get();
     }
   }
-  Y.__closure = { translateX: sharedValue1 };
-  Y.__workletHash = 14411440486141;
-  Y.__initData = gestureRef;
-  let fn2 = function z(arg0) {
-    if (isPaging.get()) {
-      if (onScroll != null) {
-        tmp(-arg0);
+  const items10 = [tmp37];
+  ZoomLayoutPagerNativeTsx9.__closure = items10;
+  ZoomLayoutPagerNativeTsx9.__workletHash = 12002625415812;
+  ZoomLayoutPagerNativeTsx9.__initData = tmp36;
+  const items11 = [sharedValue1, isPaging, onScroll];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp38, tmp39, tmp40] = items11;
+  class ZoomLayoutPagerNativeTsx10 {
+    constructor(arg0) {
+      if (closure_0.get()) {
+        tmp2 = null;
+        if (closure_1 != null) {
+          tmp3 = pageCount;
+          tmpResult = tmp(-pageCount);
+        }
       }
+      return;
     }
-  };
-  fn2.__closure = { isPaging, onScroll };
-  fn2.__workletHash = 14844046061724;
-  fn2.__initData = gestureEnabled;
-  const animatedReaction = pageCount(num2[5]).useAnimatedReaction(Y, fn2);
-  const obj7 = pageCount(num2[5]);
-  class K {
+  }
+  const items12 = [tmp39, tmp40];
+  ZoomLayoutPagerNativeTsx10.__closure = items12;
+  ZoomLayoutPagerNativeTsx10.__workletHash = 10461805768773;
+  ZoomLayoutPagerNativeTsx10.__initData = tmp38;
+  const animatedReaction = require("../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    ZoomLayoutPagerNativeTsx9,
+    ZoomLayoutPagerNativeTsx10,
+  );
+  const tmp3Result = require("../../../_runtime/metro/01652__.js");
+  const items13 = [sharedValue2, selectedPage, isPaging];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp42, tmp43, tmp44] = items13;
+  class ZoomLayoutPagerNativeTsx11 {
     constructor() {
-      obj = { page: selectedPage.get(), paging: isPaging.get() };
+      obj = { page: closure_0.get(), paging: closure_1.get() };
       return obj;
     }
   }
-  K.__closure = { selectedPage, isPaging };
-  K.__workletHash = 10538586061470;
-  K.__initData = __initData;
-  let fn3 = function q(arg0) {
-    ({ page, paging } = arg0);
-    if (!paging) {
-      paging = page === sharedValue.get();
+  const items14 = [tmp43, tmp44];
+  ZoomLayoutPagerNativeTsx11.__closure = items14;
+  ZoomLayoutPagerNativeTsx11.__workletHash = 12937330645255;
+  ZoomLayoutPagerNativeTsx11.__initData = tmp42;
+  const items15 = [sharedValue3, sharedValue, callback2];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp45, tmp46, tmp47] = items15;
+  class ZoomLayoutPagerNativeTsx12 {
+    constructor(arg0) {
+      ({ page, paging } = pageCount);
+      if (!paging) {
+        tmp = closure_0;
+        paging = page === closure_0.get();
+      }
+      if (!paging) {
+        tmp2 = closure_1;
+        flag = false;
+        tmp3 = closure_1(page, false);
+      }
+      return;
     }
-    if (!paging) {
-      callback2(page, false);
+  }
+  const items16 = [tmp46, tmp47];
+  ZoomLayoutPagerNativeTsx12.__closure = items16;
+  ZoomLayoutPagerNativeTsx12.__workletHash = 10042999683418;
+  ZoomLayoutPagerNativeTsx12.__initData = tmp45;
+  const animatedReaction1 = require("../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    ZoomLayoutPagerNativeTsx11,
+    ZoomLayoutPagerNativeTsx12,
+  );
+  const items17 = [width, height, callback2, sharedValue];
+  const effect = obj.useEffect(() => {
+    items = [closure_20, callback2, sharedValue];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp, tmp2, tmp3] = items;
+    class ZoomLayoutPagerNativeTsx13 {
+      constructor() {
+        return closure_0(closure_1.get(), false);
+      }
     }
-  };
-  fn3.__closure = { currentPageShared: sharedValue, goToPage: callback2 };
-  fn3.__workletHash = 2792537933091;
-  fn3.__initData = __initData2;
-  const animatedReaction1 = pageCount(num2[5]).useAnimatedReaction(K, fn3);
-  const items5 = [width, height, callback2, sharedValue];
-  const effect = height.useEffect(() => {
-    const fn = function t() {
-      return callback2(__initData6.get(), false);
-    };
-    fn.__closure = { goToPage: callback2, currentPageShared: sharedValue };
-    fn.__workletHash = 14139806451578;
-    fn.__initData = __initData6;
-    ReanimatedRexport.runOnUI(fn)();
-  }, items5);
-  const imperativeHandle = height.useImperativeHandle(pageCount.ref, () => ({
+    const items1 = [tmp2, tmp3];
+    ZoomLayoutPagerNativeTsx13.__closure = items1;
+    ZoomLayoutPagerNativeTsx13.__workletHash = 9355468723939;
+    ZoomLayoutPagerNativeTsx13.__initData = tmp;
+    _mod1705.scheduleOnUI(ZoomLayoutPagerNativeTsx13);
+  }, items17);
+  const imperativeHandle = obj.useImperativeHandle(pageCount.ref, () => ({
     goToPage(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
       }
-      return pageCount(num2[5]).runOnUI(callback2)(arg0, flag);
+      return c0(c2[6]).scheduleOnUI(callback2, arg0, flag);
     },
     getCurrentPage() {
-      return __initData6.get();
+      return sharedValue.get();
     },
   }));
-  const items6 = [__initData, num3, pageCount];
-  const memo2 = height.useMemo(() => {
+  const items18 = [first, num3, pageCount];
+  const memo2 = obj.useMemo(() => {
     let bound1;
-    const items = [];
-    let bound = Math.max(0, first - num3);
-    if (bound <= Math.min(pageCount - 1, first + num3)) {
+    items = [];
+    let bound = Math.max(0, first - c7);
+    if (bound <= Math.min(c0 - 1, first + c7)) {
       do {
         let arr = items.push(bound);
         bound = bound + 1;
         let _Math = Math;
-        bound1 = Math.min(pageCount - 1, first + num3);
+        bound1 = Math.min(c0 - 1, first + c7);
       } while (bound <= bound1);
     }
     return items;
-  }, items6);
-  const items7 = [width, height];
-  const items8 = [width, height];
-  const memo3 = height.useMemo(() => {
-    const size = { overflow: "hidden", width, height };
+  }, items18);
+  const items19 = [width, height];
+  const items20 = [width, height];
+  const memo3 = obj.useMemo(() => {
+    const size = { overflow: "hidden", width: _undefined4, height };
     return size;
-  }, items7);
-  closure_28 = height.useMemo(() => {
-    const size = { position: "absolute", top: 0, width, height };
+  }, items19);
+  closure_23 = obj.useMemo(() => {
+    const size = { position: "absolute", top: 0, width: _undefined4, height };
     return size;
-  }, items8);
-  const obj8 = pageCount(num2[5]);
-  function ue() {
-    const size = { transform: null, width: null, height: null };
-    const items = [{ translateX: sharedValue1.get() }];
-    size.transform = items;
-    size.width = pageCount * width;
-    size.height = height;
-    return size;
+  }, items20);
+  const tmp3Result3 = require("../../../_runtime/metro/01652__.js");
+  const items21 = [callback2, sharedValue1, pageCount, width, height];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  height = undefined;
+  [tmp52, tmp53, tmp54, tmp55, tmp56] = items21;
+  class ZoomLayoutPagerNativeTsx14 {
+    constructor() {
+      size = { transform: null, width: null, height: null };
+      obj1 = { translateX: closure_0.get() };
+      items = [];
+      items[0] = obj1;
+      size.transform = items;
+      size.width = closure_1 * closure_2;
+      size.height = closure_3;
+      return size;
+    }
   }
-  ue.__closure = { translateX: sharedValue1, pageCount, width, height };
-  ue.__workletHash = 12202520205194;
-  ue.__initData = sharedValue1;
-  const animatedStyle = pageCount(num2[5]).useAnimatedStyle(ue);
-  const obj10 = { gesture: memo1, children: null };
-  const obj11 = { collapsable: false, style: memo3, children: null };
-  const obj9 = pageCount(num2[5]);
-  obj11.children = isPaging(num(num2[5]).View, {
+  const items22 = [tmp53, tmp54, tmp55, tmp56];
+  ZoomLayoutPagerNativeTsx14.__closure = items22;
+  ZoomLayoutPagerNativeTsx14.__workletHash = 9683182820627;
+  ZoomLayoutPagerNativeTsx14.__initData = tmp52;
+  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ZoomLayoutPagerNativeTsx14);
+  const obj6 = { gesture: memo1, children: null };
+  const obj7 = { collapsable: false, style: memo3, children: null };
+  const tmp3Result4 = require("../../../_runtime/metro/01652__.js");
+  obj7.children = jsx(_modDef1652.View, {
     style: animatedStyle,
     children: memo2.map((item) => {
-      const obj = {
+      obj = {
         accessibilityElementsHidden: item !== first,
         importantForAccessibility: null,
         style: null,
@@ -547,9 +693,9 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
         str = "auto";
       }
       obj.importantForAccessibility = str;
-      const items = [closure_28, { left: item * width }];
+      items = [closure_23, { left: item * c3 }];
       obj.style = items;
-      obj.children = __initData(item);
+      obj.children = _undefined8(item);
       return (
         <View key={item} accessibilityElementsHidden={item !== first} importantForAccessibility={null} style={null}>
           {null}
@@ -557,6 +703,10 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
       );
     }),
   });
-  obj10.children = isPaging(selectedPage, obj11);
-  return isPaging(pageCount(num2[7]).GestureDetector, obj10);
+  obj6.children = (
+    <c5 collapsable={false} style={memo3}>
+      {null}
+    </c5>
+  );
+  return jsx(require("LegacyBaseButton").GestureDetector, { gesture: memo1, children: null });
 });

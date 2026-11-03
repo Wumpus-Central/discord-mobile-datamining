@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(activities, hiddenActivities) {
-  const items = [];
+  items = [];
   const items1 = [];
   const iter = activities[Symbol.iterator]();
   const nextResult = iter.next();

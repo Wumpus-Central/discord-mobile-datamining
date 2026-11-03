@@ -44,7 +44,7 @@ function HubEmailConnectionGuildSelectHeader() {
   const obj2 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -57,7 +57,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   ({ errors, loading } = onFooterButtonPressed);
   const tmp = closure_10();
   const obj = { style: null, children: null };
-  const items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.style = items;
   const obj3 = { style: tmp.footerContainer, children: null };
   const obj4 = { variant: "secondary", loading, disabled: loading, grow: true, text: null, onPress: null };
@@ -81,10 +81,10 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14329).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   rowContainer: {
     marginHorizontal: 16,
@@ -136,7 +136,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
   noop = undefined;
   closure_3 = closure_10();
   const navigation = onClose(guildsInfo[16]).useNavigation();
-  const items = [email, guildsInfo, navigation, onClose];
+  items = [email, guildsInfo, navigation, onClose];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight() {
@@ -187,7 +187,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -208,7 +208,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14342).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14473).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -219,7 +219,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6446).APIError(closure_128_0);
+                  const aPIError = new id(6566).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

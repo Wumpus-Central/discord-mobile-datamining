@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/07019_fuzzysearch.js";
 import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildRoleMemberActionCreators from "../GuildRoleMemberActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19773).GuildSettingsRoleEditSections;
+const constants = fn(19923).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
@@ -22,7 +22,7 @@ export const MAX_PREFETCH_MEMBER_COUNT = 1000;
 export function useGuildMembers(id, callback) {
   _require = id;
   closure_1 = callback;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [id, callback];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
@@ -53,7 +53,7 @@ export function useGuildMembers(id, callback) {
   );
   const items4 = [stateFromStoresArray, stateFromStoresObject, id];
   return stateFromStoresObject.useMemo(() => {
-    const items = [];
+    items = [];
     const iter = current[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -102,7 +102,7 @@ export function useGuildRoleMembers(id, id2, onMembersLoadFail) {
   const effect = noop.useEffect(() => {
     closure_3.current = current;
   });
-  let items = [id, id2];
+  items = [id, id2];
   const effect1 = noop.useEffect(() => {
     const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(closure_0, closure_1);
     membersForRole.catch(ref.current);
@@ -147,7 +147,7 @@ export function useGuildRoleMembers(id, id2, onMembersLoadFail) {
   closure_129_3 = stateFromStoresObject;
   const items6 = [stateFromStoresArray, stateFromStoresObject, id];
   return noop.useMemo(() => {
-    const items = [];
+    items = [];
     const iter = current[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -192,7 +192,7 @@ export function useQueryGuildMembers(id, formatted) {
   closure_0 = id;
   closure_1 = formatted;
   noop.useRef(false);
-  const items = [id, formatted];
+  items = [id, formatted];
   const effect = noop.useEffect(() => {
     const members = GuildUtilsDefault.requestMembers(closure_0, closure_1, 200);
     let current = "" === closure_1;

@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8174 from "../../../../../_runtime/metro/08174__.js";
-import _modDef8196 from "../../../../../_runtime/metro/08196__.js";
+import _modDef8298 from "../../../../../_runtime/metro/08298__.js";
+import _modDef8320 from "../../../../../_runtime/metro/08320__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef12013 from "../../../../../_runtime/metro/12013__.js";
-import _modDef12014 from "../../../../../_runtime/metro/12014__.js";
-import _modDef12015 from "../../../../../_runtime/metro/12015__.js";
+import _modDef12150 from "../../../../../_runtime/metro/12150__.js";
+import _modDef12151 from "../../../../../_runtime/metro/12151__.js";
+import _modDef12152 from "../../../../../_runtime/metro/12152__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -300,13 +300,13 @@ class MusicMuteButton {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
+({ AnalyticEvents: closure_10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   header: {
-    height: fn(5586).NAV_BAR_HEIGHT,
+    height: fn(5709).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -323,16 +323,16 @@ let obj = {
   icon: null,
 };
 let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5011);
+let ColorUtils = fn(5138);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj5 = { backgroundColor: null };
-ColorUtils = fn(5011);
+ColorUtils = fn(5138);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(5586).NAV_BAR_HEIGHT,
+  height: fn(5709).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -342,7 +342,7 @@ obj.stageInfo = { flex: 1, flexDirection: "row", alignItems: "center", color: na
 obj.stageInfoTopic = { marginLeft: 4 };
 let obj7 = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
 obj.icon = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
-const value = createStyles.createStyles(obj);
+const gesture = createStyles.createStyles(obj);
 let obj9 = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionHeader.tsx");
@@ -355,9 +355,9 @@ export default noop.memo(function StageActionHeader(onOpenRTCDebugOverlay) {
     speaker = tmp3.speaker;
   }
   const obj = { style: closure_14().header, pointerEvents: "box-none", children: null };
-  const items = [
-    closure_1_12(HideStageChannelCallIcon, { channel, fullscreenStream }),
-    closure_1_12(StageChannelCallHeader, { channel }),
+  items = [
+    application_id(HideStageChannelCallIcon, { channel, fullscreenStream }),
+    application_id(StageChannelCallHeader, { channel }),
     ,
     ,
     ,
@@ -365,22 +365,22 @@ export default noop.memo(function StageActionHeader(onOpenRTCDebugOverlay) {
   ];
   if (speaker) {
     const obj2 = { channelId: channel.id };
-    speaker = closure_1_12(MusicMuteButton, obj2);
+    speaker = application_id(MusicMuteButton, obj2);
   }
   items[2] = speaker;
   if (fullscreenStream) {
     const obj3 = { channel };
-    fullscreenStream = closure_1_12(ChannelCallHeaderButtons.GridButton, obj3);
+    fullscreenStream = application_id(ChannelCallHeaderButtons.GridButton, obj3);
   }
   items[3] = fullscreenStream;
-  items[4] = closure_1_12(ChannelCallHeaderButtons.CameraButton, {});
-  items[5] = closure_1_12(StageInviteButton, { channelId: channel.id });
-  items[6] = closure_1_12(StageSettingsButton, {
+  items[4] = application_id(ChannelCallHeaderButtons.CameraButton, {});
+  items[5] = application_id(StageInviteButton, { channelId: channel.id });
+  items[6] = application_id(StageSettingsButton, {
     channelId: channel.id,
     onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay,
   });
   obj.children = items;
-  return map1(View, obj);
+  return state(View, obj);
 });
 export function closeStageModal(id) {
   const obj = AnalyticsUtilsDefault;
@@ -396,7 +396,7 @@ export { StageChannelCallHeader };
 export function HideChannelCallButton(channel) {
   channel = channel.channel;
   const tmp = closure_14();
-  const items = [GuildReadStateStore];
+  items = [GuildReadStateStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = {
     source: null,
@@ -407,7 +407,7 @@ export function HideChannelCallButton(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef12013;
+  obj2.source = _modDef12150;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {

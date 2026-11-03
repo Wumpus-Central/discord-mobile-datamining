@@ -11,7 +11,7 @@ export default function AccessibilityPreferencesContextProvider(children) {
   let stateFromStoresObject;
   let stateFromStores;
   let stateFromStores1;
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   stateFromStoresObject = stateFromStoresObject(stateFromStores[3]).useStateFromStoresObject(items, () => ({
     enabled: stateFromStores1.useReducedMotion,
     rawValue: stateFromStores1.rawPrefersReducedMotion,

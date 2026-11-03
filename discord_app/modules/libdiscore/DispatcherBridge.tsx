@@ -122,7 +122,7 @@ class DispatcherBridge {
                 const _performance3 = performance;
                 const diff = performance.now() - nowResult;
                 ({ metrics, storeResults } = iter.value);
-                const items = [];
+                items = [];
                 for (const item10056 of storeResults) {
                   if (null != item10056.error) {
                     let handleStoreErrorResult = obj.handleStoreError(item10056, arg0.type);
@@ -224,7 +224,7 @@ class DispatcherBridge {
           tmp25 = closure_0;
           fromEntriesResult = Object.fromEntries(
             registeredActionTypes.map((item) => {
-              const items = [item, actionHandler];
+              items = [item, actionHandler];
               return items;
             }),
           );

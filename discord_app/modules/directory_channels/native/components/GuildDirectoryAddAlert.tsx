@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm },
   title: { marginBottom: 8, textAlign: "center" },
@@ -34,11 +34,11 @@ export default function GuildDirectoryAddAlert(arg0) {
   const obj3 = { style: tmp.guildIcon, guild, size: null };
   const tmp2 = common_AlertDefault;
   obj3.size = GuildIcon.GuildIconSizes.XLARGE;
-  const items = [React4(GuildIconDefault, obj3), ,];
+  items = [React4(GuildIconDefault, obj3), ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "text-lg/bold",
+    variant: "text-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

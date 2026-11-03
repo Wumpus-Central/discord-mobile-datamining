@@ -11,7 +11,7 @@ export default function useRefreshSavedMessages() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     if (flag) {
       const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();

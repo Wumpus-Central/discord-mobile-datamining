@@ -1,11 +1,12 @@
 // discord_app/design/components/Button/native/ButtonPill.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import shared from "../../../shared.tsx";
+import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants2 from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
@@ -14,7 +15,7 @@ import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function PillWrapper(expressivePressState) {
@@ -26,9 +27,9 @@ function PillWrapper(expressivePressState) {
   ({ expressiveRiveRef, size } = expressivePressState);
   const buttonPillStyles = ButtonHooks.useButtonPillStyles(variant, expressivePressState.pressed);
   const gradientPillStyles = ButtonHooks.useGradientPillStyles(variant);
-  const tmp5 = closure_14(variant, size);
+  const tmp5 = closure_13(variant, size);
   const obj3 = native;
-  let items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), ,];
+  items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), ,];
   items[1] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
   items[2] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
   const items1 = [
@@ -74,7 +75,7 @@ function PillWrapper(expressivePressState) {
       obj12.style = items4;
       const items5 = [children, tmp7];
       obj12.children = items5;
-      items3[1] = React6(ReanimatedRexportDefault.View, obj12);
+      items3[1] = React6(_modDef1652.View, obj12);
       obj11.children = items3;
     }
     return React6(tmp10, obj11);
@@ -93,7 +94,7 @@ function PillWrapper(expressivePressState) {
   obj15.style = items8;
   const items9 = [children, tmp7];
   obj15.children = items9;
-  items7[1] = React6(ReanimatedRexportDefault.View, obj15);
+  items7[1] = React6(_modDef1652.View, obj15);
   obj14.children = items7;
   obj11 = obj14;
   const tmp6Result = LinearGradientDefault;
@@ -116,7 +117,7 @@ class BasicButtonPill {
       flag = false;
     }
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = closure_14(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = closure_13(str, DEFAULT_BUTTON_SIZE);
     obj = {
       variant: str,
       size: DEFAULT_BUTTON_SIZE,
@@ -158,7 +159,7 @@ class LoadingButtonPill {
     closure_1 = undefined;
     closure_2 = undefined;
     ({ expressiveRiveRef, expressivePressState } = global);
-    tmp3 = closure_14(str, DEFAULT_BUTTON_SIZE);
+    tmp3 = closure_13(str, DEFAULT_BUTTON_SIZE);
     closure_1 = closure_4.useRef(null);
     tmp4 = closure_3(closure_4.useState(flag), 2);
     [tmp5, closure_2] = tmp4;
@@ -226,131 +227,159 @@ class LoadingButtonPill {
   }
 }
 function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
-  _require = flag;
-  const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
-    .reducedMotion.enabled;
-  num = 12;
+  const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
+    .enabled;
+  let num = 12;
   if ("lg" === DEFAULT_BUTTON_SIZE) {
     num = 18;
   }
-  const fn = function o() {
-    num = 1;
-    if (closure_0) {
-      num = 0;
-    }
-    const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-    const obj2 = { opacity: null, transform: null };
-    if (enabled) {
-      let withDelayResult = withSpringResult;
-      if (!closure_0) {
-        withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
-        const tmpResult = ReanimatedRexport;
-      }
-      obj2.opacity = withDelayResult;
-      const items = [{ translateY: 0 }];
-      obj2.transform = items;
-      let tmp6 = obj2;
-    } else {
-      obj2.opacity = withSpringResult;
-      let num2 = 0;
-      if (closure_0) {
-        num2 = -1 * num;
-      }
-      const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
-      const items1 = [obj3];
-      obj2.transform = items1;
-      tmp6 = obj2;
-      const tmpResult2 = spring;
-    }
-    return tmp6;
-  };
-  let tmpResult = require("ReanimatedRexport");
-  fn.__closure = {
-    withSpring: require("spring").withSpring,
-    loading: flag,
-    SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
-    useReducedMotion: enabled,
-    withDelay: require("ReanimatedRexport").withDelay,
-    FADE_DELAY,
-    offsetY: num,
-  };
-  fn.__workletHash = 9388603334085;
-  fn.__initData = __initData;
-  let items = [tmpResult.useAnimatedStyle(fn)];
-  const obj = {
-    withSpring: require("spring").withSpring,
-    loading: flag,
-    SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
-    useReducedMotion: enabled,
-    withDelay: require("ReanimatedRexport").withDelay,
-    FADE_DELAY,
-    offsetY: num,
-  };
-  const fn2 = function l() {
-    num = 0;
-    if (closure_0) {
+  items = [
+    closure_17,
+    spring_spring.withSpring,
+    flag,
+    springPresets.SUBTLE_SPRING,
+    enabled,
+    _mod1652.withDelay,
+    300,
+    num,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items;
+  class ButtonPillNativeTsx1 {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_1;
       num = 1;
-    }
-    const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-    const obj2 = { opacity: null, transform: null };
-    if (enabled) {
-      let withDelayResult = withSpringResult;
-      if (closure_0) {
-        withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
-        const tmpResult = ReanimatedRexport;
+      if (closure_1) {
+        num = 0;
       }
-      obj2.opacity = withDelayResult;
-      const items = [{ translateY: 0 }];
-      obj2.transform = items;
-      let tmp5 = obj2;
-    } else {
-      obj2.opacity = withSpringResult;
-      let num2 = 0;
-      if (!closure_0) {
-        num2 = num;
+      tmp3 = closure_2;
+      tmpResult = tmp(num, closure_2, "animate-always");
+      obj = { opacity: null, transform: null };
+      if (closure_3) {
+        tmp7 = tmpResult;
+        if (!tmp2) {
+          tmp8 = closure_4;
+          tmp9 = closure_5;
+          tmp7 = closure_4(closure_5, tmpResult);
+        }
+        obj.opacity = tmp7;
+        items = [];
+        items[0] = { translateY: 0 };
+        obj.transform = items;
+        tmp6 = obj;
+      } else {
+        obj.opacity = tmpResult;
+        num2 = 0;
+        if (tmp2) {
+          tmp5 = closure_6;
+          num3 = -1;
+          num2 = -1 * closure_6;
+        }
+        obj1 = { translateY: null };
+        obj1.translateY = tmp(num2, tmp3);
+        items1 = [];
+        items1[0] = obj1;
+        obj.transform = items1;
+        tmp6 = obj;
       }
-      const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
-      const items1 = [obj3];
-      obj2.transform = items1;
-      tmp5 = obj2;
-      const tmpResult2 = spring;
+      return tmp6;
     }
-    return tmp5;
-  };
-  let tmpResult2 = require("ReanimatedRexport");
-  fn2.__closure = {
-    withSpring: require("spring").withSpring,
-    loading: flag,
-    SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
-    useReducedMotion: enabled,
-    withDelay: require("ReanimatedRexport").withDelay,
-    FADE_DELAY,
-    offsetY: num,
-  };
-  fn2.__workletHash = 8255420825872;
-  fn2.__initData = __initData2;
-  items[1] = tmpResult2.useAnimatedStyle(fn2);
-  return items;
+  }
+  let items1 = [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10];
+  ButtonPillNativeTsx1.__closure = items1;
+  ButtonPillNativeTsx1.__workletHash = 14635715851420;
+  ButtonPillNativeTsx1.__initData = tmp3;
+  const animatedStyle = _mod1652.useAnimatedStyle(ButtonPillNativeTsx1);
+  let tmpResult = _mod1652;
+  const items2 = [
+    closure_18,
+    spring_spring.withSpring,
+    flag,
+    springPresets.SUBTLE_SPRING,
+    enabled,
+    _mod1652.withDelay,
+    300,
+    num,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19] = items2;
+  class ButtonPillNativeTsx2 {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_1;
+      num = 0;
+      if (closure_1) {
+        num = 1;
+      }
+      tmp3 = closure_2;
+      tmpResult = tmp(num, closure_2, "animate-always");
+      obj = { opacity: null, transform: null };
+      if (closure_3) {
+        tmp6 = tmpResult;
+        if (tmp2) {
+          tmp7 = closure_4;
+          tmp8 = closure_5;
+          tmp6 = closure_4(closure_5, tmpResult);
+        }
+        obj.opacity = tmp6;
+        items = [];
+        items[0] = { translateY: 0 };
+        obj.transform = items;
+        tmp5 = obj;
+      } else {
+        obj.opacity = tmpResult;
+        num2 = 0;
+        if (!tmp2) {
+          num2 = closure_6;
+        }
+        obj1 = { translateY: null };
+        obj1.translateY = tmp(num2, tmp3);
+        items1 = [];
+        items1[0] = obj1;
+        obj.transform = items1;
+        tmp5 = obj;
+      }
+      return tmp5;
+    }
+  }
+  const items3 = [tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19];
+  ButtonPillNativeTsx2.__closure = items3;
+  ButtonPillNativeTsx2.__workletHash = 5746320300361;
+  ButtonPillNativeTsx2.__initData = tmp12;
+  const items4 = [animatedStyle, _mod1652.useAnimatedStyle(ButtonPillNativeTsx2)];
+  return items4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-let c10 = 300;
-let ButtonConstants = fn(5640);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5640).SMALL_BUTTON_HEIGHT, fn(5640).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5640);
+let ButtonConstants = fn(5760);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5760).SMALL_BUTTON_HEIGHT, fn(5760).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5760);
 const paddingVertical2 = ButtonConstants.getButtonPadding(
-  fn(5640).MEDIUM_BUTTON_HEIGHT,
-  fn(5640).MEDIUM_BUTTON_ICON_SIZE,
+  fn(5760).MEDIUM_BUTTON_HEIGHT,
+  fn(5760).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = fn(5640);
+ButtonConstants = fn(5760);
 const paddingVertical3 = ButtonConstants.getButtonPadding(
-  fn(5640).LARGE_BUTTON_HEIGHT,
-  fn(5640).LARGE_BUTTON_ICON_SIZE,
+  fn(5760).LARGE_BUTTON_HEIGHT,
+  fn(5760).LARGE_BUTTON_ICON_SIZE,
 );
-const createStyles = fn(5014);
-const value = createStyles.createStyles((arg0, arg1) => {
+const createStyles = fn(5141);
+const state = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = {
       minHeight: ButtonConstants2.SMALL_BUTTON_HEIGHT,
@@ -416,11 +445,11 @@ const value = createStyles.createStyles((arg0, arg1) => {
   };
   return obj6;
 });
-const __initData = {
-  code: "function ButtonPillNativeTsx1(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}",
+let closure_17 = {
+  code: "(function ButtonPillNativeTsx1(){let[withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY]=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};})",
 };
-const __initData2 = {
-  code: "function ButtonPillNativeTsx2(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition):opacityTransition,transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}",
+let closure_18 = {
+  code: "(function ButtonPillNativeTsx2(){let[withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY]=this.__closure;const opacityTransition=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition):opacityTransition,transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");

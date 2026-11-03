@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { moreOverlay: null };
   const obj2 = {};
@@ -25,13 +25,13 @@ let closure_8 = createStyles.createStyles(() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
 
-export default function WishlistViewMoreCard(recipientName) {
-  recipientName = recipientName.recipientName;
-  ({ sku, size, overflowCount, onPress } = recipientName);
-  const obj = { onPress, accessibilityLabel: null, children: null };
+export default function WishlistViewMoreCard(overflowCount) {
+  overflowCount = overflowCount.overflowCount;
+  ({ sku, size, recipientName, onPress } = overflowCount);
+  const obj = { onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.formatToPlainString(util.t["8uYD+I"], { username: recipientName });
-  const items = [timestampProducer(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName })];
+  obj.accessibilityLabel = intl.formatToPlainString(util.t.F6iMs4, { count: overflowCount });
+  items = [timestampProducer(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName })];
   const obj2 = { style: closure_8().moreOverlay, children: null };
   const obj3 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = util.intl;

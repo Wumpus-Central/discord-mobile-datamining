@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/native/ConjureQueuedSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -22,7 +22,7 @@ function ConjureQueuedRow(content) {
   const item = tmp.item;
   const callback = noop.useCallback((nativeEvent) => _undefined2(nativeEvent.nativeEvent.lines.length > 3), []);
   if (content.divided) {
-    const items = [item, tmp.divider];
+    items = [item, tmp.divider];
     let tmp7 = items;
   } else {
     tmp7 = item;
@@ -31,7 +31,7 @@ function ConjureQueuedRow(content) {
     const obj2 = { style: tmp7, children: null };
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3868["07XimM"]);
+    obj3.children = intl2.string(_modDef3995["07XimM"]);
     obj2.children = React6(Text_Text.Text, obj3);
     let tmp18Result = React6(timestampProducer, obj2);
   } else {
@@ -73,7 +73,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureQueuedSheet = "ConjureQueuedSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   scroller: { maxHeight: 360 },
   item: { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 },
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureQu
 export default function ConjureQueuedSheet(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_11();
-  const items = [ConjureChatStore];
+  items = [ConjureChatStore];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(
     items,
@@ -113,8 +113,8 @@ export default function ConjureQueuedSheet(projectId) {
     const obj2 = { header: null, children: null };
     const obj3 = { title: null };
     const intl = tmp2(1113).intl;
-    obj3.title = intl.string(stateFromStores(3868).hzgPbZ);
-    obj2.header = closure_8(tmp2(7321).BottomSheetTitleHeader, obj3);
+    obj3.title = intl.string(stateFromStores(3995).hzgPbZ);
+    obj2.header = closure_8(tmp2(7441).BottomSheetTitleHeader, obj3);
     const obj4 = {
       style: tmp.scroller,
       nestedScrollEnabled: true,
@@ -123,7 +123,7 @@ export default function ConjureQueuedSheet(projectId) {
       ),
     };
     obj2.children = closure_8(closure_5, obj4);
-    tmp7 = closure_8(tmp2(7366).ActionSheet, obj2);
+    tmp7 = closure_8(tmp2(7486).ActionSheet, obj2);
   }
   return tmp7;
 }

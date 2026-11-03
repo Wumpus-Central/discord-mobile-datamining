@@ -1,13 +1,15 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import MobileVisualRefreshExperiment from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
 import VoicePanelFloatingCTAUtils from "utils/VoicePanelFloatingCTAUtils.tsx";
+import useChannelFloatingCTAContentDefault from "../../../video_calls/native/useChannelFloatingCTAContent.tsx";
+import useControlsHiddenPresentationDefault from "utils/useControlsHiddenPresentation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -24,140 +26,159 @@ function FloatingCTA(trailing) {
 class VoicePanelFloatingCTAContainer {
   constructor(arg0) {
     wrapperSpecs = global.wrapperSpecs;
-    accessoryHeights = global.accessoryHeights;
-    controlsSpecs = global.controlsSpecs;
-    gestureState = global.gestureState;
-    windowDimensions = undefined;
-    channelId = undefined;
-    safeArea = undefined;
-    isDockEnabled = undefined;
-    dockMinimizeProgress = undefined;
-    closure_9 = undefined;
-    closure_10 = undefined;
-    closure_11 = undefined;
-    ({ state, cleanUp } = global);
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    ({ accessoryHeights, controlsSpecs, state, cleanUp, gestureState } = global);
+    tmp2 = closure_1;
+    tmp3 = closure_2;
     tmp = closure_10();
-    tmp2 = accessoryHeights;
-    tmp3 = controlsSpecs;
-    context = windowDimensions.useContext(accessoryHeights(controlsSpecs[13]));
-    windowDimensions = context.windowDimensions;
+    context = closure_4.useContext(closure_1(closure_2[13]));
     channelId = context.channelId;
-    safeArea = context.safeArea;
-    isDockEnabled = context.isDockEnabled;
-    dockMinimizeProgress = context.dockMinimizeProgress;
-    tmp5 = accessoryHeights(controlsSpecs[14])(channelId);
-    obj = wrapperSpecs(controlsSpecs[15]);
-    first = gestureState(obj.useGetDismissibleContent(tmp5), 1)[0];
-    closure_9 = first;
-    obj2 = wrapperSpecs(controlsSpecs[16]);
+    closure_0 = channelId;
+    ({ windowDimensions, safeArea, mode, isDockEnabled, dockMinimizeProgress } = context);
+    tmp5 = closure_1(closure_2[14])(channelId);
+    obj = closure_0(closure_2[15]);
+    first = closure_3(obj.useGetDismissibleContent(tmp5), 1)[0];
+    closure_1 = first;
+    obj2 = closure_0(closure_2[16]);
     items = [];
-    items[0] = channelId;
-    stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-    closure_10 = stateFromStores;
+    items[0] = closure_5;
+    stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(c0));
+    closure_2 = stateFromStores;
     items1 = [,];
     items1[0] = first;
     items1[1] = stateFromStores;
-    memo = windowDimensions.useMemo(
-      () => VoicePanelFloatingCTAUtils.getDismissableCTAProps({ dismissableContent, channel: stateFromStores }),
+    memo = closure_4.useMemo(
+      () => VoicePanelFloatingCTAUtils.getDismissableCTAProps({ dismissableContent, channel }),
       items1,
     );
-    closure_11 = memo;
-    obj3 = wrapperSpecs(controlsSpecs[17]);
+    closure_3 = memo;
+    obj3 = closure_0(closure_2[17]);
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    tmp10 = accessoryHeights(controlsSpecs[18])(context.mode, wrapperSpecs, { state, cleanUp });
+    tmp10 = closure_1(closure_2[18])(mode, wrapperSpecs, { state, cleanUp });
     ({ hiddenProps, hiddenStyles } = tmp10);
-    obj4 = wrapperSpecs(controlsSpecs[19]);
-    fn = function w() {
-      const controlsDefaultWidth = VoicePanelControlsUtils.getControlsDefaultWidth(
-        windowDimensions.get().width,
-        safeArea.get().left,
-        safeArea.get().right,
-      );
-      const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
-      const sum1 = sum + accessoryHeights.get();
-      let tmp6 = sum1;
-      if (!wrapperSpecs.get().hidden) {
-        if (gestureState.get().active) {
-          tmp6 = sum1;
+    obj4 = closure_0(closure_2[19]);
+    items2 = [, , , , , , , , , , , , ,];
+    items2[0] = closure_12;
+    items2[1] = closure_0(closure_2[20]).getControlsDefaultWidth;
+    items2[2] = windowDimensions;
+    items2[3] = safeArea;
+    items2[4] = wrapperSpecs;
+    items2[5] = closure_7;
+    items2[6] = accessoryHeights;
+    items2[7] = gestureState;
+    items2[8] = isDockEnabled;
+    items2[9] = dockMinimizeProgress;
+    items2[10] = controlsSpecs;
+    items2[11] = closure_1(closure_2[21]);
+    items2[12] = closure_0(closure_2[22]).withSpring;
+    items2[13] = closure_6;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_8 = undefined;
+    closure_9 = undefined;
+    closure_10 = undefined;
+    closure_11 = undefined;
+    closure_12 = undefined;
+    [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items2;
+    class VoicePanelFloatingCTAContainerTsx1 {
+      constructor() {
+        tmp = closure_0(closure_1.get().width, closure_2.get().left, closure_2.get().right);
+        obj = closure_3;
+        sum = closure_3.get().height + closure_4;
+        sum1 = sum + closure_5.get();
+        tmp4 = sum1;
+        if (!closure_3.get().hidden) {
+          obj2 = closure_6;
+          if (closure_6.get().active) {
+            tmp4 = sum1;
+          }
+          tmp5 = closure_7;
+          y = obj.get().y;
+          if (closure_7) {
+            tmp7 = closure_8;
+            sum2 = y + closure_8.get() * sum1;
+          } else {
+            sum2 = y;
+          }
+          tmp8 = sum2;
         }
-        const y = wrapperSpecs.get().y;
-        if (isDockEnabled) {
-          let sum2 = y + dockMinimizeProgress.get() * sum1;
-        } else {
-          sum2 = y;
-        }
-      }
-      const obj4 = {
-        bottom: controlsSpecs.get().height + 16,
-        width: controlsDefaultWidth,
-        marginLeft: -1 * roundToNearestPixelDefault(controlsDefaultWidth / 2),
-        transform: null,
-      };
-      const obj5 = { translateX: null };
-      obj5.translateX = spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
-      const items = [obj5];
-      const obj6 = { translateY: null };
-      const tmpResult = spring;
-      obj6.translateY = spring.withSpring(tmp6, UI_SHOW_HIDE_PHYSICS);
-      items[1] = obj6;
-      obj4.transform = items;
-      return obj4;
-    };
-    obj1 = {
-      getControlsDefaultWidth: wrapperSpecs(controlsSpecs[20]).getControlsDefaultWidth,
-      windowDimensions,
-      safeArea,
-      wrapperSpecs,
-      CALL_TILE_GUTTER: isDockEnabled,
-      accessoryHeights,
-      gestureState,
-      isDockEnabled,
-      dockMinimizeProgress,
-      controlsSpecs,
-      roundToNearestPixel: accessoryHeights(controlsSpecs[21]),
-      withSpring: wrapperSpecs(controlsSpecs[22]).withSpring,
-      UI_SHOW_HIDE_PHYSICS: safeArea,
-    };
-    fn.__closure = obj1;
-    fn.__workletHash = 12226015393352;
-    fn.__initData = closure_12;
-    tmp12 = closure_9;
-    animatedStyle = obj4.useAnimatedStyle(fn);
-    obj9 = { style: null, animatedProps: hiddenProps, children: null };
-    items2 = [, ,];
-    items2[0] = tmp.container;
-    items2[1] = animatedStyle;
-    items2[2] = hiddenStyles;
-    obj9.style = items2;
-    tmp13 = accessoryHeights(controlsSpecs[23]);
-    if (null != memo) {
-      obj10 = { contentTypes: null, children: null };
-      obj10.contentTypes = tmp5;
-      obj10.children = function children() {
-        const merged = Object.assign(memo);
-        return <FloatingCTA />;
-      };
-      tmp12Result = tmp12(tmp2(tmp3[24]), obj10);
-    } else {
-      tmp12Result = null;
-      if (null != floatingCTAProps) {
-        tmp15 = closure_11;
-        obj11 = {};
-        tmp16 = obj11;
-        tmp17 = floatingCTAProps;
-        merged = Object.assign(floatingCTAProps);
-        tmp12Result = tmp12(closure_11, obj11);
+        obj1 = {
+          bottom: closure_9.get().height + 16,
+          width: tmp,
+          marginLeft: -1 * closure_10(tmp / 2),
+          transform: null,
+        };
+        obj6 = { translateX: closure_11(obj.get().x, closure_12) };
+        items = [,];
+        items[0] = obj6;
+        obj7 = { translateY: closure_11(tmp4, closure_12) };
+        items[1] = obj7;
+        obj1.transform = items;
+        return obj1;
       }
     }
-    obj9.children = tmp12Result;
-    return tmp12(tmp13, obj9);
+    items3 = [, , , , , , , , , , , ,];
+    items3[0] = tmp12;
+    items3[1] = tmp13;
+    items3[2] = tmp14;
+    items3[3] = tmp15;
+    items3[4] = tmp16;
+    items3[5] = tmp17;
+    items3[6] = tmp18;
+    items3[7] = tmp19;
+    items3[8] = tmp20;
+    items3[9] = tmp21;
+    items3[10] = tmp22;
+    items3[11] = tmp23;
+    items3[12] = tmp24;
+    VoicePanelFloatingCTAContainerTsx1.__closure = items3;
+    VoicePanelFloatingCTAContainerTsx1.__workletHash = 6234134411441;
+    VoicePanelFloatingCTAContainerTsx1.__initData = tmp11;
+    tmp26 = closure_9;
+    animatedStyle = obj4.useAnimatedStyle(VoicePanelFloatingCTAContainerTsx1);
+    obj1 = { style: null, animatedProps: hiddenProps, children: null };
+    items4 = [, ,];
+    items4[0] = tmp.container;
+    items4[1] = animatedStyle;
+    items4[2] = hiddenStyles;
+    obj1.style = items4;
+    if (null != memo) {
+      obj8 = { contentTypes: null, children: null };
+      obj8.contentTypes = tmp5;
+      obj8.children = function children() {
+        const merged = Object.assign(c3);
+        return <FloatingCTA />;
+      };
+      tmp26Result = tmp26(tmp2(tmp3[23]), obj8);
+    } else {
+      tmp26Result = null;
+      if (null != floatingCTAProps) {
+        tmp28 = closure_11;
+        obj9 = {};
+        tmp29 = obj9;
+        tmp30 = floatingCTAProps;
+        merged = Object.assign(floatingCTAProps);
+        tmp26Result = tmp26(closure_11, obj9);
+      }
+    }
+    obj1.children = tmp26Result;
+    return tmp26(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11223).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11226).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11360).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11363).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1083).ThemeTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+let jsx = fn(21).jsx;
+const createStyles = fn(5141);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,
@@ -170,8 +191,8 @@ const rect = {
 };
 obj2.container = rect;
 let closure_10 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function VoicePanelFloatingCTAContainerTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea,wrapperSpecs,CALL_TILE_GUTTER,accessoryHeights,gestureState,isDockEnabled,dockMinimizeProgress,controlsSpecs,roundToNearestPixel,withSpring,UI_SHOW_HIDE_PHYSICS}=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);const offscreenY=wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get();let translateY;if(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop){translateY=offscreenY;}else if(isDockEnabled){translateY=wrapperSpecs.get().y+dockMinimizeProgress.get()*offscreenY;}else{translateY=wrapperSpecs.get().y;}return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(translateY,UI_SHOW_HIDE_PHYSICS)}]};}",
+let closure_12 = {
+  code: "(function VoicePanelFloatingCTAContainerTsx1(){let[getControlsDefaultWidth,windowDimensions,safeArea,wrapperSpecs,CALL_TILE_GUTTER,accessoryHeights,gestureState,isDockEnabled,dockMinimizeProgress,controlsSpecs,roundToNearestPixel,withSpring,UI_SHOW_HIDE_PHYSICS]=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);const offscreenY=wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get();let translateY;if(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop){translateY=offscreenY;}else if(isDockEnabled){translateY=wrapperSpecs.get().y+dockMinimizeProgress.get()*offscreenY;}else{translateY=wrapperSpecs.get().y;}return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(translateY,UI_SHOW_HIDE_PHYSICS)}]};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");

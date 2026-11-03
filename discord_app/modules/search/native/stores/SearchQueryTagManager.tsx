@@ -43,7 +43,7 @@ prototype["mergeTag"] = function mergeTag(location, channelId) {
   closure_0 = location;
   closure_1 = channelId;
   const tags = this.tags;
-  const items = [];
+  items = [];
   items[
     HermesBuiltin.arraySpread(
       tags.filter((item) => {
@@ -165,7 +165,7 @@ prototype["add"] = function add(type) {
       }
     }
     if (tmp5) {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(self.tags, 0)] = type;
       self.tags = items;
     }

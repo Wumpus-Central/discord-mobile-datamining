@@ -93,7 +93,7 @@ export function inviteRoleToDisplayData(id, id) {
   return obj;
 }
 export function filterRoleDeletes(id, unsafeMutableRoles) {
-  let items = roles;
+  items = roles;
   if (roles === undefined) {
     items = [];
   }

@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   iconContainer: {
     position: "absolute",
@@ -49,7 +49,7 @@ export default function ChatButton(props) {
   const tmp4 = openTab(connected[6])(context.channelId);
   closure_5 = tmp4;
   const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
-  const items = [openTab, connected];
+  items = [openTab, connected];
   const callback = noop.useCallback(() => {
     value = connected.get();
     const VoicePanelTabAnalyticsSources = trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources;

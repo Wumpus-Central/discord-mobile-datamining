@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 export function usePinotChannelLabelAnchor(id) {
   closure_0 = id;
   noop = noop.useRef(null);
-  const items = [id];
+  items = [id];
   const callback = noop.useCallback(() => {
     state.setState((labels) => {
       labels = labels.labels;
@@ -58,7 +58,7 @@ export function usePinotChannelLabelCenter(channelId, ref) {
     2,
   );
   [tmp6, closure_3] = noop.useState(null);
-  const items = [tmp, ref, tmp3];
+  items = [tmp, ref, tmp3];
   const effect = noop.useEffect(() => {
     let current = ref.current;
     if (null != closure_2) {

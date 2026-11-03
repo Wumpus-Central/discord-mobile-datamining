@@ -1,7 +1,7 @@
 // discord_app/modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -56,7 +56,7 @@ class LikelyAtoWarningBanner {
     items1[0] = channelId;
     items1[1] = warningId;
     callback = closure_3.useCallback(() => {
-      const items = [warningId];
+      items = [warningId];
       const result = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
       ModalActionCreatorsDefault.popWithKey(modalKey);
     }, items1);
@@ -117,17 +117,17 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11274, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11411, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
-        const items = [
+        items = [
           closure_1_10(
-            channelId(5624).Text,
+            channelId(5747).Text,
             { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5624).Text,
+            channelId(5747).Text,
             { variant: "text-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
-const Constants = fn(11268);
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
+const Constants = fn(11405);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
@@ -186,12 +186,12 @@ const Constants = fn(11268);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };
-createStyles.createStyles(obj2);
+const state = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx");
 

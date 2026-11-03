@@ -45,7 +45,7 @@ const Constants = fn(1072);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
@@ -92,7 +92,7 @@ export default function PremiumBillingInfo(subscription) {
     };
     const intl = util.intl;
     obj6.children = intl.string(util.t.Sb6wI1);
-    const items = [timestampProducer(Text_Text.Text, obj6), ,];
+    items = [timestampProducer(Text_Text.Text, obj6), ,];
     const obj7 = { style: tmp.billingContainer, children: null };
     const obj8 = { variant: "text-md/semibold", children: null };
     const intl2 = util.intl;

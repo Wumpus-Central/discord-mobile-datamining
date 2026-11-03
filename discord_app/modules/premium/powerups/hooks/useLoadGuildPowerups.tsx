@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoa
 export default function useLoadGuildPowerups(guildId) {
   _require = guildId;
   gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useLoadGuildPowerups");
-  const items = [guildId, gameServerEnabled];
+  items = [guildId, gameServerEnabled];
   const effect = noop.useEffect(() => {
     if (gameServerEnabled) {
       const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);

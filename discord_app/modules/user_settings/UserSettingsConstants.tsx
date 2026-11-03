@@ -64,9 +64,9 @@ export function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "applicationId",
-    triggeredMigrations: "y",
-    offlineEditDataVersion: "isArray",
+    loading: "unicodeVersion",
+    triggeredMigrations: "experimental_backgroundImage",
+    offlineEditDataVersion: "boxShadow",
   };
   return obj;
 }

@@ -17,7 +17,7 @@ function FavoritesGuildAddActionSheet() {
   shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
   const isAtLimit = favoritesLimitUpsell.isAtLimit;
   favoriteLimit = favoritesLimitUpsell.favoriteLimit;
-  const items = [shouldShowUpsell, isAtLimit, favoriteLimit];
+  items = [shouldShowUpsell, isAtLimit, favoriteLimit];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddActionSheet);
     if (shouldShowUpsell) {

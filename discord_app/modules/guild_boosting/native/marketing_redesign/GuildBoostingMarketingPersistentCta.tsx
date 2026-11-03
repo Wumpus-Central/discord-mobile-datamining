@@ -1,16 +1,25 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingPersistentCta.tsx
+import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import GuildIcon from "../../../guild/native/GuildIcon.tsx";
+import GuildBoostingSubscribeButtonDefault from "../GuildBoostingSubscribeButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+
+const _modDef1652 = _mod1652;
+const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const SPRING_CONFIG = { stiffness: 70, damping: 10 };
-const createStyles = fn(5014);
+let closure_8 = { stiffness: 70, damping: 10 };
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 },
   innerWraper: null,
@@ -51,55 +60,60 @@ obj2.buttonContainer = { height: 40 };
 obj2.button = { minWidth: 100 };
 obj2.border = { padding: 2, borderRadius: 80 };
 let closure_9 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function GuildBoostingMarketingPersistentCtaTsx1(){const{useReducedMotion,VISIBILITY_OFFSET,withSpring,isVisible,SPRING_CONFIG}=this.__closure;return{transform:[{translateY:useReducedMotion?-VISIBILITY_OFFSET:withSpring(isVisible?-VISIBILITY_OFFSET:VISIBILITY_OFFSET,SPRING_CONFIG)}],opacity:withSpring(isVisible?1:0,SPRING_CONFIG)};}",
+let closure_10 = {
+  code: "(function GuildBoostingMarketingPersistentCtaTsx1(){let[useReducedMotion,VISIBILITY_OFFSET,withSpring,isVisible,SPRING_CONFIG]=this.__closure;return{transform:[{translateY:useReducedMotion?-VISIBILITY_OFFSET:withSpring(isVisible?-VISIBILITY_OFFSET:VISIBILITY_OFFSET,SPRING_CONFIG)}],opacity:withSpring(isVisible?1:0,SPRING_CONFIG)};})",
 };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingPersistentCta.tsx",
 );
 
-export default function GuildBoostingMarketingPersistentCta(arg0) {
+export default function GuildBoostingMarketingPersistentCta(guild) {
   const tmp = closure_9();
-  ({ guild, isVisible } = arg0);
-  ({ fractionalPremiumState, previousGuildSubscriptionSlot, premiumGroupRole } = arg0);
-  let items = [AccessibilityStore];
-  const stateFromStores = isVisible(563).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = isVisible(563);
-  const fn = function _() {
-    let num = -120;
-    if (!stateFromStores) {
-      let num2 = 120;
-      if (isVisible) {
-        num2 = -120;
+  guild = guild.guild;
+  ({ fractionalPremiumState, previousGuildSubscriptionSlot, isVisible, premiumGroupRole } = guild);
+  items = [AccessibilityStore];
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => _undefined2.useReducedMotion);
+  const items1 = [closure_10, stateFromStores, 120, spring_spring.withSpring, isVisible, closure_8];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10] = items1;
+  class GuildBoostingMarketingPersistentCtaTsx1 {
+    constructor() {
+      if (closure_0) {
+        tmp5 = closure_1;
+        tmp4 = -closure_1;
+      } else {
+        tmp = closure_3;
+        tmp2 = closure_1;
+        tmp3 = closure_4;
+        tmp4 = closure_2(closure_3 ? -tmp2 : tmp2, closure_4);
       }
-      num = spring.withSpring(num2, closure_8);
+      obj = { transform: null, opacity: null };
+      items = [];
+      items[0] = { translateY: tmp4 };
+      obj.transform = items;
+      num = 0;
+      tmp6 = closure_2;
+      if (closure_3) {
+        num = 1;
+      }
+      obj.opacity = tmp6(num, closure_4);
+      return obj;
     }
-    const obj2 = { transform: null, opacity: null };
-    const items = [{ translateY: num }];
-    obj2.transform = items;
-    let num3 = 0;
-    if (isVisible) {
-      num3 = 1;
-    }
-    obj2.opacity = spring.withSpring(num3, closure_8);
-    return obj2;
-  };
-  let obj2 = isVisible(5095);
-  fn.__closure = {
-    useReducedMotion: stateFromStores,
-    VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5637).withSpring,
-    isVisible,
-    SPRING_CONFIG,
-  };
-  fn.__workletHash = 14370895185277;
-  fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  const obj4 = { style: null, children: null };
-  const items1 = [tmp.wrapper, animatedStyle];
-  obj4.style = items1;
-  const obj5 = {
+  }
+  const items2 = [tmp6, tmp7, tmp8, tmp9, tmp10];
+  GuildBoostingMarketingPersistentCtaTsx1.__closure = items2;
+  GuildBoostingMarketingPersistentCtaTsx1.__workletHash = 5251879028260;
+  GuildBoostingMarketingPersistentCtaTsx1.__initData = tmp5;
+  const animatedStyle = _mod1652.useAnimatedStyle(GuildBoostingMarketingPersistentCtaTsx1);
+  const obj3 = { style: null, children: null };
+  const items3 = [tmp.wrapper, animatedStyle];
+  obj3.style = items3;
+  const obj4 = {
     angle: 45,
     angleCenter: { x: 0.5, y: 0.5 },
     colors: null,
@@ -108,39 +122,32 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     useAngle: true,
     children: null,
   };
-  const obj3 = {
-    useReducedMotion: stateFromStores,
-    VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5637).withSpring,
-    isVisible,
-    SPRING_CONFIG,
-  };
-  const items2 = [
-    stateFromStores(575).unsafe_rawColors.GUILD_BOOSTING_BLUE,
-    stateFromStores(575).unsafe_rawColors.GUILD_BOOSTING_PURPLE,
+  const items4 = [
+    nativeDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE,
+    nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE,
   ];
-  obj5.colors = items2;
-  obj5.locations = [0, 1];
-  obj5.style = tmp.border;
-  const obj6 = { style: tmp.innerWraper, children: null };
-  const obj7 = { style: tmp.guildInfoContainer, children: null };
-  const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(5587);
-  obj8.size = isVisible(6957).GuildIconSizes.LARGE;
-  const items3 = [
-    closure_6(stateFromStores(6957), obj8),
-    closure_6(isVisible(5624).Text, {
+  obj4.colors = items4;
+  obj4.locations = [0, 1];
+  obj4.style = tmp.border;
+  const obj5 = { style: tmp.innerWraper, children: null };
+  const obj6 = { style: tmp.guildInfoContainer, children: null };
+  const obj7 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
+  const tmp12 = LinearGradientDefault;
+  obj7.size = GuildIcon.GuildIconSizes.LARGE;
+  const items5 = [
+    timestampProducer(GuildIconDefault, obj7),
+    timestampProducer(Text_Text.Text, {
       style: tmp.guildName,
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       lineClamp: 1,
       children: guild.name,
     }),
   ];
-  obj7.children = items3;
-  const items4 = [closure_7(View, obj7)];
-  const obj10 = {
+  obj6.children = items5;
+  const items6 = [React5(View, obj6)];
+  const obj9 = {
     style: tmp.buttonContainer,
-    children: closure_6(stateFromStores(7584), {
+    children: timestampProducer(GuildBoostingSubscribeButtonDefault, {
       guild,
       previousGuildSubscriptionSlot,
       useShortenedCTA: true,
@@ -150,10 +157,10 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
       premiumGroupRole,
     }),
   };
-  items4[1] = closure_6(View, obj10);
-  obj6.children = items4;
-  obj5.children = closure_7(View, obj6);
-  obj4.children = closure_6(tmp4, obj5);
-  return closure_6(stateFromStores(5095).View, obj4);
+  items6[1] = timestampProducer(View, obj9);
+  obj5.children = items6;
+  obj4.children = React5(View, obj5);
+  obj3.children = timestampProducer(tmp12, obj4);
+  return timestampProducer(_modDef1652.View, obj3);
 }
 export const VISIBILITY_OFFSET = 120;

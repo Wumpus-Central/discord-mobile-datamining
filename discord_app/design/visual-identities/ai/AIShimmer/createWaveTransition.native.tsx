@@ -1,23 +1,24 @@
 // discord_app/design/visual-identities/ai/AIShimmer/createWaveTransition.native.tsx
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import timing from "../../../animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import waveTransition from "waveTransition.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function incomingSlotForPass(rounded) {
+let items = [
+  { code: "(function incomingSlotForPass_createWaveTransitionNativeTsx1(passIndex){return passIndex%2===0?'B':'A';})" },
+];
+[tmp2] = items;
+function incomingSlotForPass(arg0) {
   let str = "A";
-  if (rounded % 2 === 0) {
+  if (arg0 % 2 === 0) {
     str = "B";
   }
   return str;
 }
-incomingSlotForPass.__closure = {};
-incomingSlotForPass.__workletHash = 3269171663385;
-incomingSlotForPass.__initData = {
-  code: "function incomingSlotForPass_createWaveTransitionNativeTsx1(passIndex){return passIndex%2===0?'B':'A';}",
-};
+incomingSlotForPass.__workletHash = 6984958363480;
+incomingSlotForPass.__initData = tmp2;
 let slotB = {
-  code: "function createWaveTransitionNativeTsx2(finished){const{runOnJS,finishPass,runId}=this.__closure;if(finished===true)runOnJS(finishPass)(runId);}",
+  code: "(function createWaveTransitionNativeTsx2(finished){let[scheduleOnRN,finishPass,runId]=this.__closure;if(finished===true)scheduleOnRN(finishPass,runId);})",
 };
 let result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/createWaveTransition.native.tsx");
 
@@ -34,7 +35,7 @@ export function createWaveTransition(duration) {
   }
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
-    DEFAULT_PASS_DURATION = obj(12787).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(12923).DEFAULT_PASS_DURATION;
   }
   obj = {
     duration: DEFAULT_PASS_DURATION,
@@ -86,7 +87,7 @@ export function createWaveTransition(duration) {
   let str2 = "";
   if (0 < glyphCountResult) {
     do {
-      let GLYPH_PEAK = obj(12787).GLYPH_PEAK;
+      let GLYPH_PEAK = obj(12923).GLYPH_PEAK;
       let tmp5Result = tmp5();
       str = `${tmp8((tmp9 * obj(c1[0]).GLYPH_PEAK.length) | 0)}`;
       num = num + 1;
@@ -103,7 +104,7 @@ export function createWaveTransition(duration) {
     closure_8 = closure_8 + 1;
     c6 = 0;
     c5 = false;
-    obj = ReanimatedRexport;
+    obj = _mod1652;
     obj.cancelAnimation(obj.animationProgress);
     if (c5) {
       const animationProgress = tmp4.animationProgress;
@@ -140,7 +141,7 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = ReanimatedRexport;
+      obj = _mod1652;
       obj.cancelAnimation(obj.animationProgress);
       if (c5) {
         const animationProgress = obj2.animationProgress;
@@ -215,27 +216,27 @@ export function createWaveTransition(duration) {
       if (0 !== c6) {
         if (tmp === id) {
           c6 = 0;
-          obj(dependencyMap[2]).cancelAnimation(obj.animationProgress);
+          obj(dependencyMap[2]).cancelAnimation(c0.animationProgress);
           sum = sum + 1;
           c5 = true;
-          closure_1 = closure_1 + 1;
-          const onStart = obj.onStart;
+          dependencyMap = dependencyMap + 1;
+          const onStart = c0.onStart;
           if (onStart != null) {
             onStart();
           }
-          if (obj.respectReducedMotion) {
-            if (true === tmp16.reducedMotion) {
-              closure_129_0 = sum;
-              let crossFadeOpacity = tmp16.crossFadeOpacity;
-              obj = { duration: tmp14(dependencyMap[0]).REDUCED_MOTION_FADE_MS };
-              let result = crossFadeOpacity.set(tmp14(dependencyMap[1]).withTiming(0, obj, "animate-always"));
+          if (c0.respectReducedMotion) {
+            if (true === tmp21.reducedMotion) {
+              c0 = sum;
+              let crossFadeOpacity = tmp21.crossFadeOpacity;
+              obj = { duration: tmp19(tmp20[0]).REDUCED_MOTION_FADE_MS };
+              let result = crossFadeOpacity.set(tmp19(tmp20[1]).withTiming(0, obj, "animate-always"));
               let _setTimeout = setTimeout;
               let timeout = setTimeout(() => {
-                if (sum === closure_8) {
+                if (c0 === closure_8) {
                   const animationProgress = obj.animationProgress;
                   const result = animationProgress.set(c1);
                   const crossFadeOpacity = obj.crossFadeOpacity;
-                  obj = timing;
+                  obj = timing_timing;
                   const obj2 = { duration: waveTransition.REDUCED_MOTION_FADE_MS };
                   const result1 = crossFadeOpacity.set(obj.withTiming(1, obj2, "animate-always"));
                   const _setTimeout = setTimeout;
@@ -243,32 +244,38 @@ export function createWaveTransition(duration) {
                     c7 = null;
                     if (closure_1_0 === sum) {
                       c5 = false;
-                      const onComplete = sum.onComplete;
+                      onComplete = onComplete.onComplete;
                       if (onComplete != null) {
                         onComplete();
                       }
                     }
                   }, waveTransition.REDUCED_MOTION_FADE_MS);
                 }
-              }, tmp14(dependencyMap[0]).REDUCED_MOTION_FADE_MS);
-              const tmp14Result = tmp14(dependencyMap[1]);
+              }, tmp19(tmp20[0]).REDUCED_MOTION_FADE_MS);
+              const tmp19Result = tmp19(tmp20[1]);
             }
           }
-          obj = sum;
-          let animationProgress = tmp16.animationProgress;
-          const tmp14Result2 = obj(dependencyMap[1]);
-          let obj2 = { duration: obj.duration, easing: obj(dependencyMap[2]).Easing.linear };
-          const fn = function t(arg0) {
+          let animationProgress = tmp21.animationProgress;
+          const tmp19Result2 = obj(dependencyMap[1]);
+          let obj2 = { duration: c0.duration, easing: obj(dependencyMap[2]).Easing.linear };
+          items = [closure_3, obj(dependencyMap[3]).scheduleOnRN, finishPass, sum];
+          c0 = undefined;
+          dependencyMap = undefined;
+          c2 = undefined;
+          [tmp7, tmp8, tmp9, tmp10] = items;
+          function createWaveTransitionNativeTsx2(arg0) {
             if (true === arg0) {
-              ReanimatedRexport.runOnJS(finishPass)(sum);
+              _undefined(c1, c2);
             }
-          };
-          const obj3 = { runOnJS: obj(dependencyMap[2]).runOnJS, finishPass, runId: sum };
-          fn.__closure = obj3;
-          fn.__workletHash = 1670888017826;
-          fn.__initData = __initData;
-          let result1 = animationProgress.set(tmp14Result2.withTiming(closure_1, obj2, "animate-always", fn));
-          const obj6 = obj(dependencyMap[2]);
+          }
+          const items1 = [tmp8, tmp9, tmp10];
+          createWaveTransitionNativeTsx2.__closure = items1;
+          createWaveTransitionNativeTsx2.__workletHash = 7015905915286;
+          createWaveTransitionNativeTsx2.__initData = tmp7;
+          let result1 = animationProgress.set(
+            tmp19Result2.withTiming(tmp3, obj2, "animate-always", createWaveTransitionNativeTsx2),
+          );
+          const obj5 = obj(dependencyMap[2]);
         }
       }
     },
@@ -305,9 +312,9 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = ReanimatedRexport;
+      obj = _mod1652;
       obj.cancelAnimation(obj.animationProgress);
-      ReanimatedRexport.cancelAnimation(obj.crossFadeOpacity);
+      _mod1652.cancelAnimation(obj.crossFadeOpacity);
     },
   };
   Object.defineProperty(obj3, "running", { get: () => c5, set: undefined });

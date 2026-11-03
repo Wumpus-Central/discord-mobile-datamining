@@ -16,7 +16,7 @@ export function useScrollToInitialIndexOnce(initialScrollIndex) {
   const resetKey = initialScrollIndex.resetKey;
   noop.useRef(false);
   noop.useRef(resetKey);
-  const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
+  items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
   const effect = noop.useEffect(() => {
     if (ref2.current !== resetKey) {
       ref2.current = resetKey;

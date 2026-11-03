@@ -141,7 +141,7 @@ function newMessageFromHistory(ts) {
     tmp.steps = events.flatMap((type) => {
       if ("todos" === type.type) {
         const obj = { type: "step", kind: "todos", items: type.items };
-        const items = [obj];
+        items = [obj];
         let items1 = items;
       } else {
         items1 = [];
@@ -237,7 +237,7 @@ export function messagesFromHistory(entries) {
           return tmp;
         });
         closure_3 = [];
-        let items = [];
+        items = [];
         HermesBuiltin.arraySpread(found, 0);
         const sorted = items.sort((arg0, arg1) => arg0.at - arg1.at);
         let tmp10 = null;
@@ -246,7 +246,7 @@ export function messagesFromHistory(entries) {
             if (null == steps) {
               return null;
             } else {
-              const items = [[]];
+              items = [[]];
               HermesBuiltin.arraySpread(
                 arr.map(() => []),
                 1,
@@ -345,7 +345,7 @@ export function messagesFromHistory(entries) {
     flatMapResult = mapped.flatMap((item, index) => {
       value = map.get(index);
       if (value == null) {
-        const items = [item];
+        items = [item];
         value = items;
       }
       return value;
@@ -376,7 +376,7 @@ export function foldDividers(items) {
         id = contextSwitch.id;
       }
       if (null == id) {
-        const items = [contextSwitch];
+        items = [contextSwitch];
         return items;
       } else if (set.has(id)) {
         return [];

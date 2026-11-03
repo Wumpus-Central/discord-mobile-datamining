@@ -9,7 +9,7 @@ require = fn;
 function ManaToastSurface(bottomInset) {
   bottomInset = bottomInset.bottomInset;
   const top = useSafeAreaInsetsDefault().top;
-  const items = [top, bottomInset];
+  items = [top, bottomInset];
   const offset = noop.useMemo(() => {
     const rect = { top, bottom: bottomInset };
     return rect;

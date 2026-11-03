@@ -15,7 +15,7 @@ export default noop.memo(function RedesignSettingsCategoryDiscoveryHighlightsScr
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj = SettingBuilders;
-    const items = [MobileNotifSettingsRouteBuilders.buildCategoryDiscoveryHighlightsSettingsSection()];
+    items = [MobileNotifSettingsRouteBuilders.buildCategoryDiscoveryHighlightsSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

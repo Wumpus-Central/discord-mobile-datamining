@@ -13,7 +13,7 @@ export default noop.memo(function ShowAllVoiceChannelsButton(guildId) {
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = guildId(section[3]).useStateFromStores(items, () =>
     ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId),
   );

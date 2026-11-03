@@ -16,7 +16,7 @@ export default function IgnoreUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [user];
   const stateFromStoresObject = user(reportId[5]).useStateFromStoresObject(
     items,

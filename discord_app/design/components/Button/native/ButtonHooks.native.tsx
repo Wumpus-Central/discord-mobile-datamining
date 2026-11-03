@@ -1,13 +1,13 @@
 // discord_app/design/components/Button/native/ButtonHooks.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import shared from "../../../shared.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import Icon from "../../../void/Icon/native/Icon.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants from "ButtonConstants.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -131,16 +131,51 @@ function getButtonColorTokens(variant) {
     default:
   }
 }
+function useButtonScaleStyles(sharedValue, sharedValue1, scaleAmountInPx) {
+  items = [closure_11, sharedValue1, scaleAmountInPx, spring_spring.withSpring, _mod1652.interpolate, sharedValue, springPresets.ON_PRESS_SPRING];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7] = items;
+  class ButtonHooksNativeTsx3 {
+    constructor() {
+      obj = closure_0;
+      num = 1;
+      if (closure_0.get() > 0) {
+        tmp = closure_1;
+        diff = obj.get() - closure_1;
+        num = diff / obj.get();
+      }
+      obj1 = { transform: null };
+      obj4 = { scale: null };
+      items = [1];
+      items[1] = num;
+      obj4.scale = closure_2(closure_3(closure_4.get(), [0, 1], items), closure_5, "animate-always");
+      items1 = [];
+      items1[0] = obj4;
+      obj1.transform = items1;
+      return obj1;
+    }
+  }
+  let items1 = [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7];
+  ButtonHooksNativeTsx3.__closure = items1;
+  ButtonHooksNativeTsx3.__workletHash = 6973813995182;
+  ButtonHooksNativeTsx3.__initData = tmp;
+  return _mod1652.useAnimatedStyle(ButtonHooksNativeTsx3);
+}
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5014);
+createStyles = fn(5141);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
-createStyles = fn(5014);
+createStyles = fn(5141);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
-const __initData = { code: "function ButtonHooksNativeTsx1(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
-const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
-const __initData3 = { code: "function ButtonHooksNativeTsx3(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
+let closure_9 = { code: "(function ButtonHooksNativeTsx1(){let[interpolateColor,pressed,inactiveColor,pressedColor]=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};})" };
+let closure_10 = { code: "(function ButtonHooksNativeTsx2(){let[themedStyles,colors,interpolateColor,pressed]=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};})" };
+let closure_11 = { code: "(function ButtonHooksNativeTsx3(){let[width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING]=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
 
@@ -150,24 +185,24 @@ export function useProfileThemedButtonStyles(arg0) {
   const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
   theme = themeContext.theme;
-  const items = [theme, primaryColor, arg0];
+  items = [theme, primaryColor, arg0];
   return noop.useMemo(() => {
-    if (null == memo) {
+    if (null == c1) {
       return null;
-    } else if ("primary" === closure_0) {
+    } else if ("primary" === c0) {
       const WHITE = nativeDefault.unsafe_rawColors.WHITE;
       const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
-      const contrastingColor = native.getContrastingColor(memo, obj4);
+      const contrastingColor = native.getContrastingColor(c1, obj4);
       const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
       const obj7 = { backgroundColor: null, borderColor: null, color: null };
-      const items = [contrastingColor, darkenColorResult];
+      items = [contrastingColor, darkenColorResult];
       obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
       obj7.borderColor = items1;
       obj7.color = WHITE;
       return obj7;
-    } else if ("secondary" === closure_0) {
-      const isThemeLightResult = shared.isThemeLight(closure_2);
+    } else if ("secondary" === c0) {
+      const isThemeLightResult = shared.isThemeLight(c2);
       const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -175,7 +210,7 @@ export function useProfileThemedButtonStyles(arg0) {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const isThemeLightResult1 = shared.isThemeLight(closure_2);
+      const isThemeLightResult1 = shared.isThemeLight(c2);
       const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -188,11 +223,11 @@ export function useProfileThemedButtonStyles(arg0) {
       const items3 = [c4, c4];
       obj9.borderColor = items3;
       return obj9;
-    } else if ("tertiary" === closure_0) {
-      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+    } else if ("tertiary" === c0) {
+      const isThemeLightResult2 = shared.isThemeLight(c2);
       const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
-        let setColorOpacityResult = setColorOpacity(memo, 0.4);
+        let setColorOpacityResult = setColorOpacity(c1, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
@@ -218,29 +253,29 @@ export function useForegroundColor(variant) {
   return useToken.useToken(getButtonColorTokens(variant).foregroundInactive);
 }
 export const useButtonColorStyles = styleProperties;
-export function useButtonTextColorStyles(active) {
-  _require = active;
+export function useButtonTextColorStyles(primary) {
+  _require = primary;
   const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
   theme = themeContext.theme;
-  const items = [theme, primaryColor, active];
+  items = [theme, primaryColor, primary];
   const memo = noop.useMemo(() => {
-    if (null == memo) {
+    if (null == c1) {
       return null;
-    } else if ("primary" === closure_0) {
+    } else if ("primary" === c0) {
       const WHITE = nativeDefault.unsafe_rawColors.WHITE;
       const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
-      const contrastingColor = native.getContrastingColor(memo, obj4);
+      const contrastingColor = native.getContrastingColor(c1, obj4);
       const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
       const obj7 = { backgroundColor: null, borderColor: null, color: null };
-      const items = [contrastingColor, darkenColorResult];
+      items = [contrastingColor, darkenColorResult];
       obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
       obj7.borderColor = items1;
       obj7.color = WHITE;
       return obj7;
-    } else if ("secondary" === closure_0) {
-      const isThemeLightResult = shared.isThemeLight(closure_2);
+    } else if ("secondary" === c0) {
+      const isThemeLightResult = shared.isThemeLight(c2);
       const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -248,7 +283,7 @@ export function useButtonTextColorStyles(active) {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const isThemeLightResult1 = shared.isThemeLight(closure_2);
+      const isThemeLightResult1 = shared.isThemeLight(c2);
       const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -261,11 +296,11 @@ export function useButtonTextColorStyles(active) {
       const items3 = [c4, c4];
       obj9.borderColor = items3;
       return obj9;
-    } else if ("tertiary" === closure_0) {
-      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+    } else if ("tertiary" === c0) {
+      const isThemeLightResult2 = shared.isThemeLight(c2);
       const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
-        let setColorOpacityResult = setColorOpacity(memo, 0.4);
+        let setColorOpacityResult = setColorOpacity(c1, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
@@ -288,7 +323,7 @@ export function useButtonTextColorStyles(active) {
   }, items);
   const obj = require("native");
   let color;
-  const token = require("useToken").useToken(getButtonColorTokens(active).foregroundInactive);
+  const token = require("useToken").useToken(getButtonColorTokens(primary).foregroundInactive);
   if (memo != null) {
     color = memo.color;
   }
@@ -298,31 +333,30 @@ export function useButtonTextColorStyles(active) {
   return { color };
 }
 export function useIconTintStyles(variant, sharedValue) {
-  _require = sharedValue;
-  closure_129_0 = variant;
+  _require = variant;
   const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
-  closure_129_1 = primaryColor;
+  c1 = primaryColor;
   const theme = themeContext.theme;
-  closure_129_2 = theme;
-  let items = [theme, primaryColor, variant];
+  dependencyMap = theme;
+  items = [theme, primaryColor, variant];
   const memo = noop.useMemo(() => {
-    if (null == memo) {
+    if (null == c1) {
       return null;
-    } else if ("primary" === closure_0) {
+    } else if ("primary" === c0) {
       const WHITE = nativeDefault.unsafe_rawColors.WHITE;
       const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
-      const contrastingColor = native.getContrastingColor(memo, obj4);
+      const contrastingColor = native.getContrastingColor(c1, obj4);
       const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
       const obj7 = { backgroundColor: null, borderColor: null, color: null };
-      const items = [contrastingColor, darkenColorResult];
+      items = [contrastingColor, darkenColorResult];
       obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
       obj7.borderColor = items1;
       obj7.color = WHITE;
       return obj7;
-    } else if ("secondary" === closure_0) {
-      const isThemeLightResult = shared.isThemeLight(closure_2);
+    } else if ("secondary" === c0) {
+      const isThemeLightResult = shared.isThemeLight(c2);
       const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -330,7 +364,7 @@ export function useIconTintStyles(variant, sharedValue) {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const isThemeLightResult1 = shared.isThemeLight(closure_2);
+      const isThemeLightResult1 = shared.isThemeLight(c2);
       const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -343,11 +377,11 @@ export function useIconTintStyles(variant, sharedValue) {
       const items3 = [c4, c4];
       obj9.borderColor = items3;
       return obj9;
-    } else if ("tertiary" === closure_0) {
-      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+    } else if ("tertiary" === c0) {
+      const isThemeLightResult2 = shared.isThemeLight(c2);
       const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
-        let setColorOpacityResult = setColorOpacity(memo, 0.4);
+        let setColorOpacityResult = setColorOpacity(c1, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
@@ -378,49 +412,56 @@ export function useIconTintStyles(variant, sharedValue) {
     color = token;
   }
   const obj2 = require("useToken");
-  token1 = require("useToken").useToken(getButtonColorTokens(variant).foregroundPressed);
+  const token1 = require("useToken").useToken(getButtonColorTokens(variant).foregroundPressed);
   const tmpResult = require("useToken");
-  const fn = function t() {
-    const obj = { tintColor: null };
-    const items = [color, token1];
-    obj.tintColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
-    return obj;
-  };
-  const tmpResult2 = require("ReanimatedRexport");
-  fn.__closure = { interpolateColor: require("ReanimatedRexport").interpolateColor, pressed: sharedValue, inactiveColor: color, pressedColor: token1 };
-  fn.__workletHash = 10122935395765;
-  fn.__initData = __initData;
-  return tmpResult2.useAnimatedStyle(fn);
+  const items1 = [closure_9, require("../../../../../_runtime/metro/01652__.js").interpolateColor, sharedValue, color, token1];
+  _require = undefined;
+  c1 = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp9, tmp10, tmp11, tmp12, tmp13] = items1;
+  class ButtonHooksNativeTsx1 {
+    constructor() {
+      obj = { tintColor: null };
+      items = [, ];
+      items[0] = closure_2;
+      items[1] = closure_3;
+      obj.tintColor = closure_0(closure_1.get(), [0, 1], items);
+      return obj;
+    }
+  }
+  const items2 = [tmp10, tmp11, tmp12, tmp13];
+  ButtonHooksNativeTsx1.__closure = items2;
+  ButtonHooksNativeTsx1.__workletHash = 12606114421900;
+  ButtonHooksNativeTsx1.__initData = tmp9;
+  return require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ButtonHooksNativeTsx1);
 }
 export function useGradientPillStyles(variant) {
   return { borderColor: styleProperties(variant).borderInactive };
 }
 export function useButtonPillStyles(variant, pressed) {
-  _require = pressed;
-  closure_129_0 = variant;
+  _require = variant;
   const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
-  closure_129_1 = primaryColor;
   const theme = themeContext.theme;
-  closure_129_2 = theme;
-  let items = [theme, primaryColor, variant];
+  items = [theme, primaryColor, variant];
   const memo = noop.useMemo(() => {
-    if (null == memo) {
+    if (null == c1) {
       return null;
-    } else if ("primary" === closure_0) {
+    } else if ("primary" === c0) {
       const WHITE = nativeDefault.unsafe_rawColors.WHITE;
       const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
-      const contrastingColor = native.getContrastingColor(memo, obj4);
+      const contrastingColor = native.getContrastingColor(c1, obj4);
       const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
       const obj7 = { backgroundColor: null, borderColor: null, color: null };
-      const items = [contrastingColor, darkenColorResult];
+      items = [contrastingColor, darkenColorResult];
       obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
       obj7.borderColor = items1;
       obj7.color = WHITE;
       return obj7;
-    } else if ("secondary" === closure_0) {
-      const isThemeLightResult = shared.isThemeLight(closure_2);
+    } else if ("secondary" === c0) {
+      const isThemeLightResult = shared.isThemeLight(c2);
       const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -428,7 +469,7 @@ export function useButtonPillStyles(variant, pressed) {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const isThemeLightResult1 = shared.isThemeLight(closure_2);
+      const isThemeLightResult1 = shared.isThemeLight(c2);
       const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -441,11 +482,11 @@ export function useButtonPillStyles(variant, pressed) {
       const items3 = [c4, c4];
       obj9.borderColor = items3;
       return obj9;
-    } else if ("tertiary" === closure_0) {
-      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+    } else if ("tertiary" === c0) {
+      const isThemeLightResult2 = shared.isThemeLight(c2);
       const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
-        let setColorOpacityResult = setColorOpacity(memo, 0.4);
+        let setColorOpacityResult = setColorOpacity(c1, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
@@ -466,116 +507,80 @@ export function useButtonPillStyles(variant, pressed) {
       return null;
     }
   }, items);
-  const tmp3 = styleProperties(variant);
-  dependencyMap = tmp3;
   let obj = require("native");
-  const fn = function t() {
-    let backgroundColor;
-    if (memo != null) {
-      backgroundColor = memo.backgroundColor;
+  const tmp3 = styleProperties(variant);
+  let items1 = [closure_10, memo, tmp3, require("../../../../../_runtime/metro/01652__.js").interpolateColor, pressed];
+  _require = undefined;
+  c1 = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8] = items1;
+  class ButtonHooksNativeTsx2 {
+    constructor() {
+      tmp = closure_0;
+      backgroundColor = undefined;
+      if (closure_0 != null) {
+        backgroundColor = tmp.backgroundColor;
+      }
+      if (backgroundColor == null) {
+        tmp3 = closure_1;
+        items = [, ];
+        ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = closure_1);
+        backgroundColor = items;
+      }
+      borderColor = undefined;
+      if (tmp != null) {
+        borderColor = tmp.borderColor;
+      }
+      if (borderColor == null) {
+        tmp5 = closure_1;
+        items1 = [, ];
+        ({ borderInactive: arr2[0], borderPressed: arr2[1] } = closure_1);
+        borderColor = items1;
+      }
+      obj = { backgroundColor: closure_2(closure_3.get(), [0, 1], backgroundColor), borderColor: closure_2(closure_3.get(), [0, 1], borderColor) };
+      return obj;
     }
-    if (backgroundColor == null) {
-      const items = [, ];
-      ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = closure_2);
-      backgroundColor = items;
-    }
-    let borderColor;
-    if (memo != null) {
-      borderColor = memo.borderColor;
-    }
-    if (borderColor == null) {
-      const items1 = [, ];
-      ({ borderInactive: arr2[0], borderPressed: arr2[1] } = closure_2);
-      borderColor = items1;
-    }
-    const obj = { backgroundColor: ReanimatedRexport.interpolateColor(pressed.get(), [0, 1], backgroundColor), borderColor: null };
-    obj.borderColor = ReanimatedRexport.interpolateColor(pressed.get(), [0, 1], borderColor);
-    return obj;
-  };
-  let obj2 = require("ReanimatedRexport");
-  fn.__closure = { themedStyles: memo, colors: tmp3, interpolateColor: require("ReanimatedRexport").interpolateColor, pressed };
-  fn.__workletHash = 6773022706866;
-  fn.__initData = __initData2;
-  return obj2.useAnimatedStyle(fn);
+  }
+  let items2 = [tmp5, tmp6, tmp7, tmp8];
+  ButtonHooksNativeTsx2.__closure = items2;
+  ButtonHooksNativeTsx2.__workletHash = 15509392859051;
+  ButtonHooksNativeTsx2.__initData = tmp4;
+  return require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ButtonHooksNativeTsx2);
 }
-export function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
-  _require = pressed;
-  closure_1 = width;
-  dependencyMap = scaleAmountInPx;
-  const fn = function n() {
-    num = 1;
-    if (sharedValue1.get() > 0) {
-      const diff = sharedValue1.get() - num;
-      num = diff / sharedValue1.get();
-    }
-    const obj2 = { transform: null };
-    const obj3 = { scale: null };
-    const obj4 = spring;
-    const items = [1, num];
-    obj3.scale = obj4.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), springPresets.ON_PRESS_SPRING, "animate-always");
-    const items1 = [obj3];
-    obj2.transform = items1;
-    return obj2;
-  };
-  const obj = require("ReanimatedRexport");
-  fn.__closure = { width, scaleAmountInPx, withSpring: require("spring").withSpring, interpolate: require("ReanimatedRexport").interpolate, pressed, ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING };
-  fn.__workletHash = 11512187496215;
-  fn.__initData = __initData3;
-  return obj.useAnimatedStyle(fn);
-}
+export { useButtonScaleStyles };
 export function useButtonPressAnimationProps(sharedValue) {
   let num = scaleAmountInPx;
   if (scaleAmountInPx === undefined) {
     num = 8;
   }
-  num = onPressOut;
-  sharedValue = undefined;
-  sharedValue = sharedValue(num[6]).useSharedValue(0);
-  const obj = sharedValue(num[6]);
-  const sharedValue1 = sharedValue(num[6]).useSharedValue(0);
-  let obj2 = { onPressIn: null, onPressOut: null, onLayout: null, style: null };
-  let items = [sharedValue, onPressIn];
-  obj2.onPressIn = sharedValue.useCallback((arg0) => {
+  closure_0 = onLayout;
+  closure_1 = onPressIn;
+  closure_2 = onPressOut;
+  sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue1 = _mod1652.useSharedValue(0);
+  const obj2 = { onPressIn: null, onPressOut: null, onLayout: null, style: useButtonScaleStyles(sharedValue, sharedValue1, num) };
+  items = [sharedValue, onPressIn];
+  obj2.onPressIn = noop.useCallback((arg0) => {
     const result = sharedValue.set(1);
-    if (sharedValue1 != null) {
+    if (closure_1 != null) {
       tmp2(arg0);
     }
   }, items);
-  let items1 = [sharedValue, onPressOut];
-  obj2.onPressOut = sharedValue.useCallback((arg0) => {
+  const items1 = [sharedValue, onPressOut];
+  obj2.onPressOut = noop.useCallback((arg0) => {
     const result = sharedValue.set(0);
-    if (num != null) {
+    if (closure_2 != null) {
       tmp2(arg0);
     }
   }, items1);
   const items2 = [sharedValue1, onLayout];
-  obj2.onLayout = sharedValue.useCallback((nativeEvent) => {
+  obj2.onLayout = noop.useCallback((nativeEvent) => {
     const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
-    if (sharedValue != null) {
+    if (closure_0 != null) {
       tmp2(nativeEvent);
     }
   }, items2);
-  const tmpResult = sharedValue(num[6]);
-  const fn = function n() {
-    num = 1;
-    if (sharedValue1.get() > 0) {
-      const diff = sharedValue1.get() - num;
-      num = diff / sharedValue1.get();
-    }
-    const obj2 = { transform: null };
-    const obj3 = { scale: null };
-    const obj4 = spring;
-    const items = [1, num];
-    obj3.scale = obj4.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), springPresets.ON_PRESS_SPRING, "animate-always");
-    const items1 = [obj3];
-    obj2.transform = items1;
-    return obj2;
-  };
-  const tmpResult2 = sharedValue(num[6]);
-  fn.__closure = { width: sharedValue1, scaleAmountInPx: num, withSpring: sharedValue(num[7]).withSpring, interpolate: sharedValue(num[6]).interpolate, pressed: sharedValue, ON_PRESS_SPRING: sharedValue(num[8]).ON_PRESS_SPRING };
-  fn.__workletHash = 11512187496215;
-  fn.__initData = __initData3;
-  obj2.style = tmpResult2.useAnimatedStyle(fn);
   return obj2;
 }
 export (DEFAULT_BUTTON_SIZE, arg1) => {
@@ -589,7 +594,7 @@ export (DEFAULT_BUTTON_SIZE, arg1) => {
     BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = require("ButtonConstants").BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
   const fontScale = require("useFontScale").useFontScale();
-  const items = [DEFAULT_BUTTON_SIZE, flag, BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER, fontScale];
+  items = [DEFAULT_BUTTON_SIZE, flag, BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER, fontScale];
   return fontScale.useMemo(() => {
     Icon;
     if ("sm" === closure_0) {

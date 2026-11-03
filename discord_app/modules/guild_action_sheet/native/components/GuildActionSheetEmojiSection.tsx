@@ -17,10 +17,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
+({ UpsellTypes: closure_9, AnalyticsSections: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
   dotSeparator: null,
@@ -76,7 +76,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
   const tmp = closure_13();
   importDefault = tmp;
   [first, _slicedToArray] = stateFromStores.useState(false);
-  let items = [analyticsLocations];
+  items = [analyticsLocations];
   const items1 = [guildId];
   const stateFromStoresArray = guildId(first[10]).useStateFromStoresArray(
     items,
@@ -194,7 +194,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
           children: null,
         };
         let obj2 = { resizeMode: "contain", style: null, placeholder: null, source: null };
-        const items = [closure_1.emoji, { margin: num }];
+        items = [closure_1.emoji, { margin: num }];
         obj2.style = items;
         const obj3 = { margin: num };
         const tmp4 = closure_1(first[27]);

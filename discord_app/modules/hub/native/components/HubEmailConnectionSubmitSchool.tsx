@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(14329).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   title: {
@@ -67,7 +67,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   ref = ref.useRef(null);
   [value, obj9.onChangeText] = ref.useState("");
   const obj3 = { ref, contentContainerStyle: null, children: null };
-  const items = [tmp.scrollViewContainer];
+  items = [tmp.scrollViewContainer];
   const tmp5 = _slicedToArray(ref.useState(null), 2);
   items[1] = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault().insets.bottom + nativeDefault.space.PX_16 };
   obj3.contentContainerStyle = items;

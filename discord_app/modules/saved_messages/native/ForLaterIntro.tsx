@@ -10,7 +10,7 @@ import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
 import ReminderWatchSpotIllustration from "../../../design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx";
 import BookmarksSpotIllustration2 from "../../../design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx";
-import _modDef11187 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11324 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -27,10 +27,10 @@ function IntroDemo(isReminder) {
   };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11187 };
+  const obj4 = { uri: _modDef11324 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
-  const items = [hasOwnProperty(FastImageDefault, obj3)];
+  items = [hasOwnProperty(FastImageDefault, obj3)];
   const obj5 = { style: tmp.messageLines, children: null };
   const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
@@ -76,7 +76,7 @@ function SheetRow(hasArrow) {
     flag = false;
   }
   const tmp = closure_7();
-  const items = [tmp.sheetRow];
+  items = [tmp.sheetRow];
   let sheetRowHighlighted = null;
   if (highlighted) {
     sheetRowHighlighted = tmp.sheetRowHighlighted;
@@ -222,7 +222,7 @@ export default function ForLaterIntro(type) {
   }
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [
+  items = [
     hasOwnProperty(React4, {
       style: tmp.upsellImage,
       children: hasOwnProperty(BookmarksSpotIllustration, { width: 180, height: 120, accessible: false }),
@@ -231,7 +231,7 @@ export default function ForLaterIntro(type) {
   ];
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = {
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
     children: null,

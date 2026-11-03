@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   container: { padding: 16, alignItems: "center" },
   title: { textAlign: "center", marginBottom: 8 },
@@ -21,12 +21,12 @@ export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  const items = [
+  items = [
     React3(View, { style: tmp.illustration, children: illustration }),
     React3(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       children: title,
     }),
     React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description }),

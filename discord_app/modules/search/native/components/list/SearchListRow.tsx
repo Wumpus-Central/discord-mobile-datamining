@@ -6,10 +6,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(9827).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(9958).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = {
     pressable: { paddingHorizontal: 16, paddingVertical },
@@ -54,7 +54,7 @@ export const SearchListRow = noop.memo(function SearchListRow(accessibilityRole)
     underlayColor: tmpResult.underlayColor.backgroundColor,
     children: null,
   };
-  const items = [tmpResult.pressable, containerStyle];
+  items = [tmpResult.pressable, containerStyle];
   obj.style = items;
   const items1 = [header, ,];
   const obj2 = { style: null, children: null };

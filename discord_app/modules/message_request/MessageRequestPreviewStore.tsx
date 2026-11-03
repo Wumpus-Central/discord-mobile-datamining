@@ -144,7 +144,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
     supplementalData,
   ) {
     supplementalData = supplementalData.supplementalData;
-    const items = [...supplementalData.requestedChannelIds];
+    items = [...supplementalData.requestedChannelIds];
     set = new Set(items);
     const item = supplementalData.forEach((channel_id) => {
       ({ channel_id, message_preview } = channel_id);

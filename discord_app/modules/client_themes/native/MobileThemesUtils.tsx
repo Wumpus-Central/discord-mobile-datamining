@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2772 from "../intl/ClientThemes.messages.js";
+import _modDef2899 from "../intl/ClientThemes.messages.js";
 import HexagonCampaignUtils from "../../hexagon_campaign/HexagonCampaignUtils.tsx";
 import HexagonCampaignPerkAvailability from "../../hexagon_campaign/HexagonCampaignPerkAvailability.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2772.yl1iMm);
+  return intl.string(_modDef2899.yl1iMm);
 }
 const ClientThemesConstants = fn(1240);
 ({
@@ -24,26 +24,26 @@ const ClientThemesConstants = fn(1240);
   HEXAGON_GRADIENT_PRESET: closure_8,
   REFRESH_STANDARD_BACKGROUND_THEMES: closure_9,
 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(5039);
-({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
+const HexagonCampaignConstants = fn(5166);
+({ HexagonCampaignPerk: closure_10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
-export function isHexagonCampaignMobileTheme(themes) {
-  let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+export function isHexagonCampaignMobileTheme(c0) {
+  let result = _require.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
   if (result) {
-    result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(themes.id);
+    result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(_require.id);
     const tmpResult = HexagonCampaignUtils;
   }
   return result;
 }
-export function isNitroGatedMobileTheme(mobileThemes) {
-  let tmp3 = mobileThemes.type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME;
+export function isNitroGatedMobileTheme(themes) {
+  let tmp3 = themes.type !== ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME;
   if (tmp3) {
-    let result = mobileThemes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+    let result = themes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET;
     if (result) {
-      result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(mobileThemes.id);
+      result = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(themes.id);
       const tmpResult = HexagonCampaignUtils;
     }
     let tmp5 = !result;
@@ -91,7 +91,7 @@ export function useCustomBackgroundGradient(stateFromStores) {
 }
 export function usePerModeCustomBackgroundGradient(arg0) {
   _require = arg0;
-  const items = [ThemeStore];
+  items = [ThemeStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return null;
@@ -141,7 +141,7 @@ export function getAllMobileThemes() {
     const id = gradientPreset.id;
   }
   if (hexagonCampaignPerkAvailabilityForCurrentUser !== constants2.HIDDEN) {
-    const items = [React6];
+    items = [React6];
     HermesBuiltin.arraySpread(React5, 1);
     let tmp14 = items;
   } else {
@@ -170,7 +170,7 @@ export function getAllMobileThemes() {
 }
 export function useAllMobileThemes(mode) {
   _require = mode;
-  const items = [SavedCustomThemeStore];
+  items = [SavedCustomThemeStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -237,10 +237,10 @@ export function useAllMobileThemes(mode) {
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp17 = items4;
       }
-      tmpResult10 = tmp(5042);
+      tmpResult10 = tmp(5169);
     }
     tmp17 = closure_7;
-    tmpResult9 = tmp(5041);
+    tmpResult9 = tmp(5168);
   }
   if (null != stateFromStores1) {
     const items5 = [];
@@ -255,7 +255,7 @@ export function useAllMobileThemes(mode) {
   return items6;
 }
 export function useSavedCustomTheme() {
-  const items = [SavedCustomThemeStore];
+  items = [SavedCustomThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp2 = null;
   if (null != stateFromStores) {

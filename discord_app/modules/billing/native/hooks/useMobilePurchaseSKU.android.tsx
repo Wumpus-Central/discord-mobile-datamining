@@ -8,9 +8,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(7609).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(7733).useNativeCheckoutStoreOrNull;
 const CurrencyCodes = fn(1072).CurrencyCodes;
-fn(7598).GPlayBillingResult;
+fn(7722).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -82,7 +82,7 @@ export default function useMobilePurchaseSKU(skuId) {
     asyncGeneratorStep = tmp7;
     analyticsLoadId = tmp7;
   }
-  const items = [onPurchaseComplete, tmp4, tmp6];
+  items = [onPurchaseComplete, tmp4, tmp6];
   callback = analyticsData.useCallback(() => {
     DispatcherDefault.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     if (closure_16 != null) {
@@ -123,7 +123,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -261,7 +261,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -400,7 +400,7 @@ export default function useMobilePurchaseSKU(skuId) {
             }
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           const obj15 = {
             productId: closure_130_1,

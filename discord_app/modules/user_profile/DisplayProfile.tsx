@@ -337,7 +337,7 @@ prototype["getBadges"] = function getBadges() {
   if (badges == null) {
     badges = [];
   }
-  const items = [...badges];
+  items = [...badges];
   const _guildMemberProfile = this._guildMemberProfile;
   let badges1;
   if (_guildMemberProfile != null) {

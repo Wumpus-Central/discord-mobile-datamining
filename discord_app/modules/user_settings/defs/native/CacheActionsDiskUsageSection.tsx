@@ -19,7 +19,7 @@ function SizeRow(children) {
   }
   const iter = closure_9();
   const obj = { direction: "horizontal", justify: "space-between", spacing: nativeDefault.space.PX_16, children: null };
-  const items = [
+  items = [
     timestampProducer(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-subtle",
@@ -111,7 +111,7 @@ function DiskUsageResults(metricKitSize) {
   const intl20 = require("util").intl;
   obj4.label = intl20.string(require("util").t.O20zQi);
   obj4.bytes = report.totalMeasuredBytes;
-  const items = [closure_6(SizeRow, obj4), ,];
+  items = [closure_6(SizeRow, obj4), ,];
   obj2 = require("PlatformUtils");
   let isIOSResult = require("PlatformUtils").isIOS();
   if (isIOSResult) {
@@ -184,7 +184,7 @@ function DiskUsageResults(metricKitSize) {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   label: { flex: 1 },
   nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 },
@@ -248,7 +248,7 @@ export function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ export function useDiskUsageMeasurement() {
                 ref.current = true;
                 _require({ status: "loading" });
                 c3 = 2;
-                const items = [tmp4(tmp51[6]).calculateSize()];
+                items = [tmp4(tmp51[6]).calculateSize()];
                 const tmp48Result = tmp4(tmp51[6]);
                 const databaseResult = tmp4(tmp51[7]).database();
                 let catchPromise;

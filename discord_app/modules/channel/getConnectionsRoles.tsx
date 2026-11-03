@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/channel/getConnectionsRoles.t
 export default function getConnectionsRoles(type) {
   if (null != type) {
     if (items.includes(type.type)) {
-      const guild = GuildStore.getGuild(type.guild_id);
+      guild = GuildStore.getGuild(type.guild_id);
       if (null == guild) {
         items = [];
       } else {

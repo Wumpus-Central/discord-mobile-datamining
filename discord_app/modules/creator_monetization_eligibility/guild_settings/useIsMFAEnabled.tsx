@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useIsMFAEnabled() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [GuildSettingsStore];
   let mfaEnabled;

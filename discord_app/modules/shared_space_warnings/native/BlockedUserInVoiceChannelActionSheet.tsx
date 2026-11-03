@@ -12,13 +12,13 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const setDismissalTimeForUser = fn(15623).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(15625);
+const setDismissalTimeForUser = fn(15765).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(15767);
 ({ BlockWarningEngagements: closure_8, VoiceChannelWarningSurfaces: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_11, jsxs: closure_12, jsx: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 },
   headerImage: { alignSelf: "center", width: 73, height: 86 },
@@ -41,7 +41,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   ({ channelId: require, blockedUserId } = arg0);
   let stateFromStores;
   const tmp = closure_14();
-  let items = [RelationshipStore];
+  items = [RelationshipStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.isBlocked(blockedUserId));
   let obj = require("initialize");
   let items1 = [ChannelStore];
@@ -73,7 +73,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const items4 = [closure_13(blockedUserId(stateFromStores[14]), obj5), , ,];
   const obj6 = { style: tmp.headerText, children: null };
   const obj7 = {
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,
@@ -127,7 +127,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
         warning_surface: null,
       };
       if (stateFromStores) {
-        const items = [blockedUserId];
+        items = [blockedUserId];
         let items1 = items;
       } else {
         items1 = [];
@@ -161,7 +161,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
         warning_surface: null,
       };
       if (stateFromStores) {
-        const items = [blockedUserId];
+        items = [blockedUserId];
         let items1 = items;
       } else {
         items1 = [];

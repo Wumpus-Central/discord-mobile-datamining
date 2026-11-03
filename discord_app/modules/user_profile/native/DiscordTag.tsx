@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexGrow: 1, alignItems: "center", flexDirection: "row" },
   botTag: { marginLeft: nativeDefault.space.PX_4 },
@@ -44,7 +44,7 @@ export default function DiscordTag(arg0) {
         maxFontSizeMultiplier: 2,
         children: null,
       };
-      const items = [user.toString()];
+      items = [user.toString()];
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       let tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {

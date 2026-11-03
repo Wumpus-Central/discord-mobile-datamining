@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 
 export default function OrbsArcadeInfoSheet(gameId) {
   gameId = gameId.gameId;
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [gameId];
   const stateFromStores = gameId(504).useStateFromStores(items, () => OrbsArcadeStore.getGame(gameId), items1);
   if (null == stateFromStores) {
@@ -31,16 +31,16 @@ export default function OrbsArcadeInfoSheet(gameId) {
     const obj4 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeInfoSheet",
-      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+      secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
       direction: "vertical",
     };
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
       game: stateFromStores,
       sheetKey: "OrbsArcadeInfoSheet",
-      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+      secondaryAction: tmp(17187).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
       direction: "vertical",
     });
-    return jsx(tmp(10837).PromoSheet, {
+    return jsx(tmp(10967).PromoSheet, {
       gradientColor: "blue",
       illustration: tmp8Result,
       title: null,

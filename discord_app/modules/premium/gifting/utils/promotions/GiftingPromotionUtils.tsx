@@ -10,14 +10,14 @@ import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionPlans = fn(1385).SubscriptionPlans;
+const SubscriptionPlans = fn(1387).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp[1];
-  const items = [fetchPurchasesError];
+  items = [fetchPurchasesError];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () =>
     fetchPurchasesError.getGiftPromotionRewardSkuIds(),
   );
@@ -51,7 +51,7 @@ export function getRewardAssetIdMap(arr) {
   return map;
 }
 export function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
-  const items = [, ,];
+  items = [, ,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -72,7 +72,7 @@ export function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
   return tmp4;
 }
 export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
-  const items = [, ,];
+  items = [, ,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -92,7 +92,7 @@ export function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
   return tmp3;
 }
 export function useIsPlanEligibleForGiftingPromotion(id) {
-  const items = [, ,];
+  items = [, ,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {

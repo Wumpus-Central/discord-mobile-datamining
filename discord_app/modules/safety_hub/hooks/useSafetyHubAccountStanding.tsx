@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
 
 export function useSafetyHubAccountStanding() {
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => accountStanding.getAccountStanding());
 }

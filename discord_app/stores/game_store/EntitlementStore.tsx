@@ -47,7 +47,7 @@ function handlePurchaseSuccess(arg0) {
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
 }
-let closure_6 = fn(1385).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_6 = fn(1387).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_8 = {};
 const dependencyMap2 = {};
@@ -62,7 +62,7 @@ const Store = initializeAll.Store;
 class EntitlementStore extends Store {}
 const prototype = EntitlementStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [LibraryApplicationStore];
+  items = [LibraryApplicationStore];
   this.syncWith(items, () => true);
 };
 prototype["get"] = function get(arg0) {
@@ -218,7 +218,7 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [];
+  items = [];
   const date = new Date();
   const forApplication = this.getForApplication(closure_6);
   if (forApplication != null) {
@@ -257,7 +257,7 @@ prototype["isFractionalPremiumActive"] = function isFractionalPremiumActive(arg0
   return this.getFractionalPremium({ includeEnded: false, excludeReverseTrial }).length > 0;
 };
 prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFractionalPremiumUnits() {
-  const items = [];
+  items = [];
   const forApplication = this.getForApplication(closure_6);
   if (forApplication != null) {
     const item = forApplication.forEach((skuId) => {

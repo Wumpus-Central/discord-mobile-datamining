@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
   const obj = {
     actionButton: null,
@@ -89,7 +89,7 @@ export default noop.memo(function Button(active) {
     onPress: null,
     children: null,
   };
-  const items = [tmp6.actionButton, style];
+  items = [tmp6.actionButton, style];
   let tmp12 = flag;
   if (flag) {
     tmp12 = !disabled;

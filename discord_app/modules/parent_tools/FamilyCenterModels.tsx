@@ -4,23 +4,23 @@ import Record from "../../lib/Record.tsx";
 
 require = fn;
 const frozen = Object.freeze({
-  0: fn(1391).DayOfWeek.SUNDAY,
-  1: fn(1391).DayOfWeek.MONDAY,
-  2: fn(1391).DayOfWeek.TUESDAY,
-  3: fn(1391).DayOfWeek.WEDNESDAY,
-  4: fn(1391).DayOfWeek.THURSDAY,
-  5: fn(1391).DayOfWeek.FRIDAY,
-  6: fn(1391).DayOfWeek.SATURDAY,
+  0: fn(1393).DayOfWeek.SUNDAY,
+  1: fn(1393).DayOfWeek.MONDAY,
+  2: fn(1393).DayOfWeek.TUESDAY,
+  3: fn(1393).DayOfWeek.WEDNESDAY,
+  4: fn(1393).DayOfWeek.THURSDAY,
+  5: fn(1393).DayOfWeek.FRIDAY,
+  6: fn(1393).DayOfWeek.SATURDAY,
 });
 let closure_3 = Object.freeze({
-  [fn(1391).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0,
-  [fn(1391).DayOfWeek.MONDAY]: 1,
-  [fn(1391).DayOfWeek.TUESDAY]: 2,
-  [fn(1391).DayOfWeek.WEDNESDAY]: 3,
-  [fn(1391).DayOfWeek.THURSDAY]: 4,
-  [fn(1391).DayOfWeek.FRIDAY]: 5,
-  [fn(1391).DayOfWeek.SATURDAY]: 6,
-  [fn(1391).DayOfWeek.SUNDAY]: 0,
+  [fn(1393).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0,
+  [fn(1393).DayOfWeek.MONDAY]: 1,
+  [fn(1393).DayOfWeek.TUESDAY]: 2,
+  [fn(1393).DayOfWeek.WEDNESDAY]: 3,
+  [fn(1393).DayOfWeek.THURSDAY]: 4,
+  [fn(1393).DayOfWeek.FRIDAY]: 5,
+  [fn(1393).DayOfWeek.SATURDAY]: 6,
+  [fn(1393).DayOfWeek.SUNDAY]: 0,
 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
@@ -312,7 +312,7 @@ export function ensureRestrictedScheduleRecord(restrictedSchedule) {
       let length = restrictedSchedule.rules.length;
       if (0 === length) {
         if (typeof RestrictedScheduleRecord === "function") {
-          const items = [];
+          items = [];
           const tmp8 = new RestrictedScheduleRecord(
             tmp,
             RestrictedScheduleRecord,

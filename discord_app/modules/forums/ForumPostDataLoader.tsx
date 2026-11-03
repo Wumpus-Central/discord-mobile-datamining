@@ -30,7 +30,7 @@ let closure_13 = async function _loadForumPostData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -129,7 +129,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             c4 = 0;
             closure_2_10.finishRequesting(closure_0, nextBatch);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             channel = channel.getChannel(closure_0);
             let guild_id;
@@ -141,7 +141,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
               c4 = 0;
               closure_2_10.finishRequesting(closure_0, nextBatch);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const HTTP = require("HTTPUtils").HTTP;
               const request = { url: Endpoints.FORUM_POSTS(closure_0), body: null, rejectWithError: true };
@@ -193,7 +193,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(7476).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(7600).computeThreadIdsSnapshot;
 const Endpoints = fn(1072).Endpoints;
 class DefaultDict {
   constructor(arg0) {
@@ -300,7 +300,7 @@ export function useFirstForumPostMessage(stateFromStores, arg1) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [ForumPostMessagesStore];
+  items = [ForumPostMessagesStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ForumPostMessagesStore.getMessage(stateFromStores.id));
   ({ loaded, firstMessage } = stateFromStoresObject);
   obj3 = require("initialize");
@@ -386,7 +386,7 @@ export function useFirstForumPostMessage(stateFromStores, arg1) {
 }
 export function useMostRecentForumMessage(arg0, arg1) {
   _require = arg1;
-  const items = [ForumPostRecentMessageStore];
+  items = [ForumPostRecentMessageStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ForumPostRecentMessageStore.getMessageState(id.id));
   return { loaded: stateFromStoresObject.loaded, mostRecentMessage: stateFromStoresObject.message };
 }

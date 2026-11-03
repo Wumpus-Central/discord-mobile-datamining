@@ -166,9 +166,9 @@ prototype["onProgress"] = function onProgress(arg0) {
     muxIntegration.emitTimeUpdate();
   }
 };
-prototype["onBuffer"] = function onBuffer(flag2) {
+prototype["onBuffer"] = function onBuffer(c2) {
   const self = this;
-  if (flag2) {
+  if (c2) {
     const seeking = self.seeking;
     let tmp6 = !seeking;
     if (!seeking) {

@@ -19,13 +19,7 @@ if (!PlatformUtils.isAndroid()) {
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
-export const LAUNCH_PAD_SPRING_CONFIG = {
-  damping: 20,
-  stiffness: 280,
-  mass: 0.5,
-  restSpeedThreshold: 0.001,
-  restDisplacementThreshold: 0.001,
-};
+export const LAUNCH_PAD_SPRING_CONFIG = { damping: 20, stiffness: 280, mass: 0.5 };
 export const LAUNCH_PAD_PULL_TAB_HEIGHT = 96;
 export const LAUNCH_PAD_PULL_TAB_WIDTH = 26;
 export const LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET = 18;

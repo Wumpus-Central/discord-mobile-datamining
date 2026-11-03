@@ -12,7 +12,7 @@ const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher
   enableDevtools: false,
   logger: {
     warn(arg0) {
-      const items = [arg0, ...HermesBuiltin.copyRestArgs()];
+      items = [arg0, ...HermesBuiltin.copyRestArgs()];
       return warn.warn.apply(items);
     },
   },

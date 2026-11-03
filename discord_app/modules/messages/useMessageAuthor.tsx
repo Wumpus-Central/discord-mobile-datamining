@@ -11,7 +11,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = fn;
 function useNullableMessageAuthor(message) {
   _require = message;
-  const items = [guild_id];
+  items = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let channel = null;
     if (null != closure_0) {
@@ -129,7 +129,7 @@ function useNullableUserAuthor(actor, channel) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (null != guild_id) {
@@ -208,7 +208,7 @@ function getUserAuthor(user, channel) {
     guild_id = channel.guild_id;
   }
   let member = null;
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   if (null != guild_id) {
     member = null;
     if (null != id) {

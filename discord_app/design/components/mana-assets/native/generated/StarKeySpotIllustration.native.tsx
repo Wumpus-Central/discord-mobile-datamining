@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/StarKeySpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef19918 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-1x.png.js";
-import _modDef19919 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-2x.png.js";
-import _modDef19920 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-3x.png.js";
+import _modDef20068 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-1x.png.js";
+import _modDef20069 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-2x.png.js";
+import _modDef20070 from "../../../../../../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19918 }, 3: null };
-let obj2 = { uri: _modDef19918 };
-obj[2] = { uri: _modDef19919 };
-const obj3 = { uri: _modDef19919 };
-obj[3] = { uri: _modDef19920 };
+let obj = { 1: null, 2: { uri: _modDef20068 }, 3: null };
+let obj2 = { uri: _modDef20068 };
+obj[2] = { uri: _modDef20069 };
+const obj3 = { uri: _modDef20069 };
+obj[3] = { uri: _modDef20070 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/StarKeySpotIllustration.native.tsx",
@@ -25,7 +25,7 @@ export function StarKeySpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 };
     return assetHelpers.getAssetSizeStyle(size);

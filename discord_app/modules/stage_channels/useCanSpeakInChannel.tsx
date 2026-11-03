@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
 export default function useCanCurrentUserSpeakInChannel(id) {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   return (
     useAudienceRequestToSpeakStateDefault(stateFromStores, id) ===

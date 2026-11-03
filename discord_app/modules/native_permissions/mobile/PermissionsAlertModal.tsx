@@ -16,7 +16,7 @@ export default function PermissionsAlertModal(arg0) {
   const obj3 = { onPress: onConfirm, text: null };
   const intl = util.intl;
   obj3.text = intl.string(util.t.jVcuVY);
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj4 = { variant: "secondary", text: null };
   const intl2 = util.intl;
   obj4.text = intl2.string(util.t.cpT0Cq);

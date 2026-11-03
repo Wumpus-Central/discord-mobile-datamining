@@ -19,13 +19,13 @@ function RaisedHandIcon(rtsState) {
     PRIMARY_800 = unsafe_rawColors.PRIMARY_800;
     tmp5 = importDefault;
   }
-  const items = [tmp.raisedHandContainer];
+  items = [tmp.raisedHandContainer];
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
   const obj = {
     style: items,
-    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11904), color: PRIMARY_800 }),
+    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12041), color: PRIMARY_800 }),
   };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
@@ -33,7 +33,7 @@ function RaisedHandIcon(rtsState) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   touchableContainer: { overflow: "visible" },
   container: { alignItems: "center" },
@@ -80,7 +80,7 @@ export default noop.memo(function AudienceTile(channel) {
   const tmp = styles();
   const diff = user(guildId[9])().width - 46;
   guildId = channel.getGuildId();
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [guildId, user.id];
   let stateFromStores = channel(guildId[10]).useStateFromStores(
     items,

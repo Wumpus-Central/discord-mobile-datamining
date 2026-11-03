@@ -2,45 +2,51 @@
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_4 = {
-  code: "function SegmentedControlStateNativeTsx1(index,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}",
+  code: "(function SegmentedControlStateNativeTsx1(index,dimensions){let[itemDimensions,itemCount]=this.__closure;itemDimensions.get()[index]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
 
 export function useSegmentedControlState(pageWidth) {
-  let items = pageWidth.items;
+  items = pageWidth.items;
+  _require = items;
   pageWidth = pageWidth.pageWidth;
+  importDefault = pageWidth;
   let num = pageWidth.defaultIndex;
   if (num === undefined) {
     num = 0;
   }
   let PX_24 = pageWidth.itemSpacing;
   if (PX_24 === undefined) {
-    PX_24 = pageWidth(PX_24[1]).space.PX_24;
+    PX_24 = require("native").space.PX_24;
   }
   const onPageChange = pageWidth.onPageChange;
   const onPageChangeStart = pageWidth.onPageChangeStart;
   const onSetActiveIndex = pageWidth.onSetActiveIndex;
   let callback1;
-  const enabled = onPageChange.useContext(items(PX_24[2]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const sharedValue = items(PX_24[3]).useSharedValue([]);
-  let obj = items(PX_24[3]);
-  const sharedValue1 = items(PX_24[3]).useSharedValue(-1);
-  let obj2 = items(PX_24[3]);
-  const sharedValue2 = items(PX_24[3]).useSharedValue(0);
-  let obj3 = items(PX_24[3]);
-  const sharedValue3 = items(PX_24[3]).useSharedValue(0);
-  let obj4 = items(PX_24[3]);
-  const sharedValue4 = items(PX_24[3]).useSharedValue(num);
-  const obj5 = items(PX_24[3]);
+  const enabled = onPageChange.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
+    .reducedMotion.enabled;
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue([]);
+  let obj = onPageChange;
+  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue4 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const obj6 = require("../../../../../_runtime/metro/01652__.js");
   const items1 = [num, num];
-  const sharedValue5 = items(PX_24[3]).useSharedValue(items1);
-  const obj6 = items(PX_24[3]);
-  const animatedRef = items(PX_24[3]).useAnimatedRef();
-  const obj7 = items(PX_24[3]);
-  const sharedValue6 = items(PX_24[3]).useSharedValue(-1);
+  const sharedValue5 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(items1);
+  const obj7 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  const obj8 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue6 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
   const onPageChangeRef = onPageChange.useRef(onPageChange);
   const items2 = [onPageChange];
   const layoutEffect = onPageChange.useLayoutEffect(() => {
@@ -68,7 +74,7 @@ export function useSegmentedControlState(pageWidth) {
       if (null != onPageChangeStart) {
         tmp14(arg0, () => {
           const result = sharedValue4.set(closure_0);
-          const result1 = closure_0 * pageWidth;
+          const result1 = closure_0 * c1;
           const result2 = sharedValue1.set(result1);
           let tmp5 = !flag2;
           if (!flag2) {
@@ -113,21 +119,25 @@ export function useSegmentedControlState(pageWidth) {
       }
     }
   }, items3);
-  const length = items.length;
-  class M {
+  const items4 = [onPageChangeStart, sharedValue, items.length];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp13, tmp14, tmp15] = items4;
+  class SegmentedControlStateNativeTsx1 {
     constructor(arg0, arg1) {
-      closure_7.get()[pageWidth] = arg1;
-      items = [...closure_7.get()];
-      result = closure_7.set(items.slice(0, length));
+      closure_0.get()[pageWidth] = arg1;
+      items = [...closure_0.get()];
+      result = closure_0.set(items.slice(0, closure_1));
       return;
     }
   }
-  M.__closure = { itemDimensions: sharedValue, itemCount: length };
-  M.__workletHash = 9501406272062;
-  M.__initData = onPageChangeStart;
-  const items4 = [sharedValue, length];
-  callback1 = onPageChange.useCallback(M, items4);
-  const items5 = [
+  const items5 = [tmp14, tmp15];
+  SegmentedControlStateNativeTsx1.__closure = items5;
+  SegmentedControlStateNativeTsx1.__workletHash = 572134650279;
+  SegmentedControlStateNativeTsx1.__initData = tmp13;
+  const items6 = [sharedValue, items.length];
+  callback1 = onPageChange.useCallback(SegmentedControlStateNativeTsx1, items6);
+  const items7 = [
     sharedValue4,
     sharedValue5,
     animatedRef,
@@ -143,7 +153,7 @@ export function useSegmentedControlState(pageWidth) {
     callback1,
     enabled,
   ];
-  return onPageChange.useMemo(
+  return obj.useMemo(
     () => ({
       activeIndex: sharedValue4,
       visiblePageRange: sharedValue5,
@@ -161,6 +171,6 @@ export function useSegmentedControlState(pageWidth) {
       setItemDimensions: callback1,
       useReducedMotion: enabled,
     }),
-    items5,
+    items7,
   );
 }

@@ -76,7 +76,7 @@ const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
       isDeveloper = enabled;
     }
     if (isDeveloper) {
-      const items = [];
+      items = [];
       const obj = {
         key: null,
         experimentId: null,

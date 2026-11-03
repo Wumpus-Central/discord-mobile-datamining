@@ -5,11 +5,11 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils.tsx";
-import _modDef14604 from "../../../../_runtime/metro/14604__.js";
-import _modDef15269 from "../../../../_runtime/metro/15269__.js";
-import _modDef15270 from "../../../../_runtime/metro/15270__.js";
-import _modDef15271 from "../../../../_runtime/metro/15271__.js";
-import _modDef15272 from "../../../../_runtime/metro/15272__.js";
+import _modDef14735 from "../../../../_runtime/metro/14735__.js";
+import _modDef15410 from "../../../../_runtime/metro/15410__.js";
+import _modDef15411 from "../../../../_runtime/metro/15411__.js";
+import _modDef15412 from "../../../../_runtime/metro/15412__.js";
+import _modDef15413 from "../../../../_runtime/metro/15413__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
   const tmp = closure_8();
   const obj = { style: tmp.item, children: null };
-  const items = [
+  items = [
     timestampProducer(FastImageDefault, { source: imageSource }),
     timestampProducer(Text_Text.Text, { variant: "text-md/medium", style: tmp.itemLabel, children: text }),
   ];
@@ -27,10 +27,10 @@ function WhatYouLoseItem(arg0) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   body: { paddingTop: 24, paddingHorizontal: 24 },
   title: { marginBottom: 8, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -82,14 +82,14 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   let obj = require("PremiumUtils");
   const whatYouLoseProfileTier1Source = require("WhatYouLoseProfileTier1").useWhatYouLoseProfileTier1Source();
   subscription(premiumTypeFromSubscription[11])(null != premiumTypeFromSubscription, "Expected premium type");
-  let items = [premiumTypeFromSubscription, whatYouLoseProfileTier1Source];
+  items = [premiumTypeFromSubscription, whatYouLoseProfileTier1Source];
   const memo = analyticsLocations.useMemo(() => {
     if (PremiumTypes.TIER_0 === premiumTypeFromSubscription) {
-      const obj2 = { imageSource: _modDef15269, text: null };
+      const obj2 = { imageSource: _modDef15410, text: null };
       const intl7 = util.intl;
       obj2.text = intl7.format(util.t["0hUHi6"], {});
-      const items = [obj2];
-      const obj3 = { imageSource: _modDef15270, text: null };
+      items = [obj2];
+      const obj3 = { imageSource: _modDef15411, text: null };
       const intl8 = util.intl;
       obj3.text = intl8.format(util.t.wFWO6D, {});
       items[1] = obj3;
@@ -99,25 +99,25 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       const intl4 = util.intl;
       obj4.text = intl4.format(util.t.xCaYwE, {});
       const items1 = [obj4, ,];
-      const obj5 = { imageSource: _modDef14604, text: null };
+      const obj5 = { imageSource: _modDef14735, text: null };
       const intl5 = util.intl;
       obj5.text = intl5.format(util.t.wK04T1, {});
       items1[1] = obj5;
-      const obj6 = { imageSource: _modDef15271, text: null };
+      const obj6 = { imageSource: _modDef15412, text: null };
       const intl6 = util.intl;
       obj6.text = intl6.format(util.t.K4Hv69, {});
       items1[2] = obj6;
       return items1;
     } else if (PremiumTypes.TIER_2 === premiumTypeFromSubscription) {
-      const obj = { imageSource: _modDef15272, text: null };
+      const obj = { imageSource: _modDef15413, text: null };
       const intl = util.intl;
       obj.text = intl.format(util.t["gpqr+n"], {});
       const items2 = [obj, ,];
-      obj7 = { imageSource: _modDef15271, text: null };
+      obj7 = { imageSource: _modDef15412, text: null };
       const intl2 = util.intl;
       obj7.text = intl2.format(util.t.wRxEDW, {});
       items2[1] = obj7;
-      const obj8 = { imageSource: _modDef14604, text: null };
+      const obj8 = { imageSource: _modDef14735, text: null };
       const intl3 = util.intl;
       obj8.text = intl3.format(util.t["4WZ7T2"], {});
       items2[2] = obj8;
@@ -131,7 +131,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
     ,
   ];
   let obj3 = { style: tmp.body, children: null };
-  let obj4 = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
+  let obj4 = { variant: "heading-xl/semibold", style: tmp.title, children: null };
   if (mode === obj7.CANCEL) {
     let intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.PWq8TL);

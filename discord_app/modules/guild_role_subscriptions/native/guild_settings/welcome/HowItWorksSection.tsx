@@ -18,10 +18,10 @@ function HowItWorksCard(Illustration) {
     accessibilityLabel: "" + cardNumber + " - " + description,
     children: null,
   };
-  const items = [
+  items = [
     React3(Text_Text.Text, {
       style: tmp.cardNumber,
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       color: "text-overlay-light",
       children: cardNumber,
     }),
@@ -39,7 +39,7 @@ function HowItWorksCard(Illustration) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1 },
   horizontalContainer: { flex: 1, flexDirection: "row" },
@@ -100,7 +100,7 @@ export default function HowItWorksSection() {
   const intl = util.intl;
   obj3.description = intl.string(util.t.lT0ZNS);
   obj3.Illustration = PerksTicketSpotIllustration.PerksTicketSpotIllustration;
-  const items = [React3(HowItWorksCard, obj3), React3(native.Spacer, { size: 12 })];
+  items = [React3(HowItWorksCard, obj3), React3(native.Spacer, { size: 12 })];
   const obj4 = { cardNumber: 2, description: null, Illustration: null };
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t.ihN2Wb);

@@ -13,13 +13,13 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(5767).getComparator;
+const getComparator = fn(5887).getComparator;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
 export default function useStageChannelSpeakerVoiceStates(arg0) {
   _require = arg0;
-  let items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
+  items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
   const items1 = [arg0];
   return _slicedToArray(
     require("initialize").useStateFromStores(
@@ -33,7 +33,7 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
         } else {
           found1 = StageChannelParticipantStore.getChannels(closure_0);
         }
-        const items = [
+        items = [
           found1.reduce((acc, id) => {
             const mutableParticipants = closure_1_7.getMutableParticipants(
               id.id,

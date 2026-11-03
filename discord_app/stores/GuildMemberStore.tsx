@@ -25,7 +25,7 @@ import size from "../../_runtime/metro/00002__.js";
 function trackCommunicationDisabled(guildId, tmp10Result) {
   if (null != tmp10Result.communicationDisabledUntil) {
     if (obj2.isMemberCommunicationDisabled(tmp10Result)) {
-      const items = [];
+      items = [];
       items[constants.GUILD] = guildId;
       items[constants.USER] = tmp10Result.userId;
       const joined = items.join("-");
@@ -47,7 +47,7 @@ function trackCommunicationDisabled(guildId, tmp10Result) {
 }
 function removeCommunicationDisabled(guildId, userId) {
   if (null != userId) {
-    const items = [];
+    items = [];
     items[constants.GUILD] = guildId;
     items[constants.USER] = userId;
     const joined = items.join("-");
@@ -90,10 +90,10 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "children",
-      hoistRoleId: "enumerable",
-      iconRoleId: "x",
-      highestRoleId: "y",
+      colorRoleId: "alignItems",
+      hoistRoleId: "enabled",
+      iconRoleId: "content",
+      highestRoleId: "Array",
     };
   } else {
     const iter = roles[Symbol.iterator]();
@@ -313,7 +313,7 @@ function handleGuildMemberUpdate(arg0) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -350,7 +350,7 @@ function handleGuildMemberUpdate(arg0) {
       tmp14[user.id] = createMember(obj);
       if (null != tmp14[user.id].communicationDisabledUntil) {
         if (tmp33Result.isMemberCommunicationDisabled(tmp16)) {
-          const items = [];
+          items = [];
           items[constants.GUILD] = guildId;
           items[constants.USER] = tmp16.userId;
           const joined = items.join("-");
@@ -378,7 +378,7 @@ function batchUpdateGuildMembers(guildId, members) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during batchUpdateGuildMembers.");
@@ -436,7 +436,7 @@ function batchUpdateGuildMembers(guildId, members) {
         dependencyMap[user.user.id] = createMember(obj);
         if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
           if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-            const items = [];
+            items = [];
             items[constants.GUILD] = guildId;
             items[constants.USER] = tmp9.userId;
             const joined = items.join("-");
@@ -544,7 +544,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
   if (null == obj[guildId.guildId]) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId.guildId + " not found during " + guildId.type + ".");
@@ -617,7 +617,7 @@ function handleImpersonateUpdate(guildId) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during IMPERSONATE_UPDATE.");
@@ -836,7 +836,7 @@ function handleLoadMessages(messages) {
 }
 function handleLoadSearchResults(data) {
   data = data.data;
-  const items = [];
+  items = [];
   let item = data.forEach((messages) => {
     messages = messages.messages;
     let item = messages.forEach((arr) => {
@@ -969,7 +969,7 @@ prototype["getMemberIds"] = function getMemberIds(id) {
     return [];
   } else {
     if (null == obj[id]) {
-      let items = [];
+      items = [];
     } else {
       obj = SnowflakeUtilsDefault;
       items = obj.keys(tmp2);
@@ -982,7 +982,7 @@ prototype["getMembers"] = function getMembers(arg0) {
     return [];
   } else {
     if (null == obj[arg0]) {
-      let items = [];
+      items = [];
     } else {
       const _Object = Object;
       items = Object.values(tmp2);
@@ -1156,7 +1156,7 @@ obj = {
     if (null == tmp3) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         return false;
       } else {
@@ -1169,7 +1169,7 @@ obj = {
         if (added == null) {
           added = [];
         }
-        let items = removedRoleIds;
+        items = removedRoleIds;
         if (removedRoleIds == null) {
           items = [];
         }
@@ -1324,7 +1324,7 @@ obj = {
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
             if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-              const items = [];
+              items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
               const joined = items.join("-");
@@ -1419,7 +1419,7 @@ obj = {
             dependencyMap[user.user.id] = createMember(obj);
             if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
               if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-                const items = [];
+                items = [];
                 items[constants.GUILD] = guildId;
                 items[constants.USER] = tmp9.userId;
                 const joined = items.join("-");
@@ -1449,7 +1449,7 @@ obj = {
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function handleLoadArchivedThreadsSuccess(arg0) {
     ({ guildId, owners } = arg0);
-    let guild;
+    guild = undefined;
     closure_1 = tmp;
     if (null == obj[guildId]) {
       return false;
@@ -1512,7 +1512,7 @@ obj = {
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
             if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-              const items = [];
+              items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
               const joined = items.join("-");
@@ -1574,7 +1574,7 @@ obj = {
       }
       return arr;
     }, []);
-    let guild;
+    guild = undefined;
     closure_1 = tmp2;
     if (null == obj[guildId]) {
       return false;
@@ -1636,7 +1636,7 @@ obj = {
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
             if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-              const items = [];
+              items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
               const joined = items.join("-");
@@ -1669,7 +1669,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1698,7 +1698,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1710,7 +1710,7 @@ obj = {
         if (roles.includes(roleId)) {
           return false;
         } else {
-          const items = [];
+          items = [];
           items[HermesBuiltin.arraySpread(tmp17.roles, 0)] = roleId;
           tmp17.roles = items;
           const tmp5 = computeDerivedMemberState(GuildRoleStore.getUnsafeMutableRoles(guild.id), tmp17.roles);
@@ -1728,7 +1728,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1772,7 +1772,7 @@ obj = {
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           if (tmp18Result.isMemberCommunicationDisabled(tmp22)) {
-            const items = [];
+            items = [];
             items[constants.GUILD] = guildId;
             items[constants.USER] = tmp22.userId;
             const joined = items.join("-");
@@ -1800,7 +1800,7 @@ obj = {
     let flag = members.members.length > 0;
     if (flag) {
       ({ guildId, members } = members);
-      let guild;
+      guild = undefined;
       closure_1 = tmp2;
       if (null == obj[guildId]) {
         flag = false;
@@ -1863,7 +1863,7 @@ obj = {
             dependencyMap[user.user.id] = createMember(obj);
             if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
               if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-                const items = [];
+                items = [];
                 items[constants.GUILD] = guildId;
                 items[constants.USER] = tmp9.userId;
                 const joined = items.join("-");
@@ -1943,7 +1943,7 @@ obj = {
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function hangdleMemberSafetyGuildMemberSearchSuccess(arg0) {
     ({ guildId, members } = arg0);
     const mapped = members.map((member) => member.member);
-    let guild;
+    guild = undefined;
     dependencyMap = tmp;
     if (null == obj[guildId]) {
       return false;
@@ -2006,7 +2006,7 @@ obj = {
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
             if (tmp5Result7.isMemberCommunicationDisabled(tmp9)) {
-              const items = [];
+              items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
               const joined = items.join("-");
@@ -2090,7 +2090,7 @@ let result = size.fileFinishedImporting("stores/GuildMemberStore.tsx");
 
 export default guildMemberStore;
 export function getUserCommunicationDisabledVersion(arg0, arg1) {
-  const items = [];
+  items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
   const joined = items.join("-");
@@ -2101,7 +2101,7 @@ export function getUserCommunicationDisabledVersion(arg0, arg1) {
   return num;
 }
 export function getCommunicationDisabledUserKey(arg0, arg1) {
-  const items = [];
+  items = [];
   items[constants.GUILD] = arg0;
   items[constants.USER] = arg1;
   return items.join("-");

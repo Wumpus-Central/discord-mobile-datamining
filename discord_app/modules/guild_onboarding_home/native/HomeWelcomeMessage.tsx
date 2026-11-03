@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   relativeContainer: { position: "relative" },
   welcomeContainer: {
@@ -97,7 +97,7 @@ export default function HomeWelcomeMessage(guildId) {
   let tmp = closure_10();
   let tmp2 = guildId;
   let tmp3 = stateFromStores2;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = guildId(stateFromStores2[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = guildId(stateFromStores2[8]);
   const items1 = [GuildOnboardingHomeSettingsStore];
@@ -217,7 +217,7 @@ export default function HomeWelcomeMessage(guildId) {
             do {
               let obj14 = { variant: "text-sm/normal", style: tmp.message, children: parts[num3] };
               let arr = items9.push(closure_8(guildId(stateFromStores2[19]).Text, obj14, num3));
-              let obj15 = { variant: "text-sm/bold", style: tmp.message, children: null };
+              let obj15 = { variant: "text-sm/semibold", style: tmp.message, children: null };
               let _HermesInternal = HermesInternal;
               obj15.children = "@" + username;
               let _HermesInternal2 = HermesInternal;

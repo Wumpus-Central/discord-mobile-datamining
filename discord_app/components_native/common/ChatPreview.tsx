@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8378);
-({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
+const RowGeneratorConstants = fn(8502);
+({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -106,7 +106,7 @@ class ChatPreviewBase extends PureComponent {
       c0 = undefined;
       messages = undefined;
       let changeType;
-      let items;
+      items = undefined;
       let items1;
       const props = applyArgumentsResult.props;
       ({ channel: c0, messages } = props);
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "PX_8",
           shouldInitialScroll: "Array",
-          animated: 75.942,
-          scrollPosition: 87.567,
-          focusTargetId: 0,
+          animated: "premium-guild",
+          scrollPosition: null,
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,12 +319,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9849).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9980).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9849);
-          applyArgumentsResult(5756).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9980);
+          applyArgumentsResult(5876).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -357,14 +357,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5756).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5756);
+            applyArgumentsResult(5876).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5876);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "Enable useStateFromStores profiling",
-        selectedChannelId: "May require app restart after changes.",
-        tapLinkData: null,
+        messageChannel: "GET",
+        selectedChannelId: "HEAD",
+        tapLinkData: "POST",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -563,10 +563,10 @@ prototype["render"] = function render() {
     }
     if (null != guild_id) {
       ({ guild_id: obj8.guildId, id: obj8.channelId } = channel);
-      let tmp14 = map1(GuildNSFWDefault, { guildId: null, channelId: null });
+      let tmp14 = state(GuildNSFWDefault, { guildId: null, channelId: null });
       const obj3 = { guildId: null, channelId: null };
     }
-    const items = [tmp.containerInner];
+    items = [tmp.containerInner];
     let tmp24 = null != self.props.backgroundColor;
     if (tmp24) {
       const obj4 = { backgroundColor: self.props.backgroundColor };
@@ -577,7 +577,7 @@ prototype["render"] = function render() {
     obj5.style = items;
     const items1 = [tmp14, tmp6Result2];
     obj5.children = items1;
-    return closure_1_14(hasOwnProperty, obj5);
+    return gesture(hasOwnProperty, obj5);
   }
   if (isSpoilerHidden) {
     let guild_id1;
@@ -586,7 +586,7 @@ prototype["render"] = function render() {
     }
     if (null != guild_id1) {
       ({ guild_id: obj7.guildId, id: obj7.channelId } = channel);
-      tmp14 = map1(ChannelSpoilerDefault, { guildId: null, channelId: null });
+      tmp14 = state(ChannelSpoilerDefault, { guildId: null, channelId: null });
       const obj6 = { guildId: null, channelId: null };
     }
   }
@@ -624,47 +624,47 @@ prototype["render"] = function render() {
     accessibilityRole: "button",
     style: tmp.jumpToChatButton,
     onPress: self.handleJumpToChat,
-    children: map1(Text_Text.Text, {
+    children: state(Text_Text.Text, {
       style: tmp.jumpToChatText,
       variant: "text-md/medium",
       color: "interactive-text-default",
       children: self.props.jumpToChatProps.jumpToChatText,
     }),
   };
-  obj9.children = map1(Pressables.PressableOpacity, obj10);
+  obj9.children = state(Pressables.PressableOpacity, obj10);
   const obj17 = {
     style: tmp.jumpToChatText,
     variant: "text-md/medium",
     color: "interactive-text-default",
     children: self.props.jumpToChatProps.jumpToChatText,
   };
-  const tmp6Result = map1(tmp8, obj);
+  const tmp6Result = state(tmp8, obj);
   tmp14 = tmp6Result;
-  tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
+  tmp6Result2 = state(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(5080).ThemeContext;
+ChatPreviewBase.contextType = fn(5207).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(4839).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(4966).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(4839).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(4966).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(4839).RenderEmbeds;
+  const RenderEmbeds = channelId(4966).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
   const obj = channelId(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6753).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6753);
-  const isChannelContentGated = channelId(6734).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6734);
+  const isChannelSpoilerGated = channelId(6873).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6873);
+  const isChannelContentGated = channelId(6854).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6854);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

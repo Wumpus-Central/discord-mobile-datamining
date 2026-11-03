@@ -37,7 +37,7 @@ export const AVErrorNoAudioInputDetectedDefinition = {
                     if (!MediaEngineStore.isSelfMute()) {
                       const obj = { type: AVError.AVError.NO_AUDIO_INPUT_DETECTED };
                       const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-                      const items = [obj];
+                      items = [obj];
                       return items;
                     }
                   }

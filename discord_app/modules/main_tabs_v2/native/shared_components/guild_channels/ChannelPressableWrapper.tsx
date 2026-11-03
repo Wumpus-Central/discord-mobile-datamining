@@ -23,7 +23,7 @@ export function renderChannelPressableWrapper(children, panelVariant) {
     marginThread = flag ? layout2.marginPanels : layout2.margin;
   }
   const obj2 = { style: null, children };
-  const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
+  items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
   obj2.style = items;
   return <View style={null}>{children}</View>;
 }

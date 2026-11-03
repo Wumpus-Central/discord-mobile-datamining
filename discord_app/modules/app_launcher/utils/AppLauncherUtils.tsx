@@ -65,8 +65,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6035).BuiltInSectionId;
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const BuiltInSectionId = fn(6155).BuiltInSectionId;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -169,7 +169,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -246,7 +246,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;
@@ -328,7 +328,7 @@ export function formatPrimaryEntryPointCommandName(displayName) {
   return str;
 }
 export function ensureRecommendationSectionsOnlyContainActivities(entrypoint) {
-  const items = [];
+  items = [];
   const iter = entrypoint[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

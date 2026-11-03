@@ -17,7 +17,7 @@ export default function useBaseAppContainerDimensions() {
   const rect = useSafeAreaInsetsDefault();
   const left = rect.left;
   const right = rect.right;
-  const items = [width, height, left, right];
+  items = [width, height, left, right];
   return noop.useMemo(() => {
     const size = { width: width - left - right, height };
     return size;

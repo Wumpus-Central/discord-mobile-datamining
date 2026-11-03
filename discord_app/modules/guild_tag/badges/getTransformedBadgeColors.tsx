@@ -14,7 +14,7 @@ export function getTransformedBadgeColors(arg0) {
     secondaryLuminanceWeights,
   } = arg0);
   if (null == primaryTintColor) {
-    let items = [];
+    items = [];
     if (tmp6) {
       if (null == secondaryTintColor) {
         items = secondaryBaseColors;

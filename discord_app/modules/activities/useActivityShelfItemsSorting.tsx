@@ -12,9 +12,9 @@ export default function useActivityShelfItemsSorting(arg0) {
   const FrecencyUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-  let items = [arg0];
+  items = [arg0];
   return noop.useMemo(() => {
-    let items = [];
+    items = [];
     const item = closure_0.forEach((application) => items.push(application.application.id));
     const items1 = [...items];
     const sorted = items1.sort((arg0, arg1) => {
@@ -50,21 +50,21 @@ export default function useActivityShelfItemsSorting(arg0) {
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
       if (embeddedActivityConfig != null) {
-        const obj = items(1375);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5682)(undefined, obj.getOS(obj))];
+        const obj = items(1377);
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5802)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(5682);
+        const tmp5 = closure_1(5802);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
         tmp8 =
-          label_type === items(1992).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items(1992).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items(2121).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(2121).EmbeddedActivityLabelTypes.UPDATED;
         const tmp11 =
-          label_type === items(1992).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items(1992).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items(2121).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(2121).EmbeddedActivityLabelTypes.UPDATED;
       }
       return tmp8;
     });

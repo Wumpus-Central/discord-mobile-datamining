@@ -16,7 +16,7 @@ export default function useLaunchingActivityButtonState(applicationId) {
   const getOrFetchApplication = applicationId(onSubmissionComplete[3]).useGetOrFetchApplication(applicationId);
   const obj = applicationId(onSubmissionComplete[3]);
   let tmp = applicationId;
-  const items = [closure_4];
+  items = [closure_4];
   const stateFromStores = applicationId(onSubmissionComplete[4]).useStateFromStores(items, () => {
     let id;
     if ("channel" === importDefault.type) {
@@ -28,7 +28,7 @@ export default function useLaunchingActivityButtonState(applicationId) {
   const items1 = [FramesStore];
   let stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
     const mainFrame = FramesStore.getMainFrame();
-    let state;
+    state = undefined;
     if (mainFrame != null) {
       state = mainFrame.state;
     }

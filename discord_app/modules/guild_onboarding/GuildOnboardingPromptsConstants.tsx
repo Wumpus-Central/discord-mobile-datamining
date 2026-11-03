@@ -37,7 +37,7 @@ function serverPromptToClientPrompt(id) {
   return obj;
 }
 function validateOnboardingConnection(connection_type) {
-  const items = [];
+  items = [];
   connection_type = connection_type.connection_type;
   if (obj2.APPLICATION === connection_type) {
     if (obj3.isNullOrEmpty(connection_type.application_id)) {
@@ -306,7 +306,7 @@ export function parseConnectionIdentifier(str) {
 }
 export { validateOnboardingConnection };
 export function validateOnboardingConnections(arr) {
-  let items = [];
+  items = [];
   new Set();
   function _loop(arg0) {
     closure_0 = arg0;

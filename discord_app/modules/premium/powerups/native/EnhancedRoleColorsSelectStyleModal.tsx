@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import EnhancedRoleColorUtils from "../../enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -12,7 +12,7 @@ import useHasEnhancedRoleColors from "../hooks/useHasEnhancedRoleColors.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef11187 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11324 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -29,7 +29,7 @@ const RoleColorsStyle = GuildSettingsRolesStore.RoleColorsStyle;
 const HOLOGRAPHIC_ROLE_COLORS = EnhancedRoleColorConstants.HOLOGRAPHIC_ROLE_COLORS;
 const STYLE_CONFIGS = GuildSettingsRoleConstants.STYLE_CONFIGS;
 const ThemeTypes = Constants.ThemeTypes;
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { marginHorizontal: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_32 },
@@ -129,7 +129,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   obj3.header = closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
   const obj5 = { style: tmp3.container, children: null };
   const tmp6 = new RowGeneratorDefault();
-  let items = [
+  items = [
     closure_9(message, {
       style: tmp3.stylesContainer,
       children: STYLE_CONFIGS.map((id) => {
@@ -137,7 +137,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
         if (!hasEnhancedRoleColorsForRole) {
           tmp = id.id !== rowGenerator.SOLID;
         }
-        const items = [button.button, ,];
+        items = [button.button, ,];
         let selected = id === id.id;
         if (selected) {
           selected = button.selected;
@@ -168,7 +168,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11187;
+              message.message.avatarURL = _modDef11324;
             },
           }),
         ];
@@ -192,13 +192,13 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj10.gradientColors = items1;
     const intl4 = util.intl;
-    obj10.children = intl4.string(_modDef2570["+/IHLl"]);
+    obj10.children = intl4.string(_modDef2699["+/IHLl"]);
     obj9.magical = closure_9(Text_Text.Text, obj10);
-    obj8.children = intl3.format(_modDef2570.VpEDJc, obj9);
+    obj8.children = intl3.format(_modDef2699.VpEDJc, obj9);
     const items2 = [closure_9(Text_Text.Text, obj8)];
     const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
     const intl5 = util.intl;
-    obj11.children = intl5.string(_modDef2570.FJZeZF);
+    obj11.children = intl5.string(_modDef2699.FJZeZF);
     items2[1] = closure_9(Text_Text.Text, obj11);
     obj7.children = items2;
     tmp8Result = closure_10(tmp9, obj7);

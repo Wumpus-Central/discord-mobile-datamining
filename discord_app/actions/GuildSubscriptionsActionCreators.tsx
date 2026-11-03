@@ -33,7 +33,7 @@ export function subscribeChannelDimensions(arg0) {
   if (bound === undefined) {
     num = 0;
   }
-  const items = [];
+  items = [];
   const bound2 = Math.max(0, Math.ceil(Math.ceil(sum / rowHeight)) + num);
   let bound3 = bound1;
   if (bound1 > 0) {

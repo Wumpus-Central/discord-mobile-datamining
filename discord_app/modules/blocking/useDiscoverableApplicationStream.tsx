@@ -36,12 +36,12 @@ const result = size.fileFinishedImporting("modules/blocking/useDiscoverableAppli
 
 export default function useDiscoverableApplicationStream(arg0) {
   _require = arg0;
-  let items = [ApplicationStreamingStore, RelationshipStore];
+  items = [ApplicationStreamingStore, RelationshipStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [ApplicationStreamingStore, RelationshipStore];
+      items = [ApplicationStreamingStore, RelationshipStore];
       return getDiscoverableApplicationStream(closure_0, items);
     },
     items1,

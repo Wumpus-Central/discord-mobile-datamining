@@ -59,7 +59,7 @@ function getRowId(type) {
   }
   return context;
 }
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({ Changeset: closure_4, RowType: hasOwnProperty } = RowGeneratorConstants);
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -73,7 +73,7 @@ export default function useRelativeTimestampUpdates(isActive) {
   dependencyMap = noop.useRef({ first: -1, last: -1 });
   noop = noop.useRef(null);
   noop.useRef(undefined);
-  const tmp = chatManager(7131)(isActive.onRefresh);
+  const tmp = chatManager(7257)(isActive.onRefresh);
   closure_5 = tmp;
   function update() {
     clearTimeout(ref3.current);
@@ -84,7 +84,7 @@ export default function useRelativeTimestampUpdates(isActive) {
       const _Date = Date;
       const timestamp = Date.now();
       let num = Infinity;
-      const items = [];
+      items = [];
       if (last >= 0) {
         let tmp39 = last;
         if (last <= first) {
@@ -172,7 +172,7 @@ export default function useRelativeTimestampUpdates(isActive) {
       }
     }
   }
-  let items = [isActive, chatManager, tmp];
+  items = [isActive, chatManager, tmp];
   const callback = noop.useCallback(update, items);
   let items1 = [callback];
   const effect = noop.useEffect(() => {

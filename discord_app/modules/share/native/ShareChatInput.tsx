@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -47,7 +47,7 @@ const obj5 = {
   paddingTop: null,
   paddingBottom: null,
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -81,7 +81,7 @@ export default function ShareChatInput(onFocus) {
   const tmp = closure_8();
   const tmp4 = useMessageMaxLengthDefault();
   [focused, c2] = noop.useState(false);
-  const items = [onFocus];
+  items = [onFocus];
   const items1 = [onBlur];
   const callback = noop.useCallback(() => {
     _undefined(true);

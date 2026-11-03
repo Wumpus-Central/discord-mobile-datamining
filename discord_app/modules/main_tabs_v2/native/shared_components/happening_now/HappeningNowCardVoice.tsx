@@ -3,7 +3,7 @@ import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
 import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserAffinitiesV2Store from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
@@ -36,11 +36,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(17287).HappeningNowCardTrackingType;
+let closure_8 = fn(17430).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -60,7 +60,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
   const voiceUserAffinitySortType = guildId(voiceState[17]).useVoiceUserAffinitySortType("useVoiceChannelUsers");
   closure_129_1 = voiceUserAffinitySortType;
   let obj = guildId(voiceState[17]);
-  let items = [VoiceStateStore, UserStore, UserAffinitiesV2Store];
+  items = [VoiceStateStore, UserStore, UserAffinitiesV2Store];
   const items1 = [voiceUserAffinitySortType, voiceState.channelId];
   const stateFromStoresArray = guildId(voiceState[18]).useStateFromStoresArray(
     items,
@@ -68,7 +68,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
       const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
       const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
       const found = mapped.filter(GlobalUtils.isNotNullish);
-      const items = [
+      items = [
         function userAffinitySort(id) {
           userAffinity = userAffinity.getUserAffinity(id.id);
           if ("vc_probability" === index) {
@@ -133,7 +133,7 @@ export function useVoiceChannelUsers(channelId) {
   const voiceUserAffinitySortType =
     require("VoiceUserAffinityExperiment").useVoiceUserAffinitySortType("useVoiceChannelUsers");
   const obj = require("VoiceUserAffinityExperiment");
-  const items = [VoiceStateStore, UserStore, UserAffinitiesV2Store];
+  items = [VoiceStateStore, UserStore, UserAffinitiesV2Store];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
   return require("initialize").useStateFromStoresArray(
     items,
@@ -141,7 +141,7 @@ export function useVoiceChannelUsers(channelId) {
       const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
       const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
       const found = mapped.filter(GlobalUtils.isNotNullish);
-      const items = [
+      items = [
         function userAffinitySort(id) {
           userAffinity = userAffinity.getUserAffinity(id.id);
           if ("vc_probability" === index) {

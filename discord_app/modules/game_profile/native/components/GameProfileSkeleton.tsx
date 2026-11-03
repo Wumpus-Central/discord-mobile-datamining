@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/native/components/GameProfileSkeleton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import GameProfileSkeletonPulse from "GameProfileSkeletonPulse.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
   button: null,
@@ -51,9 +51,9 @@ export function GameProfileSkeletonContainer(animationDelayMs) {
     importantForAccessibility: "no-hide-descendants",
     children,
   };
-  const items = [style, skeletonPulseStyle];
+  items = [style, skeletonPulseStyle];
   obj2.style = items;
-  return jsx(ReanimatedRexportDefault.View, {
+  return jsx(_modDef1652.View, {
     style: null,
     accessible: false,
     accessibilityElementsHidden: true,
@@ -68,7 +68,7 @@ export function GameProfileSkeletonButton(size) {
   }
   const tmp = closure_5();
   const obj = { style: null };
-  const items = [tmp.button, tmp[closure_6[str]], size.style];
+  items = [tmp.button, tmp[closure_6[str]], size.style];
   obj.style = items;
   return <GameProfileSkeletonPlaceholder style={null} />;
 }

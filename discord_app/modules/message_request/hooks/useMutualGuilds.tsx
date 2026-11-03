@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useMutu
 
 export function useMutualGuildsForMessageRequests(userId) {
   _require = userId;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));
   const obj = require("initialize");
   const items1 = [UserProfileStore];

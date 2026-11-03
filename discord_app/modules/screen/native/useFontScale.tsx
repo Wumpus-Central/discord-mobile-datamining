@@ -16,6 +16,6 @@ export function getFontScale() {
 }
 export function useFontScale() {
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
-  const items = [appEntryKey];
+  items = [appEntryKey];
   return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].fontScale, items));
 }

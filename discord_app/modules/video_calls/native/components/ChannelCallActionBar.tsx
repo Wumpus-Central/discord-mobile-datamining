@@ -14,9 +14,9 @@ import useIsFiveButtonLayout from "../useIsFiveButtonLayout.tsx";
 import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import _modDef11935 from "../../../../../_runtime/metro/11935__.js";
-import _modDef11936 from "../../../../../_runtime/metro/11936__.js";
-import _modDef11937 from "../../../../../_runtime/metro/11937__.js";
+import _modDef12072 from "../../../../../_runtime/metro/12072__.js";
+import _modDef12073 from "../../../../../_runtime/metro/12073__.js";
+import _modDef12074 from "../../../../../_runtime/metro/12074__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -73,7 +73,7 @@ class VideoButton {
         str = "mute";
       }
       obj.animation = str;
-      return __initData(CameraLottie.CameraLottie, obj);
+      return closure_2_15(CameraLottie.CameraLottie, obj);
     }, items3);
     callback = closure_4.useCallback((channel) => {
       CallsUtils.handleToggleVideo(channel);
@@ -269,9 +269,9 @@ function LeaveActivityButton(isSmallSize) {
     obj2.applicationId = applicationId;
     const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
   };
-  obj.source = _modDef11937;
+  obj.source = _modDef12074;
   obj.isSmallSize = isSmallSize.isSmallSize;
-  return __initData(CallBarActionAll.PrimaryActionButton, obj);
+  return closure_1_15(CallBarActionAll.PrimaryActionButton, obj);
 }
 function useActionBarSecondButton(channel) {
   channel = channel.channel;
@@ -308,9 +308,9 @@ function useActionBarSecondButton(channel) {
 }
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(11004).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(11004);
-  const items = [ChannelRTCStore, AuthenticationStore];
+  const isConnectedToVoiceChannel = channel(11137).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(11137);
+  items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
     if (null != selectedParticipant) {
@@ -356,14 +356,14 @@ function useActionBarPrimaryButtons(channel) {
   return obj6;
 }
 const View = fn(17).View;
-const ParticipantTypes = fn(5681).ParticipantTypes;
-const Features = fn(5768).Features;
+const ParticipantTypes = fn(5801).ParticipantTypes;
+const Features = fn(5888).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
-    height: fn(11714).CALL_ACTION_BAR_HEIGHT,
+    height: fn(11851).CALL_ACTION_BAR_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -371,16 +371,16 @@ let obj2 = {
   containerForFiveButtonLayout: null,
 };
 let obj3 = {
-  height: fn(11714).CALL_ACTION_BAR_HEIGHT,
+  height: fn(11851).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
 obj2.containerForFiveButtonLayout = {
-  height: fn(11714).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(11851).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(11714).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(11714).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(11851).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(11851).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };
@@ -437,17 +437,17 @@ export default function ChannelCallActionBar(arg0) {
   };
   if (shouldShowConnectingScreen) {
     const obj4 = { channel };
-    let tmp13Result = __initData(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
+    let tmp13Result = closure_1_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
   } else {
     let tmp11Result4 = null;
     if (!tmp4) {
       obj5 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp11Result4 = __initData(VideoButton, obj5);
+      tmp11Result4 = closure_1_15(VideoButton, obj5);
     }
-    const items = [tmp11Result4, , ,];
+    items = [tmp11Result4, , ,];
     if (obj5.AUDIO_ROUTE === tmp5) {
       obj6 = { isSmallSize: isFiveButtonLayout, channel };
-      let tmp11Result5 = __initData(AudioRouteButton, obj6);
+      let tmp11Result5 = closure_1_15(AudioRouteButton, obj6);
     } else {
       if (tmp17.SCREEN_SHARE_START !== tmp5) {
         if (tmp17.SCREEN_SHARE_END !== tmp5) {
@@ -456,35 +456,35 @@ export default function ChannelCallActionBar(arg0) {
         }
       }
       const obj7 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp11Result5 = __initData(ScreenshareButton, obj7);
+      tmp11Result5 = closure_1_15(ScreenshareButton, obj7);
     }
     items[1] = tmp11Result5;
     const obj8 = { channel, isSmallSize: isFiveButtonLayout };
-    items[2] = __initData(ChannelCallMicButton.ChannelCallMicButton, obj8);
+    items[2] = closure_1_15(ChannelCallMicButton.ChannelCallMicButton, obj8);
     if (tmp7.END_REMOTE === END_REMOTE) {
       const obj9 = { channel, isSmallSize: isFiveButtonLayout };
-      let tmp11Result6 = __initData(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
+      let tmp11Result6 = closure_1_15(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
     } else if (tmp7.END_STREAM === END_REMOTE) {
       const obj10 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp11Result6 = __initData(DisconnectStreamButton, obj10);
+      tmp11Result6 = closure_1_15(DisconnectStreamButton, obj10);
     } else if (tmp7.END_ACTIVITY === END_REMOTE) {
       const obj11 = { isSmallSize: isFiveButtonLayout };
-      tmp11Result6 = __initData(LeaveActivityButton, obj11);
+      tmp11Result6 = closure_1_15(LeaveActivityButton, obj11);
     } else {
       tmp11Result6 = null;
       if (tmp7.END_CALL === END_REMOTE) {
         const obj12 = { channel, isSmallSize: isFiveButtonLayout };
-        tmp11Result6 = __initData(DisconnectCallButton, obj12);
+        tmp11Result6 = closure_1_15(DisconnectCallButton, obj12);
       }
     }
     const obj13 = { children: null };
     items[3] = tmp11Result6;
     obj13.children = items;
-    tmp13Result = closure_1_17(__initData2, obj13);
+    tmp13Result = closure_1_17(value2, obj13);
   }
   obj3.children = tmp13Result;
-  obj2.children = __initData(View, obj3);
-  return __initData(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
+  obj2.children = closure_1_15(View, obj3);
+  return closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
 }
 export { VideoButton };
 export { ScreenshareButton };

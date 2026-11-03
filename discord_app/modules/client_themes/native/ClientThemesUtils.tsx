@@ -267,7 +267,7 @@ export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
         const colors1 = gradient.customThemeSettings.colors;
         const mapped1 = colors1.map((item) => _modDef671(item).luminance());
         const _Math = Math;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(mapped1, 0);
         const _Math2 = Math;
         const result = _modDef671(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(min, items, Math))]).set(
@@ -337,7 +337,7 @@ export function useGradientValue(END, arg1) {
   dependencyMap = tmp;
   const tmp2 = useThemeDefault();
   closure_3 = tmp2;
-  const items = [tmp, , , ,];
+  items = [tmp, , , ,];
   let dark;
   if (arg1 != null) {
     dark = arg1.dark;

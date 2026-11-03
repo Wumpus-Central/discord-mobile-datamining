@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   heading: { flex: 1 },
@@ -27,7 +27,7 @@ export default function UserProfileWidgetEditingHeader() {
   const obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.OYlggR);
-  const items = [React4(Text_Text.Heading, obj2), ,];
+  items = [React4(Text_Text.Heading, obj2), ,];
   const obj3 = {
     size: "sm",
     variant: "secondary",

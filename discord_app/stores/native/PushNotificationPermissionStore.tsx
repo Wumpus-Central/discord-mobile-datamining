@@ -65,7 +65,7 @@ prototype["initialize"] = function initialize(promptLastSeen) {
   }
   const merged3 = Object.assign(promptLastSeen);
   obj.promptLastSeen = {};
-  const items = [...tmp.eligiblePromptTypes];
+  items = [...tmp.eligiblePromptTypes];
   let eligiblePromptTypes;
   if (promptLastSeen != null) {
     eligiblePromptTypes = promptLastSeen.eligiblePromptTypes;
@@ -100,7 +100,7 @@ Object.defineProperty(prototype, "permissionState", {
 });
 Object.defineProperty(prototype, "promptSeen", {
   get: function promptSeen() {
-    const items = [,];
+    items = [,];
     ({ PROMPT_SEEN: arr[0], PROMPT_SKIPPED: arr[1] } = obj);
     return items.includes(obj.permissionState);
   },

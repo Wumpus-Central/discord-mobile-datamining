@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" },
   message: { marginEnd: 27, flex: 3 },
@@ -24,7 +24,7 @@ export default function ActionableNotice(arg0) {
   }
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [style, tmp.container];
+  items = [style, tmp.container];
   obj.style = items;
   const items1 = [
     React3(Text_Text.Text, { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message }),

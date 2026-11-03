@@ -59,7 +59,7 @@ class ShopCoachmark$Type extends MessageType {
       name: "display_type",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.ShopCoachmarkDisplayType",
           ShopCoachmarkDisplayType,
           "SHOP_COACHMARK_DISPLAY_TYPE_",

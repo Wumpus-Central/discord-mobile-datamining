@@ -12,7 +12,7 @@ export default function useOnNewPendingRequest(current) {
   _require = current;
   const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
   let obj = require("useUserLinks");
-  const items = [ref2];
+  items = [ref2];
   stateFromStores = require("initialize").useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {

@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = {
@@ -42,7 +42,7 @@ export function PressableNavigatorBackIcon(navigation) {
   const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0, badgeCutoutColor: 0, ref: 0 }));
   let stateFromStores;
   const tmp2 = closure_10();
-  const items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
+  items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
   stateFromStores = navigation(stateFromStores[9]).useStateFromStores(items, () => {
     totalMentionCount = totalMentionCount.getTotalMentionCount();
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();

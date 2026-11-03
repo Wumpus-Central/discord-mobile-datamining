@@ -20,9 +20,9 @@ export default function UserProfileEditNoteModal(arg0) {
   }
   navigation = undefined;
   onSave = undefined;
-  navigation = navigation(1497).useNavigation();
+  navigation = navigation(1499).useNavigation();
   [_slicedToArray, onSave] = handleClose.useState(false);
-  const items = [navigation];
+  items = [navigation];
   const effect = handleClose.useEffect(
     () =>
       navigation.addListener("transitionEnd", (data) => {
@@ -32,9 +32,9 @@ export default function UserProfileEditNoteModal(arg0) {
       }),
     items,
   );
-  navigation(1376);
+  navigation(1357);
   const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
-  let obj = navigation(1497);
+  let obj = navigation(1499);
   let obj4;
   if (!tmpResult.isAndroid()) {
     obj4 = { height: 56 };
@@ -45,23 +45,23 @@ export default function UserProfileEditNoteModal(arg0) {
   let intl = tmp(1113).intl;
   obj6.title = intl.string(navigation(1113).t.sHHsOM);
   obj6.headerTitle = function headerTitle() {
-    const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
+    const obj = { variant: "redesign/heading-18/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5624).Text, {
-      variant: "redesign/heading-18/bold",
+    return jsx(navigation(5747).Text, {
+      variant: "redesign/heading-18/semibold",
       accessibilityRole: "header",
       children: null,
     });
   };
-  tmpResult = navigation(1376);
-  obj6.headerLeft = navigation(6998).getHeaderCloseButton(handleClose);
+  tmpResult = navigation(1357);
+  obj6.headerLeft = navigation(7124).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(7169).Navigator, {
+  return jsx(navigation(7290).Navigator, {
     initialRouteName: "root",
     headerStatusBarHeight: 12,
     headerStyle: null,

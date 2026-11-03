@@ -30,9 +30,9 @@ function AttachmentPreviewAppLauncher(arg0) {
   });
 }
 const View = fn(17).View;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",
@@ -65,7 +65,7 @@ export default function AppLauncherAttachmentOption(option) {
   const tmp = closure_8();
   const fileTypesFormattedString = option(onSelectAttachment[10]).useFileTypesFormattedString(fileTypes);
   const tmp2Result = option(onSelectAttachment[10]);
-  const items = [UploadAttachmentStore];
+  items = [UploadAttachmentStore];
   stateFromStores = option(onSelectAttachment[11]).useStateFromStores(items, () =>
     UploadAttachmentStore.getUpload(channel.id, option.name, DraftType.ApplicationLauncherCommand),
   );

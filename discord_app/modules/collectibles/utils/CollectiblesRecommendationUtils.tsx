@@ -9,7 +9,7 @@ export function reorderCollectiblesByRecommendation(items, length) {
       const _Map = Map;
       const map = new Map(
         items.map((skuId) => {
-          const items = [skuId.skuId, skuId];
+          items = [skuId.skuId, skuId];
           return items;
         }),
       );

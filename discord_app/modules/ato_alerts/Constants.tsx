@@ -12,7 +12,7 @@ export function getLikelyAtoMoreTips() {
   obj.title = intl.string(util.t.wSZfJR);
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.CRwzW5);
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { title: null, description: null };
   const intl3 = util.intl;
   obj2.title = intl3.string(util.t.cmMUaB);

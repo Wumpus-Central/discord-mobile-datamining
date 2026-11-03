@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/conjureTraceReq
 
 export function requestConjureTrace(projectId, traceId) {
   c2 = { projectId, traceId };
-  const items = [...set];
+  items = [...set];
   for (const item10012 of items) {
     let item10012Result = item10012(arg0);
     continue;
@@ -37,7 +37,7 @@ export function useConjureTraceRequests(projectId, callback1) {
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [projectId];
+  items = [projectId];
   const effect = noop.useEffect(() => {
     if (null != listener) {
       listener = function listener(arg0) {

@@ -11,7 +11,7 @@ function ForumPostGrid(arg0) {
   ({ hasUnreads, thread } = arg0);
   const obj = { children: null };
   ({ firstMessage, isNew, media, parentChannel } = arg0);
-  const items = [
+  items = [
     timestampProducer(ForumPostGridHeaderDefault, { thread, hasUnreads, isNew }),
     timestampProducer(ForumPostGridBodyDefault, { thread, hasUnreads, media }),
     timestampProducer(ForumPostGridFooterDefault, { thread, firstMessage, hasUnreads, parentChannel }),
@@ -25,7 +25,7 @@ function ConnectedForumPost(arg0) {
   let firstMessage;
   let ForumPostPressableContainer = require;
   let tmp = firstMessage;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(_require));
   let tmp3 = parent_id;
   parent_id(firstMessage[9])(
@@ -138,7 +138,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(13763).useForumChannelStore;
+const useForumChannelStore = fn(13894).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -146,7 +146,7 @@ const result = size.fileFinishedImporting("modules/forums/native/ForumPost.tsx")
 
 export default noop.memo(function ForumPostMissingWrapper(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   let tmp = null;
   if (null != obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId.threadId))) {
     const obj2 = {};
@@ -158,7 +158,7 @@ export default noop.memo(function ForumPostMissingWrapper(arg0) {
 export function ForumPostListDisabled(threadId) {
   threadId = threadId.threadId;
   ({ style, localDeviceMedia } = threadId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp5 = null;
   stateFromStores(38)(
@@ -173,9 +173,9 @@ export function ForumPostListDisabled(threadId) {
     ChannelStore.getChannel(stateFromStores.parent_id),
   );
   const obj2 = threadId(504);
-  const firstForumPostMessage = threadId(7475).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7599).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(9838);
+  threadId(9969);
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = {
@@ -189,8 +189,8 @@ export function ForumPostListDisabled(threadId) {
       firstMessageLoaded: loaded,
       isLocalDeviceMedia: true,
     };
-    obj4.children = closure_6(tmp4(13784), obj5);
-    tmp5 = closure_6(tmp(13783).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(13915), obj5);
+    tmp5 = closure_6(tmp(13914).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 }

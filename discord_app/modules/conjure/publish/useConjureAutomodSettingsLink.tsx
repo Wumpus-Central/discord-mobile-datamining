@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjureAutomodSettingsLink.tsx
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,17 +14,17 @@ require = fn;
 const Constants = fn(1072);
 ({ GuildSettingsSections: closure_7, Permissions: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ Fragment: closure_9, jsxs: c10 } = jsxProd);
+({ Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureAutomodSettingsLink.tsx");
 
 export default function useConjureAutomodSettingsLink(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore, ConjurePublishStatusStore, GuildStore, PermissionStore];
+  items = [ConjureProjectStore, ConjurePublishStatusStore, GuildStore, PermissionStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     if (null != project) {
-      if ("user" !== project.install_scope) {
+      if ("guild" === project.install_scope) {
         if (null != project.guild_id) {
           const supported_surfaces = project.supported_surfaces;
           let hasItem;
@@ -40,7 +40,7 @@ export default function useConjureAutomodSettingsLink(arg0) {
             }
             tmp6 = "automod" === surface;
           }
-          const guild = GuildStore.getGuild(project.guild_id);
+          guild = GuildStore.getGuild(project.guild_id);
           let canResult = null != guild;
           if (canResult) {
             canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -64,9 +64,9 @@ export default function useConjureAutomodSettingsLink(arg0) {
 export function ConjureAutomodSettingsLink(guildId) {
   guildId = guildId.guildId;
   const intl = guildId(1113).intl;
-  const tmp3 = _modDef3868;
+  const tmp3 = _modDef3995;
   const obj = { children: null };
-  const items = [
+  items = [
     " ",
     intl.format(guildId.update ? tmp3.esEGL5 : tmp3["XrN+Bg"], {
       onOpen() {

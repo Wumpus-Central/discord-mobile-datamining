@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/isWatchToget
 export default function isWatchTogetherApplication(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
-    const items = [React, React2, framebus];
+    items = [React, React2, duration];
     hasItem = items.includes(arg0);
   }
   return hasItem;

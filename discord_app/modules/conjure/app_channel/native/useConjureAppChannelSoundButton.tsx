@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import EmbeddedSurfaceType from "../../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
@@ -11,7 +11,7 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx");
 
@@ -25,7 +25,7 @@ export default function useConjureAppChannelSoundButton(application_id, arg1) {
     tmp3,
     "useConjureAppChannelSoundButton",
   );
-  const items = [,];
+  items = [,];
   ({ id: arr[0], guild_id: arr[1] } = application_id);
   const memo = userMuted.useMemo(
     () => ({
@@ -70,7 +70,7 @@ export default function useConjureAppChannelSoundButton(application_id, arg1) {
           if (stateFromStores) {
             const obj = { text: null, icon: null };
             const intl = util.intl;
-            obj.text = intl.string(_modDef3868.W8Q9fy);
+            obj.text = intl.string(_modDef3995.W8Q9fy);
             obj.icon = VoiceXIcon.VoiceXIcon;
             ToastActionCreatorsDefault.open("CONJURE_APP_CHANNEL_DEVICE_SILENCED", obj);
             const tmpResult = ToastActionCreatorsDefault;

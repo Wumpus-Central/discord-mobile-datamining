@@ -15,7 +15,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
   );
   const mapped = entries.map((item) => {
     [tmp, obj] = item;
-    const items = [
+    items = [
       tmp,
       obj
         .flatMap((resolved_assets) => {
@@ -55,7 +55,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
     const merged1 = Object.assign(
       Object.fromEntries(
         arr.map((key) => {
-          const items = [key.key, key];
+          items = [key.key, key];
           return items;
         }),
       ),
@@ -85,7 +85,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
     );
     const mapped = entries.map((item) => {
       [tmp, obj] = item;
-      const items = [
+      items = [
         tmp,
         obj
           .flatMap((resolved_assets) => {
@@ -125,7 +125,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
       const merged1 = Object.assign(
         Object.fromEntries(
           arr.map((key) => {
-            const items = [key.key, key];
+            items = [key.key, key];
             return items;
           }),
         ),

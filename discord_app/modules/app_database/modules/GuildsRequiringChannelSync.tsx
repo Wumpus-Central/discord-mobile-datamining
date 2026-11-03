@@ -208,7 +208,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           }
         }
         const properties = item10008.properties;
-        const guild = GuildStore.getGuild(item10008.id);
+        guild = GuildStore.getGuild(item10008.id);
         let ownerId;
         if (guild != null) {
           ownerId = guild.ownerId;
@@ -269,7 +269,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
   const self = this;
   if ("full_sync" !== channels.channels.op) {
     const id = AuthenticationStore.getId();
-    const guild = GuildStore.getGuild(channels.id);
+    guild = GuildStore.getGuild(channels.id);
     if (null != guild) {
       const properties = channels.properties;
       let owner_id;
@@ -397,7 +397,7 @@ prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) 
   result.delete(id);
 };
 prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels) {
-  let items = deleted_channel_ids;
+  items = deleted_channel_ids;
   if (deleted_channel_ids === undefined) {
     items = [];
   }
@@ -458,7 +458,7 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
 prototype["gatewayGuildHasObfuscatedChannels"] = function gatewayGuildHasObfuscatedChannels(channels) {
   if ("full_sync" === channels.channels.op) {
     let writes = channels.channels.items;
-    let items = [];
+    items = [];
   } else {
     writes = channels.channels.writes;
     items = channels.channels.deletes;
@@ -476,7 +476,7 @@ prototype["backgroundSyncGuildHasObfuscatedChannels"] = function backgroundSyncG
     if (deleted_channel_ids == null) {
       deleted_channel_ids = [];
     }
-    let items = deleted_channel_ids;
+    items = deleted_channel_ids;
     let channels = channels1;
   } else {
     channels = data_mode.channels;

@@ -18,9 +18,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupBoostLevelProgress(arg0) {
   _require = arg0;
   const tmp = useGuildPowerupsBoostCountDefault(arg0);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;
@@ -35,7 +35,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
   let num = 0;
   if (
     !obj2.useStateFromStores(items1, () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -50,7 +50,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
 }
 export function getGuildPowerupBoostLevelProgress(id) {
   const guildPowerupsBoostCount = useGuildPowerupsBoostCount.getGuildPowerupsBoostCount(id);
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let premiumTier;
   if (guild != null) {
     premiumTier = guild.premiumTier;

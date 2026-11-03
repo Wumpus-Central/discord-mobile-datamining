@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
 import RoleSubscriptionEmojiUtils from "../../../RoleSubscriptionEmojiUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "../GuildSettingsRoleSubscriptionContainer.tsx";
@@ -11,15 +11,15 @@ import apply from "../../../../../../_runtime/metro/00012__.js";
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(19945).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(19945);
-  const items = [GuildStore];
+  const roleSubscriptionSettingsDisabled = guildId(20095).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(20095);
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp(1113).intl;
-    const obj3 = { maxSlots: stateFromStores(19996)(stateFromStores) };
+    const obj3 = { maxSlots: stateFromStores(20146)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
@@ -35,17 +35,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(19997, dependencyMap.paths),
+              asyncRequireImpl(20147, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji: dependencyMap,
                 onSave(arg0) {
-                  stateFromStores(5258).hideActionSheet();
+                  stateFromStores(5381).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5258).hideActionSheet();
+                  stateFromStores(5381).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -57,7 +57,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       },
       disabled: roleSubscriptionSettingsDisabled,
     };
-    return jsx(tmp(19730).ManageEmojisModal, {
+    return jsx(tmp(19880).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
       computeEmojiItems,
@@ -72,17 +72,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(19997, dependencyMap.paths),
+              asyncRequireImpl(20147, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji: dependencyMap,
                 onSave(arg0) {
-                  stateFromStores(5258).hideActionSheet();
+                  stateFromStores(5381).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5258).hideActionSheet();
+                  stateFromStores(5381).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -108,7 +108,7 @@ const computeEmojiItems = apply.memoize((arr, arg1) => {
     const reversed = mapped.reverse();
     const tmp4 = getMaxRoleSubscriptionEmojiSlotsDefault(arg1);
     const intl = require("util").intl;
-    const items = [
+    items = [
       require("GuildSettingsModalEmoji").computeSectionItem(
         intl.string(require("util").t.sMOuuS),
         reversed.length,

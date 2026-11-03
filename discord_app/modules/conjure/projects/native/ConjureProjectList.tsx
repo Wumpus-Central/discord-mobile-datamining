@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -13,7 +13,7 @@ import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx
 import ConjureHeaderIconButtonDefault from "../../shared/native/ConjureHeaderIconButton.tsx";
 import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
 import openConjureProjectsSheet from "openConjureProjectsSheet.tsx";
-import MentionsBadgeDefault from "../../../guild_sidebar/native/MentionsBadge.tsx";
+import ConjureNumberBadgeDefault from "../../shared/native/ConjureNumberBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
 import ConjureProjectStore from "../ConjureProjectStore.tsx";
@@ -28,9 +28,9 @@ function ProjectRow(project) {
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_11(0);
-  const conjureProjectBadge = project(10877).useConjureProjectBadge(project.id);
-  const obj = project(10877);
-  const items = [ConjureProjectStore];
+  const conjureProjectBadge = project(11007).useConjureProjectBadge(project.id);
+  const obj = project(11007);
+  items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
     items,
@@ -43,9 +43,9 @@ function ProjectRow(project) {
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6860).getRelativeTimestamp(date.getTime());
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3868.AXydi3, obj3);
-    const tmp2Result = tmp2(6860);
+    obj3.time = tmp2(6980).getRelativeTimestamp(date.getTime());
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3995.AXydi3, obj3);
+    const tmp2Result = tmp2(6980);
   }
   const obj4 = {
     label: project.name,
@@ -59,13 +59,13 @@ function ProjectRow(project) {
   };
   if (stateFromStores) {
     const intl2 = tmp2(1113).intl;
-    formatToPlainStringResult = intl2.string(_modDef3868.Yh5pAc);
+    formatToPlainStringResult = intl2.string(_modDef3995.Yh5pAc);
   }
   obj4.subLabel = formatToPlainStringResult;
   let stringResult;
   if (null != conjureProjectBadge && conjureProjectBadge > 0 && !stateFromStores) {
     const intl3 = tmp2(1113).intl;
-    stringResult = intl3.string(_modDef3868.hfIuc7);
+    stringResult = intl3.string(_modDef3995.hfIuc7);
   }
   obj4.accessibilityHint = stringResult;
   obj4.disabled = stateFromStores;
@@ -76,11 +76,11 @@ function ProjectRow(project) {
     const obj5 = { style: tmp.projectRowTrailing, children: null };
     let tmp15Result3 = null;
     if (tmp6) {
-      const obj6 = { mentionsCount: conjureProjectBadge };
-      tmp15Result3 = closure_9(MentionsBadgeDefault, obj6);
+      const obj6 = { value: conjureProjectBadge };
+      tmp15Result3 = closure_9(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3];
-    const obj7 = { IconComponent: tmp2(9756).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const obj7 = { IconComponent: tmp2(9888).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
     const intl4 = tmp2(1113).intl;
     obj7.accessibilityLabel = intl4.string(tmp2(1113).t["UKOtz+"]);
     items2[1] = closure_9(ConjureHeaderIconButtonDefault, obj7);
@@ -91,7 +91,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_9(project(6975).TableRow, obj4)];
+  const children = [closure_9(project(7101).TableRow, obj4)];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -111,8 +111,8 @@ function ProjectRow(project) {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -170,7 +170,7 @@ export default function ConjureProjectList(guildId) {
   let obj = guildId(navigation[8]);
   ({ mine, shared, fetchState } = require("useConjureServerProjects")(guildId));
   const arr = require("useConjureOtherOwnProjects")(guildId);
-  let items = [navigation];
+  items = [navigation];
   callback = callback.useCallback((projectId) => {
     let str = arg1;
     if (arg1 === undefined) {
@@ -298,10 +298,15 @@ export default function ConjureProjectList(guildId) {
       let tmp = null;
       if (projects.projects.length > 0) {
         const obj = { style: section.section, children: null };
-        const obj2 = { variant: "heading-md/bold", color: "text-default", accessibilityRole: "header", children: null };
+        const obj2 = {
+          variant: "heading-md/semibold",
+          color: "text-default",
+          accessibilityRole: "header",
+          children: null,
+        };
         const intl = util.intl;
         obj2.children = intl.string(projects.title);
-        const items = [React7(Text_Text.Text, obj2)];
+        items = [React7(Text_Text.Text, obj2)];
         const obj3 = { hasIcons: true, children: null };
         projects = projects.projects;
         obj3.children = projects.map((project) =>

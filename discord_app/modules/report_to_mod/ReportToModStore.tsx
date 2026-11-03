@@ -27,12 +27,12 @@ prototype["initialize"] = function initialize(reportedMessages) {
     closure_3.reportedMessages = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
-        const items = [tmp, new Set(tmp2)];
+        items = [tmp, new Set(tmp2)];
         return items;
       }),
     );
   }
-  let items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   this.syncWith(items, handleSelectedGuildChange);
 };
 prototype["getState"] = function getState() {

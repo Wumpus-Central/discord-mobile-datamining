@@ -137,7 +137,7 @@ function RolesList(guildMemberRoleIds) {
   guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
   const guildId = guildMemberRoleIds.guildId;
   const tmp = closure_12();
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [guildMemberRoleIds, guildId];
   const stateFromStoresArray = guildMemberRoleIds(504).useStateFromStoresArray(
     items,
@@ -161,8 +161,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" },
   role: {
@@ -177,14 +177,14 @@ let obj2 = {
 };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
 obj2.roleDot = size;
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
 
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const items1 = [userId, guildId];
   const stateFromStores = userId(504).useStateFromStores(
     items,
@@ -206,8 +206,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7376), obj2);
-    const tmp7 = guildId(7376);
+    tmp4 = closure_9(guildId(7496), obj2);
+    const tmp7 = guildId(7496);
   }
   return tmp4;
 }

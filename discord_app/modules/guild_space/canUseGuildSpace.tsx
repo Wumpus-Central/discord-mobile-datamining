@@ -18,7 +18,7 @@ export function isGuildSpaceAdmin(arg0) {
 }
 export function useIsGuildSpaceAdmin(arg0) {
   _require = arg0;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
@@ -42,7 +42,7 @@ export function useCanUseGuildSpace(id, useGuildActionRows) {
     useGuildActionRows,
   );
   const obj = require("GuildSpaceExperiment");
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;

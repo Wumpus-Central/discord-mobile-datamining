@@ -22,7 +22,7 @@ function buildCommand(arg0) {
     tmp = rootCommand.permissions.length > 0;
   }
   if (!tmp) {
-    let items = subCommandPath;
+    items = subCommandPath;
     if (subCommandPath == null) {
       items = [];
     }
@@ -120,13 +120,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124143 */ function() { ... });
+                      mapped = choices.map(/* F124003 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F91334 */ function() { ... });
+                      mapped1 = options.map(/* F91670 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -327,7 +327,7 @@ function buildSubCommands(arg0) {
   ({ rootCommand, command, applicationId, subCommandPath, useKeyedPermissions } = arg0);
   if (command.hasOwnProperty("id")) {
     const obj2 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
-    const items = [buildCommand(obj2)];
+    items = [buildCommand(obj2)];
     return items;
   } else if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
     if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -458,7 +458,7 @@ export function isSnowflake(text) {
 export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   regex = regExp;
   closure_1 = arg2;
-  const items = [];
+  items = [];
   const item = _modDef12(contextCommands).forEach((displayName) => {
     let isMatch = regex.test(displayName.displayName);
     if (isMatch) {

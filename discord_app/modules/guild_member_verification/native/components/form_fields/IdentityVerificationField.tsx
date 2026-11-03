@@ -22,7 +22,7 @@ function BaseIdentityVerificationField(icon) {
     const obj2 = { style: tmp.icon };
     tmp4 = React4(icon, obj2);
   }
-  const items = [
+  items = [
     tmp4,
     React4(Text_Text.Text, {
       style: tmp.label,
@@ -52,7 +52,7 @@ function BaseIdentityVerificationField(icon) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     padding: 8,

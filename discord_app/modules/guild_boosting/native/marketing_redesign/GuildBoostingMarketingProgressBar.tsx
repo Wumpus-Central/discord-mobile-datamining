@@ -1,13 +1,16 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
 const GuildBoostingMarketingProgressBarMarkerDefault = GuildBoostingMarketingProgressBarMarker;
 
 require = fn;
@@ -15,14 +18,14 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   progressBarContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(15613).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -30,17 +33,17 @@ let obj2 = {
   progressBarFill: null,
   progressBarGradientFill: null,
 };
-let obj3 = {
+const obj3 = {
   display: "flex",
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(15613).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(15472).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(15613).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(15613).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,
@@ -57,14 +60,14 @@ let closure_10 = createStyles.createStyles(obj2);
 let items = [, , ,];
 ({ NONE: arr[0], TIER_1: arr[1], TIER_2: arr[2], TIER_3: arr[3] } = BoostedGuildTiers);
 let closure_12 = { stiffness: 27, damping: 10 };
-const __initData = {
-  code: 'function GuildBoostingMarketingProgressBarTsx1(){const{width}=this.__closure;return{width:width.get()+"%"};}',
+let closure_13 = {
+  code: '(function GuildBoostingMarketingProgressBarTsx1(){let[width]=this.__closure;return{width:width.get()+"%"};})',
 };
-const __initData2 = {
-  code: "function GuildBoostingMarketingProgressBarTsx2(){const{width}=this.__closure;return width.get();}",
+let closure_14 = {
+  code: "(function GuildBoostingMarketingProgressBarTsx2(){let[width]=this.__closure;return width.get();})",
 };
-const __initData3 = {
-  code: "function GuildBoostingMarketingProgressBarTsx3(width){const{BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,runOnJS,setRevealedTier}=this.__closure;let tier=BoostedGuildTiers.NONE;if(width>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)runOnJS(setRevealedTier)(tier);}",
+let closure_15 = {
+  code: "(function GuildBoostingMarketingProgressBarTsx3(width){let[BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,scheduleOnRN,setRevealedTier]=this.__closure;let tier=BoostedGuildTiers.NONE;if(width>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)scheduleOnRN(setRevealedTier,tier);})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting(
@@ -73,122 +76,144 @@ let result = size.fileFinishedImporting(
 
 export default function ProgressBar(guild) {
   guild = guild.guild;
-  let stateFromStores;
-  let sharedValue;
-  let revealedTier;
-  noop = undefined;
+  _require = guild;
+  _slicedToArray = undefined;
   let fillFactor;
   const tmp = closure_10();
-  const tmp2 = stateFromStores;
-  const tmp3 = sharedValue;
-  let tmp4 = stateFromStores(sharedValue[9])();
+  let tmp4 = useThemeDefault();
   items = [AccessibilityStore];
-  stateFromStores = guild(sharedValue[10]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = guild(sharedValue[10]);
-  sharedValue = guild(sharedValue[11]).useSharedValue(0);
-  const tmp7 = revealedTier(noop.useState(BoostedGuildTiers.NONE), 2);
-  revealedTier = tmp7[0];
-  noop = tmp9;
-  const obj2 = guild(sharedValue[11]);
-  class I {
+  const stateFromStores = require("useStateFromStores").useStateFromStores(
+    items,
+    () => useReducedMotion2.useReducedMotion,
+  );
+  importDefault = stateFromStores;
+  let obj = require("useStateFromStores");
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  dependencyMap = sharedValue;
+  const tmp9 = _slicedToArray(fillFactor.useState(BoostedGuildTiers.NONE), 2);
+  const first = tmp9[0];
+  _slicedToArray = first;
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_13, sharedValue];
+  _require = undefined;
+  [tmp11, tmp12] = items1;
+  class GuildBoostingMarketingProgressBarTsx1 {
     constructor() {
-      obj = { width: "" + closure_2.get() + "%" };
+      obj = { width: "" + closure_0.get() + "%" };
       return obj;
     }
   }
-  I.__closure = { width: sharedValue };
-  I.__workletHash = 8013193810386;
-  I.__initData = __initData;
-  const animatedStyle = guild(sharedValue[11]).useAnimatedStyle(I);
-  const obj3 = guild(sharedValue[11]);
-  const fn = function p() {
-    return sharedValue.get();
-  };
-  fn.__closure = { width: sharedValue };
-  fn.__workletHash = 5482324713221;
-  fn.__initData = __initData2;
-  const fn2 = function w(arg0) {
-    let TIER_3 = BoostedGuildTiers.NONE;
-    if (arg0 >= 28.33) {
-      TIER_3 = BoostedGuildTiers.TIER_1;
+  const items2 = [tmp12];
+  GuildBoostingMarketingProgressBarTsx1.__closure = items2;
+  GuildBoostingMarketingProgressBarTsx1.__workletHash = 12429210936939;
+  GuildBoostingMarketingProgressBarTsx1.__initData = tmp11;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    GuildBoostingMarketingProgressBarTsx1,
+  );
+  const obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_14, sharedValue];
+  _require = undefined;
+  [tmp14, tmp15] = items3;
+  class GuildBoostingMarketingProgressBarTsx2 {
+    constructor() {
+      return closure_0.get();
     }
-    if (arg0 >= 61.67) {
-      TIER_3 = BoostedGuildTiers.TIER_2;
-    }
-    if (arg0 >= 95) {
-      TIER_3 = BoostedGuildTiers.TIER_3;
-    }
-    if (TIER_3 !== first) {
-      ReanimatedRexport.runOnJS(closure_4)(TIER_3);
-    }
-  };
-  const obj4 = guild(sharedValue[11]);
-  fn2.__closure = {
+  }
+  const items4 = [tmp15];
+  GuildBoostingMarketingProgressBarTsx2.__closure = items4;
+  GuildBoostingMarketingProgressBarTsx2.__workletHash = 7658772434044;
+  GuildBoostingMarketingProgressBarTsx2.__initData = tmp14;
+  const items5 = [
+    closure_15,
     BoostedGuildTiers,
-    TIER_REACHED_OFFSET: 5,
-    revealedTier,
-    runOnJS: guild(sharedValue[11]).runOnJS,
-    setRevealedTier: tmp7[1],
-  };
-  fn2.__workletHash = 4844648302516;
-  fn2.__initData = __initData3;
-  const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
-  const items1 = [guild];
-  fillFactor = noop.useMemo(() => GuildBoostingUtils.getGuildBoostingProgressBarFillFactor(guild), items1).fillFactor;
-  const items2 = [fillFactor, sharedValue, stateFromStores];
-  const effect = noop.useEffect(() => {
+    5,
+    first,
+    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    tmp9[1],
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  fillFactor = undefined;
+  [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21] = items5;
+  class GuildBoostingMarketingProgressBarTsx3 {
+    constructor(arg0) {
+      tmp = closure_0;
+      TIER_3 = closure_0.NONE;
+      tmp2 = closure_1;
+      if (guild >= 33.33 - closure_1) {
+        TIER_3 = tmp.TIER_1;
+      }
+      if (guild >= 66.67 - tmp2) {
+        TIER_3 = tmp.TIER_2;
+      }
+      if (guild >= 100 - tmp2) {
+        TIER_3 = tmp.TIER_3;
+      }
+      if (TIER_3 !== closure_2) {
+        tmp3 = closure_3;
+        tmp4 = fillFactor;
+        tmp5 = closure_3(fillFactor, TIER_3);
+      }
+      return;
+    }
+  }
+  const items6 = [tmp17, tmp18, tmp19, tmp20, tmp21];
+  GuildBoostingMarketingProgressBarTsx3.__closure = items6;
+  GuildBoostingMarketingProgressBarTsx3.__workletHash = 1273150541408;
+  GuildBoostingMarketingProgressBarTsx3.__initData = tmp16;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    GuildBoostingMarketingProgressBarTsx2,
+    GuildBoostingMarketingProgressBarTsx3,
+  );
+  const items7 = [guild];
+  fillFactor = obj3.useMemo(() => GuildBoostingUtils.getGuildBoostingProgressBarFillFactor(c0), items7).fillFactor;
+  const items8 = [fillFactor, sharedValue, stateFromStores];
+  const effect = obj3.useEffect(() => {
     let result = 100 * fillFactor;
-    guild = result;
+    c0 = result;
     let timeout = -1;
     if (timeout) {
-      const result1 = sharedValue.set(result);
+      const result1 = _undefined.set(result);
     } else {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        result = sharedValue.set(spring.withSpring(result, closure_12));
+        result = c2.set(spring_spring.withSpring(result, closure_12));
       }, 750);
     }
     return () => {
       window.clearTimeout(closure_1);
     };
-  }, items2);
-  const obj6 = { style: tmp.progressBarContainer, children: null };
-  const obj7 = { style: tmp.progressBar, children: null };
-  const obj8 = { style: tmp.progressBarScrubber, children: null };
-  const obj9 = { style: null, children: null };
-  const items3 = [tmp.progressBarFill, animatedStyle];
-  obj9.style = items3;
-  const obj5 = {
-    BoostedGuildTiers,
-    TIER_REACHED_OFFSET: 5,
-    revealedTier,
-    runOnJS: guild(sharedValue[11]).runOnJS,
-    setRevealedTier: tmp7[1],
-  };
-  const tmp16 = stateFromStores(sharedValue[14]);
+  }, items8);
+  const obj5 = { style: tmp.progressBarContainer, children: null };
+  const obj6 = { style: tmp.progressBar, children: null };
+  const obj7 = { style: tmp.progressBarScrubber, children: null };
+  const obj8 = { style: null, children: null };
+  const items9 = [tmp.progressBarFill, animatedStyle];
+  obj8.style = items9;
+  const tmp5Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = LinearGradientDefault;
   let str = "#515359";
-  if (!obj10.isThemeDark(tmp4)) {
-    str = tmp2(tmp3[8]).unsafe_rawColors.PRIMARY_160;
+  if (!tmp5Result2.isThemeDark(tmp4)) {
+    str = tmp2(575).unsafe_rawColors.PRIMARY_160;
   }
-  const obj11 = {
+  const obj9 = {
     useAngle: true,
     angle: 90,
     colors: null,
     locations: [0.1577, 0.9905],
     style: tmp.progressBarGradientFill,
   };
-  const items4 = [str, "#AB77F2"];
-  obj11.colors = items4;
-  obj9.children = closure_8(tmp16, obj11);
-  const items5 = [
-    closure_8(stateFromStores(sharedValue[11]).View, obj9),
-    closure_8(fillFactor, { style: tmp.progressBarTrack }),
-  ];
-  obj8.children = items5;
-  const items6 = [
-    closure_9(fillFactor, obj8),
+  const items10 = [str, "#AB77F2"];
+  obj9.colors = items10;
+  obj8.children = closure_8(tmp2Result, obj9);
+  const items11 = [closure_8(_modDef1652.View, obj8), closure_8(View, { style: tmp.progressBarTrack })];
+  obj7.children = items11;
+  const items12 = [
+    closure_9(View, obj7),
     items.map((tier) => {
-      const obj = { guild, tier, revealedTier, useReducedMotion: stateFromStores, isDisabled: null };
+      const obj = { guild, tier, revealedTier, useReducedMotion, isDisabled: null };
       let tmp4 = guild.premiumTier <= tier;
       if (tmp4) {
         tmp4 = fillFactor > GuildBoostingMarketingProgressBarMarker.TierMarkerPositions[tier];
@@ -197,8 +222,8 @@ export default function ProgressBar(guild) {
       return React6(GuildBoostingMarketingProgressBarMarkerDefault, obj, tier);
     }),
   ];
-  obj7.children = items6;
-  obj6.children = closure_9(fillFactor, obj7);
-  return closure_8(fillFactor, obj6);
+  obj6.children = items12;
+  obj5.children = closure_9(View, obj6);
+  return closure_8(View, obj5);
 }
 export const PROGRESS_BAR_SPACING = 40;

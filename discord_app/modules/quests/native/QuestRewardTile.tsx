@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
   const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
-  const items = [quest];
+  items = [quest];
   const tmp3 = useMemo(() => QuestRewardUtils.getQuestPrimaryReward(quest), items);
   if (null != tmp3.name) {
     let name = tmp3.name;

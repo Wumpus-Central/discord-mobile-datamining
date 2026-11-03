@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesG
 
 export default function useFavoritesGuildUnreads(arg0) {
   _require = arg0;
-  const items = [
+  items = [
     ActiveJoinedThreadsStore,
     ChannelStore,
     GuildReadStateStore,

@@ -21,7 +21,7 @@ export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
     tmp3 = tmp2;
   }
   dependencyMap = tmp3;
-  const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
+  items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
   const effect = noop.useEffect(() => {
     let tmp = closure_2;
     if (closure_2) {

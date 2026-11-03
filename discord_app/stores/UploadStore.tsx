@@ -57,7 +57,7 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         dependencyMap[channelId] = items1;
         if (null != message) {
           closure_6[file.id] = message;
-          const items = file.items;
+          items = file.items;
           if (null != items) {
             const obj = {};
             const merged = Object.assign(file);
@@ -212,7 +212,7 @@ const uploadStore = new UploadStore(DispatcherDefault, {
       if (id == null) {
         id = tmp2.id;
       }
-      const items = file.items;
+      items = file.items;
       let mapped;
       if (items != null) {
         mapped = items.map((item) => {

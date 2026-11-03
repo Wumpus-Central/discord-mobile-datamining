@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled_mod from "../../../../_runtime/06456_allSettled.js";
+import allSettled_mod from "../../../../_runtime/06576_allSettled.js";
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
       }
     });
   }
-  const items = [];
+  items = [];
   const tmp2 = new Set();
   while (tmp4 !== undefined) {
     let channel = GuildRoleSubscriptionTierTemplatesStore.getChannel(tmp5);
@@ -54,7 +54,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           closure_2 = tmp2;
           closure_130_0 = closure_0;
           closure_130_1 = importDefault;
-          const items = [];
+          items = [];
           closure_130_2 = items;
           closure_130_3 = [];
           let item = importDefault.forEach((ref_id) => {
@@ -138,9 +138,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17217).useEditStateStore;
+const useEditStateStore = fn(17360).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
@@ -151,7 +151,7 @@ let result = size.fileFinishedImporting(
 
 export function useChannelWithTemplateFallback(ref_id) {
   _require = ref_id;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     ChannelStore.getChannel(closure_0),
   );
@@ -197,7 +197,7 @@ export function useChannelWithTemplateFallback(ref_id) {
 }
 export function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   _require = guildId;
-  const items = [GuildRoleSubscriptionsStore];
+  items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListingsForGuild(closure_0),
   );

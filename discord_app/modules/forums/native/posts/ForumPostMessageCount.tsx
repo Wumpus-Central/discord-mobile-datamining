@@ -11,9 +11,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -21,7 +21,7 @@ if (PlatformUtils.isAndroid()) {
 let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
 obj2.marginTop = num;
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;
@@ -46,7 +46,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     str = "text-default";
   }
   const obj2 = { style: null, accessibilityLabel: null, children: null };
-  const items = [tmp.container, containerStyle];
+  items = [tmp.container, containerStyle];
   obj2.style = items;
   const intl = util.intl;
   obj2.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });

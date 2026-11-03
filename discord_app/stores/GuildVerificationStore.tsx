@@ -17,7 +17,7 @@ function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
   set.add(guildId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const currentUser = UserStore.getCurrentUser();
   let tmp4 = null != guild;
   if (tmp4) {
@@ -141,7 +141,7 @@ function recomputeGuild(guildId) {
                 }
               }
             }
-            const items = [];
+            items = [];
             if (flag2) {
               items.push(num3);
             }
@@ -223,7 +223,7 @@ function handleCreateOrUpdateGuild(guild) {
   recomputeGuild(guild.guild.id);
 }
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ VerificationLevels: closure_8, VerificationCriteria: closure_9, GuildFeatures: c10 } = Constants);
+({ VerificationLevels: closure_8, VerificationCriteria: closure_9, GuildFeatures: closure_10 } = Constants);
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
 let closure_12 = {
   notClaimed: false,

@@ -13,10 +13,10 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(11001);
+const ChannelCallConstants = fn(11134);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5681).ParticipantTypes;
-const timeout = new fn(4858).Timeout();
+const ParticipantTypes = fn(5801).ParticipantTypes;
+const timeout = new fn(4985).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -28,22 +28,22 @@ let obj2 = {};
 let size = {
   x: "Array",
   y: "Path",
-  width: "y",
-  height: "HermesInternal",
-  screenOrientation: fn(8903).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  width: "disabled",
+  height: "Map",
+  screenOrientation: fn(9027).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "message",
+  isInitialized: "properties",
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "Path",
-  width: "y",
-  height: "HermesInternal",
-  screenOrientation: fn(8903).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  width: "disabled",
+  height: "Map",
+  screenOrientation: fn(9027).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: "message",
+  isInitialized: "properties",
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
@@ -125,7 +125,7 @@ export function useChannelCallOrientationHandlers(isGuildStageVoice) {
   }
   obj = require("VoiceChatHooks");
   const tmp8 = applicationId;
-  const items = [tmp8];
+  items = [tmp8];
   const items1 = [applicationId];
   stateFromStores = require("initialize").useStateFromStores(
     items,

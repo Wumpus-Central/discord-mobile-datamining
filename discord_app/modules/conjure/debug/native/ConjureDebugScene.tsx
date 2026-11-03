@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugScene.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
@@ -16,10 +16,10 @@ import ConjureDebugStore from "../ConjureDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10850).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10980).subscribeDebugBacklog;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   tabs: null,
@@ -52,7 +52,7 @@ export default function ConjureDebugScene(projectId) {
   const navigation = projectId(conjureTraceTabEnabled[10]).useNavigation();
   let obj = projectId(conjureTraceTabEnabled[10]);
   conjureTraceTabEnabled = projectId(conjureTraceTabEnabled[12]).useConjureTraceTabEnabled();
-  const items = [conjureTraceTabEnabled];
+  items = [conjureTraceTabEnabled];
   const memo = noop.useMemo(
     () => (conjureTraceTabEnabled ? ["logs", "worker", "agent", "trace"] : ["logs", "worker", "agent"]),
     items,
@@ -163,7 +163,7 @@ export default function ConjureDebugScene(projectId) {
     obj.copy(ConjureDebugSnapshot.conjureDebugSnapshot(projectId));
     const obj4 = { text: null, icon: null };
     const intl = util.intl;
-    obj4.text = intl.string(_modDef3868.wI6fhl);
+    obj4.text = intl.string(_modDef3995.wI6fhl);
     obj4.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_DEBUG_COPIED", obj4);
   }, items10);

@@ -1,54 +1,57 @@
 // discord_app/modules/display_name_styles/native/effects/GummyStripesFromHue.tsx
-import ColorPickerUtils from "../../../color_picker/native/ColorPickerUtils.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
-function AnimatedStripe(hue) {
-  hue = hue.hue;
-  const shift = hue.shift;
-  const saturation = hue.saturation;
-  const lightness = hue.lightness;
-  let stripeOverlap = hue.overlap;
-  const tmp = closure_6();
-  const fn = function c() {
-    const result = (hue.get() + shift) % 360;
-    const tmp2 = _slicedToArray(
-      ColorPickerUtils.hslToRgbWorklet({ h: (result + 360) % 360, s: saturation, l: lightness }),
-      3,
-    );
-    const obj2 = { h: (result + 360) % 360, s: saturation, l: lightness };
-    return { backgroundColor: "rgb(" + tmp2[0] + ", " + tmp2[1] + ", " + tmp2[2] + ")" };
-  };
-  let obj = hue(saturation[5]);
-  fn.__closure = { hue, shift, hslToRgbWorklet: hue(saturation[6]).hslToRgbWorklet, saturation, lightness };
-  fn.__workletHash = 8497009401863;
-  fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
+const require = fn;
+function AnimatedStripe(overlap) {
+  let stripeOverlap = overlap.overlap;
+  ({ hue, shift, saturation, lightness } = overlap);
+  let tmp = closure_6();
+  items = [closure_7, hue, shift, require("ColorPickerUtils").hslToRgbWorklet, saturation, lightness];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  let l;
+  [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+  class GummyStripesFromHueTsx1 {
+    constructor() {
+      obj = { h: (((closure_0.get() + closure_1) % 360) + 360) % 360, s: closure_3, l: closure_4 };
+      tmp = closure_3(closure_2(obj), 3);
+      obj1 = { backgroundColor: "rgb(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ")" };
+      return obj1;
+    }
+  }
+  const items1 = [tmp4, tmp5, tmp6, tmp7, tmp8];
+  GummyStripesFromHueTsx1.__closure = items1;
+  GummyStripesFromHueTsx1.__workletHash = 15518574329470;
+  GummyStripesFromHueTsx1.__initData = tmp3;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GummyStripesFromHueTsx1);
   const style = [tmp.stripe, ,];
   if (stripeOverlap) {
     stripeOverlap = tmp.stripeOverlap;
   }
   style[1] = stripeOverlap;
   style[2] = animatedStyle;
-  return closure_4(shift(saturation[5]).View, { style });
+  return l(_modDef1652.View, { style });
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
-const __initData = {
-  code: 'function GummyStripesFromHueTsx1(){const{hue,shift,hslToRgbWorklet,saturation,lightness}=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:"rgb("+r+", "+g+", "+b+")"};}',
+let closure_7 = {
+  code: '(function GummyStripesFromHueTsx1(){let[hue,shift,hslToRgbWorklet,saturation,lightness]=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:"rgb("+r+", "+g+", "+b+")"};})',
 };
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripesFromHue.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripesFromHue.tsx");
 
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1400).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1402).GUMMY_STRIPES;
   obj.children = GUMMY_STRIPES.map((hueShift, index) =>
-    React4(
+    l(
       AnimatedStripe,
       {
         hue,
@@ -60,5 +63,5 @@ export default function GummyStripesFromHue(hue) {
       index,
     ),
   );
-  return closure_4(closure_5, obj);
+  return l(closure_5, obj);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/createUseCollectiblesShopStyles.tsx
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import tinycolorDefault from "../../../_runtime/07730_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07854_tinycolor.js";
 import UserProfileGradientUtils from "../user_profile/UserProfileGradientUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/collectibles/createUseCollect
 export default function createUseCollectiblesShopStyles(arg0) {
   closure_0 = arg0;
   return (backgroundColors) => {
-    const items = [AccessibilityStore];
+    items = [AccessibilityStore];
     const stateFromStores = useStateFromStores.useStateFromStores(items, () => saturation.saturation);
     if (null == backgroundColors) {
       return {};

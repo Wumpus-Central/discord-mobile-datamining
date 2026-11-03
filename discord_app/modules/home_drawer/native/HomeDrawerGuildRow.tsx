@@ -34,7 +34,7 @@ function GuildRowWrapper(guild) {
   let memo2;
   let tmp = closure_21();
   noop = tmp;
-  let items = [unreadChannel];
+  items = [unreadChannel];
   const stateFromStores = guild(onActiveHookChange[16]).useStateFromStores(items, () =>
     GuildReadStateStore.hasUnread(guild.id),
   );
@@ -86,12 +86,12 @@ function GuildRowWrapper(guild) {
       }
       obj2.color = str;
       obj2.children = guild.name;
-      const items = [
+      items = [
         collapsedCategories(Text_Text.Text, obj2),
-        collapsedCategories(__initData2, { size: "xs", color: "icon-muted" }),
+        collapsedCategories(value2, { size: "xs", color: "icon-muted" }),
       ];
       obj.children = items;
-      return closure_2_19(View, obj);
+      return expandedHeight(View, obj);
     }
   }, items3);
   let obj2 = guild(onActiveHookChange[16]);
@@ -170,7 +170,7 @@ function GuildRowWrapper(guild) {
       const tmp = unreadChannel.getMutableGuildStates()[guild.id];
       guild = tmp;
       if (null == tmp) {
-        return { mentionChannel: "dispatch", mentionChannelName: "isArray", mentionChannelCount: null };
+        return { mentionChannel: "disabled", mentionChannelName: "isArray", mentionChannelCount: null };
       } else {
         const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
         const found = keys.filter((item) => {
@@ -361,10 +361,10 @@ function GuildRowWrapper(guild) {
   return typingChannelName(guild(onActiveHookChange[34]).HomeDrawerSharedItem, obj12);
 }
 const View = fn(17).View;
-const isThread = fn(4867).isThread;
+const isThread = fn(4994).isThread;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -375,7 +375,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -386,9 +386,9 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawer
 export default function HomeDrawerGuildRow(guildId) {
   guildId = guildId.guildId;
   ({ disableSubtitle, onActiveHookChange } = guildId);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(5204).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(5327).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

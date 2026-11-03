@@ -10,7 +10,7 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ buttonGroup: { paddingVertical: 0 } });
 let obj2 = { PLAY: "PLAY", CLAIM: "CLAIM" };
 let obj3 = { CLOSE: "CLOSE", HOW_TO_PLAY: "HOW_TO_PLAY" };
@@ -52,7 +52,7 @@ export default function OrbsArcadeSheetActions(game) {
     tmp7 = tmp4;
   }
   obj3 = game(504);
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const items1 = [game.id];
   const stateFromStores = obj3.useStateFromStores(
     items,
@@ -75,7 +75,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5634).Button, {
+        tmp19 = closure_4(tmp10(5754).Button, {
           grow: true,
           size: "lg",
           variant: "secondary",

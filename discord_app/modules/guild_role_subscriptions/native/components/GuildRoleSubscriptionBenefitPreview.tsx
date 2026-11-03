@@ -16,7 +16,7 @@ function BaseBenefitRow(isInteractive) {
   }
   const tmp = closure_7();
   const obj = { style: tmp.container, children: null };
-  const items = [
+  items = [
     hasOwnProperty(View, {
       style: tmp.emojiContainer,
       children: hasOwnProperty(EmojiIconDefault, { guildId, id: emoji }),
@@ -54,7 +54,7 @@ function DescriptiveBenefitRow(benefit) {
     isInteractive,
     children: null,
   };
-  const items = [children, tmp2];
+  items = [children, tmp2];
   obj2.children = items;
   return timestampProducer(BaseBenefitRow, obj2);
 }
@@ -75,7 +75,7 @@ function ChannelBenefitRow(benefit) {
     const obj3 = { benefit, guildId, isInteractive, children: null };
     const obj4 = { style: tmp.channelRow, children: null };
     const obj5 = { style: tmp.channelIcon, size: "xs" };
-    const items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj5)];
+    items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj5)];
     const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
     items[1] = hasOwnProperty(Text_Text.Text, obj6);
     obj4.children = items;
@@ -104,7 +104,7 @@ function EmojiBenefitRow(benefit) {
   ({ guildId, isInteractive } = benefit);
   const tmp = closure_7();
   const obj = { emoji: benefit.id, guildId, contentStyle: tmp.emojiRow, isInteractive, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
       style: tmp.emojiColons,
       variant: "text-md/medium",
@@ -127,10 +127,10 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(17196).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17339).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   emojiContainer: {

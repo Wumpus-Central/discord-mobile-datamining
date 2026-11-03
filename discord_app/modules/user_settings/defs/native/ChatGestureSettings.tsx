@@ -24,7 +24,7 @@ const radio = SettingBuilders.createRadio({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["9BGJ1m"])];
+    items = [intl.string(util.t["9BGJ1m"])];
     return items;
   },
   parent: SettingsConstants.MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
@@ -49,7 +49,7 @@ const radio = SettingBuilders.createRadio({
     obj.label = intl.string(util.t["6eXLcJ"]);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.ohhhDK);
-    const items = [obj];
+    items = [obj];
     const obj2 = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = util.intl;
     obj2.label = intl3.string(util.t["3tYNDS"]);

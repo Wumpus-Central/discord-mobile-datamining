@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3870 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef3997 from "../intl/CustomTypingIndicator.messages.js";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef13740 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef13741 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef13871 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef13872 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function CoachmarkPreview() {
     textStyle: tmp.typingText,
     emojiSource: null,
   };
-  const items = [_modDef13740, _modDef13741, _modDef13740];
+  items = [_modDef13871, _modDef13872, _modDef13871];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
     name: "Locke",
@@ -40,9 +40,9 @@ function CoachmarkPreview() {
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 },
   typingText: { maxWidth: 100 },
@@ -68,7 +68,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
   const analyticsLocations = markAsDismissed(str[9])(
     markAsDismissed(str[10]).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
   ).analyticsLocations;
-  const items = [markAsDismissed];
+  items = [markAsDismissed];
   const onDismiss = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items);
@@ -96,7 +96,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
       return closure_1_7(closure_1_9, {});
     };
     const intl = util.intl;
-    obj.buttonLabel = intl.string(_modDef3870["6NP6ic"]);
+    obj.buttonLabel = intl.string(_modDef3997["6NP6ic"]);
     obj.onButtonPress = function onButtonPress() {
       const obj2 = { screen: analyticsLocations.TYPING_INDICATOR, params: { analyticsLocations } };
       visible(str[11]).openUserSettings(obj2, () => {

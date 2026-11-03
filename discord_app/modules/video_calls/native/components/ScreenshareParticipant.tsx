@@ -8,7 +8,7 @@ const View = fn(17).View;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -27,7 +27,7 @@ export default function ScreenshareParticipant(participant) {
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
-  const items = [onSingleTap, participant];
+  items = [onSingleTap, participant];
   const items1 = [onDoubleTap, participant];
   const callback = noop.useCallback(() => {
     let tmpResult;
@@ -48,7 +48,7 @@ export default function ScreenshareParticipant(participant) {
   const items2 = [ApplicationStreamingStore];
   const stateFromStores = participant(onDoubleTap[8]).useStateFromStores(items2, () => {
     currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
-    let state;
+    state = undefined;
     if (currentUserActiveStream != null) {
       state = currentUserActiveStream.state;
     }
@@ -61,7 +61,7 @@ export default function ScreenshareParticipant(participant) {
   const obj4 = {
     style: tmp5.title,
     accessibilityRole: "header",
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

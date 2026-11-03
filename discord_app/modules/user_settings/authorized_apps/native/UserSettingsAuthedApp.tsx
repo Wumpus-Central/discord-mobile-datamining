@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../_runtime/01500_Link.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -26,7 +26,7 @@ require = fn;
 function WarningLabel(children) {
   const tmp = closure_19();
   const obj = { style: tmp.warningContainer, children: null };
-  const items = [
+  items = [
     closure_1_17(CircleInformationIcon.CircleInformationIcon, {
       size: "xs",
       color: nativeDefault.colors.TEXT_MUTED,
@@ -39,8 +39,8 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1497).useNavigation();
-  const items = [navigation];
+  navigation = navigation(1499).useNavigation();
+  items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
     const CommonActions = Link.CommonActions;
@@ -63,11 +63,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10137).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11287).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10267).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11424).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },
@@ -90,7 +90,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   let application = oauth2Token.application;
   let stringResult = stateFromStores;
   let tmp20Result9 = application(stateFromStores[21])(application);
-  const items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   stateFromStores = id(stateFromStores[22]).useStateFromStores(items, () =>
     AuthorizedAppsStore.getNewestTokenForApplication(application.id),
   );

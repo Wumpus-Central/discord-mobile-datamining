@@ -1,13 +1,13 @@
 // discord_app/modules/conjure/chat/native/ConjureMessageAuthor.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConjureMessageTime from "../ConjureMessageTime.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
-import _modDef12643 from "../../../../../_runtime/metro/12643__.js";
+import _modDef12779 from "../../../../../_runtime/metro/12779__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -63,7 +63,7 @@ class ConjureMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -71,9 +71,9 @@ let obj2 = {
   agentAvatar: null,
 };
 let size = {
-  width: fn(12625).MESSAGE_AVATAR_SIZE,
-  height: fn(12625).MESSAGE_AVATAR_SIZE,
-  borderRadius: fn(12625).MESSAGE_AVATAR_SIZE / 2,
+  width: fn(12761).MESSAGE_AVATAR_SIZE,
+  height: fn(12761).MESSAGE_AVATAR_SIZE,
+  borderRadius: fn(12761).MESSAGE_AVATAR_SIZE / 2,
 };
 obj2.agentAvatar = size;
 const React5 = createStyles.createStyles(obj2);
@@ -84,9 +84,9 @@ export { ConjureMessageHeader };
 export function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(12636).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(12636);
-  const name = messageAuthorUser(5068).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12772).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12772);
+  const name = messageAuthorUser(5195).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -101,7 +101,7 @@ export function ConjureUserHeader(arg0) {
 export function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef3868.uk6jhJ);
+  obj.name = intl.string(_modDef3995.uk6jhJ);
   obj.at = arg0.at;
   return hasOwnProperty(ConjureMessageHeader, obj);
 }
@@ -111,8 +111,8 @@ export function ConjureUserAvatar(size) {
     NORMAL = messageAuthorUser(1187).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(12636).useMessageAuthorUser(size.userId);
-  const items = [messageAuthorUser];
+  messageAuthorUser = messageAuthorUser(12772).useMessageAuthorUser(size.userId);
+  items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
       const result = ConjureMessageActionSheet.openMessageAuthorProfile(tmp.id);
@@ -131,14 +131,14 @@ export function ConjureUserAvatar(size) {
     obj2.accessibilityLabel = intl.string(tmp3(1113).t.iXAna6);
     const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
     obj2.children = closure_5(tmp3(1187).Avatar, obj3);
-    tmp7 = closure_5(tmp3(6980).PressableOpacity, obj2);
+    tmp7 = closure_5(tmp3(7106).PressableOpacity, obj2);
   }
   return tmp7;
 }
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef12643;
+  obj.source = _modDef12779;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

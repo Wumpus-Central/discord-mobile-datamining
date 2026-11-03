@@ -120,7 +120,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -236,7 +236,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -255,7 +255,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -312,7 +312,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -341,7 +341,7 @@ let closure_28 = async function _trackAppUIViewed() {
       const obj9 = { value, done: true };
       return obj9;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -523,7 +523,7 @@ let closure_28 = async function _trackAppUIViewed() {
           })(closure_131_6);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp66) {
       c6 = tmp;
@@ -533,7 +533,7 @@ let closure_28 = async function _trackAppUIViewed() {
 };
 function batchKeys(arg0) {
   const keys = Object.keys(arg0);
-  const items = [];
+  items = [];
   let num = 0;
   if (0 < keys.length) {
     const sum = num + 10;
@@ -563,7 +563,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -601,7 +601,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
           logEventProperties: true,
         });
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -610,8 +610,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7813).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(4870).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7937).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4997).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1266);
 const load_id = v1.v4();

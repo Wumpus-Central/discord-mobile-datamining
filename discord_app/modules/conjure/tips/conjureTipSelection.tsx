@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipSelect
 
 export function selectConjureTips(arg0, arg1, isDismissed) {
   const obj = { callout: null, hint: null };
-  const items = [...arg0];
+  items = [...arg0];
   const sorted = items.sort((priority, priority2) => priority2.priority - priority.priority);
   const iter = sorted[Symbol.iterator]();
   const nextResult = iter.next();

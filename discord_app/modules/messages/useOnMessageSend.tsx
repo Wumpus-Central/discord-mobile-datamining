@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx
 export default function useOnMessageSend(arg0) {
   closure_0 = arg0;
   dependencyMap = tmp;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   const effect = noop.useEffect(() => {
     function handleMessage(channelId) {
       let tmp2 = undefined !== handleMessageCreate;

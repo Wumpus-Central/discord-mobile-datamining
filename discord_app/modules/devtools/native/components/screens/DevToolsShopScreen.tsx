@@ -17,7 +17,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
 };
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 
 export default function DevToolsShopScreen() {
   const tmp = closure_7();
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = initialize.useStateFromStores(items, () => DevSettingsStore.get("shop_disable_cache"));
   const items1 = [DevSettingsStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () =>

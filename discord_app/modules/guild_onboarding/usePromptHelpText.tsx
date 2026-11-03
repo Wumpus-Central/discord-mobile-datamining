@@ -17,7 +17,7 @@ export default function usePromptHelpText(arg0) {
   if (guild != null) {
     id = guild.id;
   }
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = selectedRoleIds(504).useStateFromStoresArray(
     items,
@@ -118,7 +118,7 @@ export function useCustomizeCommunityPromptHelpText(arg0) {
   if (guild != null) {
     id = guild.id;
   }
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [id, selectedRoleIds];
   const stateFromStoresArray = selectedRoleIds(504).useStateFromStoresArray(
     items,

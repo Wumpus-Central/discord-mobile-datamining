@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/useConjurePlanBotPreviewItems.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import conjurePlanBot from "conjurePlanBot.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ function useSampleUser(_31337, name) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [_31337];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const items2 = [flag2, stateFromStores, _31337, name, str, flag];
@@ -58,7 +58,7 @@ function mentionMember(str, username) {
 }
 const Constants = fn(1072);
 ({ MessageStates: closure_8, MessageTypes: closure_9 } = Constants);
-const guildTextChannelRecord = new fn(4867).GuildTextChannelRecord({
+const guildTextChannelRecord = new fn(4994).GuildTextChannelRecord({
   id: "1337",
   guild_id: "1337",
   type: Constants.ChannelTypes.GUILD_TEXT,
@@ -72,21 +72,21 @@ export const CONJURE_PLAN_BOT_PREVIEW_CHANNEL = guildTextChannelRecord;
 export function useConjurePlanBotExchanges(proposal) {
   _require = proposal;
   const conjurePlanBotInteraction = require("conjurePlanBot").getConjurePlanBotInteraction(proposal);
-  let items = [proposal, conjurePlanBotInteraction];
+  items = [proposal, conjurePlanBotInteraction];
   let obj = require("conjurePlanBot");
   return {
     botInteraction: conjurePlanBotInteraction,
     botExchanges: noop.useMemo(() => {
       if (null == conjurePlanBotInteraction) {
-        let items = [];
+        items = [];
       } else {
         const obj2 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj2.message = intl.string(_modDef3868.J7qggf);
+        obj2.message = intl.string(_modDef3995.J7qggf);
         const intl2 = util.intl;
-        obj2.reply = intl2.string(_modDef3868.nqYtiy);
+        obj2.reply = intl2.string(_modDef3995.nqYtiy);
         const intl3 = util.intl;
-        obj2.event = intl3.string(_modDef3868["05lU9W"]);
+        obj2.event = intl3.string(_modDef3995["05lU9W"]);
         items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
       }
       return items;
@@ -94,7 +94,7 @@ export function useConjurePlanBotExchanges(proposal) {
   };
 }
 export function useConjurePlanCommandExchanges(proposal) {
-  const items = [proposal];
+  items = [proposal];
   return noop.useMemo(() => {
     const commands = proposal.commands;
     if (commands.some(conjurePlanBot.isAppCommand)) {
@@ -103,11 +103,11 @@ export function useConjurePlanCommandExchanges(proposal) {
       obj.bot = undefined;
       const obj2 = { message: null, reply: null, event: null };
       const intl = util.intl;
-      obj2.message = intl.string(_modDef3868.J7qggf);
+      obj2.message = intl.string(_modDef3995.J7qggf);
       const intl2 = util.intl;
-      obj2.reply = intl2.string(_modDef3868.nqYtiy);
+      obj2.reply = intl2.string(_modDef3995.nqYtiy);
       const intl3 = util.intl;
-      obj2.event = intl3.string(_modDef3868["05lU9W"]);
+      obj2.event = intl3.string(_modDef3995["05lU9W"]);
       let conjurePlanBotExchanges = conjurePlanBot.getConjurePlanBotExchanges(obj, "commands", obj2);
       const tmp2Result = conjurePlanBot;
     } else {
@@ -119,7 +119,7 @@ export function useConjurePlanCommandExchanges(proposal) {
 export function useConjurePlanBotPreviewItems(projectId, exchanges) {
   _require = projectId;
   importDefault = exchanges;
-  let items = [currentUser];
+  items = [currentUser];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
   const tmp3 = currentUser;
@@ -127,7 +127,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
     ConjureProjectStore.getProject(closure_0),
   );
-  let application_id;
+  application_id = undefined;
   if (stateFromStores1 != null) {
     application_id = stateFromStores1.application_id;
   }
@@ -204,9 +204,9 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
             let obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
             let obj2 = { targetMessage: null, memberMessage: null };
             const intl = util.intl;
-            obj2.targetMessage = intl.string(_modDef3868["y+QYes"]);
+            obj2.targetMessage = intl.string(_modDef3995["y+QYes"]);
             const intl2 = util.intl;
-            obj2.memberMessage = intl2.string(_modDef3868.BUTRDc);
+            obj2.memberMessage = intl2.string(_modDef3995.BUTRDc);
             (function buildPreviewItems(arg0, arg1, memberMessage) {
               ({ bot, currentUser } = arg1);
               ({ viewer, member } = arg1);
@@ -218,13 +218,13 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6063);
+                const obj2 = projectId(6183);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(10319)(obj3));
+                const merged = Object.assign(exchanges(10449)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
@@ -232,17 +232,17 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                   obj6 = {
                     id: StringResult,
                     name: interactionName,
-                    type: projectId(6070).InteractionTypes.APPLICATION_COMMAND,
-                    user: projectId(10319).userRecordToServer(currentUser),
+                    type: projectId(6190).InteractionTypes.APPLICATION_COMMAND,
+                    user: projectId(10449).userRecordToServer(currentUser),
                   };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(10319);
+                  const tmp2Result = projectId(10449);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(10319);
+                const tmp4 = exchanges(10449);
                 items.push({
                   key: StringResult,
                   record: obj2.createMessageRecord(obj4),
@@ -256,7 +256,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                   menu: obj.menu,
                 };
               }
-              const items = [];
+              items = [];
               const iter = arg0[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {

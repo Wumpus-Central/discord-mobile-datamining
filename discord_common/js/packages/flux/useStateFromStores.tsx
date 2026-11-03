@@ -18,7 +18,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
   }
   _slicedToArray = tmp;
   let current;
-  let state;
+  state = undefined;
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
@@ -27,7 +27,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
       areStatesEqual: tmp,
       getStateFromStores: getCurrentUser,
       prevDeps: "Boolean",
-      state: "__closure",
+      state: "disabled",
     };
     tmp2.current = obj;
   }

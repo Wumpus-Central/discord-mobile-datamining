@@ -5,7 +5,7 @@ import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteA
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
 
-const constants = fn(11364).GameOrganizationInviteStates;
+const constants = fn(11501).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1072).QueryIds.GAME_ORGANIZATION_INVITE,
@@ -14,7 +14,7 @@ const obj2 = {
   retryConfig: { retryableErrors: isRetryableFetchErrorDefault },
   get(arg0) {
     const invite = GameOrganizationInviteStore.getInvite(arg0);
-    let state;
+    state = undefined;
     if (invite != null) {
       state = invite.state;
     }
@@ -37,7 +37,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

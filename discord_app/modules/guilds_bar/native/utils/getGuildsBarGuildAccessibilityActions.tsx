@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuil
 
 export default function getGuildsBarGuildAccessibilityActions(arg0) {
   _require = arg0;
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let str;
   if (guild != null) {
     str = guild.name;
@@ -22,7 +22,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
   if (str == null) {
     str = "";
   }
-  let items = [];
+  items = [];
   let formatToPlainStringResult = dependencyMap;
   const tmp3 = getGuildBarNeighborsDefault(arg0);
   if (null == tmp3) {
@@ -41,7 +41,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
       const intl = ejhw4S(1113).intl;
       obj.label = intl.string(ejhw4S(1113).t.ehmVyX);
       obj.action = function action() {
-        const items = [closure_0];
+        items = [closure_0];
         const guildFolderLocal = GuildActionCreatorsDefault.createGuildFolderLocal(items, "");
         const result = moveGuildNode.persistGuildsBarOrder();
         const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;

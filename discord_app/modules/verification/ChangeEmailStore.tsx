@@ -25,7 +25,7 @@ export function setChangeEmailError(arg0, arg1) {
 }
 export function useChangeEmailError(arg0) {
   closure_0 = arg0;
-  const items = [
+  items = [
     obj((errors) => {
       errors = errors.errors;
       let tmp;

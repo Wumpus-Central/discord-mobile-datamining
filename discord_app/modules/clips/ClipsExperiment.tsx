@@ -6,8 +6,8 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
-const Features = fn(5768).Features;
+const PremiumTypes = fn(1387).PremiumTypes;
+const Features = fn(5888).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -40,7 +40,7 @@ export function useIsClipsAvailable() {
   if (isDesktopResult) {
     isDesktopResult = mediaEngine.hasClipsV3Support();
   }
-  const items = [UserStore];
+  items = [UserStore];
   return (
     initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();

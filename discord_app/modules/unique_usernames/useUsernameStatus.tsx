@@ -19,7 +19,7 @@ export (username) => {
   const usernameLiveCheck = useUsernameLiveCheck.useUsernameLiveCheck(username, flag, flag2);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   closure_3 = tmp3[1];
-  const items = [usernameLiveCheck, username, username];
+  items = [usernameLiveCheck, username, username];
   const effect = noop.useEffect(() => {
     if ("" !== closure_0) {
       if (tmp !== closure_1) {

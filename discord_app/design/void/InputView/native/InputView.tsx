@@ -40,8 +40,8 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   disabled: { opacity: 0.5 },
   topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" },
@@ -67,7 +67,7 @@ obj2.inputView = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(6778).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
 let obj5 = {
@@ -76,7 +76,7 @@ let obj5 = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(6778).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
@@ -85,9 +85,9 @@ let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.charactersLength = {
   alignSelf: "flex-end",
   fontFamily: Fonts.CODE_BOLD,
-  color: fn(6778).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
+  color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6778).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -213,7 +213,7 @@ prototype["renderBorder"] = function renderBorder() {
     if (backgroundColor == null) {
       backgroundColor = tmp.inputBorder.backgroundColor;
     }
-    const items = [tmp.inputViewBorder, ,];
+    items = [tmp.inputViewBorder, ,];
     const obj = { backgroundColor };
     items[1] = obj;
     let inputViewBorderActive = this.state.active;
@@ -241,7 +241,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   if (tmp2) {
     const obj = {};
     const merged = Object.assign(errorProps);
-    const items = [tmp.inputViewError, errorStyles];
+    items = [tmp.inputViewError, errorStyles];
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
@@ -358,7 +358,7 @@ prototype["renderTextView"] = function renderTextView() {
   } = props);
   ({ disableConstantNumberOfLines, editable, accessibilityHint, inActionSheet, disabled, inputTextStyle } = props);
   const tmp2 = _objectWithoutProperties(props, closure_3);
-  const items = [closure_11(this.context).inputView, , , ,];
+  items = [closure_11(this.context).inputView, , , ,];
   if (disableConstantNumberOfLines) {
     let num2 = 21;
     if (large) {
@@ -453,7 +453,7 @@ prototype["render"] = function render() {
   const props = this.props;
   const disabled = props.disabled;
   const obj = { accessible: false, onPress: this.focus, children: null };
-  const items = [props.style];
+  items = [props.style];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
@@ -485,7 +485,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj2);
   return React7(React5, obj);
 };
-InputView.contextType = fn(5080).ThemeContext;
+InputView.contextType = fn(5207).ThemeContext;
 InputView.defaultProps = {
   showBorder: true,
   value: "",

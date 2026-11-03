@@ -10,8 +10,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginBottom: 16, paddingHorizontal: 16 },
   header: { marginBottom: 8 },
@@ -69,7 +69,7 @@ export default function TextLineElement(element) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ export default function TextLineElement(element) {
             const obj = tmp3(dependencyMap[11]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -138,12 +138,12 @@ export default function TextLineElement(element) {
     let obj = { style: tmp.container, children: null };
     let obj2 = {
       style: tmp.header,
-      variant: "heading-md/extrabold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: title,
     };
-    const items = [closure_9(sms(tmp4[12]).Text, obj2), ,];
+    items = [closure_9(sms(tmp4[12]).Text, obj2), ,];
     let obj3 = { style: tmp.description, variant: "text-md/medium", children: tmp5(body) };
     items[1] = closure_9(sms(tmp4[12]).Text, obj3);
     let obj4 = { style: tmp.smsInfoContainer, children: null };

@@ -78,7 +78,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4858).Interval();
+    const interval = new tmp3(4985).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);
@@ -162,7 +162,7 @@ prototype["initialize"] = function initialize() {
     SelectedChannelStore,
     UserSettingsProtoStore,
   );
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, handleRunningGamesChange);
 };
 prototype["getActivities"] = function getActivities() {

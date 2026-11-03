@@ -55,8 +55,8 @@ function handlePressPasswordManagerHint() {
 const View = fn(17).View;
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -96,7 +96,7 @@ export default function Login(isMultiAccount) {
   const tmp3 = callback(navigation(ref[15])());
   navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
-  const items = [countryCode];
+  items = [countryCode];
   const stateFromStores = require("initialize").useStateFromStores(items, () => countryCode.getCountryCode());
   ref = noop.useRef(null);
   let obj2 = require("initialize");
@@ -148,7 +148,7 @@ export default function Login(isMultiAccount) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -223,7 +223,7 @@ export default function Login(isMultiAccount) {
             c3 = 0;
             closure_129_4(false);
             v32 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp47) {
           if (tmp5 === c3) {
@@ -250,7 +250,7 @@ export default function Login(isMultiAccount) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -352,7 +352,7 @@ export default function Login(isMultiAccount) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

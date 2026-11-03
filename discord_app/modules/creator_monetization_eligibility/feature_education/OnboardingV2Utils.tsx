@@ -47,7 +47,7 @@ export function useCanSeeCreatorMonetizationOnboardingV2Upsell(id) {
   const obj3 = require("GuildRoleSubscriptionSettingUtils");
 }
 export function canSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   if (null == guild) {
     return false;
   } else {

@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -62,7 +62,7 @@ export default function ConnectionCardView(description) {
   const tmp = closure_6();
   const obj = { style: tmp.card, children: null };
   const obj2 = { style: tmp.leftContent, children: null };
-  const items = [React4(React2, { style: tmp.icon, children: icon })];
+  items = [React4(React2, { style: tmp.icon, children: icon })];
   const obj4 = { style: tmp.textContent, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName })];
   let tmp4Result = null != description;

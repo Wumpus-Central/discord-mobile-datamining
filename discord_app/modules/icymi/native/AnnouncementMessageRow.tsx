@@ -14,10 +14,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(18566).ITEM_PADDING;
+const ITEM_PADDING = fn(18722).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: paddingLeft.inset },
@@ -32,10 +32,10 @@ let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
 });
 let closure_14 = noop.memo(function ChannelRow(message) {
   message = message.message;
-  const guild = message.guild;
+  guild = message.guild;
   const channel = message.channel;
   ({ unread, visible } = message);
-  let items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   const stateFromStores = message(channel[11]).useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
   );
@@ -126,7 +126,7 @@ let closure_14 = noop.memo(function ChannelRow(message) {
       const obj4 = { id: message.id, timestamp: null };
       const _Date = Date;
       obj4.timestamp = Date.now();
-      const items = [obj4];
+      items = [obj4];
       ICYMIActionCreatorsDefault.ackGravityItems(items);
       const tmpResult = ICYMIActionCreatorsDefault;
       ICYMIShared.navigateToPost(channel.id, guild.id, message.id);
@@ -209,7 +209,7 @@ export default function AnnouncementMessageRowWrapper(message) {
   message = message.message;
   let author;
   ({ unread, visible } = message);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = message(author[11]).useStateFromStores(items, () =>
     ChannelStore.getChannel(message.getChannelId()),
   );

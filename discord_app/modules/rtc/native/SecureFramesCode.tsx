@@ -8,9 +8,9 @@ function SecureFramesCodeGrid(chunks) {
   chunks = chunks.chunks;
   const columns = chunks.columns;
   noop = closure_8();
-  let items = [chunks, columns];
+  items = [chunks, columns];
   const memo = noop.useMemo(() => {
-    const items = [];
+    items = [];
     const rounded = Math.ceil(chunks.length / columns);
     for (let num = 0; num < rounded; num = num + 1) {
       let items1 = [];
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   codeText: { fontFamily: fn(1083).Fonts.CODE_NORMAL },
   row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 },
@@ -96,7 +96,7 @@ export default function SecureFramesCode(chunks) {
   ({ title, trailing, columns } = chunks);
   const tmp = closure_8();
   const obj = { style: tmp.codeHeader, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
       color: "mobile-text-heading-primary",
       variant: "heading-md/semibold",

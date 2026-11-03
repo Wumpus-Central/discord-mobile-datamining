@@ -22,7 +22,7 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {
     const obj2 = { style: null, children: null };
-    const items = [tmp.container, style];
+    items = [tmp.container, style];
     obj2.style = items;
     const obj3 = { type: "info", message: null, role: "none" };
     const intl = util.intl;

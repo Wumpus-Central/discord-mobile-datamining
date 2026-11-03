@@ -13,7 +13,7 @@ export default function useMuteAwareLocalVolume(ownerId, STREAM) {
   _require = ownerId;
   closure_1 = STREAM;
   let obj = { effectiveVolume: null, handleVolumeChange: null };
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   obj.effectiveVolume = require("initialize").useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {

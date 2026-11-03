@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = {
   flexDirection: "row",
@@ -41,13 +41,13 @@ export default function ConjureFileMention(variant) {
   }
   let context;
   const tmp = closure_9();
-  context = noop.useContext(context(12143).ConjureFileMentionProjectContext);
-  const conjureStoredAttachment = context(12145).useConjureStoredAttachment(context, variant.attachmentId);
+  context = noop.useContext(context(12279).ConjureFileMentionProjectContext);
+  const conjureStoredAttachment = context(12281).useConjureStoredAttachment(context, variant.attachmentId);
   const obj2 = { style: tmp.chip, children: null };
   let obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
-  let obj = context(12145);
+  let obj = context(12281);
   obj3.iconColor = conjureStoredAttachment(575).colors.MENTION_FOREGROUND;
-  let items = [closure_7(conjureStoredAttachment(12148), obj3)];
+  items = [closure_7(conjureStoredAttachment(12284), obj3)];
   let obj4 = { variant: str, style: tmp.name, children: null };
   let name;
   if (conjureStoredAttachment != null) {
@@ -55,17 +55,17 @@ export default function ConjureFileMention(variant) {
   }
   if (name == null) {
     const intl = tmp2(1113).intl;
-    name = intl.string(tmp9(3868).ff9Q4C);
+    name = intl.string(tmp9(3995).ff9Q4C);
   }
   obj4.children = name;
-  items[1] = closure_7(context(5624).Text, obj4);
+  items[1] = closure_7(context(5747).Text, obj4);
   obj2.children = items;
   const tmp6Result = closure_8(closure_6, obj2);
   let tmp8Result = tmp6Result;
   if (null != context) {
     tmp8Result = tmp6Result;
     if (null != conjureStoredAttachment) {
-      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12118).CONJURE_VIEWABLE_IMAGE_TYPES;
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12254).CONJURE_VIEWABLE_IMAGE_TYPES;
       tmp8Result = tmp6Result;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
         let obj5 = {
@@ -80,7 +80,7 @@ export default function ConjureFileMention(variant) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -112,7 +112,7 @@ export default function ConjureFileMention(variant) {
                   } else {
                     closure_128_0 = value.openConjureNativeImages;
                     ({ id: obj2.id, name: obj2.alt } = closure_129_1);
-                    const items = [{ id: null, alt: null }];
+                    items = [{ id: null, alt: null }];
                     paths = 2;
                     c3 = 1;
                     const obj13 = { value: closure_128_0(closure_129_0, items, 0), done: false };
@@ -127,7 +127,7 @@ export default function ConjureFileMention(variant) {
                   return obj;
                 } else {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -141,7 +141,7 @@ export default function ConjureFileMention(variant) {
         };
         const intl2 = tmp2(1113).intl;
         let obj6 = { name: conjureStoredAttachment.name };
-        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(3868).GtNukg, obj6);
+        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(3995).GtNukg, obj6);
         obj5.children = tmp6Result;
         tmp8Result = closure_7(closure_5, obj5);
       }

@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = {
     ellipsisWrapper: {
@@ -49,7 +49,7 @@ export function TypingIndicator(style) {
     style: null,
     children: jsx(native.Ellipsis, { style: tmp2.ellipsis, dotStyle: tmp2.ellipsisDot, disableScale: true }),
   };
-  const items = [tmp2.ellipsisWrapper, style.style];
+  items = [tmp2.ellipsisWrapper, style.style];
   obj2.style = items;
   return (
     <View style={null}>

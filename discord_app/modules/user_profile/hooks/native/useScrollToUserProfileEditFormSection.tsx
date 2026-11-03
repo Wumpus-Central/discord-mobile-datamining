@@ -17,7 +17,7 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   dependencyMap = arg1;
   noop = noop.useRef({});
   noop.useRef(false);
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.useReducedMotion);
   const items1 = [arg0, stateFromStores];
   const callback = noop.useCallback((arg0) => {

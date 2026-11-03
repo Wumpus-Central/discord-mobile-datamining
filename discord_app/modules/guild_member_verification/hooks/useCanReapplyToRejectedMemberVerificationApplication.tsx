@@ -18,7 +18,7 @@ export function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
   _require = guildId;
   const isLoading = _slicedToArray(noop.useState(true), 2);
   closure_1 = isLoading[1];
-  const items = [UserGuildJoinRequestStore];
+  items = [UserGuildJoinRequestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let joinRequestGuild;
     if (null != closure_0) {
@@ -37,7 +37,7 @@ export function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -80,7 +80,7 @@ export function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
         c4 = 0;
         tmp3(false);
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp18) {
         closure_3 = tmp18;
         if (tmp4 === c4) {

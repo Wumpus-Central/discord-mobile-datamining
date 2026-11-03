@@ -4,14 +4,14 @@ import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef11968 from "../../../../../_runtime/metro/11968__.js";
+import _modDef12105 from "../../../../../_runtime/metro/12105__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
@@ -24,14 +24,14 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 require = fn;
 function VoiceSettingsActionSheet() {
   const obj = { scrollable: true, startExpanded: MetaQuestUtils.isMetaQuest(), children: null };
-  obj.children = closure_1_12(BottomSheetModal.BottomSheetScrollView, {
-    children: closure_1_12(UserSettingsVoiceDefault, {}),
+  obj.children = application_id(BottomSheetModal.BottomSheetScrollView, {
+    children: application_id(UserSettingsVoiceDefault, {}),
   });
-  return closure_1_12(Sheet_BottomSheet.BottomSheet, obj);
+  return application_id(Sheet_BottomSheet.BottomSheet, obj);
 }
 function JoinMutedButton(channel) {
   const tmp = useThemeDefault();
-  return closure_1_12(ChannelCallMicButton.ChannelCallMicButton, {
+  return application_id(ChannelCallMicButton.ChannelCallMicButton, {
     channel: channel.channel,
     disableTint: "light" === useThemeDefault(),
     isSmallSize: false,
@@ -42,7 +42,7 @@ function JoinVoiceButton(channel) {
   importDefault = undefined;
   let stateFromStores1;
   importDefault = require("useVoiceStateForRemoteSession")();
-  const items = [GameConsoleStore];
+  items = [GameConsoleStore];
   const stateFromStores = channel(stateFromStores1[29]).useStateFromStores(
     items,
     () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
@@ -130,12 +130,12 @@ function JoinVoiceButton(channel) {
   return closure_12(channel(stateFromStores1[34]).LabeledActionButton, obj3);
 }
 const View = fn(17).View;
-const resetFocus = fn(11000).resetFocus;
+const resetFocus = fn(11133).resetFocus;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   spacer: { width: 8 },
   actionBarContainer: {
@@ -144,7 +144,7 @@ let obj2 = {
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    height: fn(11714).CALL_ACTION_BAR_HEIGHT,
+    height: fn(11851).CALL_ACTION_BAR_HEIGHT,
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
@@ -160,7 +160,7 @@ export function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = closure_15();
   const tmp4 = useChannelNameDefault(channel);
-  const isVoiceChannelLocked = channel(11909).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(12046).useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
@@ -171,10 +171,10 @@ export function ChannelCallConnectingHeader(channel) {
         });
     }
   }
-  const items = [closure_12(View, { style: { width: 4 } }), , ,];
+  items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    const obj2 = { source: _modDef11968, onPress: fn, accessibilityLabel: null };
+    const obj2 = { source: _modDef12105, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1113).intl;
     const obj3 = { channelName: tmp4 };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1113).t["dHHb/2"], obj3);
@@ -191,7 +191,7 @@ export function ChannelCallConnectingHeader(channel) {
 export function CallConnectingActionBar(channel) {
   channel = channel.channel;
   const obj = { style: closure_15().actionBarContainer, children: null };
-  const items = [closure_1_12(JoinMutedButton, { channel }), closure_1_12(JoinVoiceButton, { channel })];
+  items = [application_id(JoinMutedButton, { channel }), application_id(JoinVoiceButton, { channel })];
   obj.children = items;
-  return closure_1_14(View, obj);
+  return gesture(View, obj);
 }

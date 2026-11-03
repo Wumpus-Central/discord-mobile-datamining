@@ -10,7 +10,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 require = fn;
 function Row(guildId) {
   guildId = guildId.guildId;
-  const items = [guildId];
+  items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = noop.useCallback((arg0) => {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
@@ -52,7 +52,7 @@ function Row(guildId) {
       start: isStart,
       end: isEnd,
     };
-    return jsx(tmp2(7369).TableSwitchRow, {
+    return jsx(tmp2(7489).TableSwitchRow, {
       label: guild.name,
       icon: jsx(GuildIconDefault, { guild }),
       value: !muted,
@@ -72,7 +72,7 @@ let result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsHighlightNotifications() {
-  const items = [SortedGuildStore];
+  items = [SortedGuildStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () =>
     flattenedGuildIds.getFlattenedGuildIds(),
   );
@@ -80,7 +80,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8177).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8301).Form, { children: tmp3 });
   }
   return tmp4;
 }

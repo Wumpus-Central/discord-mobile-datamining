@@ -15,7 +15,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
             if (tmp) {
               tmp = rating.rating > 0;
             }
-            const items = [];
+            items = [];
             if (tmp) {
               const obj = { type: "rating", label: null, rating: null, ratingCount: null };
               const intl = closure_1_0(1113).intl;

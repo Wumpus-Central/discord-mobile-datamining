@@ -30,7 +30,7 @@ function handleUpdateActivity() {
       if (null != channel) {
         tmp2 = null;
         if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
-          const guild = GuildStore.getGuild(channel.getGuildId());
+          guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
@@ -106,7 +106,7 @@ function handleUpdateActivity() {
               const obj5 = { small_image: icon, small_text: guild.name };
               obj.assets = obj5;
               const obj6 = { id: result, size: null };
-              const items = [diff];
+              items = [diff];
               const _Math = Math;
               items[1] = Math.max(diff1, num);
               obj6.size = items;
@@ -128,7 +128,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6709).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6829).STAGE_APPLICATION_ID;
 const Constants = fn(1072);
 ({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;

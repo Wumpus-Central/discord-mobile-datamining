@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RootNavigatorScreen = fn(11514).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11651).RootNavigatorScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 
@@ -14,7 +14,7 @@ export function useHandleUseNow(analyticsLocations) {
   require = product;
   const stageCollectibleChangeForEditProfile = analyticsLocations.stageCollectibleChangeForEditProfile;
   let onSuccess;
-  const items = [onSuccess, stageCollectibleChangeForEditProfile];
+  items = [onSuccess, stageCollectibleChangeForEditProfile];
   onSuccess = onSuccess.useCallback(() => {
     if (null == onSuccess) {
       ActionSheetActionCreatorsDefault.hideAllActionSheets();

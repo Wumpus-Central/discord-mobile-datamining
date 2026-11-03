@@ -24,7 +24,7 @@ export function isAnyApplicationInTestMode() {
 }
 export function useIsTestModeForApplication(id) {
   _require = id;
-  const items = [TestModeStore, DeveloperActivityShelfStore];
+  items = [TestModeStore, DeveloperActivityShelfStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

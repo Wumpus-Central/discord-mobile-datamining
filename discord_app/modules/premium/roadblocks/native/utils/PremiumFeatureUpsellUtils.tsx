@@ -10,6 +10,7 @@ const AnalyticsPages = Constants.AnalyticsPages;
 const items = [
   EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE,
   EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS,
+  EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE,
 ];
 const set = new Set();
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
@@ -21,7 +22,7 @@ export function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
   }
   return tmp;
 }
-export function isEmojiPickerUpsellFeature(featureName) {
+export function isExpressionPickerUpsellFeature(featureName) {
   return items.includes(featureName);
 }
 export function getAnalyticsPage(featureName) {

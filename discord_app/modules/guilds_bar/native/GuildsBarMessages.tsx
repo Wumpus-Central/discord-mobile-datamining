@@ -8,6 +8,7 @@ import useGuildsBarBottomRightBadgeDefault from "hooks/useGuildsBarBottomRightBa
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
 import HomeDrawerDirectMessagesRowDefault from "../../home_drawer/native/HomeDrawerDirectMessagesRow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+import ICYMIStore from "../../icymi/ICYMIStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
@@ -25,12 +26,15 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarMe
 
 export default noop.memo(function GuildsBarMessages() {
   const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore, ICYMIStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
     let tmp2 = null == guildId;
     if (!tmp2) {
       tmp2 = guildId === ME;
+    }
+    if (tmp2) {
+      tmp2 = !isTabFocused.getIsTabFocused();
     }
     return tmp2;
   });
@@ -44,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "text-sm/normal",
-    externalChildren: "text-default",
-    expandedChildren: true,
-    children: null,
+    label: "BetaTag vs. beta, brand",
+    externalChildren: null,
+    expandedChildren: null,
+    children: "destructive",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -64,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "text-sm/normal",
-    externalChildren: "text-default",
-    expandedChildren: true,
-    children: null,
+    label: "BetaTag vs. beta, brand",
+    externalChildren: null,
+    expandedChildren: null,
+    children: "destructive",
   });
 });

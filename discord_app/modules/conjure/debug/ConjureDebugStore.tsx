@@ -368,7 +368,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
   CONJURE_DEBUG_TIMING_TRACE: function handleTimingTrace(live) {
     ({ projectId, batch } = live);
     let found;
-    let items = map10.get(projectId);
+    items = map10.get(projectId);
     if (items == null) {
       items = [];
     }

@@ -7,10 +7,14 @@ import ContentInventoryTypes from "../content_inventory/ContentInventoryTypes.ts
 import ICYMITypes from "ICYMITypes.tsx";
 import isItemUnreadInChannel from "isItemUnreadInChannel.tsx";
 import ICYMIUtils from "ICYMIUtils.tsx";
+import WaterwheelsDiscoverExperiment from "../waterwheels/WaterwheelsDiscoverExperiment.tsx";
+import parseWaterwheelsCard from "../waterwheels/cards/parseWaterwheelsCard.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 import ExperimentStore from "../experiments/ExperimentStore.tsx";
+import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import GuildScheduledEventStore_mod from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildAffinitiesStore from "../../stores/GuildAffinitiesStore.tsx";
@@ -20,6 +24,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 import ICYMIFiltersStore from "ICYMIFiltersStore.tsx";
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore.tsx";
 
@@ -30,7 +35,7 @@ function filterStaffGuild(data) {
       if (data.data.guild_id === ICYMITypes.GAME_CONTENT_GUILD_ID) {
         return true;
       } else {
-        const guild = GuildStore.getGuild(data.data.guild_id);
+        guild = GuildStore.getGuild(data.data.guild_id);
         if (null != guild) {
           const features = guild.features;
         }
@@ -40,6 +45,27 @@ function filterStaffGuild(data) {
     return true;
   } else {
     return true;
+  }
+}
+function hydrateDiscoverItem(type) {
+  if (type.type !== ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM) {
+    return true;
+  } else {
+    if (tmpResult.getWaterwheelsDiscoverEnabled("icymi_store")) {
+      const parseWaterwheelsCardResult = parseWaterwheelsCard.parseWaterwheelsCard(type.data.item);
+      let flag2 = parseWaterwheelsCardResult.ok;
+      if (flag2) {
+        obj = {};
+        const merged = Object.assign(type);
+        obj.card = parseWaterwheelsCardResult.card;
+        closure_37[type.id] = obj;
+        flag2 = true;
+      }
+      return flag2;
+    } else {
+      return false;
+    }
+    tmpResult = WaterwheelsDiscoverExperiment;
   }
 }
 function injectItemsIntoList(arr, arr2, arg2, arg3) {
@@ -56,8 +82,8 @@ function injectItemsIntoList(arr, arr2, arg2, arg3) {
   return found;
 }
 function injectRecommendedGuildsRow() {
-  closure_45 = closure_45.filter((type) => type.type !== require("ICYMITypes").ICYMIItemTypes.RECOMMENDED_GUILDS);
-  closure_46 = closure_46.filter((type) => type.type !== require("ICYMITypes").ICYMIItemTypes.RECOMMENDED_GUILDS);
+  closure_48 = closure_48.filter((type) => type.type !== require("ICYMITypes").ICYMIItemTypes.RECOMMENDED_GUILDS);
+  closure_49 = closure_49.filter((type) => type.type !== require("ICYMITypes").ICYMIItemTypes.RECOMMENDED_GUILDS);
   if (0 !== length.length) {
     const guildsArray = GuildStore.getGuildsArray();
     const tmp24 =
@@ -69,31 +95,31 @@ function injectRecommendedGuildsRow() {
     if (tmp24) {
       if (null != readTimestamp) {
         const _Date = Date;
-        if (Date.now() - closure_49 > DAY) {
+        if (Date.now() - closure_52 > DAY) {
           const _Date2 = Date;
         }
       }
     }
     obj = { id: "recommendedGuilds", type: ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS, score: 50 };
-    closure_34[obj.id] = obj;
-    closure_33[obj.id] = obj;
-    if (0 === closure_45.length) {
+    closure_37[obj.id] = obj;
+    closure_36[obj.id] = obj;
+    if (0 === closure_48.length) {
       items = [obj];
-      HermesBuiltin.arraySpread(closure_46, 1);
-      closure_46 = items;
+      HermesBuiltin.arraySpread(closure_49, 1);
+      closure_49 = items;
     } else {
       if (tmp24) {
         if (tmp24) {
           const _Math = Math;
           const _Math2 = Math;
-          closure_45.splice(Math.round(2 * Math.random()) + 3 - 1, 0, obj);
+          closure_48.splice(Math.round(2 * Math.random()) + 3 - 1, 0, obj);
         } else {
-          closure_45.splice(5, 0, obj);
+          closure_48.splice(5, 0, obj);
         }
       }
       const items1 = [];
-      items1[HermesBuiltin.arraySpread(closure_45, 0)] = obj;
-      closure_45 = items1;
+      items1[HermesBuiltin.arraySpread(closure_48, 0)] = obj;
+      closure_48 = items1;
     }
   }
 }
@@ -127,24 +153,24 @@ function finalizeNewDehydratedItemsContent() {
     }
   }
   const item1 = items1.forEach((id) => {
-    closure_1_33[id.id] = id;
-    if (id.type === set(type[19]).ICYMIItemTypes.CUSTOM_STATUS) {
+    closure_1_36[id.id] = id;
+    if (id.type === set(type[22]).ICYMIItemTypes.CUSTOM_STATUS) {
       if (blockedOrIgnored.isBlockedOrIgnored(id.data.user_id)) {
-        closure_1_35[id.id] = true;
+        closure_1_38[id.id] = true;
       } else {
-        dependencyMap[id.id] = set(type[18]).customStatusToContentInventoryEntry(id);
-        const tmpResult = set(type[18]);
+        dependencyMap[id.id] = set(type[21]).customStatusToContentInventoryEntry(id);
+        const tmpResult = set(type[21]);
       }
     }
   });
 }
 function reload(arg0) {
-  if (closure_30.length > 0) {
-    dehydratedItems = closure_30;
-    closure_30 = [];
-    closure_31 = [];
+  if (closure_33.length > 0) {
+    dehydratedItems = closure_33;
+    closure_33 = [];
+    closure_34 = [];
   }
-  closure_38 = closure_38 + 1;
+  closure_41 = closure_41 + 1;
   if (null != arg0) {
     ({ newUnread: found, newRead: found1 } = arg0);
   } else {
@@ -187,7 +213,7 @@ function reload(arg0) {
     });
     const items3 = [];
     HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(items2, 0));
-    const items4 = [items3, items.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
+    const items4 = [items3, items.sort((id, id2) => set1(dependencyMap[21]).compareGravityUnreadIds(id.id, id2.id))];
     [found, found1] = items4;
     let tmp33 = _slicedToArray(items4, 2);
   }
@@ -202,16 +228,16 @@ function reload(arg0) {
         guildScheduledEventsForGuild = guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(tmp3);
         let num = 0;
         for (const item10031 of guildScheduledEventsForGuild) {
-          if (!closure_7(item10031)) {
-            if (closure_6(item10031, 2 * items2(found1[17]).Seconds.DAY)) {
+          if (!closure_8(item10031)) {
+            if (closure_7(item10031, 2 * items2(found1[20]).Seconds.DAY)) {
               if (null == dependencyMap[item10031.id]) {
                 let obj2 = { id: item10031.id, type: null, score: 10, event_id: null };
-                obj2.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
+                obj2.type = items1(found1[22]).ICYMIItemTypes.GUILD_EVENT;
                 obj2.event_id = item10031.id;
                 dependencyMap[item10031.id] = obj2;
               }
               let obj3 = { id: item10031.id, type: null, score: 10, data: null };
-              obj3.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
+              obj3.type = items1(found1[22]).ICYMIItemTypes.GUILD_EVENT;
               let obj7 = { guild_id: null, event_id: null, channel_id: null };
               ({ guild_id: obj4.guild_id, id: obj4.event_id, channel_id } = item10031);
               obj7.channel_id = channel_id;
@@ -232,8 +258,8 @@ function reload(arg0) {
       continue;
     }
     const sorted = items.sort((data, data2) => {
-      const guildAffinity = closure_1_12.getGuildAffinity(data.data.guild_id);
-      const guildAffinity1 = closure_1_12.getGuildAffinity(data2.data.guild_id);
+      const guildAffinity = closure_1_14.getGuildAffinity(data.data.guild_id);
+      const guildAffinity1 = closure_1_14.getGuildAffinity(data2.data.guild_id);
       let num = 0;
       if (null != guildAffinity1) {
         num = guildAffinity1.score;
@@ -247,15 +273,15 @@ function reload(arg0) {
     const items1 = [];
     const items2 = [];
     const item = items.forEach((id) => {
-      closure_2_33[id.id] = id;
+      closure_2_36[id.id] = id;
       if (null != readTimestamp.getReadTimestamp(id.id)) {
         items2.push(id);
       } else {
         items1.push(id);
       }
     });
-    closure_45 = closure_58(closure_45, items1, items1(found1[19]).ICYMIItemTypes.GUILD_EVENT, 7);
-    closure_46 = closure_58(closure_46, items2, items1(found1[19]).ICYMIItemTypes.GUILD_EVENT, 7);
+    closure_48 = closure_62(closure_48, items1, items1(found1[22]).ICYMIItemTypes.GUILD_EVENT, 7);
+    closure_49 = closure_62(closure_49, items2, items1(found1[22]).ICYMIItemTypes.GUILD_EVENT, 7);
   })();
   closure_129_0 = new Set();
   closure_129_1 = {};
@@ -300,7 +326,7 @@ function reload(arg0) {
         const obj6 = { user_id: content.content.author_id, content_id: content.content.id };
         obj3.data = obj6;
         ACTIVITY.add(content.content.id);
-        closure_33[obj3.id] = obj3;
+        closure_36[obj3.id] = obj3;
         if (null != ICYMIUnreadStateStore.getReadTimestamp(obj3.id)) {
           _slicedToArray.push(obj3);
         } else {
@@ -311,7 +337,7 @@ function reload(arg0) {
       tmpResult = utils;
     }
   });
-  ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
+  ACTIVITY = ACTIVITY(found1[22]).ICYMIItemTypes.ACTIVITY;
   found = found.filter((type) => type.type !== ACTIVITY);
   found1 = found;
   const item2 = items5.forEach((item, index) => {
@@ -321,7 +347,7 @@ function reload(arg0) {
       found1.push(item);
     }
   });
-  ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
+  ACTIVITY = ACTIVITY(found1[22]).ICYMIItemTypes.ACTIVITY;
   c1 = 5;
   found1 = undefined;
   found1 = found1.filter((type) => type.type !== ACTIVITY);
@@ -339,27 +365,27 @@ function reload(arg0) {
   }
   if (tmp14) {
     obj = { newTrackingProps, hasNewContent, unreadFeedItems: found, readFeedItems: found1, homeSessionId: "gravity" };
-    tmp7(tmp8[23]).trackFeedLoaded(obj);
+    tmp7(tmp8[28]).trackFeedLoaded(obj);
     load_id = newTrackingProps.load_id;
     if (load_id == null) {
       load_id = null;
     }
     newTrackingProps = {};
-    const tmp7Result = tmp7(tmp8[23]);
+    const tmp7Result = tmp7(tmp8[28]);
   }
-  c47 = 0;
+  c50 = 0;
   if (found.length + found1.length === 0) {
-    c54 = true;
+    c57 = true;
   }
   set = new Set();
   const items7 = [...found1];
-  ACTIVITY(found1[18]).hydrateItems(items7, 0, ACTIVITY(found1[19]).ICYMI_PAGE_SIZE, dependencyMap);
-  c51 = false;
-  const tmp7Result2 = ACTIVITY(found1[18]);
+  ACTIVITY(found1[21]).hydrateItems(items7, 0, ACTIVITY(found1[22]).ICYMI_PAGE_SIZE, dependencyMap);
+  c54 = false;
+  const tmp7Result2 = ACTIVITY(found1[21]);
 }
-function getNewUnreadItems(arr9, channelId) {
+function getNewUnreadItems(arr10, channelId) {
   items = [];
-  const iter = arr9[Symbol.iterator]();
+  const iter = arr10[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -400,7 +426,7 @@ function maybeFilterChannelItems(channelId, score) {
       return tmp2;
     });
     closure_129_0 = channelId;
-    closure_45 = closure_45.filter((data) => {
+    closure_48 = closure_48.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -409,7 +435,7 @@ function maybeFilterChannelItems(channelId, score) {
       return tmp2;
     });
     closure_130_0 = channelId;
-    closure_46 = closure_46.filter((data) => {
+    closure_49 = closure_49.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -418,7 +444,7 @@ function maybeFilterChannelItems(channelId, score) {
       return tmp2;
     });
     closure_131_0 = channelId;
-    closure_30 = closure_30.filter((data) => {
+    closure_33 = closure_33.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -427,7 +453,7 @@ function maybeFilterChannelItems(channelId, score) {
       return tmp2;
     });
     closure_132_0 = channelId;
-    closure_31 = closure_31.filter((data) => {
+    closure_34 = closure_34.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -450,7 +476,7 @@ function maybeFilterGuildItems(guildId, guildScore) {
       return tmp2;
     });
     closure_129_0 = guildId;
-    closure_45 = closure_45.filter((data) => {
+    closure_48 = closure_48.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -459,7 +485,7 @@ function maybeFilterGuildItems(guildId, guildScore) {
       return tmp2;
     });
     closure_130_0 = guildId;
-    closure_46 = closure_46.filter((data) => {
+    closure_49 = closure_49.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -468,7 +494,7 @@ function maybeFilterGuildItems(guildId, guildScore) {
       return tmp2;
     });
     closure_131_0 = guildId;
-    closure_30 = closure_30.filter((data) => {
+    closure_33 = closure_33.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -477,7 +503,7 @@ function maybeFilterGuildItems(guildId, guildScore) {
       return tmp2;
     });
     closure_132_0 = guildId;
-    closure_31 = closure_31.filter((data) => {
+    closure_34 = closure_34.filter((data) => {
       const isGuildItemResult = ICYMIUtils.isGuildItem(data);
       let tmp2 = !isGuildItemResult;
       if (isGuildItemResult) {
@@ -512,7 +538,7 @@ function handleAck(channelId) {
   items = [];
   const items1 = [];
   const item = items1.forEach((type, index) => {
-    if (index > c47) {
+    if (index > c50) {
       if (type.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
         if (type.data.channel_id === set) {
           items.push(type);
@@ -527,7 +553,7 @@ function handleAck(channelId) {
   closure_129_1 = items3;
   const items4 = [];
   closure_129_2 = items4;
-  const item1 = closure_30.forEach((id) => {
+  const item1 = closure_33.forEach((id) => {
     const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
     let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
     if (tmp4) {
@@ -559,24 +585,24 @@ function handleAck(channelId) {
     }
   });
   const items5 = [...items3];
-  const items6 = [items5, items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
+  const items6 = [items5, items2.sort((id, id2) => set1(dependencyMap[21]).compareGravityUnreadIds(id.id, id2.id))];
   const tmp4 = _slicedToArray(items6, 2);
-  if (c41) {
+  if (c44) {
     let tmp15 = tmp2;
     if (tmp2) {
-      tmp15 = arr8.length >= set(items1[19]).MIN_ITEMS_FOR_NEW_PILL;
+      tmp15 = arr8.length >= set(items1[22]).MIN_ITEMS_FOR_NEW_PILL;
     }
     let tmp5 = tmp15;
   } else {
     tmp5 = tmp2;
     if (tmp2) {
       const _Date = Date;
-      const diff = Date.now() - closure_29;
+      const diff = Date.now() - closure_32;
       let flag = false;
-      if (diff > 6 * items(items1[17]).Millis.HOUR) {
+      if (diff > 6 * items(items1[20]).Millis.HOUR) {
         const _Set = Set;
         set = new Set(items1.map((id) => id.id));
-        const substr = closure_30.slice(0, 20);
+        const substr = closure_33.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
       tmp5 = flag;
@@ -594,45 +620,45 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6855);
+let GuildScheduledEventStore = fn(6975);
 ({
-  eventScheduledToStartWithin: metroRequire,
-  isGuildEventEnded: closure_7,
-  isGuildScheduledEventActive: closure_8,
+  eventScheduledToStartWithin: closure_7,
+  isGuildEventEnded: closure_8,
+  isGuildScheduledEventActive: closure_9,
 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1072);
-({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8922).ContentInventoryFeedKey;
+({ ChannelTypes: closure_24, GuildFeatures: closure_25, Permissions: closure_26 } = Constants);
+const ContentInventoryFeedKey = fn(9046).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
-let closure_26 = 3 * DurationsDefault.Millis.DAY;
+let closure_29 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
-let c28 = null;
+let c31 = null;
 const lastOpened = 0;
-let closure_30 = [];
-let closure_31 = [];
+let closure_33 = [];
+let closure_34 = [];
 let newTrackingProps = {};
-let closure_33 = {};
+let closure_36 = {};
 const dependencyMap = {};
-let closure_35 = {};
+let closure_38 = {};
 let obj = {};
 obj = {};
-let c38 = 0;
-let c39 = false;
-let c40 = false;
-let c41 = false;
+let c41 = 0;
+let c42 = false;
+let c43 = false;
+let c44 = false;
 let items = null;
-let c43 = null;
-let c44 = 0;
-let closure_45 = [];
-let closure_46 = [];
+let c46 = null;
 let c47 = 0;
+let closure_48 = [];
+let closure_49 = [];
+let c50 = 0;
 const lastJoinedRecommendedGuild = 0;
 let muted = true;
 let refreshing = false;
 let set = new Set();
 let focused = false;
-let c54 = false;
+let c57 = false;
 let timestamp = 0;
 let takenAt = 0;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -640,6 +666,7 @@ class ICYMIStore extends PersistedStore {}
 const prototype = ICYMIStore.prototype;
 prototype["initialize"] = function initialize(dehydratedItems) {
   this.waitFor(
+    ApexExperimentStore,
     AuthenticationStore,
     ChannelStore,
     ContentInventoryStore,
@@ -648,21 +675,23 @@ prototype["initialize"] = function initialize(dehydratedItems) {
     GuildScheduledEventStore,
     GuildStore,
     ICYMIFiltersStore,
+    LabFeatureStore,
     ICYMIUnreadStateStore,
     MessageStore,
     PermissionStore,
     ReadStateStore,
     RelationshipStore,
     UserGuildSettingsStore,
+    UserStore,
   );
   if (null != dehydratedItems) {
     dehydratedItems = dehydratedItems.dehydratedItems;
     if (dehydratedItems == null) {
       dehydratedItems = [];
     }
-    closure_27 = dehydratedItems;
+    closure_30 = dehydratedItems;
     const item = dehydratedItems.forEach((id) => {
-      closure_1_33[id.id] = id;
+      closure_1_36[id.id] = id;
     });
     let customGuildScores = dehydratedItems.customGuildScores;
     if (customGuildScores == null) {
@@ -676,17 +705,17 @@ prototype["initialize"] = function initialize(dehydratedItems) {
     if (num == null) {
       num = 0;
     }
-    c44 = num;
+    c47 = num;
     let num2 = dehydratedItems.lastOpened;
     if (num2 == null) {
       num2 = 0;
     }
-    closure_29 = num2;
+    closure_32 = num2;
     let num3 = dehydratedItems.lastJoinedRecommendedGuild;
     if (num3 == null) {
       num3 = 0;
     }
-    closure_49 = num3;
+    closure_52 = num3;
     let num4 = dehydratedItems.lastTakenICYMISurvey;
     if (num4 == null) {
       num4 = 0;
@@ -695,16 +724,16 @@ prototype["initialize"] = function initialize(dehydratedItems) {
   }
 };
 prototype["getVersion"] = function getVersion() {
-  return c38;
+  return c41;
 };
 prototype["getDehydratedItems"] = function getDehydratedItems() {
-  return closure_27;
-};
-prototype["getNewDehydratedItems"] = function getNewDehydratedItems() {
   return closure_30;
 };
+prototype["getNewDehydratedItems"] = function getNewDehydratedItems() {
+  return closure_33;
+};
 prototype["getDehydratedItem"] = function getDehydratedItem(arg0) {
-  let tmp = closure_33[arg0];
+  let tmp = closure_36[arg0];
   if (tmp == null) {
     tmp = null;
   }
@@ -728,22 +757,22 @@ prototype["getMessage"] = function getMessage(arg0) {
   return message;
 };
 prototype["getHydratedItems"] = function getHydratedItems() {
-  return closure_34;
+  return closure_37;
 };
 prototype["getUnreadDisplayItems"] = function getUnreadDisplayItems() {
-  return closure_45;
+  return closure_48;
 };
 prototype["getNewUnreadDehydratedItems"] = function getNewUnreadDehydratedItems() {
-  return closure_31;
+  return closure_34;
 };
 prototype["getReadDisplayItems"] = function getReadDisplayItems() {
-  return closure_46;
+  return closure_49;
 };
 prototype["getNextIndexToHydrate"] = function getNextIndexToHydrate() {
-  return c47;
+  return c50;
 };
 prototype["getMissingItems"] = function getMissingItems() {
-  return closure_35;
+  return closure_38;
 };
 prototype["customMuted"] = function customMuted(id, id) {
   const self = this;
@@ -776,7 +805,7 @@ prototype["getCustomGuildScores"] = function getCustomGuildScores() {
   return obj;
 };
 prototype["hasNewContent"] = function hasNewContent() {
-  return c40;
+  return c43;
 };
 prototype["getCurrentStatusAttachments"] = function getCurrentStatusAttachments(arg0) {
   if (null != items) {
@@ -784,16 +813,16 @@ prototype["getCurrentStatusAttachments"] = function getCurrentStatusAttachments(
   }
 };
 prototype["getLoadId"] = function getLoadId() {
-  return c28;
+  return c31;
 };
 prototype["hasOpenedEnoughTimes"] = function hasOpenedEnoughTimes() {
-  return 5 === c44;
+  return 5 === c47;
 };
 prototype["hasOpened"] = function hasOpened() {
-  return c41;
+  return c44;
 };
 prototype["getDiscoverableGuilds"] = function getDiscoverableGuilds() {
-  return closure_48;
+  return closure_51;
 };
 prototype["videosMuted"] = function videosMuted() {
   return muted;
@@ -805,13 +834,13 @@ prototype["isHydrating"] = function isHydrating() {
   return set.size > 0;
 };
 prototype["notificationItem"] = function notificationItem() {
-  return c43;
+  return c46;
 };
 prototype["getIsTabFocused"] = function getIsTabFocused() {
   return focused;
 };
 prototype["isFirstPageHydrated"] = function isFirstPageHydrated() {
-  return c54;
+  return c57;
 };
 prototype["lastScrollEvent"] = function lastScrollEvent() {
   return timestamp;
@@ -823,14 +852,14 @@ prototype["getIndexInHydratedFeed"] = function getIndexInHydratedFeed(id) {
   if ("recommended_guilds" !== id) {
     if ("recommendedGuilds" !== id) {
       items = [];
-      HermesBuiltin.arraySpread(closure_46, HermesBuiltin.arraySpread(closure_45, 0));
+      HermesBuiltin.arraySpread(closure_49, HermesBuiltin.arraySpread(closure_48, 0));
       const found = items.filter((item) => null != dependencyMap[item.id]);
       let findIndexResult = found.findIndex((id) => id.id === closure_0);
     }
     return findIndexResult;
   }
-  const items1 = [...closure_46];
-  findIndexResult = items1.findIndex((type) => type.type === id(dependencyMap[19]).ICYMIItemTypes.RECOMMENDED_GUILDS);
+  const items1 = [...closure_49];
+  findIndexResult = items1.findIndex((type) => type.type === id(dependencyMap[22]).ICYMIItemTypes.RECOMMENDED_GUILDS);
 };
 prototype["getState"] = function getState() {
   obj = {
@@ -848,36 +877,36 @@ ICYMIStore.displayName = "ICYMIStore";
 ICYMIStore.persistKey = "ICYMIStore";
 obj = {
   LOGOUT: function handleLogout() {
-    closure_27 = [];
     closure_30 = [];
-    closure_31 = [];
-    closure_33 = {};
-    closure_32 = {};
-    closure_34 = {};
+    closure_33 = [];
+    closure_34 = [];
+    closure_36 = {};
     closure_35 = {};
-    c28 = null;
-    c38 = 0;
-    c39 = false;
-    c40 = false;
-    c41 = false;
-    closure_45 = [];
-    closure_46 = [];
-    c47 = 0;
-    closure_29 = 0;
-    closure_49 = 0;
+    closure_37 = {};
+    closure_38 = {};
+    c31 = null;
+    c41 = 0;
+    c42 = false;
+    c43 = false;
+    c44 = false;
+    closure_48 = [];
+    closure_49 = [];
+    c50 = 0;
+    closure_32 = 0;
+    closure_52 = 0;
     muted = true;
     refreshing = false;
     set = new Set();
-    c43 = null;
+    c46 = null;
     focused = false;
-    c54 = false;
+    c57 = false;
     items = null;
     timestamp = 0;
   },
   LOAD_ICYMI_FROM_NOTIFICATION: function handleLoadICYMIFromNotification(arg0) {
     ({ messageItem, customStatusItem } = arg0);
     if (null != customStatusItem) {
-      if (null == c28) {
+      if (null == c31) {
         return true;
       } else {
         if (items7.length > 0) {
@@ -891,7 +920,7 @@ obj = {
         reload();
       }
     } else if (null != messageItem) {
-      obj = { id: messageItem.message.id, type: items2(items4[19]).ICYMIItemTypes.MESSAGE, score: 50, data: null };
+      obj = { id: messageItem.message.id, type: items2(items4[22]).ICYMIItemTypes.MESSAGE, score: 50, data: null };
       const obj2 = {
         channel_id: messageItem.channel_id,
         message_id: messageItem.message.id,
@@ -899,13 +928,13 @@ obj = {
         channel_type: constants.GUILD_TEXT,
       };
       obj.data = obj2;
-      closure_33[messageItem.message.id] = obj;
+      closure_36[messageItem.message.id] = obj;
       const obj3 = {};
       const merged = Object.assign(obj);
-      obj3.message = items2(items4[27]).createMessageRecord(messageItem.message);
-      closure_34[messageItem.message.id] = obj3;
-      if (null == c28) {
-        if (null == closure_32) {
+      obj3.message = items2(items4[32]).createMessageRecord(messageItem.message);
+      closure_37[messageItem.message.id] = obj3;
+      if (null == c31) {
+        if (null == closure_35) {
           items1 = [obj];
           HermesBuiltin.arraySpread(items1, 1);
           items2 = [];
@@ -946,9 +975,9 @@ obj = {
           HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(items4, 0));
           const items6 = [
             items5,
-            items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id)),
+            items2.sort((id, id2) => set1(dependencyMap[21]).compareGravityUnreadIds(id.id, id2.id)),
           ];
-          [closure_45, closure_46] = items6;
+          [closure_48, closure_49] = items6;
           const tmp26 = _slicedToArray(items6, 2);
         }
         return true;
@@ -956,7 +985,7 @@ obj = {
       items7 = [obj];
       HermesBuiltin.arraySpread(items7, 1);
       reload();
-      const obj4 = items2(items4[27]);
+      const obj4 = items2(items4[32]);
     } else {
       return false;
     }
@@ -965,11 +994,12 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8919).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(9043).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
-    const found1 = found.filter(filterStaffGuild);
-    closure_30 = found1.map((type) => {
-      if (type.type === set1(dependencyMap[19]).ICYMIItemTypes.MESSAGE) {
+    const found1 = found.filter(hydrateDiscoverItem);
+    const found2 = found1.filter(filterStaffGuild);
+    closure_33 = found2.map((type) => {
+      if (type.type === set1(dependencyMap[22]).ICYMIItemTypes.MESSAGE) {
         if (null != type.data.message_context) {
           let tmp2 = null != type.data.message_context.reply_message_id;
           if (tmp2) {
@@ -1021,7 +1051,7 @@ obj = {
     newTrackingProps = {
       load_id: loadId,
       load_time_millis: Date.now() - startTime,
-      feed_item_ids: closure_30.map((id) => id.id),
+      feed_item_ids: closure_33.map((id) => id.id),
     };
     const items1 = [];
     closure_129_0 = items1;
@@ -1029,7 +1059,7 @@ obj = {
     closure_129_1 = items2;
     const items3 = [];
     closure_129_2 = items3;
-    const item = closure_30.forEach((id) => {
+    const item = closure_33.forEach((id) => {
       const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
       let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
       if (tmp4) {
@@ -1061,34 +1091,34 @@ obj = {
       }
     });
     const items4 = [...items2];
-    const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8919).SUPPORTED_ITEM_TYPES);
-    [arr9, arr10] = items5;
+    const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[21]).compareGravityUnreadIds(id.id, id2.id))];
+    set = new Set(set1(9043).SUPPORTED_ITEM_TYPES);
+    [arr10, arr11] = items5;
     let tmp6 = _slicedToArray(items5, 2);
-    if (c41) {
-      if (0 !== c38) {
+    if (c44) {
+      if (0 !== c41) {
         if (!isInitialLoad) {
-          if (c38 > 0) {
-            c43 = null;
+          if (c41 > 0) {
+            c46 = null;
           }
-          const tmp8 = arr11.length > tmp(8919).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr12.length > tmp(9043).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
-            const tmpResult = tmp(8923);
+            const tmpResult = tmp(9047);
             const items6 = [];
-            HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmpResult.hydrateItems(items6, 0, tmp(8919).ICYMI_PAGE_SIZE, closure_34);
-            if (arr9.length + arr10.length === 0) {
-              c54 = true;
+            HermesBuiltin.arraySpread(arr11, HermesBuiltin.arraySpread(arr10, 0));
+            tmpResult.hydrateItems(items6, 0, tmp(9043).ICYMI_PAGE_SIZE, closure_37);
+            if (arr10.length + arr11.length === 0) {
+              c57 = true;
             }
           }
           const obj2 = {
             newTrackingProps,
             hasNewContent,
-            unreadFeedItems: arr9,
-            readFeedItems: arr10,
+            unreadFeedItems: arr10,
+            readFeedItems: arr11,
             homeSessionId: null,
           };
           let str = "background_load";
@@ -1096,36 +1126,36 @@ obj = {
             str = "foreground_load";
           }
           obj2.homeSessionId = str;
-          tmp(8929).trackFeedLoaded(obj2);
-          const tmpResult2 = tmp(8929);
+          tmp(9057).trackFeedLoaded(obj2);
+          const tmpResult2 = tmp(9057);
         }
       }
     }
-    c38 = 0;
+    c41 = 0;
     if (!focused) {
       const _Date = Date;
-      const diff = Date.now() - closure_29;
+      const diff = Date.now() - closure_32;
       let flag = false;
       if (diff > 6 * DurationsDefault.Millis.HOUR) {
         const _Set = Set;
-        set1 = new Set(arr9.map((id) => id.id));
-        const substr = arr13.slice(0, 20);
+        set1 = new Set(arr10.map((id) => id.id));
+        const substr = arr14.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
       if (flag) {
         hasNewContent = true;
-        c39 = true;
+        c42 = true;
       }
-      const obj3 = { newUnread: arr9, newRead: arr10 };
+      const obj3 = { newUnread: arr10, newRead: arr11 };
       reload(obj3);
-      arr13 = closure_30;
+      arr14 = closure_33;
     }
     hasNewContent = false;
-    arr11 = getNewUnreadItems(arr9);
+    arr12 = getNewUnreadItems(arr10);
   },
   LOAD_ICYMI_HYDRATED: function handleLoadHydratedItems(arg0) {
     ({ messageItems, activityItems, requestMessageItems, requestActivityItems, startingIndex, endingIndex } = arg0);
-    c54 = true;
+    c57 = true;
     obj = {};
     let merged = Object.assign(obj);
     _require = messageItems.reduce((acc, message) => {
@@ -1153,12 +1183,12 @@ obj = {
           const obj7 = {};
           const merged = Object.assign(ICYMIUtils.createGravityMessageFromServer(tmp, tmp4));
           obj7.message = message;
-          closure_34[tmp.message.id] = obj7;
+          closure_37[tmp.message.id] = obj7;
         } else {
-          closure_34[tmp.message.id] = ICYMIUtils.createGravityMessageFromServer(tmp, tmp4);
+          closure_37[tmp.message.id] = ICYMIUtils.createGravityMessageFromServer(tmp, tmp4);
         }
       } else {
-        closure_35[message_id.message_id] = true;
+        closure_38[message_id.message_id] = true;
       }
     });
     const item1 = requestActivityItems.forEach((content_id) => {
@@ -1167,12 +1197,12 @@ obj = {
           obj = {};
           const merged = Object.assign(tmp4);
           obj.activity = tmp;
-          closure_34[tmp.id] = obj;
+          closure_37[tmp.id] = obj;
         } else {
-          closure_35[content_id.content_id] = true;
+          closure_38[content_id.content_id] = true;
         }
       } else {
-        closure_35[content_id.content_id] = true;
+        closure_38[content_id.content_id] = true;
       }
     });
     set.delete(require("generateHydrationId").generateHydrationId(startingIndex, endingIndex));
@@ -1204,7 +1234,7 @@ obj = {
   },
   LOAD_ICYMI_RECOMMENDED_GUILDS: function loadICYMIRecommendedGuilds(guilds) {
     guilds = guilds.guilds;
-    closure_48 = guilds.map((guild) => require("GuildDiscoveryUtils").makeDiscoverableGuild(guild.guild));
+    closure_51 = guilds.map((guild) => require("GuildDiscoveryUtils").makeDiscoverableGuild(guild.guild));
     injectRecommendedGuildsRow();
   },
   ICYMI_CUSTOM_SCORES_UPDATED: function handleCustomScoresUpdated(guildScore) {
@@ -1230,26 +1260,26 @@ obj = {
     }
   },
   RELOAD_ICYMI: function handleReloadTab() {
-    if (0 === closure_30.length) {
+    if (0 === closure_33.length) {
       return false;
     } else {
       reload();
-      c40 = false;
+      c43 = false;
     }
   },
   ICYMI_TAB_OPENED: function handleGravityTabOpened() {
-    c41 = true;
-    closure_29 = Date.now();
-    if (c39) {
-      c39 = false;
-      c40 = false;
+    c44 = true;
+    closure_32 = Date.now();
+    if (c42) {
+      c42 = false;
+      c43 = false;
     }
-    if (c44 < 5) {
-      c44 = c44 + 1;
+    if (c47 < 5) {
+      c47 = c47 + 1;
     }
   },
   ICYMI_FEEDBACK_GIVEN: function handleGravityFeedback() {
-    c44 = 6;
+    c47 = 6;
   },
   MESSAGE_REACTION_ADD: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(arg0) {
@@ -1290,7 +1320,7 @@ obj = {
   CHANNEL_ACK: handleAck,
   MESSAGE_ACK: handleAck,
   ICYMI_JOINED_RECOMMENDED_GUILD: function handleJoinedRecommendedGuild() {
-    closure_49 = Date.now();
+    closure_52 = Date.now();
   },
   ICYMI_SET_VIDEOS_MUTED: function handleSetVideosMuted(muted) {
     muted = muted.muted;

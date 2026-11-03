@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef2932 from "../intl/DisplayNameStyles.messages.js";
+import _modDef3059 from "../intl/DisplayNameStyles.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useDisplayNameStylesEffectDefaultColorsDefault from "../hooks/useDisplayNameStylesEffectDefaultColors.native.tsx";
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg },
   container: null,
@@ -34,7 +34,7 @@ obj2.container = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17337).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17480).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = {
   flex: 1,
   paddingTop: nativeDefault.space.PX_4,
@@ -79,10 +79,10 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const tmp8 = color !== tmp5[0] && !arr.some((item) => item.colors[0] === first);
   let obj3 = { colors: tmp5, a11yLabel: null };
   const intl = onSelectColor(1113).intl;
-  let obj = onSelectColor(8741);
+  let obj = onSelectColor(8865);
   const stringResult = intl.string(onSelectColor(1113).t.bBvAEH);
   obj3.a11yLabel = "" + stringResult + ", " + onSelectColor(1090).int2hex(tmp5[0]);
-  let items = [obj3, ...arr.filter((item) => item.colors[0] !== 32)];
+  items = [obj3, ...arr.filter((item) => item.colors[0] !== 32)];
   closure_5 = tmp10;
   closure_6 = obj2.useCallback((arg0) => {
     closure_4(arg0);
@@ -100,8 +100,8 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
       {
         color,
         onSelect(arg0) {
-          const result = onSelectColor(5260).triggerHapticFeedback(
-            onSelectColor(5260).HapticFeedbackTypes.IMPACT_MEDIUM,
+          const result = onSelectColor(5383).triggerHapticFeedback(
+            onSelectColor(5383).HapticFeedbackTypes.IMPACT_MEDIUM,
           );
           closure_1_4(arg0);
         },
@@ -115,7 +115,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
     if (closure_5) {
       onSelectColor(first);
       const obj3 = { default: first === 32, colors: null };
-      const items = [first];
+      items = [first];
       obj3.colors = items;
       AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_COLOR_SELECTED, obj3);
     }
@@ -130,12 +130,12 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const obj5 = { title: null, trailing: null };
   const tmp2Result = onSelectColor(1090);
   const intl2 = onSelectColor(1113).intl;
-  obj5.title = intl2.string(_modDef2932["6OxgN7"]);
+  obj5.title = intl2.string(_modDef3059["6OxgN7"]);
   const obj6 = { text: null, onPress: null, variant: "primary", size: "sm" };
   const intl3 = onSelectColor(1113).intl;
   obj6.text = intl3.string(onSelectColor(1113).t.XqMe3N);
   obj6.onPress = callback2;
-  obj5.trailing = closure_8(onSelectColor(5634).Button, obj6);
+  obj5.trailing = closure_8(onSelectColor(5754).Button, obj6);
   obj4.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj5);
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.contentContainer, children: null };
@@ -157,7 +157,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
         accessibilityState: null,
         accessibilityLabel: null,
       };
-      const items = [presetColor.presetColor, ,];
+      items = [presetColor.presetColor, ,];
       const obj2 = { backgroundColor: onSelectColor(1090).int2hex(tmp) };
       items[1] = obj2;
       let presetColorSelected = tmp4;
@@ -177,9 +177,9 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const intl4 = onSelectColor(1113).intl;
   obj10.text = intl4.string(onSelectColor(1113).t.yBZMsQ);
   obj10.onPress = onPress;
-  items6[1] = closure_8(onSelectColor(5634).Button, obj10);
+  items6[1] = closure_8(onSelectColor(5754).Button, obj10);
   obj8.children = items6;
   obj7.children = closure_9(closure_5, obj8);
   obj4.children = closure_8(closure_5, obj7);
-  return closure_8(onSelectColor(5272).BottomSheet, obj4);
+  return closure_8(onSelectColor(5395).BottomSheet, obj4);
 }

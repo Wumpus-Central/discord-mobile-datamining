@@ -2,7 +2,7 @@
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
 function merge() {
-  let items = [...arguments];
+  items = [...arguments];
   return items.reduce((acc, item) => {
     if (Array.isArray(item)) {
       const _TypeError = TypeError;
@@ -12,7 +12,7 @@ function merge() {
       let _Object = Object;
       const keys = Object.keys(item);
       item = keys.forEach((item) => {
-        const items = ["__proto__", "constructor", "prototype"];
+        items = ["__proto__", "constructor", "prototype"];
         if (!items.includes(item)) {
           let tmp = globalThis;
           const _Array = Array;

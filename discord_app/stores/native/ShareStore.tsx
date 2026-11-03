@@ -47,7 +47,7 @@ const shareStore = new ShareStore(DispatcherDefault, {
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        const guild = GuildStore.getGuild(c3);
+        guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;

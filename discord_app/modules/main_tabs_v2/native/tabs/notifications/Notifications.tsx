@@ -88,7 +88,7 @@ class ThemedNotifications {
     items[2] = top;
     memo = closure_3.useMemo(() => {
       if (closure_1) {
-        const items = [closure_2.containerOuterTablet];
+        items = [closure_2.containerOuterTablet];
         const obj = { paddingTop: top };
         items[1] = obj;
         let containerOuter = items;
@@ -125,11 +125,11 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11514).YouBarNavigatorScreens;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const YouBarNavigatorScreens = fn(11651).YouBarNavigatorScreens;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   containerOuter: { flex: 1 },
   containerOuterTablet: {
@@ -183,7 +183,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
   const ref = noop.useRef(null);
   const tmp6 = useForLaterCoachmarkDefault(ref);
   _require = tmp6;
-  const items = [tmp6];
+  items = [tmp6];
   const callback = noop.useCallback(() => closure_0(ContentDismissActionType.TAKE_ACTION), items);
   let tmp12 = !nestedInLaunchPad;
   if (!nestedInLaunchPad) {
@@ -197,11 +197,11 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(18478).LeftBackIconWithBadge, {});
-    const items1 = [closure_7(tmp11(6980).PressableOpacity, obj3), ,];
+    obj3.children = closure_7(tmp11(18632).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp11(7106).PressableOpacity, obj3), ,];
     const obj4 = {
       color: "mobile-text-heading-primary",
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       style: tmp.headerText,
       maxFontSizeMultiplier: 1.75,
       accessibilityRole: "header",
@@ -209,13 +209,13 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp11(1113).intl;
     obj4.children = intl2.string(tmp11(1113).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5624).Text, obj4);
+    items1[1] = closure_7(tmp11(5747).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
-    const obj6 = { ref, type: tmp11(10192).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+    const obj6 = { ref, type: tmp11(10322).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];
     const obj7 = { type: null, onOpen: null };
     const tmp2Result = ForLaterOpenActionButtonDefault;
-    obj7.type = tmp11(10192).SavedMessageSortTypes.REMINDER;
+    obj7.type = tmp11(10322).SavedMessageSortTypes.REMINDER;
     obj7.onOpen = callback;
     items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
     items2[2] = closure_7(NotificationCenterActionButtonDefault, {});

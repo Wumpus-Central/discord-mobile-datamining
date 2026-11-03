@@ -1,14 +1,16 @@
 // discord_app/modules/conjure/chat/native/ConjureAwaitingUser.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { ring: null };
 const rect = {
   position: "absolute",
@@ -18,47 +20,55 @@ const rect = {
   left: -PX_4,
   borderWidth: PX_4,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
-  borderRadius: fn(12136).CONJURE_NATIVE_CARD_RADIUS + PX_4,
+  borderRadius: fn(12272).CONJURE_NATIVE_CARD_RADIUS + PX_4,
 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function ConjureAwaitingUserTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+let closure_7 = {
+  code: "(function ConjureAwaitingUserTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureAwaitingUser.tsx");
 
 export function ConjureAwaitingPulseRing() {
   const tmp = closure_6();
-  const items = [AccessibilityStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = stateFromStores(504);
-  const sharedValue = stateFromStores(5095).useSharedValue(0);
+  items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  _require = stateFromStores;
+  let obj = require("initialize");
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
   const items1 = [sharedValue, stateFromStores];
   const effect = noop.useEffect(() => {
-    if (stateFromStores) {
-      ReanimatedRexport.cancelAnimation(sharedValue);
+    if (c0) {
+      _mod1652.cancelAnimation(sharedValue);
       const result = sharedValue.set(0);
     } else {
-      const obj = ReanimatedRexport;
+      const obj = _mod1652;
       const obj3 = { duration: 1000, easing: null };
-      const Easing = ReanimatedRexport.Easing;
-      obj3.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
-      const result1 = sharedValue.set(obj.withRepeat(timing.withTiming(0.35, obj3), -1, true));
-      const fn = () => stateFromStores(dependencyMap[7]).cancelAnimation(sharedValue);
+      const Easing = _mod1652.Easing;
+      obj3.easing = Easing.inOut(_mod1652.Easing.ease);
+      const result1 = sharedValue.set(obj.withRepeat(timing_timing.withTiming(0.35, obj3), -1, true));
+      const fn = () => c0(dependencyMap[7]).cancelAnimation(sharedValue);
     }
     return fn;
   }, items1);
-  let obj2 = stateFromStores(5095);
-  let fn = function p() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 8512415125100;
-  fn.__initData = __initData;
-  const animatedStyle = stateFromStores(5095).useAnimatedStyle(fn);
+  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_7, sharedValue];
+  _require = undefined;
+  [tmp6, tmp7] = items2;
+  class ConjureAwaitingUserTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items3 = [tmp7];
+  ConjureAwaitingUserTsx1.__closure = items3;
+  ConjureAwaitingUserTsx1.__workletHash = 10338450331605;
+  ConjureAwaitingUserTsx1.__initData = tmp6;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureAwaitingUserTsx1);
   let obj4 = { pointerEvents: "none", style: null };
-  const items2 = [tmp.ring, animatedStyle];
-  obj4.style = items2;
-  return jsx(sharedValue(5095).View, { pointerEvents: "none", style: null });
+  const items4 = [tmp.ring, animatedStyle];
+  obj4.style = items4;
+  return jsx(sharedValue(1652).View, { pointerEvents: "none", style: null });
 }

@@ -15,14 +15,14 @@ function ConnectedAcceptGuildTemplate(code) {
   _slicedToArray = undefined;
   noop = undefined;
   const tmp = closure_10();
-  const items = [GuildTemplateStore];
+  items = [GuildTemplateStore];
   const stateFromStores = code(504).useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
   let obj = code(504);
-  [name, dependencyMap] = noop.useState(name(6901).getGuildNameSuggestion());
+  [name, dependencyMap] = noop.useState(name(7021).getGuildNameSuggestion());
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(13221)(stateFromStores);
+  stateFromStores(13357)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -36,7 +36,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null,
   };
-  const obj2 = name(6901);
+  const obj2 = name(7021);
   obj4.chooseIcon = first1(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -48,7 +48,7 @@ function ConnectedAcceptGuildTemplate(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ function ConnectedAcceptGuildTemplate(code) {
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -104,7 +104,7 @@ function ConnectedAcceptGuildTemplate(code) {
       );
     }
   };
-  obj3.children = jsx(stateFromStores(13222), {
+  obj3.children = jsx(stateFromStores(13358), {
     code,
     guildTemplate: stateFromStores,
     name,
@@ -116,12 +116,12 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null,
   });
-  return jsx(code(7292).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
+  return jsx(code(7412).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
 }
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
-let obj2 = { container: { flex: 1, marginTop: fn(5586).NAV_BAR_HEIGHT } };
+const createStyles = fn(5141);
+let obj2 = { container: { flex: 1, marginTop: fn(5709).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
 const size = fn(2);
@@ -129,7 +129,7 @@ const result = size.fileFinishedImporting("modules/guild_templates/native/Accept
 
 export default function AcceptGuildTemplateModal(code) {
   code = code.code;
-  const items = [code];
+  items = [code];
   const memo = noop.useMemo(() => {
     let obj = { code };
     const obj2 = {};
@@ -146,5 +146,5 @@ export default function AcceptGuildTemplateModal(code) {
     obj2[ACCEPT_GUILD_TEMPLATE] = obj3;
     return obj2;
   }, items);
-  return jsx(code(7169).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(7290).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 }

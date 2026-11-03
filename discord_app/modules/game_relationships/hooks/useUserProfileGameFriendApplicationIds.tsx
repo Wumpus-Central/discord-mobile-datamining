@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 export function useUserProfileGameFriendApplicationIds(userId) {
   userId = userId.userId;
   let stateFromStores;
-  const items = [RelationshipStore, UserStore];
+  items = [RelationshipStore, UserStore];
   stateFromStores = userId(stateFromStores[3]).useStateFromStores(items, () => {
     let isFriendResult = RelationshipStore.isFriend(userId);
     if (!isFriendResult) {

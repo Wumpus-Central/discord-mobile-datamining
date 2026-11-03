@@ -46,7 +46,7 @@ export default function NameplateCardPreview(arg0) {
   _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
   const obj2 = { style: tmp.nameplatePreviewContainer, children: null };
   const nameplateData = utils.getNameplateData(item);
-  const items = [
+  items = [
     React4(NameplateDummyUserPreview.NameplateDummyUserPreview, {
       width: 34,
       avatarSize: native.AvatarSizes.XSMALL,

@@ -11,7 +11,7 @@ export default function useTrialActiveUserLimitOptions() {
     const obj = { value: null, label: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.zHfL6o);
-    const items = [
+    items = [
       obj,
       { value: 10, label: "10" },
       { value: 25, label: "25" },

@@ -8,12 +8,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");
 
 export function useCurrentUser() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   _modDef38(null != stateFromStores, "user has to be signed in before accessing shop");
   return stateFromStores;
 }
 export function useCurrentUserIfAvailable() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
 }

@@ -8,7 +8,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   inputContainer: { flexGrow: 1, marginLeft: 8 },
   cancelButtonContainer: { paddingLeft: 8 },
@@ -21,7 +21,7 @@ const memoResult = noop.memo(function SearchButton(channelId) {
   let obj = channelId(route[6]);
   route = channelId(route[6]).useRoute();
   let obj2 = channelId(route[6]);
-  const items = [navigation, route];
+  items = [navigation, route];
   const canSearchForumPostsByChannelId = channelId(route[7]).useCanSearchForumPostsByChannelId(channelId);
   const effect = noop.useEffect(
     () => () => {
@@ -56,9 +56,9 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(11348).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(11348);
-  const items = [ForumSearchStore];
+  const canSearchForumPostsByChannelId = channelId(11485).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(11485);
+  items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
     items,

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/pinot/useIsPinotNewChannelPri
 export function useIsPinotNewChannelPrivate(guildId, categoryId) {
   _require = guildId;
   dependencyMap = categoryId;
-  const items = [ChannelStore, GuildStore, GuildRoleStore];
+  items = [ChannelStore, GuildStore, GuildRoleStore];
   const items1 = [guildId, categoryId];
   return require("initialize").useStateFromStores(
     items,

@@ -14,7 +14,7 @@ export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   activity = activity.activity;
   const guildId = activity.guildId;
   let memo;
-  const items = [activity];
+  items = [activity];
   memo = memo.useMemo(() => {
     let userIds;
     if (activity != null) {

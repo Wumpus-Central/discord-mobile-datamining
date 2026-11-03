@@ -25,7 +25,7 @@ let closure_8 = async function _getOrders(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_8 = async function _getOrders(arg0) {
           }
           const obj5 = {};
           if (null != status) {
-            const items = [_require.status];
+            items = [_require.status];
             obj5.statuses = items;
           }
           let skuId;
@@ -154,7 +154,7 @@ let closure_10 = async function _createOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -377,7 +377,7 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -472,7 +472,7 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
               purchase_type: closure_129_3,
               subscription_plan_id: closure_129_7,
             };
-            const items = [obj11];
+            items = [obj11];
             obj10.orderLineItems = items;
             obj10.externalGatewayFacet = closure_129_8;
             c3 = 3;
@@ -510,7 +510,7 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -646,7 +646,7 @@ let closure_14 = async function _patchOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -793,7 +793,7 @@ let closure_15 = async function _updateOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -962,7 +962,7 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -994,7 +994,7 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -1113,7 +1113,7 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
                   c3 = 0;
                   c11 = null;
                   c5 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp45) {
                 if (tmp5 === c3) {
@@ -1155,7 +1155,7 @@ let closure_17 = async function _markOrderAsSigningInProgress(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -1177,7 +1177,7 @@ let closure_19 = async function _cancelOrderSigning() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1211,7 +1211,7 @@ let closure_19 = async function _cancelOrderSigning() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -1364,7 +1364,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(5747).OrderStatus;
+const OrderStatus = fn(5867).OrderStatus;
 const Endpoints = fn(1072).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

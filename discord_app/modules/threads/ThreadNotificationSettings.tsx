@@ -64,7 +64,7 @@ let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSetti
 export { computeThreadNotificationSetting };
 export function useThreadNotificationSetting(channel) {
   _require = channel;
-  const items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
+  items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
   const items1 = [channel];
   return require("initialize").useStateFromStores(items, () => computeThreadNotificationSetting(closure_0), items1);
 }

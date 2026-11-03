@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9895).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4926).getUserCommunicationDisabledVersion;
-const Changeset = fn(8378).Changeset;
+let closure_6 = fn(10026).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5053).getUserCommunicationDisabledVersion;
+const Changeset = fn(8502).Changeset;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_12,
@@ -169,7 +169,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
@@ -1480,7 +1480,7 @@ class MessagesRenderer {
       onLongPressSticker: function handleLongPressSticker(nativeEvent) {
         const messageId = MessageDataSnowflakeUtils.getNativeSyntheticEventData(nativeEvent).messageId;
         const current = ref3.current;
-        const items = [messageId];
+        items = [messageId];
         const set = new Set(items);
         if (null != current) {
           set.add(current);

@@ -8,7 +8,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   linkCalloutContainer: {
     maxHeight: 300,
@@ -40,7 +40,7 @@ export function URLCallout(url) {
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
   const obj3 = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
   const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
-  const items = [protocol, "//"];
+  items = [protocol, "//"];
   obj4.children = items;
   const items1 = [
     React3(Text_Text.Text, obj4),

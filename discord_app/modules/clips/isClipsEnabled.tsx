@@ -15,7 +15,7 @@ export function isClipsEnabled() {
 }
 export function useIsClipsEnabled() {
   let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
-  const items = [ClipsStore];
+  items = [ClipsStore];
   if (isClipsAvailable) {
     isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }

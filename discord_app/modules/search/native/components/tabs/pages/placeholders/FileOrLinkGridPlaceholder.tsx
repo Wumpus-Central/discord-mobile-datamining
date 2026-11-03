@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import ReanimatedRexportDefault from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
 import useFontScale from "../../../../../../screen/native/useFontScale.tsx";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
 import SearchListCard from "../../../list/SearchListCard.tsx";
@@ -18,7 +18,7 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   const width = imageStyle.width;
   const sum = imageStyle.height + 108 * useFontScale.useFontScale();
   c1 = sum;
-  const items = [width, sum];
+  items = [width, sum];
   const memo = noop.useMemo(() => {
     const size = { width, height };
     return size;
@@ -30,7 +30,7 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj3.style = items1;
-  return jsx(ReanimatedRexportDefault.View, {
+  return jsx(_modDef1652.View, {
     style: null,
     pointerEvents: "none",
     children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),

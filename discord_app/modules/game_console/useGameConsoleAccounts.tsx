@@ -9,9 +9,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
 export default function useGameConsoleAccounts() {
-  let items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [
+    items = [
       ConnectedAccountsStore.getAccount(null, constants.XBOX),
       ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION),
       ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION_STAGING),

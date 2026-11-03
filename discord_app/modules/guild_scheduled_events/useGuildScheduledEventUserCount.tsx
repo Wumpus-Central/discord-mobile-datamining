@@ -13,7 +13,7 @@ export default function useGuildScheduledEventUserCount(guild_id, id, recurrence
   _require = guild_id;
   closure_1 = id;
   dependencyMap = recurrenceId;
-  let items = [GuildScheduledEventStore];
+  items = [GuildScheduledEventStore];
   let items1 = [id, guild_id, recurrenceId];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildScheduledEventStore.getUserCount(closure_1, closure_2),
@@ -25,7 +25,7 @@ export default function useGuildScheduledEventUserCount(guild_id, id, recurrence
     }
     if (tmp2) {
       if (null != closure_2) {
-        const items = [tmp7];
+        items = [tmp7];
         let items1 = items;
       } else {
         items1 = [];

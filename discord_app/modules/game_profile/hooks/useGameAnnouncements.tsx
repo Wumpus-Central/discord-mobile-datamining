@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnou
 export default function useGameAnnouncements(arg0, limit) {
   _require = arg0;
   dependencyMap = limit;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {

@@ -17,8 +17,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { flex: 1 },
@@ -46,7 +46,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
   }
   const tmp4 = closure_11();
   let obj2 = guildId(num[9]);
-  let items = [callback];
+  items = [callback];
   const items1 = [guildId];
   stateFromStores = guildId(num[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   let tmp2Result = guildId(num[10]);
@@ -74,7 +74,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     obj.label = intl.string(util.t.NOOm1Z);
     obj.id = MemberSafetyPageTypes.MemberSafetyPageTab.ALL_MEMBERS;
     obj.page = React7(GuildSettingsModalMembersDefault, { guildId });
-    const items = [obj, , ,];
+    items = [obj, , ,];
     const obj3 = { label: null, id: null, count: null, page: null };
     const intl2 = util.intl;
     obj3.label = intl2.string(util.t["4eQVBO"]);
@@ -123,12 +123,12 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9100), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9228), accessibilityLabel: null, ref: null };
         const intl = guildId(1113).intl;
         obj.accessibilityLabel = intl.string(guildId(1113).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(7558).HeaderActionButton, obj);
+        return closure_1_9(guildId(7682).HeaderActionButton, obj);
       },
     });
   }, items5);

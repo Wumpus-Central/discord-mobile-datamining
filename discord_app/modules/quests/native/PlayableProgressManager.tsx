@@ -42,7 +42,7 @@ const prototype = function PlayableProgressManager() {
     }
     const obj3 = { playableId: playingPlayableId, isRunning: tmp2, hasTimeout: null != playingPlayableId.timeout };
   };
-  const items = [PlayableStore, applyArgumentsResult.handlePlayableStoreChange];
+  items = [PlayableStore, applyArgumentsResult.handlePlayableStoreChange];
   const items1 = [items];
   applyArgumentsResult.stores = new Map(items1);
   applyArgumentsResult.actions = {};

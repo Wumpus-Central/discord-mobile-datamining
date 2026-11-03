@@ -19,7 +19,7 @@ function MembersPruneActionSheetContent(guild) {
   [days, _slicedToArray] = num.useState(7);
   const tmp3 = closure_5(guild.id, days, []);
   num = tmp3.count;
-  const items = [guild.id, days];
+  items = [guild.id, days];
   const effect = num.useEffect(() => {
     function handlePruneUpdate(guildId) {
       if (guildId.guildId === handlePruneUpdate.id) {
@@ -104,7 +104,7 @@ function MembersPruneActionSheetContent(guild) {
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(18657);
+const PrunePreviewStore = fn(18815);
 ({
   usePrunePreview: hasOwnProperty,
   setPrunePreview: metroRequire,
@@ -117,7 +117,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/Members
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
-  const items = [GuildStore, PermissionStore, UserStore];
+  items = [GuildStore, PermissionStore, UserStore];
   const items1 = [guild];
   const stateFromStores = guild(504).useStateFromStores(
     items,

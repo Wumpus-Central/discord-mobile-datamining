@@ -71,7 +71,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(14271).Sections;
+const Sections = fn(14402).Sections;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -79,7 +79,7 @@ const Constants = fn(1072);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ContactPermissions = fn(14249).ContactPermissions;
+const ContactPermissions = fn(14380).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {
@@ -92,7 +92,7 @@ let closure_19 = {
   CONTACT_SUGGESTIONS: 3,
   [3]: "CONTACT_SUGGESTIONS",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1 },
   inviteAppsContainerNonSticky: {
@@ -160,13 +160,13 @@ export default function AddFriendsScreen(navigation) {
   closure_14 = userRowWithSubLabelHeight1.useCallback((userId, applicationId) => {
     if (null != applicationId) {
       closure_13((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
         return items;
       });
     } else {
       _undefined4((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
         return items;
       });
@@ -175,13 +175,13 @@ export default function AddFriendsScreen(navigation) {
   constants = userRowWithSubLabelHeight1.useCallback((userId, applicationId) => {
     if (null != applicationId) {
       closure_11((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
         return items;
       });
     } else {
       _undefined2((arg0) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
         return items;
       });
@@ -193,7 +193,7 @@ export default function AddFriendsScreen(navigation) {
       source_page,
     });
   });
-  let items = [navigation];
+  items = [navigation];
   const onPress = userRowWithSubLabelHeight1.useCallback(() => {
     navigation.navigate("username-search");
   }, items);
@@ -209,7 +209,7 @@ export default function AddFriendsScreen(navigation) {
   const tmp10 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
   const items2 = [c9, first];
   const stateFromStoresArray = navigation(analyticsLocations[27]).useStateFromStoresArray(items2, () => {
-    const items = [];
+    items = [];
     const mutableRelationships = RelationshipStore.getMutableRelationships();
     const keys = mutableRelationships.keys();
     const iter = keys[Symbol.iterator]();
@@ -239,9 +239,9 @@ export default function AddFriendsScreen(navigation) {
     return _modDef12
       .unionBy(items1, items, (id) => id.id)
       .sort((arg0, arg1) => {
-        const name = source_page(5068).getName(arg0);
-        const obj = source_page(5068);
-        return name.localeCompare(source_page(5068).getName(arg1));
+        const name = source_page(5195).getName(arg0);
+        const obj = source_page(5195);
+        return name.localeCompare(source_page(5195).getName(arg1));
       });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -251,7 +251,7 @@ export default function AddFriendsScreen(navigation) {
     items3,
     () => {
       const gameRelationshipsByType = _undefined3.getGameRelationshipsByType(constants.PENDING_INCOMING);
-      const items = [];
+      items = [];
       const item = gameRelationshipsByType.forEach((id) => {
         id = id.id;
         const applicationId = id.applicationId;
@@ -280,9 +280,9 @@ export default function AddFriendsScreen(navigation) {
       return source_page(analyticsLocations[28])
         .unionBy(items1, items, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = items1(5068).getName(user.user);
-          const obj = items1(5068);
-          return name.localeCompare(items1(5068).getName(user2.user));
+          const name = items1(5195).getName(user.user);
+          const obj = items1(5195);
+          return name.localeCompare(items1(5195).getName(user2.user));
         });
     },
     items4,
@@ -308,7 +308,7 @@ export default function AddFriendsScreen(navigation) {
     } else {
       length = stateFromStores.length;
     }
-    const items = [];
+    items = [];
     for (let num2 = 0; num2 < length; num2 = num2 + 1) {
       let tmp5 = stateFromStores[num2];
       if (null != tmp5) {
@@ -367,7 +367,7 @@ export default function AddFriendsScreen(navigation) {
     if (c25) {
       num = 2;
     }
-    const items = [num, , ,];
+    items = [num, , ,];
     let num2 = 4;
     let num3 = 4;
     if (!closure_23) {
@@ -673,7 +673,7 @@ export default function AddFriendsScreen(navigation) {
                 location: constants3.ADD_FRIENDS_MODAL,
                 onAddSuggestion() {
                   return onPress3((arg0) => {
-                    const items = [];
+                    items = [];
                     items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_5;
                     return items;
                   });

@@ -13,7 +13,7 @@ function closeModal() {
   resetChangeEmailStore();
   EmailVerificationModalActionCreatorsDefault.close();
 }
-const resetChangeEmailStore = fn(6997).resetChangeEmailStore;
+const resetChangeEmailStore = fn(7123).resetChangeEmailStore;
 const VerificationModalScenes = fn(1072).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function EmailVerificationModal(isChangeEmail) {
   importDefault = undefined;
   first = undefined;
   _slicedToArray = undefined;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = isChangeEmail(first[17]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag;
   let obj = isChangeEmail(first[17]);

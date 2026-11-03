@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 export default function ParticipantTitle(arg0) {
   ({ channel, participant, style } = arg0);
   const obj = { style: null, numberOfLines: 1, children: getParticipantTitleDefault(channel, participant) };
-  const items = [closure_4().usernameText, style];
+  items = [closure_4().usernameText, style];
   obj.style = items;
   return jsx(native.LegacyText, {
     style: null,

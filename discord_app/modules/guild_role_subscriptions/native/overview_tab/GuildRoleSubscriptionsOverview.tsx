@@ -14,7 +14,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 function serverNameHook(children) {
-  return jsx(Text_Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
+  return jsx(Text_Text.Text, { variant: "heading-lg/semibold", color: "interactive-text-active", children });
 }
 class RoleSubscriptionsUnavailableNotice {
   constructor(arg0) {
@@ -52,7 +52,7 @@ const result = size.fileFinishedImporting(
 export default function GuildRoleSubscriptionsOverview(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(
     items,

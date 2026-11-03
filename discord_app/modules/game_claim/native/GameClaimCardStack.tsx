@@ -22,7 +22,7 @@ let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
 obj.container = {
@@ -88,7 +88,7 @@ export default function GameClaimCardStack(uri) {
     style: tmp.gameCard,
     children: React4(FastImageDefault, { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" }),
   };
-  const items = [React4(View, obj2)];
+  items = [React4(View, obj2)];
   const obj4 = {
     style: tmp.addCard,
     children: React4(View, {

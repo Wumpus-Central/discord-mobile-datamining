@@ -27,7 +27,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -63,7 +63,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = tmp45;
-            const aPIError = new closure_0(6446).APIError(closure_129_1);
+            const aPIError = new closure_0(6566).APIError(closure_129_1);
             tmp4(aPIError);
             c4 = 0;
             closure_1(false);
@@ -104,7 +104,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
     }
     return applyArgumentsResult;
   }, []);
-  const items = [arg0, callback];
+  items = [arg0, callback];
   const effect = noop.useEffect(() => {
     callback(closure_0);
   }, items);

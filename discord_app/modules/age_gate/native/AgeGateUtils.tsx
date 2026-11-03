@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.
 
 export function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {

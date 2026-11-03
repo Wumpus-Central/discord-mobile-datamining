@@ -9,10 +9,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(6722).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6842).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(
@@ -30,7 +30,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
   const tmp = closure_7();
   const intl = util.intl;
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let formatResult1 = intl.format(util.t.ZqkXsC, { helpdeskArticle });
   if (null != guild) {
     const intl2 = util.intl;
@@ -43,7 +43,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   const obj4 = { style: tmp.header, children: null };
   const intl3 = util.intl;
   obj4.children = intl3.string(util.t.kJwpBW);
-  const items = [
+  items = [
     hasOwnProperty(native.LegacyText, obj4),
     hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
   ];

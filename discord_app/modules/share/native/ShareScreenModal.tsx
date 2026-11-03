@@ -11,7 +11,7 @@ require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(15675).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15817).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function ShareScreenModal(text) {
   const tmp = first(noop.useState(null), 2);
   first = tmp[0];
   noop = tmp[1];
-  let items = [shareId, attachmentManifest];
+  items = [shareId, attachmentManifest];
   const effect = noop.useEffect(() => {
     closure_0 = async function _fetchAttachments() {
       if (v3 === 2) {
@@ -42,7 +42,7 @@ export default function ShareScreenModal(text) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ export default function ShareScreenModal(text) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ export default function ShareScreenModal(text) {
   const items3 = [text, first, channelId, first1];
   const memo = noop.useMemo(() => {
     const obj = { text, attachments: null };
-    let items = first;
+    items = first;
     if (first == null) {
       items = [];
     }

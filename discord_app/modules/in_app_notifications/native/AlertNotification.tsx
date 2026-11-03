@@ -9,14 +9,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = {
-  shape: fn(9509).CutoutShape.RoundedRect,
-  x: fn(6957).ImageSizes[fn(undefined, 6957).GuildIconSizes.NORMAL] - -6 - 24,
+  shape: fn(9637).CutoutShape.RoundedRect,
+  x: fn(7083).ImageSizes[fn(undefined, 7083).GuildIconSizes.NORMAL] - -6 - 24,
   y: -6,
   width: 24,
   height: 24,
   cornerRadius: nativeDefault.radii.sm,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   warningBadge: {
     position: "absolute",
@@ -35,9 +35,9 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/A
 export default function AlertNotification(notification) {
   notification = notification.notification;
   const channel = notification.channel;
-  const guild = notification.guild;
+  guild = notification.guild;
   const tmp = closure_9();
-  const incidentData = channel(11025).useGuildIncidentsState(notification.key).incidentData;
+  const incidentData = channel(11158).useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
     raidDetectedAt = incidentData.raidDetectedAt;
@@ -49,7 +49,7 @@ export default function AlertNotification(notification) {
     let intl = tmp2(1113).intl;
     stringResult = intl.string(tmp2(1113).t.evRhwg);
   }
-  const items = [guild];
+  items = [guild];
   const items1 = [channel.id];
   const memo = noop.useMemo(() => {
     const obj = { type: "simple", text: null, secondaryText: null };
@@ -70,12 +70,12 @@ export default function AlertNotification(notification) {
   const obj4 = { cutouts: null, children: null };
   const items2 = [size];
   obj4.cutouts = items2;
-  let obj = channel(11025);
-  obj4.children = closure_5(guild(6957), { guild, selected: false });
-  const items3 = [closure_5(guild(9509), obj4)];
+  let obj = channel(11158);
+  obj4.children = closure_5(guild(7083), { guild, selected: false });
+  const items3 = [closure_5(guild(9637), obj4)];
   const obj5 = { style: tmp.warningBadge, children: null };
-  const tmp8 = guild(9509);
-  obj5.children = closure_5(channel(8026).WarningIcon, {
+  const tmp8 = guild(9637);
+  obj5.children = closure_5(channel(8150).WarningIcon, {
     style: tmp.warningIcon,
     color: guild(575).colors.ICON_FEEDBACK_WARNING,
   });
@@ -83,8 +83,8 @@ export default function AlertNotification(notification) {
   obj3.children = items3;
   obj2.icon = closure_7(closure_6, obj3);
   obj2.header = memo;
-  obj2.children = closure_5(channel(11037).SystemMessageText, { text: stringResult });
+  obj2.children = closure_5(channel(11170).SystemMessageText, { text: stringResult });
   obj2.onPress = callback;
   obj2.notification = notification;
-  return closure_5(channel(11076).NotificationPressable, obj2);
+  return closure_5(channel(11213).NotificationPressable, obj2);
 }

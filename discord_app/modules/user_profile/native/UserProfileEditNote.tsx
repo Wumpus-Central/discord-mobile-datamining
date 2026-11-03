@@ -9,7 +9,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1072).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
@@ -37,7 +37,7 @@ export default function UserProfileEditNote(userId) {
   const tmp6 = flag(navigation.useState(str), 2);
   maxLength = tmp6[0];
   closure_7 = tmp8;
-  const items = [userId, maxLength, onSave];
+  items = [userId, maxLength, onSave];
   callback = obj2.useCallback(() => {
     NoteActionCreatorsDefault.updateNote(userId, first);
     if (onSave != null) {
@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            closure_1_1(11407)({
+            closure_1_1(11545)({
               location: "UserProfileEditNote",
               hasUnsavedChanges: str !== closure_6,
               onReset() {

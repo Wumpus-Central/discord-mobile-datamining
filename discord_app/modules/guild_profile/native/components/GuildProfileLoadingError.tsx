@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -27,7 +27,7 @@ export default function GuildProfileLoadingError(onPress) {
   obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
   obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
-  const items = [React4(tmp4, obj4), ,];
+  items = [React4(tmp4, obj4), ,];
   const obj6 = { style: styles.header, children: null };
   const obj7 = { style: styles.avatarBackground, children: null };
   const obj8 = { style: styles.avatarBackground, children: null };

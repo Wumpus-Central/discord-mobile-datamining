@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { rowGap: 16, flexDirection: "column" },
   buttons: { flexDirection: "row", columnGap: 12 },
@@ -54,7 +54,7 @@ export default function UserProfileIncomingFriendRequest(style) {
     onCancel: showUserProfile,
   };
   let name = items4(trackUserProfileAction[9]).useName(guildId, channelId, user);
-  const items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
+  items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
   let Button = acceptFriendRequest.useCallback(() => {
     acceptFriendRequest();
     let str = "ACCEPT_FRIEND_REQUEST";

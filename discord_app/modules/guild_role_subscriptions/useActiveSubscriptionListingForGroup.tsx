@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useA
 
 export default function useActiveSubscriptionListingForGroup(arg0) {
   _require = arg0;
-  const items = [sku_id];
+  items = [sku_id];
   stateFromStores = require("initialize").useStateFromStores(items, () => sku_id.getSubscriptions());
   const items1 = [stateFromStores];
   noop = noop.useMemo(() => {

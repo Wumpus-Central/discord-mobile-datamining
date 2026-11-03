@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sectionTitle: { marginBottom: 8 },
   policy: { marginBottom: 16 },
@@ -40,10 +40,10 @@ export default function AppealIngestionPolicySummary(classification) {
   const capitalizeTextResult = SafetyHubUtils.capitalizeText(description);
   const obj2 = { style: tmp.policy, children: null };
   const tmp2Result = ColorUtils;
-  const obj3 = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
+  const obj3 = { style: tmp.sectionTitle, variant: "text-sm/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.xsdcxh);
-  const items = [React3(Text_Text.Text, obj3)];
+  items = [React3(Text_Text.Text, obj3)];
   const obj4 = {
     style: null,
     children: React3(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }),

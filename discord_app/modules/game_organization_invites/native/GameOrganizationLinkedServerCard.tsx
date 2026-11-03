@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(6957).GuildIconSizes.XLARGE;
-const createStyles = fn(5014);
+const XLARGE = fn(7083).GuildIconSizes.XLARGE;
+const createStyles = fn(5141);
 const obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   icon: null,
@@ -54,7 +54,7 @@ export default function GameOrganizationLinkedServerCard(linkedGuild) {
   const guildIconURL = obj.getGuildIconURL({ id, icon, size: GuildIcon.ImageSizes[XLARGE] });
   const obj3 = { border: "subtle", style: tmp.card, children: null };
   const obj4 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_16, children: null };
-  const items = [
+  items = [
     React4(GuildIconDefault, { icon: guildIconURL, value: name, size: XLARGE, selected: false, style: tmp.icon }),
   ];
   const obj6 = { spacing: nativeDefault.space.PX_4, style: tmp.info, children: null };

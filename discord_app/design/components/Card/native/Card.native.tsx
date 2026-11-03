@@ -1,14 +1,15 @@
 // discord_app/design/components/Card/native/Card.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import CardTokens from "CardTokens.native.tsx";
+import AnimatedPressableHighlight from "../../experimental/Pressables/native/AnimatedPressableHighlight.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexport = ReanimatedRexport2;
+const module_1652 = _mod1652;
 
 require = fn;
 class Card {
@@ -76,101 +77,102 @@ class Card {
 function PressableCard(start) {
   if (obj.isAndroid()) {
     const start2 = start.start;
-    let onPressIn = start2;
+    c0 = start2;
     const end2 = start.end;
-    let onPressOut = end2;
+    c1 = end2;
     const radius2 = start.radius;
-    let sharedValue = radius2;
+    c2 = radius2;
     const merged = Object.assign(start, Object.assign({ children: 0, start: 0, end: 0, radius: 0 }));
-    let items = [start2, end2, radius2];
+    items = [start2, end2, radius2];
     const memo = noop.useMemo(() => {
-      if (onPressIn) {
-        let cornerRadius = sharedValue;
+      if (c0) {
+        let cornerRadius = c2;
       } else {
         cornerRadius = 0;
       }
       return { cornerRadius };
     }, items);
-    let obj3 = { androidRippleConfig: memo };
+    const obj3 = { androidRippleConfig: memo };
     const merged1 = Object.assign(merged);
     obj3.children = start.children;
-    let tmp19 = jsx(tmp(tmp2[12]).AnimatedPressableHighlight, { androidRippleConfig: memo });
+    let tmp27 = jsx(AnimatedPressableHighlight.AnimatedPressableHighlight, { androidRippleConfig: memo });
   } else {
-    onPressIn = start.onPressIn;
-    onPressOut = start.onPressOut;
+    const onPressIn = start.onPressIn;
+    const onPressOut = start.onPressOut;
     ({ radius, start, end } = start);
     ({ children, style, variant } = start);
     const merged2 = Object.assign(
       start,
       Object.assign({ children: 0, style: 0, variant: 0, onPressIn: 0, onPressOut: 0, radius: 0, start: 0, end: 0 }),
     );
-    sharedValue = tmp(tmp2[4]).useSharedValue(0);
+    const sharedValue = _mod1652.useSharedValue(0);
     const items1 = [sharedValue, onPressIn];
     const items2 = [sharedValue, onPressOut];
     const callback = noop.useCallback((arg0) => {
-      const result = sharedValue.set(1);
-      if (onPressIn != null) {
+      const result = _undefined3.set(1);
+      if (c0 != null) {
         tmp2(arg0);
       }
     }, items1);
     const callback1 = noop.useCallback((arg0) => {
-      const result = sharedValue.set(0);
-      if (onPressOut != null) {
+      const result = _undefined3.set(0);
+      if (c1 != null) {
         tmp2(arg0);
       }
     }, items2);
+    const tmpResult = _mod1652;
+    ({ backgroundColor, backgroundColorPressed } = closure_9(variant));
     const tmp11 = closure_9(variant);
-    const backgroundColor = tmp11.backgroundColor;
-    const backgroundColorPressed = tmp11.backgroundColorPressed;
-    const tmpResult = tmp(tmp2[4]);
-    class B {
+    const items3 = [
+      closure_12,
+      spring_spring.withSpring,
+      _mod1652.interpolateColor,
+      sharedValue,
+      backgroundColor,
+      backgroundColorPressed,
+      springPresets.ON_PRESS_SPRING,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items3;
+    class CardNativeTsx1 {
       constructor() {
         obj = { backgroundColor: null };
-        obj2 = closure_0(closure_2[10]);
-        obj3 = closure_0(closure_2[4]);
         items = [,];
-        items[0] = backgroundColor;
-        items[1] = backgroundColorPressed;
-        interpolateColorResult = obj3.interpolateColor(closure_2.get(), [0, 1], items);
-        obj.backgroundColor = obj2.withSpring(
-          interpolateColorResult,
-          closure_0(closure_2[11]).ON_PRESS_SPRING,
-          "animate-always",
-        );
+        items[0] = closure_3;
+        items[1] = closure_4;
+        obj.backgroundColor = closure_0(closure_1(closure_2.get(), [0, 1], items), closure_5, "animate-always");
         return obj;
       }
     }
-    const obj5 = {
-      withSpring: tmp(tmp2[10]).withSpring,
-      interpolateColor: tmp(tmp2[4]).interpolateColor,
-      pressed: sharedValue,
-      backgroundColor,
-      backgroundColorPressed,
-      ON_PRESS_SPRING: tmp(tmp2[11]).ON_PRESS_SPRING,
-    };
-    B.__closure = obj5;
-    B.__workletHash = 14943431549291;
-    B.__initData = __initData;
-    const obj6 = {};
-    const animatedStyle = tmp(tmp2[4]).useAnimatedStyle(B);
+    const items4 = [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20];
+    CardNativeTsx1.__closure = items4;
+    CardNativeTsx1.__workletHash = 12443532750962;
+    CardNativeTsx1.__initData = tmp14;
+    const obj5 = {};
+    const animatedStyle = _mod1652.useAnimatedStyle(CardNativeTsx1);
     const merged3 = Object.assign(merged2);
-    obj6.onPressIn = callback;
-    obj6.onPressOut = callback1;
-    const items3 = [style, animatedStyle];
-    obj6.style = items3;
-    obj6.unstable_pressDelay = 130;
-    obj6.children = children;
-    tmp19 = <closure_8 />;
-    const tmpResult2 = tmp(tmp2[4]);
+    obj5.onPressIn = callback;
+    obj5.onPressOut = callback1;
+    const items5 = [style, animatedStyle];
+    obj5.style = items5;
+    obj5.unstable_pressDelay = 130;
+    obj5.children = children;
+    tmp27 = <closure_8 />;
+    const tmpResult2 = _mod1652;
   }
-  return tmp19;
+  return tmp27;
 }
 let closure_3 = ["accessibilityRole"];
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5014);
+let closure_8 = module_1652.createAnimatedComponent(Pressable);
+let createStyles = fn(5141);
 let closure_9 = createStyles.createStyleProperties((arg0) => {
   if ("primary" === arg0) {
     let backgroundColor = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -200,7 +202,7 @@ let closure_9 = createStyles.createStyleProperties((arg0) => {
   }
   return { backgroundColor, backgroundColorPressed };
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
     let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -261,8 +263,8 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) 
   card.backgroundColor = BACKGROUND_SURFACE_HIGH;
   return { card, spacing: { padding: 16 } };
 });
-const __initData = {
-  code: "function CardNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};}",
+let closure_12 = {
+  code: "(function CardNativeTsx1(){let[withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING]=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Card/native/Card.native.tsx");

@@ -11,16 +11,16 @@ import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.t
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(10804).SafetyWarningFeedbackTypes;
-const Constants = fn(11256);
+let closure_7 = fn(10934).SafetyWarningFeedbackTypes;
+const Constants = fn(11393);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9,
   FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -65,7 +65,7 @@ export default function WasThisHelpfulSection(channelId) {
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;
   const tmp = closure_12();
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const stateFromStores = channelId(senderId[7]).useStateFromStores(items, () =>
     ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId),
   );

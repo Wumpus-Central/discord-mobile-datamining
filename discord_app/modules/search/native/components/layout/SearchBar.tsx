@@ -16,12 +16,12 @@ const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9827);
-({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
+const SearchConstants = fn(9958);
+({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
+const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = {
     searchBar: { minHeight: minHeight + 2 },
@@ -40,7 +40,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
   let obj = searchContext(stateFromStores[15]);
   let tmp = closure_15(closure_10 * Math.min(2, searchContext(stateFromStores[16]).useFontScale()));
   let obj2 = searchContext(stateFromStores[16]);
-  const items = [SearchQueryStore];
+  items = [SearchQueryStore];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[14]).useStateFromStores(
     items,
@@ -94,7 +94,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
         }
       }
       if (0 === channelIds.size) {
-        const guild = GuildStore.getGuild(searchContext.guildId);
+        guild = GuildStore.getGuild(searchContext.guildId);
         let name;
         if (guild != null) {
           name = guild.name;

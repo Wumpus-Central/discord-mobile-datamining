@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/pinot/useCanMessageInPinotCha
 
 export function useCanMessageInPinotChannel(guild_id) {
   _require = guild_id;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild_id];
   return require("initialize").useStateFromStores(
     items,

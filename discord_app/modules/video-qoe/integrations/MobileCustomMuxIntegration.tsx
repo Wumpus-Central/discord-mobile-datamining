@@ -1,6 +1,6 @@
 // discord_app/modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx
 import logger_Logger from "../../../../discord_common/js/packages/logger/Logger.tsx";
-import UDefault from "../../../../_runtime/17118_U.js";
+import UDefault from "../../../../_runtime/17261_U.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const logger = new logger_Logger.Logger("MobileCustomMuxIntegration");
@@ -281,7 +281,7 @@ prototype["emitError"] = function emitError(error) {
       if (error != null) {
         localizedDescription = error.localizedDescription;
       }
-      const items = [localizedDescription, ,];
+      items = [localizedDescription, ,];
       let errorString;
       if (error != null) {
         errorString = tmp5.errorString;

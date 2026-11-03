@@ -19,7 +19,7 @@ export function createJoinRequestNotificationSystemMessage(message) {
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
   if (null != request) {
-    let guild = GuildStore.getGuild(request.guildId);
+    guild = GuildStore.getGuild(request.guildId);
     if (guild == null) {
       guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
     }

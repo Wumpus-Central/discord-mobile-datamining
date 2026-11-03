@@ -29,7 +29,7 @@ function pickSamples(items3, arg1) {
     }
     return found;
   });
-  const items = [
+  items = [
     ...flatMapResult.filter((kind) => {
       let tmp = "user_command" === kind.kind;
       if (!tmp) {
@@ -141,7 +141,7 @@ export function mergeConjurePlanBotExchanges(arr, arg1) {
         return tmp;
       })
     ) {
-      let items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(arr.slice(0, 2), 0)] = arg1[0];
     }
     return items;
@@ -191,7 +191,7 @@ export function getConjurePlanSectionBotExchanges(kind, botExchanges, conjurePla
           return tmp;
         })
       ) {
-        let items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arr2.slice(0, 2), 0)] = conjurePlanCommandExchanges[0];
       }
       return items;
@@ -224,7 +224,7 @@ export function getConjurePlanBotExchanges(bot, commands, bot2) {
       return tmp;
     });
     if (mapped.length <= 0) {
-      let items = [obj];
+      items = [obj];
       mapped = items;
     }
     return mapped;
@@ -232,7 +232,7 @@ export function getConjurePlanBotExchanges(bot, commands, bot2) {
     const flatMapResult = example_exchanges.flatMap((item) => {
       ({ user, bot } = item);
       if ("" === user.trim()) {
-        let items = [];
+        items = [];
       } else {
         let str3 = "message";
         if ("messages" !== closure_0) {

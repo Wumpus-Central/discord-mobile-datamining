@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/go_live/utils/getFrontierTuni
 
 export default function getFrontierTuningConfigIfEligible(location, currentUser, guildId) {
   if (null != guildId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;

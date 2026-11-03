@@ -32,11 +32,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(9381).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(5014);
+let closure_14 = 2 * (fn(9509).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5141);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
   list: { overflow: "visible" },
@@ -53,8 +53,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(9381).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(9381).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(9509).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(9509).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -89,7 +89,7 @@ let closure_20 = noop.memo(function ImageItem(index) {
   const ref = onScrollToIndex.useRef(null);
   let size = sources[index];
   let portraitImage = size.height > size.width;
-  const items = [size.uri, recordDimensions];
+  items = [size.uri, recordDimensions];
   const items1 = [sources, index, trackAction, onScrollToIndex, setMediaModalOpen];
   const callback = onScrollToIndex.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
@@ -172,7 +172,7 @@ let closure_21 = noop.memo(function TrailerItem(sources) {
   const ref1 = setMediaModalOpen.useRef(index(trackAction[12]).createVideoControls(NOOP));
   const current = ref1.current;
   const subscribe = current.useSubscribe(callback, NOOP, NOOP);
-  const items = [trackAction, sources, index, onScrollToIndex, setMediaModalOpen];
+  items = [trackAction, sources, index, onScrollToIndex, setMediaModalOpen];
   const obj2 = {
     ref,
     style: null,
@@ -254,7 +254,7 @@ export default function GameProfileMedia(game) {
   const tmp = memo4();
   let obj = game(stateFromStores[15]);
   let tmp2 = game;
-  const items = [setMediaModalOpen];
+  items = [setMediaModalOpen];
   stateFromStores = game(stateFromStores[16]).useStateFromStores(items, () => setMediaModalOpen.useReducedMotion);
   const tmp5 = first(noop.useState(0), 2);
   first = tmp5[0];

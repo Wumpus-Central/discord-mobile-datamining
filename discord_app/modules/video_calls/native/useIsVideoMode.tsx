@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
 export default function useIsVideoMode() {
-  const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
+  items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
   return initialize.useStateFromStores(items, () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;

@@ -19,7 +19,7 @@ export default function useGroupDMNitroUpsellAction(audience) {
   if (acquisitionStrategy === audience(acquisitionStrategy[2]).GroupDMNitroAcquisitionStrategy.CHECKOUT) {
     onCheckout = audience.onCheckout;
   }
-  const items = [acquisitionStrategy, audience, _location, onCheckout];
+  items = [acquisitionStrategy, audience, _location, onCheckout];
   return onCheckout.useCallback(() => {
     const groupDMNitroUpsellRoute = GroupDMNitroUpsellModel.getGroupDMNitroUpsellRoute(audience, acquisitionStrategy);
     if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MANAGE === groupDMNitroUpsellRoute) {

@@ -1,16 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = {
     row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height },
@@ -38,8 +40,8 @@ let closure_8 = createStyles.createStyles((height) => {
   };
   return obj;
 });
-const __initData = {
-  code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+let closure_9 = {
+  code: "(function UserPlaceholderRowTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting(
@@ -55,53 +57,63 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   if (height === undefined) {
     height = flag(575).space.PX_48;
   }
-  let sharedValue;
+  _require = undefined;
   flag = undefined;
   const tmp3 = closure_8(height);
-  sharedValue = sharedValue(5095).useSharedValue(1);
-  let obj = sharedValue(5095);
-  const tmp4 = sharedValue;
-  const items = [AccessibilityStore];
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  _require = sharedValue;
+  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp4 = _require;
+  items = [AccessibilityStore];
   if (flag) {
     flag = !obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   }
   const items1 = [flag, sharedValue];
   const effect = noop.useEffect(() => {
     if (flag) {
-      const obj = ReanimatedRexport;
-      const obj2 = ReanimatedRexport;
+      const obj = _mod1652;
+      const obj2 = _mod1652;
       const obj4 = { duration: 2 * timingPresets.timingSlowDuration };
-      const withTimingResult = timing.withTiming(0.3, obj4);
+      const withTimingResult = timing_timing.withTiming(0.3, obj4);
       const obj6 = { duration: 2 * timingPresets.timingSlowDuration };
-      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, timing.withTiming(1, obj6)), -1, true));
+      const result = set(
+        obj.withRepeat(obj2.withSequence(withTimingResult, timing_timing.withTiming(1, obj6)), -1, true),
+      );
     } else {
       const result1 = set(1);
     }
   }, items1);
-  obj2 = sharedValue(504);
-  const fn = function v() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 10137317865125;
-  fn.__initData = __initData;
-  const animatedStyle = tmp4(5095).useAnimatedStyle(fn);
+  obj2 = require("initialize");
+  const items2 = [closure_9, sharedValue];
+  _require = undefined;
+  [tmp8, tmp9] = items2;
+  class UserPlaceholderRowTsx1 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items3 = [tmp9];
+  UserPlaceholderRowTsx1.__closure = items3;
+  UserPlaceholderRowTsx1.__workletHash = 5854204937948;
+  UserPlaceholderRowTsx1.__initData = tmp8;
+  const animatedStyle = tmp4(1652).useAnimatedStyle(UserPlaceholderRowTsx1);
   let obj3 = { style: null, collapsable: false, children: null };
-  const items2 = [tmp3.row, animatedStyle];
-  obj3.style = items2;
-  const items3 = [closure_6(View, { style: tmp3.placeholderAvatar })];
+  const items4 = [tmp3.row, animatedStyle];
+  obj3.style = items4;
+  const items5 = [closure_6(View, { style: tmp3.placeholderAvatar })];
   let obj5 = { style: tmp3.rowInner, children: null };
   let obj6 = { style: tmp3.rowHeaderWrapper, children: null };
   const obj7 = { style: null };
-  const items4 = [tmp3.placeholderText];
+  const items6 = [tmp3.placeholderText];
   const obj8 = { width: null };
   let result = 10000 * Math.sin(row);
   obj8.width = "" + 40 * (result - Math.floor(result)) + 40 + "%";
-  items4[1] = obj8;
-  obj7.style = items4;
+  items6[1] = obj8;
+  obj7.style = items6;
   obj6.children = closure_6(View, obj7);
   obj5.children = closure_6(View, obj6);
-  items3[1] = closure_6(View, obj5);
-  obj3.children = items3;
-  return closure_7(flag(5095).View, obj3);
+  items5[1] = closure_6(View, obj5);
+  obj3.children = items5;
+  return closure_7(flag(1652).View, obj3);
 });

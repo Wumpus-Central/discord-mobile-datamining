@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/instant_invite/useInviteAppli
 
 export function useInviteApplicationBypassInfo(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [guild];
   let hasItem;
   const stateFromStores = require("initialize").useStateFromStores(

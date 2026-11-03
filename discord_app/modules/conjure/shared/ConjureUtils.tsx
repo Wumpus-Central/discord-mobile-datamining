@@ -16,7 +16,7 @@ function conjureChannelAppId(channel) {
   }
   let tmp2 = null;
   if (type === ChannelTypes.GUILD_APP) {
-    let application_id = channel.application_id;
+    application_id = channel.application_id;
     if (application_id == null) {
       application_id = null;
     }
@@ -24,7 +24,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4944);
+let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -39,7 +39,7 @@ export function conjureSettingsGuildId(project, arg1) {
   let tmp = null;
   if (null != project) {
     tmp = null;
-    if ("user" !== project.install_scope) {
+    if ("guild" === project.install_scope) {
       let preview_guild_id = null;
       if (arg1) {
         preview_guild_id = project.preview_guild_id;
@@ -57,7 +57,7 @@ export function conjureSettingsGuildId(project, arg1) {
 }
 export function conjureSettingChannels(channels, channel_filter) {
   if ("voice" === channel_filter) {
-    let items = [];
+    items = [];
   } else {
     items = channels[React3];
   }
@@ -128,7 +128,7 @@ export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplicatio
 }
 export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
   const guildId = SelectedGuildStore.getGuildId();
-  let guild = null;
+  guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
@@ -184,7 +184,7 @@ export function isConjureChannelCandidate(channel, ActivitySounds) {
   }
   let tmp3 = null;
   if (type === ChannelTypes.GUILD_APP) {
-    let application_id = channel.application_id;
+    application_id = channel.application_id;
     if (application_id == null) {
       application_id = null;
     }

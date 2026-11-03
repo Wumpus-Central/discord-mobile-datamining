@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef18624 from "../../../../../_runtime/metro/18624__.js";
+import _modDef18782 from "../../../../../_runtime/metro/18782__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -18,8 +18,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   toggleTruncateButton: {
     alignSelf: "flex-start",
@@ -105,7 +105,7 @@ export function TruncatedText(lineClamp) {
         closure_3(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [React7(Text_Text.Text, obj3), first];
+    items = [React7(Text_Text.Text, obj3), first];
     obj2.children = items;
     return closure_1_10(timestampProducer, obj2);
   } else {
@@ -129,14 +129,14 @@ export function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [
+  items = [
     React7(Text_Text.Text, {
       variant: "text-md/semibold",
       color: "text-default",
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18624, style: tmp.arrowButtonIcon }),
+    React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18782, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
@@ -145,7 +145,7 @@ export function useFormattedSubscriptionPlan(listingId) {
   const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
   _require = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useSubscriptionPlan(listingId), 1)[0];
   const tmp3 = _require;
-  const items = [SubscriptionPlanStore];
+  items = [SubscriptionPlanStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     SubscriptionPlanStore.get(id.id),
   );
@@ -153,8 +153,8 @@ export function useFormattedSubscriptionPlan(listingId) {
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7413).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7413);
+    str = "" + tmp3(7537).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7537);
   }
   return str;
 }

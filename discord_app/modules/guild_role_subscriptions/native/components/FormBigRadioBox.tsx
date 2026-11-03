@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -71,7 +71,7 @@ export default function FormBigRadioBox(arg0) {
   const tmp = closure_6();
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  const items = [tmp.container, , ,];
+  items = [tmp.container, , ,];
   let containerSelected = selected;
   if (selected) {
     containerSelected = tmp.containerSelected;

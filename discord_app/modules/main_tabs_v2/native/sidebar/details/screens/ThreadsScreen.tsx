@@ -10,8 +10,8 @@ require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(7443).useCanStartThread(channel);
-  const items = [channel];
+  const canStartThread = channel(7567).useCanStartThread(channel);
+  items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
   }, items);
@@ -28,7 +28,7 @@ function ThreadsScreen(channel) {
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(7443);
+  let obj = channel(7567);
   if (canStartThread) {
     tmp10 = callback;
   }
@@ -48,7 +48,7 @@ const View = fn(17).View;
 const SearchTypes = fn(1072).SearchTypes;
 let closure_7 = fn(1112).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -60,7 +60,7 @@ const memoResult = noop.memo(function SearchTabsThreadScreen(searchContext) {
   } else {
     channelId = null;
   }
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -73,9 +73,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
 
 export default noop.memo(function ConnectedThreadsScreen() {
-  channelId = channelId(1498).useRoute().params.channelId;
-  const obj = channelId(1498);
-  const items = [ChannelStore];
+  channelId = channelId(1500).useRoute().params.channelId;
+  const obj = channelId(1500);
+  items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp3 = null;
   if (null != stateFromStores) {

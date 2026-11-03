@@ -23,7 +23,7 @@ import SessionsStore from "SessionsStore.tsx";
 
 require = fn;
 function updateActivities() {
-  const items = [];
+  items = [];
   const CustomStatusSetting = items(streamerActiveStreamMetadata[15]).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   let tmp4 = null != setting;
@@ -223,7 +223,7 @@ prototype["initialize"] = function initialize() {
     SpotifyStore,
     UserSettingsProtoStore,
   );
-  const items = [FirstPartyRichPresenceStore];
+  items = [FirstPartyRichPresenceStore];
   this.syncWith(items, () => updateActivities());
 };
 prototype["getActivities"] = function getActivities() {
@@ -275,7 +275,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
     if (null == activity) {
       let tmp6 = null == dependencyMap[socketId];
     } else {
-      const items = [pid, activity, partyPrivacy];
+      items = [pid, activity, partyPrivacy];
       tmp6 = _modDef1342(dependencyMap[socketId], items);
     }
     if (!tmp6) {
@@ -343,7 +343,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
           tmp11,
         );
         if (activityFlags !== tmp12) {
-          let items = [tmp8, ,];
+          items = [tmp8, ,];
           let obj4 = {};
           let merged = Object.assign(tmp9);
           obj4.flags = tmp23;

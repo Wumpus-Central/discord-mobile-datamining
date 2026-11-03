@@ -4,8 +4,8 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
-import _mod7294 from "../../../../../../discord_common/js/packages/flash-list/index.js";
-import _modDef9977 from "../../../../../../_runtime/metro/09977__.js";
+import _mod7414 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _modDef10109 from "../../../../../../_runtime/metro/10109__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ function GuildServerSubscriberCount(arg0) {
   ({ subscriberCount, style } = arg0);
   const tmp = closure_7();
   const obj = { style: null, children: null };
-  const items = [, ,];
+  items = [, ,];
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
@@ -29,7 +29,7 @@ function GuildServerSubscriberCount(arg0) {
       size: native.Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.WHITE,
       style: tmp.subscriberCountIcon,
-      source: _modDef9977,
+      source: _modDef10109,
     }),
   ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -43,52 +43,48 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   highlightedCreatorGuild = highlightedCreatorGuild.highlightedCreatorGuild;
   const tmp = closure_7();
   _require = tmp;
-  const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow(
-    "CreatorHighlightSection",
-    "text-xs/semibold",
-  );
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(19926)(guild_id, 3, 60);
-  dependencyMap = tmp6;
-  const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
-  let items = [hasAllImperativeDetails, tmp6];
-  if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19875), {}) };
+  const tmp4 = guild_id(20076)(guild_id, 3, 60);
+  dependencyMap = tmp4;
+  const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
+  items = [hasAllImperativeDetails, tmp4];
+  if (tmp4.isLoading) {
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp2(20025), {}) };
     return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
-    const details = tmp6.details;
+    const details = tmp4.details;
     ({ subscriberCount, emojisToShow, notShownEmojiCount } = details);
-    const obj3 = { style: tmp.cardContainer, children: null };
-    const obj4 = { style: tmp.horizontalContainer, children: null };
+    let obj = { style: tmp.cardContainer, children: null };
+    const obj3 = { style: tmp.horizontalContainer, children: null };
     ({ guildName, guildAvatarUrl } = details);
-    const obj5 = { style: tmp.guildIcon, source: null };
-    const obj6 = { uri: guildAvatarUrl };
-    obj5.source = obj6;
-    const items1 = [closure_5(tmp5(5717), obj5)];
-    const obj7 = { style: tmp.cardHeaderContainer, children: null };
-    const obj8 = {
-      variant: "heading-md/extrabold",
+    const obj4 = { style: tmp.guildIcon, source: null };
+    const obj5 = { uri: guildAvatarUrl };
+    obj4.source = obj5;
+    const items1 = [closure_5(tmp2(5837), obj4)];
+    const obj6 = { style: tmp.cardHeaderContainer, children: null };
+    const obj7 = {
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       lineBreakMode: "tail",
       children: guildName,
     };
-    const items2 = [closure_5(tmp2(5624).Text, obj8)];
-    let tmp11Result = null != subscriberCount;
-    if (tmp11Result) {
-      const obj9 = { subscriberCount, style: tmp.serverSubscriberCount };
-      tmp11Result = closure_5(GuildServerSubscriberCount, obj9);
+    const items2 = [closure_5(require("Text/Text").Text, obj7)];
+    let tmp9Result = null != subscriberCount;
+    if (tmp9Result) {
+      const obj8 = { subscriberCount, style: tmp.serverSubscriberCount };
+      tmp9Result = closure_5(GuildServerSubscriberCount, obj8);
     }
-    items2[1] = tmp11Result;
-    obj7.children = items2;
-    items1[1] = closure_6(View, obj7);
-    obj4.children = items1;
-    const items3 = [closure_6(View, obj4), , , ,];
-    const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-    items3[1] = closure_5(tmp2(5624).Text, obj10);
-    const obj11 = {
+    items2[1] = tmp9Result;
+    obj6.children = items2;
+    items1[1] = closure_6(View, obj6);
+    obj3.children = items1;
+    const items3 = [closure_6(View, obj3), , , ,];
+    const obj9 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
+    items3[1] = closure_5(require("Text/Text").Text, obj9);
+    const obj10 = {
       style: tmp.ownerUsername,
       variant: "text-sm/normal",
       color: "text-default",
@@ -96,75 +92,71 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       lineBreakMode: "tail",
       children: null,
     };
-    const intl = tmp2(1113).intl;
-    const obj12 = { attributionName: quote_attribution, attributionTitle: null };
+    const intl = tmp10(1113).intl;
+    const obj11 = { attributionName: quote_attribution, attributionTitle: null };
     if (quote_attribution_title == null) {
-      const intl2 = tmp2(1113).intl;
-      quote_attribution_title = intl2.string(tmp2(1113).t.pclUFJ);
+      const intl2 = tmp10(1113).intl;
+      quote_attribution_title = intl2.string(tmp10(1113).t.pclUFJ);
     }
-    obj12.attributionTitle = quote_attribution_title;
-    obj11.children = intl.format(tmp2(1113).t.m0b6Kj, obj12);
-    items3[2] = closure_5(tmp2(5624).Text, obj11);
-    let tmp9Result = null != emojisToShow;
-    if (tmp9Result) {
-      tmp9Result = emojisToShow.length > 0;
+    obj11.attributionTitle = quote_attribution_title;
+    obj10.children = intl.format(require("util").t.m0b6Kj, obj11);
+    items3[2] = closure_5(require("Text/Text").Text, obj10);
+    let tmp7Result = null != emojisToShow;
+    if (tmp7Result) {
+      tmp7Result = emojisToShow.length > 0;
     }
-    if (tmp9Result) {
-      const obj13 = { style: tmp.emojiSectionContainer, children: null };
-      const obj14 = { style: null, variant: null, color: "text-default", children: null };
-      const items4 = [tmp.premiumEmojisTitle, typeConsolidationEyebrow.style];
-      obj14.style = items4;
-      obj14.variant = typeConsolidationEyebrow.variant;
-      const intl3 = tmp2(1113).intl;
-      obj14.children = intl3.string(tmp2(1113).t.wg53L8);
-      const items5 = [closure_5(tmp2(5624).Text, obj14)];
-      const obj15 = { style: null, children: null };
-      const items6 = [,];
-      ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
-      obj15.style = items6;
-      const items7 = [
+    if (tmp7Result) {
+      const obj12 = { style: tmp.emojiSectionContainer, children: null };
+      const obj13 = { style: tmp.premiumEmojisTitle, variant: "body-sm/medium", color: "text-default", children: null };
+      const intl3 = tmp10(1113).intl;
+      obj13.children = intl3.string(tmp10(1113).t.wg53L8);
+      const items4 = [closure_5(tmp10(5747).Text, obj13)];
+      const obj14 = { style: null, children: null };
+      const items5 = [,];
+      ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
+      obj14.style = items5;
+      const items6 = [
         emojisToShow.map((id) => {
           const obj = { style: null, size: 24, id: id.id, guildId: guild_id };
-          const items = [,];
+          items = [,];
           ({ emoji: arr[0], emojiListItem: arr[1] } = closure_0);
           obj.style = items;
           return hasOwnProperty(EmojiIconDefault, obj, id.id);
         }),
       ];
-      let tmp11Result2 = null != notShownEmojiCount;
-      if (tmp11Result2) {
-        const obj16 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
+      let tmp9Result2 = null != notShownEmojiCount;
+      if (tmp9Result2) {
+        const obj15 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
-        obj16.children = "+" + notShownEmojiCount;
-        tmp11Result2 = closure_5(tmp2(5624).Text, obj16);
+        obj15.children = "+" + notShownEmojiCount;
+        tmp9Result2 = closure_5(tmp10(5747).Text, obj15);
       }
-      items7[1] = tmp11Result2;
-      obj15.children = items7;
-      items5[1] = closure_6(View, obj15);
-      obj13.children = items5;
-      tmp9Result = closure_6(View, obj13);
+      items6[1] = tmp9Result2;
+      obj14.children = items6;
+      items4[1] = closure_6(View, obj14);
+      obj12.children = items4;
+      tmp7Result = closure_6(View, obj12);
     }
-    items3[3] = tmp9Result;
-    const obj17 = { style: tmp.viewServerButtonContainer, children: null };
-    const obj18 = { style: tmp.viewServerButton, children: null };
-    const obj19 = { variant: "secondary", text: null, onPress: null, grow: true };
-    const intl4 = tmp2(1113).intl;
-    obj19.text = intl4.string(tmp2(1113).t.mQ2IGa);
-    obj19.onPress = tmp7;
-    obj18.children = closure_5(tmp2(5634).Button, obj19);
-    obj17.children = closure_5(View, obj18);
-    items3[4] = closure_5(View, obj17);
-    obj3.children = items3;
-    return closure_6(View, obj3);
+    items3[3] = tmp7Result;
+    const obj16 = { style: tmp.viewServerButtonContainer, children: null };
+    const obj17 = { style: tmp.viewServerButton, children: null };
+    const obj18 = { variant: "secondary", text: null, onPress: null, grow: true };
+    const intl4 = tmp10(1113).intl;
+    obj18.text = intl4.string(require("util").t.mQ2IGa);
+    obj18.onPress = tmp5;
+    obj17.children = closure_5(require("components/Button/Button").Button, obj18);
+    obj16.children = closure_5(View, obj17);
+    items3[4] = closure_5(View, obj16);
+    obj.children = items3;
+    return closure_6(View, obj);
   } else {
     return null;
   }
-  let obj = require("useTypeConsolidationTextTransform");
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   horizontalContainer: { flexDirection: "row" },
   serverSubscriberCount: { marginTop: 8 },
@@ -217,7 +209,7 @@ obj2.cardHeaderContainer = { flex: 1, justifyContent: "flex-start", alignItems: 
 obj2.guildIcon = { width: 60, height: 60, borderRadius: 6, marginEnd: 16 };
 obj2.ownerQuote = { marginTop: 24 };
 obj2.ownerUsername = { marginTop: 8 };
-obj2.premiumEmojisTitle = { marginTop: 32, textTransform: "uppercase" };
+obj2.premiumEmojisTitle = { marginTop: 32 };
 obj2.viewServerButtonContainer = { flex: 1, justifyContent: "flex-end" };
 obj2.viewServerButton = { marginTop: 16 };
 obj2.emojiSectionContainer = { flex: 1, justifyContent: "flex-start", alignItems: "flex-start" };
@@ -253,7 +245,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function CreatorHighlightSection(data) {
-  return hasOwnProperty(_mod7294.FlashList, {
+  return hasOwnProperty(_mod7414.FlashList, {
     data: data.highlightedCreators,
     horizontal: true,
     keyExtractor(guild_id) {

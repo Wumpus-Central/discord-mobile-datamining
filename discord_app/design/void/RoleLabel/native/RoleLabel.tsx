@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row" },
   roleDot: { marginRight: 4 },
@@ -21,7 +21,7 @@ export function RoleLabel(color) {
   color = color.color;
   ({ name, colors } = color);
   const tmp = closure_6();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   let tmp5 = "username" === stateFromStores;
   if (tmp5) {

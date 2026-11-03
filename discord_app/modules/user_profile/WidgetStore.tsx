@@ -64,18 +64,18 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
       const _Map = Map;
       const map = new Map(
         _null2.map((id) => {
-          const items = [id.id, id];
+          items = [id.id, id];
           return items;
         }),
       );
       const _Map2 = Map;
-      map1 = new Map(
+      const map1 = new Map(
         changedWidgets.map((id) => {
-          const items = [id.id, id];
+          items = [id.id, id];
           return items;
         }),
       );
-      let items = [];
+      items = [];
       const items1 = [];
       const tmp37 = map1[Symbol.iterator]();
       while (tmp37 !== undefined) {

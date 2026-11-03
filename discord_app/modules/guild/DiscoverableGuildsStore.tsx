@@ -16,7 +16,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore);
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  let guild;
+  guild = undefined;
   if (dependencyMap[arg0] != null) {
     guild = tmp.guild;
   }
@@ -27,7 +27,7 @@ prototype["getGuild"] = function getGuild(arg0) {
 };
 prototype["getGuilds"] = function getGuilds(arr) {
   const mapped = arr.map((item) => {
-    let guild;
+    guild = undefined;
     if (dependencyMap[item] != null) {
       guild = tmp.guild;
     }
@@ -76,7 +76,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      let guild;
+      guild = undefined;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;
@@ -117,7 +117,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     }
     map = new Map(
       guilds.map((id) => {
-        const items = [id.id, GuildDiscoveryUtils.makeDiscoverableGuild(id)];
+        items = [id.id, GuildDiscoveryUtils.makeDiscoverableGuild(id)];
         return items;
       }),
     );
@@ -127,7 +127,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      let guild;
+      guild = undefined;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;

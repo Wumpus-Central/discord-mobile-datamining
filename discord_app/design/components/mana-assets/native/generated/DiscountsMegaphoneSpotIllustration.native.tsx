@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef15044 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-1x.png.js";
-import _modDef15045 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js";
-import _modDef15046 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-3x.png.js";
+import _modDef15186 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-1x.png.js";
+import _modDef15187 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js";
+import _modDef15188 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15044 }, 3: null };
-let obj2 = { uri: _modDef15044 };
-obj[2] = { uri: _modDef15045 };
-const obj3 = { uri: _modDef15045 };
-obj[3] = { uri: _modDef15046 };
+let obj = { 1: null, 2: { uri: _modDef15186 }, 3: null };
+let obj2 = { uri: _modDef15186 };
+obj[2] = { uri: _modDef15187 };
+const obj3 = { uri: _modDef15187 };
+obj[3] = { uri: _modDef15188 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx",
@@ -25,7 +25,7 @@ export function DiscountsMegaphoneSpotIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

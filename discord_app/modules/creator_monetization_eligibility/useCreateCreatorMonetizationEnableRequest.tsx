@@ -16,7 +16,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   asyncGeneratorStep = tmp4[1];
   let obj = { error: tmp[0], loading: tmp3, createEnableRequest: null, submittedRequest: tmp4[0] };
-  const items = [arg0];
+  items = [arg0];
   obj.createEnableRequest = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c5 === 2) {
@@ -29,7 +29,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

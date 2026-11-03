@@ -41,7 +41,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
 export default function useSortedDevToolsScreens() {
-  const items = [DevToolsSettingsStore];
+  items = [DevToolsSettingsStore];
   initialize.useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   let sortedScreenKeys;
   if (sortedScreenKeys === undefined) {
@@ -74,7 +74,7 @@ export default function useSortedDevToolsScreens() {
   });
 }
 export function updateSortOrder(_require, down) {
-  const items = [...DevToolsSettingsStore.sortedScreenKeys];
+  items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
     let first = _slicedToArray(tmp3, 1)[0];

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServ
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   _require = arg0;
-  let items = [GameServerStore];
+  items = [GameServerStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GameServerStore.getStateForGuild(closure_0));
   let entitlements;
   if (stateFromStores != null) {
@@ -28,7 +28,7 @@ export default function useGameServerGetExpiringEntitlements(arg0) {
     }
     const values = Object.values(entitlements);
     if (0 === values.length) {
-      let items = [];
+      items = [];
     } else {
       items = getExpiringGuildEntitlements.getExpiringGuildEntitlements(values);
     }

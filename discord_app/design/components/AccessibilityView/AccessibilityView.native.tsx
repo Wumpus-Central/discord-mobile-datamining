@@ -1,7 +1,7 @@
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
 import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import ReanimatedRexport from "../../../modules/reanimated/ReanimatedRexport.tsx";
+import 01652__ from "../../../../_runtime/metro/01652__.js";
 
 class AccessibilityView {
   constructor(arg0) {
@@ -11,10 +11,7 @@ class AccessibilityView {
     }
     ({ nativeID, onAccessibilityEscape } = global);
     ({ collapsable, ref } = global);
-    merged = Object.assign(
-      global,
-      Object.assign({ accessibilityViewIsModal: 0, nativeID: 0, collapsable: 0, onAccessibilityEscape: 0, ref: 0 }),
-    );
+    merged = Object.assign(global, Object.assign({ accessibilityViewIsModal: 0, nativeID: 0, collapsable: 0, onAccessibilityEscape: 0, ref: 0 }));
     if (flag) {
       if (null == onAccessibilityEscape) {
         tmp7 = globalThis;
@@ -44,7 +41,7 @@ class AccessibilityView {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const animatedComponent = ReanimatedRexport.createAnimatedComponent(AccessibilityView);
+const animatedComponent = module_1652.createAnimatedComponent(AccessibilityView);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 

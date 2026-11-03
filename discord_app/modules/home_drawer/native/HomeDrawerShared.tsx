@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_1, jsx: c2 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_3 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 },
   titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 },
@@ -19,9 +19,9 @@ export function HomeDrawerSharedItem(right) {
   const tmp = closure_3();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.titleContainer, children: null };
-  const items = [title, subtitle];
+  items = [title, subtitle];
   obj2.children = items;
-  const items1 = [framebus(View, obj2)];
+  const items1 = [duration(View, obj2)];
   let tmp4 = null;
   if (null != right) {
     const obj3 = { style: tmp.rightContainer, children: right };
@@ -29,5 +29,5 @@ export function HomeDrawerSharedItem(right) {
   }
   items1[1] = tmp4;
   obj.children = items1;
-  return framebus(View, obj);
+  return duration(View, obj);
 }

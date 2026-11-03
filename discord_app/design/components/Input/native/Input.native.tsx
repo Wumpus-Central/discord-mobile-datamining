@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   inputRow: {
     flexDirection: "row",
@@ -48,7 +48,7 @@ export function Input(arg0) {
   const requiredFieldA11yName = obj.getRequiredFieldA11yName(native.getNodeText(label), required);
   const obj3 = { style: containerStyle, children: null };
   if (null == label) {
-    const items = [null, , ,];
+    items = [null, , ,];
     const obj4 = { style: tmp.inputRow, children };
     items[1] = React3(View, obj4);
     let tmp11Result = null;
@@ -90,7 +90,7 @@ export function Input(arg0) {
     let tmp5Result2 = null;
     if (required) {
       const obj10 = {
-        variant: "text-sm/bold",
+        variant: "text-sm/semibold",
         color: "text-feedback-critical",
         "aria-hidden": true,
         children: [" ", "*"],

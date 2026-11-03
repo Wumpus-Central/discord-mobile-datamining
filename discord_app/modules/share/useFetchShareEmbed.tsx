@@ -17,7 +17,7 @@ export default function useFetchShareEmbed(arg0) {
   _slicedToArray = noop.useRef(true);
   noop = noop.useRef(undefined);
   noop.useRef(0);
-  let items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     dependencyMap = function _unfurl() {
       const self = this;
@@ -32,7 +32,7 @@ export default function useFetchShareEmbed(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -56,10 +56,10 @@ export default function useFetchShareEmbed(arg0) {
                   c5.current = current;
                   c3 = 2;
                   tmp62(true);
-                  const items = [current];
+                  items = [current];
                   c4 = 3;
                   c5 = 1;
-                  const obj10 = { value: current(10975).unfurlEmbedUrl(items), done: false };
+                  const obj10 = { value: current(11108).unfurlEmbedUrl(items), done: false };
                   return obj10;
                 } else {
                   c5 = 3;
@@ -96,7 +96,7 @@ export default function useFetchShareEmbed(arg0) {
                     }
                   });
                   c5 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else if (0 === closure_128_1.embeds.length) {
                   tmp4(undefined);
                   c3 = 0;
@@ -155,7 +155,7 @@ export default function useFetchShareEmbed(arg0) {
     };
     if (null != closure_0) {
       if ("" !== str) {
-        const match = str.match(timeout(1377).URL_REGEX);
+        const match = str.match(timeout(1378).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);

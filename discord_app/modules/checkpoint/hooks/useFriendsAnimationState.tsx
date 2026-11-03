@@ -46,7 +46,7 @@ export function useFriendsAnimationState(route, stateFromStores3) {
     tmp5(obj3);
     const tmp6 = first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD;
   }
-  const items = [first.isTransitioning];
+  items = [first.isTransitioning];
   const effect = noop.useEffect(() => {
     if (isTransitioning.isTransitioning) {
       const _setTimeout = setTimeout;

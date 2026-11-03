@@ -30,7 +30,7 @@ export function useThreadMemberListSections(channelId, stateFromStores) {
       );
     }
   });
-  const items = [closure_4];
+  items = [closure_4];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {
       let sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);

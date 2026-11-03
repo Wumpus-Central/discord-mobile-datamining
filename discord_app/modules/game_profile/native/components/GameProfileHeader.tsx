@@ -1,26 +1,26 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef9379 from "../../../../../_runtime/metro/09379__.js";
+import _modDef9507 from "../../../../../_runtime/metro/09507__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const _modDef1652 = _mod1652;
 const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9370);
+const GameProfileConstants = fn(9498);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -88,115 +88,120 @@ obj2.textShadow = {
   textShadowRadius: 1,
 };
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function GameProfileHeaderTsx1(){const{effectiveScrollY}=this.__closure;return{top:-Math.max(0,-effectiveScrollY.get())};}",
+let closure_9 = {
+  code: "(function GameProfileHeaderTsx1(){let[effectiveScrollY]=this.__closure;return{top:-Math.max(0,-effectiveScrollY.get())};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHeader.tsx");
 
 export default function GameProfileHeader(arg0) {
   ({ game, scrollY, onHeightMeasured } = arg0);
-  scrollY = undefined;
   const tmp = closure_8();
+  const sharedValue = _mod1652.useSharedValue(0);
+  items = [closure_9];
   if (scrollY == null) {
-    scrollY = obj.useSharedValue(0);
+    scrollY = sharedValue;
   }
-  obj = ReanimatedRexport;
-  const fn = function x() {
-    return { top: -Math.max(0, -scrollY.get()) };
-  };
-  fn.__closure = { effectiveScrollY: scrollY };
-  fn.__workletHash = 1177397229282;
-  fn.__initData = __initData;
+  items[1] = scrollY;
+  [tmp5, tmp6] = items;
+  class GameProfileHeaderTsx1 {
+    constructor() {
+      obj = { top: -Math.max(0, -closure_0.get()) };
+      return obj;
+    }
+  }
+  const items1 = [tmp6];
+  GameProfileHeaderTsx1.__closure = items1;
+  GameProfileHeaderTsx1.__workletHash = 14790445044571;
+  GameProfileHeaderTsx1.__initData = tmp5;
   const genres = game.genres;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const animatedStyle = _mod1652.useAnimatedStyle(GameProfileHeaderTsx1);
   const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
-  const tmp7 = useGameProfileHeroBackgroundURLDefault(game, 1024);
-  const items = [onHeightMeasured];
-  const obj2 = {
+  const tmp10 = useGameProfileHeroBackgroundURLDefault(game, 1024);
+  const items2 = [onHeightMeasured];
+  const obj3 = {
     style: tmp.container,
     onLayout: noop.useCallback((nativeEvent) => {
       if (onHeightMeasured != null) {
         tmp(nativeEvent.nativeEvent.layout.height);
       }
-    }, items),
+    }, items2),
     children: null,
   };
-  const obj3 = { style: null, children: null };
-  const items1 = [tmp.artHero, animatedStyle];
-  obj3.style = items1;
-  let tmp10 = null != tmp7;
-  if (tmp10) {
-    const obj4 = { source: null, style: null };
-    const obj5 = { uri: tmp7 };
-    obj4.source = obj5;
-    obj4.style = tmp.artHeroImage;
-    tmp10 = timestampProducer(FastImageDefault, obj4);
+  const obj4 = { style: null, children: null };
+  const items3 = [tmp.artHero, animatedStyle];
+  obj4.style = items3;
+  let tmp13 = null != tmp10;
+  if (tmp13) {
+    const obj5 = { source: null, style: null };
+    const obj6 = { uri: tmp10 };
+    obj5.source = obj6;
+    obj5.style = tmp.artHeroImage;
+    tmp13 = timestampProducer(FastImageDefault, obj5);
   }
-  const items2 = [tmp10];
-  const obj6 = { colors: null, style: tmp.artHeroGradient };
-  const items3 = ["rgba(0,0,0,0.3)", tmp.container.backgroundColor];
-  obj6.colors = items3;
-  items2[1] = timestampProducer(LinearGradientDefault, obj6);
-  obj3.children = items2;
-  const items4 = [React5(ReanimatedRexportDefault.View, obj3)];
-  const obj7 = { style: tmp.headerContent, children: null };
-  const obj8 = { style: tmp.shadowContainer, children: null };
-  const obj9 = { game, imageSize: 114, size: null, style: null };
-  const tmp2Result = ReanimatedRexport;
-  obj9.size = GameCoverArt.GameCoverArtSize.LARGE;
-  obj9.style = tmp.coverContainer;
-  obj8.children = timestampProducer(GameCoverArtDefault, obj9);
-  const items5 = [timestampProducer(View, obj8)];
-  const obj10 = { style: tmp.titleContainer, children: null };
-  let tmp12Result = null != l30Rank;
-  if (tmp12Result) {
-    const obj11 = { rank: l30Rank };
-    tmp12Result = timestampProducer(GameProfileRankPillDefault, obj11);
+  const items4 = [tmp13];
+  const obj7 = { colors: null, style: tmp.artHeroGradient };
+  const items5 = ["rgba(0,0,0,0.3)", tmp.container.backgroundColor];
+  obj7.colors = items5;
+  items4[1] = timestampProducer(LinearGradientDefault, obj7);
+  obj4.children = items4;
+  const items6 = [React5(_modDef1652.View, obj4)];
+  const obj8 = { style: tmp.headerContent, children: null };
+  const obj9 = { style: tmp.shadowContainer, children: null };
+  const obj10 = { game, imageSize: 114, size: null, style: null };
+  obj10.size = GameCoverArt.GameCoverArtSize.LARGE;
+  obj10.style = tmp.coverContainer;
+  obj9.children = timestampProducer(GameCoverArtDefault, obj10);
+  const items7 = [timestampProducer(View, obj9)];
+  const obj11 = { style: tmp.titleContainer, children: null };
+  let tmp15Result = null != l30Rank;
+  if (tmp15Result) {
+    const obj12 = { rank: l30Rank };
+    tmp15Result = timestampProducer(GameProfileRankPillDefault, obj12);
   }
-  const items6 = [tmp12Result, ,];
-  const obj12 = { style: tmp.titleRow, children: null };
-  const obj13 = {
+  const items8 = [tmp15Result, ,];
+  const obj13 = { style: tmp.titleRow, children: null };
+  const obj14 = {
     variant: "heading-xxl/semibold",
     color: "text-overlay-light",
     lineClamp: 2,
     style: null,
     children: game.name,
   };
-  const items7 = [,];
-  ({ textShadow: arr9[0], title: arr9[1] } = tmp);
-  obj13.style = items7;
-  const items8 = [timestampProducer(Text_Text.Text, obj13)];
-  let tmp12Result3 = game.id === hasOwnProperty;
-  if (tmp12Result3) {
-    const obj14 = { source: _modDef9379, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
-    tmp12Result3 = timestampProducer(FastImageDefault, obj14);
-    const tmp6Result2 = FastImageDefault;
+  const items9 = [,];
+  ({ textShadow: arr11[0], title: arr11[1] } = tmp);
+  obj14.style = items9;
+  const items10 = [timestampProducer(Text_Text.Text, obj14)];
+  let tmp15Result3 = game.id === hasOwnProperty;
+  if (tmp15Result3) {
+    const obj15 = { source: _modDef9507, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    tmp15Result3 = timestampProducer(FastImageDefault, obj15);
+    const tmp9Result2 = FastImageDefault;
   }
-  items8[1] = tmp12Result3;
-  obj12.children = items8;
-  items6[1] = React5(View, obj12);
-  let tmp12Result4 = null;
+  items10[1] = tmp15Result3;
+  obj13.children = items10;
+  items8[1] = React5(View, obj13);
+  let tmp15Result4 = null;
   if (null != joined) {
-    tmp12Result4 = null;
+    tmp15Result4 = null;
     if ("" !== joined) {
-      const obj15 = {
+      const obj16 = {
         variant: "text-md/normal",
         color: "text-overlay-light",
         lineClamp: 2,
         style: tmp.textShadow,
         children: joined,
       };
-      tmp12Result4 = timestampProducer(Text_Text.Text, obj15);
+      tmp15Result4 = timestampProducer(Text_Text.Text, obj16);
     }
   }
-  items6[2] = tmp12Result4;
-  obj10.children = items6;
-  items5[1] = React5(View, obj10);
-  obj7.children = items5;
-  items4[1] = React5(View, obj7);
-  obj2.children = items4;
-  return React5(View, obj2);
+  items8[2] = tmp15Result4;
+  obj11.children = items8;
+  items7[1] = React5(View, obj11);
+  obj8.children = items7;
+  items6[1] = React5(View, obj8);
+  obj3.children = items6;
+  return React5(View, obj3);
 }

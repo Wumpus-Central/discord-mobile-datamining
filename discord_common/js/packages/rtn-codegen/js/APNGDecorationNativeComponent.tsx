@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default value;
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  play(arg0) {
-    renderElement.dispatchCommand(arg0, "play", []);
+  play(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "play", []);
   },
-  pause(arg0) {
-    renderElement.dispatchCommand(arg0, "pause", []);
+  pause(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "pause", []);
   },
-  seek(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "seek", items);
+  seek(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "seek", items);
   }
 };

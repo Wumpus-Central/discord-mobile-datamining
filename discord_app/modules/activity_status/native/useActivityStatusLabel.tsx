@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1113);
-const VoiceActivityStatus = v0wJXSh(10764);
+const VoiceActivityStatus = v0wJXSh(10894);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");
@@ -20,7 +20,7 @@ export default function useActivityStatusLabel(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   let gameMentionsAsPlainText;
-  let items = [PresenceStore];
+  items = [PresenceStore];
   let items1 = [userId];
   const stateFromStores = userId(gameMentionsAsPlainText[6]).useStateFromStores(
     items,
@@ -29,7 +29,7 @@ export default function useActivityStatusLabel(userId) {
         return null;
       } else {
         const activities = PresenceStore.getActivities(tmp);
-        let state;
+        state = undefined;
         if (activities != null) {
           const found = activities.find(
             (type) => type.type === userId(gameMentionsAsPlainText[7]).ActivityTypes.CUSTOM_STATUS,
@@ -75,7 +75,7 @@ export default function useActivityStatusLabel(userId) {
       }
       let v0wJXSh = require;
       let obj = dependencyMap;
-      const items = [ApplicationStreamingStore, RelationshipStore];
+      items = [ApplicationStreamingStore, RelationshipStore];
       const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(
         userId,
         items,

@@ -17,10 +17,10 @@ class BlankAudience {
   }
 }
 const View = fn(17).View;
-const MAX_AUDIENCE_ROW_LIMIT = fn(6709).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6829).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   rowContainer: {
     flex: 1,
@@ -43,7 +43,7 @@ export default noop.memo(function AudienceGridRow(theme) {
   if (renderBlankAudience) {
     num = MAX_AUDIENCE_ROW_LIMIT - participants.length;
   }
-  const items = [closure_6().rowContainer];
+  items = [closure_6().rowContainer];
   let str = "center";
   if (renderBlankAudience) {
     str = "space-between";

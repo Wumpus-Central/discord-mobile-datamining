@@ -10,14 +10,14 @@ const result = size.fileFinishedImporting("modules/icymi/native/CardHeightMeasur
 
 export const CardHeightMeasurer = noop.memo(function CardHeightMeasurer(children) {
   const itemId = children.itemId;
-  const items = [itemId];
+  items = [itemId];
   return (
     <View
       onLayout={noop.useCallback((nativeEvent) => {
         ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
       }, items)}
       pointerEvents="box-none"
-      style={{ width: noop.useContext(itemId(18529).ICYMIContext).width, alignSelf: "center" }}
+      style={{ width: noop.useContext(itemId(18683).ICYMIContext).width, alignSelf: "center" }}
     >
       {children.children}
     </View>

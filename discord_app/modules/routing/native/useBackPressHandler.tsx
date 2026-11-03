@@ -3,7 +3,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyCommands from "../../keyboard/native/KeyCommands.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const BackPressTracking = tmp(6025);
+const BackPressTracking = tmp(6145);
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function useBackPressHandler(current) {
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_2.current = current;
   });
-  const items = [flag];
+  items = [flag];
   const effect = noop.useEffect(() => {
     if (flag) {
       const fn = () => ref.current();

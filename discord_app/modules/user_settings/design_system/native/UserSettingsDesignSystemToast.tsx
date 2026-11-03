@@ -19,7 +19,7 @@ function DemoGroup(demos) {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: title }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: title }),
     React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: hint }),
     demos.map((label) =>
       closure_1_4(
@@ -56,7 +56,7 @@ function LiveStores() {
     return num;
   });
   const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-lg/bold", children: "Live store" })];
+  items = [React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Live store" })];
   let str = "text-subtle";
   if (null != toastStore) {
     str = "text-feedback-positive";
@@ -89,7 +89,7 @@ const jsxProd = fn(21);
 let c6 = "This is a toast message";
 let c7 = "https://cdn.discordapp.com/embed/avatars/0.png";
 let sum2 = 0;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, previews: { alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 let items = [
@@ -231,7 +231,7 @@ export default function UserSettingsDesignSystemToast() {
   });
   const obj7 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
   items1 = [
-    React4(Text_Text.Text, { variant: "text-lg/bold", children: "Components" }),
+    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Components" }),
     React4(Toast.Toast, { text, variant: "default" }),
     ,
     ,
@@ -269,7 +269,7 @@ export default function UserSettingsDesignSystemToast() {
   });
   items1[4] = React4(Toast.Toast, { text, variant: "success" });
   items1[5] = React4(Toast.Toast, { text, variant: "critical" });
-  items1[6] = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
+  items1[6] = React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Entities" });
   if ("" !== emojiUrl) {
     const obj13 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };
     let obj14 = obj13;

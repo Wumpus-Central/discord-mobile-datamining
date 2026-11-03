@@ -12,7 +12,7 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 require = fn;
 const UserNotificationSettings = fn(1072).UserNotificationSettings;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx",
@@ -24,9 +24,9 @@ export default function MuteSettings(guildId) {
   const onOptionPress = guildId.onOptionPress;
   let channel;
   GuildStore = undefined;
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   channel = channel.getChannel(channelId);
-  const items = [channelId];
+  items = [channelId];
   const memo = guild.useMemo(() => MuteSettingsUtils.getMuteSettings(channelId), items);
   const items1 = [channelId, guildId, onOptionPress];
   ({ muteConfig, muted } = memo);

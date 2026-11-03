@@ -8,7 +8,7 @@ require = fn;
 function ConjureDeleteAppChannelAlert(arg0) {
   ({ app, onDeleteChannel: require, onAppRemoved: importDefault } = arg0);
   let conjureServerApp;
-  let items;
+  items = undefined;
   let checked;
   noop = undefined;
   closure_6 = async function _submit() {
@@ -22,7 +22,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13280)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13416)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -57,7 +57,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
             closure_129_1();
           } else {
             const intl = tmp3(1113).intl;
-            closure_128_0 = intl.string(tmp2(3868).PJ2Fkn);
+            closure_128_0 = intl.string(tmp2(3995).PJ2Fkn);
             closure_129_5(closure_128_0);
             const _Error = Error;
             const error = new Error(closure_128_0);

@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     width: "100%",
@@ -60,7 +60,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
   const tmp4 = joinRequest(joinRequestGuild[8])(channelId);
   joinRequest = tmp4.joinRequest;
   joinRequestGuild = tmp4.joinRequestGuild;
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let userId;
     if (joinRequest != null) {
@@ -121,7 +121,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           }
           const obj = { children: null };
           const obj2 = { style: closure_0.divider };
-          const items = [React5(View, obj2), ,];
+          items = [React5(View, obj2), ,];
           const obj3 = {
             style: closure_0.formQuestion,
             variant: "text-xs/semibold",

@@ -1,29 +1,37 @@
 // discord_app/modules/jank_stats/native/JankVoicePanelTabReporter.native.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-const VoicePanelModes = fn(11223).VoicePanelModes;
-const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
+const VoicePanelModes = fn(11360).VoicePanelModes;
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
 const map = new Map();
+let items = [
+  {
+    code: "(function isDrawerShown_JankVoicePanelTabReporterNativeTsx1(wrapperSpecs,panelMode){let[VoicePanelModes]=this.__closure;return wrapperSpecs.drawerMode&&!wrapperSpecs.hidden&&panelMode===VoicePanelModes.PANEL;})",
+  },
+  VoicePanelModes,
+];
+let closure_129_0;
+[tmp3, tmp4] = items;
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;
   if (tmp) {
-    tmp = arg1 === VoicePanelModes.PANEL;
+    tmp = arg1 === require.PANEL;
   }
   return tmp;
 }
-isDrawerShown.__closure = { VoicePanelModes };
-isDrawerShown.__workletHash = 4659073724332;
-isDrawerShown.__initData = {
-  code: "function isDrawerShown_JankVoicePanelTabReporterNativeTsx1(wrapperSpecs,panelMode){const{VoicePanelModes}=this.__closure;return wrapperSpecs.drawerMode&&!wrapperSpecs.hidden&&panelMode===VoicePanelModes.PANEL;}",
+let items1 = [tmp4];
+isDrawerShown.__closure = items1;
+isDrawerShown.__workletHash = 17111317912789;
+isDrawerShown.__initData = tmp3;
+let closure_7 = {
+  code: "(function JankVoicePanelTabReporterNativeTsx2(){let[isDrawerShown,wrapperSpecs,mode,VoicePanelModes]=this.__closure;return[isDrawerShown(wrapperSpecs.get(),mode.get()),mode.get()===VoicePanelModes.PANEL];})",
 };
-const __initData = {
-  code: "function JankVoicePanelTabReporterNativeTsx2(){const{isDrawerShown,wrapperSpecs,mode,VoicePanelModes}=this.__closure;return[isDrawerShown(wrapperSpecs.get(),mode.get()),mode.get()===VoicePanelModes.PANEL];}",
-};
-const __initData2 = {
-  code: "function JankVoicePanelTabReporterNativeTsx3([isShown,isPanel],previous){const{runOnJS,handleDrawerChange}=this.__closure;if(previous==null||isShown!==previous[0]||isPanel!==previous[1]){runOnJS(handleDrawerChange)(isShown,isPanel);}}",
+let closure_8 = {
+  code: "(function JankVoicePanelTabReporterNativeTsx3([isShown,isPanel],previous){let[scheduleOnRN,handleDrawerChange]=this.__closure;if(previous==null||isShown!==previous[0]||isPanel!==previous[1]){scheduleOnRN(handleDrawerChange,isShown,isPanel);}})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankVoicePanelTabReporter.native.tsx");
@@ -31,27 +39,27 @@ let result = size.fileFinishedImporting("modules/jank_stats/native/JankVoicePane
 export default noop.memo(function JankVoicePanelTabReporter(channelId) {
   channelId = channelId.channelId;
   const tab = channelId.tab;
-  const wrapperSpecs = channelId.wrapperSpecs;
-  const mode = channelId.mode;
-  wrapperSpecs.useRef(tab);
-  let items = [channelId, tab];
-  const layoutEffect = wrapperSpecs.useLayoutEffect(() => {
-    closure_4.current = tab;
-    value = map.get(channelId);
+  noop = undefined;
+  ({ wrapperSpecs, mode } = channelId);
+  noop = noop.useRef(tab);
+  items = [channelId, tab];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    c2.current = current;
+    value = map.get(c0);
     let isShown;
     if (value != null) {
       isShown = value.isShown;
     }
     if (true === isShown) {
       getJankSurfaceName;
-      if ("chat" === tab) {
-        tmp8(channelId, `chat`);
+      if ("chat" === current) {
+        tmp8(c0, `chat`);
       }
     }
   }, items);
   const items1 = [channelId];
-  const handleDrawerChange = wrapperSpecs.useCallback((isShown, isPanel) => {
-    value = map.get(channelId);
+  const callback = noop.useCallback((isShown, isPanel) => {
+    value = map.get(c0);
     let flag;
     if (value != null) {
       flag = value.isShown;
@@ -59,12 +67,12 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
     if (flag == null) {
       flag = false;
     }
-    const result = map.set(channelId, { isShown, isPanel });
+    const result = map.set(c0, { isShown, isPanel });
     if (isShown !== flag) {
       if (!isShown) {
-        obj3.setJankVoicePanelTab(channelId, null);
+        obj3.setJankVoicePanelTab(c0, null);
       } else {
-        const current = ref.current;
+        current = _undefined2.current;
         if ("chat" === current) {
           let str3 = "chat";
         } else if ("app_launcher" !== current) {
@@ -76,48 +84,62 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
     }
     const obj2 = { isShown, isPanel };
   }, items1);
-  const fn = function f() {
-    value = wrapperSpecs.get();
-    if (typeof isDrawerShown === "function") {
-      let tmp3 = value.drawerMode && !value.hidden;
-      if (tmp3) {
-        tmp3 = tmp2 === VoicePanelModes.PANEL;
-      }
-      const items = [tmp3, mode.get() === VoicePanelModes.PANEL];
+  const items2 = [closure_7, isDrawerShown, wrapperSpecs, mode, c3];
+  _require = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c3 = undefined;
+  [tmp5, tmp6, tmp7, tmp8, tmp9] = items2;
+  class JankVoicePanelTabReporterNativeTsx2 {
+    constructor() {
+      value = closure_1.get();
+      items = [,];
+      items[0] = closure_0(value, closure_2.get());
+      items[1] = closure_2.get() === closure_3.PANEL;
       return items;
-    } else {
-      throw new TypeError("Trying to call a non-function");
     }
-  };
-  fn.__closure = { isDrawerShown, wrapperSpecs, mode, VoicePanelModes: mode };
-  fn.__workletHash = 16004116027159;
-  fn.__initData = __initData;
-  const fn2 = function _(arg0, arg1) {
-    [tmp, tmp2] = arg0;
-    if (!tmp3) {
-      ReanimatedRexport.runOnJS(callback)(tmp, tmp2);
+  }
+  const items3 = [tmp6, tmp7, tmp8, tmp9];
+  JankVoicePanelTabReporterNativeTsx2.__closure = items3;
+  JankVoicePanelTabReporterNativeTsx2.__workletHash = 2083564958222;
+  JankVoicePanelTabReporterNativeTsx2.__initData = tmp5;
+  const items4 = [closure_8, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  _require = undefined;
+  dependencyMap = undefined;
+  [tmp10, tmp11, tmp12] = items4;
+  class JankVoicePanelTabReporterNativeTsx3 {
+    constructor(arg0, arg1) {
+      [tmp, tmp2] = channelId;
+      tmp3 = null != arg1 && tmp === arg1[0] && tmp2 === arg1[1];
+      if (!tmp3) {
+        tmp4 = closure_0;
+        tmp5 = closure_1;
+        tmp6 = closure_0(closure_1, tmp, tmp2);
+      }
+      return;
     }
-    tmp3 = null != arg1 && tmp === arg1[0] && tmp2 === arg1[1];
-  };
-  let obj = channelId(tab[4]);
-  let obj2 = { isDrawerShown, wrapperSpecs, mode, VoicePanelModes: mode };
-  fn2.__closure = { runOnJS: channelId(tab[4]).runOnJS, handleDrawerChange };
-  fn2.__workletHash = 16116209487687;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  const items2 = [channelId];
-  const layoutEffect1 = wrapperSpecs.useLayoutEffect(
+  }
+  const items5 = [tmp11, tmp12];
+  JankVoicePanelTabReporterNativeTsx3.__closure = items5;
+  JankVoicePanelTabReporterNativeTsx3.__workletHash = 4126589190035;
+  JankVoicePanelTabReporterNativeTsx3.__initData = tmp10;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    JankVoicePanelTabReporterNativeTsx2,
+    JankVoicePanelTabReporterNativeTsx3,
+  );
+  const items6 = [channelId];
+  const layoutEffect1 = noop.useLayoutEffect(
     () => () => {
-      callback.delete(closure_1_0);
-      channelId(tab[3]).setJankVoicePanelTab(closure_1_0, null);
+      set.delete(_undefined);
+      c0(c1[3]).setJankVoicePanelTab(_undefined, null);
     },
-    items2,
+    items6,
   );
   return null;
 });
-export function reportJankVoicePanelTabRequest(disableControlsUpdate, disableControlsUpdate, arg2) {
+export function reportJankVoicePanelTabRequest(arg0, disableControlsUpdate, arg2) {
   ({ tab, controlsProps } = disableControlsUpdate);
-  value = map.get(disableControlsUpdate);
+  value = map.get(arg0);
   let tmp2 = null != value;
   if (tmp2) {
     let isShown = true !== disableControlsUpdate.disableControlsUpdate;
@@ -152,7 +174,7 @@ export function reportJankVoicePanelTabRequest(disableControlsUpdate, disableCon
   if (tmp2) {
     getJankSurfaceName;
     if ("chat" === tab) {
-      tmp10(disableControlsUpdate, `chat`);
+      tmp10(arg0, `chat`);
     }
   }
 }

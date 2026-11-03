@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   title: { textAlign: "center" },
@@ -28,11 +28,11 @@ export default function BlockedDomainActionSheet(url) {
   const obj = { startExpanded: true, children: null };
   const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), ,];
+  items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

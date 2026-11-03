@@ -1,5 +1,5 @@
 // discord_app/modules/client_themes/images/native/SynchronizeIconNative.tsx
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -23,7 +23,7 @@ export default function SynchronizeIcon(iconStyles) {
     children: null,
   };
   const tmp = inlineStylesDefault;
-  const items = [
+  items = [
     React3(inlineStyles.G, {
       id: "Frame_-_24px",
       children: React3(inlineStyles.Rect, { y: "0", fill: "none", width: "24", height: "24" }),

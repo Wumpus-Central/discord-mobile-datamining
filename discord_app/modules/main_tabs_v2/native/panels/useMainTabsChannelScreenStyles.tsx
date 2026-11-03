@@ -1,54 +1,58 @@
 // discord_app/modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.elevation = {};
 let closure_3 = createStyles.createStyles(obj2);
-let __initData = {
-  code: "function useMainTabsChannelScreenStylesTsx1(){const{freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered}=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};}",
+let closure_4 = {
+  code: "(function useMainTabsChannelScreenStylesTsx1(){let[freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered]=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
 
-export function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, derivedValue, parentFreezeValue) {
-  closure_2 = maxWidth;
-  __initData = parentFreezeValue;
-  const tmp = derivedValue();
-  const elevation = tmp.elevation;
-  const fn = function c() {
-    if (parentFreezeValue != null) {
-      value = parentFreezeValue.get();
+export function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, arg3, parentFreezeValue) {
+  const tmp = closure_3();
+  items = [_undefined3, parentFreezeValue, isDragging, translateX, maxWidth, tmp.elevation, arg3];
+  c0 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+  function useMainTabsChannelScreenStylesTsx1() {
+    if (_undefined != null) {
+      value = _undefined.get();
     }
-    let value3 = isDragging.get();
+    let value3 = animatedStyle.get();
     if (!value3) {
-      let tmp3 = 0 !== translateX.get();
+      let tmp3 = 0 !== _undefined2.get();
       if (tmp3) {
-        tmp3 = translateX.get() !== closure_2;
+        tmp3 = _undefined2.get() !== c3;
       }
       value3 = tmp3;
     }
     const obj3 = { transform: null, shadowOpacity: null, elevation: null, opacity: null };
-    const items = [{ translateX: translateX.get() }];
+    items = [{ translateX: _undefined2.get() }];
     obj3.transform = items;
     let num2 = 0;
     if (value3) {
-      num2 = elevation.shadowOpacity;
+      num2 = _undefined3.shadowOpacity;
     }
     obj3.shadowOpacity = num2;
     let num3 = 0;
     if (value3) {
-      num3 = elevation.elevation;
+      num3 = _undefined3.elevation;
     }
     obj3.elevation = num3;
     let value4;
-    if (derivedValue != null) {
-      value4 = derivedValue.get();
+    if (_undefined2 != null) {
+      value4 = _undefined2.get();
     }
     let num4 = 1;
     if (value4) {
@@ -56,21 +60,15 @@ export function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth,
     }
     obj3.opacity = num4;
     return obj3;
-  };
-  fn.__closure = {
-    freezeValue: parentFreezeValue,
-    isDragging,
-    translateX,
-    maxWidth,
-    elevationStyle: elevation,
-    isCompletelyCovered: derivedValue,
-  };
-  fn.__workletHash = 16765484569296;
-  fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  let items = [tmp, animatedStyle];
+  }
+  const items1 = [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8];
+  useMainTabsChannelScreenStylesTsx1.__closure = items1;
+  useMainTabsChannelScreenStylesTsx1.__workletHash = 1877489175721;
+  useMainTabsChannelScreenStylesTsx1.__initData = tmp2;
+  const animatedStyle = _mod1652.useAnimatedStyle(useMainTabsChannelScreenStylesTsx1);
+  const items2 = [tmp, animatedStyle];
   return noop.useMemo(() => {
-    const items = [elevation.elevation, animatedStyle];
+    items = [_undefined.elevation, animatedStyle];
     return items;
-  }, items);
+  }, items2);
 }

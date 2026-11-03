@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => {
   const obj = {
     badge: {
@@ -47,12 +47,12 @@ export default function PremiumGiftCountdownBadge(text) {
   ({ icon, style } = text);
   const tmp = closure_6();
   const obj = { style: null, children: null };
-  const items = [tmp.badge, style];
+  items = [tmp.badge, style];
   obj.style = items;
   const items1 = [
     icon,
     React4(Text_Text.Text, {
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       color: "text-overlay-light",
       style: tmp.text,
       children: text.text.toUpperCase(),

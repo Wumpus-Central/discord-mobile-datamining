@@ -114,7 +114,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -168,7 +168,7 @@ class Video extends PureComponent {
         const merged = Object.assign(src);
         obj3.width = width;
         obj3.height = height;
-        const items = [obj3];
+        items = [obj3];
         obj2.initialSources = items;
         obj2.originViewOrOriginLayout = current;
         openMediaModal.openMediaModal(obj2);
@@ -209,7 +209,7 @@ prototype["renderVideo"] = function renderVideo() {
           disableFocus: null,
           httpEngine: null,
         };
-        const items = [tmp.video, ,];
+        items = [tmp.video, ,];
         const size = { width: tmp3, height: tmp4 };
         items[1] = size;
         items[2] = tmp7;
@@ -281,7 +281,7 @@ prototype["render"] = function render() {
   const props = this.props;
   let accessibilityLabel = props.accessibilityLabel;
   const obj = { ref: this.ref, style: null, accessible: null, accessibilityLabel: null, children: null };
-  const items = [closure_9(this.context).container, { width: props.width, height: props.height }, props.style];
+  items = [closure_9(this.context).container, { width: props.width, height: props.height }, props.style];
   obj.style = items;
   obj.accessible = null != accessibilityLabel;
   obj.accessibilityLabel = accessibilityLabel;
@@ -320,7 +320,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5080).ThemeContext;
+Video.contextType = fn(5207).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

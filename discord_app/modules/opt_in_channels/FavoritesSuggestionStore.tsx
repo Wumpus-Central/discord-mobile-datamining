@@ -49,7 +49,7 @@ class FavoritesSuggestionStore extends PersistedStore {}
 const prototype = FavoritesSuggestionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   this.waitFor(ChannelStore, SelectedChannelStore, UserGuildSettingsStore);
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   this.syncWith(items, handleChange);
   if (null != arg0) {
     ({ suggestedChannels, dismissedSuggestions, channelOpensByChannelId } = arg0);

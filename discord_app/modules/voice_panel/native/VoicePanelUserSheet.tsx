@@ -28,7 +28,7 @@ function OverflowMenu(userId) {
   context = userProfileAnalyticsContext.context;
   const trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
   let obj = userId(analyticsLocations[12]);
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStoresObject = userId(analyticsLocations[13]).useStateFromStoresObject(items, () => ({
     relationshipType: RelationshipStore.getRelationshipType(userId),
     isIgnored: RelationshipStore.isIgnored(userId),
@@ -147,8 +147,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { gap: 12, padding: 16 },
   card: {
@@ -177,7 +177,7 @@ export default function VoicePanelUserSheet(userId) {
   userId = userId.userId;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => UserStore.getUser(userId));
   let obj = channelId(504);
   const items1 = [ChannelStore];
@@ -186,8 +186,8 @@ export default function VoicePanelUserSheet(userId) {
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(6041).useName(guildId, channelId, stateFromStores);
-  const live = userId(14896)(userId).live;
+  const name = channelId(6161).useName(guildId, channelId, stateFromStores);
+  const live = userId(15027)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -200,8 +200,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(9522).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(9522);
+          const cachedSourceFromURI = channelId(9650).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(9650);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -212,13 +212,13 @@ export default function VoicePanelUserSheet(userId) {
           let tmp11Result = closure_10(channelId(1187).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 48, height: 48, style: tmp.avatar };
-          tmp11Result = closure_10(tmp7(5717), size);
-          const tmp7Result = tmp7(5717);
+          tmp11Result = closure_10(tmp7(5837), size);
+          const tmp7Result = tmp7(5837);
         }
         const obj9 = { children: null };
         const items4 = [tmp11Result];
         const obj10 = { variant: "text-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_10(channelId(5624).Text, obj10);
+        items4[1] = closure_10(channelId(5747).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_11(stateFromStores2, obj7)];
         const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -227,7 +227,7 @@ export default function VoicePanelUserSheet(userId) {
         const items6 = [
           closure_11(stateFromStores2, obj6),
           live.map((activity, index) => {
-            let application_id = activity.application_id;
+            application_id = activity.application_id;
             if (application_id == null) {
               application_id = index;
             }
@@ -244,10 +244,10 @@ export default function VoicePanelUserSheet(userId) {
           currentUser: stateFromStores2,
           style: tmp.card,
         };
-        items6[2] = closure_10(tmp7(14899), obj12);
+        items6[2] = closure_10(tmp7(15030), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
-        return closure_10(channelId(5272).BottomSheet, obj9);
+        return closure_10(channelId(5395).BottomSheet, obj9);
       }
     }
   }

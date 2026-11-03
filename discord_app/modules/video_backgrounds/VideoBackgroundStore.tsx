@@ -43,7 +43,7 @@ class VideoBackgroundStore extends Store {}
 const prototype = VideoBackgroundStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(MediaEngineStore, SelectedChannelStore, UnsyncedUserSettingsStore, UserSettingsProtoStore, UserStore);
-  const items = [SelectedChannelStore, MediaEngineStore];
+  items = [SelectedChannelStore, MediaEngineStore];
   this.syncWith(items, handleSyncedStoresUpdate);
 };
 Object.defineProperty(prototype, "videoFilterAssets", {

@@ -44,7 +44,7 @@ export { getOrbsArcadeRewardStatus };
 export function getOrbsArcadeFocusedReward(rewards, stateFromStores, stateFromStores1) {
   closure_0 = stateFromStores;
   closure_1 = stateFromStores1;
-  const items = [...rewards];
+  items = [...rewards];
   const sorted = items.sort((scoreTarget, scoreTarget2) => scoreTarget.scoreTarget - scoreTarget2.scoreTarget);
   return sorted.find(
     (item) => getOrbsArcadeRewardStatus(item, closure_0, closure_1) !== OrbsArcadeTypes.OrbsArcadeRewardStatus.CLAIMED,

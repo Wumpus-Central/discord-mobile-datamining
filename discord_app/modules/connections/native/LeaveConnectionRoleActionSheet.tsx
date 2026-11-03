@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   container: { padding: 12 },
   marginTop: { marginTop: 8 },
@@ -22,10 +22,10 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = closure_5();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.vytvJF);
-  const items = [React3(Text_Text.Text, obj3), ,];
+  items = [React3(Text_Text.Text, obj3), ,];
   const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.caJwb5);

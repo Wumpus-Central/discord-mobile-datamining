@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/native/use
 
 export default function useTryItOutProfileTheme(id) {
   const tmp3 = useDisplayProfileDefault(id.id);
-  const items = [UserProfileSettingsStore];
+  items = [UserProfileSettingsStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => tryItOutChanges.getTryItOutChanges());
   ({ tryItOutThemeColors, tryItOutAvatar } = stateFromStoresObject);
   const obj2 = { user: id, displayProfile: tmp3, pendingThemeColors: tryItOutThemeColors, isPreview: true };

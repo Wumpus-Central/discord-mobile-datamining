@@ -19,7 +19,7 @@ export function applyHydratedMessages(arg0) {
       return false;
     }
   }
-  const items = [];
+  items = [];
   for (const item10014 of messages) {
     let obj = MessageRecordUtils;
     let messageRecord = obj.createMessageRecord(item10014);

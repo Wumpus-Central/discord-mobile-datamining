@@ -37,7 +37,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -80,7 +80,7 @@ export default {
                     const obj = { evt, args, cancelled: false };
                     value = closure_1_6.get(importDefault);
                     if (null == value) {
-                      const items = [obj];
+                      items = [obj];
                       const result = closure_1_6.set(importDefault, items);
                     } else {
                       value.push(obj);

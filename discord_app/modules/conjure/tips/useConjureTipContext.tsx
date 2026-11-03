@@ -15,7 +15,7 @@ export default function useConjureTipContext(projectId, arr, draftHasText, onAsk
   importDefault = arr;
   let tmp = importDefault;
   const tmp3 = require("useConjurePublishAction")(projectId);
-  const items = [id1];
+  items = [id1];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     const currentUser = id1.getCurrentUser();
     let id;

@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -36,7 +36,7 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   const element = { onPress: handlePress, props, accessibilityLabel, children: null };
   const tmp5 = useDrawerToggleDefault(openTab);
   const obj2 = { style: null };
-  const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
+  items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
   obj2.style = items;
   const items1 = [React3(NativeViewDefault, obj2)];
   const obj3 = { style: tmp.iconContainer, children: null };

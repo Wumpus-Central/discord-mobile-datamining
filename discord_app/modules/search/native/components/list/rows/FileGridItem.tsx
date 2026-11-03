@@ -6,11 +6,11 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
@@ -24,7 +24,7 @@ export default noop.memo(function FileGridItem(containerStyle) {
   const tmp = closure_11();
   noop = tmp;
   const scale = stateFromStores().scale;
-  let items = [fileName];
+  items = [fileName];
   stateFromStores = data(imageStyle[10]).useStateFromStores(items, () => ChannelStore.getChannel(data.channelId));
   const items1 = [data.author];
   let guild_id;
@@ -70,7 +70,7 @@ export default noop.memo(function FileGridItem(containerStyle) {
       obj4.containerWidth = imageStyle.width + React5;
       obj4.renderFallback = function renderFallback() {
         const obj = { style: null, children: null };
-        const items = [icon.icon, closure_1_2];
+        items = [icon.icon, closure_1_2];
         obj.style = items;
         const filename = attachment.attachment.filename;
         if (obj2.isImageFile(filename)) {

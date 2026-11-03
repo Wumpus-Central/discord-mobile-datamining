@@ -12,14 +12,14 @@ function getFirstEligibleUserExperiment(arg0) {
     let tmp2 = nextResult;
     let userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(nextResult);
     if (null != userExperimentDescriptor) {
-      let items = [tmp2, userExperimentDescriptor];
+      items = [tmp2, userExperimentDescriptor];
       iter.return();
       return items;
     }
   }
   return null;
 }
-const ExperimentConstants = fn(5239);
+const ExperimentConstants = fn(5362);
 ({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: metroRequire } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");

@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTot
 
 export default function useTotalPossibleBoostCount(arg0) {
   useMemo = arg0;
-  const items = [arg0];
+  items = [arg0];
   return useMemo(() => {
     if (null == id) {
       return 0;

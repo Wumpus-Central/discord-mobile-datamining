@@ -6,7 +6,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
 
 export function replaceAnimationColors(str, arg1) {
-  const items = [, ,];
+  items = [, ,];
   ({ r: arr[0], g: arr[1], b: arr[2] } = arg1);
   const complimentaryPaletteForColor = ColorUtils.getComplimentaryPaletteForColor(items, 2);
   str = str.replace(

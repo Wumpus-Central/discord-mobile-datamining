@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/ConjureAppBuildRequest.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureAttachmentDrafts from "../chat/conjureAttachmentDrafts.tsx";
 import useConjureProjectPickerOptionsDefault from "../clarification/useConjureProjectPickerOptions.tsx";
@@ -20,7 +20,7 @@ export function appBuildRequestSentToast(arr) {
   const obj = { names: null };
   const mapped = arr.map((name) => name.name);
   obj.names = mapped.join(", ");
-  return intl.formatToPlainString(_modDef3868.RZO35O, obj);
+  return intl.formatToPlainString(_modDef3995.RZO35O, obj);
 }
 export function useConjureAppBuildRequestForm(projectId, request, canSend, onDismiss, onSent) {
   importDefault = request;
@@ -38,7 +38,7 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
   closure_12 = noop.useRef(new Map());
   closure_13 = noop.useRef(false);
   noop.useRef(false);
-  let items = [tmp2, first1];
+  items = [tmp2, first1];
   const memo = noop.useMemo(
     () => closure_4.filter((item) => !first1.some((target) => target.target.projectId === item.projectId)),
     items,
@@ -48,7 +48,7 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
     if (null != closure_1.project_ids) {
       let project_ids = closure_1.project_ids;
     } else if (null != closure_1.project_id) {
-      const items = [closure_1.project_id];
+      items = [closure_1.project_id];
       project_ids = items;
     } else {
       project_ids = [];
@@ -96,7 +96,7 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
                 if (items1 == null) {
                   items1 = [];
                 }
-                let items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(items1, 0)] = target;
                 let result = map.set(_prompt, items);
                 continue;
@@ -105,14 +105,14 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
                 [tmp, arr] = arg0;
                 const mapped = arr.map((name) => {
                   const intl = closure_1_0(1113).intl;
-                  return intl.formatToPlainString(closure_1_1(3868).tcDZw9, {
+                  return intl.formatToPlainString(closure_1_1(3995).tcDZw9, {
                     name: name.name,
                     projectId: name.projectId,
                   });
                 });
                 const targets = mapped.join(", ");
                 let intl = closure_1_0(1113).intl;
-                return "" + intl.formatToPlainString(closure_1_1(3868).jZlNst, { targets }) + "\n\n" + tmp;
+                return "" + intl.formatToPlainString(closure_1_1(3995).jZlNst, { targets }) + "\n\n" + tmp;
               });
               return arr.join("\n\n");
             })(arr),
@@ -158,7 +158,7 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
           ).then((result) => {
             closure_0 = result;
             const found = closure_18.filter((item, index) => "fulfilled" === closure_0[index].status);
-            const items = [...closure_7, ...found.map((target) => ({ target, prompt: _prompt }))];
+            items = [...closure_7, ...found.map((target) => ({ target, prompt: _prompt }))];
             if (found.length !== closure_18.length) {
               if (!ref2.current) {
                 closure_8(items);

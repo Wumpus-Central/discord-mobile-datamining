@@ -12,7 +12,7 @@ export default function PremiumWishlistItemCard(size) {
   size = size.size;
   ({ sku, source } = size);
   const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));
-  const items = [size];
+  items = [size];
   const callback = noop.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
   return jsx(WishlistItemCardBaseDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });

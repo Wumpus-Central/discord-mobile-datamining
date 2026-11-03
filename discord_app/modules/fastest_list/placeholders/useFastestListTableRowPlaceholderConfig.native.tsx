@@ -4,7 +4,7 @@ import FastestListPropsPlaceholder from "../props/FastestListPropsPlaceholder.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT },
   placeholderAvatar: null,
@@ -29,7 +29,7 @@ const obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(6778).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(6898).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting(
 export default function useFastestListTableRowPlaceholderConfig() {
   const tmp = styles();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => {
     const obj = {
       type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM,

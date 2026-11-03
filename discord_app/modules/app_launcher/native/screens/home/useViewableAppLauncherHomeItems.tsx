@@ -16,7 +16,7 @@ export function useViewableAppLauncherHomeItems() {
     hasViewedActivityItem: sharedValue,
     hasViewedLearnMoreItem: sharedValue1,
   };
-  const items = [sharedValue, sharedValue1, ref];
+  items = [sharedValue, sharedValue1, ref];
   obj3.handleViewableItemsChanged = ref.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {

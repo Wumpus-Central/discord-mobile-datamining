@@ -13,9 +13,9 @@ export default function useChannelListFlatData(getItemSize) {
   const getSectionHeaderSize = getItemSize.getSectionHeaderSize;
   const headerSize = getItemSize.headerSize;
   const sections = getItemSize.sections;
-  let items = [getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections];
+  items = [getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections];
   return getSectionFooterSize.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [];
     const items2 = [];
     const map = new Map();
@@ -90,7 +90,7 @@ export default function useChannelListFlatData(getItemSize) {
           let tmp39 = getSectionFooterSize(num);
           sum1 = tmp15;
           if (tmp39 > 0) {
-            let SECTION_FOOTER = tmp36(7240).FastListItemTypes.SECTION_FOOTER;
+            let SECTION_FOOTER = tmp36(7361).FastListItemTypes.SECTION_FOOTER;
             let _HermesInternal6 = HermesInternal;
             let str16 = "";
             let str17 = ":";

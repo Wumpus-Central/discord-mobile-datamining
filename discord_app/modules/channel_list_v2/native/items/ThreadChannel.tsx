@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -39,7 +39,7 @@ function ThreadChannel(channel) {
   let obj = threadCount;
   fontScale = channel(threadCount[18]).useFontScale();
   const obj2 = channel(threadCount[18]);
-  const items = [parent_id, ownerId, UserStore, SortedVoiceStateStore, VoiceStateStore, user, parentChannel, fontScale];
+  items = [parent_id, ownerId, UserStore, SortedVoiceStateStore, VoiceStateStore, user, parentChannel, fontScale];
   const stateFromStoresObject = channel(threadCount[19]).useStateFromStoresObject(items, () => {
     const isMutedResult = JoinedThreadsStore.isMuted(id);
     const obj = {
@@ -219,14 +219,14 @@ function ThreadChannel(channel) {
   tmp8Result = tmp8(obj[24]);
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11046);
+const RedesignChannelListConstants = fn(11186);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1072).Permissions;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 let closure_16 = fn(1112).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: {
     marginVertical: CHANNEL_MARGIN_VERTICAL,
@@ -267,7 +267,7 @@ let closure_20 = createStyles.createStyles(obj);
 let closure_21 = noop.memo(function SpineCurveSvg(arg0) {
   ({ color, fontScale } = arg0);
   const size = { width: 12, height: 16, style: null, children: null };
-  const rect = { position: "absolute", left: 23, top: map1(fontScale) / 2 - 16 + 2 };
+  const rect = { position: "absolute", left: 23, top: state(fontScale) / 2 - 16 + 2 };
   size.style = rect;
   size.children = closure_1_17(inlineStyles.Path, {
     fill: color,
@@ -281,7 +281,7 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {

@@ -25,7 +25,7 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
     current2.start(50, onBackspace);
   });
   closure_2 = noop.useRef(delayedCall);
-  const items = [onBackspace];
+  items = [onBackspace];
   const items1 = [onBackspace];
   const callback = noop.useCallback(() => {
     onBackspace();

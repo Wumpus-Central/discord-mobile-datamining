@@ -43,7 +43,7 @@ export function useNavigationTTIRegionMeasurement(exclude, name) {
   str.useRef(null);
   str.useRef(str);
   str.useRef(false);
-  const items = [name, exclude];
+  items = [name, exclude];
   const callback = str.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
     let isFiniteResult = arg2 > 0 && arg3 > 0;
     if (isFiniteResult) {

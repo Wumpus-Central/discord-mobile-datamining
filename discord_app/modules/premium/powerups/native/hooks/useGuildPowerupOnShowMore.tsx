@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks
 
 export default function useGuildPowerupOnShowMore(guildId, arg1) {
   closure_1 = arg1;
-  const items = [guildId, arg1];
+  items = [guildId, arg1];
   return noop.useCallback(() => {
     if (null != closure_1) {
       const obj = { guildId, powerup: tmp };

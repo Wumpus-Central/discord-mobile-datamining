@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -35,14 +35,14 @@ export default noop.memo(function MessagesItemEmptyState() {
   }, []);
   let obj2 = {
     color: "mobile-text-heading-primary",
-    variant: "heading-lg/bold",
+    variant: "heading-lg/semibold",
     style: tmp.title,
     maxFontSizeMultiplier: 2,
     children: null,
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t["8JZof8"]);
-  const items = [React4(Text_Text.Heading, obj2), ,];
+  items = [React4(Text_Text.Heading, obj2), ,];
   const obj3 = {
     color: "text-default",
     variant: "text-md/medium",

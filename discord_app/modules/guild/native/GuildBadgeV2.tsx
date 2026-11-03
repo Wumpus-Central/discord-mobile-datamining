@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
@@ -37,7 +37,7 @@ export default function GuildBadgeV2(arg0) {
         style: null,
       };
       const size1 = { width: iconSize, height: iconSize };
-      const items = [size1];
+      items = [size1];
       let icon = merged.style;
       if (icon == null) {
         icon = tmp4.icon;

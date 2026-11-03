@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -49,7 +49,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11289, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11426, dependencyMap.paths);
         obj.openLazy(
           tmp,
           React5,
@@ -99,7 +99,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11288, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11425, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -134,7 +134,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14830, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14961, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -171,7 +171,7 @@ export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
   if (tidaWebformEnabled.tidaWebformEnabled) {
     obj.label = string(t.QvQeLv);
     obj.action = function action() {
-      const items = [];
+      items = [];
       let obj = { label: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.y5MwJy);
@@ -179,8 +179,8 @@ export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5068).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5068);
+        obj2.copy(analyticsLocations(5195).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5195);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

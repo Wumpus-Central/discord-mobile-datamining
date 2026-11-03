@@ -55,11 +55,11 @@ export default function ConnectedApplicationIdentity(identity) {
   let intl = tmp2(tmp3[7]).intl;
   const formatResult = intl.format(require("util").t.VgqIPj, { provider: str });
   noop = formatResult;
-  let items = [str, formatResult, token];
+  items = [str, formatResult, token];
   let icon;
   const callback = obj2.useCallback(() => {
     let obj = { children: null };
-    const items = [React5(native.Spacer, { size: 8 }), , ,];
+    items = [React5(native.Spacer, { size: 8 }), , ,];
     const obj2 = { variant: "text-md/medium", children: null };
     const intl = util.intl;
     obj2.children = intl.format(util.t.VgqIPj, { provider: str });

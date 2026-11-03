@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/AppleIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14296 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-1x.png.js";
-import _modDef14297 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-2x.png.js";
-import _modDef14298 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-3x.png.js";
+import _modDef14427 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-1x.png.js";
+import _modDef14428 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-2x.png.js";
+import _modDef14429 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AppleIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14296 }, 3: null };
-const obj2 = { uri: _modDef14296 };
-obj[2] = { uri: _modDef14297 };
-const obj3 = { uri: _modDef14297 };
-obj[3] = { uri: _modDef14298 };
+let obj = { 1: null, 2: { uri: _modDef14427 }, 3: null };
+const obj2 = { uri: _modDef14427 };
+obj[2] = { uri: _modDef14428 };
+const obj3 = { uri: _modDef14428 };
+obj[3] = { uri: _modDef14429 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AppleIllocon.native.tsx");
 
@@ -22,13 +22,13 @@ export function AppleIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  const items = [num];
+  items = [num];
   const memo = noop.useMemo(() => {
     const size = { width: num, height: num, intrinsicWidth: 64, intrinsicHeight: 64 };
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7069).getAssetSource(obj);
+  obj.source = num(7195).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

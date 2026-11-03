@@ -15,7 +15,7 @@ export default function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
   _slicedToArray = undefined;
   let stateFromStores1;
-  const items = [GameProfileStore];
+  items = [GameProfileStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     const pendingReturn = GameProfileStore.getPendingReturn();
     let tmp2 = null;

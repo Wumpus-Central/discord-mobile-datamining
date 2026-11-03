@@ -20,7 +20,7 @@ export default function AppDetailsOverflowMenu(application) {
   if (result) {
     result = null != onAddAppMenuClick;
   }
-  const items = [];
+  items = [];
   if (result) {
     const obj3 = { label: null, action: null, IconComponent: null };
     let intl = tmp(tmp2[4]).intl;

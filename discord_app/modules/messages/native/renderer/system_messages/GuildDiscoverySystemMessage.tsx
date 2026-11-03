@@ -25,7 +25,7 @@ export function createGuildDiscoveryDisqualifiedSystemMessage(message) {
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -66,7 +66,7 @@ export function createGuildDiscoveryGracePeriodInitialWarningSystemMessage(messa
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -100,7 +100,7 @@ export function createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message
     }
     guild_id = guild_id1;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;

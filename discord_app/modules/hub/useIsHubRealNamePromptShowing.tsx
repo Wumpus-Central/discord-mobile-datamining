@@ -10,15 +10,15 @@ const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-const GuildPrompts = fn(14228).GuildPrompts;
+const GuildPrompts = fn(14359).GuildPrompts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
 export default function useIsHubRealNamePromptShowing(arg0) {
   _require = arg0;
-  const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
+  items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

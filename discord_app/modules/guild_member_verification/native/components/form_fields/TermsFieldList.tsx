@@ -22,7 +22,7 @@ function TermsFieldListItem(rowNumber) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.formatToPlainString(util.t.XpgzeO, { number: rowNumber, total: rowCount });
   obj2.children = "" + rowNumber + ".";
-  const items = [hasOwnProperty(Text_Text.Text, obj2)];
+  items = [hasOwnProperty(Text_Text.Text, obj2)];
   const obj3 = {
     style: tmp.termsRowContent,
     variant: "text-md/medium",
@@ -35,7 +35,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   termsContainer: {
     padding: 16,
@@ -88,12 +88,12 @@ export default function TermsFieldList(rules) {
   };
   const intl = rules(1113).intl;
   obj2.children = intl.string(rules(1113).t.prJqwT);
-  let items = [
-    closure_5(rules(5624).Text, obj2),
+  items = [
+    closure_5(rules(5747).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {
-        const items = [termsContainer.termsContainer, ,];
+        items = [termsContainer.termsContainer, ,];
         let firstItem = null;
         if (0 === index) {
           firstItem = termsContainer.firstItem;

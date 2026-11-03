@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/icymi/trackFeedLoaded.tsx");
 
 export function trackFeedLoaded(unreadFeedItems) {
-  const items = [];
+  items = [];
   const items1 = [];
   const items2 = [];
   const items3 = [];
@@ -28,8 +28,11 @@ export function trackFeedLoaded(unreadFeedItems) {
         if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
           str = "guild_event";
           if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
-              str = "recommended_guilds";
+            str = "recommended_guilds";
+            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
+              if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
+                str = "discover_item";
+              }
             }
           }
         }
@@ -54,8 +57,11 @@ export function trackFeedLoaded(unreadFeedItems) {
         if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
           str = "guild_event";
           if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
-              str = "recommended_guilds";
+            str = "recommended_guilds";
+            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
+              if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
+                str = "discover_item";
+              }
             }
           }
         }

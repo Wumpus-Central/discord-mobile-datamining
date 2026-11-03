@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles(() => {
   const obj = {
     pressable: {
@@ -74,7 +74,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   const height = channel.height;
   const setIsPressed = channel.setIsPressed;
   let isPressed;
-  let items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = channel(isPressed[11]).useStateFromStores(items, () => {
     let id;
     const channelId = SelectedChannelStore.getChannelId(null);
@@ -89,7 +89,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   const items2 = [tmp4, stateFromStores];
   const memo = setIsPressed.useMemo(() => ({ height, overflow: "hidden" }), items1);
   const memo1 = setIsPressed.useMemo(() => {
-    const items = [closure_5.pressable];
+    items = [closure_5.pressable];
     let rowSelected;
     if (stateFromStores) {
       rowSelected = closure_5.rowSelected;
@@ -107,7 +107,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "raw", activities: "cix" };
+      obj3 = { status: "Array", activities: "flexDirection" };
     }
     return obj3;
   });

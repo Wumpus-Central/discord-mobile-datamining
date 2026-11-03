@@ -31,7 +31,7 @@ function FilterFooter(inline) {
   const intl = util.intl;
   obj4.text = intl.string(util.t.i4jeWR);
   obj4.onPress = onConfirm;
-  const items = [React5(components_Button_Button.Button, obj4)];
+  items = [React5(components_Button_Button.Button, obj4)];
   const obj5 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
   const intl2 = util.intl;
   obj5.text = intl2.string(util.t.yBZMsQ);
@@ -43,10 +43,10 @@ function FilterFooter(inline) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6781).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6901).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
   bodyContainer: { flex: 1, minHeight: 0 },
@@ -85,7 +85,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
     closure_1 = arg1;
     closure_5((arr) => {
       if (closure_1) {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(arr, 0)] = group;
         let found = items;
       } else {
@@ -105,7 +105,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.string(util.t.bK5N8u));
   }, []);
-  let items = [onSortMethodChange, onFiltersChange, defaultValue, first1];
+  items = [onSortMethodChange, onFiltersChange, defaultValue, first1];
   const callback2 = first1.useCallback(() => {
     onSortMethodChange(first);
     onFiltersChange(first1);
@@ -149,13 +149,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9705).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9837).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter),
         };
-        return ref(onSortMethodChange(6974).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(7100).TableCheckboxRow, obj, index);
       });
       return React5(TableRowGroup.TableRowGroup, obj, index);
     }),

@@ -7,7 +7,7 @@ import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(4841).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(4968).ExplicitContentFilterToDmSpamFilterV2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
@@ -17,7 +17,7 @@ export function useDerivedDmSpamFilterSettingValue() {
   const setting = DmSpamFilterV22.useSetting();
   const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isSettingTeenByDefault = RegionalFeatureConfigUtils.useIsSettingTeenByDefault(
     SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS,

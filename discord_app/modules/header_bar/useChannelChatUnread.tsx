@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/header_bar/useChannelChatUnre
 
 export function useChannelChatUnread(channelId) {
   _require = channelId;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const items1 = [channelId];
   return require("initialize").useStateFromStoresObject(
     items,

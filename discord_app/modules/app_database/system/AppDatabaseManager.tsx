@@ -138,7 +138,7 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
     }
     continue;
   }
-  const items = [map, mapped];
+  items = [map, mapped];
   return items;
 };
 AppDatabaseManager["register"] = function register(arg0, arr, arg2, arg3) {
@@ -148,7 +148,7 @@ AppDatabaseManager["register"] = function register(arg0, arr, arg2, arg3) {
     arg0,
     Object.fromEntries(
       arr.map((item) => {
-        const items = [item, closure_0];
+        items = [item, closure_0];
         return items;
       }),
     ),
@@ -157,7 +157,7 @@ AppDatabaseManager["register"] = function register(arg0, arr, arg2, arg3) {
   );
   const fromEntriesResult = Object.fromEntries(
     arr.map((item) => {
-      const items = [item, closure_0];
+      items = [item, closure_0];
       return items;
     }),
   );

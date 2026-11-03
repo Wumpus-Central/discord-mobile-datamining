@@ -7,11 +7,11 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8353).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
+SettingsUpsellsConfigRegistry[fn(8477).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
   IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8353).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(8477).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
   IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8353).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(8477).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
   IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
@@ -19,11 +19,11 @@ const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUps
 export { SettingsUpsellsConfigRegistry };
 export function useIarReportSettingsUpsells(reportSubType) {
   closure_0 = reportSubType;
-  let items = [reportSubType];
+  items = [reportSubType];
   return noop.useMemo(() => {
     let tmp = null;
     if (null != closure_0) {
-      const items = [];
+      items = [];
       const _Object = Object;
       const entries = Object.entries(obj);
       const item = entries.forEach((item) => {
@@ -48,7 +48,7 @@ export function useIarReportSettingsUpsells(reportSubType) {
 }
 export function useSettingsUpsellsConfigs(settingsUpsells, type) {
   closure_1 = type;
-  const items = [settingsUpsells, type];
+  items = [settingsUpsells, type];
   return noop.useMemo(() => {
     const mapped = settingsUpsells.map((item) => {
       ({ predicate, eligibleChannelTypes } = SettingsUpsellsConfigRegistry[item]);

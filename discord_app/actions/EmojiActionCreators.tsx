@@ -28,7 +28,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_11 = async function _updateEmoji(arg0) {
 };
 const Endpoints = fn(1072).Endpoints;
 const UserSettingsConstants = fn(1082);
-({ MAX_FAVORITES: closure_9, UserSettingsDelay: c10 } = UserSettingsConstants);
+({ MAX_FAVORITES: closure_9, UserSettingsDelay: closure_10 } = UserSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/EmojiActionCreators.tsx");
 
@@ -220,7 +220,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4971).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -241,7 +241,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
               return customEmojiById;
             });
             const found = mapped.filter(GlobalUtils.isNotNullish);
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(dedupeEmojisByNameOrIdDefault(found).keys(), 0);
             tmp = items;
             const obj = dedupeEmojisByNameOrIdDefault(found);
@@ -292,7 +292,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4971).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -313,7 +313,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
               return customEmojiById;
             });
             const found = mapped.filter(GlobalUtils.isNotNullish);
-            const items = [];
+            items = [];
             HermesBuiltin.arraySpread(dedupeEmojisByNameOrIdDefault(found).keys(), 0);
             tmp = items;
             let obj = dedupeEmojisByNameOrIdDefault(found);

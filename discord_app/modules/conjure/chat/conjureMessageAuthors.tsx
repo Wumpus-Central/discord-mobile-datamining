@@ -82,7 +82,7 @@ export function requestMessageAuthor(actor_user_id) {
 }
 export function useMessageAuthorUser(userId) {
   _require = userId;
-  const items = [userId];
+  items = [userId];
   const effect = noop.useEffect(() => {
     if (null != closure_0) {
       if (null == UserStore.getUser(closure_0)) {

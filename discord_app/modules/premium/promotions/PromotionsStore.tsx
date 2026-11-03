@@ -77,7 +77,7 @@ prototype["initialize"] = function initialize(arg0) {
     closure_7 = arg0;
   }
   this.waitFor(UserSettingsProtoStore, UserStore);
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, initializeFromUserSettings);
 };
 Object.defineProperty(prototype, "outboundPromotions", {
@@ -166,7 +166,7 @@ prototype["getMarketingComponentByType"] = function getMarketingComponentByType(
     const currentUser = UserStore.getCurrentUser();
     const _Date = Date;
     const date = new Date();
-    let items = map.get(GIFT_CUSTOMIZATION_BANNER);
+    items = map.get(GIFT_CUSTOMIZATION_BANNER);
     if (items == null) {
       items = [];
     }
@@ -286,7 +286,7 @@ const promotionsStore = new PromotionsStore(DispatcherDefault, {
       const marketing_components = id.marketing_components;
       if (marketing_components != null) {
         const item = marketing_components.forEach((component_type) => {
-          let items = map.get(component_type.component_type);
+          items = map.get(component_type.component_type);
           if (items == null) {
             items = [];
           }
@@ -355,7 +355,7 @@ const promotionsStore = new PromotionsStore(DispatcherDefault, {
     if (closure_16.some((promotion) => promotion.promotion.id === claimedOutboundPromotionCode.promotion.id)) {
       return false;
     } else {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_16, 0)] = claimedOutboundPromotionCode;
       closure_16 = items;
     }

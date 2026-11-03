@@ -14,7 +14,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     marginTop: nativeDefault.space.PX_32,
@@ -69,11 +69,11 @@ export default function LearnMoreAboutAppsSection(visible) {
   obj.sectionName = AppLauncherTypes.AppLauncherSectionName.NEW_TO_APPS;
   obj.viewed = visible.visible;
   const obj2 = { style: tmp.container, children: null };
-  const items = [
+  items = [
     timestampProducer(View, { style: tmp.divider }),
     timestampProducer(Text_Text.Text, {
       accessibilityRole: "header",
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: stringResult,
     }),

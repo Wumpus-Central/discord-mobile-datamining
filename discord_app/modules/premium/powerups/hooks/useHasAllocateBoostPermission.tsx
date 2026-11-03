@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHas
 
 export default function useHasAllocateBoostPermission(arg0) {
   _require = arg0;
-  const items = [PermissionStore, GuildStore];
+  items = [PermissionStore, GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {
       canResult = null;

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2042 from "../../../../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../../../../_runtime/metro/02171__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -17,11 +17,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10727).UserRowModes;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const UserRowModes = fn(10857).UserRowModes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -69,7 +69,7 @@ export default noop.memo(function ChannelRow(channel) {
   );
   let tmp3 = closure_15();
   closure_7 = tmp3;
-  let items = [label];
+  items = [label];
   const stateFromStores = channel(onPress[12]).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp7 = flag2(onPress[13])(channel);
   closure_9 = tmp7;
@@ -115,7 +115,7 @@ export default noop.memo(function ChannelRow(channel) {
         channel,
         size: GuildIconWithChannelType.GuildIconWithChannelTypeSizes.SMALL_32,
       };
-      tmp2 = closure_2_12(GuildIconWithChannelType.GuildIconWithChannelType, obj);
+      tmp2 = application_id(GuildIconWithChannelType.GuildIconWithChannelType, obj);
     }
     return tmp2;
   }, items5);
@@ -157,7 +157,7 @@ export default noop.memo(function ChannelRow(channel) {
       }
       const obj = { style: closure_7.subLabel, children: null };
       const obj2 = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
-      const items = [closure_2_12(TextIcon, obj2), ,];
+      items = [application_id(TextIcon, obj2), ,];
       const obj3 = {
         style: closure_7.threadName,
         variant: "text-xs/medium",
@@ -166,7 +166,7 @@ export default noop.memo(function ChannelRow(channel) {
         ellipsizeMode: "tail",
         children: stateFromStores1,
       };
-      items[1] = closure_2_12(Text_Text.Text, obj3);
+      items[1] = application_id(Text_Text.Text, obj3);
       let tmp5Result = null;
       if (null != stateFromStores2) {
         const obj4 = { children: null };
@@ -176,19 +176,19 @@ export default noop.memo(function ChannelRow(channel) {
           color: "text-subtle",
           children: "\u2022",
         };
-        const items1 = [closure_2_12(Text_Text.Text, obj5)];
+        const items1 = [application_id(Text_Text.Text, obj5)];
         const obj6 = {
           variant: "text-xs/medium",
           color: "text-subtle",
-          children: DateUtils.calendarFormatCompact(_modDef2042(tmp14)),
+          children: DateUtils.calendarFormatCompact(_modDef2171(tmp14)),
         };
-        items1[1] = closure_2_12(Text_Text.Text, obj6);
+        items1[1] = application_id(Text_Text.Text, obj6);
         obj4.children = items1;
-        tmp5Result = closure_2_14(map1, obj4);
+        tmp5Result = gesture(state, obj4);
       }
       items[2] = tmp5Result;
       obj.children = items;
-      return closure_2_14(View, obj);
+      return gesture(View, obj);
     }
   }, items7);
   const memo3 = onLongPress.useMemo(() => {

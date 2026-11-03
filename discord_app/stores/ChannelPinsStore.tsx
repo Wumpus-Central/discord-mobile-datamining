@@ -75,7 +75,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
         obj.message = MessageRecordUtils.createMessageRecord(pinned_at.message);
         return obj;
       });
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(tmp2.items, 0));
       tmp2.items = items;
       tmp2.state = tmp ? obj.LOADED_HAS_MORE : obj.LOADED_FINISHED;
@@ -102,7 +102,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
     if (tmp2) {
       const tmp5 = 0 !== _modDef12.remove(tmp.items, (message) => message.message.id === require).length;
       if (tmp5) {
-        const items = tmp.items;
+        items = tmp.items;
         tmp.items = items.slice();
         dependencyMap[channelId] = tmp;
       }
@@ -115,7 +115,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
     if (null == dependencyMap[ids.channelId]) {
       return false;
     } else {
-      const items = tmp.items;
+      items = tmp.items;
       tmp.items = items.filter((message) => !ids.includes(message.message.id));
     }
   },
@@ -128,7 +128,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
       return false;
     } else if (null != message.message.author) {
       if (message.message.pinned) {
-        const items = tmp20.items;
+        items = tmp20.items;
         tmp20.items = items.slice();
         const findIndexResult = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult) {
@@ -182,7 +182,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
       if (-1 === findIndexResult) {
         return false;
       } else {
-        const items = tmp.items;
+        items = tmp.items;
         tmp.items = items.slice();
         tmp.items[findIndexResult].message =
           handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileApplicationRoleConnections(arg0) {
   _require = arg0;
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let prop;
   if (stateFromStores != null) {

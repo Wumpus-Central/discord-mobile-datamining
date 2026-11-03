@@ -60,15 +60,15 @@ export default function LargeCountDownPill(countdownText) {
     children: null,
   };
   let obj2 = { style: tmp.largeCountdownPill, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       style: tmp.largeCountdownPillText,
       children: countdownText.countdownText.toUpperCase(),
     }),
   ];
   const obj3 = {
-    variant: "text-xs/bold",
+    variant: "text-xs/semibold",
     style: tmp.largeCountdownPillText,
     children: countdownText.countdownText.toUpperCase(),
   };

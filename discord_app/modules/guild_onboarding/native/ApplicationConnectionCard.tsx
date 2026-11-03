@@ -17,7 +17,7 @@ export default function ApplicationConnectionCard(connection) {
   const _location = connection.location;
   let analyticsLocations;
   let startAuthorization;
-  const items = [analyticsLocations];
+  items = [analyticsLocations];
   const items1 = [connection.application_id];
   const stateFromStores = connection(_location[4]).useStateFromStores(
     items,
@@ -70,7 +70,7 @@ export default function ApplicationConnectionCard(connection) {
     const obj = AnalyticsUtilsDefault;
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
     obj2.connection_type = "application";
-    const application_id = connection.application_id;
+    application_id = connection.application_id;
     obj2.application_id = application_id;
     obj2.location = _location;
     obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj2);

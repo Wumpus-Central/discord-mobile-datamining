@@ -39,12 +39,12 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1072).MessageTypes;
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = {
     container: { position: "relative", overflow: "hidden", paddingTop },
@@ -79,7 +79,7 @@ export default function _default(rowGenerator) {
   const constrainedWidth = tmp5[0];
   closure_8 = tmp5[1];
   const roleStyle = AccessibilityStore.roleStyle;
-  let items = [constrainedWidth, roleStyle, message, modifyRow, rowGenerator];
+  items = [constrainedWidth, roleStyle, message, modifyRow, rowGenerator];
   const memo = messageSizeCacheRef.useMemo(() => {
     rowGenerator.setOptions({ constrainedWidth });
     const generateResult = rowGenerator.generate({
@@ -181,7 +181,7 @@ export default function _default(rowGenerator) {
       let tmp = gradientColors;
       if (gradientColors == null) {
         const obj = _modDef671(token);
-        const items = [_modDef671(token).alpha(0).hex(), token];
+        items = [_modDef671(token).alpha(0).hex(), token];
         tmp = items;
         const alphaResult = _modDef671(token).alpha(0);
       }
@@ -206,6 +206,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 }
-export const DCDMessageView = fn(9887).default;
-export const DCDSystemMessageView = fn(9888).default;
-export const DCDAutoModerationSystemMessageView = fn(9886).default;
+export const DCDMessageView = fn(10018).default;
+export const DCDSystemMessageView = fn(10019).default;
+export const DCDAutoModerationSystemMessageView = fn(10017).default;

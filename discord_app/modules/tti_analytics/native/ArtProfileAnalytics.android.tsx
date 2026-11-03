@@ -16,7 +16,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -41,7 +41,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
           closure_130_6 = undefined;
           const javaBaselineProfileCompilationStatus = NativeTTIModuleDefault.getJavaBaselineProfileCompilationStatus();
           const catchPromise = javaBaselineProfileCompilationStatus.catch(() => closure_1_6);
-          const items = [catchPromise, Timers.timeoutPromise(10000).then(() => closure_1_6)];
+          items = [catchPromise, Timers.timeoutPromise(10000).then(() => closure_1_6)];
           const items1 = [Promise.race(items)];
           const timeoutPromiseResult = Timers.timeoutPromise(10000);
           items1[1] = NativeTTIModuleDefault.getAndroidArtProfileTelemetry();
@@ -80,7 +80,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
           logEventProperties: true,
         });
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp6) {
       c5 = tmp;

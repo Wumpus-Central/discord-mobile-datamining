@@ -31,7 +31,7 @@ let closure_20 = async function _getEmbedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_21 = async function _getApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -271,7 +271,7 @@ let closure_22 = async function _getCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -335,7 +335,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -471,7 +471,7 @@ let closure_24 = async function _search(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -686,7 +686,7 @@ let closure_25 = async function _fetchCollections() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -773,7 +773,7 @@ let closure_25 = async function _fetchCollections() {
                 cache: null,
               };
               const obj6 = closure_130_1(closure_130_2[11]);
-              locale = closure_130_0;
+              let locale = closure_130_0;
               let tmp55 = closure_130_2;
               if (obj10.isAndroid()) {
                 let WEB = locale(tmp55[16]).ApplicationCollectionPlatforms.ANDROID;
@@ -853,7 +853,7 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -941,11 +941,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(6882).FetchState;
-fn(12400).FetchState;
-fn(12395).FetchState;
-fn(12401).FetchState;
-const FetchState = fn(12402).FetchState;
+fn(7002).FetchState;
+fn(12536).FetchState;
+fn(12531).FetchState;
+fn(12537).FetchState;
+const FetchState = fn(12538).FetchState;
 const Endpoints = fn(1072).Endpoints;
 let c18 = 600000;
 const map = new Map();

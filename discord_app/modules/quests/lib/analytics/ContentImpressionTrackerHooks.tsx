@@ -18,10 +18,10 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
   if ("adContentId" in questOrQuests) {
     adContentId = questOrQuests.adContentId;
   }
-  let items = [questOrQuests, adContentId];
+  items = [questOrQuests, adContentId];
   const memo = noop.useMemo(() => {
     if (null != memo) {
-      const items = [tmp];
+      items = [tmp];
       let items1 = items;
     } else if (null != questOrQuests) {
       const _Array = Array;
@@ -42,7 +42,7 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
   }
   let items1 = [memo, questOrQuests.questContent, adCreativeType];
   return noop.useMemo(() => {
-    const items = [...memo];
+    items = [...memo];
     const sorted = items.sort();
     const combined = "" + sorted.join("_") + "_" + questOrQuests.questContent;
     const QUEST = AdCreativeType.AdCreativeType.QUEST;
@@ -52,7 +52,7 @@ export function useAdContentImpressionTrackerProps(questOrQuests) {
 export function useQuestStatusChanged(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const adCreativeType = adContentIds.adCreativeType;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [adContentIds, adCreativeType];
   stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(
     items,
@@ -103,7 +103,7 @@ export function useQuestImpressionId() {
 }
 export function useGetQuestImpressionId() {
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
-  const items = [context];
+  items = [context];
   return noop.useCallback(() => {
     let id;
     if (context != null) {
@@ -117,7 +117,7 @@ export function useGetQuestImpressionId() {
 }
 export function useGetOptionalQuestImpressionId() {
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
-  const items = [context];
+  items = [context];
   return noop.useCallback(() => {
     let id;
     if (context != null) {

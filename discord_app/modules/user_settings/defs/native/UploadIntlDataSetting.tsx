@@ -16,7 +16,7 @@ let closure_10 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -75,7 +75,7 @@ let closure_10 = async function _serializeIntlData() {
         const merged = Object.assign(
           Object.fromEntries(
             keys.map((item) => {
-              const items = [item];
+              items = [item];
               const intl = closure_1_0(1113).intl;
               items[1] = intl.reserialize(closure_1_0(1113).t[item]);
               return items;
@@ -153,7 +153,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -300,13 +300,13 @@ const Constants = fn(1072);
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(12225).FileUpIcon,
+  IconComponent: fn(12361).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -317,7 +317,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16746).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16889).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

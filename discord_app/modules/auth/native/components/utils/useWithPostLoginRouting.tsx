@@ -18,7 +18,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
   const tmp = loginStatus(noop.useState(), 2);
   const first = tmp[0];
   closure_3 = tmp[1];
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   loginStatus = require("initialize").useStateFromStoresObject(items, () => ({
     loginStatus: authStore.getLoginStatus(),
   })).loginStatus;
@@ -76,7 +76,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

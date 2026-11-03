@@ -34,7 +34,7 @@ export function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   if (gifs == null) {
     gifs = closure_4;
   }
-  const items = [gifs, transformFavoriteGifUrl];
+  items = [gifs, transformFavoriteGifUrl];
   return noop.useMemo(() => {
     const mapped = _modDef12(gifs).map((src, url) => {
       const obj = {};

@@ -9,10 +9,10 @@ const require = fn;
 function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
-  dependencyMap = channels(1497).useNavigation();
-  let obj = channels(1497);
+  dependencyMap = channels(1499).useNavigation();
+  let obj = channels(1499);
   const tmp = channels;
-  const getOrFetchApplication = channels(7330).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7450).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -25,15 +25,15 @@ function SyncingToGamesItem(channels) {
       children: channels.map((id) => {
         const channel = id;
         let obj = {
-          label: channels(5652).computeChannelName(id, UserStore, RelationshipStore),
+          label: channels(5772).computeChannelName(id, UserStore, RelationshipStore),
           icon: null,
           arrow: true,
           onPress: null,
         };
         const obj3 = { IconComponent: null };
-        const obj2 = channels(5652);
-        obj3.IconComponent = channels(8603).getChannelIconComponent(id);
-        obj.icon = closure_1_6(channels(6975).TableRow.Icon, obj3);
+        const obj2 = channels(5772);
+        obj3.IconComponent = channels(8727).getChannelIconComponent(id);
+        obj.icon = closure_1_6(channels(7101).TableRow.Icon, obj3);
         obj.onPress = function onPress() {
           const obj = { channel, numScreensToPop: null };
           let num = 1;
@@ -46,10 +46,10 @@ function SyncingToGamesItem(channels) {
           obj.numScreensToPop = num;
           closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
         };
-        return closure_1_6(channels(6975).TableRow, obj, id.id);
+        return closure_1_6(channels(7101).TableRow, obj, id.id);
       }),
     };
-    tmp5Result = closure_6(tmp(7060).TableRowGroup, obj3);
+    tmp5Result = closure_6(tmp(7186).TableRowGroup, obj3);
   }
   return tmp5Result;
 }
@@ -69,7 +69,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   const obj2 = require("useChannelsAllowedToUnlink");
   const groupByResult = keys(12).groupBy(channelsAllowedToUnlink, (linkedLobby) => {
     linkedLobby = linkedLobby.linkedLobby;
-    let application_id;
+    application_id = undefined;
     if (linkedLobby != null) {
       application_id = linkedLobby.application_id;
     }
@@ -80,7 +80,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   const obj4 = { children: null };
   const obj5 = { contentContainerStyle: null, children: null };
   const obj3 = keys(12);
-  const items = [{ paddingTop: keys(575).space.PX_16 }, contentContainerStyle];
+  items = [{ paddingTop: keys(575).space.PX_16 }, contentContainerStyle];
   obj5.contentContainerStyle = items;
   const obj6 = { paddingTop: keys(575).space.PX_16 };
   obj5.children = closure_6(require("Stack/Stack").Stack, {

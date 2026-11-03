@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const container = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -39,7 +39,7 @@ export default function ExternalLink(externalURL) {
   let onPress;
   const tmp = closure_9(require("useWideAuthView")());
   importDefault = externalURL(onPress[6]).useNavigation();
-  const items = [externalURL];
+  items = [externalURL];
   onPress = noop.useCallback(() => {
     React4.openURL(externalURL);
   }, items);

@@ -41,7 +41,7 @@ export default function getActivityStatusText(name) {
     }
     tmp5 = details1;
   }
-  let state;
+  state = undefined;
   if (name != null) {
     state = name.state;
   }

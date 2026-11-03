@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -21,7 +21,7 @@ let obj2 = {
   tagText: null,
 };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;
@@ -36,15 +36,15 @@ export default function LiveTag(arg0) {
   ({ style, textStyle, allowFontScaling } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };
-  const items = [tmp.tag, style];
+  items = [tmp.tag, style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/bold", style: null, lineClamp: 1, allowFontScaling, children: null };
+  const obj2 = { variant: "text-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null };
   const items1 = [tmp.tagText, textStyle];
   obj2.style = items1;
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = jsx(Text_Text.Text, {
-    variant: "text-xs/bold",
+    variant: "text-xs/semibold",
     style: null,
     lineClamp: 1,
     allowFontScaling,

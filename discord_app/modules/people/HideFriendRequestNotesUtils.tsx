@@ -27,7 +27,7 @@ export function useFriendRequestNote(arg0) {
     userIsTeen = setting;
   }
   const obj = require("useUserIsTeen");
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.getNote(closure_0));
   let tmp6 = null;
   if (!userIsTeen) {

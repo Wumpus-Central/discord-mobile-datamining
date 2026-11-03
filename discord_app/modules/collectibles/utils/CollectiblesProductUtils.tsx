@@ -3,7 +3,7 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 const size = fn(2);
@@ -62,9 +62,9 @@ export function getHasOrbPrice(arg0) {
   }
   return null != found;
 }
-export function getHasNonOrbPrice(arg0) {
+export function getHasNonOrbPrice(isFirstParty) {
   let prices;
-  if (arg0.prices[constants.MOBILE] != null) {
+  if (isFirstParty.prices[constants.MOBILE] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
       prices = countryPrices.prices;
@@ -142,7 +142,7 @@ export function isDynamicProduct(selectedProduct) {
     }
     let someResult = type1 === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
     if (someResult) {
-      const items = selectedProduct.items;
+      items = selectedProduct.items;
       someResult = items.some((effects) => {
         let someResult = isProfileEffectRecord(effects);
         if (someResult) {

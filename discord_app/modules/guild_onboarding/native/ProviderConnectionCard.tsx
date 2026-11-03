@@ -41,7 +41,7 @@ export default function ProviderConnectionCard(connection) {
     const startProviderConnection = connection(tmp2[8]).useStartProviderConnection(connection.provider_id);
     startConnection = startProviderConnection.startConnection;
     ({ hasConnection, canConnect, loading } = startProviderConnection);
-    const items = [startConnection, guildId, connection.provider_id, _location];
+    items = [startConnection, guildId, connection.provider_id, _location];
     const items1 = [connection.provider_id, tmp3];
     const callback = startConnection.useCallback(
       asyncGeneratorStep(async () => {
@@ -55,7 +55,7 @@ export default function ProviderConnectionCard(connection) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -71,7 +71,7 @@ export default function ProviderConnectionCard(connection) {
               } else {
                 const obj4 = {};
                 const obj5 = v3(1252);
-                const merged = Object.assign(provider_id(5760).collectGuildAnalyticsMetadata(guildId));
+                const merged = Object.assign(provider_id(5880).collectGuildAnalyticsMetadata(guildId));
                 obj4.connection_type = "provider";
                 provider_id = connection.provider_id;
                 if (provider_id == null) {
@@ -94,7 +94,7 @@ export default function ProviderConnectionCard(connection) {
               return obj;
             } else {
               v3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             v3 = tmp;

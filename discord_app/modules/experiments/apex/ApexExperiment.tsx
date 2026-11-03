@@ -24,10 +24,10 @@ function getUnitId(type, guildId) {
   }
 }
 function useUnitId(type, guildId) {
-  let items = [AuthenticationStore];
+  items = [AuthenticationStore];
   _slicedToArray(
     initialize.useStateFromStoresArray(items, () => {
-      const items = [AuthenticationStore.getId(), AuthenticationStore.getInstallationForTracking()];
+      items = [AuthenticationStore.getId(), AuthenticationStore.getInstallationForTracking()];
       return items;
     }),
     2,
@@ -53,5 +53,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(arg0) {
   return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, useUnitId);
 }
-export const ApexExperiment = fn(1449).ApexExperiment;
+export const ApexExperiment = fn(1451).ApexExperiment;
 export { getUnitId };

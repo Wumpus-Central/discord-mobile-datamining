@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function _computeCategories(arg0) {
   ({ categories, rowSize, isNativeEmojiPickerEnabled } = arg0);
-  const items = [];
+  items = [];
   const iter = categories[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -171,7 +171,7 @@ function _computeSearchResults(emojis) {
     const _Number = Number;
     limit = Number.MAX_SAFE_INTEGER;
   }
-  const items = [];
+  items = [];
   const obj = { emojiSections: items, renderingData: null, rowSize: null };
   const obj2 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: "", footer: null };
   let substr = unlocked;
@@ -222,9 +222,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6799);
+const EmojiPickerConstants = fn(6919);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(9942).EmojiPickerRenderingDataType;
+const constants3 = fn(10073).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

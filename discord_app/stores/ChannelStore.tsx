@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(4914)(arr);
+              tmp4(5041)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -292,7 +292,7 @@ function handleOneGuildCreate(arg0) {
     deleteGuildChannels(id);
     set.add(id);
     BasicChannelCacheStore.restored(id);
-    const items = channels.items;
+    items = channels.items;
     for (const item10058 of items) {
       let tmp25 = setGuildChannel(item10058);
       continue;
@@ -509,17 +509,17 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({
   createChannelRecordFromServer: closure_7,
   isPrivate: closure_8,
   GUILD_CHANNEL_TYPES: closure_9,
-  THREAD_CHANNEL_TYPES: c10,
+  THREAD_CHANNEL_TYPES: closure_10,
   ALL_CHANNEL_TYPES: closure_11,
   castChannelRecord: closure_12,
 } = ChannelRecord);
 const ChannelTypes = fn(1072).ChannelTypes;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -553,13 +553,13 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
     if (tmp4 != null) {
       guild_id = tmp4.guild_id;
     }
-    const items = [guild_id];
+    items = [guild_id];
     guildIds = prototype.loadGuildIds(items);
   }
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1379).isNotNullish);
+  found = items.filter(found(1380).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -569,7 +569,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(4912).tryLoadOrResetCacheGatewayAsync(
+      return tmp(5039).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {
@@ -582,7 +582,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             while (true) {
@@ -620,7 +620,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       return obj2;
                     }
                   });
-                  found = mapped.filter(closure_0(1379).isNotNullish);
+                  found = mapped.filter(closure_0(1380).isNotNullish);
                   closure_130_0 = found;
                   c5 = 1;
                   let _Promise = Promise;
@@ -711,7 +711,7 @@ class ChannelStore extends Store {}
 const prototype2 = ChannelStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore, BasicChannelCacheStore, FavoriteStore, GuildStore, UserStore);
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   this.syncWith(items, handleFavoritesUpdate);
 };
 prototype2["hasChannel"] = function hasChannel(arg0) {
@@ -973,7 +973,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       );
       let addResult = set.add(tmp5);
       for (const item10036 of arr) {
-        let tmp14 = setChannel(closure_1_12(item10036));
+        let tmp14 = setChannel(application_id(item10036));
         continue;
       }
       continue;
@@ -983,13 +983,13 @@ const channelStore = new ChannelStore(DispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(guilds) {
     closure_34 = Math.max(closure_34, guilds.guilds.length);
     const initialGuildChannels = guilds.initialGuildChannels;
-    const items = [guilds.privateChannels, initialGuildChannels];
+    items = [guilds.privateChannels, initialGuildChannels];
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       for (const item10021 of nextResult) {
         let obj = deserializeChannels;
-        let tmp8 = setChannel(obj.deserializeChannel(closure_1_12(item10021)));
+        let tmp8 = setChannel(obj.deserializeChannel(application_id(item10021)));
         continue;
       }
       continue;
@@ -1148,7 +1148,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       for (const item10033 of channels) {
         let _Object = Object;
         if (!Object.hasOwn(closure_20, item10033.id)) {
-          let tmp18 = setGuildChannel(closure_1_12(item10033));
+          let tmp18 = setGuildChannel(application_id(item10033));
         }
         continue;
       }
@@ -1176,7 +1176,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
   OVERLAY_INITIALIZE: function handleInitialize(arg0) {
     while (tmp !== undefined) {
       let obj = deserializeChannels;
-      let tmp7 = setChannel(obj.deserializeChannel(closure_1_12(tmp2)));
+      let tmp7 = setChannel(obj.deserializeChannel(application_id(tmp2)));
       continue;
     }
     tmp = arg0.channels[Symbol.iterator]();

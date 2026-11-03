@@ -1,6 +1,6 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import util from "../../../intl/index.native.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
+import Link from "../../../../_runtime/01500_Link.js";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -14,12 +14,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(17989).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17990);
+let closure_6 = fn(18132).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18133);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -45,11 +45,11 @@ export default function CaptchaModal(arg0) {
     rqtoken: closure_6,
     userflow: closure_7,
   } = arg0);
-  const tmp2 = closure_11(onReject(7111)());
+  const tmp2 = closure_11(onReject(7237)());
   const navigation = Link.useNavigation();
-  const items = [navigation];
+  items = [navigation];
   const memo = noop.useMemo(() => {
-    const state = navigation.getState();
+    state = navigation.getState();
     let name;
     if (state != null) {
       const first = state.routes[0];
@@ -66,7 +66,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(19371)({ onReject, analyticsType: memo });
+  closure_9 = onReject(19529)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);
@@ -77,7 +77,7 @@ export default function CaptchaModal(arg0) {
     headerText = intl.string(util.t.FpoiHe);
   }
   const items2 = [
-    closure_9(Text_Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }),
+    closure_9(Text_Text.Text, { variant: "heading-xl/semibold", accessibilityRole: "header", children: headerText }),
   ];
   let obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {

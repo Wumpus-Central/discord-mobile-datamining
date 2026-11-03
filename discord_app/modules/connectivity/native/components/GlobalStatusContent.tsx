@@ -18,11 +18,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11859).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11996).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -35,7 +35,7 @@ export default function ConnectivityGlobalStatusContent() {
   const tmp = closure_12();
   const tmp4 = useVoiceStateForRemoteSessionDefault();
   _require = tmp4;
-  const items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
+  items = [RTCConnectionStore, GuildStore, ChannelStore, SessionsStore];
   const items1 = [tmp4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -58,7 +58,7 @@ export default function ConnectivityGlobalStatusContent() {
         guildId1 = RTCConnectionStore.getGuildId();
       }
       let str;
-      const guild = GuildStore.getGuild(guildId1);
+      guild = GuildStore.getGuild(guildId1);
       if (closure_0 != null) {
         str = closure_0.sessionId;
       }
@@ -107,12 +107,12 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5198).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5198);
+    isScreenLandscape = tmp5(5321).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5321);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1375).isAndroid();
-    const tmp5Result6 = tmp5(1375);
+    isScreenLandscape = tmp5(1377).isAndroid();
+    const tmp5Result6 = tmp5(1377);
   }
   let num = 0;
   if (!isScreenLandscape) {

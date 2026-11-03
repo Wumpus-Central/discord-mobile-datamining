@@ -15,7 +15,7 @@ export default function ComponentOwnedWebView(applicationId) {
     applicationId,
     Object.assign({ iframeId: 0, onDisallowedNavigation: 0, contextSource: 0, activityUrl: 0, applicationId: 0 }),
   );
-  const items = [activityUrl];
+  items = [activityUrl];
   const memo = activityUrl.useMemo(() => {
     try {
       const _URL = URL;

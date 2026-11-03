@@ -12,9 +12,9 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(6853).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(6853);
-  const items = [PresenceStore];
+  const avatarDecoration = user(6973).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(6973);
+  items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
     status: PresenceStore.getStatus(user.id),
     isMobileOnline: PresenceStore.isMobileOnline(user.id),
@@ -36,7 +36,7 @@ function UserRow(user) {
   });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(6975).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(7101).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

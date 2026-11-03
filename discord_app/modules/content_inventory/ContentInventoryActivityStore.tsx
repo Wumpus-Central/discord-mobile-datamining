@@ -19,7 +19,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8927).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(9053).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
@@ -43,7 +43,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8718);
+    tmpResult = tmp(8842);
   }
   return tmp3;
 }
@@ -80,7 +80,7 @@ function handlePresenceUpdates() {
     let nextResult = iter.next();
     if (iter === undefined) {
       let obj2 = _modDef12;
-      let items = [];
+      items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(set1, 0);
       let differenceResult = obj2.difference(arr, items);
       for (const item10081 of differenceResult) {
@@ -109,7 +109,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-let items = [fn(8714).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8838).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -136,7 +136,7 @@ class ContentInventoryActivityStore extends Store {
 const prototype = ContentInventoryActivityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ContentInventoryStore, PresenceStore);
-  const items = [PresenceStore];
+  items = [PresenceStore];
   this.syncWith(items, handlePresenceUpdates);
 };
 prototype["getMatchingActivity"] = function getMatchingActivity(author_id) {

@@ -9,13 +9,13 @@ import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtil
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(19711).AuditLogChange;
-let closure_4 = fn(4867).isGuildSelectableChannelType;
-const hasAnyPermission = fn(4921).hasAnyPermission;
+const AuditLogChange = fn(19861).AuditLogChange;
+let closure_4 = fn(4994).isGuildSelectableChannelType;
+const hasAnyPermission = fn(5048).hasAnyPermission;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 ({
-  AuditLogActionTypes: c10,
+  AuditLogActionTypes: closure_10,
   AuditLogTargetTypes: closure_11,
   AuditLogChangeKeys: closure_12,
   AUDIT_LOG_PAGE_LIMIT: map1,
@@ -182,7 +182,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
     c28 = true;
     c29 = false;
     logs = logs.logs;
-    const items = [];
+    items = [];
     c1 = 0;
     const reversed = logs.reverse();
     const item = reversed.forEach((id) => {
@@ -416,7 +416,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       c28 = false;
     }
     if (logs.length > 0) {
-      let items = [];
+      items = [];
       c1 = 0;
       const reversed = logs.reverse();
       const item = reversed.forEach((id) => {

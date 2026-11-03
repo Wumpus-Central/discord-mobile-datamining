@@ -12,14 +12,14 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
-const PremiumConstants = fn(1385);
+({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
+const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -49,7 +49,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   closure_10 = undefined;
   const tmp3 = closure_15(giftOptions(giftingOrigin[11])().insets.bottom);
   const GiftingBadgeExperiment = require("GiftingBadgeExperiment").GiftingBadgeExperiment;
-  const items = [closure_7];
+  items = [closure_7];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {
       nextTier: closure_7.getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
@@ -197,7 +197,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

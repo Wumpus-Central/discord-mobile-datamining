@@ -17,10 +17,10 @@ function constructOrbChallengeItemFromUserAchievement(achievementIdentifier) {
 }
 const items = [
   null,
-  fn(15630).UserAchievementStatus.NONE,
-  fn(15630).UserAchievementStatus.IN_PROGRESS,
-  fn(15630).UserAchievementStatus.ELIGIBLE,
-  fn(15630).UserAchievementStatus.COMPLETED,
+  fn(15772).UserAchievementStatus.NONE,
+  fn(15772).UserAchievementStatus.IN_PROGRESS,
+  fn(15772).UserAchievementStatus.ELIGIBLE,
+  fn(15772).UserAchievementStatus.COMPLETED,
 ];
 const set = new Set(items);
 const ClientUnreadNotificationType = {
@@ -86,7 +86,7 @@ class OrbChallengesStore extends Store {
       nitroGatedOrbMultiplier: null,
       achievementUnreadState: null,
       lastFetchedPremiumType: "flexDirection",
-      userOpenedWalletViaProfileDCF: "admin-actions",
+      userOpenedWalletViaProfileDCF: "woman_with_headscarf_tone3",
     };
     return tmp21;
   }
@@ -131,7 +131,7 @@ prototype["handleReset"] = function handleReset() {
     nitroGatedOrbMultiplier: null,
     achievementUnreadState: null,
     lastFetchedPremiumType: "flexDirection",
-    userOpenedWalletViaProfileDCF: "admin-actions",
+    userOpenedWalletViaProfileDCF: "woman_with_headscarf_tone3",
   };
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
@@ -242,7 +242,7 @@ prototype["setUserOpenedWalletViaProfileDCF"] = function setUserOpenedWalletViaP
 };
 Object.defineProperty(prototype, "orbChallengesDisplayError", {
   get: function orbChallengesDisplayError() {
-    const state = this.state;
+    state = this.state;
     const fetchChallengesError = state.fetchChallengesError;
     const values = Object.values(state.claimChallengeErrorMap);
     const found = values.find((item) => null != item);
@@ -281,7 +281,7 @@ Object.defineProperty(prototype, "nitroGatedOrbMultiplier", {
 });
 Object.defineProperty(prototype, "hasUnclaimedAchievements", {
   get: function hasUnclaimedAchievements() {
-    const state = this.state;
+    state = this.state;
     if (this.state.hasFetchedChallenges) {
       const challenges = state.challenges;
       let someResult = challenges.some(

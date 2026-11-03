@@ -8,17 +8,17 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(13724).INITIAL_STATE;
-const DiceRollConstants = fn(9771);
+const INITIAL_STATE = fn(13855).INITIAL_STATE;
+const DiceRollConstants = fn(9903);
 ({
   AFTER_ROLL_DELAY_MS: closure_7,
   ALLOWED_DICE_SIDES_SET: closure_8,
   DEFAULT_DICE_SIDES: closure_9,
-  DISMISS_DELAY_MS: c10,
+  DISMISS_DELAY_MS: closure_10,
   MAX_DICE_COUNT: closure_11,
   ROLL_DURATION_MS: closure_12,
 } = DiceRollConstants);
-const MessageSendLocation = fn(5019).MessageSendLocation;
+const MessageSendLocation = fn(5146).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -54,7 +54,7 @@ class DiceRollLifecycleManager extends tmp3 {
       }
       let num3;
       closure_2 = undefined;
-      let items;
+      items = undefined;
       if (channelId.getChannelId() === channelId) {
         if (null == state.getState().channelId) {
           num3 = 42;

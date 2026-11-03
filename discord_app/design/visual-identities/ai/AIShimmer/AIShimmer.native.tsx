@@ -1,13 +1,15 @@
 // discord_app/design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import Text_Text from "../../../components/Text/native/Text.tsx";
+import AIGlyphText from "../AIGlyphText.native.tsx";
 import AIShimmerTypes from "AIShimmerTypes.tsx";
 import waveTransition2 from "waveTransition.tsx";
 import createWaveTransition from "createWaveTransition.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const _modDef1652 = _mod1652;
 
 require = fn;
 function AIShimmerInner(arg0) {
@@ -16,11 +18,11 @@ function AIShimmerInner(arg0) {
   pass = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  ref = undefined;
+  fontScale = undefined;
   let bound;
   closure_7 = undefined;
   ({ text, delay, initialDelay, duration, onComplete, onStart, style, ref } = arg0);
-  const fontScale = ref.getFontScale();
+  fontScale = fontScale.getFontScale();
   const tmp4 = sharedValue(pass[7]).TextStyleSheet[variant];
   const result = tmp4.fontSize * fontScale;
   const result1 = result * sharedValue(pass[8]).GLYPH_FONT_SCALE;
@@ -31,7 +33,7 @@ function AIShimmerInner(arg0) {
   [pass, _slicedToArray] = noop.useState(null);
   const obj3 = sharedValue(pass[9]);
   [tmp13, c4] = noop.useState(0);
-  ref = noop.useRef(null);
+  fontScale = noop.useRef(null);
   let num = trailingWidth;
   if (trailingWidth == null) {
     num = 0;
@@ -65,7 +67,7 @@ function AIShimmerInner(arg0) {
       return waveTransition;
     },
   }).current;
-  const items = [bound];
+  items = [bound];
   const effect = obj.useEffect(() => {
     closure_7.current = bound;
     const current = ref.current;
@@ -158,6 +160,7 @@ function AIShimmerInner(arg0) {
 }
 function ShimmerLayers(pass) {
   pass = pass.pass;
+  _require = pass;
   ({
     animationProgress,
     glyphCount,
@@ -174,110 +177,138 @@ function ShimmerLayers(pass) {
   const merged = Object.assign(obj);
   const merged1 = Object.assign(obj);
   const obj4 = { animationProgress, crossFadeOpacity };
-  let obj2 = { animationProgress, slot: "A" };
-  let obj3 = { animationProgress, slot: "B" };
+  const obj2 = { animationProgress, slot: "A" };
+  const obj3 = { animationProgress, slot: "B" };
   const tmp2 = useAnimatedSlotStyles({ animationProgress, slot: "A" });
   const merged2 = Object.assign(obj);
-  const animationProgress2 = obj4.animationProgress;
-  closure_129_0 = animationProgress2;
-  const crossFadeOpacity2 = obj4.crossFadeOpacity;
-  closure_129_1 = crossFadeOpacity2;
-  const animationWidth2 = obj4.animationWidth;
-  closure_129_2 = animationWidth2;
   const clippingWindowWidth2 = obj4.clippingWindowWidth;
-  closure_129_3 = clippingWindowWidth2;
-  const overshoot2 = obj4.overshoot;
-  closure_129_4 = overshoot2;
+  ({
+    animationProgress: animationProgress2,
+    crossFadeOpacity: crossFadeOpacity2,
+    animationWidth: animationWidth2,
+    overshoot: overshoot2,
+  } = obj4);
   const tmp4 = useAnimatedSlotStyles({ animationProgress, slot: "B" });
-  const fn = function b() {
-    value = pass.get();
-    const diff = value - Math.floor(value);
-    const bandEdgesAtResult = waveTransition2.bandEdgesAt(diff, dependencyMap, noop);
-    const obj2 = { bandStart: bandEdgesAtResult.bandStart, bandEnd: bandEdgesAtResult.bandEnd, opacity: null };
-    const obj3 = waveTransition2;
-    obj2.opacity = obj3.glyphLayerOpacityAt(waveTransition2.easeTail(diff));
-    return obj2;
-  };
-  const obj5 = pass(5095);
-  fn.__closure = {
-    animationProgress: animationProgress2,
-    bandEdgesAt: pass(12787).bandEdgesAt,
-    animationWidth: animationWidth2,
-    overshoot: overshoot2,
-    glyphLayerOpacityAt: pass(12787).glyphLayerOpacityAt,
-    easeTail: pass(12787).easeTail,
-  };
-  fn.__workletHash = 5565898978148;
-  fn.__initData = __initData9;
-  const derivedValue = obj5.useDerivedValue(fn);
-  closure_129_5 = derivedValue;
-  const obj6 = {
-    animationProgress: animationProgress2,
-    bandEdgesAt: pass(12787).bandEdgesAt,
-    animationWidth: animationWidth2,
-    overshoot: overshoot2,
-    glyphLayerOpacityAt: pass(12787).glyphLayerOpacityAt,
-    easeTail: pass(12787).easeTail,
-  };
-  class T {
+  items = [
+    closure_24,
+    animationProgress2,
+    require("waveTransition").bandEdgesAt,
+    animationWidth2,
+    overshoot2,
+    require("waveTransition").glyphLayerOpacityAt,
+    require("waveTransition").easeTail,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  noop = undefined;
+  c5 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items;
+  class AIShimmerNativeTsx9 {
     constructor() {
-      obj = { opacity: closure_1_1.get() };
+      value = closure_0.get();
+      diff = value - Math.floor(value);
+      tmp3 = closure_1(diff, closure_2, closure_3);
+      obj = { bandStart: tmp3.bandStart, bandEnd: tmp3.bandEnd, opacity: closure_4(closure_5(diff)) };
       return obj;
     }
   }
-  T.__closure = { crossFadeOpacity: crossFadeOpacity2 };
-  T.__workletHash = 1960911197633;
-  T.__initData = __initData10;
-  const animatedStyle = pass(5095).useAnimatedStyle(T);
-  const obj7 = pass(5095);
-  const fn2 = function f() {
-    value = closure_1_5.get();
-    const obj = { opacity: value.opacity, transform: null };
-    const items = [{ translateX: value.bandStart }];
-    obj.transform = items;
-    return obj;
-  };
-  fn2.__closure = { bandState: derivedValue };
-  fn2.__workletHash = 1697100745255;
-  fn2.__initData = __initData11;
-  const animatedStyle1 = pass(5095).useAnimatedStyle(fn2);
-  const obj8 = pass(5095);
-  const fn3 = function y() {
-    value = closure_1_5.get();
-    const obj = { transform: null };
-    const items = [{ translateX: value.bandEnd - value.bandStart - _slicedToArray }];
-    obj.transform = items;
-    return obj;
-  };
-  fn3.__closure = { bandState: derivedValue, clippingWindowWidth: clippingWindowWidth2 };
-  fn3.__workletHash = 14480924886008;
-  fn3.__initData = __initData12;
-  const animatedStyle2 = pass(5095).useAnimatedStyle(fn3);
-  const obj9 = pass(5095);
-  const fn4 = function _() {
-    const obj = { transform: null };
-    const items = [{ translateX: _slicedToArray - closure_1_5.get().bandEnd }];
-    obj.transform = items;
-    return obj;
-  };
-  fn4.__closure = { bandState: derivedValue, clippingWindowWidth: clippingWindowWidth2 };
-  fn4.__workletHash = 9956205645387;
-  fn4.__initData = __initData13;
-  let items = [pass.slotA];
-  const animatedStyle3 = pass(5095).useAnimatedStyle(fn4);
-  const items1 = [pass.slotB];
-  const memo = noop.useMemo(() => waveTransition2.shiftedLineFor(pass.slotA), items);
-  const memo1 = noop.useMemo(() => waveTransition2.shiftedLineFor(pass.slotB), items1);
-  const obj11 = {
+  const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14];
+  AIShimmerNativeTsx9.__closure = items1;
+  AIShimmerNativeTsx9.__workletHash = 5793871475453;
+  AIShimmerNativeTsx9.__initData = tmp8;
+  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(AIShimmerNativeTsx9);
+  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_25, crossFadeOpacity2];
+  _require = undefined;
+  [tmp16, tmp17] = items2;
+  class AIShimmerNativeTsx10 {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  const items3 = [tmp17];
+  AIShimmerNativeTsx10.__closure = items3;
+  AIShimmerNativeTsx10.__workletHash = 4137951391928;
+  AIShimmerNativeTsx10.__initData = tmp16;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx10);
+  const tmp6Result = require("../../../../../_runtime/metro/01652__.js");
+  const items4 = [closure_26, derivedValue];
+  _require = undefined;
+  [tmp19, tmp20] = items4;
+  class AIShimmerNativeTsx11 {
+    constructor() {
+      value = closure_0.get();
+      obj = { opacity: value.opacity, transform: null };
+      obj1 = { translateX: value.bandStart };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items5 = [tmp20];
+  AIShimmerNativeTsx11.__closure = items5;
+  AIShimmerNativeTsx11.__workletHash = 14375697888926;
+  AIShimmerNativeTsx11.__initData = tmp19;
+  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx11);
+  const tmp6Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const items6 = [closure_27, derivedValue, clippingWindowWidth2];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp22, tmp23, tmp24] = items6;
+  class AIShimmerNativeTsx12 {
+    constructor() {
+      value = closure_0.get();
+      obj = { transform: null };
+      obj1 = { translateX: value.bandEnd - value.bandStart - closure_1 };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items7 = [tmp23, tmp24];
+  AIShimmerNativeTsx12.__closure = items7;
+  AIShimmerNativeTsx12.__workletHash = 1324009353313;
+  AIShimmerNativeTsx12.__initData = tmp22;
+  const animatedStyle2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx12);
+  const tmp6Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const items8 = [closure_28, derivedValue, clippingWindowWidth2];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp26, tmp27, tmp28] = items8;
+  class AIShimmerNativeTsx13 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateX: closure_1 - closure_0.get().bandEnd };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items9 = [tmp27, tmp28];
+  AIShimmerNativeTsx13.__closure = items9;
+  AIShimmerNativeTsx13.__workletHash = 1661222839154;
+  AIShimmerNativeTsx13.__initData = tmp26;
+  const items10 = [pass.slotA];
+  const animatedStyle3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx13);
+  const items11 = [pass.slotB];
+  const memo = noop.useMemo(() => waveTransition2.shiftedLineFor(_undefined.slotA), items10);
+  const memo1 = noop.useMemo(() => waveTransition2.shiftedLineFor(_undefined.slotB), items11);
+  const obj6 = {
     style: null,
     pointerEvents: "none",
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const items2 = [styles.layer, { width: animationWidth }, animatedStyle];
-  obj11.style = items2;
-  const items3 = [
+  const items12 = [styles.layer, { width: animationWidth }, animatedStyle];
+  obj6.style = items12;
+  const items13 = [
     closure_7(ShimmerTextSlot, {
       text: pass.slotA,
       shiftedText: memo,
@@ -299,13 +330,13 @@ function ShimmerLayers(pass) {
       styles,
     }),
   ];
-  const obj14 = { style: null, children: null };
-  const items4 = [styles.window, { width: clippingWindowWidth }, animatedStyle1];
-  obj14.style = items4;
-  const obj15 = { style: null, children: null };
-  const items5 = [styles.window, { width: clippingWindowWidth }, animatedStyle2];
-  obj15.style = items5;
-  const obj16 = {
+  const obj9 = { style: null, children: null };
+  const items14 = [styles.window, { width: clippingWindowWidth }, animatedStyle1];
+  obj9.style = items14;
+  const obj10 = { style: null, children: null };
+  const items15 = [styles.window, { width: clippingWindowWidth }, animatedStyle2];
+  obj10.style = items15;
+  const obj11 = {
     style: null,
     children: closure_7(closure_16, {
       animationProgress,
@@ -317,20 +348,20 @@ function ShimmerLayers(pass) {
       style: styles.glyphLayer,
     }),
   };
-  const items6 = [styles.layer, { width: glyphCount * glyphFontSize }, animatedStyle3];
-  obj16.style = items6;
-  obj15.children = closure_7(ReanimatedRexportDefault.View, obj16);
-  obj14.children = closure_7(ReanimatedRexportDefault.View, obj15);
-  items3[2] = closure_7(ReanimatedRexportDefault.View, obj14);
-  obj11.children = items3;
-  return closure_8(ReanimatedRexportDefault.View, obj11);
+  const items16 = [styles.layer, { width: glyphCount * glyphFontSize }, animatedStyle3];
+  obj11.style = items16;
+  obj10.children = closure_7(_modDef1652.View, obj11);
+  obj9.children = closure_7(_modDef1652.View, obj10);
+  items13[2] = closure_7(_modDef1652.View, obj9);
+  obj6.children = items13;
+  return closure_8(_modDef1652.View, obj6);
 }
 function ShimmerTextSlot(arg0) {
   ({ variant, color, animationWidth, clippingWindowWidth, animatedStyles, styles } = arg0);
   const obj = { children: null };
   ({ text, shiftedText } = arg0);
   const obj2 = { style: null, children: null };
-  const items = [styles.window, { width: clippingWindowWidth }, animatedStyles.plainWindow];
+  items = [styles.window, { width: clippingWindowWidth }, animatedStyles.plainWindow];
   obj2.style = items;
   const obj3 = {
     style: null,
@@ -338,8 +369,8 @@ function ShimmerTextSlot(arg0) {
   };
   const items1 = [styles.layer, { width: animationWidth }, animatedStyles.plainText];
   obj3.style = items1;
-  obj2.children = React5(ReanimatedRexportDefault.View, obj3);
-  const items2 = [React5(ReanimatedRexportDefault.View, obj2)];
+  obj2.children = React5(_modDef1652.View, obj3);
+  const items2 = [React5(_modDef1652.View, obj2)];
   const obj4 = { style: null, children: null };
   const items3 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedOuterWindow];
   obj4.style = items3;
@@ -352,147 +383,184 @@ function ShimmerTextSlot(arg0) {
   };
   const items5 = [styles.layer, { width: animationWidth }, animatedStyles.shiftedText];
   obj6.style = items5;
-  obj5.children = React5(ReanimatedRexportDefault.View, obj6);
-  obj4.children = React5(ReanimatedRexportDefault.View, obj5);
-  items2[1] = React5(ReanimatedRexportDefault.View, obj4);
+  obj5.children = React5(_modDef1652.View, obj6);
+  obj4.children = React5(_modDef1652.View, obj5);
+  items2[1] = React5(_modDef1652.View, obj4);
   obj.children = items2;
   return React6(React7, obj);
 }
-function useAnimatedSlotStyles(animationProgress) {
-  animationProgress = animationProgress.animationProgress;
-  const slot = animationProgress.slot;
-  const animationWidth = animationProgress.animationWidth;
-  const clippingWindowWidth = animationProgress.clippingWindowWidth;
-  const overshoot = animationProgress.overshoot;
-  const fn = function c() {
-    value = animationProgress.get();
-    const rounded = Math.floor(value);
-    const obj = {};
-    const merged = Object.assign(waveTransition2.bandEdgesAt(value - rounded, animationWidth, overshoot));
-    obj.isIncoming = createWaveTransition.incomingSlotForPass(rounded) === slot;
-    return obj;
-  };
-  let obj = animationProgress(animationWidth[9]);
-  fn.__closure = {
+function useAnimatedSlotStyles(clippingWindowWidth) {
+  clippingWindowWidth = clippingWindowWidth.clippingWindowWidth;
+  ({ animationProgress, slot, animationWidth, overshoot } = clippingWindowWidth);
+  items = [
+    closure_17,
     animationProgress,
-    bandEdgesAt: animationProgress(animationWidth[8]).bandEdgesAt,
+    waveTransition2.bandEdgesAt,
     animationWidth,
     overshoot,
-    incomingSlotForPass: animationProgress(animationWidth[11]).incomingSlotForPass,
+    createWaveTransition.incomingSlotForPass,
     slot,
-  };
-  fn.__workletHash = 13081262734940;
-  fn.__initData = __initData3;
-  const derivedValue = obj.useDerivedValue(fn);
-  const obj3 = {
-    plainWindow: null,
-    plainText: null,
-    shiftedOuterWindow: null,
-    shiftedInnerWindow: null,
-    shiftedText: null,
-  };
-  let obj2 = {
-    animationProgress,
-    bandEdgesAt: animationProgress(animationWidth[8]).bandEdgesAt,
-    animationWidth,
-    overshoot,
-    incomingSlotForPass: animationProgress(animationWidth[11]).incomingSlotForPass,
-    slot,
-  };
-  const fn2 = function h() {
-    value = derivedValue.get();
-    let outgoingTextStart = value.outgoingTextStart;
-    if (value.isIncoming) {
-      outgoingTextStart = tmp2 - clippingWindowWidth;
-    }
-    const obj = { transform: null };
-    const items = [{ translateX: outgoingTextStart }];
-    obj.transform = items;
-    return obj;
-  };
-  fn2.__closure = { slotState: derivedValue, clippingWindowWidth };
-  fn2.__workletHash = 9591569129869;
-  fn2.__initData = __initData4;
-  obj3.plainWindow = animationProgress(animationWidth[9]).useAnimatedStyle(fn2);
-  const obj4 = animationProgress(animationWidth[9]);
-  const fn3 = function u() {
-    value = derivedValue.get();
-    if (value.isIncoming) {
-      let diff = clippingWindowWidth - tmp2;
-    } else {
-      diff = -tmp3;
-    }
-    const obj = { transform: null };
-    const items = [{ translateX: diff }];
-    obj.transform = items;
-    return obj;
-  };
-  fn3.__closure = { slotState: derivedValue, clippingWindowWidth };
-  fn3.__workletHash = 13527163592001;
-  fn3.__initData = __initData5;
-  obj3.plainText = animationProgress(animationWidth[9]).useAnimatedStyle(fn3);
-  const obj5 = animationProgress(animationWidth[9]);
-  class S {
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items;
+  class AIShimmerNativeTsx3 {
     constructor() {
-      value = closure_5.get();
-      bandEnd = value.bandEnd;
-      obj = { opacity: closure_0(closure_2[8]).SHIFTED_OPACITY, transform: null };
-      ({ bandStart, isIncoming } = value);
-      if (isIncoming) {
-        bandEnd = bandStart;
+      value = closure_0.get();
+      rounded = Math.floor(value);
+      obj = {};
+      merged = Object.assign(closure_1(value - rounded, closure_2, closure_3));
+      obj.isIncoming = closure_4(rounded) === closure_5;
+      return obj;
+    }
+  }
+  const items1 = [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9];
+  AIShimmerNativeTsx3.__closure = items1;
+  AIShimmerNativeTsx3.__workletHash = 1280666156005;
+  AIShimmerNativeTsx3.__initData = tmp3;
+  const derivedValue = _mod1652.useDerivedValue(AIShimmerNativeTsx3);
+  const items2 = [closure_18, derivedValue, clippingWindowWidth];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp11, tmp12, tmp13] = items2;
+  class AIShimmerNativeTsx4 {
+    constructor() {
+      value = closure_0.get();
+      outgoingTextStart = value.outgoingTextStart;
+      if (value.isIncoming) {
+        tmp3 = closure_1;
+        outgoingTextStart = tmp2 - closure_1;
       }
+      obj = { transform: null };
       items = [];
-      items[0] = { translateX: bandEnd };
+      items[0] = { translateX: outgoingTextStart };
       obj.transform = items;
       return obj;
     }
   }
-  const obj6 = animationProgress(animationWidth[9]);
-  S.__closure = { slotState: derivedValue, SHIFTED_OPACITY: animationProgress(animationWidth[8]).SHIFTED_OPACITY };
-  S.__workletHash = 9376178759405;
-  S.__initData = __initData6;
-  obj3.shiftedOuterWindow = obj6.useAnimatedStyle(S);
-  const obj7 = { slotState: derivedValue, SHIFTED_OPACITY: animationProgress(animationWidth[8]).SHIFTED_OPACITY };
-  const fn4 = function p() {
-    value = derivedValue.get();
-    const obj = { transform: null };
-    const items = [
-      {
+  const items3 = [tmp12, tmp13];
+  AIShimmerNativeTsx4.__closure = items3;
+  AIShimmerNativeTsx4.__workletHash = 9334787013812;
+  AIShimmerNativeTsx4.__initData = tmp11;
+  const animatedStyle = _mod1652.useAnimatedStyle(AIShimmerNativeTsx4);
+  const tmpResult = _mod1652;
+  const items4 = [closure_19, derivedValue, clippingWindowWidth];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp15, tmp16, tmp17] = items4;
+  class AIShimmerNativeTsx5 {
+    constructor() {
+      value = closure_0.get();
+      if (value.isIncoming) {
+        tmp5 = closure_1;
+        diff = closure_1 - tmp2;
+      } else {
+        diff = -tmp3;
+      }
+      obj = { transform: null };
+      items = [];
+      items[0] = { translateX: diff };
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items5 = [tmp16, tmp17];
+  AIShimmerNativeTsx5.__closure = items5;
+  AIShimmerNativeTsx5.__workletHash = 10286408218584;
+  AIShimmerNativeTsx5.__initData = tmp15;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx5);
+  const tmpResult5 = _mod1652;
+  const items6 = [closure_20, derivedValue, waveTransition2.SHIFTED_OPACITY];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp19, tmp20, tmp21] = items6;
+  class AIShimmerNativeTsx6 {
+    constructor() {
+      value = closure_0.get();
+      bandStart = value.bandEnd;
+      obj = { opacity: closure_1, transform: null };
+      if (value.isIncoming) {
+        bandStart = value.bandStart;
+      }
+      items = [];
+      items[0] = { translateX: bandStart };
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items7 = [tmp20, tmp21];
+  AIShimmerNativeTsx6.__closure = items7;
+  AIShimmerNativeTsx6.__workletHash = 9677475424724;
+  AIShimmerNativeTsx6.__initData = tmp19;
+  const animatedStyle2 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx6);
+  const tmpResult6 = _mod1652;
+  const items8 = [closure_21, derivedValue, clippingWindowWidth];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp23, tmp24, tmp25] = items8;
+  class AIShimmerNativeTsx7 {
+    constructor() {
+      value = closure_0.get();
+      obj = { transform: null };
+      obj1 = {
         translateX:
           (value.isIncoming ? value.incomingTextEnd - value.bandStart : value.outgoingTextStart - value.bandEnd) -
-          clippingWindowWidth,
-      },
-    ];
-    obj.transform = items;
-    return obj;
-  };
-  fn4.__closure = { slotState: derivedValue, clippingWindowWidth };
-  fn4.__workletHash = 5550998645378;
-  fn4.__initData = __initData7;
-  obj3.shiftedInnerWindow = animationProgress(animationWidth[9]).useAnimatedStyle(fn4);
-  const obj8 = animationProgress(animationWidth[9]);
-  const fn5 = function _() {
-    value = derivedValue.get();
-    let incomingTextEnd = value.outgoingTextStart;
-    if (value.isIncoming) {
-      incomingTextEnd = value.incomingTextEnd;
+          closure_1,
+      };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
     }
-    const obj = { transform: null };
-    const items = [{ translateX: clippingWindowWidth - incomingTextEnd }];
-    obj.transform = items;
-    return obj;
+  }
+  const items9 = [tmp24, tmp25];
+  AIShimmerNativeTsx7.__closure = items9;
+  AIShimmerNativeTsx7.__workletHash = 15141224175259;
+  AIShimmerNativeTsx7.__initData = tmp23;
+  const animatedStyle3 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx7);
+  const tmpResult7 = _mod1652;
+  const items10 = [closure_22, derivedValue, clippingWindowWidth];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp27, tmp28, tmp29] = items10;
+  class AIShimmerNativeTsx8 {
+    constructor() {
+      value = closure_0.get();
+      incomingTextEnd = value.outgoingTextStart;
+      tmp2 = closure_1;
+      if (value.isIncoming) {
+        incomingTextEnd = value.incomingTextEnd;
+      }
+      obj = { transform: null };
+      obj1 = { translateX: tmp2 - incomingTextEnd };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items11 = [tmp28, tmp29];
+  AIShimmerNativeTsx8.__closure = items11;
+  AIShimmerNativeTsx8.__workletHash = 11355419187929;
+  AIShimmerNativeTsx8.__initData = tmp27;
+  const tmpResult8 = _mod1652;
+  return {
+    plainWindow: animatedStyle,
+    plainText: animatedStyle1,
+    shiftedOuterWindow: animatedStyle2,
+    shiftedInnerWindow: animatedStyle3,
+    shiftedText: _mod1652.useAnimatedStyle(AIShimmerNativeTsx8),
   };
-  fn5.__closure = { slotState: derivedValue, clippingWindowWidth };
-  fn5.__workletHash = 5116410661440;
-  fn5.__initData = __initData8;
-  obj3.shiftedText = animationProgress(animationWidth[9]).useAnimatedStyle(fn5);
-  return obj3;
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((height, height2) => {
   const obj = {
     container: { alignSelf: "flex-start", height },
@@ -505,99 +573,101 @@ let closure_10 = createStyles.createStyles((height, height2) => {
   obj.glyphLayer = rect;
   return obj;
 });
-const __initData = {
-  code: "function AIShimmerNativeTsx1(){const{animationProgress,BAND_UPDATES_PER_PASS,bandGlyphsAt,slotCount,glyphChoices,overshootInSlots}=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const updateStep=Math.floor(passProgress*BAND_UPDATES_PER_PASS)/BAND_UPDATES_PER_PASS;return bandGlyphsAt(updateStep,slotCount,glyphChoices,overshootInSlots);}",
+let closure_14 = {
+  code: "(function AIShimmerNativeTsx1(){let[animationProgress,BAND_UPDATES_PER_PASS,bandGlyphsAt,slotCount,glyphChoices,overshootInSlots]=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const updateStep=Math.floor(passProgress*BAND_UPDATES_PER_PASS)/BAND_UPDATES_PER_PASS;return bandGlyphsAt(updateStep,slotCount,glyphChoices,overshootInSlots);})",
 };
-const __initData2 = {
-  code: "function AIShimmerNativeTsx2(next,previous){const{runOnJS,setGlyphs}=this.__closure;if(next===previous)return;runOnJS(setGlyphs)(next);}",
+let closure_15 = {
+  code: "(function AIShimmerNativeTsx2(next,previous){let[scheduleOnRN,setGlyphs]=this.__closure;if(next===previous)return;scheduleOnRN(setGlyphs,next);})",
 };
-let closure_16 = noop.memo(function GlyphBand(animationProgress) {
-  animationProgress = animationProgress.animationProgress;
-  const slotCount = animationProgress.slotCount;
-  const overshootInSlots = animationProgress.overshootInSlots;
-  const glyphChoices = animationProgress.glyphChoices;
-  noop = undefined;
-  ({ fontSize, color, style } = animationProgress);
-  const children = glyphChoices(noop.useState(glyphChoices), 2);
-  noop = tmp2;
-  class T {
+let closure_16 = noop.memo(function GlyphBand(glyphChoices) {
+  glyphChoices = glyphChoices.glyphChoices;
+  ({ animationProgress, slotCount, overshootInSlots, fontSize, color, style } = glyphChoices);
+  [tmp2, tmp3] = noop.useState(glyphChoices);
+  const tmp = _slicedToArray(noop.useState(glyphChoices), 2);
+  items = [closure_14, animationProgress, 30, waveTransition2.bandGlyphsAt, slotCount, glyphChoices, overshootInSlots];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items;
+  class AIShimmerNativeTsx1 {
     constructor() {
-      value = animationProgress.get();
-      result = Math.floor(30 * (value - Math.floor(value))) / 30;
-      obj = closure_0(closure_2[8]);
-      return obj.bandGlyphsAt(result, slotCount, glyphChoices, overshootInSlots);
+      value = closure_0.get();
+      return closure_2(
+        Math.floor((value - Math.floor(value)) * closure_1) / closure_1,
+        closure_3,
+        closure_4,
+        closure_5,
+      );
     }
   }
-  let obj = animationProgress(overshootInSlots[9]);
-  T.__closure = {
-    animationProgress,
-    BAND_UPDATES_PER_PASS: 30,
-    bandGlyphsAt: animationProgress(overshootInSlots[8]).bandGlyphsAt,
-    slotCount,
-    glyphChoices,
-    overshootInSlots,
-  };
-  T.__workletHash = 7805477121955;
-  T.__initData = __initData;
-  const fn = function _(arg0, arg1) {
-    if (arg0 !== arg1) {
-      ReanimatedRexport.runOnJS(closure_4)(arg0);
+  const items1 = [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
+  AIShimmerNativeTsx1.__closure = items1;
+  AIShimmerNativeTsx1.__workletHash = 11538958195002;
+  AIShimmerNativeTsx1.__initData = tmp6;
+  const items2 = [closure_15, _mod1705.scheduleOnRN, tmp3];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp13, tmp14, tmp15] = items2;
+  class AIShimmerNativeTsx2 {
+    constructor(arg0, arg1) {
+      if (glyphChoices !== arg1) {
+        tmp = closure_0;
+        tmp2 = closure_1;
+        tmp3 = closure_0(closure_1, glyphChoices);
+      }
+      return;
     }
-  };
-  const obj2 = {
-    animationProgress,
-    BAND_UPDATES_PER_PASS: 30,
-    bandGlyphsAt: animationProgress(overshootInSlots[8]).bandGlyphsAt,
-    slotCount,
-    glyphChoices,
-    overshootInSlots,
-  };
-  fn.__closure = { runOnJS: animationProgress(overshootInSlots[9]).runOnJS, setGlyphs: children[1] };
-  fn.__workletHash = 1613883007105;
-  fn.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(T, fn);
-  return closure_7(animationProgress(overshootInSlots[12]).AIGlyphText, {
+  }
+  const items3 = [tmp14, tmp15];
+  AIShimmerNativeTsx2.__closure = items3;
+  AIShimmerNativeTsx2.__workletHash = 3832507172693;
+  AIShimmerNativeTsx2.__initData = tmp13;
+  const animatedReaction = _mod1652.useAnimatedReaction(AIShimmerNativeTsx1, AIShimmerNativeTsx2);
+  return React5(AIGlyphText.AIGlyphText, {
     size,
     color,
     allowFontScaling: false,
     numberOfLines: 1,
     ellipsizeMode: "clip",
     style,
-    children: children[0],
+    children,
   });
 });
-const __initData3 = {
-  code: "function AIShimmerNativeTsx3(){const{animationProgress,bandEdgesAt,animationWidth,overshoot,incomingSlotForPass,slot}=this.__closure;const totalProgress=animationProgress.get();const passIndex=Math.floor(totalProgress);const passProgress=totalProgress-passIndex;return{...bandEdgesAt(passProgress,animationWidth,overshoot),isIncoming:incomingSlotForPass(passIndex)===slot};}",
+let closure_17 = {
+  code: "(function AIShimmerNativeTsx3(){let[animationProgress,bandEdgesAt,animationWidth,overshoot,incomingSlotForPass,slot]=this.__closure;const totalProgress=animationProgress.get();const passIndex=Math.floor(totalProgress);const passProgress=totalProgress-passIndex;return{...bandEdgesAt(passProgress,animationWidth,overshoot),isIncoming:incomingSlotForPass(passIndex)===slot};})",
 };
-const __initData4 = {
-  code: "function AIShimmerNativeTsx4(){const{slotState,clippingWindowWidth}=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:isIncoming?incomingTextEnd-clippingWindowWidth:outgoingTextStart}]};}",
+let closure_18 = {
+  code: "(function AIShimmerNativeTsx4(){let[slotState,clippingWindowWidth]=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:isIncoming?incomingTextEnd-clippingWindowWidth:outgoingTextStart}]};})",
 };
-const __initData5 = {
-  code: "function AIShimmerNativeTsx5(){const{slotState,clippingWindowWidth}=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:isIncoming?clippingWindowWidth-incomingTextEnd:-outgoingTextStart}]};}",
+let closure_19 = {
+  code: "(function AIShimmerNativeTsx5(){let[slotState,clippingWindowWidth]=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:isIncoming?clippingWindowWidth-incomingTextEnd:-outgoingTextStart}]};})",
 };
-const __initData6 = {
-  code: "function AIShimmerNativeTsx6(){const{slotState,SHIFTED_OPACITY}=this.__closure;const{bandStart:bandStart,bandEnd:bandEnd,isIncoming:isIncoming}=slotState.get();return{opacity:SHIFTED_OPACITY,transform:[{translateX:isIncoming?bandStart:bandEnd}]};}",
+let closure_20 = {
+  code: "(function AIShimmerNativeTsx6(){let[slotState,SHIFTED_OPACITY]=this.__closure;const{bandStart:bandStart,bandEnd:bandEnd,isIncoming:isIncoming}=slotState.get();return{opacity:SHIFTED_OPACITY,transform:[{translateX:isIncoming?bandStart:bandEnd}]};})",
 };
-const __initData7 = {
-  code: "function AIShimmerNativeTsx7(){const{slotState,clippingWindowWidth}=this.__closure;const{incomingTextEnd:incomingTextEnd,bandStart:bandStart,bandEnd:bandEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();const shiftedWidth=isIncoming?incomingTextEnd-bandStart:outgoingTextStart-bandEnd;return{transform:[{translateX:shiftedWidth-clippingWindowWidth}]};}",
+let closure_21 = {
+  code: "(function AIShimmerNativeTsx7(){let[slotState,clippingWindowWidth]=this.__closure;const{incomingTextEnd:incomingTextEnd,bandStart:bandStart,bandEnd:bandEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();const shiftedWidth=isIncoming?incomingTextEnd-bandStart:outgoingTextStart-bandEnd;return{transform:[{translateX:shiftedWidth-clippingWindowWidth}]};})",
 };
-const __initData8 = {
-  code: "function AIShimmerNativeTsx8(){const{slotState,clippingWindowWidth}=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:clippingWindowWidth-(isIncoming?incomingTextEnd:outgoingTextStart)}]};}",
+let closure_22 = {
+  code: "(function AIShimmerNativeTsx8(){let[slotState,clippingWindowWidth]=this.__closure;const{incomingTextEnd:incomingTextEnd,outgoingTextStart:outgoingTextStart,isIncoming:isIncoming}=slotState.get();return{transform:[{translateX:clippingWindowWidth-(isIncoming?incomingTextEnd:outgoingTextStart)}]};})",
 };
-const __initData9 = {
-  code: "function AIShimmerNativeTsx9(){const{animationProgress,bandEdgesAt,animationWidth,overshoot,glyphLayerOpacityAt,easeTail}=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const{bandStart:bandStart,bandEnd:bandEnd}=bandEdgesAt(passProgress,animationWidth,overshoot);return{bandStart:bandStart,bandEnd:bandEnd,opacity:glyphLayerOpacityAt(easeTail(passProgress))};}",
+let closure_24 = {
+  code: "(function AIShimmerNativeTsx9(){let[animationProgress,bandEdgesAt,animationWidth,overshoot,glyphLayerOpacityAt,easeTail]=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const{bandStart:bandStart,bandEnd:bandEnd}=bandEdgesAt(passProgress,animationWidth,overshoot);return{bandStart:bandStart,bandEnd:bandEnd,opacity:glyphLayerOpacityAt(easeTail(passProgress))};})",
 };
-const __initData10 = {
-  code: "function AIShimmerNativeTsx10(){const{crossFadeOpacity}=this.__closure;return{opacity:crossFadeOpacity.get()};}",
+let closure_25 = {
+  code: "(function AIShimmerNativeTsx10(){let[crossFadeOpacity]=this.__closure;return{opacity:crossFadeOpacity.get()};})",
 };
-const __initData11 = {
-  code: "function AIShimmerNativeTsx11(){const{bandState}=this.__closure;const{bandStart:bandStart,opacity:opacity}=bandState.get();return{opacity:opacity,transform:[{translateX:bandStart}]};}",
+let closure_26 = {
+  code: "(function AIShimmerNativeTsx11(){let[bandState]=this.__closure;const{bandStart:bandStart,opacity:opacity}=bandState.get();return{opacity:opacity,transform:[{translateX:bandStart}]};})",
 };
-const __initData12 = {
-  code: "function AIShimmerNativeTsx12(){const{bandState,clippingWindowWidth}=this.__closure;const{bandStart:bandStart,bandEnd:bandEnd}=bandState.get();return{transform:[{translateX:bandEnd-bandStart-clippingWindowWidth}]};}",
+let closure_27 = {
+  code: "(function AIShimmerNativeTsx12(){let[bandState,clippingWindowWidth]=this.__closure;const{bandStart:bandStart,bandEnd:bandEnd}=bandState.get();return{transform:[{translateX:bandEnd-bandStart-clippingWindowWidth}]};})",
 };
-const __initData13 = {
-  code: "function AIShimmerNativeTsx13(){const{bandState,clippingWindowWidth}=this.__closure;const{bandEnd:bandEnd}=bandState.get();return{transform:[{translateX:clippingWindowWidth-bandEnd}]};}",
+let closure_28 = {
+  code: "(function AIShimmerNativeTsx13(){let[bandState,clippingWindowWidth]=this.__closure;const{bandEnd:bandEnd}=bandState.get();return{transform:[{translateX:clippingWindowWidth-bandEnd}]};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx");

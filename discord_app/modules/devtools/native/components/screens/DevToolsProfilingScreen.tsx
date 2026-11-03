@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -44,13 +44,13 @@ export default function DevToolsProfilingScreen() {
     const obj4 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj5 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: callback };
     obj4.children = closure_5(TableRow.TableRow, obj5);
-    let items = [closure_5(TableRowGroup.TableRowGroup, obj4)];
+    items = [closure_5(TableRowGroup.TableRowGroup, obj4)];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((item) => {
       ({ mount, update, nestedUpdate } = componentRenderStats[item]);
       let obj = { title: "Component Profiler Target: '" + item + "'", hasIcons: false, children: null };
-      let items = [
+      items = [
         { stat: mount, label: "Mount" },
         { stat: update, label: "Update" },
         { stat: nestedUpdate, label: "Nested Update" },
@@ -59,7 +59,7 @@ export default function DevToolsProfilingScreen() {
         stat = stat.stat;
         const obj = { subLabel: null, label: null };
         const obj2 = { children: null };
-        const items = [
+        items = [
           closure_2_5(require("Text/Text").Text, {
             variant: "text-sm/medium",
             color: "text-subtle",

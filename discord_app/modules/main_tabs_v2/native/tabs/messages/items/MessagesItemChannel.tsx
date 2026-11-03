@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod7294 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7414 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod14422 from "../../../../../../../_runtime/metro/14422__.js";
+import _mod14553 from "../../../../../../../_runtime/metro/14553__.js";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ const jsx = fn(21).jsx;
 let closure_7 = noop.memo(function MessagesItemChannel(arg0) {
   ({ channelId: require, placeholderHeight } = arg0);
   ({ row, isPressed, setIsPressed } = arg0);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(require));
   let isPrivateResult;
   if (stateFromStores != null) {
@@ -46,8 +46,8 @@ const memoResult = noop.memo(function MessagesItemChannelFast(arg0) {
   return <closure_7 />;
 });
 const memoResult1 = noop.memo(function MessagesItemChannelFlash(channelId) {
-  const items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod7294.useRecyclingState(false, items), 2);
+  items = [channelId.channelId];
+  const tmp = _slicedToArray(_mod7414.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -80,7 +80,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod14422.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14553.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

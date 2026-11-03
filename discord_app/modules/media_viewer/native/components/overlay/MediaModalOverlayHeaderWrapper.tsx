@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
   const obj = {
     bar: {
@@ -29,7 +29,7 @@ export function MediaModalOverlayHeaderWrapper(arg0) {
   ({ children, style } = arg0);
   const rect = useSafeAreaInsetsDefault();
   const obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [closure_5(rect.top, rect.left, rect.right).bar, style];
+  items = [closure_5(rect.top, rect.left, rect.right).bar, style];
   obj.style = items;
   obj.children = children;
   return (

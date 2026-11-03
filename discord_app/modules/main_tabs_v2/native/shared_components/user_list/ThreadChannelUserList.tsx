@@ -22,7 +22,7 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
   closure_6 = undefined;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
   const analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
-  const items = [closure_6];
+  items = [closure_6];
   const stateFromStores = channelId(onUserPress[8]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = channelId(onUserPress[8]);
   const threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);

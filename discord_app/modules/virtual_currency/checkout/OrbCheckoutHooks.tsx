@@ -14,7 +14,7 @@ export function useOrbProductContext(skuId) {
   let shouldCaptureExceptions = skuId.shouldCaptureExceptions;
   let sKUOrbPrice;
   c3 = undefined;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = skuId(sKUOrbPrice[3]).useStateFromStores(items, () =>
     stateFromStores(sKUOrbPrice[4]).canUseShopDiscounts(currentUser.getCurrentUser()),
   );
@@ -93,7 +93,7 @@ export function useOrbCheckoutRedemption(skuId) {
   });
   const redeemVirtualCurrency = redeemVirtualCurrency1.redeemVirtualCurrency;
   const obj2 = { onRedeemVirtualCurrency: null, isRedeeming: isSubmitting, orbRedemptionError: error };
-  const items = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
+  items = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
   ({ isSubmitting, error } = redeemVirtualCurrency1);
   obj2.onRedeemVirtualCurrency = React3((arg0) => {
     closure_0 = arg0;

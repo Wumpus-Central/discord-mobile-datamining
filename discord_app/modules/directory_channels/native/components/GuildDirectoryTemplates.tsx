@@ -28,12 +28,12 @@ class GuildTemplatesItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13853);
+const GuildDirectoryConstants = fn(13984);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(13858).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13989).GuildDirectoryCreate;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({
   label: { marginTop: 16, marginLeft: 16, marginBottom: 8 },
   title: { marginBottom: 8, textAlign: "center" },
@@ -53,7 +53,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const effect = noop.useEffect(() => {
     closure_1.current = current;
   });
-  const items = [navigation];
+  items = [navigation];
   const callback = noop.useCallback((guildTemplate) => {
     navigation.push(GuildDirectoryCreate.CREATE, { onHubGuildInfoSet: ref.current.onHubGuildInfoSet, guildTemplate });
   }, items);
@@ -65,7 +65,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

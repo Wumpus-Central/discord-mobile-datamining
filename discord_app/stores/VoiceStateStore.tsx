@@ -21,7 +21,7 @@ function updateVoiceState(arg0, arg1, fn) {
   }
   const tmp10 = fn(tmp8[arg1]);
   if (tmp8[arg1] === tmp10) {
-    const items = [false, tmp10, tmp9];
+    items = [false, tmp10, tmp9];
     let items1 = items;
   } else {
     if (null != tmp9) {
@@ -172,7 +172,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1072).ME;
-const VoicePlatforms = fn(5681).VoicePlatforms;
+const VoicePlatforms = fn(5801).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};

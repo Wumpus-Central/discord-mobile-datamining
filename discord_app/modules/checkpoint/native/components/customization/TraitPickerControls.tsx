@@ -23,5 +23,5 @@ export default function TraitPickerControls(onSelectOption) {
     selectedOptionId: obj2.selectedOptionId,
     onSelectOption: obj2.onSelectOption,
   } = traitPickerSelection);
-  return jsx(TraitPickerDefault, {}, activeCustomizationOption);
+  return jsx(TraitPickerDefault, {});
 }

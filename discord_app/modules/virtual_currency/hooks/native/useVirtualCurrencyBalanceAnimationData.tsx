@@ -17,7 +17,7 @@ export function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
   noop = undefined;
   let useReducedMotion;
   c7 = undefined;
-  const items = [useReducedMotion];
+  items = [useReducedMotion];
   stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(
     items,
     () => useReducedMotion.useReducedMotion,

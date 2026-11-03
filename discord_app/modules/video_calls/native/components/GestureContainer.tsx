@@ -1,106 +1,142 @@
 // discord_app/modules/video_calls/native/components/GestureContainer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = _mod1652;
+
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(11000).useChannelCallStore;
-const Constants = fn(11700);
+const useChannelCallStore = fn(11133).useChannelCallStore;
+const Constants = fn(11837);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function GestureContainerTsx1({velocityY:velocityY}){const{position,THRESHOLD_VELOCITY,runOnJS,ModalActionCreators,withTiming,DECELERATED_EASING}=this.__closure;if(position.get()===1||velocityY>THRESHOLD_VELOCITY){runOnJS(ModalActionCreators.pop)();}else{position.set(withTiming(0,{duration:300,easing:DECELERATED_EASING}));}}",
+let closure_9 = {
+  code: "(function GestureContainerTsx1({translationY:translationY}){let[THRESHOLD_TRANSLATE,position]=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);})",
 };
-const __initData2 = {
-  code: "function GestureContainerTsx2({translationY:translationY}){const{THRESHOLD_TRANSLATE,position}=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);}",
+let closure_10 = {
+  code: "(function GestureContainerTsx2({velocityY:velocityY}){let[position,THRESHOLD_VELOCITY,scheduleOnRN,ModalActionCreators,withTiming,DECELERATED_EASING]=this.__closure;if(position.get()===1||velocityY>THRESHOLD_VELOCITY){scheduleOnRN(ModalActionCreators.pop);}else{position.set(withTiming(0,{duration:300,easing:DECELERATED_EASING}));}})",
 };
-const __initData3 = {
-  code: "function GestureContainerTsx3(){const{interpolate,position,height}=this.__closure;return{flex:1,transform:[{translateY:interpolate(position.get(),[0,1],[0,height*0.06])},{scale:interpolate(position.get(),[0,1],[1,0.9])}]};}",
+let closure_11 = {
+  code: "(function GestureContainerTsx3(){let[interpolate,position,height]=this.__closure;return{flex:1,transform:[{translateY:interpolate(position.get(),[0,1],[0,height*0.06])},{scale:interpolate(position.get(),[0,1],[1,0.9])}]};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");
 
 export default function GestureContainer(children) {
-  let sharedValue;
   const tmp = closure_8();
-  const height = sharedValue(1491)().height;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-  sharedValue = height(5095).useSharedValue(0);
-  const Gesture = height(5303).Gesture;
-  let obj = height(5095);
+  const sharedValue = _mod1652.useSharedValue(0);
+  const Gesture = LegacyBaseButton.Gesture;
   const PanResult = Gesture.Pan();
-  class S {
+  items = [closure_9, 200, sharedValue];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp7, tmp8, tmp9] = items;
+  class GestureContainerTsx1 {
     constructor(arg0) {
-      result = closure_1.set(1 - Math.pow(1 - Math.max(Math.min(children.translationY, 200), 0) / 200, 3));
+      result = closure_1.set(1 - Math.pow(1 - Math.max(Math.min(children.translationY, closure_0), 0) / closure_0, 3));
       return;
     }
   }
-  S.__closure = { THRESHOLD_TRANSLATE: 200, position: sharedValue };
-  S.__workletHash = 9476726087456;
-  S.__initData = __initData2;
+  let items1 = [tmp8, tmp9];
+  GestureContainerTsx1.__closure = items1;
+  GestureContainerTsx1.__workletHash = 12996346617978;
+  GestureContainerTsx1.__initData = tmp7;
   const enabledResult = Gesture.Pan().enabled(tmp2);
-  const fn = function h(velocityY) {
-    if (1 !== sharedValue.get()) {
-      if (velocityY.velocityY <= 500) {
-        const obj3 = { duration: 300, easing: native.DECELERATED_EASING };
-        const result = sharedValue.set(timing.withTiming(0, obj3));
+  const items2 = [
+    closure_10,
+    sharedValue,
+    500,
+    _mod1705.scheduleOnRN,
+    ModalActionCreatorsDefault,
+    timing_timing.withTiming,
+    native.DECELERATED_EASING,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16] = items2;
+  class GestureContainerTsx2 {
+    constructor(arg0) {
+      obj = closure_0;
+      if (1 !== closure_0.get()) {
+        tmp = closure_1;
+        if (children.velocityY <= closure_1) {
+          tmp2 = closure_4;
+          obj1 = { duration: 300, easing: null };
+          tmp3 = closure_5;
+          obj1.easing = closure_5;
+          num = 0;
+          result = obj.set(closure_4(0, obj1));
+        }
+        return;
       }
+      tmp5 = closure_2(closure_3.pop);
+      return;
     }
-    ReanimatedRexport.runOnJS(ModalActionCreatorsDefault.pop)();
-  };
-  const onUpdateResult = Gesture.Pan().enabled(tmp2).onUpdate(S);
-  fn.__closure = {
-    position: sharedValue,
-    THRESHOLD_VELOCITY: 500,
-    runOnJS: height(5095).runOnJS,
-    ModalActionCreators: sharedValue(6744),
-    withTiming: height(5254).withTiming,
-    DECELERATED_EASING: height(1187).DECELERATED_EASING,
-  };
-  fn.__workletHash = 10736744030668;
-  fn.__initData = __initData;
-  let obj2 = {
-    position: sharedValue,
-    THRESHOLD_VELOCITY: 500,
-    runOnJS: height(5095).runOnJS,
-    ModalActionCreators: sharedValue(6744),
-    withTiming: height(5254).withTiming,
-    DECELERATED_EASING: height(1187).DECELERATED_EASING,
-  };
-  let items = [-closure_5, closure_5];
-  const onEndResult = onUpdateResult.onEnd(fn);
-  let items1 = [-closure_6, closure_6];
-  const activeOffsetYResult = onUpdateResult.onEnd(fn).activeOffsetY(items);
-  const failOffsetXResult = onUpdateResult.onEnd(fn).activeOffsetY(items).failOffsetX(items1);
-  const fn2 = function p() {
-    const obj = { flex: 1, transform: null };
-    const obj2 = { translateY: null };
-    const items = [0, 0.06 * height];
-    obj2.translateY = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items);
-    const items1 = [obj2];
-    const obj4 = { scale: null };
-    obj4.scale = ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [1, 0.9]);
-    items1[1] = obj4;
-    obj.transform = items1;
-    return obj;
-  };
-  const obj8 = height(5095);
-  fn2.__closure = { interpolate: height(5095).interpolate, position: sharedValue, height };
-  fn2.__workletHash = 16049033434372;
-  fn2.__initData = __initData3;
-  let obj4 = { style: tmp.background, children: null };
-  const animatedStyle = obj8.useAnimatedStyle(fn2);
-  let obj3 = { interpolate: height(5095).interpolate, position: sharedValue, height };
-  obj4.children = jsx(height(5303).GestureDetector, {
+  }
+  const items3 = [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16];
+  GestureContainerTsx2.__closure = items3;
+  GestureContainerTsx2.__workletHash = 10025464345015;
+  GestureContainerTsx2.__initData = tmp10;
+  const onUpdateResult = Gesture.Pan().enabled(tmp2).onUpdate(GestureContainerTsx1);
+  const items4 = [-easing, easing];
+  const onEndResult = Gesture.Pan().enabled(tmp2).onUpdate(GestureContainerTsx1).onEnd(GestureContainerTsx2);
+  const items5 = [-timestampProducer, timestampProducer];
+  const activeOffsetYResult = Gesture.Pan()
+    .enabled(tmp2)
+    .onUpdate(GestureContainerTsx1)
+    .onEnd(GestureContainerTsx2)
+    .activeOffsetY(items4);
+  const failOffsetXResult = Gesture.Pan()
+    .enabled(tmp2)
+    .onUpdate(GestureContainerTsx1)
+    .onEnd(GestureContainerTsx2)
+    .activeOffsetY(items4)
+    .failOffsetX(items5);
+  const items6 = [closure_11, _mod1652.interpolate, sharedValue, useWindowDimensionsDefault().height];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp18, tmp19, tmp20, tmp21] = items6;
+  class GestureContainerTsx3 {
+    constructor() {
+      obj = { flex: 1, transform: null };
+      obj1 = { translateY: null };
+      items = [0];
+      items[1] = 0.06 * closure_2;
+      obj1.translateY = closure_0(closure_1.get(), [0, 1], items);
+      items1 = [,];
+      items1[0] = obj1;
+      obj4 = { scale: closure_0(closure_1.get(), [0, 1], [1, 0.9]) };
+      items1[1] = obj4;
+      obj.transform = items1;
+      return obj;
+    }
+  }
+  const items7 = [tmp19, tmp20, tmp21];
+  GestureContainerTsx3.__closure = items7;
+  GestureContainerTsx3.__workletHash = 9579755515869;
+  GestureContainerTsx3.__initData = tmp18;
+  let obj2 = { style: tmp.background, children: null };
+  const animatedStyle = _mod1652.useAnimatedStyle(GestureContainerTsx3);
+  const tmp5Result = _mod1652;
+  obj2.children = jsx(LegacyBaseButton.GestureDetector, {
     gesture: failOffsetXResult,
-    children: jsx(sharedValue(5095).View, { style: animatedStyle, children: children.children }),
+    children: jsx(_modDef1652.View, { style: animatedStyle, children: children.children }),
   });
   return <View style={tmp.background}>{null}</View>;
 }

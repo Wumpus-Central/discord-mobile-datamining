@@ -27,7 +27,7 @@ class GuildProgressHeader {
     obj = { style: tmp.header, children: null };
     obj1 = {
       style: tmp.headerTitle,
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: title,
@@ -41,18 +41,18 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14042);
+const GuildProgressConstants = fn(14173);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
-  UPLOAD_MEDIUM_SIZE: c10,
+  UPLOAD_MEDIUM_SIZE: closure_10,
   AnalyticEvents: closure_11,
   ComponentActions: closure_12,
   InstantInviteSources: map1,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -61,7 +61,7 @@ let obj2 = {
   footer: { marginTop: 4 },
   center: { alignItems: "center" },
 };
-const __initData2 = createStyles.createStyles(obj2);
+const value2 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx");
 
@@ -79,7 +79,7 @@ export default function GuildProgressActionSheet(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(9074).init(View);
-            const obj6 = tmp5(9074);
-            tmp2(14047).hideActionSheet(id.id);
-            const obj7 = tmp2(14047);
+            tmp5(9202).init(View);
+            const obj6 = tmp5(9202);
+            tmp2(14178).hideActionSheet(id.id);
+            const obj7 = tmp2(14178);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8220).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8344).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,11 +114,11 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9074).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9074);
+            tmp5(9202).updateIcon(closure_129_5, base64);
+            const obj = tmp5(9202);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -127,7 +127,7 @@ export default function GuildProgressActionSheet(guild) {
     }
   };
   const tmp = closure_16();
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   importDefault = guild(numFinished[10]).useStateFromStores(items, () => GuildChannelStore.getDefaultChannel(guild.id));
   let obj = guild(numFinished[10]);
   const iOSCompletionStates = guild(numFinished[11]).useIOSCompletionStates(guild);

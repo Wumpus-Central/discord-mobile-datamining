@@ -9,11 +9,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(6035);
+const ApplicationCommandConstants = fn(6155);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionHeader = {
@@ -46,7 +46,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   closure_18 = undefined;
   c19 = undefined;
   let scaledTextLineHeight;
-  let items = [closure_7];
+  items = [closure_7];
   const stateFromStores = navigation(onPressAppCommand[8]).useStateFromStores(items, () =>
     GuildStore.getGuild(channel.guild_id),
   );
@@ -151,7 +151,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const items7 = [loading, commands, "" !== first, frecencyItems, appItems];
   memo1 = obj2.useMemo(() => {
     if (loading) {
-      const items = [{ type: "placeholder" }];
+      items = [{ type: "placeholder" }];
       const items1 = [items];
       return items1;
     } else if (0 === commands.length) {

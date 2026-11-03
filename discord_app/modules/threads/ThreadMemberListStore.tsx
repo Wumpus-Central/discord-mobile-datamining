@@ -234,7 +234,7 @@ prototype["findOldState"] = function findOldState(id) {
     if (!(arg0 in tmp3.usersById)) {
       continue;
     } else {
-      let items = [key10004, ,];
+      items = [key10004, ,];
       ({ displayName: arr[1], canViewChannel: arr[2] } = tmp3.usersById[arg0]);
       return items;
     }
@@ -285,7 +285,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   if (nick == null) {
     nick = UserUtilsDefault.getName(user);
   }
-  const items = [str, ,];
+  items = [str, ,];
   let formatted;
   if (nick != null) {
     formatted = nick.toLowerCase();
@@ -299,7 +299,7 @@ class ThreadMemberListStore extends Store {}
 const prototype2 = ThreadMemberListStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(ChannelStore, GuildMemberStore, GuildSubscriptionsStore, PresenceStore, SelfPresenceStore, UserStore);
-  const items = [GuildSubscriptionsStore];
+  items = [GuildSubscriptionsStore];
   this.syncWith(items, () => {
     subscribedThreadIds = subscribedThreadIds.getSubscribedThreadIds();
     let flag = false;

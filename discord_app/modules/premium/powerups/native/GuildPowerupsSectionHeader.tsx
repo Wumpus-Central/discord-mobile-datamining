@@ -2,31 +2,23 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const obj = { headerContainer: { padding: nativeDefault.space.PX_16 } };
+let obj = { headerContainer: { padding: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
 
 export default function GuildPowerupsSectionHeader(arg0) {
   ({ title, description } = arg0);
-  const tmp = closure_5();
-  const obj2 = { style: tmp.headerContainer, children: null };
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsSectionHeader");
-  const items = [
+  const obj = { style: closure_5().headerContainer, children: null };
+  items = [
     React3(Text_Text.Text, { variant: "heading-lg/semibold", accessibilityRole: "header", children: title }),
+    React3(Text_Text.Text, { variant: "body-sm/normal", children: description }),
   ];
-  let str = "text-md/normal";
-  if (manaTypeConsolidationExperiment) {
-    str = "experimental/body-sm/normal";
-  }
-  items[1] = React3(Text_Text.Text, { variant: str, children: description });
-  obj2.children = items;
-  return React4(View, obj2);
+  obj.children = items;
+  return React4(View, obj);
 }

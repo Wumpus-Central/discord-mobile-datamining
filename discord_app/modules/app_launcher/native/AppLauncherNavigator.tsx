@@ -6,13 +6,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["initialRouteName"];
-const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+const NativeStackNavigator = fn(9987);
 let closure_10 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   navigator: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -64,7 +64,7 @@ export default noop.memo(function AppLauncherNavigator(bottomSheetExpandReasonRe
   ).useAccessibilityNativeStackOptions();
   const initialRouteName = overrideParams.initialRouteName;
   let obj19 = entrypoint(overrideParams, chatInputRef);
-  const items = [entrypoint];
+  items = [entrypoint];
   const layoutEffect = keyboardCloseReasonRef.useLayoutEffect(() => {
     AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
       location: "app_launcher",

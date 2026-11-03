@@ -7,7 +7,7 @@ import InviteButtonDefault from "../../instant_invite/native/components/InviteBu
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const InviteSendStates = fn(7879).InviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 export default noop.memo(function GameOrganizationInviteRow(user) {
   user = user.user;
   ({ sendState, onInvite } = user);
-  const items = [onInvite, user];
+  items = [onInvite, user];
   ({ start, end } = user);
   const callback = noop.useCallback(() => onInvite(user), items);
   const obj = {

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileGames.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
@@ -21,7 +21,7 @@ function ClickableGameIcon(game) {
   const tmp3Result = useOpenGameProfileModalDefault(obj);
   closure_2 = tmp3Result;
   closure_3 = tmp5;
-  const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
+  items = [null != tmp3Result, tmp3Result, onPressFallback, game];
   if (null != tmp3Result) {
     const onPress = noop.useCallback(() => {
       if (closure_3) {
@@ -36,7 +36,7 @@ function ClickableGameIcon(game) {
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
   const obj = { style: styles().favoriteGame, children: null };
-  const items = [
+  items = [
     hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name }),
   ];
@@ -46,7 +46,7 @@ function FavoriteGame(activityLevel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
   favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
@@ -88,7 +88,7 @@ export default function GuildProfileGames(profile) {
     iconURL = lastGameToDisplay.getIconURL(24);
   }
   closure_5 = tmp5;
-  let items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
+  items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
   const memo = noop.useMemo(() => {
     let tmp = lastGameToDisplay;
     let tmp2 = null;
@@ -103,7 +103,7 @@ export default function GuildProfileGames(profile) {
       } else {
         const obj2 = { style: closure_3.lastItem, children: null };
         const obj3 = { style: closure_3.lastItemImage, game: tmp, activityLevel: gameActivity[tmp.id] };
-        const items = [hasOwnProperty(components_GameIconDefault, obj3), ,];
+        items = [hasOwnProperty(components_GameIconDefault, obj3), ,];
         const obj4 = { style: closure_3.lastItemOverlay };
         items[1] = hasOwnProperty(View, obj4);
         const obj5 = { style: closure_3.lastItemText, children: null };

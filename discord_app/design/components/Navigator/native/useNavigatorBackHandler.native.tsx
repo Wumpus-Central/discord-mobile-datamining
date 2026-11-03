@@ -16,7 +16,7 @@ export default function useNavigatorBackHandler() {
   noop = undefined;
   navigation = onBeforeGoBack(navigation[1]).useNavigation();
   noop = noop.useRef(true);
-  const items = [navigation];
+  items = [navigation];
   const items1 = [navigation, onBeforeGoBack];
   const onGoBack = noop.useCallback(() => {
     let flag = arg0;

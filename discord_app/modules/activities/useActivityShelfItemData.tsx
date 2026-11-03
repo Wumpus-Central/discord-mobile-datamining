@@ -9,7 +9,7 @@ export function useActivityShelfItemData(guild_id1, applicationId) {
   closure_0 = applicationId;
   const tmp = useActivityShelfItemsDefault({ guildId: guild_id1 });
   closure_1 = tmp;
-  const items = [tmp, applicationId];
+  items = [tmp, applicationId];
   return noop.useMemo(() => {
     let found = closure_1.find((application) => application.application.id === applicationId);
     if (found == null) {

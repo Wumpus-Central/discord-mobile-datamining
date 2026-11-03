@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9762);
+let ApplicationCommandIndexStore = fn(9894);
 ({
   useContextIndexState: metroRequire,
   useDiscoveryState: closure_7,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(9762);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6035).BuiltInSectionId;
+const BuiltInSectionId = fn(6155).BuiltInSectionId;
 const NOOP = fn(1072).NOOP;
-let items = [fn(1992).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5683).ApplicationCommandSectionType.APPLICATION, name: "" };
+let items = [fn(2121).ApplicationCommandType.CHAT];
+let section = { id: "placeholder-section", type: fn(5803).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Boolean", command: "dispatch", section: "isArray" };
+    return { application: "replace", command: "r", section: "isArray" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "Boolean", command: "dispatch", section: "isArray" };
+    return { application: "replace", command: "r", section: "isArray" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "raw", application: "cix" };
+    return { command: "Array", application: "flexDirection" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

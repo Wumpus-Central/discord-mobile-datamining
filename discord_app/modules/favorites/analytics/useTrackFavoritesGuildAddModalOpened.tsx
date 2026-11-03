@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
 
 export default function useTrackFavoritesGuildAddModalOpened(source) {
-  const items = [source];
+  items = [source];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });
   }, items);

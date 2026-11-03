@@ -129,7 +129,7 @@ prototype["allByCategory"] = function allByCategory(PREMIUM) {
   });
   return found.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp, ,];
+    items = [tmp, ,];
     let flag = toggleStates[tmp];
     if (flag == null) {
       flag = false;

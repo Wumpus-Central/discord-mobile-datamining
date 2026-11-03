@@ -20,7 +20,7 @@ export default function showLongPressURLActionSheet(urlString) {
     const result = str(channelId[0]).triggerHapticFeedback(str(channelId[0]).HapticFeedbackTypes.IMPACT_LIGHT);
     let obj = str(channelId[0]);
   }
-  const items = [];
+  items = [];
   match = str.match(/^(tel|sms|mailto):([^?;]+)/);
   if (null != match) {
     const intl7 = str(channelId[1]).intl;

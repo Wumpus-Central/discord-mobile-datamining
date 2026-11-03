@@ -66,7 +66,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");
@@ -78,7 +78,7 @@ export default function useConjureFrameHandoff(arg0, arg1) {
     tmp = closure_7(arg0, arg1);
   }
   closure_1 = tmp;
-  const items = [arg0, tmp];
+  items = [arg0, tmp];
   const effect = noop.useEffect(() => {
     if (null != closure_1) {
       closeBackgroundedConjureAppFrames(closure_0, closure_1);

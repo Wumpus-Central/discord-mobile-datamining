@@ -32,7 +32,7 @@ export const SoundPlayer = SoundPlayerDefault;
 export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Default;
 export const ToastContainer = AppToastContainerDefault;
 export function PictureInPictureGlobalContainer() {
-  const items = [ChannelStore, RTCConnectionStore];
+  items = [ChannelStore, RTCConnectionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();
@@ -71,7 +71,7 @@ export function useAppKeyCommands() {
       closure_1_1(dependencyMap[12])();
       return true;
     };
-    const items = [obj2];
+    items = [obj2];
     return items;
   }, []);
   const keyCommands = KeyCommands.useKeyCommands(memo);

@@ -13,7 +13,7 @@ export default function useConjureDevicePermissionSettings(applicationId) {
   _require = applicationId;
   let tmp = require("useConjureDevicePermissions")(applicationId);
   importDefault = tmp;
-  let items = [ConjureDevicePermissionStore];
+  items = [ConjureDevicePermissionStore];
   const items1 = [applicationId, tmp];
   stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -31,7 +31,7 @@ export default function useConjureDevicePermissionSettings(applicationId) {
     settings: null,
     setAllowed(arg0, allowed) {
       const obj2 = { type: "CONJURE_DEVICE_PERMISSIONS_DECIDE", applicationId, permissions: null, allowed };
-      const items = [arg0];
+      items = [arg0];
       obj2.permissions = items;
       DispatcherDefault.dispatch(obj2);
     },

@@ -6,7 +6,7 @@ import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreaming
 import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
 
 require = fn;
-const ApplicationStreamPresets = fn(5864).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5984).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -31,7 +31,7 @@ export function getGoLiveAutoQualityExperimentConfig(location) {
 }
 export function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
-  const items = [ApexExperimentStore];
+  items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));
 }
 export function maybeMigrateToAutoQuality() {
@@ -42,7 +42,7 @@ export function maybeMigrateToAutoQuality() {
   }
   if (closure_6.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality) {
     if (tmp4 < 1) {
-      const state = ApplicationStreamingSettingsStore.getState();
+      state = ApplicationStreamingSettingsStore.getState();
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
         const obj = {
           preset: tmp9.PRESET_AUTO,

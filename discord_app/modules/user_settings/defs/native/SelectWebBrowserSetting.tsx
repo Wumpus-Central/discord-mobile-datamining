@@ -9,7 +9,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
-  const items = [];
+  items = [];
   const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
   if (obj2.useBrowserManagerSupportsInAppBrowser()) {
     const obj3 = { label: null, value: null };

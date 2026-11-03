@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     width: 56,
@@ -79,12 +79,12 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     obj4.children = closure_4(View, obj5);
     selectedIcon = closure_4(View, obj4);
   }
-  const items = [selectedIcon];
+  items = [selectedIcon];
   const intl = util.intl;
   items[1] = intl.format(status, {
     hook(children, arg1) {
       if (isSelected) {
-        const obj2 = { style: null, variant: "text-xxs/bold", children: null };
+        const obj2 = { style: null, variant: "text-xxs/semibold", children: null };
         const obj3 = { color: color.color };
         obj2.style = obj3;
         obj2.children = children;

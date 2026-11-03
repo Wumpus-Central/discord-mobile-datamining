@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const useEffectiveThemeOverride = fn(8801).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8925).useEffectiveThemeOverride;
 const ThemeTypes = fn(1072).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
@@ -20,7 +20,7 @@ export default function useProfileTheme(arg0) {
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;

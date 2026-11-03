@@ -9,7 +9,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const ComponentActions = fn(1072).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -37,7 +37,7 @@ export function useBountyPauseAppStoreSheet(bounty) {
   c5 = tmp5;
   isActive.useRef(false);
   isActive.useRef(null);
-  const items = [bounty.id, isActive];
+  items = [bounty.id, isActive];
   const effect = isActive.useEffect(() => {
     closure_6.current = false;
   }, items);

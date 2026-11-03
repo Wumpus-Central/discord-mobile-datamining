@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -44,7 +44,7 @@ obj2.body = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9370).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -53,7 +53,7 @@ let obj4 = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9370).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -69,7 +69,7 @@ export default function GameProfileView(arg0) {
   noop.useRef(null);
   noop.useRef(null);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
-  const items = [onStoreLinksMeasured];
+  items = [onStoreLinksMeasured];
   const result = useGameProfileInvite.hasGameProfileDiscordWebsite(game);
   closure_3 = noop.useCallback(() => {
     const current = ref.current;

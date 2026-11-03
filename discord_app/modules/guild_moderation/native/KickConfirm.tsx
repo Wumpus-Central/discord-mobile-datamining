@@ -11,8 +11,8 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   iconLabelBlock: null,
@@ -100,7 +100,7 @@ export default noop.memo(function KickConfirm(guildId) {
   const ref1 = stateFromStores1.useRef(null);
   const insets = userId(onKick[8])({ includeKeyboardHeight: true }).insets;
   const obj2 = { insets, inputs: null, scrollViewRef: ref };
-  const items = [{ ref: ref1, offset: { type: "toBottom" } }];
+  items = [{ ref: ref1, offset: { type: "toBottom" } }];
   obj2.inputs = items;
   userId(onKick[9])(obj2);
   const items1 = [checked];
@@ -181,7 +181,7 @@ export default noop.memo(function KickConfirm(guildId) {
         const obj12 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj11.children = intl.formatToPlainString(tmp7(tmp5[16]).t["1Ie87p"], obj12);
         const items6 = [tmp20(tmp7(tmp5[15]).Text, obj11)];
-        const obj13 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
+        const obj13 = { variant: "text-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
         items6[1] = tmp20(tmp7(tmp5[15]).Text, obj13);
         obj10.children = items6;
         let obj14 = obj10;
@@ -190,7 +190,7 @@ export default noop.memo(function KickConfirm(guildId) {
         obj14 = { children: null };
         const obj15 = {
           style: tmp.conjureTitle,
-          variant: "text-lg/bold",
+          variant: "text-lg/semibold",
           color: "mobile-text-heading-primary",
           children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName),
         };
@@ -208,7 +208,7 @@ export default noop.memo(function KickConfirm(guildId) {
       items5[1] = closure_11(c10, obj14);
       obj8.children = items5;
       const items8 = [closure_11(conjureServerApp, obj8), , , , , ,];
-      const obj17 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
+      const obj17 = { style: tmp.blurb, variant: "heading-md/medium", color: "text-feedback-warning", children: null };
       if (null == conjureServerApp) {
         const intl3 = tmp7(tmp5[16]).intl;
         const obj18 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };

@@ -118,8 +118,8 @@ export function getSearchTokenIcon(searchTokenType) {
     throw error;
   }
 }
-export function getSearchTokenPressHandler(arg0, token, CONTEXT_MENU) {
-  closure_0 = arg0;
+export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
+  closure_0 = _undefined;
   closure_1 = token;
   closure_2 = CONTEXT_MENU;
   if (constants.FILTER_FROM !== token) {
@@ -214,8 +214,8 @@ export function getSearchTokenPressHandler(arg0, token, CONTEXT_MENU) {
 }
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
-  const items = [];
-  const keys = Object.keys(items(13894));
+  items = [];
+  const keys = Object.keys(items(14025));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

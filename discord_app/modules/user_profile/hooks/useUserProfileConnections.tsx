@@ -13,7 +13,7 @@ export default function useUserProfileConnections(arg0) {
   _require = arg0;
   const platformAllowed = require("ConnectionsHooks").usePlatformAllowed({ forUserProfile: true });
   const obj = require("ConnectionsHooks");
-  const items = [UserProfileStore];
+  items = [UserProfileStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let connectedAccounts;
   if (stateFromStores != null) {

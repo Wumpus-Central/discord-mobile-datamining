@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const TitleStyleType = fn(1191).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 },
   titledSectionNoBorder: { marginTop: 24 },
@@ -73,7 +73,7 @@ export default function FormSection(arg0) {
     obj4.hasTrailingText = flag;
     obj4.children = found;
     obj3.children = timestampProducer(TableRowGroup.TableRowGroup, obj4);
-    const items = [timestampProducer(React4, obj3)];
+    items = [timestampProducer(React4, obj3)];
     let tmp20Result = null;
     if (null != hint) {
       const obj5 = { style: { marginTop: 8 }, children: hint };

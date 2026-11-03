@@ -14,7 +14,7 @@ export default {
     const channelId = guildId.channelId;
     let callback;
     const ref = callback.useRef(null);
-    const items = [channelId];
+    items = [channelId];
     callback = callback.useCallback(() => {
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {

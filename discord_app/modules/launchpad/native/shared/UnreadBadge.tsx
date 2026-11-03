@@ -8,10 +8,10 @@ const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6776).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
@@ -23,7 +23,7 @@ export default noop.memo(function UnreadBadge(arg0) {
   let tmp9Result = null;
   if (unread) {
     const obj = { style: null, children: null };
-    const items = [tmp.unreadBadge, tmp4.unreadBadge.position];
+    items = [tmp.unreadBadge, tmp4.unreadBadge.position];
     const size = { width: tmp4.unreadBadge.size, height: tmp4.unreadBadge.size };
     items[2] = size;
     obj.style = items;

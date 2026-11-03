@@ -11,7 +11,7 @@ require = fn;
 function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_9();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (stateFromStores != null) {
     const features = stateFromStores.features;
@@ -74,7 +74,7 @@ function GuildSettingsRoleSubscription(arg0) {
   if (obj.useGroupListingsFetchContext()) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { guildId };
-    const items = [React5(ApplicationRejectedNotice, obj3), children];
+    items = [React5(ApplicationRejectedNotice, obj3), children];
     obj2.children = items;
     let tmp5 = React6(React4, obj2);
   } else {
@@ -88,7 +88,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1 },
   warningBlockContainer: { marginHorizontal: 16, marginTop: 16 },

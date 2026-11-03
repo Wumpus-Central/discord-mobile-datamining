@@ -6,10 +6,10 @@ import ExperimentDevToolsUtils from "../../../../../../experiments/devtools/Expe
 import useCodedLinksExperimentEmbeds from "../../../../../../experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx";
 import useLegacyExperiments from "../../../../../../experiments/client_override_hooks/useLegacyExperiments.tsx";
 import useApexExperiments from "../../../../../../experiments/client_override_hooks/useApexExperiments.tsx";
-import _modDef13235 from "../../../../../../../../_runtime/metro/13235__.js";
-import _modDef13236 from "../../../../../../../../_runtime/metro/13236__.js";
+import _modDef13371 from "../../../../../../../../_runtime/metro/13371__.js";
+import _modDef13372 from "../../../../../../../../_runtime/metro/13372__.js";
 import useExperimentAssignments from "../../../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
-import _modDef13238 from "../../../../../../../../_runtime/metro/13238__.js";
+import _modDef13374 from "../../../../../../../../_runtime/metro/13374__.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../../stores/AuthenticationStore.tsx";
 
@@ -17,7 +17,7 @@ require = fn;
 function ExperimentOverrideActionSheet(override) {
   const id = override.id;
   const experiment = override.experiment;
-  let items = [experiment];
+  items = [experiment];
   const memo = noop.useMemo(() => {
     if (null != experiment) {
       let experimentVariantsForDevTools = ExperimentDevToolsUtils.getExperimentVariantsForDevTools(tmp);
@@ -85,8 +85,8 @@ function ExperimentOverrideActionSheet(override) {
   });
 }
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(5239).ExperimentEmbedType;
-const InviteTypes = fn(7879).InviteTypes;
+const ExperimentEmbedType = fn(5362).ExperimentEmbedType;
+const InviteTypes = fn(8003).InviteTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -101,7 +101,7 @@ export default function ConnectedExperimentOverrideActionSheet(id) {
   const apexExperiments = useApexExperiments.useApexExperiments();
   const experiments2 = apexExperiments.experiments;
   const overridesInfo2 = apexExperiments.overridesInfo;
-  const items = [experiments, experiments2, id];
+  items = [experiments, experiments2, id];
   const memo = noop.useMemo(() => {
     let tmp2 = experiments[id];
     if (tmp2 == null) {
@@ -190,7 +190,7 @@ export function createExperimentEmbed(url, theme) {
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13238);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13374);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor =
           null != tmp12 && null != iter && tmp12.variantId === iter.value
@@ -225,7 +225,7 @@ export function createExperimentEmbed(url, theme) {
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13238);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13374);
         ({
           backgroundColor: obj13.thumbnailBackgroundColor,
           acceptLabelGreenColor: obj13.acceptLabelColor,
@@ -254,9 +254,9 @@ export function createExperimentEmbed(url, theme) {
     "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef13235;
+    let tmpResult = _modDef13371;
   } else {
-    tmpResult = _modDef13236;
+    tmpResult = _modDef13372;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

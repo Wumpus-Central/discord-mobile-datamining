@@ -14,7 +14,7 @@ const Store = initializeDefault.Store;
 class AVErrorStore extends Store {}
 const prototype = AVErrorStore.prototype;
 prototype["hasActiveErrorOfType"] = function hasActiveErrorOfType(arg0) {
-  let items = map1.get(arg0);
+  items = map1.get(arg0);
   if (items == null) {
     items = [];
   }
@@ -29,7 +29,7 @@ prototype["getActiveErrors"] = function getActiveErrors() {
   return activeErrors;
 };
 prototype["getActiveErrorsOfType"] = function getActiveErrorsOfType(CAMERA_SEND_LOW_FPS) {
-  const items = [];
+  items = [];
   value = map1.get(CAMERA_SEND_LOW_FPS);
   if (null == value) {
     return items;
@@ -75,7 +75,7 @@ const aVErrorStore = new AVErrorStore(DispatcherDefault, {
         while (tmp24 !== undefined) {
           let tmp30 = _slicedToArray(tmp27, 2);
           [tmp31, tmp32] = tmp30;
-          let items = map1.get(tmp32.type);
+          items = map1.get(tmp32.type);
           if (items == null) {
             items = [];
           }

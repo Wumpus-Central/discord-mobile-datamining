@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFa
 export default noop.memo(function GuildsBarFavorites() {
   const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
   const isFavoritesGuildSelected = FavoritesHooks.useIsFavoritesGuildSelected();
-  let items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStores = initialize.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   ({ badge, unread } = useFavoritesGuildUnreadsDefault(stateFromStores));
   const tmp4 = useFavoritesGuildUnreadsDefault(stateFromStores);
@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(18385)(closure_1_5);
+        closure_1_1(18530)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(18194)();
+        closure_1_1(18338)();
       },
     }),
     [],
@@ -44,7 +44,7 @@ export default noop.memo(function GuildsBarFavorites() {
     const obj2 = { name, label: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t.PdRCRg);
-    const items = [obj2];
+    items = [obj2];
     obj.accessibilityActions = items;
     obj.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
       if (nativeEvent.nativeEvent.actionName === name) {

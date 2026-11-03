@@ -20,15 +20,15 @@ const GameProfileCommunitiesLocaleFilterActionSheetDefault = GameProfileCommunit
 require = fn;
 const View = fn(17).View;
 const JoinGuildSources = fn(1072).JoinGuildSources;
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9370).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9370).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -66,13 +66,13 @@ obj.list = { gap: nativeDefault.space.PX_12 };
 let closure_13 = createStyles.createStyles(obj);
 let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
   gameId = gameId.gameId;
-  let guild = gameId.guild;
+  guild = gameId.guild;
   const viewId = gameId.viewId;
   const scrollY = gameId.scrollY;
   const trackAction = gameId.trackAction;
   const closeModal = gameId.closeModal;
   let callback;
-  let items = [guild];
+  items = [guild];
   const memo = closeModal.useMemo(() => GuildRecordUtils.fromClientDiscoverableGuild(guild), items);
   let items1 = [callback];
   const items2 = [guild.id];
@@ -112,7 +112,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -155,7 +155,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
                   loadId: viewId,
                   openChannel: true,
                 };
-                const items = [guild(tmp3[19]).GAME_PROFILE_COMMUNITIES];
+                items = [guild(tmp3[19]).GAME_PROFILE_COMMUNITIES];
                 c5 = 2;
                 c6 = 1;
                 const obj11 = { value: obj10.startLurking(id2, {}, obj7, items), done: false };
@@ -208,7 +208,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
               closure_130_7(currentlySelectedChannelId2, closure_129_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp63) {
           if (tmp4 === c4) {
@@ -260,7 +260,7 @@ export default function GameProfileCommunities(game) {
   const tmp5 = useGameProfileCommunitiesLocaleFilterDefault(game.id, data);
   const locales = tmp5.locales;
   ({ filteredGuilds, showLocaleFilter } = tmp5);
-  const items = [game.id, locales];
+  items = [game.id, locales];
   const callback = locales.useCallback(() => {
     const obj2 = {
       key: GameProfileCommunitiesLocaleFilterActionSheet.ACTION_SHEET_KEY,
@@ -286,19 +286,19 @@ export default function GameProfileCommunities(game) {
   };
   const intl = game(1113).intl;
   obj3.children = intl.string(game(1113).t.r6bvTh);
-  const items1 = [closure_11(game(5624).Heading, obj3)];
+  const items1 = [closure_11(game(5747).Heading, obj3)];
   if (showLocaleFilter) {
     const obj4 = {
       size: "sm",
       variant: "secondary",
-      icon: closure_11(tmp12(9620).LanguageIcon, { size: "sm" }),
+      icon: closure_11(tmp12(9752).LanguageIcon, { size: "sm" }),
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp12(1113).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1113).t.OlOHDH);
     obj4.onPress = callback;
-    showLocaleFilter = closure_11(tmp12(8028).IconButton, obj4);
+    showLocaleFilter = closure_11(tmp12(8152).IconButton, obj4);
   }
   items1[1] = showLocaleFilter;
   obj2.children = items1;

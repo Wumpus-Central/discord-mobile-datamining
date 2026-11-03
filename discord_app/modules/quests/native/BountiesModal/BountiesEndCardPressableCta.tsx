@@ -9,10 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(16968).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(17111).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = {
@@ -48,7 +48,7 @@ export default function BountiesEndCardPressableCta(bounty) {
     scaledImageUrl = tmp2(tmp3[8]).getScaledImageUrl(size);
     const tmp2Result = tmp2(tmp3[8]);
   }
-  const items = [, , ,];
+  items = [, , ,];
   ({ id: arr[0], cta: arr[1] } = bounty);
   items[2] = getQuestImpressionId;
   items[3] = sourceQuestContent;

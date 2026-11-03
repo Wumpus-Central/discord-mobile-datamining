@@ -67,7 +67,7 @@ prototype["refreshQueryId"] = function refreshQueryId(searchContext) {
   this.setSession(searchContext, obj);
 };
 prototype["initialize"] = function initialize(arg0) {
-  const items = [arg0, ...HermesBuiltin.copyRestArgs()];
+  items = [arg0, ...HermesBuiltin.copyRestArgs()];
   this._initialize.apply(items);
   const obj = { sessionId: v1.v4(), searchQueryId: null };
   this.setSession(arg0, obj);

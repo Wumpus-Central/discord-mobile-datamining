@@ -15,11 +15,11 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(6958).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7084).EmojiSourceDataTypes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,
@@ -88,7 +88,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   const DeveloperMode = tmp3(tmp4[11]).DeveloperMode;
   let tidaWebformEnabled = DeveloperMode.useSetting();
   let obj = messageId(stateFromStores1[12]);
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = channelId(stateFromStores1[13]).useStateFromStores(items, () => guildId.getGuildId());
   const tmp3Result = channelId(stateFromStores1[13]);
   const items1 = [EmojiStore];
@@ -189,7 +189,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       fastImageStyle: tmp.emoji,
     }),
     closure_11(channelId(stateFromStores1[27]).Text, {
-      variant: "text-lg/bold",
+      variant: "text-lg/semibold",
       color: "text-default",
       style: tmp.reactionText,
       children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count,

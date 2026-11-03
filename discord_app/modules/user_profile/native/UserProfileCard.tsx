@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7377);
+const Constants = fn(7497);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   title: {
     marginBottom: nativeDefault.space.PX_12,
@@ -63,7 +63,7 @@ export default function UserProfileCard(arg0) {
   let tmp3Result2 = null != title || null != trailingAction;
   if (tmp3Result2) {
     const obj2 = { style: null, children: null };
-    const items = [tmp2.title, titleStyle];
+    items = [tmp2.title, titleStyle];
     obj2.style = items;
     let tmp3Result = null != title;
     if (tmp3Result) {
@@ -114,7 +114,7 @@ export function UserProfileFormRow(arg0) {
     children: null,
   };
   const obj2 = { style: tmp.rowLabel, children: null };
-  const items = [hasOwnProperty(icon, { size, color: str }), , ,];
+  items = [hasOwnProperty(icon, { size, color: str }), , ,];
   if (labelColor == null) {
     labelColor = str2;
   }

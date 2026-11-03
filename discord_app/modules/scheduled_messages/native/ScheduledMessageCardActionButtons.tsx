@@ -5,7 +5,7 @@ import SendMessageIcon from "../../../design/components/Icon/native/redesign/gen
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9207 from "../../../../_runtime/metro/09207__.js";
+import _modDef9335 from "../../../../_runtime/metro/09335__.js";
 import ScheduledMessagesUtils from "ScheduledMessagesUtils.native.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
@@ -23,7 +23,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
   obj.action = function action() {
     return ScheduledMessagesUtils.sendScheduledMessageNow(closure_1_0.scheduledMessageId);
   };
-  const items = [obj, , ,];
+  items = [obj, , ,];
   const obj2 = { label: null, IconComponent: null, action: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.ZXE1s4);
@@ -65,7 +65,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
       obj.accessibilityLabel = intl.string(util.t.sHmiIC);
       obj.size = "sm";
       obj.disabled = disabled;
-      obj.icon = _modDef9207;
+      obj.icon = _modDef9335;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     },
   });

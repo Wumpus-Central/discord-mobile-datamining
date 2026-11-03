@@ -32,6 +32,6 @@ export function withLocalSelfMuteDeaf(voiceState, localSelfMuteDeaf) {
   return mergeResult;
 }
 export function useLocalSelfMuteDeaf() {
-  const items = [AuthenticationStore, MediaEngineStore];
+  items = [AuthenticationStore, MediaEngineStore];
   return initialize.useStateFromStoresObject(items, getLocalSelfMuteDeaf);
 }

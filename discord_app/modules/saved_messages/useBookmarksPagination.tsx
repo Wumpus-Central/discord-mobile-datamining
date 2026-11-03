@@ -19,7 +19,7 @@ export default function useBookmarksPagination(arg0) {
   }
   let hasFetched;
   let hasShownBookmarks;
-  const items = [hasShownBookmarks];
+  items = [hasShownBookmarks];
   const stateFromStoresObject = flag(hasFetched[4]).useStateFromStoresObject(items, () => {
     const obj = {
       fetchState: hasShownBookmarks.getBookmarksFetchState(),

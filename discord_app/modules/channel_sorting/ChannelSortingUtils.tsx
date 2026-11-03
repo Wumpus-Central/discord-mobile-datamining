@@ -95,7 +95,7 @@ function getChannelMoveUpdates(localChannel, channel, parentId, channels) {
     moveItemFromToResult = [...substr];
   }
   closure_4 = [];
-  let items = [];
+  items = [];
   let _categories = channels._categories;
   if (localChannel.isCategory()) {
     const items1 = [];
@@ -835,7 +835,7 @@ export function getSectionSiblings(listChannel, categories) {
   if (null == parent_id) {
     parent_id = closure_6;
   }
-  let items = categories[parent_id];
+  items = categories[parent_id];
   if (items == null) {
     items = [];
   }
@@ -869,7 +869,7 @@ export function getChannelPlacementUpdates(isCategory, guildId, id, arg3) {
       first = found[found.length - 1];
     }
     if (null != first) {
-      let items = getChannelMoveUpdates(isCategory, first.channel, null, guildId);
+      items = getChannelMoveUpdates(isCategory, first.channel, null, guildId);
     } else {
       items = [];
     }

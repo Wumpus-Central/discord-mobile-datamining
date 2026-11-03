@@ -1,5 +1,5 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingStars.tsx
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 export default function StarsBackgroundSvg(arg0) {
   const obj = { viewBox: "0 0 336 129", fill: "none", preserveAspectRatio: "xMidYMid" };
   const merged = Object.assign(arg0);
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       d: "M78.1733 59.2326L82.9242 57.6209C83.0253 57.5403 83.0253 57.4597 82.9242 57.4597L78.1733 55.7674L76.0505 52.0604C76.0505 51.9799 75.9494 51.9799 75.8484 52.0604L73.8267 55.7674H73.7256L69.0758 57.4597C68.9747 57.4597 68.9747 57.5403 69.0758 57.6209L73.7256 59.2326H73.8267L75.8484 62.9396C75.9494 63.0201 76.0505 63.0201 76.0505 62.9396L78.1733 59.2326Z",
       fill: "white",

@@ -24,7 +24,7 @@ export default function useVideoReadyTimeout(streamId) {
     if (videoSpinnerContext !== tmp(tmp2[3]).VideoSpinnerContext.REMOTE_STREAM) {
       STREAM = tmp(tmp2[4]).MediaEngineContextTypes.DEFAULT;
     }
-    const items = [flag, streamId, loading, STREAM, streamKey, userId];
+    items = [flag, streamId, loading, STREAM, streamKey, userId];
     const effect = obj.useEffect(() => {
       if (loading) {
         if (!flag) {

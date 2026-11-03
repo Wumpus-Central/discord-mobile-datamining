@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjur
 
 export function useConjureLiveReloadSetting(arg0) {
   _require = arg0;
-  const items = [closure_5];
+  items = [closure_5];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

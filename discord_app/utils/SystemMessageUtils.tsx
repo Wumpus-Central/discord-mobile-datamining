@@ -24,7 +24,7 @@ const require = globalThis.__r;
 
 require = fn;
 function getSystemMessageUserJoinMobile(id) {
-  const items = [
+  items = [
     util.t.Jm6e0x,
     util.t.MGRnRT,
     util.t.EXOEGh,
@@ -43,7 +43,7 @@ function getSystemMessageUserJoinMobile(id) {
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
 const Constants = fn(1072);
-({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
+({ MessageEmbedTypes: closure_10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = {
   "234395307759108106": "https://groovy.bot/commands",
   "365975655608745985": "https://www.pokecord.com/getting-started",
@@ -271,7 +271,7 @@ export default {
                   const channel = ChannelStore.getChannel(channel_id);
                   let astToStringResult7 = null;
                   if (null != channel) {
-                    const guild = GuildStore.getGuild(channel.getGuildId());
+                    guild = GuildStore.getGuild(channel.getGuildId());
                     astToStringResult7 = null;
                     if (null != guild) {
                       if (
@@ -371,7 +371,7 @@ export default {
     }
   },
   getSystemMessageUserJoin(id) {
-    const items = [
+    items = [
       util.t["0cuj7l"],
       util.t["MuW+CN"],
       util.t.osqpHX,

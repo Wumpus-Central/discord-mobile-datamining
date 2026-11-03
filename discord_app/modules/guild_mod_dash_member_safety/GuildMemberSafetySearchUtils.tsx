@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/
 export function splitQuery(query) {
   const parts = query.split(",");
   const mapped = parts.map((item) => item.trim());
-  const items = [];
+  items = [];
   const items1 = [];
   const item = mapped.forEach((item) => {
     if (obj.isSnowflake(item)) {

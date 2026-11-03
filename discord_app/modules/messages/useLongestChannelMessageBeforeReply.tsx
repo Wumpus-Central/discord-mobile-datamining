@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/messages/useLongestChannelMes
 export function useLongestChannelMessageBeforeReply(id, recipientId) {
   _require = id;
   dependencyMap = recipientId;
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [id, recipientId];
   return require("initialize").useStateFromStores(
     items,

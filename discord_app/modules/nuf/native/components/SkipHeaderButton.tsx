@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   insideNavigatorButton: { paddingRight: 16 },
@@ -24,7 +24,7 @@ export default function SkipHeaderButton(label) {
   }
   const obj = {};
   const merged = Object.assign(label);
-  const items = [tmp.button];
+  items = [tmp.button];
   let prop;
   if (label.insideNavigator) {
     prop = tmp.insideNavigatorButton;

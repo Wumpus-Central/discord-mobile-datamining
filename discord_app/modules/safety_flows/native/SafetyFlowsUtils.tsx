@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2836 from "../SafetyFlows.messages.js";
+import _modDef2963 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
@@ -37,7 +37,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef2836["/fHz9S"]);
+    obj3.text = intl.string(_modDef2963["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;
@@ -53,7 +53,7 @@ function navigateToScreenForTask(arr, task_type) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [types.SafetyFlowScreens.VERIFY_EMAIL];
+          items = [types.SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
@@ -82,7 +82,7 @@ export function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [types.SafetyFlowScreens.VERIFY_EMAIL];
+        items = [types.SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }
@@ -113,7 +113,7 @@ export function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -161,7 +161,7 @@ export function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -170,7 +170,7 @@ export function useOnTaskComplete() {
       }
     })();
   });
-  const items = [navigation, task, setTask];
+  items = [navigation, task, setTask];
   return noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;

@@ -1,36 +1,35 @@
 // discord_app/modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import ScreenIndexFrozen from "../../channel/native/ScreenIndexFrozen.tsx";
+import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-const __initData = {
-  code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}",
+let closure_2 = {
+  code: "(function useAutocompleteAnimatedHeightStylesTsx1(){let[withTiming,height,timingStandard,isFrozenSharedValue]=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};})",
 };
 const result = size.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 
-export default function useAutocompleteAnimatedHeightStyles(height, arg1) {
-  _require = height;
-  isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
-  let obj = require("ScreenIndexFrozen");
-  const fn = function s() {
-    const obj = { height: timing.withTiming(closure_0, timingPresets.timingStandard), display: null };
+export default function useAutocompleteAnimatedHeightStyles(arg0, arg1) {
+  const isScreenIndexFrozenSharedValue = ScreenIndexFrozen.useIsScreenIndexFrozenSharedValue(arg1);
+  items = [closure_2, timing_timing.withTiming, arg0, timingPresets.timingStandard, isScreenIndexFrozenSharedValue];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  [tmp2, tmp3, tmp4, tmp5, tmp6] = items;
+  function useAutocompleteAnimatedHeightStylesTsx1() {
+    const obj = { height: _undefined(c1, c2), display: null };
     let str = "flex";
-    if (isScreenIndexFrozenSharedValue.get()) {
+    if (_undefined2.get()) {
       str = "none";
     }
     obj.display = str;
     return obj;
-  };
-  const obj2 = require("ReanimatedRexport");
-  fn.__closure = {
-    withTiming: require("timing").withTiming,
-    height,
-    timingStandard: require("timingPresets").timingStandard,
-    isFrozenSharedValue: isScreenIndexFrozenSharedValue,
-  };
-  fn.__workletHash = 3862216441966;
-  fn.__initData = __initData;
-  return obj2.useAnimatedStyle(fn);
+  }
+  const items1 = [tmp3, tmp4, tmp5, tmp6];
+  useAutocompleteAnimatedHeightStylesTsx1.__closure = items1;
+  useAutocompleteAnimatedHeightStylesTsx1.__workletHash = 1718162287415;
+  useAutocompleteAnimatedHeightStylesTsx1.__initData = tmp2;
+  return _mod1652.useAnimatedStyle(useAutocompleteAnimatedHeightStylesTsx1);
 }

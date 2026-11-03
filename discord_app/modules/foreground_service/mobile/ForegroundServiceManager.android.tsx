@@ -17,7 +17,7 @@ class ForegroundServiceManager {
       if (obj.serviceNotifications.size > 0) {
         const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
         const serviceNotifications = tmp.serviceNotifications;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
         ForegroundServiceModule2.startService(items);
       } else {
@@ -84,7 +84,7 @@ obj.handleChange = function handleChange() {
   if (obj.serviceNotifications.size > 0) {
     const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
     const serviceNotifications = tmp.serviceNotifications;
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
     ForegroundServiceModule2.startService(items);
   } else {

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/07019_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchField: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.searchField = { paddingVertical: nativeDefault.space.PX_16 };
@@ -31,7 +31,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   let setting;
   let users;
   const tmp = closure_15();
-  let items = [GuildStore];
+  items = [GuildStore];
   let stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = guildId(stateFromStores1[11]);
   let items1 = [PermissionStore];
@@ -76,7 +76,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   setting = DeveloperMode.useSetting();
   const items4 = [bans, stateFromStoresObject.bansVersion, searchQuery];
   const memo = searchQuery.useMemo(() => {
-    const items = [];
+    items = [];
     let items1 = bans;
     if (bans == null) {
       items1 = [];
@@ -164,7 +164,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
       obj2.trailing = closure_1_12(guildId(stateFromStores1[19]).TableRowArrow, {});
       obj2.onPress = function onPress() {
         if (null != stateFromStores) {
-          const items = [];
+          items = [];
           if (stateFromStores1) {
             let obj = { label: null, isDestructive: true, onPress: null };
             const intl = util.intl;

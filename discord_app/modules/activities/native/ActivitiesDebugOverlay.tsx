@@ -10,10 +10,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj2.container = rect;
 obj2.row = { flexDirection: "row" };
@@ -46,7 +46,7 @@ export default function ActivitiesDebugOverlay() {
   }
   const rect = useSafeAreaInsetsDefault();
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
+  items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
   obj.style = items;
   const obj3 = { style: tmp.row, children: null };
   const items1 = [

@@ -59,7 +59,7 @@ let closure_31 = [];
 let c32 = null;
 let c33 = false;
 function defaultGetSessionId() {
-  return Promise.resolve({ sessionId: "r" });
+  return Promise.resolve({ sessionId: "Array" });
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
@@ -132,7 +132,7 @@ export (getLaunchSignature) => {
           });
           closure_14 = closure_14 + 1;
         }, (body) => {
-          const items = [...substr];
+          items = [...substr];
           closure_2_31.unshift.apply(items);
           closure_15 = closure_15 + 1;
         });
@@ -271,7 +271,7 @@ export (getLaunchSignature) => {
     c21 = 0;
     telemetry_period_start_timestamp = Date.now();
     first_seen_event_sequence_number = last_seen_event_sequence_number;
-    const items = [obj];
+    items = [obj];
     return submitEventsImmediately(items, constants.CLIENT_TELEMETRY).catch((error) => {
       let str;
       if (error != null) {
@@ -341,7 +341,7 @@ export (getLaunchSignature) => {
                   let _Math3 = Math;
                   let obj = { type: "timeout", id: null };
                   let _setTimeout = setTimeout;
-                  obj.id = setTimeout(/* F138809 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
+                  obj.id = setTimeout(/* F139895 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
                   closure_3_22 = obj;
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -453,7 +453,7 @@ export (getLaunchSignature) => {
     if (null != constants) {
       const self = this;
       const waitFor = this.waitFor;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(constants, 0);
       const self2 = this;
       HermesBuiltin.apply(items, this);

@@ -17,7 +17,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
   loading = undefined;
   asyncGeneratorStep = undefined;
   [loading, asyncGeneratorStep] = noop.useState(false);
-  const items = [guildId, joinSource, loading];
+  items = [guildId, joinSource, loading];
   const callback = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c5 === 2) {
@@ -30,7 +30,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

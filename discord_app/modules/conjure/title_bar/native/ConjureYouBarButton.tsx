@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/title_bar/native/ConjureYouBarButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../_runtime/01500_Link.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
 import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin.tsx";
@@ -13,9 +13,9 @@ require = fn;
 function confirmUnpin() {
   confirmConjureYouBarPinDefault(false);
 }
-const YOU_BAR_BUTTON_ICON_SIZE = fn(17075).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(17218).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND },

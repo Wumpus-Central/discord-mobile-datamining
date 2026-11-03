@@ -57,7 +57,7 @@ function getName(username) {
   }
 }
 function useName(username) {
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   let stateFromStores = initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   if (null != username) {
     const obj2 = nameFromUser(username);
@@ -258,7 +258,7 @@ function getUserTag(user, arg1) {
 function useUserTag(user, arg1) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   return presentUserTag(
     user,
     {},
@@ -267,7 +267,7 @@ function useUserTag(user, arg1) {
 }
 function useDirectMessageRecipient(arg0) {
   _require = arg0;
-  const items = [UserStore];
+  items = [UserStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;

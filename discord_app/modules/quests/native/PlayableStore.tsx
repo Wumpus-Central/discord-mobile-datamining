@@ -13,7 +13,7 @@ require = fn;
 function pauseOrResumeTimer(c3) {
   const startedAt = _null.startedAt;
   const tmp3 = asLaunched(FramesStore.getFrame(_null.frameId));
-  const state = DiscordAppStateDefault.getState();
+  state = DiscordAppStateDefault.getState();
   let tmp8 = state === ConstantsIOS.AppStates.ACTIVE;
   if (tmp8) {
     let activityPanelMode;
@@ -68,8 +68,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
-const asLaunched = fn(6847).asLaunched;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const asLaunched = fn(6967).asLaunched;
 let c3 = null;
 const Store = initializeDefault.Store;
 class PlayableStore extends Store {}

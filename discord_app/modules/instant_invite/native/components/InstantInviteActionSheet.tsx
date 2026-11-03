@@ -17,28 +17,28 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 function Loading() {
   const tmp = closure_15();
-  const items = [];
+  items = [];
   let num = 0;
   do {
     let obj = { row: num };
-    let arr = items.push(closure_1_12(UserPlaceholderRowDefault, obj, num));
+    let arr = items.push(application_id(UserPlaceholderRowDefault, obj, num));
     num = num + 1;
   } while (num < 10);
   const obj2 = { children: null };
   const items1 = [
-    closure_1_12(hasOwnProperty, { style: tmp.placeholderHeader }),
-    closure_1_12(hasOwnProperty, { style: tmp.placeholderLabel }),
+    application_id(hasOwnProperty, { style: tmp.placeholderHeader }),
+    application_id(hasOwnProperty, { style: tmp.placeholderLabel }),
     items,
   ];
   obj2.children = items1;
-  return closure_1_14(map1, obj2);
+  return gesture(state, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   placeholderHeader: null,
   placeholderLabel: null,
@@ -102,7 +102,7 @@ export default function InstantInviteActionSheet(channel) {
   ).analyticsLocations;
   const tmp4 = source(vanityURLCode[13]);
   if (null != targetApplicationId) {
-    const items = [targetApplicationId];
+    items = [targetApplicationId];
     let items1 = items;
   } else {
     items1 = [];
@@ -263,7 +263,7 @@ export default function InstantInviteActionSheet(channel) {
         let stringResult = intl5.string(tmp7(tmp3[28]).t.iI1gMg);
       } else {
         const intl4 = tmp7(tmp3[28]).intl;
-        const guild = GuildStore.getGuild(channel.guild_id);
+        guild = GuildStore.getGuild(channel.guild_id);
         let name1;
         if (guild != null) {
           name1 = guild.name;

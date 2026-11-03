@@ -6,7 +6,7 @@ import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
@@ -20,9 +20,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 function GuildProfileBackground(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildProfile(504).useStateFromStores(items, () => {
-    let guild = GuildStore.getGuild(guildProfile.id);
+    guild = GuildStore.getGuild(guildProfile.id);
     if (guild == null) {
       guild = GuildRecordUtils.fromGuildProfile(guildProfile);
     }
@@ -47,7 +47,7 @@ function GuildProfileGradient(guildProfile) {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   const profilePrimaryColor = guild_profile_GuildProfileUtils.useProfilePrimaryColor(guildProfile.guildProfile, token);
   const obj3 = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
-  const items = [profilePrimaryColor];
+  items = [profilePrimaryColor];
   const tmp6 = LinearGradientDefault;
   const obj5 = native;
   if (isThemeDarkResult) {
@@ -63,7 +63,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   colorBanner: { height: 140, width: "100%" },
@@ -95,7 +95,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/native/componen
 export default function GuildProfileView(guildProfile) {
   guildProfile = guildProfile.guildProfile;
   const tmp = styles();
-  const items = [guildProfile];
+  items = [guildProfile];
   const obj = { style: tmp.container, children: null };
   const memo = noop.useMemo(() => {
     if (null == guildProfile) {
@@ -126,7 +126,7 @@ export default function GuildProfileView(guildProfile) {
   }
   if (tmp5Result) {
     const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_7(guildProfile(5624).Text, obj3);
+    tmp5Result = closure_7(guildProfile(5747).Text, obj3);
   }
   const items2 = [
     tmp5Result,
@@ -139,7 +139,7 @@ export default function GuildProfileView(guildProfile) {
   return closure_8(View, obj);
 }
 export function getBackgroundForProfile(theme, token) {
-  const items = [token];
+  items = [token];
   const obj2 = native;
   if (isThemeDarkResult) {
     let brightenColorResult = obj2.brightenColor(token, 0.8);

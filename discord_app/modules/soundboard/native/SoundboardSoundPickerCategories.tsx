@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
-import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
@@ -12,8 +12,8 @@ import SoundboardTypes from "../SoundboardTypes.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
-import _modDef10271 from "../../../../_runtime/metro/10271__.js";
-import _modDef19188 from "../../../../_runtime/metro/19188__.js";
+import _modDef10401 from "../../../../_runtime/metro/10401__.js";
+import _modDef19346 from "../../../../_runtime/metro/19346__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -26,7 +26,7 @@ function SoundCategoryItem(style) {
   const tmp = closure_12();
   const type = category.categoryInfo.type;
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
-    const guild = category.categoryInfo.guild;
+    guild = category.categoryInfo.guild;
     let name = guild.name;
     const obj2 = { guild, style: tmp.guildItem };
     let tmp14Result = closure_1_10(GuildIconDefault, obj2);
@@ -35,7 +35,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10271;
+    tmp6 = _modDef10401;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -48,13 +48,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef19188;
+    tmp6 = _modDef19346;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef19188;
+    tmp6 = _modDef19346;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -81,7 +81,7 @@ function SoundCategoryItem(style) {
     children: null,
   };
   const obj6 = { style: null, children: null };
-  const items = [tmp.item, style.style];
+  items = [tmp.item, style.style];
   obj6.style = items;
   if (tmp14Result == null) {
     tmp14Result = tmp7;
@@ -115,13 +115,13 @@ function SoundboardCategoryScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(19173).setSearchQuery;
+const setSearchQuery = fn(19331).setSearchQuery;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
@@ -190,7 +190,7 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
   const ref = noop.useRef(null);
   StyleSheet = noop.useRef(null);
   const ref2 = noop.useRef(null);
-  const items = [categoryIndex];
+  items = [categoryIndex];
   const effect = noop.useEffect(() => {
     if (null != ref.current) {
       if (null != ref2.current) {

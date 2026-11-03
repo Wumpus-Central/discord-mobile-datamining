@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   contentContainer: {
     paddingHorizontal: 36,
@@ -49,7 +49,7 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   obj.label = intl.string(util.t.kpMomJ);
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.uVUtPw);
-  const items = [obj, ,];
+  items = [obj, ,];
   const obj2 = { IconComponent: ChatSmileIcon.ChatSmileIcon, label: null, description: null };
   const intl3 = util.intl;
   obj2.label = intl3.string(util.t["R2IV/Q"]);
@@ -81,7 +81,12 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
     ,
     ,
   ];
-  const obj10 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const obj10 = {
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    style: tmp.title,
+    children: null,
+  };
   const intl8 = util.intl;
   let skuId;
   if (subscriptionTrial != null) {

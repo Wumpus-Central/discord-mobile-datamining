@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/hooks/useGameProfileMediaDimensions.tsx
-import privDefault from "../../../../_runtime/01451_priv.js";
+import privDefault from "../../../../_runtime/01453_priv.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ export function useGameProfileMediaDimensions(width) {
   const tmp = _slicedToArray(noop.useState(getCachedDimensions), 2);
   noop = tmp[1];
   const obj = { dimensions: tmp[0], recordDimensions: null };
-  const items = [width];
+  items = [width];
   obj.recordDimensions = noop.useCallback((arg0, width) => {
     closure_0 = arg0;
     let tmp2;

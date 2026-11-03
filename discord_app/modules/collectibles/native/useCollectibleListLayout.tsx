@@ -11,7 +11,7 @@ export default function useCollectibleListLayout() {
   closure_0 = tmp[1];
   return {
     size: tmp[0],
-    onLayout: framebus((nativeEvent) => {
+    onLayout: duration((nativeEvent) => {
       closure_0((nativeEvent.nativeEvent.layout.width - 64) / 3);
     }, []),
   };

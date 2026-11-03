@@ -1,9 +1,9 @@
 // discord_app/design/void/Easing/native/Easing.tsx
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const Easing = ReanimatedRexport.Easing;
-const Easing2 = ReanimatedRexport.Easing;
+const Easing = _mod1652.Easing;
+const Easing2 = _mod1652.Easing;
 const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
 const result = size.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
 

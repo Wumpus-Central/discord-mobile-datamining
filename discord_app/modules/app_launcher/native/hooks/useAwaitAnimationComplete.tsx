@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/use
 
 export function AwaitAnimationContext(children) {
   const handleQueuedCallback = children.handleQueuedCallback;
-  const items = [handleQueuedCallback];
+  items = [handleQueuedCallback];
   return (
     <redux.Provider value={noop.useMemo(() => ({ handleQueuedCallback }), items)}>{children.children}</redux.Provider>
   );

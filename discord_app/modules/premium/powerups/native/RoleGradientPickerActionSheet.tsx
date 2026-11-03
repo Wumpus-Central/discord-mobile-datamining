@@ -10,11 +10,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const EnhancedRoleColorConstants = fn(19780);
+const EnhancedRoleColorConstants = fn(19930);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: closure_7, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   body: {
     paddingVertical: nativeDefault.space.PX_12,
@@ -117,7 +117,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
   }
   [first, _slicedToArray] = callback1.useState(colors);
   const values = Object.values(onSelect(first[7]).extractColorStringsFromServerColors(first));
-  let items = [first, onSelect];
+  items = [first, onSelect];
   const found = values.filter(onSelect(first[8]).isNotNullish);
   const callback = obj.useCallback(() => {
     onSelect(first);
@@ -225,7 +225,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
       const tmp = closure_3(colors.colors, 2);
       const primary_color = tmp[0];
       const secondary_color = tmp3;
-      const items = [secondary_color.pressable];
+      items = [secondary_color.pressable];
       let selected = primary_color === primary_color.primary_color;
       if (selected) {
         selected = tmp3 === primary_color.secondary_color;

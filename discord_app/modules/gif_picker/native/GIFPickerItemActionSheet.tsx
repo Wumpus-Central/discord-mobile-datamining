@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },
@@ -34,7 +34,7 @@ export default function GIFPickerItemActionSheet(item) {
   let size = isFavoriteGIF(width[7])();
   width = size.width;
   const height = size.height;
-  const items = [, , ,];
+  items = [, , ,];
   ({ width: arr[0], height: arr[1] } = item);
   items[2] = width;
   items[3] = height;

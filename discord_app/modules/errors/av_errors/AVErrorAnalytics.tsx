@@ -23,7 +23,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   if (null != connectionStats) {
     if (null != lastConnectionStats) {
       const obj = {};
-      const items = [
+      items = [
         "videohookFrames",
         "hybridDxgiFrames",
         "hybridGdiFrames",
@@ -80,9 +80,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(5783).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5903).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Constants = fn(5768);
+const Constants = fn(5888);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
@@ -187,7 +187,7 @@ export function sendAVErrorAnalyticsEvent(error, context) {
     }
     tmp26 = streamApplication;
   }
-  const state = underlyingError.getState();
+  state = underlyingError.getState();
   ({ resolution: closure_21, fps: closure_22 } = state);
   let obj = require("AVError");
   const runningGameAnalytics = require("GameAnalyticsUtils").getRunningGameAnalytics(tmp26);

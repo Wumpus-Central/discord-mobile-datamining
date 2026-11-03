@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row" },
   names: { marginStart: 4, paddingRight: 1 },
@@ -53,7 +53,7 @@ export default function UserSummaryItem(users) {
   let tmp5 = renderedUsers.length > 0 ? renderedUsers.length : users.length;
   const bound = Math.min(tmp5, max);
   let obj = {};
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     closure_0.forEach((id) => {
       let tmp2 = null != closure_1_1;

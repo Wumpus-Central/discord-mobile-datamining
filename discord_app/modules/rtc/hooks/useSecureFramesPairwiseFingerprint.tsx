@@ -18,7 +18,7 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,8 +87,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9266).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(5768).Features;
+let closure_9 = fn(9394).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(5888).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
@@ -105,7 +105,7 @@ export function useSecureFramesPairwiseFingerprint(userId) {
   let first1;
   let id;
   let stateFromStores2;
-  const items = [id];
+  items = [id];
   stateFromStores = userId(stateFromStores[9]).useStateFromStores(items, () => id.getId());
   FROZEN(stateFromStores[10])(
     stateFromStores !== userId,
@@ -140,7 +140,7 @@ export function useSecureFramesPairwiseFingerprint(userId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

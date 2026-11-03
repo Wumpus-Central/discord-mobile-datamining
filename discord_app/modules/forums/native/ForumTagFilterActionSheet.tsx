@@ -11,7 +11,7 @@ require = fn;
 function EmojiIcon(arg0) {
   ({ emojiId: require, emojiName } = arg0);
   const tmp = closure_12();
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != require) {
@@ -46,12 +46,12 @@ function EmojiIcon(arg0) {
     name: null,
   });
 }
-const ForumChannelStore = fn(13763);
+const ForumChannelStore = fn(13894);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
+({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },
@@ -64,7 +64,7 @@ export default function ForumPostTagsActionSheet(channel) {
   channel = channel.channel;
   first = undefined;
   _slicedToArray = undefined;
-  let state = closure_7();
+  state = closure_7();
   [first, _slicedToArray] = noop.useState(new Set(closure_6(channel.id).tagFilter));
   let set = new Set(closure_6(channel.id).tagFilter);
   const unmountEffect = channel(first[8]).useUnmountEffect(() => {

@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default function ThemedStatusBar() {
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => authenticated.isAuthenticated());
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();
   const items1 = [ThemeStore];

@@ -7,7 +7,7 @@ import RelationshipStore from "../../../../../../../../stores/RelationshipStore.
 import UserStore from "../../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const InviteTypes = fn(7879).InviteTypes;
+const InviteTypes = fn(8003).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx",
@@ -53,20 +53,20 @@ export function createGroupDMInvite(invite, arg1, theme) {
   }
   let channelIconSource = null;
   if (null != channel) {
-    channelIconSource = tmp8(14886).getChannelIconSource(channel);
-    const tmp8Result = tmp8(14886);
+    channelIconSource = tmp8(15017).getChannelIconSource(channel);
+    const tmp8Result = tmp8(15017);
   }
   let uri = null;
   if (null != channelIconSource) {
-    uri = tmp8(1412).ensureAvatarSource(channelIconSource).uri;
-    const tmp8Result4 = tmp8(1412);
+    uri = tmp8(1414).ensureAvatarSource(channelIconSource).uri;
+    const tmp8Result4 = tmp8(1414);
   }
   let channelName = null;
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(5652).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result5 = tmp8(5652);
+      channelName = tmp8(5772).computeChannelName(channel, UserStore, RelationshipStore);
+      const tmp8Result5 = tmp8(5772);
     }
   }
   if (!channelName) {
@@ -128,8 +128,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(5652).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result6 = tmp8(5652);
+      channelName1 = tmp8(5772).computeChannelName(channel, UserStore, RelationshipStore);
+      const tmp8Result6 = tmp8(5772);
     }
   }
   obj2.channelName = channelName1;

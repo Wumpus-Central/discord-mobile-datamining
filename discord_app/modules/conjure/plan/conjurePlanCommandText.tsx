@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/plan/conjurePlanCommandText.tsx
-import escapeRegExpDefault from "../../../../_runtime/05065_escapeRegExp.js";
+import escapeRegExpDefault from "../../../../_runtime/05192_escapeRegExp.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -11,7 +11,7 @@ export function conjurePlanSlashCommandNames(arr) {
   return found.map((name) => name.name);
 }
 export function useConjurePlanSlashCommandNames(commands) {
-  const items = [commands];
+  items = [commands];
   return noop.useMemo(() => {
     const found = commands.filter((item) => "/" === commands(closure_1_2[1]).conjurePlanCommandPrefix(item));
     return found.map((name) => name.name);
@@ -21,7 +21,7 @@ export function conjurePlanCommandPattern(arg0) {
   if (0 === arg0.length) {
     return null;
   } else {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arg0, 0);
     const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
     const mapped = sorted.map(escapeRegExpDefault);
@@ -43,11 +43,11 @@ export function conjurePlanTextMentionsCommand(item, arr) {
   }
 }
 export function useConjurePlanCommandPattern(commandNames) {
-  let items = [commandNames];
+  items = [commandNames];
   return noop.useMemo(() => {
     let regExp = null;
     if (0 !== length.length) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(length, 0);
       const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
       const mapped = sorted.map(escapeRegExpDefault);
@@ -62,7 +62,7 @@ export function splitConjurePlanCommandText(mapped, conjurePlanCommandPattern) {
   if (null == conjurePlanCommandPattern) {
     return null;
   } else {
-    const items = [];
+    items = [];
     let num2 = 0;
     const matchAllResult = mapped.matchAll(conjurePlanCommandPattern);
     const iter = matchAllResult[Symbol.iterator]();

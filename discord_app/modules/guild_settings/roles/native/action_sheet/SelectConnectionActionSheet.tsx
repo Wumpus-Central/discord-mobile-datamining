@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../../../_runtime/05275_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05398_BottomSheetModal.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
@@ -161,7 +161,7 @@ export default function SelectConnectionActionSheet(arg0) {
     num = 0;
   }
   const intl2 = util.intl;
-  const items = [intl2.string(util.t["3fe7U5"])];
+  items = [intl2.string(util.t["3fe7U5"])];
   if (num > 0) {
     const intl3 = util.intl;
     items.push(intl3.string(util.t.PHjkRE));

@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaModal.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
@@ -22,7 +22,7 @@ const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8836);
+const useVideoControls = obj(8960);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -68,7 +68,7 @@ export default function MediaModal(originLayout) {
   });
   let obj = num(onCloseCallback[7]);
   const videoStateStore = num(onCloseCallback[8]).useVideoStateStore((paused) => paused.paused);
-  const items = [onCloseCallback, onClose];
+  items = [onCloseCallback, onClose];
   let callback = flag2.useCallback(() => {
     if (onClose != null) {
       tmp();
@@ -92,10 +92,10 @@ export default function MediaModal(originLayout) {
   const id = flag2.useId();
   const items2 = [id];
   const effect1 = flag2.useEffect(() => {
-    let state = AppFreezeStore.getState();
+    state = AppFreezeStore.getState();
     let freezeLock = state.requestFreezeLock({ lockEnabled: true, key: id });
     return () => {
-      const state = contextName.getState();
+      state = contextName.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key });
     };
   }, items2);
@@ -198,7 +198,7 @@ export default function MediaModal(originLayout) {
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(8905, dependencyMap.paths),
+          asyncRequireImpl(9029, dependencyMap.paths),
           "MediaShareActionSheet",
           obj2,
         );

@@ -14,6 +14,6 @@ export function useIsEligibleSenderForReferralProgram() {
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
-  const items = [ReferralTrialStore];
+  items = [ReferralTrialStore];
   return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 }

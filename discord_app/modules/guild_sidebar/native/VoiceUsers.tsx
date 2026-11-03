@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
-import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import HeadphonesIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
@@ -28,7 +28,7 @@ function AudienceItem(arg0) {
       style: tmp2.headphonesIcon,
     }),
   };
-  const items = [
+  items = [
     timestampProducer(View, obj3),
     timestampProducer(Text_Text.Text, {
       style: tmp2.listenersText,
@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -110,11 +110,11 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9822)());
-  const obj = user(9235);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9235).useLocalSelfMuteDeaf());
-  const obj2 = user(9235);
-  const items = [GuildMemberStore];
+  const tmp3 = closure_11(channel(9953)());
+  const obj = user(9363);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9363).useLocalSelfMuteDeaf());
+  const obj2 = user(9363);
+  items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
     items,
@@ -164,7 +164,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18180), obj7, user.id);
+  obj4.children = closure_6(tmp(18324), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);
@@ -184,7 +184,7 @@ export default function VoiceUsers(collapsed) {
   }
   const tmp3Result = channel(guild_id[15])(mapped);
   noop = tmp3Result;
-  const items = [guild_id, tmp3Result];
+  items = [guild_id, tmp3Result];
   const memo = noop.useMemo(() => {
     if (null != guild_id) {
       if (length.length > 0) {

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentSt
 
 export default function useMyCurrentStageChannelRole(arg0) {
   _require = arg0;
-  const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
+  items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

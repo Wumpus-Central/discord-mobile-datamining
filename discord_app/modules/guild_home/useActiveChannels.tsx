@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.
 export function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
+    items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;

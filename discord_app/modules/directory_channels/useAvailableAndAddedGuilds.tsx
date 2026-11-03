@@ -19,7 +19,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  let items = [GuildDirectoryStore];
+  items = [GuildDirectoryStore];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildDirectoryStore.getAdminGuildEntryIds(closure_1),
   );
@@ -30,9 +30,9 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     items1,
     () => {
       flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-      const items = [];
+      items = [];
       const item = flattenedGuildIds.forEach((item) => {
-        const guild = GuildStore.getGuild(item);
+        guild = GuildStore.getGuild(item);
         let canResult = null != guild;
         if (canResult) {
           canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
@@ -60,7 +60,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -97,7 +97,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           v3 = tmp;

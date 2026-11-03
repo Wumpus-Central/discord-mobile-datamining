@@ -1,91 +1,92 @@
 // discord_app/design/void/Collapsible/native/Collapsible.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
+const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const EXPAND_SPRING = { stiffness: 150, overshootClamping: true };
-const createStyles = fn(5014);
+let closure_8 = { stiffness: 150, overshootClamping: true };
+const createStyles = fn(5141);
 const obj2 = {
   collapsible: { position: "relative", overflow: "hidden" },
   collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
 };
 let closure_9 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}",
+let closure_10 = {
+  code: "(function CollapsibleTsx1(){let[withSpring,totalHeight,EXPAND_SPRING]=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
 
 export default function Collapsible(isExpanded) {
   isExpanded = isExpanded.isExpanded;
-  first = undefined;
-  first1 = undefined;
-  _slicedToArray = undefined;
+  closure_3 = undefined;
   first2 = undefined;
   closure_5 = undefined;
-  c6 = undefined;
   ({ children, collapsibleContent, style } = isExpanded);
   const tmp = closure_9();
-  [first] = first2.useState(false);
-  importDefault = tmp4;
-  [first1, _slicedToArray] = first2.useState(0);
-  [first2, closure_5] = first2.useState(0);
-  const items = [first1];
+  [first] = noop.useState(false);
+  c0 = first;
+  c1 = tmp4;
+  [first1, closure_3] = noop.useState(0);
+  c2 = first1;
+  [first2, closure_5] = noop.useState(0);
+  items = [first1];
   [][0] = first2;
-  const callback = first2.useCallback((nativeEvent) => {
-    if (0 === first1) {
+  const callback = noop.useCallback((nativeEvent) => {
+    if (0 === c2) {
       closure_3(nativeEvent.nativeEvent.layout.height);
     }
   }, items);
   if (isExpanded == null) {
     let num = 0;
     const sum = first1 + num;
-    c6 = sum;
-    class S {
+    const items1 = [closure_10, spring_spring.withSpring, sum, closure_8];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    [tmp17, tmp18, tmp19, tmp20] = items1;
+    class CollapsibleTsx1 {
       constructor() {
-        obj = { height: null };
-        obj2 = closure_0(closure_2[7]);
-        obj.height = obj2.withSpring(closure_6, closure_8);
+        obj = { height: closure_0(closure_1, closure_2) };
         return obj;
       }
     }
-    const obj3 = { withSpring: first(first1[7]).withSpring, totalHeight: sum, EXPAND_SPRING };
-    S.__closure = obj3;
-    S.__workletHash = 1072657539267;
-    S.__initData = __initData;
-    const items1 = [first, tmp4];
-    const animatedStyle = first(first1[6]).useAnimatedStyle(S);
-    const obj4 = { style, children: null };
-    const callback1 = obj.useCallback(() => {
-      closure_1(!first);
-    }, items1);
-    const items2 = [tmp.collapsible];
-    let tmp22 = null;
+    const items2 = [tmp18, tmp19, tmp20];
+    CollapsibleTsx1.__closure = items2;
+    CollapsibleTsx1.__workletHash = 912890471066;
+    CollapsibleTsx1.__initData = tmp17;
+    const items3 = [first, tmp4];
+    const animatedStyle = _mod1652.useAnimatedStyle(CollapsibleTsx1);
+    const obj3 = { style, children: null };
+    const callback1 = noop.useCallback(() => {
+      _undefined2(!c0);
+    }, items3);
+    const items4 = [tmp.collapsible];
+    let tmp27 = null;
     if (sum > 0) {
-      tmp22 = animatedStyle;
+      tmp27 = animatedStyle;
     }
-    const obj5 = { style: null, children: null };
-    items2[1] = tmp22;
-    obj5.style = items2;
-    const obj6 = { onLayout: callback, children: null };
-    const obj7 = { onPress: callback1 };
-    obj6.children = children(obj7);
-    const items3 = [c6(closure_5, obj6)];
-    const obj8 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
-    items3[1] = c6(closure_5, obj8);
-    obj5.children = items3;
-    obj4.children = closure_7(require("ReanimatedRexport").View, obj5);
-    return c6(closure_5, obj4);
+    const obj4 = { style: null, children: null };
+    items4[1] = tmp27;
+    obj4.style = items4;
+    const obj5 = { onLayout: callback, children: null };
+    const obj6 = { onPress: callback1 };
+    obj5.children = children(obj6);
+    const items5 = [timestampProducer(View, obj5)];
+    const obj7 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
+    items5[1] = timestampProducer(View, obj7);
+    obj4.children = items5;
+    obj3.children = React5(_modDef1652.View, obj4);
+    return timestampProducer(View, obj3);
   } else {
     num = 0;
   }
   num = first2;
-  obj = first2;
 }

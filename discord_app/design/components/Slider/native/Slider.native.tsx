@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef8852 from "../../../../../_runtime/metro/08852__.js";
+import _modDef8976 from "../../../../../_runtime/metro/08976__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -45,7 +45,7 @@ export function useLatestSliderValue(value, defaultValue, minValue) {
       tmp4(value);
     }
   }
-  const items = [tmp3, tmp4];
+  items = [tmp3, tmp4];
   return items;
 }
 export function Slider(maxValue) {
@@ -81,7 +81,7 @@ export function Slider(maxValue) {
       tmp7(first);
     }
   }
-  const items = [tmp6, tmp7];
+  items = [tmp6, tmp7];
   const tmp3Result4 = _slicedToArray(items, 2);
   dependencyMap = tmp3Result4[1];
   const obj2 = { style: tmp.container, children: null };
@@ -139,7 +139,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef8852;
+  const tmp18 = _modDef8976;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

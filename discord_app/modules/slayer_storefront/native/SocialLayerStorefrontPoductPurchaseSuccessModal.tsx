@@ -2,12 +2,12 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3738 from "../intl/SlayerStorefront.messages.js";
+import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef3865 from "../intl/SlayerStorefront.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
@@ -23,6 +23,7 @@ const require = globalThis.__r;
 require = fn;
 function PurchaseSuccessModalBase(sku) {
   sku = sku.sku;
+  _require = sku;
   ({ finePrint, ctaLabel, onCtaPress, onClose } = sku);
   importDefault = undefined;
   let callback1;
@@ -33,77 +34,104 @@ function PurchaseSuccessModalBase(sku) {
   const tmp = closure_16();
   _slicedToArray = tmp;
   const width = require("useWindowDimensions")().width;
-  let items = [AccessibilityStore];
-  const stateFromStores = sku(callback1[16]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   closure_129_0 = stateFromStores;
-  let obj = sku(callback1[16]);
-  const sharedValue = sku(callback1[11]).useSharedValue(0);
+  let obj = require("initialize");
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   closure_129_1 = sharedValue;
-  let obj2 = sku(callback1[11]);
-  const sharedValue1 = sku(callback1[11]).useSharedValue(0);
+  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [sharedValue, stateFromStores, sharedValue1];
   const effect = isScreenLandscape.useEffect(() => {
     let num = 1;
-    if (!sku) {
-      const obj = ReanimatedRexport;
-      num = obj.withDelay(200, spring.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
+    if (!c0) {
+      const obj = _mod1652;
+      const obj3 = { duration: null, dampingRatio: 0.7 };
+      const _Math = Math;
+      obj3.duration = Math.round(333.3333333333333);
+      num = obj.withDelay(200, spring_spring.withSpring(1, obj3));
     }
     const result = closure_1.set(num);
-    let num3 = 1;
-    if (!sku) {
-      const obj3 = ReanimatedRexport;
-      num3 = obj3.withDelay(200, timing.withTiming(1, { duration: 200 }));
+    let num4 = 1;
+    if (!c0) {
+      const obj4 = _mod1652;
+      num4 = obj4.withDelay(200, timing_timing.withTiming(1, { duration: 200 }));
     }
-    const result1 = callback1.set(num3);
+    const result1 = callback1.set(num4);
   }, items1);
-  let obj3 = sku(callback1[11]);
-  const fn = function n() {
-    const obj = { opacity: ReanimatedRexport.interpolate(closure_1.get(), [0, 1], [0.1, 1]), transform: null };
-    const obj3 = { scale: null };
-    obj3.scale = ReanimatedRexport.interpolate(closure_1.get(), [0, 1], [0, 1]);
-    const items = [obj3];
-    obj.transform = items;
-    return obj;
-  };
-  const obj5 = sku(callback1[11]);
-  fn.__closure = { interpolate: sku(callback1[11]).interpolate, springInput: sharedValue };
-  fn.__workletHash = 7750024112371;
-  fn.__initData = __initData;
-  const animatedStyle = obj5.useAnimatedStyle(fn);
-  const obj6 = { interpolate: sku(callback1[11]).interpolate, springInput: sharedValue };
-  const fn2 = function s() {
-    const obj = { opacity: ReanimatedRexport.interpolate(closure_1.get(), [0, 1], [0, 1]), transform: null };
-    const obj3 = { scale: null };
-    obj3.scale = ReanimatedRexport.interpolate(closure_1.get(), [0, 1], [0.75, 1]);
-    const items = [obj3];
-    obj.transform = items;
-    return obj;
-  };
-  const obj7 = sku(callback1[11]);
-  fn2.__closure = { interpolate: sku(callback1[11]).interpolate, springInput: sharedValue };
-  fn2.__workletHash = 3400602564931;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = obj7.useAnimatedStyle(fn2);
-  const obj8 = { interpolate: sku(callback1[11]).interpolate, springInput: sharedValue };
-  const fn3 = function c() {
-    const obj = { opacity: ReanimatedRexport.interpolate(callback1.get(), [0, 1], [0.5, 0]) };
-    return obj;
-  };
-  const obj9 = sku(callback1[11]);
-  fn3.__closure = { interpolate: sku(callback1[11]).interpolate, linearInput: sharedValue1 };
-  fn3.__workletHash = 4092396015860;
-  fn3.__initData = __initData3;
-  const animatedStyle2 = obj9.useAnimatedStyle(fn3);
-  const obj10 = { interpolate: sku(callback1[11]).interpolate, linearInput: sharedValue1 };
-  isScreenLandscape = sku(callback1[17]).useIsScreenLandscape();
-  const tmp13 = isScreenLandscape ? closure_12 : closure_13;
+  let obj3 = require("../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_18, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp9, tmp10, tmp11] = items2;
+  class SocialLayerStorefrontPoductPurchaseSuccessModalTsx1 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0.1, 1]), transform: null };
+      obj1 = { scale: closure_0(closure_1.get(), [0, 1], [0, 1]) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items3 = [tmp10, tmp11];
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__closure = items3;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__workletHash = 1000739966762;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__initData = tmp9;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    SocialLayerStorefrontPoductPurchaseSuccessModalTsx1,
+  );
+  let obj5 = require("../../../../_runtime/metro/01652__.js");
+  const items4 = [closure_19, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp13, tmp14, tmp15] = items4;
+  class SocialLayerStorefrontPoductPurchaseSuccessModalTsx2 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0, 1]), transform: null };
+      obj1 = { scale: closure_0(closure_1.get(), [0, 1], [0.75, 1]) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items5 = [tmp14, tmp15];
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__closure = items5;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__workletHash = 3853789941754;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__initData = tmp13;
+  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    SocialLayerStorefrontPoductPurchaseSuccessModalTsx2,
+  );
+  const tmp4Result = require("../../../../_runtime/metro/01652__.js");
+  const items6 = [closure_20, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp17, tmp18, tmp19] = items6;
+  class SocialLayerStorefrontPoductPurchaseSuccessModalTsx3 {
+    constructor() {
+      obj = { opacity: closure_0(closure_1.get(), [0, 1], [0.5, 0]) };
+      return obj;
+    }
+  }
+  const items7 = [tmp18, tmp19];
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__closure = items7;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__workletHash = 10933347757;
+  SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__initData = tmp17;
+  const animatedStyle2 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    SocialLayerStorefrontPoductPurchaseSuccessModalTsx3,
+  );
+  const tmp4Result3 = require("../../../../_runtime/metro/01652__.js");
+  isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
+  const tmp22 = isScreenLandscape ? closure_12 : closure_13;
   [first, closure_7] = isScreenLandscape.useState(null);
-  const items2 = [isScreenLandscape];
-  const items3 = [isScreenLandscape, first];
+  const items8 = [isScreenLandscape];
+  const items9 = [isScreenLandscape, first];
   const callback = obj4.useCallback((height) => {
     closure_7({ height: height.nativeEvent.layout.height, landscape: isScreenLandscape });
-  }, items2);
+  }, items8);
   const memo = obj4.useMemo(() => {
     if (isScreenLandscape) {
       if (null != first) {
@@ -118,12 +146,12 @@ function PurchaseSuccessModalBase(sku) {
     } else {
       return 250;
     }
-  }, items3);
-  const items4 = [sku];
+  }, items9);
+  const items10 = [sku];
   const memo1 = obj4.useMemo(() => {
-    let str = SlayerStorefrontUtils.getCardBackgroundImageURL(sku);
+    let str = SlayerStorefrontUtils.getCardBackgroundImageURL(c0);
     if (str == null) {
-      str = SlayerStorefrontUtils.getCardImageURL(sku);
+      str = SlayerStorefrontUtils.getCardImageURL(c0);
       const tmpResult = SlayerStorefrontUtils;
     }
     let str1;
@@ -131,9 +159,9 @@ function PurchaseSuccessModalBase(sku) {
       str1 = str.toString();
     }
     return str1;
-  }, items4);
-  const items5 = [width];
-  const memo2 = obj4.useMemo(() => ({ width }), items5);
+  }, items10);
+  const items11 = [width];
+  const memo2 = obj4.useMemo(() => ({ width }), items11);
   importDefault = obj4.useRef(length);
   callback1 = obj4.useCallback(() => {
     const arr = _toArray(closure_1.current);
@@ -155,190 +183,190 @@ function PurchaseSuccessModalBase(sku) {
       const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     }
   }, []);
-  const items6 = [callback1];
+  const items12 = [callback1];
   const effect1 = obj4.useEffect(() => {
     callback1();
     return () => {
       closure_1_1.current = [];
     };
-  }, items6);
-  const items7 = [tmp.messages, ,];
+  }, items12);
+  const items13 = [tmp.messages, ,];
   let messagesLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     messagesLandscape = tmp.messagesLandscape;
   }
-  const obj12 = { style: items7, children: null };
-  items7[1] = messagesLandscape;
-  items7[2] = animatedStyle1;
-  const items8 = [tmp.title];
+  const obj6 = { style: items13, children: null };
+  items13[1] = messagesLandscape;
+  items13[2] = animatedStyle1;
+  const items14 = [tmp.title];
   let textLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     textLandscape = tmp.textLandscape;
   }
-  items8[1] = textLandscape;
-  const items9 = [
-    closure_14(sku(callback1[19]).Text, {
+  items14[1] = textLandscape;
+  const items15 = [
+    closure_14(require("Text/Text").Text, {
       variant: "heading-xl/semibold",
       color: "text-overlay-light",
-      style: items8,
+      style: items14,
       children: title,
     }),
   ];
-  const items10 = [tmp.description];
+  const items16 = [tmp.description];
   let textLandscape2 = isScreenLandscape;
   if (isScreenLandscape) {
     textLandscape2 = tmp.textLandscape;
   }
-  items10[1] = textLandscape2;
-  items9[1] = closure_14(sku(callback1[19]).Text, {
+  items16[1] = textLandscape2;
+  items15[1] = closure_14(require("Text/Text").Text, {
     variant: "text-md/medium",
     color: "text-overlay-light",
-    style: items10,
+    style: items16,
     children: body,
   });
-  obj12.children = items9;
-  const tmp22Result = closure_15(require("ReanimatedRexport").View, obj12);
-  const items11 = [tmp.footer];
+  obj6.children = items15;
+  const tmp31Result = closure_15(require("../../../../_runtime/metro/01652__.js").View, obj6);
+  const items17 = [tmp.footer];
   let footerLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     footerLandscape = tmp.footerLandscape;
   }
-  const obj13 = { style: items11, children: null };
-  items11[1] = footerLandscape;
-  let tmp23Result = null != finePrint;
-  if (tmp23Result) {
-    const items12 = [tmp.finePrint];
+  const obj7 = { style: items17, children: null };
+  items17[1] = footerLandscape;
+  let tmp32Result = null != finePrint;
+  if (tmp32Result) {
+    const items18 = [tmp.finePrint];
     let textLandscape3 = isScreenLandscape;
     if (isScreenLandscape) {
       textLandscape3 = tmp.textLandscape;
     }
-    const obj14 = { variant: "text-xs/normal", color: "text-overlay-light", style: null, children: null };
-    items12[1] = textLandscape3;
-    obj14.style = items12;
-    obj14.children = finePrint;
-    tmp23Result = closure_14(tmp4(tmp3[19]).Text, obj14);
+    const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", style: null, children: null };
+    items18[1] = textLandscape3;
+    obj8.style = items18;
+    obj8.children = finePrint;
+    tmp32Result = closure_14(tmp4(tmp3[19]).Text, obj8);
   }
-  const items13 = [tmp23Result];
-  const items14 = [tmp.cta];
+  const items19 = [tmp32Result];
+  const items20 = [tmp.cta];
   let ctaLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     ctaLandscape = tmp.ctaLandscape;
   }
-  const obj15 = { style: items14, children: null };
-  items14[1] = ctaLandscape;
+  const obj9 = { style: items20, children: null };
+  items20[1] = ctaLandscape;
   if (onCtaPress == null) {
     onCtaPress = onClose;
   }
-  const obj16 = { onPress: onCtaPress, text: null, icon: null, loading: null, size: "lg", grow: true };
+  const obj10 = { onPress: onCtaPress, text: null, icon: null, loading: null, size: "lg", grow: true };
   if (ctaLabel == null) {
     const intl = tmp4(tmp3[21]).intl;
     ctaLabel = intl.string(tmp4(tmp3[21]).t.cpT0Cq);
   }
-  obj16.text = ctaLabel;
-  obj16.icon = ctaIcon;
-  obj16.loading = ctaLoading;
-  obj15.children = closure_14(sku(callback1[20]).Button, obj16);
-  items13[1] = closure_14(closure_7, obj15);
-  obj13.children = items13;
-  const tmp22Result3 = closure_15(closure_7, obj13);
-  const obj17 = { style: null, children: null };
-  const items15 = [tmp.root, memo2];
-  obj17.style = items15;
-  let tmp23Result3 = null != memo1;
-  if (tmp23Result3) {
-    const obj18 = { source: null, style: null, blurRadius: 4, resizeMode: "cover" };
-    const obj19 = { uri: memo1 };
-    obj18.source = obj19;
-    obj18.style = tmp.backdropImage;
-    tmp23Result3 = closure_14(tmp2(tmp3[22]), obj18);
+  obj10.text = ctaLabel;
+  obj10.icon = ctaIcon;
+  obj10.loading = ctaLoading;
+  obj9.children = closure_14(require("components/Button/Button").Button, obj10);
+  items19[1] = closure_14(closure_7, obj9);
+  obj7.children = items19;
+  const tmp31Result3 = closure_15(closure_7, obj7);
+  const obj11 = { style: null, children: null };
+  const items21 = [tmp.root, memo2];
+  obj11.style = items21;
+  let tmp32Result3 = null != memo1;
+  if (tmp32Result3) {
+    const obj12 = { source: null, style: null, blurRadius: 4, resizeMode: "cover" };
+    const obj13 = { uri: memo1 };
+    obj12.source = obj13;
+    obj12.style = tmp.backdropImage;
+    tmp32Result3 = closure_14(tmp2(tmp3[22]), obj12);
   }
-  const items16 = [
-    tmp23Result3,
+  const items22 = [
+    tmp32Result3,
     closure_14(require("LinearGradient"), {
       style: tmp.backdropGradient,
-      start: tmp13.START,
-      end: tmp13.END,
+      start: tmp22.START,
+      end: tmp22.END,
       locations: [0.4, 0.75, 1],
       colors: ["rgba(0,0,0,0)", "rgba(0,0,0,0.6)", "#000000"],
     }),
     ,
   ];
   const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
-  const obj21 = { style: tmp.header, children: null };
-  const obj22 = {
+  const obj15 = { style: tmp.header, children: null };
+  const obj16 = {
     onPress: onClose,
     backImage() {
-      return closure_2_14(XSmallIcon.XSmallIcon, { size: "lg", style: closeButtonIcon.closeButtonIcon });
+      return gesture(XSmallIcon.XSmallIcon, { size: "lg", style: closeButtonIcon.closeButtonIcon });
     },
     accessibilityLabel: null,
     displayMode: "minimal",
   };
   const intl2 = tmp4(tmp3[21]).intl;
-  obj22.accessibilityLabel = intl2.string(sku(callback1[21]).t.cpT0Cq);
-  obj21.children = closure_14(sku(callback1[25]).HeaderBackButton, obj22);
-  const items17 = [closure_14(closure_7, obj21), ,];
-  const obj23 = {
+  obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
+  obj15.children = closure_14(require("../../../../_runtime/metro/07131__.js").HeaderBackButton, obj16);
+  const items23 = [closure_14(closure_7, obj15), ,];
+  const obj17 = {
     style: tmp.scroll,
     contentContainerStyle: null,
     onLayout: null,
     alwaysBounceVertical: false,
     children: null,
   };
-  const items18 = [tmp.body];
+  const items24 = [tmp.body];
   let bodyLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     bodyLandscape = tmp.bodyLandscape;
   }
-  items18[1] = bodyLandscape;
-  obj23.contentContainerStyle = items18;
-  obj23.onLayout = callback;
-  const items19 = [tmp.preview, ,];
+  items24[1] = bodyLandscape;
+  obj17.contentContainerStyle = items24;
+  obj17.onLayout = callback;
+  const items25 = [tmp.preview, ,];
   let previewLandscape = isScreenLandscape;
   if (isScreenLandscape) {
     previewLandscape = tmp.previewLandscape;
   }
-  const obj24 = { style: items19, children: null };
-  items19[1] = previewLandscape;
-  items19[2] = animatedStyle;
-  let tmp23Result4 = null != memo;
-  if (tmp23Result4) {
-    const obj25 = { sku, size: memo };
-    tmp23Result4 = closure_14(tmp2(tmp3[27]), obj25);
+  const obj18 = { style: items25, children: null };
+  items25[1] = previewLandscape;
+  items25[2] = animatedStyle;
+  let tmp32Result4 = null != memo;
+  if (tmp32Result4) {
+    const obj19 = { sku, size: memo };
+    tmp32Result4 = closure_14(tmp2(tmp3[27]), obj19);
   }
-  obj24.children = tmp23Result4;
-  const items20 = [closure_14(require("ReanimatedRexport").View, obj24)];
-  let tmp22Result4 = tmp22Result;
+  obj18.children = tmp32Result4;
+  const items26 = [closure_14(require("../../../../_runtime/metro/01652__.js").View, obj18)];
+  let tmp31Result4 = tmp31Result;
   if (isScreenLandscape) {
-    const obj26 = { style: tmp.contentColumnLandscape, children: null };
-    const items21 = [tmp22Result, tmp22Result3];
-    obj26.children = items21;
-    tmp22Result4 = closure_15(tmp25, obj26);
+    const obj20 = { style: tmp.contentColumnLandscape, children: null };
+    const items27 = [tmp31Result, tmp31Result3];
+    obj20.children = items27;
+    tmp31Result4 = closure_15(tmp34, obj20);
   }
-  items20[1] = tmp22Result4;
-  obj23.children = items20;
-  items17[1] = closure_15(first, obj23);
-  let tmp32 = !isScreenLandscape;
+  items26[1] = tmp31Result4;
+  obj17.children = items26;
+  items23[1] = closure_15(first, obj17);
+  let tmp41 = !isScreenLandscape;
   if (!isScreenLandscape) {
-    tmp32 = tmp22Result3;
+    tmp41 = tmp31Result3;
   }
-  items17[2] = tmp32;
-  rect.children = items17;
-  items16[2] = closure_15(sku(callback1[24]).SafeAreaPaddingView, rect);
-  const obj27 = { style: null, pointerEvents: "none" };
-  const items22 = [tmp.curtain, animatedStyle2];
-  obj27.style = items22;
-  items16[3] = closure_14(require("ReanimatedRexport").View, obj27);
-  obj17.children = items16;
-  return closure_15(closure_7, obj17);
+  items23[2] = tmp41;
+  rect.children = items23;
+  items22[2] = closure_15(require("common/SafeAreaView").SafeAreaPaddingView, rect);
+  const obj21 = { style: null, pointerEvents: "none" };
+  const items28 = [tmp.curtain, animatedStyle2];
+  obj21.style = items28;
+  items22[3] = closure_14(require("../../../../_runtime/metro/01652__.js").View, obj21);
+  obj11.children = items22;
+  return closure_15(closure_7, obj11);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7407).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7531).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -410,20 +438,20 @@ let obj9 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
 obj2.textLandscape = { marginHorizontal: nativeDefault.space.PX_16, textAlign: "left" };
 let obj10 = { marginHorizontal: nativeDefault.space.PX_16, textAlign: "left" };
 obj2.footer = { marginBottom: nativeDefault.space.PX_16 };
-const obj11 = { marginBottom: nativeDefault.space.PX_16 };
+let obj11 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.footerLandscape = { marginTop: nativeDefault.space.PX_24, marginBottom: 0 };
 let obj12 = { marginTop: nativeDefault.space.PX_24, marginBottom: 0 };
 obj2.cta = { marginHorizontal: nativeDefault.space.PX_24 };
 let obj13 = { marginHorizontal: nativeDefault.space.PX_24 };
 obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
-let obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
+const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = {
   textAlign: "center",
   marginHorizontal: nativeDefault.space.PX_24,
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -432,14 +460,14 @@ let obj15 = {
 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
 let closure_17 = createStyles.createStyles(obj17);
-const __initData = {
-  code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx1(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0,1])}]};}",
+let closure_18 = {
+  code: "(function SocialLayerStorefrontPoductPurchaseSuccessModalTsx1(){let[interpolate,springInput]=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0,1])}]};})",
 };
-const __initData2 = {
-  code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}",
+let closure_19 = {
+  code: "(function SocialLayerStorefrontPoductPurchaseSuccessModalTsx2(){let[interpolate,springInput]=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};})",
 };
-const __initData3 = {
-  code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}",
+let closure_20 = {
+  code: "(function SocialLayerStorefrontPoductPurchaseSuccessModalTsx3(){let[interpolate,linearInput]=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};})",
 };
 let closure_21 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 const size = fn(2);
@@ -460,7 +488,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
   let ref;
   numDays = undefined;
   const tmp = closure_17();
-  let items = [ref];
+  items = [ref];
   stateFromStores = skuId(stateFromStores[16]).useStateFromStores(items, () => SKUStore.get(skuId));
   let obj = skuId(stateFromStores[16]);
   let applicationId;
@@ -488,7 +516,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
     stateFromStores[30],
   ).useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId1);
   memo = hasAlreadyLinked.useMemo(() => {
-    let items = analyticsLocations;
+    items = analyticsLocations;
     if (analyticsLocations == null) {
       items = [];
     }
@@ -629,7 +657,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3738.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3865.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;
@@ -674,11 +702,11 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
 export function SocialLayerStorefrontProductGiftPurchaseSuccessModal(analyticsLocations) {
   ({ skuId: require, orbsReward, recipient } = analyticsLocations);
   analyticsLocations = analyticsLocations.analyticsLocations;
-  let items = [SKUStore];
+  items = [SKUStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => SKUStore.get(sku_id));
   let items1 = [analyticsLocations];
   const location_stack = noop.useMemo(() => {
-    let items = analyticsLocations;
+    items = analyticsLocations;
     if (analyticsLocations == null) {
       items = [];
     }

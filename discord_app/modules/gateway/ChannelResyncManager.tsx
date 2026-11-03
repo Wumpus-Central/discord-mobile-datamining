@@ -48,7 +48,7 @@ function handleChannelSync(guild_id) {
     const channels = guild_id.channels;
     let mutableGuildChannelsForGuild;
     set = undefined;
-    let items;
+    items = undefined;
     let str2;
     if (dependencyMap[guild_id] != null) {
       str2 = tmp20.requestId;
@@ -174,7 +174,7 @@ function handleChannelSync(guild_id) {
 }
 function handleLogout(isSwitchingAccount) {
   closure_24 = closure_24 + 1;
-  const items = [
+  items = [
     ...Object.keys(closure_19),
     ...Object.keys(closure_20),
     ...Object.keys(closure_21),
@@ -286,7 +286,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -375,7 +375,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       }
                       const obj5 = closure_2_1(1252);
                     } else {
-                      const items = [];
+                      items = [];
                       mutableGuildChannelsForGuild = mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(id);
                       let num2 = 0;
                       let num = 0;
@@ -383,7 +383,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       if (keys !== undefined) {
                         num = num2;
                         while (keys[tmp] !== undefined) {
-                          let obj7 = closure_2_0(1396);
+                          let obj7 = closure_2_0(1398);
                           if (obj7.hasFlag(mutableGuildChannelsForGuild[tmp13].flags, constants2.OBFUSCATED)) {
                             let arr = items.push(tmp13);
                           }
@@ -430,7 +430,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       let obj2 = closure_2_1(1252);
                     }
                   }
-                  obj = closure_2_0(15562);
+                  obj = closure_2_0(15703);
                 },
                 Math.ceil(Math.random() * closure_2_12),
               );
@@ -452,7 +452,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -580,7 +580,7 @@ function scheduleIntegrityCheck(guild_id) {
   tmp4 = _require;
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

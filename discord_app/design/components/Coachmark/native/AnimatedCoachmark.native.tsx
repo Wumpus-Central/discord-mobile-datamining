@@ -1,6 +1,6 @@
 // discord_app/design/components/Coachmark/native/AnimatedCoachmark.native.tsx
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import TooltipConstants from "../../Tooltip/native/TooltipConstants.native.tsx";
 import AnimatedEnterExitItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Coachmark from "Coachmark.native.tsx";
@@ -12,7 +12,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {
   const obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
+  items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
   obj.style = items;
   let tmpResult = null;
   if (null != arg0) {
@@ -22,7 +22,7 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     tmpResult = jsx(Coachmark.CoachmarkContainer, {});
   }
   obj.children = tmpResult;
-  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
@@ -34,7 +34,7 @@ export function AnimatedCoachmark(visible) {
   [tmp3, c1] = noop.useState(visible);
   const tmp2 = _slicedToArray(noop.useState(visible), 2);
   const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);
-  const items = [visible];
+  items = [visible];
   const effect = noop.useEffect(() => {
     _undefined(visible);
   }, items);

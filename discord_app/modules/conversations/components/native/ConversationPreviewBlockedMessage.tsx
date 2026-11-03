@@ -22,7 +22,7 @@ export default function ConversationPreviewBlockedMessage(reason) {
   } else {
     EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
   }
-  const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED })];
+  items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED })];
   const intl = util.intl;
   const t = util.t;
   const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };

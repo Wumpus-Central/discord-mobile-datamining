@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -62,7 +62,7 @@ function ServerPicker(onChange) {
           guilds: conjureEligibleGuilds,
           onPick(id) {
             const name = id;
-            const items = [id.id];
+            items = [id.id];
             return closure_1_2(
               require("ConjureClarification").clarificationEntities("server", items, () => name.name, closure_1_1),
             );
@@ -112,7 +112,7 @@ function ProjectPicker(arg0) {
             title: question.question,
             projects,
             onPick(projectId) {
-              const items = [projectId.projectId];
+              items = [projectId.projectId];
               return closure_1_2(
                 ConjureClarification.clarificationEntities("project", items, () => projectId.name, closure_1_1),
               );
@@ -135,7 +135,7 @@ function ProjectPicker(arg0) {
             title: question.question,
             projects,
             onPick(projectId) {
-              const items = [projectId.projectId];
+              items = [projectId.projectId];
               return closure_1_2(
                 ConjureClarification.clarificationEntities("project", items, () => projectId.name, closure_1_1),
               );
@@ -168,7 +168,7 @@ function GuildEntityPicker(value) {
   });
   const input = question.input;
   let obj = question(onChange[13]);
-  let items = [conjureSettingsGuildId];
+  items = [conjureSettingsGuildId];
   const items1 = [conjureSettingsGuildId, input];
   const stateFromStores = question(onChange[15]).useStateFromStores(
     items,
@@ -237,10 +237,10 @@ function GuildEntityPicker(value) {
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef3868["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef3995["jtBVV+"]);
                             obj4.onSelect = function onSelect(stateFromStores1) {
                               if (null == stateFromStores1) {
-                                let items = [];
+                                items = [];
                               } else {
                                 items = question(onChange[7]).clarificationChannelEntities(
                                   stateFromStores1,

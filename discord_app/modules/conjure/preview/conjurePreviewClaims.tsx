@@ -103,7 +103,7 @@ export function resolveConjurePreviewClaim(projectId, id, upload_token) {
   }
 }
 export function clearConjurePreviewClaims(projectId) {
-  const items = [...map];
+  items = [...map];
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;

@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,7 +30,7 @@ let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionS
 
 export default function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
   const items1 = [GuildStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => GuildStore.getGuild(require));

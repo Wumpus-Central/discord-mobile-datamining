@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/threads/native/useCreateThrea
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   _require = tmp;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [tmp];
   const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,

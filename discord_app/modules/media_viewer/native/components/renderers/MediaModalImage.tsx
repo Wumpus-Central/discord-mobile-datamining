@@ -18,7 +18,7 @@ export default noop.memo(function MediaModalImage(source) {
   ({ fadeDuration, index, onError, onLoad, onLoadingVisible, pointerEvents } = source);
   const tmp3 = useMediaLoadingDefault({ onError, onLoad, onLoadingVisible });
   const handleProgress = tmp3.handleProgress;
-  const items = [handleProgress];
+  items = [handleProgress];
   ({ hasError, isLoadingVisible, progress, handleLoadStart, handleLoad, handleError } = tmp3);
   [][0] = source.uri;
   const callback = noop.useCallback((nativeEvent) => {

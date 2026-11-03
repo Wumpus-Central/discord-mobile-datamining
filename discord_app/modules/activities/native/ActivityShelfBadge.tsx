@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = {
   position: "absolute",
@@ -62,7 +62,7 @@ export default function ActivityShelfBadge(arg0) {
   }
   if (labelType === Server.EmbeddedActivityLabelTypes.NEW) {
     const obj = { style: null, children: null };
-    const items = [replacementStyles, ,];
+    items = [replacementStyles, ,];
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
     obj.style = items;
     const obj2 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };

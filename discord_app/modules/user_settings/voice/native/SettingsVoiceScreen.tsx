@@ -2,13 +2,13 @@
 import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef11961 from "../../../../../_runtime/metro/11961__.js";
-import _modDef11962 from "../../../../../_runtime/metro/11962__.js";
+import _modDef12098 from "../../../../../_runtime/metro/12098__.js";
+import _modDef12099 from "../../../../../_runtime/metro/12099__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -19,16 +19,16 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11961;
+    let tmp2Result = _modDef12098;
   } else {
-    tmp2Result = _modDef11962;
+    tmp2Result = _modDef12099;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   obj = shared;
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items = [React6(FastImageDefault, obj3)];
+  items = [React6(FastImageDefault, obj3)];
   const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
@@ -58,15 +58,15 @@ function SystemProcessingSubLabel() {
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let closure_11 =
   "" +
   HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },
@@ -80,7 +80,7 @@ export default function SettingsVoiceScreen() {
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t.LKCupB);
-    const items = [, ,];
+    items = [, ,];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
     obj3.settings = items;
     const items1 = [obj3, , , , , , , ,];

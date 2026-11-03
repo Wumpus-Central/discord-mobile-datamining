@@ -5,7 +5,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: c3, View: closure_4 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" },
 });
@@ -52,7 +52,7 @@ export default function SimpleLoadingModal(operation) {
   const onDismissed = D;
   let callback1;
   jsx = onRejected.useRef(callback1.OPENING);
-  const items = [D];
+  items = [D];
   const callback = onRejected.useCallback(() => {
     if (ref.current === constants.SHOWN) {
       onDismissed();

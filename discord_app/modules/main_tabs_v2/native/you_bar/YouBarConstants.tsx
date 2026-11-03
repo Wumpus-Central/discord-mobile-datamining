@@ -23,14 +23,7 @@ const diff1 = sum1 + 8 - (native.AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx");
 
 export const CONNECTION_BANNER_HEIGHT = 48;
-export const YOU_BAR_SPRING_CONFIG = {
-  damping: 20,
-  stiffness: 300,
-  mass: 1.5,
-  overshootClamping: true,
-  restSpeedThreshold: 0.001,
-  restDisplacementThreshold: 0.001,
-};
+export const YOU_BAR_SPRING_CONFIG = { damping: 20, stiffness: 300, mass: 1.5, overshootClamping: true };
 export const YOU_BAR_PADDING = PX_12;
 export const YOU_BAR_HEIGHT = 32 + result;
 export const YOU_BAR_MARGIN = nativeDefault.space.PX_16;

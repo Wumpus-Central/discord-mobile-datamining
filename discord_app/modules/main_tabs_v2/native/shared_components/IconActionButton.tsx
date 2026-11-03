@@ -27,7 +27,7 @@ class ButtonBadge {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const timestampProducer = createStyles.createStyles(() => {
   const obj = {
     actionIconButtonPressable: {
@@ -85,7 +85,7 @@ let closure_7 = noop.memo(function IconComponent(color) {
   color = color.color;
   const tmp = closure_6();
   dependencyMap = tmp;
-  const items = [tmp, color, source];
+  items = [tmp, color, source];
   if (null != IconComponent) {
     let obj = { size: "sm", color: color(575).colors.ICON_SUBTLE };
     let tmp2Result = closure_4(IconComponent, obj);
@@ -131,7 +131,7 @@ export default function IconActionButton(variant) {
     style: null,
     children: null,
   };
-  const items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , ,];
+  items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , ,];
   let roundButton;
   if (!tmp10Result) {
     roundButton = tmp.roundButton;
@@ -146,7 +146,7 @@ export default function IconActionButton(variant) {
   obj.style = items;
   const items1 = [React4(closure_7, { IconComponent, color, source }), , ,];
   if (tmp10Result) {
-    const obj2 = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
+    const obj2 = { variant: "text-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
     tmp10Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp10Result;

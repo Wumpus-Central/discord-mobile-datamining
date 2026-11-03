@@ -1,6 +1,6 @@
 // discord_app/modules/billing/hooks/useFractionalPremiumInfo.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import _modDef2042 from "../../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../../_runtime/metro/02171__.js";
 import EntitlementTypes from "../../../../discord_common/js/shared/shared-constants/EntitlementTypes.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BillingUtils from "../../../utils/BillingUtils.tsx";
@@ -30,10 +30,10 @@ function calculateFractionalPremiumInfo(isFetching) {
   const obj = {
     isFractionalPremiumActive: false,
     fractionalState: constants.NONE,
-    startsAt: _modDef2042(0),
-    endsAt: _modDef2042(0),
+    startsAt: _modDef2171(0),
+    endsAt: _modDef2171(0),
     currentEntitlementId: "",
-    currentEntitlementEndsAt: _modDef2042(0),
+    currentEntitlementEndsAt: _modDef2171(0),
     unactivatedUnits: [],
     fetched: fetchedAllEntitlements,
   };
@@ -100,14 +100,14 @@ function calculateFractionalPremiumInfo(isFetching) {
           fetched: null,
         };
         if (null != first) {
-          let tmp11 = _modDef2042(first.startsAt);
+          let tmp11 = _modDef2171(first.startsAt);
         } else {
-          tmp11 = _modDef2042(0);
+          tmp11 = _modDef2171(0);
         }
         obj7.startsAt = tmp11;
         if (null != first) {
           const obj4 = PremiumUtils;
-          let tmp2ResultResult = _modDef2042(
+          let tmp2ResultResult = _modDef2171(
             obj4.extendDateWithUnconsumedFractionalPremium(
               first.endsAt,
               unactivatedFractionalPremiumUnits,
@@ -115,9 +115,9 @@ function calculateFractionalPremiumInfo(isFetching) {
               excludeReverseTrialFromCountdown,
             ),
           );
-          const tmp2Result = _modDef2042;
+          const tmp2Result = _modDef2171;
         } else {
-          tmp2ResultResult = _modDef2042(0);
+          tmp2ResultResult = _modDef2171(0);
         }
         obj7.endsAt = tmp2ResultResult;
         let str = "";
@@ -126,9 +126,9 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj7.currentEntitlementId = str;
         if (null != first) {
-          let tmp18 = _modDef2042(first.endsAt);
+          let tmp18 = _modDef2171(first.endsAt);
         } else {
-          tmp18 = _modDef2042(0);
+          tmp18 = _modDef2171(0);
         }
         obj7.currentEntitlementEndsAt = tmp18;
         obj7.unactivatedUnits = unactivatedFractionalPremiumUnits;
@@ -145,8 +145,8 @@ function calculateFractionalPremiumInfo(isFetching) {
   }
 }
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
-const PremiumConstants = fn(1385);
-({ FractionalPremiumStates: closure_9, PREMIUM_SUBSCRIPTION_APPLICATION: c10 } = PremiumConstants);
+const PremiumConstants = fn(1387);
+({ FractionalPremiumStates: closure_9, PREMIUM_SUBSCRIPTION_APPLICATION: closure_10 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/hooks/useFractionalPremiumInfo.tsx");
 
@@ -160,7 +160,7 @@ export default function useFractionalPremiumInfo() {
   let stateFromStores1;
   let stateFromStores2;
   closure_8 = undefined;
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = forceFetch(excludeReverseTrialFromCountdown[12]).useStateFromStores(items, () =>
     stateFromStores1.getCurrentUser(),
   );

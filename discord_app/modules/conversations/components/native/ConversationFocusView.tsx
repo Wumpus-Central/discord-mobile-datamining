@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     container: { flex: 1, backgroundColor },
@@ -39,7 +39,7 @@ export default function ConversationFocusView(channelId) {
     conversationId(jumpMessageId[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND,
   );
   let container = closure_9(token);
-  const items = [channelId, conversationId];
+  items = [channelId, conversationId];
   const onBeforeJumpToMessage = startMessageId.useCallback((arg0) => {
     if ("footer_cta" === arg0) {
       const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;

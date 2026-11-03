@@ -17,7 +17,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
   if (author != null) {
     id = author.id;
   }
-  const items = [id];
+  items = [id];
   const interaction = author.interaction;
   let id1;
   if (interaction != null) {

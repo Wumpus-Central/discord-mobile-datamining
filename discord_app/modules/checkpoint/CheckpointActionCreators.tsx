@@ -7,7 +7,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
-let closure_8 = async function _fetchCheckpointData(arg0) {
+let closure_9 = async function _fetchCheckpointData(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -18,7 +18,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -37,37 +37,45 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
           closure_129_0 = closure_0;
           let body;
           CheckpointStore.initializeIfNeeded();
-          DispatcherDefault.dispatch({ type: "CHECKPOINT_FETCH_START" });
-          c3 = 1;
-          const HTTP = HTTPUtils.HTTP;
-          const obj8 = { url: constants.CHECKPOINT, rejectWithError: true };
-          c4 = 2;
-          c5 = 1;
-          const obj10 = { value: HTTP.get(obj8), done: false };
-          return obj10;
+          if (CheckpointStore.isFetching) {
+            c5 = 3;
+            const obj8 = { value: constants.FETCHING, done: true };
+            return obj8;
+          } else {
+            DispatcherDefault.dispatch({ type: "CHECKPOINT_FETCH_START" });
+            c3 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const obj10 = { url: constants2.CHECKPOINT, rejectWithError: true };
+            c4 = 2;
+            c5 = 1;
+            const obj12 = { value: HTTP.get(obj10), done: false };
+            return obj12;
+          }
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_130_1(closure_130_2[4]).dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
         c5 = 3;
-        return { value: false, done: true };
+        const obj13 = { value: closure_130_6.ERROR, done: true };
+        return obj13;
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         body = value.body;
         if (null != closure_129_0) {
-          const obj12 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: null, globalStats: null, character: null };
+          const obj15 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: null, globalStats: null, character: null };
           const obj4 = closure_130_1(closure_130_2[4]);
-          obj12.stats = closure_130_0(closure_130_2[6]).getMockCheckpointStats(closure_129_0);
+          obj15.stats = closure_130_0(closure_130_2[6]).getMockCheckpointStats(closure_129_0);
           const obj6 = closure_130_0(closure_130_2[6]);
-          obj12.globalStats = closure_130_0(closure_130_2[7]).globalStatsFromServer(body.global_stats);
-          obj4.dispatch(obj12);
+          obj15.globalStats = closure_130_0(closure_130_2[7]).globalStatsFromServer(body.global_stats);
+          obj4.dispatch(obj15);
+          const SUCCESS2 = closure_130_6.SUCCESS;
           const obj7 = closure_130_0(closure_130_2[7]);
         } else {
           let statsFromServerResult = null;
@@ -75,32 +83,33 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             statsFromServerResult = closure_130_0(closure_130_2[7]).statsFromServer(body.stats);
             const obj = closure_130_0(closure_130_2[7]);
           }
-          const obj15 = {
+          const obj16 = {
             type: "CHECKPOINT_FETCH_SUCCESS",
             stats: statsFromServerResult,
             globalStats: null,
             character: null,
           };
-          const obj13 = closure_130_1(closure_130_2[4]);
-          obj15.globalStats = closure_130_0(closure_130_2[7]).globalStatsFromServer(body.global_stats);
-          obj15.character = body.character;
-          obj13.dispatch(obj15);
+          const obj17 = closure_130_1(closure_130_2[4]);
+          obj16.globalStats = closure_130_0(closure_130_2[7]).globalStatsFromServer(body.global_stats);
+          obj16.character = body.character;
+          obj17.dispatch(obj16);
+          const SUCCESS = closure_130_6.SUCCESS;
           const obj3 = closure_130_0(closure_130_2[7]);
         }
         c3 = 0;
         c5 = 3;
       }
-    } catch (tmp36) {
+    } catch (tmp46) {
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp36;
+        throw tmp46;
       } else {
         c4 = tmp;
       }
     }
   }
 };
-let closure_9 = async function _completeCheckpoint() {
+let closure_10 = async function _completeCheckpoint() {
   c4 = 0;
   c5 = 0;
   c3 = 0;
@@ -115,7 +124,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -172,7 +181,7 @@ let closure_9 = async function _completeCheckpoint() {
     }
   })();
 };
-let closure_10 = async function _resetCheckpoint() {
+let closure_11 = async function _resetCheckpoint() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -183,7 +192,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -236,7 +245,7 @@ let closure_10 = async function _resetCheckpoint() {
     }
   }
 };
-let closure_11 = async function _sendSidekickMessage() {
+let closure_12 = async function _sendSidekickMessage() {
   closure_3 = tmp5;
   closure_2 = tmp2;
   closure_130_0 = closure_0;
@@ -249,7 +258,7 @@ let closure_11 = async function _sendSidekickMessage() {
     const error = new Error("Failed to open private channel");
     throw error;
   }
-  closure_131_1(closure_131_2[9]).track(closure_131_6.CHECKPOINT_SIDEKICK_MESSAGE_SENT, {
+  closure_131_1(closure_131_2[9]).track(closure_131_7.CHECKPOINT_SIDEKICK_MESSAGE_SENT, {
     other_user_id: closure_130_1,
   });
   closure_131_1(closure_131_2[9]);
@@ -258,7 +267,7 @@ let closure_11 = async function _sendSidekickMessage() {
     location: "checkpoint-sidekick",
   });
 };
-let closure_12 = async function _sendCheckpointCard(arg0) {
+let closure_13 = async function _sendCheckpointCard(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -269,7 +278,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -318,10 +327,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7636);
+                  const obj = checkpointCardType(7760);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7824).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(7948).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -352,7 +361,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         c8 = 0;
@@ -362,8 +371,9 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
+const CheckpointFetchStates = fn(13571).CheckpointFetchStates;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
+({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");
 
@@ -373,20 +383,10 @@ export function toggleMute() {
 export function selectCharacterTrait(trait, optionId) {
   return DispatcherDefault.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait, optionId });
 }
-export function resetEditedCharacter() {
-  return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
+export function saveCheckpointProgress(characterStage) {
+  return DispatcherDefault.dispatch({ type: "CHECKPOINT_SAVE_PROGRESS", stage: characterStage });
 }
 export function fetchCheckpointData() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-export function completeCheckpoint() {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -396,7 +396,7 @@ export function completeCheckpoint() {
   }
   return applyArgumentsResult;
 }
-export function resetCheckpoint() {
+export function completeCheckpoint() {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -406,7 +406,7 @@ export function resetCheckpoint() {
   }
   return applyArgumentsResult;
 }
-export function sendSidekickMessage() {
+export function resetCheckpoint() {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -416,9 +416,19 @@ export function sendSidekickMessage() {
   }
   return applyArgumentsResult;
 }
-export function sendCheckpointCard() {
+export function sendSidekickMessage() {
   const self = this;
   const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function sendCheckpointCard() {
+  const self = this;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

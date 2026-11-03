@@ -144,7 +144,7 @@ const Store = initializeDefault.Store;
 class GamePartyStore extends Store {}
 const prototype = GamePartyStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   this.syncWith(items, handleLocalPresenceUpdate);
   this.waitFor(AuthenticationStore, RelationshipStore, SelfPresenceStore);
 };

@@ -12,12 +12,12 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   dependencyMap = authorId;
   const eligibleHarmTypesConfigsForContext = require("ObscuredMediaUtils").getEligibleHarmTypesConfigsForContext();
   let obj = require("ObscuredMediaUtils");
-  let items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = require("initialize");
   const items1 = [stateFromStores1, stateFromStores2];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
-    const items = [ChannelStore, RelationshipStore];
+    items = [ChannelStore, RelationshipStore];
     return ObscuredMediaUtils.getChannelTypeById(closure_0, closure_1, items);
   });
   const obj3 = require("initialize");
@@ -62,10 +62,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7467).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7591).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7463).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7463);
+    NONE = tmp(7587).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7587);
   }
   return NONE;
 }

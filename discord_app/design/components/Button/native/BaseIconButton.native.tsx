@@ -1,5 +1,5 @@
 // discord_app/design/components/Button/native/BaseIconButton.native.tsx
-import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import ButtonConstants from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
@@ -7,11 +7,11 @@ import Button_BaseButton from "BaseButton.native.tsx";
 import ButtonPill from "ButtonPill.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexport = ReanimatedRexport2;
+const module_1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = {
@@ -40,7 +40,7 @@ let closure_4 = createStyles.createStyles((arg0, arg1) => {
   obj5.pill = {};
   return obj5;
 });
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
+const Icon = module_1652.createAnimatedComponent(IconDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 
@@ -63,7 +63,7 @@ export function BaseIconButton(ref) {
     num = scaleAmountInPx;
   }
   const tmp4 = closure_4(str, DEFAULT_BUTTON_SIZE);
-  const sharedValue = ReanimatedRexport2.useSharedValue(0);
+  const sharedValue = _mod1652.useSharedValue(0);
   const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
@@ -76,7 +76,7 @@ export function BaseIconButton(ref) {
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.ref = ref.ref;
-  const items = [tmp4.button, style];
+  items = [tmp4.button, style];
   obj4.style = items;
   obj4.pressed = sharedValue;
   obj4.scaleAmountInPx = num;

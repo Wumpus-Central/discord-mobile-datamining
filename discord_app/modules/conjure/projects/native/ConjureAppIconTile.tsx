@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((width, width2, backgroundColor, color) => {
   const obj = {
     tile: null,
@@ -41,14 +41,14 @@ export default function ConjureAppIconTile(size) {
   };
   if (null != character) {
     const obj3 = {
-      variant: "heading-md/bold",
+      variant: "heading-md/semibold",
       color: "none",
       style: tmp4.character,
       allowFontScaling: false,
       children: character,
     };
     let tmp5Result = jsx(Text_Text.Text, {
-      variant: "heading-md/bold",
+      variant: "heading-md/semibold",
       color: "none",
       style: tmp4.character,
       allowFontScaling: false,

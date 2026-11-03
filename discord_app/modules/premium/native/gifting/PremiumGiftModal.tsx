@@ -17,14 +17,14 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(10560).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(10560).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(10560).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(10560).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(10560).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(10690).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(10690).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(10690).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(10690).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(10690).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function PremiumGiftModal(analyticsLocations) {
   ({ planInterval, order } = analyticsLocations);
   const tmp3 = analyticsLocations(onDismiss[20])(() => analyticsLocation(onDismiss[21]).v4());
   _slicedToArray = tmp3;
-  let items = [tmp3, analyticsLocation, analyticsLocations];
+  items = [tmp3, analyticsLocation, analyticsLocations];
   if (initialRoute != null) {
     const items1 = [onDismiss];
     const callback = obj.useCallback(() => {
@@ -179,9 +179,9 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          const items = [analyticsLocations(7351).GIFTING_BADGE_POST_PURCHASE];
+          items = [analyticsLocations(7471).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(10558).openGiftModal(obj2);
+          analyticsLocation(10688).openGiftModal(obj2);
         },
       });
     };

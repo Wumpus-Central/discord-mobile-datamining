@@ -10,8 +10,8 @@ import showAudioOutputSelector from "../../../voice_calls/native/audio_output_se
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import VoiceActionUtils from "../VoiceActionUtils.tsx";
-import _modDef12000 from "../../../../../_runtime/metro/12000__.js";
-import _modDef12001 from "../../../../../_runtime/metro/12001__.js";
+import _modDef12137 from "../../../../../_runtime/metro/12137__.js";
+import _modDef12138 from "../../../../../_runtime/metro/12138__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import useDeafStatesDefault from "../../useDeafStates.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,11 +30,11 @@ function ExpandedControlItemIcon(iconSource) {
     let tmp7 = tmp11;
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
-      const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef12000 };
+      items = [tmp11, , ];
+      const obj3 = { style: tmp.sparkle2, source: _modDef12137 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef12001;
+      obj4.source = _modDef12138;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = React6(View, obj);
@@ -63,10 +63,10 @@ function ExpandedControlItem(iconSource) {
   return React5(Form.FormRow, obj2);
 }
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { formTintColor: { tintColor: nativeDefault.colors.ICON_STRONG }, formColor: null, sparkle: null, sparkle2: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_STRONG };
 obj2.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -78,7 +78,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/F
 
 export function StreamVolumeItem() {
   const tmp = closure_10();
-  const items = [ApplicationStreamingStore, AuthenticationStore];
+  items = [ApplicationStreamingStore, AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
     let tmp2 = null;
@@ -150,7 +150,7 @@ export function DeafenButton(disabled) {
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12004 : 12005), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12141 : 12142), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(ExpandedControlItem, obj2);

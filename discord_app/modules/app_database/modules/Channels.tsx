@@ -88,7 +88,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
-  const items = [...unavailableGuilds.unavailableGuilds];
+  items = [...unavailableGuilds.unavailableGuilds];
   DatabaseDaosDefault.channelsTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let result = self.handleGuildSynchronize(item10027.id, item10027.channels, arg1);
@@ -97,7 +97,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   self.privateChannels = unavailableGuilds.initialPrivateChannels;
 };
 prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental(lazyPrivateChannels, arg1) {
-  const items = [...lazyPrivateChannels.lazyPrivateChannels];
+  items = [...lazyPrivateChannels.lazyPrivateChannels];
   const replaced = this.replace(null, items, arg1);
   this.privateChannels = [];
 };

@@ -7,14 +7,14 @@ import PriceUtils from "../../../utils/PriceUtils.tsx";
 import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
 
 export function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
-  const items = [SubscriptionPlanStore];
+  items = [SubscriptionPlanStore];
   const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {

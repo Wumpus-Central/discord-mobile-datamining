@@ -26,7 +26,7 @@ export function useReferralProgramEligibleUsers(searchQuery) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -57,7 +57,7 @@ export function useReferralProgramEligibleUsers(searchQuery) {
               let _Array = Array;
               let tmp34 = closure_131_7(Array.from(closure_130_0.values()));
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               c5 = 1;
               closure_130_1 = tmp17;
@@ -116,7 +116,7 @@ export function useReferralProgramEligibleUsers(searchQuery) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -148,13 +148,13 @@ export function useReferralProgramEligibleUsers(searchQuery) {
                     c8 = 2;
                     let tmp70 = React7(true);
                     dependencyMap = 0;
-                    let items = [];
+                    items = [];
                     dependencyMap = HermesBuiltin.arraySpread(first2.values(), dependencyMap);
                     closure_133_2 = items;
                     stateFromStores = dependencyMap;
                     closure_3 = dependencyMap[Symbol.iterator]();
                     if (closure_3 === undefined) {
-                      let obj5 = searchQuery(7633);
+                      let obj5 = searchQuery(7757);
                       c9 = 4;
                       c10 = 1;
                       let obj6 = {
@@ -167,9 +167,9 @@ export function useReferralProgramEligibleUsers(searchQuery) {
                       closure_133_3 = tmp44;
                       closure_133_4 = stateFromStores(closure_133_3, 2);
                       closure_133_5 = closure_133_4[0];
-                      if (closure_133_4[1] === searchQuery(7633).ReferralOfferStatus.PENDING) {
+                      if (closure_133_4[1] === searchQuery(7757).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
-                          obj3 = searchQuery(8752);
+                          obj3 = searchQuery(8876);
                           c9 = 5;
                           c10 = 1;
                           let obj7 = { value: obj3.getUser(closure_133_5), done: false };
@@ -217,7 +217,7 @@ export function useReferralProgramEligibleUsers(searchQuery) {
                   return tmp2;
                 });
                 if (0 === closure_1_0) {
-                  const items = [];
+                  items = [];
                   HermesBuiltin.arraySpread(
                     found,
                     HermesBuiltin.arraySpread(closure_2.values(), HermesBuiltin.arraySpread(set.values(), 0)),
@@ -264,7 +264,7 @@ export function useReferralProgramEligibleUsers(searchQuery) {
       }
     }
   };
-  let items = [c6];
+  items = [c6];
   closure_3 = searchQuery(limit[4]).useStateFromStores(items, () => _undefined.getRecipientStatus());
   let obj = searchQuery(limit[4]);
   let items1 = [c6];

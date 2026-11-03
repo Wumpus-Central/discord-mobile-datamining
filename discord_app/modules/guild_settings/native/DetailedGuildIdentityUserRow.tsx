@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   mainIdentity: { flexDirection: "row", alignItems: "center" },
   primaryAvatar: { marginRight: nativeDefault.space.PX_4 },
@@ -33,12 +33,12 @@ const memoResult = noop.memo(function DetailedGuildIdentityUser(height) {
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   const obj2 = { style: { height: height.contentHeight }, children: null };
-  const items = [hasOwnProperty(DiscordTagDefault, { user, nick: nickname })];
+  items = [hasOwnProperty(DiscordTagDefault, { user, nick: nickname })];
   if (hasAvatarForGuildResult) {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result];
@@ -75,7 +75,7 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
   } = arrow);
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(require));
   if (null == stateFromStores) {
     return null;

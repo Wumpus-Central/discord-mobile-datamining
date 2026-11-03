@@ -32,7 +32,7 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
   const found = mapped.filter(GlobalUtils.isNotNullish);
   const intl = util.intl;
   obj.name = intl.string(util.t.Ym2Ri6);
-  const items = [obj, ...found];
+  items = [obj, ...found];
   return items;
 };
 prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() {
@@ -44,7 +44,7 @@ prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() 
   const found = mapped.filter(GlobalUtils.isNotNullish);
   const intl = util.intl;
   obj.name = intl.string(util.t.QToH29);
-  const items = [obj, ...found];
+  items = [obj, ...found];
   return items;
 };
 prototype["getAllCategories"] = function getAllCategories() {
@@ -67,7 +67,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function handleCategoryFetchSuccess(categories) {
     categories = categories.categories;
     let obj;
-    const items = [];
+    items = [];
     const items1 = [];
     const sorted = categories.sort((name, name2) => {
       let num = 1;
@@ -98,7 +98,7 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
       items.push(obj);
       closure_10[categoryId] = name;
     }
-    locale = categories.locale;
+    const locale = categories.locale;
   },
 });
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
@@ -106,14 +106,14 @@ const result = size.fileFinishedImporting("modules/global_discovery_servers/Guil
 export default guildDiscoveryCategoryStore;
 export function areDiscoveryCategoriesEqual(arr, arr2) {
   const mapped = arr.map((item) => {
-    const items = [,];
+    items = [,];
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   });
   return _modDef12.isEqual(
     mapped,
     arr2.map((item) => {
-      const items = [,];
+      items = [,];
       ({ categoryId: arr[0], name: arr[1] } = item);
       return items;
     }),

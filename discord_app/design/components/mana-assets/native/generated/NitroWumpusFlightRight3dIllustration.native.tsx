@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef17698 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
-import _modDef17699 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
-import _modDef17700 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
+import _modDef17841 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
+import _modDef17842 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
+import _modDef17843 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17698 }, 3: null };
-let obj2 = { uri: _modDef17698 };
-obj[2] = { uri: _modDef17699 };
-const obj3 = { uri: _modDef17699 };
-obj[3] = { uri: _modDef17700 };
+let obj = { 1: null, 2: { uri: _modDef17841 }, 3: null };
+let obj2 = { uri: _modDef17841 };
+obj[2] = { uri: _modDef17842 };
+const obj3 = { uri: _modDef17842 };
+obj[3] = { uri: _modDef17843 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx",
@@ -25,7 +25,7 @@ export function NitroWumpusFlightRight3dIllustration(width) {
   if (num === undefined) {
     num = 1;
   }
-  const items = [width, height, num];
+  items = [width, height, num];
   const memo = noop.useMemo(() => {
     const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
     return assetHelpers.getAssetSizeStyle(size);

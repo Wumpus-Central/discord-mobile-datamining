@@ -31,7 +31,7 @@ export const FilterSettingsKey = {
   CAMERA_BACKGROUND_LIVE: "cameraBackgroundLive",
 };
 export function determineMediaEngine() {
-  const items = [,];
+  items = [,];
   ({ NATIVE: arr[0], WEBRTC: arr[1] } = constants);
   let DUMMY = items.find((item) => {
     if (constants.NATIVE === item) {

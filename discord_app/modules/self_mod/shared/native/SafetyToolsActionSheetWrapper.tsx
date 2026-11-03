@@ -12,7 +12,7 @@ export default function SafetyToolsActionSheetWrapper(channelId) {
   const onClose = channelId.onClose;
   let stateFromStores;
   ({ headerTitle, hasHeaderBack, warningId, warningType, recipientId, children } = channelId);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = channelId(stateFromStores[3]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const items1 = [stateFromStores, onClose];
   const effect = noop.useEffect(() => {

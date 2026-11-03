@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/conjure/background_frames/nativ
 export default function useFloatConjureAppsOffScreen() {
   const tmp = VisibleChannelScreenStore((channelId) => channelId.channelId);
   _require = tmp;
-  const items = [
+  items = [
     require("initialize").useStateFromStoresArray(
       require("conjureAppPictureInPictureFrames").FLOATING_APP_STORES,
       getFloatableFrameIds,

@@ -215,7 +215,7 @@ export function getGuildThemePreset(presetId) {
   return tmp;
 }
 export function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "y" };
 }
 export function getGuildThemePresetAppearance(preset, stateFromStores) {
   return stateFromStores === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;
@@ -240,7 +240,7 @@ export function getSingleColorGuildThemeGradientColors(arg0, stateFromStores) {
   if (stateFromStores === ThemeTypes.LIGHT) {
     num = 0.2;
   }
-  const items = [hexResult];
+  items = [hexResult];
   const result1 = obj3.set("hsl.l", Math.max(0, Math.min(1, obj3.get("hsl.l") + num)));
   items[1] = result1.hex();
   return items;

@@ -28,7 +28,7 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
     _NumberResult = _Number(snapPoints);
   }
   c6 = _NumberResult;
-  const items = [animatedIndex, bottomSheetRef, containerHeight, isYeeted, num, _NumberResult];
+  items = [animatedIndex, bottomSheetRef, containerHeight, isYeeted, num, _NumberResult];
   const layoutEffect = containerHeight.useLayoutEffect(() => {
     if (!isYeeted) {
       if (obj.isAndroid()) {

@@ -15,7 +15,7 @@ const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
 const Constants = fn(1072);
-({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
+({ InviteStates: closure_9, GuildFeatures: closure_10 } = Constants);
 const CTATypes = {
   IS_MEMBER: 0,
   [0]: "IS_MEMBER",
@@ -42,7 +42,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  const items = [features];
+  items = [features];
   const stateFromStores = require("initialize").useStateFromStores(items, () => features.getId());
   let obj = require("initialize");
   const items1 = [stateFromStores1];

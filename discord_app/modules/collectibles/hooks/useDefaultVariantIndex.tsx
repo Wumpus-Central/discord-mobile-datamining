@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
 export function useDefaultVariantIndex(product) {
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   _require = require("initialize").useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != product) {

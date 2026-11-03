@@ -30,7 +30,7 @@ function MaybeClearBuildOverride() {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _require = tmp[1];
-  const items = [BuildOverrideStore];
+  items = [BuildOverrideStore];
   if (
     null ==
     obj.useStateFromStores(items, () => {
@@ -60,15 +60,15 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5634).Button, obj2);
+    return closure_9(tmp2(5754).Button, obj2);
   }
   obj = require("initialize");
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createLegacyClassComponentStyles({
   buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 },
   debugLogsContainer: {
@@ -161,7 +161,7 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj2.children = str;
-    const items = [React7(Text_Text.Text, obj2), ,];
+    items = [React7(Text_Text.Text, obj2), ,];
     const obj3 = { style: tmp.buttons, children: null };
     const items1 = [React7(MaybeClearBuildOverride, {})];
     const obj4 = { text: null, onPress: null };
@@ -179,7 +179,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(5080).ThemeContext;
+ErrorBoundary.contextType = fn(5207).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

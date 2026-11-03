@@ -4,16 +4,16 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef19585 from "../../../../../../_runtime/metro/19585__.js";
+import _modDef19735 from "../../../../../../_runtime/metro/19735__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(13974).EventActionType;
+const EventActionType = fn(14105).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
   image: null,
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting(
 export default function NotificationReactivationActionSheet(location) {
   const _location = location.location;
   const tmp = closure_9();
-  const items = [_location];
+  items = [_location];
   const items1 = [_location];
   const callback = noop.useCallback(() => {
     const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(
@@ -59,30 +59,30 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef19585, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef19735, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , ,];
-  const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
+  const obj4 = { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: null };
   const intl = _location(1113).intl;
   obj4.children = intl.string(_location(1113).t.a4bgO0);
-  items2[1] = closure_7(_location(5624).Text, obj4);
+  items2[1] = closure_7(_location(5747).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1113).intl;
   obj5.children = intl2.string(_location(1113).t["rW5gw/"]);
-  items2[2] = closure_7(_location(5624).Text, obj5);
+  items2[2] = closure_7(_location(5747).Text, obj5);
   const obj6 = { style: tmp.buttons, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = _location(1113).intl;
   obj7.text = intl3.string(_location(1113).t.a4bgO0);
   obj7.onPress = callback;
-  const items3 = [closure_7(_location(5634).Button, obj7)];
+  const items3 = [closure_7(_location(5754).Button, obj7)];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1113).intl;
   obj8.text = intl4.string(_location(1113).t["/L3kom"]);
   obj8.onPress = callback1;
-  items3[1] = closure_7(_location(5634).Button, obj8);
+  items3[1] = closure_7(_location(5754).Button, obj8);
   obj6.children = items3;
-  items2[3] = closure_8(_location(6767).ButtonGroup, obj6);
+  items2[3] = closure_8(_location(6887).ButtonGroup, obj6);
   obj2.children = items2;
   obj.children = closure_8(View, obj2);
-  return closure_7(_location(5272).BottomSheet, obj);
+  return closure_7(_location(5395).BottomSheet, obj);
 }

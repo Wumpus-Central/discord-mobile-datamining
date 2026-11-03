@@ -7,7 +7,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useNavigationTTIContentPainted.tsx");
 
 export function useNavigationTTIContentPainted() {
-  navTTISurface = navTTISurface(13329).useNavTTISurface();
+  navTTISurface = navTTISurface(13465).useNavTTISurface();
   noop.useRef(null);
   let navigationKey;
   if (navTTISurface != null) {
@@ -16,7 +16,7 @@ export function useNavigationTTIContentPainted() {
   dependencyMap = noop.useRef(navigationKey);
   noop = obj2.useRef(null);
   noop.useRef(null);
-  const items = [navTTISurface];
+  items = [navTTISurface];
   const callback = obj2.useCallback(() => {
     if (null != navTTISurface) {
       const activeTraceId = navTTISurface.activeTraceId;

@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function ExemptChannelsActionSheet(guildId) {
   guildId = guildId.guildId;
   ({ exemptChannels, onSave } = guildId);
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   closure_129_0 = guildId;
@@ -85,7 +85,7 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(19707), {
+  return jsx(stateFromStores(19857), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-channels",

@@ -13,7 +13,7 @@ AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
 AuthInviteStore.displayName = "AuthInviteStore";
 const authInviteStore = new AuthInviteStore(DispatcherDefault, {
   AUTH_INVITE_UPDATE: function handleAuthInviteUpdate(invite) {
-    const guild = invite.invite.guild;
+    guild = invite.invite.guild;
     if (null == guild) {
       return false;
     } else {

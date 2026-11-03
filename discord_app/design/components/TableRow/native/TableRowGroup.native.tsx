@@ -29,7 +29,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexShrink: 0 },
   content: {
@@ -80,7 +80,7 @@ export function TableRowGroup(accessibilityLabel) {
     } else if (c1) {
       const obj = { children: null };
       const obj2 = { adjustSpacingForIcon };
-      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
+      items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
       const tmp2 = React5(timestampProducer, obj);
     } else {
@@ -93,7 +93,7 @@ export function TableRowGroup(accessibilityLabel) {
     const obj3 = { title };
     tmp6Result = closure_5(TableRowGroupTitle, obj3);
   }
-  let items = [tmp6Result, , ,];
+  items = [tmp6Result, , ,];
   let tmp6Result3 = null != description;
   if (tmp6Result3) {
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };

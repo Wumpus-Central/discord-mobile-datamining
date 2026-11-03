@@ -15,7 +15,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   _require = arg0;
   [tmp2, dependencyMap] = noop.useState("loading");
   const tmp = _slicedToArray(noop.useState("loading"), 2);
-  const items = [GuildStickersStore];
+  items = [GuildStickersStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildStickersStore.getStickersByGuildId(closure_0),
   );

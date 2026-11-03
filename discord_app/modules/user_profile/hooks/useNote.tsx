@@ -22,7 +22,7 @@ let closure_7 = async function _fetchNote() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.ts
 
 export default function useNote(arg0) {
   _require = arg0;
-  const items = [NoteStore];
+  items = [NoteStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
   const effect = noop.useEffect(() => {

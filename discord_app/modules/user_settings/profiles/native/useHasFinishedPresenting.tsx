@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/user_settings/profiles/native
 export default function useHasFinishedPresenting() {
   let navigation = useNavigation.useNavigation();
   [first, closure_2] = noop.useState(false);
-  const items = [navigation, first];
+  items = [navigation, first];
   const effect = noop.useEffect(() => {
     if (!timeout) {
       const parent = navigation.getParent();

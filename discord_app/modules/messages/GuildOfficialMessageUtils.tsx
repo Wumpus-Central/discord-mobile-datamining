@@ -15,12 +15,12 @@ require = fn;
 function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   _require = channel;
   closure_129_0 = guild_id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      let guild = null;
+      guild = null;
       if (null != closure_0) {
         guild = GuildStore.getGuild(tmp);
       }
@@ -51,7 +51,7 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   }
   return enabled;
 }
-let closure_5 = fn(5019).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5146).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1072);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -111,12 +111,12 @@ export function isGuildOfficialMessagesEnabled(guild, GuildSettingsModalLanding)
 }
 export function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   _require = id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      let guild = null;
+      guild = null;
       if (null != closure_0) {
         guild = GuildStore.getGuild(tmp);
       }

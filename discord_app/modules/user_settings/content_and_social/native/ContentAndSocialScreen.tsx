@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import TinyBroncoSettingsNoticesLazy from "../../../tiny_bronco/native/TinyBroncoSettingsNoticesLazy.tsx";
+import AgeNoticeSettingsNoticesLazy from "../../../age_assurance/age_notice/native/AgeNoticeSettingsNoticesLazy.tsx";
 import SafetyGuildSettingGuildSelect from "../../defs/native/SafetyGuildSettingGuildSelect.tsx";
 import useAuthorizedSlayerApplicationsDefault from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,11 +15,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = {
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/user_settings/content_and_soc
 export default function ContentAndSocialSettings(route) {
   route = route.route;
   const memo = noop.useMemo(() => {
-    const items = [,];
+    items = [,];
     ({ CONTENT_AND_SOCIAL_DISCORD: arr[0], CONNECTED_GAMES: arr[1] } = MobileUserSettings);
     return items;
   }, []);
@@ -56,7 +56,7 @@ export default function ContentAndSocialSettings(route) {
     }),
     2,
   )[0];
-  let items = [defaultIndex, memo];
+  items = [defaultIndex, memo];
   const node = noop.useMemo(() => SettingBuilders.createSegmentedControl({ defaultIndex, settings: memo }), items);
   return closure_9(memo(defaultIndex[17]), { node });
 }
@@ -72,10 +72,10 @@ export function DiscordPermissionsPage() {
   tinyBroncoMessageRequestsNoticeVariant = allServersOptionSelected(
     tinyBroncoMessageRequestsNoticeVariant[11],
   ).useTinyBroncoMessageRequestsNoticeVariant();
-  let items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
+  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
   const memo = noop.useMemo(() => {
     const obj = { settings: null, subLabel: null };
-    const items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
+    items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
     obj.settings = items;
     const intl = util.intl;
     const obj2 = { learnMoreLink: HelpdeskUtilsDefault.getArticleURL(sensitiveContentFilterHelpArticle) };
@@ -149,7 +149,7 @@ export function DiscordPermissionsPage() {
     let tmp15;
     if (allServersOptionSelected) {
       if (tmp8) {
-        tmp15 = React7(TinyBroncoSettingsNoticesLazy.MessageRequestsNotice, {});
+        tmp15 = React7(AgeNoticeSettingsNoticesLazy.MessageRequestsNotice, {});
       }
     }
     obj15.subLabel = tmp15;
@@ -235,7 +235,7 @@ export function ConnectedGamesPage() {
     let obj4 = { variant: "text-md/semibold", color: "text-strong", children: null };
     let intl = util.intl;
     obj4.children = intl.string(util.t["+0U77d"]);
-    let items = [React7(Text_Text.Text, obj4)];
+    items = [React7(Text_Text.Text, obj4)];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = util.intl;
     let obj6 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };

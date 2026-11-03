@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import useMediaViewerSources from "../../useMediaViewerSources.tsx";
@@ -36,7 +36,7 @@ function OverlayMuteButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.w4m945);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 14769 : 11996);
+  obj.source = importDefault(isMuted ? 14900 : 12133);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleMute;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -58,7 +58,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 14770 : 14771);
+  obj.source = importDefault(spoilerActive ? 14901 : 14902);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -68,8 +68,8 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8836)(index, source, videoControls);
-  const items = [index];
+  const tmp2 = videoControls(8960)(index, source, videoControls);
+  items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
   const effect = noop.useEffect(() => {
@@ -84,7 +84,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(14774).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(14905).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }
@@ -93,7 +93,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   portraitFooterButtons: null,
   invisibleFooter: null,
@@ -149,7 +149,7 @@ let closure_13 = noop.memo(function MediaModalOverlayMemo(arg0) {
       const obj5 = { blurTheme: "dark", style: StyleSheet.absoluteFill };
       isIOSResult = React5(VisualEffectViewDefault, obj5);
     }
-    const items = [isIOSResult, slider];
+    items = [isIOSResult, slider];
     let tmp17 = null;
     if (syncer.sources.length > 1) {
       const obj6 = { syncer };
@@ -232,7 +232,7 @@ let closure_13 = noop.memo(function MediaModalOverlayMemo(arg0) {
   const obj17 = { children: null };
   items3[2] = tmp22Result5;
   obj8.children = items3;
-  items1[1] = React6(ReanimatedRexportDefault.View, obj8);
+  items1[1] = React6(_modDef1652.View, obj8);
   obj17.children = items1;
   return React6(React7, obj17);
 });
@@ -245,7 +245,7 @@ export default function MediaModalOverlayGuard(onIndexChange) {
   const merged = Object.assign(onIndexChange, Object.assign({ onIndexChange: 0 }));
   const tmp3 = _slicedToArray(MediaSourceUtil.useSelectedMediaSource(merged.syncer), 2);
   const index = tmp3[0];
-  const items = [index, onIndexChange];
+  items = [index, onIndexChange];
   const effect = noop.useEffect(() => {
     if (onIndexChange != null) {
       tmp(first);

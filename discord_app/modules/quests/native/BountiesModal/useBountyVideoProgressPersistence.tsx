@@ -20,7 +20,7 @@ export function useBountyVideoProgressPersistence(bountyId) {
       let bountyVideoProgress = BountyStore.getBountyVideoProgress(bountyId);
       if (null != bountyVideoProgress) {
         if (endMode === useBountiesModalTiming.BountyVideoEndMode.LOOP) {
-          const duration = bountyVideoProgress.duration;
+          duration = bountyVideoProgress.duration;
           let tmp6 = duration > 0;
           if (tmp6) {
             tmp6 = tmp5 >= duration - 1;
@@ -37,7 +37,7 @@ export function useBountyVideoProgressPersistence(bountyId) {
   noop.useRef(first.maxTimestampSec);
   noop.useRef(first.duration);
   let obj = { initialProgress: first, handleProgress: null, flushProgress: null };
-  const items = [bountyId];
+  items = [bountyId];
   obj.handleProgress = noop.useCallback((current, current2, current3) => {
     closure_3.current = current3;
     closure_4.current = current;

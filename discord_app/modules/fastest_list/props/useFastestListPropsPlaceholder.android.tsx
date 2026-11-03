@@ -15,34 +15,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "current",
-    borderTopRightRadius: "applicationId",
-    borderBottomLeftRadius: "useStateFromStores",
-    borderBottomRightRadius: "TypeError",
+    borderTopLeftRadius: "createStyles",
+    borderTopRightRadius: "alignItems",
+    borderBottomLeftRadius: "replace",
+    borderBottomRightRadius: "HTTP",
     divider: "r",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
-    dividerPaddingRight: "applicationId",
-    placeholderShape: "getChannel",
-    placeholderShapeColor: "dispatch",
-    placeholderShapeCount: "r",
+    dividerPaddingRight: "alignItems",
+    placeholderShape: "Path",
+    placeholderShapeColor: "order",
+    placeholderShapeCount: "Array",
     placeholderShapeGap: "isArray",
-    placeholderShapePaddingHorizontal: "isArray",
-    placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "applicationId",
-    placeholderFeedColor: "__closure",
-    placeholderFeedLabelPadding: "getCurrentUser",
+    placeholderShapePaddingHorizontal: "alignItems",
+    placeholderShapePaddingVertical: "nm",
+    placeholderFeedBackgroundColor: "p",
+    placeholderFeedColor: "a",
+    placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "Array",
-    placeholderFeedLabelSize: "isArray",
-    placeholderFeedLabelSecondarySize: "children",
-    placeholderFeedPadding: "message",
-    placeholderFeedShape: "isArray",
-    placeholderFeedShapeSize: "Array",
+    placeholderFeedLabelSize: "channel_id",
+    placeholderFeedLabelSecondarySize: "type",
+    placeholderFeedPadding: "x",
+    placeholderFeedShape: "alignItems",
+    placeholderFeedShapeSize: "useState",
     placeholderType: NONE,
-    width: true,
+    width: null,
     height: null,
-    verticalAlignment: 12.1,
-    horizontalAlignment: "tier-0",
+    verticalAlignment: null,
+    horizontalAlignment: null,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7230).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7351).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 
@@ -171,7 +171,7 @@ export default function useFastestListPropsPlaceholder() {
     tmp = obj;
   }
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(
     () => ({
       listFooter: createNativePlaceholderConfig(closure_0.listFooter),

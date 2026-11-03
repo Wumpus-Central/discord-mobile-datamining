@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { marginLeft: 8, flex: 1, flexDirection: "row" },
   tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 },
@@ -46,7 +46,7 @@ export default function VoiceUserNameItem(arg0) {
     _undefined2(nativeEvent.nativeEvent.layout.width);
   }, []);
   const obj3 = { onLayout: callback, style: null, children: null };
-  const items = [tmp.container];
+  items = [tmp.container];
   let measuringTag = tmp12;
   const callback2 = noop.useCallback((nativeEvent) => {
     _undefined4(nativeEvent.nativeEvent.layout.width);

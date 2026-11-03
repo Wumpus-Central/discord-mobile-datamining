@@ -3,8 +3,9 @@ import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import useChannelName from "../../../channel/useChannelName.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ReadStateActionCreators from "../../../../actions/ReadStateActionCreators.tsx";
 import openMediaModal from "../../../media_viewer/native/components/openMediaModal.tsx";
 import MediaSourceUtil from "../../../media_viewer/native/MediaSourceUtil.tsx";
@@ -26,7 +27,7 @@ function MediaMosaicVideo(source) {
   source = source.source;
   ({ height, width, autoplay, style } = source);
   const tmp = closure_18();
-  const items = [ICYMIStore];
+  items = [ICYMIStore];
   let isGIFV = initialize.useStateFromStores(items, () => ICYMIStore.videosMuted());
   let uri = source.videoURI;
   if (uri == null) {
@@ -53,62 +54,69 @@ function MediaMosaicVideo(source) {
     isGIFV = source.isGIFV;
   }
   size.disableFocus = isGIFV;
-  return __initData(common_VideoDefault, size);
+  return closure_1_15(common_VideoDefault, size);
 }
 function MediaMosaicImage(source) {
   source = source.source;
+  _require = source;
   ({ dimensions, style } = source);
-  imageFinishedLoading = undefined;
-  dependencyMap = undefined;
   const tmp = closure_18();
-  [imageFinishedLoading, dependencyMap] = noop.useState(false);
-  const fn = function u() {
-    let num = 1;
-    if (first) {
-      num = 0;
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  items = [closure_20, require("timing/timing").withTiming, tmp2[0]];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp4, tmp5, tmp6] = items;
+  class ICYMIMediaMosaicTsx1 {
+    constructor() {
+      num = 1;
+      tmp = closure_0;
+      if (closure_1) {
+        num = 0;
+      }
+      obj = { opacity: tmp(num, { duration: 150 }) };
+      return obj;
     }
-    return { opacity: timing.withTiming(num, { duration: 150 }) };
-  };
-  let obj = source(5095);
-  fn.__closure = { withTiming: source(5254).withTiming, imageFinishedLoading };
-  fn.__workletHash = 7803531897566;
-  fn.__initData = __initData;
-  const items = [source.placeholder];
-  const animatedStyle = obj.useAnimatedStyle(fn);
+  }
+  const items1 = [tmp5, tmp6];
+  ICYMIMediaMosaicTsx1.__closure = items1;
+  ICYMIMediaMosaicTsx1.__workletHash = 7965789718407;
+  ICYMIMediaMosaicTsx1.__initData = tmp4;
+  const items2 = [source.placeholder];
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ICYMIMediaMosaicTsx1);
   const memo = noop.useMemo(() => {
-    if (null != source.placeholder) {
+    if (null != _undefined.placeholder) {
       const obj = { uri: ThumbhashUtils.createThumbhashImageFromPlaceholder(tmp.placeholder) };
       return obj;
     }
-  }, items);
+  }, items2);
   const obj3 = { style: null, children: null };
-  const items1 = [animatedStyle, tmp.thumbhashMedia];
-  obj3.style = items1;
+  const items3 = [animatedStyle, tmp.thumbhashMedia];
+  obj3.style = items3;
   const obj4 = { source: memo, style: null };
-  const items2 = [style, tmp.media, dimensions];
-  obj4.style = items2;
-  obj3.children = closure_15(imageFinishedLoading(5717), obj4);
-  const items3 = [closure_15(imageFinishedLoading(5095).View, obj3)];
+  const items4 = [style, tmp.media, dimensions];
+  obj4.style = items4;
+  obj3.children = closure_15(FastImageDefault, obj4);
+  const items5 = [closure_15(_modDef1652.View, obj3)];
   const obj5 = {
     source: { uri: source.uri },
     style: null,
     onLoadEnd() {
-      return closure_2(true);
+      return _undefined2(true);
     },
     blurRadius: null,
     fadeDuration: 0,
   };
-  const items4 = [tmp.media, style, dimensions];
-  obj5.style = items4;
+  const items6 = [tmp.media, style, dimensions];
+  obj5.style = items6;
   let num = 0;
-  const obj2 = { withTiming: source(5254).withTiming, imageFinishedLoading };
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
   if (source.isSpoiler) {
     num = 100;
   }
   const obj6 = { children: null };
   obj5.blurRadius = num;
-  items3[1] = closure_15(imageFinishedLoading(5717), obj5, source.uri);
-  obj6.children = items3;
+  items5[1] = closure_15(FastImageDefault, obj5, source.uri);
+  obj6.children = items5;
   return closure_17(closure_16, obj6);
 }
 function Media(handlePressMedia) {
@@ -127,7 +135,7 @@ function Media(handlePressMedia) {
   const tmp3 = isSpoiler(noop.useState(flag), 2);
   isSpoiler = tmp3[0];
   noop = tmp3[1];
-  const items = [handlePressMedia, initialIndex, isSpoiler];
+  items = [handlePressMedia, initialIndex, isSpoiler];
   const callback = noop.useCallback(() => {
     if (first) {
       closure_4(false);
@@ -248,14 +256,14 @@ function OneImageRow(widthOverride) {
     widthOverride = width - context.inset - 2 * context.margin;
   }
   const obj = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ imageRow: arr[0], topRow: arr[1] } = closure_18());
   obj.style = items;
   const obj2 = { handlePressMedia, initialIndex: 0, source, dimensions: null };
   const size = { width: widthOverride, height: widthOverride / 1.5 };
   obj2.dimensions = size;
-  obj.children = __initData(Media, obj2);
-  return __initData(timestampProducer, obj);
+  obj.children = closure_1_15(Media, obj2);
+  return closure_1_15(timestampProducer, obj);
 }
 function ThreeImagesRow(arg0) {
   ({ sources, start, end, offset: require, handlePressMedia: importDefault, widthOverride } = arg0);
@@ -269,7 +277,7 @@ function ThreeImagesRow(arg0) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  const items = [tmp.imageRow, ,];
+  items = [tmp.imageRow, ,];
   if (start) {
     start = tmp.topRow;
   }
@@ -281,10 +289,10 @@ function ThreeImagesRow(arg0) {
   return closure_15(closure_6, {
     style: items,
     children: sources.map((source, index) => {
-      const obj = { handlePressMedia, initialIndex: require + index, source, dimensions: null };
+      const obj = { handlePressMedia, initialIndex: _require + index, source, dimensions: null };
       const size = { width: (widthOverride - 8) / 3, height: (widthOverride - 8) / 3 };
       obj.dimensions = size;
-      return __initData(Media, obj, require + index);
+      return closure_2_15(Media, obj, _require + index);
     }),
   });
 }
@@ -301,7 +309,7 @@ function TwoImagesRow(arg0) {
     widthOverride = width - context.inset - 2 * context.margin;
   }
   size = { width: (widthOverride - 4) / 2, height: (widthOverride - 4) / 2 / 0.75 };
-  const items = [, ,];
+  items = [, ,];
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
   if (end) {
     end = tmp.bottomRow;
@@ -310,7 +318,7 @@ function TwoImagesRow(arg0) {
   return closure_15(closure_6, {
     style: items,
     children: sources.map((source, initialIndex) =>
-      __initData(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex),
+      closure_2_15(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex),
     ),
   });
 }
@@ -326,24 +334,24 @@ function ThreeImages(arg0) {
     widthOverride = width - context.inset - 2 * context.margin;
   }
   const obj = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ imagesContainer: arr[0], imageRow: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.leftColumn, children: null };
   const obj3 = { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: null };
   const size = { width: (2 * widthOverride) / 3 - 4, height: (2 * widthOverride) / 3 };
   obj3.dimensions = size;
-  obj2.children = __initData(Media, obj3);
-  const items1 = [__initData(timestampProducer, obj2)];
+  obj2.children = closure_1_15(Media, obj3);
+  const items1 = [closure_1_15(timestampProducer, obj2)];
   const obj4 = { style: tmp.rightColumn, children: null };
   const items2 = [
-    __initData(Media, {
+    closure_1_15(Media, {
       handlePressMedia,
       initialIndex: 1,
       source: sources[1],
       dimensions: { width: widthOverride / 3, height: widthOverride / 3 },
     }),
-    __initData(Media, {
+    closure_1_15(Media, {
       handlePressMedia,
       initialIndex: 2,
       source: sources[2],
@@ -369,12 +377,12 @@ function FourImages(arg0) {
   const size = { width: widthOverride / 2 - 4, height: (widthOverride / 2 - 4) / 1.5 };
   const obj = { style: tmp.imagesContainer, children: null };
   const obj2 = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
   obj2.style = items;
   const items1 = [
-    __initData(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }),
-    __initData(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size }),
+    closure_1_15(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }),
+    closure_1_15(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size }),
   ];
   obj2.children = items1;
   const items2 = [closure_1_17(timestampProducer, obj2)];
@@ -383,8 +391,8 @@ function FourImages(arg0) {
   ({ imageRow: arr4[0], bottomRow: arr4[1] } = tmp);
   obj5.style = items3;
   const items4 = [
-    __initData(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }),
-    __initData(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size }),
+    closure_1_15(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }),
+    closure_1_15(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size }),
   ];
   obj5.children = items4;
   items2[1] = closure_1_17(timestampProducer, obj5);
@@ -404,12 +412,12 @@ function SingleImage(source) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  const items = [, ,];
+  items = [, ,];
   ({ width: arr[0], height: arr[1] } = source);
   items[2] = widthOverride;
   const obj2 = {
     style: tmp.imagesContainer,
-    children: __initData(Media, {
+    children: closure_1_15(Media, {
       handlePressMedia,
       initialIndex,
       source,
@@ -438,7 +446,7 @@ function SingleImage(source) {
       visible,
     }),
   };
-  return __initData(timestampProducer, obj2);
+  return closure_1_15(timestampProducer, obj2);
 }
 class GravityAttachmentMediaMosaic {
   constructor(arg0) {
@@ -459,7 +467,7 @@ class GravityAttachmentMediaMosaic {
       if (0 !== result) {
         num = result;
       }
-      const items = [];
+      items = [];
       items.push(sources.slice(0, num));
       if (num < length) {
         do {
@@ -513,10 +521,10 @@ class GravityAttachmentMediaMosaic {
             obj.children = memo.map((sources, index) => {
               if (1 === sources.length) {
                 const obj2 = { handlePressMedia, source: sources[0] };
-                return __initData(OneImageRow, obj2, index);
+                return closure_2_15(OneImageRow, obj2, index);
               } else if (2 === sources.length) {
                 const obj3 = { widthOverride, sources, handlePressMedia, end: index === memo.length - 1 };
-                return __initData(TwoImagesRow, obj3, index);
+                return closure_2_15(TwoImagesRow, obj3, index);
               } else {
                 let num = 0;
                 if (0 !== index) {
@@ -530,7 +538,7 @@ class GravityAttachmentMediaMosaic {
                   start: 0 === index,
                   end: index === memo.length - 1,
                 };
-                return __initData(ThreeImagesRow, obj, index);
+                return closure_2_15(ThreeImagesRow, obj, index);
               }
             });
             tmp4 = jsx(View, obj);
@@ -548,7 +556,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = {
     media: { borderRadius: nativeDefault.radii.xs },
@@ -665,8 +673,8 @@ const collapsedCategories = createStyles.createStyles(() => {
   obj.iconBgSelected = { backgroundColor: nativeDefault.colors.WHITE };
   return obj;
 });
-const __initData = {
-  code: "function ICYMIMediaMosaicTsx1(){const{withTiming,imageFinishedLoading}=this.__closure;return{opacity:withTiming(imageFinishedLoading?0:1,{duration:150})};}",
+let closure_20 = {
+  code: "(function ICYMIMediaMosaicTsx1(){let[withTiming,imageFinishedLoading]=this.__closure;return{opacity:withTiming(imageFinishedLoading?0:1,{duration:150})};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/media/ICYMIMediaMosaic.tsx");
@@ -680,7 +688,7 @@ export default function ICYMIMediaMosaic(message) {
   let nonEmbedSources;
   let handlePressMedia;
   const tmp = closure_18();
-  const items = [handlePressMedia];
+  items = [handlePressMedia];
   const stateFromStores = message(itemType[14]).useStateFromStores(items, () =>
     ChannelStore.getChannel(message.getChannelId()),
   );
@@ -780,7 +788,7 @@ export default function ICYMIMediaMosaic(message) {
     let mapped;
     if (embedSources != null) {
       mapped = embedSources.map((source, index) =>
-        __initData(
+        closure_2_15(
           SingleImage,
           { widthOverride, handlePressMedia, initialIndex: index + nonEmbedSources.length, source, visible },
           "gif-" + index,

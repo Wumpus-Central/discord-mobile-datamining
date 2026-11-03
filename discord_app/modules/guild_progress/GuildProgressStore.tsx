@@ -21,7 +21,7 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-const Steps = fn(14042).Steps;
+const Steps = fn(14173).Steps;
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {}
@@ -63,7 +63,7 @@ GuildProgressStore.displayName = "GuildProgressStore";
 GuildProgressStore.persistKey = "GuildProgressStore";
 const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const items = [];
+    items = [];
     const keys = items(11).keys(dependencyMap);
     const item = keys.forEach((item) => {
       if (obj.has(Steps.COMPLETED)) {

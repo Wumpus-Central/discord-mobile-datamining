@@ -30,7 +30,7 @@ function OpenAppChannel(arg0) {
   bottom = insets.bottom;
   const left = insets.left;
   const right = insets.right;
-  const items = [top, bottom, left, right, headerVisible];
+  items = [top, bottom, left, right, headerVisible];
   const memo = left.useMemo(() => {
     const rect = { top, bottom, left, right };
     return getInlineFramePresentationDefault(rect, headerVisible);
@@ -138,7 +138,7 @@ function ClosedAppChannel(arg0) {
 }
 function AppChannel(arg0) {
   ({ applicationId, channel } = arg0);
-  const items = [,];
+  items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const memo = noop.useMemo(
     () => ({
@@ -162,12 +162,12 @@ function AppChannel(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;
@@ -177,7 +177,7 @@ let result = size.fileFinishedImporting("modules/app_channels/native/AppChannel.
 
 export default function ConnectedAppChannel(channel) {
   channel = channel.channel;
-  let application_id = channel.application_id;
+  application_id = channel.application_id;
   if (application_id == null) {
     application_id = obj.useDMAppChannelApplicationId(channel);
   }

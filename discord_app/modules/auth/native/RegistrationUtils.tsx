@@ -74,7 +74,7 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.invite_channel_type = type;
   let id1;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       id1 = guild.id;
     }
@@ -92,9 +92,9 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(17990);
+const RegistrationConstants = fn(18133);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -165,7 +165,7 @@ export function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(require("../../../../_runtime/metro/07005__.js").HeaderBackButton, {});
+  return jsx(require("../../../../_runtime/metro/07131__.js").HeaderBackButton, {});
 }
 export function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

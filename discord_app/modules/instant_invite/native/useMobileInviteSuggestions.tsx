@@ -19,9 +19,9 @@ export default function useMobileInviteSuggestions(arg0, _location, inviteTarget
   _require = arg0;
   dependencyMap = inviteTargetType;
   _slicedToArray = application_id;
-  let items = [closure_7, SortedVoiceStateStore];
+  items = [closure_7, SortedVoiceStateStore];
   [rows, closure_5] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [InviteSuggestionsStore.getInviteSuggestionRows()];
+    items = [InviteSuggestionsStore.getInviteSuggestionRows()];
     let voiceStatesForChannel = null;
     if (null != closure_0) {
       voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(tmp);

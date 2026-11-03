@@ -15,7 +15,7 @@ export function useTrackSearchItems(callback3, memo1, current) {
   closure_4 = noop.useRef({});
   noop.useRef(current);
   let obj2 = { handleViewableItemsChanged: null };
-  const items = [entrypoint, callback3, memo1, current];
+  items = [entrypoint, callback3, memo1, current];
   obj2.handleViewableItemsChanged = noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     if (ref.current !== current) {
@@ -36,7 +36,7 @@ export function useTrackSearchItems(callback3, memo1, current) {
               properties: null,
             };
             const obj3 = {
-              location: closure_0(5683).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+              location: closure_0(5803).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
               application_id: applicationId,
               command_id: commandId,
               search_results_position: isViewable.index,
@@ -44,8 +44,8 @@ export function useTrackSearchItems(callback3, memo1, current) {
               source,
             };
             obj2.properties = obj3;
-            closure_0(6028).trackImpression(obj2, false);
-            const obj = closure_0(6028);
+            closure_0(6148).trackImpression(obj2, false);
+            const obj = closure_0(6148);
           }
         }
       }

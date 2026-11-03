@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
-import _modDef2836 from "../../SafetyFlows.messages.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import _modDef2963 from "../../SafetyFlows.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import shareGuardianConnectLink from "../../../parent_tools/native/shareGuardianConnectLink.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,11 +13,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7716).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7840).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -53,7 +53,7 @@ export default function ParentalConsentConnectionScreen() {
   const tmp2Result = onTaskComplete(str2[16]);
   const hasActiveParentLinks = onTaskComplete(str2[16]).useHasActiveParentLinks();
   const tmp2Result8 = onTaskComplete(str2[16]);
-  const items = [FamilyCenterStore];
+  items = [FamilyCenterStore];
   const stateFromStores = onTaskComplete(str2[17]).useStateFromStores(items, () => authStore.getLinkedUsers());
   const tmp2Result9 = onTaskComplete(str2[17]);
   const items1 = [FamilyCenterStore];
@@ -127,7 +127,7 @@ export default function ParentalConsentConnectionScreen() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -194,10 +194,10 @@ export default function ParentalConsentConnectionScreen() {
     const obj2 = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj2.title = intl.string(_modDef2836.dMMSA0);
+    obj2.title = intl.string(_modDef2963.dMMSA0);
     const intl2 = util.intl;
-    obj2.body = intl2.format(_modDef2836["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(16783, dependencyMap.paths), closure_9, obj2);
+    obj2.body = intl2.format(_modDef2963["6GaRTu"], { link });
+    obj.openLazy(asyncRequireImpl(16926, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

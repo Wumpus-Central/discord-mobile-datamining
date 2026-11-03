@@ -20,7 +20,7 @@ export default function MuteUserElement(user) {
   const reportId = user.reportId;
   ChannelStore = undefined;
   const dMFromUserId = ChannelStore.getDMFromUserId(user.id);
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = user(reportId[6]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];

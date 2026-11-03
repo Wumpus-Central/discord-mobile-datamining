@@ -8,9 +8,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");
 
 export default function usePendingFolderGuildIds() {
-  let items = [UserGuildJoinRequestStore, GuildStore];
+  items = [UserGuildJoinRequestStore, GuildStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [UserGuildJoinRequestStore, GuildStore];
+    items = [UserGuildJoinRequestStore, GuildStore];
     [obj, obj2] = items;
     const guildIds = obj.computeGuildIds();
     const guilds = obj2.getGuilds();
@@ -20,7 +20,7 @@ export default function usePendingFolderGuildIds() {
 export function getPendingFolderGuildIds() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [UserGuildJoinRequestStore, GuildStore];
+    items = [UserGuildJoinRequestStore, GuildStore];
     tmp = items;
   }
   [obj, obj2] = tmp;

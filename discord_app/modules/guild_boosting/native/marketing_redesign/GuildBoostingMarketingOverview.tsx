@@ -11,8 +11,8 @@ const ScrollView = fn(17).ScrollView;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -28,7 +28,7 @@ export default function GuildBoostingMarketingOverview(guildId) {
     const first = guildBoostSlots[0];
   }
   let obj = guildId(stateFromStores[8]);
-  const items = [GuildStore];
+  items = [GuildStore];
   stateFromStores = guildId(stateFromStores[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const tmp2Result = guildId(stateFromStores[9]);
   const navigation = guildId(stateFromStores[10]).useNavigation();

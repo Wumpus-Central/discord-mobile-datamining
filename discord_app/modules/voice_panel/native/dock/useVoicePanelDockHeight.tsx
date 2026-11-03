@@ -5,14 +5,14 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const getVoicePanelDockHeight = fn(11241).getVoicePanelDockHeight;
+const getVoicePanelDockHeight = fn(11378).getVoicePanelDockHeight;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockHeight.tsx");
 
 export default function useVoicePanelDockHeight() {
   let tmp = VoicePanelStore((voicePanelsWithDock) => voicePanelsWithDock.voicePanelsWithDock.size > 0);
   _require = tmp;
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const items1 = [tmp];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

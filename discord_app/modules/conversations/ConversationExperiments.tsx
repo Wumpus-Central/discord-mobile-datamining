@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-let ApexExperiment = fn(1447);
+let ApexExperiment = fn(1449);
 let obj2 = {
   kind: "user",
   name: "2026-03-conversation-highlighting-utility",
@@ -16,7 +16,7 @@ let obj3 = { 1: null, 2: { enabled: false } };
 obj3[2] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const obj5 = {
   kind: "guild",
   name: "2026-06-topical-navigation-guild",
@@ -27,7 +27,7 @@ const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
-ApexExperiment = fn(1447);
+ApexExperiment = fn(1449);
 const obj8 = {
   kind: "user",
   name: "2026-04-topical-navigation-staff-control",
@@ -47,7 +47,7 @@ export const TopicalNavUserGateExperiment = apexExperiment2;
 export function isConversationDebugUXEnabled(guildId, location) {
   let tmp2 = null != guildId;
   if (tmp2) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let flag;
     if (guild != null) {
       const features = guild.features;
@@ -71,7 +71,7 @@ export function isTopicalNavEnabled(guildId, fetch_channel_conversations) {
   } else {
     let tmp3 = null != guildId;
     if (tmp3) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let flag;
       if (guild != null) {
         const features = guild.features;
@@ -116,7 +116,7 @@ export function isTopicalNavEnabled(guildId, fetch_channel_conversations) {
 export function useIsConversationDebugUXEnabled(guildId, location) {
   const CONVERSATIONS_EXTRACTION_PROCESSING = GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING;
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId, CONVERSATIONS_EXTRACTION_PROCESSING];
   const obj = { location };
   const obj2 = require("initialize");
@@ -126,7 +126,7 @@ export function useIsConversationDebugUXEnabled(guildId, location) {
       () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
-          const guild = GuildStore.getGuild(tmp);
+          guild = GuildStore.getGuild(tmp);
           let flag;
           if (guild != null) {
             const features = guild.features;
@@ -146,7 +146,7 @@ export function useIsConversationDebugUXEnabled(guildId, location) {
 export function useIsTopicalNavEnabled(guild_id, channel_header) {
   const CONVERSATIONS_EXTRACTION_PROCESSING = GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING;
   _require = guild_id;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guild_id, CONVERSATIONS_EXTRACTION_PROCESSING];
   const obj = { location: channel_header };
   const obj2 = require("initialize");
@@ -165,7 +165,7 @@ export function useIsTopicalNavEnabled(guild_id, channel_header) {
       () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
-          const guild = GuildStore.getGuild(tmp);
+          guild = GuildStore.getGuild(tmp);
           let flag;
           if (guild != null) {
             const features = guild.features;
@@ -187,7 +187,7 @@ export function useIsTopicalNavEnabled(guild_id, channel_header) {
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const guild = GuildStore.getGuild(tmp);
+        guild = GuildStore.getGuild(tmp);
         let flag;
         if (guild != null) {
           const features = guild.features;

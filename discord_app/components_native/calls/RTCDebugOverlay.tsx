@@ -20,19 +20,19 @@ function Text(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = closure_18().text;
-  return closure_1_14(native.LegacyText, obj);
+  return gesture(native.LegacyText, obj);
 }
 function Section(arg0) {
   ({ title, children } = arg0);
   const obj = { children: null };
   const obj2 = { children: null };
-  const items = [title, ":"];
+  items = [title, ":"];
   obj2.children = items;
-  const items1 = [__initData(Text, obj2)];
+  const items1 = [closure_1_15(Text, obj2)];
   const tmp = closure_18();
-  items1[1] = closure_1_14(hasOwnProperty, { style: closure_18().indent, children });
+  items1[1] = gesture(hasOwnProperty, { style: closure_18().indent, children });
   obj.children = items1;
-  return __initData(__initData2, obj);
+  return closure_1_15(value2, obj);
 }
 function ObjectKV(obj) {
   const row = closure_18();
@@ -55,13 +55,13 @@ function ObjectKV(obj) {
       if (typeof value === "object") {
         const obj2 = { title: tmp, children: null };
         const obj3 = { obj: value };
-        obj2.children = closure_2_14(ObjectKV, obj3);
-        let tmp4Result = closure_2_14(Section, obj2, tmp);
+        obj2.children = gesture(ObjectKV, obj3);
+        let tmp4Result = gesture(Section, obj2, tmp);
       }
       return tmp4Result;
     }
     const obj4 = { style: row.row, children: null };
-    const items = [tmp, ": "];
+    items = [tmp, ": "];
     if (typeof asString === "function") {
       const obj5 = { children: null };
       items[2] = "" + value;
@@ -74,7 +74,7 @@ function ObjectKV(obj) {
   });
 }
 function RTCDebugGeneral() {
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const stateFromStoresObject = guildId(504).useStateFromStoresObject(
     items,
     () => ({ guildId: RTCConnectionStore.getGuildId(), channelId: RTCConnectionStore.getChannelId() }),
@@ -98,15 +98,15 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(5652)(stateFromStores1);
+  const tmp4 = channelId(5772)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5652)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5772)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
 function RTCDebugContext(context) {
   context = context.context;
-  let items = [RTCDebugStore];
+  items = [RTCDebugStore];
   const items1 = [context];
   const stateFromStores = context(504).useStateFromStores(items, () => RTCDebugStore.getAllStats(context), items1);
   let mapped = null;
@@ -117,16 +117,13 @@ function RTCDebugContext(context) {
         const obj = { title: "" + context + " - " + mediaEngineConnectionId.mediaEngineConnectionId, children: null };
         let tmp4 = null;
         if (null != closure_25[context]) {
-          tmp4 = closure_2_14(tmp3, {});
+          tmp4 = gesture(tmp3, {});
         }
-        const items = [tmp4, , ,];
-        const obj2 = {
-          title: "transport",
-          children: closure_2_14(ObjectKV, { obj: mediaEngineConnectionId.transport }),
-        };
-        items[1] = closure_2_14(Section, obj2);
+        items = [tmp4, , ,];
+        const obj2 = { title: "transport", children: gesture(ObjectKV, { obj: mediaEngineConnectionId.transport }) };
+        items[1] = gesture(Section, obj2);
         const outbound = mediaEngineConnectionId.rtp.outbound;
-        items[2] = closure_2_14(Section, {
+        items[2] = gesture(Section, {
           title: "outbound",
           children: outbound.map((data, index) => closure_1_14(closure_1_22, { data }, index)),
         });
@@ -138,11 +135,11 @@ function RTCDebugContext(context) {
             title: "inbound",
             children: keys.map((userId) => closure_2_14(closure_2_23, { userId, data: inbound[userId] }, userId)),
           };
-          tmp6Result = closure_2_14(Section, obj5);
+          tmp6Result = gesture(Section, obj5);
         }
         items[3] = tmp6Result;
         obj.children = items;
-        return __initData(Section, obj, mediaEngineConnectionId.mediaEngineConnectionId);
+        return closure_2_15(Section, obj, mediaEngineConnectionId.mediaEngineConnectionId);
       });
     }
   }
@@ -150,15 +147,15 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -171,14 +168,14 @@ let closure_22 = noop.memo((data) => {
   data = data.data;
   const obj = {
     title: data.type,
-    children: closure_1_14(ObjectKV, { obj: Object.assign(data, Object.assign({ type: 0 })) }),
+    children: gesture(ObjectKV, { obj: Object.assign(data, Object.assign({ type: 0 })) }),
   };
-  return closure_1_14(Section, obj);
+  return gesture(Section, obj);
 });
 let closure_23 = noop.memo((userId) => {
   userId = userId.userId;
   const data = userId.data;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userId];
   const str = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const combined = "" + userId;
@@ -195,8 +192,8 @@ let closure_23 = noop.memo((userId) => {
 });
 let closure_25 = {
   [MediaEngineContextTypes.DEFAULT]: function DefaultContextInfo() {
-    const items = [RTCConnectionStore];
-    return closure_1_14(ObjectKV, {
+    items = [RTCConnectionStore];
+    return gesture(ObjectKV, {
       obj: initialize.useStateFromStoresObject(items, () => {
         const obj = {
           mediaSessionId: RTCConnectionStore.getMediaSessionId(),
@@ -214,7 +211,7 @@ let closure_25 = {
   },
   [MediaEngineContextTypes.STREAM]: function StreamContextInfo() {
     const first = StreamRTCConnectionStore.getAllActiveStreamKeys()[0];
-    const items = [StreamRTCConnectionStore];
+    items = [StreamRTCConnectionStore];
     const items1 = [first];
     let obj = first(504);
     return closure_14(ObjectKV, {
@@ -244,21 +241,21 @@ export default function RTCDebugOverlay(arg0) {
     return RTCDebugActionCreatorsAll.close;
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
-  const items = [tmp.container, style];
+  items = [tmp.container, style];
   rect.style = items;
   const obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
-  const items1 = [closure_1_14(RTCDebugGeneral, {})];
+  const items1 = [gesture(RTCDebugGeneral, {})];
   const values = Object.values(MediaEngineContextTypes);
   items1[1] = values.map((context) => closure_1_14(RTCDebugContext, { context }, context));
   obj.children = items1;
-  const items2 = [__initData(timestampProducer, obj)];
+  const items2 = [closure_1_15(timestampProducer, obj)];
   const obj2 = { style: tmp.buttonClose, children: null };
   const obj3 = { text: null, onPress: null };
   const intl = util.intl;
   obj3.text = intl.string(util.t.cpT0Cq);
   obj3.onPress = onClose;
-  obj2.children = closure_1_14(components_Button_Button.Button, obj3);
-  items2[1] = closure_1_14(hasOwnProperty, obj2);
+  obj2.children = gesture(components_Button_Button.Button, obj3);
+  items2[1] = gesture(hasOwnProperty, obj2);
   rect.children = items2;
-  return __initData(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return closure_1_15(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

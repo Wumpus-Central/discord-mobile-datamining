@@ -3,7 +3,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import _modDef7562 from "../../../../../_runtime/metro/07562__.js";
+import _modDef7686 from "../../../../../_runtime/metro/07686__.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 64 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -25,8 +25,8 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj3 = { spacing: 24, children: null };
   const obj4 = { children: null };
   const obj5 = { children: null };
-  const items = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Text Button Example" }),
+  items = [
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Text Button Example" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -54,7 +54,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj9 = { children: null };
   const obj10 = { children: null };
   const items3 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "IconButton Example" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "IconButton Example" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -66,14 +66,14 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7562,
+      icon: _modDef7686,
       onPress() {},
     }),
   ];
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7562,
+    icon: _modDef7686,
     onPress() {},
   };
   const obj7 = {
@@ -89,7 +89,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7562,
+    icon: _modDef7686,
     onPress() {},
   });
   obj11.children = items4;
@@ -100,7 +100,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj14 = { children: null };
   const obj15 = { children: null };
   const items5 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Mixed Buttons Example" }),
+    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Mixed Buttons Example" }),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-md/medium",
       color: "text-subtle",
@@ -127,7 +127,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7562,
+    icon: _modDef7686,
     onPress() {},
   };
   const obj17 = {
@@ -139,7 +139,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7562,
+    icon: _modDef7686,
     onPress() {},
   });
   obj16.children = items6;

@@ -16,7 +16,7 @@ class SearchHistory {
 const prototype = SearchHistory.prototype;
 prototype["deserialize"] = function deserialize(arr) {
   this.items = arr.slice(0, 3);
-  const items = this.items;
+  items = this.items;
   this.items = items.filter((type) => {
     let everyResult = type.type !== constants.TEXT;
     if (!everyResult) {
@@ -47,7 +47,7 @@ prototype["add"] = function add(type) {
   if (!tmp) {
     const self = this;
     this.remove(type);
-    const items = this.items;
+    items = this.items;
     items.unshift(type);
     const items1 = this.items;
     this.items = items1.slice(0, 3);
@@ -55,7 +55,7 @@ prototype["add"] = function add(type) {
 };
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
-  const items = this.items;
+  items = this.items;
   this.items = items.filter((item) => !_mod12.isEqual(item, closure_0));
 };
 const dependencyMap = {};

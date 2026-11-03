@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { position: "relative" },
   navigationButton: null,
@@ -31,7 +31,7 @@ let size = {
   width: 44,
   zIndex: 1,
 };
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -99,7 +99,7 @@ export function MarketingCardsScroller(ref) {
   const tmp7 = ref(noop.useState(0), 2);
   [tmp10, c9] = ref(noop.useState(0), 2);
   const tmp9 = ref(noop.useState(0), 2);
-  let items = [closure_7];
+  items = [closure_7];
   stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => closure_7.useReducedMotion);
   noop.useRef(stateFromStores);
   let obj2 = num(onScrollingChange[8]);
@@ -159,7 +159,7 @@ export function MarketingCardsScroller(ref) {
   obj4.style = items6;
   const obj5 = {
     accessibilityActions: noop.useMemo(() => {
-      const items = [];
+      items = [];
       if (closure_13) {
         const obj = { name: previous, label: null };
         const intl = util.intl;

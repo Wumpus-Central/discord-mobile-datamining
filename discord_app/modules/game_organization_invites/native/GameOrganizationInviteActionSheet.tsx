@@ -33,11 +33,11 @@ function Loading() {
   return closure_1_10(View, { children });
 }
 const View = fn(17).View;
-let closure_6 = fn(9199).useInstantInviteSendStates;
+let closure_6 = fn(9327).useInstantInviteSendStates;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -52,9 +52,9 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_12();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let prop;
     if (guild != null) {
       prop = guild.linkedGameOrganization;
@@ -66,7 +66,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   });
   let tmp5 = null;
   if (null != stateFromStores) {
-    tmp5 = stateFromStores(11651)(stateFromStores);
+    tmp5 = stateFromStores(11788)(stateFromStores);
   }
   dependencyMap = tmp5;
   const tmp7 = closure_6((arg0) => {
@@ -137,39 +137,39 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     }
   }, items3);
   const intl = tmp2(1113).intl;
-  const stringResult = intl.string(stateFromStores(2404).nVMqjA);
+  const stringResult = intl.string(stateFromStores(2533).nVMqjA);
   let obj2 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl2 = tmp2(1113).intl;
   obj2.dismissAccessibilityLabel = intl2.string(guildId(1113).t.cpT0Cq);
   const obj3 = { spacing: stateFromStores(575).space.PX_16, style: tmp.header, children: null };
   const obj4 = { spacing: stateFromStores(575).space.PX_4, children: null };
   const obj5 = {
-    variant: "heading-lg/bold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.centeredText,
     children: null,
   };
   const intl3 = tmp2(1113).intl;
-  obj5.children = intl3.formatToPlainString(stateFromStores(2404).EnTIIr, { noun: stringResult });
-  const items4 = [closure_10(guildId(5624).Heading, obj5)];
+  obj5.children = intl3.formatToPlainString(stateFromStores(2533).EnTIIr, { noun: stringResult });
+  const items4 = [closure_10(guildId(5747).Heading, obj5)];
   const obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl4 = tmp2(1113).intl;
-  obj6.children = intl4.formatToPlainString(stateFromStores(2404).BBk7Qw, { noun: stringResult });
-  items4[1] = closure_10(guildId(5624).Text, obj6);
+  obj6.children = intl4.formatToPlainString(stateFromStores(2533).BBk7Qw, { noun: stringResult });
+  items4[1] = closure_10(guildId(5747).Text, obj6);
   obj4.children = items4;
-  const items5 = [closure_11(guildId(6027).Stack, obj4)];
+  const items5 = [closure_11(guildId(6147).Stack, obj4)];
   const obj7 = { size: "md", round: true, onChange: callback, placeholder: null };
   const intl5 = tmp2(1113).intl;
-  obj7.placeholder = intl5.formatToPlainString(stateFromStores(2404).cRK6SQ, { noun: stringResult });
-  items5[1] = closure_10(guildId(7218).SearchBar, obj7);
+  obj7.placeholder = intl5.formatToPlainString(stateFromStores(2533).cRK6SQ, { noun: stringResult });
+  items5[1] = closure_10(guildId(7339).SearchBar, obj7);
   obj3.children = items5;
-  obj2.header = closure_11(guildId(6027).Stack, obj3);
+  obj2.header = closure_11(guildId(6147).Stack, obj3);
   if (tmp9[0]) {
     let tmp16Result = closure_10(Loading, {});
   } else {
     const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp16Result = closure_10(stateFromStores(15791), obj8);
+    tmp16Result = closure_10(stateFromStores(15934), obj8);
   }
   obj2.children = tmp16Result;
-  return closure_10(guildId(7366).ActionSheet, obj2);
+  return closure_10(guildId(7486).ActionSheet, obj2);
 }

@@ -72,9 +72,9 @@ obj.typing = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj.activeThreadCount = { text: { variant: "text-xs/bold" } };
+obj.activeThreadCount = { text: { variant: "text-xs/semibold" } };
 const obj7 = {
-  text: { variant: "text-xs/bold" },
+  text: { variant: "text-xs/semibold" },
   layout: { paddingVertical: 4, paddingRight: 8, paddingLeft: 8, height: 24 },
   icon: null,
 };

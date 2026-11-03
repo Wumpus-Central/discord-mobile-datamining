@@ -50,10 +50,10 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13977).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14108).MultiAccountTokenStatus;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({
   accountListTag: { marginLeft: 12, flex: 1 },
   tagContainer: { display: "flex", flexDirection: "row" },
@@ -79,7 +79,7 @@ export default function AccountSwitcherListItem(arg0) {
   ({ sortHandlers, trailing } = arg0);
   ({ delayLongPress, leading } = arg0);
   const tmp = closure_11();
-  const items = [StreamerModeStore];
+  items = [StreamerModeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
@@ -123,7 +123,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, ,];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "Array" };
+    const obj9 = { user: obj3, guildId: "y" };
     const items3 = [React7(native.Avatar, obj9)];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };

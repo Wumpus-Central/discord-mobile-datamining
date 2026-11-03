@@ -16,7 +16,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
   const channelFavorites = channels.channelFavorites;
   const renderHeader = channels.renderHeader;
   const sections = channels.sections;
-  const items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
+  items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
   return channelFavorites.useMemo(() => {
     if (renderHeader === useMessagesData.MessagesDataHeader.HappeningNow) {
       let listHeaderHeight = MessagesItemHappeningNow.getMessagesItemHappeningNowHeight();

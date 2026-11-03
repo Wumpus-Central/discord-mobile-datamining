@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   fill: StyleSheet.absoluteFillObject,
   backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM },
@@ -48,7 +48,7 @@ export function Backdrop(animatedProps) {
   let backgroundColor = closure_7();
   const obj2 = { onPress: onDismiss, "aria-hidden": true };
   const obj3 = { style: null, pointerEvents: "box-none", animatedProps, children: null };
-  const items = [backgroundColor.fill, style];
+  items = [backgroundColor.fill, style];
   obj3.style = items;
   let tmp4 = null != onDismiss;
   if (tmp4) {
@@ -97,7 +97,7 @@ export function Backdrop(animatedProps) {
     obj8.style = items3;
     items2[1] = React4(tmp8, obj8);
     obj3.children = items2;
-    return hasOwnProperty(ReanimatedRexportDefault.View, obj3);
+    return hasOwnProperty(_modDef1652.View, obj3);
   }
   obj = native;
 }

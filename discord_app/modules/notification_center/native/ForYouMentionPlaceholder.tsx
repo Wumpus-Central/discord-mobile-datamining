@@ -1,5 +1,6 @@
 // discord_app/modules/notification_center/native/ForYouMentionPlaceholder.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -9,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 },
   placeholderImage: null,
@@ -48,8 +49,8 @@ obj2.placeholderBody = {
 };
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = [70, 50];
-const __initData = {
-  code: "function ForYouMentionPlaceholderTsx1(){const{reducedMotion,opacity}=this.__closure;return{opacity:reducedMotion?0.7:opacity.get()};}",
+let closure_9 = {
+  code: "(function ForYouMentionPlaceholderTsx1(){let[reducedMotion,opacity]=this.__closure;return{opacity:reducedMotion?0.7:opacity.get()};})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/ForYouMentionPlaceholder.tsx");
@@ -57,52 +58,60 @@ let result = size.fileFinishedImporting("modules/notification_center/native/ForY
 export function ForYouMentionPlaceholder() {
   const tmp = closure_7();
   _require = tmp;
-  let items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = require("initialize");
-  sharedValue = require("ReanimatedRexport").useSharedValue(0.3);
-  const obj2 = require("ReanimatedRexport");
-  const obj4 = require("ReanimatedRexport");
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0.3);
+  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../_runtime/metro/01652__.js");
   const obj3 = { duration: 1000, easing: null };
-  const Easing = require("ReanimatedRexport").Easing;
-  obj3.easing = Easing.inOut(require("ReanimatedRexport").Easing.ease);
-  const result = sharedValue.set(obj4.withRepeat(require("timing").withTiming(0.7, obj3), -1, true));
-  const obj5 = require("timing");
-  const fn = function y() {
-    let opacity = 0.7;
-    if (!stateFromStores) {
-      opacity = sharedValue.get();
+  const Easing = require("../../../../_runtime/metro/01652__.js").Easing;
+  obj3.easing = Easing.inOut(require("../../../../_runtime/metro/01652__.js").Easing.ease);
+  const result = sharedValue.set(obj4.withRepeat(require("timing/timing").withTiming(0.7, obj3), -1, true));
+  const obj5 = require("timing/timing");
+  const items1 = [closure_9, stateFromStores, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp5, tmp6, tmp7] = items1;
+  class ForYouMentionPlaceholderTsx1 {
+    constructor() {
+      opacity = 0.7;
+      if (!closure_0) {
+        tmp = closure_1;
+        opacity = closure_1.get();
+      }
+      return { opacity };
     }
-    return { opacity };
-  };
-  fn.__closure = { reducedMotion: stateFromStores, opacity: sharedValue };
-  fn.__workletHash = 8828208724188;
-  fn.__initData = __initData;
-  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
+  }
+  const items2 = [tmp6, tmp7];
+  ForYouMentionPlaceholderTsx1.__closure = items2;
+  ForYouMentionPlaceholderTsx1.__workletHash = 12937076119429;
+  ForYouMentionPlaceholderTsx1.__initData = tmp5;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(ForYouMentionPlaceholderTsx1);
   const obj6 = { style: null, children: null };
-  const items1 = [tmp.placeholder, animatedStyle];
-  obj6.style = items1;
-  const items2 = [closure_5(View, { style: tmp.placeholderImage })];
+  const items3 = [tmp.placeholder, animatedStyle];
+  obj6.style = items3;
+  const items4 = [closure_5(View, { style: tmp.placeholderImage })];
   const obj9 = { children: null };
-  const obj7 = require("ReanimatedRexport");
+  const obj7 = require("../../../../_runtime/metro/01652__.js");
   const obj8 = { style: tmp.placeholderImage };
-  const items3 = [
+  const items5 = [
     closure_5(View, {
       style: tmp.placeholderTextContainer,
       children: closure_8.map((item, index) => {
         const obj = { style: null };
-        const items = [placeholderText.placeholderText, { width: "" + item + "%" }];
+        items = [_undefined.placeholderText, { width: "" + item + "%" }];
         obj.style = items;
         return hasOwnProperty(View, obj, index);
       }),
     }),
   ];
   const obj11 = { style: null };
-  const items4 = [tmp.placeholderBody, { width: "85%" }];
-  obj11.style = items4;
-  items3[1] = closure_5(View, obj11);
-  obj9.children = items3;
-  items2[1] = closure_6(View, obj9);
-  obj6.children = items2;
-  return closure_6(stateFromStores(sharedValue[7]).View, obj6);
+  const items6 = [tmp.placeholderBody, { width: "85%" }];
+  obj11.style = items6;
+  items5[1] = closure_5(View, obj11);
+  obj9.children = items5;
+  items4[1] = closure_6(View, obj9);
+  obj6.children = items4;
+  return closure_6(_modDef1652.View, obj6);
 }

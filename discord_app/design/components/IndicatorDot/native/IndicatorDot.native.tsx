@@ -34,7 +34,7 @@ export function IndicatorDot(variant) {
   }
   ({ cutout, aria-label: tmp5 } = variant);
   const tmp6 = closure_5();
-  const items = [tmp6.dot, tmp6[DEFAULT_INDICATOR_DOT_VARIANT], , ];
+  items = [tmp6.dot, tmp6[DEFAULT_INDICATOR_DOT_VARIANT], , ];
   if (null != cutout) {
     const size = { width: tmp10 + 4, height: tmp10 + 4, borderWidth: 2, margin: -2 };
     let size1 = size;

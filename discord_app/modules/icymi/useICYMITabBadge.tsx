@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default function useICYMITabBadge() {
   const obj = { value: 0, showDot: null };
-  const items = [ICYMIStore];
+  items = [ICYMIStore];
   obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
   return obj;
 }

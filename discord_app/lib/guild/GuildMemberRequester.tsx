@@ -42,7 +42,7 @@ prototype["isSettled"] = function isSettled(arg0) {
 prototype["flushRequests"] = function flushRequests(fn) {
   const self = this;
   if (0 !== this._pendingRequests.size) {
-    const items = [];
+    items = [];
     const _pendingRequests1 = self._pendingRequests;
     const item = _pendingRequests1.forEach((item) => {
       if (!self._guildMemberExists(item)) {

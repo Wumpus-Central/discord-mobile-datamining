@@ -40,7 +40,7 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / DurationsDefault.Seconds.DAY), , ,];
+      items = [Math.floor(result / DurationsDefault.Seconds.DAY), , ,];
       const _Math2 = Math;
       const result1 = result % DurationsDefault.Seconds.DAY;
       items[1] = Math.floor(result1 / DurationsDefault.Seconds.HOUR);

@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-let constants = fn(4860).DismissibleContentGroupName;
+let constants = fn(4987).DismissibleContentGroupName;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 
@@ -21,7 +21,7 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
     "GuildThemeNuxTrigger",
   );
   if (null != enabledGuildThemeForGuildId) {
-    const items = [dismissible_content.DismissibleContent.GUILD_THEME_NUX];
+    items = [dismissible_content.DismissibleContent.GUILD_THEME_NUX];
     let items1 = items;
   } else {
     items1 = [];

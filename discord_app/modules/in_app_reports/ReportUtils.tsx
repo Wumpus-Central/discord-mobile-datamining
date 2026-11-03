@@ -95,7 +95,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
           const HTTP = closure_131_0(closure_131_2[5]).HTTP;
           const request = { url: closure_131_7.SUBMIT_REPORT_MENU(closure_130_1), body: null, rejectWithError: false };
           const obj6 = { nodeRef: closure_130_2.root_node_id, destination: null };
-          const items = ["", closure_130_2.success_node_id];
+          items = ["", closure_130_2.success_node_id];
           obj6.destination = items;
           const items1 = [obj6];
           request.body = closure_131_21(closure_130_2, closure_130_0, items1);
@@ -151,7 +151,7 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c5 = tmp;
@@ -227,7 +227,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "children", stage_instance_id: "track", guild_id: "value", guild_scheduled_event_id: "displayName", user_id: "o", email_token: "isArray", application_id: "isArray", entrypoint: "isArray", widget_id: "HTTP" };
+  let obj2 = { channel_id: "Array", message_id: "ao", stage_instance_id: "round", guild_id: "flex", guild_scheduled_event_id: "r", user_id: "isArray", email_token: "useState", application_id: "it", entrypoint: "Array", widget_id: "isArray" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -247,7 +247,7 @@ function genSubmitData(version, name, arr, email_token) {
     const entries = Object.entries(textInput);
     const merged2 = Object.assign(Object.fromEntries(entries.map((item) => {
       [tmp, ] = item;
-      const items = [tmp, tmp2];
+      items = [tmp, tmp2];
       return items;
     })));
     return {};
@@ -366,7 +366,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
-const SafetyToastType = fn(7490).SafetyToastType;
+const SafetyToastType = fn(7614).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
@@ -405,7 +405,7 @@ export function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(8355).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8479).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -432,14 +432,14 @@ export function submitReport(language, name, arr) {
         const entries = Object.entries(textInput);
         const merged2 = Object.assign(Object.fromEntries(entries.map((item) => {
           [tmp, ] = item;
-          const items = [tmp, tmp2];
+          items = [tmp, tmp2];
           return items;
         })));
         return {};
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8353).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "Boolean", message_id: "dispatch", guild_id: "isArray" };
+      if (name.name === tmp4(8477).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "replace", message_id: "r", guild_id: "isArray" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -451,11 +451,11 @@ export function submitReport(language, name, arr) {
       }
       obj4 = tmp15;
       const HTTP2 = tmp4(1282).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8355).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8479).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8353).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8477).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -491,7 +491,7 @@ export function submitReport(language, name, arr) {
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8353).ReportNames);
+      const values = Object.values(tmp4(8477).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -803,7 +803,7 @@ export function useTrackSettingsUpsellsAction(reportType, reportSubType, reportI
   closure_0 = reportType;
   closure_1 = reportSubType;
   closure_2 = reportId;
-  const items = [reportId, reportType, reportSubType];
+  items = [reportId, reportType, reportSubType];
   return noop.useCallback((settings_upsells_type) => (action) => {
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, { report_id, report_type: settings_upsells_type.name, report_subtype, settings_upsells_type, action });
   }, items);

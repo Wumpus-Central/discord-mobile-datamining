@@ -20,7 +20,7 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7446);
+let ChannelMemberStore = fn(7570);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1072);
@@ -84,7 +84,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   closure_129_8 = tmp6[1];
   const first1 = onUserLongPress(
     flag3.useState(() => {
-      const items = [sortByMatchScore.AutocompleterResultTypes.USER];
+      items = [sortByMatchScore.AutocompleterResultTypes.USER];
       const obj = { userFilters: { guild: channelId, strict: true } };
       const obj2 = { guild: channelId, strict: true };
       return new sortByMatchScoreDefault(
@@ -103,7 +103,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     1,
   )[0];
   closure_129_9 = first1;
-  let items = [flag, first1];
+  items = [flag, first1];
   const effect = flag3.useEffect(() => {
     if (roleId) {
       const searchContext = closure_9.createSearchContext();
@@ -192,7 +192,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   const tmp21 = guildId(onUserPress[17])();
   const items8 = [guildId];
   const memo1 = flag3.useMemo(() => {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let guildVisualOwnerId;
     if (null != guild) {
       guildVisualOwnerId = PermissionUtilsAll.getGuildVisualOwnerId(guild);

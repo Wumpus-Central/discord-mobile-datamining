@@ -1,7 +1,7 @@
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import DismissibleActionSheet from "../../dismissible_content/native/DismissibleActionSheet.tsx";
 import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "../../guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx";
@@ -11,16 +11,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(18305, dependencyMap.paths);
+  return asyncRequireImpl(18450, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(18307, dependencyMap.paths);
+  return asyncRequireImpl(18452, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(18310, dependencyMap.paths);
+  return asyncRequireImpl(18455, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(18312, dependencyMap.paths);
+  return asyncRequireImpl(18457, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {
@@ -111,11 +111,11 @@ class GuildTooltipActionSheets {
     return jsx(tmp4(tmp2[14]), obj1);
   }
 }
-const hasOwnProperty = fn(4860).DismissibleContentGroupName;
+const hasOwnProperty = fn(4987).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
 let closure_13 = {
-  code: "function GuildTooltipActionSheetsTsx1(){const{runOnJS,setShouldRender}=this.__closure;return runOnJS(setShouldRender)(true);}",
+  code: "(function GuildTooltipActionSheetsTsx1(){let[scheduleOnRN,setShouldRender]=this.__closure;return scheduleOnRN(setShouldRender,true);})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildTooltipActionSheets.tsx");
@@ -123,18 +123,24 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildToo
 export default function GuildTooltipActionSheetsGuard(arg0) {
   [tmp2, require] = noop.useState(false);
   const effect = noop.useEffect(() => {
-    const fn = function t() {
-      return setShouldRender(dependencyMap[16]).runOnJS(closure_1_0)(true);
-    };
-    const obj = ReanimatedRexport;
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setShouldRender };
-    fn.__workletHash = 6076095421855;
-    fn.__initData = __initData;
-    obj.runOnUI(fn)();
+    items = [closure_13, _mod1705.scheduleOnRN, closure_1_0];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp, tmp2, tmp3] = items;
+    class GuildTooltipActionSheetsTsx1 {
+      constructor() {
+        return closure_0(closure_1, true);
+      }
+    }
+    const items1 = [tmp2, tmp3];
+    GuildTooltipActionSheetsTsx1.__closure = items1;
+    GuildTooltipActionSheetsTsx1.__workletHash = 14288497747211;
+    GuildTooltipActionSheetsTsx1.__initData = tmp;
+    _mod1705.scheduleOnUI(GuildTooltipActionSheetsTsx1);
   }, []);
   let tmp4 = null;
   if (tmp2) {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     tmp4 = <GuildTooltipActionSheets />;
   }

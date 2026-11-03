@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { marginBottom: 16, paddingHorizontal: 16 },
   header: { marginBottom: 8 },
@@ -28,13 +28,13 @@ export default function TextElement(element) {
       if (tmp7) {
         const obj3 = {
           style: tmp.header,
-          variant: "heading-md/extrabold",
+          variant: "heading-md/semibold",
           color: "mobile-text-heading-primary",
           children: header,
         };
         tmp7 = hasOwnProperty(Text_Text.Text, obj3);
       }
-      const items = [tmp7];
+      items = [tmp7];
       let tmp10 = null != body;
       if (tmp10) {
         const obj4 = { style: tmp.body, variant: "text-md/medium", children: ref.current(body) };

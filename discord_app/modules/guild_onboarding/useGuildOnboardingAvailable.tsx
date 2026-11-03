@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding/useGuildOnbo
 
 export default function useGuildOnboardingAvailable(features) {
   _require = features;
-  const items = [ImpersonateStore];
+  items = [ImpersonateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let id;
     if (user != null) {

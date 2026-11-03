@@ -18,11 +18,11 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6066).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 28.7;
 let closure_8 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointStatNumber.tsx");
@@ -50,7 +50,7 @@ export default function CheckpointStatNumber(isStepHeading) {
   }
   const result = Math.min(getTextPixels(value), c7) * num3 * 0.08675000000000001;
   c4 = result;
-  const items = [num, result];
+  items = [num, result];
   const items1 = [num2, num, result];
   const memo = noop.useMemo(() => {
     const size = { height: num, width };
@@ -75,7 +75,7 @@ export default function CheckpointStatNumber(isStepHeading) {
     alignment: "center-left",
     dataBinding: memo2,
     fallback: jsx(CheckpointTextDefault, {
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       style: memo3,
       isStepHeading: isStepHeading.isStepHeading,
       children: value,

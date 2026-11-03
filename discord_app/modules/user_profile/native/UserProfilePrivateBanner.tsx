@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   banner: {
     flexDirection: "row",
@@ -22,7 +22,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(7377).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(7497).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfilePrivateBanner(primaryColor) {
   primaryColor = primaryColor.primaryColor;
-  const items = [closure_6().banner];
+  items = [closure_6().banner];
   let tmp3 = null != primaryColor;
   if (tmp3) {
     const obj = { backgroundColor: utils_ColorUtils.int2hex(primaryColor) };

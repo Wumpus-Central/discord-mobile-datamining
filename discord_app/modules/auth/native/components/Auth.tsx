@@ -2,16 +2,17 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import KeyboardChatScrollView from "../../../../../_runtime/01639_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../../_runtime/01641_KeyboardChatScrollView.js";
+import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import WideAuthScrollContext from "WideAuthScrollContext.tsx";
-import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import StackNavigator from "../../../../../_runtime/07171_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07292_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
+import useShouldShowChooseAccountDefault from "../../../multi_account/useShouldShowChooseAccount.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod18041 from "../../../../../_runtime/metro/18041__.js";
+import _mod18185 from "../../../../../_runtime/metro/18185__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -22,7 +23,7 @@ require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
     const obj3 = { name: AuthStates.WELCOME };
-    const items = [obj3];
+    items = [obj3];
     let items1 = items;
   } else {
     const obj4 = { name: AuthStates.WELCOME };
@@ -35,16 +36,17 @@ function getInitialAuthRouteStack() {
 function NavigatorWithCaptchaHook() {
   obj = useIsHCaptchaModalOpenTracking;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
+  const tmp5 = useWideAuthViewDefault();
   const tmp6 = closure_16();
   const first = _slicedToArray(noop.useState(getInitialAuthRouteStack), 1)[0];
-  const tmp5 = useWideAuthViewDefault();
-  [tmp8, require] = noop.useState(first[first.length - 1].name);
+  const tmp7 = useShouldShowChooseAccountDefault();
+  [tmp9, require] = noop.useState(first[first.length - 1].name);
   const effect = noop.useEffect(() => {
     const result = RegistrationHandoff.clearRegistrationHandoff();
   }, []);
-  const tmp10 = _slicedToArray(noop.useState(false), 2);
-  importDefault = tmp11;
-  const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
+  const tmp11 = _slicedToArray(noop.useState(false), 2);
+  importDefault = tmp12;
+  const tmp8 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
   const keyboardState = KeyboardChatScrollView.useKeyboardState((height) => height.height);
   const callback = noop.useCallback((arg0) => {
     let name;
@@ -60,32 +62,43 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod18041;
-  const children = [closure_9(BackgroundImageDefault, obj3)];
+  obj3.backgroundImageSource = _mod18185;
+  const children = [closure_9(BackgroundImageDefault, obj3), ,];
+  let tmp18Result = null;
   if (tmp5) {
-    const obj5 = { value: tmp11, children: null };
+    tmp18Result = null;
+    if (tmp9 === AuthStates.WELCOME) {
+      tmp18Result = null;
+      if (tmp7) {
+        tmp18Result = closure_9(tmp4(7073), {});
+      }
+    }
+  }
+  children[1] = tmp18Result;
+  if (tmp5) {
+    const obj5 = { value: tmp12, children: null };
     const items1 = [tmp6.wideOuterContainer];
-    let tmp24 = null;
-    if (tmp13) {
+    let tmp26 = null;
+    if (tmp14) {
       const obj6 = { paddingBottom: keyboardState };
-      tmp24 = obj6;
+      tmp26 = obj6;
     }
     const obj7 = { style: null, children: null };
-    items1[1] = tmp24;
+    items1[1] = tmp26;
     obj7.style = items1;
     const items2 = [tmp6.wideCard, ,];
-    let tmp25 = null;
-    if (null != tmp8) {
-      let num = obj[tmp8];
+    let tmp27 = null;
+    if (null != tmp9) {
+      let num = obj[tmp9];
       if (num == null) {
         num = 520;
       }
       const obj8 = { height: num };
-      tmp25 = obj8;
+      tmp27 = obj8;
     }
-    items2[1] = tmp25;
+    items2[1] = tmp27;
     let obj9 = null;
-    if (tmp13) {
+    if (tmp14) {
       obj9 = {
         maxHeight: "100%",
         height: "100%",
@@ -112,14 +125,14 @@ function NavigatorWithCaptchaHook() {
       disableHeaderAnimation: true,
     };
     let transparent = null;
-    if (tmp8 === AuthStates.WELCOME) {
+    if (tmp9 === AuthStates.WELCOME) {
       transparent = tmp6.transparent;
     }
     obj11.viewStyle = transparent;
     obj11.initialRouteStack = first;
     obj11.onWillFocus = closure_5.dismiss;
     obj11.onStateChange = callback;
-    obj11.headerStyle = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
+    obj11.headerStyle = tmp11[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
     let num2 = 20;
     if (tmpResult.isAndroid()) {
       num2 = tmp4(575).space.PX_12;
@@ -129,7 +142,7 @@ function NavigatorWithCaptchaHook() {
     obj10.children = closure_9(Navigator.Navigator, obj11);
     obj7.children = closure_9(closure_6, obj10);
     obj5.children = closure_9(closure_6, obj7);
-    let tmp17Result = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj5);
+    let tmp18Result2 = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj5);
     tmpResult = utils_PlatformUtils;
   } else {
     const obj13 = {
@@ -147,23 +160,23 @@ function NavigatorWithCaptchaHook() {
     obj13.initialRouteStack = first;
     obj13.onWillFocus = closure_5.dismiss;
     obj13.headerStyle = { borderBottomWidth: 0 };
-    tmp17Result = closure_9(Navigator.Navigator, obj13);
+    tmp18Result2 = closure_9(Navigator.Navigator, obj13);
   }
-  children[1] = tmp17Result;
+  children[2] = tmp18Result2;
   return closure_11(closure_10, { children });
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17988);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+let RegistrationStepsUtils = fn(18131);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
   RegistrationStepsUtils.map((item) => {
     [tmp, tmp2] = item;
-    const items = [tmp];
+    items = [tmp];
     obj = {};
     let merged = Object.assign(tmp2);
     obj.headerMode = "screen";
@@ -212,13 +225,13 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(7118).hasWebAuthn) {
+if (fn(7244).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
@@ -258,9 +271,9 @@ let result = size.fileFinishedImporting("modules/auth/native/components/Auth.tsx
 export default noop.memo(function Auth() {
   const effect = noop.useEffect(() => {
     AuthManagerDefault.initialize();
-    return () => closure_1_1(dependencyMap[23]).terminate();
+    return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7654).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7778).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

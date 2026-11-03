@@ -9,11 +9,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/reactParserFor.tsx");
 
 export default function reactParserFor() {
-  let items = [...arguments];
+  items = [...arguments];
   const items1 = [...items];
   closure_0 = markup_MarkupParserDefault.reactParserFor.apply(items1);
   return function parseWithSpoilers() {
-    const items = [...arguments];
+    items = [...arguments];
     const tmp = closure_0(...items);
     let tmp2 = tmp;
     if (null != tmp) {

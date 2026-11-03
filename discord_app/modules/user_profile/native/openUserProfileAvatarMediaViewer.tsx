@@ -34,7 +34,7 @@ export default function openUserProfileAvatarMediaViewer(user) {
       width: AVATAR_MAX_SIZE,
       accessoryType: "embed",
     };
-    const items = [size];
+    items = [size];
     obj2.initialSources = items;
     obj2.originViewOrOriginLayout = originViewOrOriginLayout;
     openMediaModal.openMediaModal(obj2);

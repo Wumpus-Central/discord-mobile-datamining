@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -74,7 +74,7 @@ export function NameplatePreview(aria_hidden) {
   const avatarDecoration = user(pendingAvatarSrc[8]).useAvatarDecoration(user, guildId);
   pendingAvatarDecoration = guildId(pendingAvatarSrc[9])({ guildId }).pendingAvatarDecoration;
   let obj2 = user(pendingAvatarSrc[8]);
-  const items = [pendingAvatarDecoration];
+  items = [pendingAvatarDecoration];
   stateFromStores = user(pendingAvatarSrc[10]).useStateFromStores(
     items,
     () => pendingAvatarDecoration.useReducedMotion,

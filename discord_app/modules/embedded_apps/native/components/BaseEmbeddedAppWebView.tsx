@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
-import WebView from "../../../../../_runtime/07979_WebView.js";
+import WebView from "../../../../../_runtime/08103_WebView.js";
 import useEmbeddedAppCSPDefault from "../../csp/useEmbeddedAppCSP.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -63,7 +63,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
   c10 = tmp6;
   c11 = tmp7;
   closure_12 = tmp9;
-  const items = [iframeId];
+  items = [iframeId];
   const memo = safeAreasConfig.useMemo(() => WebView.getWebViewProxy(iframeId), items);
   let rect = activityUrl(onActivityCrash[11])();
   const tmp5 = onInvalidUrl(safeAreasConfig.useState(false), 2);
@@ -319,7 +319,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -486,7 +486,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);
@@ -495,7 +495,7 @@ let result = size.fileFinishedImporting("modules/embedded_apps/native/components
 export function BaseEmbeddedAppWebView(onLoadError) {
   onLoadError = onLoadError.onLoadError;
   const tmp = useEmbeddedAppCSPDefault(onLoadError.activityUrl);
-  const items = [tmp.status, onLoadError];
+  items = [tmp.status, onLoadError];
   const effect = noop.useEffect(() => {
     if ("failed" === status.status) {
       onLoadError();

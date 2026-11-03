@@ -12,8 +12,8 @@ import FavoriteStore from "FavoriteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4876).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1385).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(5003).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
@@ -30,7 +30,7 @@ export function getFavoritesLimits() {
   return { favoriteLimit: FREE_FAVORITE_LIMIT, canUpsellFavoriteLimit: !isPremiumExactlyResult };
 }
 export function useFavoritesLimitUpsell() {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
   if (isPremiumExactlyResult) {
@@ -54,16 +54,16 @@ export function useFavoritesLimitUpsell() {
   };
 }
 export function useFavorites() {
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   return initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 }
 export function useFavorite(arg0) {
   _require = arg0;
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   return require("initialize").useStateFromStores(items, () => FavoriteStore.getFavorite(closure_0));
 }
 export function useFavoritedChannelIds() {
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () =>
     favoriteChannels.getFavoriteChannels(),
   );
@@ -73,7 +73,7 @@ export function getFavoritesCategories() {
   if (favoriteChannels === undefined) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
-  const items = [{ id: null, name: "" }];
+  items = [{ id: null, name: "" }];
   for (const key10010 in favoriteChannels) {
     let tmp6 = favoriteChannels[key10010];
     if (tmp6.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
@@ -110,14 +110,14 @@ export function getFavoritesCategories() {
   return items;
 }
 export function useIsFavoritesGuildSelected() {
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   return FavoritesUtils.isFavoritesGuildId(stateFromStores);
 }
 export function useFavoritesAwareChannel(arg0) {
   let tmp = arg0;
   _require = arg0;
-  const items = [SelectedGuildStore];
+  items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   const obj = require("initialize");
   const obj2 = require("FavoritesUtils");

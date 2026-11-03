@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(13292);
+const Constants = fn(13428);
 ({ AutomodActionType: hasOwnProperty, MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -37,7 +37,7 @@ export default function BlockMessageActionSheet(triggerType) {
     const obj3 = { title: actionInfo.headerText };
     obj2.header = closure_7(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
     const obj4 = { variant: "text-md/normal", color: "text-default", children: actionInfo.descriptionText };
-    const items = [closure_7(require("Text/Text").Text, obj4), , ,];
+    items = [closure_7(require("Text/Text").Text, obj4), , ,];
     const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
     const intl2 = require("util").intl;
     obj5.children = intl2.string(require("util").t.Oa9oWJ);

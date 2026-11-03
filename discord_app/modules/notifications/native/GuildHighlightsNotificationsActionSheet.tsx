@@ -19,7 +19,7 @@ function GuildPill(guild) {
   const tmp = closure_14();
   const obj = { style: tmp.guildPill, children: null };
   const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32, animate: true };
-  const items = [closure_1_11(GuildIconDefault, obj2)];
+  items = [closure_1_11(GuildIconDefault, obj2)];
   const obj3 = {
     style: tmp.guildName,
     variant: "heading-md/semibold",
@@ -33,15 +33,15 @@ function GuildPill(guild) {
   obj3.children = name;
   items[1] = closure_1_11(Text_Text.Text, obj3);
   obj.children = items;
-  return closure_1_12(View, obj);
+  return application_id(View, obj);
 }
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_8, HighlightSettings: closure_9 } = Constants);
-const FeedbackRating = fn(10158).FeedbackRating;
+const FeedbackRating = fn(10288).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let obj2 = {
   contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" },
   header: { alignItems: "center", paddingBottom: 24 },
@@ -52,7 +52,7 @@ let obj2 = {
   settings: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 },
 };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj5 = { guildPill: null, guildName: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -85,7 +85,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
   closure_6 = tmp4[1];
   const tmp6 = first(noop.useState(false), 2);
   closure_7 = tmp6[1];
-  const items = [first1, feedbackSettings];
+  items = [first1, feedbackSettings];
   const callback = noop.useCallback((rating) => {
     let tmp = first1;
     if (!first1) {

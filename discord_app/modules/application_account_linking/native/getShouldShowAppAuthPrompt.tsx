@@ -4,7 +4,7 @@ import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActi
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = fn;
-const FetchState = fn(7276).FetchState;
+const FetchState = fn(7396).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 
@@ -36,7 +36,7 @@ export function getShouldShowAppAuthPrompt(application1) {
         if (null == parentId) {
           return tmp4;
         } else if (AuthorizedAppsStore.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
-          const items = [parentId];
+          items = [parentId];
           response = AuthorizedAppsActionCreatorsDefault.fetch(items);
           let flag2 = false;
         } else {

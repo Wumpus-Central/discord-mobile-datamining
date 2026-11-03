@@ -9,9 +9,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
 export function useCustomThemeDisplaySettings(stateFromStores) {
-  let items = [CustomThemeMobileStore];
+  items = [CustomThemeMobileStore];
   [tmp4, tmp5, tmp6] = initialize.useStateFromStoresArray(items, () => {
-    const items = [
+    items = [
       CustomThemeMobileStore.getCustomTheme(),
       CustomThemeMobileStore.getBaseTheme(),
       CustomThemeMobileStore.getPreviewTheme(),
@@ -40,7 +40,7 @@ export function useCustomThemeDisplaySettings(stateFromStores) {
   }
   const tmp3 = _slicedToArray(
     initialize.useStateFromStoresArray(items, () => {
-      const items = [
+      items = [
         CustomThemeMobileStore.getCustomTheme(),
         CustomThemeMobileStore.getBaseTheme(),
         CustomThemeMobileStore.getPreviewTheme(),

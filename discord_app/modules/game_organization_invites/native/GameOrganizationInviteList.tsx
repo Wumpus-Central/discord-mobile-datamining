@@ -8,7 +8,7 @@ function keyExtractor(id) {
   return id.id;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = {
     content: { paddingBottom: arg0 + nativeDefault.space.PX_16 },
@@ -24,7 +24,7 @@ export default function GameOrganizationInviteList(users) {
   const getSendState = users.getSendState;
   const onInvite = users.onInvite;
   const tmp = closure_5(getSendState(onInvite[4])({ isKeyboardAwareOnAndroid: false }).insets.bottom);
-  const items = [users.length, getSendState, onInvite];
+  items = [users.length, getSendState, onInvite];
   const callback = noop.useCallback((arg0) => {
     ({ item, index } = arg0);
     const obj = {

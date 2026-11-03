@@ -22,7 +22,7 @@ const constants = {
   ADS: "Ads",
   ZENDESK: "Zendesk",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({
   content: { padding: 16 },
   header: { marginBottom: 8 },
@@ -99,13 +99,13 @@ export default noop.memo(function RequestDataContent() {
   });
   const obj12 = {
     style: tmp.title,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl8 = require("util").intl;
   obj12.children = intl8.string(require("util").t.jxXMEz);
-  const items = [closure_8(require("Text/Text").Text, obj12)];
+  items = [closure_8(require("Text/Text").Text, obj12)];
   const obj13 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl9 = require("util").intl;
   const obj14 = { helpdeskArticle: null };
@@ -176,8 +176,8 @@ export default noop.memo(function RequestDataContent() {
             const intl2 = closure_1_0(1113).intl;
             obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
             obj2.body = message;
-            closure_1_1(5958).show(obj2);
-            const obj = closure_1_1(5958);
+            closure_1_1(6078).show(obj2);
+            const obj = closure_1_1(6078);
           },
         )
         .finally(() => closure_1_1(false));
@@ -226,8 +226,8 @@ export default noop.memo(function RequestDataContent() {
           const intl2 = closure_1_0(1113).intl;
           obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
           obj2.body = message;
-          closure_1_1(5958).show(obj2);
-          const obj = closure_1_1(5958);
+          closure_1_1(6078).show(obj2);
+          const obj = closure_1_1(6078);
         },
       );
     } else {

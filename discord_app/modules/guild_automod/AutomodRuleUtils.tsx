@@ -8,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(19672).getRuleCountByTriggerType;
-const Constants = fn(13292);
+const getRuleCountByTriggerType = fn(19822).getRuleCountByTriggerType;
+const Constants = fn(13428);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -17,7 +17,7 @@ const Constants = fn(13292);
   MAX_CHARACTERS_PER_KEYWORD: closure_7,
   MIN_CHARACTERS_PER_KEYWORD: closure_8,
   MIN_REGEX_PATTERN_LENGTH: closure_9,
-  MAX_REGEX_PATTERN_LENGTH: c10,
+  MAX_REGEX_PATTERN_LENGTH: closure_10,
   AutomodActionType: closure_11,
   AutomodEventType: closure_12,
   MAX_MENTION_SPAM_LIMIT: map1,

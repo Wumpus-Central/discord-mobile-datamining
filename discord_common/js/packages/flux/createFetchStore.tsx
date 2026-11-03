@@ -133,7 +133,7 @@ export function createFetchStore(ApplicationStore, arg1) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                 backoff = closure_130_3.getState().backoff;
                 let applyResult;
                 if (closure_131_4 != null) {
-                  const items = [];
+                  items = [];
                   HermesBuiltin.arraySpread(closure_130_1, 0);
                   applyResult = HermesBuiltin.apply(items, undefined);
                 }
@@ -204,7 +204,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                       closure_130_6 = HermesBuiltin.apply(items1, undefined);
                       if (closure_130_6 === closure_1_8) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         if (null != closure_130_6) {
                           if (
@@ -223,7 +223,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                             })(closure_130_3, closure_131_9)
                           ) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: "HermesInternal" };
+                            return { value: "HermesInternal", done: null };
                           }
                         }
                         failureLockedUntil = closure_130_3.getState().failureLockedUntil;
@@ -231,7 +231,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                           const _Date2 = Date;
                           if (Date.now() < failureLockedUntil) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: "HermesInternal" };
+                            return { value: "HermesInternal", done: null };
                           }
                         }
                       }
@@ -400,7 +400,7 @@ export function createFetchStore(ApplicationStore, arg1) {
     return iter;
   };
   function useCfsHook() {
-    let items = [...arguments];
+    items = [...arguments];
     let queryId;
     c2 = undefined;
     const tmp = _slicedToArray(backoff(items), 2);
@@ -444,7 +444,7 @@ export function createFetchStore(ApplicationStore, arg1) {
       () => {
         let applyResult;
         if (_slicedToArray != null) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(first, 0);
           applyResult = HermesBuiltin.apply(items, undefined);
         }
@@ -467,7 +467,7 @@ export function createFetchStore(ApplicationStore, arg1) {
       () => {
         let applyResult;
         if (closure_2_5 != null) {
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(first, 0);
           applyResult = HermesBuiltin.apply(items, undefined);
         }
@@ -520,7 +520,7 @@ export function createFetchStore(ApplicationStore, arg1) {
     c3 = 0;
     c4 = 0;
     const iter = (async () => {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(closure_129_0, 0);
       closure_129_1 = HermesBuiltin.apply(items, undefined);
       closure_129_2 = closure_130_12(closure_129_1);

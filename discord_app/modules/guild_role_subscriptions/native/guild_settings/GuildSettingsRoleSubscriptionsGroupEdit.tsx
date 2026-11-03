@@ -74,7 +74,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     }
     tmp18 = source;
   }
-  const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
+  items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
   callback = obj3.useCallback(
     first(function* () {
       if (c2 === 2) {
@@ -87,7 +87,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -207,9 +207,9 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1362).ApplicationTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx",

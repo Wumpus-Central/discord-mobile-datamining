@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3096 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3223 from "../../../age_assurance/AgeAssurance.messages.js";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import AgeNoticeSettingsPredicate from "../../../age_assurance/age_notice/native/AgeNoticeSettingsPredicate.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
@@ -12,11 +12,11 @@ let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGr
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3096.SH6Tcv);
+    return intl.string(_modDef3223.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3096.rJiO86);
+    return intl.string(_modDef3223.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -28,7 +28,7 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
 };
 export function useShowAssignedAdultAgeGroupRow() {
   let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-  TinyBroncoSettingsPredicate;
+  AgeNoticeSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === false;
   }
@@ -36,7 +36,7 @@ export function useShowAssignedAdultAgeGroupRow() {
 }
 export function useShowAccountStatusAgeGroupRow() {
   let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-  TinyBroncoSettingsPredicate;
+  AgeNoticeSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === true;
   }

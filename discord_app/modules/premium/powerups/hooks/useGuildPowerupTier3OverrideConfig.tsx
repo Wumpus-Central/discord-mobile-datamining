@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
@@ -11,10 +11,10 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 
 export default function useGuildPowerupTier3OverrideConfig(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   if (
     obj.useStateFromStores(items, () => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -25,7 +25,7 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
   ) {
     const obj2 = { shouldShow: true, text: null };
     const intl = require("util").intl;
-    obj2.text = intl.string(_modDef2570.l9n4QZ);
+    obj2.text = intl.string(_modDef2699.l9n4QZ);
     let obj3 = obj2;
   } else {
     obj3 = { shouldShow: false, text: "" };

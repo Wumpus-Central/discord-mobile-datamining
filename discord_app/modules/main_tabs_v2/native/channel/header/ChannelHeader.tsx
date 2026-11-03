@@ -14,7 +14,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
-const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
@@ -33,10 +33,10 @@ export default function ChannelHeader(channelId) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(6734).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6854).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

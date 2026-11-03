@@ -8,17 +8,17 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8393);
+const GuildTagConstants = fn(8517);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7,
   GuildTagBadgeSize: closure_8,
 } = GuildTagConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = {
     container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 },
@@ -194,7 +194,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     tmp22 = secondary;
   }
   secondary = tmp22;
-  let items = [primary2, tmp22];
+  items = [primary2, tmp22];
   callback = obj.useCallback((arg0) => {
     if ("primary" === arg0) {
       let tmp = primary2;
@@ -333,7 +333,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     const obj = { id: "primary", label: null, page: null };
     const intl = primaryColor(onSelectColor[12]).intl;
     obj.label = intl.string(primaryColor(onSelectColor[12]).t.PHT1N2);
-    const items = [obj];
+    items = [obj];
     const obj2 = { id: "secondary", label: null, page: null };
     const intl2 = primaryColor(onSelectColor[12]).intl;
     obj2.label = intl2.string(primaryColor(onSelectColor[12]).t["9/wzjF"]);

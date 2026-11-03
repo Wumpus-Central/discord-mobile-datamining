@@ -14,13 +14,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9942).EmojiPickerSource;
+const EmojiPickerSource = fn(10073).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
-let EmojiIntention = fn(1386).EmojiIntention;
+let EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: { flexDirection: "column" },
   searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 },
@@ -94,7 +94,7 @@ export default function EmojiPickerActionSheet(onClose) {
   obj4 = onClose(pickerIntention[15]);
   const tmp14 = onPressEmoji(pickerIntention[18])(channel, sharedValue, pickerIntention, bypassPremiumEmojiEntitlement);
   handleTextChange = tmp14.handleTextChange;
-  let items = [onClose];
+  items = [onClose];
   let items1 = [onPressEmoji, tmp6, pickerIntention, source];
   const callback = obj.useCallback(() => {
     if (onClose != null) {
@@ -165,10 +165,10 @@ export default function EmojiPickerActionSheet(onClose) {
     let tmp = null;
     if (pickerIntention === EmojiIntention.DEFAULT_REACT_EMOJI) {
       const obj = { style: closure_4.headerText, children: null };
-      const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+      const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
-      const items = [closure_2_10(Text_Text.Text, obj2)];
+      items = [closure_2_10(Text_Text.Text, obj2)];
       const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
@@ -182,7 +182,7 @@ export default function EmojiPickerActionSheet(onClose) {
   const items5 = [tmp6, tmp.burstReaction.borderColor];
   const memo2 = obj.useMemo(() => {
     let obj = { style: closure_4.header, children: null };
-    const items = [memo1];
+    items = [memo1];
     const items1 = [closure_4.searchContainer];
     let headerSpacer = null;
     if (null === memo1) {
@@ -232,7 +232,7 @@ export default function EmojiPickerActionSheet(onClose) {
   }, items4);
   const memo3 = obj.useMemo(() => {
     if (closure_6) {
-      const items = [closure_4.burstReaction.borderColor, nativeDefault.unsafe_rawColors.TRANSPARENT];
+      items = [closure_4.burstReaction.borderColor, nativeDefault.unsafe_rawColors.TRANSPARENT];
       let items1 = items;
     } else {
       items1 = [nativeDefault.unsafe_rawColors.TRANSPARENT, nativeDefault.unsafe_rawColors.TRANSPARENT];
@@ -250,6 +250,7 @@ export default function EmojiPickerActionSheet(onClose) {
       portalHostName: EmojiPickerActionSheet,
       animatedSheetIndex: sharedValue1,
       followSystemKeyboard: true,
+      constrainToActionSheet: true,
     };
     isIOSResult = ref2(onPressEmoji(tmp3[31]), obj6);
   }

@@ -18,7 +18,7 @@ function parseServerPackSticker(id) {
   return obj;
 }
 function deriveStickerMetadata(name, name2) {
-  const items = [];
+  items = [];
   const obj = { type: StickersTypes.StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = name.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
@@ -46,8 +46,8 @@ function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premi
     })(item10017.stickers),
   );
 }
-const TypeTag = fn(4879).TypeTag;
-const LibdiscoreStore = fn(4886).LibdiscoreStore;
+const TypeTag = fn(5006).TypeTag;
+const LibdiscoreStore = fn(5013).LibdiscoreStore;
 let c4 = false;
 let closure_5 = null;
 const HOUR = DurationsDefault.Millis.HOUR;

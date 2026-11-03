@@ -25,7 +25,7 @@ const route = SettingBuilders.createRoute({
   usePreNavigationAction() {
     return () => {
       const obj2 = { analyticsLocations: null, analyticsSource: null };
-      const items = [AnalyticsLocationDefault.USER_SETTINGS];
+      items = [AnalyticsLocationDefault.USER_SETTINGS];
       obj2.analyticsLocations = items;
       obj2.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
       const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);

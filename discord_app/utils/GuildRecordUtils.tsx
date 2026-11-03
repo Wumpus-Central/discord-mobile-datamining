@@ -916,7 +916,7 @@ export function toGuildProperties(id) {
     maxMembers: obj.max_members,
     nsfwLevel: obj.nsfw_level,
   } = id);
-  const items = [,];
+  items = [,];
   ({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
   obj.nsfw = items.includes(id.nsfwLevel);
   ({

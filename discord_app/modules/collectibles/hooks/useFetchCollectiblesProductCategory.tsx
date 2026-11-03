@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCo
 export function useFetchCollectiblesProductCategory(skuId) {
   _require = skuId;
   useMaybeFetchCollectiblesCategoriesDefault();
-  let items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const tmp2 = _slicedToArray(
     require("useStateFromStores").useStateFromStoresArray(items, () => {
-      const items = [
+      items = [
         CollectiblesCategoryStore.isFetchingCategories,
         CollectiblesCategoryStore.getCategoryForProduct(closure_0),
       ];

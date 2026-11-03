@@ -8,7 +8,7 @@ import UserProfileStore from "../UserProfileStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FunctionUtils = fn(2034);
+const FunctionUtils = fn(2163);
 let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
@@ -16,11 +16,11 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplay
 export default function useDisplayProfile(id, arg1) {
   _require = id;
   closure_1 = arg1;
-  const items = [UserStore, UserProfileStore];
+  items = [UserStore, UserProfileStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [UserStore, UserProfileStore];
+      items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
       if (null !== closure_0) {
@@ -42,7 +42,7 @@ export default function useDisplayProfile(id, arg1) {
 }
 export function useDisplayProfileWithFetchEffect(arg0, guildId) {
   _require = arg0;
-  let items = [guildId, arg0];
+  items = [guildId, arg0];
   const effect = noop.useEffect(() => {
     maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
   }, items);
@@ -52,7 +52,7 @@ export function useDisplayProfileWithFetchEffect(arg0, guildId) {
   return require("initialize").useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [UserStore, UserProfileStore];
+      items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
       if (null !== closure_0) {
@@ -75,7 +75,7 @@ export function useDisplayProfileWithFetchEffect(arg0, guildId) {
 export function getDisplayProfile(id1, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [UserStore, UserProfileStore];
+    items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;

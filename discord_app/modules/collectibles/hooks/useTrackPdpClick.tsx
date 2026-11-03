@@ -25,7 +25,7 @@ export function useTrackPdpClick(skuId) {
   const currentUserIfAvailable = skuId(analyticsLocations[3]).useCurrentUserIfAvailable();
   const tmpResult = skuId(analyticsLocations[3]);
   shopDiscountSource = skuId(analyticsLocations[4]).getShopDiscountSource(currentUserIfAvailable);
-  const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
+  items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
   return cardId.useCallback((cta, arg1) => {
     let tmp = arg1;
     if (arg1 == null) {

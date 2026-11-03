@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.t
 
 export default function useShowBadgeProgress(arg0) {
   ({ badge, viewerBadge, isViewingOtherUser } = arg0);
-  const items = [ConsentStore];
+  items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     ConsentStore.hasConsented(constants.PERSONALIZATION),
   );

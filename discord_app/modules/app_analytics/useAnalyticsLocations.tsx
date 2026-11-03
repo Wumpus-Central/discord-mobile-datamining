@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
 
 export default function useAnalyticsLocations() {
-  let items = [...arguments];
+  items = [...arguments];
   first = undefined;
   _slicedToArray = undefined;
   context = undefined;

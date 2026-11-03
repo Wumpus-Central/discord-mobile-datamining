@@ -40,10 +40,10 @@ function handleGuildRoleMemberUpdate(guildId) {
     const tmp6 = new closure_8(guildId);
     dependencyMap[guildId] = tmp6;
   }
-  const items = [guildId.userId];
+  items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
 }
-let closure_8 = fn(7674).GuildMemberSafetyPageStore;
+let closure_8 = fn(7798).GuildMemberSafetyPageStore;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let c10 = false;
 const dependencyMap = {};
@@ -199,7 +199,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     guilds = guilds.guilds;
     let item = guilds.forEach((item) => {
       ({ id, activity_instances } = item);
-      let items;
+      items = undefined;
       if (null == dependencyMap[id]) {
         const tmp6 = new closure_8(id);
         dependencyMap[id] = tmp6;
@@ -229,7 +229,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       if (null != GuildStore.getGuild(guildId)) {
         c10 = true;
         const obj = getMemberSafetyPageStore(guildId);
-        const items = [];
+        items = [];
         for (const item10014 of members) {
           if (null == obj.getMember(item10014.userId)) {
             let arr = items.push(item10014);
@@ -315,7 +315,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       const tmp7 = new closure_8(guildId);
       dependencyMap[guildId] = tmp7;
     }
-    const items = [id];
+    items = [id];
     return dependencyMap[guildId].updateMembersByMemberIds(items);
   },
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(guildId) {
@@ -334,7 +334,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       const tmp6 = new closure_8(guildId);
       dependencyMap[guildId] = tmp6;
     }
-    const items = [guildId.guildMember.user.id];
+    items = [guildId.guildMember.user.id];
     return dependencyMap[guildId].updateMembersByMemberIds(items);
   },
   GUILD_ROLE_MEMBER_REMOVE: handleGuildRoleMemberUpdate,

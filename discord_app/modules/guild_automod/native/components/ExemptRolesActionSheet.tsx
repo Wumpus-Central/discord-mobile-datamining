@@ -13,7 +13,7 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(4921).isEveryoneRole;
+const isEveryoneRole = fn(5048).isEveryoneRole;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function ExemptRolesActionSheet(guildId) {
   guildId = guildId.guildId;
   ({ exemptRoles, onSave } = guildId);
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId), items1);
   const items2 = [stateFromStores];
@@ -48,7 +48,7 @@ export default function ExemptRolesActionSheet(guildId) {
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(19707), {
+  return jsx(stateFromStores(19857), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-roles",

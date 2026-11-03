@@ -8,7 +8,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -18,7 +18,7 @@ export default function ConjurePlanWidget(applicationId) {
   applicationId = applicationId.applicationId;
   const tmp = closure_6();
   const tmp2 = UserProfileSharedStylesDefault();
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const items1 = [applicationId];
   const stateFromStores = applicationId(504).useStateFromStores(items, () => id.getId());
   const memo = noop.useMemo(() => {

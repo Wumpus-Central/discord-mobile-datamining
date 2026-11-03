@@ -15,12 +15,12 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7276).FetchState;
+const FetchState = fn(7396).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   spinner: { padding: nativeDefault.space.PX_16 },
   emptyText: null,
@@ -40,7 +40,7 @@ let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/n
 export function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
   const style = disclosure.style;
-  const items = [disclosure, style];
+  items = [disclosure, style];
   return noop.useMemo(() => {
     if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
       const obj2 = { style, size: "xs" };
@@ -55,23 +55,23 @@ export function DisclosureIcon(disclosure) {
   }, items);
 }
 export function useAuthorizedApps() {
-  let items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   const stateFromStoresObject = appAuthTokens(504).useStateFromStoresObject(items, () => ({
     fetchState: authStore.getFetchState(),
     appAuthTokens: authStore.getNewestTokensForNonChildrenApplications(),
   }));
   appAuthTokens = stateFromStoresObject.appAuthTokens;
   const obj = appAuthTokens(504);
-  const focusEffect = appAuthTokens(1498).useFocusEffect(
+  const focusEffect = appAuthTokens(1500).useFocusEffect(
     noop.useCallback(() => closure_1(dependencyMap[13]).fetch(), []),
   );
   closure_1 = tmp3;
   const items1 = [appAuthTokens, stateFromStoresObject.fetchState !== FetchState.FETCHED];
-  const obj2 = appAuthTokens(1498);
+  const obj2 = appAuthTokens(1500);
   return {
     loading: stateFromStoresObject.fetchState !== FetchState.FETCHED,
     apps: noop.useMemo(() => {
-      const items = [];
+      items = [];
       if (closure_1) {
         let sorted = items;
       } else {
@@ -88,7 +88,7 @@ export function AuthorizedAppsHeader() {
   const obj2 = { color: "text-strong", variant: "heading-md/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["f6kk+r"]);
-  const items = [closure_1_10(Text_Text.Heading, obj2)];
+  items = [closure_1_10(Text_Text.Heading, obj2)];
   const obj3 = { style: tmp.headerDescription, color: "text-default", variant: "text-sm/normal", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.G9JfLg);
@@ -112,7 +112,7 @@ export function AuthorizedAppsEmpty(loading) {
 export function AuthorizedAppRow(app) {
   app = app.app;
   ({ start, end } = app);
-  importDefault = app(1497).useNavigation();
+  importDefault = app(1499).useNavigation();
   const obj2 = {
     icon: closure_10(TableRowApplicationIconDefault, { application: app.application }),
     label: app.application.name,
@@ -130,5 +130,5 @@ export function AuthorizedAppRow(app) {
     start,
     end,
   };
-  return closure_10(app(6975).TableRow, obj2);
+  return closure_10(app(7101).TableRow, obj2);
 }

@@ -10,18 +10,18 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
-    let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
+    items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [ApplicationStreamingStore, AuthenticationStore];
+      items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -39,7 +39,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     });
   },
   onValueChange: function onStreamValueSettingValueChange(arg0) {
-    const items = [ApplicationStreamingStore, AuthenticationStore];
+    items = [ApplicationStreamingStore, AuthenticationStore];
     [obj, obj2] = items;
     const lastActiveStream = obj.getLastActiveStream();
     let tmp2 = null;
@@ -54,10 +54,10 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
   },
   usePredicate: function useHasStreamVolumeSetting() {
     const obj = MobileAudioOutputExperimentDefault;
-    let items = [ApplicationStreamingStore, AuthenticationStore];
+    items = [ApplicationStreamingStore, AuthenticationStore];
     return (
       initialize.useStateFromStores(items, () => {
-        const items = [ApplicationStreamingStore, AuthenticationStore];
+        items = [ApplicationStreamingStore, AuthenticationStore];
         [obj, obj2] = items;
         const lastActiveStream = obj.getLastActiveStream();
         let tmp2 = null;
@@ -73,7 +73,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t["3182VD"])];
+    items = [intl.string(util.t["3182VD"])];
     const intl2 = util.intl;
     items[1] = intl2.string(util.t["DGq/PR"]);
     return items;

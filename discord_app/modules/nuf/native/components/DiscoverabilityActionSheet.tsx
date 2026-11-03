@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(14248);
+const ContactSyncModalStore = fn(14379);
 ({
   useContactSyncModalStore: closure_4,
   setAllowSync: hasOwnProperty,
@@ -13,7 +13,7 @@ const ContactSyncModalStore = fn(14248);
 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 },
   formRow: null,
@@ -48,7 +48,7 @@ export default function DiscoverabilityActionSheet() {
     tmp3 = allowEmail;
   }
   allowEmail = tmp3;
-  const items = [tmp3];
+  items = [tmp3];
   const items1 = [allowPhone];
   const callback = allowEmail.useCallback(() => {
     hasOwnProperty(!allowEmail);

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1072).CATEGORY_ICON_SIZE;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default function useExpressionPickerCategoriesPlaceholderConfig() {
   const tmp = closure_4();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => {
     const obj = { sectionItem: null };
     const size = {

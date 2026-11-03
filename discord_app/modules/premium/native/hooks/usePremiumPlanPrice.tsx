@@ -18,7 +18,7 @@ export default function usePremiumPlanPrice(arg0) {
   let formatPrice = _require;
   let amount = priceState;
   let obj = require("initialize");
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_5.getPremiumTypeSubscription());
   const NitroACOMSubscriptionExperiment = require("ACOMExperiments").NitroACOMSubscriptionExperiment;
   let enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "usePremiumPlanPrice" }).enabled;

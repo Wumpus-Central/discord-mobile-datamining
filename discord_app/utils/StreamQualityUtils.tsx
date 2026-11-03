@@ -13,16 +13,16 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const StreamSettingsConstants = fn(5864);
+const StreamSettingsConstants = fn(5984);
 ({
-  ApplicationStreamFPS: c10,
+  ApplicationStreamFPS: closure_10,
   ApplicationStreamResolutions: closure_11,
   ApplicationStreamSettingRequirements: closure_12,
   getApplicationFramerate: map1,
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
-let closure_15 = fn(1385).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5768).ResolutionTypes;
+let closure_15 = fn(1387).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5888).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
@@ -55,10 +55,10 @@ export function isPremiumResolution(maxQuality) {
 }
 export function isPremiumFPS(maxQuality) {
   if (null != maxQuality) {
-    closure_0 = map1(maxQuality.maxFrameRate);
+    closure_0 = state(maxQuality.maxFrameRate);
     return (
       null ==
-      closure_1_12.find((fps) => {
+      application_id.find((fps) => {
         let tmp = fps.fps === closure_0;
         if (tmp) {
           tmp = !(null != fps.quality || null != fps.guildPremiumTier);
@@ -76,7 +76,7 @@ export function getPremiumRequirement(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return closure_1_12.find((preset) => {
+  return application_id.find((preset) => {
     let tmp = null == preset.preset;
     if (!tmp) {
       tmp = preset.preset === closure_0;
@@ -119,7 +119,7 @@ export function getMaxQuality(participant) {
 }
 export function useMaxQuality(participant) {
   _require = participant;
-  const items = [ApplicationStreamingSettingsStore];
+  items = [ApplicationStreamingSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => state.getState());
   let obj = require("initialize");
   const items1 = [AuthenticationStore];
@@ -160,7 +160,7 @@ export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) 
   closure_0 = preset;
   closure_1 = resolution;
   closure_2 = frameRate;
-  const found = closure_1_12.find((preset) => {
+  const found = application_id.find((preset) => {
     let tmp = null == preset.preset;
     if (!tmp) {
       tmp = preset.preset === closure_0;
@@ -175,7 +175,7 @@ export function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) 
   });
   const currentUser = UserStore.getCurrentUser();
   const guildId = RTCConnectionStore.getGuildId();
-  let guild = null;
+  guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }

@@ -13,7 +13,7 @@ export function useTraitPickerSelection(customizationOption) {
   const onSelectOption = customizationOption.onSelectOption;
   let selectedOptionId;
   noop = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
-  const items = [selectedOptionId];
+  items = [selectedOptionId];
   const savedOptionId = customizationOption(onSelectOption[5]).useStateFromStoresObject(items, () => {
     let tmp7 = tmp4;
     if (customizationOption === CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT) {

@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(11204), fn(11205), fn(11206)];
-let items1 = [fn(11207), fn(11208), fn(11209)];
+let items = [fn(11341), fn(11342), fn(11343)];
+let items1 = [fn(11344), fn(11345), fn(11346)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -55,7 +55,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   },
 ];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },
@@ -84,7 +84,7 @@ export default function ChannelFollowSuccessAlert(arg0) {
   const tmp2Result = common_AlertDefault;
   items1[1] = closure_3(require("Text/Text").Text, {
     style: tmp.header,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: stableMemo1(),
   });

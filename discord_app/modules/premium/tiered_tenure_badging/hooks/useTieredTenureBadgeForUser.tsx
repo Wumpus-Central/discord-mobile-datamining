@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/h
 
 export function useTieredTenureBadgeForUser(id) {
   _require = id;
-  const items = [UserProfileStore, UserStore];
+  items = [UserProfileStore, UserStore];
   return require("initialize").useStateFromStores(items, () => {
     let userProfile = null;
     if (null != tieredTenureBadge) {

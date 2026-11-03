@@ -31,7 +31,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4870).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4997).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};
@@ -198,12 +198,12 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const guildId = SelectedGuildStore.getGuildId();
     if (null != guildId) {
-      let items = tmp5;
+      items = tmp5;
       if (dependencyMap[guildId] == null) {
         items = [];
       }
       const reduced = Array.from(items).reduce((acc, item) => {
-        let items = dependencyMap2[item];
+        items = dependencyMap2[item];
         if (items == null) {
           items = [];
         }

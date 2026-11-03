@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(5019).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5146).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -32,7 +32,7 @@ class UploaderBase extends EventEmitter {
       const timestamp = Date.now();
       const rounded = Math.floor((loaded - closure_0._loaded) / ((timestamp - closure_0._lastUpdate) / 1000));
       if (null != arg2) {
-        const items = obj2._file.items;
+        items = obj2._file.items;
         if (items != null) {
           const item = items.forEach((item) => {
             item.item.progress = closure_0[item.id];
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "applicationId",
+      items: "alignItems",
     };
     return tmp3;
   }
@@ -126,7 +126,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -368,7 +368,7 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
   _modDef12;
-  const items = [...arg2];
+  items = [...arg2];
   return _modDef12.set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
@@ -406,7 +406,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -431,7 +431,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
                 const index = files1.indexOf(found);
                 itemId = 0;
                 const files2 = self.files;
-                const items = [];
+                items = [];
                 itemId = HermesBuiltin.arraySpread(files2.slice(0, index), itemId);
                 const files3 = self.files;
                 itemId = HermesBuiltin.arraySpread(files3.slice(index + 1), itemId);

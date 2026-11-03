@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["labelId", "accessibilityLabel"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -60,7 +60,7 @@ export function GhostInput(size) {
   const obj3 = {};
   const merged = Object.assign(size);
   obj3.labelId = fieldLabelA11yNative.labelId;
-  const items = [size.containerStyle];
+  items = [size.containerStyle];
   let prop;
   if (tmp6) {
     prop = tmp4.centeredContainerStyle;

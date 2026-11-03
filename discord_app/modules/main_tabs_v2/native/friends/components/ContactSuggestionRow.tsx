@@ -24,14 +24,14 @@ export function ContactSuggestionRow(suggestedFriend) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
     sharedValue = suggestedFriend(onAddSuggestion[5]).useSharedValue(false);
-    let items = [added, sharedValue];
+    items = [added, sharedValue];
     const effect = merged.useEffect(() => {
       const result = sharedValue.set(added);
     }, items);
     const items1 = [added];
     const memo = merged.useMemo(() => {
       if (added) {
-        let items = [];
+        items = [];
       } else {
         const obj = { name: constants.ADD, label: null };
         const intl = util.intl;

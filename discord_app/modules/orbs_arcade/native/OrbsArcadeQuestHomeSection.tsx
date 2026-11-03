@@ -12,17 +12,20 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(17026);
+const OrbsArcadeNativeConstants = fn(17169);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   section: { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 },
-  sectionHeader: { gap: 2, paddingHorizontal: 4, paddingBottom: 4 },
-  sectionIcon: { width: 20, height: 20 },
+  sectionHeader: null,
+  sectionIcon: null,
   skeletonTile: null,
 };
+let obj3 = { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.sectionHeader = { gap: 2, paddingHorizontal: 4, paddingBottom: nativeDefault.space.PX_4 };
+obj2.sectionIcon = { width: 20, height: 20 };
 let size = {
   width: "100%",
   maxWidth: ORBS_ARCADE_GAME_TILE_MAX_WIDTH,
@@ -38,7 +41,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 export default function OrbsArcadeQuestHomeSection(location) {
   const tmp = closure_6();
   useFetchOrbsArcadeGamesDefault(location.location);
-  const items = [OrbsArcadeStore];
+  items = [OrbsArcadeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => OrbsArcadeStore.orbsArcadeGames);
   const items1 = [OrbsArcadeStore];
   const stateFromStores1 = initialize.useStateFromStores(

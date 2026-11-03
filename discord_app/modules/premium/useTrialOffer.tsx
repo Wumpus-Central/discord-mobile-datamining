@@ -22,7 +22,7 @@ export function hasUserTrialOfferExpired(hasExpired) {
 }
 export function useTrialOffer(React3) {
   _require = React3;
-  const items = [UserOfferStore];
+  items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserTrialOffer(closure_0));
   let flag;
   if (stateFromStores != null) {
@@ -100,7 +100,7 @@ export function useTrialOffer(React3) {
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            closure_1_0.start(num, /* F135508 */ function() { ... });
+                            closure_1_0.start(num, /* F136286 */ function() { ... });
                           }
                         }
                       });

@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -24,13 +24,13 @@ let obj2 = {
   downloadProgressSlider: null,
   playbackSlider: null,
 };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 12;
 }
 obj2.centerText = { lineHeight: num };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let num2 = 16;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;
@@ -71,7 +71,7 @@ export default function MediaSlider(controls) {
     }, num),
   );
   closure_11 = tmp12;
-  const items = [tmp12];
+  items = [tmp12];
   obj2 = controls(setPaused[6]);
   const effect = obj.useEffect(
     () => () => {

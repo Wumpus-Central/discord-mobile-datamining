@@ -13,12 +13,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(4867).isGuildReadableType;
+const isGuildReadableType = fn(4994).isGuildReadableType;
 const Constants = fn(1072);
-({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
+({ ChannelTypes: closure_10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -35,7 +35,7 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
   let first;
   let channels;
   let tmp = closure_14();
-  let items = [GuildCategoryStore];
+  items = [GuildCategoryStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildCategoryStore.getCategories(require));
   const tmp6 = first(channels.useState(""), 2);
   first = tmp6[0];
@@ -71,7 +71,7 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
       }
     }).map((channel) => channel.channel);
     let obj = { channels: mapped, sections: null };
-    const items = [mapped.length];
+    items = [mapped.length];
     obj.sections = items;
     return obj;
   }, items1);

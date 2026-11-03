@@ -14,7 +14,7 @@ export (arg0, flag3, flag) => {
   _slicedToArray = flag;
   let tmp = _slicedToArray(closure_4(false), 2);
   closure_3 = tmp[1];
-  const items = [flag3, flag, arg0];
+  items = [flag3, flag, arg0];
   closure_3(() => {
     let time1 = null;
     const item = time1.forEach((type) => {

@@ -11,14 +11,14 @@ function SearchFreezeContainer(visible) {
   ({ children, containerStyle } = visible);
   const tmp = closure_8();
   const obj = { manualFreeze: !visible, placeholder: null, children: null };
-  const items = [containerStyle, visible ? tmp.visible : tmp.hidden];
+  items = [containerStyle, visible ? tmp.visible : tmp.hidden];
   obj.children = hasOwnProperty(View, { style: items, "aria-hidden": !visible, children });
   return hasOwnProperty(AppFreezerDefault, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/layo
 export default noop.memo(function SearchScreenLayout(width) {
   const searchContext = width.searchContext;
   const containerStyle = width.containerStyle;
-  const items = [SearchQueryStore];
+  items = [SearchQueryStore];
   const items1 = [searchContext];
   const stateFromStores = searchContext(504).useStateFromStores(
     items,

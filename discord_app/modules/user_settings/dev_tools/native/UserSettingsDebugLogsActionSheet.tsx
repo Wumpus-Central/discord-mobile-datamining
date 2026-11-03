@@ -24,7 +24,7 @@ function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   obj4.label = intl2.string(util.t.wzzjk9);
   obj4.onPress = onRefresh;
   obj3.children = React3(TableRow.TableRow, obj4);
-  const items = [React3(TableRowGroup.TableRowGroup, obj3), ,];
+  items = [React3(TableRowGroup.TableRowGroup, obj3), ,];
   const obj5 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl3 = util.intl;
   obj5.title = intl3.string(util.t.gePre2);

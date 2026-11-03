@@ -16,12 +16,12 @@ const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReport
 
 export function useIsReportToModEnabled(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
         tmp4 =
@@ -35,9 +35,9 @@ export function useIsReportToModEnabled(arg0) {
 }
 export function useReportToModChannelId(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    let guild = null;
+    guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }
@@ -60,7 +60,7 @@ export function useIsModeratorReportPostChannel(isModeratorReportChannel) {
 }
 export function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
-  const items = [MessageStore];
+  items = [MessageStore];
   const stateFromStores = messageReference(504).useStateFromStores(items, () => {
     let message = null;
     if (null != messageReference) {

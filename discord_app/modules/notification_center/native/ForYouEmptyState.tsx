@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   image: { marginBottom: 16 },
   container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" },
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export function ForYouEmptyState(height) {
   const tmp = closure_5();
   const obj = { style: null, children: null };
-  const items = [tmp.container, { height: height.height }];
+  items = [tmp.container, { height: height.height }];
   obj.style = items;
   const items1 = [
     React3(View, {
@@ -33,7 +33,7 @@ export function ForYouEmptyState(height) {
   const obj3 = {
     accessibilityRole: "header",
     color: "mobile-text-heading-primary",
-    variant: "heading-md/bold",
+    variant: "heading-md/semibold",
     style: null,
     children: null,
   };

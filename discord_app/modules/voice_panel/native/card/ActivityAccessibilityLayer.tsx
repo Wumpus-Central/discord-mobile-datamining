@@ -54,7 +54,7 @@ function FocusedActivityAccessibilityLayer(activityName) {
   obj3.importantForAccessibility = str;
   obj3.style = tmp.fill;
   obj3.children = children;
-  const items = [closure_8(tmp10(tmp8[8]).AccessibilityView, obj3)];
+  items = [closure_8(tmp10(tmp8[8]).AccessibilityView, obj3)];
   const obj4 = {
     ref,
     style: absoluteFill.absoluteFill,
@@ -88,10 +88,10 @@ function FocusedActivityAccessibilityLayer(activityName) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const IS_IOS = fn(11223).IS_IOS;
+const IS_IOS = fn(11360).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ fill: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx");

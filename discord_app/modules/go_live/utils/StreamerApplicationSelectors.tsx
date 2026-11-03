@@ -57,7 +57,7 @@ export function getStreamerApplication(decodeStreamKeyResult, PresenceStore) {
 }
 export function useGetStreamApplication(stream) {
   _require = stream;
-  const items = [PresenceStore];
+  items = [PresenceStore];
   const items1 = [stream];
   return require("initialize").useStateFromStores(
     items,

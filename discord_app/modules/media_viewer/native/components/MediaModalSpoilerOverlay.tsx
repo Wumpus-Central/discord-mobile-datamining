@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
   obscureContentContainer: {
@@ -37,7 +37,7 @@ let obj4 = {
   alignItems: "center",
   alignSelf: "center",
 };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -57,7 +57,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     return null;
   } else {
     const obj3 = { style: null, children: null };
-    const items = [style, absoluteFill.absoluteFill, tmp6];
+    items = [style, absoluteFill.absoluteFill, tmp6];
     obj3.style = items;
     if (source.obscure) {
       let str = "dark";
@@ -102,7 +102,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    React5(ReanimatedRexportDefault.View, obj3);
+    React5(_modDef1652.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

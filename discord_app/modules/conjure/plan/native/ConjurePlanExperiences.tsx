@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/native/ConjurePlanExperiences.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon2 from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx";
@@ -17,7 +17,7 @@ function InfoBlock(children) {
     flag = false;
   }
   const tmp = closure_8();
-  const items = [tmp.infoBlock];
+  items = [tmp.infoBlock];
   if (flag) {
     flag = tmp.channelsBlock;
   }
@@ -58,7 +58,7 @@ function ChannelRow(arg0) {
     style: tmp.iconBox,
     children: hasOwnProperty(AppsIcon2.AppsIcon, { size: "xs", color: nativeDefault.colors.ICON_STRONG }),
   };
-  const items = [hasOwnProperty(View, obj2)];
+  items = [hasOwnProperty(View, obj2)];
   const obj4 = { style: tmp.infoText, children: null };
   const items1 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", lineClamp: 1, children: name }),
@@ -103,14 +103,14 @@ function ExperienceBlocks(showsRequirements) {
   if ("frame" === experience.kind) {
     const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
     if (null == result) {
-      let items = [];
+      items = [];
     } else {
       const items1 = [];
       if (result.channels.length > 0) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef3868.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef3995.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -125,7 +125,7 @@ function ExperienceBlocks(showsRequirements) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef3868.MY6UGJ);
+        obj6.caption = intl3.string(_modDef3995.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -180,7 +180,7 @@ function Bullets(arg0) {
   return closure_5(View, {
     children: bullets.map((text, index) => {
       obj = { style: closure_1.listItem, children: null };
-      const items = [
+      items = [
         hasOwnProperty(Text_Text.Text, {
           variant: "text-md/normal",
           color: "text-default",
@@ -223,10 +223,10 @@ function ComponentSection(arg0) {
     style: tmp.iconBox,
     children: hasOwnProperty(AppsIcon, { size: "xs", color: nativeDefault.colors.ICON_STRONG }),
   };
-  const items = [hasOwnProperty(View, obj4)];
+  items = [hasOwnProperty(View, obj4)];
   const intl = util.intl;
   if (result) {
-    let BM4Ymz = _modDef3868.BM4Ymz;
+    let BM4Ymz = _modDef3995.BM4Ymz;
   } else {
     BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
   }
@@ -274,14 +274,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  frame: fn(9727).GameControllerIcon,
-  overlay_widget: fn(12739).WindowTopIcon,
-  user_widget: fn(10805).UserCircleIcon,
-  bot: fn(12105).RobotIcon,
-  commands: fn(12105).RobotIcon,
-  automod: fn(11281).ShieldIcon,
+  frame: fn(9859).GameControllerIcon,
+  overlay_widget: fn(12875).WindowTopIcon,
+  user_widget: fn(10935).UserCircleIcon,
+  bot: fn(12241).RobotIcon,
+  commands: fn(12241).RobotIcon,
+  automod: fn(11418).ShieldIcon,
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   intro: { gap: nativeDefault.space.PX_8 },
   divider: null,
@@ -369,7 +369,7 @@ export default function ConjurePlanExperiences(proposal) {
   closure_4 = proposal(commandNames[15]).conjurePlanRequirementsSectionId(result);
   const obj2 = { children: null };
   const obj3 = { style: tmp.intro, children: null };
-  let items = [
+  items = [
     closure_5(proposal(commandNames[10]).Heading, {
       variant: "heading-lg/semibold",
       color: "text-strong",
@@ -383,7 +383,7 @@ export default function ConjurePlanExperiences(proposal) {
     result.map((bullets) => {
       const experience = bullets.experience;
       obj = { children: null };
-      const items = [
+      items = [
         hasOwnProperty(View, { style: divider.divider }),
         hasOwnProperty(ComponentSection, {
           experience,

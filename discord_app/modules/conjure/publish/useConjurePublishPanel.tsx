@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjurePublishPanel.tsx
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import ChannelPermissionsUtils from "../../channel_permissions/ChannelPermissionsUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -10,49 +10,51 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6844).isProjectOwner;
+let isProjectOwner = fn(6964).isProjectOwner;
 const Constants = fn(1072);
-({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-let items = [fn(6845).ConjureSupportedSurface.BOT, _modDef3868.UnoAgo];
-let items1 = [items, , ,];
-let items2 = [fn(6845).ConjureSupportedSurface.ACTIVITY, _modDef3868["I88/iG"]];
+({ ChannelTypes: closure_9, Permissions: closure_10 } = Constants);
+let items = [fn(6965).ConjureSupportedSurface.BOT, _modDef3995.UnoAgo];
+let items1 = [items, , , ,];
+let items2 = [fn(6965).ConjureSupportedSurface.ACTIVITY, _modDef3995["I88/iG"]];
 items1[1] = items2;
-let items3 = [fn(6845).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3868.gXY1x1];
+let items3 = [fn(6965).ConjureSupportedSurface.VOICE_CHANNEL, _modDef3995.skjf5I];
 items1[2] = items3;
-let items4 = [fn(6845).ConjureSupportedSurface.AUTOMOD, _modDef3868.Q9ruoM];
+let items4 = [fn(6965).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3995.gXY1x1];
 items1[3] = items4;
+const items5 = [fn(6965).ConjureSupportedSurface.AUTOMOD, _modDef3995.Q9ruoM];
+items1[4] = items5;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishPanel.tsx");
 
 export default function useConjurePublishPanel(id, guildId) {
   _require = id;
-  closure_9 = async function _save() {
+  isProjectOwner = async function _save(id) {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
-      if (arg0 === 1) {
+      if (id === 1) {
         throw value;
-      } else if (arg0 === 2) {
+      } else if (id === 2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c4 = 2;
         if (0 === c1) {
-          if (arg0 === 1) {
+          if (id === 1) {
             c4 = 3;
             throw value;
-          } else if (arg0 === 2) {
+          } else if (id === 2) {
             c4 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
             if (!saving) {
-              if (null == PermissionStore) {
+              if (null == GuildStore) {
                 asyncGeneratorStep(true);
                 c3 = 1;
                 let tmp17 = _slicedToArray;
@@ -81,10 +83,10 @@ export default function useConjurePublishPanel(id, guildId) {
           c3 = 0;
           closure_128_3(false);
           throw tmp28;
-        } else if (arg0 === 1) {
+        } else if (id === 1) {
           c4 = 3;
           throw value;
-        } else if (arg0 === 2) {
+        } else if (id === 2) {
           c3 = 0;
           closure_128_3(false);
           c4 = 3;
@@ -112,8 +114,8 @@ export default function useConjurePublishPanel(id, guildId) {
   const tmp4 = require("useConjureAppIdentityDraft")(id.id);
   importDefault = tmp4;
   let items4 = require("useConjurePreviewDevicePermissions")(id.id);
-  const tmp6 = _slicedToArray(items.useState(id.name), 2);
-  [saving, closure_3] = items.useState(false);
+  const tmp6 = _slicedToArray(trimmed.useState(id.name), 2);
+  [saving, closure_3] = trimmed.useState(false);
   let tmp9 = null == guildId.status;
   if (!tmp9) {
     tmp9 = !require("ConjurePublishTypes").isConjureLive(guildId.status.publishState);
@@ -121,20 +123,20 @@ export default function useConjurePublishPanel(id, guildId) {
   }
   let tmp11 = tmp9;
   if (tmp9) {
-    tmp11 = guild_id(id);
+    tmp11 = isProjectOwner(id);
   }
   _slicedToArray = tmp11;
   items = tmp9 ? id.preview_supported_surfaces : id.supported_surfaces;
   if (items == null) {
     items = [];
   }
-  const trimmed = str.trim();
+  trimmed = str.trim();
   let result = null;
   if (tmp11) {
     result = require("conjureProjectNameError").conjureProjectNameError(trimmed);
     let obj3 = require("conjureProjectNameError");
   }
-  PermissionStore = result;
+  GuildStore = result;
   const status = guildId.status;
   let previewAppChannels;
   if (status != null) {
@@ -147,7 +149,7 @@ export default function useConjurePublishPanel(id, guildId) {
   if (0 === previewAppChannels.length) {
     arr4 = previewAppChannels;
     if (items.includes(require("ConjureProjectTypes").ConjureSupportedSurface.APP_CHANNEL)) {
-      let intl = tmp16(tmp2[14]).intl;
+      let intl = tmp16(tmp2[9]).intl;
       items1 = [intl.string(tmp(tmp2[8]).xI4N6Q)];
       arr4 = items1;
     }
@@ -155,15 +157,15 @@ export default function useConjurePublishPanel(id, guildId) {
   }
   const tmp3 = require("useConjureLiveParts")(id.id, guildId.guildId);
   let tmp20 = null;
-  [tmp18, tmp19] = items.useState(false);
+  [tmp18, tmp19] = trimmed.useState(false);
   if (tmp11) {
     tmp20 = null;
     if (arr4.length > 0) {
       tmp20 = null;
-      if ("user" !== id.install_scope) {
+      if ("guild" === id.install_scope) {
         tmp20 = null;
         if (id.guild_id === guildId.guildId) {
-          guild_id = id.guild_id;
+          let guild_id = id.guild_id;
           if (guild_id == null) {
             guild_id = null;
           }
@@ -173,8 +175,8 @@ export default function useConjurePublishPanel(id, guildId) {
     }
   }
   guild_id = tmp20;
-  const tmp5Result = _slicedToArray(items.useState(false), 2);
-  const items2 = [trimmed, PermissionStore];
+  const tmp5Result = _slicedToArray(trimmed.useState(false), 2);
+  const items2 = [GuildStore, guild_id];
   const items3 = [tmp20];
   let obj5 = {
     initial: tmp9,
@@ -198,7 +200,7 @@ export default function useConjurePublishPanel(id, guildId) {
   const stateFromStores = require("initialize").useStateFromStores(
     items2,
     () => {
-      let guild = null;
+      guild = null;
       if (null != guild_id) {
         guild = GuildStore.getGuild(tmp);
       }
@@ -235,14 +237,15 @@ export default function useConjurePublishPanel(id, guildId) {
     tmp24 = obj6;
   }
   obj5.appChannelsPrivate = tmp24;
+  closure_129_0 = items;
   const found = items1.filter((item) => {
     [tmp] = item;
-    return items.includes(tmp);
+    return id.includes(tmp);
   });
   obj5.components = found.map((item) => {
     [tmp, tmp2] = item;
     const obj = { surface: tmp, label: null };
-    const intl = id(first[14]).intl;
+    const intl = id(first[9]).intl;
     obj.label = intl.string(tmp2);
     return obj;
   });
@@ -253,10 +256,10 @@ export default function useConjurePublishPanel(id, guildId) {
   let stringResult = null;
   if (tmp9) {
     stringResult = null;
-    if ("user" !== id.install_scope) {
+    if ("guild" === id.install_scope) {
       stringResult = null;
       if (items.includes(tmp22(tmp2[7]).ConjureSupportedSurface.AUTOMOD)) {
-        const intl2 = tmp22(tmp2[14]).intl;
+        const intl2 = tmp22(tmp2[9]).intl;
         stringResult = intl2.string(tmp(tmp2[8]).bljqPk);
       }
     }
@@ -266,7 +269,7 @@ export default function useConjurePublishPanel(id, guildId) {
     const obj7 = { guild, caption: null };
     let formatToPlainStringResult = null;
     if (null != memberCount) {
-      const intl4 = tmp22(tmp2[14]).intl;
+      const intl4 = tmp22(tmp2[9]).intl;
       const obj8 = { count: memberCount };
       formatToPlainStringResult = intl4.formatToPlainString(tmp(tmp2[8]).ZpZxK9, obj8);
     }
@@ -276,7 +279,7 @@ export default function useConjurePublishPanel(id, guildId) {
     tmp26 = null;
     if ("user" === id.install_scope) {
       const obj9 = { guild: null, caption: null };
-      const intl3 = tmp22(tmp2[14]).intl;
+      const intl3 = tmp22(tmp2[9]).intl;
       obj9.caption = intl3.string(tmp(tmp2[8]).RUhWLH);
       tmp26 = obj9;
     }
@@ -285,7 +288,7 @@ export default function useConjurePublishPanel(id, guildId) {
   obj5.saving = saving;
   obj5.save = function save() {
     const self = this;
-    const apply = closure_9.apply;
+    const apply = closure_8.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -296,7 +299,21 @@ export default function useConjurePublishPanel(id, guildId) {
   return obj5;
 }
 export const CONJURE_PUBLISH_COMPONENTS = items1;
+export function conjurePublishComponents(arg0) {
+  closure_0 = arg0;
+  const found = items1.filter((item) => {
+    [tmp] = item;
+    return id.includes(tmp);
+  });
+  return found.map((item) => {
+    [tmp, tmp2] = item;
+    const obj = { surface: tmp, label: null };
+    const intl = id(first[9]).intl;
+    obj.label = intl.string(tmp2);
+    return obj;
+  });
+}
 export const CONJURE_PUBLISH_PERMISSION_LABELS = {
-  screen_capture: _modDef3868["8/7kE7"],
-  connect_user_to_voice: _modDef3868.uvDWXa,
+  screen_capture: _modDef3995["8/7kE7"],
+  connect_user_to_voice: _modDef3995.uvDWXa,
 };

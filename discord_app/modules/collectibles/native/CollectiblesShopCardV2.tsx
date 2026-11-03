@@ -58,7 +58,7 @@ function CollectiblesShopCardInternalV2(product) {
   const tmp10 = require("useWishlistNUXActionSheet")();
   shouldShowWishlistNUXActionSheet = tmp10.shouldShowWishlistNUXActionSheet;
   showWishlistNUXActionSheet = tmp10.showWishlistNUXActionSheet;
-  let items = [shouldShowWishlistNUXActionSheet, showWishlistNUXActionSheet, selectedProduct];
+  items = [shouldShowWishlistNUXActionSheet, showWishlistNUXActionSheet, selectedProduct];
   const callback = shouldShowWishlistNUXActionSheet.useCallback(() => {
     if (shouldShowWishlistNUXActionSheet) {
       showWishlistNUXActionSheet(selectedProduct);
@@ -112,7 +112,7 @@ function CollectiblesShopCardInternalV2(product) {
         stringResult = string(t["8DkMEQ"]);
       }
       t = { name: "toggleWishlist", label: stringResult };
-      const items = [t];
+      items = [t];
     }
   }, items2);
   const callback2 = obj8.useCallback((nativeEvent) => {
@@ -216,7 +216,7 @@ function CollectiblesShopCardInternalV2(product) {
       str2 = "text-overlay-dark";
     }
     const obj14 = {
-      variant: "text-xs/bold",
+      variant: "text-xs/semibold",
       color: str2,
       allowFontScaling: false,
       style: tmp.badgeOverrideText,
@@ -276,7 +276,7 @@ function CollectiblesShopCardV2Inner(product) {
   analyticsLocations = defaultVariantIndex(analyticsLocations[16])().analyticsLocations;
   let obj2 = require("CollectiblesProductUtils");
   const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
-  const items = [analyticsLocations, product, defaultVariantIndex, collectiblesAnalyticsContext];
+  items = [analyticsLocations, product, defaultVariantIndex, collectiblesAnalyticsContext];
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj3 = {
@@ -370,12 +370,12 @@ get_ActivityIndicator = fn(17);
 const CollectiblesShopConstants = fn(1074);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   card: null,
   topRowOverlay: null,
@@ -437,7 +437,7 @@ export default noop.memo(function CollectiblesShopCardV2(arg0) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const merged = Object.assign(arg0, undefined);
-    const items = [merged.product.skuId];
+    items = [merged.product.skuId];
     const memo = noop.useMemo(() => {
       const obj = { cardId: v1.v4() };
       return obj;

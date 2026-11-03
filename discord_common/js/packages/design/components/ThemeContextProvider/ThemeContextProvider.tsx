@@ -23,7 +23,7 @@ export function ThemeContextProvider(children) {
   let reduceAdaptiveTheme = children.reduceAdaptiveTheme;
   const context = secondaryColor.useContext(theme(primaryColor[2]).ThemeContext);
   const FALLBACK_THEME_CONTEXT_VALUE = theme(primaryColor[2]).FALLBACK_THEME_CONTEXT_VALUE;
-  const items = [theme, , , , , , , , , , , , , , , , , , , , ,];
+  items = [theme, , , , , , , , , , , , , , , , , , , , ,];
   ({
     theme: arr[1],
     primaryColor: arr[2],

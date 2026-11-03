@@ -65,7 +65,7 @@ function addGameIdToNameCache(id, arg1) {
     if (Array.isArray(value)) {
       value.push(id);
     } else {
-      const items = [value, id];
+      items = [value, id];
       const result1 = map.set(arg1, items);
     }
   }
@@ -188,7 +188,7 @@ prototype["searchGamesByName"] = function searchGamesByName(name) {
   } else {
     value = map.get(name.trim().toLowerCase());
     if (undefined === value) {
-      let items = [];
+      items = [];
     } else {
       const _Array = Array;
       items = value;

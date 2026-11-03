@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/premium/native/hooks/useDisco
 export function useDiscountedPremiumPlan(premiumDiscountOffer, items3) {
   _require = premiumDiscountOffer;
   dependencyMap = items3;
-  const items = [premiumDiscountOffer, items3];
+  items = [premiumDiscountOffer, items3];
   memo = memo.useMemo(() => {
     if (null == closure_0) {
       return null;

@@ -6,9 +6,9 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = PortalViewNativeComponentDefault;
 } else {
@@ -26,7 +26,7 @@ export default noop.memo(function MediaModalPortal(paused) {
   const muted = paused.muted;
   ({ onLoad: dependencyMap, portal } = paused);
   ({ style, pointerEvents } = paused);
-  const tmp2 = muted(7132)(() => {
+  const tmp2 = muted(7258)(() => {
     let tmp;
     if (dependencyMap != null) {
       tmp = dependencyMap();
@@ -34,7 +34,7 @@ export default noop.memo(function MediaModalPortal(paused) {
     return tmp;
   });
   closure_4 = tmp2;
-  const items = [portal, paused];
+  items = [portal, paused];
   const layoutEffect = portal.useLayoutEffect(() => {
     if (null != portal) {
       MediaPlayerManager.toggle(tmp, !paused);
@@ -55,7 +55,7 @@ export default noop.memo(function MediaModalPortal(paused) {
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8844).unregisterView(portal);
+        muted(8968).unregisterView(portal);
         set.add(portal);
       };
     }
@@ -91,7 +91,7 @@ export function createPortalControls(portal) {
       closure_1 = arg0;
       closure_2 = arg1;
       closure_3 = arg2;
-      const items = [closure_0, arg1, arg0, arg2];
+      items = [closure_0, arg1, arg0, arg2];
       const effect = noop.useEffect(() => {
         closure_0 = closure_1_8.addListener("MediaPlayerProgress", (duration) => {
           duration = duration.duration;

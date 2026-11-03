@@ -3,7 +3,7 @@ import ShinyButtonDefault from "ShinyButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_3 = createStyles.createStyles({ container: { borderRadius: 3 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 export function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);
   const obj = { style: null, loading, disabled, onPress, text };
-  const items = [closure_3().container, style];
+  items = [closure_3().container, style];
   obj.style = items;
   return jsx(ShinyButtonDefault, { style: null, loading, disabled, onPress, text });
 }

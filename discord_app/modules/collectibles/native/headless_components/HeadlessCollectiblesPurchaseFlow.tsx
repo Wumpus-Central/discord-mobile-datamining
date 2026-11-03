@@ -71,7 +71,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     },
     children: null,
   };
-  const items = [product.skuId];
+  items = [product.skuId];
   obj4.skuIds = items;
   obj2 = PlatformUtils;
   const obj5 = {

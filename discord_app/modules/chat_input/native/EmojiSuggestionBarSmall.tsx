@@ -1,51 +1,45 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarSmall.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
 import openEmojiActionSheet2 from "../../emoji_picker/native/components/openEmojiActionSheet.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
-
 require = fn;
 function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   displayEmojis = displayEmojis.displayEmojis;
-  ({
-    reducedMotion: importDefault,
-    handlePress: dependencyMap,
-    handlePressEmojiUnavailable: noop,
-    transitionState,
-  } = displayEmojis);
+  _require = displayEmojis;
+  ({ reducedMotion: c1, handlePress: c2, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(13990).useSuggestionBarHeight(
+  const suggestionBarHeight = require("EmojiSuggestionBarUtils").useSuggestionBarHeight(
     transitionState,
     cleanUp,
-    CONTAINER_SMALL_WRAPPER_HEIGHT,
+    closure_6,
     onOccupiedHeightChange,
   );
-  let obj = displayEmojis(13990);
-  class A {
+  let obj = require("EmojiSuggestionBarUtils");
+  items = [closure_8, require("../../../../_runtime/metro/01652__.js").interpolate, suggestionBarHeight, closure_6];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp4, tmp5, tmp6, tmp7] = items;
+  class EmojiSuggestionBarSmallTsx1 {
     constructor() {
       obj = { opacity: null };
-      obj2 = closure_0(closure_2[6]);
       items = [0];
-      items[1] = closure_6;
-      obj.opacity = obj2.interpolate(closure_4.get(), items, [0, 1]);
+      items[1] = closure_2;
+      obj.opacity = closure_0(closure_1.get(), items, [0, 1]);
       return obj;
     }
   }
-  let obj2 = displayEmojis(5095);
-  A.__closure = {
-    interpolate: displayEmojis(5095).interpolate,
-    heightSv: suggestionBarHeight,
-    CONTAINER_SMALL_WRAPPER_HEIGHT,
-  };
-  A.__workletHash = 1856279964267;
-  A.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(A);
-  const obj4 = {
+  const items1 = [tmp5, tmp6, tmp7];
+  EmojiSuggestionBarSmallTsx1.__closure = items1;
+  EmojiSuggestionBarSmallTsx1.__workletHash = 1179846537362;
+  EmojiSuggestionBarSmallTsx1.__initData = tmp4;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(EmojiSuggestionBarSmallTsx1);
+  const obj3 = {
     style: null,
     children: displayEmojis.map((emoji, index) => {
       const locked = emoji.locked;
@@ -53,7 +47,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       const obj2 = {
         emoji: emoji.emoji,
         disabled: locked,
-        onPressEmoji: locked ? noop : dependencyMap,
+        onPressEmoji: locked ? noop : c2,
         onLongPressEmoji: null,
         animateEmoji: null,
         isSectionNitroLocked: false,
@@ -68,7 +62,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       obj.children = jsx(EmojiPickerListRow.EmojiItem, {
         emoji: emoji.emoji,
         disabled: locked,
-        onPressEmoji: locked ? noop : dependencyMap,
+        onPressEmoji: locked ? noop : c2,
         onLongPressEmoji: null,
         animateEmoji: null,
         isSectionNitroLocked: false,
@@ -76,19 +70,53 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return jsx(
         EmojiSuggestionBarUtils.EmojiEntranceAnimation,
         { index, reducedMotion, children: null },
-        EmojiSuggestionBarUtils.getEmojiEntranceKey(displayEmojis, index),
+        EmojiSuggestionBarUtils.getEmojiEntranceKey(c0, index),
       );
     }),
   };
-  let items = [tmp.containerSmall, animatedStyle];
-  obj4.style = items;
-  return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
+  const items2 = [tmp.containerSmall, animatedStyle];
+  obj3.style = items2;
+  return jsx(_modDef1652.View, {
+    style: null,
+    children: displayEmojis.map((emoji, index) => {
+      const locked = emoji.locked;
+      const obj = { index, reducedMotion, children: null };
+      const obj2 = {
+        emoji: emoji.emoji,
+        disabled: locked,
+        onPressEmoji: locked ? noop : c2,
+        onLongPressEmoji: null,
+        animateEmoji: null,
+        isSectionNitroLocked: false,
+      };
+      if (locked) {
+        let openEmojiActionSheet = noop;
+      } else {
+        openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
+      }
+      obj2.onLongPressEmoji = openEmojiActionSheet;
+      obj2.animateEmoji = !reducedMotion;
+      obj.children = jsx(EmojiPickerListRow.EmojiItem, {
+        emoji: emoji.emoji,
+        disabled: locked,
+        onPressEmoji: locked ? noop : c2,
+        onLongPressEmoji: null,
+        animateEmoji: null,
+        isSectionNitroLocked: false,
+      });
+      return jsx(
+        EmojiSuggestionBarUtils.EmojiEntranceAnimation,
+        { index, reducedMotion, children: null },
+        EmojiSuggestionBarUtils.getEmojiEntranceKey(c0, index),
+      );
+    }),
+  });
 }
 const jsx = fn(21).jsx;
-const sum = fn(9942).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10073).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
-const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+let closure_6 = sum + nativeDefault.space.PX_8;
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = {
@@ -111,8 +139,8 @@ let closure_7 = createStyles.createStyles((arg0) => {
   obj.containerSmall = rect;
   return obj;
 });
-const __initData = {
-  code: "function EmojiSuggestionBarSmallTsx1(){const{interpolate,heightSv,CONTAINER_SMALL_WRAPPER_HEIGHT}=this.__closure;return{opacity:interpolate(heightSv.get(),[0,CONTAINER_SMALL_WRAPPER_HEIGHT],[0,1])};}",
+let closure_8 = {
+  code: "(function EmojiSuggestionBarSmallTsx1(){let[interpolate,heightSv,CONTAINER_SMALL_WRAPPER_HEIGHT]=this.__closure;return{opacity:interpolate(heightSv.get(),[0,CONTAINER_SMALL_WRAPPER_HEIGHT],[0,1])};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarSmall.tsx");
@@ -133,7 +161,7 @@ export function EmojiSuggestionBarSmall(anchorTop) {
   const reducedMotion = emojiSuggestionBarState.reducedMotion;
   const handlePress = emojiSuggestionBarState.handlePress;
   const handlePressEmojiUnavailable = emojiSuggestionBarState.handlePressEmojiUnavailable;
-  const items = [unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable];
+  items = [unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable];
   const items1 = [anchorTop, onOccupiedHeightChange];
   const item = lockedEmojis.useMemo(() => {
     const obj = {

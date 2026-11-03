@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2538 from "../FamilyCenter.messages.js";
+import _modDef2667 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
@@ -16,12 +16,12 @@ function Row(arg0) {
   const tmp = closure_8();
   obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.iconContainer, children: hasOwnProperty(IconComponent, { style: tmp.icon }) };
-  const items = [hasOwnProperty(View, obj2)];
+  items = [hasOwnProperty(View, obj2)];
   const obj4 = { style: tmp.content, children: null };
   const items1 = [
     hasOwnProperty(Text_Text.Text, {
       style: tmp.header,
-      variant: "text-sm/bold",
+      variant: "text-sm/semibold",
       color: "mobile-text-heading-primary",
       children: header,
     }),
@@ -37,17 +37,17 @@ function FamilyCenterModalDataTooltipScreen() {
   const intl = require("util").intl;
   obj = require("useAgeSpecificText");
   const intl2 = require("util").intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2538.n6LOrh), intl2.string(_modDef2538.JNLpDZ));
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2667.n6LOrh), intl2.string(_modDef2667.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  const stringResult = intl.string(_modDef2538.n6LOrh);
+  const stringResult = intl.string(_modDef2667.n6LOrh);
   const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
   const obj3 = { children: null };
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
-  const items = [
+  items = [
     closure_5(require("Text/Text").Text, {
       style: tmp.groupHeader,
-      variant: "text-lg/bold",
+      variant: "text-lg/semibold",
       color: "mobile-text-heading-primary",
       children: ageSpecificText,
     }),
@@ -78,18 +78,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8643).ChatIcon,
-  [USER_CALLED]: fn(13363).PhoneIcon,
-  [USER_ADD]: fn(5715).FriendsIcon,
-  [GUILD_ADD]: fn(15477).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8645).ThreadIcon,
-  [PURCHASES]: fn(8015).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(5740).ClockIcon,
-  [GIFTS]: fn(13365).GiftIcon,
+  [USER_INTERACTION]: fn(8767).ChatIcon,
+  [USER_CALLED]: fn(13499).PhoneIcon,
+  [USER_ADD]: fn(5835).FriendsIcon,
+  [GUILD_ADD]: fn(15618).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8769).ThreadIcon,
+  [PURCHASES]: fn(8139).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(5860).ClockIcon,
+  [GIFTS]: fn(13501).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7716).TeenActionDisplayType);
-let createStyles = fn(5014);
+  fn(7840).TeenActionDisplayType);
+let createStyles = fn(5141);
 let obj3 = {
   row: {
     display: "flex",
@@ -134,7 +134,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(5014);
+createStyles = fn(5141);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

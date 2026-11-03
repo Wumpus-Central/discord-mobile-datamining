@@ -31,7 +31,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               const obj6 = {
                 value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () =>
-                    closure_2_1(6840).getAsync(closure_1_0),
+                    closure_2_1(6960).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -96,7 +96,7 @@ class StickersStore extends Store {}
 const prototype = StickersStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildMembershipStore, GuildStickersStore, GuildStore, StickersPackStore);
-  const items = [GuildStickersStore, StickersPackStore];
+  items = [GuildStickersStore, StickersPackStore];
   this.syncWith(items, () => true);
 };
 Object.defineProperty(prototype, "isLoaded", {
@@ -113,7 +113,7 @@ Object.defineProperty(prototype, "loadState", {
 });
 prototype["getStickerMetadataArrays"] = function getStickerMetadataArrays() {
   loadSavedGuildStickers();
-  const items = [GuildStickersStore.getStickerMetadataMap(), StickersPackStore.getStickerMetadataMap()];
+  items = [GuildStickersStore.getStickerMetadataMap(), StickersPackStore.getStickerMetadataMap()];
   return items;
 };
 Object.defineProperty(prototype, "hasLoadedStickerPacks", {

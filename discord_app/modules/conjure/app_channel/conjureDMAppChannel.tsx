@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/conjure/app_channel/conjureDM
 
 export function useDMAppChannelApplicationId(stateFromStores) {
   _require = stateFromStores;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -61,7 +61,7 @@ export function useDMAppChannelApplicationId(stateFromStores) {
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(6883);
+    tmpResult = tmp(7003);
   }
   return id;
 }

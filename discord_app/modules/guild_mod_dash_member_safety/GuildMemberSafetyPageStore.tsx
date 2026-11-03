@@ -120,7 +120,7 @@ prototype["getMembersByIndex"] = function getMembersByIndex(CURRENT_GUILD_MEMBER
   if (null != this._members) {
     if (self._initialized) {
       const _members = self._members;
-      const items = [_members.values(CURRENT_GUILD_MEMBER), self._members.version];
+      items = [_members.values(CURRENT_GUILD_MEMBER), self._members.version];
       let items1 = items;
     }
     return items1;
@@ -164,7 +164,7 @@ prototype["_getIsIncludedInSearch"] = function _getIsIncludedInSearch(
 ) {
   const self = this;
   if (null == this._search) {
-    const items = [false, false];
+    items = [false, false];
     return items;
   } else if (self._search.hasDefaultQuery) {
     const items1 = [false, false];
@@ -210,7 +210,7 @@ prototype["removeMember"] = function removeMember(id) {
 prototype["_rawUpdateMember"] = function _rawUpdateMember(id, isIncludedInSearchResults) {
   const self = this;
   if (null == this._members) {
-    const items = [false, false];
+    items = [false, false];
     return items;
   } else {
     const _members2 = self._members;
@@ -419,7 +419,7 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   const self = this;
   closure_0 = selectedSort;
   return new Promise((fn) => {
-    const items = [
+    items = [
       ..._mod12.cloneDeep(
         self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0],
       ),
@@ -703,7 +703,7 @@ prototype["getPaginatedMembers"] = function getPaginatedMembers() {
   const self = this;
   if (null != this._pagination) {
     if (self._initialized) {
-      const items = [self._pagination.paginatedMembers, self._pagination.version];
+      items = [self._pagination.paginatedMembers, self._pagination.version];
       let items1 = items;
     }
     return items1;

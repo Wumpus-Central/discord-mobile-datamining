@@ -1,5 +1,5 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppActionSheet.tsx
-import _modDef3966 from "../VoiceChannelApps.messages.js";
+import _modDef4093 from "../VoiceChannelApps.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VoiceChannelAppIconDefault from "VoiceChannelAppIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,12 +13,12 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 
 export default function VoiceChannelAppActionSheet(guildId) {
   ({ selectedApplicationId, onChange } = guildId);
-  const voiceChannelAppSettingOptions = onChange(18899).useVoiceChannelAppSettingOptions(
+  const voiceChannelAppSettingOptions = onChange(19057).useVoiceChannelAppSettingOptions(
     guildId.guildId,
     selectedApplicationId,
   );
   ({ options, listState } = voiceChannelAppSettingOptions);
-  const items = [onChange];
+  items = [onChange];
   const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (arg0 !== none) {
@@ -28,8 +28,8 @@ export default function VoiceChannelAppActionSheet(guildId) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const intl = onChange(1113).intl;
-  const stringResult = intl.string(_modDef3966.AdT7SZ);
-  const obj2 = { header: closure_4(onChange(7321).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const stringResult = intl.string(_modDef4093.AdT7SZ);
+  const obj2 = { header: closure_4(onChange(7441).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj3 = {
     accessibilityLabel: stringResult,
     value: null,
@@ -48,17 +48,17 @@ export default function VoiceChannelAppActionSheet(guildId) {
     let stringResult1 = intl4.string(onChange(1113).t.ZTNur7);
   } else if ("failed" === listState) {
     const intl3 = onChange(1113).intl;
-    stringResult1 = intl3.string(_modDef3966.X2xOBn);
+    stringResult1 = intl3.string(_modDef4093.X2xOBn);
   } else if ("empty" === listState) {
     const intl2 = onChange(1113).intl;
-    stringResult1 = intl2.string(_modDef3966["4S6iHa"]);
+    stringResult1 = intl2.string(_modDef4093["4S6iHa"]);
   }
   obj3.helperText = stringResult1;
   const items1 = [
     options.map((iconApplication) => {
       ({ applicationId, name } = iconApplication);
       return closure_1_4(
-        onChange(7061).TableRadioRow,
+        onChange(7187).TableRadioRow,
         {
           value: applicationId,
           label: name,
@@ -74,10 +74,10 @@ export default function VoiceChannelAppActionSheet(guildId) {
   ];
   const obj4 = { value: none, label: null };
   const intl5 = onChange(1113).intl;
-  obj4.label = intl5.string(_modDef3966.KEB4Rm);
-  items1[1] = closure_4(onChange(7061).TableRadioRow, obj4);
+  obj4.label = intl5.string(_modDef4093.KEB4Rm);
+  items1[1] = closure_4(onChange(7187).TableRadioRow, obj4);
   obj3.children = items1;
-  obj2.children = closure_5(onChange(7058).TableRadioGroup, obj3);
-  return closure_4(onChange(7366).ActionSheet, obj2);
+  obj2.children = closure_5(onChange(7184).TableRadioGroup, obj3);
+  return closure_4(onChange(7486).ActionSheet, obj2);
 }
 export const VOICE_CHANNEL_APP_ACTION_SHEET_KEY = "VoiceChannelAppActionSheet";

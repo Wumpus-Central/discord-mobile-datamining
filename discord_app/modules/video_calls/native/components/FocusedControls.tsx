@@ -1,59 +1,75 @@
 // discord_app/modules/video_calls/native/components/FocusedControls.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
-import RevealProvider from "RevealProvider.tsx";
-import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
-import GlobalStatusIndicator from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
+import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+const _modDef1652 = _mod1652;
+
 require = fn;
-function FocusedControlsHeader(reveal) {
-  reveal = reveal.reveal;
-  ({ header, isTouchingLeftScreenEdge } = reveal);
-  TIMING_CONFIG = reveal(5095);
-  const fn = function l() {
-    let num = -54;
-    if (reveal) {
+function FocusedControlsHeader(arg0) {
+  ({ header, reveal, isTouchingLeftScreenEdge } = arg0);
+  obj = _mod1652;
+  items = [closure_11, reveal, 54];
+  c0 = undefined;
+  c1 = undefined;
+  [tmp4, tmp5, tmp6] = items;
+  class FocusedControlsTsx1 {
+    constructor() {
       num = 0;
+      if (!closure_0) {
+        tmp = closure_1;
+        num = -closure_1;
+      }
+      return num;
     }
-    return num;
-  };
-  fn.__closure = { reveal, FOCUSED_CONTROLS_HEADER_HEIGHT: 54 };
-  fn.__workletHash = 15509217225804;
-  fn.__initData = __initData;
-  const derivedValue = TIMING_CONFIG.useDerivedValue(fn);
+  }
+  const items1 = [tmp5, tmp6];
+  FocusedControlsTsx1.__closure = items1;
+  FocusedControlsTsx1.__workletHash = 15848124233205;
+  FocusedControlsTsx1.__initData = tmp4;
+  const derivedValue = obj.useDerivedValue(FocusedControlsTsx1);
   const tmp = closure_9();
-  const tmp3 = derivedValue(11857)();
-  const fn2 = function c() {
-    const obj = { transform: null };
-    const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
-    const items = [obj2];
-    obj.transform = items;
-    return obj;
-  };
-  let obj2 = reveal(5095);
-  fn2.__closure = { withTiming: reveal(5254).withTiming, offsetY: derivedValue, TIMING_CONFIG };
-  fn2.__workletHash = 12710345257882;
-  fn2.__initData = __initData2;
-  const animatedStyle = obj2.useAnimatedStyle(fn2);
-  const obj4 = { style: animatedStyle, children: null };
+  const tmp9 = useIsInvitedToSpeakDefault();
+  const items2 = [closure_12, timing_timing.withTiming, derivedValue, obj];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp10, tmp11, tmp12, tmp13] = items2;
+  class FocusedControlsTsx2 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: closure_0(closure_1.get(), closure_2) };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items3 = [tmp11, tmp12, tmp13];
+  FocusedControlsTsx2.__closure = items3;
+  FocusedControlsTsx2.__workletHash = 5859274917667;
+  FocusedControlsTsx2.__initData = tmp10;
+  const animatedStyle = _mod1652.useAnimatedStyle(FocusedControlsTsx2);
+  const obj2 = { style: animatedStyle, children: null };
   const rect = {
-    top: !tmp3,
+    top: !tmp9,
     left: isTouchingLeftScreenEdge,
     right: true,
-    children: closure_7(closure_5, { style: tmp.headerContainer, children: header }),
+    children: React5(hasOwnProperty, { style: tmp.headerContainer, children: header }),
   };
-  obj4.children = closure_7(reveal(7292).SafeAreaPaddingView, rect);
-  return closure_7(derivedValue(5095).View, obj4);
+  obj2.children = React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return React5(_modDef1652.View, obj2);
 }
 function FocusedControlsHeaderGradient() {
   const width = useWindowDimensionsDefault().width;
-  const obj = { style: null, children: null };
-  const items = [closure_9().backgroundGradient, { width }];
+  obj = { style: null, children: null };
+  items = [closure_9().backgroundGradient, { width }];
   obj.style = items;
   const size = { height: "100%", width, children: null };
   const obj2 = { children: null };
@@ -78,24 +94,24 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 },
   headerContainer: { position: "relative", height: 54 },
 });
-let TIMING_CONFIG = { easing: fn(1187).STANDARD_EASING, duration: 250 };
-const __initData = {
-  code: "function FocusedControlsTsx1(){const{reveal,FOCUSED_CONTROLS_HEADER_HEIGHT}=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;}",
+let obj = { easing: fn(1187).STANDARD_EASING, duration: 250 };
+let closure_11 = {
+  code: "(function FocusedControlsTsx1(){let[reveal,FOCUSED_CONTROLS_HEADER_HEIGHT]=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;})",
 };
-const __initData2 = {
-  code: "function FocusedControlsTsx2(){const{withTiming,offsetY,TIMING_CONFIG}=this.__closure;return{transform:[{translateY:withTiming(offsetY.get(),TIMING_CONFIG)}]};}",
+let closure_12 = {
+  code: "(function FocusedControlsTsx2(){let[withTiming,offsetY,TIMING_CONFIG]=this.__closure;return{transform:[{translateY:withTiming(offsetY.get(),TIMING_CONFIG)}]};})",
 };
-const __initData3 = {
-  code: "function FocusedControlsTsx3(){const{isInvitedToSpeak,statusIndicatorHeight}=this.__closure;return isInvitedToSpeak?statusIndicatorHeight.get():0;}",
+let closure_15 = {
+  code: "(function FocusedControlsTsx3(){let[isInvitedToSpeak,statusIndicatorHeight]=this.__closure;return isInvitedToSpeak?statusIndicatorHeight.get():0;})",
 };
-const __initData4 = { code: "function FocusedControlsTsx4(){const{reveal}=this.__closure;return reveal?1:0;}" };
-const __initData5 = {
-  code: "function FocusedControlsTsx5(){const{withTiming,top,TIMING_CONFIG,revealOpacity}=this.__closure;return{top:withTiming(top.get(),TIMING_CONFIG),opacity:withTiming(revealOpacity.get(),TIMING_CONFIG)};}",
+let closure_16 = { code: "(function FocusedControlsTsx4(){let[reveal]=this.__closure;return reveal?1:0;})" };
+let closure_17 = {
+  code: "(function FocusedControlsTsx5(){let[withTiming,top,TIMING_CONFIG,revealOpacity]=this.__closure;return{top:withTiming(top.get(),TIMING_CONFIG),opacity:withTiming(revealOpacity.get(),TIMING_CONFIG)};})",
 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/FocusedControls.tsx");
@@ -110,108 +126,120 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   if (flag === undefined) {
     flag = false;
   }
-  ({ containerStyle, channel: require } = disableGradient);
-  let reveal;
-  let derivedValue;
-  let derivedValue1;
+  ({ containerStyle, channel: c0 } = disableGradient);
   let analyticsLocations;
-  closure_7 = undefined;
+  dependencyMap = undefined;
   ({ omitPTT, bottomHeader, onDrawerClose, isTouchingLeftScreenEdge } = disableGradient);
-  TIMING_CONFIG = useGlobalStatusIndicatorState;
-  const globalStatusIndicatorState = TIMING_CONFIG.useGlobalStatusIndicatorState();
+  obj = require("useGlobalStatusIndicatorState");
+  const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
   const globalStatusIndicatorHeightSharedValue =
-    GlobalStatusIndicator.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(11857)();
-  dependencyMap = tmp6;
-  reveal = reveal.useContext(RevealProvider.RevealContext).reveal;
-  const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
+    require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
+  let obj2 = require("GlobalStatusIndicator");
+  let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
+  const tmp6 = analyticsLocations(11994)();
+  const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
   }
   if (!reveal) {
     reveal = isScreenReaderEnabled;
   }
-  class D {
+  const obj3 = require("useIsScreenReaderEnabled");
+  items = [closure_15, tmp6, globalStatusIndicatorHeightSharedValue];
+  _require = undefined;
+  analyticsLocations = undefined;
+  [tmp8, tmp9, tmp10] = items;
+  class FocusedControlsTsx3 {
     constructor() {
       num = 0;
-      if (closure_2) {
-        tmp = closure_1;
-        num = closure_1.get();
+      if (closure_0) {
+        tmp = analyticsLocations;
+        num = analyticsLocations.get();
       }
       return num;
     }
   }
-  D.__closure = { isInvitedToSpeak: tmp6, statusIndicatorHeight: globalStatusIndicatorHeightSharedValue };
-  D.__workletHash = 14833624951450;
-  D.__initData = __initData3;
-  derivedValue = ReanimatedRexport.useDerivedValue(D);
-  const tmpResult = ReanimatedRexport;
-  class F {
+  const items1 = [tmp9, tmp10];
+  FocusedControlsTsx3.__closure = items1;
+  FocusedControlsTsx3.__workletHash = 15152715120003;
+  FocusedControlsTsx3.__initData = tmp8;
+  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(FocusedControlsTsx3);
+  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_16, reveal];
+  _require = undefined;
+  [tmp12, tmp13] = items2;
+  class FocusedControlsTsx4 {
     constructor() {
       num = 0;
-      if (closure_3) {
+      if (closure_0) {
         num = 1;
       }
       return num;
     }
   }
-  F.__closure = { reveal };
-  F.__workletHash = 15022275245977;
-  F.__initData = __initData4;
-  derivedValue1 = ReanimatedRexport.useDerivedValue(F);
-  const tmpResult3 = ReanimatedRexport;
-  const fn = function y() {
-    obj = { top: timing.withTiming(derivedValue.get(), obj), opacity: null };
-    obj.opacity = timing.withTiming(derivedValue1.get(), obj);
-    return obj;
-  };
-  const tmpResult4 = ReanimatedRexport;
-  fn.__closure = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-  fn.__workletHash = 8532538341439;
-  fn.__initData = __initData5;
-  const animatedStyle = tmpResult4.useAnimatedStyle(fn);
-  const obj4 = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-  analyticsLocations = globalStatusIndicatorHeightSharedValue(7326)(
-    tmp5(7351).FOCUSED_VOICE_CONTROLS,
-  ).analyticsLocations;
-  closure_7 = tmp5(11789)();
-  if (containerStyle == null) {
-    containerStyle = derivedValue.absoluteFill;
+  const items3 = [tmp13];
+  FocusedControlsTsx4.__closure = items3;
+  FocusedControlsTsx4.__workletHash = 3205365180320;
+  FocusedControlsTsx4.__initData = tmp12;
+  const derivedValue1 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(FocusedControlsTsx4);
+  const tmpResult3 = require("../../../../../_runtime/metro/01652__.js");
+  const items4 = [closure_17, require("timing/timing").withTiming, derivedValue, obj, derivedValue1];
+  _require = undefined;
+  analyticsLocations = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp15, tmp16, tmp17, tmp18, tmp19] = items4;
+  class FocusedControlsTsx5 {
+    constructor() {
+      obj = { top: closure_0(analyticsLocations.get(), closure_2), opacity: closure_0(closure_3.get(), closure_2) };
+      return obj;
+    }
   }
-  const obj5 = { style: null, pointerEvents: null, children: null };
-  const items = [containerStyle, animatedStyle];
-  obj5.style = items;
+  const items5 = [tmp16, tmp17, tmp18, tmp19];
+  FocusedControlsTsx5.__closure = items5;
+  FocusedControlsTsx5.__workletHash = 13660104452358;
+  FocusedControlsTsx5.__initData = tmp15;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(FocusedControlsTsx5);
+  const tmpResult4 = require("../../../../../_runtime/metro/01652__.js");
+  analyticsLocations = analyticsLocations(7446)(tmp5(7471).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  dependencyMap = tmp5(11926)();
+  if (containerStyle == null) {
+    containerStyle = absoluteFill.absoluteFill;
+  }
+  const obj4 = { style: null, pointerEvents: null, children: null };
+  const items6 = [containerStyle, animatedStyle];
+  obj4.style = items6;
   let str = "none";
   if (reveal) {
     str = "box-none";
   }
-  obj5.pointerEvents = str;
-  let tmp14 = null;
+  obj4.pointerEvents = str;
+  let tmp24 = null;
   if (!flag) {
-    tmp14 = closure_7(FocusedControlsHeaderGradient, {});
+    tmp24 = closure_7(FocusedControlsHeaderGradient, {});
   }
-  const items1 = [tmp14, closure_7(FocusedControlsHeader, { header, reveal, isTouchingLeftScreenEdge })];
-  let tmp17Result = null;
+  const items7 = [tmp24, closure_7(FocusedControlsHeader, { header, reveal, isTouchingLeftScreenEdge })];
+  let tmp27Result = null;
   if (null != actionBar) {
-    tmp17Result = null;
+    tmp27Result = null;
     if (null != expandedControls) {
-      const obj6 = {
+      const obj5 = {
         onDrawerOpen: function handleOpenDrawer() {
           const obj2 = {
-            channel_id: require.id,
-            guild_id: require.guild_id,
+            channel_id: _undefined.id,
+            guild_id: _undefined.guild_id,
             application_id: null,
             activity_session_id: null,
             location_stack: null,
           };
           let applicationId;
-          if (closure_7 != null) {
-            applicationId = closure_7.applicationId;
+          if (closure_2 != null) {
+            applicationId = closure_2.applicationId;
           }
           obj2.application_id = applicationId;
           let compositeInstanceId;
-          if (closure_7 != null) {
-            compositeInstanceId = closure_7.compositeInstanceId;
+          if (closure_2 != null) {
+            compositeInstanceId = closure_2.compositeInstanceId;
           }
           obj2.activity_session_id = compositeInstanceId;
           obj2.location_stack = analyticsLocations;
@@ -225,11 +253,11 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children,
       };
-      tmp17Result = closure_7(tmp5(11866), obj6);
+      tmp27Result = closure_7(tmp5(12003), obj5);
     }
   }
-  items1[2] = tmp17Result;
-  obj5.children = items1;
-  return closure_8(globalStatusIndicatorHeightSharedValue(5095).View, obj5);
+  items7[2] = tmp27Result;
+  obj4.children = items7;
+  return closure_8(analyticsLocations(1652).View, obj4);
 });
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;

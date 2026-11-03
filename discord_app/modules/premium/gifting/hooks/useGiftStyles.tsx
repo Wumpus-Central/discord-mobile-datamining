@@ -6,6 +6,6 @@ const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
 
 export function useGiftStyles() {
-  const items = [PremiumGiftStyles.STANDARD_BOX];
+  items = [PremiumGiftStyles.STANDARD_BOX];
   return items;
 }

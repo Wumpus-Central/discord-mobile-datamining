@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting(
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
-  const items = [stackNavigation];
+  items = [stackNavigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({ headerShown: false });
   }, items);

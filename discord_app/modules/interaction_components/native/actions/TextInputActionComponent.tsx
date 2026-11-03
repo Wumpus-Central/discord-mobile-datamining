@@ -37,7 +37,7 @@ export default noop.memo(function TextInputActionComponent(type) {
     clearable: true,
   };
   let str = "default";
-  const state = noop.useState(() => {
+  state = noop.useState(() => {
     type = undefined;
     if (_slicedToArray != null) {
       type = _slicedToArray.type;
@@ -49,7 +49,7 @@ export default noop.memo(function TextInputActionComponent(type) {
   }
   obj3.status = str;
   obj3.defaultValue = _slicedToArray(state, 1)[0];
-  const items = [type, executeStateUpdate];
+  items = [type, executeStateUpdate];
   obj3.onChange = noop.useCallback((value) => executeStateUpdate({ type, value }), items);
   obj3.autoFocus = isFirstTextInputInModal;
   if (Server.TextInputComponentStyle.SMALL === style) {

@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInv
 
 export function useInviteMembersCallback(channelId) {
   closure_0 = channelId;
-  const items = [channelId];
+  items = [channelId];
   return noop.useCallback(() => {
     let id = ChannelStore.getChannel(closure_0);
     if (null == id) {

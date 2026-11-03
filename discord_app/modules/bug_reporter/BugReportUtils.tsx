@@ -31,7 +31,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -47,7 +47,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
           } else {
             let priority = closure_0;
             const obj4 = { name: "name", value: closure_0.name };
-            let items = [obj4, , ,];
+            items = [obj4, , ,];
             const obj5 = { name: "priority", value: null };
             const _HermesInternal2 = HermesInternal;
             obj5.value = "" + closure_0.priority;
@@ -233,7 +233,7 @@ export function getPriorities() {
   obj.title = intl.string(util.t.VwIij9);
   const intl2 = util.intl;
   obj.description = intl2.format(util.t.DOP8yY, {});
-  const items = [obj, , ,];
+  items = [obj, , ,];
   const obj2 = { title: null, description: null, emoji: "410336837563973632", value: 1 };
   const intl3 = util.intl;
   obj2.title = intl3.string(util.t.rYfJop);

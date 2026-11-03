@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _modDef2868 from "../NotificationSettings.messages.js";
+import _modDef2995 from "../NotificationSettings.messages.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import PushNotificationActionCreatorsDefault from "../../../actions/native/PushNotificationActionCreators.tsx";
 import NotificationSettingsConstants from "../NotificationSettingsConstants.tsx";
@@ -26,6 +26,7 @@ class NotificationTokenManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
+    applyArgumentsResult._denylistUnsubscribe = null;
     applyArgumentsResult._experimentUnsubscribe = null;
     applyArgumentsResult.token = null;
     applyArgumentsResult.hasRegisterEventListener = false;
@@ -104,13 +105,19 @@ class NotificationTokenManager extends tmp2 {
 const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  if (null != this.token) {
+  if (obj.isAndroid()) {
+    self._denylistUnsubscribe = tmp(16422).initializeClientNotifDenylist();
+    const tmpResult = tmp(16422);
+  }
+  if (null != self.token) {
     self.handleToken(self.token);
   }
   ApexExperimentStore.addChangeListener(self._handleExperimentsUpdated);
   self._experimentUnsubscribe = () => {
     ApexExperimentStore.removeChangeListener(self._handleExperimentsUpdated);
   };
+  obj = self(1377);
+  tmp = self;
   const subscription = DispatcherDefault.subscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
   const subscription1 = DispatcherDefault.subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
   const subscription2 = DispatcherDefault.subscribe(
@@ -122,12 +129,17 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  DispatcherDefault.unsubscribe("LOGIN_SUCCESS", this.handleSyncNoMultiAccountOnLoginSuccess);
-  DispatcherDefault.unsubscribe("REGISTER_SUCCESS", this.handleSyncNoMultiAccountOnRegisterSuccess);
-  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncNoMultiAccountOnPostConnectionOpen);
-  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncWithMultiAccount);
-  DispatcherDefault.unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", this.handleSyncWithMultiAccount);
-  if (null != this._experimentUnsubscribe) {
+  const _denylistUnsubscribe = this._denylistUnsubscribe;
+  if (_denylistUnsubscribe != null) {
+    _denylistUnsubscribe();
+  }
+  self._denylistUnsubscribe = null;
+  DispatcherDefault.unsubscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
+  DispatcherDefault.unsubscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", self.handleSyncNoMultiAccountOnPostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
+  DispatcherDefault.unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", self.handleSyncWithMultiAccount);
+  if (null != self._experimentUnsubscribe) {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
@@ -178,44 +190,44 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
       reactions: null,
     };
     const intl = util.intl;
-    obj.calls = intl.string(_modDef2868["IUH/Oe"]);
+    obj.calls = intl.string(_modDef2995["IUH/Oe"]);
     const intl2 = util.intl;
-    obj.mediaConnections = intl2.string(_modDef2868.VeBD1N);
+    obj.mediaConnections = intl2.string(_modDef2995.VeBD1N);
     const intl3 = util.intl;
-    obj.messages = intl3.string(_modDef2868["4qWUAO"]);
+    obj.messages = intl3.string(_modDef2995["4qWUAO"]);
     const intl4 = util.intl;
-    obj.directMessages = intl4.string(_modDef2868.NGdNZb);
+    obj.directMessages = intl4.string(_modDef2995.NGdNZb);
     const intl5 = util.intl;
-    obj.friendRequests = intl5.string(_modDef2868.NxgGZA);
+    obj.friendRequests = intl5.string(_modDef2995.NxgGZA);
     const intl6 = util.intl;
-    obj.polls = intl6.string(_modDef2868.MOjygY);
+    obj.polls = intl6.string(_modDef2995.MOjygY);
     const intl7 = util.intl;
-    obj.social = intl7.string(_modDef2868["UzRF+8"]);
+    obj.social = intl7.string(_modDef2995["UzRF+8"]);
     const intl8 = util.intl;
-    obj.stageLive = intl8.string(_modDef2868["4n388K"]);
+    obj.stageLive = intl8.string(_modDef2995["4n388K"]);
     const intl9 = util.intl;
-    obj.guildEventLive = intl9.string(_modDef2868["40TIqW"]);
+    obj.guildEventLive = intl9.string(_modDef2995["40TIqW"]);
     const intl10 = util.intl;
     obj.guildHighlights = intl10.string(util.t.p5jg9S);
     const intl11 = util.intl;
-    obj.forumThreadCreated = intl11.string(_modDef2868.HibKoy);
+    obj.forumThreadCreated = intl11.string(_modDef2995.HibKoy);
     const intl12 = util.intl;
-    obj.systemMessages = intl12.string(_modDef2868.zJlwvV);
+    obj.systemMessages = intl12.string(_modDef2995.zJlwvV);
     const intl13 = util.intl;
-    obj.other = intl13.string(_modDef2868.kIrLfg);
+    obj.other = intl13.string(_modDef2995.kIrLfg);
     const intl14 = util.intl;
-    obj.default = intl14.string(_modDef2868["T+79Eo"]);
+    obj.default = intl14.string(_modDef2995["T+79Eo"]);
     const intl15 = util.intl;
     obj.reactions = intl15.string(util.t.gHp0C4);
     const obj2 = { realtime: null, social: null, server: null, other: null };
     const intl16 = util.intl;
-    obj2.realtime = intl16.string(_modDef2868.S5cB9e);
+    obj2.realtime = intl16.string(_modDef2995.S5cB9e);
     const intl17 = util.intl;
-    obj2.social = intl17.string(_modDef2868["UzRF+8"]);
+    obj2.social = intl17.string(_modDef2995["UzRF+8"]);
     const intl18 = util.intl;
-    obj2.server = intl18.string(_modDef2868.zRKbpz);
+    obj2.server = intl18.string(_modDef2995.zRKbpz);
     const intl19 = util.intl;
-    obj2.other = intl19.string(_modDef2868.q5M7HV);
+    obj2.other = intl19.string(_modDef2995.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj2);
   } else if (null != registerNotificationCategories) {
     const obj3 = {

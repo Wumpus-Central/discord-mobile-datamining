@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting(
 export function canSeeExperimentEmbeds() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [UserStore];
+    items = [UserStore];
     tmp = items;
   }
   const first = _slicedToArray(tmp, 1)[0];
@@ -43,9 +43,9 @@ export function canSeeExperimentEmbeds() {
   return isStaffResult;
 }
 export function useCanSeeExperimentEmbeds() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [stateFromStores2];
+    items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();
     let isStaffResult;
@@ -64,9 +64,9 @@ export function useCanSeeExperimentEmbeds() {
   });
 }
 export function useCodedLinksExperimentEmbeds() {
-  let items = [stateFromStores2];
+  items = [stateFromStores2];
   stateFromStores = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items, () => {
-    const items = [stateFromStores2];
+    items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();
     let isStaffResult;

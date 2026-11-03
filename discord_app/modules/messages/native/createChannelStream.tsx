@@ -9,7 +9,7 @@ import UploadStore from "../../../stores/UploadStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8378);
+const RowGeneratorConstants = fn(8502);
 ({
   Changeset: metroRequire,
   LoadingType: closure_7,
@@ -83,7 +83,7 @@ export default function createChannelStream(forceRender) {
     }
     return constants2.determineChangeType({ message, updateMessageIds, forceRender }, flag);
   }
-  let items = [];
+  items = [];
   const substr = uploads.slice();
   const reversed = substr.reverse();
   let iter = reversed[Symbol.iterator]();

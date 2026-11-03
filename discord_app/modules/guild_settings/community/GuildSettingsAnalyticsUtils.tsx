@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/guild_settings/community/GuildS
 export function useGuildAnalyticsOverview(guildId) {
   _require = guildId;
   closure_129_0 = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   let obj = require("initialize");

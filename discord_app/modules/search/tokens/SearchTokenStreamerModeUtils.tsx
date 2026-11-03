@@ -41,7 +41,7 @@ let result = size.fileFinishedImporting("modules/search/tokens/SearchTokenStream
 export function isFromUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;
@@ -50,7 +50,7 @@ export function isFromUserFilterSupported() {
 export function isMentionsUserFilterSupported() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;
@@ -59,7 +59,7 @@ export function isMentionsUserFilterSupported() {
 export function isInChannelFilterSupported(selectedSearchContext) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [StreamerModeStore];
+    items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;

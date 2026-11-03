@@ -8,7 +8,7 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
@@ -54,7 +54,7 @@ export function isConnectedToActivityInText() {
   }
 }
 export function useIsActivityPanelFullscreen() {
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => {
     const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(
       EmbeddedActivitiesStore.getConnectedActivityLocation(),
@@ -67,7 +67,7 @@ export function useIsActivityPanelFullscreen() {
   });
 }
 export function useIsConnectedToActivityInText() {
-  const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
+  items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   return initialize.useStateFromStores(items, () => {
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
     let flag = false;

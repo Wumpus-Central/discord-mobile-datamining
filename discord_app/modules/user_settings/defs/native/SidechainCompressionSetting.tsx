@@ -5,19 +5,19 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Features = fn(5768).Features;
-const SettingBuilders = fn(11540);
+const Features = fn(5888).Features;
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(8432).MobileUserSettings.VOICE,
+  parent: fn(8556).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },
   useValue: function useSidechainCompressionSettingValue() {
-    const items = [MediaEngineStore];
+    items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   },
   onValueChange(arg0) {

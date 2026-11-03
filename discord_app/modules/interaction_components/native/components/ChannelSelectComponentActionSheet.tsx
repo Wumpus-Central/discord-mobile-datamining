@@ -18,7 +18,7 @@ export default function ChannelSelectComponentActionSheet(guildId) {
   guildId = guildId.guildId;
   noop = undefined;
   const channelTypes = selectionActionComponent.channelTypes;
-  const items = [channelId, channelTypes];
+  items = [channelId, channelTypes];
   ({ labelComponent, containerId, onSubmit, allowEmpty } = guildId);
   const callback = noop.useCallback(
     (query) => SearchableSelectActionComponentUtils.queryChannels(query, channelId, channelTypes),
@@ -40,7 +40,7 @@ export default function ChannelSelectComponentActionSheet(guildId) {
       if (null == channel) {
         return null;
       } else {
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         const channelIconData = NativeSearchableSelectActionComponentUtils.getChannelIconData(channel, guild);
         let tmp8 = null != channelIconData;
         if (tmp8) {

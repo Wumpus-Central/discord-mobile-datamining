@@ -108,7 +108,7 @@ class ChatInputActions {
       if (result) {
         result = ImagePickerUtils.isImageCaptureIntentSupported();
       }
-      const items = [];
+      items = [];
       if (result) {
         const obj2 = { label: null, IconComponent: null, action: null };
         const intl = util.intl;
@@ -204,16 +204,18 @@ class ChatInputActions {
     arr1 = items2.push(obj1);
     closure_24 = !tmp9[0];
     tmp2Result = tmp2(tmp3[28]);
-    class X {
+    items3 = [];
+    items3[0] = closure_11;
+    [tmp13] = items3;
+    class ChatInputActionsTsx1 {
       constructor() {
         return { opacity: 1 };
       }
     }
-    X.__closure = {};
-    X.__workletHash = 13622805272332;
-    X.__initData = closure_11;
+    ChatInputActionsTsx1.__workletHash = 11222505988205;
+    ChatInputActionsTsx1.__initData = tmp13;
     obj9 = { children: null };
-    animatedStyle = tmp2Result.useAnimatedStyle(X);
+    animatedStyle = tmp2Result.useAnimatedStyle(ChatInputActionsTsx1);
     obj10 = {
       style: null,
       children: items2.map((item, index) => {
@@ -242,7 +244,7 @@ class ChatInputActions {
                   onPress: null,
                 };
                 const tmp = ChatInputActionButtonDefault;
-                const items = [ref, closure_20, closure_2_9];
+                items = [ref, closure_20, closure_2_9];
                 const items1 = [...items.filter(Boolean)];
                 obj.ref = mergeProps.mergeRefs.apply(items1);
                 const intl = util.intl;
@@ -360,21 +362,21 @@ class ChatInputActions {
         }
       }),
     };
-    items3 = [, ,];
-    items3[0] = tmp.actions;
-    items3[1] = animatedStyle;
-    items3[2] = { gap: token };
-    obj10.style = items3;
+    items4 = [, ,];
+    items4[0] = tmp.actions;
+    items4[1] = animatedStyle;
+    items4[2] = { gap: token };
+    obj10.style = items4;
     obj9.children = onAttachPress(tmp4(tmp3[28]).View, obj10);
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12809);
+const ChatInputConstants = fn(12945);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
@@ -382,11 +384,11 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5640).SMALL_BUTTON_HEIGHT + fn(5640).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5640).SMALL_BUTTON_HEIGHT + fn(5640).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
-let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
+let closure_11 = { code: "(function ChatInputActionsTsx1(){return{opacity:1};})" };
 ChatInputActions.displayName = "ChatInputActions";
 let obj5 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 const size = fn(2);

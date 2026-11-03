@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/chat/conjureFileMentions.tsx
-import _modDef1943 from "../../../../_runtime/metro/01943__.js";
+import _modDef2072 from "../../../../_runtime/metro/02072__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 let c2 = "<file:(\\d{16}-[a-z0-9]{6})>";
@@ -15,13 +15,13 @@ export function hasConjureFileMentions(arg0) {
   return regExp1.test(arg0);
 }
 export function conjureFileMentionIds(str) {
-  const items = [...new Set(Array.from(str.matchAll(regExp), (arg0) => arg0[1]))];
+  items = [...new Set(Array.from(str.matchAll(regExp), (arg0) => arg0[1]))];
   return items;
 }
 export function filterConjureFileCandidates(arr, text) {
   let formatted = text.toLowerCase();
   if ("" === formatted) {
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(arr, 0);
     let found = items;
   } else {
@@ -45,7 +45,7 @@ export function withoutInlineFileMentions(attachments, content) {
       const _Set2 = Set;
       const _Array = Array;
       const set = new Set(Array.from(content.matchAll(regExp), (arg0) => arg0[1]));
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(set, 0);
       return attachments.filter((id) => {
         let tmp = null == id.id;
@@ -62,7 +62,7 @@ export function createConjureFileMentionRule(arg0) {
   closure_0 = arg0;
   regExp = new RegExp("^" + c2);
   return {
-    order: _modDef1943.defaultRules.autolink.order - 0.5,
+    order: _modDef2072.defaultRules.autolink.order - 0.5,
     requiredFirstCharacters: ["<"],
     match(arg0) {
       return regExp.exec(arg0);

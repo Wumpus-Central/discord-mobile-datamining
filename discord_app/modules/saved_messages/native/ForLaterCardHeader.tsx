@@ -13,10 +13,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 function HeaderIcon(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(6957).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(7083).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -27,7 +27,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1187).AvatarSizes.XSMALL };
       tmp6Result = closure_5(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(8643).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(8767).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }
@@ -36,11 +36,11 @@ function HeaderIcon(channel) {
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(8603).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(8727).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;
@@ -59,7 +59,7 @@ function ChannelName(channel) {
   }
   const items1 = [
     tmp12,
-    closure_5(channel(5624).Text, {
+    closure_5(channel(5747).Text, {
       style: tmp.channelName,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
@@ -91,7 +91,7 @@ export function ForLaterCardHeader(channel) {
   channel = channel.channel;
   const tmp = closure_7();
   const obj = { style: tmp.cardHeader, children: null };
-  const items = [hasOwnProperty(HeaderIcon, { channel }), , ,];
+  items = [hasOwnProperty(HeaderIcon, { channel }), , ,];
   let tmp4Result = null;
   if (!channel.isPrivate()) {
     tmp4Result = hasOwnProperty(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "xxs" });

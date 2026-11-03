@@ -6,13 +6,13 @@ import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(13902).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(14033).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
 export function useAutoSearchGuildChannelTab(searchContext, arg1) {
   closure_1 = arg1;
-  const items = [searchContext];
+  items = [searchContext];
   const callback = noop.useCallback((searchQueryString) => {
     const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
     if (null != guildIdFromSearchContext) {

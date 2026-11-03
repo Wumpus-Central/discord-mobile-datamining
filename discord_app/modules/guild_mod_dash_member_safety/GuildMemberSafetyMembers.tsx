@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import _modDef5854 from "../../../_runtime/metro/05854__.js";
+import _modDef5974 from "../../../_runtime/metro/05974__.js";
 import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes.tsx";
 import guild_mod_dash_member_safety_DateUtils from "DateUtils.tsx";
 import SortUtils from "SortUtils.tsx";
@@ -17,7 +17,7 @@ function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
     NEW_GUILD_MEMBER = obj.NEW_GUILD_MEMBER;
     tmp2 = obj;
   }
-  const items = [NEW_GUILD_MEMBER];
+  items = [NEW_GUILD_MEMBER];
   if (isCurrentGuildMemberByTimestamp.isIncludedInSearchResults) {
     items.push(tmp2.INCLUDED_IN_SEARCH_RESULTS);
   }
@@ -217,7 +217,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj2[tmp6];
-        if (_modDef5854(tmp15, obj[tmp6])) {
+        if (_modDef5974(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

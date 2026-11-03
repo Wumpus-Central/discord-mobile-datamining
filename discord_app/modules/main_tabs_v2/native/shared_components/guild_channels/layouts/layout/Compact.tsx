@@ -59,8 +59,8 @@ const obj4 = {
 };
 CHANNEL_LIST_STYLES_COMPACT.icon = {
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(6957).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(6957).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(7083).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(7083).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -71,8 +71,8 @@ CHANNEL_LIST_STYLES_COMPACT.mentionBadge = { position: { top: 28 }, positionThre
 CHANNEL_LIST_STYLES_COMPACT.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
 const obj5 = {
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(6957).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(6957).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(7083).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(7083).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -84,9 +84,9 @@ CHANNEL_LIST_STYLES_COMPACT.typing = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
 };
-CHANNEL_LIST_STYLES_COMPACT.activeThreadCount = { text: { variant: "text-xs/bold" } };
+CHANNEL_LIST_STYLES_COMPACT.activeThreadCount = { text: { variant: "text-xs/semibold" } };
 const obj7 = {
-  text: { variant: "text-xs/bold" },
+  text: { variant: "text-xs/semibold" },
   layout: { paddingVertical: 4, paddingRight: 8, paddingLeft: 8, height: 24 },
   icon: null,
 };
@@ -96,7 +96,7 @@ const obj6 = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj7.icon = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7334).GameIconSizes.SIZE_24 };
+obj7.icon = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7454).GameIconSizes.SIZE_24 };
 CHANNEL_LIST_STYLES_COMPACT.joinVoiceButton = obj7;
 const obj9 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
@@ -110,7 +110,7 @@ const obj10 = {
   container: { paddingThread: { paddingLeft: 8 } },
   unreadBadge: { positionThread: { left: 4 } },
 };
-const obj8 = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7334).GameIconSizes.SIZE_24 };
+const obj8 = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7454).GameIconSizes.SIZE_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx",

@@ -9,9 +9,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7879).InviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { acronym: null };
 let size = {
   width: 32,
@@ -39,7 +39,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
   ({ end, error, isSubmitting, start } = row);
   const id = row.item.id;
   let tmp = closure_9();
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(id));
   let str = onPressAvatar(row[10])(stateFromStores);
   const type = row.type;
@@ -69,7 +69,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
-        let guild;
+        guild = undefined;
         if (null != guild_id) {
           guild = GuildStore.getGuild(stateFromStores.guild_id);
         }
@@ -90,8 +90,8 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
           } else {
             const obj6 = { style: tmp.acronym, children: null };
             const acronym = require("StringUtils").getAcronym(guild.name);
-            const obj7 = { variant: "text-sm/bold", children: acronym };
-            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/bold", children: acronym });
+            const obj7 = { variant: "text-sm/semibold", children: acronym };
+            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/semibold", children: acronym });
             tmp14 = <id style={tmp.acronym}>{null}</id>;
             const tmp2Result = require("StringUtils");
           }

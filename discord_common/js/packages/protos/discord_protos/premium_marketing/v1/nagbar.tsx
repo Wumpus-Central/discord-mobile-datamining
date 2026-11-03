@@ -17,7 +17,7 @@ class Nagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.premium_marketing.v1.ButtonAction",
           require("cta_button").ButtonAction,
           "BUTTON_ACTION_",
@@ -232,7 +232,7 @@ let items = [
     name: "cta_action",
     kind: "enum",
     T() {
-      const items = [
+      items = [
         "discord_protos.premium_marketing.v1.ButtonAction",
         require("cta_button").ButtonAction,
         "BUTTON_ACTION_",

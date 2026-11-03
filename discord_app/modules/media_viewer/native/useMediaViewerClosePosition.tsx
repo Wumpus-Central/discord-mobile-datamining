@@ -1,32 +1,35 @@
 // discord_app/modules/media_viewer/native/useMediaViewerClosePosition.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 const NOOP = fn(1072).NOOP;
-let closure_6 = { code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}" };
-const __initData = {
-  code: "function useMediaViewerClosePositionTsx2(index){const{runOnJS,setClosePosition}=this.__closure;runOnJS(setClosePosition)(index);}",
+let closure_6 = { code: "(function useMediaViewerClosePositionTsx1(){let[index]=this.__closure;return index.get();})" };
+let closure_7 = {
+  code: "(function useMediaViewerClosePositionTsx2(index){let[scheduleOnRN,setClosePosition]=this.__closure;scheduleOnRN(setClosePosition,index);})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerClosePosition.tsx");
 
 export default function useMediaViewerClosePosition(index) {
   index = index.index;
+  _require = index;
   const sources = index.sources;
+  importDefault = sources;
   let onClose = index.onClose;
   if (onClose === undefined) {
     onClose = closure_5;
   }
   const windowHeight = index.windowHeight;
   const windowWidth = index.windowWidth;
-  const tmp = sources(windowHeight[4])(onClose);
-  noop = tmp;
-  const tmp2 = windowWidth(
+  const tmp2 = require("useStableCallback")(onClose);
+  noop = tmp2;
+  let tmp3 = windowWidth(
     noop.useState(() => {
-      const tmp3 = sources[index.get(index)];
+      const tmp3 = _undefined2[_undefined.get(_undefined)];
       if (null != tmp3) {
         let obj = getMediaViewerStateForScreenDefault(windowWidth, windowHeight, tmp3);
       } else {
@@ -36,36 +39,47 @@ export default function useMediaViewerClosePosition(index) {
     }),
     2,
   );
-  closure_5 = tmp2[1];
-  const items = [tmp, sources, windowHeight, windowWidth];
-  const setClosePosition = noop.useCallback((arg0) => {
-    if (null == sources[arg0]) {
+  closure_5 = tmp3[1];
+  items = [tmp2, sources, windowHeight, windowWidth];
+  const callback = noop.useCallback((arg0) => {
+    if (null == _undefined2[arg0]) {
       closure_4();
     }
-    if (null != sources[arg0]) {
+    if (null != _undefined2[arg0]) {
       let obj = getMediaViewerStateForScreenDefault(tmp5, windowHeight, tmp);
     } else {
       obj = { height: windowHeight };
     }
     closure_5((windowHeight + obj.height) / 2);
   }, items);
-  const fn = function h() {
-    return index.get();
-  };
-  fn.__closure = { index };
-  fn.__workletHash = 5031282724746;
-  fn.__initData = setClosePosition;
-  const fn2 = function f(arg0) {
-    ReanimatedRexport.runOnJS(callback)(arg0);
-  };
-  let obj = index(windowHeight[5]);
-  fn2.__closure = { runOnJS: index(windowHeight[5]).runOnJS, setClosePosition };
-  fn2.__workletHash = 2709880768438;
-  fn2.__initData = __initData;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  const items1 = [setClosePosition, index];
+  const items1 = [callback, index];
+  _require = undefined;
+  [tmp6, tmp7] = items1;
+  function useMediaViewerClosePositionTsx1() {
+    return _undefined.get();
+  }
+  const items2 = [tmp7];
+  useMediaViewerClosePositionTsx1.__closure = items2;
+  useMediaViewerClosePositionTsx1.__workletHash = 7521936949267;
+  useMediaViewerClosePositionTsx1.__initData = tmp6;
+  const items3 = [closure_7, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp8, tmp9, tmp10] = items3;
+  function useMediaViewerClosePositionTsx2(arg0) {
+    _undefined(c1, arg0);
+  }
+  const items4 = [tmp9, tmp10];
+  useMediaViewerClosePositionTsx2.__closure = items4;
+  useMediaViewerClosePositionTsx2.__workletHash = 6277806213986;
+  useMediaViewerClosePositionTsx2.__initData = tmp8;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useMediaViewerClosePositionTsx1,
+    useMediaViewerClosePositionTsx2,
+  );
+  const items5 = [callback, index];
   const effect = noop.useEffect(() => {
-    callback(index.get());
-  }, items1);
-  return tmp2[0];
+    callback(_undefined.get());
+  }, items5);
+  return tmp3[0];
 }

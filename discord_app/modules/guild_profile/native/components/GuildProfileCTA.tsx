@@ -29,7 +29,7 @@ export default function GuildProfileCTA(profile) {
   validInviteKey = tmp2.validInviteKey;
   const ctaType = tmp2.ctaType;
   noop = guildId(validInviteKey[6])({ scrollPosition: constants.GUILD_TAG });
-  const items = [guildId];
+  items = [guildId];
   const items1 = [guildId, validInviteKey];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);

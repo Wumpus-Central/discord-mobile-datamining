@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05426_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../SearchPlatformUtils.tsx";
 import SmartSearchUtils from "../../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
@@ -19,7 +19,7 @@ import SearchTabsLayoutStore from "../../stores/SearchTabsLayoutStore.tsx";
 require = fn;
 function NoSearchResultsScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [SearchQueryStore];
+  items = [SearchQueryStore];
   const items1 = [searchContext];
   const stateFromStores = searchContext(504).useStateFromStores(
     items,
@@ -30,72 +30,72 @@ function NoSearchResultsScreen(searchContext) {
   const memo = noop.useMemo(() => SmartSearchUtils.getSmartSearchQuery(searchContext, stateFromStores), items2);
   const obj = searchContext(504);
   const items3 = [searchContext];
-  const smartSearchStatus = searchContext(18697).useSmartSearchStatus(memo);
+  const smartSearchStatus = searchContext(18855).useSmartSearchStatus(memo);
   const effect = noop.useEffect(() => {
     const result = search_tracking_TrackingDefault.trackSearchEmptyResult({ searchContext });
   }, items3);
   if (null != memo) {
     if (tmpResult.isSmartSearchEmptyOrErrored(smartSearchStatus)) {
       const obj3 = { smartSearchQuery: memo };
-      let tmp8 = closure_12(stateFromStores(18698), obj3);
+      let tmp8 = closure_12(stateFromStores(18856), obj3);
     }
     return tmp8;
   }
   const obj4 = { text: null };
-  const obj2 = searchContext(18697);
+  const obj2 = searchContext(18855);
   const intl = tmp(1113).intl;
   obj4.text = intl.string(searchContext(1113).t.V6nAfF);
-  tmp8 = closure_12(stateFromStores(18703), obj4);
-  const tmp7 = stateFromStores(18703);
+  tmp8 = closure_12(stateFromStores(18861), obj4);
+  const tmp7 = stateFromStores(18861);
 }
 const View = fn(17).View;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   MESSAGE_SEARCH_RESULT_TABS_SET: closure_8,
   SEARCH_MESSAGE_TAB_SENTINEL: closure_9,
-  SearchTabs: c10,
+  SearchTabs: closure_10,
 } = SearchConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
 const apply = fn(12);
 let closure_16 = apply.debounce(
   (searchContext) => search_tracking_TrackingDefault.trackSearchTabSelected({ searchContext }),
   500,
 );
-const __initData = {
-  code: "function SearchTabsLayoutTsx1({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(true);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}",
+let closure_18 = {
+  code: "(function SearchTabsLayoutTsx1({contentOffset:contentOffset}){let[isDragging,disallowMemberListGesture]=this.__closure;var _disallowMemberListGe;isDragging.set(true);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);})",
 };
-const __initData2 = {
-  code: "function SearchTabsLayoutTsx2(){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(false);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(false);}",
+let closure_19 = {
+  code: "(function SearchTabsLayoutTsx2(){let[isDragging,disallowMemberListGesture]=this.__closure;var _disallowMemberListGe;isDragging.set(false);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(false);})",
 };
-const __initData3 = {
-  code: "function SearchTabsLayoutTsx3({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;if(isDragging.get()){var _disallowMemberListGe;(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}}",
+let closure_20 = {
+  code: "(function SearchTabsLayoutTsx3({contentOffset:contentOffset}){let[isDragging,disallowMemberListGesture]=this.__closure;if(isDragging.get()){var _disallowMemberListGe;(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}})",
 };
 let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
   searchContext = searchContext.searchContext;
+  _require = searchContext;
   const visibleTabs = searchContext.visibleTabs;
+  importDefault = visibleTabs;
   const visibleTabCounts = searchContext.visibleTabCounts;
   const width = searchContext.width;
   selectedTab = undefined;
-  let gesture;
-  let disallowGesture;
-  let channelId;
+  gesture = undefined;
+  channelId = undefined;
   let screenIndex;
-  let sharedValue;
   let callback5;
   const tmp = closure_15();
-  let items = [visibleTabCounts, visibleTabs, searchContext, width];
+  items = [visibleTabCounts, visibleTabs, searchContext, width];
   const items1 = [searchContext];
   const memo = width.useMemo(() => {
-    const items = [];
-    const item = visibleTabs.forEach((id) => {
+    items = [];
+    const item = _undefined2.forEach((id) => {
       const obj = {
         label: SearchUtils.getTabTitle(id),
         id,
-        page: closure_3_12(SearchTabsPageDefault, { tab: id, searchContext, width }),
+        page: application_id(SearchTabsPageDefault, { tab: id, searchContext, width }),
         count: null,
       };
       let tmp2;
@@ -109,14 +109,14 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
     return items;
   }, items);
   const callback = width.useCallback((arg0) => {
-    SearchSessionAnalyticsManagerDefault.setSelectedTab(searchContext, arg0);
+    SearchSessionAnalyticsManagerDefault.setSelectedTab(c0, arg0);
     SmartSearchAnalyticsManagerDefault.setIsTabActive(
       arg0 === constants.MESSAGES,
       SearchSessionAnalyticsManagerDefault,
     );
-    closure_16(searchContext);
-    const queryString = SearchQueryStore.getQueryString(searchContext);
-    const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, React7, queryString);
+    closure_16(c0);
+    const queryString = SearchQueryStore.getQueryString(c0);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(c0, React7, queryString);
     const isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
     const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
     const hasItem = set.has(arg0);
@@ -128,11 +128,11 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
       tmp12 = isFetching;
     }
     if (!tmp12) {
-      const initialMessagesDebounced = SearchPlatformUtilsDefault.fetchInitialMessagesDebounced(searchContext);
+      const initialMessagesDebounced = SearchPlatformUtilsDefault.fetchInitialMessagesDebounced(c0);
       const tmpResult = SearchPlatformUtilsDefault;
     }
   }, items1);
-  const searchSegmentedControlState = searchContext(visibleTabCounts[22]).useSearchSegmentedControlState({
+  const searchSegmentedControlState = require("useSearchSegmentedControlState").useSearchSegmentedControlState({
     items: memo,
     visibleTabs,
     onSelectedTabChange: callback,
@@ -143,25 +143,24 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
   closure_129_0 = visibleTabs;
   closure_129_1 = setActiveIndex;
   closure_129_2 = width.useRef(() => {
-    visibleTabs(searchContext.findIndex((item) => item === constants.MEDIA));
+    _undefined2(_undefined.findIndex((item) => item === constants.MEDIA));
   });
   const items2 = [visibleTabs, setActiveIndex];
   const effect = width.useEffect(() => {
     visibleTabCounts.current = () => {
-      visibleTabs(searchContext.findIndex((item) => item === constants.MEDIA));
+      _undefined2(_undefined.findIndex((item) => item === constants.MEDIA));
     };
   }, items2);
   const callback1 = width.useCallback(() => visibleTabCounts.current(), []);
   const items3 = [callback1, selectedTab];
   const memo1 = width.useMemo(() => ({ selectedTab, selectMediaTab: callback1 }), items3);
-  const context = width.useContext(searchContext(visibleTabCounts[23]).SwipeForMemberListContext);
+  const context = width.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
   let obj3 = context;
   if (context == null) {
     obj3 = {};
   }
   gesture = obj3.gesture;
-  disallowGesture = obj3.disallowGesture;
-  channelId = obj3.channelId;
+  ({ disallowGesture, channelId } = obj3);
   screenIndex = obj3.screenIndex;
   const items4 = [gesture];
   const memo2 = obj.useMemo(() => {
@@ -170,44 +169,58 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
       return Gesture.Native().simultaneousWithExternalGesture(tmp);
     }
   }, items4);
-  let obj2 = searchContext(visibleTabCounts[22]);
-  sharedValue = searchContext(visibleTabCounts[25]).useSharedValue(false);
-  class G {
+  let obj2 = require("useSearchSegmentedControlState");
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const items5 = [closure_18, sharedValue, disallowGesture];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp13, tmp14, tmp15] = items5;
+  class SearchTabsLayoutTsx1 {
     constructor(arg0) {
-      result = closure_12.set(true);
-      obj = disallowGesture;
-      if (disallowGesture != null) {
+      result = closure_0.set(true);
+      obj = closure_1;
+      if (closure_1 != null) {
         num = 0;
         result1 = obj.set(searchContext.contentOffset.x > 0);
       }
       return;
     }
   }
-  G.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
-  G.__workletHash = 766628353255;
-  G.__initData = __initData;
-  const items5 = [disallowGesture, sharedValue];
-  class D {
+  const items6 = [tmp14, tmp15];
+  SearchTabsLayoutTsx1.__closure = items6;
+  SearchTabsLayoutTsx1.__workletHash = 10796280126110;
+  SearchTabsLayoutTsx1.__initData = tmp13;
+  const items7 = [disallowGesture, sharedValue];
+  const items8 = [closure_19, sharedValue, disallowGesture];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp17, tmp18, tmp19] = items8;
+  class SearchTabsLayoutTsx2 {
     constructor() {
-      result = closure_12.set(false);
-      obj = disallowGesture;
-      if (disallowGesture != null) {
+      result = closure_0.set(false);
+      obj = closure_1;
+      if (closure_1 != null) {
         result1 = obj.set(false);
       }
       return;
     }
   }
-  D.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
-  D.__workletHash = 5683301645106;
-  D.__initData = __initData2;
-  const items6 = [disallowGesture, sharedValue];
-  const callback2 = obj.useCallback(G, items5);
-  class A {
+  const items9 = [tmp18, tmp19];
+  SearchTabsLayoutTsx2.__closure = items9;
+  SearchTabsLayoutTsx2.__workletHash = 15287790770091;
+  SearchTabsLayoutTsx2.__initData = tmp17;
+  const items10 = [disallowGesture, sharedValue];
+  const callback2 = obj.useCallback(SearchTabsLayoutTsx1, items7);
+  const items11 = [closure_20, sharedValue, disallowGesture];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp21, tmp22, tmp23] = items11;
+  class SearchTabsLayoutTsx3 {
     constructor(arg0) {
-      if (closure_12.get()) {
-        obj = disallowGesture;
+      if (closure_0.get()) {
+        obj = closure_1;
         tmp = null;
-        if (disallowGesture != null) {
+        if (closure_1 != null) {
           num = 0;
           result = obj.set(searchContext.contentOffset.x > 0);
         }
@@ -215,24 +228,25 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
       return;
     }
   }
-  A.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
-  A.__workletHash = 229712012692;
-  A.__initData = __initData3;
-  const items7 = [disallowGesture, sharedValue];
-  const callback3 = obj.useCallback(D, items6);
-  const items8 = [searchContext];
-  const callback4 = obj.useCallback(A, items7);
+  const items12 = [tmp22, tmp23];
+  SearchTabsLayoutTsx3.__closure = items12;
+  SearchTabsLayoutTsx3.__workletHash = 8136690643693;
+  SearchTabsLayoutTsx3.__initData = tmp21;
+  const items13 = [disallowGesture, sharedValue];
+  const callback3 = obj.useCallback(SearchTabsLayoutTsx2, items10);
+  const items14 = [searchContext];
+  const callback4 = obj.useCallback(SearchTabsLayoutTsx3, items13);
   callback5 = obj.useCallback(() => {
     SmartSearchAnalyticsManagerDefault.resetSession(SearchSessionAnalyticsManagerDefault);
-    SearchPlatformActionCreatorsDefault.deleteSearchQuery(searchContext);
+    SearchPlatformActionCreatorsDefault.deleteSearchQuery(c0);
     const result = SearchActionCreatorsDefault.clearAllSearchMesssages();
     const result1 = SearchActionCreatorsDefault.clearSearchRecentMessages();
-    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+    const searchContextId = SearchUtils.getSearchContextId(c0);
     SearchTabsFetchManagerDefault.cleanUp(searchContextId);
-  }, items8);
-  const items9 = [context, callback5];
-  const effect1 = obj.useEffect(() => (null == context ? () => callback5() : undefined), items9);
-  const items10 = [channelId, screenIndex, setActiveIndex, context, callback5];
+  }, items14);
+  const items15 = [context, callback5];
+  const effect1 = obj.useEffect(() => (null == context ? () => callback5() : undefined), items15);
+  const items16 = [channelId, screenIndex, setActiveIndex, context, callback5];
   const effect2 = obj.useEffect(() => {
     function handleChannelDetailsHidden(channelId) {
       let tmp2 = channelId.channelId === channelId;
@@ -245,25 +259,25 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
       }
     }
     if (null != context) {
-      let ComponentDispatch = searchContext(visibleTabCounts[29]).ComponentDispatch;
-      const subscription = ComponentDispatch.subscribe(screenIndex.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
+      let ComponentDispatch = _undefined(visibleTabCounts[29]).ComponentDispatch;
+      const subscription = ComponentDispatch.subscribe(callback5.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
       return () => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.unsubscribe(ComponentActions.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
       };
     }
-  }, items10);
+  }, items16);
   if (0 === segmentedControlState.items.length) {
     let obj4 = { searchContext };
-    let tmp25Result = sharedValue(NoSearchResultsScreen, obj4);
+    let tmp34Result = closure_12(NoSearchResultsScreen, obj4);
   } else {
     let obj5 = { style: tmp.controls, children: null };
     const obj6 = { state: segmentedControlState };
-    const items11 = [sharedValue(visibleTabs(tmp5[30]), obj6)];
+    const items17 = [closure_12(require("SearchTabsTransitionGroup"), obj6)];
     const obj7 = { state: segmentedControlState };
-    items11[1] = sharedValue(visibleTabs(tmp5[31]), obj7);
-    obj5.children = items11;
-    const items12 = [callback5(selectedTab, obj5)];
+    items17[1] = closure_12(require("SearchTabsGradient"), obj7);
+    obj5.children = items17;
+    const items18 = [closure_13(selectedTab, obj5)];
     const obj8 = { style: tmp.pages, children: null };
     const obj9 = { value: memo1, children: null };
     const obj10 = {
@@ -274,29 +288,29 @@ let closure_21 = noop.memo(function SearchTabsLayout(searchContext) {
       onEndDragWorklet: null,
       onScrollWorklet: null,
     };
-    let tmp19;
+    let tmp28;
     if (null != context) {
-      tmp19 = callback2;
+      tmp28 = callback2;
     }
-    obj10.onBeginDragWorklet = tmp19;
-    let tmp20;
+    obj10.onBeginDragWorklet = tmp28;
+    let tmp29;
     if (null != context) {
-      tmp20 = callback3;
+      tmp29 = callback3;
     }
-    obj10.onEndDragWorklet = tmp20;
-    let tmp21;
+    obj10.onEndDragWorklet = tmp29;
+    let tmp30;
     if (null != context) {
-      tmp21 = callback4;
+      tmp30 = callback4;
     }
     const obj11 = { children: null };
-    obj10.onScrollWorklet = tmp21;
-    obj9.children = sharedValue(tmp4(tmp5[32]).SegmentedControlPages, obj10);
-    obj8.children = sharedValue(tmp4(tmp5[18]).SearchTabsPageContext.Provider, obj9);
-    items12[1] = sharedValue(selectedTab, obj8);
-    obj11.children = items12;
-    tmp25Result = callback5(closure_14, obj11);
+    obj10.onScrollWorklet = tmp30;
+    obj9.children = closure_12(tmp4(tmp5[32]).SegmentedControlPages, obj10);
+    obj8.children = closure_12(tmp4(tmp5[18]).SearchTabsPageContext.Provider, obj9);
+    items18[1] = closure_12(selectedTab, obj8);
+    obj11.children = items18;
+    tmp34Result = closure_13(closure_14, obj11);
   }
-  return tmp25Result;
+  return tmp34Result;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsLayout.tsx");
@@ -304,7 +318,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/tabs/S
 export default function ConnectedSearchTabsLayout(width) {
   const searchContext = width.searchContext;
   candidateTabs = undefined;
-  const items = [SearchTabsLayoutStore];
+  items = [SearchTabsLayoutStore];
   const items1 = [searchContext];
   const stateFromStoresObject = searchContext(504).useStateFromStoresObject(
     items,
@@ -319,19 +333,19 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(18802).useAutoSearchGuildChannelTab(
+  const autoSearchGuildChannelTab = searchContext(18960).useAutoSearchGuildChannelTab(
     searchContext,
     !memo.has(constants.GUILD_CHANNELS),
   );
-  const obj3 = searchContext(18802);
-  const autoSearchMembersTab = searchContext(18803).useAutoSearchMembersTab(
+  const obj3 = searchContext(18960);
+  const autoSearchMembersTab = searchContext(18961).useAutoSearchMembersTab(
     searchContext,
     !memo.has(constants.MEMBERS),
   );
-  const obj4 = searchContext(18803);
-  const autoSearchPeopleTab = searchContext(18804).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(18804);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(18805).useAutoTrackSearchTabCountsViewedAnalytics({
+  const obj4 = searchContext(18961);
+  const autoSearchPeopleTab = searchContext(18962).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(18962);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(18963).useAutoTrackSearchTabCountsViewedAnalytics({
     searchContext,
     visibleTabCounts,
     visibleTabs,

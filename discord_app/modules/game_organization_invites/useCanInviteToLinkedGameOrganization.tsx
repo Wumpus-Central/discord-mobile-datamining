@@ -14,7 +14,7 @@ export default function useCanInviteToLinkedGameOrganization(arg0, location) {
   _require = arg0;
   linkedGameOrgInvitesEnabled = require("LinkedGameOrgInvitesExperiment").useLinkedGameOrgInvitesEnabled(location);
   const obj = require("LinkedGameOrgInvitesExperiment");
-  const items = [GuildMemberStore, GuildRoleStore, PermissionStore];
+  items = [GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled, arg0];
   return require("initialize").useStateFromStores(
     items,

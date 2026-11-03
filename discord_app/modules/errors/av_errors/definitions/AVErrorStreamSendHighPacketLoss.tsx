@@ -40,7 +40,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
             const merged = Object.assign(
               tmp8Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
             );
-            const items = [obj2];
+            items = [obj2];
             const tmp3 = items;
             const tmp8Result4 = StreamKeyUtils;
           }

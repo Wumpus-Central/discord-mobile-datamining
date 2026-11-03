@@ -35,7 +35,7 @@ function useBaseActivityView(orientationLockState) {
   closure_8 = tmpResult[1];
   const size = showLoadingIndicator(setShowLoadingStateForLockingOrientation[11])();
   isLandscape = size.width > size.height;
-  const items = [isLandscape];
+  items = [isLandscape];
   const layoutEffect = obj.useLayoutEffect(() => {
     DispatcherDefault.dispatch({
       type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE",
@@ -116,7 +116,7 @@ function EmbeddedActivityWebView(applicationId) {
     1,
   )[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(11821).BaseEmbeddedAppWebView, {
+  return closure_13(applicationId(11958).BaseEmbeddedAppWebView, {
     iframeId,
     shellBridgeSecret,
     deepLinkQueryParams: applicationId.deepLinkQueryParams,
@@ -126,13 +126,13 @@ function EmbeddedActivityWebView(applicationId) {
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
-const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
-fn(1360).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
+const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
+fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
+const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
-const __initData = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
+const createStyles = fn(5141);
+const value = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   channel = channel.channel;
   const layoutMode = channel.layoutMode;
@@ -142,7 +142,7 @@ const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   const tmp4 = layoutMode(currentEmbeddedActivity[17])();
   let id = tmp4;
-  const items = [EmbeddedActivitiesStore];
+  items = [EmbeddedActivitiesStore];
   const items1 = [tmp4];
   const stateFromStores = channel(currentEmbeddedActivity[18]).useStateFromStores(
     items,

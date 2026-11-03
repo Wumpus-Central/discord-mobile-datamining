@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyV
 
 export function useFirstGloballyViewbleGuildChannelId(guildId) {
   _require = guildId;
-  const items = [GuildChannelStore];
+  items = [GuildChannelStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(
     items,

@@ -1,12 +1,12 @@
 // discord_app/utils/native/StringUtils.tsx
-import rawDefault from "../../../_runtime/10778_raw.js";
+import rawDefault from "../../../_runtime/10908_raw.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export function splitGraphemes(memo) {
   const obj = rawDefault();
-  const items = [];
+  items = [];
   let match = obj.exec(memo);
   let num = 0;
   let num2 = 0;

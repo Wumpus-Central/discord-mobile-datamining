@@ -48,7 +48,7 @@ let closure_18 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -175,7 +175,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -217,7 +217,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -308,7 +308,7 @@ let closure_31 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -393,7 +393,7 @@ let closure_32 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -470,7 +470,7 @@ let closure_34 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -558,7 +558,7 @@ let closure_36 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -748,7 +748,7 @@ let closure_43 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -871,7 +871,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -908,7 +908,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
           const obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -927,7 +927,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -962,7 +962,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -1007,7 +1007,7 @@ let closure_50 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1083,7 +1083,7 @@ let closure_52 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1149,7 +1149,7 @@ let closure_52 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6776).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1201,10 +1201,10 @@ export function applyPublishedPreview(projectId, arg1) {
   const tmpResult = DispatcherDefault;
 }
 export { listProjects };
-export function isConjureProjectUnavailable(projectId) {
-  let hasItem = set1.has(projectId);
+export function isConjureProjectUnavailable(c1) {
+  let hasItem = set1.has(c1);
   if (hasItem) {
-    hasItem = null == ConjureProjectStore.getProject(projectId);
+    hasItem = null == ConjureProjectStore.getProject(c1);
   }
   return hasItem;
 }
@@ -1425,11 +1425,11 @@ export function refreshConjureInstallState(projectId) {
     profile.catch(() => {});
   }
 }
-export function setSelectedProjectForGuild(guildId, projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId });
+export function setSelectedProjectForGuild(guildId, c1) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId: importDefault });
 }
-export function selectGlobalChatProject(projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_GLOBAL_SELECT", projectId });
+export function selectGlobalChatProject(c1) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_GLOBAL_SELECT", projectId: importDefault });
 }
 export function clearGlobalChatProject(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_GLOBAL_CLEAR", projectId });

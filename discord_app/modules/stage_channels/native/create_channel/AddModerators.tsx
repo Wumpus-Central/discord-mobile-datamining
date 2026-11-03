@@ -7,10 +7,10 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const RowType = fn(7947).RowType;
+const RowType = fn(8071).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   moderatorDescriptionContainer: { margin: 16 },
@@ -29,38 +29,38 @@ export default function AddModerators(guildId) {
   let onPress;
   const tmp3 = closure_10();
   navigation = guildId(navigation[8]).useNavigation();
-  const guild = onPress.getGuild(guildId);
+  guild = onPress.getGuild(guildId);
   merged(navigation[9])(null != guild, "Guild must not be null");
   const tmp10 = first(merged(navigation[10])(guildId.onChannelCreated), 3);
   first = tmp10[0];
   noop = tmp13;
   const tmp14 = first(noop.useState({}), 2);
   const first1 = tmp14[0];
-  let items = [tmp10[2], first1, merged, guildId];
+  items = [tmp10[2], first1, merged, guildId];
   onPress = noop.useCallback(() => {
     const values = Object.values(first1);
     const found = values.filter((row) => null != row.row.id);
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = guildId(6710).createModeratorOverwrite(
+        let moderatorOverwrite = guildId(6830).createModeratorOverwrite(
           row.id,
-          guildId(1992).PermissionOverwriteType.ROLE,
+          guildId(2121).PermissionOverwriteType.ROLE,
         );
-        const obj2 = guildId(6710);
+        const obj2 = guildId(6830);
       } else {
-        moderatorOverwrite = guildId(6710).createModeratorOverwrite(
+        moderatorOverwrite = guildId(6830).createModeratorOverwrite(
           row.id,
-          guildId(1992).PermissionOverwriteType.MEMBER,
+          guildId(2121).PermissionOverwriteType.MEMBER,
         );
-        const obj = guildId(6710);
+        const obj = guildId(6830);
       }
       return moderatorOverwrite;
     });
     let obj = {};
     merged = Object.assign(merged);
     obj.guildId = guildId;
-    const items = [...mapped];
+    items = [...mapped];
     let overwrites = merged.overwrites;
     if (overwrites == null) {
       overwrites = [];

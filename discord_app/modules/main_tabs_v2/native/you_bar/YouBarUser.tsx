@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarUser.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -8,15 +8,15 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17075);
+const YouBarConstants = fn(17218);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7,
   YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8,
 } = YouBarConstants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   youButton: {
     flexDirection: "row",
@@ -34,8 +34,8 @@ let size = {
 };
 obj.placeholder = size;
 let closure_11 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function YouBarUserTsx1(){const{nameMargin}=this.__closure;return{marginLeft:nameMargin.get()};}",
+let closure_12 = {
+  code: "(function YouBarUserTsx1(){let[nameMargin]=this.__closure;return{marginLeft:nameMargin.get()};})",
 };
 let obj3 = {
   flexDirection: "row",
@@ -49,52 +49,58 @@ export default noop.memo(function YouBarUser(isCondensed) {
   isCondensed = isCondensed.isCondensed;
   _require = undefined;
   const tmp = closure_11();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   _require = tmp5;
   let obj = require("initialize");
   const tmp2 = _require;
-  const sharedValue = require("ReanimatedRexport").useSharedValue(isCondensed ? closure_8 : closure_7);
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(
+    isCondensed ? closure_8 : closure_7,
+  );
   const items1 = [!isCondensed, sharedValue];
   const effect = noop.useEffect(() => {
-    const result = sharedValue.set(spring.withSpring(closure_0 ? React5 : React6, timestampProducer));
+    const result = sharedValue.set(spring_spring.withSpring(c0 ? React5 : React6, timestampProducer));
   }, items1);
-  const obj2 = require("ReanimatedRexport");
-  class S {
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_12, sharedValue];
+  _require = undefined;
+  [tmp8, tmp9] = items2;
+  class YouBarUserTsx1 {
     constructor() {
-      obj = { marginLeft: closure_1.get() };
+      obj = { marginLeft: closure_0.get() };
       return obj;
     }
   }
-  S.__closure = { nameMargin: sharedValue };
-  S.__workletHash = 12063452832866;
-  S.__initData = __initData;
-  const animatedStyle = tmp2(5095).useAnimatedStyle(S);
-  const tmp2Result = tmp2(5095);
-  const name = sharedValue(5068).useName(stateFromStores);
+  const items3 = [tmp9];
+  YouBarUserTsx1.__closure = items3;
+  YouBarUserTsx1.__workletHash = 12382860773339;
+  YouBarUserTsx1.__initData = tmp8;
+  const animatedStyle = tmp2(1652).useAnimatedStyle(YouBarUserTsx1);
+  const tmp2Result = tmp2(1652);
+  const name = sharedValue(5195).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items2 = [closure_9(tmp9(18461), obj5)];
+      const items4 = [closure_9(tmp11(18615), obj5)];
       const obj6 = { style: null, children: null };
-      const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
-      obj6.style = items3;
+      const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
+      obj6.style = items5;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(18462), obj7);
-      items2[1] = closure_9(tmp9(5095).View, obj6);
-      obj3.children = items2;
+      obj6.children = closure_9(tmp11(18616), obj7);
+      items4[1] = closure_9(tmp11(1652).View, obj6);
+      obj3.children = items4;
     }
-    return tmp11(View, obj3);
+    return tmp13(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items4 = [closure_9(sharedValue(18460), { isLarge: !isCondensed })];
+  const items6 = [closure_9(sharedValue(18614), { isLarge: !isCondensed })];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
-  const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
-  obj9.style = items5;
-  items4[1] = closure_9(sharedValue(5095).View, obj9);
-  obj8.children = items4;
+  const items7 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
+  obj9.style = items7;
+  items6[1] = closure_9(sharedValue(1652).View, obj9);
+  obj8.children = items6;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(5068);
+  const obj4 = sharedValue(5195);
 });

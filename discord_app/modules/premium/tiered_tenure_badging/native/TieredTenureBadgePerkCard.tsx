@@ -1,6 +1,6 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet.tsx";
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   badgeNameContainer: { flexDirection: "row" },
   tenureRequirements: { marginStart: 4 },
@@ -51,7 +51,7 @@ export function TieredTenureBadgePerkCard() {
   const timeUntilNextBadge = isBadgeDirectoryUpdatesEnabled(stateFromStores[10]).useTimeUntilNextBadge();
   const tmp9 = closure_9();
   const tmpResult7 = isBadgeDirectoryUpdatesEnabled(stateFromStores[10]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = isBadgeDirectoryUpdatesEnabled(stateFromStores[11]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
@@ -136,7 +136,7 @@ export function TieredTenureBadgePerkCard() {
     const items3 = [closure_8(View, obj7)];
     let tmp33Result = null != formatResult;
     if (tmp33Result) {
-      const obj10 = { variant: "heading-sm/normal", color: "text-muted", children: formatResult };
+      const obj10 = { variant: "heading-sm/medium", color: "text-muted", children: formatResult };
       tmp33Result = closure_7(tmp(tmp2[22]).Text, obj10);
     }
     const obj11 = { children: null };

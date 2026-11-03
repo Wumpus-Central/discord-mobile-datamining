@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   infoBox: {
     borderRadius: nativeDefault.radii.xs,
@@ -53,7 +53,7 @@ export default function InfoBox(look) {
     INFO = obj5.INFO;
   }
   const tmp2 = closure_6();
-  const items = [tmp2.infoBox];
+  items = [tmp2.infoBox];
   const items1 = [,];
   ({ infoBox: arr2[0], infoBoxWarning: arr2[1] } = tmp2);
   const obj = {};

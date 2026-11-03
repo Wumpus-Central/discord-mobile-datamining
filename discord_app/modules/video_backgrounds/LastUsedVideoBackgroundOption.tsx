@@ -27,7 +27,7 @@ export function getLastUsedVideoBackgroundOption(currentUser) {
   return tmp5;
 }
 export function useLastUsedVideoBackgroundOption() {
-  const items = [UnsyncedUserSettingsStore];
+  items = [UnsyncedUserSettingsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => videoBackground.videoBackground);
   let obj = stateFromStores(504);
   const items1 = [UserSettingsProtoStore];

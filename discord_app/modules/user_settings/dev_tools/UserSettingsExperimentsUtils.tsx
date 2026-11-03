@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
-import flattenDefault from "../../../../_runtime/05844_flatten.js";
+import flattenDefault from "../../../../_runtime/05964_flatten.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function matchesDeep(item10014, item10021) {
@@ -110,7 +110,7 @@ export function getBestMatches(arg0, str) {
   if (0 === found.length) {
     return arg0;
   } else {
-    const items = [];
+    items = [];
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

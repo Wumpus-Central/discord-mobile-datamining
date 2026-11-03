@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "../CustomTypingIndicatorTypes.tsx";
-import Link from "../../../../_runtime/01498_Link.js";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import Link from "../../../../_runtime/01500_Link.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
@@ -36,7 +36,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const tmp3 = analyticsLocations;
   const nativeStackNavigation = mode(analyticsLocations[14]).useNativeStackNavigation();
   let obj = mode(analyticsLocations[14]);
-  const items = [first3];
+  items = [first3];
   const stateFromStores = mode(analyticsLocations[15]).useStateFromStores(items, () => first3.getCurrentUser());
   let obj2 = mode(analyticsLocations[15]);
   let result = nativeStackNavigation(analyticsLocations[16]).canUsePremiumProfileCustomization(stateFromStores);
@@ -101,14 +101,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17353, dependencyMap.paths),
+      asyncRequireImpl(17496, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17354, dependencyMap.paths),
+      asyncRequireImpl(17497, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -149,7 +149,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -392,10 +392,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   screen: { flex: 1 },
   container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },
@@ -436,8 +436,8 @@ export default function CustomTypingIndicatorEditScreen() {
     analyticsLocations = locationStackFromLocationContext;
   }
   const tmpResult = useAnalyticsLocations;
-  return closure_1_12(useAnalyticsLocations.AnalyticsLocationProvider, {
+  return application_id(useAnalyticsLocations.AnalyticsLocationProvider, {
     value: analyticsLocations,
-    children: closure_1_12(CustomTypingIndicatorEditScreenContent, { mode }),
+    children: application_id(CustomTypingIndicatorEditScreenContent, { mode }),
   });
 }

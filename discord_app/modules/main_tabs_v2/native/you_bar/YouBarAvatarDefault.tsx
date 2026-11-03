@@ -29,23 +29,23 @@ function AvatarDefault() {
   };
   obj3.style = size;
   const obj4 = { cutouts: null, children: null };
-  const items = [point];
+  items = [point];
   obj4.cutouts = items;
   const obj5 = { style: null, children: null };
   const items1 = [tmp.placeholderAvatar, { width: tmp7, height: tmp7, backgroundColor: token }];
   obj5.style = items1;
   const obj6 = { style: tmp.placeholderAvatarBackground };
   const items2 = [
-    closure_1_12(View, obj6),
-    closure_1_12(ReactionIcon.ReactionIcon, {
+    application_id(View, obj6),
+    application_id(ReactionIcon.ReactionIcon, {
       size: "custom",
       style: { width: tmp7, height: tmp7 },
       color: "background-mod-strong",
     }),
   ];
   obj5.children = items2;
-  obj4.children = map1(View, obj5);
-  const items3 = [closure_1_12(ClipViewDefault, obj4)];
+  obj4.children = state(View, obj5);
+  const items3 = [application_id(ClipViewDefault, obj4)];
   const obj8 = {
     size: num,
     status: StatusTypes.OFFLINE,
@@ -56,9 +56,9 @@ function AvatarDefault() {
   };
   const rect = { position: "absolute", right: bottom, bottom };
   obj8.style = rect;
-  items3[1] = closure_1_12(native.Status, obj8);
+  items3[1] = application_id(native.Status, obj8);
   obj3.children = items3;
-  return map1(View, obj3);
+  return state(View, obj3);
 }
 function AvatarDefaultLarge() {
   const tmp = closure_14();
@@ -76,7 +76,7 @@ function AvatarDefaultLarge() {
   };
   obj2.style = size;
   const obj3 = { style: null, children: null };
-  const items = [tmp.avatarShadow];
+  items = [tmp.avatarShadow];
   const size1 = {
     position: "absolute",
     width: tmp3,
@@ -94,14 +94,14 @@ function AvatarDefaultLarge() {
   obj5.style = items2;
   const obj6 = { style: tmp.placeholderAvatarBackground };
   const tmp7 = -React7;
-  const items3 = [closure_1_12(View, obj6)];
+  const items3 = [application_id(View, obj6)];
   const obj7 = { size: "custom", style: null, color: "background-mod-strong" };
   const size2 = { width: native.AVATAR_SIZE_MAP[hasOwnProperty], height: native.AVATAR_SIZE_MAP[hasOwnProperty] };
   obj7.style = size2;
-  items3[1] = closure_1_12(ReactionIcon.ReactionIcon, obj7);
+  items3[1] = application_id(ReactionIcon.ReactionIcon, obj7);
   obj5.children = items3;
-  obj4.children = map1(View, obj5);
-  const items4 = [closure_1_12(ClipViewDefault, obj4)];
+  obj4.children = state(View, obj5);
+  const items4 = [application_id(ClipViewDefault, obj4)];
   const obj8 = {
     size,
     status: StatusTypes.OFFLINE,
@@ -116,13 +116,13 @@ function AvatarDefaultLarge() {
     bottom: timestampProducer - closure_1_10,
   };
   obj8.style = rect;
-  items4[1] = closure_1_12(native.Status, obj8);
+  items4[1] = application_id(native.Status, obj8);
   obj3.children = items4;
-  obj2.children = map1(View, obj3);
-  return closure_1_12(View, obj2);
+  obj2.children = state(View, obj3);
+  return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17075);
+const YouBarConstants = fn(17218);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -130,12 +130,12 @@ const YouBarConstants = fn(17075);
   YOU_BAR_HEIGHT: closure_7,
   YOU_BAR_LARGE_STATUS_SIZE: closure_8,
   YOU_BAR_PADDING: closure_9,
-  YOU_BAR_STATUS_OFFSET: c10,
+  YOU_BAR_STATUS_OFFSET: closure_10,
 } = YouBarConstants);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,
@@ -172,5 +172,5 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarAvatarDefault.tsx");
 
 export default noop.memo(function YouBarAvatarDefault(isLarge) {
-  return closure_1_12(isLarge.isLarge ? AvatarDefaultLarge : AvatarDefault, {});
+  return application_id(isLarge.isLarge ? AvatarDefaultLarge : AvatarDefault, {});
 });

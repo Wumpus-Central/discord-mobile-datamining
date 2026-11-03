@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
-  const items = [];
+  items = [];
   const items1 = [];
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();

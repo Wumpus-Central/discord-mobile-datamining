@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" },
   circleIcon: null,
@@ -48,7 +48,7 @@ export const PageMarker = noop.memo(function PageMarker(arg0) {
   closure_1 = tmp;
   const ArrayResult = Array(numMarkers);
   const obj = { style: null, children: null };
-  const items = [tmp.pageMarkerContainer, { width: 20 * numMarkers }];
+  items = [tmp.pageMarkerContainer, { width: 20 * numMarkers }];
   obj.style = items;
   const mapped = Array(numMarkers)
     .fill(undefined)
@@ -60,7 +60,7 @@ export const PageMarker = noop.memo(function PageMarker(arg0) {
         filledCircle = closure_1.filledCircle;
       }
       style[1] = filledCircle;
-      return framebus(View, { style }, sum);
+      return duration(View, { style }, sum);
     });
   const items1 = [closure_1(View, { style: tmp.horizontalLine }), mapped];
   obj.children = items1;

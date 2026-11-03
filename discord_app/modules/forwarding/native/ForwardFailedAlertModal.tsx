@@ -11,7 +11,7 @@ export default function ForwardFailedAlertModal(message) {
   message = message.message;
   const failedDestinations = message.failedDestinations;
   const forwardOptions = message.forwardOptions;
-  const items = [failedDestinations, message, forwardOptions];
+  items = [failedDestinations, message, forwardOptions];
   const callback = noop.useCallback(() => {
     ForwardModalUtils.openForwardModal({
       message,

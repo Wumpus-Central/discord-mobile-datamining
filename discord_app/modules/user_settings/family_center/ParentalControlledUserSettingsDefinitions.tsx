@@ -62,7 +62,7 @@ export function defineParentalControlledSetting(
     },
     useControlledSetting(arg0) {
       privacy = arg0;
-      const items = [settings];
+      items = [settings];
       const items1 = [arg0];
       return privacy(explicitContentFromProto[2]).useStateFromStores(
         items,

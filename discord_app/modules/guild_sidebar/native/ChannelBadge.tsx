@@ -2,15 +2,15 @@
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import MentionsBadgeDefault from "MentionsBadge.tsx";
 import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
+import MentionsBadgeDefault from "MentionsBadge.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
@@ -19,7 +19,7 @@ export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = closure_6();
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {
     if (mentionCount > 0) {

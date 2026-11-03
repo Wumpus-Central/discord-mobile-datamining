@@ -36,7 +36,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
     shouldOpenGameProfile = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_DISABLED);
     const obj2 = require("FlagUtils");
   }
-  let items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
+  items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
   const effect = isLoading.useEffect(() => {
     let current = ref.current;
     if (!current) {
@@ -54,7 +54,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
       _modDef38(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
       let flag = shouldOpenGameProfile;
       if (null == gameRecord) {
-        const items = [obj.NoMatch];
+        items = [obj.NoMatch];
         let tmp11 = items;
       } else {
         const items1 = [];
@@ -97,7 +97,7 @@ export function isGameDisabled(gameFlags) {
 }
 export function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {
-    const items = [obj.NoMatch];
+    items = [obj.NoMatch];
     let arr = items;
   } else {
     const items1 = [];
@@ -117,7 +117,7 @@ export function gameIsAcceptable(gameFlags) {
 export function gameIdIsAcceptable(arg0) {
   const game = GameStore.getGame(arg0);
   if (null == game) {
-    const items = [obj.NoMatch];
+    items = [obj.NoMatch];
     let arr = items;
   } else {
     const items1 = [];

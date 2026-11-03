@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
   tag: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -35,7 +35,7 @@ export function ForumPostAppliedTagPills(additionalTagsCount) {
   const tmp = closure_6();
   dependencyMap = tmp;
   const obj = { style: null, children: null };
-  const items = [additionalTagsCount.containerStyle, tmp.pillTagsContainer];
+  items = [additionalTagsCount.containerStyle, tmp.pillTagsContainer];
   obj.style = items;
   const items1 = [
     appliedTags.map((tag) =>
@@ -51,7 +51,7 @@ export function ForumPostAppliedTagPills(additionalTagsCount) {
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10522).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(10652).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;
@@ -67,7 +67,7 @@ export function ForumPostAppliedTags(appliedTags) {
   const tmp = closure_6();
   const dot = tmp;
   const obj = { style: null, children: null };
-  const items = [appliedTags.containerStyle, tmp.tagsContainer];
+  items = [appliedTags.containerStyle, tmp.tagsContainer];
   obj.style = items;
   const items1 = [
     appliedTags.map((tag, index) => {

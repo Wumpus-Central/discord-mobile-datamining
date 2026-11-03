@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2634 from "../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2763 from "../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = {
@@ -55,7 +55,7 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
   }, []);
   const callback1 = noop.useCallback(() => {
     const obj2 = { analyticsLocations: null, analyticsSource: null };
-    const items = [AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE];
+    items = [AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE];
     obj2.analyticsLocations = items;
     obj2.analyticsSource = AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE;
     const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
@@ -73,17 +73,17 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
   obj3.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj3.style = tmp.closeButton;
   obj3.children = timestampProducer(XSmallIcon.XSmallIcon, { size: "md", style: tmp.closeIcon });
-  let items = [timestampProducer(React4, obj3)];
+  items = [timestampProducer(React4, obj3)];
   const obj5 = {
     accessibilityRole: "header",
     "aria-level": "1",
     lineClamp: 1,
-    variant: "redesign/heading-18/bold",
+    variant: "redesign/heading-18/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2634.roVAey);
+  obj5.children = intl2.string(_modDef2763.roVAey);
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj2.children = items;
   const items1 = [

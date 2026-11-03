@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFet
 
 export function useFetchVirtualCurrencyBalance(disableFetch) {
   _require = disableFetch;
-  const items = [VirtualCurrencyStore];
+  items = [VirtualCurrencyStore];
   const isFetching = require("initialize").useStateFromStoresObject(items, () => ({
     balance: VirtualCurrencyStore.balance,
     isFetching: VirtualCurrencyStore.isFetchingBalance,

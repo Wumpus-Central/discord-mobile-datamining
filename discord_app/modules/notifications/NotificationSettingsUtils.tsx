@@ -18,7 +18,7 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16276);
+const NotificationSettingsConstants = fn(16419);
 ({
   NOTIF_CATEGORIES: closure_4,
   NOTIF_SETTING_MAPPING: hasOwnProperty,
@@ -29,7 +29,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
 export function getAssignedNotifSettingsAndMappings() {
-  const items = [];
+  items = [];
   const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled(
     "getAssignedNotifSettingsAndMappings",
   );
@@ -74,7 +74,7 @@ export function useNotifCategoryVisibility(CATEGORY_CALLS_MESSAGES) {
 }
 export function useNotifSettingVisibility(CALLS) {
   _require = CALLS;
-  const items = [CALLS];
+  items = [CALLS];
   const memo = noop.useMemo(
     () =>
       (function getExperimentAndConfigBySettingId(arg0) {

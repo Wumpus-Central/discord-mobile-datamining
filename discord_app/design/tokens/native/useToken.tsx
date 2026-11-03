@@ -3,13 +3,13 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 
-const SemanticColorContext = obj(5186);
+const SemanticColorContext = obj(5309);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);
 let closure_4 = Object.fromEntries(
   keys.map((item) => {
-    const items = [_modDef12.kebabCase(item), item];
+    items = [_modDef12.kebabCase(item), item];
     return items;
   }),
 );

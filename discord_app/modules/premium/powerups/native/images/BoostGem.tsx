@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/native/images/BoostGem.tsx
-import inlineStyles from "../../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -20,7 +20,7 @@ export default function BoostGem(style) {
     num2 = 66;
   }
   const size = { width: num, height: num2, viewBox: "0 0 39 66", fill: "none", style: style.style, children: null };
-  const items = [
+  items = [
     React3(inlineStyles.Path, {
       d: "M19.3146 0L0 19.4029V46.6865L19.3146 65.9999L38.6293 46.5969V19.388L19.3146 0ZM28.972 42.6566L19.3146 52.3432L9.65732 42.6566V23.388L19.3146 13.6865L28.972 23.388V42.6566Z",
       fill: "#FA6EF6",

@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10225).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10355).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     applicationCommandItem: {
@@ -56,7 +56,7 @@ export default function ApplicationCommandItem(highlighted) {
   let stateFromStores;
   const tmp3 = closure_9(section(stateFromStores[7]).useFontScale());
   const obj = section(stateFromStores[7]);
-  const items = [GuildMemberStore];
+  items = [GuildMemberStore];
   stateFromStores = section(stateFromStores[8]).useStateFromStores(items, () => {
     if (null != importDefault) {
       let botId;

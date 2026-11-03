@@ -18,7 +18,7 @@ function QuestBar_2DOrbsRiveInner(defaultViewModelInstance) {
   }
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
-  const items = [str, dataBinding, onDataBindingChange];
+  items = [str, dataBinding, onDataBindingChange];
   const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
     if (null != closure_9[str]) {

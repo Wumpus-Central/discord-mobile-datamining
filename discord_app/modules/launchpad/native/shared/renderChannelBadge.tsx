@@ -33,17 +33,21 @@ export default function renderChannelBadge(newChannel) {
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
-        const obj3 = { variant: "text-xs/bold", color: "text-brand", children: null };
+        const obj3 = { variant: "text-xs/semibold", color: "text-brand", children: null };
         const intl = util.intl;
         const obj4 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
         obj3.children = intl.format(util.t.GkAbqY, obj4);
-        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
+        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-brand", children: null });
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
-        const obj6 = { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount };
-        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount });
+        const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: postsWithUnreadsCount };
+        tmp2 = jsx(Text_Text.Text, {
+          variant: "text-xs/semibold",
+          color: "text-muted",
+          children: postsWithUnreadsCount,
+        });
       }
     }
     tmp2 = null;

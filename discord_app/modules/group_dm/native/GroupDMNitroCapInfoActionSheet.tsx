@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11629).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11766).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -46,14 +46,14 @@ export default function GroupDMNitroCapInfoActionSheet() {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = {
     style: tmp.title,
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: null,
   };
   const intl = util.intl;
   obj3.children = intl.string(util.t.u1ilug);
-  const items = [timestampProducer(Text_Text.Text, obj3), ,];
+  items = [timestampProducer(Text_Text.Text, obj3), ,];
   const obj4 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t["mr27w/"], { number });

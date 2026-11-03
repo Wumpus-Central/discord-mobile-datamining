@@ -156,7 +156,7 @@ export function perfTickLabel(arg0) {
   }
 }
 export function perfNodeSections(node) {
-  let items = [detail("Start", "+" + formatPerfMs(node.start)), detail("Duration", perfNodeDuration(node))];
+  items = [detail("Start", "+" + formatPerfMs(node.start)), detail("Duration", perfNodeDuration(node))];
   if (node.count > 1) {
     const _String = String;
     const tmp2Result = detail("Calls", String(node.count));
@@ -231,7 +231,7 @@ export function perfNodeSections(node) {
     ...closure_5.flatMap((title) => {
       value = map.get(title);
       if (null == value) {
-        let items = [];
+        items = [];
       } else {
         const obj = { title, rows: value };
         items = [obj];
@@ -284,7 +284,7 @@ export function perfModelSummary(stats) {
       str = "";
     }
     const _HermesInternal = HermesInternal;
-    const items = ["" + calls + " " + "model call" + str, , , , ,];
+    items = ["" + calls + " " + "model call" + str, , , , ,];
     const input = model.input;
     if (input < 1000) {
       const _String = String;
@@ -405,7 +405,7 @@ export function perfTraceSummary(trace) {
   if (str == null) {
     str = "";
   }
-  const items = [str, ,];
+  items = [str, ,];
   let str2 = "s";
   if (1 === trace.spans.length) {
     str2 = "";

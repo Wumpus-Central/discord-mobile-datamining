@@ -173,7 +173,7 @@ calls = {
   },
   CALL_ENQUEUE_RING: function handleCallEnqueueRing(arg0) {
     ({ channelId, recipients } = arg0);
-    let items = enqueuedRings[channelId];
+    items = enqueuedRings[channelId];
     if (items == null) {
       items = [];
     }

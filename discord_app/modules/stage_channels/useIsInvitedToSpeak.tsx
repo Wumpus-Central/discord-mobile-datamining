@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
 
 export default function useIsInvitedToSpeak() {
-  const items = [SelectedChannelStore];
+  items = [SelectedChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   const items1 = [AuthenticationStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => id.getId());

@@ -16,19 +16,19 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(7269).OnboardingConnectionType;
-let closure_12 = fn(7265).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(7389).OnboardingConnectionType;
+let closure_12 = fn(7385).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5586).NAV_BAR_HEIGHT,
+    marginTop: fn(5709).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -44,7 +44,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5586).NAV_BAR_HEIGHT,
+  marginTop: fn(5709).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -110,7 +110,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
   const sum1 = sum + onComplete(isLastStep[13]).space.PX_8;
   const ref = navigation.useRef(false);
   let obj = guildId(isLastStep[14]);
-  const items = [stateFromStores4];
+  items = [stateFromStores4];
   const stateFromStores = guildId(isLastStep[16]).useStateFromStores(items, () =>
     GuildOnboardingPromptsStore.getOnboardingConnections(guildId),
   );
@@ -272,7 +272,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
       style: tmp.connectionsList,
       children: stateFromStores.map((connection, index) => {
         const obj = { connection, guildId, location: AnalyticsLocationDefault.GUILD_ONBOARDING };
-        return closure_2_14(ConnectionCardDefault, obj, index);
+        return gesture(ConnectionCardDefault, obj, index);
       }),
     };
     items13[1] = closure_14(ref, obj17);

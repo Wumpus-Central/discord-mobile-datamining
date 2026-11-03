@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
-import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02123_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import burst_reactions_BurstReactionEffectUtils from "../../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
 import DismissibleContentUnsafeUtils from "../../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
   fill: null,
@@ -76,8 +76,8 @@ export default function BurstReactionFirstSendActionSheet(arg0) {
   obj3.onDismiss = onDismiss;
   const obj6 = { style: tmp.container, children: null };
   const obj7 = { style: tmp.textContainer, children: null };
-  const items = [React4(native.NitroWheel, { style: tmp.nitroWheel })];
-  const obj9 = { variant: "heading-xl/bold", children: null };
+  items = [React4(native.NitroWheel, { style: tmp.nitroWheel })];
+  const obj9 = { variant: "heading-xl/semibold", children: null };
   const intl = util.intl;
   obj9.children = intl.string(util.t.NX7HI7);
   items[1] = React4(Text_Text.Text, obj9);
@@ -115,7 +115,7 @@ export function openBurstReactionFirstSendActionSheet(arg0) {
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(5013, dependencyMap.paths),
+      asyncRequireImpl(5140, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

@@ -25,7 +25,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ let closure_13 = async function _launchFrame(arg0) {
               closure_131_1(closure_131_2[6]).dispatch(obj12);
               c5 = 1;
               const obj11 = closure_131_0(closure_131_2[7]);
-              const items = [
+              items = [
                 obj11.createProxyTicket(
                   closure_130_0,
                   closure_131_1(closure_131_2[8])(closure_130_1),
@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10938);
+    obj2 = obj2(11076);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -297,7 +297,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -445,15 +445,15 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({
   FrameIntent: metroRequire,
   FrameLayoutModes: closure_7,
   getFrameIntentForSurface: closure_8,
   isLaunched: closure_9,
-  makeFrameId: c10,
+  makeFrameId: closure_10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

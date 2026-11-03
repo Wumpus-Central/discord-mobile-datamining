@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
@@ -23,7 +23,7 @@ function VoiceMessageIcon() {
     fill: token,
     stroke: token1,
   });
-  const items = [React5(inlineStylesDefault, size)];
+  items = [React5(inlineStylesDefault, size)];
   const obj4 = { style: tmp.voiceMessageIconOverlay, children: null };
   const items1 = [
     React5(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }),
@@ -37,7 +37,7 @@ function VoiceMessageIcon() {
 function getBasePreviewableMedia(arg0) {
   let obj;
   ({ message, isForward } = arg0);
-  const items = [];
+  items = [];
   if (message.attachments.length > 0) {
     const attachments = message.attachments;
     if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
@@ -180,7 +180,7 @@ const PreviewableMediaTypes = {
   GIF: "gif",
   VOICE_MESSAGE: "voice_message",
 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -195,9 +195,9 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 
 export { PreviewableMediaTypes };
 export function usePreviewableMedia(message) {
-  let items = [message];
+  items = [message];
   return noop.useMemo(() => {
-    const items = [];
+    items = [];
     const items1 = [...getBasePreviewableMedia({ message, isForward: false })];
     items.push.apply(items1);
     if (isForwardMessageDefault(message)) {

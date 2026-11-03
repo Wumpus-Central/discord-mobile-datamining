@@ -28,7 +28,7 @@ function getVoiceStatesForGuild(guildId) {
         (voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
-            const items = [channelId];
+            items = [channelId];
             let items1 = items;
           } else {
             items1 = [];
@@ -126,7 +126,7 @@ class SortedVoiceStates {
       (voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
-          const items = [channelId];
+          items = [channelId];
           let items1 = items;
         } else {
           items1 = [];
@@ -341,7 +341,7 @@ prototype2["initialize"] = function initialize() {
             (voiceState) => {
               const channelId = voiceState.voiceState.channelId;
               if (null != channelId) {
-                const items = [channelId];
+                items = [channelId];
                 let items1 = items;
               } else {
                 items1 = [];
@@ -362,7 +362,7 @@ prototype2["initialize"] = function initialize() {
     });
   });
   this.waitFor(AuthenticationStore, ChannelStore, FavoriteStore, GuildMemberStore, UserStore, VoiceStateStore);
-  const items = [UserStore];
+  items = [UserStore];
   this.syncWith(items, handleUpdateUsers);
   const items1 = [FavoriteStore];
   this.syncWith(items1, handleFavoritesChange);
@@ -410,7 +410,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       }
       favoriteChannels = favoriteChannels.getFavoriteChannels();
       const map = new Map();
-      const items = [];
+      items = [];
       let obj = {};
       const keys = SnowflakeUtilsDefault.keys(favoriteChannels);
       const iter = keys[Symbol.iterator]();
@@ -458,7 +458,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
           (voiceState) => {
             const channelId = voiceState.voiceState.channelId;
             if (null != channelId) {
-              const items = [channelId];
+              items = [channelId];
               let items1 = items;
             } else {
               items1 = [];
@@ -498,7 +498,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
         (voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
-            const items = [channelId];
+            items = [channelId];
             let items1 = items;
           } else {
             items1 = [];
@@ -533,7 +533,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
         (voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
-            const items = [channelId];
+            items = [channelId];
             let items1 = items;
           } else {
             items1 = [];
@@ -571,7 +571,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
           (voiceState) => {
             const channelId = voiceState.voiceState.channelId;
             if (null != channelId) {
-              const items = [channelId];
+              items = [channelId];
               let items1 = items;
             } else {
               items1 = [];
@@ -608,7 +608,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
         (voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
-            const items = [channelId];
+            items = [channelId];
             let items1 = items;
           } else {
             items1 = [];
@@ -657,7 +657,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
               (voiceState) => {
                 const channelId = voiceState.voiceState.channelId;
                 if (null != channelId) {
-                  const items = [channelId];
+                  items = [channelId];
                   let items1 = items;
                 } else {
                   items1 = [];
@@ -697,7 +697,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
             (voiceState) => {
               const channelId = voiceState.voiceState.channelId;
               if (null != channelId) {
-                const items = [channelId];
+                items = [channelId];
                 let items1 = items;
               } else {
                 items1 = [];
@@ -736,7 +736,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
             (voiceState) => {
               const channelId = voiceState.voiceState.channelId;
               if (null != channelId) {
-                const items = [channelId];
+                items = [channelId];
                 let items1 = items;
               } else {
                 items1 = [];
@@ -769,7 +769,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
           (voiceState) => {
             const channelId = voiceState.voiceState.channelId;
             if (null != channelId) {
-              const items = [channelId];
+              items = [channelId];
               let items1 = items;
             } else {
               items1 = [];
@@ -808,7 +808,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
     const set = new Set(userIds);
     const tmp4 = new Set(userIds);
     const set1 = new Set(mapped);
-    const items = [...set1];
+    items = [...set1];
     const set2 = new Set(voiceStates.removedVoiceStateUsers);
     for (const item10051 of set3) {
       let obj3 = getVoiceStatesForGuild(arg0.guildId);

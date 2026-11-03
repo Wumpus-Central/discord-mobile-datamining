@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/premium/native/gift_code_moda
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
-  let items = [GiftCodeStore];
+  items = [GiftCodeStore];
   [first] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
+    items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
     return items;
   });
   const obj = require("initialize");

@@ -14,7 +14,7 @@ export function buildSteamStoreUrl(arg0) {
 }
 export function useSteamWebsiteUrl(id) {
   _require = id;
-  const items = [GameStore];
+  items = [GameStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
@@ -30,7 +30,7 @@ export function useSteamWebsiteUrl(id) {
         } else {
           const websites = game.websites;
           const found = websites.find(
-            (category) => category.category === id(9343).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+            (category) => category.category === id(9471).ThirdPartyGameApplicationWebsiteCategory.STEAM,
           );
           if (found != null) {
             const url = found.url;
@@ -39,8 +39,8 @@ export function useSteamWebsiteUrl(id) {
           const found1 = thirdPartySkus.filter((distributor) => {
             let tmp = distributor.distributor === constants.STEAM;
             if (tmp) {
-              tmp = !id(2026).isNullOrEmpty(distributor.id);
-              const obj = id(2026);
+              tmp = !id(2155).isNullOrEmpty(distributor.id);
+              const obj = id(2155);
             }
             return tmp;
           });

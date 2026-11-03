@@ -17,7 +17,7 @@ export function useUserProfileColors(theme) {
   ({ primaryColor, secondaryColor } = theme);
   const tmp2 = useThemeDefault();
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const obj3 = {
     gradientFallbackBackground: null,
     gradientSecondaryBackground: null,

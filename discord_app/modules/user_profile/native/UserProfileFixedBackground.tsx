@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -33,7 +33,7 @@ export default noop.memo(function UserProfileFixedBackground(style) {
       const _Math2 = Math;
       const bound = Math.min(1, Math.max(0, bannerHeight / gradientHeight));
       const obj4 = { colors: null, locations: null, style: null, pointerEvents: "none" };
-      const items = [first, first, tmp5];
+      items = [first, first, tmp5];
       obj4.colors = items;
       const items1 = [0, bound, 1];
       obj4.locations = items1;

@@ -9,7 +9,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
+function isVoicePanelParticipantFocusable(c0, c1, id2) {
   let obj = ChannelRTCStore;
   if (ChannelRTCStore === undefined) {
     obj = ChannelRTCStore;
@@ -29,7 +29,7 @@ function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
   if (null == id2) {
     return false;
   } else {
-    const participant = obj.getParticipant(guildId, id2);
+    const participant = obj.getParticipant(c1, id2);
     if (null == participant) {
       return false;
     } else if (timestampProducer(participant)) {
@@ -41,7 +41,7 @@ function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
       return null != applicationId && participant.applicationId === currentEmbeddedActivity.applicationId;
     } else {
       if (React5(participant)) {
-        let result = null != obj3.getActiveStreamForUser(participant.user.id, channelId);
+        let result = null != obj3.getActiveStreamForUser(participant.user.id, c0);
       } else if (React6(participant)) {
         result = participantHasVideo.canRenderParticipantVideo(participant, tmp);
         const tmp4Result = participantHasVideo;
@@ -53,7 +53,7 @@ function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
     }
   }
 }
-const CallConstants = fn(5681);
+const CallConstants = fn(5801);
 ({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
@@ -62,7 +62,7 @@ export default function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const items = [ChannelRTCStore, MediaEngineStore, closure_2, ApplicationStreamingStore];
+  items = [ChannelRTCStore, MediaEngineStore, closure_2, ApplicationStreamingStore];
   return require("initialize").useStateFromStores(items, () =>
     isVoicePanelParticipantFocusable(
       closure_0,

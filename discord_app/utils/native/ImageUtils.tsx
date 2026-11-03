@@ -3,7 +3,7 @@ import AvatarUtils from "../AvatarUtils.tsx";
 import utils_AvatarUtils from "AvatarUtils.tsx";
 import AttachmentImageLadderExperiment from "../../modules/image_upload/AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "../../modules/image_upload/AttachmentImageLadder.tsx";
-import _modDef1485 from "../../../_runtime/metro/01485__.js";
+import _modDef1487 from "../../../_runtime/metro/01487__.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
 import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
@@ -20,7 +20,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], _modDef1485.parse(tmp[1])];
+  items = [tmp[0], _modDef1487.parse(tmp[1])];
   [tmp5, tmp6] = items;
   if (re7.test(tmp5)) {
     tmp6.format = "webp";
@@ -49,9 +49,10 @@ function getSrcWithWidthAndHeight(animated) {
     })("native/ImageUtils.getSrcWithWidthAndHeight");
     let size = { width: targetWidth, height: targetHeight };
     if (null != tmp9) {
-      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
+      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null, ladder: null };
       const obj2 = AttachmentImageLadder;
       obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
+      obj3.ladder = tmp9.ladder;
       size = obj2.snapAttachmentDimensions(obj3);
     }
     if (!tmp12) {
@@ -66,7 +67,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    _modDef1485;
+    _modDef1487;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

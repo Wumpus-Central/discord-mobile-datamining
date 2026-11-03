@@ -74,12 +74,12 @@ function isQuestRobloxRelated(desktopApplicationIds, distributor) {
   }
   return tmp;
 }
-const QuestConstants = fn(6781);
+const QuestConstants = fn(6901);
 ({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
-const isLaunched = fn(6847).isLaunched;
+const isLaunched = fn(6967).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
-const getQuestLogger = fn(7853);
+const getQuestLogger = fn(7977);
 const logger = getQuestLogger.getQuestLogger({ location: QuestsExperimentLocations.QUESTS_MANAGER });
 class QuestProgressManager extends tmp4 {
   constructor() {
@@ -99,9 +99,9 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = applyArgumentsResult(7868).getQuestTaskDetails(
+            const questTaskDetails = applyArgumentsResult(7992).getQuestTaskDetails(
               value,
-              applyArgumentsResult(6789).FirstPartyQuestTaskTypesSets.DESKTOP,
+              applyArgumentsResult(6909).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
@@ -165,9 +165,9 @@ class QuestProgressManager extends tmp4 {
                 applyArgumentsResult.terminateHeartbeat(questId, closure_1);
               } else {
                 const _HermesInternal4 = HermesInternal;
-                const timerIdResult = timerId(6717);
+                const timerIdResult = timerId(6837);
                 logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
-                const encodeStreamKeyResult = timerId(6717).encodeStreamKey(currentUserActiveStream);
+                const encodeStreamKeyResult = timerId(6837).encodeStreamKey(currentUserActiveStream);
                 const obj2 = {
                   questId,
                   streamKey: encodeStreamKeyResult,
@@ -175,15 +175,15 @@ class QuestProgressManager extends tmp4 {
                   executablePath,
                   executableFingerprint: prop,
                 };
-                timerId(9682).sendHeartbeat(obj2);
-                const timerIdResult1 = timerId(9682);
+                timerId(9814).sendHeartbeat(obj2);
+                const timerIdResult1 = timerId(9814);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               const obj3 = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(9682).sendHeartbeat(obj3);
-              const timerIdResult2 = timerId(9682);
+              timerId(9814).sendHeartbeat(obj3);
+              const timerIdResult2 = timerId(9814);
             }
             prop = applyArgumentsResult.calculateHeartbeatDurationMs(questId);
             const _window = window;
@@ -258,14 +258,14 @@ class QuestProgressManager extends tmp4 {
     };
     obj1 = {
       QUESTS_FETCH_CURRENT_QUESTS_SUCCESS() {
-        const items = [
+        items = [
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
         ];
         return applyArgumentsResult.syncHeartbeats(items, "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS");
       },
       QUESTS_ENROLL_SUCCESS() {
-        const items = [
+        items = [
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
@@ -282,7 +282,7 @@ class QuestProgressManager extends tmp4 {
       QUESTS_SEND_HEARTBEAT_SUCCESS: applyArgumentsResult.handleSendHeartbeatSuccess,
       QUESTS_SEND_HEARTBEAT_FAILURE: applyArgumentsResult.handleSendHeartbeatFailure,
       QUESTS_PREVIEW_UPDATE_SUCCESS() {
-        const items = [
+        items = [
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
           FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
@@ -290,47 +290,47 @@ class QuestProgressManager extends tmp4 {
         return applyArgumentsResult.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
       },
       GAME_FETCH_SUCCESS() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "GAME_FETCH_SUCCESS");
       },
       APPLICATIONS_FETCH_SUCCESS() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "APPLICATIONS_FETCH_SUCCESS");
       },
       RUNNING_GAMES_CHANGE() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
       },
       RUNNING_NON_GAMES_CHANGE() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
       },
       LOCAL_ACTIVITY_UPDATE() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "LOCAL_ACTIVITY_UPDATE");
       },
       RPC_APP_DISCONNECTED() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "RPC_APP_DISCONNECTED");
       },
       STREAM_START() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "STREAM_START");
       },
       STREAM_CREATE() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "STREAM_CREATE");
       },
       STREAM_CLOSE() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "STREAM_CLOSE");
       },
       PASSIVE_UPDATE_V2() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "PASSIVE_UPDATE_V2");
       },
       VOICE_STATE_UPDATES() {
-        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
         return applyArgumentsResult.syncHeartbeats(items, "VOICE_STATE_UPDATES");
       },
       EMBEDDED_ACTIVITY_LAUNCH_SUCCESS(applicationId) {
@@ -345,7 +345,7 @@ class QuestProgressManager extends tmp4 {
     closure_129_1 = applyArgumentsResult;
     closure_129_0 = closure_3(async (arg0) => {
       await closure_1_18(applicationId);
-      const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
         let hasItem = null != config;
         if (hasItem) {
@@ -370,11 +370,11 @@ class QuestProgressManager extends tmp4 {
       return applyArgumentsResult;
     };
     obj1.FRAME_STOP = function FRAME_STOP() {
-      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       applyArgumentsResult.syncHeartbeats(items, "FRAME_STOP");
     };
     obj1.EMBEDDED_ACTIVITY_UPDATE_V2 = function EMBEDDED_ACTIVITY_UPDATE_V2() {
-      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       applyArgumentsResult.syncHeartbeats(items, "EMBEDDED_ACTIVITY_UPDATE_V2", (config) => {
         let hasItem = null != config;
         if (hasItem) {
@@ -386,7 +386,7 @@ class QuestProgressManager extends tmp4 {
     };
     obj1.QUEST_APPLICATION_START_TIMER = function QUEST_APPLICATION_START_TIMER(questId) {
       questId = questId.questId;
-      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       applyArgumentsResult.syncHeartbeats(items, "QUEST_APPLICATION_START_TIMER", (id) => {
         let tmp = null != id;
         if (tmp) {
@@ -396,7 +396,7 @@ class QuestProgressManager extends tmp4 {
           let hasItem = null != id;
           if (hasItem) {
             const features = id.config.features;
-            hasItem = features.includes(applyArgumentsResult(6782).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(applyArgumentsResult(6902).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           tmp = hasItem;
         }

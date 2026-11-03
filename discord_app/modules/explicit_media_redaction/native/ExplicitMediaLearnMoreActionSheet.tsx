@@ -10,12 +10,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7466).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1072);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     paddingVertical: nativeDefault.space.PX_24,
@@ -62,7 +62,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const shouldAgeVerifyForExplicitMedia = channelId(attachmentId[9]).useShouldAgeVerifyForExplicitMedia();
   let intl = channelId(attachmentId[10]).intl;
   let stringResult = intl.string(channelId(attachmentId[10]).t["5e0geG"]);
-  const items = [isVerifiedTeen, shouldAgeVerifyForExplicitMedia];
+  items = [isVerifiedTeen, shouldAgeVerifyForExplicitMedia];
   const memo = embedId.useMemo(() => {
     let tmp = isVerifiedTeen;
     if (isVerifiedTeen) {
@@ -119,7 +119,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const obj6 = {
     style: tmp.infoHeader,
     accessibilityRole: "header",
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

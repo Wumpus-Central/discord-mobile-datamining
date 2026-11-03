@@ -11,7 +11,7 @@ require = fn;
 const AgeGateConstants = fn(1097);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8, AgeGateType: closure_9 } = AgeGateConstants);
 const Constants = fn(1072);
-({ ChannelTypes: c10, GuildNSFWContentLevel: closure_11 } = Constants);
+({ ChannelTypes: closure_10, GuildNSFWContentLevel: closure_11 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -48,8 +48,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6734).getAgeGateType(source);
-  let obj = source(6734);
+  importDefault = source(6854).getAgeGateType(source);
+  let obj = source(6854);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -62,7 +62,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -14,27 +14,27 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-cod
 export default value;
 export { __INTERNAL_VIEW_CONFIG };
 export const Commands = {
-  scrollTo(arg0, arg1, arg2, arg3, arg4) {
-    const items = [arg1, arg2, arg3, arg4];
-    renderElement.dispatchCommand(arg0, "scrollTo", items);
+  scrollTo(nodeFromPublicInstance, arg1, arg2, arg3, arg4) {
+    items = [arg1, arg2, arg3, arg4];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollTo", items);
   },
-  scrollToBottom(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "scrollToBottom", items);
+  scrollToBottom(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollToBottom", items);
   },
-  scrollIntoView(arg0, arg1, arg2, arg3) {
-    const items = [arg1, arg2, arg3];
-    renderElement.dispatchCommand(arg0, "scrollIntoView", items);
+  scrollIntoView(nodeFromPublicInstance, arg1, arg2, arg3) {
+    items = [arg1, arg2, arg3];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "scrollIntoView", items);
   },
-  updateRows(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
-    const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
-    renderElement.dispatchCommand(arg0, "updateRows", items);
+  updateRows(nodeFromPublicInstance, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+    items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "updateRows", items);
   },
-  clearRows(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "clearRows", items);
+  clearRows(nodeFromPublicInstance, arg1) {
+    items = [arg1];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "clearRows", items);
   },
-  fadeIn(arg0) {
-    renderElement.dispatchCommand(arg0, "fadeIn", []);
+  fadeIn(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "fadeIn", []);
   }
 };

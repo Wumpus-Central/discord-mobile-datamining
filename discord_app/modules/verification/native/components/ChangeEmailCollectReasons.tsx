@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(7057);
+const VerificationConstants = fn(7183);
 ({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,
@@ -36,7 +36,7 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
   let navigation;
   let callback1;
   const tmp = closure_12();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = changeEmailReason(navigation[8]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
@@ -73,7 +73,7 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
     const obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

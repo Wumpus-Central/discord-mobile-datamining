@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ export function UserNameplateRow(onPressOut) {
   }
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp7[1];
-  const items = [onPressIn];
+  items = [onPressIn];
   const items1 = [onPressOut];
   const callback = noop.useCallback((arg0) => {
     closure_2(true);

@@ -12,12 +12,12 @@ export default function usePipPosition() {
   const tmp = _slicedToArray(
     noop.useState(() => {
       const Storage = closure_0(510).Storage;
-      return Storage.get(CameraPreviewPosition, closure_0(11707).DEFAULT_PIP_POSITION);
+      return Storage.get(CameraPreviewPosition, closure_0(11844).DEFAULT_PIP_POSITION);
     }),
     2,
   );
   closure_0 = tmp[1];
-  const items = [
+  items = [
     tmp[0],
     noop.useCallback((arg0) => {
       const Storage = Storage2.Storage;

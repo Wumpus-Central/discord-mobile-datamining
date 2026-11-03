@@ -1,5 +1,5 @@
 // discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx
-import sortedIndexByDefault from "../../../../_runtime/04942_sortedIndexBy.js";
+import sortedIndexByDefault from "../../../../_runtime/05069_sortedIndexBy.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 let closure_3 = [];
@@ -48,7 +48,7 @@ prototype["indexes"] = function indexes() {
         const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
           let tmp9 = _slicedToArray(tmp6, 2);
-          let items = [];
+          items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp9[1], 0);
           obj[tmp9[0]] = items;
           continue;
@@ -198,7 +198,7 @@ prototype["delete"] = function delete(arg0) {
 prototype["getIndex"] = function getIndex(arg0) {
   let tmp2 = this.valueIndexes[arg0];
   if (null == tmp2) {
-    const items = [];
+    items = [];
     tmp.valueIndexes[arg0] = items;
     tmp2 = items;
   }

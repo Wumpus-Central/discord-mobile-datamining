@@ -8,14 +8,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9528).NitroWheelIcon,
+  IconComponent: fn(9656).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then(
@@ -60,7 +60,7 @@ const pressable = SettingBuilders.createPressable({
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
-    const items = [UserStore];
+    items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {

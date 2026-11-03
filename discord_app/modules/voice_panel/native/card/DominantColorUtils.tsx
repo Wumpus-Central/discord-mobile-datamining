@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../../_runtime/01451_priv.js";
+import privDefault from "../../../../../_runtime/01453_priv.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -53,7 +53,7 @@ export function useDominantRGBFromImage(arg0) {
   }
   const tmp7 = _slicedToArray(noop.useState(hexToRgbResult), 2);
   dependencyMap = tmp7[1];
-  const items = [arg0];
+  items = [arg0];
   const effect1 = noop.useEffect(() => {
     value = undefined;
     if (null != closure_0) {
@@ -81,11 +81,11 @@ export function useDominantRGBFromImage(arg0) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1893).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1893);
+            let dominantColorsLocalAsset = ref(2022).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2022);
           } else {
-            dominantColorsLocalAsset = ref(1893).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1893);
+            dominantColorsLocalAsset = ref(2022).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2022);
           }
           dominantColorsLocalAsset
             .then((result) => {
@@ -137,7 +137,7 @@ export function useDominantColorFromImage(avatarURI) {
     let obj2 = require("ColorUtils");
   }
   [tmp8, dependencyMap] = noop.useState(hexToRgbResult);
-  const items = [avatarURI];
+  items = [avatarURI];
   const effect1 = noop.useEffect(() => {
     value = undefined;
     if (null != closure_0) {
@@ -165,11 +165,11 @@ export function useDominantColorFromImage(avatarURI) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1893).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1893);
+            let dominantColorsLocalAsset = ref(2022).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(2022);
           } else {
-            dominantColorsLocalAsset = ref(1893).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1893);
+            dominantColorsLocalAsset = ref(2022).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(2022);
           }
           dominantColorsLocalAsset
             .then((result) => {

@@ -5,13 +5,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const StickerPickerConstants = fn(10236);
+const StickerPickerConstants = fn(10366);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   focusedStickerPreviewContainer: {
     position: "absolute",
@@ -23,7 +23,7 @@ let closure_12 = createStyles.createStyles({
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.85)",
   },
-  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "assign" },
+  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "apply" },
   stickers: { paddingHorizontal: 16, marginBottom: 16 },
   popoutContainer: { position: "absolute", bottom: 50 },
 });
@@ -60,7 +60,7 @@ export default noop.memo(function StickerPackDetailActionSheet(stickerPack) {
   const tmp4 = _slicedToArray(first.useState(null), 2);
   const obj = analyticsPopoutType(onClose[9]);
   closure_8 = first.useRef(onClose);
-  const items = [onClose];
+  items = [onClose];
   const effect = first.useEffect(() => {
     closure_8.current = onClose;
   }, items);

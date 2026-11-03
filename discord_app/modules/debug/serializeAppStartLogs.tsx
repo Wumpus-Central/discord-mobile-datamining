@@ -99,7 +99,7 @@ export default function serializeAppStartLogs(arg0) {
               if (!tmp2) {
                 let tmp12 = diff > 5;
                 if (tmp12) {
-                  const items = ["GET_CONSTANTS", "CONVERT_CONSTANTS"];
+                  items = ["GET_CONSTANTS", "CONVERT_CONSTANTS"];
                   tmp12 = !items.some((item) => str7.includes(item));
                 }
                 tmp11 = tmp12;
@@ -169,7 +169,7 @@ export default function serializeAppStartLogs(arg0) {
     timestamp1 = tmp;
     let num2;
     let num3;
-    let items = [];
+    items = [];
     let num = 0;
     if (0 < found1.length) {
       while (true) {

@@ -42,6 +42,7 @@ function disconnect() {
       MessageActionCreatorsDefault.sendBotMessage(
         currentClientVoiceChannelId1,
         intl.formatToPlainString(util.t.XYof5G, { number: 3 }),
+        "call_idle_disconnect",
       );
       const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(null);
     }

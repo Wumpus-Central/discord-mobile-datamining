@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 const names = ["embedded_background"];
@@ -49,7 +49,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         }
         const obj2 = { style: absoluteFillObject, children: null };
         const obj3 = { resizeMode, source: { uri: url }, style: null, onError: null };
-        const items = [hasOwnProperty.absoluteFill];
+        items = [hasOwnProperty.absoluteFill];
         const size = { width: tmp9, height: tmp10, borderRadius };
         items[1] = size;
         obj3.style = items;

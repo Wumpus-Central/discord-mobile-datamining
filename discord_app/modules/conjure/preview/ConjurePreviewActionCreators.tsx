@@ -20,7 +20,7 @@ let closure_8 = async function _loadConjurePreviewDm() {
   closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
   return closure_129_1.id;
 };
-let closure_4 = fn(4867).createChannelRecordFromServer;
+let closure_4 = fn(4994).createChannelRecordFromServer;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
@@ -45,6 +45,9 @@ export function reloadConjureProjectFrames(projectId) {
 }
 export function setBuilderPreviewApplicationId(applicationId) {
   DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId });
+}
+export function selectConjureGameCapture(projectId, captureId) {
+  DispatcherDefault.dispatch({ type: "CONJURE_GAME_CAPTURE_SELECT", projectId, captureId });
 }
 export function setBuilderPreviewMobile(enabled) {
   DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled });

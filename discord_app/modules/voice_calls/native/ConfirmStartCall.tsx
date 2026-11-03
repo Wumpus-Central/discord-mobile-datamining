@@ -16,7 +16,7 @@ function ConfirmStartCall(onConfirm) {
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t.rimG2R);
   obj3.onPress = onConfirm.onConfirm;
-  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
+  items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
   const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["ETE/oC"]);

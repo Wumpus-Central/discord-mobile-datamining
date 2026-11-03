@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { dismissible: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function ConjureTipInlineCallout(arg0) {
   let tmp2 = children;
   if (null != onDismiss) {
     const obj = { style: tmp.dismissible, children: null };
-    const items = [children];
+    items = [children];
     const obj2 = {
       variant: "tertiary",
       size: "sm",

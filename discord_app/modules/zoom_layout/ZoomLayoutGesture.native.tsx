@@ -1,163 +1,187 @@
 // discord_app/modules/zoom_layout/ZoomLayoutGesture.native.tsx
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../_runtime/05303_LegacyBaseButton.js";
-import spring from "../../design/animation/reanimated/spring/spring.tsx";
+import _modDef1652 from "../../../_runtime/metro/01652__.js";
+import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const jsx = fn(21).jsx;
-let SPRING_CONFIG = { damping: 20, stiffness: 250, overshootClamping: true };
-let c7 = 0.3;
+let jsx = fn(21).jsx;
+let deceleration = { damping: 20, stiffness: 250, overshootClamping: true };
+let items = [
+  {
+    code: "(function resistTranslation_ZoomLayoutGestureNativeTsx1(position,bound){let[PAN_EDGE_RESISTANCE]=this.__closure;const clamped=Math.max(-bound,Math.min(bound,position));return clamped+(position-clamped)*PAN_EDGE_RESISTANCE;})",
+  },
+  0.3,
+];
+let closure_129_0;
+[tmp2, tmp3] = items;
 function resistTranslation(arg0, arg1) {
   const bound = Math.max(-arg1, Math.min(arg1, arg0));
-  return bound + (arg0 - bound) * c7;
+  return bound + (arg0 - bound) * require;
 }
-resistTranslation.__closure = { PAN_EDGE_RESISTANCE: 0.3 };
-resistTranslation.__workletHash = 4111916050524;
-resistTranslation.__initData = {
-  code: "function resistTranslation_ZoomLayoutGestureNativeTsx1(position,bound){const{PAN_EDGE_RESISTANCE}=this.__closure;const clamped=Math.max(-bound,Math.min(bound,position));return clamped+(position-clamped)*PAN_EDGE_RESISTANCE;}",
-};
-const __initData = {
-  code: "function ZoomLayoutGestureNativeTsx3(finished){const{bound,translation,withSpring,SPRING_CONFIG}=this.__closure;if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));}",
-};
-function releaseTranslation(get, bound, arg2) {
-  _require = get;
-  closure_1 = bound;
+let items1 = [tmp3];
+resistTranslation.__closure = items1;
+resistTranslation.__workletHash = 234320700197;
+resistTranslation.__initData = tmp2;
+let items2 = [
+  {
+    code: "(function releaseTranslation_ZoomLayoutGestureNativeTsx3(translation,bound,velocity){let[MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION,_worklet_10161841114284_init_data]=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function releaseTranslation_ZoomLayoutGestureNativeTsx3([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG]){const ZoomLayoutGestureNativeTsx2=function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));};ZoomLayoutGestureNativeTsx2.__closure=[bound,translation,withSpring,SPRING_CONFIG];ZoomLayoutGestureNativeTsx2.__workletHash=10161841114284;ZoomLayoutGestureNativeTsx2.__initData=_worklet_10161841114284_init_data;return ZoomLayoutGestureNativeTsx2;}([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG])));}})",
+  },
+  4000,
+  fn(5379).accessibilityPreferencesSharedValue,
+  fn(5757).withSpring,
+  deceleration,
+  48,
+  fn(1652).withDecay,
+  0.998,
+  {
+    code: "(function ZoomLayoutGestureNativeTsx2(finished){let[bound,translation,withSpring,SPRING_CONFIG]=this.__closure;if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));})",
+  },
+];
+let closure_130_0;
+let closure_130_1;
+let closure_130_2;
+let closure_130_3;
+let closure_130_4;
+let closure_130_5;
+let closure_130_6;
+let closure_130_7;
+[tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12] = items2;
+function releaseTranslation(get, arg1, arg2) {
   value = get.get();
-  bound = Math.max(-bound, Math.min(bound, value));
-  const bound1 = Math.max(-4000, Math.min(4000, arg2));
-  const accessibilityPreferencesSharedValue =
-    require("reanimated/AccessibilityPreferencesSharedValue").accessibilityPreferencesSharedValue;
-  if (accessibilityPreferencesSharedValue.get().reduceMotion) {
+  let bound = Math.max(-arg1, Math.min(arg1, value));
+  const bound1 = Math.max(-require, Math.min(require, arg2));
+  if (importDefault.get().reduceMotion) {
     let result = get.set(bound);
   } else {
     if (value === bound) {
-      if (0 !== bound) {
+      if (0 !== arg1) {
         let _Math = Math;
         let _Math2 = Math;
-        const bound2 = Math.min(48, 0.02 * Math.abs(bound1));
-        const SPRING_CONFIG = { velocity: bound1, deceleration: 0.998, clamp: null };
-        const items = [-bound - bound2, bound + bound2];
-        SPRING_CONFIG.clamp = items;
-        const fn = function c(arg0) {
-          if (arg0) {
-            const _Math = Math;
-            const _Math2 = Math;
-            bound = Math.max(-closure_1, Math.min(closure_1, get.get()));
-            if (bound !== get.get()) {
-              const result = get.set(spring.withSpring(bound, get));
+        const bound2 = Math.min(View, 0.02 * Math.abs(bound1));
+        deceleration = { velocity: bound1, deceleration: null, clamp: null };
+        deceleration.deceleration = deceleration;
+        items = [-arg1 - bound2, arg1 + bound2];
+        deceleration.clamp = items;
+        const items1 = [resistTranslation, arg1, get, dependencyMap, noop];
+        c0 = undefined;
+        c1 = undefined;
+        c2 = undefined;
+        c3 = undefined;
+        [tmp6, tmp7, tmp8, tmp9, tmp10] = items1;
+        class ZoomLayoutGestureNativeTsx2 {
+          constructor(arg0) {
+            if (get) {
+              tmp = globalThis;
+              _Math = Math;
+              tmp2 = closure_0;
+              _Math2 = Math;
+              obj = closure_1;
+              tmp3 = -closure_0;
+              bound = Math.max(tmp3, Math.min(closure_0, closure_1.get()));
+              if (bound !== closure_1.get()) {
+                tmp5 = closure_2;
+                tmp6 = closure_3;
+                result = obj.set(closure_2(bound, closure_3));
+              }
             }
-            const tmp3 = -closure_1;
+            return;
           }
-        };
-        let obj2 = { bound, translation: get, withSpring: tmp5(5637).withSpring, SPRING_CONFIG };
-        fn.__closure = obj2;
-        fn.__workletHash = 7034972790996;
-        fn.__initData = __initData;
-        const result1 = get.set(tmp5(5095).withDecay(SPRING_CONFIG, fn));
-        const tmp5Result = tmp5(5095);
+        }
+        const items2 = [tmp7, tmp8, tmp9, tmp10];
+        ZoomLayoutGestureNativeTsx2.__closure = items2;
+        ZoomLayoutGestureNativeTsx2.__workletHash = 10161841114284;
+        ZoomLayoutGestureNativeTsx2.__initData = tmp6;
+        const result1 = get.set(<deceleration {...ZoomLayoutGestureNativeTsx2} />);
       }
     }
-    const result2 = get.set(tmp5(5637).withSpring(bound, SPRING_CONFIG));
-    const tmp5Result2 = tmp5(5637);
+    const result2 = get.set(dependencyMap(bound, noop));
   }
-  const tmp2 = -bound;
+  const tmp2 = -arg1;
+  const tmp4 = -require;
 }
-releaseTranslation.__closure = {
-  MAX_PAN_VELOCITY: 4000,
-  accessibilityPreferencesSharedValue: fn(5256).accessibilityPreferencesSharedValue,
-  withSpring: fn(5637).withSpring,
-  SPRING_CONFIG,
-  MAX_FLING_OVERSHOOT: 48,
-  withDecay: fn(5095).withDecay,
-  PAN_DECELERATION: 0.998,
+let items3 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
+releaseTranslation.__closure = items3;
+releaseTranslation.__workletHash = 13668627211373;
+releaseTranslation.__initData = tmp4;
+const createStyles = fn(5141);
+let closure_9 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
+let closure_10 = {
+  code: "(function ZoomLayoutGestureNativeTsx4(){let[cancelAnimation,scale,translateX,translateY]=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);})",
 };
-releaseTranslation.__workletHash = 13339877968106;
-releaseTranslation.__initData = {
-  code: "function releaseTranslation_ZoomLayoutGestureNativeTsx2(translation,bound,velocity){const{MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION}=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));}));}}",
+let closure_11 = {
+  code: "(function ZoomLayoutGestureNativeTsx5(zoom){let[contentWidth,containerWidth,contentHeight,containerHeight]=this.__closure;return{x:Math.max(0,(contentWidth*zoom-containerWidth.get())/2),y:Math.max(0,(contentHeight*zoom-containerHeight.get())/2)};})",
 };
-const createStyles = fn(5014);
-let closure_11 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
 let closure_12 = {
-  code: "function ZoomLayoutGestureNativeTsx4(){const{cancelAnimation,scale,translateX,translateY}=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);}",
+  code: "(function ZoomLayoutGestureNativeTsx6(x,y,zoom){let[getTranslationBounds]=this.__closure;const bounds=getTranslationBounds(zoom);return{x:Math.max(-bounds.x,Math.min(bounds.x,x)),y:Math.max(-bounds.y,Math.min(bounds.y,y))};})",
 };
 let closure_13 = {
-  code: "function ZoomLayoutGestureNativeTsx5(zoom){const{contentWidth,containerWidth,contentHeight,containerHeight}=this.__closure;return{x:Math.max(0,(contentWidth*zoom-containerWidth.get())/2),y:Math.max(0,(contentHeight*zoom-containerHeight.get())/2)};}",
+  code: "(function ZoomLayoutGestureNativeTsx7(){let[clampTranslation,translateX,translateY,scale,withSpring,SPRING_CONFIG]=this.__closure;const position=clampTranslation(translateX.get(),translateY.get(),scale.get());if(position.x!==translateX.get())translateX.set(withSpring(position.x,SPRING_CONFIG));if(position.y!==translateY.get())translateY.set(withSpring(position.y,SPRING_CONFIG));})",
 };
 let closure_14 = {
-  code: "function ZoomLayoutGestureNativeTsx6(x,y,zoom){const{getTranslationBounds}=this.__closure;const bounds=getTranslationBounds(zoom);return{x:Math.max(-bounds.x,Math.min(bounds.x,x)),y:Math.max(-bounds.y,Math.min(bounds.y,y))};}",
+  code: "(function ZoomLayoutGestureNativeTsx8(event){let[stopAnimation,pinching,canFling,pinchStart,scale,translateX,translateY,containerWidth,containerHeight]=this.__closure;stopAnimation();pinching.set(true);canFling.set(false);pinchStart.set({scale:scale.get(),x:translateX.get(),y:translateY.get(),focalX:event.focalX-containerWidth.get()/2,focalY:event.focalY-containerHeight.get()/2,gestureScale:event.scale,pointers:event.numberOfPointers});})",
 };
 let closure_15 = {
-  code: "function ZoomLayoutGestureNativeTsx7(){const{clampTranslation,translateX,translateY,scale,withSpring,SPRING_CONFIG}=this.__closure;const position=clampTranslation(translateX.get(),translateY.get(),scale.get());if(position.x!==translateX.get())translateX.set(withSpring(position.x,SPRING_CONFIG));if(position.y!==translateY.get())translateY.set(withSpring(position.y,SPRING_CONFIG));}",
+  code: "(function ZoomLayoutGestureNativeTsx9(event){let[containerWidth,containerHeight,pinchStart,scale,translateX,translateY,minimumZoomScale,maximumZoomScale,clampTranslation,panPosition]=this.__closure;if(event.numberOfPointers<2)return;const focalX=event.focalX-containerWidth.get()/2;const focalY=event.focalY-containerHeight.get()/2;const start=pinchStart.get();if(event.numberOfPointers!==start.pointers){pinchStart.set({scale:scale.get(),x:translateX.get(),y:translateY.get(),focalX:focalX,focalY:focalY,gestureScale:event.scale,pointers:event.numberOfPointers});return;}const nextScale=Math.max(minimumZoomScale,Math.min(maximumZoomScale,start.scale*event.scale/start.gestureScale));const ratio=nextScale/start.scale;const position=clampTranslation(focalX+(start.x-start.focalX)*ratio,focalY+(start.y-start.focalY)*ratio,nextScale);scale.set(nextScale);translateX.set(position.x);translateY.set(position.y);panPosition.set(position);})",
 };
 let closure_16 = {
-  code: "function ZoomLayoutGestureNativeTsx8(){const{pinching,returnToBounds}=this.__closure;if(!pinching.get())return;pinching.set(false);returnToBounds();}",
+  code: "(function ZoomLayoutGestureNativeTsx10(){let[pinching,returnToBounds]=this.__closure;if(!pinching.get())return;pinching.set(false);returnToBounds();})",
 };
 let closure_17 = {
-  code: "function ZoomLayoutGestureNativeTsx9(event){const{containerWidth,containerHeight,pinchStart,scale,translateX,translateY,minimumZoomScale,maximumZoomScale,clampTranslation,panPosition}=this.__closure;if(event.numberOfPointers<2)return;const focalX=event.focalX-containerWidth.get()/2;const focalY=event.focalY-containerHeight.get()/2;const start=pinchStart.get();if(event.numberOfPointers!==start.pointers){pinchStart.set({scale:scale.get(),x:translateX.get(),y:translateY.get(),focalX:focalX,focalY:focalY,gestureScale:event.scale,pointers:event.numberOfPointers});return;}const nextScale=Math.max(minimumZoomScale,Math.min(maximumZoomScale,start.scale*event.scale/start.gestureScale));const ratio=nextScale/start.scale;const position=clampTranslation(focalX+(start.x-start.focalX)*ratio,focalY+(start.y-start.focalY)*ratio,nextScale);scale.set(nextScale);translateX.set(position.x);translateY.set(position.y);panPosition.set(position);}",
+  code: "(function ZoomLayoutGestureNativeTsx11(){let[panInterrupted,canFling,scale,minimumZoomScale,stopAnimation,touchStoppedAnimation]=this.__closure;panInterrupted.set(false);canFling.set(false);if(scale.get()<=minimumZoomScale)return;stopAnimation();touchStoppedAnimation.set(true);})",
 };
 let closure_18 = {
-  code: "function ZoomLayoutGestureNativeTsx10(event){const{stopAnimation,pinching,canFling,pinchStart,scale,translateX,translateY,containerWidth,containerHeight}=this.__closure;stopAnimation();pinching.set(true);canFling.set(false);pinchStart.set({scale:scale.get(),x:translateX.get(),y:translateY.get(),focalX:event.focalX-containerWidth.get()/2,focalY:event.focalY-containerHeight.get()/2,gestureScale:event.scale,pointers:event.numberOfPointers});}",
+  code: "(function ZoomLayoutGestureNativeTsx12(event,manager){let[panInterrupted,scale,minimumZoomScale,canFling]=this.__closure;if(panInterrupted.get())return;if(event.numberOfTouches===1&&scale.get()>minimumZoomScale){canFling.set(true);manager.activate();}})",
 };
 let closure_19 = {
-  code: "function ZoomLayoutGestureNativeTsx11(_,success){const{touchStoppedAnimation,pinching,returnToBounds}=this.__closure;const shouldReturn=touchStoppedAnimation.get();touchStoppedAnimation.set(false);if(!success&&shouldReturn&&!pinching.get())returnToBounds();}",
+  code: "(function ZoomLayoutGestureNativeTsx13(){let[panInterrupted,stopAnimation,translateX,translateY,clampTranslation,scale,panPosition,PAN_EDGE_RESISTANCE]=this.__closure;if(panInterrupted.get())return;stopAnimation();const x=translateX.get();const y=translateY.get();const clamped=clampTranslation(x,y,scale.get());panPosition.set({x:clamped.x+(x-clamped.x)/PAN_EDGE_RESISTANCE,y:clamped.y+(y-clamped.y)/PAN_EDGE_RESISTANCE});})",
 };
 let closure_20 = {
-  code: "function ZoomLayoutGestureNativeTsx12(event,success){const{panInterrupted,pinching,canFling,returnToBounds,getTranslationBounds,scale,releaseTranslation,translateX,translateY}=this.__closure;if(panInterrupted.get())return;if(!success||pinching.get()||event.numberOfPointers>1)return;if(!canFling.get()){returnToBounds();return;}const bounds=getTranslationBounds(scale.get());releaseTranslation(translateX,bounds.x,event.velocityX);releaseTranslation(translateY,bounds.y,event.velocityY);}",
+  code: "(function ZoomLayoutGestureNativeTsx14(event){let[panInterrupted,scale,minimumZoomScale,panPosition,getTranslationBounds,translateX,resistTranslation,translateY]=this.__closure;if(panInterrupted.get()||event.numberOfPointers!==1||scale.get()<=minimumZoomScale)return;const previous=panPosition.get();const position={x:previous.x+event.changeX,y:previous.y+event.changeY};panPosition.set(position);const bounds=getTranslationBounds(scale.get());translateX.set(resistTranslation(position.x,bounds.x));translateY.set(resistTranslation(position.y,bounds.y));})",
 };
 let closure_21 = {
-  code: "function ZoomLayoutGestureNativeTsx13(event){const{panInterrupted,scale,minimumZoomScale,panPosition,getTranslationBounds,translateX,resistTranslation,translateY}=this.__closure;if(panInterrupted.get()||event.numberOfPointers!==1||scale.get()<=minimumZoomScale)return;const previous=panPosition.get();const position={x:previous.x+event.changeX,y:previous.y+event.changeY};panPosition.set(position);const bounds=getTranslationBounds(scale.get());translateX.set(resistTranslation(position.x,bounds.x));translateY.set(resistTranslation(position.y,bounds.y));}",
+  code: "(function ZoomLayoutGestureNativeTsx15(event,success){let[panInterrupted,pinching,canFling,returnToBounds,getTranslationBounds,scale,releaseTranslation,translateX,translateY]=this.__closure;if(panInterrupted.get())return;if(!success||pinching.get()||event.numberOfPointers>1)return;if(!canFling.get()){returnToBounds();return;}const bounds=getTranslationBounds(scale.get());releaseTranslation(translateX,bounds.x,event.velocityX);releaseTranslation(translateY,bounds.y,event.velocityY);})",
 };
 let closure_22 = {
-  code: "function ZoomLayoutGestureNativeTsx14(){const{panInterrupted,stopAnimation,translateX,translateY,clampTranslation,scale,panPosition,PAN_EDGE_RESISTANCE}=this.__closure;if(panInterrupted.get())return;stopAnimation();const x=translateX.get();const y=translateY.get();const clamped=clampTranslation(x,y,scale.get());panPosition.set({x:clamped.x+(x-clamped.x)/PAN_EDGE_RESISTANCE,y:clamped.y+(y-clamped.y)/PAN_EDGE_RESISTANCE});}",
+  code: "(function ZoomLayoutGestureNativeTsx16(_,success){let[touchStoppedAnimation,pinching,returnToBounds]=this.__closure;const shouldReturn=touchStoppedAnimation.get();touchStoppedAnimation.set(false);if(!success&&shouldReturn&&!pinching.get())returnToBounds();})",
 };
 let closure_23 = {
-  code: "function ZoomLayoutGestureNativeTsx15(event,manager){const{panInterrupted,scale,minimumZoomScale,canFling}=this.__closure;if(panInterrupted.get())return;if(event.numberOfTouches===1&&scale.get()>minimumZoomScale){canFling.set(true);manager.activate();}}",
+  code: "(function ZoomLayoutGestureNativeTsx17(){let[translateX,translateY,scale]=this.__closure;return{transform:[{translateX:translateX.get()},{translateY:translateY.get()},{scale:scale.get()}]};})",
 };
 let closure_24 = {
-  code: "function ZoomLayoutGestureNativeTsx16(){const{panInterrupted,canFling,scale,minimumZoomScale,stopAnimation,touchStoppedAnimation}=this.__closure;panInterrupted.set(false);canFling.set(false);if(scale.get()<=minimumZoomScale)return;stopAnimation();touchStoppedAnimation.set(true);}",
+  code: "(function ZoomLayoutGestureNativeTsx18(){let[stopAnimation,touchStoppedAnimation,panInterrupted,minimumZoomScale,maximumZoomScale,requestedScale,scale,x,containerWidth,y,containerHeight,clampTranslation,translateX,translateY,animated,withSpring,SPRING_CONFIG]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);const nextScale=Math.max(minimumZoomScale,Math.min(maximumZoomScale,requestedScale));const ratio=nextScale/scale.get();const focalX=x-containerWidth.get()/2;const focalY=y-containerHeight.get()/2;const position=clampTranslation(focalX+(translateX.get()-focalX)*ratio,focalY+(translateY.get()-focalY)*ratio,nextScale);scale.set(animated?withSpring(nextScale,SPRING_CONFIG):nextScale);translateX.set(animated?withSpring(position.x,SPRING_CONFIG):position.x);translateY.set(animated?withSpring(position.y,SPRING_CONFIG):position.y);})",
 };
-const __initData2 = {
-  code: "function ZoomLayoutGestureNativeTsx17(){const{translateX,translateY,scale}=this.__closure;return{transform:[{translateX:translateX.get()},{translateY:translateY.get()},{scale:scale.get()}]};}",
-};
-let closure_26 = {
-  code: "function ZoomLayoutGestureNativeTsx18(){const{stopAnimation,touchStoppedAnimation,panInterrupted,minimumZoomScale,maximumZoomScale,requestedScale,scale,x,containerWidth,y,containerHeight,clampTranslation,translateX,translateY,animated,withSpring,SPRING_CONFIG}=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);const nextScale=Math.max(minimumZoomScale,Math.min(maximumZoomScale,requestedScale));const ratio=nextScale/scale.get();const focalX=x-containerWidth.get()/2;const focalY=y-containerHeight.get()/2;const position=clampTranslation(focalX+(translateX.get()-focalX)*ratio,focalY+(translateY.get()-focalY)*ratio,nextScale);scale.set(animated?withSpring(nextScale,SPRING_CONFIG):nextScale);translateX.set(animated?withSpring(position.x,SPRING_CONFIG):position.x);translateY.set(animated?withSpring(position.y,SPRING_CONFIG):position.y);}",
-};
-let closure_27 = {
-  code: "function ZoomLayoutGestureNativeTsx19(){const{stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY}=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);}",
-};
-let obj2 = {
-  MAX_PAN_VELOCITY: 4000,
-  accessibilityPreferencesSharedValue: fn(5256).accessibilityPreferencesSharedValue,
-  withSpring: fn(5637).withSpring,
-  SPRING_CONFIG,
-  MAX_FLING_OVERSHOOT: 48,
-  withDecay: fn(5095).withDecay,
-  PAN_DECELERATION: 0.998,
+let closure_25 = {
+  code: "(function ZoomLayoutGestureNativeTsx19(){let[stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/zoom_layout/ZoomLayoutGesture.native.tsx");
 
 export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   onCreateGesture = onCreateGesture.onCreateGesture;
+  _require = onCreateGesture;
   const onLayout = onCreateGesture.onLayout;
+  importDefault = onLayout;
   let flag = onCreateGesture.gestureEnabled;
   ({ ref, children, style } = onCreateGesture);
   if (flag === undefined) {
     flag = true;
   }
+  dependencyMap = flag;
   let num = onCreateGesture.minimumZoomScale;
   if (num === undefined) {
     num = 1;
   }
+  noop = num;
   let num2 = onCreateGesture.maximumZoomScale;
   if (num2 === undefined) {
     num2 = 4;
   }
-  const contentWidth = onCreateGesture.contentWidth;
-  const contentHeight = onCreateGesture.contentHeight;
-  const zoomScale = onCreateGesture.zoomScale;
+  c4 = num2;
+  ({ contentWidth, contentHeight, zoomScale } = onCreateGesture);
+  jsx = zoomScale;
   let sharedValue3;
   let callback;
   let callback1;
@@ -166,25 +190,25 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   let memo;
   let memo1;
   const tmp = sharedValue3();
-  const sharedValue = onCreateGesture(flag[5]).useSharedValue(0);
-  obj = onCreateGesture(flag[5]);
-  const sharedValue1 = onCreateGesture(flag[5]).useSharedValue(0);
-  let obj2 = onCreateGesture(flag[5]);
-  const sharedValue2 = onCreateGesture(flag[5]).useSharedValue(0);
-  let obj3 = onCreateGesture(flag[5]);
-  sharedValue3 = onCreateGesture(flag[5]).useSharedValue(0);
-  let obj4 = onCreateGesture(flag[5]);
-  const sharedValue4 = onCreateGesture(flag[5]).useSharedValue({ x: 0, y: 0 });
-  let obj5 = onCreateGesture(flag[5]);
-  const sharedValue5 = onCreateGesture(flag[5]).useSharedValue(false);
-  const obj6 = onCreateGesture(flag[5]);
-  const sharedValue6 = onCreateGesture(flag[5]).useSharedValue(false);
-  const obj7 = onCreateGesture(flag[5]);
-  const sharedValue7 = onCreateGesture(flag[5]).useSharedValue(false);
-  const obj8 = onCreateGesture(flag[5]);
-  const sharedValue8 = onCreateGesture(flag[5]).useSharedValue(false);
-  const obj9 = onCreateGesture(flag[5]);
-  const sharedValue9 = onCreateGesture(flag[5]).useSharedValue({
+  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj = require("../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj2 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj3 = require("../../../_runtime/metro/01652__.js");
+  sharedValue3 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const obj4 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue4 = require("../../../_runtime/metro/01652__.js").useSharedValue({ x: 0, y: 0 });
+  const obj5 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue5 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj6 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue6 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj7 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue7 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj8 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue8 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj9 = require("../../../_runtime/metro/01652__.js");
+  const sharedValue9 = require("../../../_runtime/metro/01652__.js").useSharedValue({
     scale: 1,
     x: 0,
     y: 0,
@@ -193,44 +217,60 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
     gestureScale: 1,
     pointers: 0,
   });
-  class V {
+  items = [
+    sharedValue4,
+    require("../../../_runtime/metro/01652__.js").cancelAnimation,
+    zoomScale,
+    sharedValue2,
+    sharedValue3,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp14, tmp15, tmp16, tmp17, tmp18] = items;
+  class ZoomLayoutGestureNativeTsx4 {
     constructor() {
-      obj = closure_0(closure_2[5]);
-      cancelAnimationResult = obj.cancelAnimation(zoomScale);
-      obj2 = closure_0(closure_2[5]);
-      cancelAnimationResult1 = obj2.cancelAnimation(closure_10);
-      obj3 = closure_0(closure_2[5]);
-      cancelAnimationResult2 = obj3.cancelAnimation(closure_11);
+      tmp = closure_0(closure_1);
+      tmp2 = closure_0(closure_2);
+      tmp3 = closure_0(closure_3);
       return;
     }
   }
-  const obj10 = onCreateGesture(flag[5]);
-  V.__closure = {
-    cancelAnimation: onCreateGesture(flag[5]).cancelAnimation,
-    scale: zoomScale,
-    translateX: sharedValue2,
-    translateY: sharedValue3,
-  };
-  V.__workletHash = 10792934756616;
-  V.__initData = sharedValue4;
-  let items = [zoomScale, sharedValue2, sharedValue3];
-  callback = num.useCallback(V, items);
-  let fn = function k(arg0) {
-    const point = { x: null, y: null };
-    const result = contentWidth * arg0;
-    point.x = Math.max(0, (result - sharedValue.get()) / 2);
-    const result1 = contentHeight * arg0;
-    point.y = Math.max(0, (result1 - sharedValue1.get()) / 2);
-    return point;
-  };
-  fn.__closure = { contentWidth, containerWidth: sharedValue, contentHeight, containerHeight: sharedValue1 };
-  fn.__workletHash = 11198863760158;
-  fn.__initData = sharedValue5;
-  const items1 = [contentWidth, contentHeight, sharedValue, sharedValue1];
-  callback1 = num.useCallback(fn, items1);
-  class B {
+  let items1 = [tmp15, tmp16, tmp17, tmp18];
+  ZoomLayoutGestureNativeTsx4.__closure = items1;
+  ZoomLayoutGestureNativeTsx4.__workletHash = 12077393304849;
+  ZoomLayoutGestureNativeTsx4.__initData = tmp14;
+  let items2 = [zoomScale, sharedValue2, sharedValue3];
+  callback = noop.useCallback(ZoomLayoutGestureNativeTsx4, items2);
+  let items3 = [sharedValue5, contentWidth, sharedValue, contentHeight, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp20, tmp21, tmp22, tmp23, tmp24] = items3;
+  class ZoomLayoutGestureNativeTsx5 {
+    constructor(arg0) {
+      point = { x: null, y: null };
+      result = closure_0 * onCreateGesture;
+      point.x = Math.max(0, (result - closure_1.get()) / 2);
+      result1 = closure_2 * onCreateGesture;
+      point.y = Math.max(0, (result1 - closure_3.get()) / 2);
+      return point;
+    }
+  }
+  let items4 = [tmp21, tmp22, tmp23, tmp24];
+  ZoomLayoutGestureNativeTsx5.__closure = items4;
+  ZoomLayoutGestureNativeTsx5.__workletHash = 4656744008551;
+  ZoomLayoutGestureNativeTsx5.__initData = tmp20;
+  let items5 = [contentWidth, contentHeight, sharedValue, sharedValue1];
+  callback1 = obj11.useCallback(ZoomLayoutGestureNativeTsx5, items5);
+  let items6 = [sharedValue6, callback1];
+  _require = undefined;
+  [tmp26, tmp27] = items6;
+  class ZoomLayoutGestureNativeTsx6 {
     constructor(arg0, arg1, arg2) {
-      point = closure_19(arg2);
+      point = closure_0(arg2);
       point1 = { x: null, y: null };
       tmp = -point.x;
       point1.x = Math.max(tmp, Math.min(point.x, onCreateGesture));
@@ -239,54 +279,55 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
       return point1;
     }
   }
-  B.__closure = { getTranslationBounds: callback1 };
-  B.__workletHash = 5164146873509;
-  B.__initData = sharedValue6;
-  const items2 = [callback1];
-  callback2 = num.useCallback(B, items2);
-  class W {
+  let items7 = [tmp27];
+  ZoomLayoutGestureNativeTsx6.__closure = items7;
+  ZoomLayoutGestureNativeTsx6.__workletHash = 9317273254044;
+  ZoomLayoutGestureNativeTsx6.__initData = tmp26;
+  let items8 = [callback1];
+  callback2 = obj11.useCallback(ZoomLayoutGestureNativeTsx6, items8);
+  let items9 = [
+    sharedValue7,
+    callback2,
+    sharedValue2,
+    sharedValue3,
+    zoomScale,
+    require("spring/spring").withSpring,
+    sharedValue,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  jsx = undefined;
+  [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35] = items9;
+  class ZoomLayoutGestureNativeTsx7 {
     constructor() {
-      obj = closure_10;
-      obj2 = closure_11;
-      value = closure_10.get();
-      value1 = closure_11.get();
-      point = closure_20(value, value1, zoomScale.get());
-      if (point.x !== closure_10.get()) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        obj3 = closure_0(closure_2[4]);
-        tmp5 = closure_6;
-        result = obj.set(obj3.withSpring(point.x, closure_6));
+      obj = closure_1;
+      obj2 = closure_2;
+      value = closure_1.get();
+      value1 = closure_2.get();
+      point = closure_0(value, value1, closure_3.get());
+      if (point.x !== closure_1.get()) {
+        tmp3 = closure_4;
+        tmp4 = closure_5;
+        result = obj.set(closure_4(point.x, closure_5));
       }
       if (point.y !== obj2.get()) {
-        tmp7 = closure_0;
-        tmp8 = closure_2;
-        obj4 = closure_0(closure_2[4]);
-        tmp9 = closure_6;
-        result1 = obj2.set(obj4.withSpring(point.y, closure_6));
+        tmp6 = closure_4;
+        tmp7 = closure_5;
+        result1 = obj2.set(closure_4(point.y, closure_5));
       }
       return;
     }
   }
-  const obj11 = {
-    cancelAnimation: onCreateGesture(flag[5]).cancelAnimation,
-    scale: zoomScale,
-    translateX: sharedValue2,
-    translateY: sharedValue3,
-  };
-  W.__closure = {
-    clampTranslation: callback2,
-    translateX: sharedValue2,
-    translateY: sharedValue3,
-    scale: zoomScale,
-    withSpring: onCreateGesture(flag[4]).withSpring,
-    SPRING_CONFIG: contentHeight,
-  };
-  W.__workletHash = 4090733756772;
-  W.__initData = sharedValue7;
-  const items3 = [callback2, zoomScale, sharedValue2, sharedValue3];
-  callback3 = num.useCallback(W, items3);
-  const items4 = [
+  let items10 = [tmp30, tmp31, tmp32, tmp33, tmp34, tmp35];
+  ZoomLayoutGestureNativeTsx7.__closure = items10;
+  ZoomLayoutGestureNativeTsx7.__workletHash = 13954530779581;
+  ZoomLayoutGestureNativeTsx7.__initData = tmp29;
+  let items11 = [callback2, zoomScale, sharedValue2, sharedValue3];
+  callback3 = obj11.useCallback(ZoomLayoutGestureNativeTsx7, items11);
+  const items12 = [
     flag,
     callback,
     sharedValue5,
@@ -303,112 +344,159 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
     callback2,
     callback3,
   ];
-  memo = num.useMemo(() => {
+  memo = obj11.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PinchResult = Gesture.Pinch();
-    const fn = function o(focalX) {
-      __initData3();
-      const result = sharedValue5.set(true);
-      const result1 = sharedValue6.set(false);
-      const point = {
-        scale: PAN_EDGE_RESISTANCE.get(),
-        x: sharedValue2.get(),
-        y: sharedValue3.get(),
-        focalX: focalX.focalX - sharedValue.get() / 2,
-        focalY: focalX.focalY - sharedValue1.get() / 2,
-        gestureScale: focalX.scale,
-        pointers: focalX.numberOfPointers,
-      };
-      const result2 = __initData2.set(point);
-    };
-    const __closure = {
-      stopAnimation: callback,
-      pinching: sharedValue5,
-      canFling: sharedValue6,
-      pinchStart: sharedValue9,
-      scale: zoomScale,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-      containerWidth: sharedValue,
-      containerHeight: sharedValue1,
-    };
-    fn.__closure = __closure;
-    fn.__workletHash = 8997643613873;
-    fn.__initData = __initData3;
-    const enabledResult = Gesture.Pinch().enabled(flag);
-    const fn2 = function n(numberOfPointers) {
-      if (numberOfPointers.numberOfPointers >= 2) {
-        const diff = numberOfPointers.focalX - sharedValue.get() / 2;
-        const diff1 = numberOfPointers.focalY - sharedValue1.get() / 2;
-        const point2 = __initData2.get();
-        if (numberOfPointers.numberOfPointers === point2.pointers) {
-          const _Math = Math;
-          const _Math2 = Math;
-          const bound = Math.max(num, Math.min(num2, (point2.scale * numberOfPointers.scale) / point2.gestureScale));
-          const result = bound / point2.scale;
-          const point = __initData5(
-            diff + (point2.x - point2.focalX) * result,
-            diff1 + (point2.y - point2.focalY) * result,
-            bound,
-          );
-          const result1 = PAN_EDGE_RESISTANCE.set(bound);
-          const result2 = sharedValue2.set(point.x);
-          const result3 = sharedValue3.set(point.y);
-          const result4 = sharedValue4.set(point);
-        } else {
-          const point1 = {
-            scale: PAN_EDGE_RESISTANCE.get(),
-            x: sharedValue2.get(),
-            y: sharedValue3.get(),
-            focalX: diff,
-            focalY: diff1,
-            gestureScale: null,
-            pointers: null,
-          };
-          ({ scale: obj.gestureScale, numberOfPointers: obj.pointers } = numberOfPointers);
-          const result5 = __initData2.set(point1);
+    items = [
+      closure_14,
+      callback,
+      sharedValue5,
+      sharedValue6,
+      sharedValue9,
+      c5,
+      sharedValue2,
+      sharedValue3,
+      sharedValue,
+      sharedValue1,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items;
+    class ZoomLayoutGestureNativeTsx8 {
+      constructor(arg0) {
+        tmp = closure_0();
+        result = closure_1.set(true);
+        result1 = closure_2.set(false);
+        point = {
+          scale: closure_4.get(),
+          x: closure_5.get(),
+          y: closure_6.get(),
+          focalX: arg0.focalX - closure_7.get() / 2,
+          focalY: arg0.focalY - closure_8.get() / 2,
+          gestureScale: arg0.scale,
+          pointers: arg0.numberOfPointers,
+        };
+        result2 = closure_3.set(point);
+        return;
+      }
+    }
+    const items1 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+    ZoomLayoutGestureNativeTsx8.__closure = items1;
+    ZoomLayoutGestureNativeTsx8.__workletHash = 6554303942353;
+    ZoomLayoutGestureNativeTsx8.__initData = tmp8;
+    const enabledResult = Gesture.Pinch().enabled(c2);
+    const tmp3 = c5;
+    const items2 = [
+      closure_15,
+      sharedValue,
+      sharedValue1,
+      sharedValue9,
+      tmp3,
+      sharedValue2,
+      sharedValue3,
+      c3,
+      c4,
+      callback2,
+      sharedValue4,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    c9 = undefined;
+    [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28] = items2;
+    class ZoomLayoutGestureNativeTsx9 {
+      constructor(arg0) {
+        if (arg0.numberOfPointers >= 2) {
+          tmp19 = closure_0;
+          diff = arg0.focalX - closure_0.get() / 2;
+          tmp21 = closure_1;
+          diff1 = arg0.focalY - closure_1.get() / 2;
+          obj2 = closure_2;
+          point2 = closure_2.get();
+          if (arg0.numberOfPointers === point2.pointers) {
+            tmp5 = globalThis;
+            _Math = Math;
+            tmp6 = closure_6;
+            _Math2 = Math;
+            tmp7 = closure_7;
+            bound = Math.max(closure_6, Math.min(closure_7, (point2.scale * arg0.scale) / point2.gestureScale));
+            result = bound / point2.scale;
+            tmp10 = closure_8;
+            point = closure_8(
+              diff + (point2.x - point2.focalX) * result,
+              diff1 + (point2.y - point2.focalY) * result,
+              bound,
+            );
+            tmp11 = closure_3;
+            result1 = closure_3.set(bound);
+            tmp13 = closure_4;
+            result2 = closure_4.set(point.x);
+            tmp15 = closure_5;
+            result3 = closure_5.set(point.y);
+            tmp17 = closure_9;
+            result4 = closure_9.set(point);
+          } else {
+            point1 = { scale: null, x: null, y: null, focalX: null, focalY: null, gestureScale: null, pointers: null };
+            tmp = closure_3;
+            point1.scale = closure_3.get();
+            tmp2 = closure_4;
+            point1.x = closure_4.get();
+            tmp3 = closure_5;
+            point1.y = closure_5.get();
+            point1.focalX = diff;
+            point1.focalY = diff1;
+            ({ scale: obj.gestureScale, numberOfPointers: obj.pointers } = arg0);
+            result5 = obj2.set(point1);
+          }
         }
+        return;
       }
-    };
-    fn2.__closure = {
-      containerWidth: sharedValue,
-      containerHeight: sharedValue1,
-      pinchStart: sharedValue9,
-      scale: zoomScale,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-      minimumZoomScale: num,
-      maximumZoomScale: num2,
-      clampTranslation: callback2,
-      panPosition: sharedValue4,
-    };
-    fn2.__workletHash = 13379918034392;
-    fn2.__initData = __initData2;
-    const obj2 = {
-      containerWidth: sharedValue,
-      containerHeight: sharedValue1,
-      pinchStart: sharedValue9,
-      scale: zoomScale,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-      minimumZoomScale: num,
-      maximumZoomScale: num2,
-      clampTranslation: callback2,
-      panPosition: sharedValue4,
-    };
-    const onStartResult = Gesture.Pinch().enabled(flag).onStart(fn);
-    const fn3 = function t() {
-      if (sharedValue5.get()) {
-        const result = sharedValue5.set(false);
-        __initData6();
+    }
+    const items3 = [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28];
+    ZoomLayoutGestureNativeTsx9.__closure = items3;
+    ZoomLayoutGestureNativeTsx9.__workletHash = 10018523503809;
+    ZoomLayoutGestureNativeTsx9.__initData = tmp18;
+    const onStartResult = Gesture.Pinch().enabled(c2).onStart(ZoomLayoutGestureNativeTsx8);
+    const items4 = [closure_16, sharedValue5, callback3];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp29, tmp30, tmp31] = items4;
+    class ZoomLayoutGestureNativeTsx10 {
+      constructor() {
+        obj = closure_0;
+        if (closure_0.get()) {
+          flag = false;
+          result = obj.set(false);
+          tmp2 = closure_1;
+          tmp3 = closure_1();
+        }
+        return;
       }
-    };
-    fn3.__closure = { pinching: sharedValue5, returnToBounds: callback3 };
-    fn3.__workletHash = 9220271155892;
-    fn3.__initData = __initData;
-    return Gesture.Pinch().enabled(flag).onStart(fn).onUpdate(fn2).onFinalize(fn3);
-  }, items4);
-  const items5 = [
+    }
+    const items5 = [tmp30, tmp31];
+    ZoomLayoutGestureNativeTsx10.__closure = items5;
+    ZoomLayoutGestureNativeTsx10.__workletHash = 7035520443764;
+    ZoomLayoutGestureNativeTsx10.__initData = tmp29;
+    return Gesture.Pinch()
+      .enabled(c2)
+      .onStart(ZoomLayoutGestureNativeTsx8)
+      .onUpdate(ZoomLayoutGestureNativeTsx9)
+      .onFinalize(ZoomLayoutGestureNativeTsx10);
+  }, items12);
+  const items13 = [
     flag,
     zoomScale,
     num,
@@ -424,220 +512,278 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
     sharedValue8,
     callback3,
   ];
-  memo1 = num.useMemo(() => {
+  memo1 = obj11.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    const enabledResult = Gesture.Pan().enabled(flag);
-    const fn = function h() {
-      const result = sharedValue7.set(false);
-      const result1 = sharedValue6.set(false);
-      if (PAN_EDGE_RESISTANCE.get() > num) {
-        __initData3();
-        const result2 = __initData.set(true);
-      }
-    };
-    const __closure = {
-      panInterrupted: sharedValue7,
-      canFling: sharedValue6,
-      scale: zoomScale,
-      minimumZoomScale: num,
-      stopAnimation: callback,
-      touchStoppedAnimation: sharedValue8,
-    };
-    fn.__closure = __closure;
-    fn.__workletHash = 4375649241436;
-    fn.__initData = __initData9;
-    const manualActivationResult = Gesture.Pan().enabled(flag).manualActivation(true);
-    const fn2 = function l(numberOfTouches, activate) {
-      if (!sharedValue7.get()) {
-        let tmp2 = 1 === numberOfTouches.numberOfTouches;
-        if (tmp2) {
-          tmp2 = PAN_EDGE_RESISTANCE.get() > num;
+    const enabledResult = Gesture.Pan().enabled(c2);
+    items = [closure_17, sharedValue7, sharedValue6, c5, c3, callback, sharedValue8];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12, tmp13] = items;
+    class ZoomLayoutGestureNativeTsx11 {
+      constructor() {
+        result = closure_0.set(false);
+        result1 = closure_1.set(false);
+        if (closure_2.get() > closure_3) {
+          tmp3 = closure_4;
+          tmp4 = closure_4();
+          tmp5 = closure_5;
+          flag = true;
+          result2 = closure_5.set(true);
         }
-        if (tmp2) {
-          const result = sharedValue6.set(true);
-          activate.activate();
+        return;
+      }
+    }
+    const items1 = [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13];
+    ZoomLayoutGestureNativeTsx11.__closure = items1;
+    ZoomLayoutGestureNativeTsx11.__workletHash = 6030949190530;
+    ZoomLayoutGestureNativeTsx11.__initData = tmp7;
+    const manualActivationResult = Gesture.Pan().enabled(c2).manualActivation(true);
+    const items2 = [closure_18, sharedValue7, c5, c3, sharedValue6];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    [tmp14, tmp15, tmp16, tmp17, tmp18] = items2;
+    class ZoomLayoutGestureNativeTsx12 {
+      constructor(arg0, arg1) {
+        if (!closure_0.get()) {
+          tmp = arg0;
+          num = 1;
+          tmp2 = 1 === arg0.numberOfTouches;
+          if (tmp2) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            tmp2 = closure_1.get() > closure_2;
+          }
+          if (tmp2) {
+            tmp5 = arg1;
+            tmp6 = closure_3;
+            flag = true;
+            result = closure_3.set(true);
+            activateResult = arg1.activate();
+          }
         }
+        return;
       }
-    };
-    fn2.__closure = { panInterrupted: sharedValue7, scale: zoomScale, minimumZoomScale: num, canFling: sharedValue6 };
-    fn2.__workletHash = 2439526361553;
-    fn2.__initData = __initData8;
-    const onTouchesDownResult = Gesture.Pan().enabled(flag).manualActivation(true).onTouchesDown(fn);
-    const fn3 = function s() {
-      if (!sharedValue7.get()) {
-        __initData3();
-        value = sharedValue2.get();
-        value2 = sharedValue3.get();
-        const point = __initData5(value, value2, PAN_EDGE_RESISTANCE.get());
-        const point1 = { x: point.x + (value - point.x) / zoomScale, y: point.y + (value2 - point.y) / zoomScale };
-        const result = sharedValue4.set(point1);
+    }
+    const items3 = [tmp15, tmp16, tmp17, tmp18];
+    ZoomLayoutGestureNativeTsx12.__closure = items3;
+    ZoomLayoutGestureNativeTsx12.__workletHash = 1838143506383;
+    ZoomLayoutGestureNativeTsx12.__initData = tmp14;
+    const onTouchesDownResult = Gesture.Pan()
+      .enabled(c2)
+      .manualActivation(true)
+      .onTouchesDown(ZoomLayoutGestureNativeTsx11);
+    const items4 = [closure_19, sharedValue7, callback, sharedValue2, sharedValue3, callback2, c5, sharedValue4, 0.3];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    [tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30] = items4;
+    class ZoomLayoutGestureNativeTsx13 {
+      constructor() {
+        if (!closure_0.get()) {
+          tmp = closure_1;
+          tmp2 = closure_1();
+          tmp3 = closure_2;
+          value = closure_2.get();
+          tmp5 = closure_3;
+          value1 = closure_3.get();
+          tmp7 = closure_4;
+          tmp8 = closure_5;
+          point = closure_4(value, value1, closure_5.get());
+          tmp9 = closure_6;
+          point1 = { x: null, y: null };
+          tmp10 = closure_7;
+          point1.x = point.x + (value - point.x) / closure_7;
+          point1.y = point.y + (value1 - point.y) / closure_7;
+          result = closure_6.set(point1);
+        }
+        return;
       }
-    };
-    fn3.__closure = {
-      panInterrupted: sharedValue7,
-      stopAnimation: callback,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-      clampTranslation: callback2,
-      scale: zoomScale,
-      panPosition: sharedValue4,
-      PAN_EDGE_RESISTANCE,
-    };
-    fn3.__workletHash = 3013657921781;
-    fn3.__initData = __initData7;
-    const obj2 = {
-      panInterrupted: sharedValue7,
-      stopAnimation: callback,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-      clampTranslation: callback2,
-      scale: zoomScale,
-      panPosition: sharedValue4,
-      PAN_EDGE_RESISTANCE,
-    };
-    const onTouchesMoveResult = Gesture.Pan().enabled(flag).manualActivation(true).onTouchesDown(fn).onTouchesMove(fn2);
-    const fn4 = function o(numberOfPointers) {
-      if (!sharedValue7.get()) {
-        if (1 === numberOfPointers.numberOfPointers) {
-          if (PAN_EDGE_RESISTANCE.get() > num) {
-            const point = sharedValue4.get();
-            const point2 = { x: point.x + numberOfPointers.changeX, y: point.y + numberOfPointers.changeY };
-            const result = sharedValue4.set(point2);
-            const point3 = __initData4(PAN_EDGE_RESISTANCE.get());
-            const x = point2.x;
-            const x2 = point3.x;
-            if (typeof sharedValue === "function") {
-              const _Math = Math;
-              const _Math2 = Math;
-              const bound = Math.max(-x2, Math.min(x2, x));
-              tmp17(bound + (x - bound) * zoomScale);
-              const y = point2.y;
-              const y2 = point3.y;
-              if (typeof tmp18 === "function") {
-                const _Math3 = Math;
-                const _Math4 = Math;
-                const bound1 = Math.max(-y2, Math.min(y2, y));
-                tmp8(bound1 + (y - bound1) * zoomScale);
-                const tmp9 = -y2;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-              const tmp3 = -x2;
-            } else {
-              throw new TypeError("Trying to call a non-function");
+    }
+    const items5 = [tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30];
+    ZoomLayoutGestureNativeTsx13.__closure = items5;
+    ZoomLayoutGestureNativeTsx13.__workletHash = 7963059043371;
+    ZoomLayoutGestureNativeTsx13.__initData = tmp22;
+    const onTouchesMoveResult = Gesture.Pan()
+      .enabled(c2)
+      .manualActivation(true)
+      .onTouchesDown(ZoomLayoutGestureNativeTsx11)
+      .onTouchesMove(ZoomLayoutGestureNativeTsx12);
+    const items6 = [
+      closure_20,
+      sharedValue7,
+      c5,
+      c3,
+      sharedValue4,
+      callback1,
+      sharedValue2,
+      resistTranslation,
+      sharedValue3,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    [tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40] = items6;
+    class ZoomLayoutGestureNativeTsx14 {
+      constructor(arg0) {
+        if (!closure_0.get()) {
+          tmp = arg0;
+          num = 1;
+          if (1 === arg0.numberOfPointers) {
+            obj = closure_1;
+            tmp2 = closure_2;
+            if (closure_1.get() > closure_2) {
+              tmp3 = closure_3;
+              point = closure_3.get();
+              point2 = { x: null, y: null };
+              point2.x = point.x + arg0.changeX;
+              point2.y = point.y + arg0.changeY;
+              result = closure_3.set(point2);
+              tmp5 = closure_4;
+              point3 = closure_4(obj.get());
+              tmp6 = closure_5;
+              tmp7 = closure_6;
+              result1 = closure_5.set(closure_6(point2.x, point3.x));
+              tmp9 = closure_7;
+              result2 = closure_7.set(closure_6(point2.y, point3.y));
             }
           }
         }
+        return;
       }
-    };
-    fn4.__closure = {
-      panInterrupted: sharedValue7,
-      scale: zoomScale,
-      minimumZoomScale: num,
-      panPosition: sharedValue4,
-      getTranslationBounds: callback1,
-      translateX: sharedValue2,
-      resistTranslation,
-      translateY: sharedValue3,
-    };
-    fn4.__workletHash = 3388464897302;
-    fn4.__initData = __initData6;
-    const obj3 = {
-      panInterrupted: sharedValue7,
-      scale: zoomScale,
-      minimumZoomScale: num,
-      panPosition: sharedValue4,
-      getTranslationBounds: callback1,
-      translateX: sharedValue2,
-      resistTranslation,
-      translateY: sharedValue3,
-    };
+    }
+    const items7 = [tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40];
+    ZoomLayoutGestureNativeTsx14.__closure = items7;
+    ZoomLayoutGestureNativeTsx14.__workletHash = 2662631838600;
+    ZoomLayoutGestureNativeTsx14.__initData = tmp32;
     const onStartResult = Gesture.Pan()
-      .enabled(flag)
+      .enabled(c2)
       .manualActivation(true)
-      .onTouchesDown(fn)
-      .onTouchesMove(fn2)
-      .onStart(fn3);
-    const fn5 = function n(numberOfPointers, arg1) {
-      if (!sharedValue7.get()) {
-        if (arg1) {
-          if (!sharedValue5.get()) {
-            if (numberOfPointers.numberOfPointers <= 1) {
-              if (sharedValue6.get()) {
-                const point = __initData4(PAN_EDGE_RESISTANCE.get());
-                sharedValue2(closure_1_10, point.x, numberOfPointers.velocityX);
-                sharedValue2(sharedValue3, point.y, numberOfPointers.velocityY);
-              } else {
-                __initData6();
+      .onTouchesDown(ZoomLayoutGestureNativeTsx11)
+      .onTouchesMove(ZoomLayoutGestureNativeTsx12)
+      .onStart(ZoomLayoutGestureNativeTsx13);
+    const items8 = [
+      closure_21,
+      sharedValue7,
+      sharedValue5,
+      sharedValue6,
+      callback3,
+      callback1,
+      c5,
+      releaseTranslation,
+      sharedValue2,
+      sharedValue3,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    c7 = undefined;
+    c8 = undefined;
+    [tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52] = items8;
+    class ZoomLayoutGestureNativeTsx15 {
+      constructor(arg0, arg1) {
+        if (!closure_0.get()) {
+          tmp = arg1;
+          if (arg1) {
+            tmp2 = closure_1;
+            if (!closure_1.get()) {
+              tmp3 = arg0;
+              num = 1;
+              if (arg0.numberOfPointers <= 1) {
+                tmp4 = closure_2;
+                if (closure_2.get()) {
+                  tmp7 = closure_4;
+                  tmp8 = closure_5;
+                  point = closure_4(closure_5.get());
+                  tmp9 = closure_6;
+                  tmp10 = closure_7;
+                  tmp11 = closure_6(closure_7, point.x, arg0.velocityX);
+                  tmp12 = closure_8;
+                  tmp13 = closure_6(closure_8, point.y, arg0.velocityY);
+                } else {
+                  tmp5 = closure_3;
+                  tmp6 = closure_3();
+                }
               }
             }
           }
         }
+        return;
       }
-    };
-    fn5.__closure = {
-      panInterrupted: sharedValue7,
-      pinching: sharedValue5,
-      canFling: sharedValue6,
-      returnToBounds: callback3,
-      getTranslationBounds: callback1,
-      scale: zoomScale,
-      releaseTranslation,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-    };
-    fn5.__workletHash = 9027145473156;
-    fn5.__initData = __initData5;
-    const obj4 = {
-      panInterrupted: sharedValue7,
-      pinching: sharedValue5,
-      canFling: sharedValue6,
-      returnToBounds: callback3,
-      getTranslationBounds: callback1,
-      scale: zoomScale,
-      releaseTranslation,
-      translateX: sharedValue2,
-      translateY: sharedValue3,
-    };
+    }
+    const items9 = [tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52];
+    ZoomLayoutGestureNativeTsx15.__closure = items9;
+    ZoomLayoutGestureNativeTsx15.__workletHash = 929238165786;
+    ZoomLayoutGestureNativeTsx15.__initData = tmp43;
     const onChangeResult = Gesture.Pan()
-      .enabled(flag)
+      .enabled(c2)
       .manualActivation(true)
-      .onTouchesDown(fn)
-      .onTouchesMove(fn2)
-      .onStart(fn3)
-      .onChange(fn4);
-    const fn6 = function t(arg0, arg1) {
-      value2 = arg1;
-      value = __initData.get();
-      const result = __initData.set(false);
-      if (!arg1) {
-        value2 = !value;
+      .onTouchesDown(ZoomLayoutGestureNativeTsx11)
+      .onTouchesMove(ZoomLayoutGestureNativeTsx12)
+      .onStart(ZoomLayoutGestureNativeTsx13)
+      .onChange(ZoomLayoutGestureNativeTsx14);
+    const items10 = [closure_22, sharedValue8, sharedValue5, callback3];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    [tmp53, tmp54, tmp55, tmp56] = items10;
+    class ZoomLayoutGestureNativeTsx16 {
+      constructor(arg0, arg1) {
+        value1 = arg1;
+        value = closure_0.get();
+        result = closure_0.set(false);
+        if (!arg1) {
+          value1 = !value;
+        }
+        if (!value1) {
+          tmp4 = closure_1;
+          value1 = closure_1.get();
+        }
+        if (!value1) {
+          tmp5 = closure_2;
+          tmp6 = closure_2();
+        }
+        return;
       }
-      if (!value2) {
-        value2 = sharedValue5.get();
-      }
-      if (!value2) {
-        __initData6();
-      }
-    };
-    fn6.__closure = { touchStoppedAnimation: sharedValue8, pinching: sharedValue5, returnToBounds: callback3 };
-    fn6.__workletHash = 1016723650015;
-    fn6.__initData = __initData4;
+    }
+    const items11 = [tmp54, tmp55, tmp56];
+    ZoomLayoutGestureNativeTsx16.__closure = items11;
+    ZoomLayoutGestureNativeTsx16.__workletHash = 14950204314849;
+    ZoomLayoutGestureNativeTsx16.__initData = tmp53;
     return Gesture.Pan()
-      .enabled(flag)
+      .enabled(c2)
       .manualActivation(true)
-      .onTouchesDown(fn)
-      .onTouchesMove(fn2)
-      .onStart(fn3)
-      .onChange(fn4)
-      .onEnd(fn5)
-      .onFinalize(fn6);
-  }, items5);
-  const items6 = [onCreateGesture, memo, memo1];
-  const memo2 = num.useMemo(() => {
+      .onTouchesDown(ZoomLayoutGestureNativeTsx11)
+      .onTouchesMove(ZoomLayoutGestureNativeTsx12)
+      .onStart(ZoomLayoutGestureNativeTsx13)
+      .onChange(ZoomLayoutGestureNativeTsx14)
+      .onEnd(ZoomLayoutGestureNativeTsx15)
+      .onFinalize(ZoomLayoutGestureNativeTsx16);
+  }, items13);
+  const items14 = [onCreateGesture, memo, memo1];
+  const memo2 = obj11.useMemo(() => {
     let SimultaneousResult;
-    if (onCreateGesture != null) {
+    if (c0 != null) {
       SimultaneousResult = tmp(memo, memo1);
     }
     if (SimultaneousResult == null) {
@@ -645,165 +791,260 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
       SimultaneousResult = Gesture.Simultaneous(memo, memo1);
     }
     return SimultaneousResult;
-  }, items6);
-  const obj12 = {
-    clampTranslation: callback2,
-    translateX: sharedValue2,
-    translateY: sharedValue3,
-    scale: zoomScale,
-    withSpring: onCreateGesture(flag[4]).withSpring,
-    SPRING_CONFIG: contentHeight,
-  };
-  let fn2 = function z() {
-    obj = { transform: null };
-    const items = [{ translateX: sharedValue2.get() }, ,];
-    const obj2 = { translateX: sharedValue2.get() };
-    items[1] = { translateY: sharedValue3.get() };
-    const obj3 = { translateY: sharedValue3.get() };
-    items[2] = { scale: zoomScale.get() };
-    obj.transform = items;
-    return obj;
-  };
-  fn2.__closure = { translateX: sharedValue2, translateY: sharedValue3, scale: zoomScale };
-  fn2.__workletHash = 13565307855671;
-  fn2.__initData = __initData2;
-  const items7 = [sharedValue, sharedValue1, onLayout];
-  const animatedStyle = onCreateGesture(flag[5]).useAnimatedStyle(fn2);
-  const callback4 = num.useCallback((nativeEvent) => {
+  }, items14);
+  const obj10 = require("../../../_runtime/metro/01652__.js");
+  const items15 = [closure_23, sharedValue2, sharedValue3, zoomScale];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp40, tmp41, tmp42, tmp43] = items15;
+  class ZoomLayoutGestureNativeTsx17 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateX: closure_0.get() };
+      items = [, ,];
+      items[0] = obj1;
+      obj5 = { translateY: closure_1.get() };
+      items[1] = obj5;
+      obj6 = { scale: closure_2.get() };
+      items[2] = obj6;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  const items16 = [tmp41, tmp42, tmp43];
+  ZoomLayoutGestureNativeTsx17.__closure = items16;
+  ZoomLayoutGestureNativeTsx17.__workletHash = 12652072835214;
+  ZoomLayoutGestureNativeTsx17.__initData = tmp40;
+  const items17 = [sharedValue, sharedValue1, onLayout];
+  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ZoomLayoutGestureNativeTsx17);
+  const callback4 = obj11.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     const result1 = sharedValue1.set(nativeEvent.nativeEvent.layout.height);
-    if (onLayout != null) {
+    if (c1 != null) {
       tmp3(nativeEvent);
     }
-  }, items7);
-  const imperativeHandle = num.useImperativeHandle(ref, () => ({
-    zoomTo(arg0) {
-      let x = arg0.x;
-      closure_0 = x;
-      let y = arg0.y;
-      closure_1 = y;
-      num = arg0.scale;
+  }, items17);
+  const imperativeHandle = obj11.useImperativeHandle(ref, () => ({
+    zoomTo(scale) {
+      let num = scale.scale;
+      ({ x, y } = scale);
       if (num === undefined) {
         num = 2;
       }
-      flag = arg0.animated;
+      let flag = scale.animated;
       if (flag === undefined) {
         flag = true;
       }
-      const fn = function l() {
-        stopAnimation();
-        const result = touchStoppedAnimation.set(false);
-        const result1 = panInterrupted.set(true);
-        const bound = Math.max(minimumZoomScale, Math.min(maximumZoomScale, num));
-        const result2 = bound / scale.get();
-        const diff = closure_0 - containerWidth.get() / 2;
-        const diff1 = closure_1 - containerHeight.get() / 2;
-        const result3 = (translateX.get() - diff) * result2;
-        const point = clampTranslation(diff + result3, diff1 + (translateY.get() - diff1) * result2, bound);
-        let withSpringResult = bound;
-        if (flag) {
-          withSpringResult = onCreateGesture(flag[4]).withSpring(bound, contentHeight);
-          const obj3 = onCreateGesture(flag[4]);
-        }
-        const result4 = scale.set(withSpringResult);
-        if (flag) {
-          let x = onCreateGesture(flag[4]).withSpring(point.x, contentHeight);
-          const obj4 = onCreateGesture(flag[4]);
-        } else {
-          x = point.x;
-        }
-        const result5 = translateX.set(x);
-        if (flag) {
-          let y = onCreateGesture(flag[4]).withSpring(point.y, contentHeight);
-          const obj5 = onCreateGesture(flag[4]);
-        } else {
-          y = point.y;
-        }
-        const result6 = translateY.set(y);
-      };
-      let point = {
-        stopAnimation,
-        touchStoppedAnimation,
-        panInterrupted,
-        minimumZoomScale: flag,
-        maximumZoomScale,
-        requestedScale: num,
-        scale,
+      items = [
+        closure_2_24,
+        callback,
+        sharedValue8,
+        sharedValue7,
+        _undefined4,
+        _undefined5,
+        num,
+        _undefined6,
         x,
-        containerWidth,
+        closure_1_6,
         y,
-        containerHeight,
-        clampTranslation,
-        translateX,
-        translateY,
-        animated: flag,
-        withSpring: onCreateGesture(5637).withSpring,
-        SPRING_CONFIG,
-      };
-      fn.__closure = point;
-      fn.__workletHash = 7362250952825;
-      fn.__initData = __initData;
-      onCreateGesture(5095).runOnUI(fn)();
+        sharedValue1,
+        callback2,
+        sharedValue2,
+        sharedValue3,
+        flag,
+        c0(c2[4]).withSpring,
+        sharedValue,
+      ];
+      c0 = undefined;
+      c1 = undefined;
+      c2 = undefined;
+      c3 = undefined;
+      c4 = undefined;
+      c5 = undefined;
+      c6 = undefined;
+      c7 = undefined;
+      c8 = undefined;
+      c9 = undefined;
+      c10 = undefined;
+      c11 = undefined;
+      c12 = undefined;
+      c13 = undefined;
+      c14 = undefined;
+      c15 = undefined;
+      c16 = undefined;
+      [
+        tmp,
+        tmp2,
+        tmp3,
+        tmp4,
+        tmp5,
+        tmp6,
+        tmp7,
+        tmp8,
+        tmp9,
+        tmp10,
+        tmp11,
+        tmp12,
+        tmp13,
+        tmp14,
+        tmp15,
+        tmp16,
+        tmp17,
+        tmp18,
+      ] = items;
+      class ZoomLayoutGestureNativeTsx18 {
+        constructor() {
+          tmp = closure_0();
+          result = closure_1.set(false);
+          result1 = closure_2.set(true);
+          bound = Math.max(closure_3, Math.min(closure_4, closure_5));
+          tmp5 = closure_6;
+          result2 = bound / closure_6.get();
+          diff = closure_7 - closure_8.get() / 2;
+          diff1 = closure_9 - closure_10.get() / 2;
+          obj = closure_12;
+          obj2 = closure_13;
+          result3 = (closure_12.get() - diff) * result2;
+          point = closure_11(diff + result3, diff1 + (closure_13.get() - diff1) * result2, bound);
+          tmp10 = closure_14;
+          tmp11 = bound;
+          if (closure_14) {
+            tmp12 = closure_15;
+            tmp13 = closure_16;
+            tmp11 = closure_15(bound, closure_16);
+          }
+          result4 = closure_6.set(tmp11);
+          if (tmp10) {
+            tmp15 = closure_15;
+            tmp16 = closure_16;
+            x = closure_15(point.x, closure_16);
+          } else {
+            x = point.x;
+          }
+          result5 = obj.set(x);
+          if (tmp10) {
+            tmp18 = closure_15;
+            tmp19 = closure_16;
+            y = closure_15(point.y, closure_16);
+          } else {
+            y = point.y;
+          }
+          result6 = obj2.set(y);
+          return;
+        }
+      }
+      const items1 = [
+        tmp2,
+        tmp3,
+        tmp4,
+        tmp5,
+        tmp6,
+        tmp7,
+        tmp8,
+        tmp9,
+        tmp10,
+        tmp11,
+        tmp12,
+        tmp13,
+        tmp14,
+        tmp15,
+        tmp16,
+        tmp17,
+        tmp18,
+      ];
+      ZoomLayoutGestureNativeTsx18.__closure = items1;
+      ZoomLayoutGestureNativeTsx18.__workletHash = 12917402826720;
+      ZoomLayoutGestureNativeTsx18.__initData = tmp;
+      c0(c2[8]).scheduleOnUI(ZoomLayoutGestureNativeTsx18);
     },
     unzoom() {
-      obj = arg0;
+      let obj = arg0;
       if (arg0 === undefined) {
         obj = {};
       }
-      flag = obj.animated;
+      let flag = obj.animated;
       if (flag === undefined) {
         flag = true;
       }
-      const fn = function n() {
-        stopAnimation();
-        const result = touchStoppedAnimation.set(false);
-        const result1 = panInterrupted.set(true);
-        if (flag) {
-          let withSpringResult = onCreateGesture(flag[4]).withSpring(minimumZoomScale, contentHeight);
-          obj = onCreateGesture(flag[4]);
-        } else {
-          withSpringResult = minimumZoomScale;
+      items = [
+        closure_2_25,
+        callback,
+        sharedValue8,
+        sharedValue7,
+        _undefined6,
+        flag,
+        c0(c2[4]).withSpring,
+        _undefined4,
+        sharedValue,
+        sharedValue2,
+        sharedValue3,
+      ];
+      c0 = undefined;
+      c1 = undefined;
+      c2 = undefined;
+      c3 = undefined;
+      c4 = undefined;
+      c5 = undefined;
+      c6 = undefined;
+      c7 = undefined;
+      c8 = undefined;
+      c9 = undefined;
+      [tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11] = items;
+      class ZoomLayoutGestureNativeTsx19 {
+        constructor() {
+          tmp = closure_0();
+          result = closure_1.set(false);
+          result1 = closure_2.set(true);
+          tmp5 = closure_4;
+          tmp4 = closure_3;
+          if (closure_4) {
+            tmp7 = closure_5;
+            tmp8 = closure_6;
+            tmp9 = closure_7;
+            tmp6 = closure_5(closure_6, closure_7);
+          } else {
+            tmp6 = closure_6;
+          }
+          result2 = closure_3.set(tmp6);
+          num = 0;
+          tmp11 = closure_8;
+          if (tmp5) {
+            tmp12 = closure_5;
+            tmp13 = closure_7;
+            num = closure_5(0, closure_7);
+          }
+          result3 = closure_8.set(num);
+          num2 = 0;
+          tmp15 = closure_9;
+          if (tmp5) {
+            tmp16 = closure_5;
+            tmp17 = closure_7;
+            num2 = closure_5(0, closure_7);
+          }
+          result4 = closure_9.set(num2);
+          return;
         }
-        const result2 = scale.set(withSpringResult);
-        num = 0;
-        if (flag) {
-          num = onCreateGesture(flag[4]).withSpring(0, contentHeight);
-          const obj2 = onCreateGesture(flag[4]);
-        }
-        const result3 = translateX.set(num);
-        num2 = 0;
-        if (flag) {
-          num2 = onCreateGesture(flag[4]).withSpring(0, contentHeight);
-          const obj3 = onCreateGesture(flag[4]);
-        }
-        const result4 = translateY.set(num2);
-      };
-      let obj2 = onCreateGesture(5095);
-      fn.__closure = {
-        stopAnimation,
-        touchStoppedAnimation,
-        panInterrupted,
-        scale,
-        animated: flag,
-        withSpring: onCreateGesture(5637).withSpring,
-        minimumZoomScale,
-        SPRING_CONFIG,
-        translateX,
-        translateY,
-      };
-      fn.__workletHash = 1391177767992;
-      fn.__initData = __initData2;
-      obj2.runOnUI(fn)();
+      }
+      const items1 = [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11];
+      ZoomLayoutGestureNativeTsx19.__closure = items1;
+      ZoomLayoutGestureNativeTsx19.__workletHash = 16104393212129;
+      ZoomLayoutGestureNativeTsx19.__initData = tmp;
+      c0(c2[8]).scheduleOnUI(ZoomLayoutGestureNativeTsx19);
     },
   }));
-  const obj14 = { gesture: memo2, children: null };
-  const obj15 = { collapsable: false, style: null, onLayout: callback4, children: null };
-  const items8 = [tmp.container, style];
-  obj15.style = items8;
-  const obj16 = { style: null, children };
-  const items9 = [tmp.content, animatedStyle];
-  obj16.style = items9;
-  obj15.children = contentWidth(onLayout(flag[5]).View, obj16);
-  obj14.children = contentWidth(num2, obj15);
-  return contentWidth(onCreateGesture(flag[7]).GestureDetector, obj14);
+  const obj12 = { gesture: memo2, children: null };
+  const obj13 = { collapsable: false, style: null, onLayout: callback4, children: null };
+  const items18 = [tmp.container, style];
+  obj13.style = items18;
+  const obj14 = { style: null, children };
+  const items19 = [tmp.content, animatedStyle];
+  obj14.style = items19;
+  obj13.children = jsx(_modDef1652.View, { style: null, children });
+  obj12.children = (
+    <c4 collapsable={false} style={null} onLayout={callback4}>
+      {null}
+    </c4>
+  );
+  return jsx(require("LegacyBaseButton").GestureDetector, { gesture: memo2, children: null });
 });

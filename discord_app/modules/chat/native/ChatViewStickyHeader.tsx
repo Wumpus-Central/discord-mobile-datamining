@@ -38,7 +38,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11256).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11393).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -64,7 +64,7 @@ export default noop.memo(function StickyHeader(channel) {
     const obj2 = { channel, onDismiss: pinotMemberNotice.dismiss };
     tmp10 = timestampProducer(PinotLazy.PinotMemberNoticeBar, obj2);
   }
-  const items = [tmp10, , , ,];
+  items = [tmp10, , , ,];
   let tmp12 = null;
   if (channel.isForumPost()) {
     tmp12 = null;

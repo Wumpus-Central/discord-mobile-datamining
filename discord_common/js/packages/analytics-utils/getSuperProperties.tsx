@@ -3,12 +3,14 @@ import Storage7 from "../storage/Storage.tsx";
 import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
+import getOSVersionProperties from "getOSVersionProperties.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01352_format.js";
+import formatDefault from "../../../../_runtime/01353_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
 import DesignIds from "../../shared/shared-constants/DesignIds.tsx";
+import utils_PlatformUtils from "../../shared/utils/PlatformUtils.tsx";
 import SessionStorage3 from "../storage/SessionStorage.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -117,29 +119,21 @@ if (null != DiscordNative) {
       str3 = "linux" === platform ? "Linux" : platform;
     }
   }
-  let obj = {
-    os: str3,
-    browser: "Discord Client",
-    release_channel: null,
-    client_version: null,
-    os_version: null,
-    os_arch: null,
-    app_arch: null,
-    system_locale: null,
-    has_client_mods: null,
-    client_launch_id: null,
-  };
+  let obj = { os: str3, browser: "Discord Client", release_channel: null, client_version: null };
   if (!str4) {
     str4 = "unknown";
   }
   obj.release_channel = str4;
   obj.client_version = version;
-  obj.os_version = DiscordNative.os.release;
+  const _module = getOSVersionProperties;
+  let merged = Object.assign(
+    _module.getDesktopOSVersionProperties(platform, DiscordNative.os.release, DiscordNative.os.systemVersion),
+  );
   obj.os_arch = DiscordNative.os.arch;
   obj.app_arch = DiscordNative.os.appArch;
   obj.system_locale = systemLocale;
-  const _module = ClientModDetectionUtils;
-  obj.has_client_mods = _module.usesClientMods();
+  const _module1 = ClientModDetectionUtils;
+  obj.has_client_mods = _module1.usesClientMods();
   obj.client_launch_id = clientLaunchId.clientLaunchId;
   const name = formatDefault.name;
   let toLocaleLowerCaseResult;
@@ -148,10 +142,10 @@ if (null != DiscordNative) {
   }
   if ("electron" === toLocaleLowerCaseResult) {
     obj.browser_user_agent = formatDefault.ua || "";
-    const tmp4 = formatDefault.ua || "";
-    let tmp5 = obj;
-    tmp5.browser_version = formatDefault.version || "";
-    const tmp6 = formatDefault.version || "";
+    const tmp6 = formatDefault.ua || "";
+    let tmp7 = obj;
+    tmp7.browser_version = formatDefault.version || "";
+    const tmp8 = formatDefault.version || "";
   }
   if ("linux" === platform) {
     const crashReporter = DiscordNative.crashReporter;
@@ -160,18 +154,6 @@ if (null != DiscordNative) {
     obj.distro = metadata.distro;
     obj.runtime_environment = metadata.runtime_environment;
     obj.display_server = metadata.display_server;
-  } else if ("darwin" === platform) {
-    let first;
-    if (str10 != null) {
-      first = str10.split(".")[0];
-    }
-    obj.os_sdk_version = first;
-  } else if ("win32" === platform) {
-    let tmp7;
-    if (str10 != null) {
-      tmp7 = str10.split(".")[2];
-    }
-    obj.os_sdk_version = tmp7;
   }
 }
 let closure_15 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
@@ -229,12 +211,13 @@ if (null == obj) {
       if (null != constants) {
         const obj6 = {};
         const merged1 = Object.assign(obj5);
-        obj6.os_version = tmp24.systemVersion || "";
-        obj6.os_sdk_version = tmp24.osSdkVersion || undefined;
+        const tmpResult = getOSVersionProperties;
+        const merged2 = Object.assign(tmpResult.getNativeOSVersionProperties(tmp24, utils_PlatformUtils.isIOS()));
         let obj7 = obj6;
+        const tmpResult2 = utils_PlatformUtils;
       } else {
         obj7 = {};
-        const merged2 = Object.assign(obj5);
+        const merged3 = Object.assign(obj5);
         const tmp22Result = formatDefault;
         let str;
         if (tmp22Result != null) {
@@ -248,9 +231,9 @@ if (null == obj) {
         }
         obj7.os_version = str;
       }
-      const merged3 = Object.assign(obj7);
-      const merged4 = Object.assign(value3);
-      const merged5 = Object.assign(value4);
+      const merged4 = Object.assign(obj7);
+      const merged5 = Object.assign(value3);
+      const merged6 = Object.assign(value4);
       return {};
     })();
   } catch (err) {
@@ -265,7 +248,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35420000000000", 10) };
+    obj = { client_build_number: parseInt("35420100000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

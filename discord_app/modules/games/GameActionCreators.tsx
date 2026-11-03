@@ -51,7 +51,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -98,7 +98,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       v3 = tmp;
@@ -135,7 +135,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4858).BatchInvocationManager(
+const batchInvocationManager = new fn(4985).BatchInvocationManager(
   function () {
     const self = this;
     const apply = closure_0.apply;
@@ -147,8 +147,8 @@ const batchInvocationManager = new fn(4858).BatchInvocationManager(
     return applyArgumentsResult;
   },
   {
-    predicate(item) {
-      return !GameStore.hasNoData(item);
+    predicate(nextResult) {
+      return !GameStore.hasNoData(nextResult);
     },
     onQueued(gameIds) {
       return DispatcherDefault.dispatch({ type: "GAME_FETCH", gameIds });

@@ -10,7 +10,7 @@ export default function GiftingBadgeIcon(size) {
   size = size.size;
   ({ icon, style } = size);
   const obj = { source: { uri: icon }, resizeMode: "contain", style: null };
-  const items = [{ width: size, height: size }, style];
+  items = [{ width: size, height: size }, style];
   obj.style = items;
   return jsx(FastImageDefault, { source: { uri: icon }, resizeMode: "contain", style: null });
 }

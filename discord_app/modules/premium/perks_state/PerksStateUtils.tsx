@@ -43,7 +43,7 @@ function getPerkSource(perks, MONTHLY_ORBS) {
         flag = hasItem;
       }
       if (flag) {
-        const items = [user.PerkSource.SOURCE_NITRO];
+        items = [user.PerkSource.SOURCE_NITRO];
         source = items;
       }
     }

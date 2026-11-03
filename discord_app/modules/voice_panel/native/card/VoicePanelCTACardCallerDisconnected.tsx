@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: null,
   avatarContainer: null,
@@ -52,7 +52,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
   }
   first = _slicedToArray(recipients, 1)[0];
   id = AuthenticationStore.getId();
-  let items = [UserStore];
+  items = [UserStore];
   const items1 = [channelId, id, first];
   const obj = channelId(id[9]);
   [tmp9, tmp10, tmp11] = channelId(id[9]).useStateFromStoresArray(
@@ -64,7 +64,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
       if (user != null) {
         avatarURL = user.getAvatarURL(undefined, 80);
       }
-      const items = [avatarURL, ,];
+      items = [avatarURL, ,];
       let avatarURL1;
       if (user1 != null) {
         avatarURL1 = user1.getAvatarURL(undefined, 80);
@@ -86,7 +86,7 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
         if (user != null) {
           avatarURL = user.getAvatarURL(undefined, 80);
         }
-        const items = [avatarURL, ,];
+        items = [avatarURL, ,];
         let avatarURL1;
         if (user1 != null) {
           avatarURL1 = user1.getAvatarURL(undefined, 80);

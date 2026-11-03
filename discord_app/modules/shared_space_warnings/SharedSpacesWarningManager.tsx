@@ -43,7 +43,7 @@ function handleAppStateChanged(state) {
       if (blockedUsersForVoiceChannel.size > 0) {
         if (hasOwnProperty()) {
           const _Set = Set;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(
             ignoredUsersForVoiceChannel,
             HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
@@ -66,7 +66,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(15623);
+const SharedSpacesWarningStore = fn(15765);
 ({
   isBlockedWarningQueued: hasOwnProperty,
   dequeueBlockWarning: metroRequire,

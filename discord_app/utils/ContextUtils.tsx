@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
   context = context.createContext(undefined);
-  const items = [
+  items = [
     context,
     function useContext() {
       context = noop.useContext(context);

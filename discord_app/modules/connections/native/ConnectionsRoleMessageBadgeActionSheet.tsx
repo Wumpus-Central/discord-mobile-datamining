@@ -59,9 +59,9 @@ function PopoutCheck(arg0) {
   if (null != formatResult) {
     const obj5 = { style: tmp.popoutCheck, children: null };
     const obj6 = { size: "sm", style: tmp.popoutCheckIcon };
-    const items = [__initData2(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6)];
+    items = [value2(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6)];
     const obj7 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
-    items[1] = __initData2(Text_Text.Text, obj7);
+    items[1] = value2(Text_Text.Text, obj7);
     obj5.children = items;
     tmp9 = closure_1_17(timestampProducer, obj5);
   }
@@ -118,12 +118,12 @@ class PopoutChecks {
         }
         if (officialApplicationIds.includes(str)) {
           const obj2 = { style: closure_1.botTag, guildId, roleColor, size: 16 };
-          let tmp12 = __initData2(OfficialConnectionIconDefault, obj2);
+          let tmp12 = value2(OfficialConnectionIconDefault, obj2);
         } else if (null != tmp7) {
           const obj3 = { style: closure_1.botTag, verified: false };
-          tmp12 = __initData2(BotTagDefault, obj3);
+          tmp12 = value2(BotTagDefault, obj3);
         }
-        const items = [closure_1.popoutChecksGroup];
+        items = [closure_1.popoutChecksGroup];
         let prop = null;
         if (index < closure_4) {
           prop = closure_1.popoutChecksGroupBottomMargin;
@@ -139,9 +139,9 @@ class PopoutChecks {
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "a",
+              guildId: "Array",
             };
-            tmp26 = __initData2(native.Avatar, obj6);
+            tmp26 = value2(native.Avatar, obj6);
           }
           items1[1] = tmp26;
           let name;
@@ -156,7 +156,7 @@ class PopoutChecks {
             name = name1;
           }
           const obj7 = { variant: "text-sm/medium", color: "interactive-text-active", children: name };
-          items1[2] = __initData2(Text_Text.Text, obj7);
+          items1[2] = value2(Text_Text.Text, obj7);
           items1[3] = tmp12;
           obj5.children = items1;
           const items2 = [
@@ -181,7 +181,7 @@ class PopoutChecks {
           const icon = value.icon;
           obj8.source = tmp11Result.makeSource(shared.isThemeDark(dependencyMap) ? icon.darkPNG : icon.lightPNG);
           obj8.size = native.Icon.Sizes.MEDIUM;
-          __initData2(native.Icon, obj8);
+          value2(native.Icon, obj8);
           const tmp11Result2 = shared;
         }
       }),
@@ -191,12 +191,12 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(7349).OperatorTypes;
+const OperatorTypes = fn(7469).OperatorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {
@@ -243,7 +243,7 @@ obj2.popoutCheckGroupName = { flexDirection: "row", alignItems: "center" };
 obj2.popoutCheckGroupPlatformIcon = { marginRight: 8 };
 obj2.button = { marginBottom: 8 };
 obj2.botTag = { marginLeft: 4 };
-let closure_19 = createStyles.createStyles(obj2);
+const expandedHeight = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
 
@@ -258,7 +258,7 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   const analyticsLocations = roleId(channelId[28])(roleId(channelId[29]).CONNECTIONS_ROLE_POPOUT).analyticsLocations;
   const tmp2 = roleId;
   const tmp4 = roleId(channelId[28]);
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = userId(channelId[30]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = userId(channelId[30]);
   const items1 = [first];

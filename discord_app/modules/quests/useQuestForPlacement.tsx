@@ -47,7 +47,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
   _require = arg0;
   closure_5(null);
   closure_129_0 = arg0;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [arg0];
   stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -132,7 +132,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
 }
 export function useAdDecisionForPlacement(arg0) {
   _require = arg0;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
@@ -151,7 +151,7 @@ export function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
   _require = MOBILE_HOME_DOCK_AREA;
   closure_1 = closure_5(null);
   closure_129_0 = MOBILE_HOME_DOCK_AREA;
-  const items = [AdDeliveryStore];
+  items = [AdDeliveryStore];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -191,7 +191,7 @@ export function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
 }
 export function useDeliveredCreativeForPlacement(MOBILE_HOME_DOCK_AREA, QUEST_BAR_MOBILE) {
   _require = QUEST_BAR_MOBILE;
-  const items = [QuestStore];
+  items = [QuestStore];
   const items1 = [QUEST_BAR_MOBILE];
   stateFromStores = require("initialize").useStateFromStores(
     items,

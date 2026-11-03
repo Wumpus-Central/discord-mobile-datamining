@@ -22,7 +22,7 @@ export function useTrackProductCardImpression(categoryStoreListingId, mobile_hom
   let callback;
   const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
   let obj = require("CollectiblesAnalyticsContext");
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     CollectiblesCategoryStore.getProduct(closure_0),
   );

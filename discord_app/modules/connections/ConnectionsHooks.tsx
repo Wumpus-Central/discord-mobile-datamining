@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7683).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7807).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/connections/ConnectionsHooks.
 export function usePlatformAllowed(forUserProfile) {
   forUserProfile = forUserProfile.forUserProfile;
   let allowPlayStationStaging;
-  const items = [UserStore];
+  items = [UserStore];
   closure_1 = forUserProfile(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = forUserProfile(allowPlayStationStaging[8]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
@@ -65,7 +65,7 @@ export function usePlatformAllowed(forUserProfile) {
   };
 }
 export function usePlatforms() {
-  let items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   stateFromStores = stateFromStores(memo[7]).useStateFromStores(items, () => accounts.getAccounts());
   closure_129_0 = false;
   let obj = stateFromStores(memo[7]);
@@ -106,7 +106,7 @@ export function usePlatforms() {
   const items3 = [memo, fn];
   return noop.useMemo(() => {
     const obj = _modDef12;
-    const items = [
+    items = [
       (type) => {
         let hasItem = set3.has(type.type);
         if (hasItem) {
@@ -130,9 +130,9 @@ export function usePlatforms() {
 }
 export function useEmptyStatePlatforms() {
   closure_129_0 = false;
-  let items = [UserStore];
+  items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(7685).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(7809).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {
@@ -161,7 +161,7 @@ export function useEmptyStatePlatforms() {
   const items1 = [fn];
   return noop.useMemo(() => {
     const obj = _modDef12;
-    const items = [
+    items = [
       (type) => {
         let num = closure_1_13.get(type.type);
         if (num == null) {

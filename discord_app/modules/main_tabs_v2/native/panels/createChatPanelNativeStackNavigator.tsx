@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
-import Link from "../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../_runtime/01500_Link.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -30,7 +30,7 @@ function ChatPanelNativeStackNavigator(arg0) {
       UNSTABLE_router: 0,
     }),
   );
-  let state;
+  state = undefined;
   let descriptors;
   const navigationBuilder = state(descriptors[2]).useNavigationBuilder(state(descriptors[2]).StackRouter, {
     id,
@@ -46,12 +46,12 @@ function ChatPanelNativeStackNavigator(arg0) {
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
   const navigation = navigationBuilder.navigation;
-  let items = [state, descriptors];
+  items = [state, descriptors];
   ({ describe, NavigationContent } = navigationBuilder);
   const memo = navigation.useMemo(() => {
     state = {};
     const merged = Object.assign(state);
-    const items = [...state.routes];
+    items = [...state.routes];
     state.routes = items;
     const items1 = [];
     const items2 = [];
@@ -91,7 +91,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return { state, filteredDescriptors: obj };
   }, items);
-  const state2 = memo.state;
+  state2 = memo.state;
   let obj = state(descriptors[2]);
   let items1 = [navigation, ,];
   ({ index: arr2[1], key: arr2[2] } = state2);

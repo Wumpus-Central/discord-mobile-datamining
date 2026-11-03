@@ -63,7 +63,7 @@ export function getFrameSurfaceForChannel(type) {
   }
 }
 export function isLaunched(conjureBuilderPreviewFrame) {
-  let state;
+  state = undefined;
   if (conjureBuilderPreviewFrame != null) {
     state = conjureBuilderPreviewFrame.state;
   }
@@ -105,7 +105,7 @@ export function getFrameLaunchChannelId(surface) {
   return channelId;
 }
 export function asLaunched(frame) {
-  let state;
+  state = undefined;
   if (frame != null) {
     state = frame.state;
   }

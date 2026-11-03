@@ -2,7 +2,7 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 function emit() {
-  const items = [...set];
+  items = [...set];
   const iter = items[Symbol.iterator]();
   if (iter !== undefined) {
     try {
@@ -11,7 +11,7 @@ function emit() {
   }
 }
 function emitReleased(projectId) {
-  const items = [...set1];
+  items = [...set1];
   const iter = items[Symbol.iterator]();
   if (iter !== undefined) {
     try {
@@ -277,7 +277,7 @@ export function setConjureControlTuning(projectId, arg1) {
 }
 export function useConjureControlTuning(projectId) {
   noop = projectId;
-  const items = [projectId];
+  items = [projectId];
   const callback = noop.useCallback(() => {
     let hasItem = null != closure_0;
     if (hasItem) {
@@ -299,7 +299,7 @@ export function isConjureControlActive(openResult) {
   return num > 0;
 }
 export function getConjureControlActiveProjectIds() {
-  const items = [...map.keys()];
+  items = [...map.keys()];
   return items;
 }
 export { subscribeConjureControl };
@@ -312,7 +312,7 @@ export function subscribeConjureControlReleased(arg0) {
 }
 export function useConjureControlActive(projectId) {
   noop = projectId;
-  const items = [projectId];
+  items = [projectId];
   const callback = noop.useCallback(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

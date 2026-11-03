@@ -25,6 +25,7 @@ export const BUILD_OVERRIDE_TARGET_NAMES = {
   discord_ios: "Discord iOS",
   discord_android: "Discord Android",
   discord_developers: "Discord Developers",
+  discord_campaign_builder: "Ads Manager",
 };
 export const BUILD_OVERRIDE_EXPIRATION_OPTIONS = items;
 export const BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS = items1;

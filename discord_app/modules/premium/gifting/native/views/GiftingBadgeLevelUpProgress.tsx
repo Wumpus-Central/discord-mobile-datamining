@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2634 from "../../GiftingBadge.messages.js";
+import _modDef2763 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
@@ -9,10 +9,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8763).getSingleRequirementThreshold;
+let closure_4 = fn(8887).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_4, width: "100%" },
   barRow: null,
@@ -60,7 +60,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
     num = Math.min(Math.max((progress / tmp6) * 100, 0), 100);
   }
   const obj2 = { style: null, children: null };
-  const items = [tmp.container, style.style];
+  items = [tmp.container, style.style];
   obj2.style = items;
   const obj3 = { style: tmp.barRow, children: null };
   let tmp10 = null != giftingBadgeTierIconUrl;
@@ -88,7 +88,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
   const obj9 = { style: tmp.labels, children: null };
   const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj10.children = intl.format(_modDef2634.iIpfQe, { count: progress, threshold: tmp6 });
+  obj10.children = intl.format(_modDef2763.iIpfQe, { count: progress, threshold: tmp6 });
   obj9.children = hasOwnProperty(Text_Text.Text, obj10);
   items3[1] = hasOwnProperty(View, obj9);
   obj2.children = items3;

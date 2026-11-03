@@ -50,7 +50,7 @@ prototype["_initialize"] = function _initialize() {
     obj2.variations = Object.fromEntries(
       treatments.map((treatmentId) => {
         treatmentId = treatmentId.treatmentId;
-        const items = [treatmentId, { treatmentId }];
+        items = [treatmentId, { treatmentId }];
         return items;
       }),
     );

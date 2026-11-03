@@ -1,61 +1,30 @@
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport2 from "../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import _modDef671 from "../../../../_runtime/metro/00671__.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+import 01652__ from "../../../../_runtime/metro/01652__.js";
 
-const ReanimatedRexport = ReanimatedRexport2;
+const require = globalThis.__r;
 
-require = fn;
+const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5624).Text);
-const createICYMIStyles = fn(18528);
+let closure_9 = module_1652.createAnimatedComponent(fn(5747).Text);
+const createICYMIStyles = fn(18682);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
-  const obj = {
-    container: {
-      flex: 1,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginVertical: nativeDefault.space.PX_32,
-    },
-    textContainer: null,
-    recommendedGuildsContainer: null,
-    iconWrapper: null,
-    icon: null,
-    headerText: null,
-    subtitleText: null,
-    buttonContainer: null,
-    gradient: null,
-  };
-  const obj2 = {
-    flex: 1,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginVertical: nativeDefault.space.PX_32,
-  };
+  const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
+  const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
   obj.textContainer = { marginHorizontal: margin.margin, marginBottom: nativeDefault.space.PX_24 };
   const obj3 = { marginHorizontal: margin.margin, marginBottom: nativeDefault.space.PX_24 };
   obj.recommendedGuildsContainer = { flex: 1, marginBottom: nativeDefault.space.PX_24 };
   const obj4 = { flex: 1, marginBottom: nativeDefault.space.PX_24 };
-  obj.iconWrapper = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: nativeDefault.space.PX_24,
-  };
+  obj.iconWrapper = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_24 };
   obj.icon = { height: 40, width: 40 };
-  const obj5 = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: nativeDefault.space.PX_24,
-  };
+  const obj5 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_24 };
   obj.headerText = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
   obj.subtitleText = { alignSelf: "center", textAlign: "center" };
   const obj6 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
@@ -63,313 +32,277 @@ let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   obj.gradient = { position: "absolute", top: 0, left: 0, right: 0, height: 150 };
   return obj;
 });
-const __initData = {
-  code: "function CaughtUpRowTsx1(){const{visibleSharedValue,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withTiming(0,{duration:250,easing:Easing.bezier(0.5,1.8,0.5,1)}):-80}],opacity:visibleSharedValue.get()?withTiming(1,{duration:100,easing:Easing.out(Easing.bezierFn(0.33,1,0.68,1))}):0};}",
-};
-const __initData2 = {
-  code: "function CaughtUpRowTsx2(){const{visibleSharedValue,withDelay,withSequence,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(80,withSequence(withTiming(8,{duration:100,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};}",
-};
-const __initData3 = {
-  code: "function CaughtUpRowTsx3(){const{visibleSharedValue,withDelay,withSequence,withTiming,Easing}=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(115,withSequence(withTiming(8,{duration:150,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};}",
-};
+let closure_11 = { code: "(function CaughtUpRowTsx1(){let[visibleSharedValue,withTiming,Easing]=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withTiming(0,{duration:250,easing:Easing.bezier(0.5,1.8,0.5,1)}):-80}],opacity:visibleSharedValue.get()?withTiming(1,{duration:100,easing:Easing.out(Easing.bezierFn(0.33,1,0.68,1))}):0};})" };
+let closure_12 = { code: "(function CaughtUpRowTsx2(){let[visibleSharedValue,withDelay,withSequence,withTiming,Easing]=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(80,withSequence(withTiming(8,{duration:100,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};})" };
+let closure_13 = { code: "(function CaughtUpRowTsx3(){let[visibleSharedValue,withDelay,withSequence,withTiming,Easing]=this.__closure;return{transform:[{translateY:visibleSharedValue.get()?withDelay(115,withSequence(withTiming(8,{duration:150,easing:Easing.inOut(Easing.ease)}),withTiming(0,{duration:300,easing:Easing.out(Easing.ease)}))):0}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/CaughtUpRow.tsx");
 
 export default function ExploreServersRow(visible) {
   visible = visible.visible;
-  dependencyMap = undefined;
+  _require = visible;
   const tmp = closure_10();
-  const sharedValue = visible(5095).useSharedValue(false);
-  let items = [visible, sharedValue];
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  items = [visible, sharedValue];
   const effect = noop.useEffect(() => {
-    let tmp2 = visible;
-    if (visible) {
-      tmp2 = sharedValue.get() !== tmp;
+    let tmp2 = c0;
+    if (c0) {
+      tmp2 = _undefined2.get() !== tmp;
     }
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const result = sharedValue.set(true);
+        const result = _undefined2.set(true);
       }, 500);
     }
   }, items);
-  [obj17.loading, dependencyMap] = noop.useState(false);
-  const callback = noop.useCallback(
-    asyncGeneratorStep(async () => {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+  [obj11.loading, dependencyMap] = noop.useState(false);
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          dependencyMap = 2;
-          if (0 === v1) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              dependencyMap(true);
-              v1(8924).itemInteracted("caught_up", "caught_up", "press_explore");
-              const obj5 = v1(8924);
-              const obj4 = {
-                itemId: "caught_up",
-                itemType: "caught_up",
-                actionParameters: {
-                  actionGestureType: "press",
-                  actionTargetElement: "browse_servers_button",
-                  actionIntentType: "open",
-                  actionDestinationType: null,
-                },
-              };
-              v1(8924).feedItemActioned(obj4);
-              const obj6 = v1(8924);
-              v1 = 1;
-              dependencyMap = 1;
-              const obj7 = { value: tmp4(18547).maybeFetchGuildDiscoveryCategories(), done: false };
-              return obj7;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        dependencyMap = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const _setTimeout = setTimeout;
-            let timerId = setTimeout(() => {
-              closure_0(c2[11]).pushICYMIInfoModal({ extendedOnboarding: true, skipIntro: true });
-              const timerId = setTimeout(() => {
-                closure_1_2(false);
-              }, 500);
-            }, 100);
-            dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            dependencyMap(true);
+            v1(9048).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(9048);
+            const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
+            v1(9048).feedItemActioned(obj4);
+            const obj6 = v1(9048);
+            v1 = 1;
+            dependencyMap = 1;
+            const obj7 = { value: tmp4(18701).maybeFetchGuildDiscoveryCategories(), done: false };
+            return obj7;
           }
-        } catch (tmp8) {
-          dependencyMap = tmp;
-          throw tmp8;
+        } else if (arg0 === 1) {
+          dependencyMap = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          dependencyMap = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          const _setTimeout = setTimeout;
+          let timerId = setTimeout(() => {
+            closure_0(c2[11]).pushICYMIInfoModal({ extendedOnboarding: true, skipIntro: true });
+            const timerId = setTimeout(() => {
+              closure_1_2(false);
+            }, 500);
+          }, 100);
+          dependencyMap = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp8) {
+        dependencyMap = tmp;
+        throw tmp8;
       }
-    }),
-    [],
-  );
+    }
+  }), []);
   const callback1 = noop.useCallback(() => {
-    sharedValue(8924).itemInteracted("caught_up", "caught_up", "press_home");
-    const obj = sharedValue(8924);
-    sharedValue(8924).feedItemActioned({
-      itemId: "caught_up",
-      itemType: "caught_up",
-      actionParameters: {
-        actionGestureType: "press",
-        actionTargetElement: "back_to_home_button",
-        actionIntentType: "navigate",
-        actionDestinationType: "guild_home",
-      },
-    });
-    const obj2 = sharedValue(8924);
-    const rootNavigationRef = visible(5199).getRootNavigationRef();
+    _undefined2(_undefined3[9]).itemInteracted("caught_up", "caught_up", "press_home");
+    const obj = _undefined2(_undefined3[9]);
+    _undefined2(_undefined3[9]).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
+    const obj2 = _undefined2(_undefined3[9]);
+    const rootNavigationRef = _undefined(_undefined3[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
     }
   }, []);
-  let obj = visible(5095);
-  class E {
+  let obj = require("../../../../_runtime/metro/01652__.js");
+  const items1 = [closure_11, sharedValue, require("timing/timing").withTiming, require("../../../../_runtime/metro/01652__.js").Easing];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp9, tmp10, tmp11, tmp12] = items1;
+  class CaughtUpRowTsx1 {
     constructor() {
-      obj = closure_1;
+      obj = closure_0;
       num = -80;
-      if (closure_1.get()) {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj2 = closure_0(closure_2[13]);
+      if (closure_0.get()) {
+        tmp = closure_1;
         obj1 = { duration: 250, easing: null };
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        Easing = closure_0(closure_2[5]).Easing;
+        tmp2 = closure_2;
         num2 = 1;
         num3 = 0.5;
         num4 = 1.8;
-        tmp5 = Easing;
+        tmp3 = closure_2;
         num5 = 0.5;
         num6 = 0.5;
-        obj1.easing = Easing.bezier(0.5, 1.8, 0.5, 1);
+        obj1.easing = closure_2.bezier(0.5, 1.8, 0.5, 1);
         num7 = 0;
-        num = obj2.withTiming(0, obj1);
+        num = closure_1(0, obj1);
       }
-      obj7 = { transform: null, opacity: null };
+      obj5 = { transform: null, opacity: null };
       items = [];
       items[0] = { translateY: num };
-      obj7.transform = items;
+      obj5.transform = items;
       num8 = 0;
       if (obj.get()) {
-        tmp6 = closure_0;
-        tmp7 = closure_2;
-        obj5 = closure_0(closure_2[13]);
-        obj8 = { duration: 100, easing: null };
-        tmp8 = closure_0;
-        tmp9 = closure_2;
-        Easing2 = closure_0(closure_2[5]).Easing;
-        tmp10 = closure_0;
-        tmp11 = closure_2;
-        Easing3 = closure_0(closure_2[5]).Easing;
+        tmp4 = closure_1;
+        obj6 = { duration: 100, easing: null };
+        tmp5 = closure_2;
         num9 = 1;
         num10 = 0.68;
         num11 = 0.33;
-        tmp12 = Easing3;
+        tmp6 = closure_2;
         num12 = 1;
         num13 = 1;
-        obj8.easing = Easing2.out(Easing3.bezierFn(0.33, 1, 0.68, 1));
-        num8 = obj5.withTiming(1, obj8);
+        obj6.easing = closure_2.out(closure_2.bezierFn(0.33, 1, 0.68, 1));
+        num8 = closure_1(1, obj6);
       }
-      obj7.opacity = num8;
-      return obj7;
+      obj5.opacity = num8;
+      return obj5;
     }
   }
-  let obj2 = visible(5095);
-  E.__closure = { visibleSharedValue: sharedValue, withTiming: visible(5254).withTiming, Easing: visible(5095).Easing };
-  E.__workletHash = 6575188656069;
-  E.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(E);
-  let obj3 = { visibleSharedValue: sharedValue, withTiming: visible(5254).withTiming, Easing: visible(5095).Easing };
-  const fn = function b() {
-    let num = 0;
-    if (sharedValue.get()) {
-      const obj = ReanimatedRexport2;
-      const obj2 = ReanimatedRexport2;
-      const obj4 = { duration: 100, easing: null };
-      const Easing = ReanimatedRexport2.Easing;
-      obj4.easing = Easing.inOut(ReanimatedRexport2.Easing.ease);
-      const withTimingResult = timing.withTiming(8, obj4);
-      const obj6 = { duration: 300, easing: null };
-      const Easing2 = ReanimatedRexport2.Easing;
-      obj6.easing = Easing2.out(ReanimatedRexport2.Easing.ease);
-      num = obj.withDelay(80, obj2.withSequence(withTimingResult, timing.withTiming(0, obj6)));
+  const items2 = [tmp10, tmp11, tmp12];
+  CaughtUpRowTsx1.__closure = items2;
+  CaughtUpRowTsx1.__workletHash = 808134122268;
+  CaughtUpRowTsx1.__initData = tmp9;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(CaughtUpRowTsx1);
+  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_12, sharedValue, require("../../../../_runtime/metro/01652__.js").withDelay, require("../../../../_runtime/metro/01652__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01652__.js").Easing];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  asyncGeneratorStep = undefined;
+  _slicedToArray = undefined;
+  [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19] = items3;
+  class CaughtUpRowTsx2 {
+    constructor() {
+      num = 0;
+      if (closure_0.get()) {
+        tmp = closure_1;
+        tmp2 = closure_2;
+        tmp3 = closure_3;
+        obj = { duration: 100, easing: null };
+        tmp4 = closure_4;
+        obj.easing = closure_4.inOut(closure_4.ease);
+        num2 = 8;
+        obj1 = { duration: 300, easing: null };
+        tmp5 = closure_3(8, obj);
+        obj1.easing = closure_4.out(closure_4.ease);
+        num3 = 80;
+        num = closure_1(80, closure_2(tmp5, closure_3(0, obj1)));
+      }
+      obj4 = { transform: null };
+      items = [];
+      items[0] = { translateY: num };
+      obj4.transform = items;
+      return obj4;
     }
-    const obj7 = { transform: null };
-    const items = [{ translateY: num }];
-    obj7.transform = items;
-    return obj7;
-  };
-  let obj4 = visible(5095);
-  fn.__closure = {
-    visibleSharedValue: sharedValue,
-    withDelay: visible(5095).withDelay,
-    withSequence: visible(5095).withSequence,
-    withTiming: visible(5254).withTiming,
-    Easing: visible(5095).Easing,
-  };
-  fn.__workletHash = 469742746264;
-  fn.__initData = __initData2;
-  const animatedStyle1 = obj4.useAnimatedStyle(fn);
-  let obj5 = {
-    visibleSharedValue: sharedValue,
-    withDelay: visible(5095).withDelay,
-    withSequence: visible(5095).withSequence,
-    withTiming: visible(5254).withTiming,
-    Easing: visible(5095).Easing,
-  };
-  const fn2 = function x() {
-    let num = 0;
-    if (sharedValue.get()) {
-      const obj = ReanimatedRexport2;
-      const obj2 = ReanimatedRexport2;
-      const obj4 = { duration: 150, easing: null };
-      const Easing = ReanimatedRexport2.Easing;
-      obj4.easing = Easing.inOut(ReanimatedRexport2.Easing.ease);
-      const withTimingResult = timing.withTiming(8, obj4);
-      const obj6 = { duration: 300, easing: null };
-      const Easing2 = ReanimatedRexport2.Easing;
-      obj6.easing = Easing2.out(ReanimatedRexport2.Easing.ease);
-      num = obj.withDelay(115, obj2.withSequence(withTimingResult, timing.withTiming(0, obj6)));
+  }
+  const items4 = [tmp15, tmp16, tmp17, tmp18, tmp19];
+  CaughtUpRowTsx2.__closure = items4;
+  CaughtUpRowTsx2.__workletHash = 5492465188513;
+  CaughtUpRowTsx2.__initData = tmp14;
+  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(CaughtUpRowTsx2);
+  const tmp2Result = require("../../../../_runtime/metro/01652__.js");
+  const items5 = [closure_13, sharedValue, require("../../../../_runtime/metro/01652__.js").withDelay, require("../../../../_runtime/metro/01652__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01652__.js").Easing];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  asyncGeneratorStep = undefined;
+  _slicedToArray = undefined;
+  [tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items5;
+  class CaughtUpRowTsx3 {
+    constructor() {
+      num = 0;
+      if (closure_0.get()) {
+        tmp = closure_1;
+        tmp2 = closure_2;
+        tmp3 = closure_3;
+        obj = { duration: 150, easing: null };
+        tmp4 = closure_4;
+        obj.easing = closure_4.inOut(closure_4.ease);
+        num2 = 8;
+        obj1 = { duration: 300, easing: null };
+        tmp5 = closure_3(8, obj);
+        obj1.easing = closure_4.out(closure_4.ease);
+        num3 = 115;
+        num = closure_1(115, closure_2(tmp5, closure_3(0, obj1)));
+      }
+      obj4 = { transform: null };
+      items = [];
+      items[0] = { translateY: num };
+      obj4.transform = items;
+      return obj4;
     }
-    const obj7 = { transform: null };
-    const items = [{ translateY: num }];
-    obj7.transform = items;
-    return obj7;
-  };
-  let obj6 = visible(5095);
-  fn2.__closure = {
-    visibleSharedValue: sharedValue,
-    withDelay: visible(5095).withDelay,
-    withSequence: visible(5095).withSequence,
-    withTiming: visible(5254).withTiming,
-    Easing: visible(5095).Easing,
-  };
-  fn2.__workletHash = 14933607481025;
-  fn2.__initData = __initData3;
-  const animatedStyle2 = obj6.useAnimatedStyle(fn2);
-  let obj7 = {
-    visibleSharedValue: sharedValue,
-    withDelay: visible(5095).withDelay,
-    withSequence: visible(5095).withSequence,
-    withTiming: visible(5254).withTiming,
-    Easing: visible(5095).Easing,
-  };
-  const token = visible(5596).useToken(sharedValue(575).colors.BACKGROUND_BRAND);
-  const obj9 = { children: null };
-  const obj10 = { style: tmp.container, children: null };
-  const obj11 = { style: tmp.textContainer, children: null };
-  const obj12 = {
-    style: null,
-    children: closure_7(visible(14861).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
-  };
-  const items1 = [tmp.iconWrapper, animatedStyle];
-  obj12.style = items1;
-  const items2 = [closure_7(sharedValue(5095).View, obj12), ,];
-  const obj14 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
-  const items3 = [tmp.headerText, animatedStyle1];
-  obj14.style = items3;
-  const intl = visible(1113).intl;
-  obj14.children = intl.string(visible(1113).t.xjxffq);
-  items2[1] = closure_7(closure_9, obj14);
-  const obj15 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
-  const items4 = [tmp.subtitleText, animatedStyle2];
-  obj15.style = items4;
-  const intl2 = visible(1113).intl;
-  obj15.children = intl2.string(visible(1113).t.sAApb0);
-  items2[2] = closure_7(closure_9, obj15);
-  obj11.children = items2;
-  const items5 = [closure_8(View, obj11)];
-  const obj16 = { style: tmp.buttonContainer, children: null };
-  const obj17 = { size: "md", text: null, grow: true, variant: "primary", onPress: null, loading: null };
-  const intl3 = visible(1113).intl;
-  obj17.text = intl3.string(visible(1113).t.lNJYV8);
-  obj17.onPress = callback;
-  const items6 = [closure_7(visible(5634).Button, obj17)];
-  const obj18 = { size: "md", text: null, grow: true, variant: "secondary", onPress: null };
-  const intl4 = visible(1113).intl;
-  obj18.text = intl4.string(visible(1113).t.AGrUbj);
-  obj18.onPress = callback1;
-  items6[1] = closure_7(visible(5634).Button, obj18);
-  obj16.children = items6;
-  items5[1] = closure_8(View, obj16);
-  obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(18567).Separator, {})];
-  const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
-  const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
-  const obj8 = visible(5596);
-  obj19.start = visible(1092).VerticalGradient.START;
-  obj19.end = visible(1092).VerticalGradient.END;
-  const tmp11 = sharedValue(5587);
-  const obj20 = sharedValue(671)(token);
-  const items8 = [sharedValue(671)(token).alpha(0.2).hex()];
-  const alphaResult = sharedValue(671)(token).alpha(0.2);
-  const obj22 = sharedValue(671)(token);
-  items8[1] = sharedValue(671)(token).alpha(0).hex();
-  obj19.colors = items8;
-  items7[2] = closure_7(tmp11, obj19);
-  obj9.children = items7;
-  return closure_8(View, obj9);
-}
+  }
+  const items6 = [tmp22, tmp23, tmp24, tmp25, tmp26];
+  CaughtUpRowTsx3.__closure = items6;
+  CaughtUpRowTsx3.__workletHash = 13859124718008;
+  CaughtUpRowTsx3.__initData = tmp21;
+  const animatedStyle2 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(CaughtUpRowTsx3);
+  const tmp2Result3 = require("../../../../_runtime/metro/01652__.js");
+  const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  let obj3 = { children: null };
+  let obj4 = { style: tmp.container, children: null };
+  let obj5 = { style: tmp.textContainer, children: null };
+  let obj6 = { style: null, children: closure_7(require("FlashIcon").FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
+  const items7 = [tmp.iconWrapper, animatedStyle];
+  obj6.style = items7;
+  const items8 = [closure_7(module_1652.View, obj6), , ];
+  const obj8 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
+  const items9 = [tmp.headerText, animatedStyle1];
+  obj8.style = items9;
+  const intl = tmp2(1113).intl;
+  obj8.children = intl.string(require("util").t.xjxffq);
+  items8[1] = closure_7(closure_9, obj8);
+  const obj9 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
+  const items10 = [tmp.subtitleText, animatedStyle2];
+  obj9.style = items10;
+  const intl2 = tmp2(1113).intl;
+  obj9.children = intl2.string(require("util").t.sAApb0);
+  items8[2] = closure_7(closure_9, obj9);
+  obj5.children = items8;
+  const items11 = [closure_8(View, obj5), ];
+  const obj10 = { style: tmp.buttonContainer, children: null };
+  const obj11 = { size: "md", text: null, grow: true, variant: "primary", onPress: null, loading: null };
+  const intl3 = tmp2(1113).intl;
+  obj11.text = intl3.string(require("util").t.lNJYV8);
+  obj11.onPress = callback;
+  const items12 = [closure_7(require("components/Button/Button").Button, obj11), ];
+  const obj12 = { size: "md", text: null, grow: true, variant: "secondary", onPress: null };
+  const intl4 = tmp2(1113).intl;
+  obj12.text = intl4.string(require("util").t.AGrUbj);
+  obj12.onPress = callback1;
+  items12[1] = closure_7(require("components/Button/Button").Button, obj12);
+  obj10.children = items12;
+  items11[1] = closure_8(View, obj10);
+  obj4.children = items11;
+  const items13 = [closure_8(View, obj4), closure_7(require("ICYMIShared").Separator, {}), ];
+  const obj13 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
+  let obj7 = { size: "custom", style: tmp.icon, color: "background-brand" };
+  const tmp2Result4 = require("useToken");
+  obj13.start = require("ConstantsIOS").VerticalGradient.START;
+  obj13.end = require("ConstantsIOS").VerticalGradient.END;
+  const tmp29 = LinearGradientDefault;
+  const obj17 = _modDef671(token);
+  const items14 = [_modDef671(token).alpha(0.2).hex(), ];
+  const alphaResult = _modDef671(token).alpha(0.2);
+  const obj19 = _modDef671(token);
+  items14[1] = _modDef671(token).alpha(0).hex();
+  obj13.colors = items14;
+  items13[2] = closure_7(tmp29, obj13);
+  obj3.children = items13;
+  return closure_8(View, obj3);
+};

@@ -12,7 +12,7 @@ export default function JankChatPanelReporter(channelId) {
   const showCreateThread = channelId.showCreateThread;
   ({ translateX, maxWidth } = channelId);
   dependencyMap = noop.useRef({ channelId, showCreateThread });
-  const items = [channelId, showCreateThread];
+  items = [channelId, showCreateThread];
   const effect = noop.useEffect(() => {
     closure_2.current = { channelId, showCreateThread };
   }, items);
@@ -25,13 +25,13 @@ export default function JankChatPanelReporter(channelId) {
     openAt: 0,
     closedAt: maxWidth,
     resolveOpenName: callback,
-    resolveClosedName: channelId(18062).getPanelListScreenName,
+    resolveClosedName: channelId(18206).getPanelListScreenName,
   };
-  return jsx(showCreateThread(18065), {
+  return jsx(showCreateThread(18209), {
     position: translateX,
     openAt: 0,
     closedAt: maxWidth,
     resolveOpenName: callback,
-    resolveClosedName: channelId(18062).getPanelListScreenName,
+    resolveClosedName: channelId(18206).getPanelListScreenName,
   });
 }

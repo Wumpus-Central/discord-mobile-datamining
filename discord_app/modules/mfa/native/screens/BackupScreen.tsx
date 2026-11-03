@@ -40,7 +40,7 @@ export default function BackupScreen(finish) {
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
   [tmp10, c5] = noop.useState(false);
   [first1, closure_7] = noop.useState(10);
-  const items = [first1];
+  items = [first1];
   const effect = noop.useEffect(() => {
     if (first1 > 0) {
       const _setTimeout = setTimeout;

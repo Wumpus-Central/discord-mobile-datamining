@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserSettingsActionCreators from "../../../actions/UserSettingsActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
@@ -15,7 +15,7 @@ function GuildFolderSettingsScene(color) {
   const onColorChange = color.onColorChange;
   ({ name, onNameChange } = color);
   const tmp = closure_12();
-  const items = [color, onColorChange];
+  items = [color, onColorChange];
   let obj = {
     style: tmp.scrollView,
     keyboardShouldPersistTaps: "always",
@@ -32,14 +32,14 @@ function GuildFolderSettingsScene(color) {
     if (color == null) {
       tmp3 = defaultColor;
     }
-    obj.openLazy(asyncRequireImpl(18367, dependencyMap.paths), "RoleColorPicker", {
+    obj.openLazy(asyncRequireImpl(18512, dependencyMap.paths), "RoleColorPicker", {
       color: tmp3,
       defaultColor,
       onSelect: onColorChange,
     });
   }, items);
   obj2.padding = onColorChange(575).space.PX_16;
-  obj2.paddingBottom = 38 + onColorChange(5607)().insets.bottom;
+  obj2.paddingBottom = 38 + onColorChange(5730)().insets.bottom;
   obj.contentContainerStyle = obj2;
   const obj3 = { spacing: onColorChange(575).space.PX_16, children: null };
   const obj4 = {
@@ -57,7 +57,7 @@ function GuildFolderSettingsScene(color) {
   obj4.placeholder = intl2.string(color(1113).t.xV9hVh);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  const items1 = [closure_10(color(7082).TextInput, obj4)];
+  const items1 = [closure_10(color(7208).TextInput, obj4)];
   const obj5 = { label: null, subLabel: null, onPress: null, arrow: true, trailing: null };
   const intl3 = color(1113).intl;
   obj5.label = intl3.string(color(1113).t.xpurRF);
@@ -75,20 +75,20 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(16451), { color: tmp11, style: tmp.colorBlock });
-  obj6.children = closure_10(color(6975).TableRow, obj5);
-  items1[1] = closure_10(color(7060).TableRowGroup, obj6);
+  obj5.trailing = closure_10(onColorChange(16595), { color: tmp11, style: tmp.colorBlock });
+  obj6.children = closure_10(color(7101).TableRow, obj5);
+  items1[1] = closure_10(color(7186).TableRowGroup, obj6);
   obj3.children = items1;
-  obj.children = closure_11(color(6027).Stack, obj3);
+  obj.children = closure_11(color(6147).Stack, obj3);
   return closure_10(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18366);
+const GuildsBarConstants = fn(18511);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   scrollView: { flex: 1 },
   colorBlock: { marginHorizontal: 0, marginVertical: 0, minWidth: 24, height: 24, borderRadius: 3 },
@@ -102,7 +102,7 @@ export default function GuildFolderSettingsModal(folderId) {
   let first1;
   noop = undefined;
   let callback1;
-  const items = [callback1];
+  items = [callback1];
   const items1 = [folderId];
   const stateFromStoresObject = folderId(504).useStateFromStoresObject(
     items,
@@ -183,5 +183,5 @@ export default function GuildFolderSettingsModal(folderId) {
     obj2.headerRight = fn;
     return { [c14]: obj2 };
   }, items3);
-  return closure_10(folderId(7169).Navigator, { screens: memo, initialRouteName });
+  return closure_10(folderId(7290).Navigator, { screens: memo, initialRouteName });
 }

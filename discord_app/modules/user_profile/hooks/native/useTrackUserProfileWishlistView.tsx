@@ -15,7 +15,7 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
     flag = true;
   }
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = wishlistId(onAction[2]).useStateFromStores(items, () => WishlistStore.isFetching(wishlistId));
   flag(false);
   const items1 = [flag, stateFromStores, onAction, wishlistId, productLines];

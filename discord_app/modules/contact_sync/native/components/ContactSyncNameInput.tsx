@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   flex: { flex: 1 },
   content: { flex: 1, padding: 16, paddingBottom: 0 },
@@ -65,7 +65,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     tmp9 = require;
   }
   const obj = { style: null, children: null };
-  const items = [
+  items = [
     tmp.content,
     { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom },
   ];
@@ -74,7 +74,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -87,7 +87,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     string2Result = string2(t2["sO+NI5"]);
   }
   obj3.children = string2Result;
-  const items1 = [timestampProducer(tmp9(5624).Text, obj3), , , ,];
+  const items1 = [timestampProducer(tmp9(5747).Text, obj3), , , ,];
   const obj4 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = tmp9(1113).intl;
   const string3 = intl3.string;
@@ -98,11 +98,11 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     string3Result = string3(t3.xI496M);
   }
   obj4.children = string3Result;
-  items1[1] = timestampProducer(tmp9(5624).Text, obj4);
+  items1[1] = timestampProducer(tmp9(5747).Text, obj4);
   const obj5 = { variant: "eyebrow", color: "interactive-text-default", children: null };
   const intl4 = tmp9(1113).intl;
   obj5.children = intl4.string(tmp9(1113).t["42/D2U"]);
-  items1[2] = timestampProducer(tmp9(5624).Text, obj5);
+  items1[2] = timestampProducer(tmp9(5747).Text, obj5);
   items1[3] = timestampProducer(tmp9(1187).InputView, {
     value,
     onChangeText: tmp2[1],
@@ -120,7 +120,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     const obj7 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl5 = tmp9(1113).intl;
     obj7.children = intl5.string(tmp9(1113).t.bCQt9K);
-    tmp12Result = timestampProducer(tmp9(5624).Text, obj7);
+    tmp12Result = timestampProducer(tmp9(5747).Text, obj7);
   }
   items1[4] = tmp12Result;
   obj2.children = items1;
@@ -129,7 +129,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = timestampProducer(tmp9(5634).Button, {
+  items2[1] = timestampProducer(tmp9(5754).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
@@ -152,7 +152,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj9.children = timestampProducer(tmp9(5634).Button, obj10);
+    obj9.children = timestampProducer(tmp9(5754).Button, obj10);
     tmp12Result2 = timestampProducer(View, obj9);
   }
   items2[2] = tmp12Result2;

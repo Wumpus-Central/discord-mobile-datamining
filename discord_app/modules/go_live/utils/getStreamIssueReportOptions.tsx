@@ -20,7 +20,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
     tmp6 = require;
   }
   obj.label = stringResult;
-  const items = [obj, , , , , , , ,];
+  items = [obj, , , , , , , ,];
   const obj2 = { id: "blurry", value: StreamIssueReportReasons.BLURRY, label: null };
   const intl2 = tmp6(1113).intl;
   const string2 = intl2.string;

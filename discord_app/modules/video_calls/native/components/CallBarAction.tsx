@@ -125,15 +125,15 @@ class ActionButton {
   }
 }
 const View = fn(17).View;
-const resetFocusTimer = fn(11000).resetFocusTimer;
+const resetFocusTimer = fn(11133).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const ColorUtils = fn(5011);
+const ColorUtils = fn(5138);
 let closure_8 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_9 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_11 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   buttonContainer: { position: "absolute" },
   iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
@@ -161,7 +161,7 @@ obj3.notificationText = { lineHeight: 16 };
 obj3.notificationAreaMentioned = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 let obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj3.notificationAreaUnread = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
-let closure_12 = createStyles.createStyles(obj3);
+const application_id = createStyles.createStyles(obj3);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/CallBarAction.tsx");
 
@@ -232,7 +232,7 @@ export function NotifiedActionButton(isMentioned) {
   const tmp2 = closure_12();
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.notificationArea];
+  items = [tmp2.notificationArea];
   if (true !== isMentioned) {
     if (undefined !== isMentioned) {
       let notificationAreaMentioned = tmp2.notificationAreaUnread;

@@ -73,7 +73,7 @@ prototype["initialize"] = function initialize(arg0) {
     obj = {};
   }
   closure_7 = obj;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   self.syncWith(items, syncFavoriteCategoryCollapse);
 };
 prototype["getState"] = function getState() {

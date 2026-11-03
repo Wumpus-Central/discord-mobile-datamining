@@ -6,7 +6,7 @@ import SearchMessageStore from "../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_4 = fn(9827).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(9958).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx",
@@ -16,7 +16,7 @@ export function useSearchMessagesLoadingState(arg0) {
   ({ searchContext: require, tab: dependencyMap } = arg0);
   ({ placeholderHeight, numColumns } = arg0);
   closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  const items = [SearchQueryStore, closure_2];
+  items = [SearchQueryStore, closure_2];
   return initialize.useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(closure_1_0, dependencyMap, searchResultsQuery);

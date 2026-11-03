@@ -72,7 +72,7 @@ export function questTaskConfigV2FromServer(task_config_v2) {
     const entries = Object.entries(task_config_v2.tasks);
     const mapped = entries.map((item) => {
       [tmp, tmp2] = item;
-      const items = [tmp];
+      items = [tmp];
       const type = tmp2.type;
       if (FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO === type) {
         const obj2 = {

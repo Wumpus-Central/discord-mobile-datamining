@@ -26,7 +26,7 @@ export default function MobileQuestPreviewContainer(title) {
     const obj2 = { variant: "text-lg/semibold", color: "text-default", style: tmp.title, children: title };
     tmp4 = React3(Text_Text.Text, obj2);
   }
-  const items = [tmp4, title.children];
+  items = [tmp4, title.children];
   obj.children = items;
   return React4(View, obj);
 }

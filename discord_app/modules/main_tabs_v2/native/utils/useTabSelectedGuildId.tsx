@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
 export default function useTabSelectedGuildId() {
-  const items = [SelectedGuildStore, SortedGuildStore];
+  items = [SelectedGuildStore, SortedGuildStore];
   return useStateFromStores.useStateFromStores(items, () => {
     let guildId = SelectedGuildStore.getGuildId();
     const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();

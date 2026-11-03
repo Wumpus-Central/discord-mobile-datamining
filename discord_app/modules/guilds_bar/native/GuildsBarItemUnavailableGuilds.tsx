@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef18413 from "../../../../_runtime/metro/18413__.js";
+import _modDef18558 from "../../../../_runtime/metro/18558__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarIt
 
 export default noop.memo(function GuildsBarItemUnavailableGuilds() {
   const tmp = closure_6();
-  const items = [GuildAvailabilityStore];
+  items = [GuildAvailabilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
@@ -52,8 +52,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18413 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18413 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18558 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18558 });
     tmp5 = (
       <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
         {null}

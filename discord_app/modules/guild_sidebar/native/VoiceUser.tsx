@@ -20,7 +20,7 @@ export default function VoiceUserConnected(channel) {
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = AuthenticationStore.getId() === user.id;
   closure_3 = tmp;
-  const items = [MediaEngineStore];
+  items = [MediaEngineStore];
   const stateFromStoresObject = channel(sessionId[8]).useStateFromStoresObject(items, () => {
     if (closure_3) {
       const obj2 = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };

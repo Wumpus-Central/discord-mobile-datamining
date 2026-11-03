@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/native/components/CheckpointOverlay.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3060 from "../../Checkpoint.messages.js";
-import _modDef3092 from "../../Checkpoint2026.messages.js";
+import _modDef3187 from "../../Checkpoint.messages.js";
+import _modDef3219 from "../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import CheckpointNavigation from "../../CheckpointNavigation.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -42,9 +42,9 @@ export default function CheckpointOverlay(route) {
       const obj3 = { size: "xs", color: CHECKPOINT_PRIMARY };
       obj2.icon = jsx(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY });
       const intl9 = util.intl;
-      obj2.title = intl9.string(_modDef3092["/7XYsa"]);
+      obj2.title = intl9.string(_modDef3219["/7XYsa"]);
       const intl10 = util.intl;
-      obj2.description = intl10.string(_modDef3092["X8/G/o"]);
+      obj2.description = intl10.string(_modDef3219["X8/G/o"]);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.VOICE === statsScreen) {
       return jsx(CheckpointVoiceStatsScreenDefault, {});
@@ -53,9 +53,9 @@ export default function CheckpointOverlay(route) {
       const obj5 = { size: "xs", color: CHECKPOINT_PRIMARY };
       obj4.icon = jsx(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY });
       const intl7 = util.intl;
-      obj4.title = intl7.string(_modDef3092["2BuyVC"]);
+      obj4.title = intl7.string(_modDef3219["2BuyVC"]);
       const intl8 = util.intl;
-      obj4.description = intl8.string(_modDef3092["kF+Y3a"]);
+      obj4.description = intl8.string(_modDef3219["kF+Y3a"]);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.MESSAGES === statsScreen) {
       return jsx(CheckpointMessagesStatsScreenDefault, {});
@@ -64,9 +64,9 @@ export default function CheckpointOverlay(route) {
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
       obj6.icon = jsx(ServerIcon.ServerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY });
       const intl5 = util.intl;
-      obj6.title = intl5.string(_modDef3060.F0fkrh);
+      obj6.title = intl5.string(_modDef3187.F0fkrh);
       const intl6 = util.intl;
-      obj6.description = intl6.string(_modDef3092.Xg82Gy);
+      obj6.description = intl6.string(_modDef3219.Xg82Gy);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.SERVERS === statsScreen) {
       return jsx(CheckpointServersStatsScreenDefault, {});
@@ -80,9 +80,9 @@ export default function CheckpointOverlay(route) {
         color: CHECKPOINT_PRIMARY,
       });
       const intl3 = util.intl;
-      obj8.title = intl3.string(_modDef3092.ZTDCIv);
+      obj8.title = intl3.string(_modDef3219.ZTDCIv);
       const intl4 = util.intl;
-      obj8.description = intl4.string(_modDef3092.y8Sr8J);
+      obj8.description = intl4.string(_modDef3219.y8Sr8J);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.EMOJI === statsScreen) {
       return jsx(CheckpointEmojiStatsScreenDefault, {});
@@ -91,9 +91,9 @@ export default function CheckpointOverlay(route) {
       const obj11 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
       obj10.icon = jsx(GameControllerIcon.GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY });
       const intl = util.intl;
-      obj10.title = intl.string(_modDef3092.HM2fjf);
+      obj10.title = intl.string(_modDef3219.HM2fjf);
       const intl2 = util.intl;
-      obj10.description = intl2.string(_modDef3092.LQiFqJ);
+      obj10.description = intl2.string(_modDef3219.LQiFqJ);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.GAMES === statsScreen) {
       return jsx(CheckpointGamesStatsScreenDefault, {});

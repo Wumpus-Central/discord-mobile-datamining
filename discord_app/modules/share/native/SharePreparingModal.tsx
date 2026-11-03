@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 },
   topBar: null,
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/share/native/SharePreparingMo
 export default function SharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
   const tmp = closure_7();
-  const items = [onCancel];
+  items = [onCancel];
   const effect = noop.useEffect(() => () => onCancel(), items);
   const obj = { style: tmp.content, children: null };
   const items1 = [hasOwnProperty(Backdrop.Backdrop, { blur: "none", "aria-hidden": true }), , ,];

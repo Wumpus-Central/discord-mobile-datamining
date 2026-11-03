@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import _modDef2042 from "../../../../_runtime/metro/02042__.js";
+import _modDef2171 from "../../../../_runtime/metro/02171__.js";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ export function useMessageRequestTimestampText(channel) {
   const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(channel);
   const obj2 = { lastMessageId: null };
   const obj = require("useMessageRequestPreview");
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj2);
@@ -24,8 +24,8 @@ export function useMessageRequestTimestampText(channel) {
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _modDef2042(extractTimestampResult).calendar();
-      const obj6 = _modDef2042(extractTimestampResult);
+      str = _modDef2171(extractTimestampResult).calendar();
+      const obj6 = _modDef2171(extractTimestampResult);
     }
     return str;
   }
@@ -41,7 +41,7 @@ export function useMessageRequestRelativeTimestampText(channel) {
   const obj2 = { lastMessageId: null };
   const obj = require("useMessageRequestPreview");
   const tmp = _require;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj2);
@@ -51,8 +51,8 @@ export function useMessageRequestRelativeTimestampText(channel) {
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(8347).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(8347);
+      str = tmp(8471).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(8471);
     }
     return str;
   }

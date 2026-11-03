@@ -31,7 +31,7 @@ function rebuildGuildChannels(guildId) {
   obj = { id: guildId };
   obj[SELECTABLE] = [];
   obj[VOCAL] = [];
-  const items = [obj];
+  items = [obj];
   obj[ChannelTypes.GUILD_CATEGORY] = items;
   obj.count = 0;
   closure_24[guildId] = obj;
@@ -73,7 +73,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(4888);
+  obj2 = obj(5015);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -192,8 +192,8 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4945).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4867);
+let closure_6 = fn(5072).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(4994);
 ({
   isGuildSelectableChannelType: closure_7,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,
@@ -239,7 +239,7 @@ prototype["initialize"] = function initialize() {
     PermissionStore,
     UserStore,
   );
-  const items = [FavoriteStore];
+  items = [FavoriteStore];
   this.syncWith(items, handleFavoritesUpdate);
 };
 prototype["getAllGuilds"] = function getAllGuilds() {

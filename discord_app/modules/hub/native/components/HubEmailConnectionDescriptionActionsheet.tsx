@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
@@ -19,7 +19,7 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   const obj2 = { title: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t["48kg+O"]);
-  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ,];
+  items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ,];
   const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.O1k9XX);

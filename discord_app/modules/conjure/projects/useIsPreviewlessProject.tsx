@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/projects/useIsPreview
 
 export default function useIsPreviewlessProject(arg0) {
   _require = arg0;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   return require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let isPreviewlessProjectResult = null != project;

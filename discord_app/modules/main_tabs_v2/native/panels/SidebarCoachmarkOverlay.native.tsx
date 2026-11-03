@@ -8,7 +8,7 @@ require = fn;
 function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
   closure_1 = _slicedToArray(noop.useState({}), 2)[1];
-  const items = [manager];
+  items = [manager];
   const effect = noop.useEffect(() => {
     closure_0 = manager;
     manager.invalidate = () => closure_1_1({});
@@ -56,7 +56,7 @@ export function SidebarCoachmarkOverlay(enabled) {
     tmp3 = tmp;
   }
   const obj = { value: tmp3, children: null };
-  const items = [enabled.children];
+  items = [enabled.children];
   let tmp4 = null;
   if (enabled) {
     const obj2 = { manager: tmp };

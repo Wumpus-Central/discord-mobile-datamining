@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import RegionalFeatureConfigUtils from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import AgeNoticeSettingsPredicate from "../../../age_assurance/age_notice/native/AgeNoticeSettingsPredicate.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ let obj = {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }
@@ -50,7 +50,7 @@ export default SettingBuilders.createStatic({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }

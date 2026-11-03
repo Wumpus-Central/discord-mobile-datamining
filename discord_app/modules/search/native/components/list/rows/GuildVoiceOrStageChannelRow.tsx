@@ -17,7 +17,7 @@ function GuildVoiceChannelSubtitle(channel) {
   const id = channel.id;
   const guild_id = channel.guild_id;
   const tmp = closure_8();
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const items1 = [channel.id];
   const stateFromStores = channel(id[9]).useStateFromStores(
     items,
@@ -168,9 +168,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(9827).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9958).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   users: { marginTop: 4 },
   subtitle: { marginEnd: 16 },
@@ -186,7 +186,7 @@ export default noop.memo(function GuildVoiceChannelRow(channel) {
     voiceStates = channel.speakerVoiceStates;
   }
   const mapped = voiceStates.map((user) => user.user);
-  const items = [channel.id, onPress];
+  items = [channel.id, onPress];
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);

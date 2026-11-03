@@ -20,6 +20,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/conjureMarkup.tsx");
 
 export function parseConjureMarkup() {
-  const items = [...arguments];
+  items = [...arguments];
   return closure_4()(...items);
 }

@@ -20,7 +20,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -107,7 +107,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
   };
   obj3.loading = tmp2;
   obj3.disabled = tmp2;
-  const items = [closure_6(AlertModal.AlertActionButton, obj3)];
+  items = [closure_6(AlertModal.AlertActionButton, obj3)];
   let obj4 = { text: null, onPress: null, variant: "secondary", disabled: null };
   const intl4 = util.intl;
   obj4.text = intl4.string(util.t["6GQDFu"]);
@@ -131,16 +131,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5207).dismissKeyboard();
-    const obj = onReset(5207);
+    onReset(5330).dismissKeyboard();
+    const obj = onReset(5330);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5258).hideActionSheet();
-      const tmp7Result = tmp7(5258);
-      tmp7(5959).close();
-      const tmp4Result = tmp4(5960);
+      tmp7(5381).hideActionSheet();
+      const tmp7Result = tmp7(5381);
+      tmp7(6079).close();
+      const tmp4Result = tmp4(6080);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5959);
+      const tmp7Result3 = tmp7(6079);
     } else {
       const obj4 = {
         title: null,
@@ -166,10 +166,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5959).show(obj4);
-      const tmp7Result4 = tmp7(5959);
+      tmp7(6079).show(obj4);
+      const tmp7Result4 = tmp7(6079);
     }
-    obj2 = onReset(11408);
+    obj2 = onReset(11546);
   } else {
     onContinue();
   }

@@ -15,7 +15,7 @@ export function useTraitPickerOptions(customizationOption) {
   const rarityOrder = customizationOption.rarityOrder;
   const optionIds = customizationOption.optionIds;
   let stateFromStores;
-  let items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = customizationOption(savedOptionId[3]).useStateFromStores(items, () => stateFromStores.stats);
   let obj = customizationOption(savedOptionId[3]);
   const items1 = [optionIds];
@@ -34,7 +34,7 @@ export function useTraitPickerOptions(customizationOption) {
       CHECKPOINT_OUTFIT_TO_COLOR_NAME = customizationOption(savedOptionId[6]).CHECKPOINT_TRAIT_TO_OPTION_NAMES[tmp3];
     }
     customizationOption(savedOptionId[7]).getVisibleTraitRarities(tmp3, totalCount);
-    const items = [];
+    items = [];
     totalCount = 0;
     earnedCount = 0;
     let tmp4 = items;

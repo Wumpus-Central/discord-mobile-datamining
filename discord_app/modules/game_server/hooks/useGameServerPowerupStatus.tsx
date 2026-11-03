@@ -1,6 +1,6 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2570 from "../../premium/powerups/GuildPowerups.messages.js";
+import _modDef2699 from "../../premium/powerups/GuildPowerups.messages.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServ
 
 export default function useGameServerPowerupStatus(arg0) {
   _require = arg0;
-  const items = [GameServerStore];
+  items = [GameServerStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
@@ -26,7 +26,7 @@ export default function useGameServerPowerupStatus(arg0) {
     },
     items1,
   );
-  const tmp2 = stateFromStores(14133)(arg0);
+  const tmp2 = stateFromStores(14264)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {
@@ -41,7 +41,7 @@ export default function useGameServerPowerupStatus(arg0) {
       } else {
         obj3 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj3.statusText = intl.string(_modDef2570.FFLkmx);
+        obj3.statusText = intl.string(_modDef2699.FFLkmx);
       }
       return obj3;
     }

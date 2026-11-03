@@ -24,7 +24,7 @@ export default function useCountdown(expiresAt, arg1, arg2, arg3) {
   _slicedToArray = undefined;
   const tmp = _slicedToArray(closure_5(Date.now), 2);
   _slicedToArray = tmp[1];
-  const items = [expiresAt, flag, arg2];
+  items = [expiresAt, flag, arg2];
   let obj = require("DateUtils");
   const diffAsUnitsResult = require("DateUtils").diffAsUnits(tmp[0], expiresAt);
   let tmp5 = null;

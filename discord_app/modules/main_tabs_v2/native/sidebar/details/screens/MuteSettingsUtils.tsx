@@ -14,7 +14,7 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: c10, UserNotificationSettings: closure_11 } = Constants);
+({ ChannelTypes: closure_10, UserNotificationSettings: closure_11 } = Constants);
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx");
@@ -82,7 +82,7 @@ export function handleMuteSettingPress(arg0) {
   ({ channelId, muteDurationSeconds } = arg0);
   const muteSettings = ChannelMuteUtilsAll.getMuteSettings(muteDurationSeconds);
   const channel = ChannelStore.getChannel(channelId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != onOptionPress) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
@@ -152,7 +152,7 @@ export function getMuteOptions() {
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
   obj.duration = MuteUntilSeconds.MINUTES_15;
-  const items = [obj, , , , ,];
+  items = [obj, , , , ,];
   const obj2 = { label: null, duration: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.UMWBZr);

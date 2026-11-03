@@ -11,7 +11,7 @@ export function useSidekickLeave(route, stateFromStores3, onNextStep, onPrevious
   closure_1 = stateFromStores3;
   noop = onNextStep;
   noop.useRef(true);
-  const items = [onNextStep, onPreviousStep, stateFromStores3, route];
+  items = [onNextStep, onPreviousStep, stateFromStores3, route];
   const effect = noop.useEffect(() => {
     if (timeout === CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE) {
       if (ref.current) {

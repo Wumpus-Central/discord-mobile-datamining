@@ -30,12 +30,12 @@ export function getBrandSafetyContext(surfaceId) {
       if (undefined !== tmp4) {
         if (undefined !== tmp5) {
           const guildId = SelectedGuildStore.getGuildId();
-          let guild = null;
+          guild = null;
           if (null != guildId) {
             guild = GuildStore.getGuild(guildId);
           }
           if (tmp7) {
-            let items = [];
+            items = [];
           } else {
             _require = GuildStore.getGuilds();
             const mapped = tmp4().map((item) => {

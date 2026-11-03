@@ -17,7 +17,7 @@ class LoginRequiredActionManager extends tmp3 {
 LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    let items = [constants.UPDATE_PASSWORD];
+    items = [constants.UPDATE_PASSWORD];
     const result = LoginRequiredActionStore.wasLoginAttemptedInSession(currentUser.id);
     const result1 = LoginRequiredActionStore.requiredActionsIncludes(currentUser.id, items);
     if (result) {
@@ -26,14 +26,14 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
           screen: constants3.ACCOUNT_CHANGE_PASSWORD,
           params: { isLoginRequiredAction: true },
           onClose() {
-            const items = [constants.UPDATE_PASSWORD];
+            items = [constants.UPDATE_PASSWORD];
             if (LoginRequiredActionStore.requiredActionsIncludes(currentUser.id, items)) {
               AuthenticationActionCreatorsDefault.logout("login_required_account_manager", constants2.LOGIN);
             }
           },
         };
-        currentUser(7563).openUserSettings(obj3);
-        const obj2 = currentUser(7563);
+        currentUser(7687).openUserSettings(obj3);
+        const obj2 = currentUser(7687);
       }
     }
     if (result1) {

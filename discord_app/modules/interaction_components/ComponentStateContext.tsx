@@ -69,7 +69,7 @@ function getActionComponentState(interaction, id) {
 }
 function useShouldDisableInteractiveComponents(channel_id) {
   const channel = ChannelStore.getChannel(channel_id);
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const items1 = [channel];
   const stateFromStores = channel(504).useStateFromStores(
     items,
@@ -138,11 +138,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8434);
-  const isThreadModerator = channel(7443).useIsThreadModerator(channel);
-  const tmpResult = channel(7443);
+  const obj5 = channel(8558);
+  const isThreadModerator = channel(7567).useIsThreadModerator(channel);
+  const tmpResult = channel(7567);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7443).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7567).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -176,7 +176,7 @@ function useShouldDisableInteractiveComponents(channel_id) {
 }
 function useComponentStateForMessage(channel_id, arg1, id) {
   _require = channel_id;
-  const items = [LocalInteractionComponentStateStore];
+  items = [LocalInteractionComponentStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     LocalInteractionComponentStateStore.getInteractionComponentState(channel_id.id, id.id),
   );
@@ -291,7 +291,7 @@ function useComponentStateForModal(customId, id, arg2) {
   _require = customId;
   importDefault = id;
   dependencyMap = arg2;
-  const items = [LocalInteractionComponentStateStore];
+  items = [LocalInteractionComponentStateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () =>
     LocalInteractionComponentStateStore.getInteractionComponentState(customId.customId, id.id),
   );
@@ -396,7 +396,7 @@ export function ComponentStateContextProvider(children) {
   if (flag === undefined) {
     flag = false;
   }
-  const items = [message, modal, applicationWidget, flag, validators, validationErrors, setValidationErrors];
+  items = [message, modal, applicationWidget, flag, validators, validationErrors, setValidationErrors];
   return (
     <redux.Provider
       value={validationErrors.useMemo(() => {

@@ -1,100 +1,91 @@
 // discord_app/modules/user_profile/native/UserProfileTabPages.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
+const _modDef1652 = tmp(1652);
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const jsx = fn(21).jsx;
-const __initData = {
-  code: "function UserProfileTabPagesTsx1(){const{isDragging,activeIndex,pageHeights}=this.__closure;if(isDragging.get())return-1;const index=Math.round(activeIndex.get());return pageHeights.get()[index]==null?-1:index;}",
+let jsx = fn(21).jsx;
+let closure_7 = {
+  code: "(function UserProfileTabPagesTsx1(){let[isDragging,activeIndex,pageHeights]=this.__closure;if(isDragging.get())return-1;const index=Math.round(activeIndex.get());return pageHeights.get()[index]==null?-1:index;})",
 };
-const __initData2 = {
-  code: "function UserProfileTabPagesTsx2(index){const{destinationIndex,scrollPosition,fillHeight,pagerHeight,pageHeights,runOnJS,scrollUpToFit}=this.__closure;if(index===-1||index===destinationIndex.get())return;const isInitialPage=destinationIndex.get()===-1;destinationIndex.set(index);if(isInitialPage||scrollPosition==null||fillHeight<=0)return;const heightDelta=pagerHeight.get()-Math.max(pageHeights.get()[index],fillHeight);if(heightDelta>0){runOnJS(scrollUpToFit)(heightDelta,scrollPosition.get());}}",
+let closure_8 = {
+  code: "(function UserProfileTabPagesTsx2(index){let[destinationIndex,scrollPosition,fillHeight,pagerHeight,pageHeights,scheduleOnRN,scrollUpToFit]=this.__closure;if(index===-1||index===destinationIndex.get())return;const isInitialPage=destinationIndex.get()===-1;destinationIndex.set(index);if(isInitialPage||scrollPosition==null||fillHeight<=0)return;const heightDelta=pagerHeight.get()-Math.max(pageHeights.get()[index],fillHeight);if(heightDelta>0){scheduleOnRN(scrollUpToFit,heightDelta,scrollPosition.get());}})",
 };
-const __initData3 = {
-  code: "function UserProfileTabPagesTsx3(){const{pageHeights,visiblePageRange,fillHeight,scrollPosition,releaseScrollY}=this.__closure;var _heights$lo,_heights$hi,_scrollPosition$get,_scrollPosition;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);return[Math.max(contentHeight,fillHeight),(_scrollPosition$get=(_scrollPosition=scrollPosition)===null||_scrollPosition===void 0?void 0:_scrollPosition.get())!==null&&_scrollPosition$get!==void 0?_scrollPosition$get:0,releaseScrollY.get()];}",
+let closure_9 = {
+  code: "(function UserProfileTabPagesTsx3(){let[pageHeights,visiblePageRange,fillHeight,scrollPosition,releaseScrollY]=this.__closure;var _heights$lo,_heights$hi,_scrollPosition$get,_scrollPosition;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);return[Math.max(contentHeight,fillHeight),(_scrollPosition$get=(_scrollPosition=scrollPosition)===null||_scrollPosition===void 0?void 0:_scrollPosition.get())!==null&&_scrollPosition$get!==void 0?_scrollPosition$get:0,releaseScrollY.get()];})",
 };
-const __initData4 = {
-  code: "function UserProfileTabPagesTsx4([targetHeight,scrollY,releaseY]){const{pagerHeight,scrollPosition,fillHeight,releaseScrollY}=this.__closure;const currentHeight=pagerHeight.get();let nextHeight=targetHeight;if(targetHeight<currentHeight&&scrollPosition!=null&&fillHeight>0){if(releaseY>=0&&scrollY<=releaseY+1){releaseScrollY.set(-1);}else{nextHeight=Math.max(targetHeight,Math.min(currentHeight,scrollY+fillHeight));}}if(nextHeight!==currentHeight){pagerHeight.set(nextHeight);}}",
+let closure_10 = {
+  code: "(function UserProfileTabPagesTsx4([targetHeight,scrollY,releaseY]){let[pagerHeight,scrollPosition,fillHeight,releaseScrollY]=this.__closure;const currentHeight=pagerHeight.get();let nextHeight=targetHeight;if(targetHeight<currentHeight&&scrollPosition!=null&&fillHeight>0){if(releaseY>=0&&scrollY<=releaseY+1){releaseScrollY.set(-1);}else{nextHeight=Math.max(targetHeight,Math.min(currentHeight,scrollY+fillHeight));}}if(nextHeight!==currentHeight){pagerHeight.set(nextHeight);}})",
 };
-const __initData5 = {
-  code: "function UserProfileTabPagesTsx5(){const{pagerHeight}=this.__closure;const height=pagerHeight.get();return height>0?{height:height}:{};}",
+let closure_11 = {
+  code: "(function UserProfileTabPagesTsx5(){let[pagerHeight]=this.__closure;const height=pagerHeight.get();return height>0?{height:height}:{};})",
 };
-const __initData6 = {
-  code: "function UserProfileTabPagesTsx6(){const{isDragging}=this.__closure;isDragging.set(true);}",
-};
-const __initData7 = {
-  code: "function UserProfileTabPagesTsx7(){const{isDragging}=this.__closure;isDragging.set(false);}",
+let closure_12 = { code: "(function UserProfileTabPagesTsx6(){let[isDragging]=this.__closure;isDragging.set(true);})" };
+let closure_13 = {
+  code: "(function UserProfileTabPagesTsx7(){let[isDragging]=this.__closure;isDragging.set(false);})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTabPages.tsx");
 
 export default noop.memo(function UserProfileTabPages(arg0) {
   ({ state, pageHeights, scrollPosition, scrollViewRef, parentPagerGesture } = arg0);
-  let height;
-  let bottom;
-  _slicedToArray = undefined;
-  let ref;
-  height = height(bottom[5])().height;
-  bottom = height(bottom[6])().bottom;
-  [tmp2, c3] = ref.useState(0);
-  ref = ref.useRef(null);
-  let items = [height, bottom, scrollPosition];
-  closure_129_0 = pageHeights;
-  closure_129_1 = tmp2;
-  closure_129_2 = scrollPosition;
-  const activeIndex = state.activeIndex;
-  closure_129_3 = activeIndex;
-  const visiblePageRange = state.visiblePageRange;
-  closure_129_4 = visiblePageRange;
-  const callback = ref.useCallback(() => {
-    const current = ref.current;
+  _require = scrollPosition;
+  c3 = undefined;
+  noop = undefined;
+  const height = useWindowDimensionsDefault().height;
+  importDefault = height;
+  const bottom = useSafeAreaInsetsDefault().bottom;
+  [tmp4, c3] = c3(noop.useState(0), 2);
+  const ref = noop.useRef(null);
+  noop = ref;
+  items = [height, bottom, scrollPosition];
+  const callback = noop.useCallback(() => {
+    const current = _undefined5.current;
     if (current != null) {
       current.measureInWindow((arg0, arg1) => {
         let num;
-        if (scrollPosition != null) {
-          num = scrollPosition.get();
+        if (_undefined != null) {
+          num = _undefined.get();
         }
         if (num == null) {
           num = 0;
         }
-        const diff = height - (arg1 + num) - bottom;
+        const diff = _undefined2 - (arg1 + num) - _undefined3;
         let num2 = 0;
         if (diff > 0) {
           num2 = diff;
         }
-        _undefined(num2);
+        _undefined4(num2);
       });
     }
   }, items);
-  const tmp = _slicedToArray(ref.useState(0), 2);
-  const sharedValue = scrollPosition(bottom[4]).useSharedValue(0);
-  closure_129_5 = sharedValue;
-  let obj = scrollPosition(bottom[4]);
-  const sharedValue1 = scrollPosition(bottom[4]).useSharedValue(-1);
-  closure_129_6 = sharedValue1;
-  let obj2 = scrollPosition(bottom[4]);
-  const sharedValue2 = scrollPosition(bottom[4]).useSharedValue(false);
-  closure_129_7 = sharedValue2;
-  const obj3 = scrollPosition(bottom[4]);
-  const sharedValue3 = scrollPosition(bottom[4]).useSharedValue(-1);
-  closure_129_8 = sharedValue3;
+  ({ activeIndex, visiblePageRange } = state);
+  const tmp3 = c3(noop.useState(0), 2);
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj4 = require("../../../../_runtime/metro/01652__.js");
   const useReducedMotion = state.useReducedMotion;
-  closure_130_0 = scrollViewRef;
-  closure_130_1 = sharedValue1;
-  closure_130_2 = useReducedMotion;
+  closure_129_0 = scrollViewRef;
+  closure_129_1 = sharedValue1;
+  closure_129_2 = useReducedMotion;
   const items1 = [scrollViewRef, sharedValue1, useReducedMotion];
-  const callback1 = ref.useCallback((arg0, arg1) => {
-    scrollPosition = arg0;
+  const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  const callback1 = noop.useCallback((arg0, arg1) => {
+    _undefined = arg0;
     closure_1 = arg1;
     let current;
-    if (scrollPosition != null) {
-      current = scrollPosition.current;
+    if (_undefined != null) {
+      current = _undefined.current;
     }
     let nativeScrollRef;
     if (current != null) {
@@ -109,11 +100,11 @@ export default noop.memo(function UserProfileTabPages(arg0) {
         closure_0 = arg3;
         innerViewRef.measure((arg0, arg1, arg2, arg3) => {
           const bound = Math.max(arg3 - closure_0 - closure_0, 0);
-          const result = height.set(bound);
+          const result = c1.set(bound);
           if (closure_1 > bound) {
             const obj = { y: bound, animated: null };
-            let tmp5 = !bottom;
-            if (!bottom) {
+            let tmp5 = !c2;
+            if (!c2) {
               tmp5 = !useIsScreenReaderEnabled.getIsScreenReaderEnabled();
             }
             obj.animated = tmp5;
@@ -123,71 +114,106 @@ export default noop.memo(function UserProfileTabPages(arg0) {
       });
     }
   }, items1);
-  closure_129_9 = callback1;
-  const obj4 = scrollPosition(bottom[4]);
-  const fn = function b() {
-    if (__initData.get()) {
-      return -1;
-    } else {
-      const _Math = Math;
-      const rounded = Math.round(_undefined.get());
-      let num = -1;
-      if (null != scrollPosition.get()[rounded]) {
-        num = rounded;
+  const obj5 = require("../../../../_runtime/metro/01652__.js");
+  const items2 = [closure_7, sharedValue2, activeIndex, pageHeights];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp13, tmp14, tmp15, tmp16] = items2;
+  class UserProfileTabPagesTsx1 {
+    constructor() {
+      if (closure_0.get()) {
+        num2 = -1;
+        return -1;
+      } else {
+        tmp = globalThis;
+        _Math = Math;
+        tmp2 = closure_1;
+        rounded = Math.round(closure_1.get());
+        tmp4 = closure_2;
+        tmp5 = null;
+        num = -1;
+        if (null != closure_2.get()[rounded]) {
+          num = rounded;
+        }
+        return num;
       }
-      return num;
     }
-  };
-  fn.__closure = { isDragging: sharedValue2, activeIndex, pageHeights };
-  fn.__workletHash = 5702222355442;
-  fn.__initData = __initData;
-  const fn2 = function v(arg0) {
-    if (-1 !== arg0) {
-      if (arg0 !== __initData2.get()) {
-        value = __initData2.get();
-        const result = __initData2.set(arg0);
-        if (-1 !== value) {
-          if (null != bottom) {
-            if (height > 0) {
-              const _Math = Math;
-              value2 = ScrollView.get();
-              const diff = value2 - Math.max(scrollPosition.get()[arg0], tmp);
-              if (diff > 0) {
-                ReanimatedRexport.runOnJS(__initData3)(diff, bottom.get());
-                const runOnJSResult = ReanimatedRexport.runOnJS(__initData3);
+  }
+  const items3 = [tmp14, tmp15, tmp16];
+  UserProfileTabPagesTsx1.__closure = items3;
+  UserProfileTabPagesTsx1.__workletHash = 12657345027755;
+  UserProfileTabPagesTsx1.__initData = tmp13;
+  const items4 = [
+    closure_8,
+    sharedValue3,
+    scrollPosition,
+    tmp4,
+    sharedValue,
+    pageHeights,
+    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    callback1,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  noop = undefined;
+  c5 = undefined;
+  jsx = undefined;
+  [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items4;
+  class UserProfileTabPagesTsx2 {
+    constructor(arg0) {
+      if (-1 !== arg0) {
+        obj2 = closure_0;
+        if (arg0 !== closure_0.get()) {
+          value = obj2.get();
+          result = obj2.set(arg0);
+          if (-1 !== value) {
+            obj = closure_1;
+            tmp = null;
+            if (null != closure_1) {
+              num = 0;
+              if (closure_2 > 0) {
+                tmp3 = closure_3;
+                tmp5 = globalThis;
+                _Math = Math;
+                tmp6 = closure_4;
+                value1 = closure_3.get();
+                diff = value1 - Math.max(closure_4.get()[arg0], tmp2);
+                if (diff > 0) {
+                  tmp8 = closure_5;
+                  tmp9 = closure_6;
+                  tmp10 = closure_5(closure_6, diff, obj.get());
+                }
               }
             }
           }
         }
       }
+      return;
     }
-  };
-  const obj5 = scrollPosition(bottom[4]);
-  fn2.__closure = {
-    destinationIndex: sharedValue3,
-    scrollPosition,
-    fillHeight: tmp2,
-    pagerHeight: sharedValue,
-    pageHeights,
-    runOnJS: scrollPosition(bottom[4]).runOnJS,
-    scrollUpToFit: callback1,
-  };
-  fn2.__workletHash = 14291429985222;
-  fn2.__initData = __initData2;
-  const animatedReaction = obj5.useAnimatedReaction(fn, fn2);
-  const obj6 = {
-    destinationIndex: sharedValue3,
-    scrollPosition,
-    fillHeight: tmp2,
-    pagerHeight: sharedValue,
-    pageHeights,
-    runOnJS: scrollPosition(bottom[4]).runOnJS,
-    scrollUpToFit: callback1,
-  };
-  class D {
+  }
+  const items5 = [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24];
+  UserProfileTabPagesTsx2.__closure = items5;
+  UserProfileTabPagesTsx2.__workletHash = 17354990160146;
+  UserProfileTabPagesTsx2.__initData = tmp17;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    UserProfileTabPagesTsx1,
+    UserProfileTabPagesTsx2,
+  );
+  const obj6 = require("../../../../_runtime/metro/01652__.js");
+  const items6 = [closure_9, pageHeights, visiblePageRange, tmp4, scrollPosition, sharedValue1];
+  closure_130_0 = undefined;
+  closure_130_1 = undefined;
+  closure_130_2 = undefined;
+  closure_130_3 = undefined;
+  closure_130_4 = undefined;
+  [tmp26, tmp27, tmp28, tmp29, tmp30, tmp31] = items6;
+  class UserProfileTabPagesTsx3 {
     constructor() {
-      value = scrollPosition.get();
-      tmp2 = closure_3(closure_4.get(), 2);
+      value = closure_0.get();
+      tmp2 = closure_3(closure_1.get(), 2);
       num = value[tmp2[0]];
       if (num == null) {
         num = 0;
@@ -197,38 +223,45 @@ export default noop.memo(function UserProfileTabPages(arg0) {
         num2 = 0;
       }
       items = [, ,];
-      items[0] = Math.max(Math.max(num, num2), height);
-      obj = bottom;
+      items[0] = Math.max(Math.max(num, num2), closure_2);
+      obj = closure_3;
       num3 = undefined;
-      if (bottom != null) {
+      if (closure_3 != null) {
         num3 = obj.get();
       }
       if (num3 == null) {
         num3 = 0;
       }
       items[1] = num3;
-      items[2] = closure_1_6.get();
+      items[2] = closure_4.get();
       return items;
     }
   }
-  D.__closure = { pageHeights, visiblePageRange, fillHeight: tmp2, scrollPosition, releaseScrollY: sharedValue1 };
-  D.__workletHash = 11095612385739;
-  D.__initData = __initData3;
-  class S {
+  const items7 = [tmp27, tmp28, tmp29, tmp30, tmp31];
+  UserProfileTabPagesTsx3.__closure = items7;
+  UserProfileTabPagesTsx3.__workletHash = 5507427512978;
+  UserProfileTabPagesTsx3.__initData = tmp26;
+  const items8 = [closure_10, sharedValue, scrollPosition, tmp4, sharedValue1];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
+  [tmp32, tmp33, tmp34, tmp35, tmp36] = items8;
+  class UserProfileTabPagesTsx4 {
     constructor(arg0) {
       [tmp, tmp2, tmp3] = arg0;
-      obj = closure_1_5;
-      value = closure_1_5.get();
+      obj = closure_0;
+      value = closure_0.get();
       tmp5 = tmp < value;
       if (tmp5) {
-        tmp6 = bottom;
+        tmp6 = closure_1;
         tmp7 = null;
-        tmp5 = null != bottom;
+        tmp5 = null != closure_1;
       }
       if (tmp5) {
-        tmp8 = height;
+        tmp8 = closure_2;
         num = 0;
-        tmp5 = height > 0;
+        tmp5 = closure_2 > 0;
       }
       if (!tmp5) {
         if (tmp !== value) {
@@ -241,28 +274,35 @@ export default noop.memo(function UserProfileTabPages(arg0) {
           tmp9 = globalThis;
           _Math = Math;
           _Math2 = Math;
-          tmp10 = height;
-          bound = Math.max(tmp, Math.min(value, tmp2 + height));
+          tmp10 = closure_2;
+          bound = Math.max(tmp, Math.min(value, tmp2 + closure_2));
           tmp14 = bound;
         } else {
           num3 = 1;
         }
-        tmp12 = closure_1_6;
+        tmp12 = closure_3;
         num4 = -1;
-        result1 = closure_1_6.set(-1);
+        result1 = closure_3.set(-1);
         bound = tmp;
       }
       return;
     }
   }
-  S.__closure = { pagerHeight: sharedValue, scrollPosition, fillHeight: tmp2, releaseScrollY: sharedValue1 };
-  S.__workletHash = 8135984088379;
-  S.__initData = __initData4;
-  const animatedReaction1 = scrollPosition(bottom[4]).useAnimatedReaction(D, S);
-  const obj7 = scrollPosition(bottom[4]);
-  class T {
+  const items9 = [tmp33, tmp34, tmp35, tmp36];
+  UserProfileTabPagesTsx4.__closure = items9;
+  UserProfileTabPagesTsx4.__workletHash = 12442150107490;
+  UserProfileTabPagesTsx4.__initData = tmp32;
+  const animatedReaction1 = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    UserProfileTabPagesTsx3,
+    UserProfileTabPagesTsx4,
+  );
+  const tmp7Result = require("../../../../_runtime/metro/01652__.js");
+  const items10 = [closure_11, sharedValue];
+  _require = undefined;
+  [tmp38, tmp39] = items10;
+  class UserProfileTabPagesTsx5 {
     constructor() {
-      value = closure_1_5.get();
+      value = closure_0.get();
       if (value > 0) {
         obj1 = { height: null };
         obj1.height = value;
@@ -273,48 +313,57 @@ export default noop.memo(function UserProfileTabPages(arg0) {
       return obj;
     }
   }
-  T.__closure = { pagerHeight: sharedValue };
-  T.__workletHash = 2768145020675;
-  T.__initData = __initData5;
-  class M {
+  const items11 = [tmp39];
+  UserProfileTabPagesTsx5.__closure = items11;
+  UserProfileTabPagesTsx5.__workletHash = 14364504137498;
+  UserProfileTabPagesTsx5.__initData = tmp38;
+  const items12 = [closure_12, sharedValue2];
+  _require = undefined;
+  [tmp41, tmp42] = items12;
+  class UserProfileTabPagesTsx6 {
     constructor() {
-      result = closure_1_7.set(true);
+      result = closure_0.set(true);
       return;
     }
   }
-  M.__closure = { isDragging: sharedValue2 };
-  M.__workletHash = 9355002885402;
-  M.__initData = __initData6;
-  const items2 = [sharedValue2];
-  const animatedStyle = scrollPosition(bottom[4]).useAnimatedStyle(T);
-  class I {
+  const items13 = [tmp42];
+  UserProfileTabPagesTsx6.__closure = items13;
+  UserProfileTabPagesTsx6.__workletHash = 5669274193379;
+  UserProfileTabPagesTsx6.__initData = tmp41;
+  const items14 = [sharedValue2];
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(UserProfileTabPagesTsx5);
+  const items15 = [closure_13, sharedValue2];
+  _require = undefined;
+  [tmp44, tmp45] = items15;
+  class UserProfileTabPagesTsx7 {
     constructor() {
-      result = closure_1_7.set(false);
+      result = closure_0.set(false);
       return;
     }
   }
-  I.__closure = { isDragging: sharedValue2 };
-  I.__workletHash = 6291407031184;
-  I.__initData = __initData7;
-  const items3 = [sharedValue2];
-  const callback2 = ref.useCallback(M, items2);
-  const items4 = [parentPagerGesture];
-  const callback3 = ref.useCallback(I, items3);
-  const memo = ref.useMemo(() => {
+  const items16 = [tmp45];
+  UserProfileTabPagesTsx7.__closure = items16;
+  UserProfileTabPagesTsx7.__workletHash = 9823673150153;
+  UserProfileTabPagesTsx7.__initData = tmp44;
+  const items17 = [sharedValue2];
+  const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
+  const items18 = [parentPagerGesture];
+  const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
+  const memo = obj.useMemo(() => {
     let result;
-    if (null != scrollPosition) {
+    if (null != c0) {
       const Gesture = LegacyBaseButton.Gesture;
       result = Gesture.Native().blocksExternalGesture(tmp);
       const NativeResult = Gesture.Native();
     }
     return result;
-  }, items4);
-  const obj8 = scrollPosition(bottom[4]);
-  return jsx(height(bottom[4]).View, {
+  }, items18);
+  const tmp7Result2 = require("../../../../_runtime/metro/01652__.js");
+  return jsx(_modDef1652.View, {
     ref,
     onLayout: callback,
     style: animatedStyle,
-    children: jsx(scrollPosition(bottom[9]).SegmentedControlPages, {
+    children: jsx(require("SegmentedControlPages").SegmentedControlPages, {
       state,
       nativeGesture: memo,
       onBeginDragWorklet: callback2,
@@ -324,9 +373,9 @@ export default noop.memo(function UserProfileTabPages(arg0) {
 });
 export function useMeasuredTabItems(memo) {
   _require = memo;
-  const sharedValue = require("ReanimatedRexport").useSharedValue([]);
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue([]);
   dependencyMap = noop.useRef([]);
-  let items = [sharedValue];
+  items = [sharedValue];
   const callback = noop.useCallback((arg0, arg1) => {
     let tmp = arg1 <= 0;
     if (!tmp) {
@@ -334,7 +383,7 @@ export function useMeasuredTabItems(memo) {
     }
     if (!tmp) {
       ref.current[arg0] = arg1;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(ref.current, 0);
       const result = sharedValue.set(items);
     }

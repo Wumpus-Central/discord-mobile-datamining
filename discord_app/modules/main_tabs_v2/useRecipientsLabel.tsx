@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLab
 
 export function useRecipientsLabel(channel) {
   _require = channel;
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((item) => user.getUser(item));

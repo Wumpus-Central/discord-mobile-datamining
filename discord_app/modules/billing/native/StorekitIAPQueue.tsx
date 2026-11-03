@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 function productSK2ToIAPProduct(subscription) {
-  let items = [];
+  items = [];
   if (null != subscription.subscription.promotionalOffers) {
     const promotionalOffers = subscription.subscription.promotionalOffers;
     items = promotionalOffers.map((identifier) => {
@@ -56,7 +56,7 @@ function productSK2ToIAPProduct(subscription) {
     str2 = "PAYASYOUGO";
   }
 }
-const convertToAlpha2 = fn(5695).convertToAlpha2;
+const convertToAlpha2 = fn(5815).convertToAlpha2;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 class StorekitIAPQueueClass {
   constructor() {
@@ -137,7 +137,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

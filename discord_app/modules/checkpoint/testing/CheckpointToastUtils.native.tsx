@@ -5,11 +5,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/checkpoint/testing/CheckpointToastUtils.native.tsx");
 
-export function showCheckpointTestingToast(intl, failure) {
+export function showCheckpointTestingToast(string, failure) {
   if ("success" === failure) {
-    const obj3 = { text: intl };
+    const obj3 = { text: string };
     ToastActionCreatorsDefault.open("CHECKPOINT_QA", obj3);
   } else {
-    ToastUtils.presentError(intl);
+    ToastUtils.presentError(string);
   }
 }

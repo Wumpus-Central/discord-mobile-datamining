@@ -8,14 +8,14 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(4921).isEveryoneRole;
+const isEveryoneRole = fn(5048).isEveryoneRole;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
 export default function useInviteAssignableRoles(arg0) {
   _require = arg0;
-  const items = [GuildRoleStore, UserStore, PermissionStore];
+  items = [GuildRoleStore, UserStore, PermissionStore];
   const items1 = [arg0];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,

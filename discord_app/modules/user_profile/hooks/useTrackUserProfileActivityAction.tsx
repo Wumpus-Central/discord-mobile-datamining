@@ -24,7 +24,7 @@ export default function useTrackUserProfileActivityAction(activity) {
     analyticsLocations = display(activity[3])().analyticsLocations;
   }
   const obj = require("UserProfileAnalyticsContext");
-  const items = [stream];
+  items = [stream];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     ContentInventoryOutboxStore.getUserOutbox(id.id),
   );

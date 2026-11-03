@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/premium/promotions/MarketingC
 
 export function useThemeAndReducedMotionAwareAssetUrl(asset, arg1) {
   const tmp2 = useThemeDefault();
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (null == asset) {
     return null;

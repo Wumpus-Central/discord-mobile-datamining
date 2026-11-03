@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/conjure/guild_pickers/conjure
 
 export function useConjureGuildRoles(arg0) {
   _require = arg0;
-  const items = [GuildRoleStore];
+  items = [GuildRoleStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(
     items,
@@ -33,7 +33,7 @@ export function useConjureGuildRoles(arg0) {
 }
 export function useConjureGuildMemberUsers(arg0) {
   _require = arg0;
-  const items = [GuildMemberStore, UserStore];
+  items = [GuildMemberStore, UserStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresArray(
     items,
@@ -59,7 +59,7 @@ export function conjureMemberUsername(id, stateFromStores1) {
 }
 export function useConjureMemberRequests(conjureSettingsGuildId) {
   closure_0 = conjureSettingsGuildId;
-  let items = result;
+  items = result;
   if (result === undefined) {
     items = [];
   }

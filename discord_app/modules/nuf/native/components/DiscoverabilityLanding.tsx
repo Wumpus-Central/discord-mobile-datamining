@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/components/DiscoverabilityLanding.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +9,10 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(14248).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14379).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { flexGrow: 0, justifyContent: "center", marginBottom: 24 },
@@ -44,9 +44,9 @@ export default function DiscoverabilityLanding(onNext) {
   const tmp2 = useContactSyncModalStore();
   let allowEmail = tmp2.allowEmail;
   const allowPhone = tmp2.allowPhone;
-  const items = [allowPhone, allowEmail];
+  items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14363, dependencyMap.paths), "Discoverability Landing", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14494, dependencyMap.paths), "Discoverability Landing", {
       allowPhone,
       allowEmail,
     });
@@ -71,7 +71,7 @@ export default function DiscoverabilityLanding(onNext) {
   const obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

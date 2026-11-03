@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -56,7 +56,7 @@ export function GuildRoleSubscriptionMemberPreview(content) {
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
   const tmp3 = closure_9();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   NicknameUtilsDefault;
   if (null == role) {

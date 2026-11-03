@@ -50,7 +50,7 @@ const userApplicationIdentityStore = new UserApplicationIdentityStore(Dispatcher
     ({ userId, identities } = userId);
     map = new Map(
       identities.map((application_id) => {
-        const items = [application_id.application_id, application_id];
+        items = [application_id.application_id, application_id];
         return items;
       }),
     );
@@ -71,7 +71,7 @@ const userApplicationIdentityStore = new UserApplicationIdentityStore(Dispatcher
       const _Map = Map;
       map = new Map(
         found.map((application_id) => {
-          const items = [application_id.application_id, application_id];
+          items = [application_id.application_id, application_id];
           return items;
         }),
       );

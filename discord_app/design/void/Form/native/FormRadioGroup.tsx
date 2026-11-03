@@ -23,7 +23,7 @@ export default function FormRadioGroup(arg0) {
     const obj3 = { children: null };
     const obj4 = { defaultValue: value, hasIcons, title, accessibilityLabel, children };
     obj3.children = hasOwnProperty(TableRadioGroup.TableRadioGroup, obj4);
-    const items = [hasOwnProperty(View, obj3)];
+    items = [hasOwnProperty(View, obj3)];
     let tmp13Result = null;
     if (null != hint) {
       const obj5 = { style: { marginTop: 8 }, children: hint };

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ConjureAppIconTileDefault from "../../projects/native/ConjureAppIconTile.tsx";
@@ -31,7 +31,7 @@ function ConjureAppSheetIcon(application) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
@@ -62,7 +62,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
   }
   appChannelApplication = tmp6;
   let obj = guild_id(creator[9]);
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [guild_id];
   const stateFromStores = guild_id(creator[10]).useStateFromStores(
     items,
@@ -99,7 +99,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp5) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3868["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3995["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

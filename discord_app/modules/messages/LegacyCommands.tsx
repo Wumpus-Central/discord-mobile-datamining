@@ -8,7 +8,7 @@ import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameAct
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import t_mod from "../../../_runtime/metro/01943__.js";
+import t_mod from "../../../_runtime/metro/02072__.js";
 
 require = fn;
 const Constants = fn(1072);
@@ -148,7 +148,7 @@ export function handleLegacyCommands(text, arg1) {
     if (null == str.match) {
       continue;
     } else {
-      let regex = str.match.regex;
+      regex = str.match.regex;
       let isMatch;
       if (regex != null) {
         isMatch = regex.test(arg0);

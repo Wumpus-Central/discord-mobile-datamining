@@ -11,7 +11,7 @@ function getCoinEntitlements() {
   return EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
 }
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(15228).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(15369).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -19,7 +19,7 @@ export function anchorOrbsPurchaseStart() {
   const forSku = EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
   obj = { startedAt: Date.now(), knownCoinEntitlementIds: null };
   if (null == forSku) {
-    let items = [];
+    items = [];
   } else {
     const _Array = Array;
     items = Array.from(forSku, (id) => id.id);
@@ -36,7 +36,7 @@ export function openOrbsModalIfDelivered() {
           return null;
         } else {
           for (const item10008 of tmp) {
-            if (item10008.type === closure_0(2046).EntitlementTypes.PURCHASE_REWARD) {
+            if (item10008.type === closure_0(2175).EntitlementTypes.PURCHASE_REWARD) {
               knownCoinEntitlementIds = arg0.knownCoinEntitlementIds;
               if (!knownCoinEntitlementIds.has(item10008.id)) {
                 obj = SnowflakeUtilsDefault;

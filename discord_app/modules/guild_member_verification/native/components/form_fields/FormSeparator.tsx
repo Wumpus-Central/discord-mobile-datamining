@@ -4,7 +4,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 },
 };
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 export default function FormSeparator(style) {
   const obj = {};
   const merged = Object.assign(style);
-  const items = [closure_2().separator, style.style];
+  items = [closure_2().separator, style.style];
   obj.style = items;
   return <View />;
 }

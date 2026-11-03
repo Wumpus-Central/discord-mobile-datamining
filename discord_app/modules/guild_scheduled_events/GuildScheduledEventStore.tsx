@@ -158,7 +158,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     const findIndexResult = guild_scheduled_event_exceptions.findIndex(
       (event_exception_id) => event_exception_id.event_exception_id === eventException.event_exception_id,
     );
-    const items = [];
+    items = [];
     HermesBuiltin.arraySpread(value.guild_scheduled_event_exceptions, 0);
     if (findIndexResult < 0) {
       items.push(eventException);
@@ -173,7 +173,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(4869);
+const GuildScheduledEventsConstants = fn(4996);
 ({
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventStatusDone: hasOwnProperty,
@@ -202,9 +202,9 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new fn(4941).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(5068).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
-  const items = [guild_id];
+  items = [guild_id];
   if (null != entity_id) {
     items.push(entity_id);
   }
@@ -264,7 +264,7 @@ prototype["getGuildEventCountByIndex"] = function getGuildEventCountByIndex(arg0
 };
 prototype["getGuildScheduledEventsForGuild"] = function getGuildScheduledEventsForGuild(guildId) {
   if (null == guildId) {
-    let items = [];
+    items = [];
   } else {
     items = secondaryIndexMap.values(guildId);
   }

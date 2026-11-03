@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_48 + nativeDefault.space.PX_8;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -131,7 +131,7 @@ export default function GameProfileGuildCard(arg0) {
   const obj6 = { guild, size: GuildIcon.GuildIconSizes.LARGE, style: null, loadingStyle: null };
   ({ guildIconImage: obj5.style, guildIconLoading: obj5.loadingStyle } = tmp);
   obj4.children = React4(GuildIconDefault, obj6);
-  const items = [React4(View, obj4)];
+  items = [React4(View, obj4)];
   const obj7 = { style: tmp.guildInfo, children: null };
   const obj8 = { style: tmp.guildNameDescriptionContainer, children: null };
   const obj9 = { style: tmp.guildNameRow, children: null };
@@ -213,7 +213,7 @@ export function GameProfileGuildCardSkeleton(animationDelayMs) {
   const obj = { style: tmp.card, children: null };
   const obj2 = { animationDelayMs: animationDelayMs.animationDelayMs, style: tmp.guildContent, children: null };
   const obj3 = { style: tmp.guildHeaderRow, children: null };
-  const items = [React4(GameProfileSkeletonDefault, { style: tmp.skeletonGuildIcon })];
+  items = [React4(GameProfileSkeletonDefault, { style: tmp.skeletonGuildIcon })];
   const items1 = [tmp.skeletonGuildInfo];
   const obj5 = { style: items1, children: null };
   items1[1] = useIsWindowLargeDefault() ? tmp.skeletonGuildInfoLarge : tmp.skeletonGuildInfoSmall;

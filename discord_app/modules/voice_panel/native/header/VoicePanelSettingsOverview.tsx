@@ -4,7 +4,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
@@ -14,7 +14,7 @@ import TableRowIcon from "../../../../design/components/TableRow/native/TableRow
 import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8350 from "../../../../../_runtime/metro/08350__.js";
+import _modDef8474 from "../../../../../_runtime/metro/08474__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import FormComponents from "../shared/FormComponents.tsx";
@@ -73,7 +73,7 @@ class VoicePanelSettingsOverviewHeader {
     tmp12 = channelId(closure_2[21]);
     obj13 = {
       style: tmp.channelTitle,
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       lineClamp: 1,
       accessibilityRole: "header",
       children: tmp7,
@@ -118,7 +118,7 @@ class VoicePanelSettingsOverviewHeader {
 }
 function ShareActivityLogsButton() {
   const callback = noop.useCallback(() => {
-    const items = [closure_1_15];
+    items = [closure_1_15];
     const json = LogAggregator.stringify(items);
     if ("" === json) {
       const obj2 = { text: null };
@@ -135,7 +135,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8350 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8474 }),
     label: null,
     trailing: null,
   };
@@ -145,7 +145,7 @@ function ShareActivityLogsButton() {
   return collapsedCategories(TableRow.TableRow, obj);
 }
 function ActivityDebugToggle() {
-  const items = [ChannelCallLifecycleStore];
+  items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
   );
@@ -155,7 +155,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef8350,
+    source: _modDef8474,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -167,11 +167,11 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5681).isStreamParticipant;
-let closure_17 = fn(9266).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(5801).isStreamParticipant;
+let closure_17 = fn(9394).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   headerContainer: { alignItems: "center" },
   channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 },
@@ -188,7 +188,7 @@ let obj = {
   },
   secureFramesIcon: { marginStart: 4 },
 };
-const __initData = createStyles.createStyles(obj);
+const guild = createStyles.createStyles(obj);
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
@@ -208,7 +208,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   let stateFromStores4;
   const tmp = guildId;
   const tmp2 = stateFromStores;
-  let items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = guildId(stateFromStores[16]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const DeveloperMode = guildId(stateFromStores[37]).DeveloperMode;
   const setting = DeveloperMode.useSetting();
@@ -227,7 +227,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
         if (stateFromStores.isPrivate()) {
           const _Set = Set;
           const set = new Set(stateFromStores1.map((user) => user.user.id));
-          const items = [];
+          items = [];
           const recipients = stateFromStores.recipients;
           for (const item10020 of recipients) {
             let user = UserStore.getUser(item10020);
@@ -289,7 +289,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19227, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19385, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

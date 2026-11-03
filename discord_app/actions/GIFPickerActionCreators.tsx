@@ -87,7 +87,7 @@ const Constants = fn(1072);
   GIFPickerResultTypes: closure_9,
 } = Constants);
 const UserSettingsConstants = fn(1082);
-({ MAX_FAVORITE_GIFS_SIZE: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
+({ MAX_FAVORITE_GIFS_SIZE: closure_10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const re12 = /-/g;
 let closure_14 = apply.debounce(doSearchRequest, 250);
 const re15 = /\.(webp|avif|gif)(\?|$)/i;

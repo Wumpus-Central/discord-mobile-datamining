@@ -10,7 +10,7 @@ export function getExperimentVariantsForDevTools(experiment) {
   if (experiment.system !== ExperimentManager.ExperimentSystem.APEX) {
     let variants = experiment.variants;
   } else {
-    const items = [obj];
+    items = [obj];
     variants = items.concat(experiment.variants);
   }
   return variants;

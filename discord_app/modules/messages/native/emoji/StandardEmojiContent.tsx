@@ -16,23 +16,23 @@ function Emoji(surrogate) {
   const merged = Object.assign(closure_9());
   const merged1 = Object.assign(useSharedMessageEmojiStyles.useSharedMessageEmojiStyles());
   const uRL = EmojiUtilsDefault.getURL(surrogate);
-  const obj4 = { style: obj.emojiWrapper, children: null };
   if ("" !== uRL) {
-    const obj5 = { style: obj.emojiIcon, resizeMode: "contain", source: null };
-    const obj6 = { uri: uRL };
-    obj5.source = obj6;
-    let tmp7Result = timestampProducer(FastImageDefault, obj5);
+    const obj4 = { style: obj.emojiIcon, resizeMode: "contain", source: null };
+    const obj5 = { uri: uRL };
+    obj4.source = obj5;
+    let tmp9 = timestampProducer(FastImageDefault, obj4);
   } else {
+    const obj6 = { style: obj.emojiWrapper, children: null };
     const obj7 = { style: obj.emojiSurrogate, variant: "text-md/medium", children: surrogate };
-    tmp7Result = timestampProducer(Text_Text.Text, obj7);
+    obj6.children = timestampProducer(Text_Text.Text, obj7);
+    tmp9 = timestampProducer(View, obj6);
   }
-  obj4.children = tmp7Result;
-  return timestampProducer(View, obj4);
+  return tmp9;
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 },
   ctaContainer: { paddingTop: nativeDefault.space.PX_4 },
@@ -53,7 +53,7 @@ export default function StandardEmojiContent(nonce) {
     currentGuildId: guildId,
     nonce: nonce.nonce,
   });
-  const items = [emojiNode.surrogate];
+  items = [emojiNode.surrogate];
   const memo = noop.useMemo(() => UnicodeEmojisDefault.convertSurrogateToBase(emojiNode.surrogate), items);
   const obj3 = emojiNode(isFavoriteEmoji[10]);
   isFavoriteEmoji = emojiNode(isFavoriteEmoji[12]).useIsFavoriteEmoji(guildId, memo);
@@ -64,7 +64,7 @@ export default function StandardEmojiContent(nonce) {
   const obj7 = { style: obj.emojiDescriptionWrapper, children: null };
   const items2 = [
     closure_6(emojiNode(isFavoriteEmoji[9]).Text, {
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: memo(isFavoriteEmoji[13])(emojiNode.content),
     }),

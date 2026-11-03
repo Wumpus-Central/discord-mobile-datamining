@@ -1,6 +1,6 @@
 // discord_app/modules/forums/native/posts/ForumPostContainer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import useNativeForumPostHandlersDefault from "hooks/useNativeForumPostHandlers.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   childContainer: { position: "relative", minHeight: 110, padding: 12 },
   card: { marginBottom: 12 },
@@ -20,7 +20,7 @@ let obj = {
   },
 };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7242);
+const ReanimatedHelperTypes = fn(7362);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
@@ -31,8 +31,8 @@ export function useForumPostContainerPressedIn() {
 export function ForumPostPressableContainer(arg0) {
   ({ threadId, children, style } = arg0);
   const tmp = closure_6();
-  const sharedValue = ReanimatedRexport.useSharedValue(false);
-  const items = [sharedValue];
+  const sharedValue = _mod1652.useSharedValue(false);
+  items = [sharedValue];
   const memo = noop.useMemo(
     () => ({
       onPressIn() {
@@ -81,7 +81,7 @@ export function ForumPostPressableContainer(arg0) {
 export function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [closure_6().disabledContainer, style];
+  items = [closure_6().disabledContainer, style];
   obj.style = items;
   obj.children = children;
   return (

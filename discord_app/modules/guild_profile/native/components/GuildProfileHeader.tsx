@@ -13,10 +13,10 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9303).getBadgeTooltip;
+const getBadgeTooltip = fn(9431).getBadgeTooltip;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,
@@ -59,7 +59,7 @@ export default function GuildProfileHeader(icon) {
   let id;
   let stateFromStores1;
   const tmp = styles();
-  const items = [LocaleStore];
+  items = [LocaleStore];
   const stateFromStores = profile(stateFromStores1[9]).useStateFromStores(items, () => locale.locale);
   let obj = profile(stateFromStores1[9]);
   let obj2 = profile(stateFromStores1[10]);

@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbn
 
 export default function useCanSetThumbnail(arg0, isImage) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     ChannelStore.getChannel(closure_0),
   );

@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/activities/useSubscribeMissin
 export default function useSubscribeMissingActivities(arg0, arg1) {
   closure_129_0 = arg0;
   closure_129_1 = arg1;
-  let items = [arg0, arg1];
+  items = [arg0, arg1];
   const tmp = _slicedToArray(
     noop.useMemo(() => {
       if (_private.isPrivate()) {
@@ -38,7 +38,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
           }
           return tmp2;
         });
-        const items = [found, found.map((id) => id.id)];
+        items = [found, found.map((id) => id.id)];
         let items1 = items;
       } else {
         items1 = [closure_8, closure_7];
@@ -54,7 +54,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items1,
     () => {
-      const items = [];
+      items = [];
       const item = _slicedToArray.forEach((author) => {
         if (
           null !=
@@ -100,7 +100,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
     noop.useMemo(() => {
       closure_0 = noop;
       if (0 === _slicedToArray.length) {
-        let items = closure_6;
+        items = closure_6;
       } else {
         items = [];
         const item = _slicedToArray.forEach((application) => {

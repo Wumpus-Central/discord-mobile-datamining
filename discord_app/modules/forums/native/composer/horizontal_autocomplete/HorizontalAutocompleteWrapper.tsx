@@ -1,8 +1,9 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx
-import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 function getItemKey(type) {
   type = type.type;
   if (AutoCompleteResultTypes.USER === type) {
@@ -23,8 +24,8 @@ function getItemKey(type) {
 }
 fn(1072).AutoCompleteResultTypes;
 const jsx = fn(21).jsx;
-const __initData = {
-  code: "function HorizontalAutocompleteWrapperTsx1(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}",
+let closure_7 = {
+  code: "(function HorizontalAutocompleteWrapperTsx1(){let[withTiming,toValue]=this.__closure;return{opacity:withTiming(toValue)};})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -33,12 +34,13 @@ const result = size.fileFinishedImporting(
 
 export default function HorizontalAutocompleteWrapper(channel) {
   channel = channel.channel;
+  _require = channel;
   const onPressAutocompleteItem = channel.onPressAutocompleteItem;
+  importDefault = onPressAutocompleteItem;
   autocompleteSelectionStart = undefined;
   let callback;
-  let num;
   ({ style, text, selection } = channel);
-  const horizontalAutocompleteResults = channel(autocompleteSelectionStart[3]).useHorizontalAutocompleteResults({
+  const horizontalAutocompleteResults = require("useHorizontalAutocompleteResults").useHorizontalAutocompleteResults({
     channel,
     text,
     selection,
@@ -51,7 +53,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
   if (first != null) {
     type = first.type;
   }
-  const items = [query, type];
+  items = [query, type];
   const effect = obj2.useEffect(() => {
     const current = ref.current;
     if (current != null) {
@@ -61,7 +63,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
   const items1 = [onPressAutocompleteItem, autocompleteSelectionStart, query];
   callback = obj2.useCallback((stopPropagation, arg1) => {
     stopPropagation.stopPropagation();
-    num = autocompleteSelectionStart;
+    let num = autocompleteSelectionStart;
     if (autocompleteSelectionStart == null) {
       num = 0;
     }
@@ -69,10 +71,10 @@ export default function HorizontalAutocompleteWrapper(channel) {
     if (query == null) {
       str = "";
     }
-    onPressAutocompleteItem(arg1, num, str);
+    _undefined2(arg1, num, str);
   }, items1);
   const items2 = [channel.guild_id, callback];
-  num = 0;
+  let num = 0;
   const callback1 = obj2.useCallback((item) => {
     item = item.item;
     const type = item.type;
@@ -83,7 +85,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
       obj2.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(onPressAutocompleteItem(autocompleteSelectionStart[4]).User, obj2);
+      return callback(_undefined2(autocompleteSelectionStart[4]).User, obj2);
     } else if (ref.ROLE === type) {
       const obj3 = {};
       const merged1 = Object.assign(item);
@@ -91,21 +93,21 @@ export default function HorizontalAutocompleteWrapper(channel) {
       obj3.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(onPressAutocompleteItem(autocompleteSelectionStart[4]).Role, obj3);
+      return callback(_undefined2(autocompleteSelectionStart[4]).Role, obj3);
     } else if (ref.CHANNEL === type) {
       const obj4 = {};
       const merged2 = Object.assign(item);
       obj4.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(onPressAutocompleteItem(autocompleteSelectionStart[4]).Channel, obj4);
+      return callback(_undefined2(autocompleteSelectionStart[4]).Channel, obj4);
     } else if (ref.EMOJI === type) {
       const obj = {};
       const merged3 = Object.assign(item);
       obj.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(onPressAutocompleteItem(autocompleteSelectionStart[4]).Emoji, obj);
+      return callback(_undefined2(autocompleteSelectionStart[4]).Emoji, obj);
     } else {
       return null;
     }
@@ -113,27 +115,31 @@ export default function HorizontalAutocompleteWrapper(channel) {
   if (results.length > 0) {
     num = 1;
   }
-  let obj = channel(autocompleteSelectionStart[3]);
-  class I {
+  let obj = require("useHorizontalAutocompleteResults");
+  const items3 = [closure_7, require("timing/timing").withTiming, num];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp10, tmp11, tmp12] = items3;
+  class HorizontalAutocompleteWrapperTsx1 {
     constructor() {
-      obj = { opacity: null };
-      obj2 = closure_0(closure_2[6]);
-      obj.opacity = obj2.withTiming(c6);
+      obj = { opacity: closure_0(closure_1) };
       return obj;
     }
   }
-  const tmpResult = channel(autocompleteSelectionStart[5]);
-  I.__closure = { withTiming: channel(autocompleteSelectionStart[6]).withTiming, toValue: num };
-  I.__workletHash = 7895652904738;
-  I.__initData = __initData;
-  const animatedStyle = tmpResult.useAnimatedStyle(I);
-  let obj4 = {
+  const items4 = [tmp11, tmp12];
+  HorizontalAutocompleteWrapperTsx1.__closure = items4;
+  HorizontalAutocompleteWrapperTsx1.__workletHash = 15765485703035;
+  HorizontalAutocompleteWrapperTsx1.__initData = tmp10;
+  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    HorizontalAutocompleteWrapperTsx1,
+  );
+  let obj3 = {
     style: null,
-    children: callback(channel(autocompleteSelectionStart[7]).FlashList, {
+    children: callback(require("../../../../../../discord_common/js/packages/flash-list/index.js").FlashList, {
       ref,
       keyboardShouldPersistTaps: "always",
       horizontal: true,
-      keyExtractor: num,
+      keyExtractor: getItemKey,
       getItemType(type) {
         return type.type;
       },
@@ -141,7 +147,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
       renderItem: callback1,
     }),
   };
-  const items3 = [style, animatedStyle];
-  obj4.style = items3;
-  return callback(onPressAutocompleteItem(autocompleteSelectionStart[5]).View, obj4);
+  const items5 = [style, animatedStyle];
+  obj3.style = items5;
+  return callback(require("../../../../../../_runtime/metro/01652__.js").View, obj3);
 }

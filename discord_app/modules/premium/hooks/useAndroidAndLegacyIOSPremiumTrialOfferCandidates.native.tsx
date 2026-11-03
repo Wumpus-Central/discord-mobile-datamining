@@ -5,7 +5,7 @@ import useTrialOffer from "../useTrialOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4,
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
-  const items = [IAPStore];
+  items = [IAPStore];
   const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({
     isFetchingProducts: IAPStore.isFetchingProducts(),
     offerIds: IAPStore.getOfferIds(),

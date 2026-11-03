@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" },
   consistentHeight: { height: 300 },
@@ -28,7 +28,7 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   let first1;
   closure_9 = undefined;
   const tmp = closure_9();
-  const items = [first1];
+  items = [first1];
   const stateFromStores = giftStyle(ref[6]).useStateFromStores(items, () => first1.useReducedMotion);
   ref = first.useRef(null);
   const ref1 = first.useRef(null);

@@ -19,7 +19,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
         return obj;
       }
       c6 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp13) {
       c6 = tmp;
       throw tmp13;
@@ -117,7 +117,7 @@ class GuildRoleSubscriptionGroupSetupModal {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -166,8 +166,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1113).intl;
                       closure_1 = intl.string(merged(1113).t.ZUEGFn);
                     }
-                    merged(5711).presentError(closure_1);
-                    const obj8 = merged(5711);
+                    merged(5831).presentError(closure_1);
+                    const obj8 = merged(5831);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -249,7 +249,7 @@ class GuildRoleSubscriptionGroupSetupModal {
       }
     }, items);
     memo = obj.useMemo(() => {
-      const items = [, , , , , ,];
+      items = [, , , , , ,];
       ({
         GATING: arr[0],
         GROUP: arr[1],
@@ -308,8 +308,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(19949).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(17196);
+const useRoleTierEditStore = fn(20099).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(17339);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } =
   GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;

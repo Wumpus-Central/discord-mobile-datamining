@@ -7,6 +7,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
 
 export function useMessageRequestsCount() {
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 }

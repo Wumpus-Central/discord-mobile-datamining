@@ -191,7 +191,7 @@ function extractMediaFromAttachment(found, message2, mediaIndex, guildIdFromSear
                   const searchParams3 = str10.searchParams;
                   searchParams3.append("format", "webp");
                 }
-                const items = [size1];
+                items = [size1];
                 const obj5 = {};
                 const merged1 = Object.assign(obj4);
                 obj5.uri = str10.toString();
@@ -372,7 +372,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
         };
         return getEmbedImageMediaSources(obj7);
       }
-      const items = [];
+      items = [];
       if (null == image.thumbnail) {
         if (isWebviewVideoResult) {
           isWebviewVideoResult = null != image.video;
@@ -648,7 +648,7 @@ function getEmbedImageMediaSources(arg0) {
   obj2.uri = str1;
   let tmp8 = obj2;
   if (str1 !== mobileOptimizedSrc) {
-    const items = [size, obj2];
+    items = [size, obj2];
     tmp8 = items;
   }
   return tmp8;
@@ -727,7 +727,7 @@ function toMediaSourceFromUnfurledMedia(id, guildId, media, description, spoiler
       if (media.proxyUrl !== mobileOptimizedSrc) {
         const obj4 = {};
         const merged1 = Object.assign(size);
-        const items = [obj4, obj3];
+        items = [obj4, obj3];
         tmp21 = items;
       }
       return tmp21;
@@ -882,7 +882,7 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let tmp4 = nextResult;
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
-        let items = tmp4.items;
+        items = tmp4.items;
         for (const item10035 of items) {
           let tmp18 = toMediaSourceFromUnfurledMedia(
             arg0,
@@ -926,7 +926,7 @@ export function extractMediaSourcesFromEmbed(message2, message1, images, index, 
   const hasSpoilerEmbeds = renderMessageMarkupDefault(message2, { contentMessage: message1 }).hasSpoilerEmbeds;
   images = images.images;
   if (images == null) {
-    let items = [images.image];
+    items = [images.image];
     images = items;
   }
   return images.map((width) => {
@@ -993,7 +993,7 @@ export function extractMediaSourcesFromEmbed(message2, message1, images, index, 
       contentType: width.contentType,
       shareURI: width.url,
     };
-    const items = [
+    items = [
       size,
       {
         uri: str1,
@@ -1026,7 +1026,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(1992).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2121).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -1035,7 +1035,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
       }
       dependencyMap = num2;
-      const items = value.items;
+      items = value.items;
       const mapped = items.map((media, index) => {
         let tmp = toMediaSourceFromUnfurledMedia(closure_0, closure_1, media.media, media.description, media.spoiler);
         if (null == tmp) {
@@ -1047,9 +1047,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1379).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
       return obj2;
-    } else if (tmp(1992).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2121).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
@@ -1066,7 +1066,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
   const flattenComponentsResult = require("InteractionComponentUtils").flattenComponents(components);
 }
 export function extractMediaSourcesFromMessage(message, message2, guild_id, GRAVITY_VALID_EMBED_TYPES) {
-  const items = [];
+  items = [];
   let num = 0;
   let num2 = 0;
   if (0 < message2.attachments.length) {
@@ -1158,7 +1158,7 @@ export function getSelectedMediaSource(mediaViewerSyncer) {
 export function useSelectedMediaSource(syncer) {
   const tmp = useStateFromSharedValueDefault(syncer.index);
   closure_1 = tmp;
-  const items = [syncer.sources, tmp];
+  items = [syncer.sources, tmp];
   const items1 = [
     tmp,
     noop.useMemo(() => {

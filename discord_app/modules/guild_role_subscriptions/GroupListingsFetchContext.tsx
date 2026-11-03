@@ -6,7 +6,7 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 const require = fn;
-const FetchState = fn(4939).FetchState;
+const FetchState = fn(5066).FetchState;
 let jsx = fn(21).jsx;
 const redux = noop.createContext(undefined);
 const size = fn(2);
@@ -24,7 +24,7 @@ export function useGroupListingsFetchContext(useGroupListingsForGuild) {
     throw error;
   } else {
     const fetchGroupListingsForGuild = context.fetchGroupListingsForGuild;
-    const items = [fetchGroupListingsForGuild];
+    items = [fetchGroupListingsForGuild];
     const effect = noop.useEffect(() => {
       fetchGroupListingsForGuild();
     }, items);
@@ -39,7 +39,7 @@ export function GroupListingsFetchContextProvider(guildId) {
   let first;
   closure_6 = undefined;
   ({ children, refetchOnMount } = guildId);
-  const items = [first];
+  items = [first];
   const stateFromStores = guildId(countryCode[5]).useStateFromStores(items, () => first.isConnected());
   let obj = guildId(countryCode[5]);
   const items1 = [closure_6];

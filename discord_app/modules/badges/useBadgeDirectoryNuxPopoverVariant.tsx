@@ -24,7 +24,7 @@ function useBadgeDirectoryNuxPopoverState(fetchCatalog) {
     tmp = currentUserId;
   }
   currentUserId = tmp;
-  const items = [ref];
+  items = [ref];
   const items1 = [tmp];
   stateFromStores = flag(stateFromStores[3]).useStateFromStores(
     items,

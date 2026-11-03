@@ -18,7 +18,7 @@ export default function useReactionPermissions(guild_id) {
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const items1 = [guild_id];
   stateFromStores = require("initialize").useStateFromStores(
     items,

@@ -10,7 +10,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
 
 export default function useGuildTagBadgeCollection() {
-  let items = [GuildSettingsStore];
+  items = [GuildSettingsStore];
   stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(items, () => guild.getGuild());
   const obj = stateFromStores(stateFromStores1[4]);
   let items1 = [GuildPowerupsStore];
@@ -54,7 +54,7 @@ export default function useGuildTagBadgeCollection() {
         const features = stateFromStores.features;
         if (features.has(item)) {
           const push2 = unlockedBadges.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(mapped, 0);
           HermesBuiltin.apply(items, unlockedBadges);
         } else {

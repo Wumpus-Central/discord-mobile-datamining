@@ -16,7 +16,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
 
-const _modDef4287 = tmp2(4287);
+const _modDef4414 = tmp2(4414);
 require = fn;
 function ConnectionsSection(onAdd) {
   onAdd = onAdd.onAdd;
@@ -25,7 +25,7 @@ function ConnectionsSection(onAdd) {
   importDefault = useThemeDefault();
   const emptyStatePlatforms = require("ConnectionsHooks").useEmptyStatePlatforms();
   let obj = require("ConnectionsHooks");
-  const items = [LocaleStore];
+  items = [LocaleStore];
   dependencyMap = require("initialize").useStateFromStores(items, () => locale2.locale);
   let obj2 = require("initialize");
   const items1 = [AuthenticationStore];
@@ -80,7 +80,7 @@ function ConnectionsSection(onAdd) {
   const items5 = [closure_12(closure_5, obj8)];
   const obj11 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl4 = tmp4(1113).intl;
-  obj11.children = intl4.string(_modDef4287["0y44+Q"]);
+  obj11.children = intl4.string(_modDef4414["0y44+Q"]);
   items5[1] = closure_11(require("Text/Text").Text, obj11);
   obj7.children = items5;
   const items6 = [closure_12(closure_5, obj7)];
@@ -101,7 +101,7 @@ function ConnectionsSection(onAdd) {
       accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id)),
     ];
     obj12.children = items7;
-    let tmp12Result = closure_12(tmp4(6027).Stack, obj12);
+    let tmp12Result = closure_12(tmp4(6147).Stack, obj12);
   } else {
     if (!fetching) {
       if (!tmp7.isLoading) {
@@ -118,8 +118,8 @@ function ConnectionsSection(onAdd) {
               style: tile.tile,
               accessibilityLabel: accessibilityLabel.name,
               onPress() {
-                closure_1(9720)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
-                const result = type(16855).trackEmptyStateCardClicked({ platformType: type });
+                closure_1(9852)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
+                const result = type(16998).trackEmptyStateCardClicked({ platformType: type });
               },
               children: null,
             };
@@ -139,7 +139,7 @@ function ConnectionsSection(onAdd) {
         const intl5 = tmp4(1113).intl;
         obj15.text = intl5.string(tmp4(1113).t["UKOtz+"]);
         obj15.onPress = onAdd;
-        obj14.children = closure_11(tmp4(5634).Button, obj15);
+        obj14.children = closure_11(tmp4(5754).Button, obj15);
         items8[1] = closure_11(closure_5, obj14);
         obj13.children = items8;
         tmp12Result = closure_12(closure_5, obj13);
@@ -156,7 +156,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24 },
   section: null,
@@ -210,11 +210,11 @@ let result = size.fileFinishedImporting("modules/user_settings/connected_apps/na
 
 export default function ConnectedAppsScreen() {
   const tmp = closure_14();
-  const authorizedApps = apps(16856).useAuthorizedApps();
+  const authorizedApps = apps(16999).useAuthorizedApps();
   apps = authorizedApps.apps;
-  let obj = apps(16856);
-  const stackNavigation = apps(1497).useStackNavigation();
-  const items = [stackNavigation];
+  let obj = apps(16999);
+  const stackNavigation = apps(1499).useStackNavigation();
+  items = [stackNavigation];
   const callback = noop.useCallback(() => {
     stackNavigation(paths[32]).openLazy(apps(paths[34])(paths[33], paths.paths), "AddConnection");
   }, []);
@@ -233,17 +233,17 @@ export default function ConnectedAppsScreen() {
     keyExtractor: null,
   };
   const items1 = [tmp.container];
-  const obj2 = apps(1497);
-  items1[1] = { paddingBottom: stackNavigation(1625)().bottom + stackNavigation(575).space.PX_24 };
+  const obj2 = apps(1499);
+  items1[1] = { paddingBottom: stackNavigation(1627)().bottom + stackNavigation(575).space.PX_24 };
   obj3.contentContainerStyle = items1;
   const obj5 = { children: null };
   const items2 = [
     closure_11(ConnectionsSection, { onAdd: callback }),
-    closure_11(apps(16856).AuthorizedAppsHeader, {}),
+    closure_11(apps(16999).AuthorizedAppsHeader, {}),
   ];
   obj5.children = items2;
   obj3.ListHeaderComponent = closure_12(closure_13, obj5);
-  obj3.ListEmptyComponent = closure_11(apps(16856).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
+  obj3.ListEmptyComponent = closure_11(apps(16999).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
   obj3.data = apps;
   obj3.renderItem = function renderItem(app) {
     const index = app.index;
@@ -256,5 +256,5 @@ export default function ConnectedAppsScreen() {
   obj3.keyExtractor = function keyExtractor(id) {
     return id.id;
   };
-  return closure_11(apps(7294).FlashList, obj3);
+  return closure_11(apps(7414).FlashList, obj3);
 }

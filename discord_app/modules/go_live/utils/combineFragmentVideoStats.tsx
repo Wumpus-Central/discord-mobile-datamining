@@ -110,7 +110,7 @@ export default function combineFragmentVideoStats(arr) {
     let applyResult;
     if (found.length > 0) {
       const _Math4 = Math;
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(found, 0);
       const _Math5 = Math;
       applyResult = HermesBuiltin.apply(items, Math);

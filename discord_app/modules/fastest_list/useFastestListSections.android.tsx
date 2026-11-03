@@ -39,7 +39,7 @@ export default function useFastestListSections(fastestListId) {
     };
   });
   closure_8 = tmp;
-  let items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
+  items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
   const memo = keyExtractor.useMemo(() => {
     let tmp2Result = num;
     if (typeof num !== "number") {
@@ -63,7 +63,7 @@ export default function useFastestListSections(fastestListId) {
     if (str2 == null) {
       str2 = "";
     }
-    const items = [];
+    items = [];
     const items1 = [];
     const items2 = [];
     if (null == keyExtractor) {

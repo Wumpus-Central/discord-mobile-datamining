@@ -16,7 +16,7 @@ function DiscoverabilityLandingScene(onComplete) {
   const navigation = onComplete(stateFromStores[9]).useNavigation();
   let obj = onComplete(stateFromStores[9]);
   const tmp = stateFromStores;
-  const items = [allowEmail];
+  items = [allowEmail];
   stateFromStores = onComplete(stateFromStores[10]).useStateFromStores(items, () => {
     const currentUser = allowEmail.getCurrentUser();
     let phone;
@@ -56,7 +56,7 @@ function DiscoverabilityNameScene(onComplete) {
   allowPhone = undefined;
   const tmp = closure_8();
   ({ name, allowPhone } = useContactSyncModalStore());
-  const items = [allowPhone, onComplete];
+  items = [allowPhone, onComplete];
   const effect = noop.useEffect(() => {
     if (!allowPhone) {
       onComplete();
@@ -74,7 +74,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(14269), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(14400), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 }
 class RedesignDiscoverabilityModal {
@@ -157,9 +157,9 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14248).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14379).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   header: {
     borderBottomWidth: 0,
@@ -178,7 +178,7 @@ obj2.container = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
   paddingBottom: 44,
-  paddingTop: fn(5586).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5709).NAV_BAR_HEIGHT + 32,
 };
 const React6 = createStyles.createStyles(obj2);
 RedesignDiscoverabilityModal.modalConfig = { animation: fn(1072).ModalAnimation.SLIDE_IN_OUT };

@@ -13,7 +13,7 @@ export function useUserProfileGradientColors(primaryColor, secondaryColor, fallb
   _require = primaryColor;
   dependencyMap = secondaryColor;
   noop = fallbackBackground;
-  const items = [overlay];
+  items = [overlay];
   const stateFromStores = require("initialize").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
   let obj = require("initialize");
   let obj2 = require("native");

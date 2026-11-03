@@ -73,7 +73,7 @@ function maybeEmitFrameSessionMetricsForQuest(applicationId, name) {
     );
     if (eligibleQuestsForApplicationId.length > 0) {
       const _HermesInternal2 = HermesInternal;
-      const items = ["application_id:" + applicationId];
+      items = ["application_id:" + applicationId];
       const found = eligibleQuestsForApplicationId.find((userStatus) => {
         userStatus = userStatus.userStatus;
         let enrolledAt;
@@ -108,7 +108,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -314,7 +314,7 @@ export function trackFrameSessionStart(applicationId, analyticsContext) {
       }
       const mediaSessionId = RTCConnectionStore.getMediaSessionId();
       if (null != mediaSessionId) {
-        const items = [mediaSessionId];
+        items = [mediaSessionId];
         let items1 = items;
       } else {
         items1 = [];
@@ -592,7 +592,7 @@ export function trackFrameSessionEnd(applicationId) {
       };
       let tmp24;
       if (null != tmp3.launchId) {
-        const items = [tmp3.launchId];
+        items = [tmp3.launchId];
         tmp24 = items;
       }
       obj4.instance_ids = tmp24;

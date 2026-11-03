@@ -1,7 +1,7 @@
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildProgressActionCreatorsDefault from "../GuildProgressActionCreators.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 function useIOSCompletionStates(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(constants.ADMINISTRATOR, closure_0),
   );
@@ -114,7 +114,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult4 = require("initialize");
 }
-const Steps = fn(14042).Steps;
+const Steps = fn(14173).Steps;
 const Constants = fn(1072);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -124,7 +124,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(14049, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(14180, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 }
 export function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);
@@ -144,7 +144,7 @@ export function useGuildProgressStep(guild) {
     const intl = util.intl;
     stringResult = intl.string(util.t.q9n0Ta);
   }
-  const items = [stringResult, , ,];
+  items = [stringResult, , ,];
   let stringResult1 = null;
   if (!guildPersonalized) {
     const intl2 = util.intl;
@@ -184,7 +184,7 @@ export function useGuildProgressStep(guild) {
 }
 export function useIsEligibleForGuildProgress(guild) {
   _require = guild;
-  const items = [PermissionStore];
+  items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () =>
     PermissionStore.can(constants.ADMINISTRATOR, closure_0),
   );

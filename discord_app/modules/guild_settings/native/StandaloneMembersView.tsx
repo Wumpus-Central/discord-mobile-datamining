@@ -16,7 +16,7 @@ function OpaqueSceneBackdrop() {
   let tmp3 = null;
   if (obj.useIsClientThemeOrCustomThemeActive()) {
     const obj2 = { style: StyleSheet.absoluteFill, pointerEvents: "none", children: null };
-    const items = [timestampProducer(ThemedGradientDefault, { absolute: true }), ,];
+    items = [timestampProducer(ThemedGradientDefault, { absolute: true }), ,];
     const obj3 = { style: tmp.navigatorBackground };
     items[1] = timestampProducer(View, obj3);
     const obj4 = { style: tmp.sceneBackground };
@@ -32,7 +32,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -51,7 +51,7 @@ export default function StandaloneMembersView(guildId) {
   let obj2;
   const tmp = closure_10();
   importDefault = guildId(obj2[7]).useNavigation();
-  let items = [guildId];
+  items = [guildId];
   const effect = noop.useEffect(() => {
     GuildSettingsActionCreatorsDefault.init(guildId);
   }, items);
@@ -70,7 +70,7 @@ export default function StandaloneMembersView(guildId) {
   };
   obj5.render = function render() {
     const obj = { children: null };
-    const items = [
+    items = [
       timestampProducer(OpaqueSceneBackdrop, {}),
       timestampProducer(GuildSettingsModalMembersWithTabsDefault, { guildId }),
     ];
@@ -81,7 +81,7 @@ export default function StandaloneMembersView(guildId) {
   obj4[constants.MEMBER_EDIT] = {
     render(arg0) {
       const obj = { children: null };
-      const items = [timestampProducer(OpaqueSceneBackdrop, {})];
+      items = [timestampProducer(OpaqueSceneBackdrop, {})];
       obj2 = { guildId };
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
@@ -96,7 +96,7 @@ export default function StandaloneMembersView(guildId) {
     },
     render(arg0) {
       const obj = { children: null };
-      const items = [timestampProducer(OpaqueSceneBackdrop, {})];
+      items = [timestampProducer(OpaqueSceneBackdrop, {})];
       obj2 = { guildId };
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);
@@ -111,7 +111,7 @@ export default function StandaloneMembersView(guildId) {
     },
     render(arg0) {
       const obj = { children: null };
-      const items = [timestampProducer(OpaqueSceneBackdrop, {})];
+      items = [timestampProducer(OpaqueSceneBackdrop, {})];
       obj2 = { guildId };
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(obj2);

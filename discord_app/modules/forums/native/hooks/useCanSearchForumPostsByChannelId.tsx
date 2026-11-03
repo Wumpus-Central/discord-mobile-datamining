@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSea
 
 export function useCanSearchForumPostsByChannelId(channelId) {
   _require = channelId;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let canResult = null != channel;

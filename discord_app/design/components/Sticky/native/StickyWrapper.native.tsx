@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("design/components/Sticky/native/Stick
 export function StickyWrapper(header) {
   header = header.header;
   const obj = { style: null, pointerEvents: header.pointerEvents, children: null };
-  const items = [header.style, wrapper.wrapper];
+  items = [header.style, wrapper.wrapper];
   obj.style = items;
   let tmp5Result = null;
   if (null != header) {

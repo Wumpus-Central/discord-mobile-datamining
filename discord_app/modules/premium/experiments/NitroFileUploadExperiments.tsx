@@ -37,7 +37,7 @@ export function getNitroFileUploadLimitBytes(arg0) {
     _location = NitroFileUploadRollout;
   }
   return closure_3.getConfig({ location: _location }, { autoTrackExposure: obj2.autoTrackExposure }).enabled
-    ? framebus
+    ? duration
     : React;
 }
 export function getNitroFileUploadRolloutConfig(arg0) {

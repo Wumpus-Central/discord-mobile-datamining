@@ -13,7 +13,7 @@ export function useChannelUnreadBadgeState(channel, flag) {
   _require = channel;
   closure_129_0 = channel;
   closure_129_1 = flag;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {
       ackMessageId: ReadStateStore.ackMessageId(user.id),
@@ -64,7 +64,7 @@ export function useChannelUnreadBadgeState(channel, flag) {
 export function useBaseChannelUnreadBadgeState(channel, muted) {
   _require = channel;
   dependencyMap = muted;
-  const items = [ReadStateStore];
+  items = [ReadStateStore];
   return require("initialize").useStateFromStoresObject(items, () => {
     const obj = {
       ackMessageId: ReadStateStore.ackMessageId(user.id),

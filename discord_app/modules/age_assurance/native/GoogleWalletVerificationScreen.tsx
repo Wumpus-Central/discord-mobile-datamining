@@ -21,7 +21,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
   const navigation = onClose(modalSessionId[5]).useNavigation();
   let obj = onClose(modalSessionId[5]);
   [tmp5, c4] = callback.useState({ type: "loading" });
-  let items = [onComplete, onClose];
+  items = [onComplete, onClose];
   callback = callback.useCallback(() => {
     if (onComplete != null) {
       tmp();
@@ -97,7 +97,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
             })(closure_128_2);
             const obj14 = { name: onClose(tmp51[10]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED, tags: null };
             const _HermesInternal = HermesInternal;
-            const items = ["reason:" + closure_128_3];
+            items = ["reason:" + closure_128_3];
             obj14.tags = items;
             tmp3(tmp51[9]).increment(obj14);
             const obj15 = { type: "error", message: null };

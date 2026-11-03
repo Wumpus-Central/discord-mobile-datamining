@@ -60,11 +60,11 @@ function renderSearchResultsSection() {
   return React7(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6776).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -83,7 +83,7 @@ let closure_14 = noop.memo(function Guild(guild) {
   guild = guild.guild;
   const tmp = closure_13();
   const tmp2 = getLayoutStylesDefault();
-  const items = [guild.id];
+  items = [guild.id];
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guild.id);
   }, items);
@@ -95,8 +95,8 @@ let closure_14 = noop.memo(function Guild(guild) {
   }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5642).useFontScale();
-  const obj2 = guild(5642);
+  const fontScale = guild(5762).useFontScale();
+  const obj2 = guild(5762);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -126,7 +126,7 @@ let closure_14 = noop.memo(function Guild(guild) {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(6980).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(7106).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo(function CategoryItemInner(arg0) {
   ({ name, onPress, note } = arg0);
@@ -155,10 +155,10 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
   const categoryStyles = history(toggleExpandedHistory[25]).useCategoryStyles();
   let obj = history(toggleExpandedHistory[25]);
   const tmp2 = toggleExpandedHistory;
-  const items = [c7];
+  items = [c7];
   const stateFromStores = history(toggleExpandedHistory[11]).useStateFromStores(items, () => {
     if (null != str) {
-      const guild = GuildStore.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -281,7 +281,7 @@ export const SearchResults = noop.memo(function SearchResultsInner(results) {
   noop = undefined;
   const tmp = closure_13();
   const categoryStyles = results(ref[25]).useCategoryStyles();
-  const items = [results, categoryStyles];
+  items = [results, categoryStyles];
   const callback = noop.useCallback((arg0, arg1) => renderItemJSX({ result: results[arg1], categoryStyles }), items);
   ref = noop.useRef(null);
   const items1 = [results.query];

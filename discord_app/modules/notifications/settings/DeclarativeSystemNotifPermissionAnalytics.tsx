@@ -31,7 +31,7 @@ const NOTIF_SETTINGS = NotificationSettingsConstants.NOTIF_SETTINGS;
 const AnalyticEvents = Constants.AnalyticEvents;
 const map = new Map(
   NOTIF_SETTINGS.map((item) => {
-    const items = [,];
+    items = [,];
     ({ id: arr[0], string_id: arr[1] } = item);
     return items;
   }),
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 export function trackSystemNotifSettingsOpened(notif_setting_id) {
   value = map.get(notif_setting_id);
   if (null != value) {
-    const items = [notif_setting_id];
+    items = [notif_setting_id];
     const tmp3 = getNotifTypesUsingSettings(items);
     const obj3 = { system_notif_channel_id: value, notif_setting_id, notif_type_ids: null, notif_type_names: null };
     ({ ids: obj2.notif_type_ids, names: obj2.notif_type_names } = tmp3);
@@ -51,7 +51,7 @@ export function trackSystemNotifSettingsOpened(notif_setting_id) {
   }
 }
 export function trackSystemNotifSettingsReenabled(disabledSettings, disabledSettings2, app_launch) {
-  const items = [];
+  items = [];
   const items1 = [];
   const iter = disabledSettings[Symbol.iterator]();
   const nextResult = iter.next();

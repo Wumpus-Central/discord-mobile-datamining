@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import RoleSubscriptionEmojiUtilsAll from "../../../guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6958).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7084).EmojiSourceDataTypes;
 const Constants = fn(1072);
 ({
   UserSettingsSections: closure_11,
@@ -31,7 +31,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW },
@@ -90,7 +90,7 @@ export default function CustomEmojiContent(emojiNode) {
   const merged = Object.assign(closure_18());
   const merged1 = Object.assign(emojiNode(nonce[14]).useSharedMessageEmojiStyles());
   let obj2 = emojiNode(nonce[14]);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = emojiNode(nonce[15]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = emojiNode(nonce[15]);
   let obj4 = expressionSourceGuild(nonce[10]);
@@ -260,7 +260,7 @@ export default function CustomEmojiContent(emojiNode) {
   const tmp24 = items3.includes(type) ? obj.ctaButton : obj.bottomCtaButton;
   const items5 = [
     closure_15(emojiNode(nonce[37]).Text, {
-      variant: "text-md/bold",
+      variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: ":" + emojiNode.alt + ":",
     }),
@@ -344,7 +344,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(10065, dependencyMap.paths),
+            asyncRequireImpl(10195, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

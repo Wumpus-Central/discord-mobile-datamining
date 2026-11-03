@@ -16,6 +16,6 @@ export function getIsScreenLandscape() {
 }
 export function useIsScreenLandscape() {
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
-  const items = [appEntryKey];
+  items = [appEntryKey];
   return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 }

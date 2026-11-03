@@ -1,7 +1,7 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../../_runtime/01498_Link.js";
+import Link from "../../../../../../_runtime/01500_Link.js";
 import DatabaseDaosDefault from "../../../../app_database/DatabaseDaos.tsx";
 import DatabaseManagerDefault from "../../../../app_database/system/DatabaseManager.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -16,10 +16,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7321).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7441).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7368).ActionSheetRow, {
+    children: jsx(store(7488).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -32,9 +32,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   };
-  obj.children = jsx(store(7368).ActionSheetRow.Group, {
+  obj.children = jsx(store(7488).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7368).ActionSheetRow, {
+    children: jsx(store(7488).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -47,15 +47,15 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   });
-  return jsx(store(7366).ActionSheet, {
-    header: jsx(store(7321).BottomSheetTitleHeader, { title: store.getName() }),
+  return jsx(store(7486).ActionSheet, {
+    header: jsx(store(7441).BottomSheetTitleHeader, { title: store.getName() }),
     children: null,
   });
 }
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -92,7 +92,7 @@ let closure_10 = noop.memo(function DatabaseDisableRow() {
   });
 });
 let closure_11 = noop.memo(function DatabaseCurrentRow() {
-  const items = [DatabaseManagerDefault, AuthenticationStore];
+  items = [DatabaseManagerDefault, AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => DatabaseManagerDefault.database(id.getId()));
   let str = "No active database.";
   if (null != stateFromStores) {
@@ -156,7 +156,7 @@ export default function DevToolsDataStorageScreen() {
       return hasItem;
     });
     const obj = { sections: null, persistedStores: found };
-    const items = [, ,];
+    items = [, ,];
     ({ DATABASE_CONTROLS: arr2[0], DATABASE_CURRENT: arr2[1], PERSISTED_STORES: arr2[2] } = closure_14);
     obj.sections = items.map((item) => {
       if (constants.DATABASE_CONTROLS === item) {
@@ -175,7 +175,7 @@ export default function DevToolsDataStorageScreen() {
   }, []);
   [first, _slicedToArray] = noop.useState(() => callback(""));
   persistedStores = first.persistedStores;
-  let items = [persistedStores, callback];
+  items = [persistedStores, callback];
   const items1 = [tmp];
   const callback1 = noop.useCallback((arg0, arg1) => {
     closure_0 = arg1;

@@ -5,7 +5,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
 
@@ -20,7 +20,7 @@ export function getChannelsAllowedToUnlink(arg0) {
   }
   closure_0 = tmp;
   if (null == arg0) {
-    let items = [];
+    items = [];
   } else {
     const found = obj
       .getChannels(arg0)
@@ -32,13 +32,13 @@ export function getChannelsAllowedToUnlink(arg0) {
 }
 export function useChannelsAllowedToUnlink(id) {
   _require = id;
-  let items = [PermissionStore, GuildChannelStore];
+  items = [PermissionStore, GuildChannelStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (GuildChannelStore !== undefined) {
       if (PermissionStore !== undefined) {
         closure_0 = PermissionStore;
         if (null == tmp) {
-          let items = [];
+          items = [];
         } else {
           const found = GuildChannelStore.getChannels(tmp)[closure_3].filter((channel) =>
             closure_0(dependencyMap[2]).canUnlinkLobbyChannel(channel.channel, closure_0),

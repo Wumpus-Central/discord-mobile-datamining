@@ -10,7 +10,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockMode = fn(6901).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -23,7 +23,7 @@ export function useWatchTaskPressHandler(questId) {
   closure_129_0 = setRestingQuestDockMode;
   const isInQuestBottomSheet = noop.useContext(questId(callback[4]).QuestBottomSheetContext).isInQuestBottomSheet;
   closure_129_1 = isInQuestBottomSheet;
-  const items = [isInQuestBottomSheet, setRestingQuestDockMode];
+  items = [isInQuestBottomSheet, setRestingQuestDockMode];
   callback = noop.useCallback(() => {
     if (sourceQuestContent) {
       ActionSheetActionCreatorsDefault.hideActionSheet("QuestBottomSheet");
@@ -78,7 +78,7 @@ export function useMobileActivityPressHandler(questId) {
     questId(launchMobileActivity[4]).QuestBottomSheetContext,
   ).isInQuestBottomSheet;
   closure_129_1 = isInQuestBottomSheet;
-  const items = [isInQuestBottomSheet, setRestingQuestDockMode];
+  items = [isInQuestBottomSheet, setRestingQuestDockMode];
   const callback = questImpression.useCallback(() => {
     if (sourceQuestContent) {
       ActionSheetActionCreatorsDefault.hideActionSheet("QuestBottomSheet");
@@ -100,7 +100,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -129,11 +129,11 @@ export function useMobileActivityPressHandler(questId) {
             return obj5;
           } else {
             const obj7 = {
-              type: tmp4(9687).AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: tmp4(6788).AdCreativeType.QUEST,
+              type: tmp4(9819).AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: tmp4(6908).AdCreativeType.QUEST,
               adCreativeId: closure_128_0,
-              questContentCTA: tmp4(7871).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-              surfaceId: tmp4(6784).QuestContent.QUEST_BOTTOM_SHEET,
+              questContentCTA: tmp4(7995).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+              surfaceId: tmp4(6904).QuestContent.QUEST_BOTTOM_SHEET,
               sourceQuestContent: closure_128_1,
               impressionId: null,
               questContentPosition: null,
@@ -148,9 +148,9 @@ export function useMobileActivityPressHandler(questId) {
               questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj7.questContentPosition = questContentPosition;
-            tmp4(9684).captureAdUserAction(obj7);
+            tmp4(9816).captureAdUserAction(obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

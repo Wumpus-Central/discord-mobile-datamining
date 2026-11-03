@@ -14,8 +14,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     flex: 1,
@@ -47,7 +47,7 @@ export default function AddFriendNicknameModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -134,9 +134,9 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(10146)();
+  _slicedToArray = showUserProfile(10276)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  const items = [closure_7];
+  items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -166,7 +166,7 @@ export default function AddFriendNicknameModal(arg0) {
   const obj4 = { children: null };
   const tmp5Result = initialize;
   let obj5 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(6954);
+  const tmp3Result = showUserProfile(7081);
   const intl3 = util.intl;
   obj5.confirmText = intl3.string(util.t["R3BPH+"]);
   obj5.onConfirm = function handleSubmit() {
@@ -186,7 +186,7 @@ export default function AddFriendNicknameModal(arg0) {
     closure_9(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "heading-lg/extrabold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: stringResult,
     }),
@@ -210,12 +210,12 @@ export default function AddFriendNicknameModal(arg0) {
   let obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   };
-  const tmp3Result3 = showUserProfile(6030);
-  obj8.placeholder = showUserProfile(5068).getName(stateFromStores1);
+  const tmp3Result3 = showUserProfile(6150);
+  obj8.placeholder = showUserProfile(5195).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);
   obj5.children = items3;

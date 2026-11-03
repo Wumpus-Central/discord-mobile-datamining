@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/hooks/use
 export default function useColorPresetsWithA11yLabels(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => {
     let colorPaletteList = closure_1;
     if (closure_1 == null) {
@@ -22,7 +22,7 @@ export default function useColorPresetsWithA11yLabels(arg0, arg1) {
       const obj2 = { number: index + 1, hexList: null };
       const mapped = colors.map(closure_1_0(1090).int2hex);
       obj2.hexList = mapped.join(", ");
-      obj.a11yLabel = intl.formatToPlainString(closure_1_1(2932).FHfTsV, obj2);
+      obj.a11yLabel = intl.formatToPlainString(closure_1_1(3059).FHfTsV, obj2);
       return obj;
     });
   }, items);

@@ -4,13 +4,13 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 
 export default function useShouldHideMediaOptions(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let parent_id;

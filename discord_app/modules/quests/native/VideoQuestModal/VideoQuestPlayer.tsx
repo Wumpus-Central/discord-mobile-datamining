@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import VideoQuestUIStore from "../../VideoQuestUIStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(6781).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(16933).PlayerState;
+export const PlayerState = fn(17076).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
@@ -38,7 +38,7 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   }
   let memo;
   let memo1;
-  let duration;
+  duration = undefined;
   closure_11 = undefined;
   let targetSeconds;
   closure_13 = undefined;
@@ -72,7 +72,7 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  const items = [quest];
+  items = [quest];
   memo = contentInsets.useMemo(
     () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_VIDEO, undefined, true),
     items,
@@ -420,11 +420,11 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
     }
   }, items11);
   const items13 = [quest, flag, contentInsets];
-  const callback13 = obj3.useCallback((flag2) => {
-    handleBufferAnalytics(flag2);
+  const callback13 = obj3.useCallback((c2) => {
+    handleBufferAnalytics(c2);
     const current = closure_29.current;
     if (current != null) {
-      current.onBuffer(flag2);
+      current.onBuffer(c2);
     }
   }, items12);
   const items14 = [memo1, memo];

@@ -14,7 +14,7 @@ require = fn;
 function UnmuteOptions(channel) {
   channel = channel.channel;
   const navigation = channel.navigation;
-  const items = [, ,];
+  items = [, ,];
   ({ guild_id: arr[0], id: arr[1] } = channel);
   items[2] = navigation;
   const obj = { style: closure_13().options, children: null };
@@ -24,20 +24,20 @@ function UnmuteOptions(channel) {
   }, items);
   const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
   const tmp = closure_13();
-  obj2.icon = closure_10(channel(1187).Icon, { disableColor: true, source: navigation(11073) });
+  obj2.icon = closure_10(channel(1187).Icon, { disableColor: true, source: navigation(11210) });
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1113).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(11073) };
-  obj5.name = channel(5652).computeChannelName(channel, UserStore, RelationshipStore, true);
+  const obj3 = { disableColor: true, source: navigation(11210) };
+  obj5.name = channel(5772).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1113).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(5624).Text, obj4);
+  obj2.label = closure_10(channel(5747).Text, obj4);
   obj2.onPress = callback;
-  const items1 = [closure_10(channel(6975).TableRow, obj2)];
+  const items1 = [closure_10(channel(7101).TableRow, obj2)];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(5652);
-  const tmp6 = navigation(11074);
-  const MuteSettingType = channel(11074).MuteSettingType;
+  const obj6 = channel(5772);
+  const tmp6 = navigation(11211);
+  const MuteSettingType = channel(11211).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj7);
   obj.children = items1;
@@ -49,7 +49,7 @@ function MuteOptions(channel) {
   const navigation = channel.navigation;
   let memo;
   memo = memo.useMemo(() => channel(navigation[14]).getMuteOptions(), []);
-  const items = [channel, navigation, applicationId];
+  items = [channel, navigation, applicationId];
   closure_4 = memo.useCallback((muteDurationSeconds) => {
     navigation.goBack();
     let result = MuteSettingsUtils.handleMuteSettingPress({
@@ -132,7 +132,7 @@ function NotificationSettingsButton(guildMessageNotifications) {
   let navigation;
   const tmp = closure_13();
   navigation = channel(navigation[22]).useNavigation();
-  const items = [channel, navigation];
+  items = [channel, navigation];
   const items1 = [messageNotifications];
   const callback = noop.useCallback(() => {
     if (channel.isThread()) {
@@ -175,14 +175,14 @@ function NotificationSettingsButton(guildMessageNotifications) {
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 },
   options: { marginBottom: 16 },
   trailing: { flexDirection: "row", alignItems: "center" },
   hint: { marginTop: 8, paddingHorizontal: 12 },
-  headerRightSpacer: { width: fn(9813).MIN_HEADER_HEIGHT },
+  headerRightSpacer: { width: fn(9944).MIN_HEADER_HEIGHT },
 };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
@@ -198,7 +198,7 @@ export default noop.memo(function ConnectedChannelMuteScreen() {
   channelId = route.params.channelId;
   const applicationId = route.params.applicationId;
   const obj2 = require("Link");
-  const items = [closure_5];
+  items = [closure_5];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     ChannelStore.getChannel(channelId),
   );

@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 },
   horizontalContainer: { flexDirection: "row", alignItems: "center" },
@@ -33,7 +33,7 @@ export default function WarningNotice(arg0) {
   ({ style, notice, submitting, disabled } = arg0);
   const tmp = closure_6();
   const obj = { style: null, children: null };
-  const items = [style, ,];
+  items = [style, ,];
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };

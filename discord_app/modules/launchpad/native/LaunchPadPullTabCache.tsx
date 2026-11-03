@@ -50,7 +50,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     if (!tmp15) {
       const rect = { left: diff, right: width, top: tmp, bottom: sum };
       _undefined = rect;
-      const items = [_undefined];
+      items = [_undefined];
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
     const tmp7Result2 = useWindowDimensions;

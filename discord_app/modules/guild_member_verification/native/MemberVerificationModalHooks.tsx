@@ -7,7 +7,7 @@ import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(6951).setInitialVerification;
+const setInitialVerification = fn(7071).setInitialVerification;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
@@ -15,7 +15,7 @@ export function useSetInitialVerificationEffect(guildId) {
   _require = guildId;
   const current = { initial: null, current: null };
   closure_129_0 = guildId;
-  const items = [InitialMemberVerificationStore];
+  items = [InitialMemberVerificationStore];
   const items1 = [guildId];
   current.initial = require("initialize").useStateFromStores(
     items,
@@ -58,7 +58,7 @@ export function useSetInitialVerificationEffect(guildId) {
   return current.initial;
 }
 export function useUserVerificationState() {
-  const items = [UserStore];
+  items = [UserStore];
   return initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -83,7 +83,7 @@ export function useUserVerificationState() {
 }
 export function useInitialVerification(id) {
   _require = id;
-  const items = [InitialMemberVerificationStore];
+  items = [InitialMemberVerificationStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

@@ -8,9 +8,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(5014);
-let obj2 = { sheetHeader: { height: fn(5586).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(5586).NAV_BAR_HEIGHT };
+const createStyles = fn(5141);
+let obj2 = { sheetHeader: { height: fn(5709).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(5709).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
   targetUserId = targetUserId.targetUserId;
   dependencyMap = undefined;
   const tmp = closure_7();
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = targetUserId(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
@@ -72,7 +72,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(7169).Navigator, {
+        let tmp9Result = jsx(tmp2(7290).Navigator, {
           screens: memo,
           initialRouteName,
           headerStatusBarHeight: 0,
@@ -81,7 +81,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
         });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(11482).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11619).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }

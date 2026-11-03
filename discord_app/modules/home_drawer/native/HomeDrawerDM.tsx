@@ -18,7 +18,7 @@ function HomeDrawerDMExpandedChildren(channel) {
   let memo;
   const tmp = closure_12();
   importDefault = tmp;
-  let items = [UserStore];
+  items = [UserStore];
   dependencyMap = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj = channel(504);
   const items1 = [UserStore, memo];
@@ -36,10 +36,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   });
   let obj2 = channel(504);
   const tmp3 = useMessagePreviewsDefault(channel, {
-    unread: channel(18416).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(18561).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(18416);
+  const obj3 = channel(18561);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -90,7 +90,7 @@ function HomeDrawerDMExpandedChildren(channel) {
         color: "text-default",
         children: stateFromStores,
       };
-      const items = [closure_2_10(Text_Text.Text, obj2), closure_2_10(NOOP, { size: "xs" })];
+      items = [closure_2_10(Text_Text.Text, obj2), closure_2_10(NOOP, { size: "xs" })];
       obj.children = items;
       return closure_2_11(View, obj);
     }
@@ -110,14 +110,14 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(18382).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(18527).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
-const isMultiUserDM = fn(4867).isMultiUserDM;
+const isMultiUserDM = fn(4994).isMultiUserDM;
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles({
   title: { flexDirection: "row", alignItems: "center", gap: 4 },
   titleText: { flexShrink: 1 },

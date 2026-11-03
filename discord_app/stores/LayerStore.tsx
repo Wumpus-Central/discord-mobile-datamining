@@ -22,7 +22,7 @@ const layerStore = new LayerStore(DispatcherDefault, {
     if (closure_0.indexOf(component) >= 0) {
       return false;
     } else {
-      const items = [];
+      items = [];
       items[HermesBuiltin.arraySpread(closure_0, 0)] = component;
       closure_0 = items;
     }

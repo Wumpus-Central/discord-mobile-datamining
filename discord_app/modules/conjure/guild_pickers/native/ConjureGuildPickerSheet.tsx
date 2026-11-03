@@ -12,9 +12,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {
-  channel: fn(6073).SelectOptionType.CHANNEL,
-  role: fn(6073).SelectOptionType.ROLE,
-  user: fn(6073).SelectOptionType.USER,
+  channel: fn(6193).SelectOptionType.CHANNEL,
+  role: fn(6193).SelectOptionType.ROLE,
+  user: fn(6193).SelectOptionType.USER,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/guild_pickers/native/ConjureGuildPickerSheet.tsx");
@@ -27,7 +27,7 @@ export default function ConjureGuildPickerSheet(guildId) {
   const onSubmit = guildId.onSubmit;
   GuildStore = undefined;
   closure_9 = undefined;
-  let guild;
+  guild = undefined;
   closure_11 = undefined;
   closure_12 = undefined;
   let set;
@@ -63,7 +63,7 @@ export default function ConjureGuildPickerSheet(guildId) {
   closure_11 = type(maxPicks[8])(tmp10, tmp6(tmp4[9]).MIN_REREQUEST_TIME);
   const tmp3Result = type(maxPicks[8]);
   closure_12 = str.trim().toLowerCase();
-  let items = tmp5;
+  items = tmp5;
   if (tmp5 == null) {
     items = [];
   }
@@ -117,7 +117,7 @@ export default function ConjureGuildPickerSheet(guildId) {
       const hasItem = set.has(value.value);
       if (1 === maxPicks) {
         if (hasItem) {
-          let items = [];
+          items = [];
         } else {
           items = [value];
         }
@@ -135,9 +135,9 @@ export default function ConjureGuildPickerSheet(guildId) {
       onSubmit(first.map((id) => ({ id: id.value, label: id.label })));
       ActionSheetActionCreatorsDefault.hideActionSheet();
     },
-    onQueryChange(ref) {
-      _undefined(ref);
-      closure_9(ref);
+    onQueryChange(arg0) {
+      _undefined(arg0);
+      closure_9(arg0);
     },
     renderIcon: callback,
     renderDescription: null,

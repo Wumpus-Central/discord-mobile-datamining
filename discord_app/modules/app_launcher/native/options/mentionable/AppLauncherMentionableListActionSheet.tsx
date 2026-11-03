@@ -31,7 +31,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
   const first1 = tmp4[0];
   closure_8 = tmp4[1];
   const guild_id = channel.guild_id;
-  let items = [query, option, channel];
+  items = [query, option, channel];
   const effect = query.useEffect(() => {
     const applicationCommandOptionQueryOptions =
       ApplicationCommandUtils.getApplicationCommandOptionQueryOptions(option);
@@ -50,7 +50,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
       allowSnowflake: true,
     });
     const users = queryMentionResultsResult.users;
-    const items = [
+    items = [
       ...users.map((item) => ({ type: constants.USER, result: item })),
       ...roles.map((item) => ({ type: constants.ROLE, result: item })),
       ...globals.map((item) => ({ type: constants.GLOBAL, result: item })),

@@ -12,9 +12,9 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4881).isGuildOwner;
+const isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
-({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
+({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
@@ -97,13 +97,13 @@ export function isEmptyOverwrite(id) {
 }
 export function useCanCreateStageChannelByGuild(guildId) {
   _require = guildId;
-  const items = [PermissionStore, AuthenticationStore, GuildStore];
+  items = [PermissionStore, AuthenticationStore, GuildStore];
   const items1 = [guildId];
   return require("initialize").useStateFromStores(
     items,
     () => {
       const id = AuthenticationStore.getId();
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let tmp3 = null != guild;
       if (tmp3) {
         const features = guild.features;
@@ -124,7 +124,7 @@ export function useCanCreateStageChannelByGuild(guildId) {
 }
 export function useCanUpdateStageChannelModerators(id) {
   _require = id;
-  const items = [PermissionStore, GuildStore, ChannelStore];
+  items = [PermissionStore, GuildStore, ChannelStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
@@ -150,7 +150,7 @@ export function useCanUpdateStageChannelModerators(id) {
 }
 export function useCanModerateRequestToSpeak(id) {
   _require = id;
-  const items = [ChannelStore, PermissionStore];
+  items = [ChannelStore, PermissionStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

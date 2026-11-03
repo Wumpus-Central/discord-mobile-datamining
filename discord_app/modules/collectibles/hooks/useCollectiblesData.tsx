@@ -11,10 +11,10 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollect
 
 export default function useCollectiblesData(arg0) {
   _require = arg0;
-  let items = [CollectiblesCategoryStore];
+  items = [CollectiblesCategoryStore];
   const tmp = _slicedToArray(
     require("useStateFromStores").useStateFromStoresArray(items, () => {
-      const items = [
+      items = [
         CollectiblesCategoryStore.getCategoryForProduct(closure_0),
         CollectiblesCategoryStore.getProduct(closure_0),
       ];

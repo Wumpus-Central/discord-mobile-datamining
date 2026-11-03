@@ -1,54 +1,27 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuItem.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
-import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import 01652__ from "../../../../../_runtime/metro/01652__.js";
 
-const ReanimatedRexport = ReanimatedRexport2;
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(5014);
+let closure_7 = module_1652.createAnimatedComponent(Pressable);
+const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
-  const obj = {
-    container: {
-      padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING,
-      minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT,
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
-      gap: 8,
-    },
-    containerRefresh: { justifyContent: "flex-start" },
-    roundedTop: null,
-    roundedBottom: null,
-    border: null,
-    pressed: null,
-    icon: null,
-    label: null,
-    trailingIndicator: null,
-  };
-  const obj2 = {
-    padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING,
-    minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: 8,
-  };
+  const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
+  const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
   obj.roundedTop = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
   const obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
-  obj.roundedBottom = {
-    borderBottomLeftRadius: nativeDefault.radii.lg,
-    borderBottomRightRadius: nativeDefault.radii.lg,
-  };
+  obj.roundedBottom = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
   const obj4 = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
   obj.border = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
   const obj5 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -63,21 +36,16 @@ let closure_8 = createStyles.createStyles((arg0) => {
   obj.trailingIndicator = { marginLeft: "auto" };
   return obj;
 });
-const __initData = { code: "function ContextMenuItemNativeTsx1(){const{pan}=this.__closure;return pan.get();}" };
-const __initData2 = {
-  code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}",
-};
-const __initData3 = {
-  code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}",
-};
-let closure_12 = {
-  code: "function ContextMenuItemNativeTsx4(){const{activeIndex,index}=this.__closure;activeIndex.set(index);}",
-};
+let closure_9 = { code: "(function ContextMenuItemNativeTsx1(){let[pan]=this.__closure;return pan.get();})" };
+let closure_10 = { code: "(function ContextMenuItemNativeTsx2(_current,previous){let[measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET]=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}})" };
+let closure_11 = { code: "(function ContextMenuItemNativeTsx3(){let[activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING]=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};})" };
+let closure_12 = { code: "(function ContextMenuItemNativeTsx4(){let[activeIndex,index]=this.__closure;activeIndex.set(index);})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
 export function ContextMenuItem(accessibilityRole) {
   ({ IconComponent, trailingIndicator, iconSource, start, end, index } = accessibilityRole);
+  _require = index;
   ({ state, variant } = accessibilityRole);
   ({ label, lastInSection, onPress } = accessibilityRole);
   if (variant === undefined) {
@@ -87,201 +55,193 @@ export function ContextMenuItem(accessibilityRole) {
   if (str === undefined) {
     str = "button";
   }
-  let pan;
-  let backgroundColor;
-  const animatedRef = index(pan[3]).useAnimatedRef();
-  const tmp4 = closure_8(variant);
-  pan = state.pan;
+  const animatedRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  let tmp4 = c8(variant);
   const itemMeasurements = state.itemMeasurements;
+  importDefault = itemMeasurements;
   const activeIndex = state.activeIndex;
-  let obj = index(pan[3]);
-  const sharedValue = index(pan[3]).useSharedValue(0);
-  const obj2 = index(pan[3]);
-  let fn = function v() {
-    return pan.get();
-  };
-  fn.__closure = { pan };
-  fn.__workletHash = 11852115418144;
-  fn.__initData = __initData;
-  class U {
+  dependencyMap = activeIndex;
+  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  items = [closure_9, state.pan];
+  _require = undefined;
+  [tmp6, tmp7] = items;
+  class ContextMenuItemNativeTsx1 {
+    constructor() {
+      return closure_0.get();
+    }
+  }
+  let items1 = [tmp7];
+  ContextMenuItemNativeTsx1.__closure = items1;
+  ContextMenuItemNativeTsx1.__workletHash = 10932936281465;
+  ContextMenuItemNativeTsx1.__initData = tmp6;
+  const items2 = [closure_10, require("../../../../../_runtime/metro/01652__.js").measure, animatedRef, index, require("ContextMenuState").INDEX_BOUNDS_OFFSET, itemMeasurements, require("ContextMenuState").INDEX_BOUNDS_PAGE_X_OFFSET, require("ContextMenuState").INDEX_BOUNDS_PAGE_Y_OFFSET, require("ContextMenuState").INDEX_BOUNDS_WIDTH_OFFSET, require("ContextMenuState").INDEX_BOUNDS_HEIGHT_OFFSET];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  [tmp8, tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items2;
+  class ContextMenuItemNativeTsx2 {
     constructor(arg0, arg1) {
       if (null != arg1) {
         tmp = accessibilityRole;
         if (accessibilityRole !== arg1) {
           tmp2 = closure_0;
-          tmp3 = closure_2;
-          obj = closure_0(closure_2[3]);
-          tmp4 = closure_1;
-          measureResult = obj.measure(closure_1);
-          if (null != measureResult) {
-            tmp6 = index;
-            ({ pageX, pageY, width, height } = measureResult);
-            result = index * tmp2(tmp3[7]).INDEX_BOUNDS_OFFSET;
-            tmp8 = itemMeasurements;
-            value = itemMeasurements.get();
-            value[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-            value1 = itemMeasurements.get();
-            value1[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
-            value2 = itemMeasurements.get();
-            value2[result + tmp2(tmp3[7]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
-            value3 = itemMeasurements.get();
-            value3[result + tmp2(tmp3[7]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          tmp3 = closure_1;
+          tmp4 = closure_0(closure_1);
+          if (null != tmp4) {
+            tmp5 = closure_2;
+            tmp6 = closure_3;
+            result = closure_2 * closure_3;
+            tmp8 = closure_4;
+            ({ pageX, pageY, width, height } = tmp4);
+            tmp9 = closure_5;
+            closure_4.get()[result + closure_5] = pageX;
+            tmp10 = closure_6;
+            closure_4.get()[result + closure_6] = pageY;
+            tmp11 = closure_7;
+            closure_4.get()[result + closure_7] = width;
+            tmp12 = closure_8;
+            closure_4.get()[result + closure_8] = height;
           }
         }
       }
       return;
     }
   }
-  const obj3 = index(pan[3]);
-  U.__closure = {
-    measure: index(pan[3]).measure,
-    ref: animatedRef,
-    index,
-    INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET,
-    itemMeasurements,
-    INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET,
-    INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET,
-    INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET,
-    INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET,
-  };
-  U.__workletHash = 9571959267234;
-  U.__initData = __initData2;
-  const animatedReaction = obj3.useAnimatedReaction(fn, U);
-  backgroundColor = tmp4.pressed.backgroundColor;
-  const obj4 = {
-    measure: index(pan[3]).measure,
-    ref: animatedRef,
-    index,
-    INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET,
-    itemMeasurements,
-    INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET,
-    INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET,
-    INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET,
-    INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET,
-  };
-  class A {
+  const items3 = [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  ContextMenuItemNativeTsx2.__closure = items3;
+  ContextMenuItemNativeTsx2.__workletHash = 15799031050779;
+  ContextMenuItemNativeTsx2.__initData = tmp8;
+  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(ContextMenuItemNativeTsx1, ContextMenuItemNativeTsx2);
+  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const items4 = [closure_11, activeIndex, index, sharedValue, require("spring/spring").withSpring, tmp4.pressed.backgroundColor, require("springPresets").SUBTLE_SPRING];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  c5 = undefined;
+  [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items4;
+  class ContextMenuItemNativeTsx3 {
     constructor() {
-      tmp = activeIndex.get() === index;
+      tmp = closure_0.get() === closure_1;
       if (!tmp) {
-        tmp2 = closure_5;
+        tmp2 = closure_2;
         num = 1;
-        tmp = 1 === closure_5.get();
+        tmp = 1 === closure_2.get();
       }
-      tmp3 = closure_0;
-      tmp4 = closure_2;
-      obj = closure_0(closure_2[8]);
       str = "transparent";
+      tmp3 = closure_3;
       if (tmp) {
-        str = backgroundColor;
+        str = closure_4;
       }
-      obj1 = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
-      return obj1;
+      obj = { backgroundColor: tmp3(str, closure_5, "animate-always") };
+      return obj;
     }
   }
-  const obj5 = index(pan[3]);
-  A.__closure = {
-    activeIndex,
-    index,
-    pressed: sharedValue,
-    withSpring: index(pan[8]).withSpring,
-    backgroundColor,
-    SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING,
-  };
-  A.__workletHash = 624481847983;
-  A.__initData = __initData3;
-  const animatedStyle = obj5.useAnimatedStyle(A);
+  const items5 = [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25];
+  ContextMenuItemNativeTsx3.__closure = items5;
+  ContextMenuItemNativeTsx3.__workletHash = 5959605672534;
+  ContextMenuItemNativeTsx3.__initData = tmp19;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ContextMenuItemNativeTsx3);
   if (null != IconComponent) {
-    const obj7 = { size: "sm", color: tmp4.icon.tintColor };
-    let tmp8 = sharedValue(IconComponent, obj7);
+    const obj4 = { size: "sm", color: tmp4.icon.tintColor };
+    let tmp27 = c5(IconComponent, obj4);
   } else {
-    tmp8 = null;
+    tmp27 = null;
     if (null != iconSource) {
-      const obj8 = { source: iconSource, style: tmp4.icon };
-      tmp8 = sharedValue(animatedRef(tmp2[10]), obj8);
+      const obj5 = { source: iconSource, style: tmp4.icon };
+      tmp27 = c5(IconDefault, obj5);
     }
   }
-  let tmp12 = null;
+  let tmp31 = null;
   if (null != trailingIndicator) {
-    const obj9 = { size: "sm", color: tmp4.icon.tintColor };
-    tmp12 = sharedValue(trailingIndicator, obj9);
+    const obj6 = { size: "sm", color: tmp4.icon.tintColor };
+    tmp31 = c5(trailingIndicator, obj6);
   }
-  const items = [index, itemMeasurements];
-  const items1 = [activeIndex, index];
-  const callback = itemMeasurements.useCallback((nativeEvent) => {
+  const items6 = [index, itemMeasurements];
+  const items7 = [activeIndex, index];
+  const callback = noop.useCallback((nativeEvent) => {
     ({ height, width } = nativeEvent.nativeEvent.layout);
     if (0 !== height) {
       if (0 !== width) {
-        const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
-        value = itemMeasurements.get();
+        const result = c0 * ContextMenuState.INDEX_BOUNDS_OFFSET;
+        value = _undefined2.get();
         value[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
-        value2 = itemMeasurements.get();
+        value2 = _undefined2.get();
         value2[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
       }
     }
-  }, items);
-  const items2 = [activeIndex];
-  const callback1 = itemMeasurements.useCallback(() => {
-    const fn = function t() {
-      const result = activeIndex.set(index);
-    };
-    fn.__closure = { activeIndex, index };
-    fn.__workletHash = 14761332236151;
-    fn.__initData = __initData;
-    ReanimatedRexport2.executeOnUIRuntimeSync(fn)();
-  }, items1);
-  const obj10 = {
-    ref: animatedRef,
-    style: null,
-    onLayout: null,
-    onPressIn: null,
-    onPressOut: null,
-    onPress: null,
-    accessibilityRole: null,
-    children: null,
-  };
-  const items3 = [, , , , ,];
-  ({ container: arr4[0], containerRefresh: arr4[1] } = tmp4);
+  }, items6);
+  const items8 = [activeIndex];
+  const callback1 = noop.useCallback(() => {
+    items = [closure_12, c2, c0];
+    c0 = undefined;
+    c1 = undefined;
+    [tmp, tmp2, tmp3] = items;
+    class ContextMenuItemNativeTsx4 {
+      constructor() {
+        result = closure_0.set(closure_1);
+        return;
+      }
+    }
+    const items1 = [tmp2, tmp3];
+    ContextMenuItemNativeTsx4.__closure = items1;
+    ContextMenuItemNativeTsx4.__workletHash = 5723143478734;
+    ContextMenuItemNativeTsx4.__initData = tmp;
+    _mod1705.runOnUISync(ContextMenuItemNativeTsx4);
+  }, items7);
+  const obj7 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
+  const items9 = [, , , , , ];
+  ({ container: arr10[0], containerRefresh: arr10[1] } = tmp4);
   let border = !end;
-  const callback2 = itemMeasurements.useCallback(() => {
-    const result = activeIndex.set(-1);
-  }, items2);
+  const callback2 = noop.useCallback(() => {
+    const result = _undefined3.set(-1);
+  }, items8);
   if (!end) {
     border = !lastInSection;
   }
   if (border) {
     border = tmp4.border;
   }
-  items3[2] = border;
+  items9[2] = border;
   if (start) {
     start = tmp4.roundedTop;
   }
-  items3[3] = start;
+  items9[3] = start;
   if (end) {
     end = tmp4.roundedBottom;
   }
-  items3[4] = end;
-  items3[5] = animatedStyle;
-  obj10.style = items3;
-  obj10.onLayout = callback;
-  obj10.onPressIn = callback1;
-  obj10.onPressOut = callback2;
-  obj10.onPress = onPress;
-  obj10.accessibilityRole = str;
-  const items4 = [sharedValue(activeIndex, { children: tmp8 }), ,];
-  const obj11 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
+  items9[4] = end;
+  items9[5] = animatedStyle;
+  obj7.style = items9;
+  obj7.onLayout = callback;
+  obj7.onPressIn = callback1;
+  obj7.onPressOut = callback2;
+  obj7.onPress = onPress;
+  obj7.accessibilityRole = str;
+  const items10 = [c5(c4, { children: tmp27 }), , ];
+  const obj8 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
   let str2 = "text-strong";
   if ("destructive" === variant) {
     str2 = "text-feedback-critical";
   }
-  obj11.color = str2;
-  obj11.children = label;
-  items4[1] = sharedValue(index(pan[11]).Text, obj11);
-  let tmp19Result = null != tmp12;
-  if (tmp19Result) {
-    const obj12 = { style: tmp4.trailingIndicator, children: tmp12 };
-    tmp19Result = tmp19(activeIndex, obj12);
+  obj8.color = str2;
+  obj8.children = label;
+  items10[1] = c5(require("Text/Text").Text, obj8);
+  let tmp38Result = null != tmp31;
+  if (tmp38Result) {
+    const obj9 = { style: tmp4.trailingIndicator, children: tmp31 };
+    tmp38Result = tmp38(c4, obj9);
   }
-  items4[2] = tmp19Result;
-  obj10.children = items4;
-  return backgroundColor(closure_7, obj10);
+  items10[2] = tmp38Result;
+  obj7.children = items10;
+  return c6(c7, obj7);
 }

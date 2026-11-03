@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("modules/opt_in_channels/isOptInEnable
 
 export function useOptInEnabledForGuild(id) {
   _require = id;
-  const items = [UserGuildSettingsStore, GuildStore, UserStore];
+  items = [UserGuildSettingsStore, GuildStore, UserStore];
   return require("initialize").useStateFromStores(items, () => {
     let isOptInEnabledResult = UserGuildSettingsStore.isOptInEnabled(closure_0);
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
@@ -44,7 +44,7 @@ export function useOptInEnabledForGuild(id) {
   });
 }
 export function isOptInEnabledForGuild(_guildId) {
-  const guild = GuildStore.getGuild(_guildId);
+  guild = GuildStore.getGuild(_guildId);
   const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != _guildId && null != guild && null != currentUser;
   if (tmp2) {
@@ -59,9 +59,9 @@ export function isOptInEnabledForGuild(_guildId) {
 }
 export function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let flag;
     const canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
     if (guild != null) {

@@ -15,12 +15,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2063).useIntlLoaderStore;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
-let closure_9 = fn(1385).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const useIntlLoaderStore = fn(2192).useIntlLoaderStore;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
+let closure_9 = fn(1387).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -102,7 +102,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
     }
     return currentLocale;
   });
-  let items = [currentUser];
+  items = [currentUser];
   const stateFromStores = navigateToSettings(gradientSecondaryBackground[15]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
@@ -290,7 +290,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const memo = obj4.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
     const obj2 = _modDef671(color);
-    const items = [_modDef671(color).alpha(0).hex()];
+    items = [_modDef671(color).alpha(0).hex()];
     const alphaResult = _modDef671(color).alpha(0);
     const obj4 = _modDef671(color);
     items[1] = _modDef671(color).alpha(1).hex();

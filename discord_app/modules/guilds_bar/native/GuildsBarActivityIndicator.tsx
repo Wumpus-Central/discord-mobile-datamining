@@ -3,49 +3,49 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import _modDef8196 from "../../../../_runtime/metro/08196__.js";
-import _modDef8608 from "../../../../_runtime/metro/08608__.js";
+import _modDef8320 from "../../../../_runtime/metro/08320__.js";
+import _modDef8732 from "../../../../_runtime/metro/08732__.js";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
-import _modDef9212 from "../../../../_runtime/metro/09212__.js";
+import _modDef9340 from "../../../../_runtime/metro/09340__.js";
 import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef18406 from "../../../../_runtime/metro/18406__.js";
-import _modDef18407 from "../../../../_runtime/metro/18407__.js";
-import _modDef18408 from "../../../../_runtime/metro/18408__.js";
+import _modDef18551 from "../../../../_runtime/metro/18551__.js";
+import _modDef18552 from "../../../../_runtime/metro/18552__.js";
+import _modDef18553 from "../../../../_runtime/metro/18553__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9212 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9340 };
     let tmp6 = obj2;
   } else if (tmp4) {
-    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8196 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8320 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18406 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18551 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18407 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18552 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18408 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18553 };
     tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8608 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8732 };
       tmp6 = obj;
     }
   }
   return tmp6;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
 let size = {
   position: "absolute",
@@ -78,7 +78,7 @@ const memoResult = noop.memo(function GuildsBarActivityIndicatorBase(arg0) {
   let activityIcon = closure_5();
   let WHITE = useToken.useToken(nativeDefault.colors.ICON_DEFAULT);
   const obj2 = { style: null, children: null };
-  const items = [activityIcon.activityWrapper, style];
+  items = [activityIcon.activityWrapper, style];
   obj2.style = items;
   const items1 = [activityIcon.activityIconWrapper];
   let prop = null;
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGuildActivityIndicator(arg0) {
   if (tmp2 != null) {
     icon = tmp2.icon;
   }
-  const items = [icon, ,];
+  items = [icon, ,];
   let source1;
   if (tmp2 != null) {
     source1 = tmp2.source;
@@ -164,7 +164,7 @@ export function useActivityIndicatorState(guildId) {
   if (tmp2 != null) {
     icon = tmp2.icon;
   }
-  const items = [icon, ,];
+  items = [icon, ,];
   let source;
   if (tmp2 != null) {
     source = tmp2.source;

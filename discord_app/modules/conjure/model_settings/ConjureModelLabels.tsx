@@ -1,30 +1,30 @@
 // discord_app/modules/conjure/model_settings/ConjureModelLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureModelLabels.tsx");
 
 export function modelTierMessage(value) {
   if ("simple" === value) {
-    return _modDef3868["/tlOR5"];
+    return _modDef3995["/tlOR5"];
   } else if ("balanced" === value) {
-    return _modDef3868.wNhuGQ;
+    return _modDef3995.wNhuGQ;
   } else if ("complex" === value) {
-    return _modDef3868.FxoUwB;
+    return _modDef3995.FxoUwB;
   } else {
     return null;
   }
 }
 export function tierTooltip(title, arg1) {
   if ("simple" === arg1) {
-    let prop = _modDef3868["/tlOR5"];
+    let prop = _modDef3995["/tlOR5"];
   } else if ("balanced" === arg1) {
-    prop = _modDef3868.wNhuGQ;
+    prop = _modDef3995.wNhuGQ;
   } else {
     prop = null;
     if ("complex" === arg1) {
-      prop = _modDef3868.FxoUwB;
+      prop = _modDef3995.FxoUwB;
     }
   }
   if (null != prop) {

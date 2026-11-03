@@ -12,7 +12,7 @@ export default function useWebViewPlatformProps(iframeUrl) {
     const obj2 = { script: null, allowedOriginRules: null };
     const obj4 = { embeddedAppOrigin: iframeUrl.origin, insets: tmp };
     obj2.script = createEmbeddedAppFrameScript.createEmbeddedAppFrameScript(obj4);
-    const items = [iframeUrl.origin];
+    items = [iframeUrl.origin];
     obj2.allowedOriginRules = items;
     obj.androidInjectedJavaScriptForOrigins = obj2;
     tmp2 = obj;

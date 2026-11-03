@@ -35,7 +35,7 @@ export function getUserProfileStackedActivityCards(arg0) {
   if (isPrivate === undefined) {
     isPrivate = false;
   }
-  const items = [];
+  items = [];
   if (null != stream) {
     const obj = { type: "stream", stream };
     items.push(obj);

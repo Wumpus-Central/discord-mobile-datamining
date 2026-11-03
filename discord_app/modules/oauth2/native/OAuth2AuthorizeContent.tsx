@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   fill: { flex: 1 },
   scrollView: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 },
@@ -66,7 +66,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
     const tmp13 = null == footer || tmp11[0] >= 0;
   }
   closure_8 = tmp12;
-  const items = [height, tmp12, first1, setAllContentSeen];
+  items = [height, tmp12, first1, setAllContentSeen];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (closure_8) {
       const obj = { layoutMeasurement: null, contentSize: null };

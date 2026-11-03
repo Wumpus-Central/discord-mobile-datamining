@@ -20,7 +20,7 @@ class Logger {
       global("log", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
         if (global != null) {
-          const items = [logger.name, "log", syncChannels];
+          items = [logger.name, "log", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
@@ -28,7 +28,7 @@ class Logger {
     };
     obj.log = function log(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
+      items = [syncChannels, ...substr];
       LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
       global("log", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
@@ -44,7 +44,7 @@ class Logger {
       global("debug", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
         if (global != null) {
-          const items = [logger.name, "debug", syncChannels];
+          items = [logger.name, "debug", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
@@ -52,7 +52,7 @@ class Logger {
     };
     obj.verbose = function verbose(handleBackPress) {
       const substr = [...arguments].slice();
-      const items = [handleBackPress, ...substr];
+      items = [handleBackPress, ...substr];
       LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
       global("debug", handleBackPress, ...substr);
       if (logger.nativeLoggerEnabled) {
@@ -65,7 +65,7 @@ class Logger {
     };
     obj.info = function info(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
+      items = [syncChannels, ...substr];
       LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
       global("info", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
@@ -78,7 +78,7 @@ class Logger {
     };
     obj.warn = function warn(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
+      items = [syncChannels, ...substr];
       LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
       global("warn", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
@@ -91,7 +91,7 @@ class Logger {
     };
     obj.error = function error(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
+      items = [syncChannels, ...substr];
       LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
       global("error", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
@@ -107,7 +107,7 @@ class Logger {
       global("trace", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
         if (global != null) {
-          const items = [logger.name, "trace", syncChannels];
+          items = [logger.name, "trace", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
@@ -147,7 +147,7 @@ class Logger {
       global("file-only", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
         if (global != null) {
-          const items = [logger.name, "file-only", syncChannels];
+          items = [logger.name, "file-only", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }

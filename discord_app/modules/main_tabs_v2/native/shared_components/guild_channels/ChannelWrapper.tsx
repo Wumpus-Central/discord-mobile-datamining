@@ -28,7 +28,7 @@ export function renderChannelWrapper(children, fontScale) {
     isThreadResult,
   );
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
-  const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, ,];
+  items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, ,];
   let isThreadResult1;
   if (channel != null) {
     isThreadResult1 = channel.isThread();

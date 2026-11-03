@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   guildIdentity: { flexDirection: "row", alignItems: "center" },
   iconContainer: { marginRight: 16 },
@@ -49,7 +49,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   first1 = tmp6[0];
   closure_5 = tmp6[1];
   if (null != first1) {
-    let items = [first1];
+    items = [first1];
     let items1 = items;
   } else {
     items1 = [];
@@ -68,7 +68,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(6073).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(6193).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -83,7 +83,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         .map((record) => {
           record = record.record;
           return {
-            type: closure_1_0(6073).SelectOptionType.GUILD,
+            type: closure_1_0(6193).SelectOptionType.GUILD,
             value: record.id,
             label: record.name,
             guild: record,
@@ -127,7 +127,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         };
         tmp8 = React6(native.Avatar, obj3);
       }
-      const items = [tmp8];
+      items = [tmp8];
       if (username == null) {
         username = user.username;
       }

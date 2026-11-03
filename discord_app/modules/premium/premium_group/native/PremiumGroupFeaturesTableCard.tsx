@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
@@ -17,7 +17,7 @@ class BetaPill {
   constructor() {
     tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
-    obj1 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
+    obj1 = { variant: "text-xs/semibold", style: tmp.betaText, children: null };
     intl = closure_0(closure_2[6]).intl;
     obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
     obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
@@ -97,7 +97,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
       children: null,
     };
     const tmp2Result = LinearGradientDefault;
-    const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), ,];
+    items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), ,];
     items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
     items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
     obj2.colors = items;

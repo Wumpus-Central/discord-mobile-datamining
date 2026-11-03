@@ -7,7 +7,7 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(10943).FetchState;
+const FetchState = fn(11081).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
@@ -15,7 +15,7 @@ export default function useApplicationWidgetConfigs(items1) {
   _require = items1;
   const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
-  const items = [stateFromStores1];
+  items = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     stateFromStores1.getFeaturedFetchState(),
   );

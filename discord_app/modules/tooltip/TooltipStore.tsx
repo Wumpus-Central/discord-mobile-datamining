@@ -27,7 +27,7 @@ class TooltipStore extends Store {
 }
 TooltipStore.prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
-  let items = Storage.get(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, []);
+  items = Storage.get(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, []);
   if (items == null) {
     items = [];
   }

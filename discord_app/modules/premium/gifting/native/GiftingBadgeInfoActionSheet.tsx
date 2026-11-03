@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2634 from "../GiftingBadge.messages.js";
+import _modDef2763 from "../GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "views/GiftingBadgeIcon.tsx";
@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8763).getSingleRequirementThreshold;
+let closure_7 = fn(8887).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -55,9 +55,9 @@ const result = size.fileFinishedImporting("modules/premium/gifting/native/Giftin
 export default function GiftingBadgeInfoActionSheet() {
   const tmp = closure_11();
   _require = tmp;
-  let items = [BadgeDirectoryStore];
+  items = [BadgeDirectoryStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
-    badgeById.getBadgeById(closure_0(8755).BadgeId.GIFTING),
+    badgeById.getBadgeById(closure_0(8879).BadgeId.GIFTING),
   );
   let obj = require("initialize");
   const items1 = [AccessibilityStore];
@@ -79,11 +79,11 @@ export default function GiftingBadgeInfoActionSheet() {
     children: null,
   };
   let intl = require("util").intl;
-  obj6.children = intl.string(_modDef2634["0MB2C6"]);
+  obj6.children = intl.string(_modDef2763["0MB2C6"]);
   const items3 = [closure_9(require("Text/Text").Text, obj6)];
   let obj7 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
-  obj7.children = intl2.string(_modDef2634.k9sNVH);
+  obj7.children = intl2.string(_modDef2763.k9sNVH);
   items3[1] = closure_9(require("Text/Text").Text, obj7);
   obj5.children = items3;
   const items4 = [closure_10(View, obj5)];
@@ -122,7 +122,7 @@ export default function GiftingBadgeInfoActionSheet() {
           obj3.children = React7(GiftingBadgeIconDefault, obj4);
           tmp9 = React7(View, obj3);
         }
-        const items = [
+        items = [
           tmp9,
           React7(Text_Text.Text, { variant: "text-lg/semibold", color: "text-strong", children: children.name }),
         ];
@@ -131,7 +131,7 @@ export default function GiftingBadgeInfoActionSheet() {
           const obj6 = { variant: "text-md/normal", color: "text-subtle", children: null };
           const intl = util.intl;
           const obj7 = { count: tmp3 };
-          obj6.children = intl.formatToPlainString(_modDef2634.qvx9E4, obj7);
+          obj6.children = intl.formatToPlainString(_modDef2763.qvx9E4, obj7);
           tmp12Result = React7(Text_Text.Text, obj6);
         }
         items[2] = tmp12Result;

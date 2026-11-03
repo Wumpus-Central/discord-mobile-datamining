@@ -8,7 +8,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6844).canPublishProject;
+const canPublishProject = fn(6964).canPublishProject;
 const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesLink.tsx");
@@ -28,7 +28,7 @@ export default function useConjurePatchNotesLink(arg0, published_revision) {
   if (published_revision == null) {
     published_revision = null;
   }
-  const items = [ConjurePublishStatusStore, published_revision];
+  items = [ConjurePublishStatusStore, published_revision];
   const items1 = [arg0, published_revision, published_revision.update, guildId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -70,7 +70,7 @@ export default function useConjurePatchNotesLink(arg0, published_revision) {
         update = null != project;
       }
       if (update) {
-        update = "user" !== project.install_scope;
+        update = "guild" === project.install_scope;
       }
       if (update) {
         update = canPublishProject(project);

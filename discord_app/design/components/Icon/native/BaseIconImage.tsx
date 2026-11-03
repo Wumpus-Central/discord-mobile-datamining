@@ -11,7 +11,7 @@ let closure_4 = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "raw", height: "cix" },
+  custom: { width: "Array", height: "flexDirection" },
   refresh_sm: { width: 18, height: 18 },
 };
 const size = fn(2);
@@ -36,7 +36,7 @@ export function BaseIconImage(size) {
     tmp3 = null != color && typeof color === "string";
   }
   const obj4 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
-  const items = [closure_4[str], tmp4, style];
+  items = [closure_4[str], tmp4, style];
   obj4.style = items;
   return jsx(FastImageDefault, {
     fadeDuration: 0,

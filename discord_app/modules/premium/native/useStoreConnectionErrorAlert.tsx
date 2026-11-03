@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
 
 export default function useStoreConnectionErrorAlert() {
-  const items = [IAPStore];
+  items = [IAPStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => IAPStore.hasConnectionError());
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {

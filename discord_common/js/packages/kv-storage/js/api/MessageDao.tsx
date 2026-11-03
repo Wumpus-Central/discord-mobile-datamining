@@ -33,7 +33,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   if (typeof MessageDao === "function") {
     const obj = Object.create(MessageDao.prototype);
     obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
+    items = [originalPrefix];
     const table = new Table.Table(items, tableId, database, false);
     obj.table = table;
     return obj;
@@ -43,17 +43,17 @@ prototype["withoutLogging"] = function withoutLogging() {
 };
 prototype["get"] = function get(arg0, arg1, str) {
   const table = this.table;
-  const items = [arg0, arg1, str.padStart(19, "0")];
+  items = [arg0, arg1, str.padStart(19, "0")];
   return table.get(items);
 };
 prototype["getLatest"] = function getLatest(arg0, arg1, limit) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return table.getMany(items, { ordering: TableId.Ordering.Descending, limit });
 };
 prototype["getRange"] = function getRange(arg0, arg1, str, str2, arg4) {
   const table = this.table;
-  const items = [arg0, arg1, str.padStart(19, "0")];
+  items = [arg0, arg1, str.padStart(19, "0")];
   const items1 = [arg0, arg1, str2.padStart(19, "0")];
   return table.getRange(items, items1, arg4);
 };
@@ -70,7 +70,7 @@ prototype["put"] = function put(arg0, arg1, data) {
   const id = data.id;
   const padStartResult = id.padStart(19, "0");
   const obj = { key: null, data, generation: padStartResult };
-  const items = [arg0, arg1, padStartResult];
+  items = [arg0, arg1, padStartResult];
   obj.key = items;
   return table.put(obj, Replace);
 };
@@ -87,7 +87,7 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
       const id = data.id;
       const padStartResult = id.padStart(19, "0");
       const obj = { key: null, data, generation: padStartResult };
-      const items = [closure_0, closure_1, padStartResult];
+      items = [closure_0, closure_1, padStartResult];
       obj.key = items;
       return obj;
     }),
@@ -100,17 +100,17 @@ prototype["deleteAll"] = function deleteAll() {
 };
 prototype["deleteGuild"] = function deleteGuild(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.delete(items);
 };
 prototype["deleteChannel"] = function deleteChannel(arg0, arg1) {
   const table = this.table;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return table.delete(items);
 };
 prototype["deleteMessage"] = function deleteMessage(arg0, arg1, str) {
   const table = this.table;
-  const items = [arg0, arg1, str.padStart(19, "0")];
+  items = [arg0, arg1, str.padStart(19, "0")];
   return table.delete(items);
 };
 prototype["transaction"] = function transaction(arg0, arg1) {
@@ -172,7 +172,7 @@ prototype2["put"] = function put(arg0, arg1, data) {
   const id = data.id;
   const padStartResult = id.padStart(19, "0");
   const obj = { key: null, data, generation: padStartResult };
-  const items = [arg0, arg1, padStartResult];
+  items = [arg0, arg1, padStartResult];
   obj.key = items;
   transaction.put(obj, Replace);
 };
@@ -189,7 +189,7 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
       const id = data.id;
       const padStartResult = id.padStart(19, "0");
       const obj = { key: null, data, generation: padStartResult };
-      const items = [closure_0, closure_1, padStartResult];
+      items = [closure_0, closure_1, padStartResult];
       obj.key = items;
       return obj;
     }),
@@ -206,17 +206,17 @@ prototype2["deleteAll"] = function deleteAll() {
 };
 prototype2["deleteGuild"] = function deleteGuild(arg0) {
   const transaction = this.transaction;
-  const items = [arg0];
+  items = [arg0];
   transaction.delete(items);
 };
 prototype2["deleteChannel"] = function deleteChannel(arg0, arg1) {
   const transaction = this.transaction;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   transaction.delete(items);
 };
 prototype2["deleteMessage"] = function deleteMessage(arg0, arg1, str) {
   const transaction = this.transaction;
-  const items = [arg0, arg1, str.padStart(19, "0")];
+  items = [arg0, arg1, str.padStart(19, "0")];
   transaction.delete(items);
 };
 prototype2["trimOrphans"] = function trimOrphans(arg0) {
@@ -225,7 +225,7 @@ prototype2["trimOrphans"] = function trimOrphans(arg0) {
 };
 prototype2["trimChannel"] = function trimChannel(arg0, arg1, arg2) {
   const messages = this.transaction.messages;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   messages.trimChannel(items, arg2);
 };
 prototype2["trimChannelsIn"] = function trimChannelsIn(arg0, arg1) {

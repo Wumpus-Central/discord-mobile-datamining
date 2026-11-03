@@ -13,7 +13,7 @@ export default function useMaybeFetchCollectiblesRecommendations() {
     stateFromStores[3],
   ).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");
   let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[3]);
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;

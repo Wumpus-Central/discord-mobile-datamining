@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/auth/native/useOrientationLoc
 export default function usePortraitOrientationOnly() {
   const tmp = useWideAuthViewDefault();
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   const effect = noop.useEffect(() => {
     const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;

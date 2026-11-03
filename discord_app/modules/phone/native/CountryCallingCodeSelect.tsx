@@ -1,15 +1,15 @@
 // discord_app/modules/phone/native/CountryCallingCodeSelect.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/07019_fuzzysearch.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const getI18NCountryName = fn(5695).getI18NCountryName;
+const getI18NCountryName = fn(5815).getI18NCountryName;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -52,9 +52,9 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
       }),
     [],
   );
-  let items = [memo, first];
+  items = [memo, first];
   const memo1 = rows.useMemo(() => {
-    const items = [];
+    items = [];
     const iter = memo[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {

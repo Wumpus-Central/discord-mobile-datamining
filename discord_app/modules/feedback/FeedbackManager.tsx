@@ -91,7 +91,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
       return obj;
     });
   }
-  const items = [lastImpressionTime, tmp7];
+  items = [lastImpressionTime, tmp7];
   let num = _mod12.max(items);
   if (num == null) {
     num = 0;
@@ -115,7 +115,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(10158);
+const Constants = fn(10288);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
 class FeedbackManager extends tmp3 {
   constructor() {
@@ -154,7 +154,7 @@ FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFe
   if (eligibilityChecks == null) {
     eligibilityChecks = [];
   }
-  const items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
+  items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
   if (!tmp4) {
     if (fn != null) {
       fn();

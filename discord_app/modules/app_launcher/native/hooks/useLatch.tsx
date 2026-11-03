@@ -14,7 +14,7 @@ export default function useLatch(arg0) {
     }, []),
     tryCallback: null,
   };
-  const items = [arg0];
+  items = [arg0];
   obj.tryCallback = noop.useCallback(() => {
     if (ref.current) {
       tmp.current = false;

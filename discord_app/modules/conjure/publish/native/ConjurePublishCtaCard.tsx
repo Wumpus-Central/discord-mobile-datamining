@@ -37,7 +37,7 @@ export default function ConjurePublishCtaCard(arg0) {
     tmp6Result4 = null;
     if (obj.isConjurePublishCtaVisible(tmp3, cta)) {
       const obj2 = { projectId, publish: tmp3 };
-      const items = [React3(PublishCta, obj2), ,];
+      items = [React3(PublishCta, obj2), ,];
       let tmp6Result = null;
       if (null != tmp3.failure) {
         const obj3 = {

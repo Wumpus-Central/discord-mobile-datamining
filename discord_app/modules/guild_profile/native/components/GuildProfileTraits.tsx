@@ -29,7 +29,7 @@ function TraitEmoji(emoji) {
 function GuildProfileTraitView(trait) {
   trait = trait.trait;
   const obj = { style: closure_7().trait, children: null };
-  const items = [
+  items = [
     hasOwnProperty(TraitEmoji, { emoji: trait.emoji }),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label }),
   ];
@@ -39,7 +39,7 @@ function GuildProfileTraitView(trait) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 },
   trait: {
@@ -62,7 +62,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/native/componen
 
 export default function GuildProfileTraits(profile) {
   profile = profile.profile;
-  const items = [profile];
+  items = [profile];
   const memo = noop.useMemo(() => {
     const traits = profile.traits;
     const mapped = traits.map((item, index) => {

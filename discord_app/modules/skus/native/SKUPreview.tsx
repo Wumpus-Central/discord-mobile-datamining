@@ -139,9 +139,9 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9467).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9595).DEFAULT_ITEM_SIZE;
   }
-  const items = [sku];
+  items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
   let tmp4 = null;
   if (null != memo) {
@@ -195,10 +195,10 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(7724).transformSKUToCollectiblesItem;
+let closure_5 = fn(7848).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1072).SKUProductLines;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const React6 = createStyles.createStyles((width, height) => {
   const obj = {
     container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" },
@@ -215,7 +215,7 @@ const React6 = createStyles.createStyles((width, height) => {
     alignItems: "center",
     transform: null,
   };
-  const items = [{ scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE }];
+  items = [{ scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE }];
   const obj2 = { scaleX: width / WishlistItemCardBase.DEFAULT_ITEM_SIZE };
   items[1] = { scaleY: height / WishlistItemCardBase.DEFAULT_ITEM_SIZE };
   size.transform = items;
@@ -227,7 +227,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(9467).DEFAULT_ITEM_SIZE, height: fn(9467).DEFAULT_ITEM_SIZE };
+let size = { width: fn(9595).DEFAULT_ITEM_SIZE, height: fn(9595).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

@@ -13,7 +13,7 @@ require = fn;
 function canEveryoneRoleViewEvent(guildEvent) {
   let tmp = items1;
   if (items1 === undefined) {
-    const items = [ChannelStore];
+    items = [ChannelStore];
     tmp = items;
   }
   [obj] = tmp;
@@ -50,7 +50,7 @@ function isGuildEventInvitable(guildEvent) {
     } else {
       defaultChannel = obj2.getChannel(channel_id);
     }
-    const guild = obj3.getGuild(guildEvent.guild_id);
+    guild = obj3.getGuild(guildEvent.guild_id);
     const stageInstanceByChannel = obj4.getStageInstanceByChannel(channel_id);
     const obj5 = canViewInviteModal;
     let canViewInviteModalResult = obj5.canViewInviteModal(
@@ -70,20 +70,20 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(6855).isGuildEventEnded;
-const constants = fn(4869).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6975).isGuildEventEnded;
+const constants = fn(4996).GuildScheduledEventEntityTypes;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
 
 export default function useCanInviteForGuildEvent(arg0) {
   _require = arg0;
-  let items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
+  items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
+      items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
       return isGuildEventInvitable(closure_0, items);
     },
     items1,

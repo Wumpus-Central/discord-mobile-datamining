@@ -1,23 +1,25 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import useFetchStreamPreviewDefault from "../../../go_live/useFetchStreamPreview.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
-import ReanimatedRexport_mod from "../../../reanimated/ReanimatedRexport.tsx";
+import module_1652_mod from "../../../../../_runtime/metro/01652__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5634).Button);
-const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(5014);
+let module_1652 = module_1652_mod;
+let closure_9 = module_1652.createAnimatedComponent(Pressable);
+let module_1652 = module_1652_mod;
+let closure_10 = module_1652.createAnimatedComponent(fn(5754).Button);
+let closure_11 = { duration: 200 };
+const createStyles = fn(5141);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = {
   position: "absolute",
@@ -45,16 +47,16 @@ obj.ownStreamText = {
   paddingVertical: nativeDefault.space.PX_16,
 };
 let closure_12 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}",
+let closure_13 = {
+  code: "(function VoicePanelStreamPreviewTsx1(){let[mode,withTiming,OPACITY_TIMING]=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};})",
 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx");
 
-export function VoicePanelStreamPreview(mode) {
-  mode = mode.mode;
-  const stream = mode.stream;
-  ({ disabled, onPress, layout } = mode);
+export function VoicePanelStreamPreview(stream) {
+  stream = stream.stream;
+  _require = stream;
+  ({ disabled, onPress, layout } = stream);
   const tmp = closure_12();
   let guildId;
   if (stream != null) {
@@ -68,97 +70,100 @@ export function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(12042)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(12042);
-  const items = [ApplicationStreamingStore, AuthenticationStore];
+  const previewUrl = useFetchStreamPreviewDefault(guildId, channelId, ownerId).previewUrl;
+  items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
-  const stateFromStores = mode(504).useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      let tmp2 = null != stream;
+      let tmp2 = null != _undefined;
       if (tmp2) {
-        tmp2 = stream.ownerId === AuthenticationStore.getId();
+        tmp2 = _undefined.ownerId === AuthenticationStore.getId();
       }
       if (tmp2) {
         tmp2 =
           null ==
-          ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(StreamKeyUtils.encodeStreamKey(stream));
+          ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(
+            StreamKeyUtils.encodeStreamKey(_undefined),
+          );
       }
       return tmp2;
     },
     items1,
   );
-  let obj = mode(504);
-  class T {
+  let obj = require("initialize");
+  const items2 = [closure_13, stream.mode, require("timing/timing").withTiming, closure_11];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp10, tmp11, tmp12, tmp13] = items2;
+  class VoicePanelStreamPreviewTsx1 {
     constructor() {
-      obj = mode;
-      if (null == mode) {
+      obj = closure_0;
+      if (null == closure_0) {
         obj1 = { opacity: 1 };
       } else {
-        tmp = closure_0;
-        tmp2 = closure_2;
-        obj2 = closure_0(closure_2[12]);
+        tmp = closure_1;
         num = 1;
         str = "pip";
         if ("pip" === obj.get()) {
           num = 0;
         }
         obj1 = { opacity: null };
-        tmp3 = closure_11;
-        obj1.opacity = obj2.withTiming(num, closure_11);
+        tmp2 = closure_2;
+        obj1.opacity = tmp(num, closure_2);
       }
       return obj1;
     }
   }
-  let obj2 = mode(5095);
-  T.__closure = { mode, withTiming: mode(5254).withTiming, OPACITY_TIMING };
-  T.__workletHash = 15496474861955;
-  T.__initData = __initData;
-  const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
-  let tmp13 = disabled;
-  const animatedStyle = obj2.useAnimatedStyle(T);
+  const items3 = [tmp11, tmp12, tmp13];
+  VoicePanelStreamPreviewTsx1.__closure = items3;
+  VoicePanelStreamPreviewTsx1.__workletHash = 4349610028794;
+  VoicePanelStreamPreviewTsx1.__initData = tmp10;
+  const obj3 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
+  let tmp17 = disabled;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    VoicePanelStreamPreviewTsx1,
+  );
   if (!disabled) {
-    tmp13 = stateFromStores;
+    tmp17 = stateFromStores;
   }
-  obj4.disabled = tmp13;
-  let tmp14 = null;
+  obj3.disabled = tmp17;
+  let tmp18 = null;
   if (null != previewUrl) {
-    const obj5 = { layout, style: tmp.streamPreviewImage, children: null };
-    const obj6 = { source: null, style: null, resizeMode: "cover" };
-    const obj7 = { uri: previewUrl };
-    obj6.source = obj7;
-    obj6.style = absoluteFill.absoluteFill;
-    obj5.children = closure_7(tmp2(5717), obj6);
-    tmp14 = closure_7(tmp2(7241), obj5);
-    const tmp2Result = tmp2(7241);
+    const obj4 = { layout, style: tmp.streamPreviewImage, children: null };
+    const obj5 = { source: null, style: null, resizeMode: "cover" };
+    const obj6 = { uri: previewUrl };
+    obj5.source = obj6;
+    obj5.style = absoluteFill.absoluteFill;
+    obj4.children = closure_7(tmp2(5837), obj5);
+    tmp18 = closure_7(tmp2(1652).View, obj4);
   }
-  const items2 = [tmp14];
-  const obj8 = { layout, children: null };
-  let obj3 = { mode, withTiming: mode(5254).withTiming, OPACITY_TIMING };
-  const obj9 = { style: animatedStyle, children: null };
-  const tmp2Result3 = stream(7241);
+  const items4 = [tmp18];
+  const obj7 = { layout, children: null };
+  const obj8 = { style: animatedStyle, children: null };
   if (stateFromStores) {
-    const obj10 = { style: tmp.ownStreamTextContainer, children: null };
-    const obj11 = {
+    const obj9 = { style: tmp.ownStreamTextContainer, children: null };
+    const obj10 = {
       variant: "text-sm/semibold",
       color: "text-overlay-light",
       style: tmp.ownStreamText,
       children: null,
     };
     const intl2 = tmp8(1113).intl;
-    obj11.children = intl2.string(tmp8(1113).t["ro/HN8"]);
-    obj10.children = closure_7(tmp8(5624).Text, obj11);
-    let tmp18Result = closure_7(closure_4, obj10);
+    obj10.children = intl2.string(tmp8(1113).t["ro/HN8"]);
+    obj9.children = closure_7(tmp8(5747).Text, obj10);
+    let tmp21Result = closure_7(closure_4, obj9);
   } else {
-    const obj12 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
+    const obj11 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
     const intl = tmp8(1113).intl;
-    obj12.text = intl.string(tmp8(1113).t["7Xq/nV"]);
-    obj12.onPress = onPress;
-    tmp18Result = closure_7(closure_10, obj12);
+    obj11.text = intl.string(tmp8(1113).t["7Xq/nV"]);
+    obj11.onPress = onPress;
+    tmp21Result = closure_7(closure_10, obj11);
   }
-  obj9.children = tmp18Result;
-  obj8.children = closure_7(stream(7241), obj9);
-  items2[1] = closure_7(tmp2Result3, obj8);
-  obj4.children = items2;
-  return closure_8(closure_9, obj4);
+  obj8.children = tmp21Result;
+  obj7.children = closure_7(module_1652.View, obj8);
+  items4[1] = closure_7(module_1652.View, obj7);
+  obj3.children = items4;
+  return closure_8(closure_9, obj3);
 }

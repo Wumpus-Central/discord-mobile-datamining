@@ -7,18 +7,18 @@ import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8359 from "../../../../_runtime/metro/08359__.js";
+import _modDef8483 from "../../../../_runtime/metro/08483__.js";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7970);
+const SafetyHubConstants = fn(8094);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -56,7 +56,7 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/SuspendedUs
 
 export default function SuspendedUserSafetyHubPage() {
   const tmp = closure_9();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   let tmp6Result =
     initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus()) !== constants.VERIFIED;
   const obj2 = { style: tmp.container, children: null };
@@ -68,7 +68,7 @@ export default function SuspendedUserSafetyHubPage() {
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef8359;
+    obj4.icon = _modDef8483;
     const items1 = [React5(IconButton.IconButton, obj4)];
     const obj5 = {
       style: tmp.text,

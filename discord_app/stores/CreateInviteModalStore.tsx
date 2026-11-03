@@ -16,7 +16,7 @@ function updateWithLatestInvite(channelId, arg1) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let maxAge = DefaultInviteExpirationExperiments.getDefaultInviteExpiration({ guild });
   const invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   _null = invite;

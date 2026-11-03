@@ -51,7 +51,7 @@ export function addBackPressListener(fn) {
   };
 }
 export function useTrackNavigationBackPress(navigationContainerRef) {
-  const items = [navigationContainerRef];
+  items = [navigationContainerRef];
   const effect = noop.useEffect(() => {
     if (null != navigationContainerRef) {
       if (navigationContainerRef.isReady()) {

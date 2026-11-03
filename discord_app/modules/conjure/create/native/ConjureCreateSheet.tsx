@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -95,7 +95,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -167,7 +167,7 @@ export default function ConjureCreateSheet(guildId) {
       }
     })();
   });
-  let items = [guildId, CONJURE_DEFAULT_TIER_SETTINGS, onCreated];
+  items = [guildId, CONJURE_DEFAULT_TIER_SETTINGS, onCreated];
   callback = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
@@ -189,7 +189,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -236,7 +236,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp12) {
         c3 = tmp;
         throw tmp12;
@@ -269,7 +269,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -415,7 +415,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -439,14 +439,14 @@ export default function ConjureCreateSheet(guildId) {
                 c6 = 1;
                 c7 = 2;
                 c8 = 1;
-                const obj5 = { value: _null(12222).pickConjureArchive(), done: false };
+                const obj5 = { value: _null(12358).pickConjureArchive(), done: false };
                 return obj5;
               }
             }
           } else if (1 === tmp7) {
             c6 = 0;
             const intl2 = _null(1113).intl;
-            closure_133_10(intl2.string(initialInstallScope(3868)["Q+l4Hv"]));
+            closure_133_10(intl2.string(initialInstallScope(3995)["Q+l4Hv"]));
             c8 = 3;
             const obj6 = { value: undefined, done: true };
             return obj6;
@@ -464,23 +464,23 @@ export default function ConjureCreateSheet(guildId) {
                 closure_132_0 = value;
                 c6 = 0;
                 if (null != closure_132_0) {
-                  closure_132_1 = _null(12222).describeConjureArchiveRejection(closure_132_0);
+                  closure_132_1 = _null(12358).describeConjureArchiveRejection(closure_132_0);
                   if (null == closure_132_1) {
                     closure_132_2 = closure_132_0;
-                    const tmp41 = _null(12991);
+                    const tmp41 = _null(13127);
                     closure_3 = tmp41;
                     dependencyMap = tmp41.importedConjureInstallScope;
                     c7 = 3;
                     c8 = 1;
                     const obj9 = {
-                      value: _null(12991).readConjureArchiveInstallScope(closure_132_2.bytes),
+                      value: _null(13127).readConjureArchiveInstallScope(closure_132_2.bytes),
                       done: false,
                     };
                     return obj9;
                   } else {
                     closure_133_10(closure_132_1);
                   }
-                  const obj15 = _null(12222);
+                  const obj15 = _null(12358);
                 }
               }
             } else if (3 === tmp7) {
@@ -512,9 +512,9 @@ export default function ConjureCreateSheet(guildId) {
                   };
                   const obj12 = { title: null };
                   let intl = _null(1113).intl;
-                  obj12.title = intl.string(initialInstallScope(3868).NyVn6T);
+                  obj12.title = intl.string(initialInstallScope(3995).NyVn6T);
                   obj10.header = obj12;
-                  const items = ["guild", "user"];
+                  items = ["guild", "user"];
                   obj10.options = items.map((item) => {
                     closure_0 = item;
                     const intl = c0(dependencyMap[17]).intl;
@@ -530,8 +530,8 @@ export default function ConjureCreateSheet(guildId) {
                       },
                     };
                   });
-                  const result = _null(7364).showSimpleActionSheet(obj10);
-                  const obj3 = _null(7364);
+                  const result = _null(7484).showSimpleActionSheet(obj10);
+                  const obj3 = _null(7484);
                 } else {
                   c7 = 4;
                   c8 = 1;

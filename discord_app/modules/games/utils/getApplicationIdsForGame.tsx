@@ -40,7 +40,7 @@ export default function getApplicationIdsForGame(arg0) {
 }
 export function useApplicationIdsForGame(gameId) {
   _require = gameId;
-  const items = [GameStore, ApplicationStore];
+  items = [GameStore, ApplicationStore];
   const items1 = [gameId];
   return require("initialize").useStateFromStoresArray(
     items,

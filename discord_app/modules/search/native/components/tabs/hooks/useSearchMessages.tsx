@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 export function useSearchMessages(searchContext, tab) {
   _require = searchContext;
   dependencyMap = tab;
-  const items = [SearchQueryStore, SearchMessageStore];
+  items = [SearchQueryStore, SearchMessageStore];
   const items1 = [searchContext, tab];
   return require("initialize").useStateFromStores(
     items,

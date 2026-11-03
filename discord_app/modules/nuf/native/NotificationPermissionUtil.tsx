@@ -20,7 +20,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -177,9 +177,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13974).EventActionType;
+const EventActionType = fn(14105).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_10 = fn(7940).NotificationAuthorizationStatus;
+let closure_10 = fn(8064).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
@@ -207,7 +207,7 @@ export function useShowReactivationPrompt() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -241,7 +241,7 @@ export function useShowReactivationPrompt() {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;
@@ -274,7 +274,7 @@ export function enableProvisionalPushNotification() {
 }
 export function useCanSeePushNotificationNudge() {
   const isTeenInStrictCountry = RegionalTeenUtils.useIsTeenInStrictCountry();
-  const items = [PushNotificationPermissionStore];
+  items = [PushNotificationPermissionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
   [tmp4, require] = noop.useState(false);
   const effect = noop.useEffect(() => {
@@ -301,7 +301,7 @@ export function useCanSeePushNotificationNudge() {
 }
 export function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
   const isTeenInStrictCountry = RegionalTeenUtils.useIsTeenInStrictCountry();
-  const items = [PushNotificationPermissionStore];
+  items = [PushNotificationPermissionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
   [tmp7, require] = noop.useState(false);
   const effect = noop.useEffect(() => {

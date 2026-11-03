@@ -2,7 +2,7 @@
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import _modDef9836 from "../../../../../_runtime/metro/09836__.js";
+import _modDef9967 from "../../../../../_runtime/metro/09967__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
@@ -17,7 +17,7 @@ function DockMuteButton(channelId) {
   channelId = channelId.channelId;
   let mute;
   let onPress;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = channelId(onPress[8]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(onPress[8]);
   const muteHandler = channelId(onPress[9]).createMuteHandler(mute(onPress[10])(stateFromStores));
@@ -72,25 +72,25 @@ function DockMuteButton(channelId) {
 }
 function DockHangUpButton(channelId) {
   channelId = channelId.channelId;
-  const items = [channelId];
+  items = [channelId];
   const callback = noop.useCallback(() => {
     SelectedChannelActionCreatorsDefault.disconnect();
-    const state = VoicePanelStore.getState();
+    state = VoicePanelStore.getState();
     state.closeChannel(channelId);
   }, items);
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef9836;
+  obj.icon = _modDef9967;
   obj.onPress = callback;
-  return closure_7(channelId(8028).IconButton, obj);
+  return closure_7(channelId(8152).IconButton, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11241).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11378).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_9 = createStyles.createStyles(obj);
@@ -104,7 +104,7 @@ export default noop.memo(function VoicePanelDockControls() {
   const tmp2Result = useDockBoxShadowDefault(native.Shadow.SHADOW_MEDIUM);
   const obj = { style: tmp.actions, children: null };
   const obj2 = { style: null, children: React5(DockMuteButton, { channelId }) };
-  const items = [tmp.buttonShadow, { boxShadow: tmp2Result }];
+  items = [tmp.buttonShadow, { boxShadow: tmp2Result }];
   obj2.style = items;
   const items1 = [React5(View, obj2)];
   const obj3 = { style: null, children: React5(DockHangUpButton, { channelId }) };

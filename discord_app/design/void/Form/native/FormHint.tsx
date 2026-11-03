@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED },
   redesignHorizontalPadding: { paddingHorizontal: 12 },
@@ -31,7 +31,7 @@ export default function FormHint(inset) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;
     }
     const obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
-    const items = [redesignHorizontalPadding, style];
+    items = [redesignHorizontalPadding, style];
     obj2.style = items;
     obj2.children = children;
     let tmp4Result = jsx(Text_Text.Text, {

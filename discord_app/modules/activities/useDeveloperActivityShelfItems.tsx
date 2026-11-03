@@ -3,12 +3,12 @@ import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
 const require = fn;
-let closure_4 = fn(2018).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+let closure_4 = fn(2147).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export function useDeveloperActivityShelfItems() {
-  const items = [DeveloperActivityShelfStore];
+  items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(
     items,
     () => ({

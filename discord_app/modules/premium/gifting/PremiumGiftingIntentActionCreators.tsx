@@ -10,7 +10,7 @@ import MessageStore from "../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1385).GiftIntentType;
+const GiftIntentType = fn(1387).GiftIntentType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

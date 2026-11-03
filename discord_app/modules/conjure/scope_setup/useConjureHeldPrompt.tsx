@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/conjure/scope_setup/useConjureH
 
 export function useConjureScopeSetupPending(projectId) {
   _require = projectId;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   return require("initialize").useStateFromStores(
     items,
@@ -32,7 +32,7 @@ export function useConjureScopeSetupPending(projectId) {
 export function useConjureHeldPrompt(projectId) {
   _require = projectId;
   closure_129_0 = projectId;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [projectId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

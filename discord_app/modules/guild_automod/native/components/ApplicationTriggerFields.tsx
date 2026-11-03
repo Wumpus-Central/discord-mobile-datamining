@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/components/ApplicationTriggerFields.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -70,7 +70,7 @@ export default function ApplicationTriggerFields(rule) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19700, dependencyMap.paths),
+        asyncRequireImpl(19850, dependencyMap.paths),
         "AutomodSelectApplication",
         obj2,
       );

@@ -14,13 +14,13 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
     const state3 = coerceTabsRouteResult.state;
     let tmp3;
     if (state3 != null) {
-      const state = coerceTabsRouteResult.state;
+      state = coerceTabsRouteResult.state;
       let index;
       if (state != null) {
         index = state.index;
       }
       if (index == null) {
-        const state2 = coerceTabsRouteResult.state;
+        state2 = coerceTabsRouteResult.state;
         let length;
         if (state2 != null) {
           length = state2.routes.length;
@@ -98,7 +98,7 @@ function resolveBackgroundScreen(state) {
               let BACKGROUND_SAVED = obj.FALLBACK_RENDERED;
             }
             const obj2 = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
-            const items = [obj2];
+            items = [obj2];
             return items;
           }
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
@@ -109,7 +109,7 @@ function resolveBackgroundScreen(state) {
   }
 }
 function resolveChannelScreens(state, isChatLockedOpen) {
-  const items = [];
+  items = [];
   for (let num = 0; num <= state.index; num = num + 1) {
     let obj = NavigationRouteUtils;
     let coerceChannelRouteResult = obj.coerceChannelRoute(state.routes[num]);
@@ -145,7 +145,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1072).ME;
-const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -170,7 +170,7 @@ export default function useChannelScreensFromNavigation(arg0) {
         let guildId = SelectedGuildStore.getGuildId();
         const channelId = SelectedChannelStore.getChannelId();
         if (null == channelId) {
-          let items = [];
+          items = [];
         } else {
           const obj = { index: 0, type: null, guildId: null, channelId: null };
           obj.type = obj.FALLBACK_RENDERED;
@@ -219,7 +219,7 @@ export default function useChannelScreensFromNavigation(arg0) {
             const obj = {};
             const merged = Object.assign(arg0[0]);
             obj.type = tmp3.FALLBACK_RENDERED;
-            const items = [obj];
+            items = [obj];
             items1 = items;
           }
         }
@@ -227,15 +227,15 @@ export default function useChannelScreensFromNavigation(arg0) {
       }
     });
   }, []);
-  let items = [arg0, tmp, callback];
+  items = [arg0, tmp, callback];
   const effect = noop.useEffect(() => {
-    const state = closure_0.getState();
+    state = closure_0.getState();
     callback(resolveChannelScreens(state, closure_1), state);
   }, items);
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5201).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5324).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

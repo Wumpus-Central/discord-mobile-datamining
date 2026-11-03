@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { margin: 16, flex: 1, alignItems: "center", padding: 40 },
   item: {
@@ -38,10 +38,10 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   closure_129_0 = first;
   const tmp5 = closure_8();
   closure_129_1 = tmp5;
-  let items = [first, tmp5.item];
+  items = [first, tmp5.item];
   const memo = noop.useMemo(() => {
     let sum;
-    const items = [];
+    items = [];
     let num = 0;
     if (0 < closure_0) {
       do {
@@ -52,7 +52,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         let _HermesInternal2 = HermesInternal;
         obj.id = "item-" + sum;
         let obj2 = { style: first.item, children: null };
-        let obj3 = { variant: "heading-xxl/bold", children: null };
+        let obj3 = { variant: "heading-xxl/semibold", children: null };
         let items1 = ["Item ", sum];
         obj3.children = items1;
         obj2.children = timestampProducer(Text_Text.Text, obj3);

@@ -23,7 +23,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ function FederatedSocialModalScreen(onClose) {
   let obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl2 = require("util").intl;
   obj5.children = intl2.formatToPlainString(require("util").t["7TByKh"], { serviceName: name });
-  const items = [closure_7(require("Text/Text").Text, obj5), ,];
+  items = [closure_7(require("Text/Text").Text, obj5), ,];
   const obj6 = {
     autoFocus: true,
     style: tmp.input,
@@ -159,7 +159,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },

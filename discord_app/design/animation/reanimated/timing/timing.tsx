@@ -1,46 +1,50 @@
 // discord_app/design/animation/reanimated/timing/timing.tsx
-import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import ReanimatedConstants from "../ReanimatedConstants.tsx";
 import reanimated_AccessibilityPreferencesSharedValue from "../AccessibilityPreferencesSharedValue.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const CONFIG_NEVER_ANIMATE_TIMING = ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING;
-function withTiming(value, timingStandard, arg2) {
+const items = [
+  {
+    code: "(function withTiming_timingTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){let[accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE_TIMING,ReduceMotion,REAwithTiming]=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE_TIMING:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithTiming(toValue,configForRea,callback);})",
+  },
+  reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
+  ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING,
+  _mod1652.ReduceMotion,
+  _mod1652.withTiming,
+];
+let c0;
+let c1;
+let c2;
+let c3;
+[tmp2, tmp3, tmp4, tmp5, tmp6] = items;
+function withTiming(c0, timingStandard, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue =
-    reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
-    let tmp7 = timingStandard;
-    if (tmp4) {
+    let tmp5 = timingStandard;
+    if (tmp2) {
       let obj = timingStandard;
       if (timingStandard == null) {
         obj = {};
       }
       const obj2 = {};
       const merged = Object.assign(obj);
-      obj2.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
-      tmp7 = obj2;
+      obj2.reduceMotion = _undefined.Never;
+      tmp5 = obj2;
     }
-    let tmp5 = tmp7;
+    let tmp3 = tmp5;
   } else {
-    tmp5 = CONFIG_NEVER_ANIMATE_TIMING;
+    tmp3 = c1;
   }
-  return ReanimatedRexport.withTiming(value, tmp5, fn);
+  return _undefined2(c0, tmp3, ChatInputActionButtonTransitionItemTsx1);
 }
-withTiming.__closure = {
-  accessibilityPreferencesSharedValue:
-    reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
-  CONFIG_NEVER_ANIMATE_TIMING,
-  ReduceMotion: ReanimatedRexport.ReduceMotion,
-  REAwithTiming: ReanimatedRexport.withTiming,
-};
-withTiming.__workletHash = 6710776253444;
-withTiming.__initData = {
-  code: "function withTiming_timingTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE_TIMING,ReduceMotion,REAwithTiming}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE_TIMING:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithTiming(toValue,configForRea,callback);}",
-};
+const items1 = [tmp3, tmp4, tmp5, tmp6];
+withTiming.__closure = items1;
+withTiming.__workletHash = 8505479360605;
+withTiming.__initData = tmp2;
 const result = size.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
 
 export { withTiming };

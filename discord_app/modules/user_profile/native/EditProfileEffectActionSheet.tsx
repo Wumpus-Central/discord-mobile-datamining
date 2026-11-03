@@ -24,7 +24,7 @@ function EditProfileEffectInner(user) {
     guildId[21],
   ).useGetOrFetchCollectiblesCategoriesAndPurchases();
   const obj = user(guildId[21]);
-  const items = [CollectiblesPurchaseStore];
+  items = [CollectiblesPurchaseStore];
   const stateFromStores = user(guildId[22]).useStateFromStores(items, () => isFetching.isFetching);
   const obj2 = user(guildId[22]);
   const tmp6 = setSelectedProfileEffect(guildId[23])();
@@ -116,11 +116,11 @@ function ProfileEffectSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8744)(previewSkuId);
+  const tmp2 = purchase(8868)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
-  const items = [purchase, product];
+  items = [purchase, product];
   const obj = { style: tmp.previewContainer, children: null };
   const memo = noop.useMemo(() => {
     let first;
@@ -140,21 +140,21 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11392), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+  const items1 = [closure_9(purchase(11530), { user, guildId, profileEffect: memo, maxWidth: 250 })];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5587), obj2);
+  items1[1] = closure_9(purchase(5710), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1 },
   previewContainer: { overflow: "hidden", height: 300, alignItems: "center" },
@@ -180,14 +180,14 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   if (str == null) {
     str = "";
   }
-  const tmp4Result = isTryItOut(8757)(str);
+  const tmp4Result = isTryItOut(8881)(str);
   dependencyMap = tmp4Result;
   const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
   selectedProfileEffect = tmp6[0];
-  const tmp4 = isTryItOut(8757);
-  let obj = guildId(8741);
-  const analyticsLocations = isTryItOut(7326)(tmp2(7351).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
-  const items = [guildId, tmp4Result];
+  const tmp4 = isTryItOut(8881);
+  let obj = guildId(8865);
+  const analyticsLocations = isTryItOut(7446)(tmp2(7471).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+  items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
     const obj = {
       type: AnalyticsLocationDefault.EDIT_PROFILE_EFFECT_SHEET,
@@ -242,8 +242,8 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   const obj4 = { title: null };
   const intl = guildId(1113).intl;
   obj4.title = intl.string(guildId(1113).t["/6nv6N"]);
-  obj3.header = closure_9(guildId(7321).BottomSheetTitleHeader, obj4);
-  const tmp2Result = isTryItOut(7326);
+  obj3.header = closure_9(guildId(7441).BottomSheetTitleHeader, obj4);
+  const tmp2Result = isTryItOut(7446);
   const items3 = [
     closure_9(closure_5, {
       style: tmp.container,
@@ -288,9 +288,9 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   obj6.isTryItOut = isTryItOut;
   obj6.onApply = callback1;
   obj6.analyticsLocations = analyticsLocations;
-  obj6.analyticsSource = isTryItOut(7351).EDIT_PROFILE_EFFECT_SHEET;
-  items3[1] = closure_9(isTryItOut(8743), obj6);
+  obj6.analyticsSource = isTryItOut(7471).EDIT_PROFILE_EFFECT_SHEET;
+  items3[1] = closure_9(isTryItOut(8867), obj6);
   obj3.children = items3;
-  obj2.children = closure_10(guildId(5272).BottomSheet, obj3);
-  return closure_9(guildId(7326).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_10(guildId(5395).BottomSheet, obj3);
+  return closure_9(guildId(7446).AnalyticsLocationProvider, obj2);
 }

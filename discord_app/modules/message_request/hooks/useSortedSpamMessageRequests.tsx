@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedSpamMessageRequests.tsx");
 
 export default function useSortedSpamMessageRequests() {
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = stateFromStoresArray(stateFromStoresObject[4]).useStateFromStores(items, () =>
     ChannelStore.getPrivateChannelsVersion(),
   );

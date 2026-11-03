@@ -43,7 +43,7 @@ export function getInlineForwardOptions(message, nativeSyntheticEventData) {
     if ("embed" === targetKind) {
       if (null != embedIndex) {
         const obj3 = { onlyEmbedIndices: null };
-        const items = [embedIndex];
+        items = [embedIndex];
         obj3.onlyEmbedIndices = items;
         let obj = obj3;
       }

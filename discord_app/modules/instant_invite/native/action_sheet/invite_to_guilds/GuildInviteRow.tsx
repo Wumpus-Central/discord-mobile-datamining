@@ -6,8 +6,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(14814).useGuildInviteSendStates;
-const InviteSendStates = fn(7879).InviteSendStates;
+const useGuildInviteSendStates = fn(14945).useGuildInviteSendStates;
+const InviteSendStates = fn(8003).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -19,7 +19,7 @@ export default noop.memo(function GuildInviteRow(arg0) {
   function handlePress() {
     GuildInviteUtils.sendGuildInvite(closure_1_0, guild.id, importDefault);
   }
-  const guild = row.guild;
+  guild = row.guild;
   ({ start, end } = arg0);
   const tmp = useGuildInviteSendStates((arg0) => {
     let tmp2;

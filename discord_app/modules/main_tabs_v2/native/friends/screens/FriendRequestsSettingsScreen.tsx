@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting(
 
 export default function FriendRequestsSettingsScreen() {
   const obj = { children: null };
-  const items = [React3(ThemedGradientDefault, { absolute: true })];
+  items = [React3(ThemedGradientDefault, { absolute: true })];
   const tmp = closure_6();
   items[1] = React3(ScrollView, {
     style: closure_6().container,

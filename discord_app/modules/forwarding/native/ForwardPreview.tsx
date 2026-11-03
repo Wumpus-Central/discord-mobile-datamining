@@ -31,9 +31,9 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5014).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5141).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
-  const items = [tmp4.seeMoreLabelColor, attachmentCount];
+  items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
     message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
     let num = 2;
@@ -80,7 +80,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5014);
+  let obj = attachmentCount(5141);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -90,7 +90,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,
@@ -165,7 +165,7 @@ export function ForwardPreview(message) {
       if (num2 > 0) {
         if (length === num2) {
           const obj4 = { style: null, children: null };
-          const items = [,];
+          items = [,];
           ({ attachmentPreview: arr[0], attachmentPreviewVideo: arr[1] } = tmp);
           obj4.style = items;
           const size = { style: tmp.videoThumbnail, source: null, width: null, height: null };

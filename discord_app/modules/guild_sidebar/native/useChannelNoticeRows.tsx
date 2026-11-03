@@ -11,9 +11,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(7713).ChannelListChannelNoticeRow;
+let closure_9 = fn(7837).ChannelListChannelNoticeRow;
 const MFALevels = fn(1072).MFALevels;
-const DismissibleContentConstants = fn(4860);
+const DismissibleContentConstants = fn(4987);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannel
 export default function useChannelNoticeRows(id) {
   _require = id;
   id = id.id;
-  let items = [guildHasLiveChannelNotice];
+  items = [guildHasLiveChannelNotice];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildProgressStore.hasProgress(id));
   const currentUser = UserStore.getCurrentUser();
   let obj = require("useStateFromStores");
@@ -73,7 +73,7 @@ export default function useChannelNoticeRows(id) {
   const tmp12 = id(stateFromStores[11])(
     require("ApplicationActionCreators").useApplication(
       tmpResult.useStateFromStoresArray(items5, () => {
-        const guild = GuildStore.getGuild(closure_0);
+        guild = GuildStore.getGuild(closure_0);
         let gameApplicationIds;
         if (guild != null) {
           gameApplicationIds = guild.gameApplicationIds;
@@ -149,7 +149,7 @@ export default function useChannelNoticeRows(id) {
   };
   const items9 = [stateFromStores, stateFromStores1, guildHasLiveChannelNotice, null != tmp10[0], null != tmp15];
   obj6.rows = stateFromStores1.useMemo(() => {
-    const items = [constants.SPACER];
+    items = [constants.SPACER];
     if (closure_6) {
       items.push(constants.GAME_CLAIM);
     }

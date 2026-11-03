@@ -40,7 +40,7 @@ let closure_2 = CreatorMonetizationReviewConstants.DefaultCreatorMonetizationRes
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
   (guild_id) => {
-    const items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
+    items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
     prop = guild_id.subscription_listings_ids;
     return items;
   },
@@ -48,7 +48,7 @@ const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
 );
 const secondaryIndexMap1 = new SecondaryIndexMap.SecondaryIndexMap(
   (application_id) => {
-    const items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
+    items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
     return items;
   },
   (id) => id.id,
@@ -94,7 +94,7 @@ prototype["getSubscriptionListing"] = function getSubscriptionListing(editStateI
 };
 prototype["getSubscriptionListingsForGuild"] = function getSubscriptionListingsForGuild(arg0) {
   const first = this.getSubscriptionGroupListingsForGuild(arg0)[0];
-  let application_id;
+  application_id = undefined;
   if (first != null) {
     application_id = first.application_id;
   }

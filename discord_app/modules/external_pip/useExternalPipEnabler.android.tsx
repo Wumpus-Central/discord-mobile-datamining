@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEn
 
 export default function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
-  const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
+  items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
   const items1 = [disabled];
   return disabled(504).useStateFromStoresObject(
     items,

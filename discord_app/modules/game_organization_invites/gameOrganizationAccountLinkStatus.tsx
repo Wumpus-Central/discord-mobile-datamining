@@ -46,14 +46,14 @@ function getGameOrganizationAccountLinkStatus(id) {
     return str;
   }
 }
-const FetchState = fn(7276).FetchState;
+const FetchState = fn(7396).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/gameOrganizationAccountLinkStatus.tsx");
 
 export { getGameOrganizationAccountLinkStatus };
 export function useGameOrganizationAccountLinkStatus(id) {
   _require = id;
-  const items = [ApplicationStore, AuthorizedAppsStore];
+  items = [ApplicationStore, AuthorizedAppsStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,

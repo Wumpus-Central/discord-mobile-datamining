@@ -24,8 +24,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5783).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8214);
+const getSystemAnalyticsInfo = fn(5903).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8338);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_14,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_15,
@@ -36,8 +36,8 @@ const ClipsConstants = fn(8214);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6715).StreamTypes;
-const Features = fn(5768).Features;
+const StreamTypes = fn(6835).StreamTypes;
+const Features = fn(5888).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -194,7 +194,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       const hardwareClassification = ClipsStore.getHardwareClassification();
       if (null != hardwareClassification) {
         if (null != ClipsStore.getHardwareClassificationForDecoupled()) {
-          if (ClipsStore.getHardwareClassificationVersion() === __initData2) {
+          if (ClipsStore.getHardwareClassificationVersion() === value2) {
             const clipsDefaultSettingsDecision = self.getClipsDefaultSettingsDecision(hardwareClassification);
             if (null != clipsDefaultSettingsDecision) {
               const result1 = self.applyClipsDefaultSettings(hardwareClassification, clipsDefaultSettingsDecision);
@@ -229,7 +229,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -271,7 +271,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4839).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4966).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -315,7 +315,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
             const obj = decision(1252);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp42) {
         dependencyMap = tmp;
@@ -337,7 +337,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -351,7 +351,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4839).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4966).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -367,7 +367,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         } else {
           v1(572).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -456,7 +456,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

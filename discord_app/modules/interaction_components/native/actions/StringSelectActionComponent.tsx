@@ -1,5 +1,5 @@
 // discord_app/modules/interaction_components/native/actions/StringSelectActionComponent.tsx
-import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import InteractionComponentUtils from "../../InteractionComponentUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ export default function StringSelectActionComponent(type) {
   _require = type;
   type = type.type;
   const options = type.options;
-  const items = [options];
+  items = [options];
   const selectPlaceholder = require("InteractionComponentUtils").getSelectPlaceholder(type);
   const memo = componentStateContext.useMemo(() => {
     const found = options.filter((item) => item.default);
@@ -40,7 +40,7 @@ export default function StringSelectActionComponent(type) {
     tmp8 = obj4;
   }
   const componentState = componentStateContext.useComponentState(type, tmp8);
-  const state = componentState.state;
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [options, type, state];
   const customId = componentStateContext.modal.customId;
@@ -91,7 +91,7 @@ export default function StringSelectActionComponent(type) {
       allowEmpty: null,
     };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(13250, dependencyMap.paths);
+    const tmp = asyncRequireImpl(13386, dependencyMap.paths);
     obj2.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj2);
   };

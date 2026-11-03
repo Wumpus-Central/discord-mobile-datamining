@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
   buttonContainer: null,
@@ -35,7 +35,7 @@ export function MediaModalOverlayFooterAction(arg0) {
       const obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
       isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
     }
-    const items = [isIOSResult, sliderElement];
+    items = [isIOSResult, sliderElement];
     let tmp12 = null;
     if (tmp2) {
       const obj2 = { syncer };

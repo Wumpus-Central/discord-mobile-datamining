@@ -18,11 +18,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ Routes: closure_9, AnalyticEvents: c10 } = Constants);
+({ Routes: closure_9, AnalyticEvents: closure_10 } = Constants);
 let closure_11 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     padding: 24,
@@ -89,7 +89,7 @@ export default function OneTimeLoginModal(token) {
   const tmp2 = useSafeAreaInsetsDefault();
   dependencyMap = tmp2;
   let height = useWindowDimensionsDefault().height;
-  const items = [tmp2.bottom, height];
+  items = [tmp2.bottom, height];
   const items1 = [token];
   const memo = onPress.useMemo(() => {
     height = "100%";
@@ -125,9 +125,9 @@ export default function OneTimeLoginModal(token) {
   const callback2 = onPress.useCallback(() => {
     const obj2 = { header: null, title: null, content: null, actions: null };
     const obj = useAlertStore;
-    obj2.header = closure_2_12(hasOwnProperty, {
+    obj2.header = application_id(hasOwnProperty, {
       style: closure_1.raisedIcon,
-      children: closure_2_12(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+      children: application_id(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
     });
     const intl = util.intl;
     obj2.title = intl.string(util.t.L6htwI);
@@ -137,17 +137,17 @@ export default function OneTimeLoginModal(token) {
     const obj5 = { onPress, text: null };
     const intl3 = util.intl;
     obj5.text = intl3.string(util.t["9vN0pz"]);
-    obj4.children = closure_2_12(AlertModal.AlertActionButton, obj5, "confirm");
-    obj2.actions = closure_2_12(AlertModal.AlertActions, obj4);
-    obj.openAlert("invalid-login-alert", closure_2_12(AlertModal.AlertModal, obj2));
+    obj4.children = application_id(AlertModal.AlertActionButton, obj5, "confirm");
+    obj2.actions = application_id(AlertModal.AlertActions, obj4);
+    obj.openAlert("invalid-login-alert", application_id(AlertModal.AlertModal, obj2));
   }, items2);
   const items3 = [tmp.raisedIcon, callback1];
   const callback3 = onPress.useCallback(() => {
     const obj2 = { header: null, title: null, content: null, actions: null };
     const obj = useAlertStore;
-    obj2.header = closure_2_12(hasOwnProperty, {
+    obj2.header = application_id(hasOwnProperty, {
       style: closure_1.raisedIcon,
-      children: closure_2_12(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+      children: application_id(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
     });
     const intl = util.intl;
     obj2.title = intl.string(util.t.MKW8z2);
@@ -165,12 +165,12 @@ export default function OneTimeLoginModal(token) {
     const obj5 = { onPress: callback1, text: null };
     const intl3 = util.intl;
     obj5.text = intl3.string(util.t["3PatSz"]);
-    obj4.children = closure_2_12(AlertModal.AlertActionButton, obj5, "confirm");
-    obj2.actions = closure_2_12(AlertModal.AlertActions, obj4);
-    obj.openAlert("already-logged-in-alert", closure_2_12(AlertModal.AlertModal, obj2));
+    obj4.children = application_id(AlertModal.AlertActionButton, obj5, "confirm");
+    obj2.actions = application_id(AlertModal.AlertActions, obj4);
+    obj.openAlert("already-logged-in-alert", application_id(AlertModal.AlertModal, obj2));
     const obj3 = {
       style: closure_1.raisedIcon,
-      children: closure_2_12(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+      children: application_id(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
     };
   }, items3);
   const items4 = [token, callback2, callback3];
@@ -239,13 +239,13 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  let obj3 = { dark: token(5192).OverlayOpacity.LEVEL_1 };
+  let obj3 = { dark: token(5315).OverlayOpacity.LEVEL_1 };
   obj2.mixAmount = obj3;
   const items6 = [closure_12(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
   const obj6 = { source: null, style: null };
-  obj6.source = token(15685);
+  obj6.source = token(15829);
   obj6.style = tmp.logo;
   const items7 = [closure_12(FastImageDefault, obj6)];
   const obj7 = { style: tmp.loadingContainer, children: null };
@@ -253,7 +253,7 @@ export default function OneTimeLoginModal(token) {
   const obj8 = { variant: "text-lg/semibold", children: null };
   let intl = token(1113).intl;
   obj8.children = intl.string(token(1113).t.W9uNdG);
-  items8[1] = closure_12(token(5624).Text, obj8);
+  items8[1] = closure_12(token(5747).Text, obj8);
   obj7.children = items8;
   items7[1] = closure_13(callback1, obj7);
   obj5.children = items7;
@@ -262,13 +262,13 @@ export default function OneTimeLoginModal(token) {
   const obj10 = { variant: "text-sm/normal", children: null };
   let intl2 = token(1113).intl;
   obj10.children = intl2.string(token(1113).t["ZXe5/Y"]);
-  const items10 = [closure_12(token(5624).Text, obj10)];
+  const items10 = [closure_12(token(5747).Text, obj10)];
   const obj11 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1113).intl;
   obj11.text = intl3.string(token(1113).t.FIEwfG);
   obj11.onPress = onPress;
   obj11.textStyle = tmp.link;
-  items10[1] = closure_12(token(7108).LinkButton, obj11);
+  items10[1] = closure_12(token(7234).LinkButton, obj11);
   obj9.children = items10;
   items9[1] = closure_13(callback1, obj9);
   obj4.children = items9;

@@ -48,7 +48,7 @@ export function flushCaptchaServeVolume() {
     let obj = MonitoringAgentDefault;
     let obj2 = { name: MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION, tags: null };
     let _HermesInternal = HermesInternal;
-    let items = ["user_flow:" + tmp6];
+    items = ["user_flow:" + tmp6];
     obj2.tags = items;
     let distributionResult = obj.distribution(obj2, tmp7, true);
     continue;

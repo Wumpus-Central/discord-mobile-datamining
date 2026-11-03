@@ -4,7 +4,7 @@ import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
   SearchListItemTypes: closure_4,
   CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty,
@@ -42,7 +42,7 @@ export default noop.memo(function LinksScreen(searchContext) {
     numColumns: placeholderCount,
   });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
-  let items = [onPressMessageItem, searchContext];
+  items = [onPressMessageItem, searchContext];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const spacing = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
@@ -71,7 +71,7 @@ export default noop.memo(function LinksScreen(searchContext) {
     searchContext,
   ];
   const memo = onPressMessageItem.useMemo(() => {
-    const items = [];
+    items = [];
     searchMessages = 0;
     if (searchMessages != null) {
       let item = searchMessages.forEach((item) => {

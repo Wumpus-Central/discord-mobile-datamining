@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
-import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../../../_runtime/05303_LegacyBaseButton.js";
+import _mod1652 from "../../../../../../../_runtime/metro/01652__.js";
+import LegacyBaseButton from "../../../../../../../_runtime/05426_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -8,6 +8,12 @@ const require = globalThis.__r;
 
 require = fn;
 let context = noop.createContext(null);
+let items = [
+  {
+    code: "(function measureRelativeTo_useSearchSuggestionsGestureTsx1(view,container){return{x:view.pageX-container.pageX,y:view.pageY-container.pageY,width:view.width,height:view.height};})",
+  },
+];
+[tmp3] = items;
 function measureRelativeTo(pageX, pageX2) {
   const size = {
     x: pageX.pageX - pageX2.pageX,
@@ -17,11 +23,14 @@ function measureRelativeTo(pageX, pageX2) {
   };
   return size;
 }
-measureRelativeTo.__closure = {};
-measureRelativeTo.__workletHash = 15107587770349;
-measureRelativeTo.__initData = {
-  code: "function measureRelativeTo_useSearchSuggestionsGestureTsx1(view,container){return{x:view.pageX-container.pageX,y:view.pageY-container.pageY,width:view.width,height:view.height};}",
-};
+measureRelativeTo.__workletHash = 8310337569996;
+measureRelativeTo.__initData = tmp3;
+let items1 = [
+  {
+    code: "(function containsPoint_useSearchSuggestionsGestureTsx2(rect,x,y){return rect.x<x&&x<rect.x+rect.width&&rect.y<y&&y<rect.y+rect.height;})",
+  },
+];
+[tmp4] = items1;
 function containsPoint(arg0, arg1, arg2) {
   let tmp = arg0.x < arg1 && arg1 < arg0.x + arg0.width;
   if (tmp) {
@@ -32,13 +41,10 @@ function containsPoint(arg0, arg1, arg2) {
   }
   return tmp;
 }
-containsPoint.__closure = {};
-containsPoint.__workletHash = 11759746841411;
-containsPoint.__initData = {
-  code: "function containsPoint_useSearchSuggestionsGestureTsx2(rect,x,y){return rect.x<x&&x<rect.x+rect.width&&rect.y<y&&y<rect.y+rect.height;}",
-};
+containsPoint.__workletHash = 16282531248450;
+containsPoint.__initData = tmp4;
 let closure_7 = {
-  code: "function useSearchSuggestionsGestureTsx3(e,manager){const{suggestionsMounted,measure,suggestionsRef,detectorRef,measureRelativeTo,containsPoint,dismissed}=this.__closure;manager.fail();const touch=e.allTouches[0];if(touch==null)return;if(!suggestionsMounted.get())return;const suggestions=measure(suggestionsRef);if(suggestions==null)return;const detector=measure(detectorRef);if(detector==null)return;const card=measureRelativeTo(suggestions,detector);if(containsPoint(card,touch.x,touch.y))return;dismissed.set(true);}",
+  code: "(function useSearchSuggestionsGestureTsx3(e,manager){let[suggestionsMounted,measure,suggestionsRef,detectorRef,measureRelativeTo,containsPoint,dismissed]=this.__closure;manager.fail();const touch=e.allTouches[0];if(touch==null)return;if(!suggestionsMounted.get())return;const suggestions=measure(suggestionsRef);if(suggestions==null)return;const detector=measure(detectorRef);if(detector==null)return;const card=measureRelativeTo(suggestions,detector);if(containsPoint(card,touch.x,touch.y))return;dismissed.set(true);})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting(
@@ -58,20 +64,20 @@ export function useSearchSuggestionsContext() {
 }
 export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   _require = channelDetailsSearchContext;
-  const sharedValue = require("ReanimatedRexport").useSharedValue(false);
-  let obj = require("ReanimatedRexport");
-  sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
-  const obj2 = require("ReanimatedRexport");
-  const animatedRef = require("ReanimatedRexport").useAnimatedRef();
-  const obj3 = require("ReanimatedRexport");
-  const animatedRef1 = require("ReanimatedRexport").useAnimatedRef();
-  const items = [sharedValue];
+  const sharedValue = require("../../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj = require("../../../../../../../_runtime/metro/01652__.js");
+  sharedValue1 = require("../../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj2 = require("../../../../../../../_runtime/metro/01652__.js");
+  const animatedRef = require("../../../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  const obj3 = require("../../../../../../../_runtime/metro/01652__.js");
+  const animatedRef1 = require("../../../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  items = [sharedValue];
   const callback = animatedRef.useCallback((arg0, arg1) => {
     if (arg0 !== arg1) {
       const result = sharedValue.set(false);
     }
   }, items);
-  const items1 = [sharedValue, channelDetailsSearchContext, callback];
+  let items1 = [sharedValue, channelDetailsSearchContext, callback];
   const effect = animatedRef.useEffect(
     () => SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, callback),
     items1,
@@ -80,50 +86,46 @@ export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   const memo = animatedRef.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const ManualResult = Gesture.Manual();
-    const fn = function e(arg0, fail) {
-      fail.fail();
-      const first = arg0.allTouches[0];
-      if (null != first) {
-        if (closure_1_2.get()) {
-          const measureResult = closure_0(sharedValue1[1]).measure(animatedRef1);
-          if (null != measureResult) {
-            const measureResult1 = closure_0(sharedValue1[1]).measure(animatedRef);
-            if (null != measureResult1) {
-              if (typeof callback === "function") {
-                const diff = measureResult.pageX - measureResult1.pageX;
-                const diff1 = measureResult.pageY - measureResult1.pageY;
-                ({ x, y } = first);
-                if (typeof memo === "function") {
-                  if (!tmp12) {
-                    const result = sharedValue.set(true);
-                  }
-                  tmp12 = diff < x && x < diff + tmp9 && diff1 < y && y < diff1 + tmp10;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            const tmp3Result = closure_0(sharedValue1[1]);
-          }
-          const obj = closure_0(sharedValue1[1]);
-        }
-      }
-    };
-    const manualActivationResult = Gesture.Manual().manualActivation(true);
-    fn.__closure = {
-      suggestionsMounted: sharedValue1,
-      measure: ReanimatedRexport.measure,
-      suggestionsRef: animatedRef1,
-      detectorRef: animatedRef,
+    items = [
+      closure_7,
+      sharedValue1,
+      _mod1652.measure,
+      animatedRef1,
+      animatedRef,
       measureRelativeTo,
       containsPoint,
-      dismissed: sharedValue,
-    };
-    fn.__workletHash = 12139911159035;
-    fn.__initData = __initData;
-    return manualActivationResult.onTouchesDown(fn);
+      sharedValue,
+    ];
+    c0 = undefined;
+    c1 = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    c5 = undefined;
+    c6 = undefined;
+    [tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+    function useSearchSuggestionsGestureTsx3(arg0, fail) {
+      fail.fail();
+      const point = arg0.allTouches[0];
+      if (null != point) {
+        if (_undefined.get()) {
+          const tmp5 = _undefined2(c2);
+          if (null != tmp5) {
+            const tmp3Result = _undefined2(c3);
+            if (null != tmp3Result) {
+              if (!_undefined4(_undefined3(tmp5, tmp3Result), point.x, point.y)) {
+                const result = _undefined5.set(true);
+              }
+            }
+          }
+        }
+      }
+    }
+    const items1 = [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8];
+    useSearchSuggestionsGestureTsx3.__closure = items1;
+    useSearchSuggestionsGestureTsx3.__workletHash = 17579046119458;
+    useSearchSuggestionsGestureTsx3.__initData = tmp;
+    return Gesture.Manual().manualActivation(true).onTouchesDown(useSearchSuggestionsGestureTsx3);
   }, items2);
   const items3 = [sharedValue];
   const callback1 = animatedRef.useCallback(() => {

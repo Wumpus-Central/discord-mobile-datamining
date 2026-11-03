@@ -19,7 +19,7 @@ export default function LeaveGuildElement(guild) {
   noop = undefined;
   [obj.disabled, _slicedToArray] = noop.useState(false);
   noop = tmp2;
-  const items = [null != guild];
+  items = [null != guild];
   const effect = noop.useEffect(() => {
     closure_3(!closure_4);
   }, items);

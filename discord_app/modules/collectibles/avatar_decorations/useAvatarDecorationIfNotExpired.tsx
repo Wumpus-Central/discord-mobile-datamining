@@ -13,7 +13,7 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
   [first, _slicedToArray] = noop.useState(false);
   noop = noop.useRef(null);
-  const items = [arg0];
+  items = [arg0];
   const effect = noop.useEffect(() => {
     function maybeScheduleExpirationCheck() {
       if (null != maybeScheduleExpirationCheck) {

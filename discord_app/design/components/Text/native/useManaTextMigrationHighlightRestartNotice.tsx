@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useManaTextMigrationHighlightRestartNotice() {
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     DevSettingsStore.get("highlight_mana_text"),
   );

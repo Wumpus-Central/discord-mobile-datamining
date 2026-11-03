@@ -6,7 +6,7 @@ import dismissible_content from "../../../../../../discord_common/js/packages/pr
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/07019_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -27,14 +27,14 @@ function DismissableContentsEmpty() {
     variant: "heading-lg/semibold",
     children: "No results found",
   };
-  const items = [React5(Text_Text.Text, obj2), React5(SearchEmpty.SearchEmpty, {})];
+  items = [React5(Text_Text.Text, obj2), React5(SearchEmpty.SearchEmpty, {})];
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -68,7 +68,7 @@ let closure_12 = noop.memo(function DismissableContentsListHeader(arg0) {
   const obj = { children: null };
   const obj2 = { style: tmp.headerSection, children: null };
   const obj3 = { title: "Global Overrides", hasIcons: false, children: null };
-  const items = [
+  items = [
     React5(TableSwitchRow.TableSwitchRow, {
       onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
       value: dailyCapOverridden,
@@ -168,8 +168,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(11902);
-  [dependencyMap, tmp5] = ref(11902).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(12039);
+  [dependencyMap, tmp5] = ref(12039).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(
     initialSearchQuery.useState(() => {
@@ -186,7 +186,7 @@ export default function DevToolsDismissableContentsScreen() {
     if (dependencyMap == null) {
       str = "";
     }
-    const items = [];
+    items = [];
     for (const key10013 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp;
       if (!tmp) {
@@ -210,8 +210,8 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(11902).useLocalStorageState("devtools-dc-search", ""), 2);
-  let items = [closure_6];
+  let tmp4 = _slicedToArray(ref(12039).useLocalStorageState("devtools-dc-search", ""), 2);
+  items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
     newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden,
@@ -231,7 +231,7 @@ export default function DevToolsDismissableContentsScreen() {
   const items1 = [tmp5, callback];
   callback1 = initialSearchQuery.useCallback((str) => {
     dependencyMap(str);
-    const items = [];
+    items = [];
     for (const key10015 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp3;
       if (!tmp3) {
@@ -301,6 +301,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj4.renderItem = callback3;
   obj4.onScroll = callback2;
-  obj3.children = dailyCapOverridden(ref(7294).FlashList, obj4);
+  obj3.children = dailyCapOverridden(ref(7414).FlashList, obj4);
   return dailyCapOverridden(first1, obj3);
 }

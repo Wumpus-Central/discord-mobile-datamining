@@ -3,7 +3,6 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupsBoostInfoText from "../utils/getGuildPowerupsBoostInfoText.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -13,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const View = _mod17.View;
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = {
+const obj = {
   container: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_12 },
   headerContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", display: "flex" },
 };
@@ -23,16 +22,14 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/Guild
 export default function GuildPowerupsBoostInfo(arg0) {
   ({ count, type } = arg0);
   const tmp = closure_7();
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsBoostInfo");
   const guildPowerupsBoostInfoText = getGuildPowerupsBoostInfoText.getGuildPowerupsBoostInfoText(count, type);
-  const obj3 = {
+  const obj2 = {
     style: tmp.container,
     accessible: true,
     accessibilityLabel: "" + count + ", " + guildPowerupsBoostInfoText,
     children: null,
   };
-  const obj4 = {
+  const obj3 = {
     style: tmp.headerContainer,
     importantForAccessibility: "no-hide-descendants",
     accessible: false,
@@ -43,31 +40,27 @@ export default function GuildPowerupsBoostInfo(arg0) {
   } else {
     TEXT_MUTED = nativeDefault.colors.TEXT_MUTED;
   }
-  const items = [hasOwnProperty(BoostGemIcon.BoostGemIcon, { size: "sm", color: TEXT_MUTED })];
-  let str = "text-lg/medium";
-  if (manaTypeConsolidationExperiment) {
-    str = "experimental/body-lg/semibold";
-  }
-  const obj5 = { variant: str, color: null, importantForAccessibility: "no-hide-descendants", children: null };
-  let str2 = "text-subtle";
+  items = [hasOwnProperty(BoostGemIcon.BoostGemIcon, { size: "sm", color: TEXT_MUTED })];
+  let str = "text-subtle";
   if (type === BoostInfoType.AVAILABLE) {
-    str2 = "text-strong";
+    str = "text-strong";
   }
-  obj5.color = str2;
-  obj5.children = count;
-  items[1] = hasOwnProperty(Text_Text.Text, obj5);
-  obj4.children = items;
-  const items1 = [timestampProducer(View, obj4)];
-  let str3 = "text-md/normal";
-  if (manaTypeConsolidationExperiment) {
-    str3 = "text-sm/normal";
-  }
-  items1[1] = hasOwnProperty(Text_Text.Text, {
-    variant: str3,
-    color: "text-subtle",
+  items[1] = hasOwnProperty(Text_Text.Text, {
+    variant: "body-lg/semibold",
+    color: str,
     importantForAccessibility: "no-hide-descendants",
-    children: guildPowerupsBoostInfoText,
+    children: count,
   });
-  obj3.children = items1;
-  return timestampProducer(View, obj3);
+  obj3.children = items;
+  const items1 = [
+    timestampProducer(View, obj3),
+    hasOwnProperty(Text_Text.Text, {
+      variant: "text-sm/normal",
+      color: "text-subtle",
+      importantForAccessibility: "no-hide-descendants",
+      children: guildPowerupsBoostInfoText,
+    }),
+  ];
+  obj2.children = items1;
+  return timestampProducer(View, obj2);
 }

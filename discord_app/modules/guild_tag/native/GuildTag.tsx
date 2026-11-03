@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/GuildTag.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8393).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   container: {
     flexDirection: "row",
@@ -27,13 +27,13 @@ let obj = {
   },
   tag: null,
 };
-let PlatformUtils = fn(1375);
+let PlatformUtils = fn(1377);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
-PlatformUtils = fn(1375);
+PlatformUtils = fn(1377);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -87,7 +87,7 @@ const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
       }
     }
     const obj = { children: null };
-    const items = [tmp4];
+    items = [tmp4];
     const obj4 = { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: null, children };
     const items1 = [tag.tag, View];
     obj4.style = items1;
@@ -106,7 +106,7 @@ const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
       accessibilityState: null,
       children: null,
     };
-    let items = [tmp2.container, containerStyles];
+    items = [tmp2.container, containerStyles];
     obj2.style = items;
     obj2.disabled = disabled;
     let obj3 = { disabled };
@@ -150,7 +150,7 @@ export default noop.memo(function GuildTagChiplet(primaryGuild) {
     Object.assign({ primaryGuild: 0, userId: 0, disabledTooltip: 0, badgeSize: 0 }),
   );
   guildId = undefined;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [userId, primaryGuild];
   const stateFromStoresObject = primaryGuild(guildId[12]).useStateFromStoresObject(
     items,

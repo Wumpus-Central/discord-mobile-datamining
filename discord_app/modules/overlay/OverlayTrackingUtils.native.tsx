@@ -13,6 +13,6 @@ export function useAnyOverlayRenderingLocked() {
   return false;
 }
 export function useOverlayLockState() {
-  const items = [false, null];
+  items = [false, null];
   return items;
 }

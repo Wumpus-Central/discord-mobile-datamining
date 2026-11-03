@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default function ConversationNavigatorMoreMenu(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
   noop = closure_5();
-  let items = [channelId, conversationId];
+  items = [channelId, conversationId];
   const memo = noop.useMemo(() => {
     let obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
@@ -34,7 +34,7 @@ export default function ConversationNavigatorMoreMenu(channelId) {
       const obj2 = { channelId, conversationId, isThumbsUp: true, isFocusMode: true };
       channelId(conversationId[9]).presentFeedbackSent();
     };
-    const items = [obj];
+    items = [obj];
     let obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t.uNGhdg);

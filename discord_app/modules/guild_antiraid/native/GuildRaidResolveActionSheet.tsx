@@ -15,10 +15,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SafetyToastType = fn(7490).SafetyToastType;
+const SafetyToastType = fn(7614).SafetyToastType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     paddingVertical: 24,
@@ -86,7 +86,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -174,7 +174,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   let intl = util.intl;
   obj.text = intl.string(util.t.yeaXw5);
   obj.value = AutomodFeedback.RaidResolutionType.LEGITIMATE_ACTIVITY;
-  let items = [obj, , ,];
+  items = [obj, , ,];
   let obj2 = { text: null, value: null };
   const intl2 = util.intl;
   obj2.text = intl2.string(util.t["o++3B8"]);
@@ -193,7 +193,12 @@ export default function GuildRaidResolveActionSheet(arg0) {
   let obj5 = { children: null };
   let obj6 = { style: tmp.container, children: null };
   const tmp3 = _slicedToArray(noop.useState(), 2);
-  const obj7 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = {
+    style: tmp.title,
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t["1zmw/H"]);
   const items1 = [handleTextInputChange(Text_Text.Text, obj7), , , ,];
@@ -213,7 +218,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
           c3.includes(value)
             ? (arr) => arr.filter((item) => item !== closure_1_0)
             : (arg0) => {
-                const items = [];
+                items = [];
                 items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
                 return items;
               },
@@ -222,7 +227,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
       leading: handleTextInputChange(require("native").Checkbox, { selected: _undefined.includes(value) }),
       label: value.text,
     };
-    let items = [handleTextInputChange(require("Form").FormRow, obj2)];
+    items = [handleTextInputChange(require("Form").FormRow, obj2)];
     let hasItem = value === require("AutomodFeedback").RaidResolutionType.OTHER;
     if (hasItem) {
       hasItem = _undefined.includes(require("AutomodFeedback").RaidResolutionType.OTHER);

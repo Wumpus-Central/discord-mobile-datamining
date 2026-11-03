@@ -81,7 +81,7 @@ prototype["restartForFragment"] = function restartForFragment() {
     this._report,
     Object.fromEntries(
       found.map((item) => {
-        const items = [item, 0];
+        items = [item, 0];
         return items;
       }),
     ),

@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/use
 export function usePlaceholderWidth(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const items = [arg0, arg1];
+  items = [arg0, arg1];
   return noop.useMemo(() => Math.random() * (closure_1 - closure_0) + closure_0, items);
 }

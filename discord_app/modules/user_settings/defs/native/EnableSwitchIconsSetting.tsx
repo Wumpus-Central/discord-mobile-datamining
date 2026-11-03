@@ -5,18 +5,18 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 function useEnableSwitchIconsSettingValue() {
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: fn(16270).setSwitchIconsEnabled,
+  onValueChange: fn(16413).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

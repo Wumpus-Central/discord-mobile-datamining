@@ -10,10 +10,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7454).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7578).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   body: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   contentContainer: { flex: 1 },
@@ -30,7 +30,7 @@ export default function ForumPostListBody(arg0) {
   const tmp = closure_7();
   const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
   const obj2 = { style: null, children: null };
-  const items = [tmp.body, containerStyle];
+  items = [tmp.body, containerStyle];
   obj2.style = items;
   const obj3 = { style: tmp.contentContainer, children: null };
   const obj4 = { style: tmp.details, children: null };

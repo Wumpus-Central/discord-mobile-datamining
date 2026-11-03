@@ -23,7 +23,7 @@ export function useUsernameLiveCheck(username) {
     flag3 = false;
   }
   let stateFromStores;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   const items1 = [username];
   stateFromStores = require("useStateFromStores").useStateFromStores(
     items,

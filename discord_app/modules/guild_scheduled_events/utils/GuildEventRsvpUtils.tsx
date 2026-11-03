@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4869);
+const GuildScheduledEventsConstants = fn(4996);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } =
   GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
@@ -23,7 +23,7 @@ export function getResponseOptions() {
   const intl = util.intl;
   obj.name = intl.string(util.t.uoorxi);
   obj.value = obj.SERIES;
-  const items = [obj];
+  items = [obj];
   const obj2 = { name: null, value: null };
   const intl2 = util.intl;
   obj2.name = intl2.string(util.t.lwZCFT);

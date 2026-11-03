@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -24,6 +24,7 @@ import ICYMIBottomLoading from "ICYMIBottomLoading.tsx";
 import CaughtUpRowDefault from "CaughtUpRow.tsx";
 import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow.tsx";
 import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow.tsx";
+import ICYMIWaterwheelsRowDefault from "ICYMIWaterwheelsRow.tsx";
 import ICYMIHeaderDefault from "ICYMIHeader.tsx";
 import ICYMIForumThreadRow from "ICYMIForumThreadRow.tsx";
 import CardHeightMeasurer from "CardHeightMeasurer.tsx";
@@ -39,17 +40,17 @@ import ICYMIStore from "../ICYMIStore.tsx";
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1113);
-const Pressables = LeftBackIconWithBadge(6980);
-const XSmallIcon = LeftBackIconWithBadge(7054);
-const notifications_Notifications = LeftBackIconWithBadge(18476);
-const BackIconWithBadge = LeftBackIconWithBadge(18478);
+const Pressables = LeftBackIconWithBadge(7106);
+const XSmallIcon = LeftBackIconWithBadge(7180);
+const notifications_Notifications = LeftBackIconWithBadge(18630);
+const BackIconWithBadge = LeftBackIconWithBadge(18632);
 require = fn;
 function SettingsButton() {
-  return closure_1_14(IconButton.IconButton, {
+  return gesture(IconButton.IconButton, {
     accessibilityLabel: "button",
     variant: "tertiary",
     size: "sm",
-    icon: closure_1_14(FiltersHorizontalIcon.FiltersHorizontalIcon, { size: "sm" }),
+    icon: gesture(FiltersHorizontalIcon.FiltersHorizontalIcon, { size: "sm" }),
     onPress() {
       require("ICYMIActionCreators").itemInteracted("filters_button", "filters_button", "press_info_button");
       const obj = require("ICYMIActionCreators");
@@ -71,11 +72,11 @@ function SettingsButton() {
   });
 }
 function InfoButton() {
-  return closure_1_14(IconButton.IconButton, {
+  return gesture(IconButton.IconButton, {
     accessibilityLabel: "button",
     variant: "tertiary",
     size: "sm",
-    icon: closure_1_14(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
+    icon: gesture(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
       ICYMIActionCreatorsDefault.itemInteracted("info_button", "info_button", "press_info_button");
       ICYMIActionCreatorsDefault.feedPageActioned({
@@ -92,21 +93,21 @@ function InfoButton() {
 }
 function ICYMIHeaderTextWrapper() {
   const tmp = closure_18();
-  return closure_1_14(hasOwnProperty, {
+  return gesture(hasOwnProperty, {
     style: closure_18().headerText,
     children: noop.useMemo(() => {
       const obj = { children: null };
       const obj2 = {
         color: "mobile-text-heading-primary",
-        variant: "heading-lg/bold",
+        variant: "heading-lg/semibold",
         maxFontSizeMultiplier: 1.75,
         accessibilityRole: "header",
         children: null,
       };
       const intl = require("util").intl;
       obj2.children = intl.string(require("util").t.SY4sdZ);
-      const items = [closure_1_14(require("Text/Text").Text, obj2)];
-      const obj3 = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
+      items = [closure_1_14(require("Text/Text").Text, obj2)];
+      const obj3 = { color: "text-brand", variant: "text-xs/semibold", style: { marginTop: 4 }, children: null };
       const intl2 = require("util").intl;
       obj3.children = intl2.string(require("util").t.Ac2OZA);
       items[1] = closure_1_14(require("Text/Text").Text, obj3);
@@ -135,7 +136,7 @@ function ICYMI(inNestedNavigator) {
     isFocused(visibleItemIds[36]).trackAppUIViewed();
   });
   let obj = isFocused(visibleItemIds[35]);
-  const items = [stateFromStores2];
+  items = [stateFromStores2];
   stateFromStores = isFocused(visibleItemIds[37]).useStateFromStores(items, () => stateFromStores2.useReducedMotion);
   let obj2 = isFocused(visibleItemIds[37]);
   const items1 = [closure_11];
@@ -149,25 +150,27 @@ function ICYMI(inNestedNavigator) {
     ICYMIActionCreatorsDefault.setTabFocused(isFocused);
   }, items2);
   let obj3 = isFocused(visibleItemIds[37]);
-  const sharedICYMILogic = isFocused(visibleItemIds[39]).useSharedICYMILogic({
+  const tmp10 = stateFromStores(visibleItemIds[39])();
+  const sharedICYMILogic = isFocused(visibleItemIds[40]).useSharedICYMILogic({
     showDot: stateFromStores(visibleItemIds[38])().showDot,
     notificationItem: stateFromStores1,
+    isWaterwheelsCardEligible: tmp10,
   });
   ({ loading, visibleItemIds } = sharedICYMILogic);
   const endVisible = sharedICYMILogic.endVisible;
   ({ isRefreshing, handleOnRefresh } = sharedICYMILogic);
   ({ data, version, stickyHeaderIndices, viewabilityConfigCallbackPairs } = sharedICYMILogic);
-  let obj4 = isFocused(visibleItemIds[39]);
-  const iCYMIEmptyLoadingAnalytics = isFocused(visibleItemIds[40]).useICYMIEmptyLoadingAnalytics(loading, isFocused);
-  let obj5 = isFocused(visibleItemIds[40]);
-  const items3 = [isFocused(visibleItemIds[42]).DismissibleContent.ICYMI_ALPHA_UPSELL];
-  const tmp12 = endVisible(isFocused(visibleItemIds[41]).useGetDismissibleContent(items3), 2);
-  const first = tmp12[0];
-  closure_6 = tmp14;
-  let obj6 = isFocused(visibleItemIds[41]);
+  let obj4 = isFocused(visibleItemIds[40]);
+  const iCYMIEmptyLoadingAnalytics = isFocused(visibleItemIds[41]).useICYMIEmptyLoadingAnalytics(loading, isFocused);
+  let obj5 = isFocused(visibleItemIds[41]);
+  const items3 = [isFocused(visibleItemIds[43]).DismissibleContent.ICYMI_ALPHA_UPSELL];
+  const tmp13 = endVisible(isFocused(visibleItemIds[42]).useGetDismissibleContent(items3), 2);
+  const first = tmp13[0];
+  closure_6 = tmp15;
+  let obj6 = isFocused(visibleItemIds[42]);
   const items4 = [ref1];
   stateFromStores2 = isFocused(visibleItemIds[37]).useStateFromStores(items4, () => ref1.getGuildCount());
-  const items5 = [first, tmp12[1], stateFromStores2];
+  const items5 = [first, tmp13[1], stateFromStores2];
   const effect1 = handleOnRefresh.useEffect(() => {
     if (null != first) {
       const obj2 = { extendedOnboarding: stateFromStores2 <= closure_12 };
@@ -182,7 +185,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18553, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18707, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -196,7 +199,7 @@ function ICYMI(inNestedNavigator) {
     },
   });
   let obj7 = isFocused(visibleItemIds[37]);
-  const obj8 = {
+  let obj8 = {
     scrollToTop() {
       const current = ref.current;
       if (current != null) {
@@ -212,7 +215,7 @@ function ICYMI(inNestedNavigator) {
     stateFromStores3.getDoubleTapBehavior(),
   );
   const obj10 = isFocused(visibleItemIds[37]);
-  const items8 = [stateFromStores3, isFocused(visibleItemIds[44]).useNavigation(), stateFromStores];
+  const items8 = [stateFromStores3, isFocused(visibleItemIds[45]).useNavigation(), stateFromStores];
   const effect3 = handleOnRefresh.useEffect(() => {
     if (stateFromStores3 === ICYMITypes.GravityICYMIDoubleTapBehavior.DEFAULT) {
       const obj2 = {
@@ -228,7 +231,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(11150).showForLaterModal(isFocused(10192).SavedMessageSortTypes.BOOKMARK);
+          isFocused(11287).showForLaterModal(isFocused(10322).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -242,67 +245,73 @@ function ICYMI(inNestedNavigator) {
       current.scrollToOffset(obj);
     }
   }, items9);
-  const obj11 = isFocused(visibleItemIds[44]);
+  const obj11 = isFocused(visibleItemIds[45]);
   const items10 = [visibleItemIds, endVisible];
-  const mobileQuestDockHeight = isFocused(visibleItemIds[48]).useMobileQuestDockHeight();
+  const mobileQuestDockHeight = isFocused(visibleItemIds[49]).useMobileQuestDockHeight();
   const callback = handleOnRefresh.useCallback((item) => {
     item = item.item;
-    const kind = item.data.kind;
-    if ("message" === kind) {
-      if (item.channelType === ChannelTypes.ChannelTypes.GUILD_ANNOUNCEMENT) {
-        const obj2 = {
-          unread: item.unread,
-          message: item.data.message,
-          visible: null != visibleItemIds.find((item) => item.item.id === item.id),
-        };
-        let tmp41 = closure_2_14(AnnouncementMessageRowDefault, obj2);
-      } else {
-        const obj3 = {
-          message: item.data.message,
-          messageContext: item.data.messageContext,
-          visible: null != visibleItemIds.find((item) => item.item.id === item.id),
-        };
-        tmp41 = closure_2_14(ICYMIMessageRowDefault, obj3);
-      }
-    } else {
-      if ("contentInventory" === kind) {
+    switch (item.data.kind) {
+      case "message":
+        if (item.channelType === ChannelTypes.ChannelTypes.GUILD_ANNOUNCEMENT) {
+          const obj2 = {
+            unread: item.unread,
+            message: item.data.message,
+            visible: null != visibleItemIds.find((item) => item.item.id === item.id),
+          };
+          let tmp43 = gesture(AnnouncementMessageRowDefault, obj2);
+        } else {
+          const obj3 = {
+            message: item.data.message,
+            messageContext: item.data.messageContext,
+            visible: null != visibleItemIds.find((item) => item.item.id === item.id),
+          };
+          tmp43 = gesture(ICYMIMessageRowDefault, obj3);
+        }
+        break;
+      case "contentInventory":
         const obj4 = {
           visible: null != visibleItemIds.find((item) => item.item.id === item.id),
           content: item.data.content,
         };
-        let tmp7 = closure_2_14(ContentInventoryEntryRowDefault, obj4);
-      } else if ("loading" === kind) {
-        return closure_2_14(ICYMILoading.ICYMILoading, {});
-      } else if ("bottomLoading" === kind) {
-        return closure_2_14(ICYMIBottomLoading.ICYMIBottomLoading, {});
-      } else if ("end" === kind) {
-        const obj5 = { visible: endVisible };
-        return closure_2_14(CaughtUpRowDefault, obj5);
-      } else if ("guildEvent" === kind) {
-        const obj6 = { eventId: item.data.eventId };
-        tmp7 = closure_2_14(ICYMIGuildEventRowDefault, obj6);
-      } else if ("recommendedGuilds" === kind) {
-        tmp7 = closure_2_14(ICYMIServerRecommendationRow.ICYMIServerRecommendationRow, {});
-      } else if ("icymiHeader" === kind) {
-        return closure_2_14(ICYMIHeaderDefault, {});
-      } else if ("forumThread" === kind) {
+        let tmp6 = gesture(ContentInventoryEntryRowDefault, obj4);
+        const obj5 = { itemId: item.id, children: tmp6 };
+        return gesture(CardHeightMeasurer.CardHeightMeasurer, obj5);
+      case "loading":
+        return gesture(ICYMILoading.ICYMILoading, {});
+      case "bottomLoading":
+        return gesture(ICYMIBottomLoading.ICYMIBottomLoading, {});
+      case "end":
+        const obj6 = { visible: endVisible };
+        return gesture(CaughtUpRowDefault, obj6);
+      case "guildEvent":
+        const obj7 = { eventId: item.data.eventId };
+        tmp6 = gesture(ICYMIGuildEventRowDefault, obj7);
+        break;
+      case "recommendedGuilds":
+        tmp6 = gesture(ICYMIServerRecommendationRow.ICYMIServerRecommendationRow, {});
+        break;
+      case "waterwheelsItem":
+        const obj8 = { card: item.data.card };
+        tmp6 = gesture(ICYMIWaterwheelsRowDefault, obj8);
+        break;
+      case "icymiHeader":
+        return gesture(ICYMIHeaderDefault, {});
+      case "forumThread":
         const obj = {
           message: item.data.message,
           channel: item.data.threadChannel,
           visible: null != visibleItemIds.find((item) => item.item.id === item.id),
         };
-        tmp7 = closure_2_14(ICYMIForumThreadRow.ICYMIForumThreadRow, obj);
-      } else {
+        tmp6 = gesture(ICYMIForumThreadRow.ICYMIForumThreadRow, obj);
+        break;
+      default:
         return null;
-      }
-      const obj7 = { itemId: item.id, children: tmp7 };
-      return closure_2_14(CardHeightMeasurer.CardHeightMeasurer, obj7);
     }
   }, items10);
   const memo = handleOnRefresh.useMemo(() => ({ backgroundColor: "transparent" }), []);
-  const obj12 = isFocused(visibleItemIds[48]);
-  const clientThemesOverride = isFocused(visibleItemIds[61]).useClientThemesOverride();
-  const obj13 = isFocused(visibleItemIds[61]);
+  const obj12 = isFocused(visibleItemIds[49]);
+  const clientThemesOverride = isFocused(visibleItemIds[63]).useClientThemesOverride();
+  const obj13 = isFocused(visibleItemIds[63]);
   const items11 = [closure_11];
   const obj15 = { style: null, children: null };
   const items12 = [,];
@@ -325,7 +334,7 @@ function ICYMI(inNestedNavigator) {
   items14[2] = clientThemesOverride;
   obj16.style = items14;
   const items15 = [
-    closure_14(stateFromStores(visibleItemIds[62]), {
+    closure_14(stateFromStores(visibleItemIds[64]), {
       onPress() {
         ICYMIActionCreatorsDefault.itemInteracted("refresh_button", "refresh_button", "press_refresh_button");
         ICYMIActionCreatorsDefault.feedPageActioned({
@@ -376,7 +385,7 @@ function ICYMI(inNestedNavigator) {
   obj18.onEndReached = handleEndReached;
   obj18.keyExtractor = keyExtractor;
   obj18.renderItem = callback;
-  obj18.getItemType = isFocused(visibleItemIds[64]).itemToType;
+  obj18.getItemType = isFocused(visibleItemIds[66]).itemToType;
   const obj14 = isFocused(visibleItemIds[37]);
   const obj17 = {
     onPress() {
@@ -394,14 +403,14 @@ function ICYMI(inNestedNavigator) {
     },
     isRefreshing,
   };
-  isFocused(visibleItemIds[65]).isAndroid();
+  isFocused(visibleItemIds[67]).isAndroid();
   obj18.stickyHeaderIndices = stickyHeaderIndices;
   obj18.viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs;
   if (!loading) {
     num = version;
   }
-  items15[1] = closure_14(isFocused(visibleItemIds[63]).FlashList, obj18, "Version-" + num);
-  items15[2] = closure_14(isFocused(visibleItemIds[66]).TTIFirstContentfulPaint, { label: "icymi" });
+  items15[1] = closure_14(isFocused(visibleItemIds[65]).FlashList, obj18, "Version-" + num);
+  items15[2] = closure_14(isFocused(visibleItemIds[68]).TTIFirstContentfulPaint, { label: "icymi" });
   obj16.children = items15;
   items13[1] = closure_16(first, obj16);
   obj15.children = items13;
@@ -412,11 +421,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(18527).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+let closure_12 = fn(18681).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -429,7 +438,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },
@@ -534,24 +543,24 @@ let closure_22 = noop.memo(function Header(inNestedNavigator) {
     light: client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8,
   };
   obj3.mixAmount = obj4;
-  const items = [closure_1_14(ThemedGradientDefault, obj3), ,];
+  items = [gesture(ThemedGradientDefault, obj3), ,];
   const obj5 = { style: tmp.headerTitle, children: null };
   const obj6 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
     if (!inNestedNavigator) {
-      const items1 = [null, closure_1_14(ICYMIHeaderTextWrapper, {})];
+      const items1 = [null, gesture(ICYMIHeaderTextWrapper, {})];
       obj6.children = items1;
-      const items2 = [__initData2(hasOwnProperty, obj6)];
+      const items2 = [value2(hasOwnProperty, obj6)];
       const obj7 = { style: tmp.headerActions, children: null };
-      const items3 = [closure_1_14(InfoButton, {}), closure_1_14(SettingsButton, {})];
+      const items3 = [gesture(InfoButton, {}), gesture(SettingsButton, {})];
       obj7.children = items3;
-      items2[1] = __initData2(hasOwnProperty, obj7);
+      items2[1] = value2(hasOwnProperty, obj7);
       obj5.children = items2;
-      items[1] = __initData2(hasOwnProperty, obj5);
+      items[1] = value2(hasOwnProperty, obj5);
       const obj8 = { style: tmp.headerBorder };
-      items[2] = closure_1_14(hasOwnProperty, obj8);
+      items[2] = gesture(hasOwnProperty, obj8);
       obj2.children = items;
-      return __initData2(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      return value2(common_SafeAreaView.SafeAreaPaddingView, obj2);
     }
   }
   const obj9 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
@@ -561,12 +570,12 @@ let closure_22 = noop.memo(function Header(inNestedNavigator) {
   if (inNestedNavigator) {
     LeftBackIconWithBadge = BackIconWithBadge.LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
-    let tmp4Result = closure_1_14(LeftBackIconWithBadge, obj);
+    let tmp4Result = gesture(LeftBackIconWithBadge, obj);
   } else {
-    tmp4Result = closure_1_14(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
+    tmp4Result = gesture(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
   }
   obj9.children = tmp4Result;
-  closure_1_14(Pressables.PressableOpacity, obj9);
+  gesture(Pressables.PressableOpacity, obj9);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
@@ -576,7 +585,7 @@ export function ICYMITab(route) {
   _require = undefined;
   importDefault = undefined;
   const tmp3 = useColorThemeBackgroundDefault();
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => id.getId());
   const tmp6 = useIsWindowLargeDefault();
   _require = tmp6;

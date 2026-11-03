@@ -3,7 +3,7 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef2538 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2667 from "../../../parent_tools/FamilyCenter.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -21,17 +21,17 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function FamilyCenterLoading() {
   const tmp = closure_19();
-  return closure_1_14(Stack_Stack.Stack, {
+  return gesture(Stack_Stack.Stack, {
     justify: "center",
     align: "center",
     style: closure_19().loadingContainer,
-    children: closure_1_14(timestampProducer, {}),
+    children: gesture(timestampProducer, {}),
   });
 }
 function FamilyCenterLoadError() {
   const tmp = closure_19();
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2538.nGX8Co);
+  const stringResult = intl.string(_modDef2667.nGX8Co);
   require = stringResult;
   items = [stringResult];
   const effect = noop.useEffect(() => {
@@ -147,7 +147,7 @@ function FamilyCenter() {
           is_considered_adult: "adult" === ageGroup,
           num_of_accepted_links: numOfAcceptedRequests,
           selected_teen_id: selectedTeenId,
-          initial_page: closure_2_12[selectedTab],
+          initial_page: application_id[selectedTab],
           source: constants.SETTINGS,
         };
         AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_VIEWED, obj2);
@@ -229,7 +229,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const AgeGateSource = fn(1097).AgeGateSource;
-const FamilyCenterConstants = fn(7716);
+const FamilyCenterConstants = fn(7840);
 ({
   FamilyCenterPageLocationAnalyticsIds: closure_11,
   FamilyCenterSubPageAnalyticsIds: closure_12,
@@ -239,7 +239,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [,];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", flex: 1 },
   segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -255,5 +255,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx");
 
 export default function FamilyCenterContainer() {
-  return closure_1_14(FamilyCenter, {});
+  return gesture(FamilyCenter, {});
 }

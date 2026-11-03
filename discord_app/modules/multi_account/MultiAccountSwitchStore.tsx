@@ -226,7 +226,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
           const token = TokenManagerAll.getToken(id);
           if (null != token) {
             if ("" !== token) {
-              let items = token2.get(token);
+              items = token2.get(token);
               if (items == null) {
                 items = [];
               }

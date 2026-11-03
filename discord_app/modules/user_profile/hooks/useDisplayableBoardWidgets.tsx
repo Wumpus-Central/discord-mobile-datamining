@@ -28,6 +28,6 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplay
 export function useDisplayableBoardWidgets(id) {
   const tmp = useUserProfileWidgetsDefault(id);
   closure_0 = tmp;
-  const items = [tmp];
+  items = [tmp];
   return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
 }

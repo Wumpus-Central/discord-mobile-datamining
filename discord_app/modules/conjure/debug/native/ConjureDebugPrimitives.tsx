@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugPrimitives.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   toolbar: {
     flexDirection: "row",
@@ -88,7 +88,7 @@ export function DebugSnapshotToolbar(onRefresh) {
   } else if ("failed" === fetchState) {
     const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3868.ZVByPX);
+    obj3.children = intl2.string(_modDef3995.ZVByPX);
     tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   } else {
     tmp4Result = null;
@@ -96,15 +96,15 @@ export function DebugSnapshotToolbar(onRefresh) {
       const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-      obj4.children = intl.formatToPlainString(_modDef3868.INVO50, obj6);
+      obj4.children = intl.formatToPlainString(_modDef3995.INVO50, obj6);
       tmp4Result = hasOwnProperty(Text_Text.Text, obj4);
     }
   }
   obj2.children = tmp4Result;
-  const items = [hasOwnProperty(React4, obj2)];
+  items = [hasOwnProperty(React4, obj2)];
   const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl3 = util.intl;
-  obj7.text = intl3.string(_modDef3868.oKEgiu);
+  obj7.text = intl3.string(_modDef3995.oKEgiu);
   obj7.onPress = onRefresh.onRefresh;
   items[1] = hasOwnProperty(components_Button_Button.Button, obj7);
   obj.children = items;
@@ -113,7 +113,7 @@ export function DebugSnapshotToolbar(onRefresh) {
 export function DebugSection(arg0) {
   ({ title, children } = arg0);
   const obj = { style: closure_7().section, children: null };
-  const items = [
+  items = [
     hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: title }),
     children,
   ];
@@ -138,7 +138,7 @@ export function DebugStatRow(arg0) {
   const obj = { style: tmp.statRow, children: null };
   const obj2 = { style: tmp.statRowHead, children: null };
   const obj3 = { style: null, children: null };
-  const items = [,];
+  items = [,];
   ({ statLabel: arr[0], statGroup: arr[1] } = tmp);
   obj3.style = items;
   const items1 = [
@@ -195,7 +195,7 @@ export function DebugMeter(arg0) {
   };
   const obj2 = { style: tmp.statRowHead, children: null };
   const formatValueResult = formatValue(used);
-  const items = [
+  items = [
     hasOwnProperty(React4, {
       style: tmp.statLabel,
       children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label }),

@@ -69,7 +69,7 @@ export function stringify(arg0) {
     return hasItem;
   });
   const mapped = found.map((time) => {
-    const items = [];
+    items = [];
     items.push(new Date(time.time).toISOString());
     if (null != time.timing) {
       items.push(time.timing);

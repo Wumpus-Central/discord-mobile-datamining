@@ -6,14 +6,14 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
-import _modDef14634 from "../../../../../../_runtime/metro/14634__.js";
+import _modDef14765 from "../../../../../../_runtime/metro/14765__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
@@ -25,12 +25,12 @@ export function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14634;
+  obj4.source = _modDef14765;
   obj4.style = tmp.image;
-  const items = [
+  items = [
     React4(FastImageDefault, obj4),
     React4(Text_Text.Text, {
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: twoWayLinkStyles.title,
       children: title,

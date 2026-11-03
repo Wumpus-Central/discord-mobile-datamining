@@ -7,15 +7,15 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(6847).asLaunched;
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const asLaunched = fn(6967).asLaunched;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  const items = [FramesStore, ApplicationStore];
+  items = [FramesStore, ApplicationStore];
   const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(items, () => {
     const tmp = asLaunched(mainFrame.getMainFrame());
     let mode;
@@ -59,7 +59,7 @@ export default function FramePanelController(children) {
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(19127).BaseActivityPanelController, {
+  return jsx(mainFrameId(19285).BaseActivityPanelController, {
     context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,

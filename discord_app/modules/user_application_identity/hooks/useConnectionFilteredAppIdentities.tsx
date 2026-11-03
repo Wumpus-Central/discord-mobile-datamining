@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(2022).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+let closure_3 = fn(2151).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",
@@ -21,9 +21,9 @@ export default function useConnectionFilteredAppIdentities(arg0) {
   const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
   data = userApplicationIdentities.data;
   const obj3 = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
-  let items = [data, undefined !== includeHidden && includeHidden];
+  items = [data, undefined !== includeHidden && includeHidden];
   obj3.filteredAppIdentities = noop.useMemo(() => {
-    let items = data;
+    items = data;
     if (data == null) {
       items = [];
     }

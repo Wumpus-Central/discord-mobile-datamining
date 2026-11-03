@@ -5,13 +5,13 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(8432).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(8556).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
       const obj = {
@@ -20,7 +20,7 @@ const radio = SettingBuilders.createRadio({
       };
       const intl = util.intl;
       obj.label = intl.string(util.t.JIFnN9);
-      const items = [obj, ,];
+      items = [obj, ,];
       const obj2 = {
         value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
         label: null,
@@ -56,7 +56,7 @@ const radio = SettingBuilders.createRadio({
   },
   useSearchTerms() {
     const intl = util.intl;
-    const items = [intl.string(util.t.XpBObB)];
+    items = [intl.string(util.t.XpBObB)];
     return items;
   },
 });

@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
   const merged = Object.assign(product, Object.assign({ product: 0 }));
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(product, stateFromStores);
   const obj3 = {};

@@ -21,7 +21,7 @@ export const AVErrorStreamSoundshareFailedDefinition = {
         const merged = Object.assign(
           obj2.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
         );
-        const items = [obj];
+        items = [obj];
         tmp2 = items;
       }
     }

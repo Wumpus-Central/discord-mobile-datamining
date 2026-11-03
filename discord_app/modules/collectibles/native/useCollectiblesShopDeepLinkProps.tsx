@@ -13,7 +13,7 @@ export function useCollectiblesShopDeepLinkProps(categories) {
   const products = categories.products;
   let initialBaseProductSkuId;
   let initialVariantIndex;
-  const items = [initialBaseProductSkuId, initialVariantIndex];
+  items = [initialBaseProductSkuId, initialVariantIndex];
   const stateFromStoresObject = categories(products[3]).useStateFromStoresObject(items, () => {
     const initialProductSkuId = initialVariantIndex.initialProductSkuId;
     const product = initialBaseProductSkuId.getProduct(initialProductSkuId);

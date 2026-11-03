@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/ato_alerts/native/components/
 
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
-  const items = [UserStore];
+  items = [UserStore];
   const items1 = [senderId];
   const stateFromStores = senderId(504).useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
@@ -22,7 +22,7 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const intl2 = senderId(1113).intl;
   obj3.subLabel = intl2.string(senderId(1113).t.w2ve0t);
   obj3.onPress = senderId.handleMutePressed;
-  obj3.icon = jsx(senderId(10992).BellSlashIcon, {});
-  obj2.children = jsx(senderId(6975).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(7060).TableRowGroup, { hasIcons: true, children: null });
+  obj3.icon = jsx(senderId(11125).BellSlashIcon, {});
+  obj2.children = jsx(senderId(7101).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(7186).TableRowGroup, { hasIcons: true, children: null });
 }

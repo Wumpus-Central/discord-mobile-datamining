@@ -11,8 +11,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 },
   container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 },
@@ -53,7 +53,7 @@ export default function GetStartedScreen(modalSessionId) {
   const stringResult = intl.string(modalSessionId(stringResult2[9]).t.JSdbBe);
   const intl3 = modalSessionId(stringResult2[9]).intl;
   stringResult2 = intl3.string(modalSessionId(stringResult2[9]).t.mFvt9M);
-  let items = [initiateAgeVerification, modalSessionId, stringResult2];
+  items = [initiateAgeVerification, modalSessionId, stringResult2];
   const memo = noop.useMemo(() => {
     let obj = { title: stringResult2, description: null, onPress: null };
     const intl = modalSessionId(stringResult2[9]).intl;
@@ -69,7 +69,7 @@ export default function GetStartedScreen(modalSessionId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,10 +83,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6729).trackAgeVerificationModalClicked(
+              const result = v3(6849).trackAgeVerificationModalClicked(
                 c0,
-                v3(6729).AgeVerificationModalVersion.RETRY,
-                v3(6729).AgeVerificationModalCta.GET_STARTED,
+                v3(6849).AgeVerificationModalVersion.RETRY,
+                v3(6849).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;
@@ -102,7 +102,7 @@ export default function GetStartedScreen(modalSessionId) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c0 = tmp;
@@ -120,7 +120,7 @@ export default function GetStartedScreen(modalSessionId) {
       }
       return applyArgumentsResult;
     };
-    const items = [obj];
+    items = [obj];
     return items;
   }, items);
   if (loading) {
@@ -140,14 +140,14 @@ export default function GetStartedScreen(modalSessionId) {
   const items2 = [
     closure_9(modalSessionId(stringResult2[11]).ShieldSpotIllustration, {}),
     closure_9(modalSessionId(stringResult2[12]).Text, {
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.centerText,
       children: stringResult,
     }),
   ];
   const obj7 = {
-    variant: "heading-xl/bold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: stringResult,

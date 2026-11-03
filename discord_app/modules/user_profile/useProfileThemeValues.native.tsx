@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeV
 
 export function useProfileThemeValues(theme) {
   _require = theme;
-  const items = [AccessibilityStore];
+  items = [AccessibilityStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => saturation.saturation);
   const items1 = [theme, stateFromStores];
   return useMemo(() => {

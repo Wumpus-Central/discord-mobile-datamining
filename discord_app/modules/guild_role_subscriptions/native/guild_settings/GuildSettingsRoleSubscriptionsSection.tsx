@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function HasCreatedListingsSection(arg0) {
   ({ guild: require, pushScreen: dependencyMap } = arg0);
-  const items = [UserStore];
+  items = [UserStore];
   let stateFromStores = initialize.useStateFromStores(items, () => isGuildOwner(id, UserStore.getCurrentUser()));
   const obj2 = { title: null, hasIcons: true, children: null };
   const intl = util.intl;
@@ -59,7 +59,7 @@ function HasCreatedListingsSection(arg0) {
   obj2.children = items1;
   return closure_7(TableRowGroup.TableRowGroup, obj2);
 }
-const isGuildOwner = fn(4881).isGuildOwner;
+const isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

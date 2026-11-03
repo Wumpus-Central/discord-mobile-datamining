@@ -219,7 +219,7 @@ class Experiment$Type extends MessageType {
       name: "unit_type",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.UnitType", obj3];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.UnitType", obj3];
         return items;
       },
     };
@@ -246,7 +246,7 @@ class Experiment$Type extends MessageType {
       name: "phase",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Phase", obj17];
+        items = ["discord_protos.discord_experimentation.v1.Phase", obj17];
         return items;
       },
     };
@@ -256,7 +256,7 @@ class Experiment$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.Surface", obj4];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.Surface", obj4];
         return items;
       },
     };
@@ -267,7 +267,7 @@ class Experiment$Type extends MessageType {
       name: "exposure_tracking",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", obj5];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", obj5];
         return items;
       },
     };
@@ -276,7 +276,7 @@ class Experiment$Type extends MessageType {
       name: "assignment_mode",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", obj6];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", obj6];
         return items;
       },
     };
@@ -296,7 +296,7 @@ class Experiment$Type extends MessageType {
       name: "type",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.Type", obj7];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.Type", obj7];
         return items;
       },
     };
@@ -342,7 +342,7 @@ class Experiment$Type extends MessageType {
       name: "custom_unit_prefix",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", obj8];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", obj8];
         return items;
       },
     };
@@ -352,7 +352,7 @@ class Experiment$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposurePointId", obj9];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.ExposurePointId", obj9];
         return items;
       },
     };
@@ -373,7 +373,7 @@ class Experiment$Type extends MessageType {
       name: "eligibility_persistence",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence",
           obj10,
           "ELIGIBILITY_PERSISTENCE_",
@@ -852,7 +852,7 @@ class Experiment_NumberLineSettings$Type extends MessageType2 {
       name: "mode",
       kind: "enum",
       T() {
-        const items = [
+        items = [
           "discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode",
           Experiment_NumberLineSettings_Mode,
         ];
@@ -952,7 +952,7 @@ let items = [
     name: "mode",
     kind: "enum",
     T() {
-      const items = [
+      items = [
         "discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode",
         Experiment_NumberLineSettings_Mode,
       ];
@@ -988,7 +988,7 @@ class Experiment_ChangeSource$Type extends MessageType3 {
       name: "kind",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", obj2];
+        items = ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", obj2];
         return items;
       },
     };
@@ -1120,7 +1120,7 @@ const items1 = [
     name: "kind",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", obj2];
+      items = ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", obj2];
       return items;
     },
   },
@@ -1339,7 +1339,7 @@ const items2 = [
     name: "type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj11];
+      items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj11];
       return items;
     },
   },
@@ -1383,7 +1383,7 @@ class Bucket$Type extends MessageType5 {
       name: "type",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
+        items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
         return items;
       },
     };
@@ -1402,7 +1402,7 @@ class Bucket$Type extends MessageType5 {
       name: "exposure_mode",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
+        items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
         return items;
       },
     };
@@ -1508,7 +1508,7 @@ const items3 = [
     name: "type",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
       return items;
     },
   },
@@ -1517,7 +1517,7 @@ const items3 = [
     name: "assignment_mode",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj12];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj12];
       return items;
     },
   },
@@ -1526,7 +1526,7 @@ const items3 = [
     name: "exposure_mode",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
       return items;
     },
   },
@@ -1969,7 +1969,7 @@ class LifecyclePlan_MeasurementPlan$Type extends MessageType10 {
       name: "status",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
         return items;
       },
     };
@@ -2078,7 +2078,7 @@ const items6 = [
     name: "status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
       return items;
     },
   },
@@ -2150,7 +2150,7 @@ class LifecyclePlan_RolloutPlan$Type extends MessageType11 {
       name: "status",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
         return items;
       },
     };
@@ -2259,7 +2259,7 @@ const items7 = [
     name: "status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
       return items;
     },
   },
@@ -2362,7 +2362,7 @@ class LifecyclePlan_RampStep$Type extends MessageType12 {
       name: "status",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
+        items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
         return items;
       },
     };
@@ -2527,7 +2527,7 @@ const obj26 = {
   name: "status",
   kind: "enum",
   T() {
-    const items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
+    items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
     return items;
   },
 };

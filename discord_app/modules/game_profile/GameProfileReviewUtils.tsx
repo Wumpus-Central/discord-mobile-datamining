@@ -84,7 +84,7 @@ export function getMobileStoreReviews(game) {
           const str2 = intl2.format(util.t.u1m2hs, obj4);
           obj2.accessibilityLabel = intl3.format(util.t["63jSRx"], obj5).toString();
           obj2.action = obj.action;
-          const items = [obj2];
+          items = [obj2];
           let items1 = items;
           const str3 = intl3.format(util.t["63jSRx"], obj5);
         } else {

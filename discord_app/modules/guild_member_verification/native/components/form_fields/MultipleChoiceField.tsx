@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 const obj3 = {};
 const merged = Object.assign(
@@ -30,7 +30,7 @@ export default function MultipleChoiceField(hasIcons) {
   const tmp = closure_6();
   const choices = field.choices;
   let num = field.response;
-  const items = [choices];
+  items = [choices];
   const memo = noop.useMemo(() => choices.map((name, value) => ({ name, value })), items);
   const obj = { style: tmp.container, children: null };
   const items1 = [

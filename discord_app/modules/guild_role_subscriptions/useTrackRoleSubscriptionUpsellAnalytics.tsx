@@ -23,12 +23,12 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
   const is_premium_member = tmp2;
   let obj = guildId(_location[3]);
-  let items = [groupListingsFetchContext];
+  items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
   const stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(
     items,
     () => {
-      let items = relevantSubscriptionListingIds;
+      items = relevantSubscriptionListingIds;
       if (relevantSubscriptionListingIds == null) {
         items = [];
       }

@@ -10,5 +10,5 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchMediaSize.tsx");
 
 export default function useSearchMediaSize(arg0) {
-  return Math.floor((arg0 - 2 * React - React2 * (framebus - 1)) / framebus);
+  return Math.floor((arg0 - 2 * React - React2 * (duration - 1)) / duration);
 }

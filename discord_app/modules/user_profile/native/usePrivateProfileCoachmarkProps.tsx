@@ -14,9 +14,9 @@ function PrivateProfileCoachmarkImage() {
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/usePrivateProfileCoachmarkProps.tsx");
@@ -43,7 +43,7 @@ export function usePrivateProfileCoachmarkProps(visibleContent) {
   }
   let intl = tmp(prop[8]).intl;
   stringResult1 = intl.string(tmp(prop[8]).t.bnNxW1);
-  const items = [stringResult1, markAsDismissed, visibleContent];
+  items = [stringResult1, markAsDismissed, visibleContent];
   return stringResult1.useMemo(() => {
     const obj = {
       title: null,

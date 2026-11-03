@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const ActivityPanelModes = fn(5777).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");
@@ -20,7 +20,7 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
   let landscapeSafeAreasConfig;
-  const items = [landscapeSafeAreasConfig];
+  items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => {
     const tmp = memo(landscapeSafeAreasConfig.getMainFrame());
     let id;

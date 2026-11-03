@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     justifyContent: "center",
@@ -86,7 +86,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   let tmp2Result = null;
   if (null != imageSource) {
     const obj3 = { style: null, source: null };
-    const items = [tmp.img, imageStyle];
+    items = [tmp.img, imageStyle];
     obj3.style = items;
     obj3.source = imageSource;
     tmp2Result = closure_5(FastImageDefault, obj3);
@@ -96,7 +96,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   const items2 = [
     closure_5(native.NitroWheel, { style: tmp.nitroWheel }),
     closure_5(Text_Text.Text, {
-      variant: "heading-xl/bold",
+      variant: "heading-xl/semibold",
       style: tmp.title,
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",

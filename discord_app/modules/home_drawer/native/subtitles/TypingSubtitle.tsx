@@ -30,7 +30,7 @@ export default function TypingSubtitle(arg0) {
     const obj3 = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
     tmp7 = React3(channelIconComponentWithGuild, obj3);
   }
-  const items = [tmp7];
+  items = [tmp7];
   const obj4 = {
     variant: "text-xs/medium",
     color: "text-muted",

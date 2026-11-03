@@ -11,11 +11,11 @@ const result = size.fileFinishedImporting("modules/experiments/trigger_points/us
 
 export function useCommonTriggerPoint(OpenNitroTriggerPoint) {
   _require = OpenNitroTriggerPoint;
-  let items = [ExperimentStore];
+  items = [ExperimentStore];
   const obj = require("initialize");
   const items1 = [OpenNitroTriggerPoint, ,];
   [arr2[1], arr2[2]] = require("initialize").useStateFromStoresArray(items, () => {
-    const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
+    items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
     return items;
   });
   const effect = noop.useEffect(() => {

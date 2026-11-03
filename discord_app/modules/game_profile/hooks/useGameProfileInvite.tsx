@@ -83,7 +83,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;
@@ -148,7 +148,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 export default function useGameProfileInvite(websites, current) {
   _require = current;
   noop.useRef(current);
-  const items = [current];
+  items = [current];
   const effect = noop.useEffect(() => {
     closure_1.current = current;
   }, items);
@@ -182,7 +182,7 @@ export default function useGameProfileInvite(websites, current) {
   const stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let id;
     if (data != null) {
-      const guild = data.guild;
+      guild = data.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -239,7 +239,7 @@ export function hasGameProfileDiscordWebsite(game) {
 export function preloadGameProfileInvite(arg0) {
   _require = arg0;
   const useGame = require("useGame").useGame;
-  let items = [arg0];
+  items = [arg0];
   let many = useGame.fetchMany(items);
   many.then(() => {
     const game = GameStore.getGame(closure_0);
@@ -266,7 +266,7 @@ export function preloadGameProfileInvite(arg0) {
       }
     }
     if (null != tmp4) {
-      const items = [tmp4];
+      items = [tmp4];
       const many = closure_10.fetchMany(items);
     }
   });

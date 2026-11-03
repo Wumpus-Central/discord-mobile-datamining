@@ -96,11 +96,20 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(Dispatch
   },
   STREAM_PREVIEW_FETCH_FAIL: function handleStreamPreviewFetchFail(arg0) {
     ({ streamKey, retryAfter } = arg0);
+    let url;
+    if (dependencyMap[streamKey] != null) {
+      url = tmp2.url;
+    }
+    if (url == null) {
+      url = null;
+    }
+    const obj = { url, expires: null };
     const timestamp = Date.now();
     if (null == retryAfter) {
       retryAfter = 10000 * dependencyMap2[streamKey];
     }
-    closure_4[streamKey] = { url: null, expires: timestamp + retryAfter };
+    obj.expires = timestamp + retryAfter;
+    dependencyMap[streamKey] = obj;
     set.delete(streamKey);
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {

@@ -15,7 +15,7 @@ require = fn;
 function FramePanelHeaderContentInner(arg0) {
   ({ frame, landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
-  const items = [frame.applicationId];
+  items = [frame.applicationId];
   const first = _slicedToArray(useGetOrFetchApplicationsDefault(items), 1)[0];
   const baseActivityPanelHeaderContent = ActivityPanelHeader.useBaseActivityPanelHeaderContent({
     landscape,
@@ -67,11 +67,11 @@ function FramePanelHeaderContentInner(arg0) {
   return React6(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 }
 const View = fn(17).View;
-const asLaunched = fn(6847).asLaunched;
+const asLaunched = fn(6967).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {
-  const items = [FramesStore];
+  items = [FramesStore];
   const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {

@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -49,7 +49,7 @@ export function TwoWayLinkDiscordConsent(callbackCode) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -119,7 +119,7 @@ export function TwoWayLinkDiscordConsent(callbackCode) {
       }
     })();
   });
-  const items = [callbackCode, callbackState, platformType, onNext, onError];
+  items = [callbackCode, callbackState, platformType, onNext, onError];
   const callback = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;

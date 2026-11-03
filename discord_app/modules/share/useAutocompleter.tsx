@@ -10,7 +10,7 @@ export default function useAutocompleter(searchOptions) {
   searchOptions = searchOptions.searchOptions;
   dependencyMap = undefined;
   [tmp2, c1] = noop.useState({ results: [], query: "" });
-  const tmp3 = searchOptions(5612)(() => {
+  const tmp3 = searchOptions(5735)(() => {
     const obj = new sortByMatchScoreDefault((results, query) => {
       closure_1_1({ results, query });
     });
@@ -19,7 +19,7 @@ export default function useAutocompleter(searchOptions) {
     return obj;
   });
   _slicedToArray = tmp3;
-  const items = [tmp3];
+  items = [tmp3];
   const effect = noop.useEffect(() => () => options.destroy(), items);
   const items1 = [tmp3, searchOptions];
   const effect1 = noop.useEffect(() => {

@@ -14,11 +14,102 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
+function getVisibleTraitRarities(item, c4) {
+  let tmp = null;
+  if (null != c4) {
+    if (require("CheckpointTrait").CheckpointTrait.FACE === item) {
+      const voice = c4.voice;
+      let prop;
+      if (voice != null) {
+        prop = voice.totalVoiceMinutesPercentile;
+      }
+      if (prop == null) {
+        prop = null;
+      }
+      tmp = prop;
+    } else if (tmp3(6232).CheckpointTrait.OUTFIT === item) {
+      const messages = c4.messages;
+      let prop1;
+      if (messages != null) {
+        prop1 = messages.numMessagesSentPercentile;
+      }
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      tmp = prop1;
+    } else if (tmp3(6232).CheckpointTrait.HAT === item) {
+      const guilds = c4.guilds;
+      let prop2;
+      if (guilds != null) {
+        const first = guilds.guilds[0];
+        if (first != null) {
+          prop2 = first.numDaysInteractedPercentile;
+        }
+      }
+      if (prop2 == null) {
+        prop2 = null;
+      }
+      tmp = prop2;
+    } else if (tmp3(6232).CheckpointTrait.SHOES === item) {
+      const emojis = c4.emojis;
+      let prop3;
+      if (emojis != null) {
+        prop3 = emojis.numEmojisSentPercentile;
+      }
+      if (prop3 == null) {
+        prop3 = null;
+      }
+      tmp = prop3;
+    } else if (tmp3(6232).CheckpointTrait.WEARABLE === item) {
+      const games2 = c4.games;
+      let prop4;
+      if (games2 != null) {
+        prop4 = games2.totalGamesPlayedPercentile;
+      }
+      if (prop4 == null) {
+        prop4 = null;
+      }
+      tmp = prop4;
+    } else if (tmp3(6232).CheckpointTrait.AURA === item) {
+      const games = c4.games;
+      let prop5;
+      if (games != null) {
+        prop5 = games.totalDaysPlayedPercentile;
+      }
+      if (prop5 == null) {
+        prop5 = null;
+      }
+      tmp = prop5;
+    } else if (tmp3(6232).CheckpointTrait.BASE === item) {
+      tmp = null;
+    }
+  }
+  _require = tmp;
+  const values = Object.values(require("CheckpointTraitRarity").CheckpointTraitRarity);
+  return new Set(
+    values.filter((item) => {
+      if (item !== CheckpointTraitRarity.CheckpointTraitRarity.DEFAULT) {
+        if (item !== CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
+          const tmp3 = CheckpointTraitConfig.CHECKPOINT_RARITY_TO_MIN_PERCENTILE[item];
+          let tmp5 = null != tmp3;
+          if (tmp5) {
+            tmp5 = null != c0;
+          }
+          if (tmp5) {
+            tmp5 = c0 >= tmp3;
+          }
+          return tmp5;
+        }
+      }
+      return true;
+    }),
+  );
+}
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f88811 = (arg0) => require.has(arg0);
+let f89168 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f88811 = (arg0) => require.has(arg0);
+f89168 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -221,7 +312,7 @@ const values14 = Object.values(CheckpointCharacterOutfit.CheckpointCharacterOutf
 const found = values14.filter((item) => typeof item === "number");
 const item = found.forEach((item) => {
   if (null != obj5[item]) {
-    let items = dependencyMap[tmp];
+    items = dependencyMap[tmp];
     if (items == null) {
       items = [];
     }
@@ -231,118 +322,31 @@ const item = found.forEach((item) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCharacterTraits.tsx");
 
-export function getVisibleTraitRarities(item, c4) {
-  let tmp = null;
-  if (null != c4) {
-    if (require("CheckpointTrait").CheckpointTrait.FACE === item) {
-      const voice = c4.voice;
-      let prop;
-      if (voice != null) {
-        prop = voice.totalVoiceMinutesPercentile;
-      }
-      if (prop == null) {
-        prop = null;
-      }
-      tmp = prop;
-    } else if (tmp3(6112).CheckpointTrait.OUTFIT === item) {
-      const messages = c4.messages;
-      let prop1;
-      if (messages != null) {
-        prop1 = messages.numMessagesSentPercentile;
-      }
-      if (prop1 == null) {
-        prop1 = null;
-      }
-      tmp = prop1;
-    } else if (tmp3(6112).CheckpointTrait.HAT === item) {
-      const guilds = c4.guilds;
-      let prop2;
-      if (guilds != null) {
-        const first = guilds.guilds[0];
-        if (first != null) {
-          prop2 = first.numDaysInteractedPercentile;
-        }
-      }
-      if (prop2 == null) {
-        prop2 = null;
-      }
-      tmp = prop2;
-    } else if (tmp3(6112).CheckpointTrait.SHOES === item) {
-      const emojis = c4.emojis;
-      let prop3;
-      if (emojis != null) {
-        prop3 = emojis.numEmojisSentPercentile;
-      }
-      if (prop3 == null) {
-        prop3 = null;
-      }
-      tmp = prop3;
-    } else if (tmp3(6112).CheckpointTrait.WEARABLE === item) {
-      const games2 = c4.games;
-      let prop4;
-      if (games2 != null) {
-        prop4 = games2.totalGamesPlayedPercentile;
-      }
-      if (prop4 == null) {
-        prop4 = null;
-      }
-      tmp = prop4;
-    } else if (tmp3(6112).CheckpointTrait.AURA === item) {
-      const games = c4.games;
-      let prop5;
-      if (games != null) {
-        prop5 = games.totalDaysPlayedPercentile;
-      }
-      if (prop5 == null) {
-        prop5 = null;
-      }
-      tmp = prop5;
-    } else if (tmp3(6112).CheckpointTrait.BASE === item) {
-      tmp = null;
-    }
-  }
-  _require = tmp;
-  const values = Object.values(require("CheckpointTraitRarity").CheckpointTraitRarity);
-  return new Set(
-    values.filter((item) => {
-      if (item !== CheckpointTraitRarity.CheckpointTraitRarity.DEFAULT) {
-        if (item !== CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
-          const tmp3 = CheckpointTraitConfig.CHECKPOINT_RARITY_TO_MIN_PERCENTILE[item];
-          let tmp5 = null != tmp3;
-          if (tmp5) {
-            tmp5 = null != c0;
-          }
-          if (tmp5) {
-            tmp5 = c0 >= tmp3;
-          }
-          return tmp5;
-        }
-      }
-      return true;
-    }),
-  );
-}
+export { getVisibleTraitRarities };
 export function getCharacterLayerOrdering(wearable) {
   const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = CheckpointTraitConfig.CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
   const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable);
   const tmp2 = CheckpointTraitConfig;
   return hasItem
     ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING
-    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f88811);
+    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f89168);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
 export const TRAIT_TO_NONE_OPTION_ID = obj4;
+export function isTraitNoneOptionId(trait, optionId) {
+  return obj4[trait] === optionId;
+}
 export const OUTFIT_DEFAULT_OPTION_IDS = items;
 export const OUTFIT_VARIANT_TO_DEFAULT = obj5;
 export function getOutfitDefaultOptionId(character) {
   return obj5[character];
 }
-export function getTraitOptionRarity(item, item10034) {
+export function getTraitOptionRarity(item10034, item10034) {
   let tmp2;
-  if (null != obj[item][item10034]) {
-    if (typeof f88811 === "function") {
-      if (closure_130_0.has(tmp)) {
+  if (null != obj[item10034][item10034]) {
+    if (typeof f89168 === "function") {
+      if (closure_131_0.has(tmp)) {
         tmp2 = tmp;
       }
     } else {
@@ -351,9 +355,40 @@ export function getTraitOptionRarity(item, item10034) {
   }
   return tmp2;
 }
+export function isTraitSelectionLocked(item, arg1, savedCharacter) {
+  savedCharacter = savedCharacter.savedCharacter;
+  let tmp;
+  ({ stats, hasNitro } = savedCharacter);
+  if (savedCharacter != null) {
+    tmp = savedCharacter[item];
+  }
+  if (tmp === arg1) {
+    return false;
+  } else {
+    let tmp4;
+    if (null != obj[item][arg1]) {
+      if (typeof f89168 === "function") {
+        if (closure_131_0.has(tmp11)) {
+          tmp4 = tmp11;
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    if (null == tmp4) {
+      let tmp8 = obj4[item] !== arg1;
+    } else if (tmp4 === CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
+      tmp8 = !hasNitro;
+    } else {
+      obj = getVisibleTraitRarities(item, stats);
+      tmp8 = !obj.has(tmp4);
+    }
+    return tmp8;
+  }
+}
 export function getOutfitColorOptionIds(NONE) {
   if (null != obj5[NONE]) {
-    let items = dependencyMap[tmp];
+    items = dependencyMap[tmp];
     if (items == null) {
       items = [];
     }

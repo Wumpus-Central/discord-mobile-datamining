@@ -2,8 +2,6 @@
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useFontScale from "../../../screen/native/useFontScale.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
@@ -13,12 +11,9 @@ import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/ge
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import useFormattedMessagePreview from "../../../message_previews/useFormattedMessagePreview.tsx";
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import MessagePreviewMarkup from "../../../message_previews/native/MessagePreviewMarkup.tsx";
-import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
-import ChannelListLayout from "guild_channels/layouts/ChannelListLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
@@ -64,95 +59,142 @@ function PreviewIcon(icon) {
 }
 class ChannelRowPreview {
   constructor(arg0) {
-    ({ message, channel, layout, lineClamp } = global);
-    if (lineClamp === undefined) {
-      lineClamp = 1;
+    message = global.message;
+    channel = global.channel;
+    layout = global.layout;
+    num = global.lineClamp;
+    if (num === undefined) {
+      num = 1;
     }
-    ({ variant, color, muted } = global);
-    tmp = closure_0;
-    tmp2 = closure_2;
-    obj = closure_0(closure_2[12]);
+    muted = global.muted;
+    ({ variant, color } = global);
+    closure_4 = undefined;
+    color = undefined;
+    content = undefined;
+    tmp = message;
+    tmp2 = layout;
+    obj = message(layout[12]);
     fontScale = obj.useFontScale();
-    obj2 = closure_0(closure_2[14]);
+    closure_4 = fontScale;
+    obj2 = message(layout[13]);
     formattedMessagePreview = obj2.useFormattedMessagePreview(message, channel);
-    obj3 = closure_0(closure_2[15]);
+    obj3 = message(layout[14]);
     layoutStyles = obj3.getLayoutStyles(layout);
-    tmp6 = closure_0(closure_2[16]);
+    obj4 = message(layout[15]);
+    scaleTextLineHeightResult = obj4.scaleTextLineHeight(layoutStyles.messagePreview.text.variant, fontScale);
+    if (color == null) {
+      color1 = undefined;
+      if (formattedMessagePreview != null) {
+        color1 = formattedMessagePreview.color;
+      }
+      color = color1;
+    }
+    type1 = undefined;
+    if (formattedMessagePreview != null) {
+      type1 = formattedMessagePreview.type;
+    }
+    if ("markup" === type1) {
+      content = formattedMessagePreview.markup;
+    } else {
+      str = "message";
+      if ("message" === type1) {
+        content = formattedMessagePreview.message.content;
+      }
+    }
+    items = [, , , , , ,];
+    items[0] = content;
+    items[1] = muted;
+    items[2] = channel.guild_id;
+    items[3] = message.channel_id;
+    items[4] = layout;
+    items[5] = color;
+    items[6] = fontScale;
+    memo = muted.useMemo(() => {
+      let result;
+      if (null != content) {
+        const obj2 = {
+          content: tmp,
+          muted,
+          guildId: channel.guild_id,
+          channelId: message.channel_id,
+          layout,
+          color,
+          fontScale,
+        };
+        result = MessagePreviewMarkup.renderMeasuredMessagePreviewMarkup(obj2);
+      }
+      return result;
+    }, items);
     if (null == formattedMessagePreview) {
       return null;
     } else {
-      ({ authorLabel, trailingIcon } = formattedMessagePreview);
-      if (color == null) {
-        color = formattedMessagePreview.color;
-      }
-      type = formattedMessagePreview.type;
-      str = "text";
+      ({ authorLabel, trailingIcon, type } = formattedMessagePreview);
+      str5 = "text";
       if ("text" === type) {
         text = formattedMessagePreview.text;
-      } else {
-        str2 = "markup";
-        if ("markup" === type) {
-          tmp8 = jsx;
-          tmp9 = closure_9;
-          if ("markup" === formattedMessagePreview.type) {
-            content = formattedMessagePreview.markup;
-          } else {
-            content = formattedMessagePreview.message.content;
-          }
-          obj1 = { markup: null, channelId: null, guildId: null, muted: null, layout: null, color: null };
-          obj1.markup = content;
-          obj1.channelId = message.channel_id;
-          obj1.guildId = channel.guild_id;
-          obj1.muted = muted;
-          obj1.layout = layout;
-          obj1.color = color;
-          text = tmp8(tmp9, obj1);
-        } else {
-          str3 = "message";
+      } else if ("markup" === type) {
+        content1 = undefined;
+        if (memo != null) {
+          content1 = memo.content;
         }
+        text = content1;
+      } else {
+        str2 = "message";
       }
-      tmp10 = jsxs;
-      obj9 = { style: null, children: null };
-      obj10 = { flexDirection: "row", alignItems: "center", minHeight: null };
-      obj10.minHeight = tmp7;
-      obj9.style = obj10;
-      tmp11 = View;
-      obj11 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
-      obj11.lineClamp = lineClamp;
+      obj1 = { style: null, children: null };
+      obj9 = { flexDirection: "row", alignItems: "center", minHeight: null };
+      obj9.minHeight = scaleTextLineHeightResult;
+      obj1.style = obj9;
+      tmp13 = content;
+      tmp11 = jsxs;
+      tmp12 = closure_4;
+      obj10 = {
+        lineClamp: null,
+        variant: null,
+        maxFontSizeMultiplier: 1.75,
+        color: null,
+        leadingContent: null,
+        mentions: null,
+        style: null,
+        children: null,
+      };
+      obj10.lineClamp = num;
       if (variant == null) {
         variant = "text-sm/normal";
       }
-      obj11.variant = variant;
-      obj11.color = color;
-      obj11.style = { paddingBottom: 2, flexShrink: 1 };
-      combined = null != authorLabel;
-      if (combined) {
-        tmp13 = globalThis;
+      obj10.variant = variant;
+      obj10.color = color;
+      combined = undefined;
+      if (null != authorLabel) {
+        tmp15 = globalThis;
         _HermesInternal = HermesInternal;
-        str4 = ": ";
-        str5 = "";
+        str3 = ": ";
+        str4 = "";
         combined = "" + authorLabel + ": ";
       }
-      items = [,];
-      items[0] = combined;
-      items[1] = text;
-      obj11.children = items;
-      items1 = [,];
-      items1[0] = tmp10(tmp(tmp2[17]).Text, obj11);
-      tmp14 = null != trailingIcon;
-      if (tmp14) {
-        tmp15 = jsx;
-        tmp16 = PreviewIcon;
-        obj12 = { icon: null, size: null, color: null, style: null };
-        obj12.icon = trailingIcon;
-        obj12.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
-        obj12.color = color;
-        obj12.style = { marginLeft: 4 };
-        tmp14 = jsx(PreviewIcon, obj12);
+      obj10.leadingContent = combined;
+      mentions = undefined;
+      if (memo != null) {
+        mentions = memo.mentions;
       }
-      items1[1] = tmp14;
-      obj9.children = items1;
-      return tmp10(tmp11, obj9);
+      obj10.mentions = mentions;
+      obj10.style = { paddingBottom: 2, flexShrink: 1 };
+      obj10.children = text;
+      items1 = [,];
+      items1[0] = tmp13(tmp(tmp2[17]).MessagePreviewParagraph, obj10);
+      tmp13Result = null != trailingIcon;
+      if (tmp13Result) {
+        tmp18 = PreviewIcon;
+        obj11 = { icon: null, size: null, color: null, style: null };
+        obj11.icon = trailingIcon;
+        obj11.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
+        obj11.color = color;
+        obj11.style = { marginLeft: 4 };
+        tmp13Result = tmp13(PreviewIcon, obj11);
+      }
+      items1[1] = tmp13Result;
+      obj1.children = items1;
+      return tmp11(tmp12, obj1);
     }
   }
 }
@@ -249,27 +291,14 @@ class NativeChannelRowPreview {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let closure_9 = noop.memo(function PreviewMarkup(arg0) {
-  ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = useFontScale.useFontScale();
-  return MessagePreviewMarkup.renderMessagePreviewMarkup({
-    content,
-    muted,
-    guildId,
-    channelId,
-    layout,
-    color,
-    fontScale,
-  });
-});
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };
 export const NativeMessageChannelRowPreview = noop.memo(function NativeMessageChannelRowPreview(message) {
   _require = message;
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   const items1 = [message.message.author.id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

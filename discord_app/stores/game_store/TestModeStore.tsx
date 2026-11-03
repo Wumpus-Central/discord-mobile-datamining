@@ -31,7 +31,7 @@ prototype["initialize"] = function initialize(arg0) {
   testModeApplicationId = obj.applicationId;
   originURL = obj.originURL;
   this.waitFor(LibraryApplicationStore, SelectivelySyncedUserSettingsStore, UserSettingsProtoStore);
-  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
+  items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   this.syncWith(items, () => true);
   LibraryApplicationStore.whenInitialized(() => {
     c11 = true;

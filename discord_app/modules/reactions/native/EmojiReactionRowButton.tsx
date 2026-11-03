@@ -10,9 +10,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5014);
+let createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = {
@@ -27,7 +27,7 @@ let closure_6 = createStyles.createStyles((width) => {
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5014);
+createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = {
@@ -63,7 +63,7 @@ export function EmojiPickerRowButton(iconSize) {
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t.lfIHs4);
   obj3.onPress = onPress;
-  const items = [tmp.emojiContainer, styles];
+  items = [tmp.emojiContainer, styles];
   obj3.style = items;
   const obj4 = {
     color: shared.isThemeLight(obj.useThemeContext().theme)
@@ -116,7 +116,7 @@ export function EmojiReactionRowButton(emoji) {
   obj2.accessibilityLabel = intl.formatToPlainString(util.t["/iYSo6"], { emojiName: name });
   obj2.disabled = null == animated;
   obj2.onPress = onPress;
-  const items = [tmp.emojiContainer, styles];
+  items = [tmp.emojiContainer, styles];
   obj2.style = items;
   if (null == animated) {
     obj2.children = null;
@@ -131,7 +131,7 @@ export function EmojiReactionRowButton(emoji) {
     }
     obj5.name = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1409);
+      const emojiURL = getEmojiURL(1411);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj.id, animated } = animated);

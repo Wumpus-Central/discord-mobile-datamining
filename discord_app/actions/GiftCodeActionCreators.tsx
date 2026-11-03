@@ -29,7 +29,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -145,7 +145,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
             product = closure_132_5.getProduct(closure_131_3.sku_id);
             let someResult;
             if (product != null) {
-              const items = tmp66.items;
+              items = tmp66.items;
               someResult = items.some(closure_132_6);
             }
             if (true === someResult) {
@@ -223,11 +223,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7728).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7852).isUnknownCollectiblesItemRecord;
 const Constants = fn(1072);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
-let closure_10 = fn(1385).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11373).default);
+let closure_10 = fn(1387).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(11511).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

@@ -14,14 +14,14 @@ get_ActivityIndicator = fn(17);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   title: { textAlign: "center", fontSize: 18 },
   subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   subtitle: { textAlign: "center" },
   nitroWheelIcon: null,
 };
-const PlatformUtils = fn(1375);
+const PlatformUtils = fn(1377);
 let tmp5;
 if (PlatformUtils.isAndroid()) {
   let items = [{ translateY: 2 }];
@@ -60,7 +60,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     numMembers: memberCount,
     maxMemberLimit: recipientLimit,
   });
-  const items = [
+  items = [
     timestampProducer(Text_Text.Text, {
       lineClamp: 1,
       variant: token,

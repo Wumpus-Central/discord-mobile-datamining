@@ -86,7 +86,7 @@ function DomainScreen(onClose) {
   const obj3 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl = onClose(first[11]).intl;
   obj3.children = intl.string(onClose(first[11]).t.NxPUqY);
-  const items = [closure_8(onClose(first[10]).Text, obj3), ,];
+  items = [closure_8(onClose(first[10]).Text, obj3), ,];
   const obj4 = {
     autoFocus: true,
     style: tmp.input,
@@ -127,7 +127,7 @@ function DNSProofScreen(proof) {
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
   obj3.children = intl.string(require("util").t.cSURbq);
-  const items = [closure_8(require("Text/Text").Text, obj3), , , ,];
+  items = [closure_8(require("Text/Text").Text, obj3), , , ,];
   const obj4 = { style: tmp.dns, children: null };
   const obj5 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
@@ -244,7 +244,7 @@ function HTTPProofScreen(children) {
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.p4ql7y);
-  const items = [closure_8(Text_Text.Text, obj3), , , ,];
+  items = [closure_8(Text_Text.Text, obj3), , , ,];
   const obj4 = { style: tmp.dns, children: null };
   const obj5 = { variant: "text-md/normal", children: null };
   const intl2 = util.intl;
@@ -343,7 +343,7 @@ const Constants = fn(1072);
 ({ Endpoints: metroRequire, PlatformTypes: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   description: { textAlign: "center" },
@@ -374,7 +374,7 @@ export default function DomainVerifyModal(arg0) {
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1113).intl;
     obj2.headerTitle = intl.string(onClose(1113).t["7lo8+e"]);
-    obj2.headerLeft = onClose(6998).getHeaderBackButton(onClose);
+    obj2.headerLeft = onClose(7124).getHeaderBackButton(onClose);
     obj2.render = function render() {
       return React6(DomainScreen, { onClose });
     };
@@ -382,8 +382,8 @@ export default function DomainVerifyModal(arg0) {
     const obj4 = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1113).intl;
     obj4.headerTitle = intl2.string(onClose(1113).t["7lo8+e"]);
-    const obj3 = onClose(6998);
-    obj4.headerLeft = onClose(6998).getHeaderBackButton(onClose);
+    const obj3 = onClose(7124);
+    obj4.headerLeft = onClose(7124).getHeaderBackButton(onClose);
     obj4.render = function render(domain) {
       return React6(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -391,8 +391,8 @@ export default function DomainVerifyModal(arg0) {
     const obj6 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1113).intl;
     obj6.headerTitle = intl3.string(onClose(1113).t["7lo8+e"]);
-    const obj5 = onClose(6998);
-    obj6.headerLeft = onClose(6998).getHeaderBackButton(onClose);
+    const obj5 = onClose(7124);
+    obj6.headerLeft = onClose(7124).getHeaderBackButton(onClose);
     obj6.render = function render(domain) {
       return React6(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -400,6 +400,6 @@ export default function DomainVerifyModal(arg0) {
     const obj8 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = onClose(1113).intl;
     obj8.headerBackTitle = intl4.string(onClose(1113).t["13/7kX"]);
-    return closure_8(onClose(7169).Navigator, obj8);
+    return closure_8(onClose(7290).Navigator, obj8);
   }
 }

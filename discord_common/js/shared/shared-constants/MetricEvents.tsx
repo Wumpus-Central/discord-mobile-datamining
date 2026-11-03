@@ -61,10 +61,6 @@ const obj = {
     "socket_crashed",
     "spam_message_request_error_view",
     "spam_message_request_view",
-    "wasm_asset_body_duration",
-    "wasm_asset_decoded_bytes",
-    "wasm_asset_encoded_bytes",
-    "wasm_asset_fetch_duration",
   ]),
   DEPRECATED: null,
 };
@@ -127,15 +123,15 @@ const set = new Set([
   "socket_crashed",
   "spam_message_request_error_view",
   "spam_message_request_view",
-  "wasm_asset_body_duration",
-  "wasm_asset_decoded_bytes",
-  "wasm_asset_encoded_bytes",
-  "wasm_asset_fetch_duration",
 ]);
 obj.DEPRECATED = new Set([
   "debug_ota_200_timeout",
   "rtc_connection_desync_store_unknown_user",
   "rtc_connection_duplicate_user",
+  "wasm_asset_body_duration",
+  "wasm_asset_decoded_bytes",
+  "wasm_asset_encoded_bytes",
+  "wasm_asset_fetch_duration",
 ]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MetricEvents.tsx");
 

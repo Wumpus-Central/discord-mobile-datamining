@@ -273,8 +273,9 @@ const obj = {
   871: null,
   872: null,
   873: null,
+  874: null,
+  875: { is_server_arbitrated: false },
 };
-obj[272] = { is_server_arbitrated: false };
 obj[275] = { is_server_arbitrated: false };
 obj[278] = { is_server_arbitrated: false };
 obj[280] = { is_server_arbitrated: false };
@@ -500,6 +501,8 @@ obj[870] = { is_server_arbitrated: false };
 obj[871] = { is_server_arbitrated: false };
 obj[872] = { is_server_arbitrated: false };
 obj[873] = { is_server_arbitrated: false };
+obj[874] = { is_server_arbitrated: false };
+obj[875] = { is_server_arbitrated: false };
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/DismissibleContentSettings.tsx",
 );

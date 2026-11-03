@@ -33,7 +33,7 @@ export function Caption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };
-  const items = [tmp.labelContainer, style];
+  items = [tmp.labelContainer, style];
   obj.style = items;
   const obj2 = { style: null, children: label };
   const items1 = [tmp.captionText, textStyle];

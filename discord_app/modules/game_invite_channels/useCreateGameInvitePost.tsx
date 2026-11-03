@@ -9,9 +9,9 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7830).SlowmodeType;
+const SlowmodeType = fn(7954).SlowmodeType;
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const ChannelFlags = fn(4870).ChannelFlags;
+const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
@@ -32,7 +32,7 @@ export function useCreateGameInvitePost(parentChannel) {
   let obj = parentChannel(applicationIdsForGame[8]);
   applicationIdsForGame = parentChannel(applicationIdsForGame[9]).useApplicationIdsForGame(parentChannel.gameId);
   let obj2 = parentChannel(applicationIdsForGame[9]);
-  const items = [c6, c7];
+  items = [c6, c7];
   const items1 = [applicationIdsForGame];
   const stateFromStores = parentChannel(applicationIdsForGame[10]).useStateFromStores(
     items,
@@ -162,7 +162,7 @@ export function useCreateGameInvitePost(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

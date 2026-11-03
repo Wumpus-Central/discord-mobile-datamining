@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;
   const guild_id = instance.guild_id;
-  const items = [instance];
+  items = [instance];
   let obj2;
   let obj = dependencyMap[guild_id];
   if (obj == null) {

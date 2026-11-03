@@ -27,7 +27,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
   }
 };
 function trackLibdiscoreSuccess() {
-  const items = [];
+  items = [];
   const prop = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((getEnabledFeatureName) => {
     const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();

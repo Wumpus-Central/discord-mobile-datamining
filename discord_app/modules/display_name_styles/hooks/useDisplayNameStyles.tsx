@@ -26,7 +26,7 @@ export default function useDisplayNameStyles() {
   });
   const obj2 = require("useDisplayNameStylesEnabled");
   const tmp2 = stateFromStores;
-  const items = [UserStore];
+  items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != require) {
       let user = UserStore.getUser(tmp);

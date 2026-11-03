@@ -35,8 +35,8 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1113).intl;
   obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5624).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(6980).PressableHighlight, {
+  obj.children = jsx(searchContext(5747).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(7106).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -68,14 +68,14 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(9827);
+const SearchConstants = fn(9958);
 ({
-  EMPTY_SEARCH_QUERY_STRING: c10,
+  EMPTY_SEARCH_QUERY_STRING: closure_10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13902).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(14033).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {
@@ -85,7 +85,7 @@ let closure_19 = noop.memo(function RecentScreen(searchContext) {
   c6 = undefined;
   let onPressMediaItem;
   let fullscreenPlaceholderCount;
-  let items = [onPressMediaItem, c6];
+  items = [onPressMediaItem, c6];
   const stateFromStoresObject = searchContext(suggestedData[20]).useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, constants2.MEDIA, searchResultsQuery);
@@ -131,7 +131,7 @@ let closure_19 = noop.memo(function RecentScreen(searchContext) {
   const memo = isInitialSearchQuery.useMemo(() => {
     if (null != messages) {
       if (0 !== messages.length) {
-        const items = [];
+        items = [];
         const obj2 = messages[Symbol.iterator]();
         while (obj2 !== undefined) {
           let obj = SearchPlatformUtils;
@@ -183,7 +183,7 @@ let closure_19 = noop.memo(function RecentScreen(searchContext) {
   ];
   const items5 = [isLoadingMediaGrid, tmp6];
   const data = isInitialSearchQuery.useMemo(() => {
-    const items = [];
+    items = [];
     if (!isInitialSearchQuery) {
       if (0 === items.length) {
         for (let num3 = 0; num3 < fullscreenPlaceholderCount; num3 = num3 + 1) {
@@ -270,7 +270,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
             const result = tmp2(onPressDMItem[18]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;
@@ -313,7 +313,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
       }
     })();
   });
-  let items = [onPressDMItem, searchContext];
+  items = [onPressDMItem, searchContext];
   const callback = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
@@ -327,7 +327,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
   const items1 = [callback, tmp];
   let obj3 = {};
   const memo = noop.useMemo(() => {
-    const items = [];
+    items = [];
     if (0 !== length.length) {
       let item = length.forEach((item) => {
         ({ title, items } = item);
@@ -360,7 +360,7 @@ let closure_21 = noop.memo(function RecentGuildScreen(searchContext) {
   let isLoadingSuggestedSearches;
   const searchContextId = searchContext(stateFromStores[19]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[19]);
-  let items = [isLoadingSuggestedSearches];
+  items = [isLoadingSuggestedSearches];
   stateFromStores = searchContext(stateFromStores[20]).useStateFromStores(items, () =>
     SearchGuildChannelTabStore.getTextChannels(closure_1),
   );
@@ -385,7 +385,7 @@ let closure_21 = noop.memo(function RecentGuildScreen(searchContext) {
   const items4 = [onPress, memo1, memo, suggestedSearches, isLoadingSuggestedSearches];
   const obj5 = {};
   const memo2 = memo1.useMemo(() => {
-    const items = [];
+    items = [];
     if (0 === suggestedSearches.length) {
       if (!isLoadingSuggestedSearches) {
         if (0 === memo.length) {

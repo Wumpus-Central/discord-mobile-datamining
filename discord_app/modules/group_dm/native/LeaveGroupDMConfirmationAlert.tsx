@@ -14,7 +14,7 @@ function LeaveGroupDMConfirmationAlert(onConfirm) {
   checked = undefined;
   ({ title, body, confirmText, cancelText } = onConfirm);
   [checked, obj3.onPress] = noop.useState(false);
-  const items = [onConfirm, checked];
+  items = [onConfirm, checked];
   const callback = noop.useCallback(() => onConfirm(first), items);
   const obj = { title, content: body, extraContent: null, actions: null };
   const obj2 = { hasIcons: false, children: null };

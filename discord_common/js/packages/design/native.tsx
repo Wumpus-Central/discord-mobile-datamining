@@ -67,8 +67,8 @@ for (const key10075 in require("components/Rive/native/generated/index.tsx")) {
   arg5[key10075] = require("components/Rive/native/generated/index.tsx")[key10075];
   continue;
 }
-for (const key10079 in require("Colors")) {
-  arg5[key10079] = require("Colors")[key10079];
+for (const key10079 in require("shared/Colors")) {
+  arg5[key10079] = require("shared/Colors")[key10079];
   continue;
 }
 

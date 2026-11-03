@@ -14,13 +14,13 @@ const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
   ChatInputComponentViewedTypes: closure_9,
-  GIF_FETCH_LIMIT_IOS: c10,
+  GIF_FETCH_LIMIT_IOS: closure_10,
   GIFPickerResultTypes: closure_11,
   TooltipNames: closure_12,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
@@ -39,7 +39,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   c13 = undefined;
   closure_15 = undefined;
   ({ selectedGifSrc, keyboardDismissMode } = bottomSheetRef);
-  const items = [channelId, guildId];
+  items = [channelId, guildId];
   const effect = onPressGIF.useEffect(() => {
     GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
@@ -188,7 +188,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   const items9 = [onPressGIF, resultItems.length, resultQuery];
   const memo2 = onPressGIF.useMemo(
     () =>
-      map1(GIFPickerSearchSuggestionsDefault, {
+      state(GIFPickerSearchSuggestionsDefault, {
         onClickSuggestion(dependencyMap) {
           return callback2(dependencyMap, false);
         },

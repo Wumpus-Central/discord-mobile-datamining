@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 
 export function useLiveStageData(stage) {
   _require = stage;
-  let items = [memo1];
+  items = [memo1];
   const items1 = [stage.channel_id];
   const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(
     items,
@@ -68,7 +68,7 @@ export function useLiveStageData(stage) {
   const items6 = [stateFromStoresArray, stateFromStoresArray1];
   const items7 = [stateFromStoresArray, stateFromStoresArray1];
   const memo = stateFromStoresArray2.useMemo(() => {
-    const items = [...stateFromStoresArray1];
+    items = [...stateFromStoresArray1];
     return _modDef12.uniqBy(items, (id) => id.id);
   }, items6);
   memo1 = stateFromStoresArray2.useMemo(
@@ -82,7 +82,7 @@ export function useLiveStageData(stage) {
   );
   const items9 = [memo1, memo2];
   const memo3 = stateFromStoresArray2.useMemo(() => {
-    const items = [...memo2];
+    items = [...memo2];
     return items;
   }, items9);
   const obj3 = require("useStateFromStores");

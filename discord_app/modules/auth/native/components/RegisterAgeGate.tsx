@@ -5,20 +5,20 @@ import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
-import hooks_mod from "../../../../../_runtime/metro/02042__.js";
+import hooks_mod from "../../../../../_runtime/metro/02171__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(17989);
+const RegistrationUIStore = fn(18132);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(17990);
-({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
+const RegistrationConstants = fn(18133);
+({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: closure_10 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   inputGroup: { marginTop: 24, marginBottom: 24 },
   flexGrow: { flexGrow: 1 },
@@ -55,7 +55,7 @@ export default function RegisterAgeGate() {
   [birthday, _slicedToArray] = first1.useState(tmp5);
   const consent = state.getState().registrationOptions.consent;
   [first1, closure_5] = first1.useState(null != consent && consent);
-  const items = [birthday];
+  items = [birthday];
   const memo = obj3.useMemo(() => {
     let toDateResult;
     if (first != null) {

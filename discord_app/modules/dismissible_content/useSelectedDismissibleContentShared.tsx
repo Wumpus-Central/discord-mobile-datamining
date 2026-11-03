@@ -5,7 +5,7 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
@@ -24,7 +24,7 @@ export function useSelectedDismissibleContentShared(arg0, arg1) {
     tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
   }
   closure_3 = tmp;
-  const items = [tmp, arg1, arg0, id];
+  items = [tmp, arg1, arg0, id];
   const effect = noop.useEffect(
     () => () => {
       let tmp = closure_1_3;
@@ -36,7 +36,7 @@ export function useSelectedDismissibleContentShared(arg0, arg1) {
         }
         let tmp6 = content !== closure_1_0;
         if (!tmp6) {
-          let result = closure_0(4854).isGuildDismissibleContent(tmp5);
+          let result = closure_0(4981).isGuildDismissibleContent(tmp5);
           if (result) {
             const lastDismissed2 = tmp2.lastDismissed;
             let guildId;
@@ -46,7 +46,7 @@ export function useSelectedDismissibleContentShared(arg0, arg1) {
             result = guildId !== id;
           }
           tmp6 = result;
-          const obj = closure_0(4854);
+          const obj = closure_0(4981);
         }
         tmp = tmp6;
         tmp2 = lastDismissed;

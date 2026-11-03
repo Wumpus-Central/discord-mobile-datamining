@@ -72,7 +72,7 @@ function handleAddItem(type) {
       if (!notifCenterIds.has(item.id)) {
         const notifCenterIds2 = obj.notifCenterIds;
         notifCenterIds2.add(item.id);
-        const items = [item];
+        items = [item];
         HermesBuiltin.arraySpread(obj.notifCenterItems, 1);
         obj.notifCenterItems = items;
         const notifCenterItems = obj.notifCenterItems;
@@ -97,7 +97,7 @@ function handleRelationshipAddOrUpdate(relationship) {
         } else if (null != user) {
           const user1 = UserStore.getUser(user.id);
           if (null != user1) {
-            const items = [];
+            items = [];
             obj = relationship(user[8]);
             items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(
               user1,
@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6855).isGuildEventEnded;
+const isGuildEventEnded = fn(6975).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 let obj = {
   loading: false,
@@ -322,7 +322,7 @@ NotificationCenterItemsStore.displayName = "NotificationCenterItemsStore";
 NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
 const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
-    const items = [];
+    items = [];
     const set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((item) => {
@@ -598,8 +598,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     } else if (type === RelationshipTypes.PENDING_INCOMING) {
       const user = UserStore.getUser(id);
       if (tmp6) {
-        const items = [];
-        obj = id(6860);
+        items = [];
+        obj = id(6980);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -731,7 +731,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const prop = obj.notifCenterLocalItems;
       if (undefined === prop.find((local_id) => local_id.local_id === _undefined.local_id)) {
         const prop1 = obj.notifCenterLocalItems;
-        const items = [];
+        items = [];
         items[
           HermesBuiltin.arraySpread(
             prop1.filter((type) => type.type !== _undefined.type),

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 
 export function useGameProfileReviewDisplayData(game, steamWebsiteUrl) {
   closure_1 = steamWebsiteUrl;
-  const items = [game, steamWebsiteUrl];
+  items = [game, steamWebsiteUrl];
   return noop.useMemo(() => {
     const reviews = game.reviews;
     let steam;

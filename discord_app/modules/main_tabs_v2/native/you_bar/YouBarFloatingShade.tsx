@@ -5,7 +5,7 @@ import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/Colo
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,11 +13,11 @@ import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBack
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17075).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(18358).GUILD_LIST_WIDTH;
+let closure_5 = fn(17218).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(18503).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
@@ -36,7 +36,7 @@ export default noop.memo(function YouBarFloatingShade() {
   const tmp2Result = client_themes_ClientThemesUtils;
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
   const tmp2Result6 = useToken;
-  const items = [ClientThemesBackgroundStore];
+  items = [ClientThemesBackgroundStore];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const tmp2Result7 = initialize;
   let token1 = null;

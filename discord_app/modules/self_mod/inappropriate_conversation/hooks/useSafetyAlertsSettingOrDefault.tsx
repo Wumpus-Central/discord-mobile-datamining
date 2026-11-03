@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 
 export function useSafetyAlertsSettingOrDefault() {
   const currentUser = UserStore.getCurrentUser();
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;

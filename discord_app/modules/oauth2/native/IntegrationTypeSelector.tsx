@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { alignItems: "center", flexDirection: "column" },
   header: { justifyContent: "center", alignItems: "center", gap: 16, marginTop: 24, marginBottom: 32, width: "100%" },
@@ -61,7 +61,7 @@ export default function IntegrationTypeSelector(application) {
   application = application.application;
   const onSelect = application.onSelect;
   const tmp = styles();
-  let items = [,];
+  items = [,];
   ({ icon: arr[0], id: arr[1] } = application);
   const memo = noop.useMemo(
     () => AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon }),
@@ -80,7 +80,7 @@ export default function IntegrationTypeSelector(application) {
     obj.label = intl.string(util.t.aCg60P);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.YeiIUZ);
-    const items = [obj];
+    items = [obj];
     const obj2 = {
       type: ApplicationIntegrationType.ApplicationIntegrationType.GUILD_INSTALL,
       icon: ServerIcon.ServerIcon,
@@ -121,7 +121,7 @@ export default function IntegrationTypeSelector(application) {
   const items3 = [
     tmp6(closure_4, { style: tmp.appIconMask, children: tmp5 }),
     tmp6(application(memo1[11]).Text, {
-      variant: "heading-lg/bold",
+      variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),

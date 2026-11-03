@@ -87,8 +87,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(4867).createChannelRecord;
-let closure_4 = fn(4876).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(4994).createChannelRecord;
+let closure_4 = fn(5003).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1072);
 ({ ChannelTypes: hasOwnProperty, FAVORITES: metroRequire } = Constants);
 let value2 = false;
@@ -98,7 +98,7 @@ const prototype = FavoriteStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserSettingsProtoStore);
   initializeFromUserSettings();
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   this.syncWith(items, initializeFromUserSettings);
 };
 prototype["getFavoriteChannels"] = function getFavoriteChannels() {

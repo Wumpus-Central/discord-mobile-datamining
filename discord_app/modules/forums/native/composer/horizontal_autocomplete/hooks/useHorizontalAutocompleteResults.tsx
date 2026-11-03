@@ -20,7 +20,7 @@ export function useHorizontalAutocompleteResults(channel) {
   closure_4 = undefined;
   closure_9 = undefined;
   [first, closure_4] = first.useState([]);
-  let items = [channel];
+  items = [channel];
   const memo = first.useMemo(() => AutocompleteOptions.getAutocompleteOptions(channel, false, false), items);
   [first1, closure_9] = first.useState({ text, selectionStart: selection.start, selectionEnd: selection.end });
   const text2 = first1.text;
@@ -88,7 +88,7 @@ export function useHorizontalAutocompleteResults(channel) {
           }
           let obj2 = { query: tmp11, autocompleteType: tmp12, autocompleteSelectionStart: tmp10, queryOptions: null };
           let obj3 = { includeEmojiPremiumUpsell: false, channelTypes: null };
-          let items = [, , ,];
+          items = [, , ,];
           ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
           obj3.channelTypes = items;
           obj2.queryOptions = obj3;

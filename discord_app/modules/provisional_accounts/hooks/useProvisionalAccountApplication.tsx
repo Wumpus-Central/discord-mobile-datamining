@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/us
 
 export default function useProvisionalAccountApplication(arg0) {
   _require = arg0;
-  const items = [GameRelationshipStore];
+  items = [GameRelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const gameRelationshipsForUser = GameRelationshipStore.getGameRelationshipsForUser(closure_0);
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;

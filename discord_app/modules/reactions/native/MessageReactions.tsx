@@ -23,7 +23,7 @@ export default function MessageReactions(emoji) {
   closure_129_0 = channelId;
   closure_129_1 = messageId;
   const tmp3 = useAnalyticsLocationsDefault;
-  const items = [MessageStore];
+  items = [MessageStore];
   const items1 = [channelId, messageId];
   const stateFromStores = items3(504).useStateFromStores(
     items,
@@ -81,7 +81,7 @@ export default function MessageReactions(emoji) {
   if (items3.length > 0) {
     let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = jsx(tmp4(10094).MessageReactionsContent, {
+    let tmp9Result = jsx(tmp4(10224).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
@@ -89,10 +89,10 @@ export default function MessageReactions(emoji) {
       isSelectedBurst,
     });
   } else {
-    tmp9Result = jsx(tmp4(10094).MessageReactionsEmpty, {});
+    tmp9Result = jsx(tmp4(10224).MessageReactionsEmpty, {});
   }
   obj2.children = tmp9Result;
-  return jsx(items3(7326).AnalyticsLocationProvider, {
+  return jsx(items3(7446).AnalyticsLocationProvider, {
     value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations,
     children: null,
   });

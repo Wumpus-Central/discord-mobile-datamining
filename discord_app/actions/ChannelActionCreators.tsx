@@ -18,11 +18,11 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4867).createChannelRecordFromServer;
+let closure_6 = fn(4994).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_9,
-  AbortCodes: c10,
+  AbortCodes: closure_10,
   Endpoints: closure_11,
   Routes: closure_12,
   ChannelTypes: map1,
@@ -60,7 +60,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -400,7 +400,7 @@ export default {
       const _Array = Array;
       let tmp2 = _require;
       if (!Array.isArray(_require)) {
-        const items = [_require];
+        items = [_require];
         tmp2 = items;
       }
       let items1 = tmp2;
@@ -615,8 +615,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7498).checkGuildTemplateDirty(closure_128_2);
-        name(7498);
+        const result = name(7622).checkGuildTemplateDirty(closure_128_2);
+        name(7622);
       }
       return closure_128_1;
     })();
@@ -636,7 +636,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -780,7 +780,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

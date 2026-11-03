@@ -59,7 +59,7 @@ function useName(guildId, channelId, user) {
   _require = guildId;
   closure_1 = channelId;
   dependencyMap = user;
-  const items = [GuildMemberStore, ChannelStore, RelationshipStore];
+  items = [GuildMemberStore, ChannelStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
 }
 const size = fn(2);

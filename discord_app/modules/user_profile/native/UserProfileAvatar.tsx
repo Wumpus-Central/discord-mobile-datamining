@@ -33,8 +33,8 @@ class UserProfileAvatar {
   }
 }
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8754).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7377).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8878).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7497).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let size = fn(2);
@@ -53,7 +53,7 @@ export function OpenableUserProfileAvatar(animate) {
   ref = ref.useRef(null);
   const trackUserProfileAction = flag(guildId[7]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp5 = null != user.avatar || user.hasAvatarForGuild(guildId);
-  const items = [flag, guildId, trackUserProfileAction, user];
+  items = [flag, guildId, trackUserProfileAction, user];
   const obj3 = { ref };
   const callback = ref.useCallback(() => {
     trackUserProfileAction({ action: TrackUserProfileActions.VIEW_AVATAR });

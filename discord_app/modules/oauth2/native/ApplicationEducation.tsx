@@ -21,7 +21,7 @@ function ApplicationEducationEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  const items = [
+  items = [
     iconComponentResult,
     hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", style: tmp.entryText, children: children.text }),
   ];
@@ -32,7 +32,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },
@@ -47,7 +47,7 @@ const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationEduc
 
 export default function ApplicationEducation(arg0) {
   ({ application, accountScopes } = arg0);
-  const items = [];
+  items = [];
   const tmp3 = useIsSocialLayerParentApplicationDefault(application);
   if (accountScopes.includes(OAuth2Scopes.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
     const intl5 = util.intl;

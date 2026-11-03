@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
 import v1 from "../../../../../_runtime/01266_v1.js";
-import CommonActions2 from "../../../../../_runtime/01502_CommonActions.js";
+import CommonActions2 from "../../../../../_runtime/01504_CommonActions.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -14,7 +14,7 @@ export function convertPortraitToLandscapeScreens() {
     if (null != state1) {
       const coerceMainRouteResult = NavigationRouteUtils.coerceMainRoute(state1.routes[0]);
       if (null != coerceMainRouteResult) {
-        const state2 = coerceMainRouteResult.state;
+        state2 = coerceMainRouteResult.state;
         if (null != state2) {
           if (0 !== state2.index) {
             if (null != tmpResult4.coerceChannelRoute(state2.routes[1])) {
@@ -23,7 +23,7 @@ export function convertPortraitToLandscapeScreens() {
                 const state3 = coerceTabsRouteResult.state;
                 let tmp4;
                 if (state3 != null) {
-                  const state = coerceTabsRouteResult.state;
+                  state = coerceTabsRouteResult.state;
                   let index;
                   if (state != null) {
                     index = state.index;
@@ -34,7 +34,7 @@ export function convertPortraitToLandscapeScreens() {
                   const obj2 = {};
                   const merged = Object.assign(state2);
                   obj2.index = state2.index - 1;
-                  const items = [state2.routes[0]];
+                  items = [state2.routes[0]];
                   const routes = state2.routes;
                   HermesBuiltin.arraySpread(routes.slice(2), 1);
                   obj2.routes = items;
@@ -71,7 +71,7 @@ export function convertLandscapeToPortraitScreens() {
     if (null != state1) {
       const coerceMainRouteResult = NavigationRouteUtils.coerceMainRoute(state1.routes[0]);
       if (null != coerceMainRouteResult) {
-        const state2 = coerceMainRouteResult.state;
+        state2 = coerceMainRouteResult.state;
         if (null != state2) {
           if (0 === state1.index) {
             if (0 !== state2.index) {
@@ -83,7 +83,7 @@ export function convertLandscapeToPortraitScreens() {
             const state3 = coerceTabsRouteResult.state;
             let tmp5;
             if (state3 != null) {
-              const state = coerceTabsRouteResult.state;
+              state = coerceTabsRouteResult.state;
               let index;
               if (state != null) {
                 index = state.index;
@@ -95,7 +95,7 @@ export function convertLandscapeToPortraitScreens() {
               const obj2 = {};
               const merged = Object.assign(state2);
               obj2.index = state2.index + 1;
-              const items = [state2.routes[0]];
+              items = [state2.routes[0]];
               const params3 = coerceGuildsRouteResult.params;
               let channelId;
               if (params3 != null) {

@@ -67,7 +67,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                         const merged = Object.assign(
                           tmp11Result10.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
                         );
-                        const items = [obj2];
+                        items = [obj2];
                         let tmp6 = items;
                         const tmp11Result11 = StreamKeyUtils;
                       } else {

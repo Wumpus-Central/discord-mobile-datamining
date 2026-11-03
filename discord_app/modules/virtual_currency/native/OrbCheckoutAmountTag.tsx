@@ -21,7 +21,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_5();
   const obj = { style: tmp.orbAmountTag, children: null };
-  const items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon })];
+  items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon })];
   if (null == orbAmount) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.pfChQr);

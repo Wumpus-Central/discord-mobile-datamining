@@ -34,7 +34,7 @@ function AddEmojiButton(channel) {
   const onPressEmoji = channel.onPressEmoji;
   ({ showText, disabled, handleItemInteracted } = channel);
   const tmp = closure_19();
-  const items = [channel, onPressEmoji, handleItemInteracted];
+  items = [channel, onPressEmoji, handleItemInteracted];
   const callback = noop.useCallback(() => {
     handleItemInteracted("press_reaction_picker", {
       actionGestureType: "press",
@@ -143,7 +143,7 @@ function EmojiReaction(count) {
     selected = tmp.selected;
   }
   let obj = messageId(reaction[24]);
-  const items = [GuildVerificationStore];
+  items = [GuildVerificationStore];
   const stateFromStores = messageId(reaction[16]).useStateFromStores(items, () => {
     let canChatInGuildResult = null != channel.guild_id;
     if (canChatInGuildResult) {
@@ -264,7 +264,7 @@ function ForwardButton(disabled) {
     accessibilityLabel: null,
     children: null,
   };
-  const items = [, ,];
+  items = [, ,];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
   let disabled1 = null;
   if (disabled) {
@@ -275,8 +275,8 @@ function ForwardButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.xIUfJS);
-  obj.children = __initData(ForwardingIconDefault, { size: "sm" });
-  return __initData(Pressables.PressableOpacity, obj);
+  obj.children = closure_1_15(ForwardingIconDefault, { size: "sm" });
+  return closure_1_15(Pressables.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
@@ -289,7 +289,7 @@ function ReplyButton(disabled) {
     accessibilityLabel: null,
     children: null,
   };
-  const items = [, ,];
+  items = [, ,];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
   let disabled1 = null;
   if (disabled) {
@@ -300,15 +300,15 @@ function ReplyButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
-  obj.children = __initData(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
-  return __initData(Pressables.PressableOpacity, obj);
+  obj.children = closure_1_15(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+  return closure_1_15(Pressables.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   parentMessage = parentMessage.parentMessage;
   const threadData = parentMessage.threadData;
   ({ style, handleItemInteracted } = parentMessage);
   const tmp = closure_19();
-  const items = [PermissionStore];
+  items = [PermissionStore];
   const items1 = [parentMessage, threadData.thread, handleItemInteracted];
   const stateFromStores = parentMessage(handleItemInteracted[16]).useStateFromStores(items, () =>
     PermissionStore.canWithPartialContext(constants2.VIEW_CHANNEL, { channelId: parentMessage.id }),
@@ -367,11 +367,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ MessageFlags: closure_11, Permissions: closure_12, HorizontalGradient: map1 } = Constants);
-const EmojiIntention = fn(1386).EmojiIntention;
+const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" },
@@ -481,7 +481,7 @@ export default function ICYMICardInteractionRow(message) {
   closure_129_0 = guild;
   closure_129_1 = message;
   closure_129_2 = flag2;
-  let items = [memo, obj3];
+  items = [memo, obj3];
   const stateFromStoresObject = message(hideAdditionalButtons[16]).useStateFromStoresObject(items, () => {
     if (null != channel) {
       if (null != message) {
@@ -528,7 +528,7 @@ export default function ICYMICardInteractionRow(message) {
   obj3 = { thread, messageCount, mostRecentMessage };
   const items2 = [message.reactions];
   memo = obj2.useMemo(() => {
-    const items = [];
+    items = [];
     const reactions = message.reactions;
     const item = reactions.forEach((me_vote) => {
       if (null == me_vote.me_vote) {
@@ -719,8 +719,8 @@ export default function ICYMICardInteractionRow(message) {
             isBurstReaction: reaction.type === MessageReactionsTypes.ReactionTypes.BURST,
             handleItemInteracted,
           };
-          const obj2 = { children: __initData(EmojiReaction, obj) };
-          return __initData(hasOwnProperty, obj2, "reaction-" + index);
+          const obj2 = { children: closure_2_15(EmojiReaction, obj) };
+          return closure_2_15(hasOwnProperty, obj2, "reaction-" + index);
         }),
       ];
       let tmp22Result = null;
@@ -786,7 +786,7 @@ export function useThread(id, arg1, arg2) {
   _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const items = [ChannelStore, ThreadMessageStore];
+  items = [ChannelStore, ThreadMessageStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (null != channel) {
       if (null != message) {

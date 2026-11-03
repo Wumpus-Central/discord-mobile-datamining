@@ -7,7 +7,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10978 from "../../../../../_runtime/metro/10978__.js";
+import _modDef11111 from "../../../../../_runtime/metro/11111__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -24,9 +24,9 @@ require = fn;
 function PrivateChannelSubtitle(channel) {
   channel = channel.channel;
   const tmp = closure_12();
-  const state = CallStateHooksDefault(channel.id).state;
+  state = CallStateHooksDefault(channel.id).state;
   const obj = { style: tmp.subtitleWrapper, children: null };
-  const items = [
+  items = [
     closure_1_10(OngoingCallStatusLabelDefault, {
       useAllAloneText: false,
       channel,
@@ -172,7 +172,7 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef10978,
+    iconSource: _modDef11111,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };
@@ -197,8 +197,8 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -215,7 +215,7 @@ let obj2 = {
 let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };
 obj2.subtitleWrapper = { flexDirection: "row" };
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx");
 

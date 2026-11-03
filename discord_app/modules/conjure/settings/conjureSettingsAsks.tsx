@@ -21,7 +21,7 @@ function subscribe(arg0) {
 function markSettingsRequestSaved(arg0) {
   if (!set.has(arg0)) {
     const _Set = Set;
-    const items = [];
+    items = [];
     items[HermesBuiltin.arraySpread(set, 0)] = arg0;
     set = new Set(items);
     for (const item10021 of set1) {
@@ -173,7 +173,7 @@ export function useConjureSettingsAsk(projectId, request, askId) {
   if (null != askId) {
     let hasItem = syncExternalStore.has(askId);
   }
-  let items = [askId];
+  items = [askId];
   let obj2 = { done: null, superseded: null, summary: null, markSaved: null };
   const callback = noop.useCallback(() => {
     if (null != closure_2) {
@@ -230,7 +230,7 @@ export function useConjureSettingsAsk(projectId, request, askId) {
     () => {
       const settings = ConjureSettingsStore.getSettings(closure_0);
       if (null == settings) {
-        let items = [];
+        items = [];
       } else {
         const result = conjureSettingsSummary.conjureSettingsSummary(closure_1, settings, (arg0) => {
           channel = channel.getChannel(arg0);

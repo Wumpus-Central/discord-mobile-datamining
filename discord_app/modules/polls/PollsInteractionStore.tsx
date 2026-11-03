@@ -113,7 +113,7 @@ export function clearPollState(arg0, arg1) {
   });
 }
 export function updatePollState(arg0, arg1, arg2) {
-  const state = closure_4.getState();
+  state = closure_4.getState();
   state.updatePollState(arg0, arg1, arg2);
 }
 export function getPollState(channelId, id) {

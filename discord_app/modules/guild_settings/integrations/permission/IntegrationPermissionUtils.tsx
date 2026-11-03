@@ -30,11 +30,11 @@ export function commandName(arg0, arg1) {
   return text;
 }
 export function commandPermissionChannels(arg0) {
-  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
+  items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 }
 export function commandPermissionMembersRoles(arg0) {
-  const items = [
+  items = [
     ApplicationCommandTypes.ApplicationCommandPermissionType.ROLE,
     ApplicationCommandTypes.ApplicationCommandPermissionType.USER,
   ];
@@ -46,7 +46,7 @@ export function toPermissionKey(allChannelsSentinelResult, CHANNEL) {
 export function keyPermissions(permissions) {
   return Object.fromEntries(
     permissions.map((id) => {
-      const items = ["" + id.id + ":" + id.type, id];
+      items = ["" + id.id + ":" + id.type, id];
       return items;
     }),
   );

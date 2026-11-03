@@ -8,7 +8,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const AgeGateSource = fn(1097).AgeGateSource;
-let closure_6 = fn(19392).ExistingUserAgeGateScreens;
+let closure_6 = fn(19550).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeAssuranceGateModal.tsx");
@@ -18,7 +18,7 @@ export default function AgeAssuranceGateModal(source) {
   const channelId = source.channelId;
   let stateFromStores;
   noop = undefined;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = source(stateFromStores[10]).useStateFromStores(
     items,

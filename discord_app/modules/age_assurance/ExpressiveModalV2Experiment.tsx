@@ -4,7 +4,7 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1447);
+const ApexExperiment = fn(1449);
 let obj2 = { kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null, 2: { enabled: true } };
 obj3[2] = { enabled: true };
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/ExpressiveModal
 
 export function useIsExpressiveModalV2Enabled(AUTOMATED_UNDERAGE_APPEALS) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
-  const items = [SafetyHubStore];
+  items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled(),
   );

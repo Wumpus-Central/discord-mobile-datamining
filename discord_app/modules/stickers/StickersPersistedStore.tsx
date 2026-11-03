@@ -55,7 +55,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
     global = arg0;
   }
-  const items = [StickersStore];
+  items = [StickersStore];
   self.syncWith(items, handleStickersStoreUpdate);
   const items1 = [UserSettingsProtoStore];
   self.syncWith(items1, handleUserSettingsProtoStoreChange);

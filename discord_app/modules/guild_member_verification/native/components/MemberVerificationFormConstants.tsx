@@ -1,4 +1,5 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -10,6 +11,7 @@ const result = size.fileFinishedImporting(
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
+export const SHEET_RADIUS = nativeDefault.radii.lg;
 export const SCROLL_EVENT_TIMER_MS = 16;
 export function useBannerHeight() {
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });

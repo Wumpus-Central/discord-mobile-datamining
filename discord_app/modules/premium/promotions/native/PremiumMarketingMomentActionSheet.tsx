@@ -9,10 +9,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticsPages = fn(1072).AnalyticsPages;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     display: "flex",
@@ -59,7 +59,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   const promotionId = component_id.promotionId;
   let helpArticleLinkProps;
   const tmp = closure_10();
-  const items = [helpArticleLinkProps];
+  items = [helpArticleLinkProps];
   const stateFromStores = markAsDismissed(promotionId[8]).useStateFromStores(
     items,
     () => helpArticleLinkProps.useReducedMotion,
@@ -155,7 +155,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
     closure_8(markAsDismissed(promotionId[20]).Text, {
       style: tmp.header,
       color: "mobile-text-heading-primary",
-      variant: "heading-lg/extrabold",
+      variant: "heading-lg/semibold",
       children: bottomSheetData.header,
     }),
     ,
@@ -184,7 +184,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   const obj11 = {
     style: tmp.header,
     color: "mobile-text-heading-primary",
-    variant: "heading-lg/extrabold",
+    variant: "heading-lg/semibold",
     children: bottomSheetData.header,
   };
   obj7 = { uri: bottomSheetData.assetUrl };

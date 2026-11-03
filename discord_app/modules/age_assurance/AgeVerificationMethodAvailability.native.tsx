@@ -65,7 +65,7 @@ export function useAvailableMethodsV2(methods) {
     }
     return isIOSResult;
   }, []);
-  const items = [methods, first, memo];
+  items = [methods, first, memo];
   return noop.useMemo(() => {
     methods = first;
     closure_1 = memo;

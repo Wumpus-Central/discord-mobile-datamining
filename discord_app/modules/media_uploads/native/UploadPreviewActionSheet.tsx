@@ -12,12 +12,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   contentContainer: { padding: 16 },
   imageWrap: {
@@ -72,7 +72,7 @@ export default function UploadPreviewActionSheet(onAdd) {
       tmp();
     }
   });
-  const items = [width, item, tmp];
+  items = [width, item, tmp];
   let size = noop.useMemo(() => {
     ({ height, width } = item);
     const width1 =

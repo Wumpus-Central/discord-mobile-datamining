@@ -11,12 +11,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7609).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GiftingOrigin = fn(1385).GiftingOrigin;
+const GiftingOrigin = fn(1387).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: null, legalCopy: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -61,7 +61,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
   }
   const getOrFetchApplication = skuId(giftOptions[12]).useGetOrFetchApplication(applicationId);
   let obj = skuId(giftOptions[12]);
-  const items = [c8];
+  items = [c8];
   noop = skuId(giftOptions[13]).useStateFromStores(items, () => UserStore.getUser(giftOptions.recipient_id));
   const tmp7 = useNativeCheckoutStore((analyticsFields) => analyticsFields.analyticsFields);
   closure_6 = tmp7;
@@ -176,7 +176,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/useConjureDebug
 
 export default function useConjureDebugAgentState(arg0, agent) {
   _require = arg0;
-  const items = [ConjureDebugStore];
+  items = [ConjureDebugStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

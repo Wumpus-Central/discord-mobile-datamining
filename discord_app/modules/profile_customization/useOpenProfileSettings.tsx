@@ -19,9 +19,9 @@ export default function useOpenProfileSettings() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const guild = obj.guild;
+  guild = obj.guild;
   const scrollPosition = obj.scrollPosition;
-  const items = [
+  items = [
     guild,
     scrollPosition,
     obj.analyticsLocations,

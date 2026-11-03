@@ -15,7 +15,7 @@ function ActivityItemEmptyCard(activity) {
   const targetDimensions = layoutManager.getTargetDimensions(undefined);
   ({ width, height } = targetDimensions);
   const analyticsLocations = application(channelId[7])().analyticsLocations;
-  const items = [activity.launchId, analyticsLocations, application, channelId];
+  items = [activity.launchId, analyticsLocations, application, channelId];
   const callback = noop.useCallback(
     analyticsLocations(function* () {
       if (v3 === 2) {
@@ -28,7 +28,7 @@ function ActivityItemEmptyCard(activity) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function ActivityItemEmptyCard(activity) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -102,7 +102,7 @@ function ActivityItemEmptyCard(activity) {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = {
   width: "100%",

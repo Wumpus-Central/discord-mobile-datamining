@@ -8,14 +8,14 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(6709);
-({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
+const StageChannelsConstants = fn(6829);
+({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: closure_10 } = StageChannelsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
-let closure_12 = fn(4869).GuildScheduledEventPrivacyLevel;
+let closure_12 = fn(4996).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingBottom: 24 },
@@ -53,7 +53,7 @@ export default function StartStageChannelEventActionSheet(channel) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -72,15 +72,15 @@ export default function StartStageChannelEventActionSheet(channel) {
             if ("" !== importAll.trim()) {
               _undefined(true);
               asyncGeneratorStep(null);
-              const result = tmp45(1888).dismissGlobalKeyboard();
+              const result = tmp45(2017).dismissGlobalKeyboard();
               dependencyMap = 1;
               if (null != stateFromStores) {
                 c4 = 3;
                 c5 = 1;
-                const obj6 = { value: tmp45(7945).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
+                const obj6 = { value: tmp45(8069).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj6;
               } else {
-                const tmp33Result2 = tmp45(7945);
+                const tmp33Result2 = tmp45(8069);
                 c4 = 2;
                 c5 = 1;
                 const obj7 = {
@@ -89,14 +89,14 @@ export default function StartStageChannelEventActionSheet(channel) {
                 };
                 return obj7;
               }
-              const obj4 = tmp45(1888);
+              const obj4 = tmp45(2017);
             }
           }
         } else {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp45;
-            const aPIError = new channel(6446).APIError(closure_128_1);
+            const aPIError = new channel(6566).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_4(closure_128_0);
             closure_129_3(false);
@@ -115,9 +115,9 @@ export default function StartStageChannelEventActionSheet(channel) {
               const obj = { value, done: true };
               return obj;
             }
-            tmp3(5258).hideActionSheet(closure_1_10);
+            tmp3(5381).hideActionSheet(closure_1_10);
             dependencyMap = 0;
-            const obj2 = tmp3(5258);
+            const obj2 = tmp3(5381);
           }
           dependencyMap = 0;
           c5 = 3;
@@ -136,7 +136,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     }
   };
   const tmp = closure_15();
-  const items = [StageInstanceStore];
+  items = [StageInstanceStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
     StageInstanceStore.getStageInstanceByChannel(channel.id),
   );
@@ -153,8 +153,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [obj3, c4] = _slicedToArray(noop.useState(null), 2);
   const tmp9 = _slicedToArray(noop.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(6758).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5593)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(6878).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5716)(() => {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
@@ -181,7 +181,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult = intl.string(tmp2(1113).t["5BKP4y"]);
   }
   obj5.children = stringResult;
-  const items1 = [closure_13(channel(5624).Text, obj5)];
+  const items1 = [closure_13(channel(5747).Text, obj5)];
   let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1113).intl;
@@ -191,11 +191,11 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult1 = intl3.string(tmp2(1113).t["I+9bLx"]);
   }
   obj6.children = stringResult1;
-  items1[1] = closure_13(channel(5624).Text, obj6);
+  items1[1] = closure_13(channel(5747).Text, obj6);
   obj4.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(6758);
+  const tmp2Result = channel(6878);
   if (null == stateFromStores) {
     const intl5 = tmp2(1113).intl;
     stringResult2 = intl5.string(tmp2(1113).t.gR66jX);
@@ -230,8 +230,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl7 = tmp2(1113).intl;
   obj8.placeholder = intl7.string(channel(1113).t.ZwWruY);
   obj8.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(7082).TextInput, obj8);
-  items2[2] = closure_13(tmp11(7954), {
+  items2[1] = closure_13(channel(7208).TextInput, obj8);
+  items2[2] = closure_13(tmp11(8078), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
@@ -246,7 +246,7 @@ export default function StartStageChannelEventActionSheet(channel) {
       color: "text-feedback-critical",
       children: obj3.getAnyErrorMessage(),
     };
-    tmp15Result = closure_13(tmp2(5624).Text, obj10);
+    tmp15Result = closure_13(tmp2(5747).Text, obj10);
   }
   items2[3] = tmp15Result;
   const obj11 = { style: tmp.startButton, children: null };
@@ -257,7 +257,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl8 = tmp2(1113).intl;
     stringResult3 = intl8.string(tmp2(1113).t.K344S7);
   }
-  obj11.children = closure_13(channel(5634).Button, {
+  obj11.children = closure_13(channel(5754).Button, {
     text: stringResult3,
     onPress: handleSave,
     disabled: "" === value,
@@ -276,7 +276,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     };
     const intl10 = tmp2(1113).intl;
     obj13.children = intl10.string(tmp2(1113).t.gR66jX);
-    tmp15Result2 = closure_13(tmp2(5624).Text, obj13);
+    tmp15Result2 = closure_13(tmp2(5747).Text, obj13);
   }
   const obj12 = {
     text: stringResult3,
@@ -295,8 +295,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj4);
   items2[5] = tmp15Result2;
   obj7.children = items2;
-  return closure_13(channel(5272).BottomSheet, {
+  return closure_13(channel(5395).BottomSheet, {
     keyboardShouldPersistTaps: "always",
-    children: closure_14(channel(7292).SafeAreaPaddingView, obj7),
+    children: closure_14(channel(7412).SafeAreaPaddingView, obj7),
   });
 }

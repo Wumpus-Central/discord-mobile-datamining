@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/ChannelListLegendList.tsx
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import FastList from "../../../lib/native/FastList.tsx";
+import useChannelListFlatDataDefault from "useChannelListFlatData.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,27 +9,26 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "dispatch", positionPercentage: false };
+let closure_8 = { item: "disabled", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = {
-  code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}",
+  code: "(function ChannelListLegendListTsx1(event){let[scrollPosValue,onScrollWorklet,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){scheduleOnRN(onScroll);}})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListLegendList.tsx");
 
 export default noop.memo(function ChannelListLegendList(listViewportHeight) {
-  ({ headerSize, initialScrollItem: require, initialScrollSection: importDefault, insetEnd } = listViewportHeight);
+  ({ headerSize, initialScrollItem: c0, initialScrollSection: c1, insetEnd } = listViewportHeight);
   listViewportHeight = listViewportHeight.listViewportHeight;
-  const onScroll = listViewportHeight.onScroll;
-  const onScrollWorklet = listViewportHeight.onScrollWorklet;
+  noop = listViewportHeight;
   const renderHeader = listViewportHeight.renderHeader;
   const renderItem = listViewportHeight.renderItem;
   const renderSectionFooter = listViewportHeight.renderSectionFooter;
   const renderSectionHeader = listViewportHeight.renderSectionHeader;
   const scrollIndicatorInsetBottom = listViewportHeight.scrollIndicatorInsetBottom;
   const drawDistanceMode = listViewportHeight.drawDistanceMode;
-  c13 = undefined;
-  c14 = undefined;
+  c11 = undefined;
+  c12 = undefined;
   contentSize = undefined;
   ({
     endReachedThreshold,
@@ -38,12 +37,14 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     getSectionFooterSize,
     getSectionHeaderSize,
     onEndReached,
+    onScroll,
+    onScrollWorklet,
     renderAccessory,
     sections,
     ref,
   } = listViewportHeight);
-  const ref1 = listViewportHeight.useRef(null);
-  let tmp3 = require("useChannelListFlatData")({
+  const ref1 = noop.useRef(null);
+  let tmp3 = useChannelListFlatDataDefault({
     getItemSize,
     getRecyclerKey,
     getSectionFooterSize,
@@ -52,44 +53,44 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     sections,
   });
   let index = tmp3;
-  ({ offsets: c13, sizes: c14, contentSize } = tmp3);
-  const memo = listViewportHeight.useMemo(() => {
-    let num = importDefault;
-    let num2 = importDefault;
-    if (importDefault == null) {
+  ({ offsets: c11, sizes: c12, contentSize } = tmp3);
+  const memo = noop.useMemo(() => {
+    let num = c1;
+    let num2 = c1;
+    if (c1 == null) {
       num2 = 0;
     }
     if (num2 <= 0) {
-      if (null == _require) {
+      if (null == c0) {
         return 0;
       }
     }
     if (num == null) {
       num = 0;
     }
-    index = index.getIndex(num, _require);
+    index = index.getIndex(num, c0);
     if (null == index) {
       return 0;
     } else {
       let diff = tmp11;
-      if (_undefined2[index] < listViewportHeight) {
+      if (_undefined5[index] < c3) {
         const _Math = Math;
         const _Math2 = Math;
         const sum = tmp11 + Math.floor(tmp13 / 2);
-        diff = sum - Math.floor(listViewportHeight / 2);
+        diff = sum - Math.floor(c3 / 2);
       }
       const _Math3 = Math;
       const _Math4 = Math;
-      return Math.max(0, Math.min(diff, contentSize + insetEnd - listViewportHeight));
+      return Math.max(0, Math.min(diff, contentSize + c2 - c3));
     }
   }, []);
-  const sharedValue = require("ReanimatedRexport").useSharedValue(memo);
-  const ref2 = listViewportHeight.useRef(tmp3);
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(memo);
+  const ref2 = noop.useRef(tmp3);
   ref2.current = tmp3;
-  const ref3 = listViewportHeight.useRef(0);
+  const ref3 = noop.useRef(0);
   ref3.current = contentSize + insetEnd;
-  let items = [listViewportHeight, sharedValue];
-  const memo1 = listViewportHeight.useMemo(() => {
+  items = [listViewportHeight, sharedValue];
+  const memo1 = noop.useMemo(() => {
     let obj = {};
     Object.defineProperty(obj, "containerSize", {
       get: () => {
@@ -108,14 +109,14 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     obj.scrollPosValue = sharedValue;
     obj.getItems = function getItems() {
       const current = ref1.current;
-      let state;
+      state = undefined;
       if (current != null) {
         state = current.getState();
       }
       if (null == state) {
-        return renderItem;
+        return renderSectionHeader;
       } else {
-        const items = [];
+        items = [];
         const _Math = Math;
         const bound = Math.min(state.endBuffered, ref2.current.listData.length - 1);
         const _Math2 = Math;
@@ -179,7 +180,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
         }
       }
       if (null == tmp3) {
-        return renderSectionFooter;
+        return scrollIndicatorInsetBottom;
       } else {
         const obj = {
           type: ref2.current.listData[tmp3].type,
@@ -236,7 +237,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
           num4 = 0;
         }
         if (num4 <= 0) {
-          num4 = listViewportHeight;
+          num4 = _undefined3;
         }
         const current2 = ref1.current;
         let num6;
@@ -297,42 +298,43 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     return obj;
   }, items);
   const items1 = [memo1];
-  const imperativeHandle = listViewportHeight.useImperativeHandle(ref, () => memo1, items1);
-  let obj = require("ReanimatedRexport");
-  class Q {
+  const imperativeHandle = noop.useImperativeHandle(ref, () => memo1, items1);
+  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  const tmp5 = _require;
+  const items2 = [
+    index,
+    sharedValue,
+    onScrollWorklet,
+    onScroll,
+    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp11, tmp12, tmp13, tmp14, tmp15] = items2;
+  class ChannelListLegendListTsx1 {
     constructor(arg0) {
-      result = closure_16.set(listViewportHeight.contentOffset.y);
-      tmp2 = onScrollWorklet(
+      result = closure_0.set(listViewportHeight.contentOffset.y);
+      tmp2 = closure_1(
         listViewportHeight.contentOffset.y,
         listViewportHeight.contentSize.height,
         listViewportHeight.layoutMeasurement.height,
       );
-      if (null != onScroll) {
-        tmp4 = closure_0;
-        tmp5 = closure_2;
-        obj = closure_0(closure_2[3]);
-        tmp6 = obj.runOnJS(tmp3)();
+      if (null != closure_2) {
+        tmp4 = closure_3;
+        tmp5 = closure_3(tmp3);
       }
       return;
     }
   }
-  let obj2 = require("ReanimatedRexport");
-  Q.__closure = {
-    scrollPosValue: sharedValue,
-    onScrollWorklet,
-    onScroll,
-    runOnJS: require("ReanimatedRexport").runOnJS,
-  };
-  Q.__workletHash = 11450141164730;
-  Q.__initData = scrollIndicatorInsetBottom;
-  const items2 = [renderItem, renderSectionFooter, renderSectionHeader];
-  const obj3 = {
-    scrollPosValue: sharedValue,
-    onScrollWorklet,
-    onScroll,
-    runOnJS: require("ReanimatedRexport").runOnJS,
-  };
-  const callback = listViewportHeight.useCallback((item) => {
+  const items3 = [tmp12, tmp13, tmp14, tmp15];
+  ChannelListLegendListTsx1.__closure = items3;
+  ChannelListLegendListTsx1.__workletHash = 15385241443618;
+  ChannelListLegendListTsx1.__initData = tmp11;
+  const items4 = [renderItem, renderSectionFooter, renderSectionHeader];
+  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const callback = obj.useCallback((item) => {
     item = item.item;
     const type = item.type;
     if (FastList.FastListItemTypes.SECTION === type) {
@@ -342,17 +344,17 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
     } else {
       return renderItem(item.section, item.item);
     }
-  }, items2);
-  const callback1 = listViewportHeight.useCallback((type) => type.type, []);
-  const callback2 = listViewportHeight.useCallback((key) => key.key, []);
-  const items3 = [memo1, renderHeader];
-  const callback3 = listViewportHeight.useCallback((arg0, arg1) => ref2.current.sizes[arg1], []);
-  const items4 = [insetEnd];
-  const memo2 = listViewportHeight.useMemo(() => hasOwnProperty(React4, { children: renderHeader(memo1) }), items3);
-  const items5 = [scrollIndicatorInsetBottom];
-  const memo3 = listViewportHeight.useMemo(() => ({ paddingBottom: insetEnd }), items4);
+  }, items4);
+  const callback1 = obj.useCallback((type) => type.type, []);
+  const callback2 = obj.useCallback((key) => key.key, []);
+  const items5 = [memo1, renderHeader];
+  const callback3 = obj.useCallback((arg0, arg1) => ref2.current.sizes[arg1], []);
+  const items6 = [insetEnd];
+  const memo2 = obj.useMemo(() => hasOwnProperty(React4, { children: renderHeader(memo1) }), items5);
+  const items7 = [scrollIndicatorInsetBottom];
+  const memo3 = obj.useMemo(() => ({ paddingBottom }), items6);
   let num = 0;
-  const memo4 = listViewportHeight.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items5);
+  const memo4 = obj.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items7);
   if (listViewportHeight > 0) {
     num = endReachedThreshold / listViewportHeight;
   }
@@ -389,16 +391,13 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.initialScrollOffset = memo;
   obj4.keyExtractor = callback2;
   obj4.ListHeaderComponent = memo2;
-  obj4.ListHeaderComponentStyle = renderSectionHeader;
+  obj4.ListHeaderComponentStyle = ref1;
   obj4.onEndReached = onEndReached;
   obj4.onEndReachedThreshold = num;
-  obj4.onScroll = obj2.useAnimatedScrollHandler(Q);
+  obj4.onScroll = require("../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items6 = [
-    onScrollWorklet(require("../../../../_runtime/metro/14421__.js").AnimatedLegendList, obj4),
-    renderAccessory(memo1),
-  ];
-  obj5.children = items6;
-  return renderHeader(onScroll, obj5);
+  const items8 = [renderItem(tmp5(14552).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  obj5.children = items8;
+  return renderSectionFooter(renderHeader, obj5);
 });

@@ -12,7 +12,7 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 
 require = fn;
 function noop() {}
-const Constants = fn(5768);
+const Constants = fn(5888);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: metroRequire,
@@ -109,7 +109,7 @@ let obj2 = {
   DAVE_INVALID_MESSAGE: 4805,
   [4805]: "DAVE_INVALID_MESSAGE",
 };
-const constants3 = {
+const application_id = {
   DISCONNECTED: 0,
   [0]: "DISCONNECTED",
   CONNECTING: 1,
@@ -207,7 +207,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  self.connectionStartTime = self(5772).now();
+  self.connectionStartTime = self(5892).now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
       false,
@@ -218,8 +218,8 @@ prototype["createWebSocket"] = function createWebSocket() {
         " ms - did not receive OP_HELLO in time.",
     );
   }, closure_13);
-  let obj = self(5772);
-  obj2 = self(15962);
+  let obj = self(5892);
+  obj2 = self(16105);
   const webSocket = new WebSocket(
     "" +
       self.url +
@@ -261,7 +261,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     if (DeveloperOptionsStore.isLoggingGatewayEvents) {
       const _Uint8Array = Uint8Array;
       if (d instanceof Uint8Array) {
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(d, 0);
         const mapped = items.map((item) => item.toString(16).padStart(2, "0"));
         const logger2 = self.logger;
@@ -561,7 +561,7 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(5772).now() - self.connectionStartTime;
+  const diff = tmp4(5892).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
@@ -570,7 +570,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
-  const tmp4Result = tmp4(5772);
+  const tmp4Result = tmp4(5892);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;

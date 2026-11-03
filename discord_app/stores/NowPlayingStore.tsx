@@ -136,7 +136,7 @@ class NowPlayingStore extends Store {}
 const prototype = NowPlayingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(PresenceStore, UserAffinitiesV2Store, UserStore);
-  const items = [UserAffinitiesV2Store];
+  items = [UserAffinitiesV2Store];
   this.syncWith(items, handleUserAffinitiesV2StoreUpdate);
 };
 Object.defineProperty(prototype, "games", {

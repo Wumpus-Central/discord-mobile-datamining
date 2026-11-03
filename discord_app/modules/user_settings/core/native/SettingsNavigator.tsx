@@ -31,7 +31,7 @@ function LeftAlignedHeaderTitle(children) {
   }
   const tmp5 = React7(Text_Text.Heading, {
     lineClamp: 1,
-    variant: "redesign/heading-18/bold",
+    variant: "redesign/heading-18/semibold",
     color: "mobile-text-heading-primary",
     maxFontSizeMultiplier: 2,
     style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer,
@@ -40,7 +40,7 @@ function LeftAlignedHeaderTitle(children) {
   let tmp6 = tmp5;
   if (null != persistentBadge) {
     const obj = { style: tmp.headerContainerRow, children: null };
-    const items = [tmp5];
+    items = [tmp5];
     const obj2 = { badge: persistentBadge };
     items[1] = React7(SettingHeaderBadge, obj2);
     obj.children = items;
@@ -52,10 +52,10 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9856);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const NativeStackNavigator = fn(9987);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,
@@ -119,7 +119,7 @@ export default noop.memo(function SettingsNavigator() {
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
     tmp2(tmp3[14]).OpenUserSettingsTriggerPoint,
   );
-  const items = [screen];
+  items = [screen];
   const effect = onClose.useEffect(() => {
     obj2 = { destinationPane: screen, source: { page: constants.USER_SETTINGS } };
     const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj2);

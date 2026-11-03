@@ -1,6 +1,6 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
 import v1 from "../../../../_runtime/01266_v1.js";
-import formatDefault from "../../../../_runtime/01352_format.js";
+import formatDefault from "../../../../_runtime/01353_format.js";
 import getDescriptionDefault from "getDescription.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -28,7 +28,7 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   }
   const encodeURIComponentResult = encodeURIComponent(str.toString());
   const encodeURIComponentResult1 = encodeURIComponent("discord://app/open#" + str.toString());
-  const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
+  items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const regExp = new RegExp("(" + items.join("|") + ")", "ig");
   const tmp9 = formatDefault;
   let match;

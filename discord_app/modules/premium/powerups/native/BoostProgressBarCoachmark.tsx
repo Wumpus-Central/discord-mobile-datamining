@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/native/BoostProgressBarCoachmark.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -19,7 +19,7 @@ export default function BoostProgressBarCoachmark(guild) {
   let onDismiss;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const items = [markAsDismissed];
+  items = [markAsDismissed];
   onDismiss = onDismiss.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items);
@@ -43,9 +43,9 @@ export default function BoostProgressBarCoachmark(guild) {
       onButtonPress: null,
     };
     const intl = util.intl;
-    obj.title = intl.string(_modDef2570.uwV2dH);
+    obj.title = intl.string(_modDef2699.uwV2dH);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef2570.MIwlcR);
+    obj.description = intl2.string(_modDef2699.MIwlcR);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return (
@@ -59,6 +59,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(9954).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(10085).useCoachmark(guild.targetRef, memo);
   return null;
 }

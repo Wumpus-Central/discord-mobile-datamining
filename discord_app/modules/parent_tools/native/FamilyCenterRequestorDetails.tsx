@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 },
   avatar: {
@@ -45,7 +45,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
     disablePlaceholder: null,
     avatarDecoration: otherUser.avatarDecoration,
   };
-  const items = [React4(native.Avatar, obj3)];
+  items = [React4(native.Avatar, obj3)];
   const obj4 = { style: tmp.detailsContainer, children: null };
   const items1 = [
     React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }),

@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7724);
+const CollectiblesItemRecord = fn(7848);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -157,7 +157,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         if (obj2 == null) {
           obj2 = {};
         }
-        let items = obj2.items;
+        items = obj2.items;
         const first1 = _slicedToArray(first.selectedOptions, 1)[0];
         const obj4 = {
           storeListingId: null,
@@ -260,18 +260,18 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "t",
                 type: "Array",
-                premiumType: "children",
-                items: null,
-                categorySkuId: null,
-                categoryWillUnpublishAt: null,
-                isCategoryReward: null,
-                prices: null,
-                previewAssets: null,
-                googleSkuIds: null,
-                eligibleOffers: null,
-                variants: "\u{1F6A1}",
-                bundledProducts: 6,
-                isFirstParty: 698,
+                premiumType: "id",
+                items: "l",
+                categorySkuId: "e",
+                categoryWillUnpublishAt: "channel_id",
+                isCategoryReward: "enabled",
+                prices: "it",
+                previewAssets: "flexDirection",
+                googleSkuIds: "o",
+                eligibleOffers: "id",
+                variants: "parent",
+                bundledProducts: "source",
+                isFirstParty: "l",
               };
               let str;
               if (first != null) {

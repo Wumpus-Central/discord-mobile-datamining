@@ -24,7 +24,7 @@ export function getCarouselPreviewPixelSize() {
 }
 export function buildMediaEntries(game) {
   if (null == game) {
-    let items = [];
+    items = [];
   } else {
     let trailers = game.trailers;
     if (trailers == null) {

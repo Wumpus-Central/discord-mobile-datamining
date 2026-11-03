@@ -14,7 +14,7 @@ export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
   if (undefined !== blurTheme) {
     str = blurTheme;
   }
-  const items = [str];
+  items = [str];
   const items1 = [str];
   const memo = noop.useMemo(() => {
     str = "rgba(255, 255, 255, 0.1)";

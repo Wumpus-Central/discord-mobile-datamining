@@ -1,10 +1,11 @@
 // discord_app/modules/chat/native/TypingIndicator.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
+import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import useTypingTextDefault from "../useTypingText.tsx";
 import CustomTypingIndicatorUtils from "../../custom_typing_indicator/CustomTypingIndicatorUtils.tsx";
 import CustomTypingIndicatorAnalytics from "../../custom_typing_indicator/CustomTypingIndicatorAnalytics.tsx";
 import openCustomTypingIndicatorAnnounceActionSheet from "../../custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx";
@@ -17,37 +18,42 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function TypingIndicatorInner(channel) {
   channel = channel.channel;
+  _require = channel;
   ({ typingUserIds, transitionState } = channel);
+  importDefault = transitionState;
   const cleanUp = channel.cleanUp;
+  dependencyMap = cleanUp;
   let stateFromStoresObject;
   closure_7 = undefined;
   let analyticsLocations;
   let sharedValue;
   let sharedValue1;
-  let customTypingIndicatorConfig = channel(cleanUp[14]).useCustomTypingIndicatorConfig("TypingIndicatorInner");
+  let customTypingIndicatorConfig = require("CustomTypingIndicatorExperiment").useCustomTypingIndicatorConfig(
+    "TypingIndicatorInner",
+  );
   const canView = customTypingIndicatorConfig.canView;
-  let obj = channel(cleanUp[14]);
-  let items = [stateFromStoresObject];
-  const stateFromStores = channel(cleanUp[11]).useStateFromStores(items, () =>
+  noop = canView;
+  let obj = require("CustomTypingIndicatorExperiment");
+  items = [stateFromStoresObject];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     stateFromStoresObject.get("preview_own_typing_indicator"),
   );
   let obj3 = { channelId: channel.id, guildId: null, typingUserIds: null };
-  let obj2 = channel(cleanUp[11]);
+  let obj2 = require("initialize");
   obj3.guildId = channel.getGuildId();
   obj3.typingUserIds = typingUserIds;
-  const tmp6Result = transitionState(cleanUp[15])(obj3);
+  const tmp6Result = useTypingTextDefault(obj3);
   let style_owner_user_id = null;
   if (1 === typingUserIds.length) {
     style_owner_user_id = typingUserIds[0];
   }
-  const tmp6 = transitionState(cleanUp[15]);
   const items1 = [sharedValue, sharedValue1, closure_7];
   const items2 = [style_owner_user_id, canView, stateFromStores, channel];
-  stateFromStoresObject = channel(cleanUp[11]).useStateFromStoresObject(
+  stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items1,
     () => {
       if (null != first) {
-        if (canView) {
+        if (c3) {
           const user = UserStore.getUser(first);
           if (stateFromStores) {
             let typingIndicatorStyle;
@@ -63,7 +69,7 @@ function TypingIndicatorInner(channel) {
           }
           if (null != customTypingIndicatorConfig) {
             if (null != user) {
-              const guildId = channel.getGuildId();
+              const guildId = _undefined.getGuildId();
               let guildEmojis = null;
               if (null != guildId) {
                 guildEmojis = RawGuildEmojiStore.getGuildEmojis(guildId);
@@ -72,11 +78,11 @@ function TypingIndicatorInner(channel) {
               const obj2 = CustomTypingIndicatorUtils;
               obj.config = obj2.getViewableCustomTypingIndicatorConfig(
                 customTypingIndicatorConfig,
-                channel,
+                _undefined,
                 first,
                 guildEmojis,
               );
-              obj.name = NicknameUtilsDefault.getName(guildId, channel.id, user);
+              obj.name = NicknameUtilsDefault.getName(guildId, _undefined.id, user);
               return obj;
             }
           }
@@ -90,19 +96,19 @@ function TypingIndicatorInner(channel) {
   closure_7 = tmp10;
   const items3 = [null != stateFromStoresObject.config, ,];
   ({ id: arr4[1], type: arr4[2] } = channel);
-  const effect = canView.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_7) {
-      ({ id: obj2.channel_id, type: obj2.channel_type } = channel);
+      ({ id: obj2.channel_id, type: obj2.channel_type } = c0);
       AnalyticsUtilsDefault.track(AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN, { channel_id: null, channel_type: null });
       const obj3 = { channel_id: null, channel_type: null };
     }
   }, items3);
-  const tmpResult = channel(cleanUp[11]);
-  analyticsLocations = transitionState(cleanUp[19])(transitionState(tmp2[20]).CHAT_TYPING_INDICATOR).analyticsLocations;
+  const tmpResult = require("initialize");
+  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7471).CHAT_TYPING_INDICATOR).analyticsLocations;
   const items4 = [stateFromStoresObject, style_owner_user_id, , ,];
   ({ id: arr5[2], type: arr5[3] } = channel);
   items4[4] = analyticsLocations;
-  const callback = canView.useCallback(() => {
+  const callback = noop.useCallback(() => {
     const config = stateFromStoresObject.config;
     let tmp = null != config;
     if (tmp) {
@@ -110,7 +116,7 @@ function TypingIndicatorInner(channel) {
     }
     if (tmp) {
       const obj5 = { channel_id: null, channel_type: null, style_owner_user_id: null };
-      ({ id: obj2.channel_id, type: obj2.channel_type } = channel);
+      ({ id: obj2.channel_id, type: obj2.channel_type } = c0);
       obj5.style_owner_user_id = style_owner_user_id;
       const obj = AnalyticsUtilsDefault;
       const merged = Object.assign(CustomTypingIndicatorAnalytics.getTypingIndicatorStyleAnalytics(config));
@@ -119,35 +125,49 @@ function TypingIndicatorInner(channel) {
     const result =
       openCustomTypingIndicatorAnnounceActionSheet.openCustomTypingIndicatorAnnounceActionSheet(analyticsLocations);
   }, items4);
-  const tmp5Result = transitionState(cleanUp[19]);
-  sharedValue = channel(cleanUp[23]).useSharedValue(undefined);
+  const tmp5Result = useAnalyticsLocationsDefault;
+  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(undefined);
   const items5 = [sharedValue];
-  const callback1 = canView.useCallback((nativeEvent) => {
+  const callback1 = noop.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items5);
-  const tmpResult6 = channel(cleanUp[23]);
+  const tmpResult6 = require("../../../../_runtime/metro/01652__.js");
   const tmp16 = closure_15(
-    channel(cleanUp[24]).useToken(transitionState(cleanUp[13]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING),
+    require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING),
   );
-  const tmpResult7 = channel(cleanUp[24]);
-  sharedValue1 = channel(cleanUp[23]).useSharedValue(0);
+  const tmpResult7 = require("useToken");
+  sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   const items6 = [cleanUp, transitionState, sharedValue1];
-  const effect1 = canView.useEffect(() => {
-    if (transitionState === native.TransitionStates.YEETED) {
+  const effect1 = noop.useEffect(() => {
+    if (c1 === native.TransitionStates.YEETED) {
       const result = sharedValue1.set(0);
-      cleanUp();
+      _undefined3();
     }
   }, items6);
-  const tmpResult8 = channel(cleanUp[23]);
-  class O {
+  const tmpResult8 = require("../../../../_runtime/metro/01652__.js");
+  const items7 = [closure_16, sharedValue];
+  _require = undefined;
+  [tmp19, tmp20] = items7;
+  class TypingIndicatorTsx1 {
     constructor() {
-      return closure_9.get();
+      return closure_0.get();
     }
   }
-  O.__closure = { typingIndicatorLayout: sharedValue };
-  O.__workletHash = 10758673194436;
-  O.__initData = __initData;
-  class P {
+  const items8 = [tmp20];
+  TypingIndicatorTsx1.__closure = items8;
+  TypingIndicatorTsx1.__workletHash = 14813085565405;
+  TypingIndicatorTsx1.__initData = tmp19;
+  const items9 = [
+    closure_17,
+    sharedValue1,
+    require("spring/spring").withSpring,
+    require("springPresets").springStandard,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp21, tmp22, tmp23, tmp24] = items9;
+  class TypingIndicatorTsx2 {
     constructor(arg0, arg1) {
       tmp = channel !== arg1;
       if (tmp) {
@@ -162,83 +182,82 @@ function TypingIndicatorInner(channel) {
         tmp = toFixedResult === height.toFixed(2);
       }
       if (tmp) {
-        tmp4 = closure_10;
-        tmp5 = closure_0;
+        tmp4 = closure_0;
+        tmp5 = closure_1;
         tmp6 = closure_2;
-        obj = closure_0(closure_2[26]);
-        tmp7 = -channel.height;
         str = "respect-motion-settings";
-        result = closure_10.set(
-          obj.withSpring(tmp7, closure_0(closure_2[27]).springStandard, "respect-motion-settings"),
-        );
+        result = closure_0.set(closure_1(-channel.height, closure_2, "respect-motion-settings"));
       }
       return;
     }
   }
-  const tmpResult9 = channel(cleanUp[23]);
-  P.__closure = {
-    translateYValue: sharedValue1,
-    withSpring: channel(cleanUp[26]).withSpring,
-    springStandard: channel(cleanUp[27]).springStandard,
-  };
-  P.__workletHash = 14874351700395;
-  P.__initData = __initData2;
-  const animatedReaction = tmpResult9.useAnimatedReaction(O, P);
-  let obj4 = {
-    translateYValue: sharedValue1,
-    withSpring: channel(cleanUp[26]).withSpring,
-    springStandard: channel(cleanUp[27]).springStandard,
-  };
-  const fn = function j() {
-    value = sharedValue.get();
-    if (0 === sharedValue1.get()) {
-      let num = 0;
-    } else {
-      num = 1;
+  const items10 = [tmp22, tmp23, tmp24];
+  TypingIndicatorTsx2.__closure = items10;
+  TypingIndicatorTsx2.__workletHash = 3866076667250;
+  TypingIndicatorTsx2.__initData = tmp21;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    TypingIndicatorTsx1,
+    TypingIndicatorTsx2,
+  );
+  const tmpResult9 = require("../../../../_runtime/metro/01652__.js");
+  const items11 = [closure_18, sharedValue, sharedValue1, transitionState, require("native").TransitionStates];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  [tmp26, tmp27, tmp28, tmp29, tmp30] = items11;
+  class TypingIndicatorTsx3 {
+    constructor() {
+      value = closure_0.get();
+      obj = closure_1;
+      if (0 === closure_1.get()) {
+        num = 0;
+      } else {
+        tmp2 = closure_2;
+        tmp3 = closure_3;
+        num = 1;
+      }
+      obj1 = { opacity: num, top: null, transform: null };
+      height = undefined;
+      if (value != null) {
+        height = value.height;
+      }
+      obj1.top = height;
+      obj4 = { translateY: obj.get() };
+      items = [];
+      items[0] = obj4;
+      obj1.transform = items;
+      return obj1;
     }
-    const obj2 = { opacity: num, top: null, transform: null };
-    let height;
-    if (value != null) {
-      height = value.height;
-    }
-    obj2.top = height;
-    const items = [{ translateY: sharedValue1.get() }];
-    obj2.transform = items;
-    return obj2;
-  };
-  const tmpResult10 = channel(cleanUp[23]);
-  fn.__closure = {
-    typingIndicatorLayout: sharedValue,
-    translateYValue: sharedValue1,
-    transitionState,
-    TransitionStates: channel(cleanUp[25]).TransitionStates,
-  };
-  fn.__workletHash = 15240163018691;
-  fn.__initData = __initData3;
-  const animatedStyle = tmpResult10.useAnimatedStyle(fn);
-  const obj6 = { style: null, onLayout: callback1, children: null };
-  const items7 = [tmp16.typingWrapper, animatedStyle];
-  obj6.style = items7;
-  const obj7 = { style: tmp16.wrapperHoriz, children: null };
-  const obj8 = { style: tmp16.horiz, children: null };
+  }
+  const items12 = [tmp27, tmp28, tmp29, tmp30];
+  TypingIndicatorTsx3.__closure = items12;
+  TypingIndicatorTsx3.__workletHash = 15288723177178;
+  TypingIndicatorTsx3.__initData = tmp26;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(TypingIndicatorTsx3);
+  let obj4 = { style: null, onLayout: callback1, children: null };
+  const items13 = [tmp16.typingWrapper, animatedStyle];
+  obj4.style = items13;
+  let obj5 = { style: tmp16.wrapperHoriz, children: null };
+  const obj6 = { style: tmp16.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj9 = { config: null, username: null, onPress: null };
-    ({ config: obj17.config, name: obj17.username } = stateFromStoresObject);
-    let tmp28;
+    const obj7 = { config: null, username: null, onPress: null };
+    ({ config: obj15.config, name: obj15.username } = stateFromStoresObject);
+    let tmp39;
     if (customTypingIndicatorConfig.canSet) {
-      tmp28 = callback;
+      tmp39 = callback;
     }
-    obj9.onPress = tmp28;
-    let tmp22Result = closure_12(transitionState(tmp2[28]), obj9);
-    const tmp5Result2 = transitionState(tmp2[28]);
+    obj7.onPress = tmp39;
+    let tmp33Result = closure_12(tmp5(13876), obj7);
+    const tmp5Result2 = tmp5(13876);
   } else {
-    let tmp21Result3 = null;
+    let tmp32Result3 = null;
     if (null != tmp6Result) {
-      tmp21Result3 = closure_12(tmp(tmp2[29]).Ellipsis, {});
+      tmp32Result3 = closure_12(tmp(1187).Ellipsis, {});
     }
-    const obj10 = { children: null };
-    const items8 = [tmp21Result3];
-    const obj11 = {
+    const obj8 = { children: null };
+    const items14 = [tmp32Result3];
+    const obj9 = {
       style: tmp16.text,
       lineClamp: 1,
       maxFontSizeMultiplier: 2,
@@ -248,36 +267,36 @@ function TypingIndicatorInner(channel) {
       ellipsizeMode: "tail",
       children: tmp6Result,
     };
-    items8[1] = closure_12(tmp(tmp2[30]).Text, obj11);
-    obj10.children = items8;
-    tmp22Result = closure_14(closure_13, obj10);
+    items14[1] = closure_12(tmp(5747).Text, obj9);
+    obj8.children = items14;
+    tmp33Result = closure_14(closure_13, obj8);
   }
-  obj8.children = tmp22Result;
-  const items9 = [closure_12(stateFromStores, obj8)];
-  let tmp21Result4 = null;
+  obj6.children = tmp33Result;
+  const items15 = [closure_12(stateFromStores, obj6)];
+  let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
-    const obj12 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp21Result4 = closure_12(transitionState(tmp2[31]), obj12);
+    const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
+    tmp32Result4 = closure_12(tmp5(13880), obj10);
   }
-  items9[1] = tmp21Result4;
-  obj7.children = items9;
-  obj6.children = closure_14(stateFromStores, obj7);
-  return closure_12(transitionState(cleanUp[23]).View, obj6);
+  items15[1] = tmp32Result4;
+  obj5.children = items15;
+  obj4.children = closure_14(stateFromStores, obj5);
+  return closure_12(_modDef1652.View, obj4);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
   const merged = Object.assign(arg1);
   obj.transitionState = transitionState;
   obj.cleanUp = cleanUp;
-  return closure_1_12(TypingIndicatorInner, obj, arg0);
+  return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(9895).useChatShowingAutoComplete;
-const SlowmodeType = fn(7830).SlowmodeType;
+let closure_5 = fn(10026).useChatShowingAutoComplete;
+const SlowmodeType = fn(7954).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = {
     typingWrapper: {
@@ -306,14 +325,14 @@ let closure_15 = createStyles.createStyles((arg0) => {
   obj.text = { flex: 1 };
   return obj;
 });
-const __initData = {
-  code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}",
+let closure_16 = {
+  code: "(function TypingIndicatorTsx1(){let[typingIndicatorLayout]=this.__closure;return typingIndicatorLayout.get();})",
 };
-const __initData2 = {
-  code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}",
+let closure_17 = {
+  code: "(function TypingIndicatorTsx2(current,prev){let[translateYValue,withSpring,springStandard]=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));})",
 };
-const __initData3 = {
-  code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}",
+let closure_18 = {
+  code: "(function TypingIndicatorTsx3(){let[typingIndicatorLayout,translateYValue,transitionState,TransitionStates]=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
@@ -325,7 +344,7 @@ export default noop.memo(function TypingIndicator(channel) {
   let memo;
   typingUserIds = typingUserIds(memo[10]).useTypingUserIds(channel.id, 4);
   let obj = typingUserIds(memo[10]);
-  let items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = typingUserIds(memo[11]).useStateFromStores(items, () =>
     DevSettingsStore.get("preview_own_typing_indicator"),
   );
@@ -343,7 +362,7 @@ export default noop.memo(function TypingIndicator(channel) {
   memo = noop.useMemo(() => {
     if (stateFromStores) {
       if (null != memo) {
-        const items = [tmp];
+        items = [tmp];
         let tmp3 = items;
       }
       return tmp3;
@@ -381,7 +400,7 @@ export function hasTypingIndicatorContent(channel, typingUserIdsForDisplay, arg2
 export function useTypingUserIdsForDisplay(id, arg1) {
   typingUserIds = typingUserIds(stateFromStores1[10]).useTypingUserIds(id, arg1);
   const obj = typingUserIds(stateFromStores1[10]);
-  const items = [DevSettingsStore];
+  items = [DevSettingsStore];
   const stateFromStores = typingUserIds(stateFromStores1[11]).useStateFromStores(items, () =>
     DevSettingsStore.get("preview_own_typing_indicator"),
   );
@@ -399,7 +418,7 @@ export function useTypingUserIdsForDisplay(id, arg1) {
   return noop.useMemo(() => {
     if (stateFromStores) {
       if (null != memo) {
-        const items = [tmp];
+        items = [tmp];
         let tmp3 = items;
       }
       return tmp3;

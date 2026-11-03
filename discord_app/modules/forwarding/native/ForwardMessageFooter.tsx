@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import DraftStore from "../../../stores/DraftStore.tsx";
 
 const require = fn;
-const DraftType = fn(7701).DraftType;
+const DraftType = fn(7825).DraftType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
@@ -25,7 +25,7 @@ export function ForwardMessageFooter(message) {
     selectedDestinations,
   );
   const obj2 = message(trackForwardEditContextMessageOnce[5]);
-  const items = [DraftStore];
+  items = [DraftStore];
   const tmp5 = text(
     noop.useState(
       message(trackForwardEditContextMessageOnce[6]).useStateFromStoresObject(items, () =>

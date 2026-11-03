@@ -50,7 +50,7 @@ let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useCha
 
 export default function useChannelRoleSubscriptionStatus(arg0) {
   _require = arg0;
-  const items = [ChannelStore, GatedChannelStore, PermissionStore];
+  items = [ChannelStore, GatedChannelStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(
     items,

@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(7454).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7578).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" },
   saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 },
@@ -47,15 +47,15 @@ export default function ForumPostTagsActionSheet(thread) {
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(7456).useAppliedTags(thread);
+  let appliedTags = thread(7580).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(7456);
+  let obj = thread(7580);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(7456).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(7580).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -71,9 +71,9 @@ export default function ForumPostTagsActionSheet(thread) {
   const intl2 = tmp4(1113).intl;
   obj3.subtitle = intl2.string(thread(1113).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
-  obj2.header = toggleTag(thread(7321).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(7456);
-  let items = [
+  obj2.header = toggleTag(thread(7441).BottomSheetTitleHeader, obj3);
+  const tmp4Result = thread(7580);
+  items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
       children: visibleForumTags.map((tag) => {
@@ -101,7 +101,7 @@ export default function ForumPostTagsActionSheet(thread) {
   obj6.onPress = function handleSave() {
     Array.from(first);
     if (null != dependencyMap) {
-      const items = [];
+      items = [];
       HermesBuiltin.arraySpread(first, 0);
       tmp4(items);
     } else if (null != thread) {
@@ -109,8 +109,8 @@ export default function ForumPostTagsActionSheet(thread) {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5634).Button, obj6);
+  obj5.children = toggleTag(thread(5754).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
-  return closure_8(thread(7366).ActionSheet, obj2);
+  return closure_8(thread(7486).ActionSheet, obj2);
 }

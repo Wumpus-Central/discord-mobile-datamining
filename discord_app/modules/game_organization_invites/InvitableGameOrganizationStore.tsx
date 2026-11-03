@@ -2,12 +2,13 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
+import GameOrganizationModels from "../game_organizations/GameOrganizationModels.tsx";
 import fromServerGameOrganization from "fromServerGameOrganization.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function fromServerInvitableGameOrganization(game_organization) {
   const obj = {
-    organization: fromServerGameOrganization.fromServerGameOrganization(game_organization.game_organization),
+    organization: GameOrganizationModels.gameOrganizationFromServer(game_organization.game_organization),
     application: null,
     displayNoun: null,
   };

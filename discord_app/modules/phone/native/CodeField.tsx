@@ -48,7 +48,7 @@ function SingleCodeInput(loading) {
     setCode(str.replace(NUMERIC === obj.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
   };
   obj2.disabled = disabled;
-  const items = [closure_7(NUMERIC(code[7]).TextInput, obj2)];
+  items = [closure_7(NUMERIC(code[7]).TextInput, obj2)];
   const obj3 = { style: tmp2.singleInputButton, children: null };
   const obj4 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl2 = tmp6(code[8]).intl;
@@ -85,7 +85,7 @@ function CodeFieldInner(loading) {
     alwaysBounceVertical: false,
     children: null,
   };
-  const items = [tmp2.background, backgroundStyle];
+  items = [tmp2.background, backgroundStyle];
   obj.style = items;
   const obj2 = { style: tmp2.container, children: null };
   [tmp4, tmp5] = noop.useState("");
@@ -93,7 +93,7 @@ function CodeFieldInner(loading) {
     React5(Text_Text.Text, {
       style: tmp2.title,
       accessibilityRole: "header",
-      variant: "heading-xl/extrabold",
+      variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),
@@ -108,7 +108,7 @@ function CodeFieldInner(loading) {
   const obj3 = {
     style: tmp2.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: title,
   };
@@ -138,7 +138,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj3 = {
   viewWrapper: { flex: 1 },
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
@@ -215,7 +215,7 @@ export function CodeBlocks(onCodeEntered) {
   const effect = noop.useEffect(() => {
     closure_5.current = num2;
   });
-  let items = [first];
+  items = [first];
   const effect1 = noop.useEffect(() => {
     if (first.every((item) => "" !== item.trim())) {
       ref.current(first.join(""));
@@ -266,7 +266,7 @@ export function CodeBlocks(onCodeEntered) {
         }
       } else if ("" === dependencyMap[tmp]) {
         const diff = tmp - 1;
-        const items = [];
+        items = [];
         HermesBuiltin.arraySpread(dependencyMap, 0);
         items[diff] = "";
         _slicedToArray(items);
@@ -286,7 +286,7 @@ export function CodeBlocks(onCodeEntered) {
       if ("" === str4) {
         parts = [""];
       }
-      const items = [...tmp2];
+      items = [...tmp2];
       const items1 = [num2, 1, ...parts];
       items.splice.apply(items1);
       _slicedToArray(items.slice(0, importDefault));

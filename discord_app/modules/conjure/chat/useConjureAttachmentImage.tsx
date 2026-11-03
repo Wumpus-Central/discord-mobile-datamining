@@ -14,7 +14,7 @@ export function useConjureAttachmentImage(projectId, id) {
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   noop = tmp2[1];
   [first, closure_5] = noop.useState(0);
-  const items = [projectId, id, first];
+  items = [projectId, id, first];
   const effect = noop.useEffect(() => {
     c0 = false;
     const attachmentUrl = projectId(closure_1[2]).getAttachmentUrl(c0, closure_1);

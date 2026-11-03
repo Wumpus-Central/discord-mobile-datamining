@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/OrbWalletEntryRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2172 from "../messages/OrbWallet.messages.js";
+import _modDef2301 from "../messages/OrbWallet.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import Badge from "../../../design/components/Badge/native/Badge.native.tsx";
@@ -18,7 +18,7 @@ function OrbWalletEntryBadge(notificationType) {
     const obj = { type: null, variant: "primary" };
     const obj2 = { text: null };
     const intl = util.intl;
-    obj2.text = intl.string(_modDef2172.WmfVjs);
+    obj2.text = intl.string(_modDef2301.WmfVjs);
     obj.type = obj2;
     return hasOwnProperty(Badge.Badge, obj);
   } else {
@@ -26,10 +26,10 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(15629).ClientUnreadNotificationType;
+const constants = fn(15771).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 },
   balance: null,
@@ -71,7 +71,7 @@ export function OrbWalletEntryRow(onPress) {
   obj.accessibilityLabel = intl.formatToPlainString(zPaLL9, { balance: str });
   const obj2 = { style: tmp.row, children: null };
   const obj3 = { style: tmp.balance, children: null };
-  const items = [
+  items = [
     hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: nativeDefault.colors.ICON_SUBTLE, accessible: false }),
   ];
   const obj5 = {

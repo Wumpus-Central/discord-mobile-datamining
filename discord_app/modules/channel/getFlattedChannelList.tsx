@@ -14,7 +14,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
   }
   const mapped = _modDef12(arg0).map((channel) => {
     if ("null" === channel.channel.id) {
-      let items = dependencyMap[channel.channel.id];
+      items = dependencyMap[channel.channel.id];
     } else {
       items = [channel, dependencyMap[channel.channel.id]];
     }

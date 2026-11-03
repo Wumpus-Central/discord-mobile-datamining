@@ -9,7 +9,7 @@ import ReferencedMessageStore from "../../../replies/ReferencedMessageStore.tsx"
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7766).ReferencedMessageState;
+const ReferencedMessageState = fn(7890).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({
@@ -31,11 +31,11 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 export function ThreadChannelStarterMessage(arg0) {
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
   rowGenerator = initialize;
-  const items = [ReferencedMessageStore];
+  items = [ReferencedMessageStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () =>
     ReferencedMessageStore.getMessage(dependencyMap, importDefault),
   );
-  let state;
+  state = undefined;
   if (stateFromStores != null) {
     state = stateFromStores.state;
   }
@@ -63,7 +63,7 @@ export function ThreadChannelStarterMessage(arg0) {
 export function ThreadCreationStarterMessage(arg0) {
   ({ messageId: require, channelId: importDefault } = arg0);
   rowGenerator = initialize;
-  const items = [MessageStore];
+  items = [MessageStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () => MessageStore.getMessage(importDefault, require));
   let tmp3 = null;
   if (null != stateFromStores) {

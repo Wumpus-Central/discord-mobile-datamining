@@ -116,7 +116,7 @@ prototype["initialize"] = function initialize(seenContentIds) {
       continue;
     }
   }
-  const items = [QuestStore, AdDeliveryStore];
+  items = [QuestStore, AdDeliveryStore];
   self.syncWith(items, syncWithQuestStore);
 };
 prototype["getState"] = function getState() {

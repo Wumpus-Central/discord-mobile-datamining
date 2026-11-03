@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_settings/authorized_apps
 export default function AuthorizedAppScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
-  const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
+  items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
   const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({
       title: settingNavigationRoute.params.oauth2Token.application.name,

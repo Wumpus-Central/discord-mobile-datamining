@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/storefront/hooks/useGetOrFetc
 
 export function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   applicationId = applicationId.applicationId;
-  const items = [applicationId];
+  items = [applicationId];
   const effect = noop.useEffect(() => {
     if (null != applicationId) {
       const obj2 = { applicationId: tmp };
@@ -18,7 +18,7 @@ export function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
 }
 export function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
   skuIds = skuIds.skuIds;
-  const items = [skuIds];
+  items = [skuIds];
   const effect = noop.useEffect(() => {
     if (0 !== skuIds.length) {
       const obj2 = { skuIds: tmp };

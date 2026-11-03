@@ -11,7 +11,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 },
@@ -25,7 +25,7 @@ export default function AppDMOptionsBottomSheet(userId) {
   const channel = userId.channel;
   const application = userId.application;
   let tmp = closure_9();
-  const items = [AuthorizedAppsStore];
+  items = [AuthorizedAppsStore];
   const stateFromStores = userId(application[7]).useStateFromStores(items, () => {
     let id;
     if (application != null) {

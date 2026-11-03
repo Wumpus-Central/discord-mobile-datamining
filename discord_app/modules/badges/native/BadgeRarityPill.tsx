@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 0.24;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   pill: {
     flexDirection: "row",
@@ -106,13 +106,13 @@ export default function BadgeRarityPill(rarity) {
     } else {
       const text = tmp5.text;
       const obj7 = { style: null, children: null };
-      const items = [tmp.pill];
+      items = [tmp.pill];
       ({ background: obj10.backgroundColor, border: obj10.borderColor } = tmp5);
       items[1] = { backgroundColor: null, borderColor: null };
       obj7.style = items;
       const obj9 = { size: "xxs", color: text };
       const items1 = [React4(tmp5.Icon, obj9)];
-      const obj11 = { variant: "text-xs/bold", color: "none", lineClamp: 1, style: null, children: null };
+      const obj11 = { variant: "text-xs/semibold", color: "none", lineClamp: 1, style: null, children: null };
       const items2 = [tmp.label];
       const obj12 = { color: text };
       items2[1] = obj12;

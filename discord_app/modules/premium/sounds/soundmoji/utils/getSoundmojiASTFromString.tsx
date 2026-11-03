@@ -26,7 +26,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
           tmp5 = tmp16;
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }
@@ -110,7 +110,7 @@ export function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, 
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }

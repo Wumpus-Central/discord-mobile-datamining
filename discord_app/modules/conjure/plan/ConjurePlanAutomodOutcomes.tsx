@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/ConjurePlanAutomodOutcomes.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import GuildDisableCommunicationConstants from "../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,28 +15,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.Vi4cjL);
+      return intl.string(_modDef3995.Vi4cjL);
     },
     blockedStyle: false,
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.YdnZ8q);
+      return intl.string(_modDef3995.YdnZ8q);
     },
     blockedStyle: true,
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.QGrx9O);
+      return intl.string(_modDef3995.QGrx9O);
     },
     blockedStyle: true,
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.RGzFNK);
+      return intl.string(_modDef3995.RGzFNK);
     },
     blockedStyle: false,
   },
@@ -45,21 +45,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.YdnZ8q);
+      return intl.string(_modDef3995.YdnZ8q);
     },
     tone: "red",
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868["8ockl9"]);
+      return intl.string(_modDef3995["8ockl9"]);
     },
     tone: "blurple",
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3868.RGzFNK);
+      return intl.string(_modDef3995.RGzFNK);
     },
     tone: "green",
   },
@@ -108,7 +108,7 @@ export function planAutomodReasonText(example) {
       }
     }
   }
-  const items = [formatToPlainStringResult, example.reason];
+  items = [formatToPlainStringResult, example.reason];
   const found = items.filter((item) => {
     let tmp = null != item;
     if (tmp) {

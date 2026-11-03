@@ -12,14 +12,14 @@ let result = size.fileFinishedImporting("modules/guild_member_verification/hooks
 
 export default function usePreviewDisabledGuild(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let obj = require("initialize");
   const tmp = _require;
   const items1 = [MemberVerificationFormStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     value = MemberVerificationFormStore.get(closure_0);
-    let guild;
+    guild = undefined;
     if (value != null) {
       guild = value.guild;
     }
@@ -34,8 +34,8 @@ export default function usePreviewDisabledGuild(arg0) {
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(4877).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult = tmp(4877);
+      result = tmp(5004).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult = tmp(5004);
     }
     stateFromStores = result;
   }

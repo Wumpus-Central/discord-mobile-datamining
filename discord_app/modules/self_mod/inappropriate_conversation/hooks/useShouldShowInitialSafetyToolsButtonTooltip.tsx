@@ -16,7 +16,7 @@ export function useShouldShowInitialSafetyToolsButtonTooltip(channelId) {
       channelId,
     );
   const obj = require("useInappropriateConversationSafetyToolsWarningForChannel");
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const obj2 = require("initialize");
   return (
     null != inappropriateConversationSafetyToolsWarningForChannel &&

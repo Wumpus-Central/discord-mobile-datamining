@@ -53,7 +53,7 @@ function handleChannelSelect() {
   }
   let flag = tmp3;
   if (flag) {
-    const items = [channelId, voiceChannelId, channelId, voiceChannelId];
+    items = [channelId, voiceChannelId, channelId, voiceChannelId];
     const obj = _modDef12(items);
     const item = _modDef12(items)
       .uniq()
@@ -126,7 +126,7 @@ prototype["getGuild"] = function getGuild(arg0, guildActionRows) {
   if (channelNoticeRows == null) {
     channelNoticeRows = [];
   }
-  const guild = closure_20.getGuild(arg0, guildActionRows, channelNoticeRows);
+  guild = closure_20.getGuild(arg0, guildActionRows, channelNoticeRows);
   return { guildChannelsVersion: guild.version, guildChannels: guild };
 };
 prototype["getGuildWithoutChangingGuildActionRows"] = function getGuildWithoutChangingGuildActionRows(id) {

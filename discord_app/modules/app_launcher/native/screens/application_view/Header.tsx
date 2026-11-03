@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
 import useAvatarColorDefault from "../../../../avatar/useAvatarColor.tsx";
@@ -12,18 +12,18 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
 import AppLauncherStore from "../../../AppLauncherStore.tsx";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1496);
+const AppLauncherNativeConstants = fn(1498);
 ({ DEFAULT_CONTENT_PADDING, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 },
   expandedHeaderBanner: { height: 105 },
@@ -78,39 +78,40 @@ const rect2 = {
 };
 obj2.actionsWrapper = rect2;
 let closure_11 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function HeaderTsx1(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,-HEADER_SCROLL_RANGE],'clamp')}]};}",
+let closure_12 = {
+  code: "(function HeaderTsx1(){let[interpolate,scrollOffsetY,HEADER_SCROLL_RANGE]=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,-HEADER_SCROLL_RANGE],'clamp')}]};})",
 };
-const __initData2 = {
-  code: "function HeaderTsx2(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,HEADER_SCROLL_RANGE],'clamp')}]};}",
+let closure_13 = {
+  code: "(function HeaderTsx2(){let[interpolate,scrollOffsetY,HEADER_SCROLL_RANGE]=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,HEADER_SCROLL_RANGE],'clamp')}]};})",
 };
-const __initData3 = {
-  code: "function HeaderTsx3(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[16,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,1],'clamp')};}",
+let closure_14 = {
+  code: "(function HeaderTsx3(){let[interpolate,scrollOffsetY,HEADER_SCROLL_RANGE]=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[16,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,1],'clamp')};})",
 };
-const __initData4 = {
-  code: "function HeaderTsx4(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,0.5],'clamp')};}",
+let closure_15 = {
+  code: "(function HeaderTsx4(){let[interpolate,scrollOffsetY,HEADER_SCROLL_RANGE]=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,0.5],'clamp')};})",
 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/Header.tsx");
 
 export default function Header(application) {
   application = application.application;
+  _require = application;
   const scrollOffsetY = application.scrollOffsetY;
   dependencyMap = undefined;
   let id;
   ({ onPressBack, onAddAppMenuClick } = application);
-  let items = [AppLauncherStore];
-  importDefault = application(504).useStateFromStores(items, () => AppLauncherStore.entrypoint());
+  items = [AppLauncherStore];
+  importDefault = require("initialize").useStateFromStores(items, () => AppLauncherStore.entrypoint());
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12379).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12379);
+    appLauncherIconSource = tmp(12515).getAppLauncherIconSource(application);
+    const tmpResult = tmp(12515);
   }
-  let obj = application(504);
-  let str = application(5596).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  let obj = require("initialize");
+  let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let tmp7 = appLauncherIconSource;
-  const tmpResult9 = application(5596);
+  const tmpResult9 = require("useToken");
   if (typeof appLauncherIconSource !== "number") {
     let uri;
     if (appLauncherIconSource != null) {
@@ -124,145 +125,176 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(12384), obj2);
+    let tmp12 = closure_7(tmp5(12520), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
     tmp12 = closure_7(id, obj3);
     tmp13 = closure_7;
   }
-  closure_129_0 = scrollOffsetY;
-  const fn = function n() {
-    const obj = { transform: null };
-    const obj2 = { translateY: null };
-    const items = [0, c10];
-    obj2.translateY = ReanimatedRexport.interpolate(application.get(), items, [0, -105], "clamp");
-    const items1 = [obj2];
-    obj.transform = items1;
-    return obj;
-  };
-  const tmpResult10 = application(5095);
-  fn.__closure = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  fn.__workletHash = 2572905048492;
-  fn.__initData = __initData;
-  closure_130_0 = scrollOffsetY;
-  const animatedStyle = tmpResult10.useAnimatedStyle(fn);
-  let obj4 = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  const fn2 = function n() {
-    const obj = { transform: null };
-    const obj2 = { translateY: null };
-    const items = [0, c10];
-    const items1 = [0, c10];
-    obj2.translateY = ReanimatedRexport.interpolate(application.get(), items, items1, "clamp");
-    const items2 = [obj2];
-    obj.transform = items2;
-    return obj;
-  };
-  const tmpResult11 = application(5095);
-  fn2.__closure = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  fn2.__workletHash = 8190094903650;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = tmpResult11.useAnimatedStyle(fn2);
-  let obj5 = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  const fn3 = function o() {
-    const obj = { transform: null, opacity: null };
-    const obj2 = { translateY: null };
-    const items = [52.5, c10];
-    obj2.translateY = ReanimatedRexport.interpolate(application.get(), items, [16, 0], "clamp");
-    const items1 = [obj2];
-    obj.transform = items1;
-    const items2 = [52.5, c10];
-    obj.opacity = ReanimatedRexport.interpolate(application.get(), items2, [0, 1], "clamp");
-    return obj;
-  };
-  const tmpResult12 = application(5095);
-  fn3.__closure = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  fn3.__workletHash = 14190901941859;
-  fn3.__initData = __initData3;
-  closure_131_0 = scrollOffsetY;
-  const animatedStyle2 = tmpResult12.useAnimatedStyle(fn3);
-  let obj6 = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  const fn4 = function n() {
-    const obj = { opacity: null };
-    const items = [52.5, c10];
-    obj.opacity = ReanimatedRexport.interpolate(application.get(), items, [0, 0.5], "clamp");
-    return obj;
-  };
-  const tmpResult13 = application(5095);
-  fn4.__closure = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  fn4.__workletHash = 9589752719246;
-  fn4.__initData = __initData4;
+  let items1 = [closure_12, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp17, tmp18, tmp19, tmp20] = items1;
+  class HeaderTsx1 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: null };
+      items = [0];
+      items[1] = closure_2;
+      items1 = [0];
+      items1[1] = -closure_2;
+      obj1.translateY = closure_0(closure_1.get(), items, items1, "clamp");
+      items2 = [];
+      items2[0] = obj1;
+      obj.transform = items2;
+      return obj;
+    }
+  }
+  let items2 = [tmp18, tmp19, tmp20];
+  HeaderTsx1.__closure = items2;
+  HeaderTsx1.__workletHash = 2041267875989;
+  HeaderTsx1.__initData = tmp17;
+  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx1);
+  const tmpResult10 = require("../../../../../../_runtime/metro/01652__.js");
+  const items3 = [closure_13, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp22, tmp23, tmp24, tmp25] = items3;
+  class HeaderTsx2 {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: null };
+      items = [0];
+      items[1] = closure_2;
+      items1 = [0];
+      items1[1] = closure_2;
+      obj1.translateY = closure_0(closure_1.get(), items, items1, "clamp");
+      items2 = [];
+      items2[0] = obj1;
+      obj.transform = items2;
+      return obj;
+    }
+  }
+  const items4 = [tmp23, tmp24, tmp25];
+  HeaderTsx2.__closure = items4;
+  HeaderTsx2.__workletHash = 12593717419899;
+  HeaderTsx2.__initData = tmp22;
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx2);
+  const tmpResult11 = require("../../../../../../_runtime/metro/01652__.js");
+  const items5 = [closure_14, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp27, tmp28, tmp29, tmp30] = items5;
+  class HeaderTsx3 {
+    constructor() {
+      obj = { transform: null, opacity: null };
+      obj1 = { translateY: null };
+      items = [,];
+      items[0] = 0.5 * closure_2;
+      items[1] = closure_2;
+      obj1.translateY = closure_0(closure_1.get(), items, [16, 0], "clamp");
+      items1 = [];
+      items1[0] = obj1;
+      obj.transform = items1;
+      items2 = [,];
+      items2[0] = 0.5 * closure_2;
+      items2[1] = closure_2;
+      obj.opacity = closure_0(closure_1.get(), items2, [0, 1], "clamp");
+      return obj;
+    }
+  }
+  const items6 = [tmp28, tmp29, tmp30];
+  HeaderTsx3.__closure = items6;
+  HeaderTsx3.__workletHash = 17390115934490;
+  HeaderTsx3.__initData = tmp27;
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx3);
+  const tmpResult12 = require("../../../../../../_runtime/metro/01652__.js");
+  const items7 = [closure_15, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp32, tmp33, tmp34, tmp35] = items7;
+  class HeaderTsx4 {
+    constructor() {
+      obj = { opacity: null };
+      items = [,];
+      items[0] = 0.5 * closure_2;
+      items[1] = closure_2;
+      obj.opacity = closure_0(closure_1.get(), items, [0, 0.5], "clamp");
+      return obj;
+    }
+  }
+  const items8 = [tmp33, tmp34, tmp35];
+  HeaderTsx4.__closure = items8;
+  HeaderTsx4.__workletHash = 5671647822967;
+  HeaderTsx4.__initData = tmp32;
   let str2 = "";
-  const animatedStyle3 = tmpResult13.useAnimatedStyle(fn4);
+  const animatedStyle3 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(9761).getSectionName(application);
-    const tmpResult14 = tmp(9761);
+    str2 = tmp(9893).getSectionName(application);
+    const tmpResult14 = tmp(9893);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2024).supportsEmbeddedSurface(application, tmp(5675).EmbeddedSurfaceType.MAIN);
-    const tmpResult15 = tmp(2024);
+    result = tmp(2153).supportsEmbeddedSurface(application, tmp(5795).EmbeddedSurfaceType.MAIN);
+    const tmpResult15 = tmp(2153);
   }
   dependencyMap = result;
   id = UserStore.getCurrentUser();
-  const obj8 = { style: null, pointerEvents: "box-none", children: null };
-  let items1 = [tmp3.headerContainer, animatedStyle];
-  obj8.style = items1;
-  const obj9 = {
-    style: null,
-    pointerEvents: "none",
-    children: tmp13(id, { style: tmp3.appIconMask, children: tmp12 }),
-  };
-  let items2 = [tmp3.expandedHeaderBanner, { backgroundColor: tmp6Result }];
-  obj9.style = items2;
-  const items3 = [tmp13(id, obj9), ,];
-  const obj11 = { style: null, pointerEvents: "box-none", children: null };
-  const items4 = [tmp3.collapsedHeaderBanner, { backgroundColor: tmp6Result }, animatedStyle1];
-  obj11.style = items4;
-  const obj12 = { style: null, pointerEvents: "none" };
-  const items5 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
-  obj12.style = items5;
-  const items6 = [
-    tmp13(ReanimatedRexportDefault.View, obj12),
-    tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }),
-    ,
-  ];
-  const obj10 = { style: tmp3.appIconMask, children: tmp12 };
-  const obj7 = { interpolate: application(5095).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
-  const tmp22 = id;
-  items6[2] = tmp13(ReanimatedRexportDefault.View, {
+  let obj4 = { style: null, pointerEvents: "box-none", children: null };
+  const items9 = [tmp3.headerContainer, animatedStyle];
+  obj4.style = items9;
+  let obj5 = { style: null, pointerEvents: "none", children: tmp13(id, { style: tmp3.appIconMask, children: tmp12 }) };
+  const items10 = [tmp3.expandedHeaderBanner, { backgroundColor: tmp6Result }];
+  obj5.style = items10;
+  const items11 = [tmp13(id, obj5), ,];
+  const obj7 = { style: null, pointerEvents: "box-none", children: null };
+  const items12 = [tmp3.collapsedHeaderBanner, { backgroundColor: tmp6Result }, animatedStyle1];
+  obj7.style = items12;
+  const obj8 = { style: null, pointerEvents: "none" };
+  const items13 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
+  obj8.style = items13;
+  const items14 = [tmp13(_modDef1652.View, obj8), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), ,];
+  let obj6 = { style: tmp3.appIconMask, children: tmp12 };
+  const tmp39 = id;
+  const tmpResult13 = require("../../../../../../_runtime/metro/01652__.js");
+  items14[2] = tmp13(_modDef1652.View, {
     style: animatedStyle2,
     pointerEvents: "none",
-    children: tmp13(application(5624).Heading, {
-      variant: "heading-lg/bold",
+    children: tmp13(require("Text/Text").Heading, {
+      variant: "heading-lg/semibold",
       color: "text-overlay-light",
       children: str2,
     }),
   });
-  items6[3] = tmp13(application(1187).Spacer, { size: 32, pointerEvents: "none" });
-  obj11.children = items6;
-  items3[1] = closure_8(ReanimatedRexportDefault.View, obj11);
-  let tmp21Result = null;
+  items14[3] = tmp13(require("native").Spacer, { size: 32, pointerEvents: "none" });
+  obj7.children = items14;
+  items11[1] = closure_8(_modDef1652.View, obj7);
+  let tmp38Result = null;
   if (null != application) {
-    tmp21Result = null;
+    tmp38Result = null;
     if (tmpResult16.isRealApplication(application)) {
-      const obj14 = { style: tmp3.actionsWrapper, children: null };
-      const obj15 = {
+      const obj10 = { style: tmp3.actionsWrapper, children: null };
+      const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(5728),
+        icon: tmp5(5848),
         onPress() {
           AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
-            application_id: application.id,
+            application_id: _undefined.id,
             source,
           });
-          const obj2 = { application_id: application.id, source };
+          const obj2 = { application_id: _undefined.id, source };
           const obj4 = getApplicationInstallURL;
           if (c2) {
-            const obj5 = { applicationId: application.id, referrerId: null };
+            const obj5 = { applicationId: _undefined.id, referrerId: null };
             id = undefined;
             if (id != null) {
               id = id.id;
@@ -270,8 +302,8 @@ export default function Header(application) {
             obj5.referrerId = id;
             let activityLaunchURL = obj4.getActivityLaunchURL(obj5);
           } else {
-            const obj6 = { id: application.id };
-            const merged = Object.assign(AppLauncherUtils.getInstallAppProps(application));
+            const obj6 = { id: _undefined.id };
+            const merged = Object.assign(AppLauncherUtils.getInstallAppProps(_undefined));
             activityLaunchURL = obj4.getApplicationInstallURL(obj6);
             const tmp4Result = AppLauncherUtils;
           }
@@ -283,18 +315,18 @@ export default function Header(application) {
         maxFontSizeMultiplier: 1.5,
       };
       const intl = tmp(1113).intl;
-      obj15.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
-      const items7 = [tmp13(tmp(8028).IconButton, obj15)];
-      const obj16 = { application, onAddAppMenuClick };
-      items7[1] = tmp13(tmp5(12463), obj16);
-      obj14.children = items7;
-      tmp21Result = closure_8(tmp22, obj14);
+      obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
+      const items15 = [tmp13(tmp(8152).IconButton, obj11)];
+      const obj12 = { application, onAddAppMenuClick };
+      items15[1] = tmp13(tmp5(12599), obj12);
+      obj10.children = items15;
+      tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(9761);
+    tmpResult16 = tmp(9893);
   }
-  items3[2] = tmp21Result;
-  obj8.children = items3;
-  return closure_8(ReanimatedRexportDefault.View, obj8);
+  items11[2] = tmp38Result;
+  obj4.children = items11;
+  return closure_8(_modDef1652.View, obj4);
 }
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

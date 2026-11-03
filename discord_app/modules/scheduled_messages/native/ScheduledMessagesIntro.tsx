@@ -14,7 +14,7 @@ import size_mod from "../../../../_runtime/metro/00002__.js";
 function MenuRow(arg0) {
   ({ icon, label, highlighted } = arg0);
   const tmp = closure_7();
-  const items = [tmp.menuRow];
+  items = [tmp.menuRow];
   let menuRowHighlighted = null;
   if (highlighted) {
     menuRowHighlighted = tmp.menuRowHighlighted;
@@ -141,7 +141,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_7();
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [
+  items = [
     hasOwnProperty(React4, {
       style: tmp.upsellImage,
       children: hasOwnProperty(ScheduleMessageSpotIllustration.ScheduleMessageSpotIllustration, {
@@ -154,7 +154,7 @@ export default function ScheduledMessagesIntro() {
   ];
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = {
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
     children: null,

@@ -32,7 +32,7 @@ export function TableRadioGroup(arg0) {
     tmp4 = null;
   }
   noop = tmp4;
-  const items = [undefined !== value, onChange, tmp4];
+  items = [undefined !== value, onChange, tmp4];
   const imperativeHandle = obj.useImperativeHandle(
     groupRef,
     () => ({
@@ -50,7 +50,7 @@ export function TableRadioGroup(arg0) {
     }),
     items,
   );
-  jsx = obj.useContext(onChange(7059).RedesignCompatContext);
+  jsx = obj.useContext(onChange(7185).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   onSelect = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -79,7 +79,7 @@ export function TableRadioGroup(arg0) {
     }
     tmp4 = type;
   });
-  obj2.children = jsx(onChange(7060).TableRowGroup, {
+  obj2.children = jsx(onChange(7186).TableRowGroup, {
     accessibilityRole: "radiogroup",
     accessibilityLabel,
     title,

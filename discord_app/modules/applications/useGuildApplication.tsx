@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/applications/useGuildApplicat
 export default function useGuildApplication(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [closure_6];
+  items = [closure_6];
   application = require("initialize").useStateFromStores(items, () =>
     ApplicationStore.getGuildApplication(closure_0, closure_1),
   );
@@ -35,7 +35,7 @@ export default function useGuildApplication(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_5 = { color: fn(6066).CHECKPOINT_PRIMARY };
+let closure_5 = { color: fn(6186).CHECKPOINT_PRIMARY };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointText.tsx");
 
@@ -29,7 +29,7 @@ export default function CheckpointText(isStepHeading) {
     tmp5 = context;
   }
   obj.ref = tmp5;
-  const items = [closure_5, style];
+  items = [closure_5, style];
   obj.style = items;
   obj.children = children;
   return jsx(Text_Text.Text, {});

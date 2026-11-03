@@ -7,7 +7,7 @@ import CustomThemeMobileStore from "CustomThemeMobileStore.tsx";
 
 require = fn;
 function useActiveThemeType() {
-  const items = [CustomThemeMobileStore];
+  items = [CustomThemeMobileStore];
   const stateFromStores = initialize.useStateFromStores(items, () => CustomThemeMobileStore.hasCustomTheme());
   const items1 = [ClientThemesBackgroundStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);

@@ -12,14 +12,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "text-sm/normal";
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   line: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 },
   text: { flexShrink: 1 },
   dismiss: null,
 };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
-obj2.dismiss = { height: fn(5624).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
+obj2.dismiss = { height: fn(5747).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipHint.tsx");
@@ -34,7 +34,7 @@ export default function ConjureTipHint(onDismiss) {
     style: tmp.text,
     children: React4(Text_Text.Text, { variant: textsmnormal, color: "text-muted", children }),
   };
-  const items = [React4(View, obj3)];
+  items = [React4(View, obj3)];
   let tmp2Result = null;
   if (null != onDismiss) {
     const obj5 = { style: tmp.dismiss, children: null };

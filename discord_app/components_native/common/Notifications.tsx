@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
-  const items = [InAppNotificationStore];
+  items = [InAppNotificationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentNotification.getCurrentNotification());
   let tmp3 = null;
   if (null != stateFromStores) {

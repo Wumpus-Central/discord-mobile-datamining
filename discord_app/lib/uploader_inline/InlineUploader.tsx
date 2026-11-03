@@ -40,7 +40,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
       }
       return tmp14;
     } else {
-      const items = [];
+      items = [];
       const _Object = Object;
       const keys = Object.keys(originalMd5);
       for (const item10006 of keys) {

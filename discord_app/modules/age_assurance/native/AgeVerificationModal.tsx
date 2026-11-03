@@ -23,7 +23,7 @@ function AgeVerifyScreen(uri) {
   const onClose = uri.onClose;
   const isExpressiveModalV2 = uri.isExpressiveModalV2;
   let callback;
-  const items = [onComplete, onClose];
+  items = [onComplete, onClose];
   callback = callback.useCallback(() => {
     onComplete();
     onClose();
@@ -102,6 +102,8 @@ function AgeVerifyScreen(uri) {
   }, []);
   return jsx(onClose(isExpressiveModalV2[6]), {
     allowsInlineMediaPlayback: true,
+    mediaPlaybackRequiresUserAction: false,
+    domStorageEnabled: true,
     javaScriptEnabled: true,
     javaScriptCanOpenWindowsAutomatically: true,
     source: { uri: uri.webviewUrl },
@@ -113,10 +115,10 @@ function AgeVerifyScreen(uri) {
       "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n",
   });
 }
-let closure_4 = fn(6728).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6848).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -135,7 +137,7 @@ export default function AgeVerificationModal(webviewUrl) {
   let intl = webviewUrl(onClose[11]).intl;
   const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
   jsx = stringResult;
-  const items = [tmp, webviewUrl, onComplete, onClose, stringResult, flag];
+  items = [tmp, webviewUrl, onComplete, onClose, stringResult, flag];
   const memo = flag.useMemo(() => {
     closure_2 = onClose;
     const isExpressiveModalV2 = flag;

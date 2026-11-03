@@ -13,7 +13,7 @@ export default function ConjureAppInstallSheet(sheetKey) {
   let context;
   context = context.useContext(sheetKey(dismissOAuthModal[2]));
   jsx = context.useRef(false);
-  const items = [dismissOAuthModal];
+  items = [dismissOAuthModal];
   const callback = context.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;

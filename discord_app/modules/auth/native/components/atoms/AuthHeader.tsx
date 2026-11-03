@@ -6,7 +6,7 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/auth/native/components/atoms/
 export default function AuthHeader(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, accessibilityRole: "header", children };
-  const items = [closure_3().header, style];
+  items = [closure_3().header, style];
   obj.style = items;
   return jsx(native.LegacyText, { style: null, accessibilityRole: "header", children });
 }

@@ -12,7 +12,7 @@ export function toDraftCommand(activeCommand, result1) {
     return null;
   } else {
     const tmp2 = (function getCommandTextPrefix(activeCommand, result1) {
-      const items = [,];
+      items = [,];
       ({ displayName: arr[0], untranslatedName: arr[1] } = activeCommand);
       const obj = items[Symbol.iterator]();
       while (obj !== undefined) {

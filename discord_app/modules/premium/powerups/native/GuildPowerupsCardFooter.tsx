@@ -2,10 +2,9 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2570 from "../GuildPowerups.messages.js";
+import _modDef2699 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
@@ -22,7 +21,7 @@ class GuildPowerupCardFooterActive {
     items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj1);
     items[1] = jsx(closure_0(closure_2[5]).Text, {
       color: "status-positive",
-      variant: "text-sm/bold",
+      variant: "text-sm/semibold",
       children: global.text,
     });
     obj.children = items;
@@ -35,7 +34,7 @@ class GuildPowerupCardFooterExpiring {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[9])(global.dateString) };
     obj5.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj6);
@@ -50,7 +49,7 @@ class GuildPowerupCardFooterRemoving {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[10])(global.removingAt) };
     obj5.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj6);
@@ -100,41 +99,34 @@ class GuildPowerupCardFooterStatus {
 class GuildPowerupCardFooterCost {
   constructor(arg0) {
     ({ cost, costDecorator } = global);
-    tmp2 = closure_0;
-    tmp3 = closure_2;
-    tmp = closure_6();
-    tmp4 = closure_0(closure_2[11]);
-    tmp7Result = null;
+    tmp3Result = null;
     if (null != cost) {
       obj = { style: null, children: null };
       obj.style = tmp.inline;
-      tmp7 = jsxs;
-      tmp8 = View;
-      tmp9 = jsx;
+      tmp6 = closure_0;
+      tmp7 = closure_2;
+      tmp3 = jsxs;
+      tmp4 = View;
+      tmp5 = jsx;
       obj1 = { size: "sm", color: null };
-      tmp10 = closure_1;
-      obj1.color = closure_1(tmp3[4]).unsafe_rawColors.GUILD_BOOSTING_PINK;
+      tmp8 = closure_1;
+      obj1.color = closure_1(closure_2[4]).unsafe_rawColors.GUILD_BOOSTING_PINK;
       items = [,];
-      items[0] = jsx(tmp2(tmp3[12]).BoostGemIcon, obj1);
-      str = "heading-sm/semibold";
-      if (tmp5) {
-        str = "experimental/body-sm/semibold";
-      }
-      obj5 = { variant: null, color: "text-subtle", children: null };
-      obj5.variant = str;
-      intl = tmp2(tmp3[7]).intl;
-      obj6 = { required: null, decorator: null };
-      obj6.required = cost;
+      items[0] = jsx(closure_0(closure_2[11]).BoostGemIcon, obj1);
+      intl = closure_0(closure_2[7]).intl;
+      obj5 = { required: null, decorator: null };
+      obj5.required = cost;
       if (costDecorator == null) {
         costDecorator = "";
       }
-      obj6.decorator = costDecorator;
-      obj5.children = intl.formatToPlainString(tmp2(tmp3[7]).t.t2Wbo1, obj6);
-      items[1] = tmp9(tmp2(tmp3[5]).Text, obj5);
+      obj6 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
+      obj5.decorator = costDecorator;
+      obj6.children = intl.formatToPlainString(closure_0(closure_2[7]).t.t2Wbo1, obj5);
+      items[1] = tmp5(closure_0(closure_2[5]).Text, obj6);
       obj.children = items;
-      tmp7Result = tmp7(tmp8, obj);
+      tmp3Result = tmp3(tmp4, obj);
     }
-    return tmp7Result;
+    return tmp3Result;
   }
 }
 const View = _mod17.View;
@@ -152,7 +144,7 @@ export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export function GuildPowerupsCardFooter(status) {
   const obj = { style: null, children: null };
-  const items = [, ,];
+  items = [, ,];
   ({ inline: arr[0], container: arr[1] } = closure_6());
   items[2] = status.style;
   obj.style = items;

@@ -72,7 +72,7 @@ export function OrbCheckoutModalContextProvider(children) {
     order,
   });
   ({ onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = orbCheckoutRedemption);
-  let items = [
+  items = [
     skuId,
     skuProductLine,
     skuApplicationId,
@@ -99,7 +99,7 @@ export function OrbCheckoutModalContextProvider(children) {
           isRedeeming: null,
           orbRedemptionError: null,
         };
-        let items = analyticsLocations;
+        items = analyticsLocations;
         if (analyticsLocations == null) {
           items = [];
         }

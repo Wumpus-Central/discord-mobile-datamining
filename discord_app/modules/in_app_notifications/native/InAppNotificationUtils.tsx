@@ -7,7 +7,7 @@ import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx"
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(11023).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(11156).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -84,7 +84,7 @@ export function getNotificationDuration(ALERT) {
   return 5 * DurationsDefault.Millis.SECOND;
 }
 export function useHasPreviewableMedia(message) {
-  const items = [message];
+  items = [message];
   return noop.useMemo(() => {
     let hasFlagResult = message.hasFlag(constants4.IS_VOICE_MESSAGE);
     if (!hasFlagResult) {
@@ -130,30 +130,30 @@ export function useHasPreviewableMedia(message) {
     return hasFlagResult;
   }, items);
 }
-export function extractMetadataFromNotification(notification) {
-  const type = notification.type;
+export function extractMetadataFromNotification(c0) {
+  const type = _require.type;
   if (constants3.MESSAGE !== type) {
     if (constants3.REACTION !== type) {
       if (constants3.ALERT === type) {
-        const guild = notification.guild;
+        guild = _require.guild;
         let id;
         if (guild != null) {
           id = guild.id;
         }
         if (id == null) {
-          const channel3 = notification.channel;
+          const channel3 = _require.channel;
           let guild_id;
           if (channel3 != null) {
             guild_id = channel3.guild_id;
           }
           id = guild_id;
         }
-        const channel4 = notification.channel;
+        const channel4 = _require.channel;
         let id1;
         if (channel4 != null) {
           id1 = channel4.id;
         }
-        const channel5 = notification.channel;
+        const channel5 = _require.channel;
         let type1;
         if (channel5 != null) {
           type1 = channel5.type;
@@ -162,12 +162,12 @@ export function extractMetadataFromNotification(notification) {
         let channelId = id1;
         let tmp4 = id;
       } else if (constants3.FORUM_THREAD_CREATED === type) {
-        const thread = notification.thread;
+        const thread = _require.thread;
         let guild_id1;
         if (thread != null) {
           guild_id1 = thread.guild_id;
         }
-        const thread2 = notification.thread;
+        const thread2 = _require.thread;
         let id2;
         if (thread2 != null) {
           id2 = thread2.id;
@@ -175,19 +175,19 @@ export function extractMetadataFromNotification(notification) {
         channelId = id2;
         tmp4 = guild_id1;
       } else if (constants3.MESSAGE_FAILED_TO_SEND === type) {
-        channelId = notification.channelId;
+        channelId = _require.channelId;
       } else if (constants3.MESSAGE_REMINDER === type) {
-        const channel9 = notification.channel;
+        const channel9 = _require.channel;
         let guild_id2;
         if (channel9 != null) {
           guild_id2 = channel9.guild_id;
         }
-        const channel = notification.channel;
+        const channel = _require.channel;
         let id3;
         if (channel != null) {
           id3 = channel.id;
         }
-        const channel2 = notification.channel;
+        const channel2 = _require.channel;
         let type2;
         if (channel2 != null) {
           type2 = channel2.type;
@@ -200,30 +200,30 @@ export function extractMetadataFromNotification(notification) {
     const obj = { guildId: tmp4, channelId, messageId: tmp3, channelType: tmp2 };
     return obj;
   }
-  const guild2 = notification.guild;
+  const guild2 = _require.guild;
   let id4;
   if (guild2 != null) {
     id4 = guild2.id;
   }
   if (id4 == null) {
-    const channel6 = notification.channel;
+    const channel6 = _require.channel;
     let guild_id3;
     if (channel6 != null) {
       guild_id3 = channel6.guild_id;
     }
     id4 = guild_id3;
   }
-  const channel7 = notification.channel;
+  const channel7 = _require.channel;
   let id5;
   if (channel7 != null) {
     id5 = channel7.id;
   }
-  const message = notification.message;
+  const message = _require.message;
   let id6;
   if (message != null) {
     id6 = message.id;
   }
-  const channel8 = notification.channel;
+  const channel8 = _require.channel;
   let type3;
   if (channel8 != null) {
     type3 = channel8.type;

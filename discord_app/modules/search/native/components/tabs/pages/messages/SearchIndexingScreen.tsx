@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting(
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [searchContext];
+  items = [searchContext];
   const effect = noop.useEffect(() => {
     search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(13893).getIndexingErrorText(searchContext);
+  const text = searchContext(14024).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 }

@@ -10,9 +10,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHas
 
 export default function useHasEnhancedRoleColors(arg0) {
   _require = arg0;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -25,7 +25,7 @@ export function getHasEnhancedRoleColors(guildId1) {
   if (null == guildId1) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId1);
+    guild = GuildStore.getGuild(guildId1);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -36,9 +36,9 @@ export function getHasEnhancedRoleColors(guildId1) {
 }
 export function useHasEnhancedRoleColorsForRole(guildId) {
   _require = guildId;
-  const items = [GuildStore];
+  items = [GuildStore];
   return require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -48,7 +48,7 @@ export function useHasEnhancedRoleColorsForRole(guildId) {
   });
 }
 export function getHasEnhancedRoleColorsForRole(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let hasItem = null != guild;
   if (hasItem) {
     const features = guild.features;

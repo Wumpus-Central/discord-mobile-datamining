@@ -11,7 +11,7 @@ const CheckpointFetchStates = CheckpointStore2.CheckpointFetchStates;
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
 
 export function useMaybeFetchCheckpointData() {
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => CheckpointStore.fetchState);
   let obj = stateFromStores1(504);
   const items1 = [CheckpointStore];

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10278 from "../../../../../_runtime/metro/10278__.js";
+import _modDef10408 from "../../../../../_runtime/metro/10408__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ function VideoUploadQualityNitroUpsell() {
   _require = require("useNavigation").useStackNavigation();
   const tmp3 = closure_11();
   const obj = require("useNavigation");
-  const items = [UserStore, SubscriptionStore];
+  items = [UserStore, SubscriptionStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
     currentUser = currentUser.getCurrentUser();
@@ -33,7 +33,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj6 = { style: tmp3.cardContent, children: null };
     const obj7 = {
       style: tmp3.cardIcon,
-      source: _modDef10278,
+      source: _modDef10408,
       size: tmp(1187).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };
@@ -47,21 +47,21 @@ function VideoUploadQualityNitroUpsell() {
       },
     };
     obj8.children = intl2.format(tmp(1113).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5624).Text, obj8);
+    items2[1] = closure_9(tmp(5747).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(6977).Card, obj5);
+    obj4.children = closure_9(tmp(7103).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   card: {
     marginTop: 8,
@@ -85,13 +85,13 @@ export default function SettingsChatScreen(route) {
       initialSetting = params.initialSetting;
     }
   }
-  let items = [initialSetting];
+  items = [initialSetting];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, scrollTarget: null };
     const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
     obj3.label = intl.string(util.t["9nyle0"]);
-    const items = [, ,];
+    items = [, ,];
     ({ DISPLAY_MEDIA_LINKS: arr[0], DISPLAY_MEDIA_UPLOADS: arr[1], IMAGE_DESCRIPTIONS: arr[2] } = MobileUserSettings);
     obj3.settings = items;
     const intl2 = util.intl;

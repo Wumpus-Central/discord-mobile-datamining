@@ -4,7 +4,7 @@ import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx",
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 
 export function useInappropriateConversationWarningsForChannel(channelId) {
   _require = channelId;
-  const items = [ChannelSafetyWarningsStore];
+  items = [ChannelSafetyWarningsStore];
   const items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(
     items,

@@ -5,9 +5,9 @@ import UserTrialActionCreatorsDefault from "../../UserTrialActionCreators.androi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const PremiumTypes = fn(1385).PremiumTypes;
+const PremiumTypes = fn(1387).PremiumTypes;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
@@ -28,7 +28,7 @@ export default function _default(markAsDismissed) {
       const result = UserTrialActionCreatorsDefault.acknowledgeUserTrialOffer(userTrialOffer);
     }
   }, []);
-  const items = [userTrialOffer, markAsDismissed];
+  items = [userTrialOffer, markAsDismissed];
   const effect1 = noop.useEffect(() => {
     if (null == userTrialOffer) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);

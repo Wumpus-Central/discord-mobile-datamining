@@ -10,13 +10,13 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMe
 
 export function useIsMessageRequest(id) {
   _require = id;
-  const items = [MessageRequestStore];
+  items = [MessageRequestStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => MessageRequestStore.isMessageRequest(closure_0), items1);
 }
 export function useIsEitherTypeOfMessageRequest(id) {
   _require = id;
-  const items = [MessageRequestStore, SpamMessageRequestStore];
+  items = [MessageRequestStore, SpamMessageRequestStore];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {

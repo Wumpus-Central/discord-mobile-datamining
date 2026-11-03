@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/frames/useFrameRunsInBackgrou
 
 export default function useFrameRunsInBackground(arg0) {
   _require = arg0;
-  const items = [FramesStore, UnsyncedUserSettingsStore];
+  items = [FramesStore, UnsyncedUserSettingsStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

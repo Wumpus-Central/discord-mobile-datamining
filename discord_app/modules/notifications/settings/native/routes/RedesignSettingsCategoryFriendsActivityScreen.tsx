@@ -15,7 +15,7 @@ export default noop.memo(function RedesignSettingsCategoryFriendsActivityScreen(
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj = SettingBuilders;
-    const items = [MobileNotifSettingsRouteBuilders.buildCategoryFriendsActivitySettingsSection()];
+    items = [MobileNotifSettingsRouteBuilders.buildCategoryFriendsActivitySettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

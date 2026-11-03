@@ -31,13 +31,13 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9076);
+const GlobalDiscoveryServersConstants = fn(9204);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
   CategoryId: closure_8,
   DISCOVERY_ALL_CATEGORIES_ID: closure_9,
-  getLanguageOptions: c10,
+  getLanguageOptions: closure_10,
   HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -216,9 +216,9 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "isArray",
-    discoverySplash: "onPress",
-    emojis: "Array",
+    preferredLocale: "id",
+    discoverySplash: "loadingTextPlaceholderSmall",
+    emojis: "_l",
   };
   ({
     approximate_presence_count: obj.presenceCount,
@@ -231,12 +231,12 @@ export function fromDiscoverableGuildSearchResult(id) {
 export function getLanguageCodeFallback() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [LocaleStore];
+    items = [LocaleStore];
     tmp = items;
   }
   [tmp3] = tmp;
   const arr2 = closure_1_10();
-  locale = tmp3.locale;
+  const locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {
     found = arr2[0];

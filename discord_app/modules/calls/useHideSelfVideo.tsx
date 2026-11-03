@@ -5,7 +5,7 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
 const require = fn;
 const VideoToggleState = fn(1072).VideoToggleState;
-const Constants = fn(5768);
+const Constants = fn(5888);
 ({ MediaEngineContextTypes: metroRequire, Features: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
@@ -15,7 +15,7 @@ export default function useHideSelfVideo(id) {
   if (arg1 === undefined) {
     DEFAULT = constants.DEFAULT;
   }
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
   let obj = DEFAULT(504);
   const items1 = [MediaEngineStore];

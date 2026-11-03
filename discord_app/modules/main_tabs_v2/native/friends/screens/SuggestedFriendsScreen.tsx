@@ -10,7 +10,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function SuggestedFriendsScreen() {
   const userRowWithSubLabelHeight = analyticsLocations(setAdded[10]).useUserRowWithSubLabelHeight(1);
   const obj = analyticsLocations(setAdded[10]);
   const userRowWithSubLabelHeight1 = analyticsLocations(setAdded[10]).useUserRowWithSubLabelHeight(2);
-  let items = [analyticsLocations];
+  items = [analyticsLocations];
   const onPress = friendSuggestions.useCallback((id) => {
     showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
   }, items);
@@ -71,7 +71,7 @@ export default function SuggestedFriendsScreen() {
           onPress,
           onAddSuggestion() {
             return closure_2((arg0) => {
-              const items = [];
+              items = [];
               items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_1;
               return items;
             });

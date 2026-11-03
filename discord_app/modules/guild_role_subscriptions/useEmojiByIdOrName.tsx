@@ -5,7 +5,7 @@ const require = fn;
 function useEmojiByIdOrName(guildId, emojiId) {
   _require = guildId;
   dependencyMap = emojiId;
-  const items = [EmojiStore];
+  items = [EmojiStore];
   const items1 = [guildId, emojiId];
   return require("initialize").useStateFromStores(
     items,

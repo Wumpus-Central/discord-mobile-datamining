@@ -8,7 +8,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5230);
+const GuildPowerupsConstants = fn(5353);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
@@ -27,9 +27,9 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId, stateFro
   );
   let obj = require("GameServerExperiment");
   let tmp = _require;
-  const items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const guild = GuildStore.getGuild(closure_0);
+    guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

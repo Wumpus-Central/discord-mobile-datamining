@@ -10,7 +10,7 @@ function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
   const tmp = usePollDurationOptionsDefault();
   importDefault = tmp;
-  const items = [tmp, onChange];
+  items = [tmp, onChange];
   const callback = noop.useCallback((arg0) => {
     onChange(arg0);
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
@@ -27,7 +27,7 @@ function PollDurationRadioGroup(onChange) {
     [tmp, tmp2] = item;
     return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
-  return jsx(onChange(7058).TableRadioGroup, {
+  return jsx(onChange(7184).TableRadioGroup, {
     title: null,
     hasIcons: false,
     onChange: null,

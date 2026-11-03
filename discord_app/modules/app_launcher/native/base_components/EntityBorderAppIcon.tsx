@@ -35,7 +35,7 @@ export default function EntityBorderAppIcon(iconSize) {
   }
   const tmp = closure_5(num, iconBorderRadius);
   const obj = { style: null, children: null };
-  const items = [tmp.entityWrapper, wrapperStyle];
+  items = [tmp.entityWrapper, wrapperStyle];
   obj.style = items;
   const obj2 = { style: null, source: iconSource };
   const items1 = [tmp.appIcon, iconStyle];

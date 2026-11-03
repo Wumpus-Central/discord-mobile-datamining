@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 const obj2 = {
   dot: { width: 8, height: 8, borderRadius: 4 },
   running: { backgroundColor: nativeDefault.colors.STATUS_WARNING },
@@ -29,7 +29,7 @@ export default function ConjurePerfTraceStatusDot(status) {
     accessibilityRole: "image",
     accessibilityLabel: ConjurePerfTraceFormat.PERF_STATUS_LABELS[status],
   };
-  const items = [tmp.dot, tmp[status]];
+  items = [tmp.dot, tmp[status]];
   obj.style = items;
   return (
     <View

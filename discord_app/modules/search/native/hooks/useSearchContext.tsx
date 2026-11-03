@@ -11,11 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");
 
 export function useGuildSearchContext(guildId) {
-  const items = [guildId];
+  items = [guildId];
   return noop.useMemo(() => ({ type: SearchTypes.GUILD, guildId }), items);
 }
 export function useGuildChannelSearchContext(guildId, channelId) {
-  const items = [guildId, channelId];
+  items = [guildId, channelId];
   return noop.useMemo(() => ({ type: SearchTypes.GUILD_CHANNEL, guildId, channelId }), items);
 }
 export function getChannelDetailsSearchContext(channelId, guildId, isThreadResult) {
@@ -33,7 +33,7 @@ export function getChannelDetailsSearchContext(channelId, guildId, isThreadResul
 }
 export function useChannelDetailsSearchContext(channelId, guildId) {
   _require = channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let flag;

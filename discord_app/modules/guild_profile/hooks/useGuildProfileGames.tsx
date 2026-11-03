@@ -15,7 +15,7 @@ export default function useGuildProfileGames(games) {
   _require = games;
   let stateFromStoresArray;
   games = games.games;
-  let items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
   if (null != games) {
@@ -54,7 +54,7 @@ export default function useGuildProfileGames(games) {
     });
     const items4 = [stateFromStoresArray, games.gameActivity];
     memo = memo.useMemo(() => {
-      const items = [...stateFromStoresArray];
+      items = [...stateFromStoresArray];
       return items.sort((arg0, arg1) => {
         let num;
         if (dependencyMap[arg0.id] != null) {
@@ -100,7 +100,7 @@ export default function useGuildProfileGames(games) {
 export function useAllGuildProfileGames(profile) {
   _require = profile;
   const games = profile.games;
-  const items = [AuthenticationStore];
+  items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
   if (null != games) {

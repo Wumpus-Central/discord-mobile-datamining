@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3092 from "../../../../Checkpoint2026.messages.js";
+import _modDef3219 from "../../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
@@ -80,7 +80,7 @@ const result = size.fileFinishedImporting(
 
 export default function CheckpointTopServerStatsScreen() {
   const tmp = closure_8();
-  const items = [CheckpointStore];
+  items = [CheckpointStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     stats = stats.stats;
     let first;
@@ -106,12 +106,12 @@ export default function CheckpointTopServerStatsScreen() {
   }
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3092["M+a+t1"]);
+  const stringResult = intl.string(_modDef3219["M+a+t1"]);
   let formatToPlainStringResult;
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3092.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3219.BRQODX, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.spotlightContainer, children: null };
@@ -157,7 +157,7 @@ export default function CheckpointTopServerStatsScreen() {
   const obj11 = { style: tmp.copy, children: null };
   const obj12 = { style: tmp.title, children: null };
   const items5 = [timestampProducer(ServerIcon.ServerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY })];
-  const obj14 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+  const obj14 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
   const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp8Result = CheckpointScreenDefault;
   obj14.children = stringResult.toLocaleUpperCase();
@@ -187,11 +187,11 @@ export default function CheckpointTopServerStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    let formatResult = intl4.format(_modDef3092.sIDTV1, obj17);
+    let formatResult = intl4.format(_modDef3219.sIDTV1, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3092.nLCUQ4, obj18);
+    formatResult = intl3.format(_modDef3219.nLCUQ4, obj18);
   }
   const obj19 = { children: null };
   obj16.children = formatResult;

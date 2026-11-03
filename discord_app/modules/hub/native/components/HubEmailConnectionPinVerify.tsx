@@ -17,7 +17,7 @@ function presentResendToast(text) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   container: { alignItems: "center" },
   title: { marginBottom: 8, textAlign: "center" },
@@ -55,14 +55,14 @@ export default function HubEmailConnectionPinVerify(email) {
     return value;
   };
   const tmp = closure_10();
-  const items = [onClose];
+  items = [onClose];
   const effect = noop.useEffect(() => {
     HubJoinManagerDefault.initialize(() => {
       dependencyMap(true);
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(14353).terminate();
+      closure_1_1(14484).terminate();
     };
   }, items);
   const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -103,12 +103,12 @@ export default function HubEmailConnectionPinVerify(email) {
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("../../../../../_runtime/metro/14354__.js");
+  obj4.source = require("../../../../../_runtime/metro/14485__.js");
   const items1 = [closure_8(require("FastImage"), obj4), , , , ,];
   const obj5 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

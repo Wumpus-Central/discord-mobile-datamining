@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14016).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(14147).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 },
   avatar: null,
@@ -32,7 +32,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
   const name = user(analyticsLocations[7]).getName(user);
   let obj = user(analyticsLocations[7]);
   const userTag = user(analyticsLocations[7]).getUserTag(user, { decoration: "never", identifiable: "always" });
-  const items = [user.id, channel.id, analyticsLocations];
+  items = [user.id, channel.id, analyticsLocations];
   const callback = userTag.useCallback(() => {
     showUserProfileActionSheetDefault({
       userId: user.id,
@@ -48,16 +48,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14179, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14310, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8762).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8762);
-        channel(7522).transitionToGuild(arg0);
-        const obj2 = channel(7522);
-        user(5258).hideActionSheet();
-        const obj3 = user(5258);
-        user(6744).popWithKey(closure_1_5);
+        const result = channel(8886).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8886);
+        channel(7646).transitionToGuild(arg0);
+        const obj2 = channel(7646);
+        user(5381).hideActionSheet();
+        const obj3 = user(5381);
+        user(6864).popWithKey(closure_1_5);
       },
     });
   }, items2);
@@ -79,7 +79,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
   obj6.accessibilityLabel = intl2.string(channel(analyticsLocations[18]).t.iXAna6);
   obj6.onPress = callback;
   obj6.children = closure_6(channel(analyticsLocations[20]).Text, {
-    variant: "heading-xxl/extrabold",
+    variant: "heading-xxl/semibold",
     color: "mobile-text-heading-primary",
     children: name,
   });

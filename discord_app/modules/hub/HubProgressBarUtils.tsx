@@ -7,7 +7,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9131).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9259).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1072).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
@@ -35,7 +35,7 @@ export function useHubProgressBarCompletedSteps(guild) {
     id = guild.id;
   }
   closure_129_0 = id;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const stateFromStores = memo(stateFromStores1[5]).useStateFromStores(items, () => {
     let num = 0;
     if (null != memo) {

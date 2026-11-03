@@ -6,15 +6,15 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 const SystemTheme = fn(1195).SystemTheme;
-const SettingBuilders = fn(11540);
+const SettingBuilders = fn(11677);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.NoFvjZ);
   },
-  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  parent: fn(8556).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    const items = [ThemeStore];
+    items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing() {

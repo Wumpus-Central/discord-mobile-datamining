@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef11911 from "../../../../../_runtime/metro/11911__.js";
+import _modDef12048 from "../../../../../_runtime/metro/12048__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -52,7 +52,7 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -83,7 +83,7 @@ export default function GuildProgressOverview(guild) {
   let completed;
   const guildProgressStep = guild(completed[6]).useGuildProgressStep(guild);
   completed = guildProgressStep.completed;
-  let items = [completed, guild.id];
+  items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
   const effect = noop.useEffect(() => {
     if (completed) {
@@ -107,7 +107,7 @@ export default function GuildProgressOverview(guild) {
         obj3.onPress = function onPress() {
           flag(completed[7]).dismissProgress(id.id);
         };
-        const items = [obj3];
+        items = [obj3];
         obj2.options = items;
         const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
       }

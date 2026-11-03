@@ -61,7 +61,7 @@ export const CONJURE_INSPECT_CLEAR_POINT = frozen;
 export function inspectPreviewPointRequest(arg0) {
   const obj = { steps: null, timeoutMs: conjurePreviewCall.INSPECT_TIMEOUT_MS, passive: true };
   const point = { action: "inspect", x: arg0.x, y: arg0.y };
-  const items = [point];
+  items = [point];
   obj.steps = items;
   return obj;
 }

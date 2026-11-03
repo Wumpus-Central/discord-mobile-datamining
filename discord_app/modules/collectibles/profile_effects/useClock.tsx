@@ -44,7 +44,7 @@ export default function _default(arg0) {
     cancelAnimationFrame(ref2.current);
     clearTimeout(ref6.current);
   }, []);
-  const items = [allowableMinInterval, callback, num2, droppedFramesCallbackThreshold, droppedFramesCallback, arg0];
+  items = [allowableMinInterval, callback, num2, droppedFramesCallbackThreshold, droppedFramesCallback, arg0];
   const callback2 = allowableMinInterval.useCallback((current) => {
     if (ticking.current) {
       if (null == ref3.current) {

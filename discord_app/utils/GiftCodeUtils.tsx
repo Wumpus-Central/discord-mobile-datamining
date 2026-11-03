@@ -25,7 +25,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -173,11 +173,11 @@ const Constants = fn(1072);
   Endpoints: closure_7,
   AnalyticEvents: closure_8,
   AbortCodes: closure_9,
-  GiftCodeModalStates: c10,
+  GiftCodeModalStates: closure_10,
   MessageEmbedTypes: closure_11,
   MessageTypes: closure_12,
 } = Constants);
-const PremiumConstants = fn(1385);
+const PremiumConstants = fn(1387);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = PremiumConstants);
 let items = [RegexUtils.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((item) => RegexUtils.escape(item))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
@@ -457,9 +457,9 @@ export function getButtonText(arg0, giftStyle, isCustomGift) {
 }
 export function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_6556").match(getOrFetchSubscriptionPlan);
+  const match = require("module_6676").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_6556");
+  const str = require("module_6676");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -527,9 +527,9 @@ export function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, s
   } else {
     intervalCount = getOrFetchSubscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_6556").match(getOrFetchSubscriptionPlan);
+      const match = require("module_6676").match(getOrFetchSubscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_6556");
+      const str = require("module_6676");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -558,9 +558,9 @@ export function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, s
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         });
     } else {
-      const match1 = require("module_6556").match(getOrFetchSubscriptionPlan);
+      const match1 = require("module_6676").match(getOrFetchSubscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_6556");
+      const str2 = require("module_6676");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -618,9 +618,9 @@ export function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(6556).match(subscriptionPlan);
+      const match = subscriptionPlan(6676).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(6556);
+      const str = subscriptionPlan(6676);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;
@@ -737,7 +737,7 @@ export function firstLibraryApplicationForGiftCode(arg0, applicationId, arg2) {
   const libraryApplication = arg2;
   applicationId = applicationId.applicationId;
   if (arg0.length <= 0) {
-    const items = [applicationId];
+    items = [applicationId];
     arr = items;
   }
   const mapped = arr.map((item) => libraryApplication.getLibraryApplication(applicationId, item, true));
@@ -772,7 +772,7 @@ export function processGiftCodeInput(str) {
 export function useGetGiftCode(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  const items = [PremiumPaymentModalStore];
+  items = [PremiumPaymentModalStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (closure_1) {

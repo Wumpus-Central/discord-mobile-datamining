@@ -16,7 +16,7 @@ import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(10247).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx",
@@ -134,7 +134,7 @@ export function createActivityInstanceEmbed(message) {
             isCurrentlyInInstance = false === canLaunchInChannel;
           }
           obj4.disabled = isCurrentlyInInstance;
-          const items = [obj4];
+          items = [obj4];
           let tmp24 = null == ApplicationStore.getApplication(application.id);
           if (tmp24) {
             tmp24 = false === ApplicationStore.isFetchingApplication(application.id);

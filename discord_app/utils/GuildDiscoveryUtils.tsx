@@ -1,7 +1,7 @@
 // discord_app/utils/GuildDiscoveryUtils.tsx
 import AnalyticsUtilsDefault from "AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1485 from "../../_runtime/metro/01485__.js";
+import _modDef1487 from "../../_runtime/metro/01487__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import LurkingStore from "../modules/lurker_mode/LurkingStore.tsx";
 import GuildMemberCountStore from "../stores/GuildMemberCountStore.tsx";
@@ -34,7 +34,7 @@ let closure_11 = async function _startLurking(arg0) {
       }
       closure_133_11 = tmp31;
       const history = closure_134_0(closure_134_2[5]).getHistory();
-      const guild = closure_134_6.getGuild(closure_133_0);
+      guild = closure_134_6.getGuild(closure_133_0);
       const obj8 = { sourceLocationStack: closure_133_3, state: null };
       obj8.state = { analyticsSource: closure_133_1 };
       closure_133_14 = obj8;
@@ -225,7 +225,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -247,7 +247,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1485.stringify(obj4);
+            request.query = _modDef1487.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };
@@ -305,7 +305,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -344,7 +344,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
         return obj6;
       } else {
         body = value.body;
-        let guild;
+        guild = undefined;
         if (body != null) {
           const data = body.data;
           if (data != null) {
@@ -386,7 +386,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, SearchTypes: closure_8, Endpoints: closure_9, Routes: c10 } = Constants);
+({ AnalyticEvents: closure_7, SearchTypes: closure_8, Endpoints: closure_9, Routes: closure_10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");
 

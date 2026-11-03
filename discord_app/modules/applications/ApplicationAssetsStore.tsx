@@ -40,7 +40,7 @@ prototype["getFetchingIds"] = function getFetchingIds() {
     [, tmp] = item;
     return tmp === constants.FETCHING;
   });
-  const items = [
+  items = [
     ...found.map((item) => {
       [tmp] = item;
       return tmp;

@@ -41,7 +41,7 @@ export function usePinotMemberNotice(channel, mobile_channel_header) {
   }
   pinotPromotableChannelId = tmp10;
   const tmpResult = pinotPromotableChannelId(stateFromStores[4]);
-  const items = [PinotMemberNoticeAckStore];
+  items = [PinotMemberNoticeAckStore];
   const items1 = [tmp10];
   stateFromStores = pinotPromotableChannelId(stateFromStores[6]).useStateFromStores(
     items,

@@ -51,7 +51,7 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
             audioCaptureSampleRateMismatchPercent: num2,
           };
           const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-          const items = [obj2];
+          items = [obj2];
           tmp5 = items;
         }
         return tmp5;

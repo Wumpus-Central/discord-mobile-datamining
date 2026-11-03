@@ -2,42 +2,31 @@
 import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtils.tsx";
-import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
+import _modDef10146 from "../../../../../../_runtime/metro/10146__.js";
+import PaginationDefault from "../../../../../../_runtime/10759_Pagination.js";
+import HexagonCampaignThemeLegalDefault from "../../../../hexagon_campaign/native/HexagonCampaignThemeLegal.tsx";
+import _modDef17412 from "../../../../../../_runtime/metro/17412__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
-import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import 01652__ from "../../../../../../_runtime/metro/01652__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
-const HexagonCampaignConstants = fn(5039);
-({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: c10 } = HexagonCampaignConstants);
+const HexagonCampaignConstants = fn(5166);
+({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: closure_10 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(1187).Icon);
-const createStyles = fn(5014);
-let obj = {
-  container: { gap: nativeDefault.space.PX_24, alignItems: "center" },
-  textCentered: { textAlign: "center" },
-  hintContainer: { alignSelf: "stretch" },
-  hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 },
-  hidden: { opacity: 0 },
-  labelGroup: null,
-  swatchesGroup: null,
-  badgeSlot: null,
-  titleContainer: null,
-  floatingNuxContainer: null,
-  floatingNux: null,
-  arrowLeft: null,
-  uppercase: null,
-  selectionBorder: null,
-  a11yThemeList: null,
-  a11yThemeListScroll: null,
-};
+let closure_14 = module_1652.createAnimatedComponent(fn(1187).Icon);
+const createStyles = fn(5141);
+let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, hintContainer: { alignSelf: "stretch" }, hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, hidden: { opacity: 0 }, labelGroup: null, swatchesGroup: null, badgeSlot: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };
 let obj4 = { gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -45,28 +34,10 @@ obj.swatchesGroup = { gap: nativeDefault.space.PX_12, alignItems: "center" };
 let obj5 = { gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.badgeSlot = { height: nativeDefault.space.PX_16, justifyContent: "center" };
 let obj6 = { height: nativeDefault.space.PX_16, justifyContent: "center" };
-obj.titleContainer = {
-  minHeight: 20,
-  marginTop: nativeDefault.space.PX_4,
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-};
-let obj7 = {
-  minHeight: 20,
-  marginTop: nativeDefault.space.PX_4,
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-};
+obj.titleContainer = { minHeight: 20, marginTop: nativeDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+let obj7 = { minHeight: 20, marginTop: nativeDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
 obj.floatingNuxContainer = { position: "absolute", left: nativeDefault.space.PX_24 };
-let obj9 = {
-  borderRadius: nativeDefault.radii.lg,
-  flexDirection: "row",
-  alignItems: "center",
-  padding: nativeDefault.space.PX_4,
-  paddingRight: nativeDefault.space.PX_8,
-};
+let obj9 = { borderRadius: nativeDefault.radii.lg, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj9.shadowColor = "#000000";
 obj.floatingNux = obj9;
@@ -75,34 +46,23 @@ let items = [{ rotate: "90deg" }];
 obj10.transform = items;
 obj.arrowLeft = obj10;
 obj.uppercase = { textTransform: "uppercase" };
-let size = {
-  position: "absolute",
-  alignSelf: "center",
-  width: SettingsAppearanceConstants.THEME_ITEM_WIDTH,
-  height: SettingsAppearanceConstants.THEME_ITEM_HEIGHT,
-  borderRadius: nativeDefault.radii.md,
-  borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
-  borderWidth: 2,
-};
+let size = { position: "absolute", alignSelf: "center", width: SettingsAppearanceConstants.THEME_ITEM_WIDTH, height: SettingsAppearanceConstants.THEME_ITEM_HEIGHT, borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
 obj.selectionBorder = size;
 obj.a11yThemeList = { flexDirection: "row" };
 obj.a11yThemeListScroll = { flexGrow: 0 };
 let closure_15 = createStyles.createStyles(obj);
-let __initData = {
-  code: "function SettingsAppearanceThemeCarouselTsx1(){const{badgeOpacity}=this.__closure;return{opacity:badgeOpacity.get()};}",
-};
-let closure_17 = {
-  code: "function SettingsAppearanceThemeCarouselTsx2(){const{withTiming,isOnyxNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?'auto':'none'};}",
-};
+let closure_16 = { code: "(function SettingsAppearanceThemeCarouselTsx1(){let[badgeOpacity]=this.__closure;return{opacity:badgeOpacity.get()};})" };
+let closure_17 = { code: "(function SettingsAppearanceThemeCarouselTsx2(){let[withTiming,isOnyxNuxVisible,timingStandard]=this.__closure;return{opacity:withTiming(isOnyxNuxVisible.get()?1:0,timingStandard),pointerEvents:isOnyxNuxVisible.get()?'auto':'none'};})" };
 size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx",
-);
+let result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
 
 export default function SettingsAppearanceThemeCarousel(themes) {
   themes = themes.themes;
+  _require = themes;
   const currentThemeIndex = themes.currentThemeIndex;
+  importDefault = currentThemeIndex;
   const isPreview = themes.isPreview;
+  dependencyMap = isPreview;
   const defaultIndex = themes.defaultIndex;
   const deviceWidth = themes.deviceWidth;
   ({ animatedStyles, hasOnyxNux: closure_5, onThemeSelected } = themes);
@@ -110,43 +70,40 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   let sharedValue2;
   closure_18 = undefined;
   let tmp = isThumbstickScrollDevice();
-  const isScreenReaderEnabled = themes(isPreview[11]).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   deviceWidth.useRef(null);
   const ref = deviceWidth.useRef(defaultIndex);
-  const items = [themes];
+  items = [themes];
   constants = deviceWidth.useMemo(() => {
-    const findIndexResult = themes.findIndex((theme) => theme.theme === constants.ONYX);
+    const findIndexResult = _undefined.findIndex((theme) => theme.theme === constants.ONYX);
     let num = 0;
     if (findIndexResult >= 0) {
       num = findIndexResult;
     }
     return num;
   }, items);
-  let obj = themes(isPreview[11]);
-  const sharedValue = themes(isPreview[7]).useSharedValue(false);
-  let obj3 = themes(isPreview[7]);
-  const sharedValue1 = themes(isPreview[7]).useSharedValue(false);
-  const obj4 = themes(isPreview[7]);
-  let result = themes(isPreview[12]).isHexagonCampaignMobileTheme(themes[currentThemeIndex]);
+  let obj = require("useIsScreenReaderEnabled");
+  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  let obj3 = require("../../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj4 = require("../../../../../../_runtime/metro/01652__.js");
+  let result = require("MobileThemesUtils").isHexagonCampaignMobileTheme(themes[currentThemeIndex]);
   c12 = result;
   const items1 = [themes];
-  const memo = deviceWidth.useMemo(() => themes.some(MobileThemesUtils.isHexagonCampaignMobileTheme), items1);
+  const memo = deviceWidth.useMemo(() => _undefined.some(MobileThemesUtils.isHexagonCampaignMobileTheme), items1);
   const items2 = [themes];
-  const memo1 = deviceWidth.useMemo(() => themes.findIndex(MobileThemesUtils.isHexagonCampaignMobileTheme), items2);
+  const memo1 = deviceWidth.useMemo(() => _undefined.findIndex(MobileThemesUtils.isHexagonCampaignMobileTheme), items2);
   let rounded = Math.ceil(deviceWidth / (ref.THEME_ITEM_WIDTH + ref.THEME_ITEM_HORIZONTAL_MARGIN));
-  const tmp13 = defaultIndex(
-    deviceWidth.useState(() => {
-      let tmp3 = memo1 >= 0;
-      if (tmp3) {
-        const _Math = Math;
-        tmp3 = Math.abs(tmp - tmp2) < rounded / 2;
-      }
-      return tmp3;
-    }),
-    2,
-  );
+  const tmp13 = defaultIndex(deviceWidth.useState(() => {
+    let tmp3 = memo1 >= 0;
+    if (tmp3) {
+      const _Math = Math;
+      tmp3 = Math.abs(tmp - tmp2) < rounded / 2;
+    }
+    return tmp3;
+  }), 2);
   isThumbstickScrollDevice = tmp13[0];
-  __initData = tmp14;
+  closure_16 = tmp14;
   let tmp15 = !isThumbstickScrollDevice;
   if (!isThumbstickScrollDevice) {
     let tmp16 = memo1 >= 0;
@@ -159,70 +116,67 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   if (tmp15) {
     tmp14(true);
   }
-  const obj5 = themes(isPreview[12]);
+  const obj5 = require("MobileThemesUtils");
   let tmp18 = memo;
   if (memo) {
     if (!isThumbstickScrollDevice) {
       isThumbstickScrollDevice = isScreenReaderEnabled;
     }
     if (!isThumbstickScrollDevice) {
-      isThumbstickScrollDevice = tmp2(tmp3[15]).isThumbstickScrollDevice;
+      isThumbstickScrollDevice = tmp2(1624).isThumbstickScrollDevice;
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = themes(isPreview[13]).useTrackHexagonCampaignContentViewed(
-    tmp2(tmp3[14]).QuestContent.CLIENT_THEME_SETTINGS,
-    tmp2(tmp3[13]).HexagonCampaignContentSurface.THEME_PICKER,
-    tmp18,
-  );
-  const tmp2Result = themes(isPreview[13]);
-  const hexagonCampaignPerkAvailability = themes(isPreview[16]).useHexagonCampaignPerkAvailability(
-    constants.CLIENT_THEME,
-    "SettingsAppearanceThemeCarousel",
-  );
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6904).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16609).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const tmp2Result = require("HexagonCampaignAnalytics");
+  const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
-  const tmp2Result7 = themes(isPreview[16]);
+  const tmp2Result7 = require("HexagonCampaignPerkAvailability");
   let num2 = 0;
   if (result) {
     num2 = 1;
   }
-  sharedValue2 = themes(isPreview[7]).useSharedValue(num2);
+  sharedValue2 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
   const items3 = [result, sharedValue2];
   const effect = obj2.useEffect(() => {
     let num = 0;
     if (c12) {
       num = 1;
     }
-    const result = sharedValue2.set(timing.withTiming(num, timingPresets.timingStandard));
+    const result = sharedValue2.set(timing_timing.withTiming(num, timingPresets.timingStandard));
   }, items3);
-  const tmp2Result8 = themes(isPreview[7]);
-  class K {
+  const tmp2Result8 = require("../../../../../../_runtime/metro/01652__.js");
+  const items4 = [closure_16, sharedValue2];
+  _require = undefined;
+  [tmp24, tmp25] = items4;
+  class SettingsAppearanceThemeCarouselTsx1 {
     constructor() {
-      obj = { opacity: closure_17.get() };
+      obj = { opacity: closure_0.get() };
       return obj;
     }
   }
-  K.__closure = { badgeOpacity: sharedValue2 };
-  K.__workletHash = 11624303332519;
-  K.__initData = __initData;
-  const items4 = [sharedValue, sharedValue1];
-  const animatedStyle = themes(isPreview[7]).useAnimatedStyle(K);
+  const items5 = [tmp25];
+  SettingsAppearanceThemeCarouselTsx1.__closure = items5;
+  SettingsAppearanceThemeCarouselTsx1.__workletHash = 10804085890430;
+  SettingsAppearanceThemeCarouselTsx1.__initData = tmp24;
+  const items6 = [sharedValue, sharedValue1];
+  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(SettingsAppearanceThemeCarouselTsx1);
   const effect1 = obj2.useEffect(() => {
     const timeout = setTimeout(() => {
       const result = sharedValue.set(false);
       const result1 = sharedValue1.set(true);
     }, 5500);
     return () => clearTimeout(closure_0);
-  }, items4);
-  const items5 = [onThemeSelected];
-  closure_18 = obj2.useMemo(() => _modDef12.debounce(onThemeSelected, 180), items5);
-  const items6 = [isPreview, onThemeSelected, currentThemeIndex];
+  }, items6);
+  const items7 = [onThemeSelected];
+  closure_18 = obj2.useMemo(() => _modDef12.debounce(onThemeSelected, 180), items7);
+  const items8 = [isPreview, onThemeSelected, currentThemeIndex];
   const callback = obj2.useCallback((themePreset) => {
     const index = themePreset.index;
-    return sharedValue1(currentThemeIndex(isPreview[20]), {
+    return sharedValue1(_undefined2(isPreview[20]), {
       themePreset: themePreset.item,
       isPreview,
-      isSelected: index === currentThemeIndex,
+      isSelected: index === _undefined2,
       onPress() {
         if (null != ref.current) {
           const current = ref.current;
@@ -248,88 +202,56 @@ export default function SettingsAppearanceThemeCarousel(themes) {
           }
         }
       },
-      isNew: false,
+      isNew: false
     });
-  }, items6);
-  const tmp2Result9 = themes(isPreview[7]);
-  class Q {
+  }, items8);
+  const tmp2Result9 = require("../../../../../../_runtime/metro/01652__.js");
+  const items9 = [sharedValue2, require("timing/timing").withTiming, sharedValue, require("timingPresets").timingStandard];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp29, tmp30, tmp31, tmp32] = items9;
+  class SettingsAppearanceThemeCarouselTsx2 {
     constructor() {
+      obj = closure_1;
       tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[17]);
-      obj2 = closure_10;
       num = 0;
-      if (closure_10.get()) {
+      if (closure_1.get()) {
         num = 1;
       }
-      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[18]).timingStandard), pointerEvents: null };
+      obj1 = { opacity: tmp(num, closure_2), pointerEvents: null };
       str = "none";
-      if (obj2.get()) {
+      if (obj.get()) {
         str = "auto";
       }
       obj1.pointerEvents = str;
       return obj1;
     }
   }
-  const tmp2Result10 = themes(isPreview[7]);
-  Q.__closure = {
-    withTiming: themes(isPreview[17]).withTiming,
-    isOnyxNuxVisible: sharedValue,
-    timingStandard: themes(isPreview[18]).timingStandard,
-  };
-  Q.__workletHash = 16840053984177;
-  Q.__initData = sharedValue2;
-  const animatedStyle1 = tmp2Result10.useAnimatedStyle(Q);
-  const obj6 = {
-    withTiming: themes(isPreview[17]).withTiming,
-    isOnyxNuxVisible: sharedValue,
-    timingStandard: themes(isPreview[18]).timingStandard,
-  };
-  const obj7 = { style: tmp.titleContainer, children: null };
-  let tmp30 = null;
+  const items10 = [tmp30, tmp31, tmp32];
+  SettingsAppearanceThemeCarouselTsx2.__closure = items10;
+  SettingsAppearanceThemeCarouselTsx2.__workletHash = 8724897694824;
+  SettingsAppearanceThemeCarouselTsx2.__initData = tmp29;
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(SettingsAppearanceThemeCarouselTsx2);
+  const obj6 = { style: tmp.titleContainer, children: null };
+  const tmp2Result10 = require("../../../../../../_runtime/metro/01652__.js");
+  let tmp36 = null;
   if (tmp2Result11.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-    const obj8 = {
-      source: currentThemeIndex(tmp3[21]),
-      style: animatedStyles.iconHeaderSecondary,
-      size: tmp2(tmp3[8]).IconSizes.SMALL_20,
-    };
-    tmp30 = sharedValue1(rounded, obj8);
+    const obj7 = { source: _modDef10146, style: animatedStyles.iconHeaderSecondary, size: tmp2(1187).IconSizes.SMALL_20 };
+    tmp36 = sharedValue1(rounded, obj7);
   }
-  const items7 = [tmp30];
-  const obj9 = {
-    animated: true,
-    style: animatedStyles.headerPrimary,
-    variant: "heading-sm/semibold",
-    children: themes[currentThemeIndex].getName(),
-  };
-  items7[1] = sharedValue1(themes(isPreview[22]).Text, obj9);
-  obj7.children = items7;
+  const items11 = [tmp36, ];
+  const obj8 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: themes[currentThemeIndex].getName() };
+  items11[1] = sharedValue1(require("Text/Text").Text, obj8);
+  obj6.children = items11;
   if (!isScreenReaderEnabled) {
-    if (!tmp2(tmp3[15]).isThumbstickScrollDevice) {
-      const obj10 = { children: null };
-      const obj11 = { pointerEvents: "none", style: tmp.selectionBorder };
-      const items8 = [tmp34(closure_5, obj11)];
-      const size = {
-        ref,
-        data: themes,
-        renderItem: callback,
-        style: null,
-        width: null,
-        height: null,
-        loop: false,
-        pagingEnabled: true,
-        defaultIndex: null,
-        onSnapToItem: null,
-        scrollAnimationDuration: 200,
-        onProgressChange: null,
-      };
-      const obj12 = {
-        width: deviceWidth,
-        justifyContent: "center",
-        alignItems: "center",
-        marginLeft: tmp11.THEME_ITEM_HORIZONTAL_MARGIN,
-      };
-      size.style = obj12;
+    if (!tmp2(1624).isThumbstickScrollDevice) {
+      const obj9 = { children: null };
+      const obj10 = { pointerEvents: "none", style: tmp.selectionBorder };
+      const items12 = [tmp40(closure_5, obj10), ];
+      const size = { ref, data: themes, renderItem: callback, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
+      const obj11 = { width: deviceWidth, justifyContent: "center", alignItems: "center", marginLeft: tmp11.THEME_ITEM_HORIZONTAL_MARGIN };
+      size.style = obj11;
       size.width = tmp11.THEME_ITEM_WIDTH + tmp11.THEME_ITEM_HORIZONTAL_MARGIN;
       size.height = tmp11.THEME_ITEM_HEIGHT;
       size.defaultIndex = defaultIndex;
@@ -352,14 +274,14 @@ export default function SettingsAppearanceThemeCarousel(themes) {
           const result = sharedValue2.set(0);
         } else {
           let num3 = 0;
-          if (null != themes[rounded]) {
+          if (null != _undefined[rounded]) {
             num3 = 0;
             if (obj.isHexagonCampaignMobileTheme(tmp36)) {
               num3 = 1;
             }
             obj = MobileThemesUtils;
           }
-          const result1 = sharedValue2.set(timing.withTiming(num3, timingPresets.timingStandard));
+          const result1 = sharedValue2.set(timing_timing.withTiming(num3, timingPresets.timingStandard));
         }
         if (rounded !== ref.current) {
           const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
@@ -368,15 +290,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         }
         if (closure_1_5) {
           const _Math2 = Math;
-          const tmp27 =
-            arg1 <
-            closure_9 +
-              Math.ceil(
-                deviceWidth /
-                  (SettingsAppearanceConstants.THEME_ITEM_WIDTH +
-                    SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN),
-              ) /
-                2;
+          const tmp27 = arg1 < closure_9 + Math.ceil(deviceWidth / (SettingsAppearanceConstants.THEME_ITEM_WIDTH + SettingsAppearanceConstants.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
           if (tmp27) {
             const result3 = sharedValue1.set(true);
           }
@@ -388,152 +302,146 @@ export default function SettingsAppearanceThemeCarousel(themes) {
           const result4 = sharedValue.set(tmp33);
         }
       };
-      items8[1] = tmp34(currentThemeIndex(tmp3[23]), size);
-      obj10.children = items8;
-      let tmp34Result7 = tmp28(memo1, obj10);
+      items12[1] = tmp40(PaginationDefault, size);
+      obj9.children = items12;
+      let tmp40Result7 = tmp34(memo1, obj9);
     }
-    const obj13 = { children: tmp34Result7 };
-    const obj14 = { animated: true, style: null, variant: "text-sm/medium", children: null };
-    const items9 = [animatedStyles.headerSecondary, tmp.textCentered];
-    obj14.style = items9;
+    const obj12 = { children: tmp40Result7 };
+    const obj13 = { animated: true, style: null, variant: "text-sm/medium", children: null };
+    const items13 = [animatedStyles.headerSecondary, tmp.textCentered];
+    obj13.style = items13;
     if (isPreview) {
       if (tmp2Result12.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-        const intl2 = tmp2(tmp3[25]).intl;
-        let stringResult = intl2.string(tmp2(tmp3[25]).t.VqGKm0);
+        const intl2 = tmp2(1113).intl;
+        let stringResult = intl2.string(tmp2(1113).t.VqGKm0);
       }
-      obj14.children = stringResult;
-      const tmp34Result4 = tmp34(tmp40, obj14);
-      let tmp28Result3 = tmp34Result4;
+      obj13.children = stringResult;
+      const tmp40Result4 = tmp40(tmp46, obj13);
+      let tmp34Result3 = tmp40Result4;
       if (memo) {
-        const obj15 = { style: tmp.hintContainer, children: null };
+        const obj14 = { style: tmp.hintContainer, children: null };
         let hidden = !result;
         if (!result) {
           hidden = tmp.hidden;
         }
-        const obj17 = {
-          style: hidden,
-          pointerEvents: null,
-          accessibilityElementsHidden: null,
-          importantForAccessibility: null,
-          children: null,
-        };
+        const obj16 = { style: hidden, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
         let str = "none";
         if (result) {
           str = "auto";
         }
-        obj17.pointerEvents = str;
-        obj17.accessibilityElementsHidden = !result;
+        obj16.pointerEvents = str;
+        obj16.accessibilityElementsHidden = !result;
         let str2 = "no-hide-descendants";
         if (result) {
           str2 = "auto";
         }
-        obj17.importantForAccessibility = str2;
-        const obj18 = { animatedStyles };
-        obj17.children = tmp34(currentThemeIndex(tmp3[26]), obj18);
-        const items10 = [tmp34(closure_5, obj17)];
-        let tmp34Result5 = !result;
+        obj16.importantForAccessibility = str2;
+        const obj17 = { animatedStyles };
+        obj16.children = tmp40(HexagonCampaignThemeLegalDefault, obj17);
+        const items14 = [tmp40(closure_5, obj16), ];
+        let tmp40Result5 = !result;
         if (!result) {
-          const obj19 = { style: tmp.hintOverlay, children: tmp34Result4 };
-          tmp34Result5 = tmp34(closure_5, obj19);
+          const obj18 = { style: tmp.hintOverlay, children: tmp40Result4 };
+          tmp40Result5 = tmp40(closure_5, obj18);
         }
-        items10[1] = tmp34Result5;
-        obj15.children = items10;
-        tmp28Result3 = tmp28(closure_5, obj15);
+        items14[1] = tmp40Result5;
+        obj14.children = items14;
+        tmp34Result3 = tmp34(closure_5, obj14);
       }
-      const obj20 = { style: tmp.swatchesGroup, children: null };
-      const obj21 = { style: null, children: null };
-      const items11 = [tmp.badgeSlot, animatedStyle];
-      obj21.style = items11;
-      let tmp34Result6 = result;
+      const obj19 = { style: tmp.swatchesGroup, children: null };
+      const obj20 = { style: null, children: null };
+      const items15 = [tmp.badgeSlot, animatedStyle];
+      obj20.style = items15;
+      let tmp40Result6 = result;
       if (result) {
-        tmp34Result6 = hexagonCampaignPerkAvailability !== sharedValue.LOCKED;
+        tmp40Result6 = hexagonCampaignPerkAvailability !== sharedValue.LOCKED;
       }
-      if (tmp34Result6) {
-        const obj22 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
-        tmp34Result6 = tmp34(tmp47(tmp3[27]), obj22);
+      if (tmp40Result6) {
+        const obj21 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
+        tmp40Result6 = tmp40(tmp53(16631), obj21);
       }
-      const obj23 = { children: null };
-      obj21.children = tmp34Result6;
-      const items12 = [tmp34(currentThemeIndex(tmp3[7]).View, obj21), tmp34Result];
-      obj20.children = items12;
-      const items13 = [tmp28(closure_5, obj20)];
-      const obj24 = { style: tmp.labelGroup, children: null };
-      const items14 = [tmp35, tmp28Result3];
-      obj24.children = items14;
-      items13[1] = tmp28(closure_5, obj24);
-      obj23.children = items13;
-      const obj25 = { style: tmp.container, children: null };
-      const obj26 = { style: tmp.floatingNuxContainer, children: null };
-      tmp2Result12 = tmp2(tmp3[12]);
-      const obj27 = { style: null, children: null };
-      const items15 = [tmp.floatingNux, animatedStyle1, ,];
-      ({ bgSurfaceOverlay: arr17[2], borderFaint: arr17[3] } = animatedStyles);
-      obj27.style = items15;
-      const obj28 = { style: null, source: null, size: null };
-      const items16 = [tmp.arrowLeft, animatedStyles.iconInteractive];
-      obj28.style = items16;
-      obj28.source = currentThemeIndex(tmp3[28]);
-      obj28.size = tmp2(tmp3[8]).IconSizes.REFRESH_SMALL_16;
-      const items17 = [tmp34(rounded, obj28)];
-      const obj29 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
-      const items18 = [animatedStyles.textNormal, tmp.uppercase];
-      obj29.style = items18;
-      const intl3 = tmp2(tmp3[25]).intl;
-      obj29.children = intl3.string(tmp2(tmp3[25]).t.y2b7CA);
-      items17[1] = tmp34(tmp2(tmp3[22]).Text, obj29);
-      obj27.children = items17;
-      obj26.children = tmp28(currentThemeIndex(tmp3[7]).View, obj27);
-      const items19 = [tmp34(closure_5, obj26), tmp28(memo1, obj23)];
-      obj25.children = items19;
-      return tmp28(closure_5, obj25);
+      const obj22 = { children: null };
+      obj20.children = tmp40Result6;
+      const items16 = [tmp40(module_1652.View, obj20), tmp40Result];
+      obj19.children = items16;
+      const items17 = [tmp34(closure_5, obj19), ];
+      const obj23 = { style: tmp.labelGroup, children: null };
+      const items18 = [tmp41, tmp34Result3];
+      obj23.children = items18;
+      items17[1] = tmp34(closure_5, obj23);
+      obj22.children = items17;
+      const obj24 = { style: tmp.container, children: null };
+      const obj25 = { style: tmp.floatingNuxContainer, children: null };
+      tmp2Result12 = tmp2(5373);
+      const obj26 = { style: null, children: null };
+      const items19 = [tmp.floatingNux, animatedStyle1, , ];
+      ({ bgSurfaceOverlay: arr21[2], borderFaint: arr21[3] } = animatedStyles);
+      obj26.style = items19;
+      const obj27 = { style: null, source: null, size: null };
+      const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
+      obj27.style = items20;
+      obj27.source = _modDef17412;
+      obj27.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
+      const items21 = [tmp40(rounded, obj27), ];
+      const obj28 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
+      const items22 = [animatedStyles.textNormal, tmp.uppercase];
+      obj28.style = items22;
+      const intl3 = tmp2(1113).intl;
+      obj28.children = intl3.string(tmp2(1113).t.y2b7CA);
+      items21[1] = tmp40(tmp2(5747).Text, obj28);
+      obj26.children = items21;
+      obj25.children = tmp34(module_1652.View, obj26);
+      const items23 = [tmp40(closure_5, obj25), tmp34(memo1, obj22)];
+      obj24.children = items23;
+      return tmp34(closure_5, obj24);
     }
-    const intl = tmp2(tmp3[25]).intl;
+    const intl = tmp2(1113).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[25]).t;
+    const t = tmp2(1113).t;
     if (themes.isSynced) {
       stringResult = string(t.lhV0Y2);
     } else {
       stringResult = string(t.d5Gu9A);
     }
-    tmp34Result = tmp34(closure_5, obj13);
+    tmp40Result = tmp40(closure_5, obj12);
   }
-  tmp2Result11 = themes(isPreview[12]);
-  tmp34Result7 = tmp34(onThemeSelected, {
+  tmp2Result11 = require("MobileThemesUtils");
+  tmp40Result7 = tmp40(onThemeSelected, {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,
     children: themes.map((themePreset, index) => {
       const obj = {
-        children: sharedValue1(currentThemeIndex(isPreview[20]), {
+        children: sharedValue1(_undefined2(isPreview[20]), {
           themePreset,
           isPreview,
-          isSelected: index === currentThemeIndex,
+          isSelected: index === _undefined2,
           onPress() {
             return onThemeSelected(closure_0);
-          },
-        }),
+          }
+        })
       };
       closure_0 = index;
       return sharedValue1(closure_1_5, obj, "theme-" + index);
-    }),
+    })
   });
-  const obj30 = {
+  const obj29 = {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,
     children: themes.map((themePreset, index) => {
       const obj = {
-        children: sharedValue1(currentThemeIndex(isPreview[20]), {
+        children: sharedValue1(_undefined2(isPreview[20]), {
           themePreset,
           isPreview,
-          isSelected: index === currentThemeIndex,
+          isSelected: index === _undefined2,
           onPress() {
             return onThemeSelected(closure_0);
-          },
-        }),
+          }
+        })
       };
       closure_0 = index;
       return sharedValue1(closure_1_5, obj, "theme-" + index);
-    }),
+    })
   };
-}
+};

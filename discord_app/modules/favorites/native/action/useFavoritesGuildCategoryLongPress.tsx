@@ -15,7 +15,7 @@ export default function useFavoritesGuildCategoryLongPress(getGuildId) {
   }
   require = isFavoritesGuildIdResult;
   const id = getGuildId.id;
-  const items = [isFavoritesGuildIdResult, id];
+  items = [isFavoritesGuildIdResult, id];
   return noop.useMemo(() => {
     let tmp = null;
     if (isFavoritesGuildIdResult) {

@@ -8,12 +8,12 @@ import useInappropriateConversationWarningsForChannel from "../../inappropriate_
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 
 export function useStrangerDangerWarning(id) {
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(id);
   const isMessageRequest = useIsMessageRequest.useIsMessageRequest(id);

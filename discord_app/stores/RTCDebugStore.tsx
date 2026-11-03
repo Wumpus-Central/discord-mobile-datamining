@@ -28,7 +28,7 @@ function updateStats(arr, arg1) {
       if (typeof arr[0] === "object") {
         let _Array3 = Array;
         let tmp27 = Array.isArray(tmp11) ? tmp11 : [];
-        let items = [];
+        items = [];
         obj2[tmp9] = items;
         let arr5 = items;
         let num = 0;
@@ -76,7 +76,7 @@ function updateStats(arr, arg1) {
   }
   return obj2;
 }
-const Constants = fn(5768);
+const Constants = fn(5888);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1072).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -121,7 +121,7 @@ class RTCDebugVideoOutputMap {
 const prototype = RTCDebugVideoOutputMap.prototype;
 RTCDebugVideoOutputMap["empty"] = function empty() {
   if (typeof RTCDebugVideoOutputMap === "function") {
-    const state = {};
+    state = {};
     const obj2 = Object.create(tmp.prototype);
     obj2.state = state;
     return obj2;
@@ -145,7 +145,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    const state = {};
+    state = {};
     const _HermesInternal = HermesInternal;
     state["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
@@ -200,7 +200,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "alrededor de 1 mes" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -335,7 +335,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(5789).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(5909).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = {
               type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",

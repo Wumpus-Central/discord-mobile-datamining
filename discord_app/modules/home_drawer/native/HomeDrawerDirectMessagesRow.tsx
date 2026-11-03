@@ -12,7 +12,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 require = fn;
 function HomeDrawerDMsRow() {
   const tmp = closure_9();
-  const items = [RelationshipStore, PresenceStore];
+  items = [RelationshipStore, PresenceStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
     return friendIDs.filter((item) => status.getStatus(item) !== constants.OFFLINE).length;
@@ -42,7 +42,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = {
   width: 8,

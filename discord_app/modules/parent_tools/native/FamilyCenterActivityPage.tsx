@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -27,7 +27,7 @@ export default function FamilyCenterActivityPage() {
   const obj2 = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = useUserLinks.useActiveLinkUserIds();
   const obj3 = { style: tmp.container, children: null };
-  const items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {})];
+  items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {})];
   if (0 === activeLinkUserIds.length) {
     const obj4 = { children: null };
     const items1 = [

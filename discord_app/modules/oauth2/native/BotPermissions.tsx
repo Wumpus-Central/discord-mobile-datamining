@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { disabledPermissionIcon: null };
 let size = {
   width: 24,
@@ -39,7 +39,7 @@ export default function BotPermissions(guild) {
   c6 = undefined;
   noop = closure_8();
   [c5, c6] = guild(noop.useState(require("PermissionUtils").NONE), 2);
-  let items = [guild.permissions, onPermissionsChange, permissions];
+  items = [guild.permissions, onPermissionsChange, permissions];
   const effect = noop.useEffect(() => {
     onPermissionsChange(true, permissions);
     _undefined(BigFlagUtilsAll.invert(guild.permissions));
@@ -70,7 +70,7 @@ export default function BotPermissions(guild) {
   const mapped1 = found2.map((item) => {
     const permissionName = permissions.getPermissionName(item);
     const obj2 = { direction: "horizontal", align: "center", children: null };
-    const items = [
+    items = [
       timestampProducer(View, {
         style: closure_4.disabledPermissionIcon,
         children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }),

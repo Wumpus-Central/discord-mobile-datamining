@@ -16,7 +16,7 @@ import GuildSettingsStore from "GuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({
-  Endpoints: c10,
+  Endpoints: closure_10,
   Layers,
   GuildSettingsSubsections: closure_11,
   GuildSettingsSections: closure_12,
@@ -44,7 +44,7 @@ let body = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ let body = {
             const obj5 = { type: "GUILD_SETTINGS_OPEN", guildId, section: SAFETY, subsection };
             SAFETY(closure_1_2[9]).dispatch(obj5);
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp25) {
           c0 = tmp;
@@ -95,7 +95,7 @@ let body = {
   setSection(arg0, arg1) {
     const guildId = GuildSettingsStore.getGuildId();
     if (null != guildId) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -275,7 +275,7 @@ let body = {
     obj(572).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(572);
-    const obj6 = obj(7153);
+    const obj6 = obj(7274);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -414,7 +414,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -451,7 +451,7 @@ let body = {
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(5022).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = closure_1_0(5149).AccessibilityAnnouncer;
                   const intl = closure_1_0(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t["7iPyVW"]));
                 }),
@@ -477,7 +477,7 @@ let body = {
               const obj = tmp2(1099);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -503,7 +503,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -633,7 +633,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -668,7 +668,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -690,7 +690,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -725,7 +725,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -748,7 +748,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -789,7 +789,7 @@ let body = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           if (closure_128_2) {
             c1 = 2;

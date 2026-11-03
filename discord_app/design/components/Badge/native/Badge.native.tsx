@@ -2,8 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import useBadgeTextVariant from "../../../../../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import BadgeShared from "../../../../../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx";
@@ -165,7 +164,6 @@ export function Badge(icon) {
   }
   icon = icon.icon;
   const tmp3 = closure_7(variant);
-  const badgeTextVariant = useBadgeTextVariant.useBadgeTextVariant();
   if ("new" === type) {
     const intl4 = util.intl;
     let text = intl4.string(util.t.y2b7CA);
@@ -181,26 +179,26 @@ export function Badge(icon) {
   } else {
     text = type.text;
   }
-  const obj2 = { style: tmp3.badge, children: null };
-  let tmp10 = null;
+  const obj = { style: tmp3.badge, children: null };
+  let tmp15 = null;
   if ("premium" === variant) {
-    const obj3 = { style: tmp9 };
-    tmp10 = React4(PremiumGradient, obj3);
+    const obj2 = { style: tmp14 };
+    tmp15 = React4(PremiumGradient, obj2);
   }
-  const items = [tmp10, ,];
-  let tmp13 = null;
+  items = [tmp15, ,];
+  let tmp18 = null;
   if (null != icon) {
-    const obj4 = { size: "xxs", color: getBadgeColors(variant).text, accessible: false };
-    tmp13 = React4(icon, obj4);
+    const obj3 = { size: "xxs", color: getBadgeColors(variant).text, accessible: false };
+    tmp18 = React4(icon, obj3);
   }
-  items[1] = tmp13;
+  items[1] = tmp18;
   items[2] = React4(Text_Text.Text, {
-    variant: badgeTextVariant,
+    variant: "body-xs/semibold",
     color: "none",
     lineClamp: 1,
     style: tmp3.label,
     children: text,
   });
-  obj2.children = items;
-  return hasOwnProperty(View, obj2);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }

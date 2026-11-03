@@ -4,7 +4,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8432).MobileUserSettings;
+const MobileUserSettings = fn(8556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -15,7 +15,7 @@ export default function SettingsDesignSystemsScreen() {
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj3 = { label: "Components", settings: null };
-    const items = [, , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , ,];
     ({
       DESIGN_SYSTEMS_TEXT: arr[0],
       DESIGN_SYSTEMS_BUTTON: arr[1],

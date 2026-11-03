@@ -1,16 +1,19 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalProgress.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   const obj2 = {};
@@ -49,87 +52,86 @@ let closure_9 = createStyles.createStyles(() => {
   obj.progressBarGlowLayer = rect1;
   return obj;
 });
-const __initData = {
-  code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}",
+let closure_10 = {
+  code: "(function BountiesModalProgressTsx1(){let[withTiming,visible,timingFast]=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};})",
 };
-const __initData2 = {
-  code: "function BountiesModalProgressTsx2(){const{withTiming,progress,shouldSkipAnimation,timingNone,timingFast}=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};}",
+let closure_11 = {
+  code: "(function BountiesModalProgressTsx2(){let[withTiming,progress,shouldSkipAnimation,timingNone,timingFast]=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};})",
 };
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
 export default function BountiesModalProgress(progress) {
   progress = progress.progress;
-  const visible = progress.visible;
+  ({ visible, style } = progress);
   const tmp = closure_9();
-  let tmp2 = _slicedToArray(noop.useState(false), 2);
-  const shouldSkipAnimation = tmp2[0];
-  const tmp4 = _slicedToArray(noop.useState(progress), 2);
-  const first1 = tmp4[0];
-  if (progress !== first1) {
-    tmp4[1](progress);
-    tmp2[1](progress < first1);
+  [tmp3, tmp4] = noop.useState(false);
+  const tmp5 = _slicedToArray(noop.useState(progress), 2);
+  const first = tmp5[0];
+  if (progress !== first) {
+    tmp5[1](progress);
+    tmp4(progress < first);
   }
-  class O {
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  items = [closure_10, timing_timing.withTiming, visible, timingPresets.timingFast];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp11, tmp12, tmp13, tmp14] = items;
+  class BountiesModalProgressTsx1 {
     constructor() {
-      tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[7]);
       num = 0;
-      if (visible) {
+      tmp = closure_0;
+      if (closure_1) {
         num = 1;
       }
-      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[8]).timingFast) };
-      return obj1;
+      obj = { opacity: tmp(num, closure_2) };
+      return obj;
     }
   }
-  let obj = progress(shouldSkipAnimation[6]);
-  O.__closure = {
-    withTiming: progress(shouldSkipAnimation[7]).withTiming,
-    visible,
-    timingFast: progress(shouldSkipAnimation[8]).timingFast,
-  };
-  O.__workletHash = 5158131592262;
-  O.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(O);
-  const obj2 = {
-    withTiming: progress(shouldSkipAnimation[7]).withTiming,
-    visible,
-    timingFast: progress(shouldSkipAnimation[8]).timingFast,
-  };
-  class B {
-    constructor() {
-      obj = closure_0(closure_2[7]);
-      result = 100 * progress;
-      tmp2 = closure_0(closure_2[8]);
-      obj1 = { width: obj.withTiming(`${tmp}%`, closure_2 ? tmp2.timingNone : tmp2.timingFast, "animate-always") };
-      return obj1;
-    }
-  }
-  const obj3 = progress(shouldSkipAnimation[6]);
-  B.__closure = {
-    withTiming: progress(shouldSkipAnimation[7]).withTiming,
+  const items1 = [tmp12, tmp13, tmp14];
+  BountiesModalProgressTsx1.__closure = items1;
+  BountiesModalProgressTsx1.__workletHash = 13607903947935;
+  BountiesModalProgressTsx1.__initData = tmp11;
+  const animatedStyle = _mod1652.useAnimatedStyle(BountiesModalProgressTsx1);
+  const items2 = [
+    closure_11,
+    timing_timing.withTiming,
     progress,
-    shouldSkipAnimation,
-    timingNone: progress(shouldSkipAnimation[8]).timingNone,
-    timingFast: progress(shouldSkipAnimation[8]).timingFast,
-  };
-  B.__workletHash = 15586067343237;
-  B.__initData = __initData2;
-  const animatedStyle1 = obj3.useAnimatedStyle(B);
-  const obj5 = { style: null, children: null };
-  const items = [tmp.progressContainer, progress.style, animatedStyle];
-  obj5.style = items;
-  const items1 = [closure_7(closure_6, { style: tmp.progressTrack }), ,];
-  const obj7 = { style: null };
-  const items2 = [tmp.progressBarGlowLayer, animatedStyle1];
-  obj7.style = items2;
-  items1[1] = closure_7(visible(shouldSkipAnimation[6]).View, obj7);
-  const obj8 = { style: null };
-  const items3 = [tmp.progressBar, animatedStyle1];
-  obj8.style = items3;
-  items1[2] = closure_7(visible(shouldSkipAnimation[6]).View, obj8);
-  obj5.children = items1;
-  return closure_8(visible(shouldSkipAnimation[6]).View, obj5);
+    tmp3,
+    timingPresets.timingNone,
+    timingPresets.timingFast,
+  ];
+  c0 = undefined;
+  c1 = undefined;
+  c2 = undefined;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp16, tmp17, tmp18, tmp19, tmp20, tmp21] = items2;
+  class BountiesModalProgressTsx2 {
+    constructor() {
+      obj = { width: closure_0(`${100 * closure_1}%`, closure_2 ? closure_3 : closure_4, "animate-always") };
+      return obj;
+    }
+  }
+  const items3 = [tmp17, tmp18, tmp19, tmp20, tmp21];
+  BountiesModalProgressTsx2.__closure = items3;
+  BountiesModalProgressTsx2.__workletHash = 7029081522716;
+  BountiesModalProgressTsx2.__initData = tmp16;
+  const animatedStyle1 = _mod1652.useAnimatedStyle(BountiesModalProgressTsx2);
+  const obj2 = { style: null, children: null };
+  const items4 = [tmp.progressContainer, style, animatedStyle];
+  obj2.style = items4;
+  const items5 = [React5(timestampProducer, { style: tmp.progressTrack }), ,];
+  const obj4 = { style: null };
+  const items6 = [tmp.progressBarGlowLayer, animatedStyle1];
+  obj4.style = items6;
+  items5[1] = React5(_modDef1652.View, obj4);
+  const obj5 = { style: null };
+  const items7 = [tmp.progressBar, animatedStyle1];
+  obj5.style = items7;
+  items5[2] = React5(_modDef1652.View, obj5);
+  obj2.children = items5;
+  return React6(_modDef1652.View, obj2);
 }
 export const PROGRESS_BAR_HEIGHT = 4;

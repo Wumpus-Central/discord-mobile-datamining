@@ -4,9 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
 import GuildPowerupsCardFooter from "GuildPowerupsCardFooter.tsx";
 import GuildPowerupsCardDefault from "GuildPowerupsCard.tsx";
@@ -16,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_16 },
   card: { padding: 0, overflow: "hidden" },
@@ -62,71 +61,55 @@ export default function GuildPowerupsPerkCard(arg0) {
   );
   const tmp2 = closure_6();
   const tmp5 = useThemeDefault();
-  const isThemeDarkResult = shared.isThemeDark(tmp5);
-  const manaTypeConsolidationExperiment =
-    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsPerkCard");
-  const obj3 = { containerStyle: null, style: tmp2.card, status, onPress, children: null };
-  const items = [tmp2.container, style];
-  obj3.containerStyle = items;
-  const obj4 = { style: tmp2.imageContainer, children: null };
-  const tmp9 = isThemeDarkResult ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
+  const obj2 = { containerStyle: null, style: tmp2.card, status, onPress, children: null };
+  items = [tmp2.container, style];
+  obj2.containerStyle = items;
+  const obj3 = { style: tmp2.imageContainer, children: null };
+  const tmp7 = shared.isThemeDark(tmp5) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
   if (riveComponent == null) {
     if (imageUrl == null) {
       imageUrl = "";
     }
-    const obj5 = { imageUrl, isAnimated: isImageAnimated };
-    riveComponent = React4(GuildPowerupsImageDefault, obj5);
+    const obj4 = { imageUrl, isAnimated: isImageAnimated };
+    riveComponent = React4(GuildPowerupsImageDefault, obj4);
     const tmp3Result2 = GuildPowerupsImageDefault;
   }
-  const items1 = [riveComponent, React4(LinearGradientDefault, { colors: tmp9, style: tmp2.gradient })];
-  obj4.children = items1;
-  const items2 = [hasOwnProperty(View, obj4), , ,];
-  const obj7 = { style: tmp2.contentContainer, children: null };
-  const obj8 = { style: tmp2.headerContainer, children: null };
-  let str;
-  if (manaTypeConsolidationExperiment) {
-    str = "text-strong";
-  }
-  const obj9 = { color: str, variant: null, children: null };
-  let str2 = "heading-md/bold";
-  if (manaTypeConsolidationExperiment) {
-    str2 = "experimental/heading-md/semibold";
-  }
-  obj9.variant = str2;
-  obj9.children = title;
-  const items3 = [React4(Text_Text.Text, obj9)];
-  let str3 = "text-sm/medium";
-  if (manaTypeConsolidationExperiment) {
-    str3 = "experimental/body-sm/normal";
-  }
-  items3[1] = React4(Text_Text.Text, { variant: str3, children: description });
-  obj8.children = items3;
-  const items4 = [hasOwnProperty(View, obj8)];
-  const obj10 = {};
+  const items1 = [riveComponent, React4(LinearGradientDefault, { colors: tmp7, style: tmp2.gradient })];
+  obj3.children = items1;
+  const items2 = [hasOwnProperty(View, obj3), , ,];
+  const obj6 = { style: tmp2.contentContainer, children: null };
+  const obj7 = { style: tmp2.headerContainer, children: null };
+  const items3 = [
+    React4(Text_Text.Text, { color: "text-strong", variant: "experimental/heading-md/semibold", children: title }),
+    React4(Text_Text.Text, { variant: "body-sm/normal", children: description }),
+  ];
+  obj7.children = items3;
+  const items4 = [hasOwnProperty(View, obj7)];
+  const obj8 = {};
   const merged1 = Object.assign(merged);
-  obj10.status = status;
-  items4[1] = React4(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj10);
-  obj7.children = items4;
-  items2[1] = hasOwnProperty(View, obj7);
-  let tmp15Result = "new" === badge;
-  if (tmp15Result) {
-    const obj11 = { text: null, style: null };
+  obj8.status = status;
+  items4[1] = React4(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj8);
+  obj6.children = items4;
+  items2[1] = hasOwnProperty(View, obj6);
+  let tmp13Result = "new" === badge;
+  if (tmp13Result) {
+    const obj9 = { text: null, style: null };
     const intl = util.intl;
-    obj11.text = intl.string(util.t.y2b7CA);
-    obj11.style = tmp2.badge;
-    tmp15Result = React4(native.TextBadge, obj11);
+    obj9.text = intl.string(util.t.y2b7CA);
+    obj9.style = tmp2.badge;
+    tmp13Result = React4(native.TextBadge, obj9);
   }
-  items2[2] = tmp15Result;
-  let tmp15Result2 = "beta" === badge;
-  if (tmp15Result2) {
-    const obj12 = { text: null, color: null, style: null };
+  items2[2] = tmp13Result;
+  let tmp13Result2 = "beta" === badge;
+  if (tmp13Result2) {
+    const obj10 = { text: null, color: null, style: null };
     const intl2 = util.intl;
-    obj12.text = intl2.string(util.t.oW0eUd);
-    obj12.color = native.BadgeColors.BRAND;
-    obj12.style = tmp2.badge;
-    tmp15Result2 = React4(native.TextBadge, obj12);
+    obj10.text = intl2.string(util.t.oW0eUd);
+    obj10.color = native.BadgeColors.BRAND;
+    obj10.style = tmp2.badge;
+    tmp13Result2 = React4(native.TextBadge, obj10);
   }
-  items2[3] = tmp15Result2;
-  obj3.children = items2;
-  return hasOwnProperty(GuildPowerupsCardDefault, obj3);
+  items2[3] = tmp13Result2;
+  obj2.children = items2;
+  return hasOwnProperty(GuildPowerupsCardDefault, obj2);
 }

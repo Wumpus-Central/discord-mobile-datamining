@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import _mod4929 from "../../../../_runtime/metro/04929__.js";
+import _mod5056 from "../../../../_runtime/metro/05056__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
 import VoicePanelUIDefault from "VoicePanelUI.tsx";
@@ -10,7 +10,7 @@ import VoicePanelStore from "../VoicePanelStore.tsx";
 require = fn;
 function VoicePanel(arg0) {
   _require = arg0;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
@@ -44,9 +44,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 
 export default noop.memo(function VoicePanelContainer() {
-  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4929.shallow);
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod5056.shallow);
   return jsx(native.TransitionGroup, {
-    items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4929.shallow),
+    items: VoicePanelStore((channels) => Array.from(channels.channels), _mod5056.shallow),
     getItemKey: getChannelKey,
     renderItem: renderVoicePanel,
   });

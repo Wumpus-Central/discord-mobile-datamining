@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   body: { flex: 1 },
   iconContainer: { marginRight: nativeDefault.space.PX_8 },
@@ -35,7 +35,7 @@ export default function NotificationContent(arg0) {
     const obj2 = { style: tmp.iconContainer, children: icon };
     tmp4 = React4(View, obj2);
   }
-  const items = [tmp4, ,];
+  items = [tmp4, ,];
   const obj3 = { style: tmp.body, children: null };
   const obj4 = { style: tmp.labelContainer, children: null };
   let tmp6 = null;

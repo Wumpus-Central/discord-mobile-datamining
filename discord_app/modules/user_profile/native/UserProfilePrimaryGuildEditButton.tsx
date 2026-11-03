@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(8393).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     pendingPrimaryGuildId = tmp4;
   }
   const tmp = closure_6();
-  const items = [GuildStore];
+  items = [GuildStore];
   const items1 = [pendingPrimaryGuildId];
   const stateFromStores = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]).useStateFromStores(
     items,
@@ -125,7 +125,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16516, dependencyMap.paths),
+        asyncRequireImpl(16659, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,

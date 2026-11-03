@@ -27,7 +27,7 @@ export default function StreamFullAlert(arg0) {
   const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.VVZDBL);
-  const items = [
+  items = [
     React3(Text_Text.Text, obj3),
     React3(Text_Text.Text, {
       variant: "text-md/normal",

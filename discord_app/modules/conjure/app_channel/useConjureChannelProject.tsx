@@ -7,7 +7,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isProjectOwner = fn(6844).isProjectOwner;
+const isProjectOwner = fn(6964).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChannelProject.tsx");
@@ -24,12 +24,12 @@ export default function useConjureChannelProject(guild_id) {
     guild_id = null;
   }
   let obj = require("ConjureUtils");
-  let items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const items1 = [guild_id];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      let guild = null;
+      guild = null;
       if (null != guild_id) {
         guild = GuildStore.getGuild(tmp);
       }
@@ -56,7 +56,7 @@ export default function useConjureChannelProject(guild_id) {
         if (roles == null) {
           roles = [];
         }
-        let items = roles;
+        items = roles;
       } else {
         items = [];
       }

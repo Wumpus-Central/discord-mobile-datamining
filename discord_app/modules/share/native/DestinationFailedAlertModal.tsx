@@ -23,7 +23,7 @@ function FailedGroupDMRow(channel) {
   const tmp2 = useChannelNameDefault(channel);
   obj2.size = native.AvatarSizes.REFRESH_MEDIUM_32;
   obj2.channel = channel;
-  const items = [
+  items = [
     closure_1_10(GroupDMAvatarDefault, obj2),
     closure_1_10(Text_Text.Text, {
       style: tmp.label,
@@ -39,7 +39,7 @@ function FailedGroupDMRow(channel) {
 function FailedUserRow(user) {
   user = user.user;
   const tmp = closure_13();
-  const items = [RelationshipStore];
+  items = [RelationshipStore];
   let stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getNickname(user.id));
   const obj = user(504);
   const items1 = [PresenceStore];
@@ -60,7 +60,7 @@ function FailedUserRow(user) {
       isVROnline: null,
       size: true,
       avatarDecoration: 148,
-      autoStatusCutout: 32,
+      autoStatusCutout: "zh-Hant-HK",
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -77,7 +77,7 @@ function FailedUserRow(user) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5624).Text, obj5);
+    items2[1] = closure_10(tmp2(5747).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -86,7 +86,7 @@ function FailedUserRow(user) {
 function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
-  const items = [GuildStore];
+  items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
@@ -98,13 +98,13 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(13423).GuildIconWithChannelType, {
+    closure_10(channel(13559).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(13423).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(13559).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(5624).Text, {
+    closure_10(channel(5747).Text, {
       style: tmp.label,
       variant: "text-md/medium",
       lineClamp: 1,
@@ -117,7 +117,7 @@ function FailedChannelRow(channel) {
 }
 function FailedDestinationRow(destination) {
   destination = destination.destination;
-  const items = [ChannelStore, UserStore];
+  items = [ChannelStore, UserStore];
   const stateFromStoresObject = destination(504).useStateFromStoresObject(items, () => {
     let channel = null;
     if ("channel" === destination.type) {
@@ -154,8 +154,8 @@ function FailedDestinationRow(destination) {
 const View = fn(17).View;
 const StatusTypes = fn(1083).StatusTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   container: {
     borderWidth: 1,
@@ -201,13 +201,13 @@ export default function DestinationFailedAlertModal(arg0) {
     const obj4 = { variant: "primary", onPress: onRetry, text: null };
     const intl2 = util.intl;
     obj4.text = intl2.string(util.t["5911Lb"]);
-    const items = [closure_1_10(AlertModal.AlertActionButton, obj4, "confirm")];
+    items = [closure_1_10(AlertModal.AlertActionButton, obj4, "confirm")];
     const obj5 = { variant: "secondary", text: null };
     const intl3 = util.intl;
     obj5.text = intl3.string(util.t.WAI6xu);
     items[1] = closure_1_10(AlertModal.AlertActionButton, obj5, "cancel");
     obj3.children = items;
-    let tmp2Result = closure_1_11(closure_1_12, obj3);
+    let tmp2Result = closure_1_11(application_id, obj3);
   } else {
     const obj6 = { variant: "primary", text: null };
     const intl = util.intl;

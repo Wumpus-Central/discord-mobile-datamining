@@ -19,7 +19,7 @@ function DemoModal() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function DemoModal() {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c0 = tmp;
@@ -63,7 +63,7 @@ function DemoModal() {
     content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.",
     actions: null,
   };
-  const items = [
+  items = [
     jsx(AlertModal.AlertActionButton, { variant: "destructive", onPress: callback, text: "Clear" }, "clear"),
     jsx(AlertModal.AlertActionButton, { variant: "secondary", onPress: callback, text: "Cancel" }, "cancel"),
   ];
@@ -80,7 +80,7 @@ function openDemoModal() {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

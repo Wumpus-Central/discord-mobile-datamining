@@ -12,7 +12,7 @@ export default function useOwnedConjureProject(arg0, arg1) {
   _require = arg0;
   const tmp = useIsOwnedConjureApplicationDefault(arg0, arg1);
   importDefault = tmp;
-  const items = [ConjureProjectStore];
+  items = [ConjureProjectStore];
   const items1 = [tmp, arg0];
   const obj = require("initialize");
   return {

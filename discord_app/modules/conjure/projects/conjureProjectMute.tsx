@@ -20,7 +20,7 @@ export function isConjureProjectMuted(settings, id) {
 }
 export function useIsConjureProjectMuted(id) {
   _require = id;
-  const items = [UserSettingsProtoStore];
+  items = [UserSettingsProtoStore];
   const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
@@ -45,15 +45,22 @@ export function setConjureProjectMuted(id, arg1) {
   PreloadedUserSettingsActionCreators.updateAsync(
     "conjure",
     async (projects) => {
-      projects = projects.projects;
       if (closure_1) {
         const ConjureProjectSettings = preloaded_user_settings.ConjureProjectSettings;
-        projects[closure_0] = ConjureProjectSettings.create({ muted: true });
-      } else if (null == projects[closure_0]) {
+        const obj = {};
+        const merged = Object.assign(tmp4);
+        obj.muted = true;
+        projects.projects[tmp3] = ConjureProjectSettings.create(obj);
+      } else if (null == tmp4) {
         return false;
       } else {
-        const projects2 = projects.projects;
-        delete tmp[tmp2];
+        const _Number = Number;
+        if (Number(tmp4.sidebarDismissedAt) > 0) {
+          tmp4.muted = false;
+        } else {
+          projects = projects.projects;
+          delete tmp[tmp2];
+        }
       }
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,

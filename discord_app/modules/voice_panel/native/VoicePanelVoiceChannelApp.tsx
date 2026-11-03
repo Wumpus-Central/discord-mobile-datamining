@@ -1,10 +1,12 @@
 // discord_app/modules/voice_panel/native/VoicePanelVoiceChannelApp.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import useSystemKeyboardHeightDefault from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import VoicePanelStateContextDefault from "VoicePanelStateContext.tsx";
 import useIsConnectedToVoiceChannelDefault from "hooks/useIsConnectedToVoiceChannel.tsx";
+import useControlsLockDefault from "controls/useControlsLock.tsx";
 import useVoiceChannelAppSurface from "../../voice_channel_apps/useVoiceChannelAppSurface.tsx";
-import voiceChannelAppLayerLayout from "voiceChannelAppLayerLayout.tsx";
+import VoiceChannelAppSurfaceDefault from "../../voice_channel_apps/native/VoiceChannelAppSurface.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import VoicePanelStore from "../VoicePanelStore.tsx";
@@ -12,89 +14,110 @@ import VoicePanelStore from "../VoicePanelStore.tsx";
 require = fn;
 function VoiceChannelAppLayer(applicationId) {
   const channel = applicationId.channel;
-  let controlsSpecs;
-  let showControls;
-  let token;
-  const context = token.useContext(controlsSpecs(showControls[8]));
-  const safeArea = context.safeArea;
-  controlsSpecs = context.controlsSpecs;
-  showControls = context.showControls;
+  _require = undefined;
+  const context = noop.useContext(VoicePanelStateContextDefault);
+  const controlsSpecs = context.controlsSpecs;
+  ({ safeArea, showControls } = context);
   const tmp = closure_8();
-  token = safeArea(showControls[9]).useToken(controlsSpecs(showControls[7]).modules.mobile.VOICE_PANEL_GUTTER);
-  const tmp4 = controlsSpecs(showControls[10])();
-  const keyboardHeight = tmp4;
-  const tmp5 = controlsSpecs(showControls[11])();
-  closure_5 = tmp5;
-  const items = [tmp5];
-  const layoutEffect = token.useLayoutEffect(() => {
-    closure_5.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
+  const token = require("useToken").useToken(nativeDefault.modules.mobile.VOICE_PANEL_GUTTER);
+  const obj = require("useToken");
+  const tmp8 = useControlsLockDefault();
+  items = [tmp8];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    _undefined.lock(VoicePanelControlsModes.FLOATING_DEFAULT);
   }, items);
-  let obj = safeArea(showControls[9]);
-  class A {
+  const tmp7 = useSystemKeyboardHeightDefault();
+  const items1 = [closure_9, controlsSpecs];
+  _require = undefined;
+  [tmp10, tmp11] = items1;
+  class VoicePanelVoiceChannelAppTsx1 {
     constructor() {
-      return controlsSpecs.get().mode;
+      return closure_0.get().mode;
     }
   }
-  A.__closure = { controlsSpecs };
-  A.__workletHash = 12896943727457;
-  A.__initData = __initData;
-  const fn = function l(arg0, arg1) {
-    if (obj.shouldRestoreVoiceChannelAppControls(arg0, arg1)) {
-      ReanimatedRexport.runOnJS(showControls)();
-      const tmpResult = ReanimatedRexport;
+  const items2 = [tmp11];
+  VoicePanelVoiceChannelAppTsx1.__closure = items2;
+  VoicePanelVoiceChannelAppTsx1.__workletHash = 3536903528120;
+  VoicePanelVoiceChannelAppTsx1.__initData = tmp10;
+  const items3 = [
+    closure_10,
+    require("voiceChannelAppLayerLayout").shouldRestoreVoiceChannelAppControls,
+    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    showControls,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  [tmp12, tmp13, tmp14, tmp15] = items3;
+  class VoicePanelVoiceChannelAppTsx2 {
+    constructor(arg0, arg1) {
+      if (closure_0(applicationId, arg1)) {
+        tmp = closure_1;
+        tmp2 = closure_2;
+        tmp3 = closure_1(closure_2);
+      }
+      return;
     }
-    obj = voiceChannelAppLayerLayout;
-  };
-  const obj2 = safeArea(showControls[12]);
-  fn.__closure = {
-    shouldRestoreVoiceChannelAppControls: safeArea(showControls[13]).shouldRestoreVoiceChannelAppControls,
-    runOnJS: safeArea(showControls[12]).runOnJS,
-    showControls,
-  };
-  fn.__workletHash = 6566921515413;
-  fn.__initData = __initData2;
-  const animatedReaction = obj2.useAnimatedReaction(A, fn);
+  }
+  const items4 = [tmp13, tmp14, tmp15];
+  VoicePanelVoiceChannelAppTsx2.__closure = items4;
+  VoicePanelVoiceChannelAppTsx2.__workletHash = 6881977336877;
+  VoicePanelVoiceChannelAppTsx2.__initData = tmp12;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    VoicePanelVoiceChannelAppTsx1,
+    VoicePanelVoiceChannelAppTsx2,
+  );
+  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const items5 = [
+    closure_11,
+    require("voiceChannelAppLayerLayout").getVoiceChannelAppLayerInsets,
+    safeArea,
+    token,
+    controlsSpecs,
+    tmp7,
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22] = items5;
+  class VoicePanelVoiceChannelAppTsx3 {
+    constructor() {
+      obj = {
+        safeArea: closure_1.get(),
+        edgeGutter: closure_2,
+        controlsHeight: closure_3.get().height,
+        keyboardHeight: closure_4,
+      };
+      return closure_0(obj);
+    }
+  }
+  const items6 = [tmp18, tmp19, tmp20, tmp21, tmp22];
+  VoicePanelVoiceChannelAppTsx3.__closure = items6;
+  VoicePanelVoiceChannelAppTsx3.__workletHash = 7326712047373;
+  VoicePanelVoiceChannelAppTsx3.__initData = tmp17;
+  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    VoicePanelVoiceChannelAppTsx3,
+  );
   const obj3 = {
-    shouldRestoreVoiceChannelAppControls: safeArea(showControls[13]).shouldRestoreVoiceChannelAppControls,
-    runOnJS: safeArea(showControls[12]).runOnJS,
-    showControls,
+    style: null,
+    children: jsx(VoiceChannelAppSurfaceDefault, {
+      applicationId: applicationId.applicationId,
+      channelId: channel.id,
+      guildId: channel.guild_id,
+    }),
   };
-  const fn2 = function k() {
-    const obj = voiceChannelAppLayerLayout;
-    return obj.getVoiceChannelAppLayerInsets({
-      safeArea: safeArea.get(),
-      edgeGutter: token,
-      controlsHeight: controlsSpecs.get().height,
-      keyboardHeight,
-    });
-  };
-  const obj4 = safeArea(showControls[12]);
-  fn2.__closure = {
-    getVoiceChannelAppLayerInsets: safeArea(showControls[13]).getVoiceChannelAppLayerInsets,
-    safeArea,
-    edgeGutter: token,
-    controlsSpecs,
-    keyboardHeight: tmp4,
-  };
-  fn2.__workletHash = 2621992408468;
-  fn2.__initData = __initData3;
-  const animatedStyle = obj4.useAnimatedStyle(fn2);
-  const obj6 = { style: null, children: null };
-  const items1 = [tmp.layer, animatedStyle];
-  obj6.style = items1;
-  const obj5 = {
-    getVoiceChannelAppLayerInsets: safeArea(showControls[13]).getVoiceChannelAppLayerInsets,
-    safeArea,
-    edgeGutter: token,
-    controlsSpecs,
-    keyboardHeight: tmp4,
-  };
-  obj6.children = jsx(controlsSpecs(showControls[15]), {
-    applicationId: applicationId.applicationId,
-    channelId: channel.id,
-    guildId: channel.guild_id,
+  const items7 = [tmp.layer, animatedStyle];
+  obj3.style = items7;
+  return jsx(_modDef1652.View, {
+    style: null,
+    children: jsx(VoiceChannelAppSurfaceDefault, {
+      applicationId: applicationId.applicationId,
+      channelId: channel.id,
+      guildId: channel.guild_id,
+    }),
   });
-  return jsx(controlsSpecs(showControls[14]), { style: null, children: null });
 }
 function VoicePanelVoiceChannelAppForChannel(channel) {
   channel = channel.channel;
@@ -114,30 +137,30 @@ function VoicePanelVoiceChannelAppForChannel(channel) {
   }
   return tmp5;
 }
-const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
 obj2.layer = obj3;
 let closure_8 = createStyles.createStyles(obj2);
-const __initData = {
-  code: "function VoicePanelVoiceChannelAppTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}",
+let closure_9 = {
+  code: "(function VoicePanelVoiceChannelAppTsx1(){let[controlsSpecs]=this.__closure;return controlsSpecs.get().mode;})",
 };
-const __initData2 = {
-  code: "function VoicePanelVoiceChannelAppTsx2(mode,previousMode){const{shouldRestoreVoiceChannelAppControls,runOnJS,showControls}=this.__closure;if(shouldRestoreVoiceChannelAppControls(mode,previousMode)){runOnJS(showControls)();}}",
+let closure_10 = {
+  code: "(function VoicePanelVoiceChannelAppTsx2(mode,previousMode){let[shouldRestoreVoiceChannelAppControls,scheduleOnRN,showControls]=this.__closure;if(shouldRestoreVoiceChannelAppControls(mode,previousMode)){scheduleOnRN(showControls);}})",
 };
-const __initData3 = {
-  code: "function VoicePanelVoiceChannelAppTsx3(){const{getVoiceChannelAppLayerInsets,safeArea,edgeGutter,controlsSpecs,keyboardHeight}=this.__closure;return getVoiceChannelAppLayerInsets({safeArea:safeArea.get(),edgeGutter:edgeGutter,controlsHeight:controlsSpecs.get().height,keyboardHeight:keyboardHeight});}",
+let closure_11 = {
+  code: "(function VoicePanelVoiceChannelAppTsx3(){let[getVoiceChannelAppLayerInsets,safeArea,edgeGutter,controlsSpecs,keyboardHeight]=this.__closure;return getVoiceChannelAppLayerInsets({safeArea:safeArea.get(),edgeGutter:edgeGutter,controlsHeight:controlsSpecs.get().height,keyboardHeight:keyboardHeight});})",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelVoiceChannelApp.tsx");
 
 export default function VoicePanelVoiceChannelApp() {
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
-  const items = [ChannelStore];
+  items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp2 = null;

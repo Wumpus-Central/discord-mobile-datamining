@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { cover: null, image: null, name: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,7 +47,7 @@ export default function InterestGameCover(game) {
     obj2.style = tmp.image;
     tmp6 = hasOwnProperty(FastImageDefault, obj2);
   }
-  const items = [tmp6];
+  items = [tmp6];
   let tmp10 = null == coverURL;
   if (tmp10) {
     const obj4 = { style: tmp.name, children: null };

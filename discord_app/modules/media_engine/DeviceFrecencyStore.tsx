@@ -6,7 +6,7 @@ import FrecencyDefault from "../../lib/Frecency.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const Constants = fn(5768);
+const Constants = fn(5888);
 const DeviceTypes = Constants.DeviceTypes;
 ({ MediaEngineContextTypes: hasOwnProperty, SpeakingFlags: metroRequire } = Constants);
 let closure_7 = {
@@ -26,11 +26,11 @@ let obj = {
   numFrequentlyItems: Infinity,
 };
 let obj2 = {};
-const stopWatch = new fn(5772).StopWatch();
+const stopWatch = new fn(5892).StopWatch();
 obj2[DeviceTypes.AUDIO_INPUT] = stopWatch;
-const stopWatch1 = new fn(5772).StopWatch();
+const stopWatch1 = new fn(5892).StopWatch();
 obj2[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
-const stopWatch2 = new fn(5772).StopWatch();
+const stopWatch2 = new fn(5892).StopWatch();
 obj2[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 let obj3 = {};
@@ -45,7 +45,7 @@ const prototype = DeviceFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   dependencyMap = arg0;
   this.waitFor(MediaEngineStore, UserStore);
-  const items = [, ,];
+  items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((item) => {
     let tmp2;
@@ -59,7 +59,7 @@ prototype["initialize"] = function initialize(arg0) {
   });
 };
 prototype["reset"] = function reset() {
-  const items = [, ,];
+  items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((item) => {
     obj2[item].reset();
@@ -126,7 +126,7 @@ prototype["getDeviceIdsSortedByFrecency"] = function getDeviceIdsSortedByFrecenc
 prototype["getUsageStats"] = function getUsageStats() {
   const self = this;
   const obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
-  const items = [,];
+  items = [,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1] } = DeviceTypes);
   const item = items.forEach((item) => {
     if (self.isSampling(item)) {

@@ -55,7 +55,7 @@ function getUncachedChannelPermissions(id, arg1) {
                 if (null == currentUser1) {
                   NONE2 = PermissionUtilsAll.NONE;
                 } else {
-                  const guild = GuildStore.getGuild(guildId);
+                  guild = GuildStore.getGuild(guildId);
                   if (null == guild) {
                     let NONE = PermissionUtilsAll.NONE;
                   } else {
@@ -222,7 +222,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         if (null == currentUser) {
           NONE2 = PermissionUtilsAll.NONE;
         } else {
-          const guild = GuildStore.getGuild(id);
+          guild = GuildStore.getGuild(id);
           if (null == guild) {
             let NONE3 = PermissionUtilsAll.NONE;
           } else {
@@ -259,12 +259,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     excludeGuildPermissions,
   };
 }
-const ChannelRecord = fn(4867);
+const ChannelRecord = fn(4994);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(4881);
-({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
+const GuildRecord = fn(5008);
+({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(4950).MemberSafetyPagePermissions;
+let closure_18 = fn(5077).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -361,7 +361,7 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
     if (null == currentUser) {
       NONE = PermissionUtilsAll.NONE;
     } else {
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {

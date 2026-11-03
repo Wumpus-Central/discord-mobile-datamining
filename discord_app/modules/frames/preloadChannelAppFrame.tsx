@@ -11,16 +11,16 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1072);
-({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);
+({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: closure_10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/preloadChannelAppFrame.tsx");
 
 export function preloadChannelAppFrame(id) {
   const channel = ChannelStore.getChannel(id);
-  let application_id;
+  application_id = undefined;
   if (channel != null) {
     application_id = channel.application_id;
   }
@@ -51,7 +51,7 @@ export function preloadChannelAppFrame(id) {
         const tmp11Result2 = createProxyTicket;
         loadEmbeddedAppCSPForLaunchDefault(application_id).catch(React7);
         const useApplication = ApplicationActionCreators.useApplication;
-        const items = [application_id];
+        items = [application_id];
         const many = useApplication.fetchMany(items);
         many.catch(React7);
         const promise = loadEmbeddedAppCSPForLaunchDefault(application_id);

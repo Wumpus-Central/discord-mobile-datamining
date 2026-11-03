@@ -35,7 +35,7 @@ class QuestThemePicker {
     items3 = [];
     items3[0] = allMobileThemes;
     memo = closure_3.useMemo(() => {
-      const items = [, ,];
+      items = [, ,];
       ({ LIGHT: arr[0], DARK: arr[1], ONYX: arr[2] } = ThemeTypes);
       return allMobileThemes.filter((type) => {
         let hasItem = type.type === items(allMobileThemes[13]).ClientThemeType.STANDARD_BACKGROUND_THEME;
@@ -104,7 +104,7 @@ class QuestThemePicker {
         },
         children: null,
       };
-      const items = [backgroundColor.themeCircle, { backgroundColor: backgroundColor.color }];
+      items = [backgroundColor.themeCircle, { backgroundColor: backgroundColor.color }];
       let themeCircleSelected = stateFromStores === backgroundColor.theme;
       if (themeCircleSelected) {
         themeCircleSelected = tmp3.themeCircleSelected;
@@ -142,8 +142,8 @@ get_ActivityIndicator = fn(17);
 let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5014);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5141);
 let obj2 = {
   themeSection: { marginBottom: nativeDefault.space.PX_8 },
   themeSelector: null,
@@ -181,7 +181,7 @@ const size1 = {
   alignItems: "center",
 };
 obj2.resetIcon = size1;
-let closure_12 = createStyles.createStyles(obj2);
+const application_id = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestThemePicker.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/group_dm/native/GroupDMNitroCapBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import usePremiumPrimaryGradientColorsDefault from "../../premium/native/usePremiumPrimaryGradientColors.tsx";
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -77,7 +77,7 @@ export default function GroupDMNitroCapBanner(showLeadingIcon) {
   const tmp = closure_8();
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
   const obj2 = { style: null, children: null };
-  const items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
+  items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
   obj2.style = items;
   const obj3 = { style: null, children: null };
   const items1 = [tmp.pill, { borderRadius: token }];

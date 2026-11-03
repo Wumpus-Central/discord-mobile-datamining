@@ -19,7 +19,7 @@ export default {
         retries: 3,
         rejectWithError: false,
       });
-      const items = [value.then((body) => body.body.address)];
+      items = [value.then((body) => body.body.address)];
       const HTTP2 = HTTPUtils.HTTP;
       items[1] = HTTP2.post({
         url: constants.NETWORKING_TOKEN,

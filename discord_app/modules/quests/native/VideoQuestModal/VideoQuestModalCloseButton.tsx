@@ -25,7 +25,7 @@ export default function VideoQuestModalCloseButton(iconColor) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj.onPress = iconColor.onClose;
-  const items = [{ flexShrink: 0, minWidth: 24, minHeight: 24 }, iconColor.style];
+  items = [{ flexShrink: 0, minWidth: 24, minHeight: 24 }, iconColor.style];
   obj.style = items;
   obj.children = jsx(XSmallIcon.XSmallIcon, { color: MOBILE_TEXT_HEADING_PRIMARY });
   return jsx(Pressables.PressableOpacity, {

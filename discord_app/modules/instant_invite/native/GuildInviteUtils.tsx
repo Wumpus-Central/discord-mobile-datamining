@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06899_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/07019_fuzzysearch.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -63,7 +63,7 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
     closure_132_1(closure_132_2[22]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(5023).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5150).AccessibilityAnnouncer;
       const intl = closure_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.PuLLzP));
     });
@@ -72,8 +72,8 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(14814).setSendState;
-const InviteSendStates = fn(7879).InviteSendStates;
+const setSendState = fn(14945).setSendState;
+const InviteSendStates = fn(8003).InviteSendStates;
 const Constants = fn(1072);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const size = fn(2);
@@ -83,7 +83,7 @@ export function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(14815, dependencyMap.paths), "invite-to-guilds-" + id, {
+  obj3.openLazy(asyncRequireImpl(14946, dependencyMap.paths), "invite-to-guilds-" + id, {
     recipientId: id,
     source: newestAnalyticsLocation,
   });
@@ -91,10 +91,10 @@ export function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
 export function useServerInviteRows(id, query) {
   _require = id;
   closure_1 = query;
-  let items = [SortedGuildStore, GuildStore];
+  items = [SortedGuildStore, GuildStore];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-    const items = [];
+    items = [];
     const item = flattenedGuildIds.forEach((item) => {
       guild = guild.getGuild(item);
       if (null != guild) {
@@ -106,7 +106,7 @@ export function useServerInviteRows(id, query) {
   let items1 = [stateFromStoresArray, query, id];
   return noop.useMemo(() => {
     if (null == memberCounts2) {
-      const items = [[], []];
+      items = [[], []];
       return items;
     } else {
       memberCounts2 = memberCounts.getMemberCounts();

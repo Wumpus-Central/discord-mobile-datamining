@@ -146,7 +146,7 @@ function ReplyMessageContent(message) {
   let width;
   const tmp = closure_18();
   context = width.useContext(message(context[14]).ICYMIContext);
-  const items = [UserStore];
+  items = [UserStore];
   const stateFromStores = message(context[17]).useStateFromStores(items, () => UserStore.getUser(message.author.id));
   const obj = width;
   const obj2 = message(context[17]);
@@ -197,14 +197,14 @@ function ReplyMessageContent(message) {
   return tmp9;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(18566).ITEM_PADDING;
+const ITEM_PADDING = fn(18722).ITEM_PADDING;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(18528);
+const createICYMIStyles = fn(18682);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 },
@@ -259,9 +259,9 @@ const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) =>
 let closure_21 = noop.memo(function ChannelRow(message) {
   message = message.message;
   const channel = message.channel;
-  const guild = message.guild;
+  guild = message.guild;
   ({ visible, messageContext } = message);
-  const items = [UserGuildSettingsStore];
+  items = [UserGuildSettingsStore];
   let id;
   const stateFromStores = message(guild[17]).useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
@@ -447,9 +447,9 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(18531).useGravityMessage(message);
-  const obj = gravityMessage(18531);
-  const items = [ChannelStore];
+  gravityMessage = gravityMessage(18685).useGravityMessage(message);
+  const obj = gravityMessage(18685);
+  items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () =>
     ChannelStore.getChannel(gravityMessage.getChannelId()),
   );

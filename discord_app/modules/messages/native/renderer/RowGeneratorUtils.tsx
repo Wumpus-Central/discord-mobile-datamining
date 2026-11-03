@@ -10,16 +10,16 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import NativeMediaManagerModule from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 
 require = fn;
-const MessageConstants = fn(5019);
+const MessageConstants = fn(5146);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
-const SwipeActionsType = fn(8378).SwipeActionsType;
+const SwipeActionsType = fn(8502).SwipeActionsType;
 const Constants = fn(1072);
-({ MessageFlags: closure_9, MessageTypes: c10 } = Constants);
-let createStyles = fn(5014);
+({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
+let createStyles = fn(5141);
 const result = createStyles.experimental_createToken(() =>
   ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-createStyles = fn(5014);
+createStyles = fn(5141);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -72,7 +72,7 @@ export default {
           if (channel != null) {
             guild_id = channel.guild_id;
           }
-          const guild = GuildStore.getGuild(guild_id);
+          guild = GuildStore.getGuild(guild_id);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {

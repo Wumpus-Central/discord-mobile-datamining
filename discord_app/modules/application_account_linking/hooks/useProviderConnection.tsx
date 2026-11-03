@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/application_account_linking/h
 
 export function useProviderConnection(provider_id) {
   _require = provider_id;
-  const items = [ConnectedAccountsStore];
+  items = [ConnectedAccountsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let account = null;
     if (null != closure_0) {
@@ -38,7 +38,7 @@ export function useProviderConnection(provider_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

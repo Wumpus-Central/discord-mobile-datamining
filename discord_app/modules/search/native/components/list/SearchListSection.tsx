@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({
   section: {
     flex: 1,
@@ -15,7 +15,7 @@ let closure_5 = createStyles.createStyles({
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: fn(9827).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: fn(9958).SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
@@ -28,7 +28,7 @@ let obj = {
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: fn(9827).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: fn(9958).SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 export default noop.memo(function SearchListSection(arg0) {
   ({ title, trailing } = arg0);
   const obj = { style: closure_5().section, children: null };
-  const items = [
+  items = [
     React3(Text_Text.Text, {
       maxFontSizeMultiplier: 2,
       accessibilityRole: "header",

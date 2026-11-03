@@ -18,17 +18,17 @@ function LinkButton(arg0) {
     children: null,
   };
   const obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
-  const items = ["\n", text];
+  items = ["\n", text];
   obj2.children = items;
   obj.children = React5(Text_Text.Text, obj2);
   return React6(Pressable, obj);
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(4916).CHANGELOG_URL;
+const CHANGELOG_URL = fn(5043).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {
@@ -60,7 +60,7 @@ export default function BioText(lineClamp) {
     str = "text-md/normal";
   }
   const tmp = closure_10();
-  const items = [bio, guildId, str];
+  items = [bio, guildId, str];
   let memo = str.useMemo(() => {
     const obj2 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
     const obj = BioMarkupUtils;

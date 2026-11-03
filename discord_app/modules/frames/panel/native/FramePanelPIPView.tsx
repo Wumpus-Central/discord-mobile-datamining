@@ -7,13 +7,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6847);
+const FramesConstants = fn(6967);
 ({
   asLaunched: hasOwnProperty,
   FrameLayoutModes: metroRequire,
   getPipOrientationLockStateForFrame: closure_7,
 } = FramesConstants);
-let closure_8 = fn(19000).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19158).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
@@ -23,7 +23,7 @@ export default noop.memo(function FramePanelPIPView(transitionState) {
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
   let landscapeSafeAreasConfig;
-  const items = [landscapeSafeAreasConfig];
+  items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () =>
     closure_1_5(landscapeSafeAreasConfig.getMainFrame()),
   );

@@ -12,7 +12,7 @@ export function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnable
   useSelectedDismissibleContent;
   if (isShopThisLookMobileEnabled) {
     if (tmp3) {
-      const items = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
+      items = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
     const tmp8 = _slicedToArray(tmp5([], { bypassAutoDismiss: true }), 2);
     const obj2 = { isVisible: null != tmp8[0], markAsDismissed: tmp8[1] };

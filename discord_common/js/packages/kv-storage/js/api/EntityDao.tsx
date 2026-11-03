@@ -33,7 +33,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   if (typeof EntityDao === "function") {
     const obj = Object.create(EntityDao.prototype);
     obj.originalPrefix = originalPrefix;
-    const items = [originalPrefix];
+    items = [originalPrefix];
     const table = new Table.Table(items, tableId, database, false);
     obj.table = table;
     return obj;
@@ -43,7 +43,7 @@ prototype["withoutLogging"] = function withoutLogging() {
 };
 prototype["get"] = function get(arg0) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   return table.get(items);
 };
 prototype["getMany"] = function getMany(arg0) {
@@ -52,7 +52,7 @@ prototype["getMany"] = function getMany(arg0) {
 };
 prototype["getRange"] = function getRange(arg0, arg1, arg2) {
   const table = this.table;
-  const items = [arg0];
+  items = [arg0];
   const items1 = [arg1];
   return table.getRange(items, items1, arg2);
 };
@@ -70,7 +70,7 @@ prototype["getIds"] = function getIds() {
 };
 prototype["getParentId"] = function getParentId(arg0) {
   const table = this.table;
-  const items = [null, arg0];
+  items = [null, arg0];
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0) {
@@ -129,7 +129,7 @@ prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
 };
 EntityDao["cell"] = function cell(data, generation) {
   const obj = { key: null, data, generation };
-  const items = [data.id];
+  items = [data.id];
   obj.key = items;
   return obj;
 };
@@ -179,7 +179,7 @@ prototype2["delete"] = function delete(arg0) {
     let deleteResult = transaction2.delete([]);
   } else {
     const transaction = self.transaction;
-    const items = [arg0];
+    items = [arg0];
     deleteResult = transaction.delete(items);
   }
   return deleteResult;

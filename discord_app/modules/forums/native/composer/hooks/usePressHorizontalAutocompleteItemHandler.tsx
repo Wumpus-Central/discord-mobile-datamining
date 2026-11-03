@@ -16,7 +16,7 @@ export function usePressHorizontalAutocompleteItemHandler(draftContent) {
   const handleTextChange = draftContent.handleTextChange;
   const setSelection = draftContent.setSelection;
   const channel = draftContent.channel;
-  const items = [draftContent, handleTextChange, setSelection, channel];
+  items = [draftContent, handleTextChange, setSelection, channel];
   return setSelection.useCallback((type, length2, arg2) => {
     const substr = draftContent.substring(0, length2);
     handleTextChange(`${tmp2}${tmp} ${draftContent.substring(length2 + arg2.length + 1)}`);

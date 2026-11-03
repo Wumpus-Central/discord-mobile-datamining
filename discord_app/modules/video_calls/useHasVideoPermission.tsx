@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermis
 
 export default function useHasVideoPermission(arg0) {
   _require = arg0;
-  const items = [GuildStore, PermissionStore];
+  items = [GuildStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,

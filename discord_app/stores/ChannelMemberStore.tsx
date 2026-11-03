@@ -85,7 +85,7 @@ class MemberList {
 const prototype = MemberList.prototype;
 prototype["updateOwnerId"] = function updateOwnerId() {
   const self = this;
-  const guild = GuildStore.getGuild(this.guildId);
+  guild = GuildStore.getGuild(this.guildId);
   if (null == guild) {
     return false;
   } else {
@@ -112,7 +112,7 @@ prototype["setGroups"] = function setGroups(groups) {
     if (constants.ONLINE !== id) {
       if (constants.OFFLINE !== id) {
         if (constants.UNKNOWN !== id) {
-          const guild = GuildStore.getGuild(tmp3);
+          guild = GuildStore.getGuild(tmp3);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
@@ -188,12 +188,12 @@ prototype["insert"] = function insert(arg0, arg1) {
     if (constants.ONLINE !== id) {
       if (constants.OFFLINE !== id) {
         if (constants.UNKNOWN !== id) {
-          const guild = GuildStore.getGuild(tmp16);
+          guild = GuildStore.getGuild(tmp16);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "ao" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -283,12 +283,12 @@ prototype["update"] = function update(arg0, arg1) {
     if (constants.ONLINE !== id2) {
       if (constants.OFFLINE !== id2) {
         if (constants.UNKNOWN !== id2) {
-          const guild = GuildStore.getGuild(tmp20);
+          guild = GuildStore.getGuild(tmp20);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "ao" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -433,7 +433,7 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     if (constants.ONLINE !== str) {
       if (constants.OFFLINE !== str) {
         if (constants.UNKNOWN !== str) {
-          const guild = GuildStore.getGuild(tmp11);
+          guild = GuildStore.getGuild(tmp11);
           let role = null;
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, str);
@@ -502,7 +502,7 @@ prototype2["get"] = function get(guildId, listId) {
       merged.listId = listId;
       merged.updateOwnerId();
       const obj2 = { id: constants.UNKNOWN, count: 0 };
-      const items = [obj2];
+      items = [obj2];
       merged.setGroups(items);
       tmp[listId] = merged;
       tmp2 = merged;
@@ -538,7 +538,7 @@ class ChannelMemberStore extends Store {
 const prototype3 = ChannelMemberStore.prototype;
 prototype3["initialize"] = function initialize() {
   this.waitFor(UserStore, GuildStore, GuildRoleStore, ChannelStore, GuildMemberStore, PresenceStore, SelfPresenceStore, AuthenticationStore, GuildMemberCountStore, ApplicationStreamingStore, ExperimentStore);
-  const items = [SelfPresenceStore];
+  items = [SelfPresenceStore];
   this.syncWith(items, handleLocalPresenceUpdate);
   const items1 = [ApplicationStreamingStore];
   this.syncWith(items1, handleApplicationStreamUpdate);

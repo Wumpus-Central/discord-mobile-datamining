@@ -1,133 +1,124 @@
 // discord_app/modules/chat_input/native/useChatInputHeightWorklet.native.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import useChatInputMaxHeight from "useChatInputMaxHeight.tsx";
+import useKeyboardStateSharedValueDefault from "../../keyboard/native/useKeyboardStateSharedValue.native.tsx";
+import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-let __initData = {
-  code: "function useChatInputHeightWorkletNativeTsx1(event){const{contentSize,textFieldHeight,getChatInputHeightAnimationTimingWorklet,textFieldMinHeight}=this.__closure;contentSize.set(event.height);textFieldHeight.set(getChatInputHeightAnimationTimingWorklet(event.height,textFieldMinHeight.get()));}",
+let closure_4 = {
+  code: "(function useChatInputHeightWorkletNativeTsx1(event){let[contentSize,textFieldHeight,getChatInputHeightAnimationTimingWorklet,textFieldMinHeight]=this.__closure;contentSize.set(event.height);textFieldHeight.set(getChatInputHeightAnimationTimingWorklet(event.height,textFieldMinHeight.get()));})",
 };
-let __initData2 = {
-  code: "function useChatInputHeightWorkletNativeTsx2(){const{keyboardState,windowDimensions,getChatInputMaxHeightWorklet}=this.__closure;keyboardState.get();windowDimensions.get();return getChatInputMaxHeightWorklet();}",
+let closure_5 = {
+  code: "(function useChatInputHeightWorkletNativeTsx2(){let[keyboardState,windowDimensions,getChatInputMaxHeightWorklet]=this.__closure;keyboardState.get();windowDimensions.get();return getChatInputMaxHeightWorklet();})",
 };
-let __initData3 = {
-  code: "function useChatInputHeightWorkletNativeTsx3(maxHeight,maxHeightPrev){const{isWorkletDriven,contentSize,textFieldHeight,getChatInputHeightAnimationTimingWorklet,textFieldMinHeight}=this.__closure;if(!isWorkletDriven||maxHeightPrev==null||maxHeight===maxHeightPrev){return;}if(contentSize.get()===0){return;}textFieldHeight.set(getChatInputHeightAnimationTimingWorklet(contentSize.get(),textFieldMinHeight.get()));}",
+let closure_6 = {
+  code: "(function useChatInputHeightWorkletNativeTsx3(maxHeight,maxHeightPrev){let[isWorkletDriven,contentSize,textFieldHeight,getChatInputHeightAnimationTimingWorklet,textFieldMinHeight]=this.__closure;if(!isWorkletDriven||maxHeightPrev==null||maxHeight===maxHeightPrev){return;}if(contentSize.get()===0){return;}textFieldHeight.set(getChatInputHeightAnimationTimingWorklet(contentSize.get(),textFieldMinHeight.get()));})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputHeightWorklet.native.tsx");
 
-export default function useChatInputHeightWorklet(textFieldHeight) {
-  textFieldHeight = textFieldHeight.textFieldHeight;
-  const textFieldMinHeight = textFieldHeight.textFieldMinHeight;
-  let sharedValue;
-  __initData = undefined;
-  sharedValue = textFieldHeight(sharedValue[2]).useSharedValue(0);
-  let obj = textFieldHeight(sharedValue[2]);
-  const fn = function s(height) {
-    const result = sharedValue.set(height.height);
-    const result1 = textFieldHeight.set(
-      useChatInputMaxHeight.getChatInputHeightAnimationTimingWorklet(height.height, textFieldMinHeight.get()),
-    );
-  };
-  const obj2 = textFieldHeight(sharedValue[2]);
-  fn.__closure = {
-    contentSize: sharedValue,
+export default function useChatInputHeightWorklet(arg0) {
+  ({ textFieldHeight, textFieldMinHeight } = arg0);
+  _require = undefined;
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  _require = sharedValue;
+  let obj = require("../../../../_runtime/metro/01652__.js");
+  items = [
+    c4,
+    sharedValue,
     textFieldHeight,
-    getChatInputHeightAnimationTimingWorklet: textFieldHeight(sharedValue[3]).getChatInputHeightAnimationTimingWorklet,
+    require("useChatInputMaxHeight").getChatInputHeightAnimationTimingWorklet,
     textFieldMinHeight,
-  };
-  fn.__workletHash = 8560364367725;
-  fn.__initData = __initData;
-  const event = obj2.useEvent(fn, ["onChangeContentSize"]);
-  const obj3 = {
-    contentSize: sharedValue,
+  ];
+  _require = undefined;
+  [tmp4, tmp5, tmp6, tmp7, tmp8] = items;
+  function useChatInputHeightWorkletNativeTsx1(height) {
+    const result = _undefined.set(height.height);
+    const result1 = _undefined2.set(_undefined3(height.height, _undefined4.get()));
+  }
+  const items1 = [tmp5, tmp6, tmp7, tmp8];
+  useChatInputHeightWorkletNativeTsx1.__closure = items1;
+  useChatInputHeightWorkletNativeTsx1.__workletHash = 620916776372;
+  useChatInputHeightWorkletNativeTsx1.__initData = tmp4;
+  const event = require("../../../../_runtime/metro/01652__.js").useEvent(useChatInputHeightWorkletNativeTsx1, [
+    "onChangeContentSize",
+  ]);
+  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("PlatformUtils");
+  const isAndroidResult = require("PlatformUtils").isAndroid();
+  const tmp11 = useKeyboardStateSharedValueDefault();
+  const tmp12 = useWindowDimensionsSharedValueDefault({ ignoreKeyboard: true });
+  const items2 = [closure_5, tmp11, tmp12, require("useChatInputMaxHeight").getChatInputMaxHeightWorklet];
+  _require = undefined;
+  [tmp13, tmp14, tmp15, tmp16] = items2;
+  function useChatInputHeightWorkletNativeTsx2() {
+    value = _undefined.get();
+    value2 = _undefined2.get();
+    return _undefined3();
+  }
+  const items3 = [tmp14, tmp15, tmp16];
+  useChatInputHeightWorkletNativeTsx2.__closure = items3;
+  useChatInputHeightWorkletNativeTsx2.__workletHash = 9634242494291;
+  useChatInputHeightWorkletNativeTsx2.__initData = tmp13;
+  const items4 = [
+    closure_6,
+    isAndroidResult,
+    sharedValue,
     textFieldHeight,
-    getChatInputHeightAnimationTimingWorklet: textFieldHeight(sharedValue[3]).getChatInputHeightAnimationTimingWorklet,
+    require("useChatInputMaxHeight").getChatInputHeightAnimationTimingWorklet,
     textFieldMinHeight,
-  };
-  const isAndroidResult = textFieldHeight(sharedValue[1]).isAndroid();
-  __initData = isAndroidResult;
-  const tmp4 = textFieldMinHeight(sharedValue[4])();
-  __initData2 = tmp4;
-  const tmp5 = textFieldMinHeight(sharedValue[5])({ ignoreKeyboard: true });
-  __initData3 = tmp5;
-  const obj4 = textFieldHeight(sharedValue[1]);
-  const fn2 = function k() {
-    value = closure_5.get();
-    value2 = closure_6.get();
-    return useChatInputMaxHeight.getChatInputMaxHeightWorklet();
-  };
-  const obj5 = textFieldHeight(sharedValue[2]);
-  fn2.__closure = {
-    keyboardState: tmp4,
-    windowDimensions: tmp5,
-    getChatInputMaxHeightWorklet: textFieldHeight(sharedValue[3]).getChatInputMaxHeightWorklet,
-  };
-  fn2.__workletHash = 13334617579850;
-  fn2.__initData = __initData2;
-  class H {
-    constructor(arg0, arg1) {
-      tmp = closure_4;
-      if (closure_4) {
-        tmp2 = null;
-        tmp = null != arg1;
-      }
-      if (tmp) {
-        tmp3 = textFieldHeight;
-        tmp = textFieldHeight !== arg1;
-      }
-      if (tmp) {
-        tmp4 = closure_2;
-        num = 0;
-        tmp = 0 !== closure_2.get();
-      }
-      if (tmp) {
-        tmp5 = textFieldHeight;
-        tmp6 = closure_0;
-        tmp7 = closure_2;
-        obj = closure_0(closure_2[3]);
-        tmp8 = closure_2;
-        tmp10 = textFieldMinHeight;
-        value = closure_2.get();
-        result = textFieldHeight.set(obj.getChatInputHeightAnimationTimingWorklet(value, textFieldMinHeight.get()));
-      }
-      return;
+  ];
+  _require = undefined;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  noop = undefined;
+  c4 = undefined;
+  [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22] = items4;
+  function useChatInputHeightWorkletNativeTsx3(arg0, arg1) {
+    let tmp = c0;
+    if (c0) {
+      tmp = null != arg1;
+    }
+    if (tmp) {
+      tmp = arg0 !== arg1;
+    }
+    if (tmp) {
+      tmp = 0 !== _undefined2.get();
+    }
+    if (tmp) {
+      value = _undefined2.get();
+      const result = _undefined3.set(_undefined4(value, _undefined5.get()));
     }
   }
-  const obj6 = {
-    keyboardState: tmp4,
-    windowDimensions: tmp5,
-    getChatInputMaxHeightWorklet: textFieldHeight(sharedValue[3]).getChatInputMaxHeightWorklet,
-  };
-  H.__closure = {
-    isWorkletDriven: isAndroidResult,
-    contentSize: sharedValue,
-    textFieldHeight,
-    getChatInputHeightAnimationTimingWorklet: textFieldHeight(sharedValue[3]).getChatInputHeightAnimationTimingWorklet,
-    textFieldMinHeight,
-  };
-  H.__workletHash = 9298875396681;
-  H.__initData = __initData3;
-  const animatedReaction = obj5.useAnimatedReaction(fn2, H);
-  const obj8 = { registerViewTag: null, unregisterViewTag: null };
-  const items = [event];
-  obj8.registerViewTag = event.useCallback((arg0) => {
+  const items5 = [tmp18, tmp19, tmp20, tmp21, tmp22];
+  useChatInputHeightWorkletNativeTsx3.__closure = items5;
+  useChatInputHeightWorkletNativeTsx3.__workletHash = 14811065728720;
+  useChatInputHeightWorkletNativeTsx3.__initData = tmp17;
+  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+    useChatInputHeightWorkletNativeTsx2,
+    useChatInputHeightWorkletNativeTsx3,
+  );
+  const obj3 = { registerViewTag: null, unregisterViewTag: null };
+  const items6 = [event];
+  obj3.registerViewTag = noop.useCallback((findNodeHandleResult) => {
     if (obj.isAndroid()) {
-      event.workletEventHandler.registerForEvents(arg0);
-      const workletEventHandler = event.workletEventHandler;
+      _undefined2.workletEventHandler.registerForEvents(findNodeHandleResult);
+      const workletEventHandler = _undefined2.workletEventHandler;
     }
     obj = PlatformUtils;
-  }, items);
-  const items1 = [sharedValue, event];
-  obj8.unregisterViewTag = event.useCallback((arg0) => {
+  }, items6);
+  const items7 = [sharedValue, event];
+  obj3.unregisterViewTag = noop.useCallback((findNodeHandleResult) => {
     if (obj.isAndroid()) {
-      event.workletEventHandler.unregisterFromEvents(arg0);
-      const result = sharedValue.set(0);
-      const workletEventHandler = event.workletEventHandler;
+      _undefined2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);
+      const result = _undefined.set(0);
+      const workletEventHandler = _undefined2.workletEventHandler;
     }
     obj = PlatformUtils;
-  }, items1);
-  return obj8;
+  }, items7);
+  return obj3;
 }
 export function getIsChatInputHeightWorkletEnabled() {
   return PlatformUtils.isAndroid();

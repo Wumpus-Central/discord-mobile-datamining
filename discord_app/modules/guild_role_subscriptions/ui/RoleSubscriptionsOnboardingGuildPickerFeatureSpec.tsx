@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 
 require = fn;
-const isGuildOwner = fn(4881).isGuildOwner;
+const isGuildOwner = fn(5008).isGuildOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx",
@@ -21,7 +21,7 @@ export default {
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [ExperimentStore];
+    items = [ExperimentStore];
     return initialize.useStateFromStores(
       items,
       () => (guild, arg1) => {
@@ -34,15 +34,15 @@ export default {
             isUserInCreatorMonetizationEligibleCountry: null,
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
-          const obj = closure_1_0(7434);
+          const obj = closure_1_0(7558);
           obj2.isUserInCreatorMonetizationEligibleCountry =
-            closure_1_0(7435).isUserInCreatorMonetizationEligibleCountry();
-          const obj3 = closure_1_0(7435);
+            closure_1_0(7559).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = closure_1_0(7559);
           obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
-            4938,
+            5065,
           ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
           result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
-          const obj4 = closure_1_0(4938);
+          const obj4 = closure_1_0(5065);
         }
         return result;
       },

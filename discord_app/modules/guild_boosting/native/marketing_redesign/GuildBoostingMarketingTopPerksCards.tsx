@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15492 from "../../../../../_runtime/metro/15492__.js";
-import _mod15493 from "../../../../../_runtime/metro/15493__.js";
-import _modDef15494 from "../../../../../_runtime/metro/15494__.js";
+import _modDef15633 from "../../../../../_runtime/metro/15633__.js";
+import _mod15634 from "../../../../../_runtime/metro/15634__.js";
+import _modDef15635 from "../../../../../_runtime/metro/15635__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15492 };
+      const obj = { style, source: _modDef15633 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15493, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15634, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15494 };
+      const obj = { style, source: _modDef15635 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -106,7 +106,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
   let obj = { style: tmp.wrapper, children: null };
   let obj2 = {
     style: tmp.heading,
-    variant: "heading-xl/extrabold",
+    variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -130,14 +130,14 @@ export default function GuildBoostingMarketingTopPerksCards() {
         getGraphic.getGraphic(card.cardGraphic),
         hasOwnProperty(Text_Text.Heading, {
           style: card.cardHeading,
-          variant: "heading-lg/extrabold",
+          variant: "heading-lg/semibold",
           color: "mobile-text-heading-primary",
           children: getGraphic.getHeadingCopy(),
         }),
       ];
       const obj2 = {
         style: card.cardHeading,
-        variant: "heading-lg/extrabold",
+        variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         children: getGraphic.getHeadingCopy(),
       };

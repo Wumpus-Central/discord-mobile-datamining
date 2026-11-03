@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
 
 export default function useIsAppDM(channel) {
   _require = channel;
-  const items = [UserStore];
+  items = [UserStore];
   return require("useStateFromStores").useStateFromStores(items, () => {
     let tmp = null != dM && dM.isDM();
     if (tmp) {

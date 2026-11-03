@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = { container: { paddingBottom: nativeDefault.space.PX_24 }, header: null, headerText: null, image: null };
 const obj3 = { paddingBottom: nativeDefault.space.PX_24 };
 obj2.header = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  const items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image })];
+  items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image })];
   const obj4 = { style: tmp.headerText, children: null };
   const items1 = [
     React4(Text_Text.Text, {

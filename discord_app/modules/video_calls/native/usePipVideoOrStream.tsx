@@ -13,14 +13,14 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const CallConstants = fn(5681);
+const CallConstants = fn(5801);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
 
 export default function usePipVideoOrStream(arg0) {
   _require = arg0;
-  const items = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
+  items = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(
     items,
@@ -63,7 +63,7 @@ export default function usePipVideoOrStream(arg0) {
         participant = found1;
       }
       let tmp8 = participant;
-      if (closure_2_12(participant)) {
+      if (application_id(participant)) {
         let tmp9 = null;
         if (!participant.localVideoDisabled) {
           tmp9 = participant;
@@ -154,7 +154,7 @@ export default function usePipVideoOrStream(arg0) {
 export function useHasPipParticipant(isActivityViewFocused) {
   isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
   let stateFromStores1;
-  const items = [RTCConnectionStore];
+  items = [RTCConnectionStore];
   const stateFromStores = isActivityViewFocused(stateFromStores1[9]).useStateFromStores(items, () =>
     channelId.getChannelId(),
   );
@@ -203,7 +203,7 @@ export function useHasPipParticipant(isActivityViewFocused) {
         participant = found1;
       }
       let tmp8 = participant;
-      if (closure_2_12(participant)) {
+      if (application_id(participant)) {
         let tmp9 = null;
         if (!participant.localVideoDisabled) {
           tmp9 = participant;

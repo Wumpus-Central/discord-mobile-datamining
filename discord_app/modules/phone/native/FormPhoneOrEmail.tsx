@@ -38,7 +38,7 @@ function CountryCodeSelector(alpha2) {
       children: combined,
     };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
-    const items = [hasOwnProperty(Pressables.PressableOpacity, obj3)];
+    items = [hasOwnProperty(Pressables.PressableOpacity, obj3)];
     const obj5 = { style: tmp.separator };
     items[1] = hasOwnProperty(View, obj5);
     obj2.children = items;
@@ -50,7 +50,7 @@ function CountryCodeSelector(alpha2) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   label: { marginBottom: 8 },
   input: { flexGrow: 1, marginBottom: 8 },
@@ -109,7 +109,7 @@ export default function FormPhoneOrEmail(arg0) {
   const effect = noop.useEffect(() => {
     closure_7.current = obj2;
   });
-  const items = [countryCode];
+  items = [countryCode];
   const effect1 = noop.useEffect(() => {
     ref.current.handleChangeText(ref.current.value);
   }, items);

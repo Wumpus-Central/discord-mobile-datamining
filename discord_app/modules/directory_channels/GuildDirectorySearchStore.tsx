@@ -54,13 +54,13 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
     const merged = Object.assign(dependencyMap[channelId]);
     obj.fetching = false;
     dependencyMap[channelId] = obj;
-    const items = [];
+    items = [];
     const item = results.forEach((item) => {
       items.push(GuildDirectoryUtils.guildDirectoryEntryFromServer(item));
     });
     const obj2 = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    const obj3 = { results: items(13852).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    const obj3 = { results: items(13983).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj2[query.query] = obj3;
     dependencyMap2[channelId] = obj2;
   },

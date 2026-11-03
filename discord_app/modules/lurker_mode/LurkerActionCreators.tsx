@@ -29,7 +29,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -48,7 +48,7 @@ let closure_8 = async function _stopLurkingAll() {
               const _Map = Map;
               const map = new Map(
                 found.map((item) => {
-                  const items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
+                  items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
                   return items;
                 }),
               );
@@ -123,7 +123,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;
@@ -142,7 +142,7 @@ let closure_9 = async function _stopLurking() {
     } else {
       closure_129_1 = closure_130_5.lurkingGuildIds();
       if (0 !== closure_129_1.length) {
-        const items = [closure_129_0, closure_130_4.getGuildId()];
+        items = [closure_129_0, closure_130_4.getGuildId()];
         closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
         c3 = 2;
         c4 = 1;

@@ -6,13 +6,13 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7766).ReferencedMessageState;
+const ReferencedMessageState = fn(7890).ReferencedMessageState;
 const Constants = fn(1072);
 ({
   MessageStates: closure_7,
   MessageTypes: closure_8,
   LOCAL_BOT_ID: closure_9,
-  NON_USER_BOT_DISCRIMINATOR: c10,
+  NON_USER_BOT_DISCRIMINATOR: closure_10,
   MessageFlags: closure_11,
 } = Constants);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function createMessage(tts) {
     DEFAULT = constants2.DEFAULT;
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
-  const items = [];
+  items = [];
   ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, mediaMention } = tts);
   if (DEFAULT === constants2.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");

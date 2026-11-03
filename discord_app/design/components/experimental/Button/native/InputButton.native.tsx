@@ -20,7 +20,7 @@ let closure_2 = [
 ];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(5014);
+const createStyles = fn(5141);
 let obj2 = {
   buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" },
   buttonTextPlaceholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -67,7 +67,7 @@ export function InputButton(ref) {
     obj6.variant = "tertiary";
     obj6.icon = icon;
     obj6.iconPosition = str2;
-    const items = [,];
+    items = [,];
     ({ padding: arr[0], radius: arr[1] } = inputStyles);
     obj6.pillStyle = items;
     if (accessibilityLabel == null) {
